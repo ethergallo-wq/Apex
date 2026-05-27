@@ -1,0 +1,790 @@
+{
+  "assessment_date": "2018-05-07T01:00:00.000+01:00",
+  "year_published": "2020",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 10826,
+  "criteria": "A3cd+4cd",
+  "url": "https://www.iucnredlist.org/species/10826/115565566",
+  "citation": "King, T., Dolch, R., Randriahaingo, H.N.T., Randrianarimanana, L. & Ravaloharimanitra, M. 2020. Indri indri. The IUCN Red List of Threatened Species 2020: e.T10826A115565566. Accessed on 15 May 2026.",
+  "assessment_id": 115565566,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 10826,
+    "scientific_name": "Indri indri",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "PRIMATES",
+    "family_name": "INDRIIDAE",
+    "genus_name": "Indri",
+    "species_name": "indri",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Gmelin, 1788)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Primate Specialist Group",
+        "url": "http://www.primate-sg.org/",
+        "description": "Chair: Russell Mittermeier (email: rmittermeier@globalwildlife.org)\nRed List Authority Focal Points: \nProsimians, monkeys and smaller apes - Sanjay Molur (email: sanjay@zooreach.org) and Christoph Schwitzer (email: cschwitzer@bristolzoo.org.uk)\nVice-Chair for great apes - Dirck S. Byler (email: dbyler@globalwildlife.org)\nVice-Chair for small apes - Susan M. Cheyne (email: section.small.apes@gmail.com)\nJournals and Newsletters: \nPrimate Conservation: http://www.primate-sg.org/primate_conservation/\nNeotropical Primates: http://www.primate-sg.org/neotropical_primates/\nAsian Primates: http://www.primate-sg.org/asian_primates_newsletter/ and http://www.primate-sg.org/asian_primates_journal/\nLemur News: http://www.primate-sg.org/lemur_news/\nAfrican Primates: http://www.primate-sg.org/african_primates/\n"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Amboanala",
+        "language": "mlg"
+      },
+      {
+        "main": false,
+        "name": "Babakoto",
+        "language": "mlg"
+      },
+      {
+        "main": false,
+        "name": "Endrina",
+        "language": "mlg"
+      },
+      {
+        "main": false,
+        "name": "Indri À Queue Courte",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Indri Colicorto",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Indry",
+        "language": "mlg"
+      },
+      {
+        "main": true,
+        "name": "Indri",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Critically Endangered"
+    },
+    "code": "CR"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 1800,
+    "lower_elevation_limit": 10,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "11",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "Yes",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "61794",
+    "continuing_decline_in_extent_of_occurence": "Yes",
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p>This highly distinctive lemur is endemic to the island of Madagascar where it inhabits the eastern rainforests from Anjanaharibe-Sud and Antohaka Lava (15 km SE of Andapa) in the north, south to Anosibe An'ala Classified Forest. It has not been found on the Masoala Peninsula or in Marojejy (Mittermeier<em> et al. </em>2010). It usually occurs at low and mid elevations, but ranges up to 1,800 m (Goodman and Ganzhorn 2004). Populations in the north of the range are generally of black colouration, whilst those in the south are generally of black-and-white colouration, with populations in the centre of the range exhibiting both colour forms and clinal forms (Brenneman <em>et al.</em> 2016).<span lang=\"EN-US\"></p><p>This species is likely affected by national trends in forest habitat loss: Madagascar lost 37% of its forest cover from 1973 to 2014, with an annual deforestation rate of 1.1%/year from 2010 to 2014. Almost half of Madagascar's forest (46%) is now located within less than 100 metres from the forest edge (Vieilledent <em>et al. </em>2018). Projected rates are also alarming. Morelli <em>et al. </em>(2020) modelled several scenarios of climate change effects and deforestation and found that rainforests across Madagascar could be reduced by up to 93% by 2070 (14–75% reduction due to climate change alone, 29–59% due to deforestation alone, or 38–93% from a combination of both). For the specific range of the Indri, Brown and Yoder (2015) estimated that the species range will decrease 39.5% from 2000 to 2080 due to climate change alone, without taking deforestation into consideration.</p>",
+    "population": "<p>Overall population size is unknown, although a figure of 1,000-10,000 has been quoted as a “reasonable estimate” (Andriaholinirina <em>et al.</em> 2014). Population size is decreasing due to habitat destruction and hunting. It is suspected that the rate of decline has surpassed 80% and that this rate of decline will continue over three generations (33 years) into the future due to a combination of habitat loss/degradation, climate change, and the wildlife trade. This species is shown to be negatively impacted by habitat fragmentation (Eppley <em>et al.</em> 2020).</p>  <p>Madagascar has lost 37% of its natural forest cover over the period 1973–2014 (Vieilledent e<em>t al.</em> 2018), with deforestation rates in moist forests of Madagascar increasing to 1.2% per year from 2010 to 2014 (Vieilledent <em>et al.</em>&#160;2018). Projected rates are also alarming. Morelli <em>et al</em>. (2020) modelled several scenarios of climate change effects and deforestation and found that rainforests across Madagascar could be reduced by up to 93% by 2070 (14–75% reduction due to climate change alone, 29–59% due to deforestation alone, or 38–93% from a combination of both). For the specific range of the Indri, Brown and Yoder (2015) estimated that the species range will decrease 39.5% from 2000 to 2080 due to climate change alone, without taking deforestation into consideration.</p>  <p>In most sites, population densities are low, with site-specific density estimates ranging from 5.2 individuals per km<sup>2</sup> in relatively pristine forest in Mantadia (Powzyk 1997 in Powzyk and Thalmann 2003), 6.9–13.2 individuals/km² in Betampona (Glessner and Britt 2005), 27.7 (± 4.0) individuals per km² in Maromizaha, 26.7 (± 10.5) individuals per km² in Analamazaotra Special Reserve, and 24.2 (± 12.2) individuals per km² in Analamazaotra Forest Station (Bonadonna <em>et al.</em> 2017).</p>  <p>Elsewhere, Indri can be quite abundant in some forests, for example the species is the most frequently observed diurnal lemur in the Andriantantely lowland rainforest (Seaman <em>et al.</em> 2018). It also appears to be edge-tolerant, although this might lead to a higher likelihood of suffering from increasing anthropogenic activities at the edges of forest fragments (Seaman <em>et al. </em>2018). Indeed a subsequent study in the mid-elevation Ankeniheny-Zahamena rainforest corridor suggested that Indri here were edge-intolerant (B. Thompson/University of Kent/The Aspinall Foundation, unpubl. data); this is an area where the traditional taboos against hunting of Indri have been eroding in recent years (Jenkins <em>et al.</em> 2011) and might be an indication of the rapidly increasing level of threat to the species.</p>",
+    "habitats": "<p>                 </p><p>The Indri is an extremely vocal lemur (Maretti <em>et al. </em>2010, Torti <em>et al.</em> 2013) that inhabits tropical moist lowland and montane forests. Songs may travel as far as 2 km (Powzyk and Thalmann 2003). The species is considered to be the most diurnal lemur (Powzyk and Thalmann 2003). Indri social groups comprise a monogamous reproductive pair (with monogamy shown to be the norm through genetic paternity testing in several groups; Bonadonna<em> et al. </em>2019) plus up to four other individuals, usually offspring. Changes in group composition can be quite frequent (V. Sorrentino in Mittermeier <em>et al.</em> 2010), and changes in partners can occur although usually only after a mate dies (Powzyk and Thalmann 2003). Groups in fragmented habitat tend to be larger than those in more extensive, undisturbed areas (Pollock 1979, Powzyk 1997). Females give birth every two to three years (Powzyk and Thalmann 2003). Reproduction is highly seasonal, with the birth of a single offspring occurring in May or June. Reproductive maturity is reached between seven and nine years of age (Pollock 1977). Both males and females disperse and the sex ratio at birth is approximately 1:1 (Kappeler 1997).</p>  <p>The diet consists primarily of immature leaves supplemented by flowers, fruit, seeds and bark, which vary in proportion according to season (Powzyk 1997, Powzyk and Thalmann 2003). They occasionally descend to the ground to eat earth, perhaps to detoxify seeds that have also been consumed (Powzyk 1997, Britt <span class=\"Betont\"><em>et al.</em> 2002, Powzyk and Thalmann 2003). </p>  <p>Indris range evenly within exclusive territories with little or no spatial overlap between territories of neighbouring groups (Bonadonna<em> et al. </em>2017). Mean territory size in fragmented mid-altitude rainforests has been calculated as 13.10 (±5.31) ha, ranging from 5.05-25.91 ha (Bonadonna <em>et al. </em>2017), and in the more pristine forests of Mantadia as up to 40 ha (Powzyk 1997, Powzyk and Thalmann 2003). In the lowland rainforest of Betampona mean home range size has been estimated as 27 ha (Glessner and Britt 2005). Indris are capable of traversing their entire territories in a few minutes but are usually fairly sedentary, moving only a few times during the day (Bonadonna <em>et al.</em> 2017). </p>  <p>Intergroup encounters are rare (Bonadonna <em>et al.</em> 2017). Most (87%) encounters are resolved by territorial songs, only rarely do the disputes result in physical fights between the males (Bonadonna <em>et al.</em> 2017). Encounters occur at the periphery of group territories, between 0 and 82 m from the boundary (mean 22 ± 27 m, Bonadonna <em>et al. </em>2017).</p><p></p>",
+    "threats": "<p><span lang=\"EN-CA\"></p><p>                 </p><p>The principal threat to this species is habitat destruction for slash and burn agriculture, logging and fuelwood gathering, all of which take place even within protected areas. Increasing levels of illegal hunting is also a major problem for the Indri (Jenkins <span class=\"Betont\"><em>et al. </em>2011). Habitat fragmentation is leading to genetic isolation of some Indri populations (Nunziata <em>et al. </em>2016).</span></p><p></p>",
+    "measures": "<p>                   </p><p>This species is listed on Appendix I of CITES. It occurs in 18 protected areas (Rylands<em> et al.</em> 2018), including three national parks (Mananara-Nord, Mantadia and Zahamena) one natural park (Makira), two nature reserves (Betampona and Zahamena) and five special reserves (Analamazaotra, Mangerivola, Ambatovaky, Anjanaharibe-Sud, and Marotandrano) (Mittermeier <span class=\"Betont\"><em>et al.</em> 2010). A significant population, comprising dark and black-and-white individuals, is found in the Andriantantely lowland rainforest, part of the Ankeniheny-Zahamena Corridor protected area but separated from the main corridor by an area of deforested agricultural land (King <em>et al.</em> 2013a, Seaman <em>et al.</em> 2018). Andriantantely is the focus of community-based conservation activities facilitated by The Aspinall Foundation to protect this high-priority lowland rainforest which supports major populations not only of Indri but also of other Critically Endangered species such as Black-and-white Ruffed Lemurs and Greater Bamboo Lemurs (King <em>et al.</em> 2013a, Ravaloharimanitra <em>et al.</em> 2015a,b). Much of the Ankeniheny-Zahamena rainforest Corridor also benefits from community-based conservation of sites supporting Indri and other lemurs (King <em>et al.</em> 2013b, Rasolofoharivelo <em>et al.</em> 2013, Ravaloharimanitra <em>et al.</em> 2015b), as do the adjacent sites of Analamazaotra Forest Station and Torotorofotsy-Ihofa complex through the activities of Association Mitsinjo (Dolch <em>et al.</em> 2013, 2015). The new protected area at Maromizaha also supports a population of Indri, where GERP runs conservation and research projects (eg. Torti <em>et al.</em> 2018, Bonadonna <em>et al.</em> 2019). A major region wide conservation education campaign to eliminate hunting is recommended (eg. Randrianasolo <em>et al</em>. 2013), for which the Indri could be promoted as the flagship species. This species has never successfully been kept in captivity and thus captive breeding programs are highly doubtful.<em></em></p><strong></strong>",
+    "use_trade": "<strong></strong>                 <p>Illegal hunting is a major problem for the Indri in certain areas. Although long thought to be protected by local <span class=\"Betont\">fadys (traditional taboos), these do not appear to be universal and the animals are now hunted even in places where such tribal taboos do exist. In many areas these taboos are breaking down with cultural erosion and immigration, and local people often find ways to circumvent taboos even if they are still in place. For example, a person for whom eating the Indri is forbidden may still hunt the animals for sale to others, while those who may be forbidden to kill Indris can purchase them for food. Recent studies of villages in the Makira Forest indicate that Indri have also been hunted in the past for their skins (which were worn as clothing), that Indri meat is prized and fetches a premium price, and that current levels of Indri hunting are unsustainable (Golden 2005, 2009, Jenkins <span class=\"Betont\"><em>et al.</em> 2011, R. Dolch <em>pers. obs.</em>). There is evidence that small numbers of live Indris have been traded within Madagascar in recent years, and others may have been smuggled out of Madagascar.</span></p>",
+    "rationale": "<p>                 </p><p>There is a suspected population reduction of ≥80% ongoing and into the future over a three generation time period (33 years) for this species, based on a continuing and projected decline in area, extent and quality of habitat, in addition to continuing and projected exploitation through unsustainable hunting pressure.<span class=\"apple-converted-space\"> Based on these premises, the species is listed as Critically Endangered.</p><p></p>",
+    "trend_justification": null,
+    "taxonomic_notes": "Two subspecies have been proposed (Groves 2001), however, this is not supported by morphological (Zaonarivelo <em>et al.</em> 2007) or genetic (Brenneman <em>et al. </em>2016) analysis, supporting the opinion that the two major colour forms are merely part of a clinal variation and not indicative of distinct taxa (Brenneman <em>et al. </em>2016)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_1",
+      "description": {
+        "en": "Formal education"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": true,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Shifting agriculture"
+      },
+      "code": "2_1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Motivation Unknown/Unrecorded"
+      },
+      "code": "5_3_5"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "King, T., Dolch, R., Randriahaingo, H.N.T., Randrianarimanana, L. & Ravaloharimanitra, M.",
+      "value": [
+        "Rainer Dolch (Association Mitsinjo, Madagascar)",
+        "Tony King (The Aspinall Foundation, Madagascar)",
+        "Lucien Randrianarimanana (The Aspinall Foundation, Madagascar)",
+        "Hery Randriahaingo (The Aspinall Foundation, Andravoahangy, Antananarivo, Madagascar)",
+        "Maholy Ravaloharimanitra (The Aspinall Foundation, Madagascar)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Reuter, K.E.",
+      "value": [
+        "Kim Reuter (IUCN SSC Primate SG)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Andriaholinirina, N., Baden, A., Blanco, M., Chikhi, L., Cooke, A., Dolch, R., Donati, G., Ganzhorn, J., Golden, C., Groeneveld, L.F., Hapke, A., Irwin, M., Johnson, S., Kappeler, P., King, T., Rakotondratsimba, M., Rakotondrainibe, H., Rakotoarisoa, G., Raharivololona, B., Patel, E., Mittermeier, R.A., Markolf, M., Lewis, R., Louis Jr, E.E., Mass, V., Nichols, R., Rabarivola, C.J., Rajaobelina, S., Rakotomanga, B., Rakotondratsimba, G., Ratsimbazafy, J., Rasoloharijaona, S., Rasamimananana, H., Randrianasolo, H., Randrianambinina, B., Ranaivoarisoa, J.F., Ralison, J., Rakotonirina, L., Ralainasolo, F.B., Ramahaleo, T., Randrianahaleo, S.I., Randrianarimanana, L., Randriatahina, G., Rasolofoharivelo, T., Ratelolahy, F., Zaramody, A., Youssouf, J., Volampeno, S., Salmona, J., Razafindramanana, J., Ratsimbazafy, N., Razafindraibe, H., Rowe, N., Seiler, M., Wright, P. & Zaonarivelo, J.",
+      "value": [
+        "Russell A. Mittermeier (Conservation International)",
+        "Harison Randrianasolo (Madagascar Reptile Assessment / Conservation International, Madagascar)",
+        "R. Nichols (Queen Mary University of London)",
+        "R. Lewis (Durrell Wildlife Conservation Trust)",
+        "Nicole Andriaholinirina (Mahajanga University, Madagascar)",
+        "Andrea Baden (Yale University, USA)",
+        "Marina Blanco (Duke University Lemur Center, USA)",
+        "Lounes Chikhi (Instituto Gulbenkian de Ci�ncia, Portugal)",
+        "Andrew Cooke (Ambatovy Minerals S.A.)",
+        "Rainer Dolch (Association Mitsinjo, Madagascar)",
+        "Giuseppe Donati (Nocturnal Primate Research Group, Oxford Brookes University, UK)",
+        "Jörg Ganzhorn (Institute of Zoology, Ecology and Conservation, University of Hamburg, Germany)",
+        "Christopher Golden (Harvard University Center for the Environment, USA)",
+        "Linn Fenna Groeneveld (Courant Research Centre Geobiology, G�ttingen University, Germany)",
+        "Andreas Hapke (Institute of Anthropology, Johannes Gutenberg University of Mainz, Germany)",
+        "Mitch Irwin (Department of Anthropology, Northern Illinois University, USA)",
+        "Steig Johnson (Department of Anthropology, Calgary University, Canada)",
+        "Peter Kappeler (German Primate Center, Goettingen, Germany)",
+        "Tony King (The Aspinall Foundation, Madagascar)",
+        "Edward E. Jr. Louis Jr (Madagascar Biodiversity Partnership, Henry Doorly Zoo, Omaha, USA)",
+        "Matthias Markolf (IUCN SSC  Center for Species Survival Cologne Zoo - Wild Pigs and Asian Songbirds)",
+        "Vanessa Mass (Ambatovy Minerals S.A.)",
+        "Erik Patel (SAVA Conservation Project, Duke University Lemur Center, USA)",
+        "Clément Joseph Rabarivola (Mahajanga University, Madagascar)",
+        "Brigitte Raharivololona (University of Antananarivo, Madagascar)",
+        "Serge Rajaobelina (Fanamby, Madagascar)",
+        "Gilbert Rakotoarisoa (Parc Botanique et Zoologique de Tsimbazaza, Madagascar)",
+        "Barson Rakotomanga (Ambatovy Minerals S.A.,)",
+        "Hajanirina Rakotondrainibe (Ambatovy Minerals S.A.,)",
+        "Gilbert Rakotondratsimba (Ambatovy Minerals S.A.,)",
+        "Marius Rakotondratsimba (The Peregrine Fund, Madagascar)",
+        "Laingoniaina Rakotonirina (The Aspinall Foundation, Madagascar)",
+        "Fidimalala Bruno Ralainasolo (Durrell Wildlife Conservation Trust - Madagascar Programme, Madagascar)",
+        "Jos� Ralison (G.E.R.P. (Groupe d'Etude et de Recherche sur les Primates de Madagascar))",
+        "Tiana Ramahaleo (WWF, Madagascar)",
+        "Jean Freddy Ranaivoarisoa (Madagascar Biodiversity Partnership, Antsiranana University, Madagascar)",
+        "Sahoby Ivy Randrianahaleo (D.G.F (Direction G�n�rale des For�ts), Madagascar)",
+        "Blanchard Randrianambinina (Mahajanga University, Madagascar)",
+        "Lucien Randrianarimanana (The Aspinall Foundation, Madagascar)",
+        "Guy Randriatahina (AEECL (Association Europ�enne pour l�Etude et la Conservation des L�muriens), Madagascar)",
+        "Hanta Rasamimananana (Ecole Normale Sup�rieure, University of Antananarivo, Madagascar )",
+        "Tovonanahary Rasolofoharivelo (The Aspinall Foundation, Madagascar)",
+        "Solofonirina Rasoloharijaona (Mahajanga University, Madagascar)",
+        "Felix Ratelolahy (Wildlife Conservation Society, Madagascar)",
+        "Jonah Ratsimbazafy (Durrell Wildlife Conservation Trust - Madagascar Programme)",
+        "Noro Ratsimbazafy (Ambatovy Minerals S.A.,)",
+        "Hanta Razafindraibe (Department of Animal Biology, University of Antananarivo, Madagascar)",
+        "Josia Razafindramanana (G.E.R.P. (Groupe d�Etude et de Recherche sur les Primates de Madagascar), Madagascar)",
+        "Noel Rowe (Primate Conservation Inc.)",
+        "Jordi Salmona (Population and Conservation Genetics Group, Instituto Gulbenkian de Ciencia, Portugal)",
+        "Melanie Seiler (Bristol Conservation and Science Foundation; School of Biological Sciences, University of Bristol, UK)",
+        "Sylviane Volampeno (AEECL (Association Europ�enne pour l�Etude et la Conservation des L�muriens), Madagascar)",
+        "Patricia Wright (Stony Brook University, Institute for the Conservation of Tropical Environments (ICTE), USA)",
+        "Jacky Youssouf (University of Toliara, Madagascar)",
+        "John Zaonarivelo (University of Antsiranana, Madagascar)",
+        "Alphonse Zaramody (Mahajanga University, Madagascar)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Chiozza, F., Pacifici, M. & Schwitzer, C.",
+      "value": [
+        "Federica Chiozza (Global Mammal Assessment)",
+        "Christoph Schwitzer (IUCN SSC Primate RLA / Bristol Conservation and Science Foundation , Bristol Zoo Gardens, Clifton, Bristol)",
+        "Michela Pacifici (Global Mammal Assessment)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Groves C.P. 2001. <i>Primate Taxonomy</i>. Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "2001",
+      "title": "Primate Taxonomy",
+      "author": "Groves C.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mittermeier, R.A., Louis Jr., E.E., Richardson, M., Schwitzer, C., Langrand, O., Rylands, A.B., Hawkins, F., Rajaobelina, S., Ratsimbazafy, J., Rasoloarison, R., Roos, C., Kappeler, P.M. and MacKinnon, J. 2010. <i>Lemurs of Madagascar. 3rd edition</i>. Conservation International, Arlington, VA.",
+      "year": "2010",
+      "title": "Lemurs of Madagascar. 3rd edition",
+      "author": "Mittermeier, R.A., Louis Jr., E.E., Richardson, M., Schwitzer, C., Langrand, O., Rylands, A.B., Hawkins, F., Rajaobelina, S., Ratsimbazafy, J., Rasoloarison, R., Roos, C., Kappeler, P.M. and MacKinnon, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C. 2013. Generation length for mammals. <i>Nature Conservation</i> 5: 87–94.",
+      "year": "2013",
+      "title": "Generation length for mammals",
+      "author": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Powzyk, J. A. 1997. The socio-ecology of two sympatric indrids, <i>Propithecus diadema diadema</i> and <i>Indri indri</i>: A comparison of feeding strategies and their possible repercussions on species-specific behaviors. Ph.D. Thesis, Duke University.",
+      "year": "1997",
+      "title": "The socio-ecology of two sympatric indrids, <i>Propithecus diadema diadema</i> and <i>Indri indri</i>: A comparison of feeding strategies and their possible repercussions on species-specific behaviors",
+      "author": "Powzyk, J. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Britt, A., Randriamandratonirina, N. J., Glasscock, K. D. and Iambana, B. R. 2002. Diet and feeding behaviour of <i>Indri indri</i> in a low-altitude rain forest. <i>Folia Primatologica</i> 73(5): 225–239.",
+      "year": "2002",
+      "title": "Diet and feeding behaviour of <i>Indri indri</i> in a low-altitude rain forest",
+      "author": "Britt, A., Randriamandratonirina, N. J., Glasscock, K. D. and Iambana, B. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Goodman, S. M. and Ganzhorn, J. U. 2004. Elevational Ranges of Lemurs in the Humid Forests of Madagascar. <i>International Journal of Primatology</i> 25(2): 331-350.",
+      "year": "2004",
+      "title": "Elevational Ranges of Lemurs in the Humid Forests of Madagascar",
+      "author": "Goodman, S. M. and Ganzhorn, J. U.",
+      "citation_short": null
+    },
+    {
+      "citation": "Powzyk, J. and Thalmann, U. 2003. <i>Indri indri</i>, indri. In: S. M. Goodman and J. P. Benstead (eds), <i>The Natural History of Madagascar</i>, pp. 1342–1345. University of Chicago Press, Chicago, IL, USA.",
+      "year": "2003",
+      "title": "<i>Indri indri</i>, indri",
+      "author": "Powzyk, J. and Thalmann, U.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pollock, J. J. 1979. Spatial distribution and ranging behavior in lemurs. In: G. A. Doyle and R. D. Martin (eds), <i>The Study of Prosimian Behavior</i>, pp. 359 – 409. Academic Press, New York, USA.",
+      "year": "1979",
+      "title": "Spatial distribution and ranging behavior in lemurs",
+      "author": "Pollock, J. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Golden, C. D. 2005. Eaten to endangerment: Mammal hunting and the bushmeat trade in Madagascar’s Makira Forest. Undergraduate Thesis, Harvard University.",
+      "year": "2005",
+      "title": "Eaten to endangerment: Mammal hunting and the bushmeat trade in Madagascar’s Makira Forest",
+      "author": "Golden, C. D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pollock, J.I. 1977. The ecology and sociology of feeding in <i>Indri indri</i>. In: T. H. Clutton-Brock (ed.), <i>Primate Ecology: Studies of Feeding and Ranging Behaviour in Lemurs, Monkeys  and Apes.</i>, pp. 37–69. Academic Press, New York, USA.",
+      "year": "1977",
+      "title": "The ecology and sociology of feeding in <i>Indri indri</i>",
+      "author": "Pollock, J.I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Jenkins, P.D. 1987. <i>Catalogue of Primates in British Museum (Natural History) and elsewhere in the British Isles</i>. British Museum (Natural History), London, UK.",
+      "year": "1987",
+      "title": "<i>Catalogue of Primates in British Museum (Natural History) and elsewhere in the British Isles</i>",
+      "author": "Jenkins, P.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jenkins, R., Keane, A., Rakotoarivelo, A., Rakotomboavonjy, V., Randrianandrianina, F., Razafimanahaka, H., Ralaiarimalala, S., Jones, J. 2011. Analysis of Patterns of Bushmeat Consumption Reveals Extensive Exploitation of Protected Species in Eastern Madagascar. <i>PLoS ONE </i> 6(12).",
+      "year": "2011",
+      "title": "Analysis of Patterns of Bushmeat Consumption Reveals Extensive Exploitation of Protected Species in Eastern Madagascar",
+      "author": "Jenkins, R., Keane, A., Rakotoarivelo, A., Rakotomboavonjy, V., Randrianandrianina, F., Razafimanahaka, H., Ralaiarimalala, S., Jones, J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Golden, C. D. 2009. Bushmeat hunting and use in the Makira Forest north-eastern Madagascar: a conservation and livelihoods issue. <i>Oryx </i> 43: 386-392.",
+      "year": "2009",
+      "title": "Bushmeat hunting and use in the Makira Forest north-eastern Madagascar: a conservation and livelihoods issue",
+      "author": "Golden, C. D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Dolch, R., Ndriamiary, J. N., Ratolojanahary, T., Randrianasolo, M., and Ramanantenasoa, I. A. 2015. Improving livelihoods, training para-ecologists, enthralling children: Earning trust for effective community-based biodiversity conservation in Andasibe, eastern Madagascar. <i>Madagascar Conservation & Development</i> 10(1S): 21-28.",
+      "year": "2015",
+      "title": "Improving livelihoods, training para-ecologists, enthralling children: Earning trust for effective community-based biodiversity conservation in Andasibe, eastern Madagascar",
+      "author": "Dolch, R., Ndriamiary, J. N., Ratolojanahary, T., Randrianasolo, M., and Ramanantenasoa, I. A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 13 June 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-2"
+    },
+    {
+      "citation": "Brown, J.L. and Yoder A.D. 2015. Shifting ranges and conservation challenges for lemurs in face of climate change. <i>Ecology and Evolution</i> 5(6): 1131-1142.",
+      "year": "2015",
+      "title": "Shifting ranges and conservation challenges for lemurs in face of climate change",
+      "author": "Brown, J.L. and Yoder A.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rylands, A. B., Goodman, S. M., and Louis Jr., E. E. 2018. Species’ lists for lemurs in protected areas. In: S. M. Goodman, M. J. Raherilalao and S. Wohlauser (eds), <i>Les Aires Protegees Terrestres de Madagascar: Leur Histoire, Description et Biote / The Terrestrial Protected Areas of Madagascar: Their History, Description, and Biota. Volume I: Introduction. Volume II: Northern and Eastern Madagascar / Le Nord et l’Est de Madagascar. Volume III: Western and Southwestern Madagascar – Synthesis / L’Ouest et le Sud de Madagascar – Synthesis</i>, pp. 1716. Association Vahatra, Antananarivo, Madagascar.",
+      "year": "2018",
+      "title": "Species’ lists for lemurs in protected areas",
+      "author": "Rylands, A. B., Goodman, S. M., and Louis Jr., E. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vieilledent, G., Grinandc, C., Rakotomalalac, F.A., Ranaivosoad, R., Rakotoarijaonad, R.-J., Allnutte, T.F. and Acharda, F. 2018. Combining global tree cover loss data with historical national forest cover maps to look at six decades of deforestation and forest fragmentation in Madagascar. <i>Biological Conservation</i> 222: 189-197.",
+      "year": "2018",
+      "title": "Combining global tree cover loss data with historical national forest cover maps to look at six decades of deforestation and forest fragmentation in Madagascar",
+      "author": "Vieilledent, G., Grinandc, C., Rakotomalalac, F.A., Ranaivosoad, R., Rakotoarijaonad, R.-J., Allnutte, T.F. and Acharda, F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Eppley, T.M., Santini, L., Tinsman, J.C. and Donati, G. 2020. Do functional traits offset the effects of fragmentation? The case of large-bodied diurnal large species. <i>American Journal of Primatology</i>: 10.1002/ajp.23104.",
+      "year": "2020",
+      "title": "Do functional traits offset the effects of fragmentation? The case of large-bodied diurnal large species",
+      "author": "Eppley, T.M., Santini, L., Tinsman, J.C. and Donati, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Morelli, T.L., Smith, A.B., Mancini, A.N., Balko, E.A., Borgerson, C., Dolch, R., Farris, Z., Federman, S., Golden, C.D., Holmes, S., Irwin, M., Jacobs, R.L., Johnson, S., King, T., Lehman, S., Louis Jr., E.E., Murphy, A., Randriahaingo, H.N.T., Randrianarimanana, H.L.L., Ratsimbazafy; J., Razafindratsima, O.H. and Baden, A.L. 2020. The fate of Madagascar's rainforest habitat. <i>Nature Climate Change</i> 10(89-96): DOI: 10.1038/s41558-019-0647-x.",
+      "year": "2020",
+      "title": "The fate of Madagascar's rainforest habitat",
+      "author": "Morelli, T.L., Smith, A.B., Mancini, A.N., Balko, E.A., Borgerson, C., Dolch, R., Farris, Z., Federman, S., Golden, C.D., Holmes, S., Irwin, M., Jacobs, R.L., Johnson, S., King, T., Lehman, S., Louis Jr., E.E., Murphy, A., Randriahaingo, H.N.T., Randrianarimanana, H.L.L., Ratsimbazafy; J., Razafindratsima, O.H. and Baden, A.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Seaman, D., Randriahaingo, H. N. T., Randrianarimanana, H. L. L., Ravaloharimanitra, M., Humle, T. and King, T. 2018. Edge effects on indri and black-and-white ruffed lemur distribution in the Andriantantely lowland rainforest, eastern Madagascar. <i>Lemur News</i> 21: 51-56.",
+      "year": "2018",
+      "title": "Edge effects on indri and black-and-white ruffed lemur distribution in the Andriantantely lowland rainforest, eastern Madagascar",
+      "author": "Seaman, D., Randriahaingo, H. N. T., Randrianarimanana, H. L. L., Ravaloharimanitra, M., Humle, T. and King, T",
+      "citation_short": ""
+    },
+    {
+      "citation": "King, T., Ravaloharimanitra, M., Randrianarimanana, H.L.L., Rasolofoharivelo, M.T. and Chamberlan, C. 2013b. Community-based conservation of critically endangered lemurs at the Sakalava and Ranomainty sites within the Ankeniheny-Zahamena rainforest corridor, eastern Madagascar. <i>Lemur News</i> 17(63-70).",
+      "year": "2013b",
+      "title": "Community-based conservation of critically endangered lemurs at the Sakalava and Ranomainty sites within the Ankeniheny-Zahamena rainforest corridor, eastern Madagascar",
+      "author": "King, T., Ravaloharimanitra, M., Randrianarimanana, H.L.L., Rasolofoharivelo, M.T. and Chamberlan, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Andriaholinirina, N., Baden, A., Blanco, M., Chikhi, L., Cooke, A., Davies, N., Dolch, R., Donati, G., Ganzhorn, J., Golden, C., Groeneveld, L.F., Irwin, M., Johnson, S., Kappeler, P., King, T., Lewis, R., Louis, E.E., Markolf, M., Mass, V., Mittermeier, R.A., Nichols, R., Patel, E., Rabarivola, C.J., Raharivololona, B., Rajaobelina, S., Rakotoarisoa, G., Rakotomanga, B., Rakotonanahary, J., Rakotondrainibe, H., Rakotondratsimba, G., Rakotondratsimba, M., Rakotonirina, L., Ralainasolo, F.B., Ralison, J., Ramahaleo, T., Ranaivoarisoa, J.F., Randrianahaleo, S.I., Randrianambinina, B., Randrianarimanana, L., Randrianasolo, H., Randriatahina, G., Rasamimananana, H., Rasolofoharivelo, T., Rasoloharijaona, S., Ratelolahy, F., Ratsimbazafy, J., Ratsimbazafy, N., Razafindraibe, H., Razafindramanana, J., Rowe, N., Salmona, J., Seiler, M., Volampeno, S., Wright, P., Youssouf, J., Zaonarivelo, J. and Zaramody, A. 2014. Indri indri. Available at: <a href=\"https://dx.doi.org/10.2305/IUCN.UK.2014-1.RLTS.T10826A16115457.en\">https://dx.doi.org/10.2305/IUCN.UK.2014-1.RLTS.T10826A16115457.en</a>. (Accessed: 31st December).",
+      "year": "2014",
+      "title": "Indri indri",
+      "author": "Andriaholinirina, N., Baden, A., Blanco, M., Chikhi, L., Cooke, A., Davies, N., Dolch, R., Donati, G., Ganzhorn, J., Golden, C., Groeneveld, L.F., Irwin, M., Johnson, S., Kappeler, P., King, T., Lewis, R., Louis, E.E., Markolf, M., Mass, V., Mittermeier, R.A., Nichols, R., Patel, E., Rabarivola, C.J., Raharivololona, B., Rajaobelina, S., Rakotoarisoa, G., Rakotomanga, B., Rakotonanahary, J., Rakotondrainibe, H., Rakotondratsimba, G., Rakotondratsimba, M., Rakotonirina, L., Ralainasolo, F.B., Ralison, J., Ramahaleo, T., Ranaivoarisoa, J.F., Randrianahaleo, S.I., Randrianambinina, B., Randrianarimanana, L., Randrianasolo, H., Randriatahina, G., Rasamimananana, H., Rasolofoharivelo, T., Rasoloharijaona, S., Ratelolahy, F., Ratsimbazafy, J., Ratsimbazafy, N., Razafindraibe, H., Razafindramanana, J., Rowe, N., Salmona, J., Seiler, M., Volampeno, S., Wright, P., Youssouf, J., Zaonarivelo, J. and Zaramody, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bonadonna, G., Torti, V., De Gregorio, C., Valente, D., Randrianarison, R.M., Pozzi, L., Gamba, M. and Giacoma, C. 2019. Evidence of genetic monogamy in the lemur Indri (Indri indri). <i>American Journal of Primatology</i> 81(6): e22993.",
+      "year": "2019",
+      "title": "Evidence of genetic monogamy in the lemur Indri (Indri indri).",
+      "author": "Bonadonna, G., Torti, V., De Gregorio, C., Valente, D., Randrianarison, R.M., Pozzi, L., Gamba, M. and Giacoma, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bonadonna, G., Torti, V., Sorrentino, V., Randrianarison, R.M., Zaccagno, M., Gamba, M., Tan, C.L. and Giacoma, C. 2017. Territory exclusivity and intergroup encounters in the indris (Mammalia: Primates: Indridae: Indri indri) upon methodological tuning. <i>The European Zoological Journal</i> 84(1): 238-251.",
+      "year": "2017",
+      "title": "Territory exclusivity and intergroup encounters in the indris (Mammalia: Primates: Indridae: Indri indri) upon methodological tuning",
+      "author": "Bonadonna, G., Torti, V., Sorrentino, V., Randrianarison, R.M., Zaccagno, M., Gamba, M., Tan, C.L. and Giacoma, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brenneman, R.A., McLain, A.T., Taylor, J.M., Zaonarivelo, J.R., Lei, R., McGuire, S.M., Andriantompohavana, R., Rylands, A.B. and Louis, E.E. 2016. Genetic analysis of the Indri reveals no evidence of distinct subspecies. <i>International Journal of Primatology</i> 37(3): 460-477.",
+      "year": "2016",
+      "title": "Genetic analysis of the Indri reveals no evidence of distinct subspecies",
+      "author": "Brenneman, R.A., McLain, A.T., Taylor, J.M., Zaonarivelo, J.R., Lei, R., McGuire, S.M., Andriantompohavana, R., Rylands, A.B. and Louis, E.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dolch, R., Ratolojanahary, T., Randrianasolo, H., Rasolofoharivelo, T., King, T. and Randrianarimanana, L. 2013. Torotorofotsy–Ihofa. In: Schwitzer, C., Mittermeier, R.A., Davies, N., Johnson, S., Ratsimbazafy, J., Razafindramanana, J., Louis Jr., E. E. & Rajaobelina, S. (ed.), <i>Lemurs of Madagascar: A Strategy for their Conservation 2013-2016</i>, pp. 71-73. IUCN/SSC Primate Specialist Group, Bristol Conservation and Science Foundation, and Conservation International, Bristol, UK.",
+      "year": "2013",
+      "title": "Torotorofotsy–Ihofa",
+      "author": "Dolch, R., Ratolojanahary, T., Randrianasolo, H., Rasolofoharivelo, T., King, T. and Randrianarimanana, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Glessner, K.D.G. and Britt, A. 2005. Population density and home range size of Indri indri in a protected low altitude rain forest. <i>International Journal of Primatology</i> 26(4): 855-872.",
+      "year": "2005",
+      "title": "Population density and home range size of Indri indri in a protected low altitude rain forest",
+      "author": "Glessner, K.D.G. and Britt, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kappeler, P.M. 1997. Determinants of primate social organization: comparative evidence and new insights from Malagasy lemurs. <i>Biological Reviews</i> 72(1): 111-151.",
+      "year": "1997",
+      "title": "Determinants of primate social organization: comparative evidence and new insights from Malagasy lemurs",
+      "author": "Kappeler, P.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "King, T., Rasolofoharivelo, T., Randrianasolo, H., Dolch, R., Randrianarimanana, L. and Ratolojanahary, T. 2013a. Andriantantely. In: Schwitzer, C., Mittermeier, R.A., Davies, N., Johnson, S., Ratsimbazafy, J., Razafindramanana, J., Louis Jr., E. E. & Rajaobelina, S. (ed.), <i>Lemurs of Madagascar: A Strategy for their Conservation 2013-2016</i>, pp. 69-70. IUCN/SSC Primate Specialist Group, Bristol Conservation and Science Foundation, and Conservation International, Bristol, UK.",
+      "year": "2013a",
+      "title": "Andriantantely",
+      "author": "King, T., Rasolofoharivelo, T., Randrianasolo, H., Dolch, R., Randrianarimanana, L. and Ratolojanahary, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Maretti G, Sorrentino V, Finomana A, Gamba M, and Giacoma C. 2010. Not just a pretty song: An overview of the vocal repertoire of Indri indri. <i>Journal of Anthropological Science</i> 88: 151-165.",
+      "year": "2010",
+      "title": "Not just a pretty song: An overview of the vocal repertoire of Indri indri",
+      "author": "Maretti G, Sorrentino V, Finomana A, Gamba M, and Giacoma C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nunziata, S.O., Wallenhorst, P., Barrett, M.A., Junge, R.E., Yoder, A.D. and Weisrock, D.W. 2016. Population and conservation genetics in an Endangered lemur, Indri indri, across three forest reserves in Madagascar. <i>International Journal of Primatology</i> 37(6): 688-702.",
+      "year": "2016",
+      "title": "Population and conservation genetics in an Endangered lemur, Indri indri, across three forest reserves in Madagascar",
+      "author": "Nunziata, S.O., Wallenhorst, P., Barrett, M.A., Junge, R.E., Yoder, A.D. and Weisrock, D.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pollock, J. 1975. Field observations on Indri indri: A preliminary report. In: Tattersall, I. and R. W. Sussman (eds), <i>Lemur Biology</i>, pp. 287-311. Plenum Press, New York, USA.",
+      "year": "1975",
+      "title": "Field observations on Indri indri: A preliminary report",
+      "author": "Pollock, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Randrianasolo, H., Rasolofoharivelo, T., Dolch, R., King, T., Randrianarimanana, L. and Ratolojanahary, T. 2013. Prevention and reduction of bushmeat hunting in the Ankeniheny–Zahamena Corridor (CAZ). In: Schwitzer, C., Mittermeier, R.A., Davies, N., Johnson, S., Ratsimbazafy, J., Razafindramanana, J., Louis Jr., E. E. & Rajaobelina, S. (ed.), <i>Lemurs of Madagascar: A Strategy for their Conservation 2013-2016</i>, pp. 76-78. IUCN/SSC Primate Specialist Group, Bristol Conservation and Science Foundation, and Conservation International, Bristol, UK.",
+      "year": "2013",
+      "title": "Prevention and reduction of bushmeat hunting in the Ankeniheny–Zahamena Corridor (CAZ)",
+      "author": "Randrianasolo, H., Rasolofoharivelo, T., Dolch, R., King, T., Randrianarimanana, L. and Ratolojanahary, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rasolofoharivelo, T., Randrianarimanana, L., King, T., Randrianasolo, H., Dolch, R. and Ratolojanahary, T. 2013. Western portion of the Ankeniheny-Zahamena Corridor (CAZ). In: Schwitzer, C., Mittermeier, R.A., Davies, N., Johnson, S., Ratsimbazafy, J., Razafindramanana, J., Louis Jr., E. E. & Rajaobelina, S. (ed.), <i>Lemurs of Madagascar: A Strategy for their Conservation 2013-2016</i>, pp. 74-75. IUCN/SSC Primate Specialist Group, Bristol Conservation and Science Foundation, and Conservation International, Bristol, UK.",
+      "year": "2013",
+      "title": "Western portion of the Ankeniheny-Zahamena Corridor (CAZ)",
+      "author": "Rasolofoharivelo, T., Randrianarimanana, L., King, T., Randrianasolo, H., Dolch, R. and Ratolojanahary, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ravaloharimanitra, M., Randriahaingo, H.N.T., Ranaivosoa, L. H., Chamberlan, C. and King, T. 2015a. Conservation communautaire de la forêt humide de basse altitude d’Andriantantely, Madagascar. <i>Madagascar Conservation & Development</i> 10(S1): 29-34.",
+      "year": "2015a",
+      "title": "Conservation communautaire de la forêt humide de basse altitude d’Andriantantely, Madagascar",
+      "author": "Ravaloharimanitra, M., Randriahaingo, H.N.T., Ranaivosoa, L. H., Chamberlan, C. and King, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ravaloharimanitra, M., Randrianarimanana, H.L.L., Randriahaingo, H.N.T., Mihaminekena, T.H. and King, T. 2015b. Supporting the social, economic and environmental aspects of community-based conservation of greater bamboo lemurs, black-and-white ruffed lemurs and indri. <i>Lemur News</i> 19: 7-9.",
+      "year": "2015b",
+      "title": "Supporting the social, economic and environmental aspects of community-based conservation of greater bamboo lemurs, black-and-white ruffed lemurs and indri",
+      "author": "Ravaloharimanitra, M., Randrianarimanana, H.L.L., Randriahaingo, H.N.T., Mihaminekena, T.H. and King, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Torti, V., Valente, D., De Gregorio, C., Comazzi, C., Miaretsoa, L., Ratsimbazafy, J., Giacoma, C. and Gamba, M. 2018. Call and be counted! Can we reliably estimate the number of callers in the indri's (Indri indri) song? <i>PLOS ONE</i> 13(8): p.e0201664.",
+      "year": "2018",
+      "title": "Call and be counted! Can we reliably estimate the number of callers in the indri's (Indri indri) song?",
+      "author": "Torti, V., Valente, D., De Gregorio, C., Comazzi, C., Miaretsoa, L., Ratsimbazafy, J., Giacoma, C. and Gamba, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zaonarivelo, J.R., Andriantompohavana, R., Engberg, S.E., Kelley, S.G., Randriamanana, J.C., Louis Jr, E.E. and Brenneman, R.A. 2007. Morphometric data for Indri (Indri indri) collected from ten forest fragments in eastern Madagascar. <i>Lemur News</i> 12: 19-23.",
+      "year": "2007",
+      "title": "Morphometric data for Indri (Indri indri) collected from ten forest fragments in eastern Madagascar",
+      "author": "Zaonarivelo, J.R., Andriantompohavana, R., Engberg, S.E., Kelley, S.G., Randriamanana, J.C., Louis Jr, E.E. and Brenneman, R.A.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

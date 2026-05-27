@@ -1,0 +1,423 @@
+{
+  "assessment_date": "2016-09-01T01:00:00.000+01:00",
+  "year_published": "2016",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 9123,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/9123/115090506",
+  "citation": "Granjon, L. 2016. Gerbillus gerbillus (errata version published in 2017). The IUCN Red List of Threatened Species 2016: e.T9123A115090506. Accessed on 15 May 2026.",
+  "assessment_id": 115090506,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 9123,
+    "scientific_name": "Gerbillus gerbillus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "RODENTIA",
+    "family_name": "MURIDAE",
+    "genus_name": "Gerbillus",
+    "species_name": "gerbillus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Olivier, 1801)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Small Mammal Specialist Group",
+        "url": "http://www.small-mammals.org/",
+        "description": "Co-Chairs: Thomas Lacher (email: tlacher@tamu.edu) and Rosalind Kennerley (email: Rosalind.Kennerley@durrell.org)\nRed List Authority Coordinator: Roslaind Kennedy (email: Rosalind.Kennerley@durrell.org)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": true,
+        "name": "Lesser Egyptian Gerbil",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "2-3",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "10133714",
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species is found throughout the desert and semi-desert regions of northern Africa. It also occurs marginally in Israel and Jordan.",
+    "population": "It is a common species.",
+    "habitats": "This species is typically found in dry sandy or rocky areas, sometimes with sparse and coarse vegetation. It is also found in in areas close to palm groves.",
+    "threats": "There are no major threats to this species.",
+    "measures": "There are no conservation measure in place, however, in view of its wide range it is presumed to occur in a number of protected areas.",
+    "use_trade": null,
+    "rationale": "Listed as Least Concern in view of its wide distribution, presumed large population, and because it is unlikely to be declining fast enough to qualify for listing in a more threatened category.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Coastal Sand Dunes"
+      },
+      "code": "13_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Desert - Hot"
+      },
+      "code": "8_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Jordan"
+      },
+      "code": "JO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Niger"
+      },
+      "code": "NE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Chad"
+      },
+      "code": "TD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mali"
+      },
+      "code": "ML"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Palestine, State of"
+      },
+      "code": "PS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Western Sahara"
+      },
+      "code": "EH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [],
+  "threats": [],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Granjon, L.",
+      "value": [
+        "Laurent Granjon (The Center for Biology and Management of Populations (CBGP), Montpellier, France)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Amori, G.",
+      "value": [
+        "Giovanni Amori (Italian National Research Council, La Sapienza University in Rome, Italy)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Aulagnier, S., Shenbrot, G. & Amr, Z.S.S.",
+      "value": [
+        "Stéphane Aulagnier (Société Française pour l' Étude et la Protection des Mammifères)",
+        "Zuhair Amr (Jordan University of Science & Technology, Jordan)",
+        "Georgy Shenbrot"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This errata assessment has been created because the map was accidentally left out of the version published previously."
+    }
+  ],
+  "references": [
+    {
+      "citation": "IUCN. 2017. The IUCN Red List of Threatened Species. Version 2017-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 27 April 2017).",
+      "year": "2017",
+      "title": "The IUCN Red List of Threatened Species. Version 2017-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2017-1"
+    },
+    {
+      "citation": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C. 2013. Generation length for mammals. <i>Nature Conservation</i> 5: 87–94.",
+      "year": "2013",
+      "title": "Generation length for mammals",
+      "author": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Osborn, D.J. and Helmy, I. 1980. <i>The contemporary land mammals of Egypt (including Sinai)</i>. Field Museum of Natural History, Bethseda, Maryland.",
+      "year": "1980",
+      "title": "The contemporary land mammals of Egypt (including Sinai)",
+      "author": "Osborn, D.J. and Helmy, I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Qumsiyeh, M.B. 1996. <i>Mammals of the Holy Land</i>. Texas Tech University Press, Lubbock.",
+      "year": "1996",
+      "title": "Mammals of the Holy Land",
+      "author": "Qumsiyeh, M.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Amr, Z.S. 2000. <i>Jordan Country Study of Biological Diversity. Mammals of Jordan</i>. United Nations Environment Programme and National Library, Amman, Jordan.",
+      "year": "2000",
+      "title": "Jordan Country Study of Biological Diversity. Mammals of Jordan",
+      "author": "Amr, Z.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Klein, J.M., Poulet, A.R. and Simonkovich, E. 1975. Observations écologiques dans une zone enzootique de peste en Mauritanie. 1. Les rongeurs, et en particulier <i>Gerbillus gerbillus</i> Olivier, 1801 (Rodentia, Gerbillinae). <i>Cahiers Orstom, série Entomologie médicale et Parasitologie</i> 13: 13-28.",
+      "year": "1975",
+      "title": "Observations écologiques dans une zone enzootique de peste en Mauritanie. 1. Les rongeurs, et en particulier <i>Gerbillus gerbillus</i> Olivier, 1801 (Rodentia, Gerbillinae)",
+      "author": "Klein, J.M., Poulet, A.R. and Simonkovich, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 07 December 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-3"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

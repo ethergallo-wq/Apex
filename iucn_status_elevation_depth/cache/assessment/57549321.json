@@ -1,0 +1,847 @@
+{
+  "assessment_date": "2014-06-20T01:00:00.000+01:00",
+  "year_published": "2014",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 899,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/899/57549321",
+  "citation": "Angerbjörn, A. & Tannerfeldt, M. 2014. Vulpes lagopus. The IUCN Red List of Threatened Species 2014: e.T899A57549321. Accessed on 15 May 2026.",
+  "assessment_id": 57549321,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 899,
+    "scientific_name": "Vulpes lagopus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CARNIVORA",
+    "family_name": "CANIDAE",
+    "genus_name": "Vulpes",
+    "species_name": "lagopus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Canid Specialist Group (foxes, jackals and wild dogs)",
+        "url": "http://www.canids.org/",
+        "description": "Chair: Claudio Sillero-Zubiri (email: canids@zoology.oxford.ac.uk)\nRed List Authority Coordinator: Michael Hoffmann (email: mike.hoffmann@zsl.org)\nNewsletter: http://www.canids.org/c-b-c"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Polar Fox",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Ïåñåö",
+        "language": "rus"
+      },
+      {
+        "main": false,
+        "name": "Isatis",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Polarfuchs",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Renard Polaire",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Reynard Polaire",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Zorro Ártico",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Песец",
+        "language": "rus"
+      },
+      {
+        "main": true,
+        "name": "Arctic Fox",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Alopex lagopus (Linnaeus, 1758)",
+        "status": "NEW",
+        "genus_name": "Alopex",
+        "species_name": "lagopus",
+        "species_author": "(Linnaeus, 1758)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Canis lagopus Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Canis",
+        "species_name": "lagopus",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 3000,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Not Applicable"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": ">20,000",
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "The Arctic Fox has a circumpolar distribution in all Arctic tundra habitats. It breeds north of and above the tree line on the Arctic tundra in North America and Eurasia and on the alpine tundra in Fennoscandia, ranging from northern Greenland at 88°N to the southern tip of Hudson Bay, Canada, 53°N. The southern edge of the species' distribution range may have moved somewhat north during the 20th century resulting in a smaller total range (Hersteinsson and Macdonald 1992). The species inhabits most Arctic islands and many islands in the Bering Sea. The Arctic Fox was also introduced to previously isolated islands in the Aleutian chain at the end of the 19th century by the fur industry (Bailey 1992), where they are now often being eliminated by bird conservation efforts (Walton <em>et al</em>. 2013). The Arctic Fox has also been observed on the sea ice up to the North Pole. They may occur up to 3,000 m asl in elevation.&#160;<br/><br/>During the last glaciation, the Arctic Fox had a distribution along the ice edge, and Arctic Fox remains have been found in a number of Pleistocene deposits over most of Europe and large parts of Siberia (Dalén <em>et al</em>. 2007).",
+    "population": "The world population of Arctic Foxes is in the order of several hundred thousand animals. Most populations fluctuate widely in numbers between years in response to varying lemming numbers. In most areas, however, population status is believed to be good. The species is common in the tundra areas of Russia, Canada, coastal Alaska, Greenland and Iceland. Exceptions are Fennoscandia, islands in the Bering Sea (Mednyi Island, Russia; Pribilof Islands, Alaska, e.g., St Paul), where populations are at critically low levels and appear to be declining further. On some Aleutian Islands, Alaska, non-native Arctic Foxes are being eradicated in the course of bird conservation efforts (Walton <em>et al</em>. 2013).&#160;Vagrant Arctic Foxes are common over the northern sea-ice where can move several thousands of kilometres following Polar Bears <em>Ursus maritimus&#160;</em>as scavengers (Tarroux <em>et al</em>. 2010).",
+    "habitats": "Inhabits Arctic and alpine tundra on the continents of Eurasia, North America and the Canadian archipelago, Siberian islands, Greenland, inland Iceland and Svalbard, and Sub-Arctic maritime habitat in the Aleutian island chain, Bering Sea Islands, Commander Islands and coastal Iceland. <br/><br/>The Arctic Fox is an opportunistic predator and scavenger but in most inland areas, the species is heavily dependent on fluctuating rodent populations. The species' main prey items include lemmings, both <em>Lemmus</em> spp. and <em>Dicrostonyx</em> spp. (Macpherson 1969, Angerbjörn <em>et al.</em> 1999). In Fennoscandia, <em>Lemmus lemmus</em> was the main prey in summer (85% frequency of occurrence in faeces) followed by birds (Passeriformes, Galliformes and Caridriiformes, 34%) and reindeer (<em>Rangifer tarandus</em>) (21%; Elmhagen <em>et al</em>. 2000). In winter, ptarmigan and grouse (<em>Lagopus</em> spp.) are common prey in addition to rodents and reindeer (Kaikusalo and Angerbjörn 1995). Changes in fox populations have been observed to follow those of their main prey in three- to five-year cycles (Macpherson 1969, Angerbjörn <em>et al</em>. 1999, 2013) with up to 20 cubs produced by a single female (Tannerfeldt and Angerbjörn 1998).<br/><br/>Foxes living near ice-free coasts have access to both inland prey and sea birds, seal carcasses, fish and invertebrates connected to the marine environment, leading to relatively stable food availability and a more generalist strategy (Hersteinsson and Macdonald 1996). In late winter and summer, foxes found in coastal Iceland feed on seabirds (<em>Uria aalge</em>, <em>U. lomvia</em>), seal carcasses and marine invertebrates. Inland foxes rely more on ptarmigan in winter, and migrant birds, such as geese and waders, in summer (Hersteinsson and Macdonald 1996). In certain areas, foxes rely on colonies of Arctic geese, which can dominate their diet locally (Samelius and Lee 1998).&#160;Some populations switch between lemmings, migratory birds and marine resources depending on intra- and interannual variations in prey availability. The Arctic Fox depends also on remains of carrion left by larger predators, e.g. Polar Bear, Grey Wolf <em>Canis lupus</em>, and Wolverine <em>Gulo gulo</em>. It is itself a victim of predation, mainly from Red Fox, Wolverine, Golden Eagle, and humans.",
+    "threats": "Hunting for fur has long been a major mortality factor for the Arctic Fox. With the decline of the fur hunting industry, the threat of over-exploitation is lowered for most Arctic Fox populations. They may also be subject to direct persecution (as on St. Paul Island). Misinformation as to the origin of Arctic Foxes on the Pribilofs continues to foster negative attitudes and the long-term persistence of this endemic subspecies is in jeopardy. In areas connected to marine ecosystems, Arctic Foxes may also be affected by indirect threats, such as diseases and the effects of persistent organic pollutants (Sonne <em>et al</em>. 2008); indeed, an emerging threat in Fennoscandia is the impact of sarcoptic mange on populations (Mörner 1992).&#160;In some areas, gene swamping by farm-bred blue foxes (see Conservation) may threaten native populations (Norén&#160;<em>et al</em>. 2009).",
+    "measures": "The species is not included in the CITES Appendices.<br/><br/>In most of its range, the Arctic Fox is not protected. However, the species and its dens have had total legal protection in Sweden since 1928, in mainland Norway since 1930, and in Finland since 1940. In Europe, the Arctic Fox is a priority species under the Actions by the Community relating to the Environment (ACE). It is therefore to be given full protection. On St. Paul Island the declining Arctic Fox population currently has no legal protection (Walton<em> et al</em>. 2013). In Norway (Svalbard), Greenland, Canada, Russia, and Alaska, trapping is limited to licensed trappers operating in a defined trapping season. The enforcement of these laws appears to be uniformly good. In Iceland, bounty hunting takes place over most of the country outside nature reserves.<br/><br/>For occurrence in protected areas, good information is available only for Sweden and Finland. For Iceland, Arctic Foxes could potentially appear in most protected areas. <br/><br/>An action plan has been developed for Arctic Foxes in Sweden (Elmhagen 2008) and status reports have been published for Norway (Ulvund <em>et al</em>. 2013) and Finland (Kaikusalo <em>et al.</em> 2000). In Sweden, Norway and Finland, a conservation project led to significant increases in the population (Angerbjörn <em>et al</em>. 2013).&#160;<br/><br/>The Arctic Fox occurs widely in captivity on fur farms and has been bred for fur production for over 70 years. The present captive population originates from a number of wild populations and has been bred for characteristics different from those found in the wild, including large size. Escaped \"blue\" foxes may already be a problem in Fennoscandia (and to a lesser extent in Iceland) due to gene swamping (Norén <em>et al</em>. 2009).&#160;In Norway, foxes bred in captivity have successfully been released into the wild (Landa <em>et al</em>. 2014).<br/><br/>The following gaps still exist in knowledge of the Arctic Fox:<br/><br/>1) Little is known concerning the impact of diseases on fox populations, e.g. sarcoptic mange and <em>Echinococcus multilocularis</em>. Allied to this is our lack of knowledge of the epidemiology of Arctic rabies.<br/><br/>2) Considering the northward spread of the Red Fox in certain areas, studies are necessary to determine the effects of competition between Red Foxes and Arctic Foxes on various population parameters and Arctic Fox life-history patterns.<br/><br/>3) The non-recovery of the Fennoscandian population is a cause for concern, and requires specific attention, especially in terms of disease and genetics.",
+    "use_trade": "The Arctic Fox remains the single most important terrestrial game species in the Arctic. Indigenous peoples have always utilized its exceptional fur, and with the advent of the fur industry, the Arctic Fox quickly became an important source of income. Today, leg-hold traps and shooting are the main hunting methods. Because of their large reproductive capacity, Arctic Foxes can maintain population levels under high hunting pressure. In some areas, up to 50% of the total population has been harvested on a sustainable basis (Nasimovic and Isakov 1985). However, this does not allow for hunting during population lows, as shown by the situation in Fennoscandia. The Arctic Fox has nevertheless survived high fur prices better than most other Arctic mammals. Hunting has declined considerably in the last decades, as a result of low fur prices and alternative sources of income. In the Yukon, for example, the total value of all fur production decreased from $1.3 million in 1988 to less than $300,000 after 2000.",
+    "rationale": "The Arctic Fox has a circumpolar distribution in all Arctic tundra habitats, with a global population in the order of several hundred thousand animals. Most populations fluctuate widely in numbers between years in response to varying lemming numbers, but in most areas population status is believed to be good and there is no reason to believe that the species currently qualifies for listing as threatened under any of the criteria.",
+    "trend_justification": null,
+    "taxonomic_notes": "Often included in the genus <em>Alopex</em>, current evidence suggests that inclusion in&#160;<em>Vulpes</em> (<em>sensu</em> Wozencraft 2005) is warranted as <em>Vulpes </em>is otherwise paraphyletic with respect to <em>Alopex</em>.&#160;Nuclear and matrilineal (mitochondrial) DNA unambiguously support the inclusion of <em>Alopex lagopus</em> in <em>Vulpes&#160;</em>(Geffen <em>et al</em>. 1992, Lindblad-Toh <em>et al</em>. 2005, Perini <em>et al</em>. 2010)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [
+    {
+      "formerlyBred": "No",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Arctic Sea"
+      },
+      "code": "18"
+    },
+    {
+      "formerlyBred": "No",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northeast"
+      },
+      "code": "27"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Tundra"
+      },
+      "code": "4_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Aleutian Is."
+      },
+      "code": "ALU-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Alaska"
+      },
+      "code": "ASK-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sweden"
+      },
+      "code": "SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Svalbard and Jan Mayen"
+      },
+      "code": "SJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iceland"
+      },
+      "code": "IS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greenland"
+      },
+      "code": "GL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Finland"
+      },
+      "code": "FI"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Problematic native species/diseases"
+      },
+      "code": "8_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Herbicides and pesticides"
+      },
+      "code": "9_3_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Angerbjörn, A. & Tannerfeldt, M.",
+      "value": [
+        "Anders Angerbjörn (Stockholm University)",
+        "Magnus Tannerfeldt (Swedish Polar Research Secretariat)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Hoffmann, M. & Sillero-Zubiri, C.",
+      "value": [
+        "Michael Hoffmann (Zoological Society of London / IUCN SSC Canid Specialist Group)",
+        "Claudio Sillero-Zubiri (IUCN SSC Canid Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Hersteinsson, P.",
+      "value": [
+        "Páll Hersteinsson"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Perini, F.A., Russo, C.A.M. and Schrago, C.G. 2010. The evolution of South American endemic canids: a history of rapid diversification and morphological parallelism. <i>Journal of Evolutionary Biology</i> 23: 311-322.",
+      "year": "2010",
+      "title": "The evolution of South American endemic canids: a history of rapid diversification and morphological parallelism",
+      "author": "Perini, F.A., Russo, C.A.M. and Schrago, C.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wozencraft, W.C. 2005. Order Carnivora. In: D.E. Wilson and D.M. Reeder (eds), <i>Mammal Species of the World: A Taxonomic and Geographic Reference. Third Edition</i>, pp. 532-628. Johns Hopkins University Press, Baltimore.",
+      "year": "2005",
+      "title": "Order Carnivora",
+      "author": "Wozencraft, W.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lindblad-Toh, K., Wade, C.M., Mikkelsen, T.S., Karlsson, E.K., Jaffe, D.B., Kamal, M., Clamp, M., Chang, J.L., Kulbokas, E.J., Zody, M.C., Mauceli, E., Xie, X., Breen, M., Wayne, R.K., Ostrander, E.A., Ponting, C.P., Galibert, F., Smith, D.R., deJong, P.J., Kirkness, E., Alvarez, P., Biagi, T., Brockman, W., Butler, J., Chin, C.W., Cook, A., Cuff, J., Daly, M.J., DeCaprio, D., Gnerre, S., Grabherr, M., Kellis, M., Kleber, M., Bardeleben, C., Goodstadt, L., Heger, A., Hitte, C., Kim, L., Koepfli, K.P., Parker, H.G., Pollinger, J.P., Searle, S.M.J., Sutter, N.B., Thomas, R., Webber, C. and Lander, E.S. 2005. Genome sequence, comparative analysis and haplotype structure of the domestic dog. <i>Nature </i> 438(7069): 803-819.",
+      "year": "2005",
+      "title": "Genome sequence, comparative analysis and haplotype structure of the domestic dog",
+      "author": "Lindblad-Toh, K., Wade, C.M., Mikkelsen, T.S., Karlsson, E.K., Jaffe, D.B., Kamal, M., Clamp, M., Chang, J.L., Kulbokas, E.J., Zody, M.C., Mauceli, E., Xie, X., Breen, M., Wayne, R.K., Ostrander, E.A., Ponting, C.P., Galibert, F., Smith, D.R., deJong, P.J., Kirkness, E., Alvarez, P., Biagi, T., Brockman, W., Butler, J., Chin, C.W., Cook, A., Cuff, J., Daly, M.J., DeCaprio, D., Gnerre, S., Grabherr, M., Kellis, M., Kleber, M., Bardeleben, C., Goodstadt, L., Heger, A., Hitte, C., Kim, L., Koepfli, K.P., Parker, H.G., Pollinger, J.P., Searle, S.M.J., Sutter, N.B., Thomas, R., Webber, C. and Lander, E.S. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nasimovich, A. and Isakov, Y. (eds). 1985. <i>Arctic fox, red fox and raccoon dog: distribution of resources, ecology, use and conservation</i>. Janka, Moscow, USSR.",
+      "year": "1985",
+      "title": "Arctic fox, red fox and raccoon dog: distribution of resources, ecology, use and conservation",
+      "author": "Nasimovich, A. and Isakov, Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sillero-Zubiri, C., Hoffmann, M. and Macdonald, D.W. (eds). 2004. <i>Canids: Foxes, Wolves, Jackals and Dogs. Status Survey and Conservation Action Plan</i>. IUCN/SSC Canid Specialist Group, IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "2004",
+      "title": "Canids: Foxes, Wolves, Jackals and Dogs. Status Survey and Conservation Action Plan",
+      "author": "Sillero-Zubiri, C., Hoffmann, M. and Macdonald, D.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chesemore, D. L. 1975. Ecology of the Arctic fox (<i>Alopex lagopus</i>) in North America - a review. In: M. W. Fox (ed.), <i>The wild canids. Their systematics, behavioral ecology and evolution</i>, pp. 143-163. Van Nostrand Rheinhold Co., New York, USA.",
+      "year": "1975",
+      "title": "Ecology of the Arctic fox (<i>Alopex lagopus</i>) in North America - a review",
+      "author": "Chesemore, D. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Angerbjörn, A., Tannerfeldt, M. and Erlinge, S. 1999. Predator-prey relations: lemmings and Arctic foxes. <i>Journal of Animal Ecology</i> 68: 34-49.",
+      "year": "1999",
+      "title": "Predator-prey relations: lemmings and Arctic foxes",
+      "author": "Angerbjörn, A., Tannerfeldt, M. and Erlinge, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kaikusalo, A. and Angerbjörn, A. 1995. The Arctic fox population in Finnish Lapland during 30 years, 1964-93. <i>Annales Zoologica Fennici</i> 32: 69-77.",
+      "year": "1995",
+      "title": "The Arctic fox population in Finnish Lapland during 30 years, 1964-93",
+      "author": "Kaikusalo, A. and Angerbjörn, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Elmhagen, B., Tannerfeldt, M., Verucci, P. and Angerbjörn, A. 2000. The Arctic fox – an opportunistic specialist. <i>Journal of Zoology (London)</i> 251: 139-149.",
+      "year": "2000",
+      "title": "The Arctic fox – an opportunistic specialist",
+      "author": "Elmhagen, B., Tannerfeldt, M., Verucci, P. and Angerbjörn, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hersteinsson, P. and Macdonald, D.W. 1996. Diet of Arctic foxes (<i>Alopex lagopus</i>) in Iceland. <i>Journal of Zoology (London)</i> 240: 457-474.",
+      "year": "1996",
+      "title": "Diet of Arctic foxes (<i>Alopex lagopus</i>) in Iceland",
+      "author": "Hersteinsson, P. and Macdonald, D.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Macpherson, A.H. 1969. The dynamics of Canadian Arctic fox populations. <i>Canadian Wildlife Service Report Series</i> 8: 1-49.",
+      "year": "1969",
+      "title": "The dynamics of Canadian Arctic fox populations",
+      "author": "Macpherson, A.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bailey, E.P. 1992. Red foxes, <i>Vulpes vulpes</i>, as biological control agents for introduced Arctic foxes, <i>Alopex lagopus</i>, on Alaskan Islands. <i>Canadian Field-Naturalist</i> 106: 200-205.",
+      "year": "1992",
+      "title": "Red foxes, <i>Vulpes vulpes</i>, as biological control agents for introduced Arctic foxes, <i>Alopex lagopus</i>, on Alaskan Islands",
+      "author": "Bailey, E.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Samelius, G. and Lee, M. 1998. Arctic fox, <i>Alopex lagopus</i>, predation on lesser snow geese, <i>Chen caerulescens</i>, and their eggs. <i>Canadian Field Naturalist</i> 112: 700-701.",
+      "year": "1998",
+      "title": "Arctic fox, <i>Alopex lagopus</i>, predation on lesser snow geese, <i>Chen caerulescens</i>, and their eggs",
+      "author": "Samelius, G. and Lee, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hersteinsson, P., Angerbjörn, A., Frafjord, K. and Kaikusalo, A. 1989. The arctic fox in Fennoscandia and Iceland: management problems. <i>Biological Conservation</i> 49: 67-81.",
+      "year": "1989",
+      "title": "The arctic fox in Fennoscandia and Iceland: management problems",
+      "author": "Hersteinsson, P., Angerbjörn, A., Frafjord, K. and Kaikusalo, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hersteinsson, P. and Macdonald, D. W. 1992. Interspecific competition and the geographical distribution of red and Arctic foxes <i>Vulpes vulpes</i> and <i>Alopex lagopus</i>. <i>Oikos</i> 64: 505-515.",
+      "year": "1992",
+      "title": "Interspecific competition and the geographical distribution of red and Arctic foxes <i>Vulpes vulpes</i> and <i>Alopex lagopus</i>",
+      "author": "Hersteinsson, P. and Macdonald, D. W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kaikusalo, A., Mela, M. and Henttonen, H. 2000. Häviääkö naali Suomesta? Will the arctic fox become extinct in Finland? <i>Suomen Riista</i> 46: 57-65.",
+      "year": "2000",
+      "title": "Häviääkö naali Suomesta? Will the arctic fox become extinct in Finland?",
+      "author": "Kaikusalo, A., Mela, M. and Henttonen, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tarroux, A., Berteaux, D. and Bety, J. 2010. Northern nomads: ability for extensive movements in adult arctic foxes. <i>Polar Biology</i> 33: 1021-1026.",
+      "year": "2010",
+      "title": "Northern nomads: ability for extensive movements in adult arctic foxes",
+      "author": "Tarroux, A., Berteaux, D. and Bety, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ulvund, K.R., Flagstad, Ø., Eide, N.E. and Landa, A. 2013. Fjellrev i Norge, Resultater fra det nasjonale overvåkingsprogrammet for fjellrev. Norsk institutt for naturforskning (NINA), Trondheim.",
+      "year": "2013",
+      "title": "Fjellrev i Norge, Resultater fra det nasjonale overvåkingsprogrammet for fjellrev",
+      "author": "Ulvund, K.R., Flagstad, Ø., Eide, N.E. and Landa, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Geffen, E., Mercure, A., Girman, D.J., Macdonald, D.W. and Wayne, R.K. 1992. Phylogenetic relationships of the fox-like canids: mitochondrial DNA restriction fragment, site and cytochrome b sequence analyses. . <i>Journal of Zoology</i> 228: 27-39.",
+      "year": "1992",
+      "title": "Phylogenetic relationships of the fox-like canids: mitochondrial DNA restriction fragment, site and cytochrome b sequence analyses. ",
+      "author": "Geffen, E., Mercure, A., Girman, D.J., Macdonald, D.W. and Wayne, R.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Norén, K., Kvaløy, K., Nyström, V., Landa, A., Dalén, L., Eide, N.E., Østbye, E., Henttonen, H. and Angerbjörn, A. 2009. Farmed arctic foxes on the Fennoscandian mountain tundra: implications for conservation. <i>Animal Conservation </i> 12: 434-444.",
+      "year": "2009",
+      "title": "Farmed arctic foxes on the Fennoscandian mountain tundra: implications for conservation",
+      "author": "Norén, K., Kvaløy, K., Nyström, V., Landa, A., Dalén, L., Eide, N.E., Østbye, E., Henttonen, H. and Angerbjörn, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Elmhagen, B., Hersteinsson, P. , Norén, K., Unnsteinsdottir, E.R. & Angerbjörn, A. 2014. From breeding pairs to fox towns: The social organisation of arctic fox populations with stable and fluctuating availability of food. <i>Polar Biology</i> 37: 111-122.",
+      "year": "2014",
+      "title": "From breeding pairs to fox towns: The social organisation of arctic fox populations with stable and fluctuating availability of food",
+      "author": "Elmhagen, B., Hersteinsson, P. , Norén, K., Unnsteinsdottir, E.R. & Angerbjörn, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cameron, C., Berteaux, D. & Dufresne, F. 2011. Spatial variation in food availability predicts extrapair paternity in the arctic fox. <i>Behavioral Ecology</i> 22: 1364-1373.",
+      "year": "2011",
+      "title": "Spatial variation in food availability predicts extrapair paternity in the arctic fox",
+      "author": "Cameron, C., Berteaux, D. & Dufresne, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dragoo, J.W., Choate, J.R., Yates, T.L. and O'Farrell, T.P. 1990. Evolutionary and taxonomic relationships among North American arid-land foxes. <i>Journal of Mammalogy</i> 71: 318-332.",
+      "year": "1990",
+      "title": "Evolutionary and taxonomic relationships among North American arid-land foxes",
+      "author": "Dragoo, J.W., Choate, J.R., Yates, T.L. and O'Farrell, T.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Elmhagen. B. 2008. Åtgärdsprogram för fjällräv, 2008–2012 (Vulpes lagopus). Naturvårdsverket, Stockholm.",
+      "year": "2008",
+      "title": "Åtgärdsprogram för fjällräv, 2008–2012 (Vulpes lagopus)",
+      "author": "Elmhagen. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mörner, T. 1992. Sarcoptic mange in Swedish wildlife. <i>Rev. sci. tech. Off. int. Epiz. </i> 11: 1115-1121.",
+      "year": "1992",
+      "title": "Sarcoptic mange in Swedish wildlife",
+      "author": "Mörner, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sonne, C.S., Wolkers, H.,  Leifsson, P.S., Jenssen, B.M.,  Fuglei, E., Ahlstrom, O., Dietz, R., Kirkegaard, M., Muir, D.C.G. and Jorgensen, E. 2008. Organochlorine-induced histopathology in kidney and liver tissue from Arctic fox (Vulpes lagopus). <i>Chemosphere</i> 71: 1214-1224.",
+      "year": "2008",
+      "title": "Organochlorine-induced histopathology in kidney and liver tissue from Arctic fox (Vulpes lagopus)",
+      "author": "Sonne, C.S., Wolkers, H.,  Leifsson, P.S., Jenssen, B.M.,  Fuglei, E., Ahlstrom, O., Dietz, R., Kirkegaard, M., Muir, D.C.G. and Jorgensen, E. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Angerbjörn, A., Eide, N., Dalén, L., Elmhagen, B., Hellström, P., Ims, R., Killengreen, S., Landa, A., Meijer, T., Mela, M., Niemimaa, J., Norén, K., Tannerfeldt, M., Yoccoz, N. and Henttonen, H. 2013. Conservation in practice: replicated management actions on a large spatial scale. <i>Journal of Applied Ecology</i> 50: 59–67.",
+      "year": "2013",
+      "title": "Conservation in practice: replicated management actions on a large spatial scale",
+      "author": "Angerbjörn, A., Eide, N., Dalén, L., Elmhagen, B., Hellström, P., Ims, R., Killengreen, S., Landa, A., Meijer, T., Mela, M., Niemimaa, J., Norén, K., Tannerfeldt, M., Yoccoz, N. and Henttonen, H. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Landa, A., Ulvund, K. Eide, N.E., Flagstad, O., Meås. R. Andersen, R. and Thierry, A.M. 2014. Avlsprogrammet for fjellrev. Årsrapport 2013. . Norsk institutt for naturforskning, Trondheim.",
+      "year": "2014",
+      "title": "Avlsprogrammet for fjellrev. Årsrapport 2013. ",
+      "author": "Landa, A., Ulvund, K. Eide, N.E., Flagstad, O., Meås. R. Andersen, R. and Thierry, A.M. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cypher, B.L. 2003. Foxes. In: G. A. Feldhamer, B.C. Thompson and J.A. Chapman (eds), <i>Wild Mammals of North America: Biology, Management, and Conservation</i>, pp. 511-546. The Johns Hopkins University Press, Baltimore, Maryland.",
+      "year": "2003",
+      "title": "Foxes",
+      "author": "Cypher, B.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tannerfeldt, M. and Angerbjorn, A. 1998. Fluctuating resources and the evolution of litter size in the  arctic fox. <i>Oikos</i> 83: 545-559.",
+      "year": "1998",
+      "title": "Fluctuating resources and the evolution of litter size in the  arctic fox",
+      "author": "Tannerfeldt, M. and Angerbjorn, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dalén, L., Nyström, V., Valdiosera, C., Germonpré, M., Sablin, M., Turner, E., Angerbjörn, A., Arsuaga, J.L. and Götherström, A. 2007. Ancient DNA reveals lack of postglacial habitat tracking in the arctic fox. <i>Proceedings of the National Academy of Sciences USA</i> 104: 6726-6729.",
+      "year": "2007",
+      "title": "Ancient DNA reveals lack of postglacial habitat tracking in the arctic fox.",
+      "author": "Dalén, L., Nyström, V., Valdiosera, C., Germonpré, M., Sablin, M., Turner, E., Angerbjörn, A., Arsuaga, J.L. and Götherström, A. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Walton, K., Gotthardt, T. and Fields, T. 2013. Alaska Species Ranking System Summary Report - Arctic fox. . Alaska Natural Heritage Program, University of Alaska Anchorage.",
+      "year": "2013",
+      "title": "Alaska Species Ranking System Summary Report - Arctic fox. ",
+      "author": "Walton, K., Gotthardt, T. and Fields, T. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mercure, A., Ralls, K., Koepfli, K.P. and Wayne, R.K. 1993. Genetic subdivisions among small canids: Mitochondrial DNA differentiation of swift, kit, and arctic foxes. . <i>Evolution</i> 47: 1313-1328.",
+      "year": "1993",
+      "title": "Genetic subdivisions among small canids: Mitochondrial DNA differentiation of swift, kit, and arctic foxes. ",
+      "author": "Mercure, A., Ralls, K., Koepfli, K.P. and Wayne, R.K. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2014. The IUCN Red List of Threatened Species. Version 2014.2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 24 July 2014).",
+      "year": "2014",
+      "title": "The IUCN Red List of Threatened Species. Version 2014.2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2014.2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

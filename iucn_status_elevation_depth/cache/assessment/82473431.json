@@ -1,0 +1,1461 @@
+{
+  "assessment_date": "2021-07-15T01:00:00.000+01:00",
+  "year_published": "2022",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 59077,
+  "criteria": "A2cde",
+  "url": "https://www.iucnredlist.org/species/59077/82473431",
+  "citation": "IUCN SSC Amphibian Specialist Group 2022. Cryptobranchus alleganiensis. The IUCN Red List of Threatened Species 2022: e.T59077A82473431. Accessed on 15 May 2026.",
+  "assessment_id": 82473431,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 59077,
+    "scientific_name": "Cryptobranchus alleganiensis",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AMPHIBIA",
+    "order_name": "CAUDATA",
+    "family_name": "CRYPTOBRANCHIDAE",
+    "genus_name": "Cryptobranchus",
+    "species_name": "alleganiensis",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Sonnini de Manoncourt &amp; Latreille, 1801)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Amphibian Specialist Group",
+        "url": "https://www.iucn-amphibians.org/",
+        "description": "Chair: Ariadne Angulo (email: aangulo@amphibians.org)\nRed List Authority Coordinator: Jennifer Luedtke (email: jluedtke@amphibians.org)\nNewsletter: http://www.amphibians.org/froglog/"
+      }
+    ],
+    "common_names": [
+      {
+        "main": true,
+        "name": "Hellbender",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Cryptobranchus bishopi Grobman, 1943",
+        "status": "MERGE",
+        "genus_name": "Cryptobranchus",
+        "species_name": "bishopi",
+        "species_author": "Grobman, 1943",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Salamandra  alleganiensis Sonnini de Manoncourt & Latreille, 1801",
+        "status": "ACCEPTED",
+        "genus_name": "Salamandra ",
+        "species_name": "alleganiensis",
+        "species_author": "Sonnini de Manoncourt & Latreille, 1801",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Cryptobranchus guildayi Holman, 1977",
+        "status": "ACCEPTED",
+        "genus_name": "Cryptobranchus",
+        "species_name": "guildayi",
+        "species_author": "Holman, 1977",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "10",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species occurs across much of the interior portion of the eastern US, ranging from southern New York (Bishop 1941) to northeastern Mississippi and northern Alabama, including the Susquehanna River, tributaries of the Savannah River, the Tennessee River, and the Ohio River (Mount 1975, Green <em>et al. </em>2014). This stretch encompasses southern Illinois (Smith 1961, Brandon and Ballard 1994, Phillips<em> et al</em>. 1999), southern Indiana (Minton 1972), Ohio (Pfingsten and Downs 1989) and Pennsylvania (McCoy 1982). They are also found in the Missouri River drainage, the Meramec River, and the White River in portions of Missouri and northern Arkansas (Johnson 1987, Trauth <em>et al. </em>1992, Green <em>et al.</em> 2014). Their range extends into northern Georgia and the western portions of North Carolina and South Carolina (Martof<em> et al. </em>1980) and into western Virginia (Tobey 1985) and West Virginia in areas west of the Allegheny Front (Green and Pauley 1987). They can also be found in extreme western Maryland.&#160;<br/><br/>In Kentucky, near the centre of the range, Barbour (1971) regarded the species as most common in the upper reaches of the Cumberland, Kentucky, and Licking river systems. In Tennessee, no records exist for locations west of the Tennessee River (Redmond and Scott 1996). Collections are known from southeastern Kansas (Neosha River), but these are likely to have been from introduced individuals and not from a naturally occurring subpopulation (Collins 1982, 1993; W.H. Busby pers. comm.). There are early reports of this species from Iowa (Nickerson and Mays 1973b) however these records are uncertain. The species does not occur in Iowa today, and its historical occurrence is uncertain (Phillips and Humphries 2005).&#160;<br/><br/>Previously reported historical records from the Great Lakes (Lake Erie) drainage, New Jersey, and Louisiana are probably erroneous (Pfingsten and Downs 1989, Harding 1997) and have therefore been excluded from the range map. Due to this species' secretive nature and its confusion with <em>Necturus maculosus</em> the present range is not known with certainty (Lannoo <em>et al. </em>2005). Additionally, there is considerable taxonomic uncertainty surrounding this species. It is likely that there are several undescribed species contained within the current concept (T. Pierson pers. comm. June 2021).",
+    "population": "While secure subpopulations exist in many areas, the overall population is thought to be in a state of decline. A declining trend was observed by Smith and Minton (1957) who stated that the species' range was rapidly shrinking due to habitat modification. Minton (2001) noted that the species had disappeared from many of its historic localities between 1935–1965. This declining trend appears to have persisted. Phillips and Humphries (2005) claimed that although the level of reported declines seemed to vary and much remains unknown, declines seem to be occurring across the species' range (NatureServe 2021). Wheeler <em>et al.</em> (2003) reported a 77% decline over a 20 year study in Missouri, and Lipps (2013) reported a relative decline of 82% over the past 30 years from subpopulations observed in Ohio (NatureServe 2021). In Alabama, this species has declined considerably and may possibly be extirpated, although this has yet to be confirmed. Significant sampling efforts consisting of 335 person hours and 31 trap nights across the majority of historical localities in the state failed to record a single individual. If the species does persist in the state, it is in very low densities and will likely be extirpated in the near future (Graham <em>et al.</em> 2011). Surveys conducted by Burgmeier <em>et al</em>. (2011) indicate a significant decline in Indiana, as despite an increase in effort from previous surveys they documented fewer total captures and extremely low population densities. They also found that the population seemed to mainly consist of large, older-age class individuals that showed limited signs of reproduction. In the Allegheny River Drainage of New York, this species also appears to have experienced a decline from historic levels recorded in the 1980s (Foster <em>et al.</em> 2009). A study by Wineland <em>et al. </em>(2019) utilizing eDNA predicted that this species has been extirpated from approximately 38% of the 49 sampled historical sites in West Virginia, which suggests that the species has experienced widespread declines and range contractions in the state.<br/><br/>Of the 570 known occurrences of the subspecies&#160;<em>Cryptobranchus alleganiensis alleganiensis, </em>68 (12%) have been extirpated or functionally extirpated, 393 (69%) remain extant, and 109 (19%) are of unknown status. Of the 393 extant subpopulations, 57 are declining, 35 are thought to be healthy, and 301 have an unknown trend. Experts estimate that in total, 126 subpopulations remain healthy and 219 are declining (USFWS 2018). Population monitoring efforts for the subspecies&#160;<em>Cryptobranchus alleganiensis bishopi</em> indicate that these subpopulations are also in a state of decline, with an estimated adult population size of 915 individuals (USFWS 2020). The Spring River subpopulation is now considered to be functionally extirpated, and the North Fork White River subpopulation, which was once considered to be a stronghold for the species, was severely impacted by flooding in 2017 (USFWS 2020). Given the ongoing threats across this species' range, it is estimated that the population has declined by at least 30% in the last 30 years (three generation lengths) although likely not more than 50%.",
+    "habitats": "This aquatic species inhabits rocky, clear creeks and rivers that contain abundant cover in the form of large flat rocks, bedrock shelves, crevices, and logs (Green<em> et al.</em> 2014). It usually avoids water warmer than 20°C. Males prepare nests and attend eggs beneath large flat rocks or submerged logs. This species breeds by larval development. This is a long-lived species, with a life expectancy of 20–30 years (Peterson 1979, Taber <em>et al</em>. 1975, Wheeler<em> et al.</em> 2003). The generation length is estimated to be 10 years.",
+    "threats": "The principal threat to this species is degradation of habitat, since it is a habitat specialist with little tolerance of environmental change (Williams <em>et al.</em> 1981). It breathes primarily (approximately 90%) through the skin (Guimond 1970) and is therefore dependent on cool, well-oxygenated, flowing water. Construction of dams stops swift water flow and submerges riffles. Logging, mining, road construction and maintenance, and other activities, can cause extensive sedimentation that covers the loose rock and gravel important as nest sites, and for shelter and food production. In Illinois, the majority of formerly rocky habitat has been buried under silt (Phillips <em>et al</em>. 1999). Chemical pollutants and acid mine drainage are probably destructive, especially to eggs and larvae. Thermal pollution of water with a consequent oxygen loss would also be detrimental. Several streams in Alabama have been polluted, impounded, or otherwise modified to the extent that they are, from all indications, incapable of supporting hellbender populations (Mount 1975), which has likely contributed to the species' possible disappearance in this state. Injuries and deaths sometimes also result when the salamanders are hooked by anglers, and some fishermen still believe that Hellbenders are dangerously poisonous and also destroy game fish and their eggs (both beliefs are false), and therefore kill them at every opportunity. In the past, there were even attempts by organized sportsmen’s groups in West Virginia to eradicate them. There is some collecting of Hellbenders for sale as live animals or as preserved specimens. Over-collecting has been considered a serious threat in some parts; a decline was noted in the early 1990s, apparently due to collecting. Nickerson and Mays (1973b) noted additional factors they suspected might affect local populations, such as gigging (hunting of the species at night), heavy canoe traffic, dynamiting of large boulders to enhance commercial canoe traffic, and riverside cattle and pig pens. Hellbenders generally are intolerant of heavy recreational use of habitat.<br/><br/>Additional threats include habitat modifications as a result of industrialization and urbanization, increased channelization and impoundment of streams that contribute to increased siltation, and pollution of streams from agricultural run-off, mining wastes, and thermal pollution (Green <em>et al. </em>2014). Disease may also pose a threat to this species, as<em> Bd</em>&#160;and <em>Ranavirus</em> have both been detected in this species and many subpopulations have declined for unclear reasons (Bodinof <em>et al. </em>2011, Souza <em>et al.</em> 2012). Additionally, the emergence of the salamander chytrid fungus (<em>Batrachochytrium salamandrivorans</em>, “<em>Bsal</em>”) as an amphibian pathogen has caused dramatic declines in European fire salamanders since its apparent arrival in 2008 through the international pet trade (Feldmeier<em> et al. </em>2016). Although the presence of the fungus has not been confirmed in the Americas, it is spreading in Europe and risks spreading further. Should <em>Bsal</em> be introduced to the US, the impacts on salamander populations could be rapid and severe if immediate mitigation action is not taken.",
+    "measures": "<strong><em>Conservation Actions In-Place</em></strong><br/>This species is listed at the state level as \"Endangered\" in Illinois, Indiana, Maryland, and Ohio, as \"Rare\" in Georgia, and of \"Special Concern\" or a \"Species of Concern\" in New York, North Carolina, and Virginia. They are on the state Watch List in Missouri, and are considered in \"Need of Maintenance\" in Tennessee. Other states, including Alabama, Arkansas, Kentucky, Mississippi, South Carolina, and West Virginia track this species' distribution records in a database but do not generally afford them protection from take (Green <em>et al. </em>2014). The subspecies<em> Cryptobranchus alleganiensis alleganiensis </em>and&#160;<em>Cryptobranchus alleganiensis bishopi</em> are listed at the federal level as \"Endangered\" under the Endangered Species Act.<br/><br/>Many of the presently known populations occur in national or state forests, national parks, and other public lands, where there is good potential for protecting habitat. However, some of these areas are still at risk of negative impacts from upstream activities in the watershed (NatureServe 2021). The St. Louis Zoo maintains a captive-breeding programme for this species.<br/><br/>In an effort to prevent the introduction of <em>Bsal </em>into the US, an Interim Rule of the Lacey Act has been enacted that bans the importation of 201 species of salamanders (USFWS 2016). Additionally, a temporary voluntary trade moratorium of imports of Asian salamander species that are known to carry the disease until such time as effective testing and treatment regimens can be developed and distributed has been recommended to all exporters, shippers, sellers and buyers by the Pet Industry Joint Advisory Council (PIJAC). A North America <em>Bsal </em>Task Force has also been created, with working groups designed to address a variety of disease prevention and mitigation goals (North America <em>Bsal </em>Task Force 2021).<br/><br/><strong><em>Conservation Needed</em></strong><br/>The preservation of highly forested, low anthropogenically impacted catchments will be important to the conservation of this species (Wineland <em>et al.</em> 2018). Strengthened management and implementation of recovery plans on public lands would likely be helpful as well.&#160;<br/><strong><em><br/></em></strong><strong><em>Research Needed</em></strong><br/>Further taxonomic work is necessary to investigate this species complex and elucidate the taxonomic identity of its members. Population monitoring is also recommended given the widespread declines across its range and the likely future descriptions of cryptic species within this complex.",
+    "use_trade": "This species is collected for the pet trade and as research specimens.",
+    "rationale": "Listed as Vulnerable because this species is in significant decline suspected to be between 30–50% over the past three generations (30 years - assuming a generation length of approximately ten years) due to the impacts of disease and widespread habitat loss and degradation throughout much of its range.",
+    "trend_justification": null,
+    "taxonomic_notes": "<em>Cryptobranchus guildayi</em> synonymized with this species by Bredehoeft and Schubert (2015).<br/><br/>There are likely multiple species currently retained within this concept (T. Pierson pers. comm. June 2021).&#160;It is necessary to investigate this species complex and elucidate the taxonomic identity of its members."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Alabama"
+      },
+      "code": "ALA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mississippi"
+      },
+      "code": "MSI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "North Carolina"
+      },
+      "code": "NCA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Arkansas"
+      },
+      "code": "ARK-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GEO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Illinois"
+      },
+      "code": "ILL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indiana"
+      },
+      "code": "INI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kentucky"
+      },
+      "code": "KTY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ohio"
+      },
+      "code": "OHI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pennsylvania"
+      },
+      "code": "PEN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maryland"
+      },
+      "code": "MRY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New York"
+      },
+      "code": "NWY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Missouri"
+      },
+      "code": "MSO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Carolina"
+      },
+      "code": "SCA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tennessee"
+      },
+      "code": "TEN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virginia"
+      },
+      "code": "VRG-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "West Virginia"
+      },
+      "code": "WVA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iowa"
+      },
+      "code": "IOW-OO"
+    },
+    {
+      "is_endemic": true,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Dams (size unknown)"
+      },
+      "code": "7_2_11"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    },
+    {
+      "scope": null,
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_3_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Seepage from mining"
+      },
+      "code": "9_2_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Thermal pollution"
+      },
+      "code": "9_6_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Batrachochytrium dendrobatidis",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_3_4"
+    },
+    {
+      "scope": null,
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "No/Negligible Impact: 1",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Batrachochytrium salamandrivorans",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "IUCN SSC Amphibian Specialist Group",
+      "value": [
+        " IUCN SSC Amphibian Specialist Group (IUCN SSC)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Chanson, J.S.",
+      "value": [
+        "Janice Chanson (IUCN SSC Amphibian Red List Authority)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Phillips, C., Beamer, D., Hammerson, G.A. & Pierson, T.",
+      "value": [
+        "David Beamer",
+        "Todd Pierson",
+        "Christopher Phillips",
+        "Geoffrey Hammerson (NatureServe)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Neam, K. & Naylor Warr, L.",
+      "value": [
+        "Kelsey Neam (Amphibian RLA)",
+        "Lauren Naylor Warr (IUCN SSC Amphibian Red List Authority)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Johnson, T.R. 1977. <i>The Amphibians of Missouri</i>. Univ. Kansas Mus. Nat. Hist., Pub. Ed. Ser. 6, Kansas.",
+      "year": "1977",
+      "title": "The Amphibians of Missouri",
+      "author": "Johnson, T.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Blackburn, L., Nanjappa, P. and Lannoo, M.J. 2001. <i>An Atlas of the Distribution of U.S. Amphibians</i>. Ball State University, Muncie, IN, USA.",
+      "year": "2001",
+      "title": "An Atlas of the Distribution of U.S. Amphibians",
+      "author": "Blackburn, L., Nanjappa, P. and Lannoo, M.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Johnson, T.R. 2000. <i>The Amphibians and Reptiles of Missouri. Second Edition</i>. Missouri Department of Conservation, Jefferson City.",
+      "year": "2000",
+      "title": "The Amphibians and Reptiles of Missouri. Second Edition",
+      "author": "Johnson, T.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bishop, S.C. 1941. The salamanders of New York. <i>New York State Museum Bulletin</i>: 1-365.",
+      "year": "1941",
+      "title": "The salamanders of New York",
+      "author": "Bishop, S.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Collins, J.T. 1993. <i>Amphibians and reptiles in Kansas. Third edition, revised</i>. University of Kansas Museum of Natural History, Public Education Series No. 13.",
+      "year": "1993",
+      "title": "Amphibians and reptiles in Kansas. Third edition, revised",
+      "author": "Collins, J.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Redmond, W.H. and Scott, A.F. 1996. <i>Atlas of Amphibians in Tennessee (Miscellaneous Publication Number 12)</i>. The Center for Field Biology, Austin Peay State University, Miscellaneous Publication Number 12, Clarksville, TN, USA.",
+      "year": "1996",
+      "title": "Atlas of Amphibians in Tennessee (Miscellaneous Publication Number 12)",
+      "author": "Redmond, W.H. and Scott, A.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pfingsten, R.A. and Downs, F.L. 1989. Salamanders of Ohio. <i>Bulletin of Ohio Biological Survey</i>: 1-315.",
+      "year": "1989",
+      "title": "Salamanders of Ohio",
+      "author": "Pfingsten, R.A. and Downs, F.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Phillips, C.A., Brandon, R.A. and Moll, E.O. 1999. <i>Field Guide to Amphibians and Reptiles of Illinois</i>. Illinois Natural History Survey Manual 8, Illinois.",
+      "year": "1999",
+      "title": "Field Guide to Amphibians and Reptiles of Illinois",
+      "author": "Phillips, C.A., Brandon, R.A. and Moll, E.O.",
+      "citation_short": null
+    },
+    {
+      "citation": "Minton Jr, S.A. 1972. <i>Amphibians and Reptiles of Indiana</i>. Indiana Academy of Science Monographs 3, Indianapolis, IN, USA.",
+      "year": "1972",
+      "title": "Amphibians and Reptiles of Indiana",
+      "author": "Minton Jr, S.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Smith, P.W. 1961. The amphibians and reptiles of Illinois. <i>Illinois Natural History Survey</i>: 1-298.",
+      "year": "1961",
+      "title": "The amphibians and reptiles of Illinois",
+      "author": "Smith, P.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Frost, D.R. 1985. <i>Amphibian Species of the World: A Taxonomic and Geographic Reference</i>. Allen Press and the Association of Systematic Collections, Lawrence, Kansas.",
+      "year": "1985",
+      "title": "Amphibian Species of the World: A Taxonomic and Geographic Reference",
+      "author": "Frost, D.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tobey, F.J. 1985. <i>Virginia's amphibians and reptiles: a distributional survey</i>. Virginia Herpetological Survey, Virginia.",
+      "year": "1985",
+      "title": "Virginia's amphibians and reptiles: a distributional survey",
+      "author": "Tobey, F.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mitchell, J.C. 1991. Amphibians and reptiles. In: Terwilliger, K. (ed.), <i>Virginia's Endangered Species: Proceedings of a Symposium</i>, pp. 411-476. McDonald and Woodward Publishing Company, Blacksburg, Virginia.",
+      "year": "1991",
+      "title": "Amphibians and reptiles",
+      "author": "Mitchell, J.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Harding, J.H. 1997. <i>Amphibians and Reptiles of the Great Lakes Region</i>. University of Michigan Press, Ann Arbor, Michigan.",
+      "year": "1997",
+      "title": "Amphibians and Reptiles of the Great Lakes Region",
+      "author": "Harding, J.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Martof, B.S., Palmer, W.M., Bailey, J.R. and Harrison III, J.R. 1980. <i>Amphibians and Reptiles of the Carolinas and Virginia</i>. University of North Carolina Press, Chapel Hill, North Carolina.",
+      "year": "1980",
+      "title": "Amphibians and Reptiles of the Carolinas and Virginia",
+      "author": "Martof, B.S., Palmer, W.M., Bailey, J.R. and Harrison III, J.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Minton Jr, S.A. 2001. <i>Amphibians and Reptiles of Indiana, revised second edition</i>. Indiana Academy of Science, Indianapolis, IN, USA.",
+      "year": "2001",
+      "title": "Amphibians and Reptiles of Indiana, revised second edition",
+      "author": "Minton Jr, S.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mount, R.H. 1975. <i>The Reptiles and Amphibians of Alabama</i>. Auburn University Agricultural Experiment Station, Auburn, Alabama.",
+      "year": "1975",
+      "title": "The Reptiles and Amphibians of Alabama",
+      "author": "Mount, R.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bury, R.B., Dodd, Jr., C.K. and Fellers, G.M. 1980. Conservation of the Amphibia of the United States: a review. <i>Resource Publication</i>: 1-34.",
+      "year": "1980",
+      "title": "Conservation of the Amphibia of the United States: a review",
+      "author": "Bury, R.B., Dodd, Jr., C.K. and Fellers, G.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Behler, J.L. and King, F.W. 1979. <i>The Audubon Society Field Guide to North American Reptiles and Amphibians</i>. New York.",
+      "year": "1979",
+      "title": "The Audubon Society Field Guide to North American Reptiles and Amphibians",
+      "author": "Behler, J.L. and King, F.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Barbour, R.W. 1971. <i>Amphibians and Reptiles of Kentucky</i>. University Press of Kentucky, Lexington.",
+      "year": "1971",
+      "title": "Amphibians and Reptiles of Kentucky",
+      "author": "Barbour, R.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hulse, A.C., McCoy, C.J. and Censky, E. 2001. <i>Amphibians and Reptiles of Pennsylvania and the Northeast</i>. Comstock Publishing Associates and Cornell University Press, Ithaca, New York, USA.",
+      "year": "2001",
+      "title": "Amphibians and Reptiles of Pennsylvania and the Northeast",
+      "author": "Hulse, A.C., McCoy, C.J. and Censky, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Green, N.B. and Pauley, T.K. 1987. <i>Amphibians and Reptiles in West Virginia</i>. University of Pittsburgh Press, Pittsburgh, PA, USA.",
+      "year": "1987",
+      "title": "Amphibians and Reptiles in West Virginia",
+      "author": "Green, N.B. and Pauley, T.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lannoo, M. (editor). 2005. <i>Amphibian declines: the conservation status of United States species</i>. University of California Press, Berkeley, California.",
+      "year": "2005",
+      "title": "Amphibian declines: the conservation status of United States species",
+      "author": "Lannoo, M. (editor)",
+      "citation_short": null
+    },
+    {
+      "citation": "Collins, J.T. 1982. <i>Amphibians and reptiles in Kansas. Second Edition</i>. Univ. Kansas Mus. Nat. Hist., Pub. Ed. Ser. 8, Kansas.",
+      "year": "1982",
+      "title": "Amphibians and reptiles in Kansas. Second Edition",
+      "author": "Collins, J.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Collins, J.T. 1991. Viewpoint: a new taxonomic arrangement for some North American amphibians and reptiles. <i>SSAR Herpetological Review</i>: 42-43.",
+      "year": "1991",
+      "title": "Viewpoint: a new taxonomic arrangement for some North American amphibians and reptiles",
+      "author": "Collins, J.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Johnson, T.R. 1987. <i>The amphibians and reptiles of Missouri</i>. Missouri Department of Conservation, Jefferson City.",
+      "year": "1987",
+      "title": "The amphibians and reptiles of Missouri",
+      "author": "Johnson, T.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Peterson, C. L., Wilkinson, Jr., R.F., Topping, M.S. and Metter, D.E. 1983. Age and growth of the Ozark hellbender. <i>Copeia</i>: 225-231.",
+      "year": "1983",
+      "title": "Age and growth of the Ozark hellbender",
+      "author": "Peterson, C. L., Wilkinson, Jr., R.F., Topping, M.S. and Metter, D.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Humphries, W.J. and Pauley, T.K. 2000. Seasonal changes in nocturnal activity of the hellbender, <i>Cryptobranchus alleganiensis</i>, in West Virginia. <i>Journal of Herpetology</i>: 604-607.",
+      "year": "2000",
+      "title": "Seasonal changes in nocturnal activity of the hellbender, <i>Cryptobranchus alleganiensis</i>, in West Virginia",
+      "author": "Humphries, W.J. and Pauley, T.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Routman, E. 1993. Mitochondrial DNA variation in <i>Cryptobranchus alleganiensis</i>, a salamander with extremely low allozyme diversity. <i>Copeia</i>: 407-416.",
+      "year": "1993",
+      "title": "Mitochondrial DNA variation in <i>Cryptobranchus alleganiensis</i>, a salamander with extremely low allozyme diversity",
+      "author": "Routman, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Blais, D.P. 1996. Movement, Home Range, and Other Aspects of the Biology of the Eastern Hellbender (<i>Cryptobranchus a. alleganiensis</i>): A Radio Telemetric Study. <i>Masters Thesis</i>, S.U.N.Y., Binghamton.",
+      "year": "1996",
+      "title": "Movement, Home Range, and Other Aspects of the Biology of the Eastern Hellbender (<i>Cryptobranchus a. alleganiensis</i>): A Radio Telemetric Study",
+      "author": "Blais, D.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Peterson, C. L., D. E. Metter, and B. T. Miller. 1988. Demography of the hellbender <i>Cryptobranchus alleganiensis</i> in the Ozarks. <i>American Midland Naturalist</i>: 291-303.",
+      "year": "1988",
+      "title": "Demography of the hellbender <i>Cryptobranchus alleganiensis</i> in the Ozarks",
+      "author": "Peterson, C. L., D. E. Metter, and B. T. Miller.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dundee, H.A. 1971. <i>Cryptobranchus</i>, and <i>C. alleganiensis</i>. <i>Catalogue of American Amphibians and Reptiles</i>: 1-4.",
+      "year": "1971",
+      "title": "<i>Cryptobranchus</i>, and <i>C. alleganiensis</i>",
+      "author": "Dundee, H.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Firschein, I.L. 1951. The range of <i>Cryptobranchus bishopi</i> and remarks on the distribution of the genus <i>Cryptobranchus</i>. <i>American Midland Naturalist</i>: 455-459.",
+      "year": "1951",
+      "title": "The range of <i>Cryptobranchus bishopi</i> and remarks on the distribution of the genus <i>Cryptobranchus</i>",
+      "author": "Firschein, I.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Routman, E., Wu, R. and Templeton, A.R. 1994. Parsimony, molecular evolution, and biogeography: the case of the North American giant salamander. <i>Evolution</i>: 1799-1809.",
+      "year": "1994",
+      "title": "Parsimony, molecular evolution, and biogeography: the case of the North American giant salamander",
+      "author": "Routman, E., Wu, R. and Templeton, A.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Figg, D.E. 1993. Missouri Department of Conservation wildlife diversity report, July 1992 - June 1993.",
+      "year": "1993",
+      "title": "Missouri Department of Conservation wildlife diversity report, July 1992 - June 1993",
+      "author": "Figg, D.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Guimond, R.W. 1970. Aerial and aquatic respiration in four species of paedomorphic salamander: <i>Amphiuma means means, Cryptobranchus alleganiensis, Necturus maculosus maculosis</i>, and <i>Siren lacertina</i>. <i>Dissertation</i>, University of Rhode Island.",
+      "year": "1970",
+      "title": "Aerial and aquatic respiration in four species of paedomorphic salamander: <i>Amphiuma means means, Cryptobranchus alleganiensis, Necturus maculosus maculosis</i>, and <i>Siren lacertina</i>",
+      "author": "Guimond, R.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "McCoy, C.J. 1982. Amphibians and reptiles in Pennsylvania. <i>Carnegie Museum of Natural History Special Publication</i>.",
+      "year": "1982",
+      "title": "Amphibians and reptiles in Pennsylvania",
+      "author": "McCoy, C.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Peterson, C.L., Ingersol, C.A. and Wilkinson, R.F. 1989. Winter breeding of <i>Cryptobranchus alleganiensis bishopi</i> in Arkansas. <i>Copeia</i>: 1031-1035.",
+      "year": "1989",
+      "title": "Winter breeding of <i>Cryptobranchus alleganiensis bishopi</i> in Arkansas",
+      "author": "Peterson, C.L., Ingersol, C.A. and Wilkinson, R.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Peterson, C.L., Reed, J.W. and Wilkinson, R.F. 1989. Seasonal food habits of <i>Cryptobranchus alleganiensis</i> (Caudata: Cryptobranchidae). <i>Southwestern Naturalist</i>: 438-441.",
+      "year": "1989",
+      "title": "Seasonal food habits of <i>Cryptobranchus alleganiensis</i> (Caudata: Cryptobranchidae)",
+      "author": "Peterson, C.L., Reed, J.W. and Wilkinson, R.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Peterson, C.L. 1987. Movement and catchability of the hellbender, <i>Cryptobranchus alleganiensis</i>. <i>Journal of Herpetology</i>: 197-204.",
+      "year": "1987",
+      "title": "Movement and catchability of the hellbender, <i>Cryptobranchus alleganiensis</i>",
+      "author": "Peterson, C.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Coatney, Jr, C.E. 1982. <i>Home range and nocturnal activity of the Ozark hellbender</i>. Unpublished Master's thesis. Southwest Missouri State University, Springfield, Missouri.",
+      "year": "1982",
+      "title": "Home range and nocturnal activity of the Ozark hellbender",
+      "author": "Coatney, Jr, C.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nickerson, M.A. and Mays, C.E. 1973. The Hellbenders: North American \"Giant Salamanders\". <i>Milwaukee Public Museum, Publ. Inbiol. and Geol.</i>: 106 p.",
+      "year": "1973",
+      "title": "The Hellbenders: North American \"Giant Salamanders\"",
+      "author": "Nickerson, M.A. and Mays, C.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nickerson, M.A. and Mays, C.E. 1973. A study of the Ozark hellbender, <i>Cryptobranchus alleganiensis bishopi</i>. <i>Ecology</i>: 1164-1165.",
+      "year": "1973",
+      "title": "A study of the Ozark hellbender, <i>Cryptobranchus alleganiensis bishopi</i>",
+      "author": "Nickerson, M.A. and Mays, C.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pough, F.H. and Wilson, R.E. 1976. Acid precipitation and reproductive success of <i>Ambystoma salamanders</i>. <i>Proceedings: First National Symposium on Acid Precipitation and the Forest Ecosystem</i>, pp. 531-544.",
+      "year": "1976",
+      "title": "Acid precipitation and reproductive success of <i>Ambystoma salamanders</i>",
+      "author": "Pough, F.H. and Wilson, R.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hillis, R.E. and Bellis, E.D. 1971. Some aspects of the ecology of the hellbender, <i>Cryptobranchus alleganiensis alleganiensis</i>, in a Pennsylvania stream. <i>Journal of Herpetology</i>: 121-126.",
+      "year": "1971",
+      "title": "Some aspects of the ecology of the hellbender, <i>Cryptobranchus alleganiensis alleganiensis</i>, in a Pennsylvania stream",
+      "author": "Hillis, R.E. and Bellis, E.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Noeske, T.A. and Nickerson, M.A. 1979. Diet activity rhythms in the hellbender, <i>Cryptobranchus alleganiensis</i> (Caudata: Cryptobranchidae). <i>Copeia</i>: 92-95.",
+      "year": "1979",
+      "title": "Diet activity rhythms in the hellbender, <i>Cryptobranchus alleganiensis</i> (Caudata: Cryptobranchidae)",
+      "author": "Noeske, T.A. and Nickerson, M.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brandon, R.A. and Ballard, S.R. 1994. Geographic distribution: <i>Cryptobranchus alleganiensis</i>. <i>Herpetological Review</i>: 31.",
+      "year": "1994",
+      "title": "Geographic distribution: <i>Cryptobranchus alleganiensis</i>",
+      "author": "Brandon, R.A. and Ballard, S.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Williams, R.D., Gates, J.E., Hocutt, C.H. and Taylore, G.J. 1981. The hellbender: a nongame species in need of management. <i>Wildlife Society Bulletin</i>: 94-100.",
+      "year": "1981",
+      "title": "The hellbender: a nongame species in need of management",
+      "author": "Williams, R.D., Gates, J.E., Hocutt, C.H. and Taylore, G.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Swanson, P.L. 1948. Notes on the amphibians of Venago County, Pennsylvania. <i>American Midland Naturalist</i>: 362-371.",
+      "year": "1948",
+      "title": "Notes on the amphibians of Venago County, Pennsylvania",
+      "author": "Swanson, P.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Trauth, S.E., Wilhide, J.D. and Daniel, P. 1992. Geographic distribution: <i>Cryptobranchus bishopi</i>. <i>Herpetological Review</i>: 121.",
+      "year": "1992",
+      "title": "Geographic distribution: <i>Cryptobranchus bishopi</i>",
+      "author": "Trauth, S.E., Wilhide, J.D. and Daniel, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gates, J.E., Stouffer, Jr., R.H., Stauffer, Jr., J.R. and Hocutt, C.H. 1985. Dispersal patterns of translocated <i>Cryptobranchus alleganiensis</i> in a Maryland stream. <i>Journal of Herpetology</i>: 436-438.",
+      "year": "1985",
+      "title": "Dispersal patterns of translocated <i>Cryptobranchus alleganiensis</i> in a Maryland stream",
+      "author": "Gates, J.E., Stouffer, Jr., R.H., Stauffer, Jr., J.R. and Hocutt, C.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wiggs, R.L. 1977. Movement and homing in the hellbender, <i>Cryptobranchus alleganiensis</i>, in the Niangua River, Missouri. <i>M.S. Thesis.</i>, Southwest Missouri State University, Springfield.",
+      "year": "1977",
+      "title": "Movement and homing in the hellbender, <i>Cryptobranchus alleganiensis</i>, in the Niangua River, Missouri",
+      "author": "Wiggs, R.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Topping, M.S. and Ingersol, C.A. 1981. Fecundity in the hellbender, <i>Cryptobranchus alleganiensis</i>. <i>Copeia</i>: 873-876.",
+      "year": "1981",
+      "title": "Fecundity in the hellbender, <i>Cryptobranchus alleganiensis</i>",
+      "author": "Topping, M.S. and Ingersol, C.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pfingsten, R.A. 1990. The status and distribution of the hellbender, <i>Cryptobranchus alleganiensis</i> in Ohio. <i>Herpetological Review</i>: 48-50.",
+      "year": "1990",
+      "title": "The status and distribution of the hellbender, <i>Cryptobranchus alleganiensis</i> in Ohio",
+      "author": "Pfingsten, R.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Peterson, C.L. and Wilkinson, R.F. 1996. Home range size of the hellbender (<i>Cryptobranchus alleganiensis</i>) in Missouri. <i>Herpetological Review</i>: 126-127.",
+      "year": "1996",
+      "title": "Home range size of the hellbender (<i>Cryptobranchus alleganiensis</i>) in Missouri",
+      "author": "Peterson, C.L. and Wilkinson, R.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Feldmeier, S., Schefczyk, L., Wagner, N., Heinemann, G., Veith, M. and Lötters, S. 2016. Exploring the Distribution of the Spreading Lethal Salamander Chytrid Fungus in Its Invasive Range in Europe – A Macroecological Approach. <i>PLoS ONE</i> 11(10): e0165682.",
+      "year": "2016",
+      "title": "Exploring the Distribution of the Spreading Lethal Salamander Chytrid Fungus in Its Invasive Range in Europe – A Macroecological Approach",
+      "author": "Feldmeier, S., Schefczyk, L., Wagner, N., Heinemann, G., Veith, M. and Lötters, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Green, D.M., Wier, L.A., Casper, G.S. and Lannoo, M.J. 2014. <i>North American Amphibians: Diversity and Distribution</i>. University of California Press.",
+      "year": "2014",
+      "title": "North American Amphibians: Diversity and Distribution",
+      "author": "Green, D.M., Wier, L.A., Casper, G.S. and Lannoo, M.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "NatureServe. 2021. NatureServe Explorer: An online encyclopedia of life [web application]. Arlington, Virginia Available at: <a href=\"http://explorer.natureserve.org\">http://explorer.natureserve.org</a>. ",
+      "year": "2021",
+      "title": "NatureServe Explorer: An online encyclopedia of life [web application]",
+      "author": "NatureServe",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2022. The IUCN Red List of Threatened Species. Version 2022-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 08 December 2022).",
+      "year": "2022",
+      "title": "The IUCN Red List of Threatened Species. Version 2022-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2022-2"
+    },
+    {
+      "citation": "North America <i>Bsal</i> Task Force. 2021. A North American Strategic Plan to Control Invasions of <i>Batrachochytrium Salamandrivorans</i>. online: Salamanderfungus.org. Amphibian Survival Alliance (ASA). Available at: <a href=\"https://www.salamanderfungus.org/strategic-plan-annual-reports/\">https://www.salamanderfungus.org/strategic-plan-annual-reports/</a>. ",
+      "year": "2021",
+      "title": "A North American Strategic Plan to Control Invasions of <i>Batrachochytrium Salamandrivorans</i>",
+      "author": "North America <i>Bsal</i> Task Force",
+      "citation_short": ""
+    },
+    {
+      "citation": "U.S. Fish and Wildlife Service (USFWS). 2016. Environmental Action Statement: Injurious Wildlife Species; Listing Salamanders Due to Risk of Salamander Chytrid Fungus. U.S. Fish and Wildlife Service.",
+      "year": "2016",
+      "title": "Environmental Action Statement: Injurious Wildlife Species; Listing Salamanders Due to Risk of Salamander Chytrid Fungus",
+      "author": "U.S. Fish and Wildlife Service (USFWS)",
+      "citation_short": null
+    },
+    {
+      "citation": "Bodinof, C.M., Briggler, J.T., Duncan, M.C., Beringer, J. and Millspaugh, J.J. 2011. Historic occurrence of the amphibian chytrid fungus <i>Batrachochytrium dendrobatidis</i> in hellbender <i>Cryptobranchus alleganiensis</i> populations from Missouri. <i>Diseases of Aquatic Organisms </i> 96: 1-7.",
+      "year": "2011",
+      "title": "Historic occurrence of the amphibian chytrid fungus <i>Batrachochytrium dendrobatidis</i> in hellbender <i>Cryptobranchus alleganiensis</i> populations from Missouri",
+      "author": "Bodinof, C.M., Briggler, J.T., Duncan, M.C., Beringer, J. and Millspaugh, J.J. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bredehoeft, K.E. and Schubert, B.W. 2015. A re-evaluation of the Pleistocene Hellbender, <i>Cryptobranchus guildayi</i>. <i>Journal of Herpetology</i> 49: 157–160.",
+      "year": "2015",
+      "title": "A re-evaluation of the Pleistocene Hellbender, <i>Cryptobranchus guildayi</i>",
+      "author": "Bredehoeft, K.E. and Schubert, B.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Burgmeier, N.G., Unger, S.D., Sutton, T.M., and Williams, R.D. 2011. Population Status of the Eastern Hellbender (<i>Cryptobranchus alleganiensis alleganiensis</i>) in Indiana. <i>Journal of Herpetology</i> 45(2): 195-201.",
+      "year": "2011",
+      "title": "Population Status of the Eastern Hellbender (<i>Cryptobranchus alleganiensis alleganiensis</i>) in Indiana",
+      "author": "Burgmeier, N.G., Unger, S.D., Sutton, T.M., and Williams, R.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Foster, R.L., McMillan, A.M., and K.J. Roble. 2009. Population Status of Hellbender Salamanders (<i>Cryptobranchus alleganiensis</i>) in the Allegheny River Drainage of New York State. <i>Journal of Herpetology</i> 43(4): 579-588.",
+      "year": "2009",
+      "title": "Population Status of Hellbender Salamanders (<i>Cryptobranchus alleganiensis</i>) in the Allegheny River Drainage of New York State",
+      "author": "Foster, R.L., McMillan, A.M., and K.J. Roble",
+      "citation_short": null
+    },
+    {
+      "citation": "Graham, S.P., Soehren, E.C. Cline, G.R., Schmidt, C.M., Sutton, W.B., Rayburn, J.R., Stiles, S.H. and Stiles, J.A. 2011. Conservation Status of Hellbenders (<i>Cryptobranchus alleganiensis</i>) in Alabama, US. <i>Herpetological Conservation and Biology</i> 6(2): 242-249.",
+      "year": "2011",
+      "title": "Conservation Status of Hellbenders (<i>Cryptobranchus alleganiensis</i>) in Alabama, US",
+      "author": "Graham, S.P., Soehren, E.C. Cline, G.R., Schmidt, C.M., Sutton, W.B., Rayburn, J.R., Stiles, S.H. and Stiles, J.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Humphries, W.J. and Pauley, T.K. 2005. Life History of the Hellbender, <i>Cryptobranchus alleganiensis</i>, in a West Virginia Stream. <i>The American Midland Naturalist</i> 154(1): 135-142.",
+      "year": "2005",
+      "title": "Life History of the Hellbender, <i>Cryptobranchus alleganiensis</i>, in a West Virginia Stream",
+      "author": "Humphries, W.J. and Pauley, T.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lipps, G.J. 2013. Eastern Hellbender: <i>Cryptobranchus alleganiensis alleganiensis</i>. In: R.A. Pfingsten, J.G. Davis, T.O. Matson, G.J  Lipps Jr., D. Wynn and B.J. Armitage (eds), <i>Amphibians of Ohio. Ohio Biological Survey Bulletin New Series</i>, pp. 187-208.",
+      "year": "2013",
+      "title": "Eastern Hellbender: <i>Cryptobranchus alleganiensis alleganiensis</i>",
+      "author": "Lipps, G.J. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Peterson, C.L. 1979. Age and Growth of the Ozark Hellbender. Southwest Missouri State University.",
+      "year": "1979",
+      "title": "Age and Growth of the Ozark Hellbender",
+      "author": "Peterson, C.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Phillips, C.A. and Humphries, W.J. 2005. <i>Cryptobranchus alleganiensis</i> (Daudin, 1803). Hellbender. In: M. Lannoo (ed.), <i>Amphibian declines: the conservation status of United States species</i>, pp. 648-651 . University of California Press, Berkeley, Berkeley, California.",
+      "year": "2005",
+      "title": "<i>Cryptobranchus alleganiensis</i> (Daudin, 1803). Hellbender",
+      "author": "Phillips, C.A. and Humphries, W.J. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Smith, P.W. and Minton Jr, S.A. 1957. A distributional summary of the herpetofauna of Indiana and Illinois. <i>American Midland Naturalist</i> 58(2): 341-351.",
+      "year": "1957",
+      "title": "A distributional summary of the herpetofauna of Indiana and Illinois",
+      "author": "Smith, P.W. and Minton Jr, S.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Souza, M.J., Gray, M.J., Colclough, P. and Miller, D.L. 2012. Prevalence of infection by <i>Batrachochytrium dendrobatidis</i> and <i>Ranavirus</i> in Eastern Hellbenders (<i>Cryptobranchus alleganiensis</i>) in eastern Tennessee. <i>Journal of Wildlife Diseases</i> 48(3): 560-566.",
+      "year": "2012",
+      "title": "Prevalence of infection by <i>Batrachochytrium dendrobatidis</i> and <i>Ranavirus</i> in Eastern Hellbenders (<i>Cryptobranchus alleganiensis</i>) in eastern Tennessee",
+      "author": "Souza, M.J., Gray, M.J., Colclough, P. and Miller, D.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Taber, C..A., Wilkinson, R.F. and Topping, M.S. 1975. Age and growth of hellbenders in the Niangua River, Missouri. <i>Copeia</i> 1975: 633-636.",
+      "year": "1975",
+      "title": "Age and growth of hellbenders in the Niangua River, Missouri",
+      "author": "Taber, C..A., Wilkinson, R.F. and Topping, M.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "U.S. Fish and Wildlife Service (USFWS). 2018. Species status assessment report for the Eastern Hellbender (<i>Cryptobranchus alleganiensis alleganiensis</i>). U.S. Fish and Wildlife Service Midwest Region.",
+      "year": "2018",
+      "title": "Species status assessment report for the Eastern Hellbender (<i>Cryptobranchus alleganiensis alleganiensis</i>)",
+      "author": "U.S. Fish and Wildlife Service (USFWS)",
+      "citation_short": null
+    },
+    {
+      "citation": "U.S. Fish and Wildlife Service (USFWS). 2020. Ozark Hellbender (<i>Cryptobranchus alleganiensis bishopi</i>) 5-Year Review. U.S. Fish and Wildlife Service Midwest Region, Columbia, Missouri.",
+      "year": "2020",
+      "title": "Ozark Hellbender (<i>Cryptobranchus alleganiensis bishopi</i>) 5-Year Review",
+      "author": "U.S. Fish and Wildlife Service (USFWS)",
+      "citation_short": null
+    },
+    {
+      "citation": "Wheeler, B.A., Prosen, E., Mathis, A. and Wilkinson, R.F. 2003. Population declines of a long-lived salamander: a 20+-year study of hellbenders, <i>Cryptobranchus alleganiensis</i>. <i>Biological Consevation</i> 109: 151-156.",
+      "year": "2003",
+      "title": "Population declines of a long-lived salamander: a 20+-year study of hellbenders, <i>Cryptobranchus alleganiensis</i>",
+      "author": "Wheeler, B.A., Prosen, E., Mathis, A. and Wilkinson, R.F. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wineland, S.M., Welch, S. M., Pauley, T.K., Apodaca, J.J., Olszack, M., Mosher, J.J., Holmes, J.N., Waldron, J.L. 2019. Using environmental DNA and occupancy modelling to identify drivers of eastern hellbender (<i>Cryptobranchus alleganiensis alleganiensis</i>) extirpation. <i>Freshwater Biology</i> 64(1): 208-221.",
+      "year": "2019",
+      "title": "Using environmental DNA and occupancy modelling to identify drivers of eastern hellbender (<i>Cryptobranchus alleganiensis alleganiensis</i>) extirpation",
+      "author": "Wineland, S.M., Welch, S. M., Pauley, T.K., Apodaca, J.J., Olszack, M., Mosher, J.J., Holmes, J.N., Waldron, J.L.",
+      "citation_short": ""
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

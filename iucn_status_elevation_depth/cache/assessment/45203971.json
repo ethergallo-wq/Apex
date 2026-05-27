@@ -1,0 +1,986 @@
+{
+  "assessment_date": "2015-03-03T00:00:00.000+00:00",
+  "year_published": "2016",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 29680,
+  "criteria": "A2c",
+  "url": "https://www.iucnredlist.org/species/29680/45203971",
+  "citation": "Abramov, A.V., Kranz, A. & Maran, T. 2016. Vormela peregusna. The IUCN Red List of Threatened Species 2016: e.T29680A45203971. Accessed on 15 May 2026.",
+  "assessment_id": 45203971,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 29680,
+    "scientific_name": "Vormela peregusna",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CARNIVORA",
+    "family_name": "MUSTELIDAE",
+    "genus_name": "Vormela",
+    "species_name": "peregusna",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(von Güldenstädt, 1770)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Small Carnivore Specialist Group",
+        "url": "http://www.iucn-scsg.org/",
+        "description": "Co-Chairs: Daniel Wilcox (email: willcox.daniel@gmail.com) and José F. González-Maya (email: jfgonzalezmaya@gmail.com)\nRed List Authority Coordinator: Will Duckworth (email: willduckworthdprk@yahoo.com)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "European Marbled Polecat",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Ereen Khuren",
+        "language": "mon"
+      },
+      {
+        "main": false,
+        "name": "Putois Marbré",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Turón Búlgaro",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "Marbled Polecat",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Mustela peregusna von Güldenstädt, 1770",
+        "status": "ACCEPTED",
+        "genus_name": "Mustela",
+        "species_name": "peregusna",
+        "species_author": "von Güldenstädt, 1770",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 3000,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "Unknown",
+    "population_continuing_decline": "Yes",
+    "generational_length": "3.1",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Unknown"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "Unknown",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "Yes",
+    "extreme_fluctuations_in_subpopulations": "Unknown",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Yes",
+    "extreme_fluctuations_in_area_of_occupancy": "Unknown",
+    "estimated_extent_of_occurence": ">20,000",
+    "continuing_decline_in_extent_of_occurence": "Yes",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Yes",
+    "extreme_fluctuations_in_number_of_locations": "Unknown"
+  },
+  "documentation": {
+    "range": "Marbled Polecat occurs from south-east Europe through Asia Minor, the Middle East, the Caucasus, and Central Asia, to northern China and Mongolia. In Europe, it is found in Serbia and Montenegro, Macedonia, Greece, Romania, Bulgaria, Turkish Thrace, southern parts of Ukraine (but it has disappeared from most of the Ukraine, persisting only in the east), the south of the Russian Federation and the northern Caucasus (in the steppe areas, not the mountains). It is widespread in the Middle East, having been recorded from Israel/Palestine, Jordan, Lebanon, Syria, northern Iraq and northern Saudi Arabia (Ellerman and Morrison-Scott 1951, Harrison 1968, Nader 1991, Werner 2012). In Israel its southern range border is retreating northward (Werner 2012).&#160;Two localities in the northern part of the Sinai Peninsula (south-east of Bir El Abd and just north of Gabal El Maghara) constituted the first records from Egypt (Saleh and Basuony 1998). In China it has been recorded from the provinces of Nei Mongol,&#160;Shaanxi,&#160;Shanxi, Gansu, Ningxia, Qinghai and Xinjiang (Wang 2003).&#160;In Mongolia it occurs in the west,&#160;south and, locally, centre (Dulamtseren <em>et al</em>. 2009).<em>&#160;</em>It occurs from sea level to 2,000 m, and up to 3,000 m in the Tien Shan Mountains.",
+    "population": "Marbled Polecat is rare throughout much of its range,&#160;apparently naturally&#160;so.&#160;It&#160;is classed as 'Rare' in the Russian Federation. Its northern range border is receding in the Balkans, Ukraine, and European Russia, as is its&#160;southern border&#160;in Israel&#160;(Werner 2012). It has declined substantially in Europe in line with the loss of steppe habitats. Declines, even&#160;extirpation,&#160;are also suspected in much of the eastern part of its range (Sadikov 1983, Shagdarsuren and Erdenejav 1988, Anonymous 1991, Shiirevdamba 1997, Rozhnov 2001, Putintsev <em>et al</em>. 2002, Clark <em>et al</em>. 2006). It is believed to be less rare in central Asia than elsewhere, but even&#160;so, it is&#160;not common there. It was perhaps&#160;common in northern Sinai, Egypt, being well known to the local Bedouins (Saleh and Basuony 1998), but&#160;the most recent record from&#160;Sinai&#160;traced by Basuony&#160;<em>et al</em>. (2010) was from 1996 and they then considered it to be \"very rare\" in Egypt. The largest population in the Middle East is reported to be in Israel (M. Stubbe pers. comm. 2006).",
+    "habitats": "This species inhabits desert, semi-desert and steppe habitats, but, at least in Israel, also cultivated landcapes (Werner 2012). It is a specialised predator, feeding mainly on desert and steppe rodents such as gerbils, ground squirrels and birds.&#160;It&#160;was recorded from a sparsely vegetated, sandy area southeast of Bir El Abd, northern Sinai, while another was recorded from a sandy area just north of Gabal El Maghara (Saleh and Basuony 1998).&#160;It is the most fossorial of all weasels.",
+    "threats": "The major threat to Marbled Polecat is the loss of natural steppe and desert habitats. Steppe habitats are declining in Europe through conversion&#160;to cultivated farmland. Secondary poisoning by rodenticides might also be a threat, as are likely to be population declines in key prey species (a number of steppe rodent species are declining in Europe). In China, desertification is the major threat to the species. Hunting is perhaps a significant cause of decline in at least Israel (Werner 2012).",
+    "measures": "Marbled Polecat is strictly protected under Appendix II of the Bern Convention. Hunting for this species is prohibited in most countries across its range. It occurs in a number of protected areas across its range, but many may be too small to conserve this species effectively. There is an urgent need to protect the remaining steppe habitat of this species. It is a flagship species for the steppe. An EEP programme has been launched by European zoos&#160;for captive management. China's Red List notes&#160;the species as Vulnerable. It is listed as threatened in Uzbekistan (Sadikov 1983), Kazakhstan (Anonymous 1991), Russia (Rozhnov 2001) and Mongolia (Shagdarsuren and Erdenejav 1988, Shiirevdamba 1997, Clark <em>et al</em>. 2006). The intraspecific taxonomy is unclear and therefore it is unclear if the whole species can be regarded as one conservation management unit.",
+    "use_trade": "Hunting is perhaps a significant cause of decline in at least Israel (Werner 2012) but is apparently unusual (or perhaps&#160;simply undocumented?)&#160;elsewhere in the&#160;species's range.",
+    "rationale": "Marbled Polecat is listed as Vulnerable under Criterion A2c (population reduction over the last 10 years&#160;through habitat loss). It seems reasonable to infer at least a 30% reduction in the population in the last ten years (slightly longer than&#160;three generations; Pacifici <em>et al</em>. 2013) because of the heavy loss of steppe habitat (especially in Europe and China). This reduction is likely to&#160;continue into the future, as suggested by climate change models and land-use change, but it is difficult to predict if it would be at the same rate.",
+    "trend_justification": null,
+    "taxonomic_notes": "Marbled Polecat infra-specific taxonomy is not clear and further work on this is required (most of the work so far has been done on pelts)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Desert - Cold"
+      },
+      "code": "8_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Desert - Temperate"
+      },
+      "code": "8_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Rocky areas (eg. inland cliffs, mountain peaks)"
+      },
+      "code": "6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mongolia"
+      },
+      "code": "MN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kazakhstan"
+      },
+      "code": "KZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "North Macedonia"
+      },
+      "code": "MK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iraq"
+      },
+      "code": "IQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ukraine"
+      },
+      "code": "UA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Afghanistan"
+      },
+      "code": "AF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Armenia"
+      },
+      "code": "AM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Azerbaijan"
+      },
+      "code": "AZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uzbekistan"
+      },
+      "code": "UZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Turkmenistan"
+      },
+      "code": "TM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lebanon"
+      },
+      "code": "LB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Serbia"
+      },
+      "code": "RS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sinai"
+      },
+      "code": "SIN-OO"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other ecosystem modifications"
+      },
+      "code": "7_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Abramov, A.V., Kranz, A. & Maran, T.",
+      "value": [
+        "Tiit Maran (Foundation Lutreola, Tallinn Zoo)",
+        "Andreas Kranz",
+        "Alexei Abramov (Zoological Institute, Russian Academy of Sciences, St. Petersberg, Russia)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Schipper, J. & Duckworth, J.W.",
+      "value": [
+        "William Duckworth (IUCN SSC Small Carnivore Specialist Group; IUCN SSC Deer Specialist Group)",
+        "Jan Schipper (IUCN SSC Small Carnivore Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Tikhonov, A., Cavallini, P., Herrero, J., Giannatos, G., Stubbe, M., Conroy, J., Kryštufek, B. & Wozencraft, C",
+      "value": [
+        "Jim Conroy (Chair, IUCN Otter Specialist Group)",
+        "Chris Wozencraft (Was Chair IUCN SSC Carnivore SG, now deceased)",
+        "Paolo Cavallini (Faunalia, Italy)",
+        "Juan  Herrero",
+        "A Tikhonov",
+        "Giorgos Giannatos (University of Athens - Department of Biology, Section of Zoology and Marine Biology)",
+        "M Stubbe",
+        "Boris Kryštufek"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 30 June 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-1"
+    },
+    {
+      "citation": "Ellerman, J.R. and Morrison-Scott, T.C.S. 1951. <i>Checklist of Palaearctic and Indian Mammals 1758 to 1946</i>. British Museum (Natural History), London, UK.",
+      "year": "1951",
+      "title": "Checklist of Palaearctic and Indian Mammals 1758 to 1946",
+      "author": "Ellerman, J.R. and Morrison-Scott, T.C.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sokolov, V. E. and Orlov, V. N. 1980. <i>Guide to the Mammals of Mongolia</i>. Pensoft, Moscow, Russia.",
+      "year": "1980",
+      "title": "Guide to the Mammals of Mongolia",
+      "author": "Sokolov, V. E. and Orlov, V. N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dulamtseren, S. 1970. <i>Guide Book of the Mammals in Mongolia</i>. Publishing House of the Mongolian Academy of Science, Ulaanbaatar.",
+      "year": "1970",
+      "title": "Guide Book of the Mammals in Mongolia",
+      "author": "Dulamtseren, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bannikov, A.G. 1954. <i>Mammals of the Mongolian People’s Republic</i>. Nauka, Moscow, Russia.",
+      "year": "1954",
+      "title": "Mammals of the Mongolian People’s Republic",
+      "author": "Bannikov, A.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Shagdarsuren, O., Jigi, S., Tsendjav, D., Dulamtseren, S., Bold, A., Munkhbayar, Kh., Dulmaa, A., Erdenejav, G., Olziihutag, N., Ligaa, U. and Sanchir, Ch. 1987. <i>Mongolian Red Book</i>. Publishing House of the Mongolian Academy of Sciences, Ulaanbaatar, Mongolia.",
+      "year": "1987",
+      "title": "Mongolian Red Book",
+      "author": "Shagdarsuren, O., Jigi, S., Tsendjav, D., Dulamtseren, S., Bold, A., Munkhbayar, Kh., Dulmaa, A., Erdenejav, G., Olziihutag, N., Ligaa, U. and Sanchir, Ch.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ministry of Nature and Environment. 1997. Mongolian Red Book. In: Ts. Shiirevdamba, O. Shagdarsuren, G. Erdenejav, T. Amgalan and Ts. Tsetsegmaa (eds). ADMON Printing, Ulaanbaatar.",
+      "year": "1997",
+      "title": "Mongolian Red Book",
+      "author": "Ministry of Nature and Environment",
+      "citation_short": ""
+    },
+    {
+      "citation": "Saleh, M. A. and Basuony, M. 1998. A contribution to the mammalogy of the Sinai Peninsula. <i>Mammalia</i> 62: 557–575.",
+      "year": "1998",
+      "title": "A contribution to the mammalogy of the Sinai Peninsula",
+      "author": "Saleh, M. A. and Basuony, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ministry of Nature and Environment. 1996. Biodiversity Conservation Action Plan for Mongolia. Ministry of Nature and Environment, Ulaanbaatar.",
+      "year": "1996",
+      "title": "Biodiversity Conservation Action Plan for Mongolia",
+      "author": "Ministry of Nature and Environment",
+      "citation_short": null
+    },
+    {
+      "citation": "Chotolchu, N., Stubbe, M. and Samiya, R. 1989. <i>Verbreitung des Tigeriltis </i>Vormela peregusna<i> (Güldenstaedt, 1770) in Eurasian und sein Status in der Mongolischen Volksrepublik. Populationsökologie marderartiger Säugetiere, Wiss</i>. Wiss Beitr Martin Luther Univ, Halle.",
+      "year": "1989",
+      "title": "Verbreitung des Tigeriltis <i>Vormela peregusna</i> (Güldenstaedt, 1770) in Eurasian und sein Status in der Mongolischen Volksrepublik. Populationsökologie marderartiger Säugetiere, Wiss",
+      "author": "Chotolchu, N., Stubbe, M. and Samiya, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Harrison, D. L. 1968. <i>The Mammals of Arabia</i>. Ernest Benn Limited, London, UK.",
+      "year": "1968",
+      "title": "The Mammals of Arabia",
+      "author": "Harrison, D. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rozhnov, V. V. 1999. <i>Vormela peregusna</i>. In: A. J. Mitchell-Jones, G. Amori, W. Bogdanowicz, B. Kryštufek, P. J. H. Reijnders, F. Spitzenberger, M. Stubbe, J. B. M. Thissen, V. Vohralík, and J. Zima (eds), <i>The Atlas of European Mammals</i>, Academic Press, London, UK.",
+      "year": "1999",
+      "title": "<i>Vormela peregusna</i>",
+      "author": "Rozhnov, V. V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dulamtseren, S., Dashzeveg, G. and Togtokhbayar, D. 1999. New distribution data for Marbled Polecats (<i>Vormela peregusna</i> Güldenstaedt, 1770). <i>Proceedings of the Institute of General and Experimental Biology of the Mongolian Academy of Sciences</i> 1: 141-143.",
+      "year": "1999",
+      "title": "New distribution data for Marbled Polecats (<i>Vormela peregusna</i> Güldenstaedt, 1770)",
+      "author": "Dulamtseren, S., Dashzeveg, G. and Togtokhbayar, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nader, I. 1991. First record of the Marbled Polecat <i>Vormela peregusna</i> (Gueldenstaedt, 1770) for Saudi Arabia (Mammalia: Carnivora: Mustelidae). <i>Fauna of Saudi Arabia</i> 12: 416–419.",
+      "year": "1991",
+      "title": "First record of the Marbled Polecat <i>Vormela peregusna</i> (Gueldenstaedt, 1770) for Saudi Arabia (Mammalia: Carnivora: Mustelidae)",
+      "author": "Nader, I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Putintsev, N.I., Arakchaa, L.K. and Zabelin, V.I. (eds). 2002. <i>[Red data book of the Tuva Republic. Animals]</i>. Siberian Branch of Russian Academy of Sciences, SB RAS Press, Geo Branch, Novosibirsk, Russia. (In Russian.).",
+      "year": "2002",
+      "title": "[Red data book of the Tuva Republic. Animals]",
+      "author": "Putintsev, N.I., Arakchaa, L.K. and Zabelin, V.I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sadikov, A.S. (ed.). 1983. <i>[Red book of the Uzbek Republic. Vol. 1. Vertebrate animals]</i>. USSR Academy of Sciences Printing Press, Tashkent, USSR. (In Russian.).",
+      "year": "1983",
+      "title": "[Red book of the Uzbek Republic. Vol. 1. Vertebrate animals]",
+      "author": "Sadikov, A.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dulamtseren, S., Shar, S., Murdoch, J.D., Reading, R.P., Gantulga, J., Usukhjargal, D. and Buyandelger, S. 2009. Notes on the distribution of Marbled Polecat <i>Vormela peregusna</i> in Mongolia. <i>Small Carnivore Conservation</i> 40: 29–32.",
+      "year": "2009",
+      "title": "Notes on the distribution of Marbled Polecat <i>Vormela peregusna</i> in Mongolia",
+      "author": "Dulamtseren, S., Shar, S., Murdoch, J.D., Reading, R.P., Gantulga, J., Usukhjargal, D. and Buyandelger, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shagdarsuren, O. and Erdenejav, G. (eds). 1988. <i>Red book of Mongolian Republic</i>. Mongolian Academy of Sciences Printing Press, Ulaanbaatar, Mongolia. (In Mongolian.).",
+      "year": "1988",
+      "title": "Red book of Mongolian Republic",
+      "author": "Shagdarsuren, O. and Erdenejav, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rozhnov, V.V. 2001. [Marbled Polecat <i>Vormela peregusna</i> (Guldenstaedt, 1770)]. In: V.I. Danilov-Danielyan et al. (ed.), <i>[Red data book of the Russian Federation. Animals]</i>, Astrel Printing, Moscow. (In Russian.).",
+      "year": "2001",
+      "title": "[Marbled Polecat <i>Vormela peregusna</i> (Guldenstaedt, 1770)]",
+      "author": "Rozhnov, V.V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Anonymous. 1991. <i>[Red book of the Kazakh Republic, vol. 1. Animals]</i>. Gylym Printing, Alma-Ata, Kazakhstan. (In Russian.).",
+      "year": "1991",
+      "title": "[Red book of the Kazakh Republic, vol. 1. Animals]",
+      "author": "Anonymous",
+      "citation_short": null
+    },
+    {
+      "citation": "Shiirevdamba, T. (ed.). 1997. <i>Red book of Mongolia</i>. Ministry of Nature and Environment. ADMON Printing, Ulaanbaatar, Mongolia. (In Mongolian.).",
+      "year": "1997",
+      "title": "Red book of Mongolia",
+      "author": "Shiirevdamba, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Clark, E.L., Munkhbat, J., Dulamtseren, S., Baillie, J.E.M., Batsaikhan, N., Samya, R. and Stubbe, M. (eds). 2006. <i>Red list of mammals, Mongolia. Regional Red List Series, vol. 1</i>. Zoological Society of London, London, UK.",
+      "year": "2006",
+      "title": "Red list of mammals, Mongolia. Regional Red List Series, vol. 1",
+      "author": "Clark, E.L., Munkhbat, J., Dulamtseren, S., Baillie, J.E.M., Batsaikhan, N., Samya, R. and Stubbe, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dulamtseren, S., Shar, S., Murdoch, J.D., Reading, R.P., Gantulga, J., Usukhjargal, D. and Buyandelger, S. 2009. Notes on the distribution of Marbled Polecat <i>Vormela peregusna</i> in Mongolia. <i>Small Carnivore Conservation</i> 40: 29–32.",
+      "year": "2009",
+      "title": "Notes on the distribution of Marbled Polecat <i>Vormela peregusna</i> in Mongolia",
+      "author": "Dulamtseren, S., Shar, S., Murdoch, J.D., Reading, R.P., Gantulga, J., Usukhjargal, D. and Buyandelger, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Werner, N.Y. 2012. Small carnivores, big database – inferring possible small carnivore distribution and population trends in Israel from over 30 years of recorded sightings. <i>Small Carnivore Conservation</i> 47: 17–25.",
+      "year": "2012",
+      "title": "Small carnivores, big database – inferring possible small carnivore distribution and population trends in Israel from over 30 years of recorded sightings",
+      "author": "Werner, N.Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wang, Y.X. 2003. <i>A complete checklist of mammal species and subspecies in China: a taxonomic and geographic reference</i>. China Forestry Publishing House, Beijing, China.",
+      "year": "2003",
+      "title": "A complete checklist of mammal species and subspecies in China: a taxonomic and geographic reference",
+      "author": "Wang, Y.X.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

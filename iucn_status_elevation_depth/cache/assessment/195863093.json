@@ -1,0 +1,1877 @@
+{
+  "assessment_date": "2020-07-20T01:00:00.000+01:00",
+  "year_published": "2021",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 39255,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/39255/195863093",
+  "citation": "Anderwald, P., Ambarli, H., Avramov, S., Ciach, M., Corlatti, L., Farkas, A., Jovanovic, M., Papaioannou, H., Peters, W., Sarasa, M., Šprem, N., Weinberg, P. & Willisch, C. 2021. Rupicapra rupicapra (amended version of 2020 assessment). The IUCN Red List of Threatened Species 2021: e.T39255A195863093. Accessed on 15 May 2026.",
+  "assessment_id": 195863093,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 39255,
+    "scientific_name": "Rupicapra rupicapra",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "ARTIODACTYLA",
+    "family_name": "BOVIDAE",
+    "genus_name": "Rupicapra",
+    "species_name": "rupicapra",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Alpine Chamois",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Anatolian Chamois",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Asia Minor Chamois",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Balkan Chamois",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Carpathian Chamois",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Caucasus Chamois",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Chamois",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Tatra Chamois",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Turkish Chamois",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Agriogido",
+        "language": "gre"
+      },
+      {
+        "main": false,
+        "name": "(Alpen-)Gämse",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Camoscio settentrionale",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Çengel boynuzlu dağ keçisi",
+        "language": "tur"
+      },
+      {
+        "main": false,
+        "name": "Chamois",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Divokoza",
+        "language": "scr"
+      },
+      {
+        "main": false,
+        "name": "Gamuza",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Gamuza Septentrional",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "kamzík",
+        "language": "slo"
+      },
+      {
+        "main": false,
+        "name": "Kozica (tatrzańska)",
+        "language": "pol"
+      },
+      {
+        "main": false,
+        "name": "Rebeco septentrional",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "дивокоза (divokoza)",
+        "language": "scc"
+      },
+      {
+        "main": false,
+        "name": "северная серна (severnaya serna)",
+        "language": "rus"
+      },
+      {
+        "main": true,
+        "name": "Northern Chamois",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Capra rupricapra Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Capra",
+        "species_name": "rupricapra",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 3500,
+    "lower_elevation_limit": 200,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "300000",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "8-11",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": ">20,000",
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p>The Northern Chamois is native to mountainous parts of central and southern Europe and Asia Minor, where it occurs as seven subspecies: <em>R. r.</em> <em>asiatica, balcanica</em>, <em>carpatica</em>, <em>cartusiana</em>, <em>caucasica, rupicapra</em> and <em>tatrica</em> (Shackleton 1997, Pedrotti and Lovari 1999). It occurs from 200 m to 3,500 m asl.&#160; It has been introduced to Czechia and New Zealand (not mapped), and possibly to Argentina (no information on its presence nowadays). <br/> <br/> The subspecies <em>R. r.</em> <em>asiatica </em>only occurs in the northeastern mountains of the Black Sea, eastern parts of Anatolia (Turkey) and the southwestern regions of Georgia in three mostly isolated populations. The Kaçkar Mountain and the transboundary populations between Turkey and Georgia have not been connected since 2000 due to the large dam water reservoirs in the province of Artvin. The eastern Anatolian and Kaçkar Mountain populations have become almost isolated after increasing highway constructions and decreasing population sizes, and there is no evidence that they are connected any longer. Previous distribution maps by Turan (1984) and Lovari and Scala (1984) showed a wide coverage in eastern and northeastern Anatolia including Mount Ağrı, Cilo and Kaçkar, but recent studies have indicated that Anatolian Chamois have been disappearing from former habitats (Ambarlı 2014). </p>  <p>The subspecies <em>R. r.</em> <em>balcanica</em> occurs in Croatia (Dinara and Biokovo Mts.), Bosnia and Herzegovina, Serbia, Kosovo, Montenegro, North Macedonia, Albania, Bulgaria (four main massifs), and Greece. In Serbia, it inhabits the mountain Tara, the area around the Lim river, Đerdapska klisura and Zlot. In Kosovo, it occurs in the mountains of Prokletije, Mokra Gora, Koritnik and Šar Planina. In Bosnia and Herzegovina, it inhabits the mountains of Zelengora, Prenj, Čvrsnica, Čabulja, Veleža, Bjelašnica, Treskavica and Sušica. In Montenegro, it is found in the mountains of Durmitor, Prokletije and Orjen, and in the Tara river canyon. In Bulgaria, there are five distinct sub-populations: Western Rhodopes, Rila, Pirin, Vitosha and Central Balkan. The population in Vitosha was reintroduced after 2000 (Valchev&#160;<em>et al.</em>&#160;2010). A reintroduction project has also started in the Western Stara Planina, but requires additional animals in order to be successful. In Greece, there are 30 distinct sub-populations forming six discrete population blocks in the following mountain ranges: Northern Pindus (12 sub-populations), Central and Southern Pindus (7), South mainland mts (5), N-NW mts (1), Olympus mt (1), Rhodope mts (4) (Papaioannou 2010, 2015, 2016a, 2016b, 2020; Papaioannou and Kati 2016). The first three, and possibly the fourth, seem to share a common genepool, whereas the rest diverge slightly (Papaioannou&#160;<em>et al.</em>&#160;2019). The area of occupancy at the national level is estimated between 1950 – 2475 km<sup>2</sup> (EEA 2019, Papaioannou 2020). <br/> <br/> The subspecies <em>R. r.</em> <em>carpatica</em> occurs in many populations in Romania throughout the Transylvania alps and the Carpathian mountains. There have been a number of successful re-introductions (Shackleton 1997).<br/> <br/> The subspecies <em>cartusiana</em> is endemic to France, where it is restricted to a 350 km<sup>2 </sup>area of the Chartreuse limestone massif, centred around Grenoble, at the western edge of the French Alps. <br/> <br/> The subspecies <em>R. r.</em> <em>caucasica</em> is restricted to the Caucasus Mountains in southern Russia, Georgia and Azerbaijan. Its distribution in the Lesser Caucasus is currently confined to the northern and western parts, Adjara-Imereti Mountain Range (Vereshchagin 1947, Gurielidze 2015). In the Greater Caucasus, the chamois sporadically inhabits all three highest ranges, and sometimes occurs at lower altitudes. The outer limits of its distribution in the Greater Caucasus have not changed much during the last 50 years, except for the westernmost part, where it is no longer present. </p>  <p>The subspecies <em>R. r.</em> <em>rupicapra </em>is found in Austria, southern Germany, Switzerland, Liechtenstein, Italy, eastern France, Slovenia and NW Croatia. While the range has remained similar to the previous assessment in Austria, Germany, Switzerland and Liechtenstein, it has increased in France as a result of natural and assisted recolonisations.The subspecies <em>R. r.</em> <em>tatrica </em>has a small island-like distribution range of some 300 km<sup>2</sup> and occurs in the open habitats above the tree line in the Tatra Mountains of Poland and Slovakia, including the ranges of Western, High and Belianske Tatra Mountains (Jamrozy&#160;<em>et al.</em>&#160;2007). In Slovakia, it had also been introduced to the Low Tatra Mountains (Shackleton 1997), but this population is now hybridized with introduced <em>R. r. rupicapra</em> (<span class=\"author\">Zemanová&#160;<em>et al.</em>&#160;<span class=\"pubyear\">2015).</span></p>",
+    "population": "<p>The Northern Chamois&#160;as a species is widespread and appears generally stable, especially the Alpine subspecies <em>R. r. rupicapra</em>. However, many of the other subspecies are rare and/or declining:&#160;</p><p><em>R. r. asiatica -&#160;</em>The total population size is estimated between 500 and 750, with a total extent of occurrence (EOO) over 9,000 km<sup>2</sup>, but a very low area of occupancy (AOO). Group sizes in the Kaçkar Mountains have decreased significantly from 40 to 50 individuals in the 1990s to a maximum of 25 individuals (but mostly only 3 to 7) between 2006 and 2012 during mating time observations (Ambarlı 2014). Along with the disappearance from former habitats and increasing habitat fragmentation, the population size of Anatolian Chamois has decreased sharply in the last three decades (by ca. 60-70%, with the greatest reductions in population, AOO and EOO probably occurring between 1980 and 2000; Ambarlı 2014).</p>    <p><em>R. r. balcanica -&#160;</em>The total population numbers less than ten thousand individuals: ca. 500 in Croatia (Šprem and Buzan 2016), less than 1,000 in Bosnia and Herzegovina (cf. Adamič&#160;<em>et al.</em>&#160;2006, Korjenić&#160;<em>et al.</em>&#160;2009), ca. 320 in Central Serbia (data from 2017), ca. 200-300 in Kosovo, ca. 1,400 in Montenegro (Đurović 2018), ca. 1,400 in North Macedonia (V. Maletić pers. comm.), ca. 450-600 in Albania (F. Bego pers. comm.), ca. 2,500-3,000 in Bulgaria (with the largest sub-populations in Rhodopes – ca. 1000 - and Rila – ca. 1000; S. Avramov, pers. comm.), and ca. 1,500 in Greece (i.e. 1330-1765, with 4 populations numbering more than 150, the largest 380 and the smallest no more than 5-15; Papaioannou 2015, 2016a,b, 2020; Papaioannou and Kati 2016). In Bulgaria, the population size increased from 1,000-1,100 individuals estimated in 1997-2000 to 1,600–1,800 in 2005 (200-220 in the Central Balkan range, 450-500 at Rila, 200 in Pirin, and 750-850 in the Western Rhodopes; Spiridonov&#160;<em>et al.&#160;</em>2011). </p>  <p><em>R. r. carpatica -&#160;</em>Following some fluctuations in population size (Şelaru 1997), chamois numbers in Romania have shown a steady increase from ca. 6,800 in 2008 to ca. 8,150 individuals in 2019. This has been paralleled by an increase in the number of harvested animals from 195 in 2008 to 443 in 2018 (A. Farkas, pers. comm).<br/> <br/> <em>R. r. cartusiana -&#160;</em>The population is currently estimated at ca. 1,500 individuals, with ca. 200 animals harvested in 2017-2018 (Prévost 2018). The population history is as follows: ca. 50 individuals in 1945, 250 in 1972 (Prévost 2018), 35 in 1977, and 67 in 1979 in the north-western nucleus of the introduced population (Rouland 1980), 150 in 1986 (Prévost 2018) and ca. 120 in 1990 (Berducou 1990). Between 2005 and 2016, both the assigned hunting quota and number of harvested chamois increased: in 2005, about 110 chamois were harvested out of a quota of ca. 140, and in 2016, about 180 out of ca. 200 (Chantreau and Gaudry 2019). The genetic integrity of the current <em>R. r. cartusiana</em><em> population is unknown.</em></p><p><em>R. r. caucasica -&#160;</em>The total population estimate for the entire Greater Caucasus is just over 9,000 individuals, and in general, the subspecies is still declining. In Russia, the total is ca. 5,500, with ca. 3,500 in the Western Greater Caucasus, up to 1,000 in the central part, and up to 1,000 in Chechnya and Dagestan (Reports on status of nature conservation in respective regions; Lukarevsky 2018; Yarovenko and Yarovenko 2018). Chamois numbers in Chechnya (mainly on the limestone Rocky Ridge; Lukarevsky 2018) probably amount to at least 300 animals, possibly more. Of all animals in Russia, ca. 1,200 occur in the Kavkazsky Biosphere Reserve (Trepet, 2018), 300 in Sochi NP (Semyonov and Voronin, 2018), ca. 200 in the Teberdinsky Biosphere Reserve (J. Tekeev, pers. comm.), and ca. 250 in the North Ossetinsky Nature Reserve, Tseysky Managed Nature Reserve and Alania National Park (Weinberg, 2018). The population history is as follows: 9,000 chamois on the northern slope in 1972, almost 6,000 of which inhabited Krasnodar Kray, and 1,200 in the Stavropol region (Ravkin, 1975). The population declined, and by the beginning of the 2000s, there were 1,500 in the Western Greater Caucasus (without Kavkazsky reserve), up to 1,300 in the Central Greater Caucasus, and more than 400 animals in Dagestan (Danilkin, 2005). In addition, there were about 1,000 Chamois in the Kavkazsky Biosphere Reserve (Trepet, 2014). In Georgia, combined aerial counts and ground censuses conducted during 2012-2014 produced a maximum number of 3,267 animals in the Greater Caucasus and 500-600 Chamois in Adjara in the Lesser Caucasus (Gurielidze 2015). This also represents a decline from an estimated 5,000 animals at the end of the 1980’s (Arabuli 1989). In Azerbaijan, only 600-800 individuals were left by the end of the 1990s compared to an estimate of 2,000-2,500 animals in the 1950-60s (Guliyev 2000). 341 animals were counted in the Zagatala Nature Reserve in 2015, and 315 in 2018; in Ilisu Nature Reserve, 24 and 18 animals, respectively, in the same years (A. Muradov, pers. comm.). No data are available from Shahdag National Park, the largest protected area in the Azerbaijan part of the Eastern Greater Caucasus. Chamois numbers probably decrease eastwards.&#160;<span class=\"tlid-translation\">See Table 1&#160;in supplementary material.</p><p><em>R. r. rupicapra -&#160;</em>This subspecies comprises the bulk of the global Northern Chamois&#160;population, and is widespread and abundant in the Alps. Recent population declines have been suggested for some countries (e.g. Austria, Switzerland and Italy), but this is controversial, as there are large regional differences in population trends in all cases. The situation in Switzerland may provide a good example for the difficulties in inferring population trends from different data sources: In Switzerland, the total population size was estimated at ca. 91,000 in 2018. Compared to 2008, when there was an estimated number of about 96,000 chamois (Eidgenössische Jagdstatistik 2019), this would represent a decline of about 5%. However, as there is no standardized method to infer population abundance or trends of chamois in Switzerland, abundance estimates are not validated, and suspected changes need to be interpreted with care. The number of chamois shot in Switzerland peaked in the 1990’s and has since declined steadily. In 2008, about 17,300 chamois were shot, in 2018 about 13,700, which would correspond to a decline of 21% in ten years (data: Eidgenössische Jagdstatistik, Nov. 2019). However, care must also be taken regarding the interpretation of these data, as hunting regulations and hunting pressure have changed over the years. Reductions in numbers of shot animals therefore do not necessarily reflect population declines (Vogt&#160;<em>et al.</em>&#160;2019). While in some sub-populations, chamois numbers have experienced steady declines in the past 20-30 years, others have been stable or increasing (e.g., Vogt <em>et al.</em> 2019, Willisch&#160;<em>et al.</em>&#160;2013, Willisch pers. comm). A similar situation applies to Austria, where trends in the number of animals shot has differed widely between provinces, while the overall population trend is still under debate (Reimoser&#160;<em>et al.</em>&#160;2019). In Germany, a population numbering approximately 1,200 animals today occurs in the federal state of Baden Wuerttemberg (Wotschikowsky&#160;2010; MLR 2019). In the federal state of Saxony, few occasional sightings of individuals that belong to a border population in Czechia occur (Hertweck and Riebe 2009). The bulk of the German chamois populations occur in the federal state of Bavaria for which Wotschikowsky (2010) suggested an estimate of roughly 20,000 individuals in 2010. Current population size and trends have been debated amongst different stakeholder groups, which resulted in the initiation of several research projects to inform this debate, but results are pending to date. In Italy, the total population estimate is ca. 137,000 individuals, with ca. 124,800 outside (in 2014; Pellicioli 2019) and ca. 12,600 inside National Parks (Gran Paradiso 2019: ca. 7,000; Stelvio 2019: ca. 3,500; Val Grande 2013: ca. 800; Dolomiti Bellunesi: ca. 1,300; Italian National Park Authorities). Given annual population counts of 119,042 (2009), 120,400 (2010), 123,475 (2011), 123,666 (2012), 126,825 (2013), and 124,847 (2014) outside National Parks (Pelliccioli 2019), the number of chamois (including kids)&#160;in the Italian Alps appears relatively stable. Nevertheless, declines have been detected in some populations, particularly high density areas: for example, in the Trentino sector of the Stelvio National Park, the decline was over 60% between the mid-1990s and 2019. In France, chamois abundance and distribution range have shown an increase over most of the overall monitoring period, although the total abundance may have tended to stabilize during the last 15 years (1988: 31,680, 1994: 55,570, 2005: 98,715; 2010: 103,345; Corti 2012; Barboiron&#160;<em>et al.</em>&#160;2018). Although the population expansion still seems to be ongoing at intermediate and low altitudes (Barboiron&#160;<em>et al.</em>&#160;2018), contrasting local trends have appeared in other areas, including some local population decreases even in national parks such as in the Ecrins National Park and the Vanoise National Park. Difficulties in inferring <em>R. r. rupicapra </em>population sizes and trends also include limited economic and human resources allocated to absolute abundance surveys, and changes in survey methodology including the promotion of relative abundance indices (Loison&#160;<em>et al.</em>&#160;2006; Michallet&#160;<em>et al.</em>&#160;2015). Although this may fulfill the objective of making local surveys cheaper for the purpose of adjusting annual harvest rates, it may weaken the availability and accuracy of total population estimates (e.g. Jullien and Cornillon 2017; Barboiron&#160;<em>et al.</em>&#160;2018). In practice, such indices of relative abundance are only reliable when calculated over a sufficient number of surveys per year and over a sufficient number of years (Loison&#160;<em>et al.</em>&#160;2006), which is often not fulfilled (e.g. Chantreau and Gaudry 2019). <span class=\"tlid-translation\">Partial participation of stakeholders further compromises the reliability of population monitoring, and the corrections of underestimation biases (De Danieli and Sarasa 2015) also remain an open question.&#160;</span></p><em>    R. r. tatrica</em> - The total population size is currently estimated at 1,350 individuals (1000 in Slovakia and 350 in Poland, based on the mean population size for 2014-2018, Ciach and Pęksa 2018; M. Ciach and Ł. Pęksa , unpublished). Numbers of the Tatra Chamois had declined steadily since the 1960s (Jurdíková 2000) from ca. 1,100 individuals to ca. 220 individuals by the turn of the century (Ciach and Pęksa 2018). After the period of decline, the population increased rapidly between 2000 and 2018, with current numbers exceeding the population size prior to the decline (Ciach and Pęksa 2018; M. Ciach and Ł. Pęksa unpublished). There is an additional population of ca. 100 individuals in the Low Tatra Mts (Slovakia), which was established from 30 individuals from the Tatra population and introduced as a back-up population between 1969-1976. It increased subsequently and has persisted to date (Bačkor and Velič 2008, <span class=\"author\">Zemanová&#160;<em>et al.</em>&#160;<span class=\"pubyear\">2015), although nowadays, this population is displaying high levels of introgression of the <em>R. r. rupicapra </em>genome.</span>",
+    "habitats": "Northern Chamois&#160;inhabit steep, rocky areas mostly in the mountains, utilizing a variety of habitats including alpine meadows, open rocky areas, mixed broadleaf woodland, and coniferous woodland (Pedrotti and Lovari 1999). This species occupies rocky areas and alpine meadows, and feeds on grasses, herbs, leaves of trees, buds, shoots, and fungi (Sägesser and Krapp 1986). Females gestate for 170 days and usually have 1 offspring per pregnancy. Females are sexually mature at 2.5 years, while males mature 1-1.5 years later. They live 14-22 years. Females and young occur in flocks of 5-30 animals, while adult males remain solitary.",
+    "threats": "<p>Poaching and over-hunting are a problem for the species in parts of its range, especially where it occurs outside protected areas and private hunting reserves (Shackleton 1997, Jurdíková 2000; Markov et al. 2016). Many of the less numerous subspecies (e.g. <em>R. r. balcanica</em>, <em>R. r. cartusiana</em>, and <em>R. r. tatrica</em>) are threatened by the deliberate introduction of subspecies from other geographic areas (especially <em>R. r. rupicapra</em><em>; e.g. Rouland 1980</em>), leading to hybridisation and genetic swamping (Shackleton 1997; <span class=\"author\">Zemanová et al. <span class=\"pubyear\">2015; Šprem and Buzan 2016; Iacolina et al. 2019). Human disturbance, particularly as a result of increased tourism and leisure activities in mountain areas, is also a problem (Shackleton 1997, Jurdíková 2000; Pęksa &amp; Ciach 2015, Pęksa &amp; Ciach 2018). Competition with domestic livestock and introduced species such as the mouflon <em>Ovis aries</em><em> musimon</em> is a threat to the more vulnerable subspecies, although it is not considered to be a major problem for <em>R. r. rupicapra</em>. <em>R. r. rupicapra</em> does, however, suffer periodic outbreaks of sarcoptic mange, causing local population declines (Shackleton 1997). Habitat loss is a problem in some areas (e.g. for subspecies <em>balcanica </em>in Albania and <em>asiatica</em> in Turkey; Shackleton 1997; Ambarlı 2014). Because its population is very small indeed, subspecies <em>cartusiana </em>is susceptible to extinction as a result of stochastic demographic or environmental events (Shackleton 1997, S. Lovari pers. comm. 2006).<br/> <br/> <em>Rupicapra rupicapra asiatica</em><br/> </span>The main threats are poaching, trophy hunting, habitat degradation and isolation due to the construction of new roads to alpine habitats for mass tourism (Ambarlı 2014). Additional threats include the construction of hydro-electric power plants above 2000 meters, increasing tourism activities, heli-skiing causing avalanches and disturbing the animals during pregnancy, and chasing individuals by using unmanned aerial vehicles in refuge areas. For many years, the main threat to the population was considered to be poaching only. However, hunting regulations were changed in 2010, and the ban on killing females during trophy hunting was lifted because hunters had complained about difficulties in correctly sexing individuals from a distance. Moreover, trophy hunters are sometimes more interested in killing females due to their longer horns compared to males. As a result of the new hunting regulations, and because trophy hunting mostly takes place during the rut and birth seasons, both reproductive success and birth rates have likely also decreased. Additionally, the number of quotas is not determined based on robust scientific data. Instead, most are given out over the desk or by relying on hunters’ observations without knowledge of actual population sizes in wildlife reserves. Alpine tourism and new road constructions in the Kaçkar Mountains for the “Green Belt Roads\" Project by the Ministry of Tourism has caused catastrophic destruction of the prime habitats of Anatolian chamois. Additionally, interspecific competition with wild goats and livestock has probably pushed chamois up to higher altitudes and restricted the subspecies’ range in the alpine zone to mostly above 2,000 m.<br/> <br/> <em>Rupicapra rupicapra balcanica</em><br/> In Albania, habitat loss is a major threat in some regions due to land demands by the expanding human population. There appears to be no competition from domestic livestock. Poaching does occur, but the extent is not known. In both Bulgaria and Croatia, the major threats are poaching and hybridization with Alpine chamois (Iacolina et. al, 2019). In Rhodope, this is almost complete, and is also a potential danger at Rila. In Croatia, the hybridization zone between the Alpine and Balkan subspecies is in the Velebit mountains (Šprem and Buzan 2016). Outside protected areas, poaching remains a problem. Although there has been a decrease in poaching in Bulgaria in recent years, it still has negative effects on populations. As a result, the majority of suitable habitats in Bulgaria have not been recolonized by chamois. Poaching is wide-spread in the entire country both in national parks and hunting territories. The genetic purity of the subspecies needs to be clarified, especially in West Rodopi, where ten female and 1 male Alpine chamois were introduced from Switzerland in 1977. Their influence on the neighboring subpopulations requires clarification. The influence of disturbance of chamois due to drive-hunting of wild boar, as well as the presence of feral and guard dogs around livestock, also need to be assessed. The Balkan population, which has been isolated for about 100 years, is still small and vulnerable, and poaching has not yet been eliminated (Markov et al. 2016). In Serbia, the population at Tara mountain had declined from 500 to ca. 60 individuals between 1992 and 1996, mainly due to poaching. However, due to conservation measures in the last decade, the number has increased to ca. 120 individuals. The population from Stolovi mountain is extinct, and only isolated individuals are occasionally encountered in the area around the Lim river. Populations from Šar planina are also threatened by poaching and are declining (estimated to be about 100 individuals). At Đerdapska klisura and Zlot, populations are not threatened. In Bosnia and Herzegovina, numbers declined in the last three decades due to poaching (e.g. by more than 80% to 90 individuals at Zelengora mountain). At Prokletije mountain (belonging to both Serbia and Montenegro), the population is not threatened and numbers up to 150 individuals.&#160; In Greece, the main threat is also poaching. All Greek sub-populations suffer from regular poaching to a greater or lesser extent (Papaioannou 2010, 2015, 2016a,b,c, 2020; Bounas et al., 2017).&#160; Poaching is more intensive in the border zones with the neighbouring Balkan countries. Additional problems are: fragmentation due to geographic isolation in restricted areas and resulting very small population sizes, disturbance due to legal hunting of other game species and livestock presence, competition with livestock, increased road accessibility for timbering and livestock keeping close to or inside the species’ key habitats, as well as a lack of an effective state wildlife management system at a national level (Papaioannou 2010, 2015, 2016a,b, 2020; Papaioannou &amp; Kati 2016; EEA, 2019). Genetic effects on one of the northern Greek populations due to re-stocking with individuals of other subspecies from Bulgaria, as well as current road construction for installation of wind power stations, seem to be future threats, too (Papaioannou 2020). Both population size and geographic range are estimated to be less than 10-20% of the carrying capacity in Greece (Papaioannou 2020). This latter point is normally not accounted for in species assessments, which means that particularly in Greece with its extremely small and isolated populations, the Balkan chamois should be listed as higher conservation concern (i.e. vulnerable) than the assessment based on overall population size would suggest.</p>  <p><br/> <em>Rupicapra rupicapra carpatica</em><br/> Grazing by domestic sheep in summer leads to disturbance and thus to higher dispersal of animals. In some areas, high livestock densities create intense grazing pressure and lead to interspecific competition. Additional concerns are small, fragmented populations and poaching in some areas (Valdez 2011).<br/> <br/> <em>Rupicapra rupicapra cartusiana</em><br/> Many factors threaten this subspecies, and the most important include: food and space competition with domestic livestock, red deer <em>Cervus elaphus</em> and introduced mouflon; potential hybridization with introduced <em>R. r. rupicapra</em> (Rouland 1980); over-harvesting and poaching; forestry; summer tourism and winter cross-country skiing. <br/> <br/> <em>Rupicapra rupicapra caucasica</em><br/> The main threat for the subspecies is poaching. In some areas, competition with domestic livestock is a problem, and competition with tur (<em>Capra caucasica</em> and <em>Capra cylindricornis</em>), red deer, and roe deer <em>Capreolus capreolus</em> is also possible.<br/> <br/> <em>Rupicapra rupicapra rupicapra</em><br/> <em>R. r. rupicapra</em> is not threatened overall. However, the ongoing increase in human land use and particularly increases in (winter) outdoor / tourism activities contribute to habitat degradation and disturbance (e.g. Ingold, 2005). In parts of its range, the subspecies was / has been subjected to increased hunting pressure at local scales, in order to prevent browsing damage to mountain forests (e.g. Baumann &amp; Imesch 2010; Wotschikowsky 2010) and to afforestations. In areas managed by the State Forestry Board in Bavaria chamois are managed on the basis of a spatio-temporally structured zonation system. Under legislative regulation, year-round hunting is exerted in small areas to support regeneration of forests with protective attributes (e.g. protection from avalanches and erosion), while in other areas hunting is restricted to few to no individuals. Debates regarding the management practices of chamois population units in some regions / countries have been ongoing, but compelling evidence is often limited. Over the majority of the subspecies’ range, however, harvest rates are generally considered sustainable. Regarding climatic factors, harsh winters (i.e. with a lot of snow) and warm summers may limit population growth in some areas (Vogt et al 2019, Willisch et al. 2013). Climate change seems to exert negative effects on body mass of young chamois (Rughetti &amp; Festa-Bianchet 2012, Mason et al. 2014), but its demographic effect in these populations is still unclear.&#160;Imperio et al. (2014) suggested that positive and negative effects of a changing climate may largely balance out, with an overall positive effect of lower winter snow depth on survival rates, but negative effects from higher spring-summer temperatures on population dynamics. Among the biotic factors that can negatively influence chamois populations are diseases such as infectious keratoconjunctivitis (Degiorgis et al. 2000, Mavrot et al. 2012) and sarcoptic mange (Rossi et al. 2007), competition with livestock (in this case also the danger of disease transmission) or other wild ungulates such as red deer, Alpine ibex <em>Capra ibex</em> or mouflon (e.g. Suter et al. 2005; Bertolino et al. 2009; Chirichella at al. 2012; Darmon et al. 2012; Vogt et al. 2019; Corlatti et al. 2019). Increased predation is expected due to the return of large carnivores such as the Eurasian lynx <em>Lynx lynx</em> (Vogt et al. 2019) and wolf <em>Canis lupus</em> (Gazzola et al. 2007). In 2015, a barbed wire border fence was constructed along the border between Croatia and Slovenia due to the European migrant crisis. This fence represents a major threat to the local chamois population, as it may cause mortality, obstruct seasonal dispersal, and reduce effective population size (Safner et al. 2019).<br/> <br/> <em>Rupicapra rupicapra tatrica</em><br/> In the past, major threats included poaching and domestic sheep grazing. However, the Tatras are now protected in their entirety in the form of national parks: the Tatranský Národný Park (TANAP) in Slovakia was established in 1949 and the Tatrzański Park Narodowy (TPN) in Poland in 1954. As a result of strict conservation measures, hunting is banned and incidents of poaching are rare (Jamrozy et al. 2007). Sheep grazing, once common all over the Tatras, gradually declined following the creation of the national parks, and since the 1980s has been restricted to mid-forest meadows, which lie at lower altitudes, below the range of occurrence of the Tatra chamois. Currently, disturbance and habitat loss caused by tourism is a major threat to the population. This includes the constant presence of large numbers of tourists in the high mountains and the development or maintenance of tourist infrastructures (ski resorts, hiking trails), which impact the spatial distribution, behaviour and physiology of the Tatra chamois (Zwijacz-Kozica et al. 2013, Pęksa &amp; Ciach 2015, Pęksa &amp; Ciach 2018). In Slovakia, interbreeding with animals from introduced populations of <em>R. r. rupicapra</em> has caused the loss of the back-up population of <em>R. r. tatrica </em><em>in the </em>Low Tatra Mountains (Slovakia; <span class=\"author\">Zemanová et al. <span class=\"pubyear\">2015<em>), and further gene flow between introduced Alpine and native Tatra chamois can become a serious threat to the population occuring in the Tatra </em></span>Mountains. Both populations (natural, inhabiting the Tatra Mountains and introduced and hybridized in the Low Tatra Mountains) are relatively small, and their effective population sizes may limit the maintenance of genetic diversity and adaptability over the long term. A potential problem is the danger of disease transmission from domestic livestock to the wild population of the Tatra chamois.</p>",
+    "measures": "<p>The species is listed on Appendix III of the Bern Convention and in Annex V of the EU Habitats and Species Directive (higher protection applies to some subspecies). Chamois occur in many protected areas. In general, conservation recommendations that apply to all subspecies include ensuring that any harvest is sustainable (e.g. through research, monitoring, legislation, and international cooperation), reducing poaching (e.g. through legislation, enforcement, education and awareness-raising, and provision of alternative livelihoods where necessary), reducing the impacts of human disturbance (e.g. by providing refugia in areas with intense tourism and hunting pressure), preventing habitat degradation, and protecting the genetic integrity of populations (by avoiding translocations of 'foreign' subspecies that could hybridise with the local population). Monitoring of all subspecies is important, especially those that are rare and/or declining. Due to increasing evidence of negative effects on chamois through interspecific competition with red deer, red deer (re-)introductions should be avoided in areas with chamois presence, and due to the danger of disease transmission from domestic livestock to wild ungulates, prophylaxis of domestic animals against infectious keratoconjunctivitis should become routine. Particularly the uncertainties in population trends in central Europe highlight the importance of methodologically consistent long-term monitoring programmes.</p>    <em>R. r. asiatica -</em>&#160;The Anatolian Chamois has so far been the only subspecies categorized as DD. There is only a limited number of studies about the species in Turkey. It has been fully protected by the Land Hunting Law 4915 since 2003 (Official Gazette of Turkish Republic 2003). However, continued trophy hunting has been permitted by the Directory of Game Animals since 1989, and poaching still continues mainly on the population of the northeastern Black Sea Region and transboundary populations. To protect chamois and stop the population decline in the 1990s, five wildlife reserves were established, but they have no viable populations any longer. Both the number of game wardens and conservation efforts in high mountain areas are inadequate, and limited resources are allocated to monitoring efforts and law enforcement.   <em>R. r. balcanica</em> is listed in Annexes II and IV of the EU Habitats and Species Directive. In Croatia, one of two Balkan chamois habitats – the Dinara Mountain - has been listed in the Natura 2000 sites in 2019. In Greece, the conservation status of the Balkan Chamois at the national level is U<sub>2</sub>-(i) (EEA, 2019), and it is included in the Greek National Red Data book as NT (Near Threatened, Legakis and Maragou 2009). It is a fully protected species, and hunting has been banned throughout the country since 1969 (Law 86/69). Most of the subspecies’ population ranges have been included in a no-hunting legislation status (Wildlife sanctuaries). In addition, several chamois ranges overlap - entirely or partly - with Natura 2000 sites, either SCIs or SPAs (Papaioannou 2016a, 2016c, 2020), and most of them are located within the boundaries of protected areas (e.g. extended National Parks, namely: Northern Pindos, Olympus, Oiti, Rodope, Tzoumerka-Peristeri-Aracthos gorge). The Greek Ministry of Environment has recently (2015) implemented monitoring projects for species listed on Annex 17 of the European directive 92/43 EU (EEA 2019) - including the Balkan Chamois - and the National Action Plan for this subspecies has just been accomplished (Papaioannou 2020). In Bulgaria, Balkan Chamois have been protected since 2007 (with poaching fines of 2500 euro and up to 5 years of emprisonment) and a National Action Plan was developed. The species is listed as Endangered in the National Red Book, but the status of U1 vs. U2 has been disputed. Although a small population growth at the national level was registered during the previous reporting period, the Balkan Chamois still inhabits less than half of its potential habitat in Bulgaria, and the present population size is several times lower than the potential number for the country. The distribution in Rila, Pirin and the Central Balkan is mostly within the borders of national parks where hunting is strictly prohibited, and almost all present Bulgarian populations and the majority of the potential chamois habitat are in Natura 2000 sites. The main tool to decrease poaching in Bulgaria is through community-based conservation, i.e. encouraging local hunters through a small number (35-55) of hunting permits, education of mountaineers and local communities. Under the National Action Plan, a National Chamois working group was established in order to coordinate the activities of the plan but it deals mainly with hunting derogations (Avramov at al. 2010). A few joint control actions against illegal trophies of chamois were carried out. More than fifteen trophies were confiscated and trials started against some of the most famous poachers. A large-scale media campaign was initiated against poaching. The Ministry of Environment organized the first National Chamois counting in 2009. The counts continue but their reliability has been compromised in the last years. The monitoring of chamois needs to be revised and improved.   <em>R. r. cartusiana</em> has been subject to intensive conservation management, including reintroductions. The subspecies was distinguished by Couturier (1938), while it was not distinguished from <em>R. r. rupicapra</em> during certain management actions and in many reports (Corti 1995). This uneven recognition has had substantial impacts on its conservation until nowadays. <em>R. r. cartusiana</em> was not assessed at the subspecific level in the Red List of Mammals of France in 2009 (IUCN France <em>et al.</em> 2009), while it was listed as vulnerable with unknown population trend in the Red List of Mammals of France in 2017 (IUCN France <em>et al.</em> 2017). It was considered as formerly abundant in Chartreuse, but overhunting and poaching probably put the population at risk of extinction from WWII to 1970 (Rouland 1980). Restocking and restauration programmes are cited in some references of grey literature (Corti 2006). During the 1974-76 period, 29 <em>R. r. rupicapra</em> individuals from the Bauges hunting reserve and the Markstein were translocated to the north-western part of the Chartreuse (Rouland 1980). During the 1990-92 period, 26 chamois assumed to be <em>R. r. cartusiana</em> were translocated from the south-western part of the Chartreuse to the south-eastern part (Michallet and Toïgo 2000). In practice, monitoring focused on estimating the relative abundance of chamois in Chartreuse is only partially fulfilled and suggests high interannual variability and an overall stability during the 2010-2016 period (e.g. Chantreau and Gaudry 2019). The conservation of <em>R. r. cartusiana</em> should incorporate improved monitoring and reporting of abundance, sustainable management of hunting pressure and active management of the risk of extinction by hybridization and introgression, beyond monitoring pressures from interspecific competition.  <em>R. r. caucasica </em>is listed in the Red Data Book of Azerbaijan as a “Species whose numbers declined in the past and are still low” (Guliyev 2013c). It is also listed in the Red List of Georgia as Endangered (EN/A2a) (Decree 2014). In both countries, these listings exclude any extractive use, but do not lead to restrictions on land use or development projects affecting the species and its habitat (S. Michel, pers. comm.). In the Soviet Union, the chamois was considered rare, but was not included in Red Data Books. Later, it was still not listed in the Red List of the Russian Federation. Now there are plans to include the species in the new version of the Red List of Russia. <em>R. r. tatrica</em> is listed in Annexes II* and IV of the EU Habitats and Species Directive. It has been strictly protected by law since 1868 on the Polish side of the Tatra Mountains (the world's first parliamentary act on the protection of animal species). In spite of being strictly protected by law, numbers of Tatra Chamois continued to decline. In the mid 20<sup>th</sup> century, the whole Tatra massif became protected in the form of national parks: the Slovakian Tatranský Národný Park was formed in 1949 and the Polish Tatra National Park was formed in 1954. Moreover, the Tatras have been designated as an International Biosphere Reserve and are one of the areas protected by the Natura 2000 network in the frame of the Habitats Directive. Today, the entire population and its habitats are protected year-round in both the Polish and Slovakian national parks. The species is listed in the Polish Red Data Book as critically endangered. <em>R. r. rupicapra</em> introduced into Slovakia <em>should be managed for minimizing the threat of genetic introgression from dispersing males into the populations of </em><em>R. r. tatrica</em><em>. The population of </em><em>R. r. tatrica</em><em> in the Low Tatras, affected by introgression of </em><em>R. r. rupicapra</em><em>, should be maintained separately from the pure </em><em>R. r. tatrica</em><em> in the High Tatras</em><em> </em>(Zemanová <em>et al.</em> 2015).<br/><strong></strong>",
+    "use_trade": "This species is widely hunted through its range.",
+    "rationale": "<p>The Northern Chamois&#160;is widespread as a species and has a large population of just under 500,000 individuals (Corlatti <em>et al</em>. in press). Although it is declining in some parts of its distribution range, the bulk of the population (subspecies <em>R. r. rupicapra</em>) is found in the Alps and is currently secure. Consequently, it is assessed as Least Concern. However, most chamois subspecies qualify as threatened, and require urgent conservation action.</p>    <em>R. r. asiatica</em> – Recent data suggest that the subspecies has experienced catastrophic declines in population size in the last several decades due to intensive human impact. The overall population is less than 2,500 mature individuals (estimated between 500 and 750 individuals). There is an observed and projected decline by more than 20% in two generations based on recent, ongoing and planned development projects (roads and hydro-power plants in montane areas) affecting habitat and connectivity, and causing an increase in pressure by illegal hunting. Therefore, the subspecies <em>asiatica</em> should be listed as Endangered (EN) C1+2a(i).  <em>R. r. cartusiana</em> - Listed as Vulnerable (VU) D1+2. Confined to a single mountain, the population size was estimated at 1,500 individuals in 2017-2018 (Prévost 2018). Assuming that ca. 60% of the population are mature (IUCN definition), this would translate into a total of 900 adults. The past introduction of <em>R. r. rupicapra</em> to the Chartreuse to increase the small relict population (Rouland 1980) might jeopardize the long-term persistence of <em>R. r. cartusiana</em> due to the potential risk of crossbreeding (Apollonio&#160;<em>et al.</em>&#160;2014) which could eventually lead to extinction by hybridization and introgression (Rhymer and Simberloff 1996).  <em>R. r. caucasica</em> – Previously no category assigned at subspecies level. The population size is approx. 6,000 mature individuals and there had been a decline by approx. 70% since the 1960-1970s, which is suspected to continue. The subspecies is therefore assessed as VU C1.<br/> <br/> <em>R. r. tatrica</em> - Listed as Endangered (EN) B1+2ab - has a restricted geographic range and small population of 1,350 individuals (1,000 in Slovakia and 350 in Poland (mean population size for 2014-2018, Ciach and Pęksa 2018; M. Ciach and Ł. Pęksa, unpublished). There are an additional ca. 100 individuals in the Low Tatra Mts (Slovakia) as a result of the introduction of a back-up population between 1969-1976 (Bačkor and Velič 2008), but these are presently hybridized with introduced <em>R. r. rupicapra</em> (<span class=\"author\">Zemanová&#160;<em>et al</em>&#160;<span class=\"pubyear\">2015) and cannot be accounted for the subspecies <em>tatrica </em>(J. Robovsky, pers. comm. 2020). There has been strong fluctuation in the number of mature individuals (decline of the population from ca. 1,100 individuals in the 1960’s to ca. 220 individuals by the turn of the century; Ciach and Pęksa 2018). The population increased rapidly between 2000 and 2018, with current numbers exceeding the population size prior to the decline (Ciach and Pęksa 2018, M. Ciach and Ł. Pęksa unpublished). Concerns are low genetic variation and a projected problem of hybridization with introduced <em>R. r. rupicapra</em> (<span class=\"author\">Zemanová&#160;<em>et al</em>&#160;<span class=\"pubyear\">2015).</span></span>",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_3_1",
+      "description": {
+        "en": "Reintroduction"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": null,
+      "code": "6_1",
+      "description": {
+        "en": "Linked enterprises & livelihood alternatives"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Rocky areas (eg. inland cliffs, mountain peaks)"
+      },
+      "code": "6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Austria"
+      },
+      "code": "AT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Serbia"
+      },
+      "code": "RS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Kosovo"
+      },
+      "code": "YUG-KO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Azerbaijan"
+      },
+      "code": "AZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bosnia and Herzegovina"
+      },
+      "code": "BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Poland"
+      },
+      "code": "PL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Czechia"
+      },
+      "code": "CZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Slovakia"
+      },
+      "code": "SK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Switzerland"
+      },
+      "code": "CH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Serbia"
+      },
+      "code": "YUG-SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "North Macedonia"
+      },
+      "code": "MK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "NZ"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Ovis aries",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Capra aegagrus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_2_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Capra caucasica",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_2_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Cervus elaphus_old",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_2_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Capreolus capreolus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_2_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_2_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Unspecified SARCOPTIDAE",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_4_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Canis familiaris",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": "Pestivirus",
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_5_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Anderwald, P., Ambarli, H., Avramov, S., Ciach, M., Corlatti, L., Farkas, A., Jovanovic, M., Papaioannou, H., Peters, W., Sarasa, M., Šprem, N., Weinberg, P. & Willisch, C.",
+      "value": [
+        "Michał Ciach (4University of Agriculture in Krakow, Poland)",
+        "Christian Willisch (Zentrum für Fisch- und Wildtiermedizin, Switzerland)",
+        "Nikica Šprem (University of Zagreb, Croatia)",
+        "Mathieu Sarasa (BEOPS, France)",
+        "Wibke Peters (Bavarian State Institute of Forestry, Germany)",
+        "Haritakis Papaioannou (University of Ioannina, Greece)",
+        "Marija Jovanovic (University of Kragujevac, Serbia)",
+        "Attila Farkas (6Ecosystem Management Association, Romania)",
+        "P Weinberg",
+        "Stefan Avramov (Thracian University & Rewilding Rhodopes Foundation, Bulgaria)",
+        "Pia Anderwald (Swiss National Park, Switzerland)",
+        "Huseyin Ambarli (2Duzce University, Turkey and TUM Terrestrial Ecology, Germany)",
+        "Luca Corlatti (University of Freiburg, Germany and Stelvio National Park, Italy)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Herrero, J., Lovari, S. & Michel, S.",
+      "value": [
+        "Sandro Lovari (Università degli Studi di Siena)",
+        "Juan  Herrero",
+        "Stefan Michel (IUCN SSC Caprinae Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Miller, C., Muradov, A., Valchev, K. & Yarovenko, Y.A.",
+      "value": [
+        "Azerchin Muradov (Zagatala State Nature Reserve, Azerbaijan)",
+        "Yuri Yarovenko (Caspian Institute of Biological Resources, Russian Federation)",
+        "Kostadin Valchev (Balkani Wildlife Society, Bulgaria)",
+        "Christine Miller"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This amended assessment was created to update the distribution map for this species."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Shackleton, D.M. 1997. <i>Wild Sheep and Goats and Their Relatives: Status Survey and Conservation Action Plan for Caprinae</i>. IUCN/SSC Caprinae Specialist Group, Gland, Switzerland and Cambridge, UK.",
+      "year": "1997",
+      "title": "Wild Sheep and Goats and Their Relatives: Status Survey and Conservation Action Plan for Caprinae",
+      "author": "Shackleton, D.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Loison, A., Appolinaire, J., Jullien, J.-M. and Dubray, D. 2006. How reliable are total counts to detect trends in population size of chamois <i>Rupicapra rupicapra</i> and <i>R. pyrenaica</i>? <i>Wildlife Biology</i> 12: 77-88.",
+      "year": "2006",
+      "title": "How reliable are total counts to detect trends in population size of chamois <i>Rupicapra rupicapra</i> and <i>R. pyrenaica</i>?",
+      "author": "Loison, A., Appolinaire, J., Jullien, J.-M. and Dubray, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ravkin, Ye.S. 1975. <i>Wild ungulate resources in the North Caucasus and anthropogenous influence upon them</i>. Nauka, Moscow, Russia.",
+      "year": "1975",
+      "title": "Wild ungulate resources in the North Caucasus and anthropogenous influence upon them",
+      "author": "Ravkin, Ye.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pedrotti, L. and Lovari, S. 1999. <i>Rupicapra rupicapra</i>. In: A. J. Mitchell-Jones, G. Amori, W. Bogdanowicz, B. Kryštufek, P.J.H. Reijnders, F. Spitzenberger, M. Stubbe, J.B.M. Thissen, V. Vohralík, and J. Zima (eds), <i>The Atlas of European Mammals</i>, Academic Press, London, UK.",
+      "year": "1999",
+      "title": "<i>Rupicapra rupicapra</i>",
+      "author": "Pedrotti, L. and Lovari, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jurdíková, N. 2000. The decline of the Tatra chamois. <i>Caprinae: Newsletter of the IUCN/SSC Caprinae Specialist Group</i> 2000: 4-6.",
+      "year": "2000",
+      "title": "The decline of the Tatra chamois",
+      "author": "Jurdíková, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vereshchagin, N. K. 1959. <i>The Mammals of the Caucasus: A History of the Evolution of the Fauna</i>. Academy of Sciences of the USSR.",
+      "year": "1959",
+      "title": "The Mammals of the Caucasus: A History of the Evolution of the Fauna",
+      "author": "Vereshchagin, N. K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Trepet, S.A. 2018. Historic range and prospects of leopard restoration in Krasnodar Kray and Adygea. In: Semyonov, U.A. (ed.), <i>Restoration of leopard in the Caucasus</i>, Partnership of scientific publications KMK, Moscow.",
+      "year": "2018",
+      "title": "Historic range and prospects of leopard restoration in Krasnodar Kray and Adygea",
+      "author": "Trepet, S.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lukarevsky, V.S. 2018. Field surveys in Chechen Republic, Republic of Daghestan and Republic North Ossetia-Alania in order to evaluate habitats of Leopard and work out suggestions on current species range appropriate for restoration of wild population. Unpublished report. ANO “Center for Nature of the Caucasus”.",
+      "year": "2018",
+      "title": "Field surveys in Chechen Republic, Republic of Daghestan and Republic North Ossetia-Alania in order to evaluate habitats of Leopard and work out suggestions on current species range appropriate for restoration of wild population. Unpublished report",
+      "author": "Lukarevsky, V.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vereshchagin, N.K. 1947. <i>Game animals of the Caucasus</i>. Azerbaijan Acad. Sci., Baku.",
+      "year": "1947",
+      "title": "Game animals of the Caucasus",
+      "author": "Vereshchagin, N.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Weinberg, P.J. 2018. Survey in Republic of North Ossetia–Alania in order to evaluate possibility of inclusion into leopard restoration in the Caucasus. In: Semyonov, U.A. (ed.), <i>Restoration of leopard in the Caucasus</i>, pp. 213-258 . Partnership of scientific publications KMK, Moscow.",
+      "year": "2018",
+      "title": "Survey in Republic of North Ossetia–Alania in order to evaluate possibility of inclusion into leopard restoration in the Caucasus",
+      "author": "Weinberg, P.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 December 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-3"
+    },
+    {
+      "citation": "Adamic, M. and Jerina, K. 2010. Ungulate management in Europe in the 21st century Slovenia. In: Apollonio, M., Andersen, R. and Putman, R. (eds), <i>European ungulates and their management in the 21st century </i>, pp. Cambridge University Press, UK. Cambridge University Press, UK.",
+      "year": "2010",
+      "title": "Ungulate management in Europe in the 21st century Slovenia",
+      "author": "Adamic, M. and Jerina, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Akkiev, M.I. 2018. Evaluation of potential leopard habitats in Kabardino-Balkaria. In: Semyonov, U.A. (ed.), <i>Restoration of leopard in the Caucasus</i>, pp. 165-212. Partnership of scientific publications KMK, Moscow.",
+      "year": "2018",
+      "title": "Evaluation of potential leopard habitats in Kabardino-Balkaria",
+      "author": "Akkiev, M.I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ambarlı, H. 2014. Status and management of Anatolian chamois (Rupicapra rupicapra asiatica): implications for conservation. <i>Chamois International Congress. 17-19 June 2014, Lama dei Peligni, Majella National Park, Italy</i>.",
+      "year": "2014",
+      "title": "Status and management of Anatolian chamois (Rupicapra rupicapra asiatica): implications for conservation",
+      "author": "Ambarlı, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Apollonio, M., Scandura, M. and Šprem, N. 2014. Reintroductions as a management tool for European ungulates. In: R. Putman and M. Apollonio (eds), <i>Behaviour and management of European ungulates</i>, pp. 46-77. Whittles Publishing, Dunbeath.",
+      "year": "2014",
+      "title": "Reintroductions as a management tool for European ungulates",
+      "author": "Apollonio, M., Scandura, M. and Šprem, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Arabuli, A.B. 1989. Contemporary status of rare ungulate species of Georgia. In: Sablina, T.B. (ed.), <i>Ecology, morphology, use and protection of wild ungulates, part 1.</i>, pp. 28-29. Moscow.",
+      "year": "1989",
+      "title": "Contemporary status of rare ungulate species of Georgia",
+      "author": "Arabuli, A.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Avramov, S. and Valchev, K. 2010. Balkan Chamois Status and Action Plan in Bulgaria. <i>Galemys</i> 22 (NE): 561-574.",
+      "year": "2010",
+      "title": "Balkan Chamois Status and Action Plan in Bulgaria",
+      "author": "Avramov, S. and Valchev, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bačkor, P. and Velič, E. 2008. Restitution Tatra chamois (Rupicapra rupicapra tatrica Blahout 1971) to the Nízke Tatry Mts (Central Slovakia). <i>Nature Conservation</i> 65: 17–25.",
+      "year": "2008",
+      "title": "Restitution Tatra chamois (Rupicapra rupicapra tatrica Blahout 1971) to the Nízke Tatry Mts (Central Slovakia)",
+      "author": "Bačkor, P. and Velič, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Barboiron, A., C. Saint-Andrieux, M. Garel, C. Calenge, and B. Guibert. 2018. Inventaire des populations françaises d'ongulés de montagne, mise à jour 2016. <i>Faune Sauvage</i> 320: 35-44.",
+      "year": "2018",
+      "title": "Inventaire des populations françaises d'ongulés de montagne, mise à jour 2016",
+      "author": "Barboiron, A., C. Saint-Andrieux, M. Garel, C. Calenge, and B. Guibert.",
+      "citation_short": null
+    },
+    {
+      "citation": "Baumann, M. and Imesch, N. 2010. Jagdplanung bei Reh, Gämse und Rothirsch. <i>Wald und Wild - Grundlagen für die Praxis</i>, pp. 123-166. Bundesamt für Umwelt, BAFU, Berne.",
+      "year": "2010",
+      "title": "Jagdplanung bei Reh, Gämse und Rothirsch",
+      "author": "Baumann, M. and Imesch, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Berducou, C. 1990. Chamois et Isard: bilan des translocations réalisées en France (1956-1988). <i>Rev. Ecol. (Terre Vie) Suppl.</i> 5: 121-130.",
+      "year": "1990",
+      "title": "Chamois et Isard: bilan des translocations réalisées en France (1956-1988)",
+      "author": "Berducou, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bertolino S., di Montezemolo N. C. and Bassano B. 2009. Food–niche relationships within a guild of alpine ungulates including an introduced species. <i>Journal of Zoology</i> 277: 63-69.",
+      "year": "2009",
+      "title": "Food–niche relationships within a guild of alpine ungulates including an introduced species",
+      "author": "Bertolino S., di Montezemolo N. C. and Bassano B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bounas, A., Siarabi, S., Papadaki, C., Toli, E.A. and Sotiropoulos, K. 2018. DNA barcoding against poaching of Chamois (Rupicapra rupicapra), two confirmed cases from Greece. <i>Journal of Wildlife and Biodiversity</i> 2(1): 1-5.",
+      "year": "2018",
+      "title": "DNA barcoding against poaching of Chamois (Rupicapra rupicapra), two confirmed cases from Greece",
+      "author": "Bounas, A., Siarabi, S., Papadaki, C., Toli, E.A. and Sotiropoulos, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Chantreau, F. and Gaudry, W. 2019. <i>Synthèse des acquis et du fonctionnement du site OGFH de la Chartreuse</i>. Observatoire grande faune et habitats - ONCFS.",
+      "year": "2019",
+      "title": "Synthèse des acquis et du fonctionnement du site OGFH de la Chartreuse",
+      "author": "Chantreau, F. and Gaudry, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Chirichella, R., Ciuti, S. and Apollonio, M. 2013. Effects of livestock and non-native mouflon on use of high-elevation pastures by Alpine chamois. <i>Mammalian Biology</i> 78: 344-350.",
+      "year": "2013",
+      "title": "Effects of livestock and non-native mouflon on use of high-elevation pastures by Alpine chamois",
+      "author": "Chirichella, R., Ciuti, S. and Apollonio, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ciach, M. and Pęksa, Ł. 2018. Impact of climate on the population dynamics of an alpine ungulate: a long-term study of the Tatra chamois Rupicapra rupicapra tatrica. <i>International Journal of Biometeorology</i> 62(12): 2173-2182, doi:10.1007/s00484-018-1619-y.",
+      "year": "2018",
+      "title": "Impact of climate on the population dynamics of an alpine ungulate: a long-term study of the Tatra chamois Rupicapra rupicapra tatrica",
+      "author": "Ciach, M. and Pęksa, Ł.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ciach, M. and Pęksa, Ł. 2019. Human-induced environmental changes influence habitat use by an ungulate over the long term. <i>Current Zoology</i> 65(2): 129-137. doi:10.1093/cz/zoy035.",
+      "year": "2019",
+      "title": "Human-induced environmental changes influence habitat use by an ungulate over the long term",
+      "author": "Ciach, M. and Pęksa, Ł.",
+      "citation_short": null
+    },
+    {
+      "citation": "Corlatti, L., Bonardi, A., Bragalanti, N. and L. Pedrotti. 2019. Coupled dynamics of mountain-dwelling ungulates suggest interspecific competition. <i>Journal of Zoology</i>: in press.",
+      "year": "2019",
+      "title": "Coupled dynamics of mountain-dwelling ungulates suggest interspecific competition",
+      "author": "Corlatti, L., Bonardi, A., Bragalanti, N. and L. Pedrotti",
+      "citation_short": null
+    },
+    {
+      "citation": "Corlatti, L., Herrero, J., Ferretti, F., Anderwald, P., García-González, R., Hammer, S., Nores, C., Rossi, L. & Lovari, S. in press.. Chamois, Rupicapra spp. In: Zachos, F.E. & Corlatti, L. (ed.), <i>Terrestrial Cetartiodactyla</i>, Springer.",
+      "year": "in press.",
+      "title": "Chamois, Rupicapra spp",
+      "author": "Corlatti, L., Herrero, J., Ferretti, F., Anderwald, P., García-González, R., Hammer, S., Nores, C., Rossi, L. & Lovari, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Corti, R. 1995. Le chamois et l'isard en France. <i>Bulletin de l'Office National de la Chasse</i> 198: 14-27.",
+      "year": "1995",
+      "title": "Le chamois et l'isard en France",
+      "author": "Corti, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Corti, R. 2006. Le chamois des Alpes Rupicapra rupicapra rupicapra. <i>Inventaire des populations françaises d'ongulés de montagne - Mise à jour 2006</i>, pp. 4-17. Réseau Ongulés Sauvages ONCFS-FNC-FDC.",
+      "year": "2006",
+      "title": "Le chamois des Alpes Rupicapra rupicapra rupicapra.",
+      "author": "Corti, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Corti, R. 2012. Le chamois des Alpes Rupicapra rupicapra rupicapra. Pages 4-19  Inventaire des populations françaises d'ongulés de montagne - Mise à jour 2011. <i>Inventaire des populations françaises d'ongulés de montagne - Mise à jour 2011</i>, pp. 4-19. Réseau Ongulés Sauvages ONCFS-FNC-FDC.",
+      "year": "2012",
+      "title": "Le chamois des Alpes Rupicapra rupicapra rupicapra. Pages 4-19  Inventaire des populations françaises d'ongulés de montagne - Mise à jour 2011",
+      "author": "Corti, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Couturier, M. 1938. <i>Le chamois: Rupicapra rupicapra (L.)</i>. Arthaud, Grenoble, France.",
+      "year": "1938",
+      "title": "Le chamois: Rupicapra rupicapra (L.)",
+      "author": "Couturier, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Danilkin, A.A. 2005. <i>Hollow-horned ungulates (Bovidae)</i>. Partnership of scientific publications KMK, Moscow.",
+      "year": "2005",
+      "title": "Hollow-horned ungulates (Bovidae)",
+      "author": "Danilkin, A.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Darmon, G., Bourgoin, G., Marchand, P., Garel, M., Dubray, D., Jullien, J.-M. and Loison, A. 2014. Do ecologically close species shift their daily activities when in sympatry? A test on chamois in the presence of mouflon. <i>Biological Journal of the Linnean Society</i> 111: 621-626.",
+      "year": "2014",
+      "title": "Do ecologically close species shift their daily activities when in sympatry? A test on chamois in the presence of mouflon",
+      "author": "Darmon, G., Bourgoin, G., Marchand, P., Garel, M., Dubray, D., Jullien, J.-M. and Loison, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Decree 2014. Decree of the Government of Georgia on Adoption of Georgian “Red List”. [In Georg.]. –https://matsne.gov.ge/ka/document/view/2256983?publication=0  Sakartvelos sakanondeblo matsne Publisher, Tbilisi. Downloaded 21/08/2018.",
+      "year": null,
+      "title": null,
+      "author": "Decree 2014. Decree of the Government of Georgia on Adoption of Georgian “Red List”. [In Georg.]. –https://matsne.gov.ge/ka/document/view/2256983?publication=0  Sakartvelos sakanondeblo matsne Publisher, Tbilisi. Downloaded 21/08/2018.",
+      "citation_short": null
+    },
+    {
+      "citation": "De Danieli, C. and Sarasa, M. 2015. Population estimates, density–dependence and the risk of disease outbreaks in the Alpine ibex Capra ibex. <i>Animal Biodiversity and Conservation</i> 38: 101-119.",
+      "year": "2015",
+      "title": "Population estimates, density–dependence and the risk of disease outbreaks in the Alpine ibex Capra ibex",
+      "author": "De Danieli, C. and Sarasa, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Degiorgis, M.-P., Frey, J., Nicolet, J., Abdo, E.-M., Fatzer, R., Schlatter, Y., Reist, S., Janovski, M. and Giacometti M. 2000. An outbreak of infectious keratoconjunctivitis in Alpine chamois (Rupicapra r. rupicapra) in Simmental-Gruyères, Switzerland. <i>An outbreak of infectious keratoconjunctivitis in Alpine chamois (Rupicapra r. rupicapra) in Simmental-Gruyères, Switzerland</i> 142: 520-527.",
+      "year": "2000",
+      "title": "An outbreak of infectious keratoconjunctivitis in Alpine chamois (Rupicapra r. rupicapra) in Simmental-Gruyères, Switzerland",
+      "author": "Degiorgis, M.-P., Frey, J., Nicolet, J., Abdo, E.-M., Fatzer, R., Schlatter, Y., Reist, S., Janovski, M. and Giacometti M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Đurović M. 2018. Ecology characteristics of Balkan chamois (Rupicapra rupicapra balcanica Bolkay, 1926) in Montenegro with a special focus on National Park „ Durmitor“. Master Thesis. University of Sarajevo.",
+      "year": "2018",
+      "title": "Ecology characteristics of Balkan chamois (Rupicapra rupicapra balcanica Bolkay, 1926) in Montenegro with a special focus on National Park „ Durmitor“. Master Thesis",
+      "author": "Đurović M.",
+      "citation_short": null
+    },
+    {
+      "citation": "EEA. 2019. 4th national report on the implementation of the Habitats Directive (Article 17/Directive 92/43/EEC) in Greece (reporting period: 2013-2018). 31/7/2019. http://cdr.eionet.europa.eu/gr/eu/art17.",
+      "year": "2019",
+      "title": "4th national report on the implementation of the Habitats Directive (Article 17/Directive 92/43/EEC) in Greece (reporting period: 2013-2018). 31/7/2019. http://cdr.eionet.europa.eu/gr/eu/art17.",
+      "author": "EEA",
+      "citation_short": null
+    },
+    {
+      "citation": "Gazzola, A., Avanzinelli, E., Bertelli, I., Tolosano, A., Bertotto, P., Musso, R., et al. 2007. The role of the wolf in shaping a multi-species ungulate community in the italian western alps. <i>Italian Journal of Zoolog</i> 74: 297-307.",
+      "year": "2007",
+      "title": "The role of the wolf in shaping a multi-species ungulate community in the italian western alps",
+      "author": "Gazzola, A., Avanzinelli, E., Bertelli, I., Tolosano, A., Bertotto, P., Musso, R., et al.",
+      "citation_short": null
+    },
+    {
+      "citation": "Guliyev S.M. 2000. Chamois – Rupicapra rupicapra. In: Gadjiyev, D.V.& Pakhmatulina, I.K. (ed.), <i>Animal world of Azerbaijan, vol. III. Vertebrates</i>, pp. 604-606. Elm, Baku.",
+      "year": "2000",
+      "title": "Chamois – Rupicapra rupicapra",
+      "author": "Guliyev S.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Guliyev, S.M. 2013. Chamois Rupicapra rupicapra L, 1758. Baku Available at: <a href=\"http://redbook.az\">http://redbook.az</a>. ",
+      "year": "2013",
+      "title": "Chamois Rupicapra rupicapra L, 1758",
+      "author": "Guliyev, S.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gurielidze, Z. 2013. Mountain inhabitants. Liberali, 12 June, 2015 [in Georgian]. Available at: <a href=\"http://liberali.ge/articles/view/4071/mtis-binadrebi\">http://liberali.ge/articles/view/4071/mtis-binadrebi</a>. ",
+      "year": "2013",
+      "title": "Mountain inhabitants. Liberali, 12 June, 2015 [in Georgian]",
+      "author": "Gurielidze, Z.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hertweck, K. and Riebe, H. 2009. Gämse <i>Rupicapra rupicapra</i> (Linnaeus, 1758). In: Hauer, S., Ansorge, H. & U. Zöphel (ed.), <i>Atlas der Säugetiere Sachsens</i>, pp. 337-339. Sächsisches Landesamt für Umwelt, Landwirtschaft und Geologie, S.",
+      "year": "2009",
+      "title": "Gämse <i>Rupicapra rupicapra</i> (Linnaeus, 1758)",
+      "author": "Hertweck, K. and Riebe, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Iacolina, L., Corlatti, L., Buzan, E., Safner, T. and Šprem, N. 2019. Hybridisation in European ungulates: an overview of the current status, causes, and consequences. <i>Mamm Rev</i> 49: 45-59.",
+      "year": "2019",
+      "title": "Hybridisation in European ungulates: an overview of the current status, causes, and consequences",
+      "author": "Iacolina, L., Corlatti, L., Buzan, E., Safner, T. and Šprem, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Imperio, S., Corlatti, L., Bassano, B. and Provenzale, A. 2014. Dynamics of two ungulate populations in a mountain habitat: density dependence and climatic effects. <i>Grandi Erbivori negli Ecosistemi Alpini in Trasformazione</i> Allegato 2b_2: 1-17.",
+      "year": "2014",
+      "title": "Dynamics of two ungulate populations in a mountain habitat: density dependence and climatic effects",
+      "author": "Imperio, S., Corlatti, L., Bassano, B. and Provenzale, A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ingold, P. 2005. <i>Freizeitaktivitäten im Lebensraum der Alpentiere – Konfliktbereiche zwischen Mensch und Tier - Mit einem Ratgeber für die Praxis</i>. Haupt Verlag, Bern, Schweiz.",
+      "year": "2005",
+      "title": "Freizeitaktivitäten im Lebensraum der Alpentiere – Konfliktbereiche zwischen Mensch und Tier - Mit einem Ratgeber für die Praxis",
+      "author": "Ingold, P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Jamrozy, G., Pęksa, Ł., Urbanik, Z. and Gąsienica-Byrcyn, W. 2007. The Tatra chamois <i>Rupicapra rupicapra tatrica</i>. Tatra National Park, Zakopane.",
+      "year": "2007",
+      "title": "The Tatra chamois <i>Rupicapra rupicapra tatrica</i>.",
+      "author": "Jamrozy, G., Pęksa, Ł., Urbanik, Z. and Gąsienica-Byrcyn, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jovanović, M. 2013. Intra-species differentiation of chamois (<i>Rupicapra rupicapra</i> L.) of the Balkan Peninsula. Master Thesis. Faculty of Science, University of Kragujevac.",
+      "year": "2013",
+      "title": "Intra-species differentiation of chamois (<i>Rupicapra rupicapra</i> L.) of the Balkan Peninsula. Master Thesis",
+      "author": "Jovanović, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jullien, J.M. and Cornillon, M. 2017. <i>Le chamois, biologie et écologie, études dans le massif des Bauges</i>. Biotope, Mèze, France.",
+      "year": "2017",
+      "title": "Le chamois, biologie et écologie, études dans le massif des Bauges",
+      "author": "Jullien, J.M. and Cornillon, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kapanadze, A.D. 1975. Structure and number of populations of highland ungulates of the Caucasus. <i>2nd congress of all-Union theriological society</i>: 137-138.",
+      "year": "1975",
+      "title": "Structure and number of populations of highland ungulates of the Caucasus",
+      "author": "Kapanadze, A.D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Korjenić, E., Džano A. and Šuta N. 2009. Population size of chamois - <i>Rupicapra rupicapra</i> (Linné) in Diva Grabovica mountain chain. <i>Veterinaria </i> 58: 77-81.",
+      "year": "2009",
+      "title": "Population size of chamois - <i>Rupicapra rupicapra</i> (Linné) in Diva Grabovica mountain chain",
+      "author": "Korjenić, E., Džano A. and Šuta N. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Legakis, A. and Maragou, P. 2019. <i>Red Data Book of Endangered Animals in Greece</i>. Hellenic Zoological Society, Athens.",
+      "year": "2019",
+      "title": "Red Data Book of Endangered Animals in Greece",
+      "author": "Legakis, A. and Maragou, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lovari, S. and Scala, C. 1984. Revision of <i>Rupicapra</i> genus. IV. Horn biometrics of <i>Rupicapra rupicapra asiatica </i> and its relevance to the taxonomic position of <i>Rupicapra rupicapra caucasica</i>. <i>Zeitschrift für Säugetierkunde</i> 49: 246-253.",
+      "year": "1984",
+      "title": "Revision of <i>Rupicapra</i> genus. IV. Horn biometrics of <i>Rupicapra rupicapra asiatica </i> and its relevance to the taxonomic position of <i>Rupicapra rupicapra caucasica</i>",
+      "author": "Lovari, S. and Scala, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lukarevsky, V.S, Lukarevsky, S.V. and Voronin, N.Ye. 2018. Evaluation of status of leopard habitats on the offshoots of the Main Caucasus Range in the north-west Caucasus in Karachai-Cherkessia, and their suitability for inclusion into re-introduction program.  Semyonov, U.A., ed. Restoration of leopard in the Caucasus. Partnership of scientific publications KMK, Moscow.",
+      "year": "2018",
+      "title": "Evaluation of status of leopard habitats on the offshoots of the Main Caucasus Range in the north-west Caucasus in Karachai-Cherkessia, and their suitability for inclusion into re-introduction program",
+      "author": "Lukarevsky, V.S, Lukarevsky, S.V. and Voronin, N.Ye.",
+      "citation_short": null
+    },
+    {
+      "citation": "Markov, G., Zhelev, P., Ben Slimen, H. and Suchentrunk, F. 2016. Population genetic data pertinent to the conservation of Bulgarian chamois (<i>Rupicapra rupicapra balcanica</i>). <i>Conserv Genet</i> 17: 155-164.",
+      "year": "2016",
+      "title": "Population genetic data pertinent to the conservation of Bulgarian chamois (<i>Rupicapra rupicapra balcanica</i>)",
+      "author": "Markov, G., Zhelev, P., Ben Slimen, H. and Suchentrunk, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Martin, C., Letellier, C., Caij, B., Gauthier, D., Jean, N., Shaffii, A. and Saegerman, C. 2011. Epidemiology of Pestivirus infection in wild ungulates of the French South Alps. <i>Veterinary Microbiology</i> 147: 320-328.",
+      "year": "2011",
+      "title": "Epidemiology of Pestivirus infection in wild ungulates of the French South Alps",
+      "author": "Martin, C., Letellier, C., Caij, B., Gauthier, D., Jean, N., Shaffii, A. and Saegerman, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mason, T.H., Apollonio, M., Chirichella, R., Willis, S.G. and Stephens, P.A. 2014. Environmental change and long-term body mass declines in an alpine mammal. <i>Frontiers in Zoology</i> 11: 19.",
+      "year": "2014",
+      "title": "Environmental change and long-term body mass declines in an alpine mammal",
+      "author": "Mason, T.H., Apollonio, M., Chirichella, R., Willis, S.G. and Stephens, P.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Mavrot, F., Vilei, E.M., Marreros, N., Signer, C., Frey, J. and Ryser-Degiorgis, M.-P. 2012. Occurrence, quantification and genotyping of Mycoplasma conjunctivae in wild Caprinae with and without infectious keratoconjunctivitis. <i>Journal of wildlife diseases</i> 48(3): 619-631.",
+      "year": "2012",
+      "title": "Occurrence, quantification and genotyping of Mycoplasma conjunctivae in wild Caprinae with and without infectious keratoconjunctivitis",
+      "author": "Mavrot, F., Vilei, E.M., Marreros, N., Signer, C., Frey, J. and Ryser-Degiorgis, M.-P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Michallet, J. and Toïgo, C. 2000. Home ranges of chamois (<i>Rupicapra rupicapra cartusiana</i>) translocated to reinforce a population in the Grande Chartreuse mountain massif, Isère. <i>Game and wildlife science</i> 17: 259-272.",
+      "year": "2000",
+      "title": "Home ranges of chamois (<i>Rupicapra rupicapra cartusiana</i>) translocated to reinforce a population in the Grande Chartreuse mountain massif, Isère",
+      "author": "Michallet, J. and Toïgo, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Michallet, J., Pellerin, M., Garel, M., Chevrier, T., Saïd, S., Baudet, E., Saint-Andrieux, C., Hars, J., Rossi, S., Maillard, D., Klein, F., Bonenfant, C., Gilot-Fromont, E., Boulanger, V., and Ferté, H. 2015. <i>Vers une nouvelle gestion du grand gibier: les indicateurs de changement écologique</i>. ONCFS.",
+      "year": "2015",
+      "title": "Vers une nouvelle gestion du grand gibier: les indicateurs de changement écologique",
+      "author": "Michallet, J., Pellerin, M., Garel, M., Chevrier, T., Saïd, S., Baudet, E., Saint-Andrieux, C., Hars, J., Rossi, S., Maillard, D., Klein, F., Bonenfant, C., Gilot-Fromont, E., Boulanger, V., and Ferté, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Milošević-Zlatanović, S. 2014. Indicator criteria monitoring (connecting the morphology of horns and antlers with specific habitat conditions and animal shooting) for quickly assessment of selection preassures on the population parameters of roe deer (<i>Capreolus capreolus</i> L.) and Alpine chamois (<i>Rupicapra rupicapra</i> L.) from the Republic of Serbia, including Kosovo and Metohia.  Project funded by Ministry of Agriculture, and Environmental Protection of Serbia.",
+      "year": "2014",
+      "title": "Indicator criteria monitoring (connecting the morphology of horns and antlers with specific habitat conditions and animal shooting) for quickly assessment of selection preassures on the population parameters of roe deer (<i>Capreolus capreolus</i> L.) and Alpine chamois (<i>Rupicapra rupicapra</i> L.) from the Republic of Serbia, including Kosovo and Metohia",
+      "author": "Milošević-Zlatanović, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "MLR. 2019. <i>Wildtierbericht für Baden-Wurttemberg 2018</i>. Ministerium fur Ländlichen Raum und Verbraucherschutz (Hrsg.).",
+      "year": "2019",
+      "title": "Wildtierbericht für Baden-Wurttemberg 2018",
+      "author": "MLR ",
+      "citation_short": null
+    },
+    {
+      "citation": "Official Gazette of Turkish Republic. 2003. <i>Land Hunting Law. Law no: 4915, Issue: 25165</i>. Prime Ministry, Ankara, Turkey.",
+      "year": "2003",
+      "title": "Land Hunting Law. Law no: 4915, Issue: 25165",
+      "author": "Official Gazette of Turkish Republic",
+      "citation_short": null
+    },
+    {
+      "citation": "Papaioannou, H. 2010. Ungulates and their management in Greece. In: Apollonio, M., Andersen, R. and Putman, R. (eds), <i>European ungulates and their management in the 21st century</i>, pp. 540-562. Cambridge University Press, UK.",
+      "year": "2010",
+      "title": "Ungulates and their management in Greece",
+      "author": "Papaioannou, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Papaioannou, H. 2015. Current status and conservation management of Balkan chamois (<i>R.r. balcanica</i>) in Greece. In: Antonucci A., Di Domenico G. (ed.), <i>Chamois international congress</i>, pp. 111-122. Lama dei Peligni, Majella National Park, Italy.",
+      "year": "2015",
+      "title": "Current status and conservation management of Balkan chamois (<i>R.r. balcanica</i>) in Greece",
+      "author": "Papaioannou, H. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Papaioannou, H. 2016a. The Balkan Chamois (<i>Rupicapra rupicapra balcanica</i> Bolkay, 1925) in Greece. PhD Thesis. Department of Environmental and Natural Resources, University of Patras.",
+      "year": "2016a",
+      "title": "The Balkan Chamois (<i>Rupicapra rupicapra balcanica</i> Bolkay, 1925) in Greece. PhD Thesis",
+      "author": "Papaioannou, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Papaioannou, H. 2016b. The Balkan Chamois in Greece. Current status and perspectives for conservation. roceedings of the 8th Conference on Ecology: 118. Thessaloniki .",
+      "year": "2016b",
+      "title": "The Balkan Chamois in Greece. Current status and perspectives for conservation",
+      "author": "Papaioannou, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Papaioannou, H. 2020. National Action Plan for the Balkan Chamois in Greece. Ministry of Environment and Energy. Biodiversity Department.",
+      "year": "2020",
+      "title": "National Action Plan for the Balkan Chamois in Greece",
+      "author": "Papaioannou, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Papaioannou, H. and Kati, V. 2016. Balkan chamois in Greece: Increasing population trend, threats and conservation perspectives. Proceedings of the VIth World Congress on Mountain Ungulates and Vth International Symposium on Mouflon: 66. Nicosia, Lefkosia, Cyprus.",
+      "year": "2016",
+      "title": "Balkan chamois in Greece: Increasing population trend, threats and conservation perspectives",
+      "author": "Papaioannou, H. and Kati, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Papaioannou, H., Fernández, M., Pérez, T. and Domínguez, A. 2019. Genetic variability and population structure of chamois in Greece (<i>Rupicapra rupicapra balcanica</i>). <i>Conservation Genetics</i> 20: 939-945.",
+      "year": "2019",
+      "title": "Genetic variability and population structure of chamois in Greece (<i>Rupicapra rupicapra balcanica</i>)",
+      "author": "Papaioannou, H., Fernández, M., Pérez, T. and Domínguez, A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Pęksa, Ł. and Ciach, M. 2015. Negative effects of mass tourism on high mountain fauna: the case of the Tatra chamois <i>Rupicapra rupicapra tatrica</i>. <i>Oryx </i> 49(3): 500-505.",
+      "year": "2015",
+      "title": "Negative effects of mass tourism on high mountain fauna: the case of the Tatra chamois <i>Rupicapra rupicapra tatrica</i>",
+      "author": "Pęksa, Ł. and Ciach, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pęksa, Ł. and Ciach, M. 2018. Daytime activity budget of an alpine ungulate (Tatra chamois <i>Rupicapra rupicapra tatrica</i>): influence of herd size, sex, weather and human disturbance. <i>Mammal Research</i> 63(4): 443-453.",
+      "year": "2018",
+      "title": "Daytime activity budget of an alpine ungulate (Tatra chamois <i>Rupicapra rupicapra tatrica</i>): influence of herd size, sex, weather and human disturbance",
+      "author": "Pęksa, Ł. and Ciach, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pellicioli, L. 2019. <i>Quaderno UNCZA studi e ricerche n°2/2019</i>. Ed. Fidc.",
+      "year": "2019",
+      "title": "Quaderno UNCZA studi e ricerche n°2/2019",
+      "author": "Pellicioli, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pioz, M., Loison, A., Gauthier, D., Gibert, P., Jullien, J.M., Artois, M. and Gilot-Fromont, E. 2008a. Diseases and reproductive success in a wild mammal: example in the alpine chamois. <i>Oecologia</i> 155: 691-704.",
+      "year": "2008a",
+      "title": "Diseases and reproductive success in a wild mammal: example in the alpine chamois",
+      "author": "Pioz, M., Loison, A., Gauthier, D., Gibert, P., Jullien, J.M., Artois, M. and Gilot-Fromont, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pioz, M., Loison, A., Gibert, P., Jullien, J.M., Artois, M. and Gilot-Fromont, E. 2008b. Antibodies against Salmonella is associated with reduced reproductive success in female alpine chamois (<i>Rupicapra rupicapra</i>). <i>Canadian Journal of Zoology</i> 86: 1111-1120.",
+      "year": "2008b",
+      "title": "Antibodies against Salmonella is associated with reduced reproductive success in female alpine chamois (<i>Rupicapra rupicapra</i>)",
+      "author": "Pioz, M., Loison, A., Gibert, P., Jullien, J.M., Artois, M. and Gilot-Fromont, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Prévost, J. 2018. Portrait d’une espèce – le chamois en Chartreuse. <i>LPO Info Isère</i> 59: 10-11.",
+      "year": "2018",
+      "title": "Portrait d’une espèce – le chamois en Chartreuse",
+      "author": "Prévost, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Reimoser, S., Di, I.R. and Reimoser, F. 2019. Lebensraum and Jagdstrecke – Abschussdichten verschiedener Wildarten in den österreichischen Bezirken seit 1955. – 1. Teil: Gamswild. <i>In Weidwerk</i> 11: 20-22.",
+      "year": "2019",
+      "title": "Lebensraum and Jagdstrecke – Abschussdichten verschiedener Wildarten in den österreichischen Bezirken seit 1955. – 1. Teil: Gamswild",
+      "author": "Reimoser, S., Di, I.R. and Reimoser, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rossi, L., Fraquelli, C., Vesco, U., Permunian, R., Sommavilla, G.M., Carmignola, G., Da Pozzo, M. and Meneguz, P.G. 2007. Descriptive epidemiology of a scabies epidemic in chamois in the Dolomite Alps, Italy. <i>European Journal of Wildlife Research</i> 53: 131-141.",
+      "year": "2007",
+      "title": "Descriptive epidemiology of a scabies epidemic in chamois in the Dolomite Alps, Italy",
+      "author": "Rossi, L., Fraquelli, C., Vesco, U., Permunian, R., Sommavilla, G.M., Carmignola, G., Da Pozzo, M. and Meneguz, P.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rouland, P. 1980. Opérations de réintroduction de chamois. Exemples de la Chartreuse savoyarde. <i>Bulletin Mensuel de l’Office National de la Chasse</i> 34: 20-23.",
+      "year": "1980",
+      "title": "Opérations de réintroduction de chamois. Exemples de la Chartreuse savoyarde",
+      "author": "Rouland, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rughetti, M. and Festa-Bianchet, M. 2012. Effect of spring-summer temperature on body-mass of chamois. <i>Journal of Mammalogy</i> 93: 1301-1307.",
+      "year": "2012",
+      "title": "Effect of spring-summer temperature on body-mass of chamois",
+      "author": "Rughetti, M. and Festa-Bianchet, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Safner, T., Buzan, E., Rezic, A. and Šprem, N. 2019. Small-scale spatial genetic structure of Alpine chamois (<i>Rupicapra rupicapra</i>) in Northern Dinaride. <i>European Journal of Wildlife Research</i> 65: 23-29.",
+      "year": "2019",
+      "title": "Small-scale spatial genetic structure of Alpine chamois (<i>Rupicapra rupicapra</i>) in Northern Dinaride",
+      "author": "Safner, T., Buzan, E., Rezic, A. and Šprem, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Şelaru, N. 1997. Evoluţia efectivelor şi managementul populaţiilor de capre negre din România. Unpublished Report.",
+      "year": "1997",
+      "title": "Evoluţia efectivelor şi managementul populaţiilor de capre negre din România",
+      "author": "Şelaru, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Semyonov, U.A. and Voronin, N.Ye. 2018. Evaluation of the territory of Sochi National Park to be included into leopard restoration program in the Caucasus. Restoration of leopard in the Caucasus. Partnership of scientific publications KMK, Moscow, Semyonov, U.A.",
+      "year": "2018",
+      "title": "Evaluation of the territory of Sochi National Park to be included into leopard restoration program in the Caucasus",
+      "author": "Semyonov, U.A. and Voronin, N.Ye.",
+      "citation_short": null
+    },
+    {
+      "citation": "Spiridonov, G., Spasov, N.  and Genov, P. 2011. Chamois<i>Rupicapra rupicapra</i> Linnaeus, 1789. <i>Red Data Book of the Republic of Bulgaria</i>, BAS-MoE, Sofia.",
+      "year": "2011",
+      "title": "Chamois<i>Rupicapra rupicapra</i> Linnaeus, 1789",
+      "author": "Spiridonov, G., Spasov, N.  and Genov, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Spitzenberger, F. 2002. <i>Die Säugetierfauna Österreichs. Bundesministerium für Land- und Forstwirtschaft</i>. Umwelt und Wasserwirtschaft, Band.",
+      "year": "2002",
+      "title": "Die Säugetierfauna Österreichs. Bundesministerium für Land- und Forstwirtschaft",
+      "author": "Spitzenberger, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Šprem, N. and Buzan, E. 2016. The genetic impact of chamois management in the dinarides. <i>The Journal of Wildlife Management</i> 80(5): 783-793.",
+      "year": "2016",
+      "title": "The genetic impact of chamois management in the dinarides",
+      "author": "Šprem, N. and Buzan, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "State report on the ecological situation in the Republic of North Ossetia–Alania in 2016. 2017. Vladikavkaz. Available at: <a href=\"http://minprirod.ru\">http://minprirod.ru</a>. ",
+      "year": "2017",
+      "title": "Vladikavkaz",
+      "author": "State report on the ecological situation in the Republic of North Ossetia–Alania in 2016",
+      "citation_short": ""
+    },
+    {
+      "citation": "State report on the status of land-use and nature conservation in Krasnodar Krai in 2017. 2018. Krasnodar. Available at: <a href=\"http://www.mprkk.ru \">http://www.mprkk.ru </a>. ",
+      "year": "2018",
+      "title": "Krasnodar",
+      "author": "State report on the status of land-use and nature conservation in Krasnodar Krai in 2017",
+      "citation_short": ""
+    },
+    {
+      "citation": "State report on the status of nature conservation in the Chechen Republic 2017. 2018. Grozny. Available at: <a href=\"http://mpr-chr.rul\">http://mpr-chr.rul</a>. ",
+      "year": "2018",
+      "title": "Grozny",
+      "author": "State report on the status of nature conservation in the Chechen Republic 2017",
+      "citation_short": ""
+    },
+    {
+      "citation": "State report on the status of nature conservation in the Kabardino-Balkarian Republic in 2017. 2018. Nal’chik. Available at: <a href=\"http://pravitelstvo.kbr.ru/oigv/minprirod/deyatelnost/gosdoklad.php\">http://pravitelstvo.kbr.ru/oigv/minprirod/deyatelnost/gosdoklad.php</a>. ",
+      "year": "2018",
+      "title": "Nal’chik",
+      "author": "State report on the status of nature conservation in the Kabardino-Balkarian Republic in 2017",
+      "citation_short": null
+    },
+    {
+      "citation": "State report on the status of nature conservation in the Karachai-Cherkessian Republic in 2014. 2015. Cherkessk. Available at: <a href=\"http://www.okrsredkchr.ru/index/tekushhaja_dejatelnost/0-4\">http://www.okrsredkchr.ru/index/tekushhaja_dejatelnost/0-4</a>. ",
+      "year": "2015",
+      "title": "Cherkessk",
+      "author": "State report on the status of nature conservation in the Karachai-Cherkessian Republic in 2014",
+      "citation_short": null
+    },
+    {
+      "citation": "State report on the status of nature conservation in the Karachai-Cherkessian Republic in 2017. 2018. Cherkessk. Available at: <a href=\"http://www.okrsredkchr.ru/index/tekushhaja_dejatelnost/0-4\">http://www.okrsredkchr.ru/index/tekushhaja_dejatelnost/0-4</a>. ",
+      "year": "2018",
+      "title": "Cherkessk",
+      "author": "State report on the status of nature conservation in the Karachai-Cherkessian Republic in 2017",
+      "citation_short": null
+    },
+    {
+      "citation": "State report on the status of nature conservation in the Republic of Daghestan in 2016. 2017. Makhachkala. Available at: <a href=\"http://mprdag.ru/gosdoklady\">http://mprdag.ru/gosdoklady</a>. ",
+      "year": "2017",
+      "title": "Makhachkala",
+      "author": "State report on the status of nature conservation in the Republic of Daghestan in 2016",
+      "citation_short": ""
+    },
+    {
+      "citation": "State reports on ecological situation in the Republic of Adygea in 2017. 2018. Maikop. Available at: <a href=\"http://www.adygheya.ru/ministers/departments/upravlenie-po-okhrane-okruzhayushchey-sredy-i-prirodnym-resursam/informatsi/doklady/\">http://www.adygheya.ru/ministers/departments/upravlenie-po-okhrane-okruzhayushchey-sredy-i-prirodnym-resursam/informatsi/doklady/</a>. ",
+      "year": "2018",
+      "title": "Maikop",
+      "author": "State reports on ecological situation in the Republic of Adygea in 2017",
+      "citation_short": ""
+    },
+    {
+      "citation": "Suter, W., Zweifel-Schielly, B., Moser, B., Fankhauser, R. and Kreuzer, M. 2005. Forum für Wissen. 2005: 31-39.",
+      "year": "2005",
+      "title": "Forum für Wissen",
+      "author": "Suter, W., Zweifel-Schielly, B., Moser, B., Fankhauser, R. and Kreuzer, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Trepet, S.A. 2014. <i>Ungulates of the North-West Caucasus. Contemporary status and mechanisms of stability of populations</i>. Kuban Publishers, Krasnodar.",
+      "year": "2014",
+      "title": "Ungulates of the North-West Caucasus. Contemporary status and mechanisms of stability of populations",
+      "author": "Trepet, S.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Turan, N. 1984. <i>Mammals and Game Animals of Turkey</i>. Self published, Ankara.",
+      "year": "1984",
+      "title": "Mammals and Game Animals of Turkey",
+      "author": "Turan, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "UICN France, MNHN, SFEPM, and ONCFS. 2009. La liste rouge des espèces menacées en France - Chapitre Mammifères de France métropolitaine. Paris, France.",
+      "year": "2009",
+      "title": "La liste rouge des espèces menacées en France - Chapitre Mammifères de France métropolitaine",
+      "author": "UICN France, MNHN, SFEPM, and ONCFS",
+      "citation_short": null
+    },
+    {
+      "citation": "UICN France, MNHN, SFEPM, and ONCFS. 2017. La Liste rouge des espèces menacées en France - Mammifères de France métropolitaine. Paris, France.",
+      "year": "2017",
+      "title": "La Liste rouge des espèces menacées en France - Mammifères de France métropolitaine",
+      "author": "UICN France, MNHN, SFEPM, and ONCFS",
+      "citation_short": null
+    },
+    {
+      "citation": "Valchev, K., Andonov, Kr., Popgeorgiev, G., Plachijski, D. and Avramov, St. 2006. Action Plan for the Chamois in Bulgaria: 2007 – 2016. BBF – SFA, Sofia.",
+      "year": "2006",
+      "title": "Action Plan for the Chamois in Bulgaria: 2007 – 2016",
+      "author": "Valchev, K., Andonov, Kr., Popgeorgiev, G., Plachijski, D. and Avramov, St.",
+      "citation_short": null
+    },
+    {
+      "citation": "Valchev, K., Milushev, V. and Yankov, Y. 2010. Reintroduction of Balkan Chamois (<i>Rupicapra rupicapra balcanica</i>, bolkay 1925) in Vitosha Nature Park. <i>Galemys</i> 22: 575-594.",
+      "year": "2010",
+      "title": "Reintroduction of Balkan Chamois (<i>Rupicapra rupicapra balcanica</i>, bolkay 1925) in Vitosha Nature Park",
+      "author": "Valchev, K., Milushev, V. and Yankov, Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Valdez, R. 2011. Genus <i>Rupicapra</i>. In: Wilson, D.E. and Mittermeier, R.A. (eds), <i>Handbook of the Mammals of the World – 2. Hoofed Mammals</i>, Lynx Edicions, Barcelona.",
+      "year": "2011",
+      "title": "Genus <i>Rupicapra</i>",
+      "author": "Valdez, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vogt, K., Signer, S., Ryser, A., Schaufelberger, L., Nagl, D., Breitenmoser, U. and Willisch, C. 2019. Einfluss von Luchsprädation und Jagd auf die Gämse – Teil 1 und 2.  Bericht in Zusammenarbeit mit dem Jagdinspektorat des Kantons Bern. KORA Bericht Nr. 84. KORA, Muri bei Bern, Schweiz.",
+      "year": "2019",
+      "title": "Einfluss von Luchsprädation und Jagd auf die Gämse – Teil 1 und 2",
+      "author": "Vogt, K., Signer, S., Ryser, A., Schaufelberger, L., Nagl, D., Breitenmoser, U. and Willisch, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Willisch, C.S., Bieri, K., Struch, M., Franceschina, R., Schnidrig-Petrig, R. and Ingold, P. 2013. Climate effects on demographic parameters in an unhunted population of Alpine chamois (<i>Rupicapra rupicapra</i>). <i>Journal of Mammalogy</i> 94: 173-182.",
+      "year": "2013",
+      "title": "Climate effects on demographic parameters in an unhunted population of Alpine chamois (<i>Rupicapra rupicapra</i>)",
+      "author": "Willisch, C.S., Bieri, K., Struch, M., Franceschina, R., Schnidrig-Petrig, R. and Ingold, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wotschikowsky, U. 2010. Ungulates and their management in Germany. In: Apollonio, M., Andersen, R. and Putman, R. (eds), <i>European ungulates and their management in the 21st century</i>, Cambridge University Press, UK.",
+      "year": "2010",
+      "title": "Ungulates and their management in Germany",
+      "author": "Wotschikowsky, U.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yarovenko, Yu.A. and Yarovenko, A.Yu. 2018. Survey of the north-western part of montane Dagestan and feasibility of leopard reintroduction there. Pp. 259-308 in Semyonov, U.A. ed. Restoration of leopard in the Caucasus. Partnership of scientific publications KMK, Moscow.",
+      "year": "2018",
+      "title": "Survey of the north-western part of montane Dagestan and feasibility of leopard reintroduction there",
+      "author": "Yarovenko, Yu.A. and Yarovenko, A.Yu.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zemanová, B.,Hájková, P.,Hájek, B.,Martínková, N.,Mikulíček, P.,Zima, J. and Bryja, J. 2015. Extremely low genetic variation in endangered Tatra chamois and evidence for hybridization with an introduced alpine population. <i>Conservation Genetics</i> 16: 729-741.",
+      "year": "2015",
+      "title": "Extremely low genetic variation in endangered Tatra chamois and evidence for hybridization with an introduced alpine population",
+      "author": "Zemanová, B.,Hájková, P.,Hájek, B.,Martínková, N.,Mikulíček, P.,Zima, J. and Bryja, J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Zwijacz-Kozica, T., Selva, N., Barja, I., Silván, G., Martínez-Fernández, L., Illera, J.C. and Jodłowski, M. 2013. Concentration of fecal cortisol metabolites in chamois in relation to tourist pressure in Tatra National Park (South Poland). <i>Acta Theriologica</i> 58: 215-222.",
+      "year": "2013",
+      "title": "Concentration of fecal cortisol metabolites in chamois in relation to tourist pressure in Tatra National Park (South Poland)",
+      "author": "Zwijacz-Kozica, T., Selva, N., Barja, I., Silván, G., Martínez-Fernández, L., Illera, J.C. and Jodłowski, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2021. The IUCN Red List of Threatened Species. Version 2021-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 25 March 2021).",
+      "year": "2021",
+      "title": "The IUCN Red List of Threatened Species. Version 2021-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2021-1"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Competition"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "description": {
+        "en": "Competition"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "description": {
+        "en": "Competition"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "description": {
+        "en": "Competition"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "description": {
+        "en": "Competition"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "description": {
+        "en": "Competition"
+      },
+      "code": "2_3_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

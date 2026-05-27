@@ -1,0 +1,448 @@
+{
+  "assessment_date": "2015-08-05T01:00:00.000+01:00",
+  "year_published": "2016",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 40502,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/40502/22176259",
+  "citation": "Pérez-Hernandez, R., Lew, D. & Solari, S. 2016. Didelphis virginiana. The IUCN Red List of Threatened Species 2016: e.T40502A22176259. Accessed on 15 May 2026.",
+  "assessment_id": 22176259,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 40502,
+    "scientific_name": "Didelphis virginiana",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "DIDELPHIMORPHIA",
+    "family_name": "DIDELPHIDAE",
+    "genus_name": "Didelphis",
+    "species_name": "virginiana",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Kerr, 1792",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC New World Marsupial Specialist Group",
+        "url": null,
+        "description": "Chair: Gabriel Martin (email: gmartin_ar@yahoo.com)\nRed List Authority Coordinator: Ana Paula Carmignotto (email: apcarmig@gmail.com)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Sarigue de Virginie",
+        "language": "fre"
+      },
+      {
+        "main": true,
+        "name": "Virginia Opossum",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Increasing"
+    },
+    "code": "0"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 3000,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species is found in Central America, from Costa Rica to Mexico and in the United States east of the Rocky Mountains, and north into southwestern Ontario, Canada (the northernmost locality reached by a marsupial). Some introduced populations are also found along the west coast of the United States and recently into British Columbia (Canada). Their range, limited by winter temperatures and snow depth, appears to be expanding northwards (Gardner 2005). This species can be found from lowlands to 3,000 m (Reid 1997).",
+    "population": "<em>D. virginiana</em> is common and widespread throughout its known range.",
+    "habitats": "This species is found in a variety of habitats, ranging from relatively arid to mesic environments. They prefer wet areas, however, especially woodlands and thickets near streams and swamps. Also in suburban areas. The opportunistic denning and feeding habits of the Virginia opossum has led to the success of the species, especially in areas of habitat fragmentation. High reproductive potential further contributes to increasing population size (McManus 1974). Abandoned burrows, buildings, hollow logs, and tree cavities are generally used for den sites.",
+    "threats": "There are no major threats to this species. Opossums are hunted and trapped for food and fur in certain areas of their range, but the mortality is mostly caused by collision with motor vehicles (Gardner 2005).",
+    "measures": "There are no specific measures in place to protect the Virginia opposum, as it likely occurs in a number of protected areas throughout its range.",
+    "use_trade": "Although opossums were once important in the fur trade, this activity has apparently had little impact on the species' population (Whitaker Jr. and Hamilton Jr., 1998).",
+    "rationale": "A widespread and common species throughout its range, this species is adaptable to human dominated landscapes. Although hunted or trapped locally for food, sport and as predators of poultry, apparently the species has not been adversely affected by human settlement, in fact its range appears to be expanding. Commercial hunting for the fur trade does not appear to have much impact.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    },
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Mangrove Vegetation Above High Tide Level"
+      },
+      "code": "1_7"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Subtropical/Tropical Heavily Degraded Former Forest"
+      },
+      "code": "14_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Swamp"
+      },
+      "code": "1_8"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Ontario"
+      },
+      "code": "ONT-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Belize"
+      },
+      "code": "BZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "El Salvador"
+      },
+      "code": "SV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    }
+  ],
+  "threats": [],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Pérez-Hernandez, R., Lew, D. & Solari, S.",
+      "value": [
+        "Daniel Lew (Fundación La Salle de Ciencias Naturales, Venezuela)",
+        "Roger Pérez-Hernandez (Universidad Central de Venezuela)",
+        "Sergio Solari (IUCN SSC Bat RLA (New World))"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Martin, G.M. & Teta, P.",
+      "value": [
+        "Pablo Teta (Centro Nacional Patagonico)",
+        "Gabriel Martin (Universidad Nacional de la Patagonia)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Reid, F. 2009. <i>A Field Guide to the Mammals of Central America and Southeast Mexico</i>. Oxford University Press, New York, USA.",
+      "year": "2009",
+      "title": "A Field Guide to the Mammals of Central America and Southeast Mexico",
+      "author": "Reid, F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 30 June 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-1"
+    },
+    {
+      "citation": "Nowak, R.M. 1999. <i>Walker's Mammals of the World</i>. The Johns Hopkins University Press, Baltimore, USA and London, UK.",
+      "year": "1999",
+      "title": "Walker's Mammals of the World",
+      "author": "Nowak, R.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gardner, A.L. 2005. Order Didelphimorphia. In: D.E. Wilson and D.M. Reeder (eds), <i>Mammal Species of the World</i>, pp. 3-18. The Johns Hopkins University Press, Baltimore, Maryland, USA.",
+      "year": "2005",
+      "title": "Order Didelphimorphia",
+      "author": "Gardner, A.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mcmanus, J. J. 1974. <i>Didelphis virginiana</i>. <i>Mammalian Species</i> 40: 1-6.",
+      "year": "1974",
+      "title": "<i>Didelphis virginiana</i>",
+      "author": "Mcmanus, J. J.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

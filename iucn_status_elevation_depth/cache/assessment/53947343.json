@@ -1,0 +1,839 @@
+{
+  "assessment_date": "2019-10-23T01:00:00.000+01:00",
+  "year_published": "2020",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 1095,
+  "criteria": "A2abce",
+  "url": "https://www.iucnredlist.org/species/1095/53947343",
+  "citation": "IUCN SSC Amphibian Specialist Group 2020. Ambystoma mexicanum. The IUCN Red List of Threatened Species 2020: e.T1095A53947343. Accessed on 15 May 2026.",
+  "assessment_id": 53947343,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 1095,
+    "scientific_name": "Ambystoma mexicanum",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AMPHIBIA",
+    "order_name": "CAUDATA",
+    "family_name": "AMBYSTOMATIDAE",
+    "genus_name": "Ambystoma",
+    "species_name": "mexicanum",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Shaw &amp; Nodder, 1798)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Amphibian Specialist Group",
+        "url": "https://www.iucn-amphibians.org/",
+        "description": "Chair: Ariadne Angulo (email: aangulo@amphibians.org)\nRed List Authority Coordinator: Jennifer Luedtke (email: jluedtke@amphibians.org)\nNewsletter: http://www.amphibians.org/froglog/"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Ajolote",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "Axolotl",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Gyrinus mexicanus Shaw & Nodder, 1798",
+        "status": "ACCEPTED",
+        "genus_name": "Gyrinus",
+        "species_name": "mexicanus",
+        "species_author": "Shaw & Nodder, 1798",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Critically Endangered"
+    },
+    "code": "CR"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "Yes",
+    "number_of_locations": "3",
+    "upper_elevation_limit": 2240,
+    "lower_elevation_limit": 2240,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "50-1000",
+    "population_severely_fragmented": "Yes",
+    "population_continuing_decline": "Yes",
+    "generational_length": "2-10",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "467",
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species was originally known to occupy a series of lakes and wetlands throughout the Mexican Central Valley, including Lakes Xochimilco and Chalco (and presumably in the connecting lakes Texcoco and Zumpango), but it has disappeared from most of its historical range. It is now only known from three sites in the southern part of Mexico City in central Mexico, at&#160;<em>c.</em>&#160;2,240 m asl: the canals at Xochimilco, Chalco lake, and Chapultepec Lake (records from Chapultepec Lake that were previously reported to have been uncertain have now been confirmed to belong to this species) (G. Parra-Olea pers. comm. 2014, Contreras&#160;<em>et al.</em>&#160;2009,&#160;Recuero <em>et al. </em>2010<strong>)</strong>. Its current extent of occurrence (EOO) is estimated to be 467 km<sup>2</sup>.",
+    "population": "The population has experienced a dramatic reduction due to habitat transformation (Zambrano&#160;<em>et al.</em> 2007) and the surviving wild population is very small. Although subpopulations are difficult to assess, surveys covering almost all of its known distribution range have usually captured fewer than 100 individuals (e.g. during 2002 and 2003, more than 1,800 net casts were made along Xochimilco canals covering 39,173 m² which resulted in a catch of only 42 specimens; and only two individuals were captured in 2013). In a study covering a span of six years (from 1998 to 2004), the species' density had reduced from 0.006-org/ m<sup>2</sup>&#160;to 0.001-org/ m<sup>2</sup>, although it is thought that this reduction could also be due to its own population dynamics (Zambrano 2006).&#160;Previous population density estimates for this species have been reportedly low, but alarming declines have been observed: from 6,000 ind/km<sup>2</sup>&#160;estimated in 1998 to 1000 in 2004 (Zambrano&#160;<em>et al.</em> 2007) to 100 in 2008 (unpubl. data in Contreras&#160;<em>et al.&#160;</em>2009). Local fishermen have also reported very few individuals in 2008 (Contreras&#160;<em>et al</em>.&#160;2009).<br/><br/>There has not been a density study of the Chalco subpopulation, but evidence suggests that it is small and, furthermore, Chalco is a highly unstable system that runs the risk of disappearing in the near future.&#160;Re-population has been attempted by introducing close to 10,000 individuals in 2012. Ecological niche modelling indicates that the species' potential distribution in Xochimilco is limited to 11 sites in six reduced, isolated and scattered areas, located mostly in zones dominated by traditional agricultural&#160;(Contreras&#160;<em>et al.&#160;</em>2009). However, monthly sampling at Xochimilco over the course of 2017 did not record the species (L. Zambrano pers. comm. 2017). In 2019, the species' population is limited to three disjunct sites; the only site at which records have been made in the last six years is Chapultepec Lake, which is an artificial, cement-lined lake in a city park where individuals have been released and seem to be breeding (A. Calzada pers. comm. October 2019). Therefore, the population is suspected to have declined by 80% or more in the last three generations (16.5 years) since 2003 (Mexico Red List Assessment Workshop October 2019).",
+    "habitats": "This species is native to the ancient system of water channels and lakes in the Mexican Central Valley. It requires deep-water lakes (both natural and artificial canals) with abundant aquatic vegetation, and is sensitive to changes in water quality.&#160;Structures such as plants are needed to lay eggs. It is a paedomorphic species, living permanently in water, and does not undergo complete metamorphosis. It is thought to reach maturity around 1.5 years and, in captivity, lives until about 10 years; the generation length is estimated to be around 5.5 years.",
+    "threats": "Xochimilco is a complex water system of <em>c</em>. 40 km<sup>2</sup>&#160;of artificial channels, small lakes and temporary wetlands between rural and urban areas (Zambrano&#160;<em>et al.&#160;</em>2009). The desiccation and pollution of the canal system and lakes in Xochimilco and Chalco, as a result of urbanization and increased tourist activity is the primary threat to the species (Zambrano 2006). Although the water regime has changed in the last ten years, and it is reported that pollution levels are decreasing, factors such as very high levels of bacterial contamination could still pose a serious threat.<br/><br/>The species was previously also captured for the international pet trade, however, it is thought that all animals in the international trade are now captive bred. Traditional consumption of the species by local people is presumed to have ceased, but may have presented a threat to the species in the past. Introduced fishes (tilapia and carp) have increased to high abundances (a recent study collected 600 kg of tilapia in one small channel using a 100 m net) and have also impacted the species through competition and predation.&#160;<br/><br/>The species has tested positive to the amphibian chytrid fungus&#160;<em>Batrachochytrium dendrobatidis</em>&#160;(<em>Bd</em>), but is not thought to be susceptible to the disease (Garcia-Feria <em>et al</em>. 2017). In addition, laboratory tests have shown that the species is resistant to the salamander chytrid fungus <em>Batrachochytrium salamandrivorans</em> (<em>Bsal</em>) (M. Gray pers. comm. 2019).",
+    "measures": "<strong><em>Conservation Actions In-Place</em></strong><br/>This species occurs in&#160;Ejidos de Xochimilco y San Gregorio Atlapulco and is protected under the category P (Peligro de extincion) by the Government of Mexico and is in the process of being amended to a higher risk category. It has a species action plan, and there are several captive colonies around the world, since the species is used in physiological and biomedical research, as well as in the pet trade. Although this species is currently in CITES Appendix II, it is currently under the process of \"Periodic Review of species included in CITES Appendices\". Conservation action is also focusing on raising the profile of Lake Xochimilco through conservation education and a nature tourism initiative, coupled with work on habitat restoration and bio-remediation.<strong><em><br/></em></strong><strong><em><br/></em></strong><strong><em>Conservation Needed&#160;&#160;</em></strong><br/>Given the two most important threats to the species are related to habitat transformation, including a drastic modification of riparian habitat due to urbanization, and a population explosion of introduced predatory fish (tilapia), a species recovery plan should&#160;involve habitat management and restoration before any other measure such as further reintroductions.&#160;Any reintroduction efforts should take care to avoid introducing potential diseases or genetic problems from captive colonies (Zambrano&#160;<em>et al.&#160;</em>2007).<br/><br/><em><strong>Research Needed</strong></em><br/>Further work is required to clarify questions around the species' taxonomy (G. Parra-Olea pers. comm. October 2019).",
+    "use_trade": "There was a local illegal trade in wild-caught animals for human consumption, medicinal uses and pets. However, the population is now so small that any national trade is likely to be of individuals belonging to related species or captive-bred individuals (A. Calzada, V.&#160;Jiménez, and G. Para-Olea pers. comm. October 2019).&#160;It is assumed that all international trade is now in captive-bred animals.",
+    "rationale": "Listed as Critically Endangered because of an observed population decline, estimated to be more than 80% over the past three generations (16.5 years), inferred from the combined impacts of urbanization, the subsequent pollution of waterways, and predation and competition from invasive species.",
+    "trend_justification": null,
+    "taxonomic_notes": "The taxonomic validity of this species is confirmed, on the basis of morphology, allozymes, and mtDNA (H.B. Shaffer pers. comm.)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    },
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3_1",
+      "description": {
+        "en": "Reintroduction"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Invasive/problematic species control"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Water Storage Areas (over 8ha)"
+      },
+      "code": "15_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Canals and Drainage Channels, Ditches"
+      },
+      "code": "15_9"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "México Distrito Federal"
+      },
+      "code": "MXC-DF"
+    },
+    {
+      "is_endemic": true,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Research"
+      },
+      "code": "14"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": "Yes",
+      "score": "Past Impact",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_2_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Garbage & solid waste"
+      },
+      "code": "9_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Sewage"
+      },
+      "code": "9_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_3_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Unspecified CYPRINIDAE",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Unspecified Tilapia",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "IUCN SSC Amphibian Specialist Group",
+      "value": [
+        " IUCN SSC Amphibian Specialist Group (IUCN SSC)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Chanson, J.S.",
+      "value": [
+        "Janice Chanson (IUCN SSC Amphibian Red List Authority)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Calzada, A., Parra-Olea, G., Zambrano, L., Gray, M., Aguilar, X. & Jiménez, V.",
+      "value": [
+        "Luis Zambrano",
+        "Gabriela Parra-Olea",
+        "Xóchitl Aguilar (Universidad Autónoma del Estado de México)",
+        "Alejandro Calzada",
+        "Victor Jiménez",
+        "Matthew Gray"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Garcia Moreno, J., Luedtke, J., Naylor Warr, L. & Hobin, L.",
+      "value": [
+        "Jennifer Luedtke (Re:wild)",
+        "Jaime Garcia Moreno",
+        "Louise Hobin (SSC Amphibian RLA)",
+        "Lauren Naylor Warr (IUCN SSC Amphibian Red List Authority)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Smith, H.B. 1989. The axolotl in its native habitat. <i>Axolotl News</i>: 12-17.",
+      "year": "1989",
+      "title": "The axolotl in its native habitat",
+      "author": "Smith, H.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Highton, R. 2000. Detecting cryptic species using allozyme data. In: R.C. Bruce, R.G. Jaeger  and L.D. Houck (eds), <i>The Biology of Plethodontid Salamanders</i>, pp. 215-241. Kluwer Academic / Plenum Publishers, New York.",
+      "year": "2000",
+      "title": "Detecting cryptic species using allozyme data",
+      "author": "Highton, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Shaffer, H.B. 1984. Evolution in a paedomorphic lineage. II. Allometry and form in the Mexican ambystomatid salamanders. <i>Evolution</i> 38: 1207-1218.",
+      "year": "1984",
+      "title": "Evolution in a paedomorphic lineage. II. Allometry and form in the Mexican ambystomatid salamanders",
+      "author": "Shaffer, H.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Shaffer, H.B. 1984. Evolution in a paedomorphic lineage. I. An electrophoretic analysis of the Mexican ambystomatid salamanders. <i>Evolution</i> 38: 1194-1206.",
+      "year": "1984",
+      "title": "Evolution in a paedomorphic lineage. I. An electrophoretic analysis of the Mexican ambystomatid salamanders",
+      "author": "Shaffer, H.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Graue, V. 1998. <i>Estudio genético y demográfico de le población del anfibio </i>Ambystoma mexicanum<i> (Caudata: Ambystomatidae) del lago Xochimilco</i>. Unpublished thesis, Instituto de Ciencias del Mar y Limnologica, Universidad Nacional Autónoma de México, Mexico City.",
+      "year": "1998",
+      "title": "Estudio genético y demográfico de le población del anfibio <i>Ambystoma mexicanum</i> (Caudata: Ambystomatidae) del lago Xochimilco",
+      "author": "Graue, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Griffiths, H.I. and Thomas, D.H. 1988. What is the status of the Mexican axolotl? <i>British Herpetological Society Bulletin</i>: 3-5.",
+      "year": "1988",
+      "title": "What is the status of the Mexican axolotl?",
+      "author": "Griffiths, H.I. and Thomas, D.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zambrano, L., Reynoso, V.H. and Herrera, G. 2004. <i>Abundancia y estructura poblacional del axolotl (</i>Ambystoma mexicanum<i>) en los sistemas dulceacuícolas de Xochimilco y Chalco</i>. Unpublished report, Instituto de Biología, Universidad Nacional Autónoma de México. Base de datos SNIB-Conabio proyecto AS004., Mexico City.",
+      "year": "2004",
+      "title": "Abundancia y estructura poblacional del axolotl (<i>Ambystoma mexicanum</i>) en los sistemas dulceacuícolas de Xochimilco y Chalco",
+      "author": "Zambrano, L., Reynoso, V.H. and Herrera, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vergara, G. 1990. <i>Contribución al estudio histológico del aparato reproductor masculino del anfibio urodelo </i>Ambystoma mexicanum<i></i>. Unpublished thesis, Facultad de Ciencias, Universidad Nacional Autónoma de México, Mexico City.",
+      "year": "1990",
+      "title": "Contribución al estudio histológico del aparato reproductor masculino del anfibio urodelo <i>Ambystoma mexicanum</i>",
+      "author": "Vergara, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "McKay, J.E. 2003. <i>An evaluation of captive breeding and sustainable use of the Mexican axolotl (</i>Ambystoma mexicanum<i>)</i>. Unpublished MSc dissertation, University of Kent, Canterbury, U.K.",
+      "year": "2003",
+      "title": "An evaluation of captive breeding and sustainable use of the Mexican axolotl (<i>Ambystoma mexicanum</i>)",
+      "author": "McKay, J.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brandon, R.A. 1972. Hybridization between the Mexican salamanders <i>Ambystoma dumerilii</i> and <i>Ambystoma mexicanum</i> under laboratory conditions. <i>Herpetologica</i>: 199-207.",
+      "year": "1972",
+      "title": "Hybridization between the Mexican salamanders <i>Ambystoma dumerilii</i> and <i>Ambystoma mexicanum</i> under laboratory conditions",
+      "author": "Brandon, R.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brandon, R.A. 1989. Natural history of the axolotl and its relationship to other ambystomatic salamanders. In: Armstrong, J.B. and Malacinski, G.M. (eds), <i>Development Biology of the Axolotl.</i>, pp. 12-21. Oxford University Press, New York.",
+      "year": "1989",
+      "title": "Natural history of the axolotl and its relationship to other ambystomatic salamanders",
+      "author": "Brandon, R.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Griffiths, R.A., Graue, V. and Bride, I.G. 2003. The axolotls of Lake Xochimilco: the evolution of a conservation programme. <i>Axolotl News</i>: 12-18.",
+      "year": "2003",
+      "title": "The axolotls of Lake Xochimilco: the evolution of a conservation programme",
+      "author": "Griffiths, R.A., Graue, V. and Bride, I.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jones, C. 2002. <i>Water quality model for the reintroduction of the axolotl (</i>Ambystoma mexicanum<i>) into the canals of Xochimilco, Mexico City</i>. Unnpublished undergradualte honours theses, Trent University, Peterborough, Canada.",
+      "year": "2002",
+      "title": "Water quality model for the reintroduction of the axolotl (<i>Ambystoma mexicanum</i>) into the canals of Xochimilco, Mexico City",
+      "author": "Jones, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Smith, H.B. 1989. Discovery of the axolotl and its early history in biological research. In: Armstrong, J.B. and Malacinski, G.M. (eds), <i>Developmental Biology of the Axolotl</i>, pp. 3-12. Oxford University Press, New York.",
+      "year": "1989",
+      "title": "Discovery of the axolotl and its early history in biological research",
+      "author": "Smith, H.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "1989. <i>Developmental Biology of the Axolotl</i>. Oxford University Press, New York.",
+      "year": "1989",
+      "title": "Developmental Biology of the Axolotl",
+      "author": null,
+      "citation_short": null
+    },
+    {
+      "citation": "Shaffer, H.B. 1993. Phylogenetics of model organisms: the laboratory axolotl, <i>Ambystoma mexicanum</i>. <i>Systematic Biology</i>: 508-522.",
+      "year": "1993",
+      "title": "Phylogenetics of model organisms: the laboratory axolotl, <i>Ambystoma mexicanum</i>",
+      "author": "Shaffer, H.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shaffer, H.B. 1989. Natural history and ecology of the Mexican axolotls. <i>Axolotl News</i>: 5-11.",
+      "year": "1989",
+      "title": "Natural history and ecology of the Mexican axolotls",
+      "author": "Shaffer, H.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shaffer, H.B. and Lauder, G.V. 1985. Patterns of variation in aquatic ambystomatid salamanders: kinematics of the feeding mechanism. <i>Evolution</i>: 83-92.",
+      "year": "1985",
+      "title": "Patterns of variation in aquatic ambystomatid salamanders: kinematics of the feeding mechanism",
+      "author": "Shaffer, H.B. and Lauder, G.V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Griffiths, R.A., Graue, V., Bride, I.G. and McKay, J.E. 2004. Conservation of the axolotl (<i>Ambystoma mexicanum</i>) at Lake Xochimilco, Mexico. <i>Herpetological Bulletin</i>: 4-11.",
+      "year": "2004",
+      "title": "Conservation of the axolotl (<i>Ambystoma mexicanum</i>) at Lake Xochimilco, Mexico",
+      "author": "Griffiths, R.A., Graue, V., Bride, I.G. and McKay, J.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zambrano, L. 2006. <i>The Mexican Axolotl (</i>Ambystoma mexicanum<i>)</i>.",
+      "year": "2006",
+      "title": "The Mexican Axolotl (<i>Ambystoma mexicanum</i>)",
+      "author": "Zambrano, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "García-Feria, L.M., Brousset  Hernández-Jauregui, D.M., Vallejo Bravo, D., Cervantes Olivares, R.A. 2017. El comercio de anfibios y la presencia de <i>Batrachochytrium dendrobatidis</i> en vida libre: ¿dispersión en círculo vicioso? <i>Neotropical Biology and Conservation</i> 12(1): 30-36.",
+      "year": "2017",
+      "title": "El comercio de anfibios y la presencia de <i>Batrachochytrium dendrobatidis</i> en vida libre: ¿dispersión en círculo vicioso?",
+      "author": "García-Feria, L.M., Brousset  Hernández-Jauregui, D.M., Vallejo Bravo, D., Cervantes Olivares, R.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 December 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-3"
+    },
+    {
+      "citation": "Contreras, V., Martínez-Meyer, E., Valiente, E. and Zambrano, L. 2009. Recent decline and potential distribution in the last remnant area of the microendemic Mexican axolotl (<i>Ambystoma mexicanum</i>). <i>Biological Conservation</i> 142(12): 2881-2885.",
+      "year": "2009",
+      "title": "Recent decline and potential distribution in the last remnant area of the microendemic Mexican axolotl (<i>Ambystoma mexicanum</i>)",
+      "author": "Contreras, V., Martínez-Meyer, E., Valiente, E. and Zambrano, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Recuero, E., Cruzado-Cortés, J., Parra-Olea, G., and K.R., Zamudio. 2010. Urban Aquatic Habitats and Conservation of Highly Endangered Species: The Case of <i>Ambystoma mexicanum</i> (Caudata, Ambystomatidae). <i>Annales Zoologici Fennici</i> 47(4): 223-238.",
+      "year": "2010",
+      "title": "Urban Aquatic Habitats and Conservation of Highly Endangered Species: The Case of <i>Ambystoma mexicanum</i> (Caudata, Ambystomatidae)",
+      "author": "Recuero, E., Cruzado-Cortés, J., Parra-Olea, G., and K.R., Zamudio",
+      "citation_short": null
+    },
+    {
+      "citation": "Zambrano, L., Contreras, V., Mazari-Hiriart, M. and Zarco-Arista, A.E. 2009. Spatial heterogeneity of water quality in a highly degraded tropical freshwater ecosystem. <i>Environmental Management</i> 43: 249–263.",
+      "year": "2009",
+      "title": "Spatial heterogeneity of water quality in a highly degraded tropical freshwater ecosystem",
+      "author": "Zambrano, L., Contreras, V., Mazari-Hiriart, M. and Zarco-Arista, A.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zambrano, L., Vega, E., Herrera, L.G., Prado, E. and Reynoso, V.H. 2007. A population matrix model and population viability analysis to predict the fate of endangered species in highly managed water systems. <i>Animal Conservation</i> 10: 297-303.",
+      "year": "2007",
+      "title": "A population matrix model and population viability analysis to predict the fate of endangered species in highly managed water systems",
+      "author": "Zambrano, L., Vega, E., Herrera, L.G., Prado, E. and Reynoso, V.H.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Competition"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "description": {
+        "en": "Competition"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "description": {
+        "en": "Competition"
+      },
+      "code": "2_3_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

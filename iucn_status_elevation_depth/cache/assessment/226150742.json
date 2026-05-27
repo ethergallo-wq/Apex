@@ -1,0 +1,2324 @@
+{
+  "assessment_date": "2021-12-29T00:00:00.000+00:00",
+  "year_published": "2023",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 223138747,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/223138747/226150742",
+  "citation": "Ghimirey, Y., Petersen, W., Jahed, N., Akash, M., Lynam, A.J., Kun, S., Din, J., Nawaz, M.A., Singh, P., Dhendup, T., Chua, M.A.H., Gray, T.N.E. & Phyoe Kyaw, P. 2023. Prionailurus bengalensis (amended version of 2022 assessment). The IUCN Red List of Threatened Species 2023: e.T223138747A226150742. Accessed on 15 May 2026.",
+  "assessment_id": 226150742,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 223138747,
+    "scientific_name": "Prionailurus bengalensis",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 223143199,
+        "scientific_name": "Prionailurus bengalensis ssp. bengalensis",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "CARNIVORA",
+        "family_name": "FELIDAE",
+        "genus_name": "Prionailurus",
+        "species_name": "bengalensis",
+        "subpopulation_name": null,
+        "infra_name": "bengalensis",
+        "authority": "(Kerr, 1792)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Cat Specialist Group (wild cats)",
+            "url": "http://www.catsg.org/",
+            "description": "Chair: Christine Breitenmoser (email: ch.breitenmoser@kora.ch) and Urs Max Breitenmoser (email: urs.breitenmoser@vetsuisse.unibe.ch)\nRed List Authority Coordinator: Tabea Lanz (email: t.lanz@kora.ch)\nNewsletter: http://www.catsg.org/index.php?id=7"
+          }
+        ],
+        "common_names": [],
+        "synonyms": []
+      },
+      {
+        "sis_id": 223142998,
+        "scientific_name": "Prionailurus bengalensis ssp. euptilurus",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "CARNIVORA",
+        "family_name": "FELIDAE",
+        "genus_name": "Prionailurus",
+        "species_name": "bengalensis",
+        "subpopulation_name": null,
+        "infra_name": "euptilurus",
+        "authority": "(Elliott, 1871)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Cat Specialist Group (wild cats)",
+            "url": "http://www.catsg.org/",
+            "description": "Chair: Christine Breitenmoser (email: ch.breitenmoser@kora.ch) and Urs Max Breitenmoser (email: urs.breitenmoser@vetsuisse.unibe.ch)\nRed List Authority Coordinator: Tabea Lanz (email: t.lanz@kora.ch)\nNewsletter: http://www.catsg.org/index.php?id=7"
+          }
+        ],
+        "common_names": [],
+        "synonyms": [
+          {
+            "name": "Prionailurus bengalensis ssp. iriomotensis Imaizumi, 1967",
+            "status": "MERGE",
+            "genus_name": "Prionailurus",
+            "species_name": "bengalensis",
+            "species_author": null,
+            "infrarank_author": "Imaizumi, 1967",
+            "subpopulation_name": null,
+            "infra_type": "subspecies",
+            "infra_name": "iriomotensis"
+          }
+        ]
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CARNIVORA",
+    "family_name": "FELIDAE",
+    "genus_name": "Prionailurus",
+    "species_name": "bengalensis",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Kerr, 1792)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Cat Specialist Group (wild cats)",
+        "url": "http://www.catsg.org/",
+        "description": "Chair: Christine Breitenmoser (email: ch.breitenmoser@kora.ch) and Urs Max Breitenmoser (email: urs.breitenmoser@vetsuisse.unibe.ch)\nRed List Authority Coordinator: Tabea Lanz (email: t.lanz@kora.ch)\nNewsletter: http://www.catsg.org/index.php?id=7"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Common Leopard Cat",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "แมวดาว",
+        "language": "tha"
+      },
+      {
+        "main": false,
+        "name": "Bja-zig",
+        "language": "dzo"
+      },
+      {
+        "main": false,
+        "name": "Chari bagh",
+        "language": "nep"
+      },
+      {
+        "main": false,
+        "name": "Chat de Chine",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Chat-léopard du Bengale",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Cheetah Billi",
+        "language": "hin"
+      },
+      {
+        "main": false,
+        "name": "Chita Biral",
+        "language": "ben"
+      },
+      {
+        "main": false,
+        "name": "Gato Bengalí",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Gato de Bengala",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Kucing batu",
+        "language": "may"
+      },
+      {
+        "main": false,
+        "name": "Maewdaao",
+        "language": "tha"
+      },
+      {
+        "main": false,
+        "name": "Sanghar",
+        "language": "sit"
+      },
+      {
+        "main": false,
+        "name": "Thit-Kyaung",
+        "language": "bur"
+      },
+      {
+        "main": false,
+        "name": "Waghati",
+        "language": "mar"
+      },
+      {
+        "main": true,
+        "name": "Mainland Leopard Cat",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Felis bengalensis Kerr, 1792",
+        "status": "ACCEPTED",
+        "genus_name": "Felis",
+        "species_name": "bengalensis",
+        "species_author": "Kerr, 1792",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 4474,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Unknown",
+    "generational_length": "6.44",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Unknown",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "No"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "Unknown",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "No",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": "Unknown"
+  },
+  "documentation": {
+    "range": "Mainland Leopard Cat is one of the most widely distributed cat species  in the world with its distribution ranging from the Russian Far East in  the north to Singapore in the south.<br/><br/><strong>Afghanistan</strong>: Afghanistan is  the westernmost limit of the Mainland Leopard Cat’s global distribution  range. The cat has been confirmed from Kunar, Nangarhar and Nuristan  provinces (Habibi 2003, Stevens <em>et al.</em> 2011). One positive DNA sample also indicates its presence in Takhar province in north-east Afghanistan (Ostrowski <em>et al.</em> 2008).<br/><br/><strong>Bangladesh</strong>:  The Mainland Leopard Cat is present in all major forest ecosystems of  Bangladesh: Eastern mixed-evergreen forests of Sylhet and Chattogram  Hill Tracts; central, north and north-western dipterocarp-dominated  deciduous forests and in the Sundarbans mangrove forests in  south-western corner of the country. It is a matter of discussion  whether the species has the widest distribution (second to Jungle Cat  Felis chaus) in the country as stated by Ahmed (2015). Based on Ahmed <em>et al.</em>  (2009), Khan (2008, 2018), and Khan (2010, 2015), it appears that the  Mainland Leopard Cat in Bangladesh is very likely to be restricted to  forested areas.<br/><br/><strong>Bhutan</strong>: The Mainland Leopard Cat is a habitat  generalist and can be found across the country, both in protected areas  and outside. It has been reported from the sub-tropical jungles in the  southern parts of the country to the alpine areas in the north above  4,000 m. The species has been recorded in Jigme Dorji National Park  (Thinley <em>et al.</em> 2015, Jamtsho <em>et al.</em> 2021), Jigme Singye Wangchuck National Park (Wang and Macdonald 2009), Royal Manas National Park (Dhendup <em>et al.</em> 2016, Ghosh and Lucas 2017) and Lamai Goempa Research Preserve (Dhendup <em>et al.</em>  2019). Outside protected areas published records come from Gedu  Division in the west, Sarpang Division in the south central, and  Bumthang Division in Central Bhutan (Dhendup and Dorji 2018, Tenzin <em>et al.</em> 2019). The species has also been reported from Thimphu, Samtse, and Trashigang (Unpublished data with Tashi Dhendup)<br/><br/><strong>Cambodia</strong>:  The Mainland Leopard Cat appears to be widespread throughout Cambodia’s  remaining forests. Recent camera-trap records (2010-onwards) confirm  the species’ presence in most of Cambodia’s major biodiversity  conservation landscapes, including the Cardamom Mountains Landscape  (e.g., Botum Sakor National Park, Central Cardamom Mountains National  Park, Phnom Samkos Wildlife Sanctuary, Southern Cardamom National Park,  Gray <em>et al.</em> 2017; Peam Krasop Wildlife Sanctuary, Ream National Park, Prey Nub, Thuang <em>et al.</em> 2017), the Eastern Plains Landscape (i.e., Keo Seima Wildlife Sanctuary, Griffin <em>et al.</em> 2020; Srepok Wildlife Sanctuary, Pin <em>et al.</em>  2018), the Northern Plains Landscape (e.g., Chheb Wildlife Sanctuary,  Kulen Promtep Wildlife Sanctuary, Phnom Tbeng Natural Heritage Site,  Preah Rokar Wildlife Sanctuary, Techo Sen Russey Treb Cambodian Royal  Academy National Park, Griffin <em>et al.</em> 2020), the Prey Lang Forest Landscape (e.g., Prey Lang Wildlife Sanctuary, Hayes <em>et al.</em> 2015), the Tonle Sap Floodplains (e.g., Tonle Sap Biosphere Reserve, Griffin <em>et al.</em> 2020), and the Tri-Border Forest (e.g. Siem Pang Wildlife Sanctuary, Loveridge <em>et al.</em> 2018; Virachey National Park, McCann <em>et al.</em> 2020).<br/><br/><strong>China</strong>:  The Mainland Leopard Cat is present in Guangxi autonomous region,  Hainan island, Guizhou, Sichuan, Tibet, Yunnan, Hebei, Heilongjang,  Henan, Jiangsu, Jilin, Liaoning, Nei Mongol, Shandong, Shanxi, Shaanxi,  Qinghai, Hunan, Hubei, Beijing and Zhejiang provinces (Wang <em>et al.</em> 2019, Jinping 2010, Sheng <em>et al.</em> 2010, Yu 2010, Bu <em>et al.</em> 2016, Shi <em>et al.</em> 2017, Jia <em>et al.</em> 2020, Li <em>et al.</em> 2019, 2020, Liu <em>et al.</em> 2020). Fujian province and Jiangxi province also have documented Mainland Leopard Cat presence within China (Jiang <em>et al.</em> 2021).<br/><br/><strong>India</strong>:  The Mainland Leopard Cat is among the most common small wild cats in  India, with a large distribution. It occurs across the Western Ghats,  along the higher elevation areas of the eastern hills and the coastal  belt, north-east India, in the Terai and the Duars, and the Himalaya.  Due to lack of systematic surveys in the eastern hill regions of Odisha  and Andhra Pradesh and the adjoining regions of Chhattisgarh, its  distribution in these areas remains poorly documented. Of the 28 states  in India, it has confirmed presence in at least 21 states, and one Union  Territory.<br/><br/>Some of the sites in India where the species has been reported from include:<br/><br/><strong><em>Himalaya</em></strong>: Dachigam NP, Kashmir (Mukherjee <em>et al.</em> 2010, Noor <em>et al.</em> 2020); Khangchendzonga Biosphere Reserve, Sikkim (Bashir <em>et al.</em> 2014); several locations in Himachal Pradesh (Mukherjee <em>et al.</em> 2010) including Kinnaur at around 3000±400 m elevation (Suryawanshi, K.S., pers. comm.).<br/><br/>Terai, Duars, and the foothills of the Himalaya: Rajaji TR, Corbett TR, Katerniaghat WLS, Dudhwa TR, Valmiki TR, Buxa TR (Jhala <em>et al.</em> 2020).<br/><br/><strong><em>North-east India</em></strong>:<br/><br/>a) Arunachal Pradesh: Eaglenest WLS (Velho <em>et al.</em> 2015, Mukherjee <em>et al.</em> 2016), Namdapha TR (Datta <em>et al.</em> 2008, Jhala <em>et al.</em> 2020), Kamlang WLS (Jhala <em>et al.</em> 2020), Dibang WLS (S. Nijhawan pers. comm.), Pakke TR (Selvan <em>et al.</em> 2014, Mukherjee <em>et al.</em> 2019, Jhala <em>et al.</em> 2020), Talle Valley WLS (Mukherjee <em>et al.</em> 2019), Singchung-Bugun CCR (Mukherjee <em>et al.</em> 2019)<br/><br/>b) Nagaland: Intanki NP (Longchar 2013), Shatuya Forest (Grewal <em>et al.</em> 2013), Dzükou Valley (Joshi <em>et al.</em> 2019)<br/><br/>c) Mizoram: Dampa TR (Singh and Macdonald 2017, Mukherjee <em>et al.</em> 2019, Jhala <em>et al.</em> 2020) and Thorangtlang WLS (P. Singh pers. comm.)<br/><br/>d) Assam: Manas NP (Goswami and Ganesh 2011); Kaziranga NP, Orang NP, Nameri TR (Jhala <em>et al.</em> 2020), Jaypore FD (Wildlife Conservation Society 2010), Dibru-Saikhowa NP (Mukherjee <em>et al.</em> 2019); Bornadi-Khalingduar Complex (Chakraborty <em>et al.</em> 2015)<br/><br/>e) Meghalaya: Nongkhyllem WLS and Baghmara-Balpakram landscape (Mukherjee <em>et al.</em> 2019),<br/><br/>Eastern coastal areas: Sundarbans TR (Das <em>et al.</em> 2012, Jhala <em>et al.</em> 2020), Bhitarkanika WLS (Palei <em>et al.</em> 2018)<br/><br/><em><strong>Eastern Ghats</strong></em>: Simlipal TR (Palei <em>et al.</em>  2015), Satkosia TR, Papikonda NP (Aditya and Ganesh 2016). In this  region, the area between Papikonda and Satkosia-Simlipal remains poorly  surveyed. An unverified record from Koratput exists however, this area  requires more field surveys to accurately determine the distribution of  this species.<br/><br/>Western Ghats: Anshi-Dandeli TR, Bandipur TR, Bhadra TR, Nagarahole TR, Biligiri Rangaswamy Temple TR (Mukherjee <em>et al.</em> 2010, Kumara <em>et al.</em> 2012, Kumara <em>et al.</em> 2014, Srivathsa <em>et al.</em> 2015), Kalakad-Mundanthurai TR (Mudappa <em>et al.</em> 2007), Mudumalai TR, Sathyamangalam TR, Parambikulam TR (Sreehari and Nameer 2016), Periyar TR (Mukherjee <em>et al.</em> 2010, Jhala <em>et al.</em> 2020), Eravikulam NP (Nikhil and Nameer 2017), Peppara WLS (Jayson and Christopher 1995), Silent Valley NP (Mukherjee <em>et al.</em> 2010, Sanghamitra and Nameer 2018), Anamalai TR (Kumaraguru <em>et al.</em>  2011), Wayanad WLS (Sreekumar and Nameer 2018). An unverified record of  a road kill from near Bhandardara in Maharashtra also exists, extending  the possible distribution of leopard cats in the Western Ghats further  north.<br/><br/>Mammal checklists from Keoladeo Ghana WLS (Singh <em>et al.</em>  2017) and the Damodar River Valley in Jharkhand (Chakraborty 2011) also  include the Mainland Leopard Cat. However, in the absence of  photographic evidence of this cat from these areas, the veracity of  these records remains unsubstantiated.<br/><br/><strong>Japan</strong>: The Mainland Leopard Cat is the only wild felid in Japan (Ross <em>et al.</em>  2015). Small populations inhabit the Island of Tsushima (only found in  the Tsushima area of Nagasaki Prefecture) and of Iriomote (Ross <em>et al.</em> 2015, Schmidt <em>et al.</em> 1987).<br/><br/><strong>Lao  PDR</strong>: There is very little survey involving Mainland Leopard Cats in Lao  PDR and much of what occurs is associated with development projects and  results are not made publicly available. The species’ current  distribution in the country is largely unknown. Given Lao PDR’s  relatively high forest cover (~57% of total land cover, Department of  Forestry 2018) and the leopard cat’s tolerance of human disturbance, it  is likely that the species is widespread throughout the country.  However, given the occurrence of indiscriminate wire-snaring throughout  Lao PDR it is conceivable that the species has been extirpated from some  parts of the country, particularly those where habitat is heavily  fragmented and trade-driven snaring is intense. Recent published  camera-trap records (2010-onwards) confirm the species’s presence in  Nakai-Nam Theun National Park (Association Anoulak 2019), Nam Et Phou  Louey National Biodiversity Conservation Area (Rasphone <em>et al.</em>  2019), Nam Kading National Biodiversity Area (Wildlife Conservation  Society, unpubl. data), Phou Hin Poun National Protected Area (Brakels  and Somdachit 2020), and in Xe Sap National Protected Area and adjacent  Palé Watershed Protection Forest (Tilker <em>et al.</em> 2019). Many other  unpublished locality records exist spread across the country, with no  obvious gaps in terms of camera-trapping of appropriate intensity  failing to find the species in any survey area however these records are  not systematically collated by the concerned people owing to its least  conservation concern status by IUCN (J. W. Duckworth pers. comm. 2021)<br/><br/><strong>Malaysia</strong>:  The species has been recorded throughout Malaysia, including Mersing  and Panti Forest Reserves in Johor, Sungai Yu Forest Reserve and Taman  Negara National Park in Pahang, Pasoh Forest Reserve in Negeri Sembilan,  Gunung Inas Forest Reserve in Kedah and in Dungun Timber Complex,  Tembat Forest Reserve and Petuang Forest Reserve Terrenganu (Gumal <em>et al.</em> 2014, Ross <em>et al.</em> 2015, Magintan <em>et al.</em> 2017, Ota <em>et al.</em> 2020, Clements <em>et al.</em>  2021). Since the presence of both Mainland Leopard Cat and Sunda  Leopard Cat is expected in the peninsular Malaysia it is difficult to be  certain on exact distribution of Mainland Leopard Cats within the  peninsula (Patel <em>et al.</em> 2017).<br/><br/><strong>Myanmar</strong>: The Mainland  Leopard Cat is the most widespread small cat in Myanmar occurring in  almost all regions of the country including the states of Kachin, Kayin,  Sagaing, Shan, Rakhine, Mandalay and Bago (Moo <em>et al.</em> 2017).  Locality wise it has been recorded from Alaungadaw Kathapa National  Park, Tanintharyi Nature Reserve and Shwesettaw Wildlife Sanctuary  (Linnell <em>et al.</em> 2014). Than Zaw <em>et al.</em> (2014) confirmed  the presence of leopard cat from southernmost to the northernmost areas,  within 151 independent camera-trap detection events coming from 15  survey areas.It is also well distributed in Htamanthi Wildlife Sanctuary  (HlaNaing <em>et al.</em> 2019), Hukaung Valley (HlaNaing 2015) and  Myitsone, Lai Zar, proposed Tanintharyi National Park, Tachileik,  Minlar, Alaungdaw Kathapa National Park (SuSu 2005), Karen State (Moo <em>et al.</em> 2018) and Eastern Shan State (MONREC 2020).<br/><br/><strong>Nepal</strong>:  The Mainland Leopard Cat has been confirmed from 31 out of 77  districts. These include Arghakhanchi, Baglung, Bajura, Banke, Bardia,  Bhaktapur, Bhojpur, Chitwan, Dadeldhura (Acharya, B. pers. comm. 2020),  Dang (C. Khanal pers. comm. 2020), Gorkha, Gulmi, Jajarkot, Jhapa,  Jumla, Kavrepalanchowk, Kailali, Kalikot, Kanchanpur, Kapilvastu, Kaski,  Kathmandu, Khotang, Lamjung, Mahottari, Mugu, Myagdi, Okhaldhunga,  Palpa, Parbat, Parsa, Rasuwa, Rupandehi, Sankhuwasabha, Saptari,  Solukhumbu, Surkhet, Syangja, Taplejung, Terhathum and Udayapur (FON  Nepal 2020, Himalayan Nature 2018, FON Nepal 2017, Ghimirey 2017, Thapa <em>et al.</em> 2013, Jnawali <em>et al.</em>  2011). Confirmed records for the species have been made from the  protected areas of Annapurna Conservation Area, Banke National Park,  Bardia National Park, Chitwan National Park, Gaurishankar Conservation  Area, Kanchenjunga Conservation Area, Manaslu Conservation Area, Makalu  Barun National Park, Parsa National Park, Rara National Park,  Shivapuri-Nagarjuna National Park and Shuklaphanta National Park  (Poudyal <em>et al.</em> 2019, Appel <em>et al.</em> 2013, Thapa <em>et al.</em> 2013, Ghimirey <em>et al.</em> 2012, Jnawali <em>et al.</em>  2011, Pandey 2010). The species has been even recorded to have been  using the alpine habitat in eastern Nepal at 4,474 m (Thapa <em>et al.</em> 2013).<br/><br/><strong>Pakistan</strong>: In Pakistan, this cat species is found in the Murree hills and the Kaghan valley (Khatoon <em>et al.</em>  2019). It also occurs in Azad Jammu and Kashmir. Further west it is  found in Swat, Dir, and lower Gilgit through Hazara District and lower  Chitral (Roberts 1997). There are conflicting reports about its  occurrence in other areas of northern Pakistan.<br/><br/><strong>Russia</strong>: The  Mainland Leopard Cat inhabits the Far East region of the Russia  (Primorskii Krai), both in protected areas and outside. The species is  regularly registered in the forest area and flat river open valleys, and  also near villages in landscapes influenced by agricultural work in the  south-eastern region of the country (in the border of Russia and China,  of Russia and DPR Korea). Protected areas inhabited by the Mainland  Leopard Cat include Leopard Land and Ussuriiskii Nature Reserve,  Sikhote-Alin Nature Reserve, Lazovsky Nature Reserve, Khankaiskii Nature  Reserve and Bolshekhekhtsirskii Nature Reserve (Yudin 2015).<br/><br/><strong>Singapore</strong>:  In Singapore, the Leopard Cat is found in the remnant major forest  fragments on the main island of Singapore and two offshore islands of  Tekong and Ubin (Chua <em>et al.</em> 2016). Leopard Cats in Singapore are  phenotypically closer to the Mainland Leopard Cat however the  similarity of their cytochrome b with Sunda leopard cat makes it  uncertain on the species of leopard cat in the country and their  distribution (Chua 2013).<br/><br/><strong>Republic of Korea</strong>: The Mainland Leopard  Cat is widespread across the Republic of Korea, except on the small  offshore islands (Kim <em>et al.</em> 2021).  From the island Jeju, it disappeared between 1930 and 1940 (Kim <em>et al.</em> 2021).<br/><br/><strong>Taiwan</strong>:  The Mainland Leopard Cat was once widespread in lowland regions of  Taiwan but its population has been greatly reduced (Chen <em>et al.</em> 2016). Its distribution is now restricted to areas in the counties of Miaoli, Nantou and Taichung City in Central Taiwan (Chen <em>et al.</em> 2019).<br/><br/><strong>Thailand</strong>:  The Mainland Leopard cat is widespread in Thailand’s forests; with many  recent records from both protected and non-protected areas throughout  the country. Recent records (2010-onwards) confirm the species’s  presence in most of Thailand’s major forest complexes (FC) such as Lum  Nam Pai-Salawin FC (e.g., Salawin WS, Salawin WS unpubl. data), Western  FC (e.g. Thung Yai Naresuan WS, Chutipong <em>et al.</em> 2016; Huai Kha  Kaeng WS, N. Sukumal, unpubl. data; Mae Wong NP, WWF-Thailand unpubl.  data; Khlong Lan NP; WWF-Thailand, unpubl. data; Khao Laem NP, Freeland  Foundation 2019a), Kaeng Krachan FC (e.g., Namtok Huai Yang NP, Freeland  Foundation 2019b; Kui Buri NP, N. Seuaturien, unpubl. data), Khlong  Saeng-Khao Sok FC (e.g. Khlong Saeng WS and Khao Sok NP, Petersen <em>et al.</em> 2020), Hala Bala FC (e.g., Hala Bala WS, T. Dawrueng unpubl. data), Eastern FC (e.g., Khao Aung Rue Nai WS., Baker <em>et al.</em> 2015), Dong-Phayayen-Khao Yai FC (e.g., Dong Yai WS, Khao Yai NP, Pang Sida NP, Thap Lan NP, and Ta Phraya NP, Ash <em>et al.</em>  2020), Doi Phu Kha-Mae Yom FC (e.g. Tub Phaya Lor NHA, Wiang Lo WS, Doi  Phu Nang NP, G. Saridnir ununpubl. data), and Phu Khieo-Nam Nao FC  (e.g. Phu Khieo WS, A. Riggio unpubl. data), as well as several smaller  forest fragments (e.g., Sakaerat Biosphere Reserve, Petersen <em>et al.</em>  2019a; Khao Sam RoiYot NP, K. Phosri unpubl. data; Pak Pha-Nang (Nakhon  Si Thammarat Province), Thalae Noi (Phutthalung), ThaPhae (Satun),  La-Un (Rangong), Koh Lanta (Krabi), Kantang and Bangsak (Trang), Khura  Buri and Takua Pha (Phang Nga), Tantipisanuh <em>et al.</em> 2019; and Wang Mai (Chumphon), Ueda 2020).<br/><br/><strong>Viet Nam</strong>: The Mainland Leopard Cat is currently the most widespread cat species in the country. Willcox <em>et al.</em>  (2014) reported 32 occurrences of this species from various parts of  the country. Not much targeted research on the species has yet been  conducted in the country.<br/><br/><strong>Hong Kong</strong>: The Mainland Leopard Cat is  distributed mostly in the new territories in the north while it is  presumably absent in the Lantau island in the south. Hong Kong island in  the south is also inhabited by the species.<p></p>",
+    "population": "<p>Information on the Mainland Leopard Cat’s population status is limited  despite the widespread use of camera-traps across the species’  geographic range. Its population has not been estimated in most parts of  its range and there is little information on the abundance of this  species except for some very small and isolated areas or specific  protected areas where its estimates are often the result of bycatch  data. This reflects the species’ low interest to researchers.<br/><br/>Despite  the general paucity of information on the Mainland Leopard Cat  population size and trends, the species is generally considered to be  abundant and stable based on the following observations: (1) the  Mainland Leopard Cat appears to be widely distributed throughout its  historical geographic range and (2) it appears to tolerate human  modified environments to a better degree than other sympatric cat  species. However, this does not mean the species is invulnerable to  habitat loss and degradation, as previous studies suggest the species is  at least somewhat dependent on nearby forest cover and avoids large  artificial open areas (e.g. non-woody agriculture) if vegetation cover  is insufficient (e.g. Chen <em>et al.</em> 2016). Furthermore, any  potentially detrimental effects of habitat loss and degradation will be  exacerbated by illegal hunting, likely causing population declines in  some regions. This is evident in parts of Southeast Asia where some  Mainland Leopard Cat populations appear to have been negatively  influenced due to ongoing wire-snaring crises (e.g. Coudrat <em>et al.</em> 2014a,b; Willcox <em>et al.</em> 2014).<br/><br/>Published  spatial capture-recapture derived density estimates for this species  vary substantially (2.9-21.42 individuals / 100 km<sup>2</sup>) and are  currently available from only a few locations, making generalizations  about broader population abundance difficult at this time. These include  six locations in India: Pakke Tiger Reserve: 2.9/100 km<sup>2</sup> (Selvan <em>et al.</em>2014), Biligiri Rangaswamy Temple Tiger Reserve: 4.48/100 km<sup>2</sup> (Srivathsa <em>et al.</em>2015), Bhadra Tiger Reserve: 10.45 / 100 km<sup>2</sup> (Srivathsa <em>et al.</em>2015) and Khangchendzonga Biosphere Reserve: 17.52/100 km<sup>2</sup> (Bashir <em>et al.</em>2013), one from Nepal: Banke National Park: 4.85/100 km<sup>2</sup> (Dhakal 2018) and one location in Thailand: Sakaerat Biosphere Reserve: 17.7/100 km<sup>2</sup> (Petersen <em>et al.</em>2019b). The highest density for the species (89.4±17.2 (SE) individuals/100 km<sup>2</sup>) has been recorded from Tekong Island, Singapore (an estimate of 21 adults; Chua <em>et al.</em> 2016).<br/><br/>Mainland  Leopard Cat population densities presumably vary by habitat type and  level of human disturbance as those factors influence resource  availability, foraging success, and the potential for inter-specific  competition. Petersen <em>et al.</em>(2019b) found that Leopard Cat  density varied by habitat type within a degraded forest fragment in  north-eastern Thailand (Sakaerat Biosphere Reserve), being highest in  semi-evergreen forest (21.42/100 km<sup>2</sup>), followed by mixed-acacia/eucalyptus plantation forest (7.9/100 km<sup>2</sup>).  Detections were too few to estimate Leopard Cat density in the site’s  third major forest type, dry dipterocarp forest. Spatial  capture-recapture derived estimates of rodent biomass were highest in  the semi-evergreen forest during the study period, followed by dry  dipterocarp, and plantation forests (Petersen <em>et al.</em> 2019b). The  potential for inter-specific competition between Leopard Cats and other  sympatric small terrestrial carnivores was found to be greatest in the  dry dipterocarp forest (Petersen <em>et al.</em> 2019a). Similarly, Srivathsa <em>et al.</em>  (2015), using bycatch data from four camera-trap surveys targeting the  Tiger (<em>Panthera tigris</em>) in the Western Ghats (India), found high  Mainland Leopard Cat densities to be clustered around secondary,  disturbed, or partly modified forests and human-use areas, and  attributed the high leopard cat densities to presumably high rodent  abundances in those same areas. Leopard Cat density estimates from core  areas of larger, closer to intact forest landscapes, however, are  lacking. Past studies from such areas have reported lower Mainland  Leopard Cat photo-encounter rates than for some other sympatric felids  (e.g. Petersen <em>et al.</em> 2020; with similar findings reported for the Sunda Leopard Cat (<em>Prionailurus javanensis</em>): McCarthy <em>et al.</em>  2015), suggesting the high Mainland Leopard Cat densities reported from  smaller forest fragments and other disturbed locations should not be  extrapolated to these less disturbed areas.<br/><br/>Country-specific  reliable population estimates for the species are not available though  several educated guesses have been made across its range. Not more than  1,600 individuals are believed to inhabit the whole range on the  territory of Russia (Yudin 2015) while only fewer than 2,500 and 100-150  individuals are believed to exist in Nepal and Pakistan respectively  (Jnawali <em>et al.</em> 2011). A total of around 50 individuals were  estimated from Singapore. For the islands Iriomote and Tsushima in Japan  and for Taiwan, the population sizes of the Mainland Leopard Cat are  supposed to be very small (Ross <em>et al.</em> 2015). Khan (2015) and  Khan (2018) both labelled the species as uncommon in Bangladesh.  Population size or trends are not known for any other country. In China,  the population size of the MLC is about 230,000, and the population  trend is stable (Jiang <em>et al.</em> 2021).</p>  <p></p>",
+    "habitats": "Mainland Leopard Cat inhabits a variety of habitats, from tropical  rainforest to temperate broadleaf forest and marginally, coniferous  forest, as well as shrub forest and successional grasslands (Thapa <em>et al.</em> 2013, Ghimirey <em>et al.</em> 2012, Shrivathsa <em>et al.</em> 2015, Coudrat <em>et al.</em> 2014). It also occurs in mountainous areas, lowland riparian habitats and agricultural wetlands (Kim <em>et al.</em>  2021). They are also known to adapt to a variety of habitats including  monoculture like coffee, tea, rubber and palm plantations (Bali <em>et al.</em> 2007, Kumara <em>et al.</em>  2004, Tweedie 1978, Yu 2010, Nick Baker in litt. November 2021). Their  adaptability to agricultural landscapes and plantations is often  attributed to presence of rodents as prey in such habitats (Lim 1999).  They are frequently reported along roads and human settlements.  They  have been recorded in the Himalayas as high as 4,474 m (Thapa <em>et al.</em>2013). Home range of leopard cat varies from 1.5 to 12.4 km<sup>2</sup> (Chen <em>et al.</em> 2016).<br/><br/>Mainland  Leopard Cats prey primarily upon rodents like squirrels, rats and mice,  ground birds and lizards. A total of 63 species of prey were found in  their scats in Primorsky region of Russia with mammals and birds having  highest frequency (89.3% and 30.6%) in their diet (Seryodkin and  Burkovskiy 2019). They have been found to be mostly nocturnal and  crepuscular (Can <em>et al.</em> 2019, Chua <em>et al.</em> 2016, Mukherjee <em>et al.</em> 2019, Petersen <em>et al.</em> 2019a).<br/><br/>In  the wild, birth dens have been found in hollow trees, amongst bushes,  under overhanging rocks in small caves, under big roots, and between  rocks. They are also excellent swimmers, and show an affinity towards  water (Yu 2010). Available evidence from Thailand suggests Mainland  Leopard Cat habitat use and activity patterns might be influenced by a  combination of resource availability and inter-specific competition.  Petersen <em>et al.</em> (2019a) found Leopard Cat habitat use within a  forest fragment in north-eastern Thailand was positively associated with  rodent biomass during a period of resource scarcity.  However, no  association was found between Leopard Cat habitat use and rodent biomass  during a subsequent period of high rodent biomass.<p></p>",
+    "threats": "<p>Potential threats to Mainland Leopard Cat vary across its geographic  range, but overall, there is no evidence of any serious threats  operating over large areas. Hunting and snaring occur in most parts of  Mainland Leopard Cat’s range and is particularly intense in South-east  Asia (Gray <em>et al.</em> 2018, Harrison <em>et al.</em> 2016, Willcox <em>et al.</em>  2014). But surveys in areas affected by heavy snaring show the Mainland  Leopard Cat to be one of the most resilient species of small carnivores  (Willcox <em>et al.</em> 2014). Hence there is little evidence to suggest  that hunting and/or snaring is reducing Mainland Leopard Cat’s  population at a global scale. The species is traded or hunted for meat  in parts of north-east India (Selvan <em>et al.</em> 2013), in parts of Afghanistan (Karlstetter 2008), Bangladesh (S. Chaudhary pers. comm. 2021) and in South-east Asia (Willcox <em>et al.</em>  2014) but there is no evidence that this practice has dramatically  reduced the species’ populations in those areas. A recent report shows  that from North China to Sichuan, from Jiangxi to Yunnan, and areas like  Guangxi and Guangdong showed a lower than expected number of wild  Mainland Leopard Cat. The contributing reason behind the population  decline in southern China is believed to be hunting for food and fur,  however, more recently evidence shows illegal adoption, domestication,  and hybrid breeding of Bengal Leopard Cat maybe other main factors (CFCA  2017). In recent years, the data indicate that the hunting pressure on  the Chinese Mainland Leopard Cat populations has been dramatically  reduced (Yu 2010). Additionally, China’s massive natural forest  protection campaign since 1998 may also be very helpful for habitat  recovery, which should be beneficial for the Leopard Cat (Yu 2010).<br/><br/>Retaliatory  killings in response to perceived poultry depredation are common though  not at a rate to threaten its population either locally or globally.  Misidentifications (as, for example mistaking the species as Leopard  <em>Panthera pardus</em> or Snow Leopard <em>Panthera uncia</em> cub or Fishing Cat  <em>Prionailurus viverrinus</em>) leading to lethal anthropogenic responses are  common in countries like Bangladesh and Nepal. These perspectives instil  fear, resulting in stern retaliatory anthropogenic responses however  most of these responses are few and far between, with little impact in  the global or even local scale.<br/><br/>Deforestation is potentially an  important driver of habitat deterioration and may be a localised threat  to Mainland Leopard Cat survival in certain areas such as the eastern  Afghanistan. Habitat loss or deterioration from other countries in its  range has also been documented. Also, a recent study using ecological  niche models suggests that the primary macroscale factors that  negatively impact Leopard Cat are, climate change and human induced  habitat degradation (Silva <em>et al.</em> 2020). However, its occurrence  in areas without actual forests indicates that this is less of a threat  than previously perceived. In Thailand, it is presumed to have higher  mortality due to increased proximity to humans (Haines <em>et al.</em> 2004), but recent research in China shows much better adaptation by the species to human disturbance (Wu <em>et al.</em>  2018). The species’ overall tolerance to human disturbance allows for a  much wider population of the species than would be the case if it  inhabited in areas infrequented by humans. The species’ ability to  disperse between the many isolated forest fragments in which it  currently occurs is unknown, though available evidence suggests it may  be limited in Taiwan (Chen <em>et al.</em> 2016). By contrast, in southern  Korea, the species disperses freely across non-forest landscapes as  shown by its strong colonisation of newly-reclaimed areas of formerly  intertidal habitat converted to rice fields and brackish wetlands. In  principle, inter-patch dispersal ability depends on the structure and  composition of the surrounding matrix and overall landscape  permeability, features that can be both site- and period-specific  (Metzger and Décamps 1997). As such, the long-term viability of isolated  populations living within many forest fragments is uncertain and  probably variable.<br/><br/>Free roaming dogs, Feline Immunodeficiency  Virus (FIV) transmission from feral cats and reduced prey availability  can also threaten the Mainland Leopard Cat in specific areas, such as  for example the population on Tsushima island, Japan (Ministry of the  Environment of the Government of Japan, no date). Protoparvovirus have  also been found in Mainland Leopard Cat in China (Chen <em>et al.</em>  2019). Road kills in and around protected areas and forests is another  visible potential issue for the Mainland Leopard Cat in some areas (Kim <em>et al.</em> 2019, Chen <em>et al.</em> 2016, Baskaran and Bhoominathan 2010, Izawa <em>et al.</em> 2009), though it is presumably not a prominent overall threat at the moment.</p>  <p></p>",
+    "measures": "<p>Conservation measures tailored to the Mainland Leopard Cat are scarce,  except the protected areas which provide safe refuge to the species,  often under the umbrella of other keystone species. Generally, its  population trend and status is not well known. In Afghanistan and  Pakistan, the Leopard Cat is data deficient, hence the first concrete  steps in these countries would be the systematic assessment of the  species’ current range, abundance and threats. Its status in other  countries of its geographic range is relatively more common though a  comprehensive assessment in China regarding the illegal trade of the  species would be a good step. In China, the species has been listed as  Category II of National Key Protected Wild Animals (2021). The  populations of the species in nature reserves are under protection, and  it has been listed as Vulnerable in the China's Red List of Biodiversity  (Jiang <em>et al.</em> 2021). Systematic monitoring of potential threats  to the species is really the primary need, in case any of them should  change into serious threats.<br/><br/>Generally, the species is widely  reported and presumably abundant in Nepal, India, Malaysia, Myanmar and  Thailand. Thus, dedicated conservation measures targeting this species  are rare in these countries. One of the important conservation  initiatives for the Mainland Leopard Cat includes enlisting the species  in the schedule I of National Park and Wildlife Conservation Act 1973 in  Nepal. The species is also protected in Bangladesh, included in  schedule I of the Wildlife (Conservation and Protection) Act 2012.  Myanmar too has provided complete protection to the species according to  the newly updated Conservation of Biodiversity and Protected Area Law  (2018). In Japan the species has been declared a National Nature  Monument in 1971 and an endangered species in 1994 and a conservation  project plan has been initiated since 1995. The species is listed in the  schedule I of the Forest and Nature Conservation Act of Bhutan 1995.  Hence, hunting or trade of any sort is completely prohibited in the  country.<br/><br/>Since the species is not highly sought after by  researchers it will be a great initiative if researchers from across its  global range collaborate to produce a range-wide estimation of its  habitat suitability including the already existing presence data of the  species.</p>  <p></p>",
+    "use_trade": "Mainland Leopard Cat’s involvement in illegal wildlife trade is not properly known from most parts of its range. However there have been many documented cases of this species in trade or hunted for meat in parts of north-east India, South-east Asia and China. The species is, for example, hunted as meat by indigenous tribes in Chattogram Hill Tracts (S. C. Rahman and S. Chakma pers. comm. 2020). According to Karlstetter (2008, pers. comm. with C. Miller), the Leopard Cat is the second most abundant of all cat species listed for Afghanistan at Kabul’s fur Market, and the same author reported pelts of Leopard Cat in Nuristan Province, although it was not specified whether they had been hunted specifically for fur trade or as retaliatory killing. A Kabul household consumption survey also confirmed that Leopard Cats continue to be hunted and their pelts traded (Jonson and Wingard 2010). Cross-border trade across Afghanistan and Pakistan has also been documented (Bader <em>et al. </em>2013, Ostrowski <em>et al.</em> 2009). Even though hundreds of thousands were trapped for the fur trade in the 1980s, Leopard Cat still seems to be fairly common in the first decade of the 21st century. However, in China there was a decline in harvest of legal trapping which was an indication for over-hunting (Yu 2010). For many decades, some border town markets in Myanmar like Tachileik have sold various body parts, which are mostly pelts (Nijman <em>et al. </em>2015). In addition, Leopard Cats were the second most common species found in wildlife trade markets of Tachileik and Mong La in Myanmar-Thailand border based on the total number of individual skins encountered (458 skins) while they were the most abundant considering number of individuals per survey (median 26 individuals/survey; Nijmann and Shepherd 2015). Body parts have also been seized in Nepal though the frequency of seizure is too little to indicate any serious threats to the Mainland Leopard Cat population in the country (Dangol 2015). Their fur and meat are especially popular in China and Japan, which played a major role in the decrease of the population in China in earlier decades. They are also popular in the pet trade industry, as they are often bred with domestic cats to create Bengal cats (Chan 2010). Illegal trade in this species using the internet is also known from Vietnam (Nguyen and Willemsen 2016).",
+    "rationale": "<p>The Mainland Leopard Cat is widely reported and appears to be common  across its large geographic range. Despite this, little is actually  known concerning the species' global population size and status (i.e.,  declining, stable, increasing). Absolute abundance estimates available  from only a handful of sites might not properly represent its population  across its global range, however indicate good population in those  surveyed sites. Thus, we believe the species warrants the treatment of  Least Concern, given how widely reported the species is and how good the  population size is in the surveyed sites.<br/><br/>The habitat seems to be lost and/or modified in many regions (e.g. Hansen <em>et al.</em>  2013). However, an ability to adapt to different habitat types has  helped its population to persist in those areas. There have been  countries/regions too, for example Nepal which have experienced an  increase in their forest cover (DFRS 2015). The Extent of Occurrence and  the Area of Occupancy of the Mainland Leopard Cat are suspected to have  remained more or less the same, and both are very much bigger than  would be apt for categorisation as anything other than Least Concern.<br/><br/>Although  there have certainly been localized declines, there are no indications  of an overall global population decline by the species at a rate  sufficient for categorisation as anything other than Least Concern.</p>",
+    "trend_justification": null,
+    "taxonomic_notes": "In 2017, a taxonomic revision of all cat species recognized the split of  the Leopard Cat into two different species: Mainland Leopard Cat (<em>Prionailurus bengalensis</em>) and Sunda Leopard Cat (<em>Prionailurus javanensis</em>).  The Mainland Leopard Cat, meanwhile, has two recognized subspecies:<br/><ul><li><em>Prionailurus  bengalensis bengalensis</em> in South and Southeast Asia occurring from  Pakistan to China and probably inhabiting the Malay Peninsula and</li><li><em>Prionailurus bengalensis euptilurus</em> existing in Manchuria, Russian Far East, Taiwan, Iriomote Island and Tsushima Island.</li></ul>The Iriomote Cat was widely and until recently treated as a species but is now, according to Kitchener <em>et al.</em> (2017), included into the subspecies <em>Prionailurus bengalensis euptilurus</em>.<p></p>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Subtropical/Tropical Heavily Degraded Former Forest"
+      },
+      "code": "14_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical High Altitude"
+      },
+      "code": "3_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Seasonally Wet/Flooded"
+      },
+      "code": "4_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Mangrove Vegetation Above High Tide Level"
+      },
+      "code": "1_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Boreal"
+      },
+      "code": "1_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Swamp"
+      },
+      "code": "1_8"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Introduced vegetation"
+      },
+      "code": "16"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Republic of"
+      },
+      "code": "KR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nansei-shoto"
+      },
+      "code": "NNS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bhutan"
+      },
+      "code": "BT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lao People's Democratic Republic"
+      },
+      "code": "LA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Democratic People's Republic of"
+      },
+      "code": "KP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Taiwan, Province of China"
+      },
+      "code": "TW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nepal"
+      },
+      "code": "NP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Macao"
+      },
+      "code": "MO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hong Kong"
+      },
+      "code": "HK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Singapore"
+      },
+      "code": "SG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Afghanistan"
+      },
+      "code": "AF"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "No decline",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Herbicides and pesticides"
+      },
+      "code": "9_3_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "No decline",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Dams (size unknown)"
+      },
+      "code": "7_2_11"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects (species is not the target)"
+      },
+      "code": "5_1_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Shifting agriculture"
+      },
+      "code": "2_1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder plantations"
+      },
+      "code": "2_2_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry plantations"
+      },
+      "code": "2_2_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_3_4"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Ghimirey, Y., Petersen, W., Jahed, N., Akash, M., Lynam, A.J., Kun, S., Din, J., Nawaz, M.A., Singh, P., Dhendup, T., Chua, M.A.H., Gray, T.N.E. & Phyoe Kyaw, P.",
+      "value": [
+        "Shi Kun (Beijing Forestry University, China)",
+        "Pyae Phyoe Kyaw (Wildlife Conservation Society, Myanmar)",
+        "Tashi Dhendup (UWICE)",
+        "Yadav Ghimirey (Cat SG)",
+        "Anthony Lynam (Wildlife Conservation Society)",
+        "Nasratullah Jahed (Wildlife Conservation Society, Afghanistan, Program, Kabul, Afthanistan)",
+        "Priya Singh (Researchers for Wildlife Conservation, Bangalore)",
+        "Marcus Chua",
+        "Jaffar Ud Din (Snow Leopard Foundation, Islamabad, Pakistan)",
+        "Muhammad Ali Nawaz (Quaid-i-Azam University, Pakistan)",
+        "Thomas Gray",
+        "Wyatt Petersen (King Mongkut's University of Technology Thonburi)",
+        "Muntasir Akash (University of Dhaka, Bangladesh)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Duckworth, W.",
+      "value": [
+        "Will Duckworth"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Baral, R., Lamichhane, B.R., Chen, Y., Lu, S., Liu, Y., Mukherjee, S., Appel, A., Srivathsa, A., Zakir, T., Ansary, Z., Shoaib, H., Hussain, A. & Yachmenikova, A.",
+      "value": [
+        "Zaber Ansary (Jahangirnagar University, Bangladesh)",
+        "Hameed Shoaib (Snow Leopard Foundation, Pakistan)",
+        "Ali Hussain (Snow Leopard Foundation, Pakistan)",
+        "Anna Yachmenikova (Svertsov Institute of Zoological Sciences, Russia)",
+        "Yixuan Liu (Eco-Bridge Continental, China)",
+        "Arjun Srivathsa (Wildlife Conservation Society- India)",
+        "Tania Zakir (IUCN Bangladesh)",
+        "Shanjun Lu (Eco-Bridge Continental, China)",
+        "Babu Ram Lamichhane (National Trust for Nature Conservation, Nepal)",
+        "Rishi Baral (National Trust for Nature Conservation, Nepal)",
+        "Ying Chen",
+        "Angie Appel (Sand Cat WG)",
+        "Shomita Mukherjee (Salim Ali Centre for Ornithology and Natural History)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This amended assessment was created to correct an Assessor's name.<br/><br/>The amendment is on top of a previous errata assessment: This errata assessment was created to correct the distribution map: previously, the distribution did not include the Sundarbans mangrove forest area; this has now been added to the mapped distribution. Also, the 2021 assessment should have referred to the revised taxonomic concept for <em>Prionailurus bengalensis</em>, which excludes the Sunda Leopard Cat (now a separate species: <em>Prionailurus javanensis</em>). The old concept (to which the historic assessments from 1996 to 2014 refer) has now been dropped from The IUCN Red List."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Roberts, T.J. 1977. <i>The Mammals of Pakistan</i>. Ernest Benn, London, UK.",
+      "year": "1977",
+      "title": "The Mammals of Pakistan",
+      "author": "Roberts, T.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tweedie, M. 1978. <i>Mammals of Malaysia</i>. Longman, Malaysia, Kuala Lampur.",
+      "year": "1978",
+      "title": "Mammals of Malaysia",
+      "author": "Tweedie, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bali, A., Kumar, A. and Krishnaswamy, J. 2007. The mammalian communities in coffee plantations around a protected area in the Western Ghats, India. <i>Biological Conservation</i> 139: 93-102.",
+      "year": "2007",
+      "title": "The mammalian communities in coffee plantations around a protected area in the Western Ghats, India",
+      "author": "Bali, A., Kumar, A. and Krishnaswamy, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Haines, A.M., Grassman Jr., L.I. and Tewes, M.E. 2004. Survival of radiocollared adult leopard cats <i>Prionailurus bengalensis</i> in Thailand. <i>Acta Theriologica</i> 49: 349-356.",
+      "year": "2004",
+      "title": "Survival of radiocollared adult leopard cats <i>Prionailurus bengalensis</i> in Thailand",
+      "author": "Haines, A.M., Grassman Jr., L.I. and Tewes, M.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Su Su. 2005. Small carnivores and their threats in Hlawga Wildlife Park, Myanmar. <i>Small Carnivore Conservation</i> 33: 6-13.",
+      "year": "2005",
+      "title": "Small carnivores and their threats in Hlawga Wildlife Park, Myanmar",
+      "author": "Su Su",
+      "citation_short": null
+    },
+    {
+      "citation": "Stevens, K., Dehgan, A., Karlstetter, M., Rawan, F., Tawhid, M. I. and Ostrowski, S. 2011. Large mammals surviving conflict in the eastern forests of Afghanistan. <i>Oryx</i> 45(2): 265-271. doi:10.1017/S0030605310000517.",
+      "year": "2011",
+      "title": "Large mammals surviving conflict in the eastern forests of Afghanistan.",
+      "author": "Stevens, K., Dehgan, A., Karlstetter, M., Rawan, F., Tawhid, M. I. and Ostrowski, S. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Willcox, D.H.A., Tran Q.P., Hoang M.D. and Nguyen T.T.A. 2014. The decline of non-<i>Panthera</i> cat species in Vietnam. <i>Cat News </i> Special Issue 8: 53–61.",
+      "year": "2014",
+      "title": "The decline of non-<i>Panthera</i> cat species in Vietnam",
+      "author": "Willcox, D.H.A., Tran Q.P., Hoang M.D. and Nguyen T.T.A. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Coudrat, C.N.Z. Nanthavong, C., Sayavong, S., Johnson, A., Johnston, J.B. and Robichaud, W.G. 2014a. Non-Panthera cats in Nakai-Nam Theun National Protected Area, Lao PDR. <i>Cat News Special Issue</i> 8: 45-52.",
+      "year": "2014a",
+      "title": "Non-Panthera cats in Nakai-Nam Theun National Protected Area, Lao PDR",
+      "author": "Coudrat, C.N.Z. Nanthavong, C., Sayavong, S., Johnson, A., Johnston, J.B. and Robichaud, W.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ostrowski, S., Zahler, P., Dehgan, A., Stevens, K., Karlstetter, M., and Smallwood, P. 2009. The Asiatic black bear still survives in Nuristan, Afghanistan. <i>International Bear News</i> 18(4): 14-15.",
+      "year": "2009",
+      "title": "The Asiatic black bear still survives in Nuristan, Afghanistan",
+      "author": "Ostrowski, S., Zahler, P., Dehgan, A., Stevens, K., Karlstetter, M., and Smallwood, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mudappa, D., Noon, B.R., Kumar, A. and Chellam, R. 2007. Responses of small carnivores to rainforest fragmentation in the southern Western Ghats, India. <i>Small Carnivore Conservation</i> 36: 18–26.",
+      "year": "2007",
+      "title": "Responses of small carnivores to rainforest fragmentation in the southern Western Ghats, India",
+      "author": "Mudappa, D., Noon, B.R., Kumar, A. and Chellam, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Appel, A., Werhahn, G., Acharya, R., Ghimirey, Y. and Adhikary, B. 2013. Small carnivores in the Annapurna Conservation Area, Nepal. <i>Vertebrate Zoology</i> 63: 111–121.",
+      "year": "2013",
+      "title": "Small carnivores in the Annapurna Conservation Area, Nepal",
+      "author": "Appel, A., Werhahn, G., Acharya, R., Ghimirey, Y. and Adhikary, B. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Khan, M.M.H. 2008. <i>Protected areas of Bangladesh- A guide to wildlife</i>. Nishorgo Program. Bangladesh Forest Department, Dhaka, Bangladesh.",
+      "year": "2008",
+      "title": "Protected areas of Bangladesh- A guide to wildlife",
+      "author": "Khan, M.M.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jnawali, S.R., Baral, H.S., Lee, S., Acharya, K.P., Upadhyay, G.P., Pandey, M., Shrestha, R., Joshi, D., Lamichhane, B.R., Griffiths, J., Khatiwada, A.P., Subedi, N., and Amin, R. (compilers). 2011. <i>The Status of Nepal Mammals: The National Red List Series.</i> Department of National Parks and Wildlife Conservation, Kathmandu, Nepal.",
+      "year": "2011",
+      "title": "The Status of Nepal Mammals: The National Red List Series.",
+      "author": "Jnawali, S.R., Baral, H.S., Lee, S., Acharya, K.P., Upadhyay, G.P., Pandey, M., Shrestha, R., Joshi, D., Lamichhane, B.R., Griffiths, J., Khatiwada, A.P., Subedi, N., and Amin, R. (compilers)",
+      "citation_short": ""
+    },
+    {
+      "citation": "McCarthy, J.L., Wibisonobo, H.T., McCarthy, K.P., Fuller, T.K. and Andayani, N. 2015. Assessing the distribution and habitat use of four felid species in Bukit Barisan Selatan National Park, Sumatra, Indonesia. <i>Global Ecology and Conservation</i> 3: 210-221.",
+      "year": "2015",
+      "title": "Assessing the distribution and habitat use of four felid species in Bukit Barisan Selatan National Park, Sumatra, Indonesia",
+      "author": "McCarthy, J.L., Wibisonobo, H.T., McCarthy, K.P., Fuller, T.K. and Andayani, N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kumara, H.N., Thorat, O., Santhosh, K., Sasi, R. and Ashwin, H.P. 2014. Small carnivores of Biligiri Rangaswamy Temple Tiger Reserve, Karnataka, India. <i>Journal of Threatened Taxa</i> 6(12): 6534-6543.",
+      "year": "2014",
+      "title": "Small carnivores of Biligiri Rangaswamy Temple Tiger Reserve, Karnataka, India",
+      "author": "Kumara, H.N., Thorat, O., Santhosh, K., Sasi, R. and Ashwin, H.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nijman, V. and Shepherd, C.R. 2015. Trade in tigers and other wild cats in Mong La and Tachilek, Myanmar – A tale of two border towns. <i>Biological Conservation</i> 182: 1-7.",
+      "year": "2015",
+      "title": "Trade in tigers and other wild cats in Mong La and Tachilek, Myanmar – A tale of two border towns",
+      "author": "Nijman, V. and Shepherd, C.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gumal, M., Salleh, A.B.B.M., Yasak, M.N., Horng, L.S., Lee, B.P.Y-H., Pheng, L.C., Hamzah, H., Kong, D., Magintan, D., Yung D.T.C., Zalaluddin, A.Z.B., Azmi, A.B., Khalid, N.B., Yen, T.P., Mufeng, V., Meng, F.C.F., and Ng, S. 2014. Small-medium wild cats of Endau Rompin Landscape in Johor Peninsular Malaysia. <i>Cat News</i> 8: 10-18.",
+      "year": "2014",
+      "title": "Small-medium wild cats of Endau Rompin Landscape in Johor Peninsular Malaysia",
+      "author": "Gumal, M., Salleh, A.B.B.M., Yasak, M.N., Horng, L.S., Lee, B.P.Y-H., Pheng, L.C., Hamzah, H., Kong, D., Magintan, D., Yung D.T.C., Zalaluddin, A.Z.B., Azmi, A.B., Khalid, N.B., Yen, T.P., Mufeng, V., Meng, F.C.F., and Ng, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Srivathsa, A., Parameshwaran, R., Sharma, S. and Karanth, K.U. 2015. Estimating population sizes of leopard cats in the Western Ghats using camera surveys. <i>Journal of Mammalogy</i>.",
+      "year": "2015",
+      "title": "Estimating population sizes of leopard cats in the Western Ghats using camera surveys",
+      "author": "Srivathsa, A., Parameshwaran, R., Sharma, S. and Karanth, K.U. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Chua, M.A.H. 2013. Ecology and conservation of the leopard cat <i>Prionailurus bengalensis</i> (Kerr, 1792)(mammalia: carnivora: felidae) in Singapore. MSc thesis. University of Singapore.",
+      "year": "2013",
+      "title": "Ecology and conservation of the leopard cat <i>Prionailurus bengalensis</i> (Kerr, 1792)(mammalia: carnivora: felidae) in Singapore. MSc thesis",
+      "author": "Chua, M.A.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Yu, J. 2010. Leopard cat <i>Prionailurus bengalensis</i>. <i>Cat News Special Issue </i> 5: 26-29.",
+      "year": "2010",
+      "title": "Leopard cat <i>Prionailurus bengalensis</i>",
+      "author": "Yu, J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Mukherjee, S., Krishnan, A., Tamma, K., Home, C., Navya, R., Joseph, S., Das, A. and Ramakrishnan, U. 2010. Ecology Driving Genetic Variation: A Comparative Phylogeography of Jungle Cat (<i>Felis chaus</i>) and Leopard Cat (<i>Prionailurus bengalensis</i>) in India. <i>PloS one 5</i>.",
+      "year": "2010",
+      "title": "Ecology Driving Genetic Variation: A Comparative Phylogeography of Jungle Cat (<i>Felis chaus</i>) and Leopard Cat (<i>Prionailurus bengalensis</i>) in India",
+      "author": "Mukherjee, S., Krishnan, A., Tamma, K., Home, C., Navya, R., Joseph, S., Das, A. and Ramakrishnan, U.",
+      "citation_short": null
+    },
+    {
+      "citation": "Than Zaw, Than Myint, Saw Htun, Saw Htoo Tha Po, Kyaw Thinn Latt, Myint Maung and Lynam, A. J. 2014. Status and distribution of smaller cats in Myanmar. <i>Cat News Special Issue </i> 8: 24-30.",
+      "year": "2014",
+      "title": "Status and distribution of smaller cats in Myanmar",
+      "author": "Than Zaw, Than Myint, Saw Htun, Saw Htoo Tha Po, Kyaw Thinn Latt, Myint Maung and Lynam, A. J. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Izawa, M., Doi, T., Nakanishi, N. and Teranishi, A. 2009. Ecology and conservation of two endangered subspecies of the leopard cat (<i>Prionailurus bengalensis</i>) on Japanese islands. <i>Biological Conservation</i> 142: 1884-1890.",
+      "year": "2009",
+      "title": "Ecology and conservation of two endangered subspecies of the leopard cat (<i>Prionailurus bengalensis</i>) on Japanese islands",
+      "author": "Izawa, M., Doi, T., Nakanishi, N. and Teranishi, A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kitchener, A.C., Breitenmoser-Würsten, C., Eizirik, E., Gentry, A., Werdelin, L., Wilting, A., Yamaguchi, N., Abramov, A.V., Christiansen, P., Driscoll, C., Duckworth, J.W., Johnson, W., Luo, S.-J., Meijaard, E., O'Donoghue, P., Sanderson, J., Seymour, K., Bruford, M., Groves, C., Hoffman, M., Nowell, K., Timmons, Z. and Tobe, S. 2017. A revised taxonomy of the Felidae. The final report of the Cat Classification Task Force of the IUCN/SSC Cat Specialist Group. <i>Cat News Special Issue</i> 11.",
+      "year": "2017",
+      "title": "A revised taxonomy of the Felidae. The final report of the Cat Classification Task Force of the IUCN/SSC Cat Specialist Group",
+      "author": "Kitchener, A.C., Breitenmoser-Würsten, C., Eizirik, E., Gentry, A., Werdelin, L., Wilting, A., Yamaguchi, N., Abramov, A.V., Christiansen, P., Driscoll, C., Duckworth, J.W., Johnson, W., Luo, S.-J., Meijaard, E., O'Donoghue, P., Sanderson, J., Seymour, K., Bruford, M., Groves, C., Hoffman, M., Nowell, K., Timmons, Z. and Tobe, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gray, T.N.E., Hughes, A.C., Laurance, W.F., Long, B., Lynam, A.J., O’Kelly, H., Ripple, W.J., Seng, T., Scotson, L. and Wilkinson, N.M. 2018. The wildlife snaring crisis: an insidious and pervasive threat to biodiversity in Southeast Asia. <i>Biodiversity and Conservation </i> 27: 1031-1037.",
+      "year": "2018",
+      "title": "The wildlife snaring crisis: an insidious and pervasive threat to biodiversity in Southeast Asia",
+      "author": "Gray, T.N.E., Hughes, A.C., Laurance, W.F., Long, B., Lynam, A.J., O’Kelly, H., Ripple, W.J., Seng, T., Scotson, L. and Wilkinson, N.M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Harrison, R.D., Sreekar, R., Brodie, J.F., Brook, S., Luskin, M., O'Kelly, H., Rao, M., Scheffers, B. and Velho, N. 2016. Impacts of hunting on tropical forests in Southeast Asia. <i>Conservation Biology </i> 30(5): 972-981.",
+      "year": "2016",
+      "title": "Impacts of hunting on tropical forests in Southeast Asia",
+      "author": "Harrison, R.D., Sreekar, R., Brodie, J.F., Brook, S., Luskin, M., O'Kelly, H., Rao, M., Scheffers, B. and Velho, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hla Naing, Fuller, T.K., Sievert, P.R., Randhir, T.O., Saw Htoo Tha Po, Myint Maung, Lynam, A.J., Saw Htun, Win Naing Thaw and Than Myint. 2015. Assessing large mammal and bird richness from camera-trap records in the Hukaung Valley of Northern Myanmar. <i>Raffles Bulletin of Zoology</i> 63: 376-388.",
+      "year": "2015",
+      "title": "Assessing large mammal and bird richness from camera-trap records in the Hukaung Valley of Northern Myanmar",
+      "author": "Hla Naing, Fuller, T.K., Sievert, P.R., Randhir, T.O., Saw Htoo Tha Po, Myint Maung, Lynam, A.J., Saw Htun, Win Naing Thaw and Than Myint ",
+      "citation_short": null
+    },
+    {
+      "citation": "Hansen, M., Potapov, P., Moore, R., Hancher, M., Turubanova, S., Tyukavina, A., Thau, D., Stehman, S., Goetz, S., Loveland, T., Kommareddy, A., Egorov, A., Chini, L., Justice, C and Townshend, J. 2013. High-Resolution Global Maps of 21st-Century Forest Cover Change. <i>Science</i> 342.",
+      "year": "2013",
+      "title": "High-Resolution Global Maps of 21st-Century Forest Cover Change",
+      "author": "Hansen, M., Potapov, P., Moore, R., Hancher, M., Turubanova, S., Tyukavina, A., Thau, D., Stehman, S., Goetz, S., Loveland, T., Kommareddy, A., Egorov, A., Chini, L., Justice, C and Townshend, J",
+      "citation_short": null
+    },
+    {
+      "citation": "Habibi, K. 2003. <i>Mammals of Afghanistan. </i>. Zoo Outreach Organisation/USFWS, Coimbatore,  India.",
+      "year": "2003",
+      "title": "Mammals of Afghanistan. ",
+      "author": "Habibi, K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kumara, H.N., Rathnakumar, S., Sasi, R. and Singh, M. 2012. Conservation status of wild mammals in Biligiri Rangaswamy Temple Wildlife Sanctuary, the Western Ghats, India. <i>Current Science</i> 103(8): 933-940.",
+      "year": "2012",
+      "title": "Conservation status of wild mammals in Biligiri Rangaswamy Temple Wildlife Sanctuary, the Western Ghats, India",
+      "author": "Kumara, H.N., Rathnakumar, S., Sasi, R. and Singh, M. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gray, T. N. E., Billingsley, A., Crudge, B., Prechette, J., Grosu, R., Herranz-Munoz, V., Holden, H., Keo, O., Kong, K., Macdonal, D., Neang, T., Ou, R., Phan, C., & Sim, S. 2017. Status and conservation signifi cance of ground-dwelling mammals in the Cardamom Rainforest Landscape, southwestern Cambodia. <i>Cambodian Journal of Natural History</i> 1: 38-48.",
+      "year": "2017",
+      "title": "Status and conservation signifi cance of ground-dwelling mammals in the Cardamom Rainforest Landscape, southwestern Cambodia",
+      "author": "Gray, T. N. E., Billingsley, A., Crudge, B., Prechette, J., Grosu, R., Herranz-Munoz, V., Holden, H., Keo, O., Kong, K., Macdonal, D., Neang, T., Ou, R., Phan, C., & Sim, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brakels, P. and Somdachit, T. 2020. Record of cats from Phou Hin Poun National Protected Area, Lao PDR. <i>Cat News</i> 71: 7-8.",
+      "year": "2020",
+      "title": "Record of cats from Phou Hin Poun National Protected Area, Lao PDR",
+      "author": "Brakels, P. and Somdachit, T. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Can, Ö.E., Yadav, B.P., Johnson, P.J., Ross, J., D’Cruze, N. and Macdonald, D.W. 2020. Factors affecting the occurrence and activity of clouded leopards, common leopards and leopard cats in the Himalayas. <i>Biodiversity and Conservation</i> 29(3): 839-851.",
+      "year": "2020",
+      "title": "Factors affecting the occurrence and activity of clouded leopards, common leopards and leopard cats in the Himalayas",
+      "author": "Can, Ö.E., Yadav, B.P., Johnson, P.J., Ross, J., D’Cruze, N. and Macdonald, D.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Jhala, Y.V., Qureshi, Q. and Nayak, A.K. 2020. Status of tigers, copredators and prey in India, 2018. National Tiger Conservation Authority, Government of India, New Delhi, and Wildlife Institute of India, Dehradun.",
+      "year": "2020",
+      "title": "Status of tigers, copredators and prey in India, 2018",
+      "author": "Jhala, Y.V., Qureshi, Q. and Nayak, A.K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Liu, Y., Song, D., Liu, B., Xia, F., Chen, Y., Wang, Y. and Huang, Q. 2020. Overview of the Camera-trapping Platform for Felid Species in China: Data integration by a conservation NGO. <i>Biodiversity Science</i> 28(9): 1067-1074.",
+      "year": "2020",
+      "title": "Overview of the Camera-trapping Platform for Felid Species in China: Data integration by a conservation NGO",
+      "author": "Liu, Y., Song, D., Liu, B., Xia, F., Chen, Y., Wang, Y. and Huang, Q. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Moo, S.S.B., Froese, G.Z. and Gray, T.N. 2018. First structured camera-trap surveys in Karen State, Myanmar, reveal high diversity of globally threatened mammals. <i>Oryx</i> 52(3): 537.",
+      "year": "2018",
+      "title": "First structured camera-trap surveys in Karen State, Myanmar, reveal high diversity of globally threatened mammals",
+      "author": "Moo, S.S.B., Froese, G.Z. and Gray, T.N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mukherjee, S., Singh, P., Silva, A.P., Ri, C., Kakati, K., Borah, B., Tapi, T., Kadur, S., Choudhary, C., Srikant, S., Nadig, S., Navya, R., Bjorklund, M. and Ramakrishnan, U. 2019. 2019. Activity patterns of the small and medium felid (Mammalia: Carnivora: Felidae) guild in northeastern India. <i>Journal of Threatened Taxa </i> 11: 13432−13447.",
+      "year": "2019",
+      "title": "Activity patterns of the small and medium felid (Mammalia: Carnivora: Felidae) guild in northeastern India",
+      "author": "Mukherjee, S., Singh, P., Silva, A.P., Ri, C., Kakati, K., Borah, B., Tapi, T., Kadur, S., Choudhary, C., Srikant, S., Nadig, S., Navya, R., Bjorklund, M. and Ramakrishnan, U. 2019. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Petersen, W.J., Steinmetz, R., Sribuarod, K. and Ngoprasert, D. 2020b. Density and movements of mainland clouded leopards (<i>Neofelis nebulosa</i>) under conditions of high and low poaching pressure. <i>Global Ecology and Conservation</i>: 1-11.",
+      "year": "2020b",
+      "title": "Density and movements of mainland clouded leopards (<i>Neofelis nebulosa</i>) under conditions of high and low poaching pressure",
+      "author": "Petersen, W.J., Steinmetz, R., Sribuarod, K. and Ngoprasert, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rasphone, A., Kéry, M., Kamler, J.F. and Macdonald, D.W. 2019. Documenting the demise of tiger and leopard, and the status of other carnivores and prey, in Lao PDR's most prized protected area: Nam Et-Phou Louey. <i>Global Ecology and Conservation</i> 20: 1-15.",
+      "year": "2019",
+      "title": "Documenting the demise of tiger and leopard, and the status of other carnivores and prey, in Lao PDR's most prized protected area: Nam Et-Phou Louey",
+      "author": "Rasphone, A., Kéry, M., Kamler, J.F. and Macdonald, D.W. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Singh, P. and Macdonald, D.W. 2017. Populations and activity patterns of clouded leopards and marbled cats in Dampa Tiger Reserve, India. <i>Journal of Mammalogy </i> 98: 1453-1462.",
+      "year": "2017",
+      "title": "Populations and activity patterns of clouded leopards and marbled cats in Dampa Tiger Reserve, India",
+      "author": "Singh, P. and Macdonald, D.W. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Khan, M.M.H. 2018. Photographic Guide to the Wildlife of Bangladesh. <i>Arannayk Foundation, Dhaka, Bangladesh</i>: 488.",
+      "year": "2018",
+      "title": "Photographic Guide to the Wildlife of Bangladesh",
+      "author": "Khan, M.M.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Baskaran, N. and D. Boominathan. 2010. Roadkill of animals by highway traffic in the tropical forest of Mudumalai Tiger Reserve, southern India. <i>Journal of Threatened Taxa</i> 2(3): 753-759.",
+      "year": "2010",
+      "title": "Roadkill of animals by highway traffic in the tropical forest of Mudumalai Tiger Reserve, southern India",
+      "author": "Baskaran, N. and D. Boominathan",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2022. The IUCN Red List of Threatened Species. Version 2022-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 21 July 2022).",
+      "year": "2022",
+      "title": "The IUCN Red List of Threatened Species. Version 2022-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2022-1"
+    },
+    {
+      "citation": "Aditya, V. and Ganesh, T. 2016. Camera trap records of Rusty-spotted Cat Prionailurus rubiginosus and Leopard Cat <i>Prionailurus bengalensis</i> (Mammalia: Carnivora: Felidae) from Papikonda National Park, northern Eastern Ghats, India. <i>Journal of Threatened Taxa</i> 8: 8818-8819.",
+      "year": "2016",
+      "title": "Camera trap records of Rusty-spotted Cat Prionailurus rubiginosus and Leopard Cat <i>Prionailurus bengalensis</i> (Mammalia: Carnivora: Felidae) from Papikonda National Park, northern Eastern Ghats, India",
+      "author": "Aditya, V. and Ganesh, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ahmed, A.T.A., Kabir, S.M.H., Ahmad, M., Hasan, M.A. and Khondker, M. 2009. <i>Encyclopedia of Flora and Fauna of Bangladesh</i>. Mammals. Asiatic Society of Bangladesh, Dhaka.",
+      "year": "2009",
+      "title": "Encyclopedia of Flora and Fauna of Bangladesh",
+      "author": "Ahmed, A.T.A., Kabir, S.M.H., Ahmad, M., Hasan, M.A. and Khondker, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ahmed, M.S. 2015. Leopard Cat <i>Prionailurus bengalensis</i> (Kerr,1792). <i>IUCN Bangladesh. Red List of Bangladesh</i>, pp. 114. International Union for Conservation of Nature, Bangladesh Country Office, Dhaka.",
+      "year": "2015",
+      "title": "Leopard Cat <i>Prionailurus bengalensis</i> (Kerr,1792)",
+      "author": "Ahmed, M.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ash, E., Kaszta, Z., Noochdumrong, A., Redford, T., Chanteap, P., Hallam, C., Jaroensuk, B., Raksat, S., Srinoppawan, K. & Macdonald, D.W. 2020. Opportunity for Thailand’s forgotten tigers: assessment of the Indochinese tiger <I>Panthera tigris corbetti</i> and its prey with camera trap surveys. <i>Oryx</i> 55: 204-211.",
+      "year": "2020",
+      "title": "Opportunity for Thailand’s forgotten tigers: assessment of the Indochinese tiger <I>Panthera tigris corbetti</i> and its prey with camera trap surveys",
+      "author": "Ash, E., Kaszta, Z., Noochdumrong, A., Redford, T., Chanteap, P., Hallam, C., Jaroensuk, B., Raksat, S., Srinoppawan, K. & Macdonald, D.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Association Anoulak. 2019. Camera-trap surveys in Nakai-Nam Theun National Park for wildlife population monitoring. Report for surveys conducted in 2018-2019, Nakai, Laos PDR.",
+      "year": "2019",
+      "title": "Camera-trap surveys in Nakai-Nam Theun National Park for wildlife population monitoring",
+      "author": "Association Anoulak",
+      "citation_short": null
+    },
+    {
+      "citation": "Bader, H.R., Hanna, C., Douglas, C. and Fox, J.D. 2013. Illegal timber exploitation and counterinsurgency operations in Kunar Province of Afghanistan: A case study describing the nexus among insurgents, criminal cartels, and communities within the forest sector. <i>Journal of Sustainable Forestry</i> 32: 329-353.",
+      "year": "2013",
+      "title": "Illegal timber exploitation and counterinsurgency operations in Kunar Province of Afghanistan: A case study describing the nexus among insurgents, criminal cartels, and communities within the forest sector",
+      "author": "Bader, H.R., Hanna, C., Douglas, C. and Fox, J.D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Baker, M., McShea, W., Howard, J., Bhumpakphan, N. and Sukmasuang, R., 2015. Survey for small felid species in Thailand reserves and evidence for competitive exclusion by larger felids. Final Report.",
+      "year": "2015",
+      "title": "Survey for small felid species in Thailand reserves and evidence for competitive exclusion by larger felids",
+      "author": "Baker, M., McShea, W., Howard, J., Bhumpakphan, N. and Sukmasuang, R., ",
+      "citation_short": null
+    },
+    {
+      "citation": "Bashir, T., Bhattacharya, T., Poudyal, K., Sathyakumar, S. and Qureshi, Q. 2014. Integrating aspects of ecology and predictive modelling: implications for the conservation of the leopard cat (<i>Prionailurus bengalensis</i>) in the Eastern Himalaya. <i>Acta Theriologica</i> 59: 35-47.",
+      "year": "2014",
+      "title": "Integrating aspects of ecology and predictive modelling: implications for the conservation of the leopard cat (<i>Prionailurus bengalensis</i>) in the Eastern Himalaya",
+      "author": "Bashir, T., Bhattacharya, T., Poudyal, K., Sathyakumar, S. and Qureshi, Q.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bashir, T., Bhattacharya, T., Poudyal, K., Sathyakumar, S. & Qureshi, Q. 2013. Estimating leopard cat Prionailurus bengalensis densities using photographic captures and recaptures. <i>Wildlife Biology</i> 19: 462-472.",
+      "year": "2013",
+      "title": "Estimating leopard cat Prionailurus bengalensis densities using photographic captures and recaptures",
+      "author": "Bashir, T., Bhattacharya, T., Poudyal, K., Sathyakumar, S. and Qureshi, Q.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bu H., Wang F., McShea J. W., Lu Z. Wang D. and Li S. 2016. Spatial Co-occurrence and activity patterns of mesocarnivores in the Temperate Forests of Southwest China. <i>PLoS ONE </i> 11(10): e0164271.",
+      "year": "2016",
+      "title": "Spatial Co-occurrence and activity patterns of mesocarnivores in the Temperate Forests of Southwest China",
+      "author": "Bu H., Wang F., McShea J. W., Lu Z. Wang D. and Li S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Chakraborty, P., Lalthanpuia, Sharma, T., Borah, J. and Sarmah, A. 2015. Faunal diversity in a semi-evergreen forest of Bornadi-Khalingduar Complex of Assam, India. <i>Journal of Threatened Taxa </i> 7: 7770-7775.",
+      "year": "2015",
+      "title": "Faunal diversity in a semi-evergreen forest of Bornadi-Khalingduar Complex of Assam, India",
+      "author": "Chakraborty, P., Lalthanpuia, Sharma, T., Borah, J. and Sarmah, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Chakraborty, R. 2011. Mammalian and avian faunal diversity in Damodar Valley under DVC Project Area. Records of the Zoological Survey of India. Zoological Survey of India, Kolkata.",
+      "year": "2011",
+      "title": "Mammalian and avian faunal diversity in Damodar Valley under DVC Project Area. Records of the Zoological Survey of India.",
+      "author": "Chakraborty, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Chan, B. 2010. Carnivores (Mammalia: Carnivora) in South China: a status review with notes on the commercial trade. <i>Mammal Review</i> 40: 247-292.",
+      "year": "2010",
+      "title": "Carnivores (Mammalia: Carnivora) in South China: a status review with notes on the commercial trade",
+      "author": "Chan, B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Chen, C.C., Chang, A.M., Wada, T., Chen, M.T. and Tu, Y.S. 2019. Distribution of carnivore protoparvovirus 1 in free-living leopard cats (<i>Prionailurus bengalensis chinensis</i>) and its association with domestic carnivores in Taiwan. <i>PLoS ONE </i> 14(9): e0221990.",
+      "year": "2019",
+      "title": "Distribution of carnivore protoparvovirus 1 in free-living leopard cats (<i>Prionailurus bengalensis chinensis</i>) and its association with domestic carnivores in Taiwan",
+      "author": "Chen, C.C., Chang, A.M., Wada, T., Chen, M.T. and Tu, Y.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chen, M.T., Liang, Y.J., Kuo, C.C. and Pei, K.J.C. 2016. Home ranges, movements and activity patterns of leopard cats (<i>Prionailurus bengalensis</i>) and threats to them in Taiwan. <i>Mammal Study </i> 41: 77-86.",
+      "year": "2016",
+      "title": "Home ranges, movements and activity patterns of leopard cats (<i>Prionailurus bengalensis</i>) and threats to them in Taiwan",
+      "author": "Chen, M.T., Liang, Y.J., Kuo, C.C. and Pei, K.J.C. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chua, M.A.H., Sivasothi, N. and Meier, R. 2016. Population density, spatiotemporal use and diet of the leopard cat (<i>Prionailurus bengalensis</i>) in a human-modified succession forest landscape of Singapore. <i>Mammal Research </i> 61: 99-108.",
+      "year": "2016",
+      "title": "Population density, spatiotemporal use and diet of the leopard cat (<i>Prionailurus bengalensis</i>) in a human-modified succession forest landscape of Singapore",
+      "author": "Chua, M.A.H., Sivasothi, N. and Meier, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Chutipong, W., Steinmetz, R., Savini, T. and Gale, G.A. 2016. Assessing resource and predator effects on habitat use of tropical small carnivores. <i>Mammal Research </i> 62: 21-36.",
+      "year": "2016",
+      "title": "Assessing resource and predator effects on habitat use of tropical small carnivores",
+      "author": "Chutipong, W., Steinmetz, R., Savini, T. and Gale, G.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Clements, G. R., Rostro-García, S., Kamler, J. F., Llang, S. H. and Hashim, A. K. B.A. 2021. Conservation status of large mammals in protected and logged forests of the greater Taman Negara Landscape, Peninsular Malaysia. <i>Biodiversitas</i> 22: 272-277.",
+      "year": "2021",
+      "title": "Conservation status of large mammals in protected and logged forests of the greater Taman Negara Landscape, Peninsular Malaysia",
+      "author": "Clements, G. R., Rostro-García, S., Kamler, J. F., Llang, S. H. and Hashim, A. K. B.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Dangol, B.R. 2015. Illegal Wildlife Trade in Nepal: A Case Study from Kathmandu Valley. A thesis submitted for partial fulfilment of the requirements for Master's Degree on International Environmental Studies (IES). Norwegian University of Life Sciences.",
+      "year": "2015",
+      "title": "Illegal Wildlife Trade in Nepal: A Case Study from Kathmandu Valley. A thesis submitted for partial fulfilment of the requirements for Master's Degree on International Environmental Studies (IES)",
+      "author": "Dangol, B.R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Das, S.K., Sarkar, P.K., Saha, R., Vyas, P., Danda, A.A. and Vattakavan, J. 2012. Status of tigers in Sundarban Biosphere Reserve, 24 Parganas (South) Forest Division, West Bengal, India. World Wide Fund for Nature-India, New Delhi. Datta, A., Anand, M.O. & Naniwadekar, R. 2008. Empty forests: large carnivore and prey abundance in Namdapha National Park, north-east India. <i>Biological Conservation</i> 141: 1429-1435.",
+      "year": "2012",
+      "title": "Status of tigers in Sundarban Biosphere Reserve, 24 Parganas (South) Forest Division, West Bengal, India. World Wide Fund for Nature-India, New Delhi. Datta, A., Anand, M.O. & Naniwadekar, R. 2008. Empty forests: large carnivore and prey abundance in Namdapha National Park, north-east India",
+      "author": "Das, S.K., Sarkar, P.K., Saha, R., Vyas, P., Danda, A.A. and Vattakavan, J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Delattre, E. and Rahmani, H. 2009. A Preliminary Assessment of Forest Cover and Change in the Eastern Forest Complex of Afghanistan. Wildlife Conservation Society, New York, USA.",
+      "year": "2009",
+      "title": "A Preliminary Assessment of Forest Cover and Change in the Eastern Forest Complex of Afghanistan",
+      "author": "Delattre, E. and Rahmani, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Department of Forestry. 2018. Lao PDR’s Forest Reference Emission Level and Forest Reference Level for REDD+ Results Payment under the UNFCCC.",
+      "year": "2018",
+      "title": "Lao PDR’s Forest Reference Emission Level and Forest Reference Level for REDD+ Results Payment under the UNFCCC",
+      "author": "Department of Forestry",
+      "citation_short": null
+    },
+    {
+      "citation": "DFRS. 2015. State of Nepal's Forests. Forest Resource Assessment (FRA) Nepal, Department of Forest Research and Survey (DFRS). Kathmandu, Nepal.",
+      "year": "2015",
+      "title": "State of Nepal's Forests. Forest Resource Assessment (FRA) Nepal, Department of Forest Research and Survey (DFRS)",
+      "author": "DFRS",
+      "citation_short": null
+    },
+    {
+      "citation": "Dhakal, S. 2018. Distribution, density and activity pattern of Leopard Cat (Prionailurus bengalensis) in Banke-Bardia complex, Nepal. A thesis submitted for the partial fulfilment of Bachelor of Science in Forestry degree. Tribhuvan University, Kathmandu Forestry College.",
+      "year": "2018",
+      "title": "Distribution, density and activity pattern of Leopard Cat (Prionailurus bengalensis) in Banke-Bardia complex, Nepal. A thesis submitted for the partial fulfilment of Bachelor of Science in Forestry degree",
+      "author": "Dhakal, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Dhendup, T. and Dorji, R. 2018. Occurrence of six felid species outside protected areas in Bhutan. <i>Cat News</i> 67: 37-39.",
+      "year": "2018",
+      "title": "Occurrence of six felid species outside protected areas in Bhutan",
+      "author": "Dhendup, T. and Dorji, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Dhendup, T., Tempa, T. and Tenzin, U. 2016. Clouded leopard co-exists with six other felids in Royal Manas National Park, Bhutan. <i>Cat News</i> 63: 24-27.",
+      "year": "2016",
+      "title": "Clouded leopard co-exists with six other felids in Royal Manas National Park, Bhutan",
+      "author": "Dhendup, T., Tempa, T. and Tenzin, U. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Dhendup T., Thinley K. and Tenzin U. 2019. Mammal diversity in a montane forest in central Bhutan. <i>Journal of Threatened Taxa </i> 11: 14757-14763.",
+      "year": "2019",
+      "title": "Mammal diversity in a montane forest in central Bhutan",
+      "author": "Dhendup T., Thinley K. and Tenzin U. ",
+      "citation_short": null
+    },
+    {
+      "citation": "FON Nepal. 2017. Wildlife Research Techniques Training 2017. Friends of Nature, Kathmandu.",
+      "year": "2017",
+      "title": "Wildlife Research Techniques Training 2017",
+      "author": "FON Nepal ",
+      "citation_short": null
+    },
+    {
+      "citation": "FON Nepal. 2020. Wildlife Research Techniques Training 2020. Friends of Nature, Kathmandu.",
+      "year": "2020",
+      "title": "Wildlife Research Techniques Training 2020",
+      "author": "FON Nepal ",
+      "citation_short": null
+    },
+    {
+      "citation": "Freeland Foundation. 2019a. Khao Laem: Conservation in one of Thailand’s Frontier Tiger Parks. Interim Report.",
+      "year": "2019a",
+      "title": "Khao Laem: Conservation in one of Thailand’s Frontier Tiger Parks",
+      "author": "Freeland Foundation",
+      "citation_short": null
+    },
+    {
+      "citation": "Freeland Foundation. 2019b. Surveying Indochinese tigers in Nam Tok Huai Yang National Park. FSI 2019. India State of Forest Report 2019. Forest Survey of India, Dehradun, India.",
+      "year": "2019b",
+      "title": "Surveying Indochinese tigers in Nam Tok Huai Yang National Park",
+      "author": "Freeland Foundation",
+      "citation_short": null
+    },
+    {
+      "citation": "Ghimirey, Y. 2017. Clouded leopard in Hugu-Kori forests, Annapurna Conservation Area, Nepal. Report submitted to Rufford Small Grants, UK.",
+      "year": "2017",
+      "title": "Clouded leopard in Hugu-Kori forests, Annapurna Conservation Area, Nepal",
+      "author": "Ghimirey, Y. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ghimirey, Y., Ghimire, B., Pal, P., Koirala, V., Acharya, R., Dahal, B.V. and Appel, A. 2012. Status of Felids in Makalu-Barun National Park. <i>Cat News </i> 56: 23-27.",
+      "year": "2012",
+      "title": "Status of Felids in Makalu-Barun National Park",
+      "author": "Ghimirey, Y., Ghimire, B., Pal, P., Koirala, V., Acharya, R., Dahal, B.V. and Appel, A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ghosh, S. and Lucas, R. 2017. Coupling field sampling with Earth observation increases understanding of tiger movement and behaviour. In: Diaz-Delgado R., Lucas R. and Hurford C. (eds), <i>The roles of Remote sensing in Nature Conservation</i>, pp. 223-247. Springer International Publishing.",
+      "year": "2017",
+      "title": "Coupling field sampling with Earth observation increases understanding of tiger movement and behaviour",
+      "author": "Ghosh, S. and Lucas, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Goswami, R. and Ganesh, T. 2011. Conservation amidst political unrest: the case of Manas National Park, India. <i>Current Science </i> 100: 445–446.",
+      "year": "2011",
+      "title": "Conservation amidst political unrest: the case of Manas National Park, India",
+      "author": "Goswami, R. and Ganesh, T. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Grewal, B., Sreenivasan, R. and Haralu, B. 2012. Nagaland: Biodiversity and Conservation Programme, an action document. Wildlife Biology and Conservation, Wildlife Conservation Society-India Program, National Centre for Biological Sciences, Bangalore, Department of Forests, Ecology, Environment and Wildlife, Nagaland.",
+      "year": "2012",
+      "title": "Nagaland: Biodiversity and Conservation Programme, an action document",
+      "author": "Grewal, B., Sreenivasan, R. and Haralu, B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Griffin, O., Suzuki, A., Willard, C., Ommanney, K. and Mahood, S. 2020. WCS Cambodia camera trap occurrence data. Version 1.14. Available at: <a href=\"https://doi.org/10.15468/tjl4lg \">https://doi.org/10.15468/tjl4lg </a>. (Accessed: GBIF.org on 2020-07-16).",
+      "year": "2020",
+      "title": "WCS Cambodia camera trap occurrence data. Version 1.14",
+      "author": "Griffin, O., Suzuki, A., Willard, C., Ommanney, K. and Mahood, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Hayes, B., Khou, E.H., Thy, N., Furey, N., Sophea, C., Holden, J., Seiha, H., Sarith, P., Pengly, L. and Simpson, V. 2015. Biodiversity Assessment of Prey Lang, Kratie, Kamphong Thom, Stung Treng, and Preah Vihear Provinces. Conservation International.",
+      "year": "2015",
+      "title": "Biodiversity Assessment of Prey Lang, Kratie, Kamphong Thom, Stung Treng, and Preah Vihear Provinces",
+      "author": "Hayes, B., Khou, E.H., Thy, N., Furey, N., Sophea, C., Holden, J., Seiha, H., Sarith, P., Pengly, L. and Simpson, V. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Himalayan Nature. 2018. Habitat Suitability Assessment for Tiger in Trijuga Forest, East Nepal. Submitted to WildCats Conservation Alliance, London.",
+      "year": "2018",
+      "title": "Habitat Suitability Assessment for Tiger in Trijuga Forest, East Nepal",
+      "author": "Himalayan Nature ",
+      "citation_short": null
+    },
+    {
+      "citation": "Jamtsho Y., Dendup P., Dorji T., Dorji R. and Dorji R. 2021. Jigme Dorji National Park: A wild felid biodiversity hotspot in Bhutan. <i>Cat News</i> 71: 30-34.",
+      "year": "2021",
+      "title": "Jigme Dorji National Park: A wild felid biodiversity hotspot in Bhutan",
+      "author": "Jamtsho Y., Dendup P., Dorji T., Dorji R. and Dorji R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Jayson, E.A. and Christopher, G. 1995. Sighting of two cat species (<i>Felis</i> sp.) from the Western Ghats, South India. <i>The Journal of the Bombay Natural History Society </i> 93: 582.",
+      "year": "1995",
+      "title": "Sighting of two cat species (<i>Felis</i> sp.) from the Western Ghats, South India",
+      "author": "Jayson, E.A. and Christopher, G. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "J. D. C., Bischof, R., Gjershaug J. O. and McNutt, L. 2014. Wildlife surveys in Shwesettaw Wildlife Sanctuary: summary of pilot camera trapping session in 2014.",
+      "year": "2014",
+      "title": "Wildlife surveys in Shwesettaw Wildlife Sanctuary: summary of pilot camera trapping session in 2014",
+      "author": " J. D. C., Bischof, R., Gjershaug J. O. and McNutt, L. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Jia D., Li P., Zhao X., Cheng C., Xiao L. and Lü Z. 2020. Overview of Sanjiangyuan community-based camera-trapping monitoring platform. <i>Biodiversity science </i> 28: 1104-1109.",
+      "year": "2020",
+      "title": "Overview of Sanjiangyuan community-based camera-trapping monitoring platform",
+      "author": "Jia D., Li P., Zhao X., Cheng C., Xiao L. and Lü Z. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Jinping Y. 2010. Leopard Cat. <i>Cat News Special Issue </i> 5: 26-29.",
+      "year": "2010",
+      "title": "Leopard Cat",
+      "author": "Jinping Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Johnson, M.F. and Wingard J.R. 2010. Wild Fauna Trade in Afghanistan. Analysis of three surveys concerning wild fauna trade conducted by the Wildlife Conservation Society in Afghanistan from 2006-2008. WCS Afghanistan, Kabul.",
+      "year": "2010",
+      "title": "Wild Fauna Trade in Afghanistan. Analysis of three surveys concerning wild fauna trade conducted by the Wildlife Conservation Society in Afghanistan from 2006-2008",
+      "author": "Johnson, M.F. and Wingard J.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Joshi, B., Syiem, B.L.N., Kuotsu, R., Menon, A., Gogoi, J., Goswami, V.R. and Vasudev, D. 2019. Records of the Marbled Cat <i>Pardofelis marmorata</i> and the Asiatic Golden Cat <i>Catopuma temminckii</i> (Mammalia: Carnivora: Felidae) from the community forests surrounding the Dzukou Valley in Nagaland, India. <i>Journal of Threatened Taxa </i> 11: 14363-14367.",
+      "year": "2019",
+      "title": "Records of the Marbled Cat <i>Pardofelis marmorata</i> and the Asiatic Golden Cat <i>Catopuma temminckii</i> (Mammalia: Carnivora: Felidae) from the community forests surrounding the Dzukou Valley in Nagaland, India",
+      "author": "Joshi, B., Syiem, B.L.N., Kuotsu, R., Menon, A., Gogoi, J., Goswami, V.R. and Vasudev, D. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Karlstetter, M. 2008. Wildlife Surveys and wildlife conservation in Nuristan, Afghanistan Including Scat and Small Rodent Collection from Other Sites. Wildlife Conservation Society/United States Agency for International Development, Afghanistan Biodiversity Conservation Program.",
+      "year": "2008",
+      "title": "Wildlife Surveys and wildlife conservation in Nuristan, Afghanistan Including Scat and Small Rodent Collection from Other Sites",
+      "author": "Karlstetter, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Khan, M.A.R. 2010. Wildlife of Bangladesh—A Checklist. Shahitya Prakash. Dhaka, Bangladesh.",
+      "year": "2010",
+      "title": "Wildlife of Bangladesh—A Checklist. Shahitya Prakash",
+      "author": "Khan, M.A.R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Khan, M.A.R. 2015. <i>Wildlife of Bangladesh - checklist and guide</i>. Chhayabithi, Dhaka, Bangladesh.",
+      "year": "2015",
+      "title": "Wildlife of Bangladesh - checklist and guide",
+      "author": "Khan, M.A.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kim K., Jang Y. and Borzée A. 2021. Update on the range of leopard cats in the Republic of Korea. <i>Cat News</i> 72: 38–39.",
+      "year": "2021",
+      "title": "Update on the range of leopard cats in the Republic of Korea",
+      "author": "Kim K., Jang Y. and Borzée A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kim, K., Serret, H, Clauzel, C., Andersen, D. and Jang, Y. 2019. Spatio-temporal characteristics and predictions of the endangered leopard cat <i>Prionailirus bengalensis euptilura</i> road-kills in the Republic of Korea. <i>Global Ecology and Conservation</i>: e00673.",
+      "year": "2019",
+      "title": "Spatio-temporal characteristics and predictions of the endangered leopard cat <i>Prionailirus bengalensis euptilura</i> road-kills in the Republic of Korea",
+      "author": "Kim, K., Serret, H, Clauzel, C., Andersen, D. and Jang, Y. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kumaraguru, A., Saravanamuthu, R., Brinda, K. & Asokan, S. 2011. Prey preference of large carnivores in Anamalai Tiger Reserve, India. <i>European Journal of Wildlife Research </i> 57: 627–637.",
+      "year": "2011",
+      "title": "Prey preference of large carnivores in Anamalai Tiger Reserve, India",
+      "author": "Kumaraguru, A., Saravanamuthu, R., Brinda, K. & Asokan, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kumara, H.N., Kumar, M.A., Sharma, A.K., Sushma, H.S., Singh, M. and Singh, M. 2004. Diversity and management of wild mammals in tea gardens in the rainforest regions of the Western Ghats, India: A case study from a tea estate in the Anamalai Hills. <i>Current Science </i> 87: 1282-1287.",
+      "year": "2004",
+      "title": "Diversity and management of wild mammals in tea gardens in the rainforest regions of the Western Ghats, India: A case study from a tea estate in the Anamalai Hills",
+      "author": "Kumara, H.N., Kumar, M.A., Sharma, A.K., Sushma, H.S., Singh, M. and Singh, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Lim, B.L. 1999. The distribution, food habits and parasite patterns of the leopard cat (<i>Prionailurus bengalensis</i>) in Peninsular Malaysia. <i>Journal of Wildlife and Parks</i> 17: 17–27.",
+      "year": "1999",
+      "title": "The distribution, food habits and parasite patterns of the leopard cat (<i>Prionailurus bengalensis</i>) in Peninsular Malaysia",
+      "author": "Lim, B.L. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Li S., McShea W. J., Wang D., Shen X., Bu H., Guan T., Wang F., Gu X., Zhang X. and Liao H. 2019. Construction progress of the camera-trapping network for the Mountains of Southwest China.",
+      "year": "2019",
+      "title": "Construction progress of the camera-trapping network for the Mountains of Southwest China",
+      "author": "Li S., McShea W. J., Wang D., Shen X., Bu H., Guan T., Wang F., Gu X., Zhang X. and Liao H. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Li S., Wang D., Lu Z. and Mcshea W. J. 2010. Cats living with pandas – the status of wild felids within giant Panda range, China. <i>Cat News</i> 52: 23-25.",
+      "year": "2010",
+      "title": "Cats living with pandas – the status of wild felids within giant Panda range, China",
+      "author": "Li S., Wang D., Lu Z. and Mcshea W. J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Li X., Hu W., Pu C., Li Q., Yu Q., Hu Z., Bleisch W. V. and Jiang X. 2020. Camera-trapping monitoring platform for mammals and pheasants in the Longitudinal Range and Gorge Region of Southwest China: Protocol, progress and future outlook. <i>Biodiversity Science </i> 28: 1090-1096.",
+      "year": "2020",
+      "title": "Camera-trapping monitoring platform for mammals and pheasants in the Longitudinal Range and Gorge Region of Southwest China: Protocol, progress and future outlook",
+      "author": "Li X., Hu W., Pu C., Li Q., Yu Q., Hu Z., Bleisch W. V. and Jiang X. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Longchar, S. 2013. Study on the trends of bushmeat consumption and traditional hunting of wild fauna by indigenous community living near protected area in Nagaland. Saurashtra University.",
+      "year": "2013",
+      "title": "Study on the trends of bushmeat consumption and traditional hunting of wild fauna by indigenous community living near protected area in Nagaland",
+      "author": "Longchar, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Loveridge, R., Cusack, J.J., Eames, J.C., Eang, S. and Willcox, D., 2018.  Loveridge, R., Cusack, J.J., Eames, J.C., Eang, S. & Willcox, D., 2018. Mammal records and conservation threats in Siem Pang Wildlife Sanctuary and Siem Pang Khang Lech Wildlife Sanctuary, Cambodia. <i>Cambodian Journal of Natural History </i> 2: 76-89.",
+      "year": "2018",
+      "title": " Loveridge, R., Cusack, J.J., Eames, J.C., Eang, S. & Willcox, D., 2018. Mammal records and conservation threats in Siem Pang Wildlife Sanctuary and Siem Pang Khang Lech Wildlife Sanctuary, Cambodia",
+      "author": "Loveridge, R., Cusack, J.J., Eames, J.C., Eang, S. and Willcox, D., ",
+      "citation_short": null
+    },
+    {
+      "citation": "Magintan D., Nor S. M., Ean T. P., Lechner A. M. and Azhar B. 2017. The conservation value of unlogged and logged forests for native mammals on the East Coast of Peninsular Malaysia. <i>Journal for Nature Conservation</i> 40: 113-119.",
+      "year": "2017",
+      "title": "The conservation value of unlogged and logged forests for native mammals on the East Coast of Peninsular Malaysia",
+      "author": "Magintan D., Nor S. M., Ean T. P., Lechner A. M. and Azhar B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Mccann, G., Pawlowski, K. and Soukhon, T. 2020. The Standard Four' in Virachey National Park, north-east Cambodia. <i>Cat News </i> 71: 9-13.",
+      "year": "2020",
+      "title": "The Standard Four' in Virachey National Park, north-east Cambodia",
+      "author": "Mccann, G., Pawlowski, K. and Soukhon, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Metzger, J.-P., & Décamps, H. 1997. The structural connectivity threshold: An hypothesis in conservation biology at the landscape scale. <i>Acta Oecologica </i> 18: 1-12.",
+      "year": "1997",
+      "title": "The structural connectivity threshold: An hypothesis in conservation biology at the landscape scale",
+      "author": "Metzger, J.-P., & Décamps, H. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ministry of the Environment, Government of Japan. no date. Let’s protect Japan’s wildlife. What we can do to help. Available at: <a href=\"https://www.env.go.jp/nature/kisho/pamphlet/mamorou_2017en.pdf.\">https://www.env.go.jp/nature/kisho/pamphlet/mamorou_2017en.pdf.</a>. ",
+      "year": "no date",
+      "title": "Let’s protect Japan’s wildlife. What we can do to help",
+      "author": "Ministry of the Environment, Government of Japan",
+      "citation_short": null
+    },
+    {
+      "citation": "MONREC. 2020. National Red List of Threatened Species in Myanmar. Ministry of Natural Resources and Environmental Conservation, Nay Pyi Taw, Myanmar.",
+      "year": "2020",
+      "title": "National Red List of Threatened Species in Myanmar",
+      "author": "MONREC",
+      "citation_short": null
+    },
+    {
+      "citation": "Mukherjee, S., Athreya, R., Karunakaran, P.V. and Choudhary, P. 2016. Ecological species sorting in relation to habitat structure in the small cat guild of Eaglenest Wildlife Sanctuary, Arunachal Pradesh. Sálim Ali Centre for Ornithology and Natural History, Coimbatore, Tamil Nadu. Technical Report No. PR-182.",
+      "year": "2016",
+      "title": "Ecological species sorting in relation to habitat structure in the small cat guild of Eaglenest Wildlife Sanctuary, Arunachal Pradesh",
+      "author": "Mukherjee, S., Athreya, R., Karunakaran, P.V. and Choudhary, P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Naing, H., Ross, J., Burnham, D., Htun, S. and Macdonald, D. W. 2019. Population density estimates and conservation concern for clouded leopards <i>Neofelis nebulosa</i>, marbled cats <i>Pardofelis marmorata</i> and tigers <i>Panthera tigris</i> in Htamanthi Wildlife Sanctuary, Sagaing, Myanmar. <i>Oryx</i> 53: 654–662.",
+      "year": "2019",
+      "title": "Population density estimates and conservation concern for clouded leopards <i>Neofelis nebulosa</i>, marbled cats <i>Pardofelis marmorata</i> and tigers <i>Panthera tigris</i> in Htamanthi Wildlife Sanctuary, Sagaing, Myanmar",
+      "author": "Naing, H., Ross, J., Burnham, D., Htun, S. and Macdonald, D. W. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Nguyen, M. and Willemsen, M. 2016. A rapid assessment of e-commerce wildlife trade in Vietnam. <i>TRAFFIC Bulletin </i> 28: 53-55.",
+      "year": "2016",
+      "title": "A rapid assessment of e-commerce wildlife trade in Vietnam",
+      "author": "Nguyen, M. and Willemsen, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Nijman, V., Morcatty, T., Smith, J.H., Atoussi, S., Shepherd, C.R., Siriwat, P., Nekaris, K.A. and Bergin, D. 2015. Illegal wildlife trade – surveying open animal markets and online platforms to understand the poaching of wild cats. <i>Biodiversity</i> 20: 1-4.",
+      "year": "2015",
+      "title": "Illegal wildlife trade – surveying open animal markets and online platforms to understand the poaching of wild cats",
+      "author": "Nijman, V., Morcatty, T., Smith, J.H., Atoussi, S., Shepherd, C.R., Siriwat, P., Nekaris, K.A. and Bergin, D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Nikhil, S. and Nameer, P.O. 2017. Small carnivores of the montane forests of Eravikulam National Park in the Western Ghats, India. <i>Journal of Threatened Taxa </i> 9: 10880–10885.",
+      "year": "2017",
+      "title": "Small carnivores of the montane forests of Eravikulam National Park in the Western Ghats, India",
+      "author": "Nikhil, S. and Nameer, P.O. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Noor, A., Mir, Z.R., Veeraswami, G.G. and Habib, B. 2020. Density of leopard in a moist-temperate forest of western Himalaya, India. <i>Tropical Ecology </i> 61: 301-310.",
+      "year": "2020",
+      "title": "Density of leopard in a moist-temperate forest of western Himalaya, India",
+      "author": "Noor, A., Mir, Z.R., Veeraswami, G.G. and Habib, B",
+      "citation_short": null
+    },
+    {
+      "citation": "Ostrowski, S., Rajabi, A.M. and Noori, H. 2008. Occurrence of wildlife and hunting activities in Imam Sahib, Aye Khanum and Darqad wetlands, Afghanistan, December 2007. Survey report. USAID‐funded Biodiversity and Natural Resource Management Program of the Wildlife Conservation Society (WCS), Kabul, Afghanistan.",
+      "year": "2008",
+      "title": "Occurrence of wildlife and hunting activities in Imam Sahib, Aye Khanum and Darqad wetlands, Afghanistan, December 2007",
+      "author": "Ostrowski, S., Rajabi, A.M. and Noori, H. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ota. A., Takagi. E., Yasuda. M., Hashim. M., Hosaka. T. and Numata. S. 2020. Effects of nonlethal tourist activity on the diel activity patterns of mammals in a National Park in Peninsular Malaysia. <i>Global Ecology and Conservation</i> 20(e00772).",
+      "year": "2020",
+      "title": "Effects of nonlethal tourist activity on the diel activity patterns of mammals in a National Park in Peninsular Malaysia",
+      "author": "Ota. A., Takagi. E., Yasuda. M., Hashim. M., Hosaka. T. and Numata. S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Palei, H.S., Pradhan, T., Sahu, H.K. and Nayak, A.K. 2015. Estimating mammalian abundance using camera traps in the tropical forests of Simlipal Tiger Reserve, Odisha, India. <i>Proceedings of the Zoological Society </i> 69: 181–188.",
+      "year": "2015",
+      "title": "Estimating mammalian abundance using camera traps in the tropical forests of Simlipal Tiger Reserve, Odisha, India",
+      "author": "Palei, H.S., Pradhan, T., Sahu, H.K. and Nayak, A.K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Palei, H.S., Pratap Das, U. and Debata, S. 2018. The vulnerable fishing cat <i>Prionailurus viverrinus</i> in Odisha, eastern India: status and conservation implications. <i>Zoology and Ecology </i> 28: 69–74.",
+      "year": "2018",
+      "title": "The vulnerable fishing cat <i>Prionailurus viverrinus</i> in Odisha, eastern India: status and conservation implications",
+      "author": "Palei, H.S., Pratap Das, U. and Debata, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Pandey, B. 2010. Clouded leopard in Shivapuri Nagarjuna National Park, Nepal. <i>Cat News </i> 57: 24-25.",
+      "year": "2010",
+      "title": "Clouded leopard in Shivapuri Nagarjuna National Park, Nepal",
+      "author": "Pandey, B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Patel, R.P., Wutke, S., Lenz, D., Mukherjee, S., Ramakrishnan, U., Veron, G., Fickel, J., Wilting, A. and Förster, D.W. 2017. Genetic Structure and Phylogeography of the Leopard Cat (<i>Prionailurus bengalensis</i>) Inferred from Mitochondrial Genomes. <i>Journal of Heredity </i> 108: 349–360.",
+      "year": "2017",
+      "title": "Genetic Structure and Phylogeography of the Leopard Cat (<i>Prionailurus bengalensis</i>) Inferred from Mitochondrial Genomes",
+      "author": "Patel, R.P., Wutke, S., Lenz, D., Mukherjee, S., Ramakrishnan, U., Veron, G., Fickel, J., Wilting, A. and Förster, D.W. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Petersen, W.J., Savini, T., Steinmetz, R. and Ngoprasert, D. 2019a. Periodic resource scarcity and potential for interspecific competition influences distribution of small carnivores in a seasonally dry tropical forest fragment. <i>Mammalian Biology </i> 95: 112-122.",
+      "year": "2019a",
+      "title": "Periodic resource scarcity and potential for interspecific competition influences distribution of small carnivores in a seasonally dry tropical forest fragment",
+      "author": "Petersen, W.J., Savini, T., Steinmetz, R. and Ngoprasert, D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Petersen, W.J., Savini, T., Steinmetz, R. and Ngoprasert, D. 2019b. Estimating leopard cat <i>Prionailurus bengalensis</i> Kerr, 1792 (Carnivora: Felidae) density in a degraded tropical forest fragment in north-eastern Thailand. <i>Journal of Threatened Taxa </i> 11: 13448-13458.",
+      "year": "2019b",
+      "title": "Estimating leopard cat <i>Prionailurus bengalensis</i> Kerr, 1792 (Carnivora: Felidae) density in a degraded tropical forest fragment in north-eastern Thailand",
+      "author": "Petersen, W.J., Savini, T., Steinmetz, R. and Ngoprasert, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pin, C., Ngoprasert, D., Gray, T.N.E., Savini, T., Crouthers, R. and Gale, G.A. 2018. Utilization of waterholes by globally threatened species in deciduous dipterocarp forest of the Eastern Plains Landscape of Cambodia. <i>Oryx</i> 54: 572-582.",
+      "year": "2018",
+      "title": "Utilization of waterholes by globally threatened species in deciduous dipterocarp forest of the Eastern Plains Landscape of Cambodia",
+      "author": "Pin, C., Ngoprasert, D., Gray, T.N.E., Savini, T., Crouthers, R. and Gale, G.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Poudyal, L.P., Lamichhane, B.R., Paudel, U., Niroula, S.R., Prasai, A., Malla, S., Subedi, N., Thapa, K. and Dahal, B.R. 2019. Mammals of Shuklaphanta: An Account from Camera Trap Survey. Shuklaphanta National Park Office, Kanchanpur, Nepal.",
+      "year": "2019",
+      "title": "Mammals of Shuklaphanta: An Account from Camera Trap Survey",
+      "author": "Poudyal, L.P., Lamichhane, B.R., Paudel, U., Niroula, S.R., Prasai, A., Malla, S., Subedi, N., Thapa, K. and Dahal, B.R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ross, J., Brodie, J., Cheyne, S., Hearn, A., Izawa, M., Loken, B., Lynam, A., McCarthy, J., Mukherjee, S., Phan, C., Rasphone, A. and Wilting, A. 2015. <i>Prionailurus bengalensis</i>. The IUCN Red List of Threatened Species 2015:. Available at: <a href=\"https://dx.doi.org/10.2305/IUCN.UK.2015-4.RLTS.T18146A50661611.en. Accessed on 20 December 2021\">https://dx.doi.org/10.2305/IUCN.UK.2015-4.RLTS.T18146A50661611.en. Accessed on 20 December 2021</a>. ",
+      "year": "2015",
+      "title": "<i>Prionailurus bengalensis</i>",
+      "author": "Ross, J., Brodie, J., Cheyne, S., Hearn, A., Izawa, M., Loken, B., Lynam, A., McCarthy, J., Mukherjee, S., Phan, C., Rasphone, A. and Wilting, A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Sanghamithra, D. and Nameer, P.O. 2018. Small carnivores of Silent Valley National Park, Kerala, India. <i>Journal of Threatened Taxa</i> 10: 12091–12097.",
+      "year": "2018",
+      "title": "Small carnivores of Silent Valley National Park, Kerala, India",
+      "author": "Sanghamithra, D. and Nameer, P.O. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Schmidt K., Nakanishi N., Okamura M., Doi t. and Izawa M. 2003. Movements and use of home range in the Iriomote cat (<i>Prionailurus bengalensis irimotensis</i>). <i>Journal of Zoology </i> 261: 273-283.",
+      "year": "2003",
+      "title": "Movements and use of home range in the Iriomote cat (<i>Prionailurus bengalensis irimotensis</i>)",
+      "author": "Schmidt K., Nakanishi N., Okamura M., Doi t. and Izawa M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Selvan, K. M., Veeraswami, G.G., Habib, B. and Lyngdoh, S. 2013. Losing threatened and rare wildlife to hunting in Ziro valley, Arunachal Pradesh, India. <i>Current Science </i> 104: 1492–1495.",
+      "year": "2013",
+      "title": "Losing threatened and rare wildlife to hunting in Ziro valley, Arunachal Pradesh, India",
+      "author": "Selvan, K. M., Veeraswami, G.G., Habib, B. and Lyngdoh, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Selvan, M., Lyngdoh, S., Gopi, G.V. and Habib, B. 2014. Density estimation of leopard cat <i>Prionailurus bengalensis</i> using capture-recaptures sampling in lowland forest of Pakke Tiger Reserve, Arunachal Pradesh, India. <i>Mammalia</i> 78: 555–559.",
+      "year": "2014",
+      "title": "Density estimation of leopard cat <i>Prionailurus bengalensis</i> using capture-recaptures sampling in lowland forest of Pakke Tiger Reserve, Arunachal Pradesh, India",
+      "author": "Selvan, M., Lyngdoh, S., Gopi, G.V. and Habib, B. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Seryodkin, I.V. and Burkovskiy, O.A. 2019. Food Habit Analysis of the Amur Leopard Cat <i>Prionailurus bengalensis euptilurus</i> in the Russian Far East. <i>Biology Bulletin </i> 5: 20-23.",
+      "year": "2019",
+      "title": "Food Habit Analysis of the Amur Leopard Cat <i>Prionailurus bengalensis euptilurus</i> in the Russian Far East",
+      "author": "Seryodkin, I.V. and Burkovskiy, O.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Sheng, L., Wang, D., Lu, Z. & McShea, W.J. 2010. Cats living with Pandas: The status of wild felids within giant panda range, China. <i>Cat News Special Issue </i> 5: 20-23.",
+      "year": "2010",
+      "title": "Cats living with Pandas: The status of wild felids within giant panda range, China",
+      "author": "Sheng, L., Wang, D., Lu, Z. & McShea, W.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Shi. X., Hu. Q., Li. J., Tang. Z., Yang. J., Li. W., Shen. X. and Li. S. 2017. Camera-trapping surveys of the mammal and bird diversity in Wolong National Nature Reserve, Sichuan Province. <i>Biodiversity Science </i> 25: 1131-1136.",
+      "year": "2017",
+      "title": "Camera-trapping surveys of the mammal and bird diversity in Wolong National Nature Reserve, Sichuan Province",
+      "author": "Shi. X., Hu. Q., Li. J., Tang. Z., Yang. J., Li. W., Shen. X. and Li. S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Silva, A.P., Mukherjee, S., Ramakrishnan, U., Fernandes, C. and Björklund, M. 2020. Closely related species show species-specific environmental responses and different spatial conservation needs: Prionailurus cats in the Indian subcontinent. <i>Scientific Reports </i> 10: 18705.",
+      "year": "2020",
+      "title": "Closely related species show species-specific environmental responses and different spatial conservation needs: Prionailurus cats in the Indian subcontinent",
+      "author": "Silva, A.P., Mukherjee, S., Ramakrishnan, U., Fernandes, C. and Björklund, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Singh, A., Mukherjee, A., Dookia, S. and Kumara, H.N. 2017. An Updated Account of Mammal Species and Population Status of Ungulates in Keoladeo National Park, Bharatpur, Rajasthan. <i>Current Science </i> 113: 103–111.",
+      "year": "2017",
+      "title": "An Updated Account of Mammal Species and Population Status of Ungulates in Keoladeo National Park, Bharatpur, Rajasthan",
+      "author": "Singh, A., Mukherjee, A., Dookia, S. and Kumara, H.N. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Sreehari, R. and Nameer, P.O. 2016. Small carnivores of Parambikulam Tiger Reserve, Southern Western Ghats, India. <i>Journal of Threatened Taxa </i> 8: 9306–9315.",
+      "year": "2016",
+      "title": "Small carnivores of Parambikulam Tiger Reserve, Southern Western Ghats, India",
+      "author": "Sreehari, R. and Nameer, P.O. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Sreekumar, E.R. and Nameer, P.O. 2018. Small carnivores of Wayanad Wildlife Sanctuary, the southern Western Ghats, India. <i>Journal of Threatened Taxa</i> 10: 11218–11225.",
+      "year": "2018",
+      "title": "Small carnivores of Wayanad Wildlife Sanctuary, the southern Western Ghats, India.",
+      "author": "Sreekumar, E.R. and Nameer, P.O. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Tantipisanuh, N., Ngoprasert, D., Chutipong, W., Kamjing, A., Phosri, K. and Dachyosdee. 2019. Distribution status of otters and other small carnivore species in mangrove forest and wetland areas in Southern Thailand (2nd year) (Project No. P-17-50771). National Science and Technology Development Agency.",
+      "year": "2019",
+      "title": "Distribution status of otters and other small carnivore species in mangrove forest and wetland areas in Southern Thailand (2nd year) (Project No. P-17-50771)",
+      "author": "Tantipisanuh, N., Ngoprasert, D., Chutipong, W., Kamjing, A., Phosri, K. and Dachyosdee. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Tenzin, J., Dhendup, T., Dhendup, P., Dorji, T., Choki, K., Wangschuk, S., Dorji, S., Nidup, C. and Dorji, T. 2019. Six felid species occur outside protected areas in south-central Bhutan. <i>Cat News </i> 70: 25- 29.",
+      "year": "2019",
+      "title": "Six felid species occur outside protected areas in south-central Bhutan",
+      "author": "Tenzin, J., Dhendup, T., Dhendup, P., Dorji, T., Choki, K., Wangschuk, S., Dorji, S., Nidup, C. and Dorji, T. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Thapa. K., Pradhan, N.M.B., Barker, J., Dhakal. M., Bhandari. A.R., Gurung, G.S., Rai, D.P., Thapa, G.J., Shrestha, S. and Singh, R.G. 2013. High elevation record of leopard cat in the Kanchenjunga Conservation Area, Nepal. <i>Cat News</i> 58: 26-27.",
+      "year": "2013",
+      "title": "High elevation record of leopard cat in the Kanchenjunga Conservation Area, Nepal",
+      "author": "Thapa. K., Pradhan, N.M.B., Barker, J., Dhakal. M., Bhandari. A.R., Gurung, G.S., Rai, D.P., Thapa, G.J., Shrestha, S. and Singh, R.G. ",
+      "citation_short": null
+    },
+    {
+      "citation": "The Chinese Felid Conservation Alliance (CFCA). 2017. Leopard cat is a beautiful creature which only belongs to the wilderness. Available at: <a href=\"https://mp.weixin.qq.com/s/IGNqgudP_gRd5o0gwJ8uiA\">https://mp.weixin.qq.com/s/IGNqgudP_gRd5o0gwJ8uiA</a>. ",
+      "year": "2017",
+      "title": "Leopard cat is a beautiful creature which only belongs to the wilderness",
+      "author": "The Chinese Felid Conservation Alliance (CFCA)",
+      "citation_short": null
+    },
+    {
+      "citation": "Thinley, P., Morreale, S. J., Curtis, P. D., Lassoie, J. P., Dorji, T., Leki, Phuntsho, S. and Dorji, N. 2015. Diversity, occupancy, and spatio-temporal occurrences of mammalian predators in Bhutan's Jigme Dorji National Park. <i>Bhutan Journal of Natural Resources & Development </i> 2: 19-27.",
+      "year": "2015",
+      "title": "Diversity, occupancy, and spatio-temporal occurrences of mammalian predators in Bhutan's Jigme Dorji National Park",
+      "author": "Thinley, P., Morreale, S. J., Curtis, P. D., Lassoie, J. P., Dorji, T., Leki, Phuntsho, S. and Dorji, N. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Thuang, R., Muñoz, V.H., Holden, J., Willcox, D. and Souter, N.J. 2017. The Vulnerable fishing cat <i>Prionailurus viverrinus</i> and other globally threatened species in Cambodia’s coastal mangroves. <i>Oryx</i> 52: 636-640.",
+      "year": "2017",
+      "title": "The Vulnerable fishing cat <i>Prionailurus viverrinus</i> and other globally threatened species in Cambodia’s coastal mangroves",
+      "author": "Thuang, R., Muñoz, V.H., Holden, J., Willcox, D. and Souter, N.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Tilker, A., Abrams, J.F., Azlan, M., Nguyen, A., Wong, S.T, Sollman, R., Niedbella, J., Bhagwat, T., Gray, T.N.E., Rawson, B.M., Guegan, F., Kissing, J., Wegmann, M. and Wilting, A. 2019. Habitat degradation  and indiscriminate hunting differentially impact faunal communities in Southeast Asian tropical biodiversity hotspot. <i>Communications Biology </i> 2: 396.",
+      "year": "2019",
+      "title": "Habitat degradation  and indiscriminate hunting differentially impact faunal communities in Southeast Asian tropical biodiversity hotspot",
+      "author": "Tilker, A., Abrams, J.F., Azlan, M., Nguyen, A., Wong, S.T, Sollman, R., Niedbella, J., Bhagwat, T., Gray, T.N.E., Rawson, B.M., Guegan, F., Kissing, J., Wegmann, M. and Wilting, A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ueda, K. 2020. iNaturalist Research-grade Observations. iNaturalist.org. Occurrence dataset https://doi.org/10.15468/ab3s5x . Available at: <a href=\"https://www.gbif.org/occurrence/2429609569\">https://www.gbif.org/occurrence/2429609569</a>. (Accessed: GBIF.org on 2020-11-17).",
+      "year": "2020",
+      "title": "iNaturalist Research-grade Observations. iNaturalist.org. Occurrence dataset https://doi.org/10.15468/ab3s5x ",
+      "author": "Ueda, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Velho, N., Srinivasan, U., Singh, P. and Laurance, W.F. 2015. Large mammal use of protected and community-managed lands in a biodiversity hotspot. <i>Animal Conservation </i> 19: 199–208.",
+      "year": "2015",
+      "title": "Large mammal use of protected and community-managed lands in a biodiversity hotspot",
+      "author": "Velho, N., Srinivasan, U., Singh, P. and Laurance, W.F. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Wang, S. W. and Macdonald, D. W. 2009. Feeding habits and niche partitioning in a predator guild composed of tigers, leopards and dholes in a temperate ecosystem in central Bhutan. <i>Journal of Zoology </i> 277: 275-283.",
+      "year": "2009",
+      "title": "Feeding habits and niche partitioning in a predator guild composed of tigers, leopards and dholes in a temperate ecosystem in central Bhutan",
+      "author": "Wang, S. W. and Macdonald, D. W. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Wang. Y., Li. S., Liu. W., Zhu. X. and Li. B. 2019. Coat pattern variation and activity rhythm of Asiatic golden cat (<i>Catopuma temminckii</i>) in Yarlung Zangbo Grand Canyon National Nature Reserve, Tibet, China. <i>Biodiversity Science </i> 27: 638-647.",
+      "year": "2019",
+      "title": "Coat pattern variation and activity rhythm of Asiatic golden cat (<i>Catopuma temminckii</i>) in Yarlung Zangbo Grand Canyon National Nature Reserve, Tibet, China",
+      "author": "Wang. Y., Li. S., Liu. W., Zhu. X. and Li. B. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wildlife Conservation Society. 2010 . Camera trapping in Assam rainforest reveal world’s largest cat species diversity. Conservation India. Available at: <a href=\"https://www.conservationindia.org/news/cat-crazy-remote-cameras-reveal-worlds-largest-diversity-of-cat-species-living-in-single-remote-rainforest\">https://www.conservationindia.org/news/cat-crazy-remote-cameras-reveal-worlds-largest-diversity-of-cat-species-living-in-single-remote-rainforest</a>. ",
+      "year": "2010 ",
+      "title": "Camera trapping in Assam rainforest reveal world’s largest cat species diversity. Conservation India",
+      "author": "Wildlife Conservation Society ",
+      "citation_short": null
+    },
+    {
+      "citation": "Wu, J., Wang, J., Zhu, Y., Bu, X., Xiang, R., Lu, Q., Cui, S., Hao, Y., Sheng, Y. and Meng, X. 2018. Summer habitat selection and impacts of human disturbance on leopard cats (<i>Prionailurus bengalensis</i>). <i>Ecosystem Health and Sustainability </i> 6: 1.",
+      "year": "2018",
+      "title": "Summer habitat selection and impacts of human disturbance on leopard cats (<i>Prionailurus bengalensis</i>)",
+      "author": "Wu, J., Wang, J., Zhu, Y., Bu, X., Xiang, R., Lu, Q., Cui, S., Hao, Y., Sheng, Y. and Meng, X. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Yudin, V.G. 2015. Amur leopard cat. Chapter 4 Distribution pp. 51-84, chapter 7 Behavior, spatial organization 259-278. P. 435. Vladivostok, Dalnauka.",
+      "year": "2015",
+      "title": "Amur leopard cat. Chapter 4 Distribution pp. 51-84, chapter 7 Behavior, spatial organization 259-278. P. 435",
+      "author": "Yudin, V.G. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2023. The IUCN Red List of Threatened Species. Version 2023-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 07 December 2023).",
+      "year": "2023",
+      "title": "The IUCN Red List of Threatened Species. Version 2023-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2023-1"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Other"
+      },
+      "code": "2_3_8"
+    },
+    {
+      "description": {
+        "en": "Other"
+      },
+      "code": "2_3_8"
+    },
+    {
+      "description": {
+        "en": "Other"
+      },
+      "code": "2_3_8"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

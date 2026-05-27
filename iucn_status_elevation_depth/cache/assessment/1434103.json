@@ -1,0 +1,1763 @@
+{
+  "assessment_date": "2019-08-09T01:00:00.000+01:00",
+  "year_published": "2021",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 99156022,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/99156022/1434103",
+  "citation": "Wogan, G., Sumontha, M., Phimmachak, S., Lwin, K., Neang, T., Stuart, B.L., Thaksintham, W., Caicedo, J.R., Rivas, G., Tjaturadi, B. & Iskandar, D. 2021. Hemidactylus frenatus. The IUCN Red List of Threatened Species 2021: e.T99156022A1434103. Accessed on 15 May 2026.",
+  "assessment_id": 1434103,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 99156022,
+    "scientific_name": "Hemidactylus frenatus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "GEKKONIDAE",
+    "genus_name": "Hemidactylus",
+    "species_name": "frenatus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Schlegel in Duméril &amp; Bibron, 1836",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Snake and Lizard Red List Authority",
+        "url": null,
+        "description": "Red List Authority Coordinator: Philip Bowles (email: philip.bowles@iucn.org)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Pacific Gecko",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "South Asian House Gecko",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "Common House Gecko",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Hemidactylus hexaspis Cope, 1869",
+        "status": "ACCEPTED",
+        "genus_name": "Hemidactylus",
+        "species_name": "hexaspis",
+        "species_author": "Cope, 1869",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Hemidactylus longiceps Cope, 1869",
+        "status": "ACCEPTED",
+        "genus_name": "Hemidactylus",
+        "species_name": "longiceps",
+        "species_author": "Cope, 1869",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Hemidactylus nigriventris Lidth de Jeude, 1905",
+        "status": "ACCEPTED",
+        "genus_name": "Hemidactylus",
+        "species_name": "nigriventris",
+        "species_author": "Lidth de Jeude, 1905",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Hemidactylus okinavensis Okada, 1936",
+        "status": "ACCEPTED",
+        "genus_name": "Hemidactylus",
+        "species_name": "okinavensis",
+        "species_author": "Okada, 1936",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Hemidactylus punctatus Jerdon, 1853",
+        "status": "ACCEPTED",
+        "genus_name": "Hemidactylus",
+        "species_name": "punctatus",
+        "species_author": "Jerdon, 1853",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Hemidactylus tristis Sauvage, 1879",
+        "status": "ACCEPTED",
+        "genus_name": "Hemidactylus",
+        "species_name": "tristis",
+        "species_author": "Sauvage, 1879",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Hemidactylus vandermeer-mohri Brongersma, 1928",
+        "status": "ACCEPTED",
+        "genus_name": "Hemidactylus",
+        "species_name": "vandermeer-mohri",
+        "species_author": "Brongersma, 1928",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Hemidactylus vittatus Gray, 1845",
+        "status": "ACCEPTED",
+        "genus_name": "Hemidactylus",
+        "species_name": "vittatus",
+        "species_author": "Gray, 1845",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Pnoepus bojeri (Fitzinger, 1843)",
+        "status": "ACCEPTED",
+        "genus_name": "Pnoepus",
+        "species_name": "bojeri",
+        "species_author": "(Fitzinger, 1843)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Pnoepus frenatus (Schlegel in Duméril & Bibron, 1836)",
+        "status": "ACCEPTED",
+        "genus_name": "Pnoepus",
+        "species_name": "frenatus",
+        "species_author": "(Schlegel in Duméril & Bibron, 1836)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Pnoepus papuensis (Macleay, 1877)",
+        "status": "ACCEPTED",
+        "genus_name": "Pnoepus",
+        "species_name": "papuensis",
+        "species_author": "(Macleay, 1877)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Pnoepus punctatus (Jerdon, 1853)",
+        "status": "ACCEPTED",
+        "genus_name": "Pnoepus",
+        "species_name": "punctatus",
+        "species_author": "(Jerdon, 1853)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Hemidactylus javanicus Fitzinger, 1826 [<i>nomen nudum</i>]",
+        "status": "ACCEPTED",
+        "genus_name": "Hemidactylus",
+        "species_name": "javanicus",
+        "species_author": "Fitzinger, 1826 [<i>nomen nudum</i>]",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 1600,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species is found worldwide in tropical and subtropical regions. It is native to southern and southeast Asia and the Indo-Australian Archipelago. This species also has a patchy distribution in the Pacific, which includes many regions of Polynesia, Micronesia, and Melanesia. It also occurs in Taiwan, the Ryukyu Islands, and the Philippines (most or all islands). In China it occurs throughout southern China, excluding Hong Kong and Macao (J.H. Yang pers. comm. 2018).<br/><br/>In South Asia it has been widely reported, including Meghamalai, Tamil Nadu (Bhupathy and Sathishkumar 2013), Barail Wildlife Sanctuary, Assam (Das <em>et al. </em>2009),<span class=\"Apple-converted-space\">&#160; Ponmudi, Kerala, South India (Inger <em>et al.</em> 1984), Morankanda-Mukalana secondary forest patch in Sri Lanka (Jayaneththi 2015), Monaragala District, Sril Lanka (Karunarathna and Amarasinghe 2011), Mizoram (Lalremsanga <em>et al.</em> 2010), Chittagong Hill Tracts, Bangladesh (Mahony and Reza 2007),<span class=\"Apple-converted-space\">&#160;Jahangirnagar University, Dhaka, Bangladesh (Mahony <em>et al.</em> 2009), Jammu City (Manhas <em>et al.</em> 2016), Kerala (Palot 2015), Gujarat (Patel <em>et al.</em> 2016), Guwahati, Assam (Purkayastha <em>et al</em>. 2011), Chembarambakkam Lake, Chennai, Tamil Nadu (Tsetan and Ramanibai 2011), and Vidyanagari, Mumbai, Maharashtra (Upadhye <em>et al.</em> 2012).&#160; Nicobar Islands (Car Nicobar, Chowra, Tarasa, Bompoka, Tillanchong, Katchall, Camora, Nancowry, Trinkat, Great Nicobar, Little Nicobar, Kondul, Pilo Milo) (Vijayakumar 2005)<br/><br/><span class=\"Apple-converted-space\"><span class=\"Apple-converted-space\">This species has been transported widely by humans: introduced populations exist in Australia, eastern Africa (where its distribution is poorly-documented following the resurrection of <em>Hemidactylus fragilis</em>, but is known to include mesic areas of southern Somalia and it has also been reported from Djibouti and coastal Kenya - Mazuch <em>et al.</em> 2016, Spawls<em> et al.</em> 2018), islands of the Indian Ocean, Mexico (Loreto, La Paz, Boca de la Sierra and San Jose del Cabo, in Baja California Sur), and the United States (including Hawaii) (Bauer and Henle 1994, Kraus 2009). In the Caribbean it has been reported in Hispaniola. In South America, this species is known from northwestern Venezuela (including Isla de Margarita off the Caribbean coast), Colombia (where it is widely distributed), and Ecuador (Rivas <em>et al</em>. 2005, Caicedo-Portilla and Dulcey-Cala 2011). This species generally occurs at elevations below 1,600 m asl, but there is a record at 2,600 m in Colombia (Caicedo-Portilla and Dulcey-Cala 2011).<br/><br/>In Australia, it occurs among the coast in north and east of Australia, all the way south toward Sydney (G. Gillespie pers. comm. 2019).</span></span>",
+    "population": "This species is common or abundant throughout most of its range. In Venezuela, it is displacing <em>Hemidactylus mabouia</em> (G. Rivas pers. comm. 2013). In Colombia, it may be displacing the native geckos of San Andrés and Providencia as well as introduced populations of <em>H. angulatus</em> (R. Caicedo pers. comm. 2013). The population is stable in Southeast Asia, representing the major part of the gecko's native range. In the Nicobar Islands it is uncommon with a narrow distribution (Vijayakumar 2005).",
+    "habitats": "This nocturnal species can be found on boulders, beneath rocks or rotting logs, and on trees, but it is most commonly found on buildings. This species is found in both villages and large urban areas; it is usually found close to electric lights at dusk (Malkmus 2002). In addition, this species occurs in a diverse range of natural habitats, including rain forests, savannas, and semiarid regions (Henkel and Schmidt 1995).",
+    "threats": "It is unlikely that any major threat is impacting this species.",
+    "measures": "There are no known species-specific conservation measures in place for this species, but in places its distribution coincides with protected areas. No conservation measures are required.",
+    "use_trade": "This gecko is sold in the pet trade, both as a pet and as snake food.",
+    "rationale": "Listed as Least Concern because this an exceptionally widespread species in its native Southeast Asia, occurs at very high densities in anthropogenic habitats, and is subject to no threats.<em></em>",
+    "trend_justification": null,
+    "taxonomic_notes": "<em>Hemidactylus frenatus&#160;</em>was first described by Dumeril and Bibron in 1836 based on specimens from Java (Brygoo 1991). Fitzinger (1826) used the name <em>Hemidactylus javanicus</em> but as no description or diagnosis was provided, the name is considered a&#160;<em>nomen nudum</em> (Bauer 1994).<br/><br/>Mazuch <em>et al</em>. (2016) resurrected the name&#160;<em>H. fragilis</em>&#160;Calabrisi, 1915 for populations from northeast Africa which these authors recognized as a separate species, and this scheme is followed here."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Australasian"
+      },
+      "code": "2"
+    },
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    },
+    {
+      "description": {
+        "en": "Oceanian"
+      },
+      "code": "6"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Rocky areas (eg. inland cliffs, mountain peaks)"
+      },
+      "code": "6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Moist"
+      },
+      "code": "2_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Solomon Islands"
+      },
+      "code": "SB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cook Islands"
+      },
+      "code": "CK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Papua New Guinea"
+      },
+      "code": "PG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Polynesia"
+      },
+      "code": "PF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Wallis and Futuna"
+      },
+      "code": "WF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cocos (Keeling) Islands"
+      },
+      "code": "CC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Philippines"
+      },
+      "code": "PH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nicobar Is."
+      },
+      "code": "NCB-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Origin Uncertain",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guam"
+      },
+      "code": "GU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Comoros"
+      },
+      "code": "KM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Singapore"
+      },
+      "code": "SG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Samoa"
+      },
+      "code": "WS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Helena, Ascension and Tristan da Cunha"
+      },
+      "code": "SH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Christmas Island"
+      },
+      "code": "CX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norfolk Island"
+      },
+      "code": "NF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ascension"
+      },
+      "code": "ASC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Origin Uncertain",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northern Mariana Islands"
+      },
+      "code": "MP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States Minor Outlying Islands"
+      },
+      "code": "UM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritius"
+      },
+      "code": "MU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "American Samoa"
+      },
+      "code": "AS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Vanuatu"
+      },
+      "code": "VU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hong Kong"
+      },
+      "code": "HK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Réunion"
+      },
+      "code": "RE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chagos Archipelago"
+      },
+      "code": "CGS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Marshall Islands"
+      },
+      "code": "MH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hawaiian Is."
+      },
+      "code": "HAW-HI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maldives"
+      },
+      "code": "MV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Origin Uncertain",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Palau"
+      },
+      "code": "PW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Caledonia"
+      },
+      "code": "NC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Taiwan, Province of China"
+      },
+      "code": "TW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tuvalu"
+      },
+      "code": "TV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Togo"
+      },
+      "code": "TG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bhutan"
+      },
+      "code": "BT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tonga"
+      },
+      "code": "TO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rodrigues"
+      },
+      "code": "ROD-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Niue"
+      },
+      "code": "NU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nauru"
+      },
+      "code": "NR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belize"
+      },
+      "code": "BZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nepal"
+      },
+      "code": "NP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "El Salvador"
+      },
+      "code": "SV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Fiji"
+      },
+      "code": "FJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kiribati"
+      },
+      "code": "KI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Micronesia, Federated States of "
+      },
+      "code": "FM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Andaman Is."
+      },
+      "code": "AND-AN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Seychelles"
+      },
+      "code": "SC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "British Indian Ocean Territory"
+      },
+      "code": "IO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela (mainland)"
+      },
+      "code": "VEN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador (mainland)"
+      },
+      "code": "ECU-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia (mainland)"
+      },
+      "code": "CLM-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominican Republic"
+      },
+      "code": "DO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ashmore-Cartier Is."
+      },
+      "code": "WAU-AC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northern Territory"
+      },
+      "code": "NTA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Queensland"
+      },
+      "code": "QLD-QU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Australia"
+      },
+      "code": "WAU-WA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Djibouti"
+      },
+      "code": "DJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Food - animal"
+      },
+      "code": "2"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Wogan, G., Sumontha, M., Phimmachak, S., Lwin, K., Neang, T., Stuart, B.L., Thaksintham, W., Caicedo, J.R., Rivas, G., Tjaturadi, B. & Iskandar, D.",
+      "value": [
+        "Gilson Rivas (Museo de Biologia, Facultad Experimental de Ciencias, La Universidad del Zulia, apartado postal 526, Maracaibo 4011, Estado Zulia, Venezuela)",
+        "Bryan Stuart",
+        "Djoko Iskandar",
+        "Guinevere Wogan (University of California, Berkeley)",
+        "José Rancés Caicedo (Instituto Sinchi, Leticia, Colombia)",
+        "Somphouthone Phimmachak",
+        "Thy Neang",
+        "Kyi Soe Lwin (Friends of Wildlife, Yangon)",
+        "Montri Sumontha (Department of Fisheries, Bangkok)",
+        "Wuth Thaksintham",
+        "Burhan Tjaturadi"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Bowles, P. & Cox, N.A.",
+      "value": [
+        "Neil Cox (Biodiversity Assessment Unit)",
+        "Philip Bowles (IUCN SSC/CI Biodiversity Assessment Unit)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Ota, H. & Whitaker, A.H.",
+      "value": [
+        "Anthony Whitaker (Deceased was @ Whitaker Consultants)",
+        "Hidetoshi Ota (Institute of Natural and Environmental Sciences, University of Hyogo, Yayoigaoka 6, Sanda, Hyogo 669-1546, Japan)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Macfarlane, N. & Zhang, J.",
+      "value": [
+        "Jing Zhang (Global Reptile Assessment)",
+        "Nicholas Macfarlane (IUCN, Washington DC, USA)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Mazuch, T., Šmíd, J. and Bauer, A.M. 2016. Rediscovery and a new record of <i>Hemidactylus laevis</i> (Reptilia: Gekkonidae) from Somaliland, with notes on and resurrection of <i>Hemidactylus fragilis</i>. <i>Zootaxa</i> 4117(4): 529-542. doi: 10.11646/zootaxa.4117.4.5.",
+      "year": "2016",
+      "title": "Rediscovery and a new record of <i>Hemidactylus laevis</i> (Reptilia: Gekkonidae) from Somaliland, with notes on and resurrection of <i>Hemidactylus fragilis</i>",
+      "author": "Mazuch, T., Šmíd, J. and Bauer, A.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Spawls, S., Howell, K.M., Drewes, R.C. and Ashe, J. 2002. <i>A Field Guide to the Reptiles of East Africa</i>. Academic Press, Elsevier Science, San Diego, San Francisco, New York, Boston, London.",
+      "year": "2002",
+      "title": "A Field Guide to the Reptiles of East Africa",
+      "author": "Spawls, S., Howell, K.M., Drewes, R.C. and Ashe, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Malkmus, R., Manthey, U., Vogel, G., Hoffmann, P. and Kosuch, J. 2002. <i>Amphibians and reptiles of Mount Kinabalu (North Borneo)</i>. A.R.G. Gantner Verlag K.G., Ruggell, Liechtenstein.",
+      "year": "2002",
+      "title": "Amphibians and reptiles of Mount Kinabalu (North Borneo)",
+      "author": "Malkmus, R., Manthey, U., Vogel, G., Hoffmann, P. and Kosuch, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lanza, B. 1990. Amphibians and reptiles of the Somali Democratic Republic: checklist and biogeography. <i>Biogeographica</i> 14: 407-465.",
+      "year": "1990",
+      "title": "Amphibians and reptiles of the Somali Democratic Republic: checklist and biogeography",
+      "author": "Lanza, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Yuwono, F.B. 1998. The trade of live reptiles & amphibians in Indonesia. In W. Erdelen (ed.) Conservation, Trade & Sustainable Use of Lizards & Snakes in Indonesia. <i>Mertensiella</i> 9: 9-16.",
+      "year": "1998",
+      "title": "The trade of live reptiles & amphibians in Indonesia. In W. Erdelen (ed.) Conservation, Trade & Sustainable Use of Lizards & Snakes in Indonesia.",
+      "author": "Yuwono, F.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bauer, A.M. and Henle, K. 1994. <i>Das Tierreich - Familia Gekkonidae (Reptilia, Sauria). Part I Australia and Oceania</i>. Walter de Gruyter, Berlin.",
+      "year": "1994",
+      "title": "Das Tierreich - Familia Gekkonidae (Reptilia, Sauria). Part I Australia and Oceania",
+      "author": "Bauer, A.M. and Henle, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Caicedo-Portilla, R. and Dulcey-Cala, C.J. 2011. Distribución del gecko introducido <i>Hemidactylus frenatus</i> (Dumeril y Bribon 1836) (Squamata: Gekkonidae) en Colombia. <i>Biota Colombiana</i> 12(2): 45-56.",
+      "year": "2011",
+      "title": "Distribución del gecko introducido <i>Hemidactylus frenatus</i> (Dumeril y Bribon 1836) (Squamata: Gekkonidae) en Colombia",
+      "author": "Caicedo-Portilla, R. and Dulcey-Cala, C.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Brown, W.C. and Alcala, A.C. 1978. <i>Philippine Lizards of the Family Gekkonidae</i>. Dumaguete.",
+      "year": "1978",
+      "title": "Philippine Lizards of the Family Gekkonidae",
+      "author": "Brown, W.C. and Alcala, A.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ota, H. 1989. A review of the Geckos (Lacertilia: Reptilia) of the Ryukyu Archipelago and Taiwan. In: M. Matsui, T. Hikida and R.C. Goris (eds) (eds), <i>Current Herpetology in East Asia</i>, pp. 222-261. Herpetological Society of Japan, Kyoto.",
+      "year": "1989",
+      "title": "A review of the Geckos (Lacertilia: Reptilia) of the Ryukyu Archipelago and Taiwan",
+      "author": "Ota, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Henkel, F.W. and Schmidt, W. 1995. <i>Geckoes</i>. Kreiger Publishing Company, Malabar, Florida.",
+      "year": "1995",
+      "title": "Geckoes",
+      "author": "Henkel, F.W. and Schmidt, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ota, H. 1994. Female reproductive cycles in the northernmost populations of the two gekkonid lizards, <i>Hemidactylus frenatus</i> and <i>Lepidodactylus lugubris</i>. <i>Ecological Research</i> 9: 121-130.",
+      "year": "1994",
+      "title": "Female reproductive cycles in the northernmost populations of the two gekkonid lizards, <i>Hemidactylus frenatus</i> and <i>Lepidodactylus lugubris</i>",
+      "author": "Ota, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lever, C. 2003. <i>Naturalized Reptiles and Amphibians of the World</i>. Oxford University Press.",
+      "year": "2003",
+      "title": "Naturalized Reptiles and Amphibians of the World",
+      "author": "Lever, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kraus, F. 2009. <i>Alien reptiles and amphibians: a scientific compendium and analysis</i>. Springer, New York.",
+      "year": "2009",
+      "title": "Alien reptiles and amphibians: a scientific compendium and analysis",
+      "author": "Kraus, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Grismer, L.L. 2002. <i>Amphibians and Reptiles of Baja California, Including its Pacific Islands and the Islands in the Sea of Cortés</i>. University of California Press, Berkeley and Los Angeles, California.",
+      "year": "2002",
+      "title": "Amphibians and Reptiles of Baja California, Including its Pacific Islands and the Islands in the Sea of Cortés",
+      "author": "Grismer, L.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hardy, L.M. and McDiarmid, R.W. 1969. The amphibians and reptiles of Sinaloa, México. <i>University of Kansas Publications, Museum of Natural History</i> 18(3): 39-252.",
+      "year": "1969",
+      "title": "The amphibians and reptiles of Sinaloa, México",
+      "author": "Hardy, L.M. and McDiarmid, R.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Malkmus, R. 2002. Die Verbreitung der Libellen Portugals, Madeiras and der Azoren. <i>Nachrichten des naturwissenschaftlichen Museum Aschaffenburg</i> 106: 117-143.",
+      "year": "2002",
+      "title": "Die Verbreitung der Libellen Portugals, Madeiras and der Azoren",
+      "author": "Malkmus, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Inger, R.F., Shaffer, H.B., Koshy, M. and Bakde, R. 1984. A report on a collection of amphibians and reptiles from the Ponmudi, Kerala, South India. <i>Journal of the Bombay Natural History Society</i> 81(3): 551-570.",
+      "year": "1984",
+      "title": "A report on a collection of amphibians and reptiles from the Ponmudi, Kerala, South India",
+      "author": "Inger, R.F., Shaffer, H.B., Koshy, M. and Bakde, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mahony, S., Hasan, M.K., Kabir, M.M., Ahmed, M. and Hossain, M.K. 2009. A catalogue of amphibians and reptiles in the collection of Jahangirnargar University, Dhaka, Bangladesh. <i>Hamadryad</i> 34(1): 80-94.",
+      "year": "2009",
+      "title": "A catalogue of amphibians and reptiles in the collection of Jahangirnargar University, Dhaka, Bangladesh.",
+      "author": "Mahony, S., Hasan, M.K., Kabir, M.M., Ahmed, M. and Hossain, M.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bhupathy, S. and Sathishkumar, N. 2013. Status of reptiles in Meghamalai and its environs, Western Ghats, Tamil Nadu, India. <i>Journal of Threatened Taxa</i> 5(15): 4953-4961.",
+      "year": "2013",
+      "title": "Status of reptiles in Meghamalai and its environs, Western Ghats, Tamil Nadu, India",
+      "author": "Bhupathy, S. and Sathishkumar, N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Karunarathna, D.M.S. and Amarasinghe, A.A.T. 2011. A preliminary survey of the Reptile fauna in Nilgala Forest and its vicinity, Monaragala District, Sri Lanka. <i>Taprobanica</i> 3(2): 69-76.",
+      "year": "2011",
+      "title": "A preliminary survey of the Reptile fauna in Nilgala Forest and its vicinity, Monaragala District, Sri Lanka.",
+      "author": "Karunarathna, D.M.S. and Amarasinghe, A.A.T",
+      "citation_short": ""
+    },
+    {
+      "citation": "Manhas, A., Raina, R. and Wanganeo, A. 2016. An assessment of reptilian diversity and their distribution in Jammu and Kashmir state from Jammu city in northern India: A case study . <i>International Journal of Fauna and Biological Studies</i> 3(3): 20-23.",
+      "year": "2016",
+      "title": "An assessment of reptilian diversity and their distribution in Jammu and Kashmir state from Jammu city in northern India: A case study ",
+      "author": "Manhas, A., Raina, R. and Wanganeo, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Palot, M.J. 2015. A checklist of reptiles of Kerala, India. <i>Journal of Threatened Taxa</i> 7(13): 8010–8022.",
+      "year": "2015",
+      "title": "A checklist of reptiles of Kerala, India",
+      "author": "Palot, M.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Jayaneththi, H.B. 2015. Vertebrate fauna of Morankanda-Mukalana secondary forest patch in Sri Lanka: A checklist reported from 2004-2008 survey. <i>RUHUNA JOURNAL OF SCIENCE</i> 6: 21-41.",
+      "year": "2015",
+      "title": "Vertebrate fauna of Morankanda-Mukalana secondary forest patch in Sri Lanka: A checklist reported from 2004-2008 survey.",
+      "author": "Jayaneththi, H.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vijayakumar, S.P. 2005. Status and Distribution of Amphibians and Reptiles of the Nicobar Islands, India. Final Report, Rufford Foundation, UK.",
+      "year": "2005",
+      "title": "Status and Distribution of Amphibians and Reptiles of the Nicobar Islands, India",
+      "author": "Vijayakumar, S.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2021. The IUCN Red List of Threatened Species. Version 2021-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 09 December 2021).",
+      "year": "2021",
+      "title": "The IUCN Red List of Threatened Species. Version 2021-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2021-3"
+    },
+    {
+      "citation": "Mahony, S. and Ali Reza, A.H.M. 2007. A herpetological collection from the Chittagong Hill Tracts, Bangladesh, with two new species records for the country. <i>Hamadryad</i> 32(1): 45-56.",
+      "year": "2007",
+      "title": "A herpetological collection from the Chittagong Hill Tracts, Bangladesh, with two new species records for the country.",
+      "author": "Mahony, S. and Ali Reza, A.H.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tsetan, C. and Ramanibai, R. 2011. Reptilian fauna of agricultural landscapes of Chembarambakkam Lake, Chennai, Tamil Nadu. <i>Reptile Rap</i> 12: 2-8.",
+      "year": "2011",
+      "title": "Reptilian fauna of agricultural landscapes of Chembarambakkam Lake, Chennai, Tamil Nadu",
+      "author": "Tsetan, C. and Ramanibai, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lalremsanga, H.T., Khawlhring, L. and Lalrotluanga. 2010. Three additional lizard (Squamata: Sauria) records for Mizoram, India. <i>Journal of Threatened Taxa </i> 2(2): 718-720.",
+      "year": "2010",
+      "title": "Three additional lizard (Squamata: Sauria) records for Mizoram, India",
+      "author": "Lalremsanga, H.T., Khawlhring, L. and Lalrotluanga ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Purkayastha, J., Das, M. and Sengupta, S. 2011. Urban herpetofauna: a case study in Guwahati City of Assam, India. <i>Herpetology Notes</i> 4: 195-202.",
+      "year": "2011",
+      "title": "Urban herpetofauna: a case study in Guwahati City of Assam, India",
+      "author": "Purkayastha, J., Das, M. and Sengupta, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brygoo, E.R. 1991. Les types de gekkonides (Reptiles, Sauriens) du Museum national d'Histoire naturelle. Catalogue critique. <i>Bulletin du Museum national d'Histoire naturelle, 4ème série. Section A, zoologie, biologie et ecologie animales</i> 12(3-4, supplement): 19-141.",
+      "year": "1991",
+      "title": "Les types de gekkonides (Reptiles, Sauriens) du Museum national d'Histoire naturelle. Catalogue critique.",
+      "author": "Brygoo, E.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Das, A., Saikia U., Murthy B.H.C.K., Dey S. and Dutta S.K. 2009. A herpetofaunal inventory of Barail Wildlife Sanctuary and adjacent regions, Assam, north-eastern India. <i>Hamadryad</i> 34(1): 117-134.",
+      "year": "2009",
+      "title": "A herpetofaunal inventory of Barail Wildlife Sanctuary and adjacent regions, Assam, north-eastern India",
+      "author": "Das, A., Saikia U., Murthy B.H.C.K., Dey S. and Dutta S.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Patel H, Naik V & Tank SK. 2016. The Common House Gecko, Hemidactylus frenatus Schlegel in Dumeril & Bibron 1836 (Reptilia: Gekkonidae) in Gujarat, India. <i>IRCF Reptiles & Amphibians</i> 23(3): 178-182.",
+      "year": "2016",
+      "title": "The Common House Gecko, Hemidactylus frenatus Schlegel in Dumeril & Bibron 1836 (Reptilia: Gekkonidae) in Gujarat, India.",
+      "author": "Patel H, Naik V & Tank SK",
+      "citation_short": null
+    },
+    {
+      "citation": "Pregill, G.K. 1998. Squamate reptiles from prehistoric sites in the Mariana Islands, Micronesia. <i>Copeia, 1998:64-75</i> 1998(64-75).",
+      "year": "1998",
+      "title": "Squamate reptiles from prehistoric sites in the Mariana Islands, Micronesia.",
+      "author": "Pregill, G.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Upadhye, M.V., Puranik, V.V., Dabholkar, P. and Jadhav, U. 2012. Herpetofauna of the Vidyanagari campus of the University of Mumbai, Maharashtra. <i>Reptile Rap</i>: 15-20.",
+      "year": "2012",
+      "title": "Herpetofauna of the Vidyanagari campus of the University of Mumbai, Maharashtra",
+      "author": "Upadhye, M.V., Puranik, V.V., Dabholkar, P. and Jadhav, U.",
+      "citation_short": ""
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

@@ -1,0 +1,982 @@
+{
+  "assessment_date": "2019-06-07T01:00:00.000+01:00",
+  "year_published": "2020",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 182615,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/182615/58331540",
+  "citation": "Lalèyè, P. 2020. Polypterus senegalus. The IUCN Red List of Threatened Species 2020: e.T182615A58331540. Accessed on 15 May 2026.",
+  "assessment_id": 58331540,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 182615,
+    "scientific_name": "Polypterus senegalus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 183096,
+        "scientific_name": "Polypterus senegalus ssp. meridonalis",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "ACTINOPTERYGII",
+        "order_name": "POLYPTERIFORMES",
+        "family_name": "POLYPTERIDAE",
+        "genus_name": "Polypterus",
+        "species_name": "senegalus",
+        "subpopulation_name": null,
+        "infra_name": "meridonalis",
+        "authority": "Poll, 1941",
+        "ssc_groups": [],
+        "common_names": [],
+        "synonyms": []
+      },
+      {
+        "sis_id": 183055,
+        "scientific_name": "Polypterus senegalus ssp. senegalus",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "ACTINOPTERYGII",
+        "order_name": "POLYPTERIFORMES",
+        "family_name": "POLYPTERIDAE",
+        "genus_name": "Polypterus",
+        "species_name": "senegalus",
+        "subpopulation_name": null,
+        "infra_name": "senegalus",
+        "authority": "Cuvier, 1829",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Bichir",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Gray Bichir",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Sail-fin",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Sénégal Bichir",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Abshir",
+            "language": "ara"
+          },
+          {
+            "main": false,
+            "name": "Abshire",
+            "language": "ara"
+          },
+          {
+            "main": false,
+            "name": "Adagba",
+            "language": "yor"
+          },
+          {
+            "main": false,
+            "name": "Adeke",
+            "language": "ewe"
+          },
+          {
+            "main": false,
+            "name": "Agada",
+            "language": "ijo"
+          },
+          {
+            "main": false,
+            "name": "Agwer",
+            "language": "din"
+          },
+          {
+            "main": false,
+            "name": "Akata",
+            "language": "ijo"
+          },
+          {
+            "main": false,
+            "name": "Alideka",
+            "language": "ewe"
+          },
+          {
+            "main": false,
+            "name": "Bicher Senegalský",
+            "language": "cze"
+          },
+          {
+            "main": false,
+            "name": "Dabib El Hut",
+            "language": "ara"
+          },
+          {
+            "main": false,
+            "name": "Dégé",
+            "language": "ewe"
+          },
+          {
+            "main": false,
+            "name": "Deka",
+            "language": "ewe"
+          },
+          {
+            "main": false,
+            "name": "Emsir",
+            "language": "ara"
+          },
+          {
+            "main": false,
+            "name": "Gbaranga",
+            "language": "znd"
+          },
+          {
+            "main": false,
+            "name": "Gong Kakarte",
+            "language": "und"
+          },
+          {
+            "main": false,
+            "name": "Gong Kekerte",
+            "language": "und"
+          },
+          {
+            "main": false,
+            "name": "Gwando",
+            "language": "hau"
+          },
+          {
+            "main": false,
+            "name": "Jeyei",
+            "language": "und"
+          },
+          {
+            "main": false,
+            "name": "Juath",
+            "language": "und"
+          },
+          {
+            "main": false,
+            "name": "Kambanioka",
+            "language": "und"
+          },
+          {
+            "main": false,
+            "name": "Keskla",
+            "language": "und"
+          },
+          {
+            "main": false,
+            "name": "Khâb",
+            "language": "wol"
+          },
+          {
+            "main": false,
+            "name": "Khabé",
+            "language": "wol"
+          },
+          {
+            "main": false,
+            "name": "Kuilwaafo",
+            "language": "und"
+          },
+          {
+            "main": false,
+            "name": "Kuku",
+            "language": "znd"
+          },
+          {
+            "main": false,
+            "name": "Kusakpa",
+            "language": "und"
+          },
+          {
+            "main": false,
+            "name": "Kutenkellie",
+            "language": "und"
+          },
+          {
+            "main": false,
+            "name": "Mtonta",
+            "language": "und"
+          },
+          {
+            "main": false,
+            "name": "Nagir",
+            "language": "und"
+          },
+          {
+            "main": false,
+            "name": "Nagiri",
+            "language": "und"
+          },
+          {
+            "main": false,
+            "name": "Otel",
+            "language": "und"
+          },
+          {
+            "main": false,
+            "name": "Otell",
+            "language": "und"
+          },
+          {
+            "main": false,
+            "name": "Otwel",
+            "language": "und"
+          },
+          {
+            "main": false,
+            "name": "Sajig",
+            "language": "und"
+          },
+          {
+            "main": false,
+            "name": "Sanmeki",
+            "language": "gaa"
+          },
+          {
+            "main": false,
+            "name": "Sannka",
+            "language": "wol"
+          },
+          {
+            "main": false,
+            "name": "Sayo",
+            "language": "und"
+          },
+          {
+            "main": false,
+            "name": "Senegal-bikir",
+            "language": "dan"
+          },
+          {
+            "main": false,
+            "name": "Senegal-flösselhecht",
+            "language": "ger"
+          },
+          {
+            "main": false,
+            "name": "Viherniilinhauki",
+            "language": "fin"
+          },
+          {
+            "main": false,
+            "name": "Wielopletwiec Senegalski",
+            "language": "pol"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Polypterus senegalensis Steindachner, 1870",
+            "status": "ADD",
+            "genus_name": "Polypterus",
+            "species_name": "senegalensis",
+            "species_author": "Steindachner, 1870",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          },
+          {
+            "name": "Polypterus arnaudi Duméril, 1870",
+            "status": "ADD",
+            "genus_name": "Polypterus",
+            "species_name": "arnaudi",
+            "species_author": "Duméril, 1870",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          },
+          {
+            "name": "Polypterus delhezi (non Boulenger, 1899)",
+            "status": "ADD",
+            "genus_name": "Polypterus",
+            "species_name": "delhezi",
+            "species_author": "(non Boulenger, 1899)",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          },
+          {
+            "name": "Polypterus bichir (non Geoffroy Saint-Hilaire, 1802)",
+            "status": "ADD",
+            "genus_name": "Polypterus",
+            "species_name": "bichir",
+            "species_author": "(non Geoffroy Saint-Hilaire, 1802)",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          },
+          {
+            "name": "Polypterus senegalus Cuvier, 1829",
+            "status": "ADD",
+            "genus_name": "Polypterus",
+            "species_name": "senegalus",
+            "species_author": "Cuvier, 1829",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          },
+          {
+            "name": "Polypterus senegallus Cuvier, 1829",
+            "status": "ADD",
+            "genus_name": "Polypterus",
+            "species_name": "senegallus",
+            "species_author": "Cuvier, 1829",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          },
+          {
+            "name": "Polypterus arnaudii Duméril, 1870",
+            "status": "ADD",
+            "genus_name": "Polypterus",
+            "species_name": "arnaudii",
+            "species_author": "Duméril, 1870",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          },
+          {
+            "name": "Polypterus lapradei (non steindachner, 1869)",
+            "status": "ADD",
+            "genus_name": "Polypterus",
+            "species_name": "lapradei",
+            "species_author": "(non steindachner, 1869)",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          }
+        ]
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "ACTINOPTERYGII",
+    "order_name": "POLYPTERIFORMES",
+    "family_name": "POLYPTERIDAE",
+    "genus_name": "Polypterus",
+    "species_name": "senegalus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Cuvier, 1829",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Adagba",
+        "language": "yor"
+      },
+      {
+        "main": false,
+        "name": "Adeke",
+        "language": "ewe"
+      },
+      {
+        "main": false,
+        "name": "Akata",
+        "language": "ijo"
+      },
+      {
+        "main": false,
+        "name": "Bichir",
+        "language": "enm"
+      },
+      {
+        "main": false,
+        "name": "Dégé",
+        "language": "ewe"
+      },
+      {
+        "main": false,
+        "name": "Deka",
+        "language": "gaa"
+      },
+      {
+        "main": false,
+        "name": "Gwando",
+        "language": "hau"
+      },
+      {
+        "main": false,
+        "name": "Sanmeki",
+        "language": "ewe"
+      },
+      {
+        "main": true,
+        "name": "Otel",
+        "language": "und"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Polypterus  arnaudi Duméril, 1870",
+        "status": "ACCEPTED",
+        "genus_name": "Polypterus ",
+        "species_name": "arnaudi",
+        "species_author": "Duméril, 1870",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Polypterus  arnaudii Duméril, 1870",
+        "status": "ACCEPTED",
+        "genus_name": "Polypterus ",
+        "species_name": "arnaudii",
+        "species_author": "Duméril, 1870",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Polypterus  senegalensis Steindachner, 1870",
+        "status": "ACCEPTED",
+        "genus_name": "Polypterus ",
+        "species_name": "senegalensis",
+        "species_author": "Steindachner, 1870",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<em>Polypterus senegalus senegalus</em>&#160;is known Senegal to Ethiopia; from the White Nile, Lake Albert, Lake Turkana, Omo River, Lake Chad and Chari River, Niger, Volta, Gambia and Senegal basins. <em>Polypterus senegalus meridionalis</em> is known from the upper Congo River basin.<br/><strong><br/>Central Africa:</strong>&#160;According to Thys van den Audenaerde (1966), it has been introduced from Fort-Lamy, Chad to Yaoundé, Cameroon. Its presence has been confirmed by a single museum specimen and record from a pond at Melen, Cameroon (Nyong River basin) collected by Thys van den Audenaerde in 1964. It is unknown whether the species is established or not.<br/><br/><strong>Eastern Africa:</strong>&#160;It is present in Lake Albert, the Victoria Nile below Murchison Falls, the Albert Nile, and the Lake Turkana basin (Seegers<em>&#160;et al.&#160;</em>2004).&#160;<br/><br/><strong>North-eastern Africa</strong>:&#160;It occurs in the Ghazal and Jebel systems, White Nile to Khartoum and beyond in Sudan, and Baro and Omo Rivers in Ethiopia.<br/><br/><strong>Western Africa:</strong>&#160;This species has been reported from Senegal, Gambia, Niger, Volta and Chad basins, Oti, and Pra (Dankwa 1985).",
+    "population": "There is a lack of detailed information on population size and the global trend is unknown.",
+    "habitats": "This species inhabits marginal swamps and freshwater lagoons and it appears to favour sheltered inshore habitats. It inhabits the muddy regions at the sides of rivers and swampy waters, where it lies quiet or glides about with snake-like movements. During the hottest hours of the day, it comes to the surface just on the outer edge of the vegetation, and it goes back to the bottom when disturbed. It feeds on insects, crustaceans, molluscs, frogs and fishes, as well as on plant fragments and seeds. Longevity of&#160;<em>Polypterus senegalus</em>&#160;in captivity can be over 34 year. Larval fish of 1.1-3.8 cm SL were found in papyrus root mat and juveniles up to 10 cm SL retaining external gills were found in fringing Water Hyacinth.",
+    "threats": "Overfishing for food is a threat in western Africa. However, there are no major threats to the global population.",
+    "measures": "No conservation actions are known for this species.",
+    "use_trade": "This species is harvested for human consumption.",
+    "rationale": "This species has a wide distribution. It is threatened by over-fishing for human consumption in western Africa but there are no major threats to the global population. Therefore, it is assessed as Least Concern.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Inland Deltas"
+      },
+      "code": "5_13"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Saline, Brackish or Alkaline Marshes/Pools"
+      },
+      "code": "5_16"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chad"
+      },
+      "code": "TD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Burkina Faso"
+      },
+      "code": "BF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Benin"
+      },
+      "code": "BJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Central African Republic"
+      },
+      "code": "CF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Côte d'Ivoire"
+      },
+      "code": "CI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ethiopia"
+      },
+      "code": "ET"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ghana"
+      },
+      "code": "GH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea-Bissau"
+      },
+      "code": "GW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mali"
+      },
+      "code": "ML"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Niger"
+      },
+      "code": "NE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Sudan"
+      },
+      "code": "SS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Togo"
+      },
+      "code": "TG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uganda"
+      },
+      "code": "UG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo"
+      },
+      "code": "CG"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Lalèyè, P.",
+      "value": [
+        "Philipe Lalèyè (University of Abomey-Calavi)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Sayer, C.",
+      "value": [
+        "Catherine Sayer (IUCN Red List Unit)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Dankwa, H.R. 1985. Fish monitoring in the Onchocerciasis Control Programme zone in Ghana -  An overview of the fish monitoring programme, Hydrobiological Monitoring Report, OCP (Volta Basin in Ghana). IAB 106. <i>Fish monitoring in the Onchocerciasis Control Programme zone in Ghana -  An overview of the fish monitoring programme, Hydrobiological Monitoring Report, OCP (Volta Basin in Ghana). IAB 106</i>, Institute of Aquatic Biology, Accra.",
+      "year": "1985",
+      "title": "Fish monitoring in the Onchocerciasis Control Programme zone in Ghana -  An overview of the fish monitoring programme, Hydrobiological Monitoring Report, OCP (Volta Basin in Ghana). IAB 106",
+      "author": "Dankwa, H.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bailey, R.G. 1994. Guide to the fishes of the River Nile in the Republic of the Sudan. <i>J. Nat. Hist.</i>: 937-970.",
+      "year": "1994",
+      "title": "Guide to the fishes of the River Nile in the Republic of the Sudan",
+      "author": "Bailey, R.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Seegers, L., De Vos, L. and Okeyo, D.O. 2004. <i>Annotated check-list of the freshwater fishes of Kenya</i>.",
+      "year": "2004",
+      "title": "Annotated check-list of the freshwater fishes of Kenya",
+      "author": "Seegers, L., De Vos, L. and Okeyo, D.O.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 13 June 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-2"
+    },
+    {
+      "citation": "Banister, K.E. and Bailey, R.G. 1979. Fishes collected by the Zaïre River Expedition, 1974-75. <i>Zool. J. Linn. Soc.</i> 66: 205-249.",
+      "year": "1979",
+      "title": "Fishes collected by the Zaïre River Expedition, 1974-75",
+      "author": "Banister, K.E. and Bailey, R.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gosse, J.P. and Daget, J. 2003. Polypteridae. In: D. Paugy, C. Lévêque and G.G. Teugels (eds), <i>The fresh and brackish water fishes of West Africa</i>, pp. 101-112. IRD & MRAC, Paris & Tervuren.",
+      "year": "2003",
+      "title": "Polypteridae",
+      "author": "Gosse, J.P. and Daget, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Thys van den Audenaerde, D.F.E. 1966. Les tilapia (Pisces, Cichlidae) du Sud-Cameroun et du Gabon. Étude systématique. <i>Ann. Mus. R. Afr. Centr.</i>: 98.",
+      "year": "1966",
+      "title": "Les tilapia (Pisces, Cichlidae) du Sud-Cameroun et du Gabon. Étude systématique",
+      "author": "Thys van den Audenaerde, D.F.E.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

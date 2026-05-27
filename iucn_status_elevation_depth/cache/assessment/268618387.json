@@ -1,0 +1,2440 @@
+{
+  "assessment_date": "2024-05-16T01:00:00.000+01:00",
+  "year_published": "2025",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 18150,
+  "criteria": "A2cd+3cd+4cd",
+  "url": "https://www.iucnredlist.org/species/18150/268618387",
+  "citation": "Mukherjee, S., Appel, A., Adhya, T., Aziz, M.A., Borah, J., Chakraborty, S., Dey, A., Herranz Muñoz, V., Kantimahanti, M., Kittle, A., Mahar, J.A., Mishra, R., Naing Lin, Ngoprasert, D., Phosri, K., Qureshi, Q., Rana, D., Ratnayaka, A., Tantipisanuh, N. & Watson, A.C. 2025. Prionailurus viverrinus. The IUCN Red List of Threatened Species 2025: e.T18150A268618387. Accessed on 15 May 2026.",
+  "assessment_id": 268618387,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 18150,
+    "scientific_name": "Prionailurus viverrinus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CARNIVORA",
+    "family_name": "FELIDAE",
+    "genus_name": "Prionailurus",
+    "species_name": "viverrinus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Bennett, 1833)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Cat Specialist Group (wild cats)",
+        "url": "http://www.catsg.org/",
+        "description": "Chair: Christine Breitenmoser (email: ch.breitenmoser@kora.ch) and Urs Max Breitenmoser (email: urs.breitenmoser@vetsuisse.unibe.ch)\nRed List Authority Coordinator: Tabea Lanz (email: t.lanz@kora.ch)\nNewsletter: http://www.catsg.org/index.php?id=7"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "เสือปลา",
+        "language": "tha"
+      },
+      {
+        "main": false,
+        "name": "Baghrol",
+        "language": "ben"
+      },
+      {
+        "main": false,
+        "name": "Hadun diviya",
+        "language": "sin"
+      },
+      {
+        "main": false,
+        "name": "Kla trey",
+        "language": "khm"
+      },
+      {
+        "main": false,
+        "name": "Machhli khore billi",
+        "language": "urd"
+      },
+      {
+        "main": false,
+        "name": "Malaha biralo",
+        "language": "nep"
+      },
+      {
+        "main": true,
+        "name": "Fishing Cat",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Felis viverrina Bennett, 1833",
+        "status": "ACCEPTED",
+        "genus_name": "Felis",
+        "species_name": "viverrina",
+        "species_author": "Bennett, 1833",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 2277,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "5",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "No"
+          },
+          {
+            "name": "Percentage of population protected by PAs",
+            "value": "41-50"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "Unknown",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": "115000",
+    "continuing_decline_in_area_of_occupancy": "Yes",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "238000",
+    "continuing_decline_in_extent_of_occurence": "Unknown",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "The Fishing Cat is widely but discontinuously distributed in South and Southeast Asia from southern Pakistan in the west to Cambodia in the east, and from the Himalayan foothills of the Terai and the Dooars in the north to Sri Lanka and Thailand in the south. However, currently known occurrence is highly localized with large gaps of more than 100 km between sites with authenticated presence records. Such gaps are most prevalent in the basins of the Indus, Ganges, Brahmaputra, Ayeyarwady and Chao Phraya rivers, and along the coasts of the Bay of Bengal and the Gulf of Thailand. At present, its main range appears to be the Indian and Nepal Terai, and the lower reaches and delta of the Ganges and Brahmaputra in India and Bangladesh. Its range extends along major river basins along the east coast of India and throughout much of Sri Lanka. Its range in Southeast Asia is limited to the southern Ayeyarwady Region of Myanmar, coastal areas of western peninsular Thailand and coastal Cambodia. In Viet Nam and Indonesia, it has not been recorded since the early 2000s.<br/><br/>In most range countries, the Fishing Cat was recorded in new locations since the previous assessment of 2016. The majority of records were obtained during camera trapping surveys targeting the Tiger <em>Panthera tigris</em> in protected areas of the Terai, Dooars and Sundarban Mangroves, and the Leopard <em>Panthera pardus</em> in both protected and unprotected landscapes in Sri Lanka. Its distribution outside protected areas is still not well understood, and vast stretches with potentially suitable habitat in many human-dominated landscapes have not been surveyed to date. This paucity of surveys outside protected area networks clouds our understanding of the Fishing Cat’s biogeography, and how site-specific factors affect its distribution (Rana <em>et al.</em> 2022).<br/><br/>The Fishing Cat occurs at sea level in parts of its range (Das <em>et al. </em>2017, Thaung <em>et al. </em>2018, Naing Lin and Platt 2019) to an elevation of 436 m in the Indian Terai (Guleria <em>et al.</em> 2022), which represents the highest reliable elevation record in this region to date. In Sri Lanka, it has been recorded up to 2,277 m in Horton Plains National Park (Anjali Watson and Andrew Kittle, unpublished data).<br/><br/>Please see Supplementary Information for details of distribution by range country.",
+    "population": "<p>Camera trap surveys indicate that Fishing Cat population density in inland protected areas of the Indian Terai is 3–3.5 individuals/100 km<sup>2</sup> (Nair 2012). Density is significantly higher in coastal areas, both within and outside protected areas ranging from 18–70 individuals/100 km<sup>2 </sup>(Sathiyaselvam <em>et al.</em> 2016, Phosri<em> et al.</em> 2021, Adhya <em>et al.</em> 2024). We therefore extrapolate these values to those inland and coastal areas, respectively, where population density estimates are lacking.</p>  <p>In areas with fewer than three records in one Fishing Cat generation, we refrain from estimating population size due to the paucity of surveys and lack of data. These areas are predominantly situated in human-dominated landscapes, where the Fishing Cat's presence has become known through media reports about killed individuals (see e.g. Chowdhury <em>et al. </em>2015, Chakraborty <em>et al. </em>2022).</p>  <p>Based on available and extrapolated estimates, we infer a total population size of 3,194–7,527 Fishing Cats. Most of the population resides in South Asia, with an estimated population size of 1,768–5,088 individuals in India and Bangladesh, and 1,392–2,187 individuals in Sri Lanka. Thailand and Cambodia combined retain an estimated population of 131–200 individuals at most.</p>  <p>Please see Supplementary Information for details of estimated population densities and sizes in the range countries.</p>",
+    "habitats": "In the Indus River basin, the Terai and Indian Dooars, camera trap records of the Fishing Cat have been obtained in mosaics of forests and dense grasslands covered by tall <em>Imperata</em>, <em>Phragmites</em>, <em>Saccharum</em> and <em>Typha</em> grasses (Nair 2012, Islam <em>et al. </em>2016, Mishra <em>et al.</em> 2018, Jhala <em>et al.</em> 2020, Jhala<em> et al.</em> 2021, Guleria<em> et al.</em> 2022). In protected areas, it was also recorded in open riverine forest interspersed with grasses and herbs (Yadav <em>et al.</em> 2018), and in grassland patches close to streams, sandbanks, swamps, oxbow lakes and reservoirs (Taylor <em>et al. </em>2016, Mishra <em>et al.</em> 2018, Yadav <em>et al. </em>2020, Jhala<em> et al.</em> 2021, Jayasekara and Mahaulpatha 2022). In Indian Tiger Reserves, three individuals were recorded in dry deciduous forests at most 6 km away from streams (Sadhu and Reddy 2013, Talegaonkar <em>et al</em>. 2018, Dutta <em>et al.</em> 2021). Mangrove forests and remnant mangrove patches represent important habitats along coasts of the Bay of Bengal and the Gulf of Thailand (Sathiyaselvam<em> et al.</em> 2016, Das <em>et al. </em>2017, Thaung <em>et al.</em> 2018, Chutipong<em> et al.</em> 2019, Naing and Platt 2019, Rana 2020, Shankar <em>et al. </em>2020, Jhala <em>et al.</em> 2020, Jhala <em>et al.</em> 2021, Phosri <em>et al.</em> 2021). Outside protected areas, it has repeatedly been recorded near active and abandoned fishponds, in rice fields, oil palm and coconut plantations, abandoned unused land, marshland and on river banks (Cutter 2015, Dahal 2016, Taylor<em> et al.</em> 2016, Kantimahanti <em>et al. </em>2019, Kolipaka <em>et al.</em> 2019, Naing and Platt 2019, Chakraborty <em>et al. </em>2020a, b, Jhala <em>et al.</em> 2021, Mishra <em>et al. </em>2021, Phosri <em>et al. </em>2021). In the Indian state of Odisha, its presence in the Chilika Lagoon is higher in <em>Phragmites</em> dominated marshland than in more saline areas with sparse vegetation cover (Adhya <em>et al.</em> 2023). It has also been sighted in sugarcane fields during harvest seasons (Mishra 2022, Divyashree Rana pers. comm. 6 January 2023) and documented near commercial fish farms adjacent to tourist destination spots in West Bengal and Odisha (Samrat Chakraborty in litt. 21 August 2023, Adhya <em>et al.</em> 2024). In Sri Lanka, it also inhabits tea estates and dry rocky slopes in the vicinity of rivers, lakes and reservoirs (Kittle and Watson 2018), wetland environments in Colombo (Ratnayaka <em>et al.</em> 2022), both dry and wet zone forest patches, and intermediate savannah-type forests near waterbodies (Anjali Watson and Andrew Kittle, unpublished data).<br/><br/>A genetic study by Rana (2020) using scat samples and microsatellite markers reveals a low diversity and strong genetic structure between Fishing Cat populations in India. This suggests several landscape level barriers due to the patchiness of wetland habitats and fragmentation owing to anthropogenic activities. The Terai population has comparatively high genetic diversity with a metapopulation structure (Rana 2020).<br/><br/>The home ranges of three radio-collared female Fishing Cats in Chitwan National Park were estimated at 4–6 km², and that of a male at 16–22 km² (Sunquist and Sunquist 2002). The home range of a male individual in Kishanpur Wildlife Sanctuary was estimated at 18.46 km² (Nair 2012). In and around Khao Sam Roi Yot National Park, four females had home ranges of 2.3–5.3 km² in the dry season and of 3.0–4.4 km² in the wet season; the home range of a male varied from 8.9 km² in the dry season to 12.6 km² in the wet season (Cutter 2015). Camera trap records in the same study area indicate that female Fishing Cats moved 598–1,335 m, whereas males moved 1,373–2,285 m per day (Phosri <em>et al.</em> 2021). Home ranges of one male and two female Fishing Cats in the same area was estimated at 2.21–4.33 km² and 3.44–8.49 km², respectively, in the wet season of 2022 (Klakhaeng <em>et al.</em> 2023). Two females in urban areas of Colombo had home ranges of 3.06–3.39 km², and two males of 32.02–32.99 km² (Ratnayaka <em>et al. </em>2022). Data of 11 radio-collared Fishing Cats in Nepal’s Koshi Tappu Wildlife Reserve indicate that males move in an area of about 18–58.4 km² and females in 1.2–34.7 km² both inside and outside the reserve (Rama Mishra in litt. 26 April 2024).<br/><br/>Information on the reproduction of the Fishing Cat in the wild is limited to a few incidental observations. Mating of Fishing Cats was observed in late February to early March in the Indian Sundarbans (Sanyal and Roy 1985). Gestation period is 63–70 days (Sunquist and Sunquist 2002), and litters consist of one to three kittens (Sanyal and Roy 1985, Datye 1993, Cutter and Cutter 2009, Mishra <em>et al.</em> 2021, Divyashree Rana in litt. 21 August 2023). Kittens of less than 15 days old were observed in May and January (Sanyal and Roy 1985, Divyashree Rana in litt. 21 August 2023). Females followed by kittens of several weeks of age were observed in mid-March, early January and April to May (Datye 1993, Cutter and Cutter 2009, Malla <em>et al. </em>2019). In the Bhitarkanika mangroves of Odisha, kittens are sighted in all seasons (Manas K Das, Range Officer, pers. comm. 7 September 2023), and newborn kittens were observed from November to June in the Chilika Lagoon (Tiasa Adhya in litt. 21 December 2023).<br/>The Fishing Cat was thought to be largely nocturnal (Mukherjee 1989, Sunquist and Sunquist 2002, Sathiyaselvam <em>et al. </em>2016). Several camera trap records obtained since 2011 show that it is also active during daylight hours (Nair 2012, Islam <em>et al. </em>2016, Mishra <em>et al. </em>2018, Shankar <em>et al.</em> 2020, Yadav <em>et al. </em>2020, Jayasekara and Mahaulpatha 2022, Kantimahanti <em>et al. </em>2022, Anjali Watson and Andrew Kittle, unpublished data).<br/><br/>Faeces collected in Keoladeo National Park showed that Fishing Cats predominantly consumed fish all year round, followed by birds, insects and rodents (Haque and Vijayan 1993). Scat collected in Khao Sam Roi Yot National Park indicates that fish constituted 42% of the diet, followed by mammals and birds 24% each, reptiles 5% and crustaceans 2% (Cutter 2015). Scat collected in the same national park contained remains of 16 species including four fish, three rodent and three bird species; the diet varied slightly between summer, rainy and winter seasons, consisting of fish (46.9–54.5%), rodents (21.8–27.7%), birds (19.1–19.8%), insects (0–2.7%), snakes, crabs, snails and arthropods (Wongson <em>et al. </em>2024). Fishing Cats were also observed hunting an Indian Pond Heron <em>Ardeola grayii</em>, a Dog-faced Water Snake <em>Cerberus rynchops </em>(Malla <em>et al. </em>2018) and a Checkered Keelback <em>Fowlea piscator </em>(Kantimahanti <em>et al. </em>2022). The first arboreal behaviour of Fishing Cats foraging on nests of colonial waterbirds 8 m above ground in the canopy of a tree was documented in 2022 (Sadik and Akash 2024). Scat collected in the Coringa mangroves contained remains of fish (36.6%), crabs (17.8%), rodents (16.8%), birds (14.8%), reptiles (11.4%), molluscs and insects (Malla <em>et al.</em> 2024).",
+    "threats": "The major threat to the Fishing Cat across range countries appears to be the loss and fragmentation of forests, grasslands, wetlands, marshes and mangrove habitats due to the expansion of aquaculture, agriculture, infrastructure and industrialisation (see details in Supplementary Information). The expansion of commercial aquaculture in particular results in the pollution of the entire food chain due to microplastics and the use of chemicals and sewage reaching surrounding areas untreated (Chatterjee <em>et al.</em> 2024, Mitra <em>et al. </em>2024). In most range countries, land use changes are aggravated by further conflict with humans for resources like space and small livestock. Such conflicts entail killing of Fishing Cats in retaliation for perceived livestock loss. With expanding linear infrastructure, roadkills are a potential major threat, especially in India and Sri Lanka.<br/><br/>Poaching is a potential threat to the Fishing Cat in Cambodia (Thaung <em>et al. </em>2018). Indiscriminate snaring of mammals in Cambodia and Viet Nam is a major and ongoing threat with a devastating impact on the region’s wildlife (Gray <em>et al. </em>2021).<br/>Please see Supplementary Information for detailed threats by range country.",
+    "measures": "The Fishing Cat is listed in Appendix II of the Convention on International Trade in Endangered Species of Wild Fauna and Flora, requiring permits for international trade (Acharjyo 1998). In Pakistan’s Sindh province, the Fishing Cat has been protected since 2020 under the First Schedule of the Sindh Wildlife Protection, Preservation, Conservation and Management Act 2020, rendering possession, hunting and trading of protected species illegal (Umar Farooq 2020). In India, it has been protected since 1972 under the highest protection level Schedule I of the Wildlife (Protection) Act (Acharjyo 1998) and in the Wildlife (Protection) Amendment Act (2022) (Ministry of Law and Justice 2022). In Nepal, it is not listed as protected under the National Parks and Wildlife Conservation Act, 2029 (1973), but hunting wildlife without a license is prohibited (Nepal Law Commission 2018). In Bangladesh, it has been fully protected since 1973 under the Wild Life Preservation Order and since 2012 under the Wildlife (Conservation and Security) Act, 2012 (Sultana<em> et al.</em> 2022). In Myanmar, the Fishing Cat is completely protected under the Conservation of Biodiversity and Protected Areas Law of 2018 (Thu <em>et al. </em>2024). It is strictly protected in Sri Lanka under the Fauna and Flora Protection (Amendment) Act of 2009 (Parliament of the Democratic Socialist Republic of Sri Lanka 2009). In Thailand, it is protected under the Wildlife Preservation and Protection Act of 2019, which prohibits intentional killing (Phosri <em>et al.</em> 2021). In Cambodia’s Natural Resource and Environmental Code, it is listed as common with minimal penalties for its trade and consumption (Gray <em>et al. </em>2017).<br/><br/>Sri Lanka was the first nation to legally protect all its mangrove forests in 2015 (Veettil<em> et al.</em> 2023). Mangrove restoration and plantation projects have been implemented in Pakistan (Gilani<em> et al.</em> 2021), India (Kubo <em>et al. </em>2018, Parida and Kumar 2020, Samanta&#160;<em>et al.</em> 2021, Choubey 2024), Bangladesh (Uddin&#160;<em>et al.</em> 2022), Sri Lanka (UNCC 2023) and Cambodia (Veettil and Quang 2019). The Fishing Cat also benefits from establishment of wildlife corridors in the Indian Terai and the Central Highlands of Sri Lanka (Jhala&#160;<em>et al.</em> 2021, Resplendent Ceylon 2021, WWCT 2024).<br/><br/>Local people have been sensitized to issues pertaining to the conservation and protection of the Fishing Cat in and around several survey areas in Sri Lanka, West Bengal, Odisha and Andhra Pradesh in India, in Nepal, Thailand and Cambodia (Thudugala 2016, Kolipaka&#160;<em>et al.</em> 2019, Malla&#160;<em>et al.</em> 2019,&#160; Mishra&#160;<em>et al.</em> 2021, Phosri&#160;<em>et al.</em> 2021, Herranz Muñoz and Vong 2022, Kantimahanti&#160;<em>et al.</em> 2022, Adhya&#160;<em>et al.</em> 2024). In India, the Fishing Cat has been declared as the State Animal of West Bengal and as the flagship species of Odisha’s Chilika Lagoon; a blueprint designed to safeguard the Fishing Cat across the country provides a coherent scheme for essential district-level conservation actions (Rana&#160;<em>et al.</em> 2022). Educational material and outreach strategies need to be developed and implemented in human-dominated landscapes with a high conflict density like West Bengal and Bangladesh (Chakraborty<em> et al.</em> 2022, Sultana<em> et al.</em> 2022).",
+    "use_trade": "Little is known about illegal use and trade of the Fishing Cat. In  Pakistan, two captive individuals were confiscated and rescued in  Karachi in 2015 (Bhatti 2015, Zubairi and Naidu 2016). Three live  Fishing Cat kittens were offered for sale on a market in spring 2024,  but it was not possible to figure out the location of this incident in  Pakistan or abroad (Javed Mahar in litt. 17 May 2024). A few cases of  ritual hunting of Fishing Cats for meat and skin have been reported in  southern West Bengal (Mukherjee<em> et al.</em> 2012). Tribal people in Andhra Pradesh occasionally hunt Fishing Cats for meat (Kantimahanti <em>et al. </em>2019).  Indigenous hunters in Sri Lanka’s Central Province and in northeastern  Bangladesh allegedly consume Fishing Cat meat and use their body parts  for medicinal purposes (Thudugala 2016, Sultana<em> et al.</em> 2022). In  the period 2016–2021, the Bangladesh Forest Department seized 24 live  individuals from illegal trafficking that were destined as pets to India  or West Asia (Uddin <em>et al.</em> 2023). A few local people in Thailand  also admitted capturing Fishing Cats for sale as pets and eating their  meat (Cutter 2015, Chutipong <em>et al.</em> 2019). In Cambodia, a dead  Fishing Cat was recovered at a bushmeat stall near the Tonle Sap  wetlands in 2018 (Herranz Muñoz and Vong 2022).",
+    "rationale": "The Fishing Cat is widely distributed from southern Pakistan, northern India, southern Nepal and Bangladesh to Myanmar, southern Thailand and western Cambodia. However, its distribution is discontinuous as indicated by large gaps between known population units in the lower reaches of the Indus River and the Indian and Nepal Terai region, and between coastal areas along the Bay of Bengal and the Gulf of Thailand. No land corridor exists between continental and Sri Lankan populations. In all range countries, the Fishing Cat largely inhabits wetlands, riverine and mangrove forests, marshes, swamps and grasslands in the vicinity of waterbodies. Current human-dominated landscapes once featured these habitat types but are now fragmented due to severe land use changes in favour of aquaculture, agriculture, infrastructure and industrialisation since at least the late 1980s.<br/><br/>Habitat loss and fragmentation of the Fishing Cat’s preferred habitat is aggravated by water pollution in aquaculture sites due to the use of chemicals and sewage reaching surrounding areas untreated. Killing of Fishing Cats is most pronounced in the Ganges Brahmaputra delta and northeastern Bangladesh, mostly in retaliation for perceived loss of small livestock and fish-stock. Linear infrastructure bisecting natural habitats has been entailing roadkills and mortally wounded Fishing Cats, especially in India and Sri Lanka. Several cases of Fishing Cat meat and body parts being consumed by ethnic groups have been reported in India, Sri Lanka, Bangladesh, Thailand and Cambodia. There is also some evidence of Fishing Cats being caught, kept and traded as pets in Pakistan, Bangladesh and Thailand.<br/><br/>The presently known and extrapolated sizes of population units suggest a global population of fewer than 8,000 mature individuals. Since Southeast Asia harbours the smallest population units of all, presently estimated at 200 individuals at most, this population faces a far greater extinction risk than populations in South Asia. We suspect a global population decline of 30% or more in the past three Fishing Cat generations during 2008–2023, as quality and extent of suitable grassland and wetland habitats declined during this period by more than 30% in several regions, where land use and land cover changes have been studied. We consider it highly likely that this decline will continue and accelerate in the future three generations during 2024–2038, concurrent with presumed future trends of severe and extensive habitat conversions and degradations in all range countries, especially in coastal areas. Effective and sustainable interventions are unlikely to be of sufficient magnitude to prevent such decline rates. We therefore categorize the Fishing Cat as Vulnerable under criteria A2cd+3cd+4cd.",
+    "trend_justification": null,
+    "taxonomic_notes": "The Fishing Cat is placed in <em>Prionailurus</em> according to genetic analysis (Johnson<em> et al. </em>2006, O'Brien and Johnson 2007, Kitchener <em>et al. </em>2017).<p></p>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_2",
+      "description": {
+        "en": "Training"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "We recommend that captive breeding for reintroduction of the Fishing Cat should not be initiated as this would be inappropriate and ineffective as long as suitable habitats for the Fishing Cat continue to decline.",
+      "code": "3_4_1",
+      "description": {
+        "en": "Captive breeding/artificial propagation"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Shrub Dominated Wetlands"
+      },
+      "code": "5_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Swamp"
+      },
+      "code": "1_8"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Mangrove Vegetation Above High Tide Level"
+      },
+      "code": "1_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Inland Deltas"
+      },
+      "code": "5_13"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Seasonally Wet/Flooded"
+      },
+      "code": "4_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_5"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Water Storage Areas (over 8ha)"
+      },
+      "code": "15_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Ponds (below 8ha)"
+      },
+      "code": "15_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Aquaculture Ponds"
+      },
+      "code": "15_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Irrigated Land (includes irrigation channels)"
+      },
+      "code": "15_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Seasonally Flooded Agricultural Land"
+      },
+      "code": "15_8"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Canals and Drainage Channels, Ditches"
+      },
+      "code": "15_9"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_6"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nepal"
+      },
+      "code": "NP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jawa"
+      },
+      "code": "JAW-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    }
+  ],
+  "researches": [
+    {
+      "note": "Monitor land use changes in areas where the Fishing Cat is known to occur.",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "Investigate interconnectivity between habitats suitable for the Fishing Cat, where wildlife corridors can and need to be established.\nIdentify stakeholders engaged in restoration of degraded habitats where the Fishing Cat occurs and develop joint conservation measures.\nDetermine approaches and best practises to mitigate human-induced mortality of Fishing Cats.\n",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": "Conduct surveys in range countries where distribution and status is unclear like Indus basin in Pakistan, Brahmaputra valley in India, Ayeyarwady basin and delta in Myanmar, and coastal areas in the Gulf of Thailand.\nInitiate surveys in areas identified as potentially suitable habitat.\nPerform reliable estimates for population density and size both inside and outside protected areas using standardised methods and suitable camera trapping designs. Study areas should be selected in regions and habitats where the Fishing Cat is known to occur but with currently scarce data. Additionally, surveys should be conducted in areas identified as potentially suitable habitat.\nGenerate information on genetic connectivity of Fishing Cat population units, including estimates of effective population sizes.",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "National-level action and recovery plans are urgently required.",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "Generate information on Fishing Cat diet and monitor prey base. Standardise new techniques using genetic tools.",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "Monitor population trends periodically every five years in areas, where baseline information is available.\nGenerate baseline information in areas where information is scare or not available.\n",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "Identify and prioritise threats.\nMonitor human-induced mortality of Fishing Cats in range countries and regions, which are known to be killing hotspots like West Bengal in India and Bangladesh.\nAnalyse water quality and potential impact of pollution due to solid waste and chemical contamination on Fishing Cat health in study sites that are afforded a low to no protection level.\n",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "Investigate and assess national and international trade of Fishing Cats.",
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    },
+    {
+      "note": "Identify and prioritise key areas for required conservation actions in all Fishing Cat range countries.\nInitiate trans-boundary Fishing Cat conservation units and collaborative population monitoring.\n",
+      "code": "2_2",
+      "description": {
+        "en": "Area-based Management Plan"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_1_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Sewage"
+      },
+      "code": "9_1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_3_4"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Soil erosion, sedimentation"
+      },
+      "code": "9_3_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Unknown",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Scale Unknown/Unrecorded"
+      },
+      "code": "2_4_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects (species is not the target)"
+      },
+      "code": "5_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Garbage & solid waste"
+      },
+      "code": "9_4"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_2_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of surface water (commercial use)"
+      },
+      "code": "7_2_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Storms & flooding"
+      },
+      "code": "11_4"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of surface water (domestic use)"
+      },
+      "code": "7_2_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of surface water (agricultural use)"
+      },
+      "code": "7_2_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Dams (size unknown)"
+      },
+      "code": "7_2_11"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Subsistence/artisinal aquaculture"
+      },
+      "code": "2_4_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Nutrient loads"
+      },
+      "code": "9_3_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other threat"
+      },
+      "code": "12_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Industrial aquaculture"
+      },
+      "code": "2_4_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Large dams"
+      },
+      "code": "7_2_10"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Herbicides and pesticides"
+      },
+      "code": "9_3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of surface water (unknown use)"
+      },
+      "code": "7_2_4"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small dams"
+      },
+      "code": "7_2_9"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of ground water (agricultural use)"
+      },
+      "code": "7_2_7"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Run-off"
+      },
+      "code": "9_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Mukherjee, S., Appel, A., Adhya, T., Aziz, M.A., Borah, J., Chakraborty, S., Dey, A., Herranz Muñoz, V., Kantimahanti, M., Kittle, A., Mahar, J.A., Mishra, R., Naing Lin, Ngoprasert, D., Phosri, K., Qureshi, Q., Rana, D., Ratnayaka, A., Tantipisanuh, N. & Watson, A.C.",
+      "value": [
+        "Shomita Mukherjee (Salim Ali Centre for Ornithology and Natural History)",
+        "Jimmy Borah (WWF)",
+        "Andrew Kittle (IUCN SSC Cat SG)",
+        "Anjali Watson (IUCN SSC Cat SG)",
+        "Angie Appel (Sand Cat WG)",
+        "Dusit Ngoprasert",
+        "Nauremon Tantipisanuh",
+        "Qamar Qureshi (IUCN SSC Equid SG)",
+        "Murthy Kantimahanti (Eastern Ghats Wildlife Society India)",
+        "Anya Ratnayaka",
+        "Vanessa Herranz Muñoz",
+        "Tiasa Adhya (National Centre for Biological Sciences, India)",
+        "Rama Mishra (Central Department of Zoology, Tribhuvan University, Nepal)",
+        "Mohammad Abdul Aziz (Jahangirnagar University, Bangladesh)",
+        "Samrat Chakraborty (University of Calcutta, India)",
+        "Ajanta Dey (Nature Environment & Wildlife Society, India)",
+        "Javed Ahmed Mahar (Sindh Forest & Wildlife Department, Pakistan)",
+        " Naing Lin (Wildlife Conservation Society, Myanmar)",
+        "Kitiphat Phosri (King Mongkut's University of Technology, Thailand)",
+        "Divyashree Rana (Tata Institute of Fundamental Research, India)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Duckworth, J., Sanderson, J. & Wong, W.",
+      "value": [
+        "Jim Sanderson (Small Wild Cat Conservation Foundation)",
+        "Wai-Ming Wong (Panthera)",
+        "John Will Duckworth"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Saha, G., Yadav, B., Shankar, A., Jhala, Y.V., Compost, A., Akash, M., Shaikh, Z. & Malla, G.",
+      "value": [
+        "Yadvendradev Jhala",
+        "Giridhar Malla (Wildlife Institute of India)",
+        "Bhupendra Yadav (Nepal Department of National Parks and Wildlife Conservation)",
+        "Zafeer Shaikh",
+        "Muntasir Akash (University of Dhaka, Bangladesh)",
+        "Goutam Saha (University of Calcutta, India)",
+        "Anant Shankar (Divisional Forest Office Andhra Pradesh, India)",
+        "Alain Compost (Independent researcher, Indonesia)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C. 2013. Generation length for mammals. <i>Nature Conservation</i> 5: 87–94.",
+      "year": "2013",
+      "title": "Generation length for mammals",
+      "author": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sunquist, M. and Sunquist, F. 2002. <i>Wild Cats of the World</i>. University of Chicago Press.",
+      "year": "2002",
+      "title": "Wild Cats of the World",
+      "author": "Sunquist, M. and Sunquist, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Johnson, W.E., Eizirik, E., Pecon-Slattery, J., Murphy, W.J., Antunes, A., Teeling, E. and O'Brien, S.J. 2006. The late Miocene radiation of modern Felidae: A genetic assessment. <i>Science</i> 311: 73-77.",
+      "year": "2006",
+      "title": "The late Miocene radiation of modern Felidae: A genetic assessment",
+      "author": "Johnson, W.E., Eizirik, E., Pecon-Slattery, J., Murphy, W.J., Antunes, A., Teeling, E. and O'Brien, S.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "O'Brien, S.J. and Johnson, W.E. 2007. The evolution of cats. <i>Scientific American</i> July: 68-75.",
+      "year": "2007",
+      "title": "The evolution of cats",
+      "author": "O'Brien, S.J. and Johnson, W.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mukherjee, S. 1989. Ecological separation of four sympatric carnivores in Keoladeo Ghana National Park, Bharatpur, Rajasthan, India. Thesis, Wildlife Institute of India.",
+      "year": "1989",
+      "title": "Ecological separation of four sympatric carnivores in Keoladeo Ghana National Park, Bharatpur, Rajasthan, India",
+      "author": "Mukherjee, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Haque, N. M. and Vijayan, V. 1993. Food habits of the Fishing Cat <i>Felis viverrina</i> in Keoladeo National Park, Bharatpur, Rajasthan. <i>Journal of the Bombay Natural History Society</i> 90: 498-500.",
+      "year": "1993",
+      "title": "Food habits of the Fishing Cat <i>Felis viverrina</i> in Keoladeo National Park, Bharatpur, Rajasthan",
+      "author": "Haque, N. M. and Vijayan, V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cutter, P. and Cutter, P. 2009. Recent sightings of fishing cats in Thailand. <i>Cat News</i> 51: 12-13.",
+      "year": "2009",
+      "title": "Recent sightings of fishing cats in Thailand",
+      "author": "Cutter, P. and Cutter, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chowdhury, S.U., Chwodhury, A.R., Ahmed, S. and Sabir Bin Muzaffar. 2015. Human-fishing cat conflicts and conservation needs of fishing cats in Bangladesh. <i>Cat News</i> 62: 4-7.",
+      "year": "2015",
+      "title": "Human-fishing cat conflicts and conservation needs of fishing cats in Bangladesh",
+      "author": "Chowdhury, S.U., Chwodhury, A.R., Ahmed, S. and Sabir Bin Muzaffar",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dahal, S. 2016. Fishing Cats outside protected areas in Nepal Terai. In: A. Appel and J. W. Duckworth (eds), Proceedings of the First International Fishing Cat Conservation Symposium, 25–29 November 2015, Nepal. Fishing Cat Working Group, Bad Marienberg, Germany and Saltford, Bristol, United Kingdom, pp. 27-28.",
+      "year": "2016",
+      "title": "Fishing Cats outside protected areas in Nepal Terai.",
+      "author": "Dahal, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bhatti, M.W. 2015. Fishing Cat, six monkeys seized in raid handed over to zoo. The News International, 18 October 2015. Available at: <a href=\"http://www.thenews.com.pk/Todays-News-4-346300-Fishing-cat-six-monkeys-seized-in-raid-handed-over-to-zoo\">http://www.thenews.com.pk/Todays-News-4-346300-Fishing-cat-six-monkeys-seized-in-raid-handed-over-to-zoo</a>. ",
+      "year": "2015",
+      "title": "Fishing Cat, six monkeys seized in raid handed over to zoo. The News International, 18 October 2015",
+      "author": "Bhatti, M.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Islam, S., Nawaz, R. and Moazzam, M. 2015. A survey of Smooth-coated Otter (<i>Lutrogale perspicillata sindica</i>) and Fishing Cat (<i>Prionailurus viverrinus</i>) in Chotiari Reservoir, Sanghar, Pakistan using camera traps. <i>International Journal of Biology and Biotechnology </i> 12 (4): 579-584.",
+      "year": "2015",
+      "title": "A survey of Smooth-coated Otter (<i>Lutrogale perspicillata sindica</i>) and Fishing Cat (<i>Prionailurus viverrinus</i>) in Chotiari Reservoir, Sanghar, Pakistan using camera traps",
+      "author": "Islam, S., Nawaz, R. and Moazzam, M. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cutter, P. 2015. Fishing Cat ecology: food habits, home ranges, habitat use and mortality in a human-dominated landscape around Khao Sam Roi Yot area, peninsular Thailand. A thesis submitted to the Faculty of University of Minnesota.",
+      "year": "2015",
+      "title": "Fishing Cat ecology: food habits, home ranges, habitat use and mortality in a human-dominated landscape around Khao Sam Roi Yot area, peninsular Thailand. A thesis submitted to the Faculty of University of Minnesota.",
+      "author": "Cutter, P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Taylor, I.R., Baral, S.H., Pandey, P. and Kaspal, P. 2016. The conservation status of the Fishing Cat <i>Prionailurus viverrinus</i> Bennett, 1833 (Carnivora: Felidae) In Koshi Tappu Wildlife Reserve, Nepal. <i>Journal of Threatened Taxa </i> 8 (1): 8323–8332.",
+      "year": "2016",
+      "title": "The conservation status of the Fishing Cat <i>Prionailurus viverrinus</i> Bennett, 1833 (Carnivora: Felidae) In Koshi Tappu Wildlife Reserve, Nepal",
+      "author": "Taylor, I.R., Baral, S.H., Pandey, P. and Kaspal, P. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mukherjee, S., Adhya, T., Thatte, P. and Ramakrishnan, U. 2012. Survey of the Fishing Cat <i> Prionailurus viverrinus </i> Bennett, 1833 (Carnivora: Felidae) and some aspects impacting its conservation in India. <i>Journal of Threatened Taxa </i> 4(14): 3355–3361.",
+      "year": "2012",
+      "title": "Survey of the Fishing Cat <i> Prionailurus viverrinus </i> Bennett, 1833 (Carnivora: Felidae) and some aspects impacting its conservation in India",
+      "author": "Mukherjee, S., Adhya, T., Thatte, P. and Ramakrishnan, U. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Thudugala, A. 2016. Fishing Cat conservation in hill country, Sri Lanka. In:  A. Appel and J. W. Duckworth (eds) (eds), Proceedings of the First International Fishing Cat Conservation Symposium, 25–29 November 2015, Nepal. Fishing Cat Working Group, Bad Marienberg, Germany and Saltford, Bristol, United Kingdom, pp. 29–31.",
+      "year": "2016",
+      "title": "Fishing Cat conservation in hill country, Sri Lanka",
+      "author": "Thudugala, A. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kitchener, A.C., Breitenmoser-Würsten, C., Eizirik, E., Gentry, A., Werdelin, L., Wilting, A., Yamaguchi, N., Abramov, A.V., Christiansen, P., Driscoll, C., Duckworth, J.W., Johnson, W., Luo, S.-J., Meijaard, E., O'Donoghue, P., Sanderson, J., Seymour, K., Bruford, M., Groves, C., Hoffman, M., Nowell, K., Timmons, Z. and Tobe, S. 2017. A revised taxonomy of the Felidae. The final report of the Cat Classification Task Force of the IUCN/SSC Cat Specialist Group. <i>Cat News Special Issue</i> 11.",
+      "year": "2017",
+      "title": "A revised taxonomy of the Felidae. The final report of the Cat Classification Task Force of the IUCN/SSC Cat Specialist Group",
+      "author": "Kitchener, A.C., Breitenmoser-Würsten, C., Eizirik, E., Gentry, A., Werdelin, L., Wilting, A., Yamaguchi, N., Abramov, A.V., Christiansen, P., Driscoll, C., Duckworth, J.W., Johnson, W., Luo, S.-J., Meijaard, E., O'Donoghue, P., Sanderson, J., Seymour, K., Bruford, M., Groves, C., Hoffman, M., Nowell, K., Timmons, Z. and Tobe, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gray, T.N.E., Marx, N., Khem, V., Lague, D., Nijman, V. and Gauntlett, S. 2017b. Holistic managment of live animals confiscated from illegal wildlife trade. <i>Journal of Applied Ecology</i> 54(3): 726-730.",
+      "year": "2017b",
+      "title": "Holistic managment of live animals confiscated from illegal wildlife trade",
+      "author": "Gray, T.N.E., Marx, N., Khem, V., Lague, D., Nijman, V. and Gauntlett, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Jhala, Y.V., Qureshi, Q. and Nayak, A.K. 2020. Status of tigers, copredators and prey in India, 2018. National Tiger Conservation Authority, Government of India, New Delhi, and Wildlife Institute of India, Dehradun.",
+      "year": "2020",
+      "title": "Status of tigers, copredators and prey in India, 2018",
+      "author": "Jhala, Y.V., Qureshi, Q. and Nayak, A.K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Jhala, Y.V, Qureshi, Q. and Yadav, S.P. 2021. Status of leopards, co-predators, and megaherbivores in India, 2018. National Tiger Conservation Authority, Government of India and Wildlife Instittue of India, New Dehli and Dehradun, India.",
+      "year": "2021",
+      "title": "Status of leopards, co-predators, and megaherbivores in India, 2018",
+      "author": "Jhala, Y.V, Qureshi, Q. and Yadav, S.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gray, T.N.E., Belecky, M., O'Kelly, H.J., Rao, M., Roberts, O., Tilker, A., Signs, M. and Yoganand, K. 2021. Understanding and solving the South-East Asian snaring crisis. <i>The Ecological Citizen</i> 4(2): 129-141.",
+      "year": "2021",
+      "title": "Understanding and solving the South-East Asian snaring crisis",
+      "author": "Gray, T.N.E., Belecky, M., O'Kelly, H.J., Rao, M., Roberts, O., Tilker, A., Signs, M. and Yoganand, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2025. The IUCN Red List of Threatened Species. Version 2025-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 27 March 2025).",
+      "year": "2025",
+      "title": "The IUCN Red List of Threatened Species. Version 2025-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2025-1"
+    },
+    {
+      "citation": "Acharjyo, L.N. 1998. The six small cats of Orissa. <i>Envis Wildlife and Protected Areas </i> 1(2): 18-20.",
+      "year": "1998",
+      "title": "The six small cats of Orissa",
+      "author": "Acharjyo, L.N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Adhya, T., Banerjee, S., Dey, P., Nanda, S., Santra, S. and Nesha, I. 2024. Density estimation of the globally threatened Fishing Cat <i>Prionailurus viverrinus</i> through a participatory science approach in the Chilika lagoon, eastern India. <i>Endangered Species Research </i> 54: 1-13.",
+      "year": "2024",
+      "title": "Density estimation of the globally threatened Fishing Cat <i>Prionailurus viverrinus</i> through a participatory science approach in the Chilika lagoon, eastern India",
+      "author": "Adhya, T., Banerjee, S., Dey, P., Nanda, S., Santra, S. and Nesha, I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Adhya, T., Dey, P., Nanda, S., Nayak, A., Gowda, S. and Chetan, H.C. 2023. Distribution of the Fishing Cat in Chilika, a Ramsar site located in the Indian eastern coast. <i>Cat News</i> 78: 13-16.",
+      "year": "2023",
+      "title": "Distribution of the Fishing Cat in Chilika, a Ramsar site located in the Indian eastern coast",
+      "author": "Adhya, T., Dey, P., Nanda, S., Nayak, A., Gowda, S. and Chetan, H.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Chakraborty, S., Barik, S., Saha, R., Dey, A., Deuti, K., Venkatraman, C., Mazumdar, S. and Saha, G.K. 2020a. Camera-trap records of Fishing Cat (<i>Prionailurus viverrinus</i>) from East Medinipur (West Bengal, India), and notes on threats to this population. <i>Écoscience</i>: 1-8.",
+      "year": "2020a",
+      "title": "Camera-trap records of Fishing Cat (<i>Prionailurus viverrinus</i>) from East Medinipur (West Bengal, India), and notes on threats to this population",
+      "author": "Chakraborty, S., Barik, S., Saha, R., Dey, A., Deuti, K., Venkatraman, C., Mazumdar, S. and Saha, G.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chakraborty, S., Barik, S., Saha, R., Dey, A., Deuti, K., Venkatraman, C., Mazumdar, S. and Saha, G.K. 2020b. First Camera Trap Record of Fishing Cat <i>Prionailurus viverrinus</i> Bennett, 1833 (Carnivora: Felidae) from a Rural Wetland of Mid-West Bengal, India. <i>Proceedings of the Zoological Society</i> 73: 343–351.",
+      "year": "2020b",
+      "title": "First Camera Trap Record of Fishing Cat <i>Prionailurus viverrinus</i> Bennett, 1833 (Carnivora: Felidae) from a Rural Wetland of Mid-West Bengal, India",
+      "author": "Chakraborty, S., Barik, S., Saha, R., Dey, A., Deuti, K., Venkatraman, C., Mazumdar, S. and Saha, G.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chakraborty, S., Mitra, S., Chatterjee, P., Dey, D., Mazumdar, S. and Saha, G.K. 2022. State Representative beaten to death: A decade long conflict scenario of Fishing Cats (<i>Prionailurus viverrinus</i>) from southern West Bengal, India. <i>Proceedings of the Zoological Society </i> 75: 449–455.",
+      "year": "2022",
+      "title": "State Representative beaten to death: A decade long conflict scenario of Fishing Cats (<i>Prionailurus viverrinus</i>) from southern West Bengal, India",
+      "author": "Chakraborty, S., Mitra, S., Chatterjee, P., Dey, D., Mazumdar, S. and Saha, G.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chatterjee, N.H., Manna, S., Ray, A., Das, S., Rana, N., Banerjee, A., Ray, M. and Ray, S. 2024. Microplastics contamination in two species of gobies and their estuarine habitat of Indian Sundarbans. <i>Marine Pollution Bulletin</i> 198: 115857.",
+      "year": "2024",
+      "title": "Microplastics contamination in two species of gobies and their estuarine habitat of Indian Sundarbans",
+      "author": "Chatterjee, N.H., Manna, S., Ray, A., Das, S., Rana, N., Banerjee, A., Ray, M. and Ray, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Choubey, A.K. 2024. Schemes for Restoration of Mangrove Forests. Ministry of Environment, Forest and Climate Change.",
+      "year": "2024",
+      "title": "Schemes for Restoration of Mangrove Forests. Ministry of Environment, Forest and Climate Change",
+      "author": "Choubey, A.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Chutipong, W., Kamjing, A., Klinsawat, W., Ngoprasert, D., Phosri, K., Sukumal, N., Wongtung, P. and Tantipisanuh, N. 2019. An update on the status of Fishing Cat <i>Prionailurus viverrinus</i> Bennett, 1833 (Carnivora: Felidae) in Thailand. <i>Journal of Threatened Taxa </i> 11(4): 13459–13469.",
+      "year": "2019",
+      "title": "An update on the status of Fishing Cat <i>Prionailurus viverrinus</i> Bennett, 1833 (Carnivora: Felidae) in Thailand",
+      "author": "Chutipong, W., Kamjing, A., Klinsawat, W., Ngoprasert, D., Phosri, K., Sukumal, N., Wongtung, P. and Tantipisanuh, N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Das, S.K., Saha, R., Mukherjee, S., Danda, A.A. and Borah, J. 2017. First estimates of Fishing Cat abundance and density in Lothian Wildlife Sanctuary, Sundarbans, India. <i>Cat News</i> 66: 25–27.",
+      "year": "2017",
+      "title": "First estimates of Fishing Cat abundance and density in Lothian Wildlife Sanctuary, Sundarbans, India",
+      "author": "Das, S.K., Saha, R., Mukherjee, S., Danda, A.A. and Borah, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Datye, H.S. 1993. First record of the Fishing Cat Felis viverrina Bennet in Dalma Wildlife Sanctuary and Chhotanagpur Plateau of Bihar. <i>Journal of the Bombay Natural History Society</i> 90(1): 90.",
+      "year": "1993",
+      "title": "First record of the Fishing Cat Felis viverrina Bennet in Dalma Wildlife Sanctuary and Chhotanagpur Plateau of Bihar",
+      "author": "Datye, H.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dutta, S., Pokhariya, K. and Krishnamurthy, R. 2021. First photographic evidence of Fishing Cat in Panna Tiger Reserve, central India. <i>Cat News</i> 73: 17–18.",
+      "year": "2021",
+      "title": "First photographic evidence of Fishing Cat in Panna Tiger Reserve, central India",
+      "author": "Dutta, S., Pokhariya, K. and Krishnamurthy, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gilani, H., Naz, H.I., Arshad, M., Nazim, K., Akram, U., Abrar, A. and Asif, M. 2021. Evaluating mangrove conservation and sustainability through spatiotemporal (1990–2020) mangrove cover change analysis in Pakistan. <i>Estuarine, Coastal and Shelf Science </i> 249: 107128.",
+      "year": "2021",
+      "title": "Evaluating mangrove conservation and sustainability through spatiotemporal (1990–2020) mangrove cover change analysis in Pakistan",
+      "author": "Gilani, H., Naz, H.I., Arshad, M., Nazim, K., Akram, U., Abrar, A. and Asif, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Guleria, H., Hussain, A., Khan, K.A., Pandav, B., Malik, P.K. and Rawat, G.S. 2022. First Fishing Cat camera trap record in Nandhaur Wildlife Sanctuary, Uttarakhand, India. <i>Cat News</i> 75: 15–17.",
+      "year": "2022",
+      "title": "First Fishing Cat camera trap record in Nandhaur Wildlife Sanctuary, Uttarakhand, India",
+      "author": "Guleria, H., Hussain, A., Khan, K.A., Pandav, B., Malik, P.K. and Rawat, G.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Herranz Muñoz, V. and Vong, V. 2022. Climate Change Vulnerability Assessment Stung Sen Ramsar Site, Cambodia. IUCN Asia Regional Office, Bangkok.",
+      "year": "2022",
+      "title": "Climate Change Vulnerability Assessment Stung Sen Ramsar Site, Cambodia",
+      "author": "Herranz Muñoz, V. and Vong, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jayasekara, D. and Mahaulpatha, W.A.D. 2022. Modeling the habitat suitability for sympatric small and medium sized felids and investigating the spatiotemporal niche overlapping in Maduru Oya National Park, Sri Lanka. <i>Journal of Wildlife and Biodiversity</i> 6(1): 31–56.",
+      "year": "2022",
+      "title": "Modeling the habitat suitability for sympatric small and medium sized felids and investigating the spatiotemporal niche overlapping in Maduru Oya National Park, Sri Lanka",
+      "author": "Jayasekara, D. and Mahaulpatha, W.A.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kantimahanti, M., Thyadi, A. and Thyadi, O. 2022. Feeding behaviour of a Fishing Cat inland from the wetlands in the east coast of India. <i>Cat News</i> 75: 12–13.",
+      "year": "2022",
+      "title": "Feeding behaviour of a Fishing Cat inland from the wetlands in the east coast of India",
+      "author": "Kantimahanti, M., Thyadi, A. and Thyadi, O.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kantimahanti, M., Thyadi, A., Chintalapudi, A., Rathod, V. and Yerramsetti, P. 2019. Camera trap record of inland Fishing Cat from east coastal plains of South India. <i>Cat News</i> 70: 16–17.",
+      "year": "2019",
+      "title": "Camera trap record of inland Fishing Cat from east coastal plains of South India",
+      "author": "Kantimahanti, M., Thyadi, A., Chintalapudi, A., Rathod, V. and Yerramsetti, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kittle, A.M. and Watson A.C. 2018. Small wildcats of Sri Lanka – some recent records. <i>Cat News</i> 68: 9–12.",
+      "year": "2018",
+      "title": "Small wildcats of Sri Lanka – some recent records",
+      "author": "Kittle, A.M. and Watson A.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Klakhaeng, C., Sukmasuang, R., Suksavate, W., Wongson, T., Khaephakdee, S. and Monkonsin, W. 2023. Home range and habitat use of the Fishing Cat at Khao Sam Roi Yot National Park, Prachuap Khiri Khan Province. In: Slansinha, N. and Thipgantha (eds), Proceeding of the 15th Academic Conference on Zoos and Wildlife, Symposium conducted at the meeting of the Zoological Park Organization of Thailand, National Science Museum, 27–29 August 2023, pp. 30. Bangkok.",
+      "year": "2023",
+      "title": "Home range and habitat use of the Fishing Cat at Khao Sam Roi Yot National Park, Prachuap Khiri Khan Province",
+      "author": "Klakhaeng, C., Sukmasuang, R., Suksavate, W., Wongson, T., Khaephakdee, S. and Monkonsin, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kolipaka, S., Srivastava, D.P., Prasad, S. and Rust, N. 2019. Fishing Cat conservation in human-dominated landscapes in West Bengal, India. <i>Cat News</i> 69: 21–24.",
+      "year": "2019",
+      "title": "Fishing Cat conservation in human-dominated landscapes in West Bengal, India",
+      "author": "Kolipaka, S., Srivastava, D.P., Prasad, S. and Rust, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kubo, S., Naga Kumar, K.C.V., Demudu, G., Hema Malini, B., Nageswara Rao, K., Agrawal, R., Ramakrishnan, R. and Rajawat, A.S. 2018. <i>Geographical review of Japan series B</i> 90(2): 66–75.",
+      "year": "2018",
+      "title": null,
+      "author": "Kubo, S., Naga Kumar, K.C.V., Demudu, G., Hema Malini, B., Nageswara Rao, K., Agrawal, R., Ramakrishnan, R. and Rajawat, A.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Malla, G., Ray, P. and Sivakumar, K. 2018. Feeding behaviour of Fishing Cat in the Godavari mangroves, India. <i>Cat News</i> 67: 30–31.",
+      "year": "2018",
+      "title": "Feeding behaviour of Fishing Cat in the Godavari mangroves, India",
+      "author": "Malla, G., Ray, P. and Sivakumar, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Malla, G., Ray, P., Rajasekar, P.S. and Sivakumar, K. 2019. Notes on Fishing Cats of the Godavari delta, Andhra Pradesh, India. <i>Cat News</i> 70: 18–21.",
+      "year": "2019",
+      "title": "Notes on Fishing Cats of the Godavari delta, Andhra Pradesh, India",
+      "author": "Malla, G., Ray, P., Rajasekar, P.S. and Sivakumar, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Malla, G., Ray, P., Srinivas, Y., Malla, S., Byragi Reddy, T., Hayward, M. and Sivakumar, K. 2024. Fish on the platter! Dietary habits of Fishing Cats (<i>Prionailurus viverrinus</i>) in the Godavari Delta, India. <i>Mammal Research </i> 69: 221–230.",
+      "year": "2024",
+      "title": "Fish on the platter! Dietary habits of Fishing Cats (<i>Prionailurus viverrinus</i>) in the Godavari Delta, India",
+      "author": "Malla, G., Ray, P., Srinivas, Y., Malla, S., Byragi Reddy, T., Hayward, M. and Sivakumar, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ministry of Law and Justice. 2022. <i>The Wild Life (Protection) Amendment Act, 2022</i>. The Gazette of India Extraordinary, Part II, Section 1, New Delhi.",
+      "year": "2022",
+      "title": "The Wild Life (Protection) Amendment Act, 2022",
+      "author": "Ministry of Law and Justice ",
+      "citation_short": null
+    },
+    {
+      "citation": "Mishra, R. 2022. Curiosity did not kill these cats. Nepali Times. Available at: <a href=\"https://www.nepalitimes.com/latest/curiosity-did-not-kill-these-cats\">https://www.nepalitimes.com/latest/curiosity-did-not-kill-these-cats</a>. (Accessed: 2 May 2022).",
+      "year": "2022",
+      "title": "Curiosity did not kill these cats",
+      "author": "Mishra, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mishra, R., Basnet, K., Amin, R. and Lamichhane, B.R. 2018. Fishing Cat <i>Prionailurus viverrinus</i> Bennett, 1833 (Carnivora: Felidae) distribution and habitat characteristics in Chitwan National Park, Nepal. <i>Journal of Threatened Taxa </i> 10(11): 12451–12458.",
+      "year": "2018",
+      "title": "Fishing Cat <i>Prionailurus viverrinus</i> Bennett, 1833 (Carnivora: Felidae) distribution and habitat characteristics in Chitwan National Park, Nepal",
+      "author": "Mishra, R., Basnet, K., Amin, R. and Lamichhane, B.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mishra, R., Gautam B., Kaspal P. and Shah S.K. 2021. Population status and threats to Fishing Cat <i>Prionailurus viverrinus</i> (Bennett, 1833) in Koshi Tappu Wildlife Reserve, eastern Nepal. <i>Nepalese Journal of Zoology</i> 5(1): 13–21.",
+      "year": "2021",
+      "title": "Population status and threats to Fishing Cat <i>Prionailurus viverrinus</i> (Bennett, 1833) in Koshi Tappu Wildlife Reserve, eastern Nepal",
+      "author": "Mishra, R., Gautam B., Kaspal P. and Shah S.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mitra, S., Khan, M.A., Nielsen, R., Kumar, G. and Rahman, M.T. 2024. Review of environmental challenges in the Bangladesh aquaculture industry. <i>Environmental Science and Pollution Research</i> 31: 8330–8340.",
+      "year": "2024",
+      "title": "Review of environmental challenges in the Bangladesh aquaculture industry",
+      "author": "Mitra, S., Khan, M.A., Nielsen, R., Kumar, G. and Rahman, M.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Naing Lin  and Platt, S.G. 2019. Recent photographic records of Fishing Cat <i>Prionailurus viverrinus</i> (Bennet, 1833) (Carnivora: Felidae) in the Ayeyarwady Delta of Myanmar. <i>Journal of Threatened Taxa</i> 11(7): 13910–13914.",
+      "year": "2019",
+      "title": "Recent photographic records of Fishing Cat <i>Prionailurus viverrinus</i> (Bennet, 1833) (Carnivora: Felidae) in the Ayeyarwady Delta of Myanmar",
+      "author": "Naing Lin  and Platt, S.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nair, S. 2012. Habitat use and abundance of Fishing Cats (<i>Prionailurus viverrinus</i>) from camera-trap surveys used for monitoring Tigers in the Terai region of India. University of Otago, Dunedin, New Zealand.",
+      "year": "2012",
+      "title": "Habitat use and abundance of Fishing Cats (<i>Prionailurus viverrinus</i>) from camera-trap surveys used for monitoring Tigers in the Terai region of India",
+      "author": "Nair, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nepal Law Commission. 2018. National Parks and Wildlife Conservation Act, 2029 (1973). Government of Nepal, Kathmandu, Nepal.",
+      "year": "2018",
+      "title": "National Parks and Wildlife Conservation Act, 2029 (1973)",
+      "author": "Nepal Law Commission ",
+      "citation_short": null
+    },
+    {
+      "citation": "Parida, B.R. and Kumar, P. 2020. Mapping and dynamic analysis of mangrove forest during 2009–2019 using landsat–5 and sentinel–2 satellite data along Odisha Coast. <i>Tropical Ecology</i> 61(4): 538–549.",
+      "year": "2020",
+      "title": "Mapping and dynamic analysis of mangrove forest during 2009–2019 using landsat–5 and sentinel–2 satellite data along Odisha Coast",
+      "author": "Parida, B.R. and Kumar, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Parliament of the Democratic Socialist Republic of Sri Lanka. 2009. Fauna and Flora Protection (Amendment) Act, No. 22 of 2009. Government of Sri Lanka, Colombo.",
+      "year": "2009",
+      "title": "Fauna and Flora Protection (Amendment) Act, No. 22 of 2009",
+      "author": "Parliament of the Democratic Socialist Republic of Sri Lanka",
+      "citation_short": null
+    },
+    {
+      "citation": "Phosri, K., Tantipisanuh, N., Chutipong, W., Gore, M.L., Giordano, A.J. and Ngoprasert, D. 2021. Fishing Cats in an anthropogenic landscape: A multi-method assessment of local population status and threats. <i>Global Ecology and Conservation</i> 27: e01615.",
+      "year": "2021",
+      "title": "Fishing Cats in an anthropogenic landscape: A multi-method assessment of local population status and threats",
+      "author": "Phosri, K., Tantipisanuh, N., Chutipong, W., Gore, M.L., Giordano, A.J. and Ngoprasert, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rana, D. 2020. Investigating the genetic landscapes of Fishing Cat <i>Prionailurus viverrinus</i> in India. National Centre for Biological Sciences, Tata Institute of Fundamental Research, Bengaluru, India.",
+      "year": "2020",
+      "title": "Investigating the genetic landscapes of Fishing Cat <i>Prionailurus viverrinus</i> in India",
+      "author": "Rana, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rana, D., Samad, I. and Rastogi, S. 2022. To a charismatic rescue: Designing a blueprint to steer Fishing Cat conservation for safeguarding Indian wetlands. <i>Journal for Nature Conservation </i> 68: 126225.",
+      "year": "2022",
+      "title": "To a charismatic rescue: Designing a blueprint to steer Fishing Cat conservation for safeguarding Indian wetlands",
+      "author": "Rana, D., Samad, I. and Rastogi, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ratnayaka, A.A., Serieys, L.E., Prasad, T., Leighton, G.R., Sanderson, J.G. and Leung, L.K.P. 2022. Urban habitat use and home ranges of Fishing Cats in Colombo, Sri Lanka. <i>Mammalian Biology</i> 102(1): 271–277.",
+      "year": "2022",
+      "title": "Urban habitat use and home ranges of Fishing Cats in Colombo, Sri Lanka",
+      "author": "Ratnayaka, A.A., Serieys, L.E., Prasad, T., Leighton, G.R., Sanderson, J.G. and Leung, L.K.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Resplendent Ceylon. 2021. Conserving the Peak Ridge Forest Corridor. Resplendent Journal, 22 March 2021. Available at: <a href=\"https://www.resplendentceylon.com/resplendentjournal/conserving-the-peak-ridge-forest-corridor/\">https://www.resplendentceylon.com/resplendentjournal/conserving-the-peak-ridge-forest-corridor/</a>. ",
+      "year": "2021",
+      "title": "Conserving the Peak Ridge Forest Corridor",
+      "author": "Resplendent Ceylon",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sadik, A.S. and Akash, M. 2024. A treetop diner: Fishing Cat foraging on arboreal nests of colonial waterbirds in Bangladesh. <i>Mammalia</i> 88(2): 100–105.",
+      "year": "2024",
+      "title": "A treetop diner: Fishing Cat foraging on arboreal nests of colonial waterbirds in Bangladesh",
+      "author": "Sadik, A.S. and Akash, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Samanta, S., Hazra, S., Mondal, P.P., Chanda, A., Giri, S., French, J.R. and Nicholls, R.J. 2021. Assessment and attribution of mangrove Forest changes in the Indian Sundarbans from 2000 to 2020. <i>Remote Sensing</i> 13(24): 4957.",
+      "year": "2021",
+      "title": "Assessment and attribution of mangrove Forest changes in the Indian Sundarbans from 2000 to 2020",
+      "author": "Samanta, S., Hazra, S., Mondal, P.P., Chanda, A., Giri, S., French, J.R. and Nicholls, R.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sanyal, P. and Roy, S. 1985. On the trail of Fishing Cat. <i>Cheetal</i> 27(1&2): 5–9.",
+      "year": "1985",
+      "title": "On the trail of Fishing Cat",
+      "author": "Sanyal, P. and Roy, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sathiyaselvam, P., Satyanarayana, E. and Kathula, T. 2016. Current status and threats to Fishing Cat <i>Prionailurus viverrinus</i> (Bennett, 1833) in Godavari mangroves, Andhra Pradesh, India. <i>Indian Forester</i> 142(10): 950–832.",
+      "year": "2016",
+      "title": "Current status and threats to Fishing Cat <i>Prionailurus viverrinus</i> (Bennett, 1833) in Godavari mangroves, Andhra Pradesh, India",
+      "author": "Sathiyaselvam, P., Satyanarayana, E. and Kathula, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Shankar, A., Salaria, N., Sanil, R., Chackaravarthy, S.D. and Shameer, T.T. 2020. Spatio-temporal association of Fishing Cats with the mammalian assemblages in the East Godavari mangrove delta, India. <i>Mammal Study</i> 45(4): 303–313.",
+      "year": "2020",
+      "title": "Spatio-temporal association of Fishing Cats with the mammalian assemblages in the East Godavari mangrove delta, India",
+      "author": "Shankar, A., Salaria, N., Sanil, R., Chackaravarthy, S.D. and Shameer, T.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sultana, M.N., Suzuki, A., Numata, S., Aziz, M.A. and Palash, A. 2022. The killing of Fishing Cat <i>Prionailurus viverrinus</i> (Bennett, 1833) (Mammalia: Carnivora: Felidae) in Hakaluki Haor, Bangladesh. <i>Journal of Threatened Taxa</i> 14(10): 21903–21917.",
+      "year": "2022",
+      "title": "The killing of Fishing Cat <i>Prionailurus viverrinus</i> (Bennett, 1833) (Mammalia: Carnivora: Felidae) in Hakaluki Haor, Bangladesh",
+      "author": "Sultana, M.N., Suzuki, A., Numata, S., Aziz, M.A. and Palash, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Talegaonkar, R.K., Momin, A.C., Nigam, P. and Pathak, M. 2018. Record of Fishing Cat from Bandhavgarh Tiger Reserve, Madhya Pradesh, India. <i>Cat News</i> 68: 5–6.",
+      "year": "2018",
+      "title": "Record of Fishing Cat from Bandhavgarh Tiger Reserve, Madhya Pradesh, India",
+      "author": "Talegaonkar, R.K., Momin, A.C., Nigam, P. and Pathak, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thaung R., Herranz Muñoz, V., Holden, J., Willcox, D. and Souter, N. 2018. The vulnerable Fishing Cat <i>Prionailurus viverrinus</i> and other globally threatened species in Cambodia's coastal mangroves. <i>Oryx</i> 52(4): 636–640.",
+      "year": "2018",
+      "title": "The vulnerable Fishing Cat <i>Prionailurus viverrinus</i> and other globally threatened species in Cambodia's coastal mangroves",
+      "author": "Thaung R., Herranz Muñoz, V., Holden, J., Willcox, D. and Souter, N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Thu, A.M., Lwin, Y.H. and Quan, R.C. 2024. Mammals of Myanmar: an annotated checklist. <i>Mammalia</i> 88(3): 147–197.",
+      "year": "2024",
+      "title": "Mammals of Myanmar: an annotated checklist",
+      "author": "Thu, A.M., Lwin, Y.H. and Quan, R.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Uddin, M.M., Hossain, M.M., Aziz, A.A. and Lovelock, C.E. 2022. Ecological development of mangrove plantations in the Bangladesh Delta. <i>Forest Ecology and Management </i> 517: 120269.",
+      "year": "2022",
+      "title": "Ecological development of mangrove plantations in the Bangladesh Delta",
+      "author": "Uddin, M.M., Hossain, M.M., Aziz, A.A. and Lovelock, C.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Uddin, N., Enoch, S., Harihar, A., Pickles, R.S. and Hughes, A.C. 2023. Laundered alive? The transnational trade in wild felids through Bangladesh. <i>Global Ecology and Conservation</i> 41: e02356.",
+      "year": "2023",
+      "title": "Laundered alive? The transnational trade in wild felids through Bangladesh",
+      "author": "Uddin, N., Enoch, S., Harihar, A., Pickles, R.S. and Hughes, A.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Umar Farooq, G.M. 2020. The Sindh Wildlife Protection, Preservation, Conservation and Management Bill, 2020. Provincial Assembly of Sindh, Karachi, Pakistan.",
+      "year": "2020",
+      "title": "The Sindh Wildlife Protection, Preservation, Conservation and Management Bill, 2020",
+      "author": "Umar Farooq, G.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "UNCC. 2023. Sri Lanka Mangrove Conservation Project | Sri Lanka | United Nations Climate Change.",
+      "year": "2023",
+      "title": "Sri Lanka Mangrove Conservation Project | Sri Lanka | United Nations Climate Change",
+      "author": "UNCC",
+      "citation_short": null
+    },
+    {
+      "citation": "Veettil, B.J., Wickramasinghe, D. and Amarakoon, V. 2023. Mangrove forests in Sri Lanka: An updated review on distribution, diversity, current state of research and future perspectives. <i>Regional Studies in Marine Science</i> 62: 102932.",
+      "year": "2023",
+      "title": "Mangrove forests in Sri Lanka: An updated review on distribution, diversity, current state of research and future perspectives",
+      "author": "Veettil, B.J., Wickramasinghe, D. and Amarakoon, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Veettil, B.K. and Quang, N.X. 2019. Mangrove forests of Cambodia: Recent changes and future threats. <i>Ocean & Coastal Management</i> 181: 104895.",
+      "year": "2019",
+      "title": "Mangrove forests of Cambodia: Recent changes and future threats",
+      "author": "Veettil, B.K. and Quang, N.X.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wongson, T., Khaewphakdee, S., Monkonsin, W., Serieys, L.E., Wong, W.-M., Yindee, M., Pattanarangsan, R., Suksavate, W., Promkuntod, P., Klakhaeng, C. and Sukmasuang, R. 2024. Dietary habits of Fishing Cats in a human-dominated wetland in Coastal Thailand. <i>Biodiversitas</i> 25(6): 2788–2797.",
+      "year": "2024",
+      "title": "Dietary habits of Fishing Cats in a human-dominated wetland in Coastal Thailand",
+      "author": "Wongson, T., Khaewphakdee, S., Monkonsin, W., Serieys, L.E., Wong, W.-M., Yindee, M., Pattanarangsan, R., Suksavate, W., Promkuntod, P., Klakhaeng, C. and Sukmasuang, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "WWCT. 2024. Corridors for Conservation. The Wilderness and Wildlife Conservation Trust, Sri Lanka. Available at: <a href=\"https://www.wwct.org/key-projects/corridors-for-conservation\">https://www.wwct.org/key-projects/corridors-for-conservation</a>. ",
+      "year": "2024",
+      "title": "Corridors for Conservation. The Wilderness and Wildlife Conservation Trust, Sri Lanka",
+      "author": "WWCT",
+      "citation_short": null
+    },
+    {
+      "citation": "Yadav, B.P., Appel, A., Shrestha, B.P., Dahal, B.R. and Dhakal, M. 2020. The Fishing Cat <i>Prionailurus viverrinus</i> (Bennett, 1833) (Mammalia: Carnivora: Felidae) in Shuklaphanta National Park, Nepal. <i>Journal of Threatened Taxa</i> 12(16): 17203–17212.",
+      "year": "2020",
+      "title": "The Fishing Cat <i>Prionailurus viverrinus</i> (Bennett, 1833) (Mammalia: Carnivora: Felidae) in Shuklaphanta National Park, Nepal",
+      "author": "Yadav, B.P., Appel, A., Shrestha, B.P., Dahal, B.R. and Dhakal, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Yadav, S.K., Lamichhane, B.R., Subedi, N., Dhakal, M., Thapa, R.K., Poudyal, L. and Dahal, B.R. 2018. Fishing Cat camera trapped in Babai Valley of Bardia National Park, Nepal. <i>Cat News</i> 67: 31–33.",
+      "year": "2018",
+      "title": "Fishing Cat camera trapped in Babai Valley of Bardia National Park, Nepal",
+      "author": "Yadav, S.K., Lamichhane, B.R., Subedi, N., Dhakal, M., Thapa, R.K., Poudyal, L. and Dahal, B.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zubairi, F. and Naidu, A. 2016. Fishing Cat may not be extirpated in Pakistan: a call to survey coastal mangroves. <i>Cat News </i> 63: 21–22.",
+      "year": "2016",
+      "title": "Fishing Cat may not be extirpated in Pakistan: a call to survey coastal mangroves",
+      "author": "Zubairi, F. and Naidu, A.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Competition"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

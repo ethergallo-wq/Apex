@@ -1,0 +1,816 @@
+{
+  "assessment_date": "2008-12-14T00:00:00.000+00:00",
+  "year_published": "2009",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 61550,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/61550/12514105",
+  "citation": "Wolfgang Böhme, Valentin Pérez-Mellado, Marc Cheylan, Hans Konrad Nettmann, László Krecsák, Bogoljub Sterijovski, Benedikt Schmidt, Petros Lymberakis, Richard Podloucky, Roberto Sindaco, Aziz Avci 2009. Podarcis muralis. The IUCN Red List of Threatened Species 2009: e.T61550A12514105. Accessed on 15 May 2026.",
+  "assessment_id": 12514105,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 61550,
+    "scientific_name": "Podarcis muralis",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "LACERTIDAE",
+    "genus_name": "Podarcis",
+    "species_name": "muralis",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Laurenti, 1768)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Duvar Kertenkelesi",
+        "language": "tur"
+      },
+      {
+        "main": false,
+        "name": "Lagartija Roquera",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Lucertola Muraiola",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Mauereidechse",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Sидна гуштерица / Скалеста гуштерица",
+        "language": "mac"
+      },
+      {
+        "main": false,
+        "name": "Τοιχόσαυρα",
+        "language": "gre"
+      },
+      {
+        "main": true,
+        "name": "Common Wall Lizard",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Seps muralis Laurenti, 1768",
+        "status": "ACCEPTED",
+        "genus_name": "Seps",
+        "species_name": "muralis",
+        "species_author": "Laurenti, 1768",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Lacerta muralis (Laurenti, 1768)",
+        "status": "ACCEPTED",
+        "genus_name": "Lacerta",
+        "species_name": "muralis",
+        "species_author": "(Laurenti, 1768)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Lacertus terrestris Garsault, 1764",
+        "status": "ACCEPTED",
+        "genus_name": "Lacertus",
+        "species_name": "terrestris",
+        "species_author": "Garsault, 1764",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 2500,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species is widely distributed in Europe. It ranges from northern Spain, northwards to northern France, southern Belgium, Luxembourg, west-central Germany, much of Austria, southwestern Czech Republic, central Slovakia and central Hungary, and eastwards to central Romania, Bulgaria, most of the Balkans (excluding most of the Aegean islands) and northwestern Anatolia, Turkey. It occurs on Jersey in the Channel Islands (United Kingdom). It is largely absent from Northern Europe (it occurs as small patchy, isolated populations in the north of its range), southern Iberia (though there are fragmented, isolated populations in central Spain), and parts of southern Italy and its larger islands (Sardinia, Sicily, and Apulia). It has been introduced to the United States. Many southern subspecies of <em>P. muralis</em> have been introduced to Switzerland, where they are mostly found along railway lines (Benedikt Schmidt pers. comm.). It is found from sea level up to 2,500m asl.",
+    "population": "It is generally an abundant species in suitable habitat.",
+    "habitats": "In dry areas, the species is largely found in humid or semi-humid habitats. It the more northern parts of its range it is mostly found in the driest areas. It can be occur in rocky and scree areas, scrubland, deciduous and coniferous woodland, orchards, vineyards, fields, stone walls, and on buildings. It is often found in human settlements including large cities and villages and railway lines which may be a possible method of dispersal. The females lay two to three clutches of two to six eggs per year. This species has been introduced in many places in Germany and the United Kingdom, often presumably by hobbyists (e.g. terrarium owners).",
+    "threats": "There generally appear to be no major threats to this adaptable and widespread species. Populations are locally threatened in parts of its range, including those on islands or in mountains (for example through the development of alpine tourism in the Central Mountains of Spain). Several populations, principally in Northern Europe, are threatened by the loss of suitable habitat to agricultural intensification and overuse of pesticides. This species is frequently encountered in the pet trade, however the overall impact of this is not considered to constitute a major threat. The introduction of non-native subspecies may represent a threat to some localized populations.",
+    "measures": "This species is listed on Appendix II of the Bern Convention, and on Annex IV of the European Union Habitats Directive. It is protected by national legislation in many countries (e.g.. Switzerland), and occurs in a number of protected areas. The subspecies <em>P. m. rasquinetti</em> is listed as DD on the Spanish National Red List. This species is categorized as Least Concern in Switzerland (Monney and Meyer, 2005).",
+    "use_trade": null,
+    "rationale": "Listed as Least Concern in view of its wide distribution, tolerance of a broad range of habitats, presumed large population, and because it is unlikely to be declining fast enough to qualify for listing in a more threatened category.",
+    "trend_justification": null,
+    "taxonomic_notes": "Additional research is needed to understand the status of several described subspecies."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Mediterranean-type Shrubby Vegetation"
+      },
+      "code": "3_8"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Rocky areas (eg. inland cliffs, mountain peaks)"
+      },
+      "code": "6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Czechia"
+      },
+      "code": "CZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Belgium"
+      },
+      "code": "BE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "North Macedonia"
+      },
+      "code": "MK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Hungary"
+      },
+      "code": "HU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Luxembourg"
+      },
+      "code": "LU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Austria"
+      },
+      "code": "AT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Slovakia"
+      },
+      "code": "SK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bosnia and Herzegovina"
+      },
+      "code": "BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Serbia"
+      },
+      "code": "RS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Switzerland"
+      },
+      "code": "CH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Liechtenstein"
+      },
+      "code": "LI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_3_4"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Wolfgang Böhme, Valentin Pérez-Mellado, Marc Cheylan, Hans Konrad Nettmann, László Krecsák, Bogoljub Sterijovski, Benedikt Schmidt, Petros Lymberakis, Richard Podloucky, Roberto Sindaco, Aziz Avci",
+      "value": null
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Cox, N. and Temple, H.J. (Global Reptile Assessment)",
+      "value": null
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Sindaco, R. and Jeremčenko, V.K. 2008. <i>The Reptiles of the Western Palearctic. 1. Annotated Checklist and Distributional Atlas of the Turtles, Crocodiles, Amphibians and Lizards of Europe, North Africa, Middle East and Central Asia</i>. Edizioni Belvedere, Latina (Italy).",
+      "year": "2008",
+      "title": "The Reptiles of the Western Palearctic. 1. Annotated Checklist and Distributional Atlas of the Turtles, Crocodiles, Amphibians and Lizards of Europe, North Africa, Middle East and Central Asia",
+      "author": "Sindaco, R. and Jeremčenko, V.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Baran, I. and Atatür, M.K. 1998. <i>Turkish herpetofauna (amphibians and reptiles)</i>. Republic of Turkey Ministry of Environment, Ankara.",
+      "year": "1998",
+      "title": "Turkish herpetofauna (amphibians and reptiles)",
+      "author": "Baran, I. and Atatür, M.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pleguezuelos, J.M., Márquez, R. and Lizana, M. 2002. <i>Atlas y Libro Rojo de los Anfibios y Reptiles de España.</i> Dirección General de la Conservación de la naturaleza-Associación Herpetológica Española., Madrid.",
+      "year": "2002",
+      "title": "Atlas y Libro Rojo de los Anfibios y Reptiles de España.",
+      "author": "Pleguezuelos, J.M., Márquez, R. and Lizana, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Arnold, E.N. 2003. <i>Reptiles and Amphibians of Europe</i>. Princeton University Press, Princeton and Oxford.",
+      "year": "2003",
+      "title": "Reptiles and Amphibians of Europe",
+      "author": "Arnold, E.N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Andreu, A., Bea, A., Braña, F., Galán, P., López-Jurado, L.F., Pérez-Mellado, V., Pleguezuelos, J.M. and Salvador, A. 1998. Fauna Ibérica. Reptiles. 10: 1-705.",
+      "year": "1998",
+      "title": "Fauna Ibérica. Reptiles",
+      "author": "Andreu, A., Bea, A., Braña, F., Galán, P., López-Jurado, L.F., Pérez-Mellado, V., Pleguezuelos, J.M. and Salvador, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sindaco, R., Venchi, A., Carpaneto, G.M. and Bologna, M.A. 2000. The reptiles of Anatolia: a checklist and zoogeographical analysis. <i>Biogeographia</i> 21: 441-554.",
+      "year": "2000",
+      "title": "The reptiles of Anatolia: a checklist and zoogeographical analysis",
+      "author": "Sindaco, R., Venchi, A., Carpaneto, G.M. and Bologna, M.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gasc, J.-P., Cabela, A., Crnobrnja-Isailovic, J., Dolmen, D., Grossenbacher, K., Haffner, P., Lescure, J., Martens, H., Martínez-Rica, J.P., Maurin, H., Oliveira, M.E., Sofianidou, T.S., Veith, M. and Zuiderwijk, A. 1997. <i>Atlas of Amphibians and Reptiles in Europe.</i> Societas Europaea Herpetologica and Musée National d'Histoire Naturelle, Paris.",
+      "year": "1997",
+      "title": "Atlas of Amphibians and Reptiles in Europe.",
+      "author": "Gasc, J.-P., Cabela, A., Crnobrnja-Isailovic, J., Dolmen, D., Grossenbacher, K., Haffner, P., Lescure, J., Martens, H., Martínez-Rica, J.P., Maurin, H., Oliveira, M.E., Sofianidou, T.S., Veith, M. and Zuiderwijk, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sindaco, R., Doria, G., Razzetti, E. and Bernini, F. 2006. <i>Atlas of Italian Amphibians and Reptiles\\\\Atlante Degli Anfibi E Dei Rettili D'Italia.</i> Societas Herpetologica Italica - Edizioni Polistampa, Firenze.",
+      "year": "2006",
+      "title": "Atlas of Italian Amphibians and Reptiles\\\\Atlante Degli Anfibi E Dei Rettili D'Italia.",
+      "author": "Sindaco, R., Doria, G., Razzetti, E. and Bernini, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kasapidis, P., Provatidou, S., Maragou, P. and Valakos, E.D. 1996. Neue Daten über die Herpetofauna von Lesbos (ägäische Inseln, Griechenland) und einige biogeographische Bemerkungen über die Inseln des nordöstlichen ägäischen Archipels. <i>Salamandra</i> 32(3): 171-180.",
+      "year": "1996",
+      "title": "Neue Daten über die Herpetofauna von Lesbos (ägäische Inseln, Griechenland) und einige biogeographische Bemerkungen über die Inseln des nordöstlichen ägäischen Archipels",
+      "author": "Kasapidis, P., Provatidou, S., Maragou, P. and Valakos, E.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nöllert, A., Nöllert, C. and Ritter, A. 1986. Einige Beobachtungen zur Herpetofauna der bulgarischen Schwarzmeerküste und Südwestbulgariens (Teil 2 - Die Reptilien). <i>Herpetofauna</i> 8(44): 30-34.",
+      "year": "1986",
+      "title": "Einige Beobachtungen zur Herpetofauna der bulgarischen Schwarzmeerküste und Südwestbulgariens (Teil 2 - Die Reptilien)",
+      "author": "Nöllert, A., Nöllert, C. and Ritter, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hofer, U., Monney, J.-C. and Dusej, G. 2001. <i>Die Reptilien der Schweiz: Verbreitung, Lebensräume, Schutz.</i> Birkhäuser Verlag, Basel, Switzerland.",
+      "year": "2001",
+      "title": "Die Reptilien der Schweiz: Verbreitung, Lebensräume, Schutz.",
+      "author": "Hofer, U., Monney, J.-C. and Dusej, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Monney, J.-C. and Meyer, A. 2005. <i>Rote Liste der gefährdeten Reptilien der Schweiz.</i> BUWAL-Reihe: Vollzug Umwelt, 50 S., (BUWAL, Bern, Switzerland).",
+      "year": "2005",
+      "title": "Rote Liste der gefährdeten Reptilien der Schweiz.",
+      "author": "Monney, J.-C. and Meyer, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2009. IUCN Red List of Threatened Species (ver. 2009.1). Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 22 June 2009).",
+      "year": "2009",
+      "title": "IUCN Red List of Threatened Species (ver. 2009.1)",
+      "author": "IUCN",
+      "citation_short": "IUCN 2009.1"
+    },
+    {
+      "citation": "Henle, K. 1985. Ökologische, zoogeographische und systematische Bemerkungen zur Herpetofauna Jugoslawiens. <i>Salamandra</i>: 229-251.",
+      "year": "1985",
+      "title": "Ökologische, zoogeographische und systematische Bemerkungen zur Herpetofauna Jugoslawiens.",
+      "author": "Henle, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Çevik, I.E. 1999. Trakya'da Yasayan Kertenkele Türlerinin Taksonomik Durumu (Lacertilia: Anguidae, Lacertidae, Scincidae). <i>Tr. J. of Zoology</i>: 23-35.",
+      "year": "1999",
+      "title": "Trakya'da Yasayan Kertenkele Türlerinin Taksonomik Durumu (Lacertilia: Anguidae, Lacertidae, Scincidae).",
+      "author": "Çevik, I.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bejaković, D., Aleksić, I., Crnobrnja-Isailović, J., Džukić, G. and Kalezić, M.L. 1996. Female reproductive traits in the Common Wall Lizard (Podarcis muralis) from the Skadar Lake region, Montenegro. <i>Rev.Esp.Herp.</i> 10: 91-96.",
+      "year": "1996",
+      "title": "Female reproductive traits in the Common Wall Lizard (Podarcis muralis) from the Skadar Lake region, Montenegro.",
+      "author": "Bejaković, D., Aleksić, I., Crnobrnja-Isailović, J., Džukić, G. and Kalezić, M.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Aleksić, I. and Ljubisavljević, K. 2001. Reproductive cycle in the Common Wall Lizard (Podarcis muralis) from Belgrade. <i>Arch. Biol. Sci., Belgrade</i> 53(3-4): 73 – 81.",
+      "year": "2001",
+      "title": "Reproductive cycle in the Common Wall Lizard (Podarcis muralis) from Belgrade.",
+      "author": "Aleksić, I. and Ljubisavljević, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dexel, R. 1985. Zur Ökologie der Mauereidechse Podarcis muralis (Laurenti, 1768) (Sauria: Lacertidae) an ihrer nördlichen Arealgrenze. I. Verbreitung, Habitat, Habitus und Lebensweise. <i>Salamandra</i>: 63-78.",
+      "year": "1985",
+      "title": "Zur Ökologie der Mauereidechse Podarcis muralis (Laurenti, 1768) (Sauria: Lacertidae) an ihrer nördlichen Arealgrenze. I. Verbreitung, Habitat, Habitus und Lebensweise.",
+      "author": "Dexel, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Martin, M.R. 1998. Untersuchungen zur Ökologie der Mauereidechse (Podarcis muralis, Laur.) in Heidelberg. <i>Die Eidechse</i>: 10-21.",
+      "year": "1998",
+      "title": "Untersuchungen zur Ökologie der Mauereidechse (Podarcis muralis, Laur.) in Heidelberg.",
+      "author": "Martin, M.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hohl, C. 1985. Versuch einer systematischen Bestandsaufnahme der Eidechsenpopulationen in der Region Basel (Schweiz). <i>Salamandra</i>: 55-62.",
+      "year": "1985",
+      "title": "Versuch einer systematischen Bestandsaufnahme der Eidechsenpopulationen in der Region Basel (Schweiz).",
+      "author": "Hohl, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gruschwitz, M. and Böhme, W. 1986. Podarcis muralis - Mauereidechse. In: Böhme, W. (ed.), <i>Handbuch der Reptilien und Amphibien Europas, Band 2/II., Echsen III (Podarcis).</i>, pp. 155-208. Aula-Verlag, Wiesbaden.",
+      "year": "1986",
+      "title": "Podarcis muralis - Mauereidechse.",
+      "author": "Gruschwitz, M. and Böhme, W.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

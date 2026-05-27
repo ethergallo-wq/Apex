@@ -1,0 +1,20 @@
+{
+  "source": "IUCN Red List API v4",
+  "n_records": 1080,
+  "ok": 935,
+  "failed_or_not_found": 145,
+  "with_red_list_category": 935,
+  "with_elevation": 567,
+  "with_depth": 157,
+  "outputs": {
+    "json": "iucn_status_elevation_depth/iucn_status_elevation_depth.json",
+    "csv": "iucn_status_elevation_depth/iucn_status_elevation_depth.csv",
+    "js": "iucn_status_elevation_depth/iucn_status_elevation_depth.js",
+    "summary": "iucn_status_elevation_depth/summary_status_elevation_depth.json"
+  },
+  "notes": {
+    "depth_upper_m": "limite superiore/meno profondo secondo nomenclatura IUCN, quando presente",
+    "depth_lower_m": "limite inferiore/più profondo secondo nomenclatura IUCN, quando presente",
+    "no_local_inference": "altitudine/profondità/stato sono letti solo dall'assessment IUCN, non inferiti da animals-data.js"
+  }
+}

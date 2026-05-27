@@ -1,0 +1,510 @@
+{
+  "assessment_date": "2016-08-08T01:00:00.000+01:00",
+  "year_published": "2016",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 10748,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/10748/115099085",
+  "citation": "Cassola, F. 2016. Hystrix africaeaustralis (errata version published in 2017). The IUCN Red List of Threatened Species 2016: e.T10748A115099085. Accessed on 15 May 2026.",
+  "assessment_id": 115099085,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 10748,
+    "scientific_name": "Hystrix africaeaustralis",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "RODENTIA",
+    "family_name": "HYSTRICIDAE",
+    "genus_name": "Hystrix",
+    "species_name": "africaeaustralis",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "W.C.H. Peters, 1852",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Small Mammal Specialist Group",
+        "url": "http://www.small-mammals.org/",
+        "description": "Co-Chairs: Thomas Lacher (email: tlacher@tamu.edu) and Rosalind Kennerley (email: Rosalind.Kennerley@durrell.org)\nRed List Authority Coordinator: Roslaind Kennedy (email: Rosalind.Kennerley@durrell.org)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "South African Porcupine",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Ystervark",
+        "language": "afr"
+      },
+      {
+        "main": true,
+        "name": "Cape Porcupine",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 2000,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "7",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "8743574",
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This widespread African species occurs from Kenya and southern Uganda in the north, through Tanzania, Rwanda, southeastern Democratic Republic of the Congo, extreme southwestern Congo, Angola, Zambia, Malawi, and Mozambique, and then south throughout the southern African Subregion (although it is absent from much of central Botswana). There is no confirmed evidence that they occur on The island of Zanzibar, Tanzania. It is found from sea level to over 2,000 m asl.",
+    "population": "It is fairly common, although hunting pressure may account for its absence in some areas.",
+    "habitats": "It is found in most of the types of vegetation encountered in southern Africa. They are generally absent from forest, and are only found here marginally. They have  been recorded in the coastal parts of the Namib Desert in Namibia. Day-time shelters may take the form of rock crevices, caves and abandoned Aardvark (<em>Orycteropus afer</em>) burrows or other types of holes in the ground. Holes are often modified to their own requirements, but they also dig their own burrows as they do in East Africa. It is a nocturnal, territorial and mostly solitary forager, although it can occasionally be found foraging in groups of two to three animals. This species is monogamous and live in groups comprising either an adult pair, an adult pair and their offspring from consecutive litters, or an adult male and young of the year (Skinner and Smithers 1990, Skinner and Chimimba 2005). The species has a gestation period of 93 to 94 days, after which one to three young are born. There is a single litter per year.",
+    "threats": "There are no major threats to this species. Porcupines have benefited from agricultural development and their destructive feeding habitats have led to them being considered as a problem in some farming areas, especially where root crops, potatoes, groundnuts and maize are grown. Porcupines are also notorious for ring-barking trees, which exposes the tree's heartwood and increases susceptibility to fungal infections.",
+    "measures": "It occurs in many protected areas, most of which are very well managed.",
+    "use_trade": "It is hunted for food.",
+    "rationale": "Listed as Least Concern in view of its wide distribution, presumed large population, it occurs in a number of protected areas, has a tolerance of a degree of habitat modification, and because it is unlikely to be declining fast enough to qualify for listing in a more threatened category. Some limited hunting by humans occurs some parts of the range, but the population overall is stable.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Moist"
+      },
+      "code": "2_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Eswatini"
+      },
+      "code": "SZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Rwanda"
+      },
+      "code": "RW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Uganda"
+      },
+      "code": "UG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Zambia"
+      },
+      "code": "ZM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Burundi"
+      },
+      "code": "BI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Botswana"
+      },
+      "code": "BW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Congo"
+      },
+      "code": "CG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Malawi"
+      },
+      "code": "MW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Zimbabwe"
+      },
+      "code": "ZW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Lesotho"
+      },
+      "code": "LS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Cassola, F.",
+      "value": [
+        "Francesca Cassola (Global Mammal Assessment)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Amori, G.",
+      "value": [
+        "Giovanni Amori (Italian National Research Council, La Sapienza University in Rome, Italy)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Grubb, P.",
+      "value": [
+        "P. Grubb (Deceased - formerly Natural History Museum, London)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This errata assessment has been created because the map was accidentally left out of the version published previously."
+    }
+  ],
+  "references": [
+    {
+      "citation": "IUCN. 2017. The IUCN Red List of Threatened Species. Version 2017-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 27 April 2017).",
+      "year": "2017",
+      "title": "The IUCN Red List of Threatened Species. Version 2017-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2017-1"
+    },
+    {
+      "citation": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C. 2013. Generation length for mammals. <i>Nature Conservation</i> 5: 87–94.",
+      "year": "2013",
+      "title": "Generation length for mammals",
+      "author": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ansell, W.F.H. and Dowsett, R.J. 1988. <i>Mammals of Malawi - an Annotated Checklist and Atlas</i>. The Trendrine Press, Zennor, St Ives, Cornwall, UK.",
+      "year": "1988",
+      "title": "Mammals of Malawi - an Annotated Checklist and Atlas",
+      "author": "Ansell, W.F.H. and Dowsett, R.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Delany, M.J. 1975. <i>The Rodents of Uganda</i>. Trustees British Museum (Natural History), London, UK.",
+      "year": "1975",
+      "title": "The Rodents of Uganda",
+      "author": "Delany, M.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Smithers, R.H.N. 1971. The mammals of Botswana. <i>National Museums of Rhodesia, Museum Memoir</i> 4: 1-340.",
+      "year": "1971",
+      "title": "The mammals of Botswana",
+      "author": "Smithers, R.H.N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rathbun, G.B. (subeditor). 2005. Macroscelidea. In: J.D. Skinner and C.T. Chimimba (eds), <i>The Mammals of the Southern African Subregion, 3rd edition</i>, pp. 22-34. Cambridge University Press, Cambridge, UK.",
+      "year": "2005",
+      "title": "Macroscelidea",
+      "author": "Rathbun, G.B. (subeditor)",
+      "citation_short": ""
+    },
+    {
+      "citation": "Skinner, J.D. and Chimimba, C.T. (eds). 2005. <i>The Mammals of the Southern African Subregion</i>. Cambridge University Press, United Kingdom, Cambridge.",
+      "year": "2005",
+      "title": "The Mammals of the Southern African Subregion",
+      "author": "Skinner, J.D. and Chimimba, C.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Swynnerton, G.H. and Hayman, R.W. 1951. A Checklist of the Land Mammals of the Tanganyika Territory and the Zanzibar Protectorate. <i>Journal of the East Africa Natural History Society</i> 20(6): 274-392.",
+      "year": "1951",
+      "title": "A Checklist of the Land Mammals of the Tanganyika Territory and the Zanzibar Protectorate",
+      "author": "Swynnerton, G.H. and Hayman, R.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ansell, W.F.H. 1978. The Mammals of Zambia. pp. 73-74. The National Parks and Wildlife Service, Chilanga, Zambia.",
+      "year": "1978",
+      "title": "The Mammals of Zambia",
+      "author": "Ansell, W.F.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 07 December 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-3"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

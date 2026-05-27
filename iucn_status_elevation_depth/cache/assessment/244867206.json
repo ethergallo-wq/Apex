@@ -1,0 +1,1715 @@
+{
+  "assessment_date": "2020-03-07T00:00:00.000+00:00",
+  "year_published": "2023",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 18711,
+  "criteria": "A2cde+3ce",
+  "url": "https://www.iucnredlist.org/species/18711/244867206",
+  "citation": "Groenendijk, J., Leuchtenberger, C., Marmontel, M., Van Damme, P.A., Wallace, R. & Schenck, C. 2023. Pteronura brasiliensis (amended version of 2022 assessment). The IUCN Red List of Threatened Species 2023: e.T18711A244867206. Accessed on 15 May 2026.",
+  "assessment_id": 244867206,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 18711,
+    "scientific_name": "Pteronura brasiliensis",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CARNIVORA",
+    "family_name": "MUSTELIDAE",
+    "genus_name": "Pteronura",
+    "species_name": "brasiliensis",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Gmelin, 1788)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Otter Specialist Group",
+        "url": "http://www.otterspecialistgroup.org/",
+        "description": "Co-Chairs: Nicole Duplaix (email: Nicole.Duplaix@oregonstate.edu) and Anna Loy (email: a.loy@unimol.it)\nRed List Authority Coordinator: Syed Ainul Hussain (email: hussain@wii.gov.in)\nNewsletter: http://www.otterspecialistgroup.org/Bulletin/IUCNOSGBull.html"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Giant Brazilian Otter",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Arirai",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Ariranha",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Lobito de Cola Ancha",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Lobo del Río",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Lobo de Rio",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Lobo de Río Grande",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Lobo Gargantilla",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Loutre géante du Brésil",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Perro de Agua",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "Giant Otter",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Pteronura sambachii Gray, 1837",
+        "status": "ACCEPTED",
+        "genus_name": "Pteronura",
+        "species_name": "sambachii",
+        "species_author": "Gray, 1837",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mustela brasilinensis Gmelin, 1788",
+        "status": "ACCEPTED",
+        "genus_name": "Mustela",
+        "species_name": "brasilinensis",
+        "species_author": "Gmelin, 1788",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Endangered"
+    },
+    "code": "EN"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 1000,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": 0,
+    "upper_depth_limit": 0,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "5",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "No",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<em>Pteronura brasiliensis</em> is endemic to South America and is distributed east of the Andes in the Orinoco, Amazonas, and Parana basins, and the hydrographic networks of the Guianas. The northern limit of its distribution occurs in northern Venezuela, and the southern limit in Misiones, Argentina. The Giant Otter’s range has become discontinuous and fragmented due to local extinctions; the Uruguayan and Argentine populations are extinct or nearly so (Gil pers. comm., Buschiazzo pers. comm.), and the species is reduced to a single, small subpopulation in Paraguay, occupying less than 2% of its former distributional range. It is also extinct to the east of the Tocantins and Paraná basins in Brazil. In the Brazilian Cerrado a population persists in the face of intense habitat modification. Important subpopulations are still found in parts of the Amazon, in the Pantanal region, and, possibly, in the Guianas.",
+    "population": "<p>There is no current total population estimate and current population trends are unknown: however, there is evidence that populations may be recovering in the Yavarí-Mirín River in northern Peru (Recharte and Bodmer 2010, Deza pers. comm. 2012), the Madidi and Itenéz or Guaporé Rivers in Bolivia (Ayala <em>et al.</em> 2015, Zambrana Rojas <em>et al. </em>2012), the Lagarto-Cocha and Cuyabeno rivers in the northeastern Ecuadorian Amazon (Utreras pers. comm. 2018), in the Amanã Reserve in Brazil Amazon (Marmontel <em>et al.</em> 2015) and the Brazilian Pantanal (Leuchtenberger and Mourão 2008, Ribas&#160;<em>et al.</em> 2012, Tomás <em>et al</em>. 2015). However, in other regions, such as in the Department of Madre de Dios in southeastern Peru (R. Williams pers. comm. 2012) and in western Colombia (J.C. Botello pers. comm. 2012), populations are on the decline due to habitat loss and degradation, and other human activities. Most populations remain isolated from each other. Population estimates based on surveys exist for some areas: </p><p></p><ol><li><strong>Brazil</strong>: In the Pantanal, 1,100 breeding individuals or 3,950 individuals in 7,350 km of rivers (Tomas <em>et al.</em> 2015); Xixuaú River in Amazon, 15 groups (30 breeding individuals, 80 individuals) in 40 km of river (Evangelista and Rosas 2011); Balbina lake in Amazon, 67 groups (134 breeding individuals, 280 individuals) (Palmeirim <em>et al. </em>2014); Amanã Reserve in Amazon: 12 groups (24 breeding individuals, 75 individuals) (Lima <em>et al.</em> 2014); Araguaia, above Bananal Island, Brazil: upper Araguaia basin in Cerrado: 200 individuals (G. Georgiadis pers. comm. 2018); Cantão State Park: 4 groups (eight breeding individuals, 20 individuals), (Georgiadis <em>et al.</em> 2015). These surveys suggest a population of at least 1,296 breeding individuals, and a total population size of 4,659 individuals in Brazil. </li><li><strong>Bolivia</strong>: in the northwest, Madre de Dios-Beni sub-basin: 271 individuals in 1,318.6 km of rivers and streams and 42.14 km² of lakes (Ayala <em>et al.</em> 2015); in the Pantanal (Paraguay river sub-basin), 50 individuals in 118,031 km²; and in the northeast (Itenez sub-basin), 600 individuals in 186,460 km², totalling an estimated 1,021 individuals in Bolivia.</li><li><strong>Peru</strong>: southeastern Peru, Madre de Dios: 180–400 individuals (R. Williams pers. comm. 2012); Manu National Park: 81 individuals and 11 groups in 2006 (Groenendijk <em>et al.</em> 2014);</li><li><strong>Ecuador</strong>: Cuyabeno Wildlife Reserve, nine groups (18 breeding individuals, 45 individuals), but Utreras and Tirica (2011) suggest that the Ecuador population is less than 250 individuals;</li><li><strong>French Guiana</strong>: at least 200 individuals (Benoit de Thoisy pers. comm. 2012);</li><li><strong>Paraguay</strong>: 24–32 individuals (Cartes and R. Pickles pers. comm. 2011);</li><li><strong>Guyana</strong>: Rewa Head: minimum of 35 individuals (Pickles&#160;<em>et al.&#160;</em>2011).</li></ol><p></p><p>                Although the distribution range of Giant Otters is apparently large, their occurrence is irregular, making overall population size estimates a challenge, especially because the number of groups is not available for all surveyed areas. Also, due to their social organization, the total number of adult individuals does not represent the effective population size, as only the alpha couple of a given group reproduces.<br/><br/>Accelerating habitat destruction, degradation, and exploitation throughout the Giant Otter's range represents the greatest threat to the species, and is suspected to have caused a population decline of more than 50% in the past 25 years (three generations, based on Groenendijk <em>et al</em>. 2014), and (based on current trends) is suspected to lead to a future reduction of more than 50% in population size over the next 25 years.<br/></p>",
+    "habitats": "<p>The Giant Otter inhabits large rivers, streams, lakes and swamps (Duplaix 1980, Carter and Rosas 1997). In Suriname, the species seems to prefer black water creeks and rivers with sandy or rocky bottoms (Duplaix 1980). In Peru, large lowland rivers with gentle flow and oxbow lakes with high fish densities are preferred (Schenck 1999). In Bolivia, both clear and white water floodplains are used (Zambrana Rojas <em>et al. </em>2012). &#160;Since Giant Otters build dens and use campsites along the banks of water bodies, some habitat traits are important determinants of presence, such as gentle slopes and vegetation cover and proximity to the water’s edge (Lima <em>et al.</em> 2012). In seasonally flooded habitats, the availability of banks and other habitat features may change, and induce changes in habitat selection (Leuchtenberger <em>et al.</em> 2013). During the peak inundation in the southern Pantanal, when no banks were available, Giant Otter groups used emerged shrubs as refuges and latrines (Leuchtenberger <em>et al.</em> 2015). At such times, when prey is more dispersed, Giant Otters were observed in flooded forest, swamps and grasslands adjacent to the river (Leuchtenberger <em>et al.</em> 2013). Territoriality and population density may lead some groups to use unusual sites, such as artificial lakes along roads in the southern Pantanal (Leuchtenberger <em>et al.</em> 2013), even adapting their diet (Ribas <em>et al.</em> 2012). Giant Otters also use agricultural channels (Laidler 1984) and the reservoirs of dams (Palmeirim <em>et al. </em>2014). The preferred habitat for giant otters seem to be undisturbed water bodies, with high-quality vegetation cover and abundant prey density.<br/><br/>Giant Otters are one of the most social members of the otter family. A Giant Otter group consists of a dominant breeding pair, non-breeding subadults and offspring. Group size can range from two to 16 individuals that may or may not be related (Ribas <em>et al.</em> 2016). Reproduction is related to the capacity of the group to defend high-quality territories, usually a function of group size (Groenendijk <em>et al.</em> 2015, Leuchtenberger <em>et al.</em> 2015), possibly explaining the advantage of having non-related individuals in the group (Leuchtenberger and Mourão 2008, Ribas <em>et al</em>. 2016). Giant Otters attain sexual maturity at around 2.5 years old (Oliveira <em>et al. </em>2011, Sykes-Gatz 2004), and the earliest breeding may occur at age three years (Groenendijk <em>et al.</em> 2015). A group usually produces one litter a year, ranging from one to six young, but averaging two (Duplaix 1980, Staib 2005, Groenendijk and Hajek 2006, Leuchtenberger and Mourão 2008).<br/><br/>Groups live in well-established territories that are constantly defended by scent-markings at latrines, campsites and dens along the banks of lakes and rivers (Leuchtenberger and Mourão 2009), and warning vocalizations (Leuchtenberger <em>et al.</em> 2014, Mumm Knörnschild 2017). Conflict encounters are common when an intruder is detected, and may lead to serious injuries or even death (Schweizer 1992, Rosas and Mattos 2003, Ribas and Mourão 2004). Territories vary in size from 0.5 km to 18 km in the dry season, and 8 to 24 km in the wet season (Utreras <em>et al.</em> 2005, Leuchtenberger <em>et al.</em> 2015), and appears to be related to group size (Groenendijk <em>et al.</em> 2015, Leuchtenberger <em>et al.</em> 2015). The size of neighbouring groups may limit the expansion of territory (Leuchtenberger <em>et al. </em>2015).<br/><br/>The diet of Giant Otters consists almost exclusively of fish, but may also include caiman and other vertebrates (Ribas <em>et al.</em> 2012, Rosas-Ribeiro <em>et al</em>. 2012). The species is opportunistic in its diet and adapts its diet according to prey availability.</p>  The average reproductive lifespan is about five years for females and males (Groenendijk <em>et al</em>. 2014). This, in tandem with a mortality of about 50% (Groenendijk <em>et al.</em> 2014), a suspected high transient mortality, and difficulty to establish new groups (Schenck and Staib 1998), means that population recovery and colonization of new areas can be slow.",
+    "threats": "<p>The species is threatened by multiple human activities throughout its range, destruction of riparian habitat, overfishing, contamination of water bodies—especially by gold mining, fossil fuel exploration, and the use of pesticides and fertilizers, diseases spread by domestic animals, and mismanaged tourism (Duplaix 1980, Schenck 1999, Utreras and Tirira 2011). Human populations are increasing and expanding. In the last census, the Amazon region registered the highest population growth in Brazil. Illegal settlements, road opening and deforestation threaten pristine habitats. Colonization of new areas are expected, followed by intensive exploitation of natural resources. Furthermore, proposed mega-projects in the 2007 Brazilian Growth Acceleration Plan represent a significant threat to Brazilian Amazonian and Pantanal habitats. Changes in government and environmental protection policies in Brazil endanger the pristine areas of the Amazon, Pantanal and Cerrado. Between 2017 and 2019 4,500 km² of the Amazon were lost due to deforestation and burning, of which 65% occurred in 2019 (Cannon 2019, <span lang=\"EN-GB\"><a href=\"https://news.mongabay.com/2019/11/deforestation-preceded-fires-in-massive-area-of-amazon-in-2019/\">https://news.mongabay.com/2019/11/deforestation-preceded-fires-in-massive-area-of-amazon-in-2019/</a>). From August to November of 2019, at least 1.5 million hectares of Brazilian Pantanal were burned (<a href=\"https://www.dw.com/en/brazils-next-fire-disaster-in-the-pantanal-wetlands/a-51199164\">https://www.dw.com/en/brazils-next-fire-disaster-in-the-pantanal-wetlands/a-51199164</a>).</p>  <p>Hunting for the pelt trade was the greatest threat to the Giant Otter in the past and the species came close to extinction in the early 1970s in Ecuador, Colombia, Venezuela, Bolivia, and Brazilian Pantanal (Duplaix 1980). From 1960 to 1969, records indicated a regional harvest of 12,390 giant otter skins. In 1973, giant otters were placed on CITES Appendix I, and the enforcement of international trade restrictions on Giant Otter&#160;skins in 1975 finally ended Giant Otter&#160;hunting (Recharte and Bodmer 2010).</p>  <p>The Giant Otter&#160;remains endangered because of the low recuperation rate of relict populations now also under pressure from human activities (Groenendijk <em>et al.</em> 2015). Direct conflict between humans and otters is an increasing problem. Otters may be killed for fun or out of fear, or, more often, because they are seen as competitors for fish by loggers, miners, and fishermen, who often blame them for depleting fish resources used for local and commercial consumption (Gómez and Jorgensen 1999, Recharte&#160;<em>et al.</em>&#160;2008, Rosas-Ribeiro&#160;<em>et al.</em>&#160;2012, Utreras and Tirira 2011). Giant Otters can drown in fishing nets and traps and are also blamed for damaging them (Rosas-Ribeiro&#160;<em>et al.</em>&#160;2012, Utreras&#160;<em>et al.</em>&#160;2013). Fish farming is rapidly increasing in the species’ range, for example in parts of the Ecuadorian Amazon, and expose otters to retaliation killing (V. Utreras pers. obs.). Cubs are sometimes captured illegally to be kept as pets (M. Marmontel pers. obs).</p>  <p>Giant Otters are highly susceptible to persecution: they are large, conspicuous, social, and very vocal. They are active at daytime and occupy open habitats and stable territories. Their signs—latrines and dens—are easily recognizable, making it possible to identify areas of recent activity by a group (Groenendijk&#160;<em>et al.</em>&#160;2005). Individuals and groups often react to people by approaching to investigate. Moreover, only the dominant pair produces young, and usually only once a year. During the pelt trade years, these life history attributes made them an easy target for fishermen. In 2017, a Giant Otter&#160;group was killed by fishermen in the Pantanal and according to locals, kills occur frequently during the fishing season (C. Leuchtenberger pers. obs.). In 2011–2012, the Kanamari indigenous people promoted a massive Giant Otter&#160;killing in their territory (Território Indígena Kanamari), based on their perception that the species was overfishing the river turtle population. The community leader bought 300 cartridges for the hunters, who shot 64 Giant Otters (Endo pers. comm. 2012). Such incidents of targeted killing can lead to extinction of small populations in a watershed.</p>  <p>Gold mining, artisanal as well as industrial, is a significant threat to the species, particularly in the Guiana Shield region, in southeastern Peru, the western region of the Ecuadorian Amazon, and northern Pantanal. The main impacts are habitat destruction, sedimentation of rivers, and pollution (<span lang=\"EN-GB\">Kimbrough 2014). Gold miners cut swathes into the floodplain forest and blast river banks with pressure hoses, using mercury to amalgamate gold particles. Gold prices are at a record high, whereas mercury is inexpensive. Forest conversion to mining increased six-fold from 2003–2006 to 2006–2009 (Swenson&#160;<em>et al.</em>&#160;2011). Even a decade after mining stopped, areas affected still had depleted fish populations and had not been re-colonized by otters. In areas of gold mining, fish are contaminated with mercury. Gutleb&#160;<em>et al.&#160;</em>(1997) found that mercury concentrations in the majority of fish near Manu National Park were higher than considered tolerable for the Eurasian otter. Migration of contaminated fish and long-range atmospheric transport of mercury probably increase the area of influence of such contaminants. Contamination of otters by other heavy metals through pesticides and other agrochemicals is still poorly understood. </span></p>  <p>The many planned hydroelectric dams in the species’ range are a major threat to Giant Otters. These will alter hydrological regimes of rivers and affect fish populations and habitat (Latrubesse&#160;<em>et al.</em>&#160;2017). Dams disrupt the annual cycles of inundations, vital for the maintenance of populations of flood dependent species such as the Giant Otter&#160;(Mourão&#160;<em>et al.</em>&#160;2010, Alho and Sabino 2011). One hundred and eighty-four new dams are planned or under construction, greater than two MW capacity over the next 20 years in the Amazon. These dams would include five of the six major Andean tributaries of the Amazon. Sixty per cent of the dams would cause the first major break in connectivity between protected Andean headwaters and the lowland Amazon. Giant Otters are able to live in some artificial lakes, such as the shallow Balbina Reservoir in Brazil (Rosas&#160;<em>et al.</em>&#160;2007). In other areas, hydroelectric dams have depleted Giant Otter&#160;populations, as did the Curuá-Una Hydroelectric in the Brazilian Amazonia (Rosas&#160;<em>et al.</em>&#160;2007). Around the Pantanal, there are over 115 projects of small hydroelectric plants. Other major infrastructure projects include the Inter-oceanic highway in southeastern Peru, and the Initiative for the Integration of the Regional Infrastructure of South America (V. Utreras pers. comm. 2012).</p>  <p>Giant Otters are vulnerable to disturbance from poorly managed tourism, including sport fishing. It&#160;is important to control increasing levels of tourism on lakes and rivers both in and outside protected areas (Groenendijk and Hajek 2006). Research has shown that Giant Otter&#160;reproductive success and sighting success by tourists is considerably lower on unmanaged lakes than on managed lakes (Groenendijk and Hajek 2006).</p>  <p>Giant Otter cubs held in captivity have died of canine parvovirus, and all mustelids are susceptible to canine distemper, so domestic animal diseases may pose a serious threat to wild Giant Otter&#160;populations. Infection can also occur in remote areas, since transient otters and people hunting with dogs travel large distances with potential for contact and infection of vulnerable otter populations (Schenck&#160;<em>et al.</em>&#160;1999).</p>  Climatic changes are predicted to increase suitable areas for Giant Otters (Cianfrani&#160;<em>et al.</em>&#160;2018). However, long-term habitat and climatic modifications will increase the exposure of suitable core otter areas to the negative effects of the surrounding unsuitable areas (Cianfrani&#160;<em>et al.</em>&#160;2018). The species also has a high specialized niche, making it more vulnerable to climate change.",
+    "measures": "<p>The Giant Otter is listed on Appendix I of the Convention on International Trade in Endangered Species (CITES) and as Endangered under the United States Endangered Species Act, 1973. The Global Otter Conservation Strategy for the species (Leuchtenberger&#160;<em>et al</em>. 2018) recommends&#160;priority actions that include:</p><ul><li>Establish protected areas in all range countries, including fish corridors to connect fragmented populations and protect stable populations.</li><li>Implement reintroduction programs to recover lost historical populations in Argentina (Corrientes) and Brazil (Paraná Basin).</li><li>Establish national conservation plans throughout the species range.</li><li>Foster multinational cooperation (i.e. Amapá-Brazil and French Guiana, Suriname and Guyana, Southern Amazon and the Pantanal) to coordinate management of transboundary or connected protected areas, control of illegal mining and the integrity of continuous otter habitat.</li><li>Create protocols in all range countries to regulate mitigation and compensation for projects like hydroelectric dams, gold mining, agriculture, deforestation and overfishing in Giant Otter&#160;habitat.</li><li>Implement resilience/recovery projects in areas of human activities to help the return of Giant Otters after threat mitigation.</li><li>Create global guidelines for Giant Otter&#160;watching by ecotourists including mandatory responsible behaviour.</li><li>Train locals to participate as field assistants in research activities, or as ecotourism guides.</li><li>Promote the value of Giant Otters through environmental education programs in communities that coexist with otters.</li><li>Develop management plans to regulate overfishing to reduce conflicts and protect the prey base.</li><li>Implement sustainable economic alternatives for communities that coexist with Giant Otters by training locals to guide otter watchers and strengthen local networks to participate in the regional decision-making processes.</li><li>Create a map of risk and decision scenarios for stakeholders, incorporating otter presence and the current and future threats.</li><li>Conduct population surveys in areas with poor or no knowledge about Giant Otter&#160;occurrence in the last 10 years.</li><li>Establish long-term Giant Otter&#160;conservation programs for key populations in Brazil (Pantanal, Amazonia, Cerrado), Bolivia (Amazonia), Peru (Amazonia), and Colombia (Orinoco).</li><li>Conduct population surveys in parts of Uruguay, Argentina, Brazil (Paraná Basin) where there is little or no knowledge about Giant Otter&#160;presence in the last decade.</li><li>Document the illegal trade in Guyana where animals are taken from the wild by traders either to trade or breed for pets.</li><li>Build strong local networks to create the capacity for local communities to participate in the regional decision-making process.</li></ul><p></p>        <p></p>",
+    "use_trade": "Hunting for the pelt trade was the single, greatest threat to the giant otter in the past and the species came close to extinction in the early 1970s in Ecuador, Colombia, Venezuela, Bolivia, and Brazil (Duplaix 1980). The inclusion of the Giant Otter on Appendix I of CITES in 1973, and the coming into force of international trade restrictions on Giant Otter skins in 1975 finally ended the economic benefits of Giant Otter hunting (Recharte and Bodmer 2010) and commercial hunting ceased shortly after. There is no current trade, although there have been reports of skins being displayed in homes as decoration (M. Marmontel and Lima pers. comms. 2012).",
+    "rationale": "The status of Giant Otter is regularly monitored by its range countries. Of the 12 national assessments on the distribution and conservation status of the Giant Otter that were prepared, in two countries the species has been categorized in national Red Lists as Critically Endangered (Paraguay and Ecuador), in four countries as Endangered (Peru, Colombia, Venezuela, Bolivia), and as Vulnerable in Brazil; it is considered Extinct in Uruguay, and probably Extinct in Argentina. In the Guianas, the Giant Otter is also protected by law, though this is rarely enforced. There was a strong consensus among workers on Giant Otter that it should be considered as Endangered on a continental level. The total global Giant Otter population size is low but, more critically, individual subpopulations are fragmented and most are small. Because of its conspicuous behaviour and social nature, this species is easy to extirpate and is therefore extremely vulnerable. It remains highly susceptible to hunting (though currently, hunting of Giant Otters is not a common practice). The killing of individuals and entire groups continues in some areas where fishermen are active, including in protected areas. Moreover, the Giant Otter is intrinsically vulnerable to extinction: combined with low habitat resilience and the fact that only a quarter to a third of the total population reproduces, the species also shows late maturity, late breeding age, suspected low transient survival, and low cub survival—all are traits which limit Giant Otter recovery and re-colonization. Although widely distributed on a continental scale, overall, they may occupy less than 5%, often less than 1%, of a given watershed. This means that changes in this specific habitat, or impacts there-in, will have severe effects even if only a fraction of the overall area is affected. Rivers are roads into the forest; this is where people settle, where gold mining takes place, where there is competition for fish or overfishing, where “green” energy can be harvested, where climate change will have strong impacts, where contamination can be spread rapidly, and so on. This vital link to rivers and wetlands renders the Giant Otter much more susceptible than most other comparable large predators of the Amazon, such as the Jaguar.<br/> <br/> In South America, only 13 years from now (about half the time-span considered for this assessment) there will be an increase of 44 million people, much more than the total population of Peru. Brazil has seen the highest deforestation rate in the world and just in 2019 the deforestation of the Amazon represented almost 2,900 km² and in 2020, at least 4.5 million hectares of the Pantanal have burned. There are estimates that the Amazon rainforest will be reduced by 40% in 2030. If just one or two of the Giant Otter’s strongholds is affected, this may be enough to lead to heavy declines in overall population numbers. Further, once remote watersheds are now accessible so that Giant Otters can no longer retreat to ‘safe zones’.<br/> <br/> Many emerging and/or growing threats pose serious problems for Giant Otters, including contamination, overfishing and conflict with fishermen, and infrastructure such as roads and hydroelectric dams. With their preference for lowland wetlands, rivers, and lakes, their prime habitat overlaps completely with the demands of humans (gold mining, fishing, deforestation, mega infrastructure and energy developments, settlement, transport, tourism, etc.). The effects of climate change are already being felt, with Brazil recently suffering severe droughts. Large-scale deforestation in the Amazon could reduce basin-wide rainfall by 12% during the wet season and by 21% in the dry season by 2050 (Spracklen <em>et al</em>. 2012) with unknown impacts on (semi) aquatic species.<br/> <br/> In summary, three Giant Otter generation lengths approximately represent a 25-year period. Accelerating habitat destruction, degradation, and exploitation throughout the Giant Otter's range represents the greatest threat to the species, and is suspected to have caused a population decline of more than 50% in the past 25 years (three generations) (criterion A2), also potentially leading to a future reduction in population size of 50% or more over the next 25  years (criterion A3), suspected through a decline in area of occupancy (AOO), extent of occurrence (EOO), and quality of habitat (subcriterion c), exploitation (subcriterion d), pollutants (especially mercury and fossil fuels), pathogens (domestic animal diseases), and competitors (fishermen) (subcriterion e) potentially playing important roles. Therefore, the species is listed as Endangered under criteria A2cde+3ce.",
+    "trend_justification": null,
+    "taxonomic_notes": "Two subspecies have been described (Duplaix 1980): (1) <em>P. b. brasiliensis</em> (Gmelin, 1788) from Suriname, the Guianas, southern Venezuela, southern Colombia, eastern Ecuador, eastern Peru, Bolivia, Paraguay, and Brazil; (2) <em>P. b. paranensis</em> (Rengger, 1830) from the Paraguay and Parana rivers in Brazil, northern Argentina and Uruguay. However, this subspecific division was rejected by Carter and Rosas (1997) and described as being of “doubtful value” by Duplaix (1980).&#160; Wozencraft (2005) treated subspecies <em>paranensis</em> as a synonym of a different subspecies&#160;<em>P</em>.<em> b. paraguensi</em>s (Schinz, 1821). Subsequent mitochondrial DNA and microsatellite analysis supports subdivision of the species into four evolutionary distinct units (ESUs). These comprise: (1) the Rio Madre de Dios with the Rio Madeira (2); the Pantanal (3) the Amazon with the Orinoco and Guianas drainages (4) The Itenez/Guapore basin (Garcia <em>et al.</em> 2007; Pickles <em>et al.</em> 2011, 2012)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_2",
+      "description": {
+        "en": "Training"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Artificial/Aquatic & Marine"
+      },
+      "code": "15"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"
+      },
+      "code": "5_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_8"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Wetlands (inland) - Freshwater Springs and Oases"
+      },
+      "code": "5_9"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Marine Neritic - Estuaries"
+      },
+      "code": "9_10"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Coastal Freshwater Lakes"
+      },
+      "code": "13_5"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Mangrove Vegetation Above High Tide Level"
+      },
+      "code": "1_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Shrub Dominated Wetlands"
+      },
+      "code": "5_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bolivia, Plurinational States of"
+      },
+      "code": "BO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Paraguay"
+      },
+      "code": "PY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Suriname"
+      },
+      "code": "SR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uruguay"
+      },
+      "code": "UY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Soil erosion, sedimentation"
+      },
+      "code": "9_3_2"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "High Impact: 8",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects (species is not the target)"
+      },
+      "code": "5_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry plantations"
+      },
+      "code": "2_2_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Utility & service lines"
+      },
+      "code": "4_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_4_4"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "High Impact: 8",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Scale Unknown/Unrecorded"
+      },
+      "code": "2_4_3"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Droughts"
+      },
+      "code": "11_2"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "High Impact: 8",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Large dams"
+      },
+      "code": "7_2_10"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Motivation Unknown/Unrecorded"
+      },
+      "code": "5_3_5"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_2_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Oil spills"
+      },
+      "code": "9_2_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Groenendijk, J., Leuchtenberger, C., Marmontel, M., Van Damme, P.A., Wallace, R. & Schenck, C.",
+      "value": [
+        "Jessica Groenendijk (San Diego Zoo Global, Peru)",
+        "Caroline Leuchtenberger (Frankfurt Zoological Society, Peru)",
+        "Miriam Marmontel (IUCN SSC Sirenia Specialist Group)",
+        "Paul Van Damme (Faunagua)",
+        "R. Wallace",
+        "Christof Schenck (Frankfurt Zoological Society)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Hussain, S.A. & Duplaix, N.",
+      "value": [
+        "Nicole Duplaix (Department of Fisheries and Wildlife, Oregon State University, USA)",
+        "Syed Ainul Hussain (IUCN SSC Otter Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Boher, S., Botello, J.C., Buschiazzo, M., Calvimontes, J., Cartes, J.L., Davenport, L., De Thoisy, B., Evangelista, E., Gil, G., Moraes Tomas, W., Munis, M., Pickles, R.S., Quadros, J., Rheingantz, M.L., Ribas, C., Trujillo, F., Utreras, V., Valqui, J., Velasco, D.M., Waldemarin, H.F., Wallace, R.B., Weber Rosas, F.C., Williams, R.S.R. & Zambrana, V.",
+      "value": [
+        "Rob Williams (Sociedad Zoológica de Francfort)",
+        "Salvador Boher (Working on Giant Otter)",
+        "Guillermo Gil (Working on Giant Otter in Argentina)",
+        "Veronica Zambrana (Working on Giant Otter)",
+        "Martin Buschiazzo (Working on Giant Otter)",
+        "Rob Pickles (Ex ZSL, LOndon currently University of Trent, Ontario)",
+        "Juliana Quadros (IUCN SSC Otter Specialist Group)",
+        "Fernando Weber Rosas (IUCN SSC Otter Specialist Group; Instituto Nacional de Pesquisas da Amazonia)",
+        "Jorge Calvimontes (IUCN SSC Otter Specialist Group)",
+        "Carolina Ribas (IUCN SSC Otter Specialist Group)",
+        "José Cartes (IUCN SSC Deer and Tapir Specialist Groups)",
+        "Victor Utreras (IUCN SSC Otter Specialist Group; WCS , Ecuador)",
+        "Robert B. Wallace (IUCN SSC Specialist Group member - several groups)",
+        "Diana Velasco",
+        "Juan Carlos Botello",
+        "Manuel Munis (IUCN SSC Crocodile Specialist Group)",
+        "Emanuela Evangelista (IUCN SSC Otter Specialist Group)",
+        "Helen Waldemarin (IUCN SSC Otter Specialist Group)",
+        "Juan Valqui (Otter Specialist Group)",
+        "Marcelo Lopes Rheingantz (Universidade Federal do Rio de Janeiro)",
+        "Benoit De Thoisy (IUCN SSC Cat Specalist Group)",
+        "Fernando Trujillo (Fundación Omacha)",
+        "Lisa Davenport (IUCN SSC Otter Specialist Group; Duke University)",
+        "Walfrido Moraes Tomas (Empresa Brasileira de Pesquisa Agropecuária, Embrapa, Brazil)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "Corrected author name from \"Van Damme, P.\" to \"Van Damme, P.A.\"."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Wozencraft, W.C. 2005. Order Carnivora. In: D.E. Wilson and D.M. Reeder (eds), <i>Mammal Species of the World: A Taxonomic and Geographic Reference. Third Edition</i>, pp. 532-628. Johns Hopkins University Press, Baltimore.",
+      "year": "2005",
+      "title": "Order Carnivora",
+      "author": "Wozencraft, W.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Carter, S.K. and Rosas, F.C.W. 1997. Biology and conservation of the giant otter <i>Pteronura brasiliensis</i>. <i>Mammal Review</i> 27: 1-26.",
+      "year": "1997",
+      "title": "Biology and conservation of the giant otter <i>Pteronura brasiliensis</i>",
+      "author": "Carter, S.K. and Rosas, F.C.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Duplaix, N. 1980. Observations of the ecology and behaviour of the giant river otter <i>Pteronura brasiliensis</i> in Suriname. <i>Revue d’Ecologie (La Terre et La Vie)</i> 34: 495-620.",
+      "year": "1980",
+      "title": "Observations of the ecology and behaviour of the giant river otter <i>Pteronura brasiliensis</i> in Suriname",
+      "author": "Duplaix, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gómez, J. R. and Jorgenson, J. P. 1999. An Overview of the Giant Otter-Fisherman Problem in the Orinoco Basin of Colombia. <i>IUCN Otter Specialist Group Bulletin</i> 16(2): 90-96.",
+      "year": "1999",
+      "title": "An Overview of the Giant Otter-Fisherman Problem in the Orinoco Basin of Colombia",
+      "author": "Gómez, J. R. and Jorgenson, J. P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Groenendijk, J. and Hajek, F. 2006. <i>Giants of the Madre de Dios</i>. Ayuda para Vida Silvestre Amenazada, Sociedad Zoológica de Francfort, Peru.",
+      "year": "2006",
+      "title": "Giants of the Madre de Dios",
+      "author": "Groenendijk, J. and Hajek, F. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Swenson, J.J, Carter, C.E, Dome, J.-C. and Delgado, C.I. 2011. Gold Mining in the Peruvian Amazon: Global Prices, Deforestation, and Mercury Imports. <i>PLoS ONE</i> 6(4): e18875.",
+      "year": "2011",
+      "title": "Gold Mining in the Peruvian Amazon: Global Prices, Deforestation, and Mercury Imports",
+      "author": "Swenson, J.J, Carter, C.E, Dome, J.-C. and Delgado, C.I. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Garcia, D.M., Marmontel, M., Rosas, F.W. and Santos, F.R. 2007. Conservation genetics of the giant otter (<i>Pteronura brasiliensis</i> (Zimmerman, 1780)) (Carnivora, Mustelidae</i>). <i>Brazilian Journal of Biology</i> 67(4): 819-827.",
+      "year": "2007",
+      "title": "Conservation genetics of the giant otter (<i>Pteronura brasiliensis</i> (Zimmerman, 1780)) (Carnivora, Mustelidae</i>)",
+      "author": "Garcia, D.M., Marmontel, M., Rosas, F.W. and Santos, F.R. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gutleb, A., Schenck, C. and Staib, E. 1997. Giant Otter (<i>Pteronura brasiliensis</i>) at Risk? Total Mercury and Methylmercury Levels in Fish and Otter Scats, Peru. <i>Ambio</i> 26(8): 511-514.",
+      "year": "1997",
+      "title": "Giant Otter (<i>Pteronura brasiliensis</i>) at Risk? Total Mercury and Methylmercury Levels in Fish and Otter Scats, Peru",
+      "author": "Gutleb, A., Schenck, C. and Staib, E. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Groenendijk, J., Hajek, F., Duplaix, N., Reuther, C., Van Damme, P., Schenck, C., Staib, E., Wallace, R., Waldemarin, H., Notin, R., Marmontel, M., Rosas, F., de Mattos, G.E., Evangelista, E., Utreras, V., Lasso, G., Jacques, H., Matos, K., Roopsind, I., Botello, J.C. 2005. <i>Surveying and Monitoring Distribution and Population Trends of the Giant Otter (</i>Pteronura brasiliensis<i>) - Guidelines for a Standardisation of Survey Methods as Recommended by the Giant Otter Section of the IUCN/SSC Otter Specialist Group</i>. Habitat 16.",
+      "year": "2005",
+      "title": "Surveying and Monitoring Distribution and Population Trends of the Giant Otter (<i>Pteronura brasiliensis</i>) - Guidelines for a Standardisation of Survey Methods as Recommended by the Giant Otter Section of the IUCN/SSC Otter Specialist Group",
+      "author": "Groenendijk, J., Hajek, F., Duplaix, N., Reuther, C., Van Damme, P., Schenck, C., Staib, E., Wallace, R., Waldemarin, H., Notin, R., Marmontel, M., Rosas, F., de Mattos, G.E., Evangelista, E., Utreras, V., Lasso, G., Jacques, H., Matos, K., Roopsind, I., Botello, J.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Utreras, V. and Tirira, D.G. 2011. Nutria gigante (<i>Pteronura brasiliensis</i>). In: D. Tirira (ed.), <i>Libro Rojo de los Mamíferos del Ecuador</i>, pp. 96-97. Fundación Mamíferos y Conservación / Pontificia Universidad Católica del Ecuador / Ministerio del Ambiente del Ecuador, Quito.",
+      "year": "2011",
+      "title": "Nutria gigante (<i>Pteronura brasiliensis</i>)",
+      "author": "Utreras, V. and Tirira, D.G. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Sykes-Gatz, S. 2005. <i>International Giant Otter Studbook Husbandry and Management Information and Guidelines. Husbandry and Management of the Giant Otter (</i>Pteronura brasiliensis<i>)</i>. 2nd Edition, Dortmund. 276pp.",
+      "year": "2005",
+      "title": "International Giant Otter Studbook Husbandry and Management Information and Guidelines. Husbandry and Management of the Giant Otter (<i>Pteronura brasiliensis</i>)",
+      "author": "Sykes-Gatz, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Utreras ,V., Suarez, E.R., Zapata-Rios, G, Lasso, G. and Pinos, L. 2005. Dry and rainy season estimations of giant otter, <i>Pteronura brasiliensis</i>, home range in the Yasuni National Park, Ecuador. <i>Latin American Journal of Aquatic Mammals </i> 4(2): 191-194.",
+      "year": "2005",
+      "title": "Dry and rainy season estimations of giant otter, <i>Pteronura brasiliensis</i>, home range in the Yasuni National Park, Ecuador",
+      "author": "Utreras ,V., Suarez, E.R., Zapata-Rios, G, Lasso, G. and Pinos, L. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Staib, E. 2005. <i>Eco-Etología del Lobo de Río (</i>Pteronura brasiliensis<i>) en el Sureste del Perú</i>. Ayuda para Vida Silvestre Amenazada - Sociedad Zoológica de Francfort Perú.",
+      "year": "2005",
+      "title": "Eco-Etología del Lobo de Río (<i>Pteronura brasiliensis</i>) en el Sureste del Perú",
+      "author": "Staib, E. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Rosas-Ribeiro, P.F., Rosas, F.C.W., and Zuanon, J. 2011. Conflict between fishermen and giant otters (<i>Pteronura brasiliensis</i>) in western Brazilian Amazon. <i>Biotropica</i> 44(3): 437-444.",
+      "year": "2011",
+      "title": "Conflict between fishermen and giant otters (<i>Pteronura brasiliensis</i>) in western Brazilian Amazon",
+      "author": "Rosas-Ribeiro, P.F., Rosas, F.C.W., and Zuanon, J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Oliveira, G.C., Barcellos, J.F.M., Lazzarini, S.M. and Rosas, F.C.W. 2011. Gross anatomy and histology of giant otter (<i>Pteronura brasiliensis</i>) and neotropical otter (<i>Lontra longicaudis</i>) testes. <i>Animal Biology </i> 61: 175-183.",
+      "year": "2011",
+      "title": "Gross anatomy and histology of giant otter (<i>Pteronura brasiliensis</i>) and neotropical otter (<i>Lontra longicaudis</i>) testes",
+      "author": "Oliveira, G.C., Barcellos, J.F.M., Lazzarini, S.M. and Rosas, F.C.W. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Rosas, F.C.W., de Mattos, G.E. and Cabral, M.M.M. 2007. The use of hydroelectric lakes by giant otters (<i>Pteronura brasiliensis</i>): The case of Balbina dam in Central Amazonia, Brazil. <i>Oryx </i> 41(4): 520-524.",
+      "year": "2007",
+      "title": "The use of hydroelectric lakes by giant otters (<i>Pteronura brasiliensis</i>): The case of Balbina dam in Central Amazonia, Brazil",
+      "author": "Rosas, F.C.W., de Mattos, G.E. and Cabral, M.M.M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ribas, C., Damasceno, G., Magnusson, W., Leuchtenberger, C. and Mourão, G. 2012. Giant otters feeding on caiman: evidence for an expanded trophic niche of recovering populations. <i>Studies on Neotropical Fauna and Environment</i> 47(1): 19-23.",
+      "year": "2012",
+      "title": "Giant otters feeding on caiman: evidence for an expanded trophic niche of recovering populations",
+      "author": "Ribas, C., Damasceno, G., Magnusson, W., Leuchtenberger, C. and Mourão, G. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pickles, R.S.A., Groombridge, J.J., Zambrana Rojas, V.D., Van Damme, P., Gottelli, D., Ariani, C.V. and Jordan, W.C. 2012. Genetic diversity and population structure in the endangered giant otter. <i>Conservation Genetics</i> 13: 235-245.",
+      "year": "2012",
+      "title": "Genetic diversity and population structure in the endangered giant otter",
+      "author": "Pickles, R.S.A., Groombridge, J.J., Zambrana Rojas, V.D., Van Damme, P., Gottelli, D., Ariani, C.V. and Jordan, W.C. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pickles, R.S.A., Groombridge, J.J., Zambrana Rojas, V.D., van Damme, P., Gottelli, D., Kundu, S., Bodmer, R., Ariani, C.V., Iyengar, A and Jordan, W.C. 2011. Phylogeography and identification of evolutionary significant units in the giant otter. <i>Molecular Phylogenetics and Evolution</i> 61: 616-627.",
+      "year": "2011",
+      "title": "Phylogeography and identification of evolutionary significant units in the giant otter",
+      "author": "Pickles, R.S.A., Groombridge, J.J., Zambrana Rojas, V.D., van Damme, P., Gottelli, D., Kundu, S., Bodmer, R., Ariani, C.V., Iyengar, A and Jordan, W.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Spracklen, D.V., Arnold, S.R. and Taylor, C.M. 2012. Observations of increased tropical rainfall precede by air passage over forests. <i>Nature</i> 489: 282-285.",
+      "year": "2012",
+      "title": "Observations of increased tropical rainfall precede by air passage over forests",
+      "author": "Spracklen, D.V., Arnold, S.R. and Taylor, C.M. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Alho, C.J.R., & J. Sabino. 2011. A conservation agenda for the Pantanal's biodiversity. <i>Brazilian Journal of Biology.</i> 71(1): 327-335.",
+      "year": "2011",
+      "title": "A conservation agenda for the Pantanal's biodiversity.",
+      "author": "Alho, C.J.R., & J. Sabino.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ayala, G., R.B. Wallace, M. Viscarra, & C. Jurado. 2015. Giant otter (Pteronura brasiliensis) distribution, relative abundance and conservation in northwestern Bolivia. <i>Latin American Journal of Aquatic Mammalogy</i> 10(2): 179-186.",
+      "year": "2015",
+      "title": "Giant otter (Pteronura brasiliensis) distribution, relative abundance and conservation in northwestern Bolivia.",
+      "author": "Ayala, G., R.B. Wallace, M. Viscarra, & C. Jurado.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cannon, J, C. 2019. Deforestation preceded fires in ‘massive’ area of Amazon in 2019. Mongabay. 14 nov 2019.",
+      "year": "2019",
+      "title": "Deforestation preceded fires in ‘massive’ area of Amazon in 2019. Mongabay. 14 nov 2019.",
+      "author": "Cannon, J, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cianfrani, C., O. Broennimann, A. Loy, & A. Guisan. 2018. More than range exposure: Global otter vulnerability to climate change. <i>Biological Conservation.</i>.",
+      "year": "2018",
+      "title": "More than range exposure: Global otter vulnerability to climate change.",
+      "author": "Cianfrani, C., O. Broennimann, A. Loy, & A. Guisan.",
+      "citation_short": null
+    },
+    {
+      "citation": "Evangelista, E., & F.C. Rosas. 2011. Breeding behavior of giant otter (Pteronura brasiliensis) in the Xixuaú Reserve, Roraima, Brazil. <i>IUCN Otter Specialist Group Bulletin</i> 28(A): 5-10.",
+      "year": "2011",
+      "title": "Breeding behavior of giant otter (Pteronura brasiliensis) in the Xixuaú Reserve, Roraima, Brazil.",
+      "author": "Evangelista, E., & F.C. Rosas.",
+      "citation_short": null
+    },
+    {
+      "citation": "Georgiadis, G., S. Campello, & B.N. Leles. 2015. Protection and monitoring of the giant otter (Pteronura brasiliensis). <i>Latin American Journal of Aquatic Mammals</i> 10(2): 152-155.",
+      "year": "2015",
+      "title": "Protection and monitoring of the giant otter (Pteronura brasiliensis).",
+      "author": "Georgiadis, G., S. Campello, & B.N. Leles.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gmelin, J. F. 1788. Caroli a Linné, systema naturae per regna tria naturae, secundum classes, ordines, genera, species, cum characteribus, differentiis, synonymis, locis. Tomus I. Editio decima tertia, aucta, reformata. G. E. Beer, Leipzig, Germany.",
+      "year": "1788",
+      "title": "Caroli a Linné, systema naturae per regna tria naturae, secundum classes, ordines, genera, species, cum characteribus, differentiis, synonymis, locis. Tomus I. Editio decima tertia, aucta, reformata. G. E. Beer, Leipzig, Germany.",
+      "author": "Gmelin, J. F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Groenendijk, J., F. Hajek, C. Schenck, E. Staib, P.J. Johnson, & D.W. MacDonald, 2015. Effects of territory size on the reproductive success and social system of the giant otter, south‐eastern Peru. <i>Journal of Zoology</i> 296(3): 153-160.",
+      "year": "2015",
+      "title": "Effects of territory size on the reproductive success and social system of the giant otter, south‐eastern Peru.",
+      "author": "Groenendijk, J., F. Hajek, C. Schenck, E. Staib, P.J. Johnson, & D.W. MacDonald,",
+      "citation_short": null
+    },
+    {
+      "citation": "Groenendijk, J., F. Hajek, P.J. Johnson, D.W. Macdonald, J. Calvimontes, E. Staib, E., & C. Schenck. 2014. Demography of the giant otter (Pteronura brasiliensis) in Manu National Park, south-eastern Peru: Implications for conservation. <i>PloS One</i> 9(8): e106202.",
+      "year": "2014",
+      "title": "Demography of the giant otter (Pteronura brasiliensis) in Manu National Park, south-eastern Peru: Implications for conservation.",
+      "author": "Groenendijk, J., F. Hajek, P.J. Johnson, D.W. Macdonald, J. Calvimontes, E. Staib, E., & C. Schenck.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kimbrough, L. 2014. Gold mining expanding rapidly along Guiana Shield, threatening forests, water, wildlife. Mongabay.",
+      "year": "2014",
+      "title": "Gold mining expanding rapidly along Guiana Shield, threatening forests, water, wildlife. Mongabay.",
+      "author": "Kimbrough, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Laidler, P.E. 1984. The behavioural ecology of giant otter in Guyana. Ph.D. Thesis. University of Cambridge, UK. 296 pp.",
+      "year": "1984",
+      "title": "The behavioural ecology of giant otter in Guyana. Ph.D. Thesis. University of Cambridge, UK. 296 pp.",
+      "author": "Laidler, P.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Latrubesse E.M., E.Y. Arima, T. Dunne, E. Park, V.R.Baker, F.M. dHorta, C. Wight, F. Wittmann, J. Zuanon, P.A. Baker, C.C. Ribas, R.B. Norgaard, N. Filizola, A. Ansar, B. Flyvbjerg, & J.C. Stevaux. 2017. Damming the rivers of the Amazon basin. <i>Nature</i> 546: 363-369.",
+      "year": "2017",
+      "title": "Damming the rivers of the Amazon basin.",
+      "author": "Latrubesse E.M., E.Y. Arima, T. Dunne, E. Park, V.R.Baker, F.M. dHorta, C. Wight, F. Wittmann, J. Zuanon, P.A. Baker, C.C. Ribas, R.B. Norgaard, N. Filizola, A. Ansar, B. Flyvbjerg, & J.C. Stevaux.",
+      "citation_short": null
+    },
+    {
+      "citation": "Leuchtenberger, C., & G. Mourão. 2008. Social organization and territoriality of giant otters (Carnivora, Mustelidae) in a seasonally flooded savanna in Brazil. <i>Sociobiology</i> 52(2): 257-270.",
+      "year": "2008",
+      "title": "Social organization and territoriality of giant otters (Carnivora, Mustelidae) in a seasonally flooded savanna in Brazil.",
+      "author": "Leuchtenberger, C., & G. Mourão.",
+      "citation_short": null
+    },
+    {
+      "citation": "Leuchtenberger, C., & G. Mourão. 2009. Scent‐marking of giant otter in the southern Pantanal, Brazil. <i>Ethology</i> 115(3): 210-216.",
+      "year": "2009",
+      "title": "Scent‐marking of giant otter in the southern Pantanal, Brazil.",
+      "author": "Leuchtenberger, C., & G. Mourão.",
+      "citation_short": null
+    },
+    {
+      "citation": "Leuchtenberger, C., L.G.R. Oliveira-Santos, W. Magnusson, & G.  Mourão. 2013. Space use by giant otter groups in the Brazilian Pantanal. <i>Journal of Mammalogy</i> 94(2): 320–330.",
+      "year": "2013",
+      "title": "Space use by giant otter groups in the Brazilian Pantanal.",
+      "author": "Leuchtenberger, C., L.G.R. Oliveira-Santos, W. Magnusson, & G.  Mourão.",
+      "citation_short": null
+    },
+    {
+      "citation": "Leuchtenberger C, W.E. Magnusson, & G. Mourão. 2015. Territoriality of giant otter groups in an area with seasonal flooding. <i>PLoS ONE</i> 10(5): e0126073.",
+      "year": "2015",
+      "title": "Territoriality of giant otter groups in an area with seasonal flooding.",
+      "author": "Leuchtenberger C, W.E. Magnusson, & G. Mourão.",
+      "citation_short": null
+    },
+    {
+      "citation": "Leuchtenberger et al. 2018. Giant otter. In: Nicole Duplaix and Melissa Savage (2018), The Global Otter Conservation Strategy. IUCN/SSC Otter Specialist Group, Salem, Oregon, USA. Pp:74-81.",
+      "year": "2018",
+      "title": "Giant otter. In: Nicole Duplaix and Melissa Savage (2018), The Global Otter Conservation Strategy. IUCN/SSC Otter Specialist Group, Salem, Oregon, USA. Pp:74-81.",
+      "author": "Leuchtenberger et al.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lima. D.S., Marmontel, M. and Bernard, E. 2012. Site and refuge use by giant river otters (Pteronura brasiliensis) in the Western Brazilian Amazonia. <i>Journal of Natural History</i> 46. 11-12(2012): 729-739.",
+      "year": "2012",
+      "title": "Site and refuge use by giant river otters (Pteronura brasiliensis) in the Western Brazilian Amazonia.",
+      "author": "Lima. D.S., Marmontel, M. and Bernard, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lima, D.S., M. Marmontel, & E. Bernard. 2014. Reoccupation of historical áreas by the endangered giant river otter Pteronura brasiliensis (Carnivora, Mustelidae) in Central Amazonia, Brazil. <i>Mammalia</i> 78(2): 177-184.",
+      "year": "2014",
+      "title": "Reoccupation of historical áreas by the endangered giant river otter Pteronura brasiliensis (Carnivora, Mustelidae) in Central Amazonia, Brazil.",
+      "author": "Lima, D.S., M. Marmontel, & E. Bernard.",
+      "citation_short": null
+    },
+    {
+      "citation": "Marmontel, M., U.J. Calvimontes U., & O. Carvalho Jr. 2015. Rediscovery of Pteronura brasiliensis in the Amanã Sustainable Development Reserve, Amazonas, Brazil. <i>Latin American Journal of Aquatic Mammals.</i> 10(2): 147-151.",
+      "year": "2015",
+      "title": "Rediscovery of Pteronura brasiliensis in the Amanã Sustainable Development Reserve, Amazonas, Brazil.",
+      "author": "Marmontel, M., U.J. Calvimontes U., & O. Carvalho Jr.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mourão, G., W. Tomas, & Z. Campos. 2010. How much can the number of jabiru stork (Ciconiidae) nests vary due to change of flood extension in a large Neotropical floodplain? <i>Zoologia (Curitiba).</i> 27(5): 751-756.",
+      "year": "2010",
+      "title": "How much can the number of jabiru stork (Ciconiidae) nests vary due to change of flood extension in a large Neotropical floodplain?",
+      "author": "Mourão, G., W. Tomas, & Z. Campos.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mumm, C. A., & Knörnschild, M. 2017. Territorial choruses of giant otter groups (Pteronura brasiliensis) encode information on group identity. <i>PloS one</i> 12(10): e0185733.",
+      "year": "2017",
+      "title": "Territorial choruses of giant otter groups (Pteronura brasiliensis) encode information on group identity.",
+      "author": "Mumm, C. A., & Knörnschild, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Palmeirim, A. F., C.A. Peres, & F.C. Rosas. 2014. Giant otter population responses to habitat expansion and degradation induced by a mega hydroelectric dam. <i>Biological Conservation</i> 174: 30-38.",
+      "year": "2014",
+      "title": "Giant otter population responses to habitat expansion and degradation induced by a mega hydroelectric dam.",
+      "author": "Palmeirim, A. F., C.A. Peres, & F.C. Rosas.",
+      "citation_short": null
+    },
+    {
+      "citation": "Recharte, M., M. Bowler, & R. Bodmer. 2008. Potential conflict between fishermen and giant otter (Pteronura brasiliensis) populations by fishermen in response to declining stocks of arowana fish (Osteoglossum bicirrhosum) in northeastern Peru. <i>IUCN Otter Specialist Group Bulletin</i> 25(2): 89-93.",
+      "year": "2008",
+      "title": "Potential conflict between fishermen and giant otter (Pteronura brasiliensis) populations by fishermen in response to declining stocks of arowana fish (Osteoglossum bicirrhosum) in northeastern Peru.",
+      "author": "Recharte, M., M. Bowler, & R. Bodmer.",
+      "citation_short": null
+    },
+    {
+      "citation": "Recharte, M., & R. Bodmer. 2010. Recovery of the endangered giant otter Pteronura brasiliensis on the Yavari-Mirin and Yavari Rivers: A success story for CITES. <i>Oryx</i> 44(1): 83-88.",
+      "year": "2010",
+      "title": "Recovery of the endangered giant otter Pteronura brasiliensis on the Yavari-Mirin and Yavari Rivers: A success story for CITES.",
+      "author": "Recharte, M., & R. Bodmer.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rengger, J. R. 1830. Naturgeschichte der Säugethiere von Paraguay. Schweighauser, Basel, Switzerland.",
+      "year": "1830",
+      "title": "Naturgeschichte der Säugethiere von Paraguay. Schweighauser, Basel, Switzerland.",
+      "author": "Rengger, J. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ribas, C., & G. Mourão. 2004. Intraspecific agonism between giant otter groups. <i>IUCN Otter Specialist Group Bulletin</i> 21(2): 89-93.",
+      "year": "2004",
+      "title": "Intraspecific agonism between giant otter groups.",
+      "author": "Ribas, C., & G. Mourão.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ribas, C., H.A. Cunha, G. Damasceno, W.E. Magnusson, A. Solé-Cava, & G. Mourão. 2016. More than meets the eye: Kinship and social organization in giant otters (Pteronura brasiliensis). <i>Behavioral Ecology and Sociobiology</i> 70(1): 61-72.",
+      "year": "2016",
+      "title": "More than meets the eye: Kinship and social organization in giant otters (Pteronura brasiliensis).",
+      "author": "Ribas, C., H.A. Cunha, G. Damasceno, W.E. Magnusson, A. Solé-Cava, & G. Mourão.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rosas, F.C.W., & G.E. De Mattos. 2003. Notes on giant otter (Pteronura brasiliensis) behavior in the lake of the Balbina hydroelectric power station, Amazonas, Brazil. <i>Latin American Journal of Aquatic Mammals</i> 2(2): 127-129.",
+      "year": "2003",
+      "title": "Notes on giant otter (Pteronura brasiliensis) behavior in the lake of the Balbina hydroelectric power station, Amazonas, Brazil.",
+      "author": "Rosas, F.C.W., & G.E. De Mattos.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schenck, C. 1999. Lobo de Río (Pteronura brasiliensis) – Presencia, uso del hábitat y protección en el Perú. Spanish translation of German PhD. dissertation : Vorkommen, Habitatnutzung und Schutz des Riesenotters (Pteronura brasiliensis) in Peru (1996), Munich.",
+      "year": "1999",
+      "title": "Lobo de Río (Pteronura brasiliensis) – Presencia, uso del hábitat y protección en el Perú. Spanish translation of German PhD. dissertation : Vorkommen, Habitatnutzung und Schutz des Riesenotters (Pteronura brasiliensis) in Peru (1996), Munich.",
+      "author": "Schenck, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schenck, C., and E. Staib. 1998. Status, habitat use and conservation of giant otter in Peru. In: N. Dunstone and M. L. Gorman (eds), <i>Behaviour and ecology of riparian mammals.</i>, pp. 359–170. Cambridge University Press, Cambridge, United Kingdom.",
+      "year": "1998",
+      "title": "Status, habitat use and conservation of giant otter in Peru",
+      "author": "Schenck, C., and E. Staib.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schinz, H. R. 1821. G. Cuvier, Das Tierreich eingeteilt nach dem Bau der Tiere als Grundlage ihrer Naturgeschichte und der vergleichenden Anatomie. Cotta, Stuttgart, Germany.",
+      "year": "1821",
+      "title": "G. Cuvier, Das Tierreich eingeteilt nach dem Bau der Tiere als Grundlage ihrer Naturgeschichte und der vergleichenden Anatomie. Cotta, Stuttgart, Germany.",
+      "author": "Schinz, H. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schweizer, J. 1992. Ariranhas no Pantanal. Ecologia e comportamento da Pteronura brasiliensis. EDIBRAN Editora Brasil Natureza Ltda., Curitiba, PR, Brazil.",
+      "year": "1992",
+      "title": "Ariranhas no Pantanal. Ecologia e comportamento da Pteronura brasiliensis. EDIBRAN Editora Brasil Natureza Ltda., Curitiba, PR, Brazil.",
+      "author": "Schweizer, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sykes-Gatz, S. 2004. International giant otter studbook husbandry and management information guidelines (2005): husbandry and management of the giant otter (Pteronura brasiliensis). 2nd ed. Zoologischer Garten Dortmund, Dortmund, Germany.",
+      "year": "2004",
+      "title": "International giant otter studbook husbandry and management information guidelines (2005): husbandry and management of the giant otter (Pteronura brasiliensis). 2nd ed. Zoologischer Garten Dortmund, Dortmund, Germany.",
+      "author": "Sykes-Gatz, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tomás, W.M., A. R. Camilo, C. Ribas, C. Leuchtenberger, P.A.L. Borges, G. Mourão, & L.A. Pellegrin. 2015. Distribution and conservation status of giant otter (Pteronura brasiliensis) in the Pantanal wetland, Brazil. <i>Latin American Journal of Aquatic Mammals.</i> 10(2): 107-114.",
+      "year": "2015",
+      "title": "Distribution and conservation status of giant otter (Pteronura brasiliensis) in the Pantanal wetland, Brazil.",
+      "author": "Tomás, W.M., A. R. Camilo, C. Ribas, C. Leuchtenberger, P.A.L. Borges, G. Mourão, & L.A. Pellegrin.",
+      "citation_short": null
+    },
+    {
+      "citation": "Utreras, V., F. Trujillo, & S. Usma. 2013. Plan de Acción para la Conservación de los Mamíferos Acuáticos en la Amazonía Ecuatoriana. WCS, Fundación Omacha, Ministerio del Ambiente y WWF. Quito.",
+      "year": "2013",
+      "title": "Plan de Acción para la Conservación de los Mamíferos Acuáticos en la Amazonía Ecuatoriana. WCS, Fundación Omacha, Ministerio del Ambiente y WWF. Quito.",
+      "author": "Utreras, V., F. Trujillo, & S. Usma.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zambrana Rojas V., R.S. Pickles, & P.A. Van Damme. 2012. Abundancia relativa de la londra (Pteronura brasiliensis) en los ríos Blanco y San Martín (cuenca del río Iténez, Beni-Bolivia). pp. 183-194. In: P.A. Van Damme, M. Maldonado, M. Pouilly, C.R. C. Doria C.R.C. 2012. Aguas del Iténez o Guaporé: recursos hidrobiológicos de un patrimonio binacional (Bolivia y Brasil). Edit. INIA, Cochabamba, Bolivia. 420 pp.",
+      "year": "2012",
+      "title": "Abundancia relativa de la londra (Pteronura brasiliensis) en los ríos Blanco y San Martín (cuenca del río Iténez, Beni-Bolivia). pp. 183-194. In: P.A. Van Damme, M. Maldonado, M. Pouilly, C.R. C. Doria C.R.C. 2012. Aguas del Iténez o Guaporé: recursos hidrobiológicos de un patrimonio binacional (Bolivia y Brasil). Edit. INIA, Cochabamba, Bolivia. 420 pp.",
+      "author": "Zambrana Rojas V., R.S. Pickles, & P.A. Van Damme.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2022. The IUCN Red List of Threatened Species. Version 2022-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 08 December 2022).",
+      "year": "2022",
+      "title": "The IUCN Red List of Threatened Species. Version 2022-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2022-2"
+    },
+    {
+      "citation": "IUCN. 2023. The IUCN Red List of Threatened Species. Version 2023-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 07 December 2023).",
+      "year": "2023",
+      "title": "The IUCN Red List of Threatened Species. Version 2023-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2023-1"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

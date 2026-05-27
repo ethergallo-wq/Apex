@@ -1,0 +1,962 @@
+{
+  "assessment_date": "2014-11-14T00:00:00.000+00:00",
+  "year_published": "2021",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 178477,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/178477/44954627",
+  "citation": "Cacciali, P., Caicedo, J.R., Carreira, S., Fitzgerald, L., Gutiérrez-Cárdenas, P., Kacoliris, F., Montero, R., Renjifo, J., Rivas, G., Rodríguez, J. & Scott, N. 2021. Crotalus durissus. The IUCN Red List of Threatened Species 2021: e.T178477A44954627. Accessed on 15 May 2026.",
+  "assessment_id": 44954627,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 178477,
+    "scientific_name": "Crotalus durissus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 5685,
+        "scientific_name": "Crotalus durissus ssp. unicolor",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "REPTILIA",
+        "order_name": "SQUAMATA",
+        "family_name": "VIPERIDAE",
+        "genus_name": "Crotalus",
+        "species_name": "durissus",
+        "subpopulation_name": null,
+        "infra_name": "unicolor",
+        "authority": "Lidth de Jeude, 1887",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Viper Specialist Group",
+            "url": "http://www.oriannesociety.org/iucn-viper-specialist-group",
+            "description": "Co-Chairs: Jesús Sigala-Rodríguez (email: jjsigala@gmail.com) and Stephen Spear (email: sspear@thewilds.org)\nRed List Authority Coordinator: Johannes Penner (email: johannes.penner@web.de)"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Aruba Island Rattlesnake",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Crotalus unicolor Lidth de Jeude, 1887",
+            "status": "NEW",
+            "genus_name": "Crotalus",
+            "species_name": "unicolor",
+            "species_author": "Lidth de Jeude, 1887",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          }
+        ]
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "VIPERIDAE",
+    "genus_name": "Crotalus",
+    "species_name": "durissus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Linnaeus, 1758",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Viper Specialist Group",
+        "url": "http://www.oriannesociety.org/iucn-viper-specialist-group",
+        "description": "Co-Chairs: Jesús Sigala-Rodríguez (email: jjsigala@gmail.com) and Stephen Spear (email: sspear@thewilds.org)\nRed List Authority Coordinator: Johannes Penner (email: johannes.penner@web.de)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Neotropical Rattlesnake",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "South American Rattlesnake",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Yucatan Rattlesnake",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Cascabel-tropische - Schauer-klapperschlange",
+        "language": "ger"
+      },
+      {
+        "main": true,
+        "name": "Cascabel Rattlesnake",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Crotalus loeflingii Humboldt, 1811",
+        "status": "ACCEPTED",
+        "genus_name": "Crotalus",
+        "species_name": "loeflingii",
+        "species_author": "Humboldt, 1811",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Crotalus dryinas Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Crotalus",
+        "species_name": "dryinas",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Crotalus terrificus Boulenger, 1896",
+        "status": "ACCEPTED",
+        "genus_name": "Crotalus",
+        "species_name": "terrificus",
+        "species_author": "Boulenger, 1896",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Crotalus cascavella Wagler, 1824",
+        "status": "ACCEPTED",
+        "genus_name": "Crotalus",
+        "species_name": "cascavella",
+        "species_author": "Wagler, 1824",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Crotalus cumanensis Humboldt, 1811",
+        "status": "ACCEPTED",
+        "genus_name": "Crotalus",
+        "species_name": "cumanensis",
+        "species_author": "Humboldt, 1811",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 2800,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species ranges discontinuously from Colombia to Argentina in South America. It occurs in all mainland countries in South America except Ecuador and Chile. This species generally is found at elevations between sea level and 2,000 m asl, but there is an isolated record in Boyacá, Colombia, at 2,100 m (J.R. Caicedo pers. comm. 2013) and another from Venezuela at&#160;2,800 m (Campbell and Lamar 2004).",
+    "population": "It is a common species.&#160;No significant declines have been reported, although in Uruguay its distribution has been reduced significantly and at present is restricted to the northern part of the country (Carreira <em>et al</em>. 2005).",
+    "habitats": "This is a mainly terrestrial species, but in Brazil it has been observed in arboreal situations (Dayrell <em>et al. </em>2010). It inhabits a broad range of habitats, ranging from dry sparsely vegetated stony areas or desert, to savanna and grasslands (M. Martins, pers. comm., 2010). It feeds almost exclusively on mammals (mainly rodents), eating lizards only rarely (Leynaud and Bucher 1999, Campbell and Lamar 2004, M. Martins pers. comm. 2010, G. Rivas and J.R. Caicedo pers. comm. 2013).",
+    "threats": "It is hunted and persecuted by farmers,&#160;but on a range-wide scale no major threats are known.",
+    "measures": "The subspecies&#160;<em>Crotalus durissus terrificus</em>&#160;is a priority species for conservation in Uruguay (Carreira and Estrades 2013).&#160;In places its distribution coincides with protected areas. No further conservation measures are required.",
+    "use_trade": "It is used locally in traditional medicine for cancer treatment in the eastern llanos of Colombia.",
+    "rationale": "<em>Crotalus durissus</em> has been assessed as Least Concern in view of its very wide distribution and its tolerance of a broad range of habitats. No specific threats have been reported, and this species probably is not undergoing significant population declines.",
+    "trend_justification": null,
+    "taxonomic_notes": "<p>The taxonomic rearrangement of Campbell and Lamar (2004) (based on morphology) was corroborated by the molecular data of Wuster&#160;<em>et al</em>. (2005), confining&#160;<em>Crotalus durissus</em>&#160;(previously understood to range throughout the Neotropics) to South America (M. Martins, pers. comm. 2010). Rivas <em>et al. </em>(2012) propose recognizing the current subspecies&#160;<em>Crotalus d. vegrandis </em>from the lowlands of Maturín and Anzoátegui (northeastern Venezuela) as a full species based only on size and colour pattern. This scheme is adopted by the Reptile Database as of November 2018 (Uetz 2018), however, other works do not (Campbell and Lamar 2004, Wuster <em>et al</em>. 2005) and the recognition of this species would warrant more evidence than a smaller size and a peculiar colour pattern.</p>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Moist"
+      },
+      "code": "2_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Rocky areas (eg. inland cliffs, mountain peaks)"
+      },
+      "code": "6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uruguay"
+      },
+      "code": "UY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bolivia, Plurinational States of"
+      },
+      "code": "BO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Paraguay"
+      },
+      "code": "PY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Suriname"
+      },
+      "code": "SR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tucumán"
+      },
+      "code": "AGW-TU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Santiago del Estero"
+      },
+      "code": "AGW-SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Santa Fé"
+      },
+      "code": "AGE-SF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Misiones"
+      },
+      "code": "AGE-MI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Salta"
+      },
+      "code": "AGW-SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mendoza"
+      },
+      "code": "AGW-ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "La Rioja"
+      },
+      "code": "AGW-LR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "La Pampa"
+      },
+      "code": "AGE-LP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jujuy"
+      },
+      "code": "AGW-JU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Formosa"
+      },
+      "code": "AGE-FO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Entre Ríos"
+      },
+      "code": "AGE-ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Corrientes"
+      },
+      "code": "AGE-CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Córdoba"
+      },
+      "code": "AGE-CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chaco"
+      },
+      "code": "AGE-CH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Catamarca"
+      },
+      "code": "AGW-CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "San Juan"
+      },
+      "code": "AGW-SJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "San Luis"
+      },
+      "code": "AGW-SL"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Cacciali, P., Caicedo, J.R., Carreira, S., Fitzgerald, L., Gutiérrez-Cárdenas, P., Kacoliris, F., Montero, R., Renjifo, J., Rivas, G., Rodríguez, J. & Scott, N.",
+      "value": [
+        "Lee Fitzgerald (SRLI Reptile Assessment)",
+        "Gilson Rivas (Museo de Biologia, Facultad Experimental de Ciencias, La Universidad del Zulia, apartado postal 526, Maracaibo 4011, Estado Zulia, Venezuela)",
+        "Norman Scott (SRLI Reptile Assessment)",
+        "José Rancés Caicedo (Instituto Sinchi, Leticia, Colombia)",
+        "Pier Cacciali (Instituto de Investigación Biológica del Paraguay)",
+        "Federico Kacoliris (Museo de La Plata-CONICET)",
+        "Ricardo Montero (Fundación Miguel Lillo-CONICET)",
+        "Paul Gutiérrez-Cárdenas",
+        "Juan Manuel Renjifo",
+        "Jorge Rodríguez (IUCN SSC Conservation Planning Specialist Group (CPSG))",
+        "Santiago Carreira (Sección Zoología Vertebrados, Facultad de Ciencias & Museo Nacional de Historia Natural / Montevideo - Uruguay)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Sigala Rodriguez, J., Martins, M.R.C. & Lamar, W.",
+      "value": [
+        "Jesus Sigala Rodriguez",
+        "William Lamar (University of Texas at Tyler / SRLI Reptile Assessment)",
+        "Marcio Martins (USP (Brazilian Snakes))"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Rodríguez, J., De Silva, R., Milligan, H.T., Wearn, O.R., Wren, S., Zamin, T., Sears, J., Wilson, P., Lewis, S., Lintott, P. & Powney, G.",
+      "value": [
+        "Ranmali De Silva (IOZ)",
+        "Harriet Milligan (IOZ)",
+        "Oliver Wearn (Imperial College/ Institute of Zoology, London, UK)",
+        "Sally Wren (Zoological Society of London, UK)",
+        "Tara Zamin (ex ZSL)",
+        "Jennifer Sears (SRLI Reptile Assessment)",
+        "Penny Wilson (SRLI Reptile Assessment)",
+        "Sarah Lewis (SRLI Reptile Assessment)",
+        "Paul Lintott (SRLI Reptile Assessment)",
+        "Gary Powney (SRLI Reptile Assessment)",
+        "Jorge Rodríguez (IUCN SSC Conservation Planning Specialist Group (CPSG))"
+      ]
+    },
+    {
+      "credit_type_name": "institutions",
+      "full": "NatureServe",
+      "value": [
+        "NatureServe"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Uetz, P., Freed, P. and Hošek, J. (eds). 2018. The Reptile Database. Available at: <a href=\"http://www.reptile-database.org\">http://www.reptile-database.org</a>. (Accessed: 06 February 2018).",
+      "year": "2018",
+      "title": "The Reptile Database",
+      "author": "Uetz, P., Freed, P. and Hošek, J. (eds)",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rivas, G.A., Molina, C.R., Ugueto, G.N., Barros, T.R., Barrio-Amorós, C.L. and Kok, P.J.R. 2012. Reptiles of Venezuela: an updated and commented checklist. <i>Zootaxa</i> 3211: 1-64.",
+      "year": "2012",
+      "title": "Reptiles of Venezuela: an updated and commented checklist",
+      "author": "Rivas, G.A., Molina, C.R., Ugueto, G.N., Barros, T.R., Barrio-Amorós, C.L. and Kok, P.J.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Campbell, J.A. and Lamar, W.W. 2004. <i>The Venomous Reptiles of the Western Hemisphere</i>. Cornell Univeristy Press, Ithica, NY.",
+      "year": "2004",
+      "title": "The Venomous Reptiles of the Western Hemisphere",
+      "author": "Campbell, J.A. and Lamar, W.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Trutnau, L. 2004. <i>Venomous Snakes: Snakes in the Terrarium</i>. Krieger Publishing Company, Florida.",
+      "year": "2004",
+      "title": "Venomous Snakes: Snakes in the Terrarium",
+      "author": "Trutnau, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "McDiarmid, R.W., Campbell, J.A. and Toure, T.A. 1999. <i>Snake Species of the World: A Taxonomic and Geographic Reference</i>. The Herpetologists' League, Washington DC.",
+      "year": "1999",
+      "title": "Snake Species of the World: A Taxonomic and Geographic Reference",
+      "author": "McDiarmid, R.W., Campbell, J.A. and Toure, T.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Leynaud, G.C. and Bucher, E.H. 1999. La fauna de serpientes del Chaco Sudamericano: diversidad, distribución geografica y estado de conservación. <i> Academia Nacional de Ciencias Miscelanea</i> 98: 1-46.",
+      "year": "1999",
+      "title": "La fauna de serpientes del Chaco Sudamericano: diversidad, distribución geografica y estado de conservación",
+      "author": "Leynaud, G.C. and Bucher, E.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Giraudo, A.R., Arzamendia, V., Bellini, G.P., Bessa, C.A., Calamante, C.C., Cardozo, G., Chiaraviglio, M., Costanzo, M.B., Etchepare, E.G., Di Cola, V., Di Pietro, D., Kretzschmar, S., Palomas, S., Nenda, S.J., Rivera, P.C., Rodríguez, M.E., Scrocchi, G.J. and Williams, J. D. 2012. Categorización del estado de conservación de las serpientes de la República Argentina. <i>Cuadernos de Herpetología</i> 26(3): 303-326.",
+      "year": "2012",
+      "title": "Categorización del estado de conservación de las serpientes de la República Argentina",
+      "author": "Giraudo, A.R., Arzamendia, V., Bellini, G.P., Bessa, C.A., Calamante, C.C., Cardozo, G., Chiaraviglio, M., Costanzo, M.B., Etchepare, E.G., Di Cola, V., Di Pietro, D., Kretzschmar, S., Palomas, S., Nenda, S.J., Rivera, P.C., Rodríguez, M.E., Scrocchi, G.J. and Williams, J. D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Campbell, J.A. and Lamar, W.W. 1989. <i>The Venomous Reptiles of Latin America</i>. Cornell University Press, Ithaca, New York.",
+      "year": "1989",
+      "title": "The Venomous Reptiles of Latin America",
+      "author": "Campbell, J.A. and Lamar, W.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Carreira, S., Meneghel, M. and Achaval, F. 2005. <i>Reptiles del Uruguay</i>. Facultad de Ciencias, Montevideo.",
+      "year": "2005",
+      "title": "Reptiles del Uruguay",
+      "author": "Carreira, S., Meneghel, M. and Achaval, F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Campbell, J.R and Lamar, W.W. 1989. <i>The Venomous Reptiles of Latin America</i>. Cornell University Press, New York.",
+      "year": "1989",
+      "title": "The Venomous Reptiles of Latin America",
+      "author": "Campbell, J.R and Lamar, W.W",
+      "citation_short": null
+    },
+    {
+      "citation": "Tozetti, A. M. and Martins, M. 2008. Habitat use by the South American rattlesnake (Crotalus durissus) in southeastern Brazil. <i>Journal of Natural History</i> 42: 1435-1444.",
+      "year": "2008",
+      "title": "Habitat use by the South American rattlesnake (Crotalus durissus) in southeastern Brazil",
+      "author": "Tozetti, A. M. and Martins, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wüster, W., Ferguson, J.E., Quijada-Mascareñas, J.A., Pook, C.E., Salomão, M.G. and  Thorpe, R.S. 2005a. Tracing an invasion: landbridges, refugia and the phylogeography of the Neotropical rattlesnake (Serpentes: Viperidae: Crotalus durissus). <i>Molecular Ecology</i> 14: 1095-1108.",
+      "year": "2005a",
+      "title": "Tracing an invasion: landbridges, refugia and the phylogeography of the Neotropical rattlesnake (Serpentes: Viperidae: Crotalus durissus)",
+      "author": "Wüster, W., Ferguson, J.E., Quijada-Mascareñas, J.A., Pook, C.E., Salomão, M.G. and  Thorpe, R.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Stafford, P.J. and Meyer, J.R. 2000. <i>A Guide to the Reptiles of Belize</i>. Academic Press, San Diego.",
+      "year": "2000",
+      "title": "A Guide to the Reptiles of Belize",
+      "author": "Stafford, P.J. and Meyer, J.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Quijada-Mascareñas, Ferguson, J.E., Pook, C.E., Salomão, M.G. J.A., Thorpe, R.S. and Wüster, W. 2007. Phylogeographic patterns of trans-Amazonian vicariants and Amazonian biogeography: the Neotropical rattlesnake (Crotalus durissus complex) as an example. <i>Journal of Biogeography</i> 34(8): 1296-1312.",
+      "year": "2007",
+      "title": "Phylogeographic patterns of trans-Amazonian vicariants and Amazonian biogeography: the Neotropical rattlesnake (Crotalus durissus complex) as an example",
+      "author": "Quijada-Mascareñas, Ferguson, J.E., Pook, C.E., Salomão, M.G. J.A., Thorpe, R.S. and Wüster, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Salomão, M. G., Santos, S. M. A., and Puorto, G. 1995. Activity pattern of Crotalus durissus (Viperidae, Crotalinae): Feeding, reproduction and snakebite. <i>Studies on Neotropical Fauna and Environment</i> 30(2): 101-106.",
+      "year": "1995",
+      "title": "Activity pattern of Crotalus durissus (Viperidae, Crotalinae): Feeding, reproduction and snakebite",
+      "author": "Salomão, M. G., Santos, S. M. A., and Puorto, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Soutullo , A., Clavijo, C. and Martínez-Lanfranco, J.A. (eds.). 2013. <i>Especies prioritarias para la conservación en Uruguay. Vertebrados, moluscos continentales y plantas vasculares</i>.  SNAP/DINAMA/MVOTMA y DICYT/ MEC, Nontevideo.",
+      "year": "2013",
+      "title": "Especies prioritarias para la conservación en Uruguay. Vertebrados, moluscos continentales y plantas vasculares",
+      "author": "Soutullo , A., Clavijo, C. and Martínez-Lanfranco, J.A. (eds.)",
+      "citation_short": null
+    },
+    {
+      "citation": "Carreira, S. and Estrades, A. 2013. Reptiles. In: A. Soutullo, C. Clavijo and J.A. Martínez-Lanfranco (eds), <i>Especies prioritarias para la conservación en Uruguay. Vertebrados, moluscos continentales y plantas vasculares.</i>, pp. 129-147. SNAP/DINAMA/MVOTMA y DICYT/MEC, Montevideo.",
+      "year": "2013",
+      "title": "Reptiles",
+      "author": "Carreira, S. and Estrades, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2021. The IUCN Red List of Threatened Species. Version 2021-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 09 December 2021).",
+      "year": "2021",
+      "title": "The IUCN Red List of Threatened Species. Version 2021-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2021-3"
+    },
+    {
+      "citation": "Barros, V.A., Sueiro, L.R. and Almeida-Santos, S.M. 2012. Reproductive biology of the neotropical rattlesnake <i>Crotalus durissus</i> from northeastern Brazil: a test of phylogenetic conservatism of reproductive patterns. <i>Herpetological Journal </i> 22: 97-104.",
+      "year": "2012",
+      "title": "Reproductive biology of the neotropical rattlesnake <i>Crotalus durissus</i> from northeastern Brazil: a test of phylogenetic conservatism of reproductive patterns.",
+      "author": "Barros, V.A., Sueiro, L.R. and Almeida-Santos, S.M. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dayrell, J.S., Costa, H.C., Feio, R.N. and Drummond, A.O. 2010. <i>Crotalus durissus</i> (South American rattlesnake). Arboreal habitat use. . <i>Herpetological Review </i> 41: 89-90.",
+      "year": "2010",
+      "title": "<i>Crotalus durissus</i> (South American rattlesnake). Arboreal habitat use. ",
+      "author": "Dayrell, J.S., Costa, H.C., Feio, R.N. and Drummond, A.O",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wang, E. 2002. <i>Crotalus durissus</i> (Neotropical rattlesnake). Predation. <i>Herpetological Review</i> 33(2): 138-139.",
+      "year": "2002",
+      "title": "<i>Crotalus durissus</i> (Neotropical rattlesnake). Predation.",
+      "author": "Wang, E.",
+      "citation_short": ""
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

@@ -1,0 +1,857 @@
+{
+  "assessment_date": "2016-01-07T00:00:00.000+00:00",
+  "year_published": "2016",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 550,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/550/50180828",
+  "citation": "IUCN SSC Antelope Specialist Group 2016. Aepyceros melampus. The IUCN Red List of Threatened Species 2016: e.T550A50180828. Accessed on 15 May 2026.",
+  "assessment_id": 50180828,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 550,
+    "scientific_name": "Aepyceros melampus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 136944,
+        "scientific_name": "Aepyceros melampus ssp. melampus",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "BOVIDAE",
+        "genus_name": "Aepyceros",
+        "species_name": "melampus",
+        "subpopulation_name": null,
+        "infra_name": "melampus",
+        "authority": "(Lichtenstein, 1812)",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Impala",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Rooibok",
+            "language": "afr"
+          },
+          {
+            "main": false,
+            "name": "Schwarzfersenantilope",
+            "language": "ger"
+          },
+          {
+            "main": true,
+            "name": "Common Impala",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 549,
+        "scientific_name": "Aepyceros melampus ssp. petersi",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "BOVIDAE",
+        "genus_name": "Aepyceros",
+        "species_name": "melampus",
+        "subpopulation_name": null,
+        "infra_name": "petersi",
+        "authority": "Bocage, 1879",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Schwarzgesicht-Impala",
+            "language": "ger"
+          },
+          {
+            "main": false,
+            "name": "Schwarznasen-Impala",
+            "language": "ger"
+          },
+          {
+            "main": true,
+            "name": "Black-faced Impala",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "ARTIODACTYLA",
+    "family_name": "BOVIDAE",
+    "genus_name": "Aepyceros",
+    "species_name": "melampus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Lichtenstein, 1812)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Black-faced Impala",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Common Impala",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Impala",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Impala",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Rooibok",
+        "language": "afr"
+      },
+      {
+        "main": false,
+        "name": "Schwarzfersenantilope",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Swala Pala",
+        "language": "swa"
+      },
+      {
+        "main": true,
+        "name": "Impala",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Antilope melampus Lichtenstein, 1812",
+        "status": "ACCEPTED",
+        "genus_name": "Antilope",
+        "species_name": "melampus",
+        "species_author": "Lichtenstein, 1812",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 1700,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "2000000",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "5.7",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Percentage of population protected by PAs",
+            "value": "21-30"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "The Impala (<em>Aepyceros melampus</em>) formerly occurred widely in southern and East Africa, from central and southern Kenya and north-east Uganda to northern KwaZulu-Natal, with a small disjunct population of Black-faced Impala in north-west Namibia and south-east Angola. Their current distribution remains largely unchanged from their historical range, although it has been eliminated from parts by hunting for meat and the spread of settlement (e.g., they now only occur in south-west Uganda, and have been extirpated from Burundi) (East 1999, Fritz and Bourgarel 2013). Common Impala have been introduced to numerous privately owned game  ranches and small reserves throughout southern Africa. Impala have also  been introduced in two protected areas in Gabon, although here they are  in decline (P. Chardonnet pers. comm). In Namibia, the Black-faced Impala is naturally confined to the Kaokoland in the north-west, and neighbouring south-western Angola.",
+    "population": "Population estimates are available for most of the Impala’s current range. East (1999) summed these estimates to produce a total population of 1,584,000 Common Impala and 2,200 Black-faced Impala, but the former does not allow for undercounting in aerial surveys or those areas for which population estimates are unavailable. Correcting for undercounting biases, East (1999) estimated the total numbers of Common Impala at ca 2 million. East's estimate of 2,200 for Black-faced Impala is slightly lower than that estimated by Green and Rothstein (1998), who estimated numbers in Etosha at around 1,500 individuals, with an additional 1,200 on private land, and the total population in Kaokoland at around 500. As of 2007, numbers in Etosha and private ranches are estimated at about 3,200 with a further 50-100 on conservancies (all stable and increasing); numbers in the north-west (the original native range) may number approximately 1,000 (J. Jackson in litt to ASG 2007). As noted by Fritz and Bourgarel (2013), actual recorded densities of Impala vary substantially, from less than 1/km² in Mkomazi National Park (Tanzania) to as many as 135/km² on the shores of Lake Kariba in Zimbabwe (Bourgarel 1998). In the wooded savanna of Akagera N.P. in Rwanda, where Monfort (1972) recorded densities of 214/km², total numbers declined by about 75-80% between 1990 and 1998 (Williams and Ntayombya 1999).",
+    "habitats": "The Impala is a water-dependent and typical ecotone species, associated with light woodlands and savannahs, selecting open <em>Acacia </em>savannas with nutrient-rich soils providing good-quality grass, and high-quality browse in the dry season (Fritz and Bourgarel 2013). Impala are absent from montane ecosystems, recorded to about 1,700 m on the slopes of Mt Kilimanjaro (Grimshaw<em> <em>et al.</em></em> 1995). In their semi-arid environment, Black-faced Impala also select the interface between wooded savanna and open grassy vleis (Joubert 1971, Matson <em><em>et al.</em></em> 2005).",
+    "threats": "The main threat to Common Impala seems to be active poaching at the edge of, and within, protected areas (with strong influence on densities as well as population structure) combined with agro-pastoral development (Setsaasa <em><em>et al.</em> </em>2007, Averbeck <em><em>et al.</em> </em>2009). Hunting risk is also likely to affect Impala behaviour, such as change in habitat selection or waterhole attendance (Crosmary <em><em>et al.</em></em> 2012). Poaching, livestock development and severe drought were the main factors contributing to the decline of Black-faced Impala&#160;(Green and Rothstein 1998, East 1999). The reintroduction of 180 individuals from Kaokoland to the west of Etosha National Park between 1968 and 1971 helped promote the conservation of the Black-faced subspecies, and a few were translocated from Etosha to private game farms in Namibia (Fritz and Bourgarel 2013).&#160;However, the introduction of Common Impala to ranches and conservancies neighbouring Etosha National Park may represent a threat to the Black-faced&#160;Impala through hybridization. Green and Rothstein (1998) earlier estimated that about one-quarter of all privately owned Black-faced Impala occur in mixed herds with Common Impala. In a recent study, Lorenzen and Siegismund (2004) analysed 127 Black-faced Impala individuals from five subpopulations in Etosha National Park to determine whether any hybridization had taken place within the park, but could not find any definite evidence.",
+    "measures": "The Common Impala is one of the most abundant antelopes in Africa, with about one-quarter of the population occurring in protected areas. The largest numbers occurring in areas such as the Mara and Kajiado (Kenya), Serengeti, Ruaha and Selous (Tanzania), Luangwa Valley (Zambia), Okavango (Botswana), Hwange, Sebungwe and the Zambezi Valley (Zimbabwe), Kruger (South Africa) and on private farms and conservancies (South Africa, Zimbabwe, Botswana and Namibia) (East 1999). Its future is secure as long as it continues to occur in large, adequately protected and managed populations in protected areas and private farms and conservancies. The main surviving populations of the Black-faced Impala occur in Etosha National Park and private farms in Namibia. The numbers of the Black-faced Impala should continue to increase in protected areas and on private land, although it remains at potential risk from hybridization with the Common Impala (East 1999). The Namibian government has a management plan to eliminate hybridization with Common Impala and strictly regulate harvests. The Namibian Professional Hunters Association has a Black-faced Impala committee and the NGO Conservation Force has a long-term involvement in all aspects of its conservation including funding of the management plan. Good management practices make the future of the taxon secure for now (J. Jackson in litt to ASG 2007).",
+    "use_trade": "Impala are subject&#160;to consumptive purposes including hunting safaris, local use and harvesting for export. Impala are the most common antelope taken on hunting safaris in South Africa and&#160;are the second&#160;most numerous species harvested for use as biltong (after Springbok <em>Antidorcas marsupialis</em>; Van der Merwe and Saayman 2003). Owing to its high rate of reproduction and great adaptability, the Impala has also become of prime interest for meat production (e.g., Fairall 1983, Bothma 1989), not only on wildlife ranches but also in remote communal areas (e.g., Feron <em><em>et al.</em></em> 1998; Averbeck 2001, 2002; Bourgarel <em><em>et al.</em></em> 2001). In 2004, Impala meat constituted the&#160;eighth highest&#160;weight of&#160;commercially produced game&#160;meat that was exported from South Africa&#160;(Patterson and Khosa 2005).&#160; The Black-faced Impala is also affected but to a lesser extent and the Namibian government has a management plan to strictly regulate harvests.",
+    "rationale": "The Impala is assessed as Least Concern as Impala are still relatively widespread, common and abundant in numerous protected areas. The population is estimated at almost two million, of which about 50% are on private land (stable or increasing) and 25% in protected areas (stable). The remaining 25% are stable or decreasing. Its future is secure as long as it continues to occur in large, adequately protected and managed populations in protected areas and private farms and conservancies. Most of the largest populations are stable or increasing.",
+    "trend_justification": null,
+    "taxonomic_notes": "Two subspecies are generally recognized, supported by molecular data (Nersting and Arctander 2001, Lorenzen <em>et al.</em> 2006): the Common Impala (<em>A. m. melampus</em>) and the Black-faced Impala (<em>A. m. petersi</em>)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Burundi"
+      },
+      "code": "BI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Botswana"
+      },
+      "code": "BW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rwanda"
+      },
+      "code": "RW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eswatini"
+      },
+      "code": "SZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malawi"
+      },
+      "code": "MW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Zambia"
+      },
+      "code": "ZM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uganda"
+      },
+      "code": "UG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Zimbabwe"
+      },
+      "code": "ZW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Droughts"
+      },
+      "code": "11_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "IUCN SSC Antelope Specialist Group",
+      "value": [
+        "falsemail@gen.iucnsis.org"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Hoffmann, M. & Mallon, D.",
+      "value": [
+        "David Mallon (IUCN SSC Antelope RLA)",
+        "Michael Hoffmann (Zoological Society of London / IUCN SSC Canid Specialist Group)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "East, R. (compiler). 1999. <i>African Antelope Database 1998</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1999",
+      "title": "African Antelope Database 1998",
+      "author": "East, R. (compiler)",
+      "citation_short": ""
+    },
+    {
+      "citation": "Crawford-Cabral, J. and Verissimo, L.N. 2005. <i>The Ungulate Fauna of Angola</i>. Instituto de Investifacao Cientifica Tropical, Lisboa.",
+      "year": "2005",
+      "title": "The Ungulate Fauna of Angola",
+      "author": "Crawford-Cabral, J. and Verissimo, L.N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Grimshaw, J. M., Cordeiro, N. J. and Foley, C. A. H. 1995. The mammals of Kilimanjaro. <i>Journal of the East Africa Natural History Society</i> 84: 105-139.",
+      "year": "1995",
+      "title": "The mammals of Kilimanjaro",
+      "author": "Grimshaw, J. M., Cordeiro, N. J. and Foley, C. A. H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Williams, S.D. and Ntayombya, P. 1999. Akagera: An assessment of the biodiversity and conservation needs. Report of the Zoological Society of London – MINAGRI, London, UK.",
+      "year": "1999",
+      "title": "Akagera: An assessment of the biodiversity and conservation needs",
+      "author": "Williams, S.D. and Ntayombya, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Monfort, A. 1972. Densités, biomasses et structures des populations d'ongulés sauvages au Parc De L'akagera (Rwanda). <i>Revue d'Écologie (La Terre et la Vie)</i> 2: 216-257.",
+      "year": "1972",
+      "title": "Densités, biomasses et structures des populations d'ongulés sauvages au Parc De L'akagera (Rwanda)",
+      "author": "Monfort, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Joubert, E. 1971. Observations on the habitat preferences and population dynamics of the Black-faced Impala in South West Africa. <i>Madoqua</i> 1(3): 55-65.",
+      "year": "1971",
+      "title": "Observations on the habitat preferences and population dynamics of the Black-faced Impala in South West Africa",
+      "author": "Joubert, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Green, W.C.H. and Rothstein, A. 1998. Translocation, hybridization, and the endangered Black-Faced Impala. <i>Conservation Biology</i> 12(2): 475-480.",
+      "year": "1998",
+      "title": "Translocation, hybridization, and the endangered Black-Faced Impala",
+      "author": "Green, W.C.H. and Rothstein, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bourgarel, M. 1998. Aspects de la dynamique des populations d'impalas <i>Aepyceros melampus</i> sur les bords du Lac Kariba au Zimbabwe. M.Sc. thesis, Université Lyon - I.",
+      "year": "1998",
+      "title": "Aspects de la dynamique des populations d'impalas <i>Aepyceros melampus</i> sur les bords du Lac Kariba au Zimbabwe",
+      "author": "Bourgarel, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fritz, H. and Bourgarel, M. 2013. <i>Aepyceros melampus</i> Impala. In: J. Kingdon and M. Hoffmann (eds), <i>The Mammals of Africa. VI. Pigs, Hippopoyamuses, Chevrotain, Giraffes, Deer, and Bovids</i>, pp. 480-487. Bloomsbury Publishing, London, UK.",
+      "year": "2013",
+      "title": "<i>Aepyceros melampus</i> Impala",
+      "author": "Fritz, H. and Bourgarel, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lorenzen, E.D. and Siegismund, H.R. 2004. No suggestion of hybridization between the vulnerable black-faced impala (<i>Aepyceros melampus petersi</i>) and the common impala (<i>A. m. melampus</i>) in Etosha National Park, Namibia. <i>Molecular Ecology</i> 13: 3007-3019.",
+      "year": "2004",
+      "title": "No suggestion of hybridization between the vulnerable black-faced impala (<i>Aepyceros melampus petersi</i>) and the common impala (<i>A. m. melampus</i>) in Etosha National Park, Namibia",
+      "author": "Lorenzen, E.D. and Siegismund, H.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lorenzen, E.D., Arctander, P. and Siegismund, H.R. 2006. Regional genetic structuring and evolutionary history of the impala <i>Aepyceros melampus</i>. <i>Journal of Heredity</i> 97: 119–132.",
+      "year": "2006",
+      "title": "Regional genetic structuring and evolutionary history of the impala <i>Aepyceros melampus</i>",
+      "author": "Lorenzen, E.D., Arctander, P. and Siegismund, H.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Matson, T.K., Goldizen, A.W. and Jarman, P.J. 2005. Microhabitat use by black-faced impala in the Etosha National Park, Namibia. <i>Journal of Wildlife Management</i> 69: 1708-1715.",
+      "year": "2005",
+      "title": "Microhabitat use by black-faced impala in the Etosha National Park, Namibia",
+      "author": "Matson, T.K., Goldizen, A.W. and Jarman, P.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nersting L.G. and Arctander, P. 2001. Phylogeography and conservation of impala and greater kudu. <i>Molecular Ecology</i> 10: 711-719.",
+      "year": "2001",
+      "title": "Phylogeography and conservation of impala and greater kudu",
+      "author": "Nersting L.G. and Arctander, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bourgarel, M., des Clers, B., Roques-Rogery, D., Matabilila, J. and Banda, M. 2001. Sustainable use of game population in a Zimbabwean Communal Area: production of cheap edible meat for local communities. In: H. Ebedes, B. Reilly, W. Van Hoven and B. Penzhorn (eds), <i>Fifth International Game Ranching Symposium</i>, pp. 199-206. University of Pretoria, South Africa.",
+      "year": "2001",
+      "title": "Sustainable use of game population in a Zimbabwean Communal Area: production of cheap edible meat for local communities",
+      "author": "Bourgarel, M., des Clers, B., Roques-Rogery, D., Matabilila, J. and Banda, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bothma, J. du P. 1989. <i>Game Ranch Management</i>. J. du P. Bothma, Pretoria.",
+      "year": "1989",
+      "title": "Game Ranch Management",
+      "author": "Bothma, J. du P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Feron, E., Tafira, J. K., Belemsobgo, U., Blomme, S. and de Garine-Wichatitsky, M. 1998. Transforming wild African herbivores into edible meat for local communities. A community owned mechanism for the sustainable use of Impala (<i>Aepyceros melampus</i>) in the Campfire Programme, Zimbabwe. <i>Revue d'Elevage et de Médecine Vétérinaire des Pays Tropicaux</i> 51: 265-272.",
+      "year": "1998",
+      "title": "Transforming wild African herbivores into edible meat for local communities. A community owned mechanism for the sustainable use of Impala (<i>Aepyceros melampus</i>) in the Campfire Programme, Zimbabwe.",
+      "author": "Feron, E., Tafira, J. K., Belemsobgo, U., Blomme, S. and de Garine-Wichatitsky, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Crosmary, W., Valeix, M., Fritz, H., Madzikanda, H. and Côté, S. D. 2012. African ungulates and their drinking problems: trophy hunting and predation constrain access to surface water. <i>Animal Behaviour</i> 83: 145-153.",
+      "year": "2012",
+      "title": "African ungulates and their drinking problems: trophy hunting and predation constrain access to surface water.",
+      "author": "Crosmary, W., Valeix, M., Fritz, H., Madzikanda, H. and Côté, S. D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Van der Merwe, P. and Saayman, M. 2003. Determining the economic value of game farm tourism. <i>Koedoe</i> 46(2): 103-112.",
+      "year": "2003",
+      "title": "Determining the economic value of game farm tourism.",
+      "author": "Van der Merwe, P. and Saayman, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fairall, N. 1983. Production parameters of the Impala, <i>Aepyceros melampus</i>. <i>South African Journal of Animal Science</i> 13: 176-179.",
+      "year": "1983",
+      "title": "Production parameters of the Impala, <i>Aepyceros melampus</i>",
+      "author": "Fairall, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Patterson, C. and Khosa, P. 2005. Background research paper: A status quo study on the professional and recreational hunting industry in South Africa. Trade Record Analysis for Fauna and Flora in Commerce, Pretoria, South Africa.",
+      "year": "2005",
+      "title": "Background research paper: A status quo study on the professional and recreational hunting industry in South Africa.",
+      "author": "Patterson, C. and Khosa, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Averbeck, C., Apio, A., Plath, M. and Wronski, T. 2009. Hunting differentially affects mixed-sex and bachelor-herds in a gregarious ungulate, the Impala (<i>Aepyceros melampus</i>: Bovidae). <i>African Journal of Ecology</i> 48: 255-264.",
+      "year": "2009",
+      "title": "Hunting differentially affects mixed-sex and bachelor-herds in a gregarious ungulate, the Impala (<i>Aepyceros melampus</i>: Bovidae).",
+      "author": "Averbeck, C., Apio, A., Plath, M. and Wronski, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Averbeck, C. 2002. Population ecology of impala and community-based wildlife conservation in Uganda. PhD thesis, Tecnische Universität, München, Germany.",
+      "year": "2002",
+      "title": "Population ecology of impala and community-based wildlife conservation in Uganda",
+      "author": "Averbeck, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Averbeck, C. 2001. Integrating rural communities, antelopes and buffalo conservation in the Lake Mburo Area. <i>Gnusletter</i> 20(1): 24-25.",
+      "year": "2001",
+      "title": "Integrating rural communities, antelopes and buffalo conservation in the Lake Mburo Area.",
+      "author": "Averbeck, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Setsaasa, T. H., Holmerna, T., Mwakalebeb, G., Stokkec, S. and Røskaft, E. 2007. How does human exploitation affect impala populations in protected and partially protected areas? - A case study from the Serengeti Ecosystem, Tanzania. <i>Biological Conservation</i> 136: 563-570.",
+      "year": "2007",
+      "title": "How does human exploitation affect impala populations in protected and partially protected areas? - A case study from the Serengeti Ecosystem, Tanzania.",
+      "author": "Setsaasa, T. H., Holmerna, T., Mwakalebeb, G., Stokkec, S. and Røskaft, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 04 September 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Skewed sex ratios"
+      },
+      "code": "2_3_6"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

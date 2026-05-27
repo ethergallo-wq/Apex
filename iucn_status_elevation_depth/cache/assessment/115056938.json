@@ -1,0 +1,941 @@
+{
+  "assessment_date": "2016-06-14T01:00:00.000+01:00",
+  "year_published": "2016",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 1677,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/1677/115056938",
+  "citation": "IUCN SSC Antelope Specialist Group 2016. Antilocapra americana (errata version published in 2017). The IUCN Red List of Threatened Species 2016: e.T1677A115056938. Accessed on 15 May 2026.",
+  "assessment_id": 115056938,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 1677,
+    "scientific_name": "Antilocapra americana",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 1679,
+        "scientific_name": "Antilocapra americana ssp. peninsularis",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "ANTILOCAPRIDAE",
+        "genus_name": "Antilocapra",
+        "species_name": "americana",
+        "subpopulation_name": null,
+        "infra_name": "peninsularis",
+        "authority": "Nelson, 1912",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Antilocapre de la Basse-Californie",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Berrendo Peninsular",
+            "language": "spa"
+          },
+          {
+            "main": true,
+            "name": "Peninsular Pronghorn",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 1680,
+        "scientific_name": "Antilocapra americana ssp. sonoriensis",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "CETARTIODACTYLA",
+        "family_name": "ANTILOCAPRIDAE",
+        "genus_name": "Antilocapra",
+        "species_name": "americana",
+        "subpopulation_name": null,
+        "infra_name": "sonoriensis",
+        "authority": "Goldman, 1945",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Antelope Specialist Group",
+            "url": "https://www.iucn.org/ssc-groups/mammals/specialist-groups-a-e/antelope",
+            "description": "Co-Chairs: Philippe Chardonnet (email: pchardonnet@yahoo.fr) and David Mallon (email: d.mallon@zoo.co.uk)\nRed List Authority Coordinator: David Mallon\nProgramme Officer: Tania Gilbert (email: asgpo@marwell.org.uk)\nNewsletter: http://www.iucn.org/specialist-groups/antelope-sg/about/ssc-specialist-groups-and-red-list-authorities-directory-5"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Antilocapre de Sonora (mexique)",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Berrendo Sonorense",
+            "language": "spa"
+          },
+          {
+            "main": true,
+            "name": "Sonoran Pronghorn",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 1680,
+        "scientific_name": "Antilocapra americana ssp. sonoriensis",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "ANTILOCAPRIDAE",
+        "genus_name": "Antilocapra",
+        "species_name": "americana",
+        "subpopulation_name": null,
+        "infra_name": "sonoriensis",
+        "authority": "Goldman, 1945",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Antilocapre de Sonora (mexique)",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Berrendo Sonorense",
+            "language": "spa"
+          },
+          {
+            "main": true,
+            "name": "Sonoran Pronghorn",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "ARTIODACTYLA",
+    "family_name": "ANTILOCAPRIDAE",
+    "genus_name": "Antilocapra",
+    "species_name": "americana",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Ord, 1815)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "American Pronghorn",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Mexican Pronghorn",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Amerikanischer Gabelbock",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Antilocapre",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Antilope Américaine",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Berrendo",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Gabelbock",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Gabelhornantilope",
+        "language": "ger"
+      },
+      {
+        "main": true,
+        "name": "Pronghorn",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 3350,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "750000",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "4.3",
+    "congregatory": "Congregatory (and dispersive)",
+    "movement_patterns": "Full Migrant",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "The Pronghorn occurs in western North America, from the southern Prairie Provinces of Canada (southern Alberta, southern Saskatchewan) through the western U.S. to northern Mexico (Baja California, Sonora, Hidalgo).<br/><br/>The Sonoran Pronghorn&#160;occurs in southwestern Arizona (USA) and northwestern Sonora (Mexico). The Baja California or Peninsular Pronghorn is endemic to Baja California (Mexico).<br/><br/>Pronghorn was introduced onto Lanai Island (Hawaii) in 1959, where it reached a  population of about 250 in the mid-1960s; however, there were less than  12 in 1983 and it seemed headed for extinction (Tomich 1986).",
+    "population": "In the early 1800s, there were probably upwards of 35 million Pronghorn. By 1924, they were believed to be near extinction with less than 20,000 animals remaining. From 1924 to 1964 the population increased ten-fold  (O'Gara 1978). <br/><br/>Today, numbers are estimated at about 1 million with around half occurring in Wyoming though numbers fluctuate with the severity of droughts and winters (O'Gara 1999, Byers 2011). They are generally declining in Mexico, although more stable in the remainder of the range. Many local populations are small and isolated.<br/><br/>It is estimated that there are fewer than 300 individuals of Sonoran Pronghorn in the United States and 200-500 individuals in Mexico (U.S. Fish and Wildlife Service 1998). There are around 200 Peninsular Pronghorn in and around breeding centres in Baja California (Byers 2011).",
+    "habitats": "An inhabitant of grasslands, sagebrush plains, deserts, and foothills; avoiding closed habitats with limited lines of sight. They range from near sea-level to 3,350 m (O'Gara 1999). Their need for free water varies with the succulence of the vegetation in their diet. Some populations undertake seasonal movements, sometimes moving as much as 160 km from their summering area (O'Gara 1978). They usually occur in small bands, but large winter herds disperse in spring. Forms separate bachelor and female-kid groups in spring and summer. Males associate with females in late summer and early fall. Breeding takes place mid-September to early October in the north, and from late July to early October in south.<br/><br/>In winter, northern populations depend heavily on browse, especially sagebrush; forbs are most important in summer. Southern populations use more forbs and less browse. They also take grasses, and, in some areas, cacti.",
+    "threats": "The original decline in numbers of Pronghorn was most likely due to hunting, combined with a drastic reduction of available habitat due to habitat loss from agricultural, urban, and mining expansion onto historic lands; fencing across routes of seasonal movements; removal of native vegetation by rangeland rehabilitation projects; and heavy livestock grazing (U.S. Fish and Wildlife Service 1998). However, effective law enforcement, and habitat and wildlife management techniques during the mid-1900s helped Pronghorn stage a remarkable recovery (Yoakum 1968).<br/><br/>Today, there are no major range-wide threats, although localized declines are taking place, particularly to the Sonoran Pronghorn, mainly as a result of, among others, livestock grazing, the construction of roads, fences and other barriers that pose barriers to historical habitat, illegal hunting (mainly in Mexico), insufficient forage and water, and lack of recruitment (see U.S. Fish and Wildlife Service 1998 for review). Pronghorn usually inhabit large expanses of contiguous habitat and once such regions become fragmented beyond some threshold, use by Pronghorn generally decreases.",
+    "measures": "Populations of the Sonoran Pronghorn in Arizona and Mexico are protected under the US Endangered Species Act (since 1967), and a recovery plan for this subspecies has been prepared by the USFWS (U.S. Fish and Wildlife Service 1998). Mexican animals are listed on CITES Appendix I. Pronghorns have game-animal status in all of the western states of the United States, and permits are required to trap or shoot pronghorns. Both Sonoran and Baja Califronia Pronghorn subspecies are listed as Endangered by the&#160;USFWS.<br/><br/>This species occurs in a number of large and well-managed protected areas, including Yellowstone National Park.",
+    "use_trade": "Pronghorn are hunted for meat and as trophies across their range.",
+    "rationale": "Listed as Least Concern as the species remains widespread and relatively common within its range, with a population estimated at around one million animals. No major population declines are reported, with a number of populations occurring in large and well-managed protected areas.",
+    "trend_justification": null,
+    "taxonomic_notes": "<em>Antilocapra americana</em> is sometimes included in the family Bovidae along with other antelopes, but was restored to separate family status by Janis and Scott (1987); see also Grubb (2005). Five subspecies have been named but only three are commonly recognized: American Pronghorn (<em>A. a. americana</em>), Sonoran Pronghorn (<em>A. a. sonoriensis</em>), and Baja California Pronghorn (<em>A. a. peninsularis</em>) with most animals belonging to the nominate subspecies (Byers 2011). Mitochondrial DNA analyses since the early 1990s support the idea of clines within a wide-ranging species rather than separate subspecies (O’Gara and Yoakum 2004)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Desert - Temperate"
+      },
+      "code": "8_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Mediterranean-type Shrubby Vegetation"
+      },
+      "code": "3_8"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Manitoba"
+      },
+      "code": "MAN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Texas"
+      },
+      "code": "TEX-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Baja California"
+      },
+      "code": "MXN-BC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Minnesota"
+      },
+      "code": "MIN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kansas"
+      },
+      "code": "KAN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "North Dakota"
+      },
+      "code": "NDA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montana"
+      },
+      "code": "MNT-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oklahoma"
+      },
+      "code": "OKL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colorado"
+      },
+      "code": "COL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oregon"
+      },
+      "code": "ORE-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Mexico"
+      },
+      "code": "NWM-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Dakota"
+      },
+      "code": "SDA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Wyoming"
+      },
+      "code": "WYO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iowa"
+      },
+      "code": "IOW-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nevada"
+      },
+      "code": "NEV-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sonora"
+      },
+      "code": "MXN-SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saskatchewan"
+      },
+      "code": "SAS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hidalgo"
+      },
+      "code": "MXE-HI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Washington"
+      },
+      "code": "WAS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Idaho"
+      },
+      "code": "IDA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Utah"
+      },
+      "code": "UTA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Alberta"
+      },
+      "code": "ABT-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "California"
+      },
+      "code": "CAL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Arizona"
+      },
+      "code": "ARI-OO"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Scale Unknown/Unrecorded"
+      },
+      "code": "2_3_4"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "IUCN SSC Antelope Specialist Group",
+      "value": [
+        "falsemail@gen.iucnsis.org"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Hoffmann, M.",
+      "value": [
+        "Michael Hoffmann (Zoological Society of London / IUCN SSC Canid Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Beckmann, J., Hoffmann, M. & Byers, J.",
+      "value": [
+        "J. Beckmann",
+        "J. Byers",
+        "Michael Hoffmann (Zoological Society of London / IUCN SSC Canid Specialist Group)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This errata assessment has been created because the map was accidentally left out of the version published previously."
+    }
+  ],
+  "references": [
+    {
+      "citation": "IUCN. 2017. The IUCN Red List of Threatened Species. Version 2017-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 27 April 2017).",
+      "year": "2017",
+      "title": "The IUCN Red List of Threatened Species. Version 2017-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2017-1"
+    },
+    {
+      "citation": "Grubb, P. 2005. Artiodactyla. In: D.E. Wilson & D.M. Reeder (ed.), <i>Mammal Species of the World. A Taxonomic and Geographic Reference (3rd ed)</i>, pp. 637-722. Johns Hopkins University Press, Baltimore, USA.",
+      "year": "2005",
+      "title": "Artiodactyla",
+      "author": "Grubb, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Groves, C.P. and Grubb, P. 1987. Relationships of Living Deer. In: C.M. Wemmer (ed.), <i>Biology and Management of the Cervidae</i>, pp. 21-59. Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "1987",
+      "title": "Relationships of Living Deer",
+      "author": "Groves, C.P. and Grubb, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Yoakum, J. 1968. A review of the distribution and abundance of American pronghorn antelope. Antelope States Workshop, Casper Wyoming 3: 4-14.",
+      "year": "1968",
+      "title": "A review of the distribution and abundance of American pronghorn antelope",
+      "author": "Yoakum, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "O'Gara, B. W. 1978. <i>Antilocapra americana</i>. <i>Mammalian Species</i> 90: 1-7.",
+      "year": "1978",
+      "title": "<i>Antilocapra americana</i>",
+      "author": "O'Gara, B. W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tomich, P. Q. 1986. <i>Mammals in Hawai'i. A synopsis and notational bibliography</i>. Bishop Museum Press, Honolulu, HI, USA.",
+      "year": "1986",
+      "title": "Mammals in Hawai'i. A synopsis and notational bibliography",
+      "author": "Tomich, P. Q.",
+      "citation_short": ""
+    },
+    {
+      "citation": "U.S. Fish and Wildlife Service. 1998. Final Revised Sonoran Pronghorn Recovery Plan (<i>Antilocapra americana sonoriensis</i>). U.S. Fish and Wildlife Service, Albuquerque, New Mexico, USA.",
+      "year": "1998",
+      "title": "Final Revised Sonoran Pronghorn Recovery Plan (<i>Antilocapra americana sonoriensis</i>)",
+      "author": "U.S. Fish and Wildlife Service",
+      "citation_short": null
+    },
+    {
+      "citation": "O'Gara, B. W. 1999. <i>Antilocapra americana</i>. In: D. E. Wilson and S. Ruff (eds), <i>The Smithsonian Book of North American Mammals</i>, pp. 339-341. UBC Press, Canada.",
+      "year": "1999",
+      "title": "<i>Antilocapra americana</i>",
+      "author": "O'Gara, B. W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Janis, C.M. and Scott, K.M. 1987. The interrelationships of high ruminant families with special emphasis on the members of the Cervoidea. <i>American Museum Novitates</i> 2893: 1-85.",
+      "year": "1987",
+      "title": "The interrelationships of high ruminant families with special emphasis on the members of the Cervoidea",
+      "author": "Janis, C.M. and Scott, K.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Byers, J.A. 2011. Antilocapridae (Pronghorn). In: Wilson, D.E., Mittermeier, R.A. (ed.), <i>Handbook of the Mammals of the World. Vol. 2 Hoofed mammals</i>, pp. 780-787. Lynx Edicions, Barcelona, Spain.",
+      "year": "2011",
+      "title": "Antilocapridae (Pronghorn)",
+      "author": "Byers, J.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lee, T. E., Jr. 1992. Mitochondrial DNA and allozyme analysis of pronghorn populations in North America. Ph.D. Thesis, Texas A&M University, College Station, USA.",
+      "year": "1992",
+      "title": "Mitochondrial DNA and allozyme analysis of pronghorn populations in North America",
+      "author": "Lee, T. E., Jr.",
+      "citation_short": ""
+    },
+    {
+      "citation": "O’Gara, B.W. and Yoakum, J.D. 2004. <i>Pronghorn Ecology and Management</i>.  University Press of Colorado, Boulder, Colorado.",
+      "year": "2004",
+      "title": "Pronghorn Ecology and Management",
+      "author": "O’Gara, B.W. and Yoakum, J.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 07 December 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-3"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

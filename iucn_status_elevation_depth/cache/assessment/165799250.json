@@ -1,0 +1,1816 @@
+{
+  "assessment_date": "2021-06-01T01:00:00.000+01:00",
+  "year_published": "2022",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 133257,
+  "criteria": "A3c",
+  "url": "https://www.iucnredlist.org/species/133257/165799250",
+  "citation": "Goergen, L., Rodríguez-Martínez, R., Miller, M., Crabbe, J., Banaszak, A. & Vermeij, M. 2022. Diploria labyrinthiformis. The IUCN Red List of Threatened Species 2022: e.T133257A165799250. Accessed on 15 May 2026.",
+  "assessment_id": 165799250,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 133257,
+    "scientific_name": "Diploria labyrinthiformis",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CNIDARIA",
+    "class_name": "ANTHOZOA",
+    "order_name": "SCLERACTINIA",
+    "family_name": "FAVIIDAE",
+    "genus_name": "Diploria",
+    "species_name": "labyrinthiformis",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Coral Specialist Group",
+        "url": null,
+        "description": "Chair: David Obura (email: dobura@cordioea.net)\nRed List Authority Coordinator: Both Polidoro (email: beth.polidoro@asu.edu)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Corail-cerveau de Neptune",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Coral Cerebro Estriado",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "Grooved Brain Coral",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Diploria cerebreformis (Lamarck, 1816)",
+        "status": "ACCEPTED",
+        "genus_name": "Diploria",
+        "species_name": "cerebreformis",
+        "species_author": "(Lamarck, 1816)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Meandrina laberintiformis (Linnaeus, 1758) [orth. error]",
+        "status": "ADD",
+        "genus_name": "Meandrina",
+        "species_name": "laberintiformis",
+        "species_author": "(Linnaeus, 1758) [orth. error]",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Maeandrina labyrinthiformis (Linnaeus, 1758)",
+        "status": "ACCEPTED",
+        "genus_name": "Maeandrina",
+        "species_name": "labyrinthiformis",
+        "species_author": "(Linnaeus, 1758)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Maeandra labyrinthiformis (Linnaeus, 1758)",
+        "status": "ACCEPTED",
+        "genus_name": "Maeandra",
+        "species_name": "labyrinthiformis",
+        "species_author": "(Linnaeus, 1758)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Coeloria labyrinthiformis Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Coeloria",
+        "species_name": "labyrinthiformis",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Maeandra cerebriformis Lamarck, 1816",
+        "status": "ACCEPTED",
+        "genus_name": "Maeandra",
+        "species_name": "cerebriformis",
+        "species_author": "Lamarck, 1816",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Maeandrina abyrinthiformis Linnaeus, 1758",
+        "status": "ADD",
+        "genus_name": "Maeandrina",
+        "species_name": "abyrinthiformis",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Maeandrina sinuosa Le Sueur, 1820",
+        "status": "ADD",
+        "genus_name": "Maeandrina",
+        "species_name": "sinuosa",
+        "species_author": "Le Sueur, 1820",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Meandrina cerebriformis Lamarck, 1816",
+        "status": "ACCEPTED",
+        "genus_name": "Meandrina",
+        "species_name": "cerebriformis",
+        "species_author": "Lamarck, 1816",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Madrepora labyrinthiformis Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Madrepora",
+        "species_name": "labyrinthiformis",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Critically Endangered"
+    },
+    "code": "CR"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": 43,
+    "upper_depth_limit": 1,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "10",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": "<p><br/></p>",
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species is distributed in the western Atlantic from Bermuda, the Flower Garden Banks in the northwestern Gulf of Mexico and Mexico (Veracruz) to south Florida and the Bahamas southward throughout the Caribbean to Trinidad and Tobago. The depth range is 1-43 metres but the species is most common shallower than 12 m (Goreau and Wells 1967).",
+    "population": "<p>This species is common in most Greater Caribbean reef environments, but typically occurs in low abundances.&#160;</p>  <p>Curaçao and Bonaire have some of the least degraded reefs in the Caribbean (Jackson<em> et al</em>. 2014). Off Curaçao,&#160;average island wide cover (in percentage of bottom cover) of this species<em>&#160;</em>decreased from 0.70 in 1973 (n=21 sites) to 0.10% (n=153 sites) in 2005 (Carmabi unpubl. data) based on direct observation. The abundance of this species is lower on neighbouring islands of Aruba (0.02%, n=52 sites,; Carmabi unpubl. data) and Bonaire (0.0% in 2014) (De Bakker <em>et al</em>. 2016) and there was a decline from an average cover of 0.02 in 1973 based on direct observation (De Bakker<em> et al</em>. 2016). This is a decrease of &gt;56% in two localities with relatively healthy reefs (Bonaire and Curaçao).</p>  <p>This species can be&#160;abundant in some areas. It is thought to be more tolerant to high sedimentation and other stressors compared to other coral species (Hubbard and Pocock 1972, Pratte and Richardson 2014) and this may account for its ability to dominate certain human impacted areas (M. Vermeij and V. Chamberland pers. comm.) and naturally marginal coral reef systems (Dodge and Vaisnys 1977). Nonetheless, severe declines of this species have been reported in response to coastal development (Vermeij 2019) and construction activities (Dodge and Vaisnys 1977) as well as due to Stony Coral Tissue Loss Disease (SCTLD; Meyer<em> et al</em>. 2019). with prevalence and losses&#160;of 67% in Grecian Rocks, Florida Keys (Lunz <em>et al</em>. 2017), 25% in Mexican Caribbean reefs (Alvarez-Filip<em> et al.</em> 2019) and between 20-34% in the Bahamas (Dahlgren 2020).</p>  <p>Species-specific, global level population information is limited. However, coral reefs are experiencing severe global level declines due to increasing water temperatures caused by climate change (Hughes <em>et al.</em> 2018). For the purposes of this Red List assessment, we used species-specific vulnerability traits and two analytical approaches based on two global coral datasets to infer past (GCRMN 2021) and future (UNEP 2020) population trends.&#160; &#160; &#160;</p><p><strong>Approach 1: Future population trend</strong></p><p>The projected onset of annual severe bleaching (ASB) was applied as a proxy to estimate global level population decline. ASB represents the date at which a coral reef will likely experience severe bleaching conditions annually, and beyond which the species will experience a greater than 80% decline as it is not expected to recover (van Hooidonk <em>et al</em>. 2014). ASB is defined as at least eight Degree Heating Weeks (DHW) occurring over a three-month period within a year, and where a DHW occurs when the sea surface temperature is at least 1°C above the maximum monthly mean (van Hooidonk <em>et al.</em> 2014; 2015).&#160;We defined the onset of ASB as corresponding to 80% or more decline, however, this is conservative as other studies have found that corals are unlikely to recover with just two incidences of ASB per decade (Obura&#160;<em>et al.&#160;</em>2022).&#160;<br/></p><p>To calculate ASB for each species we applied spatial data made publicly available via a United Nations Environment Programme report (UNEP 2020) that used the 2019 IPCC CMIP6 global climate models to estimate the projected onset of ASB for the years 2015-2100 on a 27 km x 27 km grid according to the 2018 WCMC-UNEP global coral reef distribution map, which has a resolution to 30 m depth. These data are available via two scenarios of Shared Socioeconomic Pathways (SSP), with SSP5-8.5 representing current global emissions and SSP2-4.5 representing a future reduction in emissions (UNEP 2020). We applied SSP5-8.5 since it follows the precautionary approach recommended by the IUCN Red List methodology and SSP2-4.5 since it represents a more moderate climate change scenario that better tracks current policy projections (Roelfsema&#160;<em>et al</em>. 2020, Obura&#160;<em>et al.</em>&#160;2022). To acknowledge varying levels of coral adaptation to thermal stress, both of these spatial data layers are available for all quarter degree intervals between 0° and 2°C (UNEP 2020); however, coral adaptation in general is poorly understood and varies by species and locality (van Hooidonk&#160;<em>et al</em>. 2013, Logan<em>&#160;et al.</em>&#160;2014). To account for adaptation, we calculated two estimates of ASB onset for both the SSP5-8.5 and the SSP2-4.5, where the first estimate assumes the species has no level of adaptation (0°C) and the second assumes a capacity for 1°C of adaptation. We clipped each of these four UNEP (2020) spatial data layers to the species’ distribution and calculated the average year of ASB onset across all overlapping grid cells.<br/><br/>Based on this spatial analysis, the onset of ASB across this species’ range is projected to occur on average by the year 2030&#160;for SSP5-8.5 and by 2034 for SSP2-4.5&#160;assuming no level of adaptation and by the year 2059&#160;for SSP5-8.5 and by 2072 for SSP2-4.5&#160;assuming 1°C of adaptation. We inferred that the uncertainty associated with the estimate of population decline based on no level of adaptation is lower given this species is primarily restricted to depths shallower than 30 m and is highly susceptible to bleaching. The relative vulnerability to bleaching (i.e., highly susceptible, moderately susceptible, or more resilient) is primarily based on scientific species expert knowledge. The application of the species’ depth range as a vulnerability factor is based on the understanding that a coral species with shallow depth preferences is more frequently exposed to extreme temperatures and is expected to decline at a faster global rate than species that also or primarily occur in deeper, cooler waters (Riegl and Piller 2003). Ocean acidification, which is measured by aragonite saturation, is also considered a major threat to corals due to the impacts of climate change, however, the impacts are expected to be more severe in cooler and/or deeper waters (Couce&#160;<em>et al.</em>&#160;2013, van Hooidonk&#160;<em>et al.</em>&#160;2014, Hoegh-Guldberg&#160;<em>et al.</em>&#160;2017). Although the exact threshold of aragonite saturation that is expected to cause significant decline is not well-known, in the Atlantic, changes in aragonite saturation are expected to be most severe in the Mediterranean Sea (Flecha<em>&#160;et al</em>. 2015).&#160;Therefore, this species is inferred to experience a projected global level decline of at least 80% by the year 2050, or three generations in the future, regardless of the SSP2-4.5 or SSP5-8.5 scenario.&#160;</p><p><strong>Approach 2: Past population trend</strong></p><p>Coral reef monitoring data was also applied as a proxy to estimate global level population decline. The Global Coral Reef Monitoring Network (GCRMN) compiled data related to the status and trends of coral reefs in 10 regions from 1978-2019 via the scientific monitoring observations of more than 300 network members located throughout the world. We applied the publicly available data on estimations of the percent of live hard coral cover loss at the 20%, 50% and 80% confidence intervals in the five Caribbean subregions (GCRMN 2021) to estimate species population decline over the past three generations (1989-2019). The proportion of the species’ range that overlapped with each of the subregions was estimated using the Red List distribution map. The sum of the proportion of the subregional species distribution multiplied by the percent of coral cover loss in each subregion was then used to calculate the 20%, 50% and 80% estimates of coral loss across this species’ entire range.</p><p>To inform the choice of the best (i.e., lowest level of uncertainty) out of the three percentile declines, we considered nine species-specific traits related to vulnerability to coral cover loss. Given this species’ depth range is 1-43 m and is predominately found at depths less than 10 m, generalized abundance is considered common, overall population is not highly fragmented, does not occur off-reef, is highly susceptible to disease, is highly susceptible to Stony Coral Tissue Loss Disease (SCTLD), does recover well from bleaching or disease and is highly susceptible to bleaching, it is overall inferred to be highly susceptible to threats related to reef degradation. Therefore, past decline was inferred from the 80% percentile of estimated coral cover loss, resulting in a global level decline of 28% since 1989, or over the past three generations.</p>",
+    "habitats": "This species occurs in lagoon and back- and fore-reef environments (Goreau and Wells 1967). This&#160;is a hermaphroditic protogynous spawner with an annual cycle of gametogenesis. The timing of gamete release differs among locations throughout the Caribbean. Spawning occurs between April and November, but most commonly between June and August (Szmant 1986, Soong 1991, Jordan 2018). On Curaçao and Bonaire, this species spawns between April and November with a peak in June (Chamberland <em>et al.</em> 2017, E. Muller pers. comm.). However, it reproduces during the late summer in Mexico (S. Snowden pers. obs.), while in Puerto Rico (Weil and Vargas 2010) and Colombia (Alvarado <em>et al.</em> 2004) it spawns only during a single spawning event in the spring. In Mexico, this species spawns in July and August (Grosso-Becerra <em>et al.</em> 2021). Spawning generally occurs between 8 to 13 days after the full moon, with a peak around 11 to 12 days after the full moon. Schools of butterflyfish swarming around a colony typically indicate imminent or ongoing spawning of this colony. Colonies often spawn in up to three consecutive pulses that last in average 5 min and are spaced by intervals of 3 to 20 minutes (Chamberland <em>et al</em>. 2017). This is the only Caribbean coral species that spawns prior to sunset (Muller and Vermeij 2011, Chamberland <em>et al</em>. 2017, Jordan 2018).&#160;It generally exhibits high rates of recruitment, but new recruits may sustain high mortality. <br/><br/>Populations comprise cryptic species, at least on Curaçao. Genetically isolated, but morphologically similar groupings of <em>Diploria labyrinthiformis</em> colonies exist that spawn during different periods of the year (spring vs. fall; V. Chamberland unpubl. data). Genome-wide sequencing confirms that colonies spawning in different seasons represented distinct genetic clusters (Fst= 0.126), showing that different spawning periods have resulted in (partial) reproductive isolation among sympatric, morphologically similar colonies (V. Chamberland unpubl. data). Effective populations size for this species that are already in decline (see above) are thus even smaller than those derived from species inventories based on morphology alone.<br/><p>The age at first maturity of most reef-building corals is typically three to eight years (Wallace 1999). Based on this, we infer that the average age of mature individuals of this species is greater than eight years. Based on average sizes and growth rates, we also infer that the average length of one generation is 10 years. Longevity is not known, but is likely to be greater than 10 years. Therefore, any population decline rates estimated for the purposes of this Red List assessment are measured over a time period of 30 years.&#160;</p>",
+    "threats": "<p>This species is highly susceptible to a multitude of common Caribbean coral diseases (Garzón-Ferreira <em>et al</em>. 2001, Nugues 2002, Precht <em>et al.</em> 2016). It is highly susceptible to Stony Coral Tissue Loss Disease (SCTLD) and is highly sensitive and highly vulnerable to climate change (Foden <em>et al</em>. 2013). SCTLD was first described in Florida in 2014 (Precht <em>et al</em>. 2016) and subsequently spread among Caribbean reefs (https://www.agrra.org/coral-disease-outbreak/#sctld-dashboard). Prevalence of SCTLD among populations of this species has been reported at 67% in Grecian Rocks, Florida Keys (Lunz <em>et al.</em> 2017), up to 80% in Puerto Rico (Weil <em>et al.</em> 2019), between 20-34% in the Bahamas (Dahlgren 2020), and from 25-44% in the Mexican Caribbean (Alvarez-Filip <em>et al</em>. 2019, L. Alvarez-Filip pers. comm. 2020). Complete mortality of colonies commonly occurs within weeks to months. A recent study in which a small population was monitored in Jardines Reef, Mexican Caribbean showed that 7 out of 9 colonies died within months of being infected (Grosso-Becerra <em>et al.</em> 2021). This emerging disease represents a new and significant threat to the species' status. Other diseases that significantly threaten this species are Black Band and White Plague diseases (Gintert <em>et al.</em> 2019).</p><p>In general, the major threat to corals is global climate change, in particular, temperature extremes leading to bleaching and increased susceptibility to disease, increased severity of ENSO events and storms, and ocean acidification (Richards <em>et al.</em> 2008). The most recent, and first, multi-year, global bleaching event (spanning hundreds of kilometres or more) was from 2014 to 2017. Nearly 30% of reefs suffered mortality level-stress, more than 50% of affected reef areas were impacted at least twice, and some locations saw almost complete coral cover loss (Blunden<em> et al</em>. 2018, Vargas-Angel <em>et al</em>. 2019, Eakin <em>et al</em>. 2019). The average interval between bleaching events is now more than 50% less than before, preventing full reef recovery (Hughes<em> et al</em>. 2018).</p><p>Coral disease has emerged as a serious threat to coral reefs worldwide and is a major cause of reef deterioration (Weil <em>et al</em>. 2006, Richards <em>et al.</em> 2008, Maynard <em>et al</em>. 2015). As noted in Walton <em>et al</em>. (2018), in addition to thermal stress, increased coral disease prevalence and mortality can be linked to reduced water quality (Bruno <em>et al.</em> 2003) and clarity (van Woesik and McCaffrey 2017), nutrient enrichment (Vega Thurber <em>et al</em>. 2013), dredging associated sedimentation (Pollock <em>et al</em>. 2014, Miller<em> et al</em>. 2016), and plastic pollution. Based on a survey of 159 reefs in the Asia-Pacific region, the likelihood of disease increases 20-fold when corals are in contact with plastic (Lamb<em> et al</em>. 2018). Increased coral disease levels on the GBR were correlated with increased ocean temperatures (Boyett<em>&#160;</em><em>et al.</em> 2007) supporting the prediction that disease levels will be increasing with higher sea surface temperatures.</p>  <p>Localized threats to corals include fisheries and overfishing, bioerosion by sponges and other organisms, hurricane damage, high sedimentation. human development (industry, settlement, resort development, tourism, and transportation), changes in native species dynamics (competitors, predators, pathogens and parasites), invasive species (competitors, predators, pathogens and parasites), dynamite fishing, chemical fishing, pollution from agriculture and industry, domestic pollution, sedimentation, marine debris and human recreation and tourism activities. The severity of these combined threats to the global population of each individual coral species is not known.</p>",
+    "measures": "<p>All corals are listed on CITES Appendix II.&#160;In U.S. waters, it is illegal to harvest corals for commercial purposes.&#160;In the U.S., this species is present in most marine protected areas (MPAs) throughout the Caribbean.</p>  <p>This is a hermaphroditic broadcast spawner with a convenient schedule including multiple, daytime spawning events over five or six months of the year in Curaçao (Chamberland <em>et al</em>. 2017). As a result of this and its relative ease of larval culture, it is becoming the target of increasing larval propagation and restoration efforts (see http://crc.reefresilience.org/wp-content/uploads/2020/06/CSFS-Diploria-labyrinthiformis_June_2020.pdf).</p>  <p>Recommended measures for conserving this species include research and implementation of mitigation of SCTLD, likely including cryopreservation of genetic material that can be used in future restoration actions (Grosso-Becerra <em>et al</em>. 2021). Coral biorepositories that include cryopreserved <em>Diploria labyrinthiformis</em> sperm have been established in Mexico (Coralium-UNAM) and Curaçao (Carmabi). Other needs include species specific population abundance trends, taxonomy, ecology and habitat status, threats and resilience to threats, restoration action; identification, establishment and management of new protected areas; expansion of protected areas; recovery management; and disease, pathogen and parasite management.</p>",
+    "use_trade": "This species is not utilized.",
+    "rationale": "<p>This widely distributed coral species is common. Global level, species-specific population data are limited; however, coral reefs have declined globally and are expected to continue rapidly declining due to increasing severe bleaching conditions under temperature stress caused by climate change as well as a variety of other threats. Our species-specific vulnerability traits analysis indicates this species is highly susceptible to major threats related to coral reef degradation (e.g., disease and bleaching). We applied two analytical approaches involving two different global coral datasets and the species’ distribution map as proxies to infer population decline. Based on global coral cover monitoring data, this species experienced an inferred decline of about 28% over the past three generations, or since 1989. Based on the projected onset of annual severe bleaching (ASB) conditions via both SSP2-4.5 and SSP5-8.5 scenarios of global climate model data, in combination with the species’ depth range and bleaching vulnerability,&#160;this species is inferred to decline by at least 80% over the next three generations, or by 2050. Since the species qualifies for a higher category under the projected decline, we therefore list it as Critically Endangered A3c. The change in status from the previous assessment reflects updated declines calculated from improved data on modelled coral cover loss in the Caribbean from 1978 to 2019&#160;and projected date of annual severe bleaching, along with improved knowledge of species traits.</p>",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_4_2",
+      "description": {
+        "en": "Genome resource bank"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_4_1",
+      "description": {
+        "en": "Captive breeding/artificial propagation"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    }
+  ],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - western central"
+      },
+      "code": "31"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Rock and Rocky Reefs"
+      },
+      "code": "9_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Marine Neritic - Subtidal Loose Rock/pebble/gravel"
+      },
+      "code": "9_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Coral Reef"
+      },
+      "code": "9_8"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, British"
+      },
+      "code": "VG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Lucia"
+      },
+      "code": "LC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Haiti"
+      },
+      "code": "HT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montserrat"
+      },
+      "code": "MS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominica"
+      },
+      "code": "DM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cayman Islands"
+      },
+      "code": "KY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Kitts and Nevis"
+      },
+      "code": "KN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominican Republic"
+      },
+      "code": "DO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cuba"
+      },
+      "code": "CU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Vincent and the Grenadines"
+      },
+      "code": "VC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Barbados"
+      },
+      "code": "BB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Turks and Caicos Islands"
+      },
+      "code": "TC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bonaire"
+      },
+      "code": "NLA-BO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bahamas"
+      },
+      "code": "BS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belize"
+      },
+      "code": "BZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Anguilla"
+      },
+      "code": "AI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bonaire, Sint Eustatius and Saba"
+      },
+      "code": "BQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jamaica"
+      },
+      "code": "JM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Trinidad and Tobago"
+      },
+      "code": "TT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Curaçao"
+      },
+      "code": "CW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guadeloupe"
+      },
+      "code": "GP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sint Maarten (Dutch part)"
+      },
+      "code": "SX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Grenada"
+      },
+      "code": "GD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Antigua and Barbuda"
+      },
+      "code": "AG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sint Eustatius"
+      },
+      "code": "NLA-SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bermuda"
+      },
+      "code": "BM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saba"
+      },
+      "code": "NLA-SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Barthélemy"
+      },
+      "code": "BL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Martin (French part)"
+      },
+      "code": "MF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Aruba"
+      },
+      "code": "AW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Martinique"
+      },
+      "code": "MQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Puerto Rico"
+      },
+      "code": "PR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, U.S."
+      },
+      "code": "VI"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Storms & flooding"
+      },
+      "code": "11_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Aurantimonas coralicida",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_4_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Motivation Unknown/Unrecorded"
+      },
+      "code": "5_4_6"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Temperature extremes"
+      },
+      "code": "11_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_2_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Ozone"
+      },
+      "code": "9_5_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_3_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_2_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Roseofilum corallyticum",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_4_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Shipping lanes"
+      },
+      "code": "4_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Soil erosion, sedimentation"
+      },
+      "code": "9_3_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Goergen, L., Rodríguez-Martínez, R., Miller, M., Crabbe, J., Banaszak, A. & Vermeij, M.",
+      "value": [
+        "James Crabbe (University of Bedfordshire, Wolfson College)",
+        "Anastazia Banaszak (Laboratorio de Investigacion Integral para la Conservacion de Arrecifes (CORALIUM), Unidad Academia de Sistemas Arrecificales, Puerto Moreles, ICML-UNAM, Mexico)",
+        "Liz Goergen (Department of Biology and Environmental Science, Qatar University)",
+        "Margaret  Miller (SECORE International)",
+        "Mark Vermeij (Carmabi Foundation)",
+        "Rosa  Rodríguez-Martínez (Unidad Academica de Sistemas Arrecifales. Instituto de Ciencias del Mar y Limnologia. Universidad Nacional Autonoma de Mexico )"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Obura, D.O., Polidoro, B., Gutierrez, L., Kemppinen, K., Linardich, C. & Cavada-Blanco, F.",
+      "value": [
+        "Beth Polidoro (GMSA)",
+        "Christi Linardich (Marine Biodiversity Unit)",
+        "David Obura (Coral Reef Assessor)",
+        "Krista Kemppinen (Arizona State Univeristy)",
+        "Luis Gutierrez (Arizona State Unversity)",
+        "Francoise Cavada-Blanco (IUCN SSC Coral Specialist Group / fUniversity of Portsmouth (ormerly Zoological Society of London))"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Jackson, J.B.C, Donovan, M.K., Cramer, K.L. and Lam, W. (editors). 2014. Status and Trends for Caribbean Coral Reefs: 1970-2012. Global Coral Reef Monitoring Network, IUCN, Gland, Switzerland.",
+      "year": "2014",
+      "title": "Status and Trends for Caribbean Coral Reefs: 1970-2012",
+      "author": "Jackson, J.B.C, Donovan, M.K., Cramer, K.L. and Lam, W. (editors)",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wallace, C.C. 1999. <i>Staghorn Corals of the World: a revision of the coral genus </i>Acropora<i></i>. CSIRO, Collingwood.",
+      "year": "1999",
+      "title": "Staghorn Corals of the World: a revision of the coral genus <i>Acropora</i>",
+      "author": "Wallace, C.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Goreau, T.F. and Wells, J.W. 1967. The shallow-water Scleractinia of Jamaica: Revised list of species and their vertical distribution range. <i>Bulletin of Marine Science</i> 17: 442-453.",
+      "year": "1967",
+      "title": "The shallow-water Scleractinia of Jamaica: Revised list of species and their vertical distribution range",
+      "author": "Goreau, T.F. and Wells, J.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Foden, W.B., Butchart, S.H.M., Stuart, S.N., Vié, J.-C., Akçakaya, H.R., Angulo, A., DeVantier, L.M., Gutsche, A., Turak, E., Cao, L., Donner, S.D., Katariya, V., Bernard, R., Holland, R.A., Hughes, A.F., O'Hanlon, S.E., Garnett, S.T., Şekercioğlu, Ç.H. and Mace, G.M. 2013. Identifying the world's most climate change vulnerable species: A systematic trait-based assessment of all birds, amphibians and corals. <i>PLoS ONE</i> 8(6): e65427.",
+      "year": "2013",
+      "title": "Identifying the world's most climate change vulnerable species: A systematic trait-based assessment of all birds, amphibians and corals",
+      "author": "Foden, W.B., Butchart, S.H.M., Stuart, S.N., Vié, J.-C., Akçakaya, H.R., Angulo, A., DeVantier, L.M., Gutsche, A., Turak, E., Cao, L., Donner, S.D., Katariya, V., Bernard, R., Holland, R.A., Hughes, A.F., O'Hanlon, S.E., Garnett, S.T., Şekercioğlu, Ç.H. and Mace, G.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2022. The IUCN Red List of Threatened Species. Version 2022-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 08 December 2022).",
+      "year": "2022",
+      "title": "The IUCN Red List of Threatened Species. Version 2022-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2022-2"
+    },
+    {
+      "citation": "Hoegh-Guldberg, O., Poloczanska, E.S., Skirving, W. and Dove, S. 2017. Coral reef ecosystems under climate change and ocean acidification. <i>Frontiers in Marine Science</i> 4(158): 1-20.",
+      "year": "2017",
+      "title": "Coral reef ecosystems under climate change and ocean acidification",
+      "author": "Hoegh-Guldberg, O., Poloczanska, E.S., Skirving, W. and Dove, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Boyett, H.V., Bourne, D.G. and Willis, B.L. 2007. Elevated temperature and light enhance progression and spread of black band disease on staghorn corals of the Great Barrier Reef. <i>Marine Biology</i> 151(5): 1711-1720.",
+      "year": "2007",
+      "title": "Elevated temperature and light enhance progression and spread of black band disease on staghorn corals of the Great Barrier Reef",
+      "author": "Boyett, H.V., Bourne, D.G. and Willis, B.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Weil, E., Smith, G. and Gil-Agudelo, D.L. 2006. Status and progress in coral reef disease research. <i>Diseases of Aquatic Organisms</i> 69(1): 1-7.",
+      "year": "2006",
+      "title": "Status and progress in coral reef disease research",
+      "author": "Weil, E., Smith, G. and Gil-Agudelo, D.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Alvarez-Filip, L., Estrada-Saldívar, N., Pérez-Cervantes, E., Molina-Hernández, A., and González-Barrios, F.J. 2019. A rapid spread of the stony coral tissue loss disease outbreak in the Mexican Caribbean. <i>PeerJ</i> 7(e8069).",
+      "year": "2019",
+      "title": "A rapid spread of the stony coral tissue loss disease outbreak in the Mexican Caribbean",
+      "author": "Alvarez-Filip, L., Estrada-Saldívar, N., Pérez-Cervantes, E., Molina-Hernández, A., and González-Barrios, F.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Szmant, A.M. 1986. Reproductive ecology of Caribbean reef corals. <i>Coral Reefs</i> 5: 43–54.",
+      "year": "1986",
+      "title": "Reproductive ecology of Caribbean reef corals",
+      "author": "Szmant, A.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "UNEP. 2020. Projections of future coral bleaching conditions using IPCC CMIP6 models: climate policy implications, management applications, and Regional Seas summaries. In: United Nations Environment Programme (ed.). Nairobi, Kenya.",
+      "year": "2020",
+      "title": "Projections of future coral bleaching conditions using IPCC CMIP6 models: climate policy implications, management applications, and Regional Seas summaries",
+      "author": "UNEP",
+      "citation_short": null
+    },
+    {
+      "citation": "Waitt Institute. 2017. Marine Science Assessment: The State of Curacao's coral reefs, San Diego 64.",
+      "year": "2017",
+      "title": "Marine Science Assessment: The State of Curacao's coral reefs, San Diego 64",
+      "author": "Waitt Institute",
+      "citation_short": ""
+    },
+    {
+      "citation": "Blunden, J., Hartfield, G., Arndt, D.S., Dunn, R., Tye, M., Blenkinsop, S., Donat, M., Durre, I., Ziese, M., Cooper, O. and Hemming, D. 2018. State of the Climate in 2017. <i>Bulletin of the American Meteorological Society</i> 99(8): Si-S310.",
+      "year": "2018",
+      "title": "State of the Climate in 2017",
+      "author": "Blunden, J., Hartfield, G., Arndt, D.S., Dunn, R., Tye, M., Blenkinsop, S., Donat, M., Durre, I., Ziese, M., Cooper, O. and Hemming, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bruno, J.F., Petes, L.E., Harvell, C.D. and Hettinger, A. 2003. Nutrient enrichment can increase the severity of coral diseases. <i>Ecology Letters</i> 6: 1056-1061.",
+      "year": "2003",
+      "title": "Nutrient enrichment can increase the severity of coral diseases",
+      "author": "Bruno, J.F., Petes, L.E., Harvell, C.D. and Hettinger, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Couce, E., Ridgwell, A. and Hendy, E.J. 2013. Future habitat suitability for coral reef ecosystems under global warming and ocean acidification. <i>Global Change Biology</i> 19(12): 3592-3606.",
+      "year": "2013",
+      "title": "Future habitat suitability for coral reef ecosystems under global warming and ocean acidification",
+      "author": "Couce, E., Ridgwell, A. and Hendy, E.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Flecha, S., Pérez, F.F., García-Lafuente, J., Sammartino, S., Ríos, A. and Huertas, I.E. 2015. Trends of pH decrease in the Mediterranean Sea through high frequency observational data: indication of ocean acidification in the basin. <i>Scientific Reports</i> 5: 1-8.",
+      "year": "2015",
+      "title": "Trends of pH decrease in the Mediterranean Sea through high frequency observational data: indication of ocean acidification in the basin",
+      "author": "Flecha, S., Pérez, F.F., García-Lafuente, J., Sammartino, S., Ríos, A. and Huertas, I.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "GCRMN. 2021. Status of Coral Reefs of the World: 2020. In: Souter, D., Planes, S., Wicquart, J., Logan, M., Obura, D., Staub, F. (ed.). Global Coral Reef Monitoring Network.",
+      "year": "2021",
+      "title": "Status of Coral Reefs of the World: 2020",
+      "author": "GCRMN",
+      "citation_short": null
+    },
+    {
+      "citation": "Hughes, T.P., Anderson, K.D., Connolly, S.R., Heron, S.F., Kerry, J.T., Lough, J.M., Baird, A.H., Baum, J.K., Berumen, M.L., Bridge, T.C., Claar, D.C., Eakin, C.M., Gilmour, J.P., Graham, N.A.J., Harrison, H., Hobbs, J.P.A., Hoey, A.S., Hoogenboom, M., Lowe, R.J., McCulloch, M.T., Pandolfi, J.M., Pratchett, M., Schoepf, V., Torda, G. and Wilson, S.K. 2018. Spatial and temporal patterns of mass bleaching of corals in the Anthropocene. <i>Science</i> 359(6371): 80-83.",
+      "year": "2018",
+      "title": "Spatial and temporal patterns of mass bleaching of corals in the Anthropocene",
+      "author": "Hughes, T.P., Anderson, K.D., Connolly, S.R., Heron, S.F., Kerry, J.T., Lough, J.M., Baird, A.H., Baum, J.K., Berumen, M.L., Bridge, T.C., Claar, D.C., Eakin, C.M., Gilmour, J.P., Graham, N.A.J., Harrison, H., Hobbs, J.P.A., Hoey, A.S., Hoogenboom, M., Lowe, R.J., McCulloch, M.T., Pandolfi, J.M., Pratchett, M., Schoepf, V., Torda, G. and Wilson, S.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lamb, J.B., Willis, B.L., Fiorenza, E.A., Couch, C.S., Howard, R., Rader, D.N., True, J.D., Kelly, L.A., Ahmad, A., Jompa, J. and Harvell, C.D. 2018. Plastic waste associated with disease on coral reefs. <i>Science</i> 359: 460-462.",
+      "year": "2018",
+      "title": "Plastic waste associated with disease on coral reefs",
+      "author": "Lamb, J.B., Willis, B.L., Fiorenza, E.A., Couch, C.S., Howard, R., Rader, D.N., True, J.D., Kelly, L.A., Ahmad, A., Jompa, J. and Harvell, C.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Logan, C.A., Dunne, J.P., Eakin, C.M. and Donner, S.D. 2014. Incorporating adaptive responses into future projections of coral bleaching. <i>Global Change Biology</i> 20: 125-139.",
+      "year": "2014",
+      "title": "Incorporating adaptive responses into future projections of coral bleaching",
+      "author": "Logan, C.A., Dunne, J.P., Eakin, C.M. and Donner, S.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Miller, M.W., Karazsia, J., Groves, C.E., Griffin, S., Moore, T., Wilber, P. and Gregg, K. 2016. Detecting sedimentation impacts to coral reefs resulting from dredging the Port of Miami, Florida USA. <i>PeerJ</i> 4: e2711.",
+      "year": "2016",
+      "title": "Detecting sedimentation impacts to coral reefs resulting from dredging the Port of Miami, Florida USA",
+      "author": "Miller, M.W., Karazsia, J., Groves, C.E., Griffin, S., Moore, T., Wilber, P. and Gregg, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Obura, D., Gudka, M., Samoilys, M., Osuka, K., Mbugua, J., Keith, D.A., Porter, S., Roche, R., van Hooidonk, R., Ahamada, S. and Araman, A. 2022. Vulnerability to collapse of coral reef ecosystems in the Western Indian Ocean. <i>Nature Sustainability</i> 5(2): 104-113.",
+      "year": "2022",
+      "title": "Vulnerability to collapse of coral reef ecosystems in the Western Indian Ocean",
+      "author": "Obura, D., Gudka, M., Samoilys, M., Osuka, K., Mbugua, J., Keith, D.A., Porter, S., Roche, R., van Hooidonk, R., Ahamada, S. and Araman, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Richards, Z.T., van Oppen, M.J., Wallace, C.C., Willis, B.L., and Miller, D.J. 2008. Some rare Indo-Pacific coral species are probable hybrids. <i>PloS ONE</i> 3(9): e3240.",
+      "year": "2008",
+      "title": "Some rare Indo-Pacific coral species are probable hybrids",
+      "author": "Richards, Z.T., van Oppen, M.J., Wallace, C.C., Willis, B.L., and Miller, D.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Riegl, B. and Piller, W.E. 2003. Possible refugia for reefs in times of environmental stress. <i>International Journal of Earth Sciences</i> 92(4): 520-531.",
+      "year": "2003",
+      "title": "Possible refugia for reefs in times of environmental stress",
+      "author": "Riegl, B. and Piller, W.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Roelfsema, M., van Soest, H.L., Harmsen, M., van Vuuren, D.P., Bertram, C., den Elzen, M., Höhne, N., Iacobuta, G., Krey, V., Kriegler, E. and Luderer, G. 2020. Taking stock of national climate policies to evaluate implementation of the Paris Agreement. <i>Nature Communications</i> 11: 1-12.",
+      "year": "2020",
+      "title": "Taking stock of national climate policies to evaluate implementation of the Paris Agreement",
+      "author": "Roelfsema, M., van Soest, H.L., Harmsen, M., van Vuuren, D.P., Bertram, C., den Elzen, M., Höhne, N., Iacobuta, G., Krey, V., Kriegler, E. and Luderer, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "van Hooidonk, R., Maynard, J.A. and Planes, S. 2013. Temporary refugia for coral reefs in a warming world. <i>Nature Climate Change</i> 3(5): 508-511.",
+      "year": "2013",
+      "title": "Temporary refugia for coral reefs in a warming world",
+      "author": "van Hooidonk, R., Maynard, J.A. and Planes, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "van Hooidonk, R., Maynard, J.A., Liu, Y. and Lee, S.K. 2015. Downscaled projections of Caribbean coral bleaching that can inform conservation planning. <i>Global Change Biology</i> 21(9): 3389-3401.",
+      "year": "2015",
+      "title": "Downscaled projections of Caribbean coral bleaching that can inform conservation planning",
+      "author": "van Hooidonk, R., Maynard, J.A., Liu, Y. and Lee, S.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "van Hooidonk, R., Maynard, J.A., Manzello, D. and Planes, S. 2014. Opposite latitudinal gradients in projected ocean acidification and bleaching impacts on coral reefs. <i>Global Change Biology</i> 20: 103-112.",
+      "year": "2014",
+      "title": "Opposite latitudinal gradients in projected ocean acidification and bleaching impacts on coral reefs",
+      "author": "van Hooidonk, R., Maynard, J.A., Manzello, D. and Planes, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "van Woesik, R. and McCaffrey, K.R. 2017. Repeated thermal stress, shading, and directional selection in the Florida Reef Tract. <i>Frontiers in Marine Science</i> 4: 182.",
+      "year": "2017",
+      "title": "Repeated thermal stress, shading, and directional selection in the Florida Reef Tract",
+      "author": "van Woesik, R. and McCaffrey, K.R. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vargas-Angel, B., Huntington, B., Brainard, R.E., Venegas, R., Oliver, T., Barkley, H. and Cohen, A. 2019. El Niño-associated catastrophic coral mortality at Jarvis Island, central Equatorial Pacific. <i>Coral Reefs</i> 38(4): 731-741.",
+      "year": "2019",
+      "title": "El Niño-associated catastrophic coral mortality at Jarvis Island, central Equatorial Pacific",
+      "author": "Vargas-Angel, B., Huntington, B., Brainard, R.E., Venegas, R., Oliver, T., Barkley, H. and Cohen, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vega Thurber, R.L., Burkepile, D.E., Fuchs, C., Shantz, A.A., McMinds, R. and Zaneveld, J.R. 2013. Chronic nutrient enrichment increases prevalence and severity of coral disease and bleaching. <i>Global Change Biology</i> 20: 544-554.",
+      "year": "2013",
+      "title": "Chronic nutrient enrichment increases prevalence and severity of coral disease and bleaching",
+      "author": "Vega Thurber, R.L., Burkepile, D.E., Fuchs, C., Shantz, A.A., McMinds, R. and Zaneveld, J.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Maynard, J., Van Hooidonk, R., Eakin, C.M., Puotinen, M., Garren, M., Williams, G., Heron, S.F., Lamb, J., Weil, E., Willis, B. and Harvell, C.D. 2015. Projections of climate conditions that increase coral disease susceptibility and pathogen abundance and virulence. <i>Nature Climate Change</i> 5: 688-694.",
+      "year": "2015",
+      "title": "Projections of climate conditions that increase coral disease susceptibility and pathogen abundance and virulence",
+      "author": "Maynard, J., Van Hooidonk, R., Eakin, C.M., Puotinen, M., Garren, M., Williams, G., Heron, S.F., Lamb, J., Weil, E., Willis, B. and Harvell, C.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Walton, C.J., Hayes, N.K. and Gilliam, D.S. 2018. Impacts of a regional, multi-year, multi-species coral disease outbreak in Southeast Florida. <i>Frontiers in Marine Science</i> 5: 323.",
+      "year": "2018",
+      "title": "Impacts of a regional, multi-year, multi-species coral disease outbreak in Southeast Florida",
+      "author": "Walton, C.J., Hayes, N.K. and Gilliam, D.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dahlgren, C. 2020. Rapid Assessment of the occurrence of Stony Coral Tissue Loss Disease (SCTLD) along the southern coast of Grand Bahama, Bahamas.  SCTLD Report. Perry Institute of Marine Science, Bahamas.",
+      "year": "2020",
+      "title": "Rapid Assessment of the occurrence of Stony Coral Tissue Loss Disease (SCTLD) along the southern coast of Grand Bahama, Bahamas",
+      "author": "Dahlgren, C. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Meyer, J.L., Castellanos-Gell, J., Aeby, G.S., Häse, C.C., Ushijima, B., and Paul, V.J. 2019. Microbial community shifts associated with the ongoing stony coral tissue loss disease outbreak on the Florida Reef Tract. <i>Frontiers in Microbiology </i> 10: 2244.",
+      "year": "2019",
+      "title": "Microbial community shifts associated with the ongoing stony coral tissue loss disease outbreak on the Florida Reef Tract.",
+      "author": "Meyer, J.L., Castellanos-Gell, J., Aeby, G.S., Häse, C.C., Ushijima, B., and Paul, V.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pratte, Z.A., and Richardson, L.L. 2014. Impacts of temperature increase and acidification on thickness of the surface mucopolysaccharide layer of the Caribbean coral <i>Diploria</i> spp. <i>Coral Reefs</i> 33: 487-496.",
+      "year": "2014",
+      "title": "Impacts of temperature increase and acidification on thickness of the surface mucopolysaccharide layer of the Caribbean coral <i>Diploria</i> spp.",
+      "author": "Pratte, Z.A., and Richardson, L.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gintert, B.E., Precht, W.F., Fura, R., Rogers, K., Rice, M., Precht, L.L., D’Alessandro, M., Croop, J., Vilmar, C., and Robbart, M.L. 2019. Regional coral disease outbreak overwhelms impacts from a local dredge project. <i>Environmental Monitoring and Assessment </i> 191(10): 630.",
+      "year": "2019",
+      "title": "Regional coral disease outbreak overwhelms impacts from a local dredge project",
+      "author": "Gintert, B.E., Precht, W.F., Fura, R., Rogers, K., Rice, M., Precht, L.L., D’Alessandro, M., Croop, J., Vilmar, C., and Robbart, M.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Precht, W.F., Gintert, B.E., Robbart, M.L., Fura, R., and van Woesik, R. 2016. Unprecedented disease-related coral mortality in southeastern Florida. <i>Scientific Reports</i> 6: 31374.",
+      "year": "2016",
+      "title": "Unprecedented disease-related coral mortality in southeastern Florida",
+      "author": "Precht, W.F., Gintert, B.E., Robbart, M.L., Fura, R., and van Woesik, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lunz, K., Landsberg, J., Kiryu, Y., and Brinkhuis, V. 2017. Investigation of the coral disease outbreak affecting scleractinian coral species along the Florida Reef Tract. In: Florida Department of Environmental Protection (ed.).",
+      "year": "2017",
+      "title": "Investigation of the coral disease outbreak affecting scleractinian coral species along the Florida Reef Tract",
+      "author": "Lunz, K., Landsberg, J., Kiryu, Y., and Brinkhuis, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Soong, K. 1991. Sexual reproductive patterns of shallow-water reef corals in Panama. <i>Bulletin of Marine Science </i> 49(3): 832-846.",
+      "year": "1991",
+      "title": "Sexual reproductive patterns of shallow-water reef corals in Panama",
+      "author": "Soong, K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Alvarado, E.M., García R.U, and Acosta, A. 2004. Sexual reproduction of the reef-building coral <i>Diploria labyrinthiformis</i> (Scleractinia: Faviidae), in the Colombian Caribbean. <i>Revista de Biología Tropical </i> 52: 859-868.",
+      "year": "2004",
+      "title": "Sexual reproduction of the reef-building coral <i>Diploria labyrinthiformis</i> (Scleractinia: Faviidae), in the Colombian Caribbean",
+      "author": "Alvarado, E.M., García R.U, and Acosta, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chamberland, V.F., Snowden, S., Marhaver, K.L., Petersen, D., and Vermeij, M.J. 2017. The reproductive biology and early life ecology of a common Caribbean brain coral <i>Diploria labyrinthiformis</i> (Scleractinia: Faviinae). <i>Coral Reefs </i> 36(1): 83-94.",
+      "year": "2017",
+      "title": "The reproductive biology and early life ecology of a common Caribbean brain coral <i>Diploria labyrinthiformis</i> (Scleractinia: Faviinae)",
+      "author": "Chamberland, V.F., Snowden, S., Marhaver, K.L., Petersen, D., and Vermeij, M.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "De Bakker, D.M., Meesters, E.H., Bak, R.P., Nieuwland, G., and Van Duyl, F.C. 2016. Long-term shifts in coral communities on shallow to deep reef slopes of Curaçao and Bonaire: are there any winners? <i>Frontiers in Marine Science</i> 3: 247.",
+      "year": "2016",
+      "title": "Long-term shifts in coral communities on shallow to deep reef slopes of Curaçao and Bonaire: are there any winners?",
+      "author": "De Bakker, D.M., Meesters, E.H., Bak, R.P., Nieuwland, G., and Van Duyl, F.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dodge, R.E., and Vaisnys, J.R. 1977. Coral populations and growth patterns: responses to sedimentation and turbidity associated with dredging. <i>Journal of Marine Research</i> 35: 715–730.",
+      "year": "1977",
+      "title": "Coral populations and growth patterns: responses to sedimentation and turbidity associated with dredging",
+      "author": "Dodge, R.E., and Vaisnys, J.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Garzón-Ferreira, J., Gil-Agudelo, D.L., Barrios, L.M., and Zea, S. 2001. Stony coral diseases observed in southwestern Caribbean reefs. <i>Hydrobiologia</i> 460: 65-69.",
+      "year": "2001",
+      "title": "Stony coral diseases observed in southwestern Caribbean reefs",
+      "author": "Garzón-Ferreira, J., Gil-Agudelo, D.L., Barrios, L.M., and Zea, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Grosso-Becerra, M.V., Mendoza-Quiroz, S., Maldonado, E. and Banaszak, A.T. 2021. Cryopreservation of sperm from the brain coral <i>Diploria labyrinthiformis</i> as a strategy to face the loss of corals in the Caribbean. <i>Coral Reefs</i> 40(3): 937-950.",
+      "year": "2021",
+      "title": "Cryopreservation of sperm from the brain coral <i>Diploria labyrinthiformis</i> as a strategy to face the loss of corals in the Caribbean",
+      "author": "Grosso-Becerra, M.V., Mendoza-Quiroz, S., Maldonado, E. and Banaszak, A.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hubbard, J.A.E.B., and Pocock, Y.P. 1972. Sediment rejection by recent scleractinian corals: a key to palaeo-environmental reconstruction. <i>Geol. Rundschau </i> 6: 598-626.",
+      "year": "1972",
+      "title": "Sediment rejection by recent scleractinian corals: a key to palaeo-environmental reconstruction",
+      "author": "Hubbard, J.A.E.B., and Pocock, Y.P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Jordan, A.C. 2018. Patterns in Caribbean Coral Spawning. Nova Southeastern University.",
+      "year": "2018",
+      "title": "Patterns in Caribbean Coral Spawning",
+      "author": "Jordan, A.C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Muller, E., and Vermeij, M.J.A. 2011. Day time spawning of a Caribbean coral. <i>Coral Reefs </i> 30: 1147.",
+      "year": "2011",
+      "title": "Day time spawning of a Caribbean coral",
+      "author": "Muller, E., and Vermeij, M.J.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nugues, M.M. 2002. Impact of a coral disease outbreak on coral communities in St. Lucia: What and how much has been lost? <i>Marine Ecology Progress Series</i> 229: 61-71.",
+      "year": "2002",
+      "title": "Impact of a coral disease outbreak on coral communities in St. Lucia: What and how much has been lost?",
+      "author": "Nugues, M.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vermeij, M.J. 2019. Coral Reefs Baseline Study for Aruba.  Departement van Natuur en Milieu. Oranjestad.",
+      "year": "2019",
+      "title": "Coral Reefs Baseline Study for Aruba",
+      "author": "Vermeij, M.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Weil, E., and Vargas, W.L. 2010. Comparative aspects of sexual reproduction in the Caribbean coral genus <i>Diploria</i> (Scleractinia: Faviidae). <i>Marine Biology</i> 157: 413-426.",
+      "year": "2010",
+      "title": "Comparative aspects of sexual reproduction in the Caribbean coral genus <i>Diploria</i> (Scleractinia: Faviidae)",
+      "author": "Weil, E., and Vargas, W.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Weil, E., Hernández-Delgado, E., Gonzalez, M., Williams, S., Suleimán-Ramos, S., Figuerola, M., and Metz-Estrella, T. 2019. spread of the new coral disease “SCTLD” into the Caribbean: implications for Puerto Rico. <i>Reef Encounter</i> 34: 38-43.",
+      "year": "2019",
+      "title": "spread of the new coral disease “SCTLD” into the Caribbean: implications for Puerto Rico",
+      "author": "Weil, E., Hernández-Delgado, E., Gonzalez, M., Williams, S., Suleimán-Ramos, S., Figuerola, M., and Metz-Estrella, T.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Competition"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "description": {
+        "en": "Competition"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "description": {
+        "en": "Other"
+      },
+      "code": "2_3_8"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

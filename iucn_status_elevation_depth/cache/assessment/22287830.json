@@ -1,0 +1,892 @@
+{
+  "assessment_date": "2016-02-01T00:00:00.000+00:00",
+  "year_published": "2016",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 41440,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/41440/22287830",
+  "citation": "Hutterer, R., Molur, S. & Heaney, L. 2016. Suncus murinus. The IUCN Red List of Threatened Species 2016: e.T41440A22287830. Accessed on 15 May 2026.",
+  "assessment_id": 22287830,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 41440,
+    "scientific_name": "Suncus murinus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "EULIPOTYPHLA",
+    "family_name": "SORICIDAE",
+    "genus_name": "Suncus",
+    "species_name": "murinus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Linnaeus, 1766",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Small Mammal Specialist Group",
+        "url": "http://www.small-mammals.org/",
+        "description": "Co-Chairs: Thomas Lacher (email: tlacher@tamu.edu) and Rosalind Kennerley (email: Rosalind.Kennerley@durrell.org)\nRed List Authority Coordinator: Roslaind Kennedy (email: Rosalind.Kennerley@durrell.org)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Asian House Shrew",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "House Shrew",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "1",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "24954758",
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This very widespread species occurs virtually throughout the Indomalayan Region, and has been widely introduced by human agency in the Philippines, parts of Africa, coastal Arabia, islands in the Indian Ocean and many other regions (e.g. Guam) (Hutterer and Tranier 1990, Hutterer 2005).",
+    "population": "This is a fairly abundant and stable species. It lives in and around human settlements.",
+    "habitats": "This species is found in a very wide variety of habitats, including natural forests, scrubland and grasslands and nearly all secondary and degraded habitats, such as plantations, pasture, cultivated fields, suburban and urban areas. It is a human commensal.",
+    "threats": "There are no major threats to this species.",
+    "measures": "It is present in many protected areas and no direct conservation measures are needed.",
+    "use_trade": null,
+    "rationale": "Listed as Least Concern in view of its wide distribution, presumed large population, occurrence in a number of protected areas, the fact that it is a human commensal with a tolerance of habitat modification, and because it is unlikely to be declining fast enough to qualify for listing in a more threatened category.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Swamp"
+      },
+      "code": "1_8"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Subtropical/Tropical Heavily Degraded Former Forest"
+      },
+      "code": "14_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Savanna - Moist"
+      },
+      "code": "2_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bahrain"
+      },
+      "code": "BH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Oman"
+      },
+      "code": "OM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Afghanistan"
+      },
+      "code": "AF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Nepal"
+      },
+      "code": "NP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Philippines"
+      },
+      "code": "PH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Rwanda"
+      },
+      "code": "RW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bhutan"
+      },
+      "code": "BT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guam"
+      },
+      "code": "GU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Brunei Darussalam"
+      },
+      "code": "BN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Djibouti"
+      },
+      "code": "DJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mauritius"
+      },
+      "code": "MU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Singapore"
+      },
+      "code": "SG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Comoros"
+      },
+      "code": "KM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Taiwan, Province of China"
+      },
+      "code": "TW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Yemen"
+      },
+      "code": "YE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Saudi Arabia"
+      },
+      "code": "SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Lao People's Democratic Republic"
+      },
+      "code": "LA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Kuwait"
+      },
+      "code": "KW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Papua New Guinea"
+      },
+      "code": "PG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Réunion"
+      },
+      "code": "RE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Iraq"
+      },
+      "code": "IQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [],
+  "threats": [],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Hutterer, R., Molur, S. & Heaney, L.",
+      "value": null
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Amori, G.",
+      "value": [
+        "Giovanni Amori (Italian National Research Council, La Sapienza University in Rome, Italy)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C. 2013. Generation length for mammals. <i>Nature Conservation</i> 5: 87–94.",
+      "year": "2013",
+      "title": "Generation length for mammals",
+      "author": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Corbet, G.B. and Hill, J.E. 1992. <i>Mammals of the Indo-Malayan Region: a Systematic Review</i>. Oxford University Press, Oxford, UK.",
+      "year": "1992",
+      "title": "Mammals of the Indo-Malayan Region: a Systematic Review",
+      "author": "Corbet, G.B. and Hill, J.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Heaney, L.R., Balete, D.S., Dollar, M.L., Alcala, A.C., Dans, A.T.L., Gonzales, P.C., Ingle, N.R., Lepiten, M.V., Oliver, W.L.R., Ong, P.S., Rickart, E.A., Tabaranza Jr., B.R. and Utzurrum, R.C.B. 1998. A synopsis of the mammalian fauna of the Philippine Islands. <i>Fieldiana: Zoology (New Series)</i> 88: 1–61.",
+      "year": "1998",
+      "title": "A synopsis of the mammalian fauna of the Philippine Islands",
+      "author": "Heaney, L.R., Balete, D.S., Dollar, M.L., Alcala, A.C., Dans, A.T.L., Gonzales, P.C., Ingle, N.R., Lepiten, M.V., Oliver, W.L.R., Ong, P.S., Rickart, E.A., Tabaranza Jr., B.R. and Utzurrum, R.C.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Smith, A.T. and Xie, Y. 2008. <i>A Guide to the Mammals of China</i>. Princeton University Press, Princeton, New Jersey.",
+      "year": "2008",
+      "title": "A Guide to the Mammals of China",
+      "author": "Smith, A.T. and Xie, Y.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Harrison, D.L. and Bates, P.J.J. 1991. <i>The Mammals of Arabia</i>. Harrison Zoological Museum, Sevenoaks, UK.",
+      "year": "1991",
+      "title": "The Mammals of Arabia",
+      "author": "Harrison, D.L. and Bates, P.J.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rabor, D.S. 1986. <i>Guide to the Philippine flora and fauna</i>. Natural Resources Management Centre. Ministry of Natural Resources and University of the Philippines.",
+      "year": "1986",
+      "title": "Guide to the Philippine flora and fauna",
+      "author": "Rabor, D.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rickart, E.A., Heaney, L.R., Heidman, P.D. and Utzurrum, R.C.B. 1993. The distribution and ecology of mammals on Leyte, Biliran, and Maripipi islands, Philippines. <i>Fieldiana: Zoology</i> 72: 1-62.",
+      "year": "1993",
+      "title": "The distribution and ecology of mammals on Leyte, Biliran, and Maripipi islands, Philippines",
+      "author": "Rickart, E.A., Heaney, L.R., Heidman, P.D. and Utzurrum, R.C.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Alcala, A.C. and Alviola, P. 1970. Notes on birds and mammals of Boracay, Caluya, Carabao, Semirara, and Sibay islands, Philippines. <i>Silliman Journal</i> 17: 444-454.",
+      "year": "1970",
+      "title": "Notes on birds and mammals of Boracay, Caluya, Carabao, Semirara, and Sibay islands, Philippines",
+      "author": "Alcala, A.C. and Alviola, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hutterer, R. 2005. Order Soricomorpha. In: D.E. Wilson and D.M. Reeder (eds), <i>Mammal Species of the World</i>, pp. 220-311. Johns Hopkins University Press, Baltimore, Maryland, USA.",
+      "year": "2005",
+      "title": "Order Soricomorpha",
+      "author": "Hutterer, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Heaney, L.R., Heideman, P.D., Rickart, E.A., Utzurrum, R.B. and Klompen, J.S.H. 1989. Elevational zonation of mammals in the central Philippines. <i>Journal of Tropical Ecology</i> 5: 259-280.",
+      "year": "1989",
+      "title": "Elevational zonation of mammals in the central Philippines",
+      "author": "Heaney, L.R., Heideman, P.D., Rickart, E.A., Utzurrum, R.B. and Klompen, J.S.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rabor, D.S. 1977. <i>Philippine birds and mammals</i>. University of the Philippines Science Education Center, Quezon City.",
+      "year": "1977",
+      "title": "Philippine birds and mammals",
+      "author": "Rabor, D.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Goodman, S.M. and Benstead, J.P. (eds). 2003. <i>The Natural History of Madagascar</i>. The University of Chicago Press, Chicago, Illinois, USA.",
+      "year": "2003",
+      "title": "The Natural History of Madagascar",
+      "author": "Goodman, S.M. and Benstead, J.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kitchener, D.J., Schmitt, L.H. and Maharadatunkamsi. 1994. Morphological and genetic variation in <i>Suncus murinus</i> (Soricidae: Crocidurinae) from Java, Lesser Sunda islands, Maluku and Sulawesi, Indonesia. <i>Mammalia</i> 58: 433-451.",
+      "year": "1994",
+      "title": "Morphological and genetic variation in <i>Suncus murinus</i> (Soricidae: Crocidurinae) from Java, Lesser Sunda islands, Maluku and Sulawesi, Indonesia",
+      "author": "Kitchener, D.J., Schmitt, L.H. and Maharadatunkamsi",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hutterer, R. and Tranier, M. 1990. The immigration of the Asian house shrew <i>Suncus murinus</i> into Africa and Madagascar. In: G. Peters and R. Hutterer (eds), <i>Vertebrates in the Tropics</i>, pp. 309-319. Museum Alexander Koenig, Bonn, Germany.",
+      "year": "1990",
+      "title": "The immigration of the Asian house shrew <i>Suncus murinus</i> into Africa and Madagascar",
+      "author": "Hutterer, R. and Tranier, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Molur, S., Srinivasulu, C., Srinivasulu, B., Walker, S., Nameer, P.O. and Ravikumar, L. 2005. <i>Status of South Asian Non-volant Small Mammals: Conservation Assessment and Management Plan (C.A.M.P.) Workshop Report</i>. Zoo Outreach Organisation / CBSG-South Asia., Comibatore, India.",
+      "year": "2005",
+      "title": "Status of South Asian Non-volant Small Mammals: Conservation Assessment and Management Plan (C.A.M.P.) Workshop Report",
+      "author": "Molur, S., Srinivasulu, C., Srinivasulu, B., Walker, S., Nameer, P.O. and Ravikumar, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 04 September 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

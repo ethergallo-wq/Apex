@@ -1,0 +1,2493 @@
+{
+  "assessment_date": "2023-08-02T01:00:00.000+01:00",
+  "year_published": "2025",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 232775771,
+  "criteria": "A2bcd+4bcd",
+  "url": "https://www.iucnredlist.org/species/232775771/507158",
+  "citation": "Carr, J.L., Riedle, D.J., Munscher, E., Pearson, L.S., Kessler, E.J. & Dreslik, M.J. 2025. Macrochelys temminckii. The IUCN Red List of Threatened Species 2025: e.T232775771A507158. Accessed on 15 May 2026.",
+  "assessment_id": 507158,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 232775771,
+    "scientific_name": "Macrochelys temminckii",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "TESTUDINES",
+    "family_name": "CHELYDRIDAE",
+    "genus_name": "Macrochelys",
+    "species_name": "temminckii",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Troost in Harlan, 1835)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Tortoise and Freshwater Turtle Specialist Group",
+        "url": "http://www.iucn-tftsg.org/",
+        "description": "Chair: Craig Stanford (email: stanford@usc.edu)\nRed List Authority Coordinator: Carla Eisemberg (email:Carla.Eisemberg@cdu.edu.au)\nNewsletters: Chelonian Conservation and Biology (http://www.chelonian.org/ccb/); Turtle and Tortoise Newsletter (http://www.chelonian.org/crf-publications/turtle-and-tortoise-newsletter/); TurtleLog Online Newsletter (http://www.iucn-tftsg.org/turtlelog_online_newsletter/)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Alligator Snapping Turtle",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "Western Alligator Snapping Turtle",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Chelonura temminckii Troost in Harlan, 1835",
+        "status": "ACCEPTED",
+        "genus_name": "Chelonura",
+        "species_name": "temminckii",
+        "species_author": "Troost in Harlan, 1835",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Macroclemys temminckii (Troost in Harlan, 1835)",
+        "status": "ACCEPTED",
+        "genus_name": "Macroclemys",
+        "species_name": "temminckii",
+        "species_author": "(Troost in Harlan, 1835)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Gypochelys lacertina Agassiz, 1857",
+        "status": "ACCEPTED",
+        "genus_name": "Gypochelys",
+        "species_name": "lacertina",
+        "species_author": "Agassiz, 1857",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Macrochelys apalachicolae Thomas, Granatosky, Bourque, Krysko, Moler, Gamble, Suarez, Leone, Enge & Roman, 2014",
+        "status": "ACCEPTED",
+        "genus_name": "Macrochelys",
+        "species_name": "apalachicolae",
+        "species_author": "Thomas, Granatosky, Bourque, Krysko, Moler, Gamble, Suarez, Leone, Enge & Roman, 2014",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Endangered"
+    },
+    "code": "EN"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 366,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "31-49",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": "505589",
+    "continuing_decline_in_area_of_occupancy": "Yes",
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "1051342",
+    "continuing_decline_in_extent_of_occurence": "Yes",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Yes",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "The distribution of <em>Macrochelys temminckii</em> is centred in the south-central and southeastern United States within river systems draining into the Gulf of Mexico, from the Apalachicola River system in Florida and Georgia westward to the Buffalo Bayou, Brazos, and San Bernard drainages in Texas. Its range formerly extended upstream within the Mississippi River system, reaching western Illinois and Indiana, northern Missouri, and potentially Iowa, with Alabama, Mississippi, and Louisiana representing the core of its range (Iverson 1992, Ernst and Lovich 2009, TTWG 2021). Specifically, the states historically inhabited are Alabama, Arkansas, Florida, Georgia, Illinois, Indiana, Kansas, Kentucky, Louisiana, Mississippi, Missouri, Oklahoma, Tennessee, and Texas. Extralimital records within the United States have been recorded for Arizona, California, northern Indiana, northeastern Virginia, Oregon, Puerto Rico, southwestern Michigan, and Washington D.C. (USGS 2023). In addition, the species has been found introduced or as pet releases in the following countries: China (Liu <em>et al</em>. 2021), Italy (Esposito <em>et al</em>. 2022), Japan (Ekawa 2005, Nambu 2001, Yoshinori and Tomomi 2022), Reunion Island (Boulay and Probst 1998), Spain (Poch <em>et al</em>. 2020), Republic of Korea (Kim <em>et al</em>. 2020, Koo <em>et al</em>. 2020, 2021), Taiwan, Province of China (Lee <em>et al</em>. 2019), United Kingdom (Langton <em>et al</em>. 2011).<br/><br/>The estimated historical indigenous range (area of occupancy, AOO) was 505,589 sq. km, as calculated using all HUC-12 watersheds with recorded or estimated historical occupancy (TTWG in press). The current AOO, reflective of records after 1990, is significantly decreased, with Indiana, Illinois, Kansas, northern Missouri, northeastern Oklahoma, and many peripheral historical populations apparently extirpated (Carr <em>et al</em>. 2023). The estimated historical indigenous extent of occurrence (EOO) was 1,406,452 sq. km, as calculated using a minimum convex polygon around&#160;all HUC-12 watersheds with recorded or estimated historical occupancy (TTWG in press). The current EOO is <em>ca</em> 1,051,342 sq. km, as calculated using a minimum convex polygon around all post-1990 locations, excluding likely extirpated populations (Carr <em>et al</em>. 2023; TTWG in press), a <em>ca</em> 25% reduction. Contraction of the EOO has occurred at the periphery of the range, notably with extirpations in Indiana, Illinois, northern Missouri, Kansas, and northeastern Oklahoma. The species has been recorded post-1993 at nearly 1,400 native locations, but of those, as many as about 400 no longer have contemporary observations, indicating a <em>ca</em> 29% recent decline in known locations (Carr <em>et al</em>. 2023).",
+    "population": "Knowledge concerning population densities of <em>Macrochelys temminckii</em> is somewhat limited, with catch per unit effort approaches dominating. Within habitats unaffected by anthropogenic pressures, the species can attain high densities, as high as 28–34 individuals per stream km (Riedle <em>et al</em>. 2008a). Studies from Texas estimate densities at <em>ca</em> 4.43 turtles/river km with a population estimate of 173 individuals over a 39 km stretch of habitat during five years of study (Munscher <em>et al</em>. 2023). Contrastingly, populations influenced by chronic anthropogenic factors exhibit reduced population sizes relative to their unimpacted counterparts (Trauth <em>et al</em>. 1998, Shipman and Riedle 2008, Riedle <em>et al</em>. 2008a). In the western portion of its distribution, fragmentation from impoundments has impeded recruitment and movements, as observed by extirpations in Kansas due to such barriers in northern Oklahoma (Riedle <em>et al</em>. 2008b). The phenomenon of restricted movements and dispersal within watersheds warrants thorough investigation. The USFWS (2021a) has proposed a total range-wide population estimate for <em>M. temminckii</em> of between 68,154 and 1,436,825 adults, with a mean estimate of 361,213, with little supporting evidence of how these estimates were derived (USFWS 2021a).<br/><br/>The available population data illustrates that <em>M. temminckii</em> has historically constituted a substantial proportion of turtle populations within aquatic ecosystems within its range. The assertion is substantiated by historical data indicating the species constituted between 4–12.5% of the total turtle catch across four sites in Louisiana in 1947 (Cagle and Chaney 1950). Across three sites in Alabama, it comprised 18% of the trapped turtle specimens (Godwin 2004). At 70 sites across Mississippi, the species comprised only 2.3% of trapped turtles in the Tombigbee River drainage, but up to 50% of trapped turtles in the Mississippi River alluvial plain (Berry 2019, Haralson 2022). Notably, in Oklahoma, it comprised only 2–6% of turtle captures (Riedle <em>et al</em>. 2009). Comparatively, trapping efforts in Florida yielded threefold higher capture rates of larger individuals per unit effort than the extensively exploited Flint River in Georgia (Ewert <em>et al</em>. 2006).<br/><br/>Notable population declines have occurred in Oklahoma and Missouri, with the causative factors attributed to a dual impact of extensive harvesting and alterations to the habitat through channelization, cold water release, and agricultural drainage (Riedle <em>et al</em>. 2005, Shipman and Riedle 2008, Riedle <em>et al</em>. 2009). The species' distribution has contracted from <em>ca</em> 60–70% of its former range in Oklahoma, alongside parallel findings in southeastern Missouri (Shipman and Riedle 2008); however, recently there appears to be some increase in sightings in Missouri (J.T. Briggler, Missouri Department of Conservation, pers. comm.) and in Oklahoma a few new populations have recently been documented, and repatriation efforts are underway in other areas (M. Howery, Oklahoma Department of Wildlife Conservation, pers. comm.). The species has been extirpated from Kansas (Riedle <em>et al</em>. 2008b) and apparently from Indiana and most of Illinois. Declines have also been noted in Arkansas (Trauth <em>et al</em>. 1998) but have not reached the same magnitude observed in Kansas, Missouri, or Oklahoma. In Texas, the species has apparently been nearly extirpated from the Brazos River watershed, although scattered records persist (Gordon <em>et al</em>. 2023a, Rosenbaum <em>et al</em>. 2023) and the species has recently been recorded in the San Bernard R. southwest of the Brazos (Ross <em>et al</em>. 2023).<br/><br/>Evidence from recent studies indicates a discernible decline in the adult turtle population at a site in Oklahoma, with comparisons between sampling in 2010 and surveys conducted between 1997–2000 affirming the trend (Riedle <em>et al</em>. 2008a). A comprehensive understanding of the population dynamics is provided from numerous literature sources, including Pritchard (1989), Trauth <em>et al</em>. (1998), Reed <em>et al</em>. (2002), Jensen and Birkhead (2003), Riedle <em>et al</em>. (2005), Ewert <em>et al</em>. (2006), Shipman and Riedle (2008), Ernst and Lovich (2009), Folt and Godwin (2013), Folt <em>et al</em>. (2016), Huntzinger <em>et al</em>. (2019, 2020), Garig <em>et al</em>. (2021), USFWS (2021a), and Munscher <em>et al</em>. (2023).<br/><br/>Historically elevated levels of commercial exploitation during the 1960s and 1970s significantly depleted populations (Reed <em>et al</em>. 2002). Population recovery is partially hindered by increasing fragmentation of rivers by impoundments, at least in the western portion of the species' range, leaving fragmented populations with little chance of up or downstream recruitment (Riedle <em>et al</em>. 2008b). Declines in Oklahoma and Kansas were simultaneous with the commercial overexploitation, although anecdotal evidence exists that illegal take continued through the early 2000s in southeastern Oklahoma.<br/><br/>The contemporary population trajectory indicates substantial reductions, as evident from the extirpations in Kansas (Riedle <em>et al</em>. 2008b), Indiana, Kentucky (Baxley <em>et al</em>. 2014), and Illinois, and the continued range contraction in Oklahoma (Riedle <em>et al</em>. 2005). Comparable declines have occurred in southeastern Missouri (Shipman and Riedle 2008), likely related to the associated decline in Arkansas. While a decline had occurred in Arkansas based on sampling in three streams, it did not reach the same level as other states as based on catch per unit effort (Trauth <em>et al</em>. 1998). A later study of one of the three streams, Salado Creek (Trauth <em>et al</em>. 2016), found the population size estimates had increased, and average male and female sizes had increased, indicative of a partial recovery from depressed levels from prior turtle harvesting in the area.<br/><br/>Data available for <em>M. temminckii</em> populations in Georgia (including estimations of abundance from catch-per-unit-effort [CPUE] survey data as well as population modelling from a long-term data set collected from a natural population) neither indicate precipitous population declines, nor population growth or recovery over the last <em>ca</em> 20 years (Folt <em>et al</em>. 2016, King <em>et al</em>. 2016; T.M. Floyd pers. comm.). Instead, taken as a whole, the data suggest a slow gradual recovery of populations; the lack of an increase in estimated relative abundance in Georgia for such a long-lived species that takes so long to reach sexual maturity is hardly surprising, since the enactment of conservation measures, such as harvest prohibition, have only been in place in Georgia for a small fraction of the species’ life span (T.M. Floyd pers. comm.).<br/><br/>Although quantifiable data are sparse, an emerging concern centres around using setlines (such as trotlines and limblines) in recreational fishing activities (USFWS 2021). A preliminary investigation in Oklahoma suggested a correlation between the increase in setline fishing and declines in adult populations of <em>M. temminckii</em> (Riedle, unpubl. data). Both recent (2020–2021) and historical (1999–2001) surveys in Texas have documented a significantly lower <em>M. temminckii</em> catch per unit effort (CPUE) at sites with trotlines present as opposed to those without (Rosenbaum <em>et al</em>. 2023). Both single-hook fixed line and trotline fishing gears have been identified as significant sources of mortality across the entire range of <em>M. temminckii</em> (Shook <em>et al</em>. 2023). Further comprehensive analysis is warranted to ascertain the extent of this hazard and its potential implications for the species' population viability.",
+    "habitats": "The Western Alligator Snapping Turtle primarily inhabits rivers and flooded channels within floodplain swamps (Ernst and Lovich, 2009). Additionally, it is found in various aquatic environments, including creeks, bayous, floodplain lakes, oxbows, and swamps, with a preference for permanent water bodies (Dundee and Rossman 1979, Boundy and Carr 2017). An overview of movement and habitat use suggests that <em>Macrochelys temminckii</em> uses habitats with deeper water depths than other turtles (Riedle <em>et al.</em> 2015). Ambient temperature regimes can influence the depth used within sites (Fitzgerald and Nelson 2011). Deeper depths provide the depth variation required for thermoregulation in <em>M. temminckii</em> (Riedle <em>et al</em>. 2006, Fitzgerald and Nelson 2011). Additionally, there are ontogenetic shifts in depth use, with smaller age classes using smaller, shallow tributaries or shallower depths in lentic habitats (Bass 2007, Hyder <em>et al</em>. 2021, Brown 2023). Hatchling-sized <em>M. temminckii</em> were found at depths significantly more shallow than random points, with a mean of 34 cm and median of 12 cm in Louisiana (Bass 2007) and Oklahoma (Spangler <em>et al</em>. 2021), respectively. The same was true for a group of translocated, head-started juveniles (2-, 3-, and 4-year-olds) in Louisiana in oxbow lakes (Townsend 2016), with mean depths of 38, 43, and 52 cm deep selected, respectively. Mean water depths used by subadults (mean CL = 26.5 cm) were 111 and 125 cm for males and females, respectively, in an impounded, linear bayou habitat (Harrel <em>et al</em>. 1996). Depths up to 9 m (P. Delisle, unpubl. data), shallow and heavily vegetated backwaters, and smaller tributaries are all important.<br/><br/>Movement: Distinct movement patterns are exhibited by the species, primarily among submerged structures, and it displays high site fidelity, often residing at specific sites for extended durations, potentially spanning several months. Extensive movements have been recorded, with documented cases of individuals moving up to 24.1 km within two months (Harrell <em>et al</em>. 1996, Trauth <em>et al</em>. 1998, Riedle <em>et al</em>. 2006, Howey and Dinkelacker 2009; P. Delisle, unpubl. data). Additionally, evidence suggests short-distance terrestrial forays among wetlands occurs (Shipman <em>et al</em>. 1991, Riedle <em>et al</em>. 2015; P. Delisle, unpubl. data). Notable examples of extreme movements include 22.5 km in 6 weeks in Mississippi (P. Delisle, unpubl. data), a 16 km displacement in two months in Oklahoma (Riedle <em>et al</em>. 2006), and a significant 22.5 km migration within one year by a large male in Texas (Munscher <em>et al</em>. 2021a). Historical data indicate such movements were likely influenced by stream dynamics preceding impoundments (Riedle <em>et al.</em>&#160;2008, 2018).<br/><br/>Home Range: Spatial patterns using multiple methodologies show variation in home range across regions and illustrate the species' required area. Stage-specific patterns exist whereby adults use larger areas than younger turtles; however, no sex-specific patterns are apparent. In Florida, a translocated population demonstrated a minimum linear home range of 12.9 km for males and 10.6 km for females (Cozad <em>et al</em>. 2023). Work on a natural population in Louisiana revealed much smaller linear home ranges of 890 m for males and 389 m for females (Harrel <em>et al</em>. 1996), similar to the 481 m for males and 878 m for females in Oklahoma (Riedle <em>et al</em>. 2006). Linear home ranges of 1.3 km for males and 2.2 km for females in Missouri (Shipman and Riedle 2008) were similar to those in Texas, where linear home ranges were estimated as 1.6 and 2.3 km for males and females, respectively (Munscher <em>et al</em>. 2021b). In Mississippi, individuals exhibited linear home ranges of approximately 6 km for males, 5 km females, and 1.8 km for juveniles (P. Delisle, unpubl. data). Using Minimum Convex Polygon methodology (MCP), home ranges varied from 0.00945&#160;ha for hatchlings in lentic/lake environments in Louisiana (Bass 2007) to 28.2 ha for males and 44.8 ha for females in natural populations (Ray 2010). Additionally, translocated and hatchery-raised individuals in a lentic/oxbow habitat in Louisiana had an MCP of 0.55 ha for juveniles (Townsend 2016). The most extensive spatial coverage was recorded in a mixed setting of translocated and natural adults in Louisiana, where home ranges varied from 0.7 to 247 ha (Sloan and Taylor 1987).<br/><br/>Body Size: The largest recorded <em>M. temminckii</em> was a male, achieving 74.0 cm in carapace length (CL) (Rosenbaum <em>et al</em>. 2023). Males consistently are larger in CL than females. In Alabama, males reach a mean CL of 52.8 cm, while females have a mean CL of 42.5 cm (Folt and Godwin 2013). Statewide sampling in Arkansas found turtles had an overall mean CL of 33.8 cm (Wagner <em>et al</em>. 1996). Sampling in Georgia found mean CL was 51.3 cm for males and 42.1 cm for females (Folt <em>et al</em>. 2016). A study across multiple sites in Louisiana found adults had a mean CL of 46.3 cm and 40.2 cm for males and females, respectively (Dobie 1971). In the northern regions of Louisiana, adult male mean CL ranged from 49.5–50.8 cm, with corresponding female CL ranging from 40.2–43.1 cm (Douglas 1989, Sloan <em>et al</em>, 1996, Tucker and Sloan 1997, Johnson <em>et al</em>. 2023b, Woosley 2005). In southeastern Louisiana, males have a mean CL of 47.2 cm, and females have a mean CL of 39.6 cm (Boundy and Kennedy 2006). In addition, immature males and females had mean CL of 34.5 and 33.8 cm, respectively (Tucker and Sloan 1997). In Mississippi, males had a mean CL of 46.5 cm, and females had a mean CL of 40.1 cm (Pearson, unpubl. data). Finally, two studies in Texas reported mean CL of 52.1– 51.6 cm and 42.1–42.8 cm for males and females, respectively (Munscher <em>et al</em>. 2023, Rosenbaum <em>et al</em>. 2023).<br/><br/>Following suit with body size, masses for&#160;<em>M. temminckii</em>&#160;can be high, with the largest recorded being 95.8 kg (Rosenbaum <em>et al</em>. 2023). Sexual dimorphism exists, with females weighing less than males; regionally, <em>M. temminckii</em> from Texas tends to be heavier than in the rest of the range. In Alabama, females average about 20 kg, with the largest reaching 55.3 cm CL (Godwin <em>et al</em>. 2023). In Arkansas, males had a mean mass of 25.6 kg, whereas females averaged 13.4 kg (Howey and Dinkelacker 2013). In northern Louisiana, adults averaged 20.4 kg (Douglas 1989); more specifically, mean masses for males ranged between 29.9–32.7 kg and for females 18.7–19.2 kg (Woosley 2005, Johnson <em>et al</em>. 2023b). In southeastern Louisiana, mass averaged 21.3 and 13.4 kg for males and females, respectively (Boundy and Kennedy 2006). Surveys in Mississippi documented mean masses of 26.3 and 16.4 kg for males and females, respectively (Pearson, unpubl. data). Research on Texas populations reported mean masses of 25.3–34.9 kg and 19.0–19.2 kg for males and females, respectively (Munscher <em>et al</em>. 2023, Rosenbaum <em>et al</em>. 2023).<br/><br/>Diet: Diets and foraging habits of <em>M. temminckii</em> show distinct ontogenetic shifting across life stages. Juveniles are ambush predators, primarily targeting fish for sustenance (Harrel and Stringer 1997). In contrast, the diets of larger individuals comprise numerous prey items, predominantly vertebrate animals, carrion, fruits, acorns, and other plant materials (Elsey 2006). Examination of stomach contents from 65 individuals identified the diet composition included acorns (43%), fish (57%), wood, and crayfish (Sloan <em>et al</em>. 1996). Another study analyzing 109 digestive tracts identified dietary categories with over 25% frequency, featuring crayfish, molluscs, insects, fish (80%), turtles, vegetation (99%), and non-food items such as fishing gear, rocks, and aluminium foil (Elsey 2006). Identifiable fishes corresponded with the most common species in the north Louisiana environment turtles occupied, i.e., various sunfishes (60% Centrachidae) and Gizzard Shad (Harrel and Stringer 1997).&#160;Being a large species requiring and having a broad diet, <em>M. temminckii</em> provides ecosystem services as predator, scavenger, and (possibly) a seed and plant disperser (Sloan <em>et al</em>. 1996, Elbers and Moll 2011).<br/><br/>Life History: More research is needed to understand some of the life history traits of the species. However, the existing work illustrates it follows the typical pattern of delayed sexual maturity as observed in many turtle species, making it extremely susceptible to chronic threats. Males mature at 11–13 years at a CL of <em>ca</em> 37.0 cm, whereas females mature between 11–16 years at <em>ca</em>&#160;33.0 cm CL (Dobie 1971). Additional studies indicate males mature between 11–21 years and 37.8-41.0 cm CL and females between 13–21 and <em>ca</em> 32.7–37.0 cm CL (Tucker and Sloan 1997). Notably, these age and size thresholds mark key milestones in the reproductive lifecycle of the species. Longevity assessments suggest turtles may lie beyond 80 years (Ewert <em>et al</em>. 2006). Additionally, generation time calculations range from 31–49 years, with the former being derived from a demographic study in Georgia (Reed <em>et al</em>. 2002, Folt <em>et al</em>. 2016).<br/><br/>Reproduction: Current work indicates that <em>M. temminckii</em> has relatively low fecundity for its body size and thus likely lack resiliency to chronic and severe threats. Females deposit a single clutch annually (Dobie 1971, Tucker and Sloan 1997). Clutch size varies geographically, ranging from a mean of 24.5 eggs (range = 16–52) in Louisiana (Dobie 1971) to a mean of 35 eggs (range = 17–52) in the Apalachicola River region (Ewert <em>et al</em>. 1971, Jackson and Ewert 2023). A translocated population in Oklahoma had a mean clutch size of 22.4 eggs (range = 15–41) (Miller and Ligon 2014). Incubation periods observed for the translocated population spanned 79–96 days (Miller and Ligon 2014), whereas the interval from oviposition to emergence from nests in Louisiana averaged 115.3 days (range = 97–143) (Holcomb and Carr 2011). Louisiana hatchlings were 37.4 mm in CL and had a mass of 17.3 g (Bass 2007). Although foundational work exists, further work is needed to examine reproductive traits range-wide to help determine if clinal variation exists, what the drivers of fecundity are, and how such information translates to population resiliency.",
+    "threats": "The recent Species Status Assessment of <em>Macrochelys temminckii</em> by USFWS (2021a) identified four main threats to the species: legal and illegal harvest, fishing bycatch, habitat alteration, and nest predation. The conclusions were reached based primarily on expert elicitation. The top four threats identified within the IUCN Threat Scheme based on first-hand field observations and literature reports included, in descending order: (1) recreational fishing bycatch with hook-bearing gear; (2) intentional persecution by humans; (3) human infrastructure encounters; and (4) fishing bycatch with net devices (Shook <em>et al</em>. 2023). Human-turtle interactions threatening populations varied in the degree to which encounters were lethal—among the most dangerous were intentional shooting and bycatch by trotlines, a type of multi-hook fishing device (Shook <em>et al</em>. 2023). Demographic analyses concluded delayed maturation and high adult survivorship traits can confound recovery and exacerbate declines (Reed <em>et al</em>. 2002). Even less than a 2% annual harvest rate is unsustainable, and there is no evidence of sustainable adult harvest rates (Reed <em>et al</em>. 2002).<br/><br/>Harvest: Targeted exploitation has depleted populations in the Flint River, Georgia (Johnson 1989, King <em>et al</em>. 2016), across Louisiana (Sloan and Lovich 1995), and elsewhere (see USFWS 2021a) based on past commercial harvest of the species for consumption (Pritchard 1989). Personal, recreational harvesting is legal only in Louisiana and Mississippi (Shook <em>et al</em>. 2023, USFWS 2021a). Poaching is reported occasionally (e.g., DOJ 2017, Shook<em> et al</em>. 2023), but there is no single repository of information for federal (interstate or federal lands) and state-level cases. A recent study by Easter <em>et al</em>. (2023) identified 54 cases of illegal turtle trade from 1998–2021 (United States Department of Justice cases). Several violations were identified, but most were charged under the Lacey Act (interstate violations). In 47 of those cases with associated news articles, those with information about the driver of the illegal activity most often mentioned profit motives (38%) and the demand for pet turtles (40%), which was primarily international (43%) and originating from eastern Asia. In general, they recorded more cases throughout the study, and of the 34 turtle species identified, <em>Macrochelys</em> were recorded in six cases.<br/><br/>Pet trade for the species exists at domestic and international levels (CITES 2022). Exports from the United States have averaged around 34,000 individuals annually since 2006, when the species was added to Appendix III of CITES (CITES 2022). The three principal destinations reported through part of 2021 were (97%) China, Hong Kong SAR, and Macao SAR (CITES Trade Database 2023). Of approximately 515,500 reported individuals from the USA (2006–2021), virtually all were exported alive, and 98% were reportedly sourced from the wild (CITES Trade Database 2023). The live exports are undoubtedly primarily originating from captive facilities, so the impact on wild populations is unknown (CITES 2022).<br/><br/>Persecution is often associated with fishing when humans and turtles are brought into proximity, with shooting and blunt trauma being the main means of harming turtles (Shook <em>et al</em>. 2023). Fishing bycatch and the consequences of hook ingestion were identified by USFWS (2021a)&#160;as among the most serious threats (see Steen and Robinson 2017). Bycatch and commercial fishing for catfish and buffalo were specifically identified. Fishing net devices such as hoop nets and gill nets are more commonly associated with commercial fishing, and there is evidence of individual <em>M. temminckii</em> being captured and drowned in such gear (Shook <em>et al</em>. 2023).<br/><br/>Habitat Alteration &amp; Destruction: Although <em>M. temminckii</em> is highly adaptable in habitat usage, significant threats exist from habitat degradation driven by river engineering practices. Such anthropogenic alteration, notably the reduction of silt load below dams, lowers the main channel, negatively impacting connectivity among swamp forest channels. Consequently, habitat quality, extent, and carrying capacity become degraded. The species experiences overwintering mortality due to flood control measures in pulsed systems, further accentuating the detrimental effects of habitat alteration (Dreslik <em>et al</em>. 2023; Kessler 2020, 2023). In Houston, Texas, no direct evidence of mortality has been observed within Buffalo Bayou due to flooding and being a pulse system (Munscher <em>et al</em>. 2021c). However, urban pulse systems are routinely altered and \"improved\" to limit flooding. Notably, the species encounters numerous additional anthropogenic threats associated with infrastructure related to various types of roads, occasional interactions with railroads, and structures related to water, such as swimming pools and cooling-water intakes (Shook <em>et al</em>. 2023). Additional threats highlighted encompassed recreational boat strikes, which may be on the rise, and encounters with industrial equipment such as dredging-type machinery (Shook <em>et al</em>. 2023). The findings illustrate the range of anthropogenic threats impacting populations and emphasize the urgency of conservation measures to mitigate habitat degradation and associated risks (Shook <em>et al</em>. 2023).<br/><br/>Nest Predation &amp; Mortality: Nesting success is also under heavy ecological pressure from anthropogenically induced sources. Specifically, nest predation rates were notably high in Louisiana and Florida, reaching 87% in the latter (Ewert <em>et al</em>. 2006). Raccoons are the prominent nest predators, contributing to high nest predation rates (Redmond, 1979, Ewert <em>et al</em>. 2006). Mammalian nest predators in Louisiana included raccoons, armadillos, opossums, bobcats, and river otters (Holcomb and Carr 2013). The resurgence of river otters, attributed to targeted reintroductions in various regions, has been noted as impacting Alligator Snapping Turtles negatively, with growing otter populations posing an additional threat (Ligon and Reasor 2007; J. Kath, Illinois Department of Natural Resources, pers. comm.). Invertebrate predation on eggs and neonates from invasive Red Fire Ants and the Scaled Hump-backed Fly illustrate the additional threats to survival (Pritchard 1989; Ewert <em>et al</em>. 2006; Holcomb and Carr 2011a, 2011b, 2023). Additionally, non-biological factors, such as heavy rainfall leading to nest flooding, contribute to egg mortality within nests (Holcomb and Carr 2023). Collectively, these stressors underscore the pervasive threats to recruitment.<br/><br/>Genetic Loss: Genetic studies have revealed a history of population bottlenecks and remarkably low female dispersal rates across drainage basins (Echelle <em>et al</em>. 2010, Apodaca <em>et al</em>. 2023). The findings suggest restricted gene flow and limited genetic connectivity among populations, raising concerns about potential impacts on genetic diversity and adaptability. A more detailed genetic analysis conducted within the Yazoo River system in Mississippi further highlights significant genetic bottlenecks (Pearson 2021). The observation may explain the lower genetic diversity in western Mississippi compared to the eastern region (Pearson 2021). Unfortunately, more work should be conducted to examine additional population genetic patterns, critical for developing effective conservation strategies.",
+    "measures": "<em>Macrochelys temminckii</em> is protected through various state legislative regulations and is currently protected from commercial exploitation in all states and recreational take in all states except Louisiana and Mississippi. It has recently been assessed and recommended for inclusion under the U.S. Endangered Species Act as a Threatened species (USFWS 2021a, b). It was included in CITES Appendix III from 2004 to 2022 and transferred to Appendix II in February 2023 (CITES, 2023). NatureServe ranks it as G3 – Vulnerable, with the United States also being N3 – Vulnerable (NatureServe, 2023). By state ranks, it is S1 – Critically Imperiled in Illinois and Kentucky, S2 – Imperiled in Missouri, Oklahoma, and Texas, S2S3 Imperiled-Vulnerable in Tennessee, S3 – Vulnerable in Alabama, Florida, Georgia, Louisiana, and Mississippi, S3S4 – Vulnerable-Apparently Secure in Arkansas, and SH – Possibly Extinct in Indiana and SU – Unrankable in Iowa (NatureServe 2023). NatureServe does not provide an S rank for Kansas, but it would be SX – Presumed Extinct.<br/><br/>The species occurs in many protected areas throughout its range. Alabama: Choctaw NWR; Bon Secour NWR; Conecuh National Forest; Tuskegee National Forest, Fort Benning (Godwin <em>et al</em>. 2023).&#160;Arkansas: White River NWR; Cache River NWR; Holla Bend NWR; Big Lake NWR; Felsenthal NWR; Fort Chaffee, Little Rock Air Force Base, Camp Robinson Maneuver Training Center (Wagner <em>et al</em>. 1996; Trauth <em>et al</em>. 2004; DoD PARC 2021).&#160;Florida: The species occurs in several protected areas in Florida (Eglin AFB, Tyndall AFB, NAS Pensacola-NOLF Bronson Field; NAS Pensacola-Saufley Field NETPDTC; NAS Whiting Field; DoD PARC, 2021; Ewert <em>et al</em>. 2006). Georgia: Moody AFB, Fort Benning. Louisiana: Black Bayou Lake NWR (Sloan and Taylor 1987, Woosley 2005); Red River NWR (Bogosian 2010); Tensas River NWR (Johnson <em>et al</em>. 2023); Upper Ouachita NWR (Johnson <em>et al</em>. 2021); Barksdale AFB, Fort Johnson, Naval Air Station Joint Reserve Base New Orleans (DoD PARC 2021). Natchitoches National Fish Hatchery has been raising hatchlings for eventual release. Mississippi: Theodore Roosevelt NWR Complex; Tallahatchie NWR; Camp Shelby Joint Forces Training Center; Naval Construction Battalion Center Gulfport Stennis Western Maneuver Area; Bogue Chitto NWR; Mississippi Sandhill Crane NWR; DeSoto National Forest; Delta National Forest; Holly Springs National Forest (Pearson <em>et al</em>. 2023. Feist <em>et al</em>. 2018; J. Lee pers. comm.).&#160;Oklahoma: Little River National Wildlife Refuge, Tishomingo National Wildlife Refuge, Sequoyah National Wildlife Refuge, Deep Fork National Wildlife Refuge. A captive hatchery was established at Tishomingo National Fish Hatchery, and trial releases were conducted in Oklahoma, Louisiana, and Illinois (Dreslik et al. 2017).&#160;Texas: Red River Army Depot, Big Thicket National Preserve, Sam Houston National Forest, Trinity River National Wildlife Refuge, Buffalo Bayou Park System (Gordon <em>et al</em>. 2023, Munscher <em>et al</em>. 2023, Rosenbaum <em>et al</em>. 2023).<br/><br/>Conservation Actions by State:<br/><br/>Alabama: Designated as S3 (Vulnerable) by NatureServe (2023), the Alabama Department of Conservation and Natural Resources (ADCNR) listed <em>M. temminckii</em> as a protected non-game species in 1990 (Alabama Administrative Code r.220-2-.92; Folt and Godwin 2013). Originally assigned a P3 rank (moderate conservation concern) in the Alabama Wildlife Action Plan (ADCNR 2015), in 2002, the ADCNR Amphibian and Reptile Committee upgraded the rank to P2 (high conservation concern) for the species because of its low apparent abundance (Soehren and Godwin 2004). The first major status survey for the species sampled 11 major rivers in the state's southern portions and detected 93 turtles from seven of the systems (Folt and Godwin 2013). Targeted survey work in Alabama sampled 18 sites from 1995–2021, resulting in 174 individuals detected at six sites, thus helping fill gaps within the state's distribution (Godwin <em>et al</em>. 2023). Among the newly documented locations were urban habitats around Birmingham. Additional occurrence records were contributed based on captures during fisheries surveys, data which also contribute to our understanding of fishing gear interactions by documentation of the rates of capture of the species with trotlines and gill nets (Rider <em>et al</em>. 2023).<br/><br/>Arkansas: Designated as S3/S4 (Vulnerable/Apparently Secure) by NatureServe (2023), the species was protected against all harvest as of 1993 (Trauth <em>et al.</em> 1998, Wagner <em>et al</em>. 1996). It is not listed as an SGCN species within the Arkansas Wildlife Action Plan (Fowler 2015). A status survey conducted from 1994–1995 captured 445 individuals in 1,905 trap nights, which expanded its known range by 41 counties and affirmed its presence in 61 (Wagner <em>et al</em>. 1996). No statistical size differences were noted between counties open and closed to commercial harvest (Wagner <em>et al</em>. 1996). One population with historical harvest exhibited female-biased sex ratios (Howey and Dinkelacker 2013), whereas others had equal or male-biased adult sex ratios (Trauth <em>et al</em>. 1998, 2016). Density estimates for a northeast Arkansas population averaged 26 turtles per river km, ranging from 21.9–290 turtles per river km (Trauth <em>et al</em>. 2016). No recent species status surveys have been conducted in Arkansas since 1995, and current occurrence records rely on opportunistic observations, underscoring the necessity for updated assessments (Wagner <em>et al</em>. 1996).<br/><br/>Florida: Restricted to just the Panhandle populations, the species is designated as S3 (Vulnerable) by NatureServe (2023). Florida does not provide a protected status for the species; however, it is listed as SGCN (FWC, 2019). Recent surveys in the Ochlockonee, Apalachicola, Choctawhatchee, and Escambia River systems reported a CPUE of 0.21 (Enge <em>et al</em>. 2023), comparable to the 0.25 CPUE from a prior survey (Moler 1996). The recent survey confirmed its presence in 23 out of 26 surveyed streams, with additional records indicating its occurrence in another 21 untrapped streams (Enge <em>et al</em>. 2023). The comprehensive survey suggests similar population abundances and distributions between the 1996 and 2019 assessments.<br/><br/>Georgia: Designated as S3 (Vulnerable) by NatureServe (2023), the Georgia Department of Natural Resources (GDNR) protects the species as Threatened and lists it as SGCN in their wildlife action plan (GDNR 2015). Status surveys have shown no recovery following the closure of the commercial harvest, with a CPUE of 0.09 in the Flint River, comparable to surveys conducted 22 years earlier (King <em>et al</em>. 2016, Johnson 1989). Further, additional surveys in the Apalachicola and Ochlockonee rivers reported a low CPUE of 0.40 (Jensen and Birkhead 2003). For all surveys, CPUE values were well below the 1.0 CPUE anecdotal reports from the 1970s when commercial harvesters would capture 1,000 pounds (455 kg) of <em>Macrochelys</em> from a single hoop net (Johnson 1989, George 1988).<br/><br/>Illinois: Designated S1 (Critically Imperiled) by NatureServe (2023), listed as a Species in Greatest Need of Conservation (SGCN), and protected as Endangered (ILESPB 2020; IDNR 2005, 2015). A species status survey was conducted throughout the historical range, and no turtles were found (Bluett <em>et al</em>. 2011). Work then led to the forming of a recovery team and a plan to reintroduce the species from the appropriate mtDNA haplotype stock from Tishomingo National Fish Hatchery, supplemented with captive-reared and confiscated animals (Dreslik <em>et al</em>. 2017, Kessler <em>et al</em>. 2017). The initial pilot study was unsuccessful, as tracked turtles suffered mortality through anoxic conditions at a lentic site (Dreslik <em>et al</em>. 2017, Kessler <em>et al</em>. 2017). A second pilot study in a lotic system met with better success, barely achieving the survival performance metrics (Dreslik <em>et al</em>. 2017, Kessler <em>et al</em>. 2017). A formal 8-year reintroduction project commenced at the last known lotic habitat site for the species in Illinois (Dreslik <em>et al</em>. 2017, Kessler <em>et al</em>. 2017, Kessler 2020). Results from the study found mortality rates were too high, and the threats were high juvenile predation rates, overwinter mortality due to flooding and exposure, and bycatch in illegal trapping. Growth rates were also too slow, suggesting insufficient food resources, maladaptability of captive-reared stock, or the overall unsuitable climate (Kessler 2020, Dreslik <em>et al</em>. 2023). There has been a formal Illinois species status assessment (Ballard 2022) and species guidance document geared toward conservation and best management practices (Kessler 2023). After eight years of release, the reintroduction project was shuttered because it did not meet performance goals (Kessler 2020, Dreslik <em>et al</em>. 2023).<br/><br/>Indiana: Designated as SH (Presumed extirpated) by NatureServe (2023), and the Indiana Department of Natural Resources (INDNR) protects the species as Endangered and lists it as SGCN (INDNR 2015). Exploratory eDNA surveys have been conducted at sites in southwestern Indiana in the Patoka and White River watershed, where one positive result was detected. Subsequent trapping did not yield any captures, and systematic eDNA surveys throughout southwestern Indiana did not result in any detections (Kessler and Dreslik 2018, 2019, 2021).<br/><br/>Kansas: Not designated by NatureServe (2023), the Kansas Department of Wildlife and Parks currently lists it as a species in conservation need (SICN) Tier 2 SGCN (Rohweder 2022) due to a lack of known breeding populations in the state. The species is currently covered under a multi-species Candidate Conservation Agreement with Assurances/ Safe Harbor Agreement to allow for release in private waterways in Kansas (Riedle pers. comm.).<br/><br/>Kentucky: Designated as S1 (Critically Imperiled) by NatureServe (2023) and the Kentucky Department of Fish and Wildlife Resources (KDFWR) lists it as SGCN in their wildlife action plan but notes that it is a data deficient priority group (KDFWR 2023). Status surveys conducted at 24 sites for over 800 trap nights detected no individuals (Baxley <em>et al</em>. 2014). The current population status in Kentucky is unknown, with only three counties having records within the last 21 years (Caldwell, Calloway, and Hickman counties; USFWS 2021a).<br/><br/>Louisiana: Listed as SGCN (Holcomb <em>et al</em>. 2015) and designated S3 (Vulnerable) by NatureServe (2023). Louisiana allows the take of one individual per person per vehicle per day with a recreational fishing license (LDWF 2021). A translocation effort in a 3-state project was initiated over four years (2013–2016) to augment populations at two sites within Boeuf Wildlife Management Area in Caldwell Parish (Townsend 2016, Dreslik <em>et al</em>. 2017). Turtles have been recovered from those translocations and other translocated, head-started animals from the Monroe Fish Hatchery (Johnson <em>et al</em>. 2023a, Schwartz in prep.). Another augmentation with head-started turtles (2015–2016) from the Monroe Fish Hatchery involved releases into the Calcasieu River (Beauregard Parish) drainage in southwestern Louisiana (Glorioso <em>et al</em>. 2020). Status surveys in two portions of the state were completed in the last 12 years. Trapping was conducted in 2012–2013 at 15 sites in southwestern Louisiana for 731 trap-nights and yielded 14 captures (Huntzinger <em>et al</em>. 2019). Similar surveys in the northern part of the state (2018–2020) for 615 trap-nights at 19 sites yielded 66 individuals (Johnson <em>et al</em>. 2023a).<br/><br/>Mississippi: Classified as S3 (Vulnerable) by NatureServe (2023), and although not formally protected, the Mississippi Department of Wildlife Fisheries and Parks (MDWFP) classifies it as SGCN (MDWFP 2015). The species is continually monitored by the Mississippi Natural Heritage Program (MNHP 2018). Regulations permit the recreational harvest of one turtle per person annually, at a minimum CL of 61.0 cm, to protect mature females (MDWFP 2021). Status surveys in 2017 yielded 154 confirmed localities across 60 counties (Pearson <em>et al</em>. 2023). A CPUE analysis indicated higher abundance in larger river systems with adjacent wetlands, decreasing towards headwaters (Pearson <em>et al</em>. 2023). Populations in the Mississippi alluvial plain comprised more adults in better body condition, whereas Gulf coastal river drainages predominantly had more juveniles, constituting up to 80% of captures (Pearson 2021, Pearson <em>et al</em>. 2023). Surveys using eDNA detected the species in six of nine National Wildlife Refuges and traditional capture surveys detected turtles at a site with no eDNA detection (Feist <em>et al</em>. 2018, Pearson <em>et al</em>. 2023). Genetic assessments delineated discrete populations in each river drainage, with fine-scale intra-drainage genetic structuring present (Pearson 2021). A radio-tracking project in the Mississippi alluvial plain aims to provide data on home ranges, movement patterns, habitat use, and nesting locations (P. Delisle, unpubl. data). Notably, preliminary observations include the discovery of two dozen depredated nests, with an average conservative clutch size of 24 eggs from five nests (L. Pearson, pers. obs.). In addition, trapping efforts have been consistently applied at five selected sites to facilitate long-term monitoring since 2017.<br/><br/>Missouri: Designated as S2 (Imperiled) by NatureServe (2023), the Missouri Department of Conservation (MDOC) lists the species as SGCN (MDOC 2015). Some status surveys and spatial ecological work have occurred in the state (Lescher <em>et al</em>. 2013, Shipman and Riedle 2008). A status survey covering fifty sites with potential suitable habitats were visited in 1994, and 19 were trapped in Dunklin, Mississippi, New Madrid, and Pemiscot counties (Shipman and Riedle 2008). The surveys captured 37 turtles at four sites in Pemiscot and Dunklin counties. The Dunklin County site was resampled in 1997, and radio transmitters were attached to 11 Alligator Snapping Turtles (six males, four females, one unknown sex). Radio-equipped turtles used microhabitats with more cover, high-density canopy, and lower gradient banks than random locations (Shipman and Riedle 2008. There were significant differences in turtle size between sites with and without historical harvest, particularly along the Arkansas Border (Shipman and Riedle 2008). Lescher <em>et al</em>. (2013) resampled six sites in 2009 where the occurrence of <em>M. temminckii</em> had been documented in 1993 (Santhuff 1993) or 1994 (Shipman and Riedle 2008). They documented a decline in their measure of relative abundance (CPUE) and a decrease in the size structure of those populations with fewer adults of both sexes and more juveniles.<br/><br/>Oklahoma: Designated as S2 (Imperiled) by NatureServe (2023), the Oklahoma Department of Wildlife Conservation (ODWC) lists it as Tier I SGCN (ODWC 2016). The Natural Heritage State Rank for Oklahoma (S2) was last updated in the early 2000s and does not reflect the results of surveys since at least 2010 (M. Howery pers. comm.). Conservation work includes status surveys and work associated with a reintroduction programme. From 1997 to 1999, a status survey was conducted to identify extant populations and assess relative densities and viability (Riedle <em>et al</em>. 2005). Sixty-seven sites in 15 counties were surveyed across the historic distribution within the state, and 63 turtles were captured at 11 sites, all in the state's southeastern quarter and only in protected or isolated locations (Riedle <em>et al</em>. 2005). The authors concluded there appeared to be a significant range contraction in Oklahoma, and with so few sites exhibiting capture rates indicative of healthy populations, population declines had occurred in Oklahoma (Riedle <em>et al</em>. 2005). A mark-recapture project at Sequoyah National Wildlife Refuge between 1997–2000 found the population had equal sex ratios, marked sexual-size dimorphism, and population densities between 28 and 34 animals per km of stream (Riedle <em>et al</em>. 2008). The lack of large adults and an underrepresented cohort of subadults were hypothesized to be evidence of past population perturbations (Riedle <em>et al</em>. 2008). Follow-up sampling from 2010–2011 on the Sequoyah NWR revealed juveniles dominated the population, and the population lacked detections of large adult-size classes and small juveniles (East <em>et al</em>. 2013). A retrospective analysis of 1997–2001 data (Riedle <em>et al</em>. 2008) revealed that the population was likely to decline even at that time despite high capture rates, a concerning finding given the protection afforded by the national wildlife refuge (East <em>et al</em>. 2013). A reintroduction project in the Caney River and its tributary, Pond Creek, released 246 juveniles from 2008–2010. All turtles exhibited measurable growth by their first recapture 1–3 years after release, and no decline in body condition was observed (East <em>et al</em>. 2013). Apparent survival and recapture probabilities increased with age, and apparent survivorship was higher for turtles released in the main channel, whereas recapture probabilities were higher in the tributary (Anthony <em>et al</em>. 2015). The releases of captive-reared juveniles have continued through the present at the sites on the Caney and Verdigris rivers and the reintroduction effort on the Washita River has resulted in the successful hatching and growth of multiple size classes of juvenile turtles (M. Howery pers. comm.).<br/><br/>Tennessee: Designated as S2 by NatureServe (2023), and the Tennessee Wildlife Resources Agency (TWRA) lists the species as SGCN and Deemed in Need of Management (TWRA 2015). Limited conservation efforts have occurred. Status surveys conducted in western Tennessee spanning 65 sites yielded 22 turtles, nine of which were likely recaptures of turtles reintroduced in the early 2000s (Garig <em>et al</em>. 2021). The survey further concluded the species occurs at low densities within the region, potentially attributed to historical habitat modification (Garig e<em>t al</em>. 2021). Despite the findings, the status of <em>M. temminckii</em> in central Tennessee rivers remains unknown due to a lack of contemporary surveys. However, recent observations near Saltillo in the Tennessee River suggest the species' presence, emphasizing the need for further investigation (R. Colvin pers. comm.).<br/><br/>Texas: Designated as S2 (Imperiled) by NatureServe (2023), the species has been protected as State Threatened since 1987 (Texas Register 1987), and it is listed as SGCN by the Texas Parks and Wildlife Department (TPWD 2005). It is unlawful to take or possess any freshwater turtle from the wild for commercial purposes and to possess more than six individuals of any freshwater turtle species. Texas Parks and Wildlife has rewards of up to $1,000 for any poaching report. Although there are prohibitions on take, there is a challenge to monitoring illegal harvest because most of Texas is private land (94%). An initial status assessment was conducted at 23 sites across the major river drainages of east Texas and detected 48 individuals at 17 sites, including the Sabine, Trinity, San Jacinto, and Brazos rivers (Rudolf <em>et al</em>. 2002). Follow-up surveys of these sites from 2020–2021 detected individuals at 18 of 22 historic sites and 29 additional, resulting in 221 turtles captured from 51 sites (Rosenbaum <em>et al</em>. 2023). A recent survey from 2021–2022 detected 69 individuals at 24 of 34 locations across 25 counties, with supporting genetic analyses revealing three metapopulations, one spanning the Red, Cypress, and Sulphur River basins, a second covering the Sabine and Neches River basins, and the third covering the San Jacinto and Trinity River basins (Gordon <em>et al</em>. 2023a). Detailed population research at Buffalo Bayou began in 2016 after discovering this urban population (Munscher <em>et al</em>. 2020, 2023). Work has identified 142 marked individuals at a density of 4.43 turtles/river km and biomass estimates of 89.9 kg/km. Capture rates remain high at 0.267–0.547 turtles per trap night, with a population estimated at 173 turtles (95% CI:138–250) and a sex ratio of 1.00M:1.28F (Munscher <em>et al</em>. 2023). The main issue with determining the extent of the species' presence and population status in the landscape is the limited access of wildlife research to private lands (Texas Center for Policy Studies 2000, Texas General Land Office 2019).",
+    "use_trade": "<em>Macrochelys temminckii</em> has experienced substantial anthropogenic pressures primarily through intense exploitation for subsistence consumption and trade (Pritchard 1989, Boundy and Kennedy 2006, Howey and Dinkelacker 2013, USFWS 2021a). Juveniles have been subjected to extensive trade within the pet industry, catering to the demand for exotic pets and supplying East Asian aquaculture enterprises. Furthermore, commercial farming activities targeting this species have been established in specific regions, including Arkansas, Florida, Louisiana, and Missouri (Hughes 1999). The species is consequently listed in CITES Appendix II as of February 2023 (CITES 2023), meaning although they are not imminently threatened with extinction in the wild, international trade must be regulated to avoid overexploitation. With this designation, an export permit is required for trade and issued by the CITES Management Authority (USFWS) only when the specimen was deemed legally obtained and its export not detrimental to the species' survival.",
+    "rationale": "<p>The Western Alligator Snapping Turtle, <em>Macrochelys temminckii</em>, has experienced a significant decline exceeding 50% across its historic distribution within the last <em>ca</em> 100 years, equivalent to three generations. Although more precise quantification in distributional status and abundance estimates are needed, the decline has been influenced by commercial and recreational overharvesting, habitat degradation, loss, and fragmentation, and increased nest and juvenile turtle predation, particularly from subsidized mesopredators. The chronic synergistic and cumulative impacts of such factors since the 1950s suggest a substantial population reduction by at least 50% (criterion A2). The declines, characterized by reversible and irreversible impacts, are significant enough to categorize <em>M. temminckii</em> as Endangered (EN) under criteria A2bcd+4bcd, considering the past three generations or the ongoing last two generations with projections for the next generation (criterion A4). Furthermore, an assessment conducted by the USFWS (2021a) indicated that&#160;<em>M. temminckii</em> qualifies for listing as Threatened under the U.S. Endangered Species Act, implying a high likelihood of the species becoming Endangered in the foreseeable future across its entire range or a substantial portion thereof. The current assessment reflects the precarious status of <em>M. temminckii</em> and the urgency of needed conservation efforts. The species&#160;was previously assessed in 1996 as Vulnerable (VU) (TFTSG 1996) and provisionally re-assessed in 2011 as Vulnerable (Rhodin <em>et al</em>. 2018, TTWG 2021).</p>",
+    "trend_justification": null,
+    "taxonomic_notes": "The Alligator Snapping Turtle, <em>Macrochelys temminckii</em>, was initially placed in the genus <em>Macroclemys</em> throughout much of the late 20th century until it was revised due to the genus <em>Macrochelys</em> having nomenclatural priority (Webb 1995).<br/><br/>Genetic research found significant divergence in the Suwannee River populations (Roman <em>et al</em>. 1999, Echelle <em>et al</em>. 2010), further supported by morphological analyses (Murray<em> et al.</em> 2014, Thomas <em>et al. </em>2014), which led to taxonomic revision recognizing the Suwannee River populations as <em>M. suwanniensis</em> (Thomas <em>et al.</em> 2014).<br/><br/>Distinctions were also noted for the Apalachicola River population, prompting description as <em>M. apalachicolae</em> (Thomas<em> et al.</em> 2014). The taxonomic distinctiveness of <em>M. apalachicolae</em> was contested, and the recommendation was to subsume <em>M. apalachicolae</em> back into <em>M. temminckii </em>(Folt and Guyer 2015). However, the genetic lineage representing the Alligator Snapping Turtle populations in the Apalachicola River and adjacent drainages has been further confirmed by next-generation sequencing of a large, range-wide sample of <em>Macrochelys</em> specimens (Apodaca <em>et al. </em>2023), although no taxonomic or nomenclatural recommendations were made. The current nomenclatural arrangement recognizes only <em>M. temminckii</em> and <em>M. suwanniensis</em> (TTWG 2021)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "5_2",
+      "description": {
+        "en": "Policies and regulations"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_2",
+      "description": {
+        "en": "Invasive/problematic species control"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Shrub Dominated Wetlands"
+      },
+      "code": "5_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Louisiana"
+      },
+      "code": "LOU-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kentucky"
+      },
+      "code": "KTY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Arkansas"
+      },
+      "code": "ARK-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GEO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Florida"
+      },
+      "code": "FLA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tennessee"
+      },
+      "code": "TEN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kansas"
+      },
+      "code": "KAN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Illinois"
+      },
+      "code": "ILL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Alabama"
+      },
+      "code": "ALA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oklahoma"
+      },
+      "code": "OKL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indiana"
+      },
+      "code": "INI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mississippi"
+      },
+      "code": "MSI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Texas"
+      },
+      "code": "TEX-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Missouri"
+      },
+      "code": "MSO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Réunion"
+      },
+      "code": "RE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Republic of"
+      },
+      "code": "KR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Taiwan, Province of China"
+      },
+      "code": "TW"
+    },
+    {
+      "is_endemic": true,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Establishing ex-situ production *"
+      },
+      "code": "16"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": "Yes",
+      "score": "Past Impact",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    },
+    {
+      "scope": null,
+      "timing": null,
+      "internationalTrade": null,
+      "score": "(Not specified)",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": null,
+      "timing": null,
+      "internationalTrade": null,
+      "score": "(Not specified)",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Problematic native species/diseases"
+      },
+      "code": "8_2"
+    },
+    {
+      "scope": null,
+      "timing": null,
+      "internationalTrade": null,
+      "score": "(Not specified)",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Large dams"
+      },
+      "code": "7_2_10"
+    },
+    {
+      "scope": null,
+      "timing": null,
+      "internationalTrade": null,
+      "score": "(Not specified)",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small dams"
+      },
+      "code": "7_2_9"
+    },
+    {
+      "scope": null,
+      "timing": null,
+      "internationalTrade": null,
+      "score": "(Not specified)",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_4_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Temperature extremes"
+      },
+      "code": "11_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Scale Unknown/Unrecorded"
+      },
+      "code": "2_1_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other ecosystem modifications"
+      },
+      "code": "7_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Oil spills"
+      },
+      "code": "9_2_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Storms & flooding"
+      },
+      "code": "11_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Soil erosion, sedimentation"
+      },
+      "code": "9_3_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Herbicides and pesticides"
+      },
+      "code": "9_3_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Droughts"
+      },
+      "code": "11_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Shipping lanes"
+      },
+      "code": "4_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Work & other activities"
+      },
+      "code": "6_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Carr, J.L., Riedle, D.J., Munscher, E., Pearson, L.S., Kessler, E.J. & Dreslik, M.J.",
+      "value": [
+        "munscher.gen.1701877062864@gen.iucnsis.org",
+        "carr.gen.1702223951683@gen.iucnsis.org",
+        "riedle.gen.1704106084034@gen.iucnsis.org",
+        "pearson.gen.1704106149357@gen.iucnsis.org",
+        "kessler.gen.1704106185769@gen.iucnsis.org",
+        "dreslik.gen.1704106211712@gen.iucnsis.org"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Rhodin, A.G.J., van Dijk, P.P. & Stanford, C.B.",
+      "value": [
+        "Peter Paul van Dijk (N/A)",
+        "rhodin.gen.1701537143623@gen.iucnsis.org",
+        "stanford.gen.1701537184669@gen.iucnsis.org"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "USA Turtle Red Listing Workshop 2023, Briggler, J.T., Floyd, T.M., Howery, M. & O'Hanlon, B.",
+      "value": [
+        "usaturtle.gen.1701687454589@gen.iucnsis.org",
+        "briggler.gen.1707783752966@gen.iucnsis.org",
+        "howery.gen.1707843082644@gen.iucnsis.org",
+        "ohanlon.gen.1708784670900@gen.iucnsis.org",
+        "floyd.gen.1708805386072@gen.iucnsis.org"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Rhodin, A.G.J.",
+      "value": [
+        "rhodin.gen.1701537143623@gen.iucnsis.org"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "TTWG [Turtle Taxonomy Working Group: Rhodin, A.G.J., Iverson, J.B., Bour, R., Fritz, U., Georges, A., Shaffer, H.B. and van Dijk, P.P.]. 2021. Turtles of the World: Annotated Checklist and Atlas of Taxonomy, Synonymy, Distribution, and Conservation Status (9th Ed.). Turtle Taxonomy Working Group (TTWG). In: A.G.J. Rhodin, J.B. Iverson, P.P. van Dijk, C.B. Stanford, E.V. Goode, K.A. Buhlmann and R.A. Mittermeier (eds), <i>Conservation Biology of Freshwater Turtles and Tortoises: A Compilation Project of the IUCN/SSC Tortoise and Freshwater Turtle Specialist Group. Chelonian Research Monographs, Volume  8</i>, pp. 1–472: DOI: 10.3854/crm.8.checklist.atlas.v9.2021.",
+      "year": "2021",
+      "title": "Turtles of the World: Annotated Checklist and Atlas of Taxonomy, Synonymy, Distribution, and Conservation Status (9th Ed.). Turtle Taxonomy Working Group (TTWG)",
+      "author": "TTWG [Turtle Taxonomy Working Group: Rhodin, A.G.J., Iverson, J.B., Bour, R., Fritz, U., Georges, A., Shaffer, H.B. and van Dijk, P.P.]",
+      "citation_short": ""
+    },
+    {
+      "citation": "TTWG [Turtle Taxonomy Working Group: Rhodin, A.G.J., Iverson, J.B., Fritz, U., Gallego-García, N., Georges, A., Ihlow, F., Shaffer, H.B. and van Dijk, P.P.]. In Press. Turtles of the World: Annotated Checklist and Atlas of Taxonomy, Synonymy, Distribution, and Conservation Status (10th Ed.). <i>Chelonian Research Monographs</i> 9.",
+      "year": "In Press",
+      "title": "Turtles of the World: Annotated Checklist and Atlas of Taxonomy, Synonymy, Distribution, and Conservation Status (10th Ed.)",
+      "author": "TTWG [Turtle Taxonomy Working Group: Rhodin, A.G.J., Iverson, J.B., Fritz, U., Gallego-García, N., Georges, A., Ihlow, F., Shaffer, H.B. and van Dijk, P.P.]",
+      "citation_short": ""
+    },
+    {
+      "citation": "ADCNR [Alabama Department of Conservation and Natural Resources]. 2015. Alabama's Wildlife Action Plan 2015-2025. https://www.outdooralabama.com/research/state-wildlife-grants.",
+      "year": null,
+      "title": null,
+      "author": "ADCNR [Alabama Department of Conservation and Natural Resources]. 2015. Alabama's Wildlife Action Plan 2015-2025. https://www.outdooralabama.com/research/state-wildlife-grants",
+      "citation_short": null
+    },
+    {
+      "citation": "Agassiz, L. 1857. Contributions to the Natural History of the United States of America. First Monograph. Vol. I. Part I. Essay on Classification. Part II. North American Testudinata. Boston: Little, Brown and Co., Vol. I, pp. 1–452.",
+      "year": null,
+      "title": null,
+      "author": "Agassiz, L. 1857. Contributions to the Natural History of the United States of America. First Monograph. Vol. I. Part I. Essay on Classification. Part II. North American Testudinata. Boston: Little, Brown and Co., Vol. I, pp. 1–452. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Anthony, T., J.D. Riedle, M.B. East, B. Fillmore, and D.B. Ligon. 2015. Monitoring of a reintroduced population of juvenile alligator snapping turtles. Chelonian Conservation and Biology 14:43– 48.",
+      "year": null,
+      "title": null,
+      "author": "Anthony, T., J.D. Riedle, M.B. East, B. Fillmore, and D.B. Ligon. 2015. Monitoring of a reintroduced population of juvenile alligator snapping turtles. Chelonian Conservation and Biology 14:43– 48.",
+      "citation_short": null
+    },
+    {
+      "citation": "Apodaca, J.J., Krohn, A.R., Collins, L., Godwin, J.C., Pearson, L. and Walde, A.D. 2023. Reevaluating population structure, conservation units, and taxonomy in extant Alligator Snapping Turtles (genus <i>Macrochelys</i>) using next-generation sequencing. <i>Southeastern Naturalist</i> 22(Special Issue 12): 1–24.",
+      "year": "2023",
+      "title": "Reevaluating population structure, conservation units, and taxonomy in extant Alligator Snapping Turtles (genus <i>Macrochelys</i>) using next-generation sequencing",
+      "author": "Apodaca, J.J., Krohn, A.R., Collins, L., Godwin, J.C., Pearson, L. and Walde, A.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ballard, S. 2022. Alligator Snapping Turtle Species Status Assessment for Illinois. Illinois Department of Natural Resources, Springfield, Illinois, 12 pp.",
+      "year": null,
+      "title": null,
+      "author": "Ballard, S. 2022. Alligator Snapping Turtle Species Status Assessment for Illinois. Illinois Department of Natural Resources, Springfield, Illinois, 12 pp. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Bass, A.A. 2007. Habitat use and movements of Alligator Snapping Turtle (Macrochelys temminckii) hatchlings. Master of Science Thesis, University of Louisiana at Monroe, Monroe, LA.",
+      "year": null,
+      "title": null,
+      "author": "Bass, A.A. 2007. Habitat use and movements of Alligator Snapping Turtle (Macrochelys temminckii) hatchlings. Master of Science Thesis, University of Louisiana at Monroe, Monroe, LA.",
+      "citation_short": null
+    },
+    {
+      "citation": "Baxley, D.L., J.O. Barnard, and H. Venter. 2014. A survey for the Alligator Snapping Turtle (Macrochelys temminckii) in western Kentucky. Southeastern Naturalist 13(2):337–346.",
+      "year": null,
+      "title": null,
+      "author": "Baxley, D.L., J.O. Barnard, and H. Venter. 2014. A survey for the Alligator Snapping Turtle (Macrochelys temminckii) in western Kentucky. Southeastern Naturalist 13(2):337–346.",
+      "citation_short": null
+    },
+    {
+      "citation": "Berry, G. 2019. The ecology and evolution of the freshwater turtles of Southern Mississippi. Thesis, University of Southern Mississippi, Hattiesburg, Mississippi.",
+      "year": null,
+      "title": null,
+      "author": "Berry, G. 2019. The ecology and evolution of the freshwater turtles of Southern Mississippi. Thesis, University of Southern Mississippi, Hattiesburg, Mississippi.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bluett, R.D., D.A. Woolard, J.G. Palis, and J.A. Kath. 2011. Survey for Macrochelys temminckii in southern Illinois: implications for recovery actions. Transactions of the Illinois State Academy of Science. 104(1-2):63–70.",
+      "year": null,
+      "title": null,
+      "author": "Bluett, R.D., D.A. Woolard, J.G. Palis, and J.A. Kath. 2011. Survey for Macrochelys temminckii in southern Illinois: implications for recovery actions. Transactions of the Illinois State Academy of Science. 104(1-2):63–70. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Bogosian, V., III. 2010. Natural history of resident and translocated Alligator Snapping Turtles (Macrochelys temminckii) in Louisiana. Southeastern Naturalist 9(4):711– 720.",
+      "year": null,
+      "title": null,
+      "author": "Bogosian, V., III. 2010. Natural history of resident and translocated Alligator Snapping Turtles (Macrochelys temminckii) in Louisiana. Southeastern Naturalist 9(4):711– 720.",
+      "citation_short": null
+    },
+    {
+      "citation": "Boulay, S., and J.-M. Probst. 1998. Note sur la capture d’une Tortue Alligator introduite Macroclemys temminckii pêchée dans la Rivière de l’Est (Ile de La Réunion). Bulletin Phaethon 7:52.",
+      "year": null,
+      "title": null,
+      "author": "Boulay, S., and J.-M. Probst. 1998. Note sur la capture d’une Tortue Alligator introduite Macroclemys temminckii pêchée dans la Rivière de l’Est (Ile de La Réunion). Bulletin Phaethon 7:52.",
+      "citation_short": null
+    },
+    {
+      "citation": "Boundy, J., and J.L. Carr. 2017. Amphibians and Reptiles of Louisiana: An Identification and Reference Guide. Louisiana State University Press, Baton Rouge, LA.",
+      "year": null,
+      "title": null,
+      "author": "Boundy, J., and J.L. Carr. 2017. Amphibians and Reptiles of Louisiana: An Identification and Reference Guide. Louisiana State University Press, Baton Rouge, LA.",
+      "citation_short": null
+    },
+    {
+      "citation": "Boundy, J. and Kennedy, C. 2006. Trapping survey results for the Alligator Snapping Turtle (Macrochelys temminckii) in southeastern Louisiana, with comments on exploitation. Chelonian Conservation and Biology 5(1):3–9.",
+      "year": null,
+      "title": null,
+      "author": "Boundy, J. and Kennedy, C. 2006. Trapping survey results for the Alligator Snapping Turtle (Macrochelys temminckii) in southeastern Louisiana, with comments on exploitation. Chelonian Conservation and Biology 5(1):3–9. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Brown, G.J. 2023. Big turtles start small: trapping juvenile alligator snapping turtles in south Mississippi and implications for conservation. Southeastern Naturalist 22 (Special Issue 12):126–137.",
+      "year": null,
+      "title": null,
+      "author": "Brown, G.J. 2023. Big turtles start small: trapping juvenile alligator snapping turtles in south Mississippi and implications for conservation. Southeastern Naturalist 22 (Special Issue 12):126–137.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cagle, F.R. and Chaney, A.H. 1950. Turtle populations in Louisiana. American Midland Naturalist 43:383–388.",
+      "year": null,
+      "title": null,
+      "author": "Cagle, F.R. and Chaney, A.H. 1950. Turtle populations in Louisiana. American Midland Naturalist 43:383–388.",
+      "citation_short": null
+    },
+    {
+      "citation": "Carr, J.L., A. Bass, L.B. White, and L. Besenhofer. 2007. Alligator Snapping Turtle (Macrochelys temminckii) Movements and Reproduction at Black Bayou Lake National Wildlife Refuge. In: Biology (ed.). pp. 1– 76. University of Louisiana at Monroe, Monroe, LA.",
+      "year": null,
+      "title": null,
+      "author": "Carr, J.L., A. Bass, L.B. White, and L. Besenhofer. 2007. Alligator Snapping Turtle (Macrochelys temminckii) Movements and Reproduction at Black Bayou Lake National Wildlife Refuge. In: Biology (ed.). pp. 1– 76. University of Louisiana at Monroe, Monroe, LA.",
+      "citation_short": null
+    },
+    {
+      "citation": "Carr, J.L., Kessler, E.J., and Johnston, G.R. (Eds.). 2023. Biology and Conservation of Alligator Snapping Turtles. Southeastern Naturalist 22 (Special Issue 12): xvi + 456 pp.",
+      "year": null,
+      "title": null,
+      "author": "Carr, J.L., Kessler, E.J., and Johnston, G.R. (Eds.). 2023. Biology and Conservation of Alligator Snapping Turtles. Southeastern Naturalist 22 (Special Issue 12): xvi + 456 pp.",
+      "citation_short": null
+    },
+    {
+      "citation": "CITES. 2022. Convention on International Trade in Endangered Species of Wild Fauna and Flora. COP19 Proposal 23. Gland, Switzerland, CITES Secretariat. 22 pp.",
+      "year": null,
+      "title": null,
+      "author": "CITES. 2022. Convention on International Trade in Endangered Species of Wild Fauna and Flora. COP19 Proposal 23. Gland, Switzerland, CITES Secretariat. 22 pp.",
+      "citation_short": null
+    },
+    {
+      "citation": "CITES. 2023. Appendices I, II, and III, valid from 23 February 2023.",
+      "year": null,
+      "title": null,
+      "author": "CITES. 2023. Appendices I, II, and III, valid from 23 February 2023.",
+      "citation_short": null
+    },
+    {
+      "citation": "CITES Trade Database. 2023. Compiled by UNEP-WCMC for the CITES Secretariat. Available at: trade.cites.org. Accessed 2023-12-20.",
+      "year": null,
+      "title": null,
+      "author": "CITES Trade Database. 2023. Compiled by UNEP-WCMC for the CITES Secretariat. Available at: trade.cites.org. Accessed 2023-12-20.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cozad, R.A., D.B. Breakfield, and M.J. Aresco. 2023. Home range and habitat use of translocated Alligator Snapping Turtles (Macrochelys temminckii) in an extensive river system. Southeastern Naturalist 22(Special Issue 12):393–409.",
+      "year": null,
+      "title": null,
+      "author": "Cozad, R.A., D.B. Breakfield, and M.J. Aresco. 2023. Home range and habitat use of translocated Alligator Snapping Turtles (Macrochelys temminckii) in an extensive river system. Southeastern Naturalist 22(Special Issue 12):393–409.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dobie, J.L. 1971. Reproduction and growth in the alligator snapping turtle, Macroclemys temminckii (Troost). Copeia 1971:645–658.",
+      "year": null,
+      "title": null,
+      "author": "Dobie, J.L. 1971. Reproduction and growth in the alligator snapping turtle, Macroclemys temminckii (Troost). Copeia 1971:645–658.",
+      "citation_short": null
+    },
+    {
+      "citation": "DoD PARC [Department of Defense Partners in Amphibian and Reptile Conservation]. 2021. Recommended best management practices for the alligator snapping turtle on Department of Defense Installations, 23 pp.",
+      "year": null,
+      "title": null,
+      "author": "DoD PARC [Department of Defense Partners in Amphibian and Reptile Conservation]. 2021. Recommended best management practices for the alligator snapping turtle on Department of Defense Installations, 23 pp. ",
+      "citation_short": null
+    },
+    {
+      "citation": "DOJ [Department of Justice, U.S. Attorney's Office, Eastern District of Texas]. 2017. Two brothers sentenced to 21 months and 16 months in prison for illegally trafficking threatened alligator snapping turtles. Press Release. 15 December, 2017. Available online at: https://www.justice.gov/usao-edtx/pr/two-brothers-sentenced-21-months-and-16-months-prison-illegally-trafficking-threatened#:~:text=WASHINGTON%20%E2%80%93%20Travis%20Leger%20of%20Sulphur,the%20Lacey%20Act%20by%20illegally.",
+      "year": null,
+      "title": null,
+      "author": "DOJ [Department of Justice, U.S. Attorney's Office, Eastern District of Texas]. 2017. Two brothers sentenced to 21 months and 16 months in prison for illegally trafficking threatened alligator snapping turtles. Press Release. 15 December, 2017. Available online at: https://www.justice.gov/usao-edtx/pr/two-brothers-sentenced-21-months-and-16-months-prison-illegally-trafficking-threatened#:~:text=WASHINGTON%20%E2%80%93%20Travis%20Leger%20of%20Sulphur,the%20Lacey%20Act%20by%20illegally.",
+      "citation_short": null
+    },
+    {
+      "citation": "Douglas, N.H. 1989. Status of the Alligator Snapping Turtle, Macroclemys temmincki in Louisiana. Annual Report. 1 July 1987 - 30 June 1988, Northeast Louisiana University, Monroe, LA, 20 pp.",
+      "year": null,
+      "title": null,
+      "author": "Douglas, N.H. 1989. Status of the Alligator Snapping Turtle, Macroclemys temmincki in Louisiana. Annual Report. 1 July 1987 - 30 June 1988, Northeast Louisiana University, Monroe, LA, 20 pp.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dreslik, M.J., J.A. Crawford, J.M. Mui, A.R. Kuhns, E.J. Kessler, et al. 2023. Final report for T-113-R-1: Critical conservation issues and adaptive management of imperiled herpetofauna in Illinois. Illinois Natural History Survey Technical Report. 2023(28):1–9.",
+      "year": null,
+      "title": null,
+      "author": "Dreslik, M.J., J.A. Crawford, J.M. Mui, A.R. Kuhns, E.J. Kessler, et al. 2023. Final report for T-113-R-1: Critical conservation issues and adaptive management of imperiled herpetofauna in Illinois. Illinois Natural History Survey Technical Report. 2023(28):1–9. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Dreslik, M.J., J.L. Carr, D.B. Ligon, and E.J. Kessler. 2017. Recovery of the alligator snapping turtle (Macrochelys temminckii) in the Mississippi River Valley drainages of southern Illinois, Oklahoma, and Louisiana. Illinois Natural History Survey Technical Report. 2017(28):1–59.",
+      "year": null,
+      "title": null,
+      "author": "Dreslik, M.J., J.L. Carr, D.B. Ligon, and E.J. Kessler. 2017. Recovery of the alligator snapping turtle (Macrochelys temminckii) in the Mississippi River Valley drainages of southern Illinois, Oklahoma, and Louisiana. Illinois Natural History Survey Technical Report. 2017(28):1–59. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Dundee, H.A., and D.A. Rossman. 1989. The Amphibians and Reptiles of Louisiana. Louisiana State University Press, Baton Rouge, LA.",
+      "year": null,
+      "title": null,
+      "author": "Dundee, H.A., and D.A. Rossman. 1989. The Amphibians and Reptiles of Louisiana. Louisiana State University Press, Baton Rouge, LA.",
+      "citation_short": null
+    },
+    {
+      "citation": "Easter, T., J. Trautmann, M. Gore, and N. Carter. 2023. Media portrayal of the illegal trade in wildlife: the case of turtles in the US and implications for conservation. People and Nature 5:758–773.",
+      "year": null,
+      "title": null,
+      "author": "Easter, T., J. Trautmann, M. Gore, and N. Carter. 2023. Media portrayal of the illegal trade in wildlife: the case of turtles in the US and implications for conservation. People and Nature 5:758–773.",
+      "citation_short": null
+    },
+    {
+      "citation": "East, M.B., J.D. Riedle, and D.B. Ligon. 2013. Temporal changes in an alligator snapping turtle (Macrochelys temminckii) population. Journal of Wildlife Research 40:77-81.",
+      "year": null,
+      "title": null,
+      "author": "East, M.B., J.D. Riedle, and D.B. Ligon. 2013. Temporal changes in an alligator snapping turtle (Macrochelys temminckii) population. Journal of Wildlife Research 40:77-81.",
+      "citation_short": null
+    },
+    {
+      "citation": "Echelle, A.A., Hackler, J.C., Lack, J.B., Ballard, S.R., Roman, J., Fox, S.F., Leslie Jr., D.M. and Van Den Bussche, R.A. 2010. Conservation genetics of the alligator snapping turtle: cytonuclear evidence of range-wide bottleneck effects and unusually pronounced geographic structure. <i>Conservation Genetics</i> 11: 1375−1387. DOI: 10.1007/s10592-009-9966-1.",
+      "year": "2010",
+      "title": "Conservation genetics of the alligator snapping turtle: cytonuclear evidence of range-wide bottleneck effects and unusually pronounced geographic structure",
+      "author": "Echelle, A.A., Hackler, J.C., Lack, J.B., Ballard, S.R., Roman, J., Fox, S.F., Leslie Jr., D.M. and Van Den Bussche, R.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ekawa, K. 2005. Macroclemys temminckii (Troost, 1836) (Testudines, Chelydridae) from the River Kinowaka, Wakayama Prefecture, Japan [In Japanese.] Nanki Seibutu 47(1):95.",
+      "year": null,
+      "title": null,
+      "author": "Ekawa, K. 2005. Macroclemys temminckii (Troost, 1836) (Testudines, Chelydridae) from the River Kinowaka, Wakayama Prefecture, Japan [In Japanese.] Nanki Seibutu 47(1):95.",
+      "citation_short": null
+    },
+    {
+      "citation": "Elbers, J.P., and D. Moll. 2011. Ingestion by a freshwater turtle alters germination of bottomland hardwood seeds. Wetlands 31(4):757–761.Elbers, J.P., and D. Moll. 2011. Ingestion by a freshwater turtle alters germination of bottomland hardwood seeds. Wetlands 31(4):757–761.",
+      "year": null,
+      "title": null,
+      "author": "Elbers, J.P., and D. Moll. 2011. Ingestion by a freshwater turtle alters germination of bottomland hardwood seeds. Wetlands 31(4):757–761.Elbers, J.P., and D. Moll. 2011. Ingestion by a freshwater turtle alters germination of bottomland hardwood seeds. Wetlands 31(4):757–761.",
+      "citation_short": null
+    },
+    {
+      "citation": "Elsey, R.M. 2006. Food habits of Macrochelys temminckii (Alligator Snapping Turtle) from Arkansas and Louisiana. Southeastern Naturalist 5(3):443–452.",
+      "year": null,
+      "title": null,
+      "author": "Elsey, R.M. 2006. Food habits of Macrochelys temminckii (Alligator Snapping Turtle) from Arkansas and Louisiana. Southeastern Naturalist 5(3):443–452.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ernst, C.H. and Lovich, J.E. 2009. Turtles of the United States and Canada. Second Edition. Baltimore: Johns Hopkins University Press, 827 pp.",
+      "year": null,
+      "title": null,
+      "author": "Ernst, C.H. and Lovich, J.E. 2009. Turtles of the United States and Canada. Second Edition. Baltimore: Johns Hopkins University Press, 827 pp. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Esposito, G., Di Tizio, L., Prearo, M., Dondo, A., Ercolini, C., Nieddu, G., Ferrari, A., and Pastorino, P. 2022. Non-native turtles (Chelydridae) in freshwater ecosystems in Italy: A threat to biodiversity and human health? Animals 12:2057. https://doi.org/10.3390/ani12162057.",
+      "year": null,
+      "title": null,
+      "author": "Esposito, G., Di Tizio, L., Prearo, M., Dondo, A., Ercolini, C., Nieddu, G., Ferrari, A., and Pastorino, P. 2022. Non-native turtles (Chelydridae) in freshwater ecosystems in Italy: A threat to biodiversity and human health? Animals 12:2057. https://doi.org/10.3390/ani12162057.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ewert, M.A., Jackson, D.R., and Moler, P.E. 2006. Macrochelys temminckii – alligator snapping turtle. In: Meylan, P.A. (Ed.). Biology and Conservation of Florida Turtles. Chelonian Research Monographs No. 3, pp. 58–71.",
+      "year": null,
+      "title": null,
+      "author": "Ewert, M.A., Jackson, D.R., and Moler, P.E. 2006. Macrochelys temminckii – alligator snapping turtle. In: Meylan, P.A. (Ed.). Biology and Conservation of Florida Turtles. Chelonian Research Monographs No. 3, pp. 58–71. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Feist, S. and Richardson, D. 2019. Detection of alligator snapping turtles using eDNA on National Wildlife Refuges in Mississippi. Report to U.S. Fish and Wildlife Service, Southeast Region Inventory and Monitoring Branch, 13 pp.",
+      "year": null,
+      "title": null,
+      "author": "Feist, S. and Richardson, D. 2019. Detection of alligator snapping turtles using eDNA on National Wildlife Refuges in Mississippi. Report to U.S. Fish and Wildlife Service, Southeast Region Inventory and Monitoring Branch, 13 pp.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fitzgerald, L.A. and R.E. Nelson. 2011. Thermal biology and temperature-based habitat selection in a large aquatic ectotherm, the alligator snapping turtle, Macrochelys temminckii. Journal of Thermal Biology 36:160–166.",
+      "year": null,
+      "title": null,
+      "author": "Fitzgerald, L.A. and R.E. Nelson. 2011. Thermal biology and temperature-based habitat selection in a large aquatic ectotherm, the alligator snapping turtle, Macrochelys temminckii. Journal of Thermal Biology 36:160–166.",
+      "citation_short": null
+    },
+    {
+      "citation": "Folt, B. and Godwin, J.C. 2013. Status of the Alligator Snapping Turtle (Macrochelys temminckii) in south Alabama with comments on its distribution. Chelonian Conservation and Biology 12(2):211–217.",
+      "year": null,
+      "title": null,
+      "author": "Folt, B. and Godwin, J.C. 2013. Status of the Alligator Snapping Turtle (Macrochelys temminckii) in south Alabama with comments on its distribution. Chelonian Conservation and Biology 12(2):211–217. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Folt, B. and Guyer, C. 2015. Evaluating recent taxonomic changes for alligator snapping turtles (Testudines: Chelydridae). <i>Zootaxa</i> 3947(3): 447–450.",
+      "year": "2015",
+      "title": "Evaluating recent taxonomic changes for alligator snapping turtles (Testudines: Chelydridae)",
+      "author": "Folt, B. and Guyer, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Folt, B., Jensen, J.B., Teare, A., and Rostal, D. 2016. Establishing reference demography for conservation: a case study of Macrochelys temminckii in Spring Creek, Georgia. Herpetological Monographs 30:21–33.",
+      "year": null,
+      "title": null,
+      "author": "Folt, B., Jensen, J.B., Teare, A., and Rostal, D. 2016. Establishing reference demography for conservation: a case study of Macrochelys temminckii in Spring Creek, Georgia. Herpetological Monographs 30:21–33. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Fowler, A. (Ed.) 2015. Arkansas Wildlife Action Plan. Arkansas Game and Fish Commission, Little Rock, Arkansas. 1678 pp. https://www.wildlifearkansas.com/strategy.html.",
+      "year": null,
+      "title": null,
+      "author": "Fowler, A. (Ed.) 2015. Arkansas Wildlife Action Plan. Arkansas Game and Fish Commission, Little Rock, Arkansas. 1678 pp. https://www.wildlifearkansas.com/strategy.html",
+      "citation_short": null
+    },
+    {
+      "citation": "Franklin, C.J., V. Ricardez, S. Scibetta, D. Rosenbaum, and J.B. Grizzle. 2023. Diurnal observations of Alligator Snapping Turtles (Macrochelys temminckii). Southeastern Naturalist 22(Special Issue 12):410–417.",
+      "year": null,
+      "title": null,
+      "author": "Franklin, C.J., V. Ricardez, S. Scibetta, D. Rosenbaum, and J.B. Grizzle. 2023. Diurnal observations of Alligator Snapping Turtles (Macrochelys temminckii). Southeastern Naturalist 22(Special Issue 12):410–417.",
+      "citation_short": null
+    },
+    {
+      "citation": "FWC [Florida Fish and Wildlife Conservation Commission]. 2019. Florida's Wildlife Legacy Initiative: Florida's State Wildlife Action Plan. Tallahassee, Florida. https://myfwc.com/media/22767/2019-action-plan.pdf.",
+      "year": null,
+      "title": null,
+      "author": "FWC [Florida Fish and Wildlife Conservation Commission]. 2019. Florida's Wildlife Legacy Initiative: Florida's State Wildlife Action Plan. Tallahassee, Florida. https://myfwc.com/media/22767/2019-action-plan.pdf",
+      "citation_short": null
+    },
+    {
+      "citation": "Garig, D., Ennen, J.R., Hyder, S.J., Simmonds, T., Feltmann, A.J., Colvin, R., Dennison, J., Pearson, L., Kreiser, B.R., Sweat, S.C., and Davenport, J.M. 2021. Status of the alligator snapping turtle, Macrochelys temminckii, in west Tennessee. Chelonian Conservation and Biology 20:35–42.",
+      "year": null,
+      "title": null,
+      "author": "Garig, D., Ennen, J.R., Hyder, S.J., Simmonds, T., Feltmann, A.J., Colvin, R., Dennison, J., Pearson, L., Kreiser, B.R., Sweat, S.C., and Davenport, J.M. 2021. Status of the alligator snapping turtle, Macrochelys temminckii, in west Tennessee. Chelonian Conservation and Biology 20:35–42. ",
+      "citation_short": null
+    },
+    {
+      "citation": "GDNR [Georgia Department of Natural Resources]. 2015. Georgia State Wildlife Action Plan. Social Circle, GA: Georgia Department of Natural Resources. https://georgiawildlife.com/WildlifeActionPlan.",
+      "year": null,
+      "title": null,
+      "author": "GDNR [Georgia Department of Natural Resources]. 2015. Georgia State Wildlife Action Plan. Social Circle, GA: Georgia Department of Natural Resources. https://georgiawildlife.com/WildlifeActionPlan",
+      "citation_short": null
+    },
+    {
+      "citation": "Godwin, J. 2004. Status survey for the Alligator Snapping Turtle (Macrochelys temminckii) at selected sites in the Mobile basin drainage of Alabama: Year 1. Montogomery, AL: Alabama Natural Heritage Program, 29 pp.",
+      "year": null,
+      "title": null,
+      "author": "Godwin, J. 2004. Status survey for the Alligator Snapping Turtle (Macrochelys temminckii) at selected sites in the Mobile basin drainage of Alabama: Year 1. Montogomery, AL: Alabama Natural Heritage Program, 29 pp. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Godwin, J.C., Coleman, A., and Guyer, C. 2023. Distribution and status of the alligator snapping turtle (Macrochelys temminckii) in Alabama. Southeastern Naturalist 22:109–125.",
+      "year": null,
+      "title": null,
+      "author": "Godwin, J.C., Coleman, A., and Guyer, C. 2023. Distribution and status of the alligator snapping turtle (Macrochelys temminckii) in Alabama. Southeastern Naturalist 22:109–125.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gordon, M., B. Giles, K. Garcia, J.W. Oakley, E. Munscher, J.J. Apodaca, A. Krohn, D.R. Bontrager, J. Kittle, M. Mokrech, T. Sankey, A. Tuggle, C. Franklin, V. Ricardez, C. Schalk, D. Saenz, D. Rosenbaum, C. Jones, J. Watson, T. Corbett, and G. Guillen. 2023b. Baseline study of Alligator Snapping Turtle (Macrochelys temminckii) population viability in Texas watersheds, Final Report. (Report No. EIH23-002). Prepared for the Texas Comptroller of Public Accounts (Contract 20-6997BG), 107 pages.",
+      "year": null,
+      "title": null,
+      "author": "Gordon, M., B. Giles, K. Garcia, J.W. Oakley, E. Munscher, J.J. Apodaca, A. Krohn, D.R. Bontrager, J. Kittle, M. Mokrech, T. Sankey, A. Tuggle, C. Franklin, V. Ricardez, C. Schalk, D. Saenz, D. Rosenbaum, C. Jones, J. Watson, T. Corbett, and G. Guillen. 2023b. Baseline study of Alligator Snapping Turtle (Macrochelys temminckii) population viability in Texas watersheds, Final Report. (Report No. EIH23-002). Prepared for the Texas Comptroller of Public Accounts (Contract 20-6997BG), 107 pages.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gordon, M., D.R. Bontrager, J.E. Watson, T. Corbett, C. Crawford, C.J. Franklin, B. Kirby, E. Munscher, V. Ricardez, and A. Tuggle. 2023a. Using local ecological knowledge to document distribution and temporal patterns of Macrochelys temminckii in Texas. Southeastern Naturalist 22(Special Issue 12):171–196.",
+      "year": null,
+      "title": null,
+      "author": "Gordon, M., D.R. Bontrager, J.E. Watson, T. Corbett, C. Crawford, C.J. Franklin, B. Kirby, E. Munscher, V. Ricardez, and A. Tuggle. 2023a. Using local ecological knowledge to document distribution and temporal patterns of Macrochelys temminckii in Texas. Southeastern Naturalist 22(Special Issue 12):171–196.",
+      "citation_short": null
+    },
+    {
+      "citation": "Haralson, L. 2021. An assessment of diverse freshwater turtle fauna of Mississippi. Thesis, University of Southern Mississippi, Hattiesburg, Mississippi.",
+      "year": null,
+      "title": null,
+      "author": "Haralson, L. 2021. An assessment of diverse freshwater turtle fauna of Mississippi. Thesis, University of Southern Mississippi, Hattiesburg, Mississippi.",
+      "citation_short": null
+    },
+    {
+      "citation": "Harlan, R. 1835. Genera of North American Reptilia, and a synopsis of the species. In: Harlan, R. Medical and Physical Researches: or Original Memoirs in Medicine, Surgery, Physiology, Geology, Zoology, and Comparative Anatomy. Philadelphia: L.R. Bailey, pp. 84–163.",
+      "year": null,
+      "title": null,
+      "author": "Harlan, R. 1835. Genera of North American Reptilia, and a synopsis of the species. In: Harlan, R. Medical and Physical Researches: or Original Memoirs in Medicine, Surgery, Physiology, Geology, Zoology, and Comparative Anatomy. Philadelphia: L.R. Bailey, pp. 84–163.",
+      "citation_short": null
+    },
+    {
+      "citation": "Harrel, J.B. and G.L. Stringer. 1997. Feeding habits of the Alligator Snapping Turtle (Macroclemys temminckii) as indicated by teleostean otoliths. Herpetological Review 28:185–187.",
+      "year": null,
+      "title": null,
+      "author": "Harrel, J.B. and G.L. Stringer. 1997. Feeding habits of the Alligator Snapping Turtle (Macroclemys temminckii) as indicated by teleostean otoliths. Herpetological Review 28:185–187.",
+      "citation_short": null
+    },
+    {
+      "citation": "Harrel, J.B., C.M. Allen, and S.J. Herbert. 1996. Movements and habitat use of subadult alligator snapping turtles, Macroclemmys temminckii, in Louisiana. American Midland Naturalist 135:60–67.",
+      "year": null,
+      "title": null,
+      "author": "Harrel, J.B., C.M. Allen, and S.J. Herbert. 1996. Movements and habitat use of subadult alligator snapping turtles, Macroclemmys temminckii, in Louisiana. American Midland Naturalist 135:60–67.",
+      "citation_short": null
+    },
+    {
+      "citation": "Holcomb, S.R., A.A. Bass, C.S. Reid, M.A. Seymour, N.F. Lorenz, B.B. Gregory, S.M. Javed, and K.F. Balkum. 2015. Louisiana Wildlife Action Plan. Louisiana Department of Wildlife and Fisheries, Baton Rouge, LA.",
+      "year": null,
+      "title": null,
+      "author": "Holcomb, S.R., A.A. Bass, C.S. Reid, M.A. Seymour, N.F. Lorenz, B.B. Gregory, S.M. Javed, and K.F. Balkum. 2015. Louisiana Wildlife Action Plan. Louisiana Department of Wildlife and Fisheries, Baton Rouge, LA.",
+      "citation_short": null
+    },
+    {
+      "citation": "Holcomb, S.R. and J.L. Carr. 2011a. Infestation of a naturally incubated nest of the Alligator Snapping Turtle (Macrochelys temminckii) by the phorid fly Megaselia scalaris. Southwestern Naturalist 56(3):427–429.",
+      "year": null,
+      "title": null,
+      "author": "Holcomb, S.R. and J.L. Carr. 2011a. Infestation of a naturally incubated nest of the Alligator Snapping Turtle (Macrochelys temminckii) by the phorid fly Megaselia scalaris. Southwestern Naturalist 56(3):427–429.",
+      "citation_short": null
+    },
+    {
+      "citation": "Holcomb, S.R. and J.L. Carr. 2011b. Hatchling emergence from naturally incubated Alligator Snapping Turtle (Macrochelys temminckii) nests in northern Louisiana. Chelonian Conservation and Biology 10(2):222–227.",
+      "year": null,
+      "title": null,
+      "author": "Holcomb, S.R. and J.L. Carr. 2011b. Hatchling emergence from naturally incubated Alligator Snapping Turtle (Macrochelys temminckii) nests in northern Louisiana. Chelonian Conservation and Biology 10(2):222–227. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Holcomb, S.R. and J.L. Carr. 2013. Mammalian depredation of artificial Alligator Snapping Turtle (Macrochelys temminckii Troost) nests in North Louisiana. Southeastern Naturalist 12(3):478–491.",
+      "year": null,
+      "title": null,
+      "author": "Holcomb, S.R. and J.L. Carr. 2013. Mammalian depredation of artificial Alligator Snapping Turtle (Macrochelys temminckii Troost) nests in North Louisiana. Southeastern Naturalist 12(3):478–491.",
+      "citation_short": null
+    },
+    {
+      "citation": "Holcomb, S.R. and J.L. Carr. 2023. Nest success of Alligator Snapping Turtles (Macrochelys temminckii) in Louisiana, with comments on sources of mortality. Southeastern Naturalist 22(Special Issue 12): 297–310.Holcomb, S.R. and J.L. Carr. 2023. Nest success of Alligator Snapping Turtles (Macrochelys temminckii) in Louisiana, with comments on sources of mortality. Southeastern Naturalist 22(Special Issue 12): 297–310.",
+      "year": null,
+      "title": null,
+      "author": "Holcomb, S.R. and J.L. Carr. 2023. Nest success of Alligator Snapping Turtles (Macrochelys temminckii) in Louisiana, with comments on sources of mortality. Southeastern Naturalist 22(Special Issue 12): 297–310.Holcomb, S.R. and J.L. Carr. 2023. Nest success of Alligator Snapping Turtles (Macrochelys temminckii) in Louisiana, with comments on sources of mortality. Southeastern Naturalist 22(Special Issue 12): 297–310.",
+      "citation_short": null
+    },
+    {
+      "citation": "Howey, C.A.F. and Dinkelacker, S.A. 2013. Characteristics of a historically harvested alligator snapping turtle (Macrochelys temminckii) population. Copeia 2013:58–63.",
+      "year": null,
+      "title": null,
+      "author": "Howey, C.A.F. and Dinkelacker, S.A. 2013. Characteristics of a historically harvested alligator snapping turtle (Macrochelys temminckii) population. Copeia 2013:58–63.",
+      "citation_short": null
+    },
+    {
+      "citation": "Howey, C.A.F. and S.A. Dinkelacker. 2009. Habitat selection of the alligator snapping turtle (Macrochelys temminckii) in Arkansas. Journal of Herpetology 43:589–596.",
+      "year": null,
+      "title": null,
+      "author": "Howey, C.A.F. and S.A. Dinkelacker. 2009. Habitat selection of the alligator snapping turtle (Macrochelys temminckii) in Arkansas. Journal of Herpetology 43:589–596.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hughes, D.W. 1999. The contribution of the pet turtle industry to the Louisiana economy. Aquaculture Economics and Management 3:205–214.Hughes, D.W. 1999. The contribution of the pet turtle industry to the Louisiana economy. Aquaculture Economics and Management 3:205–214.",
+      "year": null,
+      "title": null,
+      "author": "Hughes, D.W. 1999. The contribution of the pet turtle industry to the Louisiana economy. Aquaculture Economics and Management 3:205–214.Hughes, D.W. 1999. The contribution of the pet turtle industry to the Louisiana economy. Aquaculture Economics and Management 3:205–214.",
+      "citation_short": null
+    },
+    {
+      "citation": "Huntzinger, C.C., Louque, I., Jr., Lyons, E.K., Lindeman, P.V., and Selman, W. 2020. Using local ecological knowledge in Louisiana to infer distribution and abundance of the Alligator Snapping Turtle. Wildlife Society Bulletin 44:42–48.",
+      "year": null,
+      "title": null,
+      "author": "Huntzinger, C.C., Louque, I., Jr., Lyons, E.K., Lindeman, P.V., and Selman, W. 2020. Using local ecological knowledge in Louisiana to infer distribution and abundance of the Alligator Snapping Turtle. Wildlife Society Bulletin 44:42–48.",
+      "citation_short": null
+    },
+    {
+      "citation": "Huntzinger, C.C., Louque, I., Jr., Selman, W., Lindeman, P.V., and Lyons, E.K. 2019. Distribution and abundance of the Alligator Snapping Turtle (Macrochelys temminckii) in southwestern Louisiana. Southeastern Naturalist 18:65–75.",
+      "year": null,
+      "title": null,
+      "author": "Huntzinger, C.C., Louque, I., Jr., Selman, W., Lindeman, P.V., and Lyons, E.K. 2019. Distribution and abundance of the Alligator Snapping Turtle (Macrochelys temminckii) in southwestern Louisiana. Southeastern Naturalist 18:65–75. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Hyder, S.J., J.R. Ennen, and J.M. Davenport. 2021. Ontogenetic and seasonal shifts in movement and habitat selection of the alligator snapping turtle (Macrochelys temminckii). Amphibia-Reptilia 42(2):217–226.",
+      "year": null,
+      "title": null,
+      "author": "Hyder, S.J., J.R. Ennen, and J.M. Davenport. 2021. Ontogenetic and seasonal shifts in movement and habitat selection of the alligator snapping turtle (Macrochelys temminckii). Amphibia-Reptilia 42(2):217–226.",
+      "citation_short": null
+    },
+    {
+      "citation": "IDNR [Illinois Department of Natural Resources]. 2005. Illinois Wildlife Action Plan. Illinois Department of Natural Resources, Springfield, Illinois.",
+      "year": null,
+      "title": null,
+      "author": "IDNR [Illinois Department of Natural Resources]. 2005. Illinois Wildlife Action Plan. Illinois Department of Natural Resources, Springfield, Illinois. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IDNR [Illinois Department of Natural Resources]. 2015. 2015 Implementation guide to the Illinois wildlife action plan. Illinois Department of Natural Resources, Springfield, Illinois.",
+      "year": null,
+      "title": null,
+      "author": "IDNR [Illinois Department of Natural Resources]. 2015. 2015 Implementation guide to the Illinois wildlife action plan. Illinois Department of Natural Resources, Springfield, Illinois. ",
+      "citation_short": null
+    },
+    {
+      "citation": "ILESPB [Illinois Endangered Species Protection Board]. 2020. Checklist of Illinois endangered and threatened animals and plants. Illinois Endangered Species Protection Board, Springfield.",
+      "year": null,
+      "title": null,
+      "author": "ILESPB [Illinois Endangered Species Protection Board]. 2020. Checklist of Illinois endangered and threatened animals and plants. Illinois Endangered Species Protection Board, Springfield.",
+      "citation_short": null
+    },
+    {
+      "citation": "INDNR [Indiana Department of Natural Resources]. 2015. Indiana State Wildlife Action Plan. Indianapolis, Indiana. https://www.in.gov/dnr/fish-and-wildlife/wildlife-resources/state-wildlife-action-plan/report/.",
+      "year": null,
+      "title": null,
+      "author": "INDNR [Indiana Department of Natural Resources]. 2015. Indiana State Wildlife Action Plan. Indianapolis, Indiana. https://www.in.gov/dnr/fish-and-wildlife/wildlife-resources/state-wildlife-action-plan/report/",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2025. The IUCN Red List of Threatened Species. Version 2025-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 27 March 2025).",
+      "year": "2025",
+      "title": "The IUCN Red List of Threatened Species. Version 2025-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2025-1"
+    },
+    {
+      "citation": "Iverson, J.B. 1992. A Revised Checklist with Distribution Maps of the Turtles of the World. Richmond, IN: Privately printed, 363 pp.",
+      "year": null,
+      "title": null,
+      "author": "Iverson, J.B. 1992. A Revised Checklist with Distribution Maps of the Turtles of the World. Richmond, IN: Privately printed, 363 pp. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Jackson, D.R., and M.A. Ewert. 2023. Nesting Ecology of the Alligator Snapping Turtle (Macrochelys temminckii) along the Lower Apalachicola River, Florida. Southeastern Naturalist, 22(Special Issue 12):311–334.",
+      "year": null,
+      "title": null,
+      "author": "Jackson, D.R., and M.A. Ewert. 2023. Nesting Ecology of the Alligator Snapping Turtle (Macrochelys temminckii) along the Lower Apalachicola River, Florida. Southeastern Naturalist, 22(Special Issue 12):311–334. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Jensen, J.B., and Birkhead, W.S. 2003. Distribution and status of the alligator snapping turtle (Macrochelys temminckii) in Georgia. Southeastern Naturalist 2:25–34.",
+      "year": null,
+      "title": null,
+      "author": "Jensen, J.B., and Birkhead, W.S. 2003. Distribution and status of the alligator snapping turtle (Macrochelys temminckii) in Georgia. Southeastern Naturalist 2:25–34. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Johnson, A.C., L.B. White, S.R. Holcomb, M.J. Ray, and J.L. Carr. 2023b. A temporal assessment of the demographic structure of a protected Alligator Snapping Turtle population. Southeastern Naturalist 22(Special Issue 12):236–249.",
+      "year": null,
+      "title": null,
+      "author": "Johnson, A.C., L.B. White, S.R. Holcomb, M.J. Ray, and J.L. Carr. 2023b. A temporal assessment of the demographic structure of a protected Alligator Snapping Turtle population. Southeastern Naturalist 22(Special Issue 12):236–249.",
+      "citation_short": null
+    },
+    {
+      "citation": "Johnson, A.C., R.E. Glasford, M.L. McBride, J.B. Grizzle, A.N. Triplett, S.M. Mongold, and J.L. Carr. 2021. New distribution records for turtles in northern Louisiana, USA. Herpetological Review 52(3):588–591.",
+      "year": null,
+      "title": null,
+      "author": "Johnson, A.C., R.E. Glasford, M.L. McBride, J.B. Grizzle, A.N. Triplett, S.M. Mongold, and J.L. Carr. 2021. New distribution records for turtles in northern Louisiana, USA. Herpetological Review 52(3):588–591.",
+      "citation_short": null
+    },
+    {
+      "citation": "Johnson, S. 1989. Population status of the alligator snapping turtle (Macroclemys temmincki) in the Flint River. Unpublished report to Georgia Dept. of Natural Resources, Forsyth, Georgia, 11 pp.",
+      "year": null,
+      "title": null,
+      "author": "Johnson, S. 1989. Population status of the alligator snapping turtle (Macroclemys temmincki) in the Flint River. Unpublished report to Georgia Dept. of Natural Resources, Forsyth, Georgia, 11 pp.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kawanabe, H., Nishino, M., and Maehata, M. 2020. Lake Biwa: Interactions between Nature and People. Second Edition. Dordrecht, Netherlands. Springer Science. pp. 744.",
+      "year": null,
+      "title": null,
+      "author": "Kawanabe, H., Nishino, M., and Maehata, M. 2020. Lake Biwa: Interactions between Nature and People. Second Edition. Dordrecht, Netherlands. Springer Science. pp. 744.",
+      "citation_short": null
+    },
+    {
+      "citation": "KDFWR [Kentucky Department of Fish and Wildlife Resources]. 2015. Kentucky Wildlife Action Plan. Frankfort, KY. https://app.fw.ky.gov/kyswap/.",
+      "year": null,
+      "title": null,
+      "author": "KDFWR [Kentucky Department of Fish and Wildlife Resources]. 2015. Kentucky Wildlife Action Plan. Frankfort, KY. https://app.fw.ky.gov/kyswap/",
+      "citation_short": null
+    },
+    {
+      "citation": "Kessler, E.J. 2020. Assessment of a freshwater turtle reintroduction. Ph.D. Dissertation, University of Illinois Urbana-Champaign.",
+      "year": null,
+      "title": null,
+      "author": "Kessler, E.J. 2020. Assessment of a freshwater turtle reintroduction. Ph.D. Dissertation, University of Illinois Urbana-Champaign. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kessler, E.J. 2023. Conservation guidance for: Alligator Snapping Turtle Macrochelys temminckii (Troost in Harlan, 1835). Illinois Natural History Survey Technical Report. 2023(48):1–11.",
+      "year": null,
+      "title": null,
+      "author": "Kessler, E.J. 2023. Conservation guidance for: Alligator Snapping Turtle Macrochelys temminckii (Troost in Harlan, 1835). Illinois Natural History Survey Technical Report. 2023(48):1–11. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kessler, E.J. and Dreslik, M.J. 2018. Surveying for the Alligator Snapping Turtle (Macrochelys temminckii) in the Patoka and White River Watersheds of Indiana. Illinois Natural History Survey Technical Report. 2018(35):1–24.",
+      "year": null,
+      "title": null,
+      "author": "Kessler, E.J. and Dreslik, M.J. 2018. Surveying for the Alligator Snapping Turtle (Macrochelys temminckii) in the Patoka and White River Watersheds of Indiana. Illinois Natural History Survey Technical Report. 2018(35):1–24.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kessler, E.J. and M J. Dreslik. 2019. Follow-up environmental DNA sampling for the Alligator Snapping Turtle in the Patoka River drainage of Indiana. Illinois Natural History Survey Technical Report. 2019(24):1–11.",
+      "year": null,
+      "title": null,
+      "author": "Kessler, E.J. and M J. Dreslik. 2019. Follow-up environmental DNA sampling for the Alligator Snapping Turtle in the Patoka River drainage of Indiana. Illinois Natural History Survey Technical Report. 2019(24):1–11.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kessler, E.J. and M.J. Dreslik. 2021. Environmental DNA surveys for the Alligator Snapping Turtle (Macrochelys temminckii) in southwestern Indiana. Illinois Natural History Survey Technical Report. 2021(22):1–26.",
+      "year": null,
+      "title": null,
+      "author": "Kessler, E.J. and M.J. Dreslik. 2021. Environmental DNA surveys for the Alligator Snapping Turtle (Macrochelys temminckii) in southwestern Indiana. Illinois Natural History Survey Technical Report. 2021(22):1–26.  ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kessler, E J., C.A. Phillips, S.R. Ballard, and M.J. Dreslik. 2017. The first record of an alligator snapping turtle (Macrochelys temminckii) in Illinois in 30 years. Southeastern Naturalist 16(3):N29–N35.",
+      "year": null,
+      "title": null,
+      "author": "Kessler, E J., C.A. Phillips, S.R. Ballard, and M.J. Dreslik. 2017. The first record of an alligator snapping turtle (Macrochelys temminckii) in Illinois in 30 years. Southeastern Naturalist 16(3):N29–N35.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kim, H., S.M. Park, Y. Jang, and K.S. Koo. 2020. Public perception on non-native species: based on the news articles about the Alligator Snapping Turtle (Macrochelys temminckii). Korean Journal of Environment and Ecology 34(5):396–401.",
+      "year": null,
+      "title": null,
+      "author": "Kim, H., S.M. Park, Y. Jang, and K.S. Koo. 2020. Public perception on non-native species: based on the news articles about the Alligator Snapping Turtle (Macrochelys temminckii). Korean Journal of Environment and Ecology 34(5):396–401.",
+      "citation_short": null
+    },
+    {
+      "citation": "King, R.L., Hepler, B.P., Smith, L.L., and Jensen, J.B. 2016. The status of Macrochelys temminckii (Alligator Snapping Turtle) in the Flint River, GA, 22 years after the close of commercial harvest. Southeastern Naturalist 15:575–585.",
+      "year": null,
+      "title": null,
+      "author": "King, R.L., Hepler, B.P., Smith, L.L., and Jensen, J.B. 2016. The status of Macrochelys temminckii (Alligator Snapping Turtle) in the Flint River, GA, 22 years after the close of commercial harvest. Southeastern Naturalist 15:575–585.",
+      "citation_short": null
+    },
+    {
+      "citation": "Koo, K.S., Park, S-M., Choi, J.H., and Sung, H-C. 2021. New report of an alligator snapping turtle (Macrochelys temminckii Troost, 1835) introduced into the wild in the Republic of Korea. BioInvasions Records 10:220–226.",
+      "year": null,
+      "title": null,
+      "author": "Koo, K.S., Park, S-M., Choi, J.H., and Sung, H-C. 2021. New report of an alligator snapping turtle (Macrochelys temminckii Troost, 1835) introduced into the wild in the Republic of Korea. BioInvasions Records 10:220–226.",
+      "citation_short": null
+    },
+    {
+      "citation": "Koo, K.S., S. Song, J.H. Choi, and H.C. Sung. 2020. Current distribution and status of non-native freshwater turtles in the wild, Republic of Korea. Sustainability 12(10):4042.",
+      "year": null,
+      "title": null,
+      "author": "Koo, K.S., S. Song, J.H. Choi, and H.C. Sung. 2020. Current distribution and status of non-native freshwater turtles in the wild, Republic of Korea. Sustainability 12(10):4042.",
+      "citation_short": null
+    },
+    {
+      "citation": "Langton, T.E.S., Atkins, W., and Herbert, C. 2011. On the distribution, ecology, and management of non-native reptiles and amphibians in the London Area. Part 1. Distribution and predator/prey impacts. The London Naturalist 90:83–156.",
+      "year": null,
+      "title": null,
+      "author": "Langton, T.E.S., Atkins, W., and Herbert, C. 2011. On the distribution, ecology, and management of non-native reptiles and amphibians in the London Area. Part 1. Distribution and predator/prey impacts. The London Naturalist 90:83–156.",
+      "citation_short": null
+    },
+    {
+      "citation": "LDWF [Louisiana Department of Wildlife and Fisheries]. 2021. 2021 Louisiana recreational fishing regulations. Louisiana Department of Wildlife and Fisheries, Baton Rouge, LA, 40 pp.",
+      "year": null,
+      "title": null,
+      "author": "LDWF [Louisiana Department of Wildlife and Fisheries]. 2021. 2021 Louisiana recreational fishing regulations. Louisiana Department of Wildlife and Fisheries, Baton Rouge, LA, 40 pp.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lee, K.H., T.H. Chen, G. Shang, S. Clulow, Y.J. Yang, and S.M. Lin. 2019. A check list and population trends of invasive amphibians and reptiles in Taiwan. Zookeys 829:85–130.",
+      "year": null,
+      "title": null,
+      "author": "Lee, K.H., T.H. Chen, G. Shang, S. Clulow, Y.J. Yang, and S.M. Lin. 2019. A check list and population trends of invasive amphibians and reptiles in Taiwan. Zookeys 829:85–130.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lescher, T.C., J.T. Briggler, and Z. Tang-Martínez. 2013. Relative abundance, population structure, and conservation of Alligator Snapping Turtles (Macrochelys temminckii) in Missouri between 1993–1994 and 2009. Chelonian Conservation and Biology 12:163–168.",
+      "year": null,
+      "title": null,
+      "author": "Lescher, T.C., J.T. Briggler, and Z. Tang-Martínez. 2013. Relative abundance, population structure, and conservation of Alligator Snapping Turtles (Macrochelys temminckii) in Missouri between 1993–1994 and 2009. Chelonian Conservation and Biology 12:163–168.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ligon, D.B. and J. Reasor. 2007. Predation on alligator snapping turtles (Macrochelys temminckii) by northern river otters Lontra Canadensis). Southwestern Naturalist 52:608–610.",
+      "year": null,
+      "title": null,
+      "author": "Ligon, D.B. and J. Reasor. 2007. Predation on alligator snapping turtles (Macrochelys temminckii) by northern river otters Lontra Canadensis). Southwestern Naturalist 52:608–610. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ligon, D.B. and M.B. Lovern. 2009. Temperature effects during early life stages of the alligator snapping turtle. Chelonian Conservation and Biology 8:74–83.",
+      "year": null,
+      "title": null,
+      "author": "Ligon, D.B. and M.B. Lovern. 2009. Temperature effects during early life stages of the alligator snapping turtle. Chelonian Conservation and Biology 8:74–83.",
+      "citation_short": null
+    },
+    {
+      "citation": "Liu, S., Newman, C., Buesching, C.D., Macdonald, D.W., Zhang, Y., Zhang, K-J., Li, F., and Zhou, Z-M. 2021. E-commerce promotes trade in invasive turtles in China. Oryx 55(3):352–355.",
+      "year": null,
+      "title": null,
+      "author": "Liu, S., Newman, C., Buesching, C.D., Macdonald, D.W., Zhang, Y., Zhang, K-J., Li, F., and Zhou, Z-M. 2021. E-commerce promotes trade in invasive turtles in China. Oryx 55(3):352–355.",
+      "citation_short": null
+    },
+    {
+      "citation": "MDOC [Missouri Department of Conservation]. 2015. Missouri State Wildlife Action Plan: Conserving healthy fish, forests, and wildlife. Jefferson City, MO. https://mdc.mo.gov/sites/default/files/2020-04/SWAP.pdf.",
+      "year": null,
+      "title": null,
+      "author": "MDOC [Missouri Department of Conservation]. 2015. Missouri State Wildlife Action Plan: Conserving healthy fish, forests, and wildlife. Jefferson City, MO. https://mdc.mo.gov/sites/default/files/2020-04/SWAP.pdf",
+      "citation_short": null
+    },
+    {
+      "citation": "MDWFP [Mississippi Department of Wildlife, Fisheries, and Parks]. 2015. Mississippi State Wildlife Action Plan 2015-2025. Jackson, MS. https://www.mdwfp.com/museum/seek-study/state-wildlife-action-plan/.",
+      "year": null,
+      "title": null,
+      "author": "MDWFP [Mississippi Department of Wildlife, Fisheries, and Parks]. 2015. Mississippi State Wildlife Action Plan 2015-2025. Jackson, MS. https://www.mdwfp.com/museum/seek-study/state-wildlife-action-plan/",
+      "citation_short": null
+    },
+    {
+      "citation": "MDWFP [Mississippi Department of Wildlife, Fisheries, and Parks]. 2021. Miss. Code Ann. §§49-1-29, 49-4-4, and 49-5-113. Available online at https://www.mdwfp.com/media/1676/20160729151515.pdf.",
+      "year": null,
+      "title": null,
+      "author": "MDWFP [Mississippi Department of Wildlife, Fisheries, and Parks]. 2021. Miss. Code Ann. §§49-1-29, 49-4-4, and 49-5-113. Available online at https://www.mdwfp.com/media/1676/20160729151515.pdf. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Miller, J.L. and D.B. Ligon. 2014. Sex ratios in naturally incubating Macrochelys temminckii nests, a species with type II temperature-dependent sex determination. Journal of Thermal Biology 39(1):6–11.",
+      "year": null,
+      "title": null,
+      "author": "Miller, J.L. and D.B. Ligon. 2014. Sex ratios in naturally incubating Macrochelys temminckii nests, a species with type II temperature-dependent sex determination. Journal of Thermal Biology 39(1):6–11.",
+      "citation_short": null
+    },
+    {
+      "citation": "MNHP [Mississippi Natural Heritage Program]. 2018. Special Animals Tracking List. Museum of Natural Science, Mississippi Department of Wildlife, Fisheries, and Parks, Jackson, MS, 13 pp.",
+      "year": null,
+      "title": null,
+      "author": "MNHP [Mississippi Natural Heritage Program]. 2018. Special Animals Tracking List. Museum of Natural Science, Mississippi Department of Wildlife, Fisheries, and Parks, Jackson, MS, 13 pp.",
+      "citation_short": null
+    },
+    {
+      "citation": "Moore, D.B., D.B. Ligon, B.M. Fillmore, and S.F. Fox. 2014. Spatial use and selection of habitat in a reintroduced population of alligator snapping turtles (Macrochelys temminckii). Southwestern Naturalist 59(1):30–37.",
+      "year": null,
+      "title": null,
+      "author": "Moore, D.B., D.B. Ligon, B.M. Fillmore, and S.F. Fox. 2014. Spatial use and selection of habitat in a reintroduced population of alligator snapping turtles (Macrochelys temminckii). Southwestern Naturalist 59(1):30–37.",
+      "citation_short": null
+    },
+    {
+      "citation": "Moriarty, J.J. (Ed.). 2017. Scientific and standard English names of amphibians and reptiles of North America north of Mexico, with comments regarding confidence in our understanding, 8th edition. Society for the study of amphibians and reptiles. Herpetological Circular 43:1–102.",
+      "year": null,
+      "title": null,
+      "author": "Moriarty, J.J. (Ed.). 2017. Scientific and standard English names of amphibians and reptiles of North America north of Mexico, with comments regarding confidence in our understanding, 8th edition. Society for the study of amphibians and reptiles. Herpetological Circular 43:1–102.",
+      "citation_short": null
+    },
+    {
+      "citation": "Munscher, E.C., A. Tuggle, A. Dugas, R. Couvillon, B.P. Butterfield, J. Gray, and A.D. Walde. 2021a. Natural History Note: Macrochelys temminckii (Alligator Snapping Turtle). Long Distance Movement. Herpetological Review 53 (3):633.",
+      "year": null,
+      "title": null,
+      "author": "Munscher, E.C., A. Tuggle, A. Dugas, R. Couvillon, B.P. Butterfield, J. Gray, and A.D. Walde. 2021a. Natural History Note: Macrochelys temminckii (Alligator Snapping Turtle). Long Distance Movement. Herpetological Review 53 (3):633.",
+      "citation_short": null
+    },
+    {
+      "citation": "Munscher, E.C., J.D. Riedle, A. Tuggle, J. Gray, D. Ligon, V. Gladkaya, C. Drake, R. Couvillon, J. Bolton, M. Morrison, B. P. Butterfield, and A.D. Walde. 2023. Population demography of an urban population of Alligator Snapping Turtles (Macrochelys temminckii). Southeastern Naturalist 22 (Special Issue 12): 221–225.",
+      "year": null,
+      "title": null,
+      "author": "Munscher, E.C., J.D. Riedle, A. Tuggle, J. Gray, D. Ligon, V. Gladkaya, C. Drake, R. Couvillon, J. Bolton, M. Morrison, B. P. Butterfield, and A.D. Walde. 2023. Population demography of an urban population of Alligator Snapping Turtles (Macrochelys temminckii). Southeastern Naturalist 22 (Special Issue 12): 221–225.",
+      "citation_short": null
+    },
+    {
+      "citation": "Munscher, E.C., J. Gray, A. Tuggle, B.P. Butterfield, K. Norrid, and A.D. Walde. 2021c. Natural History Note: Macrochelys temminckii (Alligator Snapping Turtle). Response to flooding. Herpetological Review 52: 394-395.",
+      "year": null,
+      "title": null,
+      "author": "Munscher, E.C., J. Gray, A. Tuggle, B.P. Butterfield, K. Norrid, and A.D. Walde. 2021c. Natural History Note: Macrochelys temminckii (Alligator Snapping Turtle). Response to flooding. Herpetological Review 52: 394-395.",
+      "citation_short": null
+    },
+    {
+      "citation": "Munscher, E.C., J. Gray, A. Tuggle, D. Ligon, V. Gladkaya, C. Franklin, C. Drake, V. Ricardez, B.P. Butterfield, K. Norrid, and A. Walde. 2020. Discovery of an alligator snapping turtle (Macrochelys temiminckii) population in metropolitan Houston, Harris County, Texas. Urban Naturalist 32: 1–5.",
+      "year": null,
+      "title": null,
+      "author": "Munscher, E.C., J. Gray, A. Tuggle, D. Ligon, V. Gladkaya, C. Franklin, C. Drake, V. Ricardez, B.P. Butterfield, K. Norrid, and A. Walde. 2020. Discovery of an alligator snapping turtle (Macrochelys temiminckii) population in metropolitan Houston, Harris County, Texas. Urban Naturalist 32: 1–5.",
+      "citation_short": null
+    },
+    {
+      "citation": "Munscher, E.C., V. Gladkaya, J. Stein, B.P. Butterfield, R. Adams, J. Gray, A.S. Weber, K. Norrid, and A.D. Walde. 2021b. Movements of Western Alligator Snapping Turtles, Macrochelys temminckii (Testudines, Chelydridae), in an urban ecosystem: Buffalo Bayou, Houston, Texas. Herpetology Notes 14: 985–995.",
+      "year": null,
+      "title": null,
+      "author": "Munscher, E.C., V. Gladkaya, J. Stein, B.P. Butterfield, R. Adams, J. Gray, A.S. Weber, K. Norrid, and A.D. Walde. 2021b. Movements of Western Alligator Snapping Turtles, Macrochelys temminckii (Testudines, Chelydridae), in an urban ecosystem: Buffalo Bayou, Houston, Texas. Herpetology Notes 14: 985–995.",
+      "citation_short": null
+    },
+    {
+      "citation": "Murray, C.M., McMahan, C.D., Dobie, J.L. and Guyer C. 2014. Cranial variation amongst independent lineages of the alligator snapping turtle (<i>Macrochelys temminckii</i>). <i>Journal of Zoological Systematics and Evolutionary Research</i> 52: 305‒311.",
+      "year": "2014",
+      "title": "Cranial variation amongst independent lineages of the alligator snapping turtle (<i>Macrochelys temminckii</i>)",
+      "author": "Murray, C.M., McMahan, C.D., Dobie, J.L. and Guyer C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nambu, H. 2001. A record of Macroclemys temminckii from Sho-river, Toyama Prefecture [In Japanese.] Bulletin of the Toyama Science Museum 24:89–90.",
+      "year": null,
+      "title": null,
+      "author": "Nambu, H. 2001. A record of Macroclemys temminckii from Sho-river, Toyama Prefecture [In Japanese.] Bulletin of the Toyama Science Museum 24:89–90.",
+      "citation_short": null
+    },
+    {
+      "citation": "NatureServe. 2023. NatureServe Network Biodiversity Location Data accessed through NatureServe Explorer [web application]. NatureServe, Arlington, Virginia. Available https://explorer.natureserve.org/. (Accessed: 21 December, 2023).",
+      "year": null,
+      "title": null,
+      "author": "NatureServe. 2023. NatureServe Network Biodiversity Location Data accessed through NatureServe Explorer [web application]. NatureServe, Arlington, Virginia. Available https://explorer.natureserve.org/. (Accessed: 21 December, 2023). ",
+      "citation_short": null
+    },
+    {
+      "citation": "ODWC [Oklahoma Department of Wildlife Conservation]. 2016. Oklahoma Comprehensive Wildlife Conservation Strategy: A Strategic Conservation Plan for Oklahoma's Rare and Declining Wildlife. Oklahoma City, OK. https://www.wildlifedepartment.com/sites/default/files/2021-11/Oklahoma%20Comprehensive%20Wildlife%20Conservation%20Strategy.pdf.",
+      "year": null,
+      "title": null,
+      "author": "ODWC [Oklahoma Department of Wildlife Conservation]. 2016. Oklahoma Comprehensive Wildlife Conservation Strategy: A Strategic Conservation Plan for Oklahoma's Rare and Declining Wildlife. Oklahoma City, OK. https://www.wildlifedepartment.com/sites/default/files/2021-11/Oklahoma%20Comprehensive%20Wildlife%20Conservation%20Strategy.pdf",
+      "citation_short": null
+    },
+    {
+      "citation": "Pearson, L. 2021. Distribution, abundance, and population genetics of the alligator snapping turtle (Macrochelys temminckii) in Mississippi. Ph.D. Dissertation, University of Southern Mississippi, Hattiesburg, Mississippi.",
+      "year": null,
+      "title": null,
+      "author": "Pearson, L. 2021. Distribution, abundance, and population genetics of the alligator snapping turtle (Macrochelys temminckii) in Mississippi. Ph.D. Dissertation, University of Southern Mississippi, Hattiesburg, Mississippi.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pearson, L., Haralson, L., Berry, G., Brown, G.J., and Qualls, C. 2023. Distribution patterns and factors influencing relative abundance of the alligator snapping turtle (Macrochelys temminckii) in Mississippi. Southeastern Naturalist 22:138–156.",
+      "year": null,
+      "title": null,
+      "author": "Pearson, L., Haralson, L., Berry, G., Brown, G.J., and Qualls, C. 2023. Distribution patterns and factors influencing relative abundance of the alligator snapping turtle (Macrochelys temminckii) in Mississippi. Southeastern Naturalist 22:138–156.",
+      "citation_short": null
+    },
+    {
+      "citation": "Poch, S., P. Sunyer, G. Pascual, D. Boix, M. Campos, E. Cruset, C. Quer-Feo, M.A. Fuentes, et al. 2020. Alien chelonians in northeastern Spain: new distributional data. Herpetological Bulletin 151:1–5.Poch, S., P. Sunyer, G. Pascual, D. Boix, M. Campos, E. Cruset, C. Quer-Feo, M.A. Fuentes, et al. 2020. Alien chelonians in northeastern Spain: new distributional data. Herpetological Bulletin 151:1–5.",
+      "year": null,
+      "title": null,
+      "author": "Poch, S., P. Sunyer, G. Pascual, D. Boix, M. Campos, E. Cruset, C. Quer-Feo, M.A. Fuentes, et al. 2020. Alien chelonians in northeastern Spain: new distributional data. Herpetological Bulletin 151:1–5.Poch, S., P. Sunyer, G. Pascual, D. Boix, M. Campos, E. Cruset, C. Quer-Feo, M.A. Fuentes, et al. 2020. Alien chelonians in northeastern Spain: new distributional data. Herpetological Bulletin 151:1–5.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pritchard, P.C.H. 1989. The Alligator Snapping Turtle: Biology and Conservation. Milwaukee: Milwaukee Public Museum, 104 pp.",
+      "year": null,
+      "title": null,
+      "author": "Pritchard, P.C.H. 1989. The Alligator Snapping Turtle: Biology and Conservation. Milwaukee: Milwaukee Public Museum, 104 pp.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ray, M.J. 2010. Spatial ecology of adult Alligator Snapping Turtles (Macrochelys temminckii) in northern Louisiana. Master of Science Thesis, University of Louisiana at Monroe, Monroe, LA.",
+      "year": null,
+      "title": null,
+      "author": "Ray, M.J. 2010. Spatial ecology of adult Alligator Snapping Turtles (Macrochelys temminckii) in northern Louisiana. Master of Science Thesis, University of Louisiana at Monroe, Monroe, LA.",
+      "citation_short": null
+    },
+    {
+      "citation": "Redmond, A. 1979. Observations on the Alligator Snapping Turtle. Bulletin of the Georgia Herpetological Society 5:5–6.",
+      "year": null,
+      "title": null,
+      "author": "Redmond, A. 1979. Observations on the Alligator Snapping Turtle. Bulletin of the Georgia Herpetological Society 5:5–6.",
+      "citation_short": null
+    },
+    {
+      "citation": "Reed, R.N., Congdon, J., and Gibbons, J.W. 2002. The alligator snapping turtle [Macrochelys (Macroclemys) temminckii]: a review of ecology, life history, and conservation, with demographic analyses of the sustainability of take from wild populations. Aiken, South Carolina: Savannah River Ecology Laboratory, Report to Division of Scientific Authority, U.S. Fish and Wildlife Service, 17 pp.",
+      "year": null,
+      "title": null,
+      "author": "Reed, R.N., Congdon, J., and Gibbons, J.W. 2002. The alligator snapping turtle [Macrochelys (Macroclemys) temminckii]: a review of ecology, life history, and conservation, with demographic analyses of the sustainability of take from wild populations. Aiken, South Carolina: Savannah River Ecology Laboratory, Report to Division of Scientific Authority, U.S. Fish and Wildlife Service, 17 pp. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Rhodin, A.G.J., Stanford, C.B., Dijk, P.P.V., Eisemberg, C., Luiselli, L., Mittermeier, R.A., Hudson, R., Horne, B.D., Goode, E.V., Kuchling, G., Walde, A., Baard, E.H.W., Berry, K.H., Bertolero, A., Blanck, T.E.G., Bour, R., Buhlmann, K.A., Cayot, L.J., Collett, S., Currylow, A., Das, I., Diagne, T., Ennen, J.R., Forero-Medina, G., Frankel, M.G., Fritz, U., García, G., Gibbons, J.W., Gibbons, P.M., Shiping, G., Guntoro, J., Hofmeyr, M.D., Iverson, J.B., Kiester, A.R., Lau, M., Lawson, D.P., Lovich, J.E., Moll, E.O., Páez, V.P., Palomo-Ramos, R., Platt, K., Platt, S.G., Pritchard, P.C.H., Quinn, H.R., Rahman, S.C., Randrianjafizanaka, S.T., Schaffer, J., Selman, W., Shaffer, H.B., Sharma, D.S.K., Haitao, S., Singh, S., Spencer, R., Stannard, K., Sutcliffe, S., Thomson, S., and Vogt, R.C. 2018. Global conservation status of turtles and tortoises (Order Testudines). Chelonian Conservation and Biology 17(2):135–161.",
+      "year": null,
+      "title": null,
+      "author": "Rhodin, A.G.J., Stanford, C.B., Dijk, P.P.V., Eisemberg, C., Luiselli, L., Mittermeier, R.A., Hudson, R., Horne, B.D., Goode, E.V., Kuchling, G., Walde, A., Baard, E.H.W., Berry, K.H., Bertolero, A., Blanck, T.E.G., Bour, R., Buhlmann, K.A., Cayot, L.J., Collett, S., Currylow, A., Das, I., Diagne, T., Ennen, J.R., Forero-Medina, G., Frankel, M.G., Fritz, U., García, G., Gibbons, J.W., Gibbons, P.M., Shiping, G., Guntoro, J., Hofmeyr, M.D., Iverson, J.B., Kiester, A.R., Lau, M., Lawson, D.P., Lovich, J.E., Moll, E.O., Páez, V.P., Palomo-Ramos, R., Platt, K., Platt, S.G., Pritchard, P.C.H., Quinn, H.R., Rahman, S.C., Randrianjafizanaka, S.T., Schaffer, J., Selman, W., Shaffer, H.B., Sharma, D.S.K., Haitao, S., Singh, S., Spencer, R., Stannard, K., Sutcliffe, S., Thomson, S., and Vogt, R.C. 2018. Global conservation status of turtles and tortoises (Order Testudines). Chelonian Conservation and Biology 17(2):135–161.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rider, S.J., T.R. Powell, and G.T. Miles. 2023. New location records for Alligator Snapping Turtle (Macrochelys temminckii) captured during fishery surveys in Alabama. Southeastern Naturalist 22(Special Issue 12): 100-108.",
+      "year": null,
+      "title": null,
+      "author": "Rider, S.J., T.R. Powell, and G.T. Miles. 2023. New location records for Alligator Snapping Turtle (Macrochelys temminckii) captured during fishery surveys in Alabama. Southeastern Naturalist 22(Special Issue 12): 100-108.",
+      "citation_short": null
+    },
+    {
+      "citation": "Riedle, J.D., D.B. Ligon, and K. Graves. 2008b. Distribution and management of alligator snapping turtles, Macrochelys temminckii, in Kansas and Oklahoma. Transactions of the Kansas Academy of Science 111:21–28.",
+      "year": null,
+      "title": null,
+      "author": "Riedle, J.D., D.B. Ligon, and K. Graves. 2008b. Distribution and management of alligator snapping turtles, Macrochelys temminckii, in Kansas and Oklahoma. Transactions of the Kansas Academy of Science 111:21–28.",
+      "citation_short": null
+    },
+    {
+      "citation": "Riedle, J.D., P.A. Shipman, S.F. Fox, and D.M. Leslie, Jr. 2006. Microhabitat use, home range, and movements of the alligator snapping turtle, Macrochelys temminckii, in Oklahoma. Southwestern Naturalist 51:35–40.",
+      "year": null,
+      "title": null,
+      "author": "Riedle, J.D., P.A. Shipman, S.F. Fox, and D.M. Leslie, Jr. 2006. Microhabitat use, home range, and movements of the alligator snapping turtle, Macrochelys temminckii, in Oklahoma. Southwestern Naturalist 51:35–40. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Riedle, J.D., P.A. Shipman, S.F. Fox, and D.M. Leslie, Jr. 2009. Habitat associations of aquatic turtle communities in eastern Oklahoma. Proceedings of the Oklahoma Academy of Science 89:19–30.",
+      "year": null,
+      "title": null,
+      "author": "Riedle, J.D., P.A. Shipman, S.F. Fox, and D.M. Leslie, Jr. 2009. Habitat associations of aquatic turtle communities in eastern Oklahoma. Proceedings of the Oklahoma Academy of Science 89:19–30. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Riedle, J.D., P.A. Shipman, S.F. Fox, J.C. Hackler, and D.M. Leslie, Jr. 2008a. Population structure of the alligator snapping turtles, Macrochelys temminckii, on the western edge of its distribution. Chelonian Conservation and Biology 7:100–104.",
+      "year": null,
+      "title": null,
+      "author": "Riedle, J.D., P.A. Shipman, S.F. Fox, J.C. Hackler, and D.M. Leslie, Jr. 2008a. Population structure of the alligator snapping turtles, Macrochelys temminckii, on the western edge of its distribution. Chelonian Conservation and Biology 7:100–104. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Riedle, J.D., Place, A.J., and S.D. Thompson. 2018. The westernmost occurrence of the alligator snapping turtle and its implications for conservation. Collinsorum 7:19–20.",
+      "year": null,
+      "title": null,
+      "author": "Riedle, J.D., Place, A.J., and S.D. Thompson. 2018. The westernmost occurrence of the alligator snapping turtle and its implications for conservation. Collinsorum 7:19–20.",
+      "citation_short": null
+    },
+    {
+      "citation": "Riedle, J.D., R.T. Kazmaier, J. Killian, and W.B. Littrell. 2015. Assemblage structure of an eastern Texas aquatic turtle community. Herpetological Conservation and Biology 10:695–702.",
+      "year": null,
+      "title": null,
+      "author": "Riedle, J.D., R.T. Kazmaier, J. Killian, and W.B. Littrell. 2015. Assemblage structure of an eastern Texas aquatic turtle community. Herpetological Conservation and Biology 10:695–702. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Riedle, J.D., Shipman, P.A., Fox, S.F., and Leslie, D.M., Jr. 2005. Status and distribution of the alligator snapping turtle, Macrochelys temminckii, in Oklahoma. Southwestern Naturalist 50:79–84.",
+      "year": null,
+      "title": null,
+      "author": "Riedle, J.D., Shipman, P.A., Fox, S.F., and Leslie, D.M., Jr. 2005. Status and distribution of the alligator snapping turtle, Macrochelys temminckii, in Oklahoma. Southwestern Naturalist 50:79–84. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Rohweder, M.R. 2022. Kansas Wildlife Action Plan. 3rd Edition. Ecological Services Section, Kansas Department of Wildlife and Parks in cooperation with the Kansas Biological Survey 183 pp., https://ksoutdoors.com/Services/Kansas-SWAP.",
+      "year": null,
+      "title": null,
+      "author": "Rohweder, M.R. 2022. Kansas Wildlife Action Plan. 3rd Edition. Ecological Services Section, Kansas Department of Wildlife and Parks in cooperation with the Kansas Biological Survey 183 pp., https://ksoutdoors.com/Services/Kansas-SWAP",
+      "citation_short": null
+    },
+    {
+      "citation": "Roman, J., Santhuff, S.D., Moler, P.E. and Bowen, B.W. 1999. Population structure and cryptic evolutionary units in the alligator snapping turtle. <i>Conservation Biology</i> 13: 135–142.",
+      "year": "1999",
+      "title": "Population structure and cryptic evolutionary units in the alligator snapping turtle",
+      "author": "Roman, J., Santhuff, S.D., Moler, P.E. and Bowen, B.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rosenbaum, D., D.C. Rudolph, D. Saenz, L.A. Fitzgerald, R.E. Nelson, C.S. Collins, T.J. Hibbitts, R.W. Maxey, P. Crump, and C.M. Schalk. 2023. Distribution and demography of the Alligator Snapping Turtle (Macrochelys temminckii) in Texas: a 20-year perspective. Southeastern Naturalist 22(Special Issue 12):197–220.",
+      "year": null,
+      "title": null,
+      "author": "Rosenbaum, D., D.C. Rudolph, D. Saenz, L.A. Fitzgerald, R.E. Nelson, C.S. Collins, T.J. Hibbitts, R.W. Maxey, P. Crump, and C.M. Schalk. 2023. Distribution and demography of the Alligator Snapping Turtle (Macrochelys temminckii) in Texas: a 20-year perspective. Southeastern Naturalist 22(Special Issue 12):197–220.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ross, S., E.C. Munscher, and L. Little. 2023. Geographic distribution. Macrochelys temminckii. Alligator Snapping Turtle. Herpetological Review 54:401.",
+      "year": null,
+      "title": null,
+      "author": "Ross, S., E.C. Munscher, and L. Little. 2023. Geographic distribution. Macrochelys temminckii. Alligator Snapping Turtle. Herpetological Review 54:401.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rudolf, D.C., L.A. Fitzgerald, R.E. Nelson, T. Hibbits, and R.W. Maxey. 2002. Historical and local process determining the current status of Macroclemys temminckii: The Alligator Snapping Turtle in Texas (WER42) final report. The Endangered Species Program. Texas Parks and Wildlife, 74 pp.",
+      "year": null,
+      "title": null,
+      "author": "Rudolf, D.C., L.A. Fitzgerald, R.E. Nelson, T. Hibbits, and R.W. Maxey. 2002. Historical and local process determining the current status of Macroclemys temminckii: The Alligator Snapping Turtle in Texas (WER42) final report. The Endangered Species Program. Texas Parks and Wildlife, 74 pp.",
+      "citation_short": null
+    },
+    {
+      "citation": "Santhuff, S.D. 1993. Alligator Snapping Turtle, Macroclemys temminckii, trap, mark, and release project. Final report to the Missouri Department of Conservation, Jefferson City, MO, 17 pp.",
+      "year": null,
+      "title": null,
+      "author": "Santhuff, S.D. 1993. Alligator Snapping Turtle, Macroclemys temminckii, trap, mark, and release project. Final report to the Missouri Department of Conservation, Jefferson City, MO, 17 pp.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schwartz, N. In prep. Growth and survival of juvenile head-started Alligator Snapping Turtles (Macrochelys temminckii) translocated into Oxbow Lake herpetofaunal communities. Master of Science Thesis, University of Louisiana at Monroe, Monroe, LA.",
+      "year": null,
+      "title": null,
+      "author": "Schwartz, N. In prep. Growth and survival of juvenile head-started Alligator Snapping Turtles (Macrochelys temminckii) translocated into Oxbow Lake herpetofaunal communities. Master of Science Thesis, University of Louisiana at Monroe, Monroe, LA.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shipman, P.A. and Riedle, J.D. 2008. Status and distribution of the alligator snapping turtle (Macrochelys temminckii) in southeastern Missouri. Southeastern Naturalist 7:331–338.",
+      "year": null,
+      "title": null,
+      "author": "Shipman, P.A. and Riedle, J.D. 2008. Status and distribution of the alligator snapping turtle (Macrochelys temminckii) in southeastern Missouri. Southeastern Naturalist 7:331–338. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Shipman, P.A., D.R. Edds, and D. Blex. 1991. Report on the recapture of an alligator snapping turtle (Macroclemys temminckii) in Kansas. Kansas Herpetological Society Newsletter 85:8–9.",
+      "year": null,
+      "title": null,
+      "author": "Shipman, P.A., D.R. Edds, and D. Blex. 1991. Report on the recapture of an alligator snapping turtle (Macroclemys temminckii) in Kansas. Kansas Herpetological Society Newsletter 85:8–9.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shook, A.K., C.D. Battaglia, K.M. Enge, C. Franklin, J.C. Godwin, A.C. Johnson, E.J. Kessler, E. Munscher, K. Norrid, L. Pearson, V. Ricardez, D J. Stevenson, T.M. Thomas, and J.L. Carr. 2023. Anthropogenic threats to Alligator Snapping Turtles (Chelydridae: Macrochelys)  Southeastern Naturalist 22(Special Issue 12):25–55.",
+      "year": null,
+      "title": null,
+      "author": "Shook, A.K., C.D. Battaglia, K.M. Enge, C. Franklin, J.C. Godwin, A.C. Johnson, E.J. Kessler, E. Munscher, K. Norrid, L. Pearson, V. Ricardez, D J. Stevenson, T.M. Thomas, and J.L. Carr. 2023. Anthropogenic threats to Alligator Snapping Turtles (Chelydridae: Macrochelys)  Southeastern Naturalist 22(Special Issue 12):25–55.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sloan, K. and Lovich, J.E. 1995. Exploitation of the alligator snapping turtle, Macroclemys temminckii, in Louisiana: a case study. Chelonian Conservation and Biology 1:221–222.Sloan, K. and Lovich, J.E. 1995. Exploitation of the alligator snapping turtle, Macroclemys temminckii, in Louisiana: a case study. Chelonian Conservation and Biology 1:221–222.",
+      "year": null,
+      "title": null,
+      "author": "Sloan, K. and Lovich, J.E. 1995. Exploitation of the alligator snapping turtle, Macroclemys temminckii, in Louisiana: a case study. Chelonian Conservation and Biology 1:221–222.Sloan, K. and Lovich, J.E. 1995. Exploitation of the alligator snapping turtle, Macroclemys temminckii, in Louisiana: a case study. Chelonian Conservation and Biology 1:221–222.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sloan, K.N. and D. Taylor. 1987. Habitats and movements of adult Alligator Snapping Turtles in northeast Louisiana. Proceedings of the Annual Conference, Southeastern Association of Fish and Wildlife Agencies 41:343–348.",
+      "year": null,
+      "title": null,
+      "author": "Sloan, K.N. and D. Taylor. 1987. Habitats and movements of adult Alligator Snapping Turtles in northeast Louisiana. Proceedings of the Annual Conference, Southeastern Association of Fish and Wildlife Agencies 41:343–348.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sloan, K.N., K.A. Buhlmann, and J.E. Lovich. 1996. Stomach contents of commercially harvested adult Alligator Snapping Turtles, Macroclemys temminckii. Chelonian Conservation and Biology 2(1):96–99.",
+      "year": null,
+      "title": null,
+      "author": "Sloan, K.N., K.A. Buhlmann, and J.E. Lovich. 1996. Stomach contents of commercially harvested adult Alligator Snapping Turtles, Macroclemys temminckii. Chelonian Conservation and Biology 2(1):96–99.",
+      "citation_short": null
+    },
+    {
+      "citation": "Soehren, E.C. and J.C. Godwin. 2004. Alligator Snapping Turtle, Macrochelys temminckii (Harlan). pp. 75–77, in R.E. Mirarchi, M.A. Bailey, T.M. Haggerty, and T.C. Best (Eds.). Alabama Wildlife Volume 3: Imperiled Amphibians, Reptiles, Birds, and Mammals. University of Alabama Press. Tuscaloosa, AL, 225 pp.",
+      "year": null,
+      "title": null,
+      "author": "Soehren, E.C. and J.C. Godwin. 2004. Alligator Snapping Turtle, Macrochelys temminckii (Harlan). pp. 75–77, in R.E. Mirarchi, M.A. Bailey, T.M. Haggerty, and T.C. Best (Eds.). Alabama Wildlife Volume 3: Imperiled Amphibians, Reptiles, Birds, and Mammals. University of Alabama Press. Tuscaloosa, AL, 225 pp. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Steen, D.A. and Robinson, O.J. 2017. Estimating freshwater turtle mortality rates and population declines following hook ingestion. Conservation Biology 31(6):1333–1339.",
+      "year": null,
+      "title": null,
+      "author": "Steen, D.A. and Robinson, O.J. 2017. Estimating freshwater turtle mortality rates and population declines following hook ingestion. Conservation Biology 31(6):1333–1339.",
+      "citation_short": null
+    },
+    {
+      "citation": "Texas Center for Policy Studies. 2000. Texas Environmental Almanac. 2nd ed. University of Texas Press, Austin, TX, USA.",
+      "year": null,
+      "title": null,
+      "author": "Texas Center for Policy Studies. 2000. Texas Environmental Almanac. 2nd ed. University of Texas Press, Austin, TX, USA.",
+      "citation_short": null
+    },
+    {
+      "citation": "Texas General Land Office. 2019. Geographic Information Systems data. Available online at http://www.glo.state.tx.us/gisdata/gisdata.html.",
+      "year": null,
+      "title": null,
+      "author": "Texas General Land Office. 2019. Geographic Information Systems data. Available online at http://www.glo.state.tx.us/gisdata/gisdata.html. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Texas Register. 1987. Texas Register Publications 12:451–479.",
+      "year": null,
+      "title": null,
+      "author": "Texas Register. 1987. Texas Register Publications 12:451–479.",
+      "citation_short": null
+    },
+    {
+      "citation": "TFTSG [Tortoise and Freshwater Turtle Specialist Group]. 1996. Macrochelys temminckii. The IUCN Red List of Threatened Species 1996: e.T12589A3362355.",
+      "year": null,
+      "title": null,
+      "author": "TFTSG [Tortoise and Freshwater Turtle Specialist Group]. 1996. Macrochelys temminckii. The IUCN Red List of Threatened Species 1996: e.T12589A3362355.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thomas, T.M., Granatosky, M.C., Bourque, J.R., Krysko, K.L., Moler, P.E., Gamble, T., Suarez, E., Leone, E., Enge, K.M. and Roman, J. 2014. Taxonomic assessment of alligator snapping turtles (Chelydridae: <i>Macrochelys</i>), with the description of two new species from the southeastern United States. <i>Zootaxa</i> 3768(2): 141–165.",
+      "year": "2014",
+      "title": "Taxonomic assessment of alligator snapping turtles (Chelydridae: <i>Macrochelys</i>), with the description of two new species from the southeastern United States",
+      "author": "Thomas, T.M., Granatosky, M.C., Bourque, J.R., Krysko, K.L., Moler, P.E., Gamble, T., Suarez, E., Leone, E., Enge, K.M. and Roman, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Townsend, C.L. 2016. Spatial ecology of juvenile, captive-reared Alligator Snapping Turtles (Macrochelys temminckii) in northeastern Louisiana. Master of Science Thesis, University of Louisiana at Monroe, Monroe, LA.",
+      "year": null,
+      "title": null,
+      "author": "Townsend, C.L. 2016. Spatial ecology of juvenile, captive-reared Alligator Snapping Turtles (Macrochelys temminckii) in northeastern Louisiana. Master of Science Thesis, University of Louisiana at Monroe, Monroe, LA.",
+      "citation_short": null
+    },
+    {
+      "citation": "TPWD [Texas Parks and Wildlife Department]. 2005. Texas Comprehensive Wildlife Conservation Strategy. Austin, TX. https://tpwd.texas.gov/huntwild/wild/wildlife_diversity/nongame/tcap/.",
+      "year": null,
+      "title": null,
+      "author": "TPWD [Texas Parks and Wildlife Department]. 2005. Texas Comprehensive Wildlife Conservation Strategy. Austin, TX. https://tpwd.texas.gov/huntwild/wild/wildlife_diversity/nongame/tcap/",
+      "citation_short": null
+    },
+    {
+      "citation": "Trauth, S.E., Siegel, D.S., McCallum, M.L., Jamieson, D.H., and Holt, A. 2016. Long-term monitoring and recovery of a population of alligator snapping turtles, Macrochelys temminckii (Testudines: Chelydridae), from a northeastern Arkansas stream. Journal of the Arkansas Academy of Science 70(39):235–247.",
+      "year": null,
+      "title": null,
+      "author": "Trauth, S.E., Siegel, D.S., McCallum, M.L., Jamieson, D.H., and Holt, A. 2016. Long-term monitoring and recovery of a population of alligator snapping turtles, Macrochelys temminckii (Testudines: Chelydridae), from a northeastern Arkansas stream. Journal of the Arkansas Academy of Science 70(39):235–247.",
+      "citation_short": null
+    },
+    {
+      "citation": "Trauth, S.E., Wilhide, J.D., and Holt, A. 1998. Population structure and movement patterns of alligator snapping turtles (Macroclemys temminckii) in northeastern Arkansas. Chelonian Conservation and Biology 3(1):64–70.",
+      "year": null,
+      "title": null,
+      "author": "Trauth, S.E., Wilhide, J.D., and Holt, A. 1998. Population structure and movement patterns of alligator snapping turtles (Macroclemys temminckii) in northeastern Arkansas. Chelonian Conservation and Biology 3(1):64–70. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Tucker, A.D. and Sloan, K.N. 1997. Growth and reproductive estimates from alligator snapping turtles, Macroclemys temminckii, taken by commercial harvest in Louisiana. Chelonian Conservation and Biology 2:587–592.",
+      "year": null,
+      "title": null,
+      "author": "Tucker, A.D. and Sloan, K.N. 1997. Growth and reproductive estimates from alligator snapping turtles, Macroclemys temminckii, taken by commercial harvest in Louisiana. Chelonian Conservation and Biology 2:587–592. ",
+      "citation_short": null
+    },
+    {
+      "citation": "TWRA [Tennessee Wildlife Resources Agency]. 2015. Tennessee State Wildlife Action Plan. Nashville, TN. https://www.tn.gov/content/tn/twra/wildlife/action-plan/tennessee-wildlife-action-plan.html.",
+      "year": null,
+      "title": null,
+      "author": "TWRA [Tennessee Wildlife Resources Agency]. 2015. Tennessee State Wildlife Action Plan. Nashville, TN. https://www.tn.gov/content/tn/twra/wildlife/action-plan/tennessee-wildlife-action-plan.html",
+      "citation_short": null
+    },
+    {
+      "citation": "USFWS [United States Fish and Wildlife Service]. 2021a. Species status assessment report for the alligator snapping turtle (Macrochelys temminckii), Version 1.2. Atlanta, GA: U.S. Fish and Wildlife Service, 199 pp.",
+      "year": null,
+      "title": null,
+      "author": "USFWS [United States Fish and Wildlife Service]. 2021a. Species status assessment report for the alligator snapping turtle (Macrochelys temminckii), Version 1.2. Atlanta, GA: U.S. Fish and Wildlife Service, 199 pp.",
+      "citation_short": null
+    },
+    {
+      "citation": "USFWS [United States Fish and Wildlife Service]. 2021b. Endangered and threatened wildlife and plants; threatened species status with section 4(d) Rule for Alligator Snapping Turtle. Federal Register 86:62434–62463.",
+      "year": null,
+      "title": null,
+      "author": "USFWS [United States Fish and Wildlife Service]. 2021b. Endangered and threatened wildlife and plants; threatened species status with section 4(d) Rule for Alligator Snapping Turtle. Federal Register 86:62434–62463.",
+      "citation_short": null
+    },
+    {
+      "citation": "USGS [United States Geological Survey]. 2023. NAS - Nonindigenous Aquatic Species: Macrochelys temminckii. https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=1227. (Date: Accessed 22 December 2023).",
+      "year": null,
+      "title": null,
+      "author": "USGS [United States Geological Survey]. 2023. NAS - Nonindigenous Aquatic Species: Macrochelys temminckii. https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=1227. (Date: Accessed 22 December 2023).",
+      "citation_short": null
+    },
+    {
+      "citation": "Wagner, B., D. Urbston, and D. Leek. 1996. Status and distribution of alligator snapping turtles in Arkansas. Proceedings of the 50th Annual Conference of Southeastern Association of Fish and Wildlife Agencies 50:264– 270.",
+      "year": null,
+      "title": null,
+      "author": "Wagner, B., D. Urbston, and D. Leek. 1996. Status and distribution of alligator snapping turtles in Arkansas. Proceedings of the 50th Annual Conference of Southeastern Association of Fish and Wildlife Agencies 50:264– 270.",
+      "citation_short": null
+    },
+    {
+      "citation": "Webb, R.G. 1995. The date of publication of Gray's Catalogue of Shield Reptiles. <i>Chelonian Conservation and Biology</i> 1(4): 322–323.",
+      "year": "1995",
+      "title": "The date of publication of Gray's Catalogue of Shield Reptiles",
+      "author": "Webb, R.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wickham, M.M. 1922. Notes on the migration of Macrochelys lacertina. Proceedings of the Oklahoma Academy of Science 2:20–22.",
+      "year": null,
+      "title": null,
+      "author": "Wickham, M.M. 1922. Notes on the migration of Macrochelys lacertina. Proceedings of the Oklahoma Academy of Science 2:20–22. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Woosley, L.B. 2005. Population structure and reproduction of Alligator Snapping Turtles, Macrochelys temminckii, at Black Bayou Lake National Wildlife Refuge. Master of Science Thesis, University of Louisiana at Monroe, Monroe, LA.",
+      "year": null,
+      "title": null,
+      "author": "Woosley, L.B. 2005. Population structure and reproduction of Alligator Snapping Turtles, Macrochelys temminckii, at Black Bayou Lake National Wildlife Refuge. Master of Science Thesis, University of Louisiana at Monroe, Monroe, LA.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yoshinori, K. and S. Tomomi. 2022. List of amphibians and reptiles from Kochi Prefecture. [in Japanese.] Shikoku Natural History Science Research 15:74–76.",
+      "year": null,
+      "title": null,
+      "author": "Yoshinori, K. and S. Tomomi. 2022. List of amphibians and reptiles from Kochi Prefecture. [in Japanese.] Shikoku Natural History Science Research 15:74–76.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Skewed sex ratios"
+      },
+      "code": "2_3_6"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

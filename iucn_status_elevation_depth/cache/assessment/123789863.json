@@ -1,0 +1,1856 @@
+{
+  "assessment_date": "2016-09-01T01:00:00.000+01:00",
+  "year_published": "2017",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 2815,
+  "criteria": "C2a(i)",
+  "url": "https://www.iucnredlist.org/species/2815/123789863",
+  "citation": "Aune, K., Jørgensen, D. & Gates, C. 2017. Bison bison (errata version published in 2018). The IUCN Red List of Threatened Species 2017: e.T2815A123789863. Accessed on 15 May 2026.",
+  "assessment_id": 123789863,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 2815,
+    "scientific_name": "Bison bison",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "ARTIODACTYLA",
+    "family_name": "BOVIDAE",
+    "genus_name": "Bison",
+    "species_name": "bison",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Amerikanischer Bison",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Bison d'Amerique",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Bisonte Americano",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Edjere",
+        "language": "chp"
+      },
+      {
+        "main": false,
+        "name": "Moostoosh",
+        "language": "cre"
+      },
+      {
+        "main": false,
+        "name": "Tatanka",
+        "language": "dak"
+      },
+      {
+        "main": true,
+        "name": "American Bison",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Bos bison Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Bos",
+        "species_name": "bison",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Near Threatened"
+    },
+    "code": "NT"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 2750,
+    "lower_elevation_limit": 180,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "11248-13123",
+    "population_severely_fragmented": "Yes",
+    "population_continuing_decline": "No",
+    "generational_length": "9",
+    "congregatory": "Congregatory (and dispersive)",
+    "movement_patterns": "Full Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": "20",
+    "continuing_decline_in_subpopulations": "No",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": "2000-3500",
+    "estimated_area_of_occupancy": "143253",
+    "continuing_decline_in_area_of_occupancy": "No",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": "Unknown"
+  },
+  "documentation": {
+    "range": "<p><span lang=\"EN-US\">The original North American range <span lang=\"EN-US\"><span lang=\"EN-US\">for <em>Bison bison</em> extended from northern Mexico to Alaska. Plains Bison (<em>B. b. bison</em>) occurred from Northern Mexico to central Alberta, Canada. Wood Bison (<em>B. b. athabascae</em>) occurred from central Alberta, Canada to Alaska, USA. The species' current range is restricted by land use and wildlife management policies in the southern area and by wildlife and reportable disease management policies in the northern portion of the North American range. Bison functioning as wild currently occupy less than 1.2% of their original range (Sanderson <span lang=\"EN-US\"><em>et al.</em><span lang=\"EN-US\"><em> </em>2008, this report).</span></span></p>",
+    "population": "There are approximately 31,000 total bison in 68 conservation herds (herds managed in the public interest by governments and environmental organizations) in North America. These include about 20,000 Plains Bison and 11,000 total Wood Bison. For this assessment we applied a rigorous set of criteria to classify herds as functioning as wild, functioning as wild with limitations and not functioning as wild. We excluded from this assessment 30 of 68 conservation bison herds that are very small (&lt;300) and managed on small landscapes (&lt;10,000 acres) for education, public viewing and research. Based on our criteria these bison cannot function as wild bison under current management schemes. We also did not include 9,523 bison in 18 herds managed behind fences and held in captivity, although these are important conservation herds. These herds are considered captive, intensively husbanded and culled by artificial selection.<br/><br/>There are 14,703 bison in eight herds that are in populations &gt;400 and function as wild bison subject to the full range of natural selections forces. Another 4,044 wild bison are found in 12 herds that free-range but suffer from small populations size (&lt;400) and may experience limited predation from large carnivores. For this assessment we considered the wild bison population to be 18,748 bison from these 20 free-ranging herds occupying large landscapes and primarily subjected to the forces of natural selection. We conducted Population Viability Analyses (PVA) for the eight largest herds to determine both the demographic and genetic viability of each population and their viability if they were managed as a meta-population out to 200 years (see the attached PVA report).<br/><br/>The number of calves and yearlings in a bison population will vary considerably between populations and years (Brodie <em>et al</em>. 2008). Therefore It is difficult to establish the exact number of mature individuals in each of 20 bison herds but demographic data from many show that 30-40% are individuals under 2 years of age. We estimated that there are between 11,248 and 13,123 mature bison in the current populations of wild free-ranging bison in North America.<br/><br/>Populations are considered viable in the long term if they exceed 1,000 individuals (Gates <em>et al</em>. 2010). There are two Plains Bison conservation herds and two Wood Bison conservation herds each exceeding 1,000 individuals—therefore according to this criteria the total number of viable populations is only four. However, a specific population viability analysis was performed on the eight bison herds functioning as wild and results demonstrate that all are demographically viable but all but the two largest herds will lose 5-8% of their genetic diversity over the next 200 years (see the PVA report in the Supplementary Material).",
+    "habitats": "<p><span lang=\"EN-US\">North American bison are primarily grazers and forage primarily in grassland and meadow vegetative communities. They had the widest natural range of any North American herbivore, from the arid grasslands of Chihuahua State in northern Mexico, through the grasslands of the Great Plains of the United States and Canada, to the riparian meadows of interior Alaska. They can persist in arid regions (e.g. Mexico and New Mexico) and in areas experiencing deep snow cover (e.g., Yellowstone National Park). Grasses and sedges form the mainstay of the annual diet in all regions. However, summer and fall diets may be broader, including flowering plants, woody plant leaves, and lichens, in addition to grasses and sedges, depending on local availability. Bison excavate snow at foraging sites by sweeping it away using side to side motions of their muzzle. The plains bison undertook seasonal migrations when they were abundant prior to European settlement of the continent. Bison no longer migrate owing to land use change contributing to range restriction and depopulation. The Wood Bison was not migratory and remains so. Both subspecies exhibit strong seasonal aggregation during the calving through breeding seasons (May through August).</p>",
+    "threats": "In the 19th Century, market, subsistence and recreational hunting nearly eliminated the bison throughout its range in North America. Conservation measures have brought about limited recovery in the wild and in captive conservation herds. Private commercial production of bison has resulted in significant numerical recovery, but does not provide for conservation of the bison as wildlife in the sense used for Red List designation. Existing threats include: habitat loss; genetic manipulation of commercial bison for market traits; small population effects in most conservation herds; few herds are exposed to a full range of natural limiting factors (natural selection); cattle gene introgression; loss of genetic non-exchangeability through hybridization between bison subspecies; and the threat of depopulation as a management response to infection of some wild populations hosting reportable cattle diseases. Canada, the United States and Mexico list bison nationally as both wildlife and domestic livestock. Legal status varies among State and Provincial jurisdictions. In Canada, four provinces and two territories classify bison as both wildlife and livestock. Bison are legally classified as livestock in the United Sates only 10 states classify bison as wildlife in all or portions of the state. An additional threat to populations of this species is culling to prevent the spread of bovine tuberculosis and brucellosis.",
+    "measures": "<p><span lang=\"EN-US\">A recovery program for wood bison has existed in Canada since the early 1960s where the subspecies was designated as 'Threatened' by the Committee on Endangered Species of Wildlife in Canada (COSEWIC). In May 2004 COSEWIC assessed the status of plains bison and recommended listing them as 'Threatened' in Canada. National Refuges and Parks and State parks play an important role in maintaining conservation herds in Canada and the United States. Wild free-ranging herds are managed by government agencies. The Nature Conservancy manages 13 captive herds and the American Prairie Reserve manages one fenced bison herd primarily for conservation objectives. Restoration of large populations of plains bison are being considered in Alberta, southern Colorado, Arizona and northern Montana. The State of Alaska recently reintroduced wood bison to the wild in the Yukon region. Better coordination among various federal initiatives for plains bison conservation is being accomplished by a designated Department of Interior Bison Working Group commissioned by secretarial order in 2008. A Plains Bison reintroduction is scheduled for Banff National Park in spring 2017.<br/> <br/> The Bison Specialist Group (North America) produced a bison conservation assessment and action plan that provides support and guidance for policy development and conservation planning and management for public and private sector projects, including: numeric, geographic and genetic status of North American bison, including public and private herds; a review of legislation and policies of individual range states regarding bison conservation; geographic assessment of priority conservation areas in North America (Gates <em>et al</em>. 2010); enhancing the capacity of members of the Bison Specialist Group and organizations they represent to provide timely, innovative and practical solutions to conservation challenges; guidelines for management in support of species’ conservation and ecological restoration. </p>  <p><span lang=\"EN-US\">There are potential opportunities for ecological restoration of herds managed primarily for conservation on federal, state, provincial lands in some jurisdictions (Sanderson <span lang=\"EN-US\"><em>et al.</em><span lang=\"EN-US\"> 2008, Freese <em>et al.</em> 2007). Recently the U.S. Department of Interior published a document titled “looking forward” where they enumerated potential restoration sites in the United States (National Park Service 2014a). In addition the U.S. National Park Service has identified bison restoration as a key activity in their plan for the next 100 years. Badlands National Park is undertaking a bison range expansion within the parks boundaries that will permit increasing the population management target from 800 bison to &gt;1,000 bison.</span></span></p>  <p><span lang=\"EN-US\">There may also be opportunities for establishing herds on Native-owned lands that are managed for combined conservation and socio-economic purposes. A Buffalo Treaty that calls for bison restoration was recently signed among 15 indigenous tribes/first nations in Montana and Alberta. The American Indian tribes &#160;govern over 84 million acres in the western United States.&#160;In Montana the Blackfeet Nation is embarking upon a restoration project for plains bison (titled the Iinnii Initiative) in partnership with Glacier and Waterton National Parks in Montana and Alberta. The Assiniboine and Sioux Tribes of Fort Peck Reservation, Montana, also seek to host an operational quarantine facility that will provide an ongoing source of disease free culled Yellowstone bison for the purposes of conservation and cultural restoration throughout the United States. However, there are significant cultural, social and economic challenges in integrating western science-based approaches conservation to tribal communities.<br/> <br/> <em>Bison bison athabascae</em> is listed in CITES Appendix II.</p>",
+    "use_trade": "<p>Approximately 300,000 bison are commercially propagated on 4,000 farms and ranches in North America (based on data from 2014). Conservation practices vary widely among private owners and are not regulated. Escapes from private commercial herds have been documented in Montana, Alberta, and British Columbia. Artificial selection for market traits is a cause for concern: escaped individuals may become established in the wild or interbreed with established wild populations.</p>",
+    "rationale": "<p><span lang=\"EN-US\">This species is listed as Near Threatened in light of its dependence on ongoing conservation program to persist beyond the next 5 years, a very limited number of viable populations (five), and large number of small (13 of 20 less than 400) isolated populations. The North America bison population underwent a drastic decline in the 19th century caused by over hunting but has since partially recovered. There has been a modest increases in the number of conservation herds and individuals in populations managed for species conservation and ecological restoration, however, all mature individuals occur within active management programs which if ceased would result in the species qualifying for a threatened status. About 97% of the continental population is managed for private captive commercial propagation; very few of these herds are managed primarily for species conservation and none is managed in the public interest for conservation. Herds managed for conservation purposes in the public interest are typically small (&lt;400), and populations are widely dispersed with few geographic situations that provide conditions for natural movements between subpopulations. The total number of mature individuals in wild free-ranging and semi-free-ranging populations is estimated to be approximately 11,248-13,123 and only 4 subpopulations have more than 1,000 individuals, thus making this species nearly qualify for Vulnerable C2a(i). The species is not currently in decline but wild mature individuals could be greatly reduced if current management regimes are changed or removed. This is a conservation dependant species.<br/> <br/> The current number of ecologically restored large populations managed primarily for conservation (populations exceeding 1,000 and managed in the presence of most natural limiting factors) is small. The species is most limited in Mexico, where only one herd may remain in the wild; it is subject to adverse policies when individuals move across the international border into the United States where they are classified as livestock. Creation of opportunities for a few additional, large-scale ecological restoration projects is dependent on cooperation between government agencies and non-government organizations. Future progress in conservation and recovery of the North American bison will depend on significant changes in its legal status and management as wildlife by federal and state/provincial agencies, harmonization of policies and activities among agencies at multiple levels, cooperation with environmental organizations, and public tolerance and support of wild, free-ranging bison managed as wildife on limited, large-scale landscapes. Cooperation and coordination are particularly important where different agencies or organizations have separate management jurisdiction for adjacent land areas within an ecosystem unit in which ecological restoration of bison is possible.</p><p>  </p><p><span lang=\"EN-US\">The likelihood of wild bison increasing over the next five years is entirely dependent upon conservation interventions.&#160;Currently six of the 20 wild herds representing 11,956 animals (63.7%) are anchored by National Parks, Refuges or Sanctuaries. Without these large protected landscapes bison would not likely survive and the future survival of American bison would be in serious jeopardy. Beyond these 6 herds in protected areas the remaining 14 wild herds are dependent upon conservation actions and management decisions by conservation programs of States, Tribes and Provinces who regulate the populations to assure sustainability of these herds.&#160;None of the 20 wild bison herds would persist without the management prescriptions and subsequent actions of the managing authorities.&#160;Wood bison are currently protected under the Species at Risk Act and are managed under a National Recovery Strategy.&#160;Hence, wild bison (wood or plains) are totally dependent upon conservation actions and protected lands.&#160;American Bison would not persist without those intensive conservation measures.</span></p>",
+    "trend_justification": null,
+    "taxonomic_notes": "There are two recognized subspecies in North America: <em>Bison bison bison</em> and <em>B. b. athabascae</em>."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_1_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_2",
+      "description": {
+        "en": "Training"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_1",
+      "description": {
+        "en": "Formal education"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_3_1",
+      "description": {
+        "en": "Reintroduction"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Artificial/Aquatic - Canals and Drainage Channels, Ditches"
+      },
+      "code": "15_9"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Desert - Temperate"
+      },
+      "code": "8_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Desert - Cold"
+      },
+      "code": "8_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Inland Deltas"
+      },
+      "code": "5_13"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subarctic"
+      },
+      "code": "4_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Geothermal Wetlands"
+      },
+      "code": "5_12"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Moist"
+      },
+      "code": "2_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Shrubland - Subarctic"
+      },
+      "code": "3_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Shrubland - Mediterranean-type Shrubby Vegetation"
+      },
+      "code": "3_8"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Artificial/Aquatic - Irrigated Land (includes irrigation channels)"
+      },
+      "code": "15_7"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Saline, Brackish or Alkaline Lakes and Flats"
+      },
+      "code": "5_15"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Tundra"
+      },
+      "code": "4_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Shrub Dominated Wetlands"
+      },
+      "code": "5_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Artificial/Aquatic - Seasonally Flooded Agricultural Land"
+      },
+      "code": "15_8"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Seasonally Wet/Flooded"
+      },
+      "code": "4_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Shrubland - Boreal"
+      },
+      "code": "3_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Forest - Boreal"
+      },
+      "code": "1_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Maryland"
+      },
+      "code": "MRY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Alberta"
+      },
+      "code": "ABT-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Colorado"
+      },
+      "code": "COL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Wisconsin"
+      },
+      "code": "WIS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "West Virginia"
+      },
+      "code": "WVA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Kansas"
+      },
+      "code": "KAN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Missouri"
+      },
+      "code": "MSO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Iowa"
+      },
+      "code": "IOW-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": null,
+      "description": {
+        "en": "Texas"
+      },
+      "code": "TEX-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Nevada"
+      },
+      "code": "NEV-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Kentucky"
+      },
+      "code": "KTY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Oklahoma"
+      },
+      "code": "OKL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Virginia"
+      },
+      "code": "VRG-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "North Carolina"
+      },
+      "code": "NCA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Florida"
+      },
+      "code": "FLA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "New York"
+      },
+      "code": "NWY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "North Dakota"
+      },
+      "code": "NDA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GEO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Mississippi"
+      },
+      "code": "MSI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "District of Columbia"
+      },
+      "code": "WDC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Delaware"
+      },
+      "code": "DEL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Utah"
+      },
+      "code": "UTA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Reintroduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Arkansas"
+      },
+      "code": "ARK-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Ohio"
+      },
+      "code": "OHI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Arizona"
+      },
+      "code": "ARI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Pennsylvania"
+      },
+      "code": "PEN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Ontario"
+      },
+      "code": "ONT-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "South Carolina"
+      },
+      "code": "SCA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Alabama"
+      },
+      "code": "ALA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Manitoba"
+      },
+      "code": "MAN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "British Columbia"
+      },
+      "code": "BRC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Oregon"
+      },
+      "code": "ORE-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Tennessee"
+      },
+      "code": "TEN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Massachusetts"
+      },
+      "code": "MAS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Indiana"
+      },
+      "code": "INI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Montana"
+      },
+      "code": "MNT-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Saskatchewan"
+      },
+      "code": "SAS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Idaho"
+      },
+      "code": "IDA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Wyoming"
+      },
+      "code": "WYO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Washington"
+      },
+      "code": "WAS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Nebraska"
+      },
+      "code": "NEB-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Illinois"
+      },
+      "code": "ILL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Michigan"
+      },
+      "code": "MIC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Louisiana"
+      },
+      "code": "LOU-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "South Dakota"
+      },
+      "code": "SDA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Reintroduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Alaska"
+      },
+      "code": "ASK-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "California"
+      },
+      "code": "CAL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "New Mexico"
+      },
+      "code": "NWM-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Minnesota"
+      },
+      "code": "MIN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Yukon"
+      },
+      "code": "YUK-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Northwest Territories"
+      },
+      "code": "NWT-OO"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Establishing ex-situ production *"
+      },
+      "code": "16"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Other household goods"
+      },
+      "code": "11"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Fibre"
+      },
+      "code": "8"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Construction or structural materials"
+      },
+      "code": "9"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Handicrafts, jewellery, etc."
+      },
+      "code": "12"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Storms & flooding"
+      },
+      "code": "11_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Problematic native species/diseases"
+      },
+      "code": "8_2"
+    },
+    {
+      "scope": null,
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects (species is not the target)"
+      },
+      "code": "5_1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Nomadic grazing"
+      },
+      "code": "2_3_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Shifting agriculture"
+      },
+      "code": "2_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": null,
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other ecosystem modifications"
+      },
+      "code": "7_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Aune, K., Jørgensen, D. & Gates, C.",
+      "value": [
+        "Keith Aune (Wildlife Conservation Society)",
+        "Dolly Jørgensen",
+        "Cormack Gates (IUCN SSC Bison RLA)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Schipper, J.",
+      "value": [
+        "Jan Schipper (IUCN SSC Small Carnivore Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Traylor Holzer, K. & Hardy, A.",
+      "value": [
+        "Kathy Traylor Holzer (IUCN SSC Conservation Breeding Specialist Group )",
+        "Amanda Hardy (Wildlife Conservation Society)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "The original version of this assessment was published with an older version of the distribution map. This errata assessment uses the updated distribution map."
+    }
+  ],
+  "references": [
+    {
+      "citation": "IUCN. 2018. The IUCN Red List of Threatened Species. Version 2018-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 28 June 2018).",
+      "year": "2018",
+      "title": "The IUCN Red List of Threatened Species. Version 2018-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2018-1"
+    },
+    {
+      "citation": "Nowak, R.M. 1991. <i>Walker's Mammals of the World</i>. The Johns Hopkins University Press, Baltimore, USA and London, UK.",
+      "year": "1991",
+      "title": "Walker's Mammals of the World",
+      "author": "Nowak, R.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wilson, D.E. and Reeder, D.M. 2005. <i>Mammal Species of the World</i>. Johns Hopkins University Press, Baltimore, MD, USA.",
+      "year": "2005",
+      "title": "Mammal Species of the World",
+      "author": "Wilson, D.E. and Reeder, D.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Freese, C. H., Aune, K. E., Boyd, D. P., Derr, J. N., Forrest, J. C., Cormack Gates, C., Gogan, P. J., Grassel, S. M., Halbert, N. D., Kunkel, K. and Redford, K. H. 2007. Second chance for the plains bison. <i>Biological Conservation</i> 136: 175-184.",
+      "year": "2007",
+      "title": "Second chance for the plains bison",
+      "author": "Freese, C. H., Aune, K. E., Boyd, D. P., Derr, J. N., Forrest, J. C., Cormack Gates, C., Gogan, P. J., Grassel, S. M., Halbert, N. D., Kunkel, K. and Redford, K. H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Halbert, N. D. and Derr, J. N. 2007. A comprehensive evaluation of cattle introgression into US Federal bison herds. <i>Journal of Heredity</i> 98(1): 1-12.",
+      "year": "2007",
+      "title": "A comprehensive evaluation of cattle introgression into US Federal bison herds",
+      "author": "Halbert, N. D. and Derr, J. N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Boyd, D. and Gates, C. C. 2006. A Brief Review of the Status of Plains Bison in North America. <i>Journal of the West</i> 45(2): 15-21.",
+      "year": "2006",
+      "title": "A Brief Review of the Status of Plains Bison in North America",
+      "author": "Boyd, D. and Gates, C. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gates, C. C., Stelfox, B., Muhly, T., Chowns, T. and Hudson, R. J. 2005. The ecology of bison movements and distribution in and beyond Yellowstone National Park: A critical review with implications for winter use and transboundary population management. University of Calgary, Faculty of Environmental Design, Calgary, Alberta, Canada.",
+      "year": "2005",
+      "title": "The ecology of bison movements and distribution in and beyond Yellowstone National Park: A critical review with implications for winter use and transboundary population management",
+      "author": "Gates, C. C., Stelfox, B., Muhly, T., Chowns, T. and Hudson, R. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Komers, P. E., Messier, F. and Gates, C. C. 1994. <i>Plasticity of reproductive behaviour in wood bison bulls: on risks and opportunities</i>.",
+      "year": "1994",
+      "title": "Plasticity of reproductive behaviour in wood bison bulls: on risks and opportunities",
+      "author": "Komers, P. E., Messier, F. and Gates, C. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Stephenson, R. O., Gerlach, S. C., Gurthrie, R. D., Harington, C. R., Mills, R. O. and Hare, G. 2001. Wood bison in late holocene Alaska and adjacent Canada; paleontological, archaeological and historical records. In: S. C. Gerlach and M. S. Murray (eds), <i>People and wildlife in northern North America: essays in honor of R. Dale Guthrie</i>, pp. 125-159. BAR International Series 944.",
+      "year": "2001",
+      "title": "Wood bison in late holocene Alaska and adjacent Canada; paleontological, archaeological and historical records",
+      "author": "Stephenson, R. O., Gerlach, S. C., Gurthrie, R. D., Harington, C. R., Mills, R. O. and Hare, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gates, C. C., Elkin, B. and Dragon, D. 1995. Investigation, control and epizootiology of anthrax in an isolated, free-roaming bison population in northern Canada. <i>Canadian Journal of Veterinary Research</i> 59: 256-264.",
+      "year": "1995",
+      "title": "Investigation, control and epizootiology of anthrax in an isolated, free-roaming bison population in northern Canada",
+      "author": "Gates, C. C., Elkin, B. and Dragon, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Reynolds, H., Gates, C. and Glahoht, R. 2003. Bison. In: J. Chapman and G. Feldhamer (eds), <i>Wild mammals of North America, biology, management, and economics</i>, pp. Pages 1009 - 1060. Johns Hopkins University Press, London, UK.",
+      "year": "2003",
+      "title": "Bison",
+      "author": "Reynolds, H., Gates, C. and Glahoht, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ward, T. J., Skow, L. C., Gallagher, D. S., Schnabel, R. D., Nall, C. A., Kolenda, C. E., Davis, S. K., Taylor, J. F. and Derr, J. N. 2001. Differential introgression of uniparentally inherited markers in bison populations with hybrid ancestries. <i>Animal Genetics</i> 32: 89-91.",
+      "year": "2001",
+      "title": "Differential introgression of uniparentally inherited markers in bison populations with hybrid ancestries",
+      "author": "Ward, T. J., Skow, L. C., Gallagher, D. S., Schnabel, R. D., Nall, C. A., Kolenda, C. E., Davis, S. K., Taylor, J. F. and Derr, J. N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Van Zyll de Jong, C. G. 1986. A systematic study of recent bison, with particular consideration of the wood bison. <i>National Museum of Natural Science Publication</i> 6: 69 pp.",
+      "year": "1986",
+      "title": "A systematic study of recent bison, with particular consideration of the wood bison",
+      "author": "Van Zyll de Jong, C. G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gates, C. C., Stephenson, R. O., Reynolds, H. W., Van Zyll De Jong, C. G., Schwantje, H., Hoefs, M., Nishi, J., Cool, N., Chisholm, J., James, A. and Koonz, B. 2001. National recovery plan for the wood bison (<i>Bison bison athabascae</i>). Recovery of Nationally Endangered Wildlife (RENEW), Ottawa, Ontario, Canada.",
+      "year": "2001",
+      "title": "National recovery plan for the wood bison (<i>Bison bison athabascae</i>)",
+      "author": "Gates, C. C., Stephenson, R. O., Reynolds, H. W., Van Zyll De Jong, C. G., Schwantje, H., Hoefs, M., Nishi, J., Cool, N., Chisholm, J., James, A. and Koonz, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Van Zyll de Jong, C. G., Gates, C., Reynolds, H. and Olson, W. 1995. Phenotypic variation in remnant populations of North American bison. <i>Journal of Mammalogy</i> 76: 391-405.",
+      "year": "1995",
+      "title": "Phenotypic variation in remnant populations of North American bison",
+      "author": "Van Zyll de Jong, C. G., Gates, C., Reynolds, H. and Olson, W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Boyd, D. P. 2003. Conservation of North American bison: status and recommendations. Faculty of Environmental Design, University of Calgary.",
+      "year": "2003",
+      "title": "Conservation of North American bison: status and recommendations",
+      "author": "Boyd, D. P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sanderson, E., Redford, K. H., Weber, B., Aune, K., Baldes, D., Berger, J., Carter, D., Curtin, C., Derr, J., Dobrott, S., Fearn, E., Fleener, C., Forrest, S., Gerlach, C., Gates, C. C., Gross, J., Gogan, P., Grassel, S., Hilty, J. A., Jensen, M., Kunkel, K., Lammers, D., List, R., Minkowski, K., Olson, T., Pague, C., Robertson, P. B. and Stephenson, B. 2008. The Ecological Future of the North American Bison: Conceiving Long-term, Large-scale Conservation of Wildlife. <i>Conservation Biology</i> 22(2): 252-266.",
+      "year": "2008",
+      "title": "The Ecological Future of the North American Bison: Conceiving Long-term, Large-scale Conservation of Wildlife",
+      "author": "Sanderson, E., Redford, K. H., Weber, B., Aune, K., Baldes, D., Berger, J., Carter, D., Curtin, C., Derr, J., Dobrott, S., Fearn, E., Fleener, C., Forrest, S., Gerlach, C., Gates, C. C., Gross, J., Gogan, P., Grassel, S., Hilty, J. A., Jensen, M., Kunkel, K., Lammers, D., List, R., Minkowski, K., Olson, T., Pague, C., Robertson, P. B. and Stephenson, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Reynolds, H. W. and Hawley, A. W. L. 1987. Bison ecology in relation to agricultural development in the Slave River lowlands, NWT. <i>Occasional Paper - Canadian Wildlife Service</i> 63: 74 pp.",
+      "year": "1987",
+      "title": "Bison ecology in relation to agricultural development in the Slave River lowlands, NWT",
+      "author": "Reynolds, H. W. and Hawley, A. W. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wilson, G. and Strobeck, C. 1999. Genetic variation within and relatedness among wood and plains bison populations. <i>Genome</i> 42: 483-496.",
+      "year": "1999",
+      "title": "Genetic variation within and relatedness among wood and plains bison populations",
+      "author": "Wilson, G. and Strobeck, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Committee on the Status of Endangered Wildlife in Canada. 2004. Assessment and status report on the plains bison (<i>Bison bison bison</i>) in Canada. Committee on the Status of Endangered Wildlife in Canada, Ottawa, Canada.",
+      "year": "2004",
+      "title": "Assessment and status report on the plains bison (<i>Bison bison bison</i>) in Canada",
+      "author": "Committee on the Status of Endangered Wildlife in Canada",
+      "citation_short": null
+    },
+    {
+      "citation": "Gross, J. E., Wang, G. 2005. Effects of population control strategies on retention of genetic diversity in National Park Service bison (<i>Bison bison</i>) herds.  Final Report, Yellowstone Research Group, USGS-BRD. United State Geological Survey, Bozeman, Montana, USA.",
+      "year": "2005",
+      "title": "Effects of population control strategies on retention of genetic diversity in National Park Service bison (<i>Bison bison</i>) herds",
+      "author": "Gross, J. E., Wang, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "List, R., Ceballos, G., Curtin, C., Gogan, J. P., Pacheco, J. and Truett, J. 2007. Historic Distribution and Challenges to Bison Recovery in the Northern Chihuahuan Desert. <i>Conservation Biology</i> 21(6): 1487-1494.",
+      "year": "2007",
+      "title": "Historic Distribution and Challenges to Bison Recovery in the Northern Chihuahuan Desert",
+      "author": "List, R., Ceballos, G., Curtin, C., Gogan, J. P., Pacheco, J. and Truett, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "National Park Service. 2014. A comprehensive review of ungulate management by the National Park Service: Second century challenges, opportunities, and coherence.  Natural Resource Report NPS/NRSS/BRMD/NRR – 2014/8988. National Park Service, Fort Collins, Colorado.",
+      "year": "2014",
+      "title": "A comprehensive review of ungulate management by the National Park Service: Second century challenges, opportunities, and coherence.",
+      "author": "National Park Service",
+      "citation_short": null
+    },
+    {
+      "citation": "Hedrick, P.W. 2009. Conservation genetics and North American bison (<i>Bison bison<i/>). <i>Journal of Heredity </i> 100(4): 411-420.",
+      "year": "2009",
+      "title": "Conservation genetics and North American bison (<i>Bison bison<i/>)",
+      "author": "Hedrick, P.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fuller, J.A., Garrott, R.A., White, P.J., Aune, K.E., Roffe, T.J., ad Rhyan, J.C. 2007. Reproduction and survival of Yellowstone bison. <i>Journal of Wildlife Management</i> 71(7): 2365-2372.18.",
+      "year": "2007",
+      "title": "Reproduction and survival of Yellowstone bison",
+      "author": "Fuller, J.A., Garrott, R.A., White, P.J., Aune, K.E., Roffe, T.J., ad Rhyan, J.C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Reed, D.H., O’Grady, J.J., Ballou, J.D. and Frankham, R. 2003. The frequency and severity of catastrophic die-offs in vertebrates. <i>Animal Conservation</i> 6: 109-114.",
+      "year": "2003",
+      "title": "The frequency and severity of catastrophic die-offs in vertebrates",
+      "author": "Reed, D.H., O’Grady, J.J., Ballou, J.D. and Frankham, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Geremia, C., Wallen, R. and White, P.J. 2014 . Population dynamics and adaptive management of Yellowstone bison. <i>National Park Service, Yellowstone National Park, Mammoth, Wyoming</i>.",
+      "year": "2014 ",
+      "title": "Population dynamics and adaptive management of Yellowstone bison",
+      "author": "Geremia, C., Wallen, R. and White, P.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Halbert, N.D. and Derr, J.N. 2008. Patterns of genetic variation in US federal bison herds. <i>Molecular Ecology</i> 17: 4963–4977.",
+      "year": "2008",
+      "title": "Patterns of genetic variation in US federal bison herds",
+      "author": "Halbert, N.D. and Derr, J.N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gates, C.C., Freese, C.H., Gogan, P.J.P. and Kotzman, M. 2010. <i>America Bison: Status Survey and Conservation Guidelines 2010</i>. IUCN, Gland, Switzerland.",
+      "year": "2010",
+      "title": "America Bison: Status Survey and Conservation Guidelines 2010",
+      "author": "Gates, C.C., Freese, C.H., Gogan, P.J.P. and Kotzman, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brodie, J.F. 2008. A review of American bison (<i>Bos bison<i/>) demography and population dynamics. <i>American Bison Society Working Paper</i> 2.",
+      "year": "2008",
+      "title": "A review of American bison (<i>Bos bison<i/>) demography and population dynamics",
+      "author": "Brodie, J.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Plumb, G.E., P. J. White, and K. Aune. 2013. American Bison. <i>Wild Cattle of the World</i>, Cambridge University Press, UK.",
+      "year": "2013",
+      "title": "American Bison",
+      "author": "Plumb, G.E., P. J. White, and K. Aune",
+      "citation_short": null
+    },
+    {
+      "citation": "National Park Service. 2014. DOI Bison Report: Looking Forward.  In: Natural Resource Report NPS/NRSS/BRMD/NRR—2014/821 (ed.),  . National Park Service, Fort Collins, Colorado.",
+      "year": "2014",
+      "title": "DOI Bison Report: Looking Forward",
+      "author": "National Park Service",
+      "citation_short": null
+    },
+    {
+      "citation": "Wilson, G.A., Olson, W. and Strobeck, C. 2002. Reproductive success in wood bison (<i>Bison bison athabascae<i/>) established using molecular techniques. <i>Canadian Journal of Zoology</i> 80(9): 1537-1548.",
+      "year": "2002",
+      "title": "Reproductive success in wood bison (<i>Bison bison athabascae<i/>) established using molecular techniques",
+      "author": "Wilson, G.A., Olson, W. and Strobeck, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Redford, K. H., K. Aune, and E. Fearn. 2009. The second recovery of bison: Ecological recovery of North America’s largest mammal. <i>The Wildlife Professional</i> 3:  46-50.",
+      "year": "2009",
+      "title": "The second recovery of bison: Ecological recovery of North America’s largest mammal",
+      "author": "Redford, K. H., K. Aune, and E. Fearn",
+      "citation_short": null
+    },
+    {
+      "citation": "Ball, M.C., Fulton, T.L., and Wilson, G.A. In press. Genetic analysis of wild bison in Alberta, Canada: implications for recovery and disease management.",
+      "year": null,
+      "title": "Genetic analysis of wild bison in Alberta, Canada: implications for recovery and disease management",
+      "author": "Ball, M.C., Fulton, T.L., and Wilson, G.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "White, P.J., Wallen, R.L., and Hallac, D.E. 2015. <i>Yellowstone Bison: Conserving an American Icon in Modern Society</i>. Yellowstone Association, Yellowstone National Park.",
+      "year": "2015",
+      "title": "Yellowstone Bison: Conserving an American Icon in Modern Society",
+      "author": "White, P.J., Wallen, R.L., and Hallac, D.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fuhlendorf, S. D., Brady W. Allred and Robert G. Hamilton. 2010. <i>Bison as keystone herbivores on the Great Plains: Can cattle serve as proxy for evolutionary grazing patterns? ABS Working Paper No 4</i>. Wildlife Conservation Society, NY.",
+      "year": "2010",
+      "title": "Bison as keystone herbivores on the Great Plains: Can cattle serve as proxy for evolutionary grazing patterns? ABS Working Paper No 4",
+      "author": "Fuhlendorf, S. D., Brady W. Allred and Robert G. Hamilton",
+      "citation_short": null
+    },
+    {
+      "citation": "O’Grady, J.J., Brook, B.W., Reed, D.H., Ballou, J.D., Tonkyn, D.W. and Frankham, R. 2006. Realistic levels of inbreeding depression strongly affect extinction risk in wild populations. <i>Biological Conservation </i> 133: 42-51.",
+      "year": "2006",
+      "title": "Realistic levels of inbreeding depression strongly affect extinction risk in wild populations",
+      "author": "O’Grady, J.J., Brook, B.W., Reed, D.H., Ballou, J.D., Tonkyn, D.W. and Frankham, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2017. The IUCN Red List of Threatened Species. Version 2017-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 5 December 2017).",
+      "year": "2017",
+      "title": "The IUCN Red List of Threatened Species. Version 2017-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2017-3"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

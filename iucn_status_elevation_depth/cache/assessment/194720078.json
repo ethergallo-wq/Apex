@@ -1,0 +1,2981 @@
+{
+  "assessment_date": "2018-11-07T00:00:00.000+00:00",
+  "year_published": "2021",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 4292,
+  "criteria": "A2bd",
+  "url": "https://www.iucnredlist.org/species/4292/194720078",
+  "citation": "Rigby, C.L., Barreto, R., Carlson, J., Fernando, D., Fordham, S., Francis, M.P., Herman, K., Jabado, R.W., Liu, K.M., Marshall, A., Romanov, E. & Kyne, P.M. 2021. Cetorhinus maximus (amended version of 2019 assessment). The IUCN Red List of Threatened Species 2021: e.T4292A194720078. Accessed on 15 May 2026.",
+  "assessment_id": 194720078,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 4292,
+    "scientific_name": "Cetorhinus maximus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "CHONDRICHTHYES",
+    "order_name": "LAMNIFORMES",
+    "family_name": "CETORHINIDAE",
+    "genus_name": "Cetorhinus",
+    "species_name": "maximus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Gunnerus, 1765)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Shark Specialist Group (sharks and rays)",
+        "url": "https://www.iucnssg.org",
+        "description": "Chair: Rima Jabado (email: rimajabado@hotmail.com)\nRed List Authority Coordinator: Cassie Rigby (email: crigby@westnet.com.au)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Pelerin",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Peregrino",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "Basking Shark",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Squalus maximus Gunnerus, 1765",
+        "status": "ACCEPTED",
+        "genus_name": "Squalus",
+        "species_name": "maximus",
+        "species_author": "Gunnerus, 1765",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Endangered"
+    },
+    "code": "EN"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": 1264,
+    "upper_depth_limit": 0,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": "34",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Not Applicable"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p>The Basking Shark occurs mainly in the Atlantic and Pacific Oceans; in the Indian Ocean, it is reported only from southern Australia, Indonesia, and South Africa (Ebert <em>et al.</em> 2013, Fahmi and White 2015).</p>",
+    "population": "<p>There are no data on the absolute global population size, although it is likely to be greater than 20,000 individuals (and thus not approaching the thresholds for criterion C: small population size and decline). Genetic results indicate one global population&#160;(Noble <em>et al.</em> 2006, Francis 2017). Basking Shark total abundances have been estimated for a number of regions: 4,200 and 632 (CI: 377–1,058) in the Bay of Fundy, Canada in 2007 and  2011, respectively (Campana <em>et al.</em> 2008, Westgate <em>et al. </em>2014); 10,125  in Canadian Northwest Atlantic waters in 2007 (highly uncertain estimate) (Campana  <em>et al.</em> 2008); 6,671–14,925 in New England shelf waters, United States in 1982 (Kenney <em>et al.</em> 1985); 985 on the west coast of Scotland in 2010 (95% CI: 495–1,683) (Gore <em>et al. </em>2016); and, possibly 19,151 (+/-10,629) for Scotland and Ireland combined (Gore <em>et al.</em> 2013).<br/><br/>Landings and sightings data are available from the Northeast Atlantic (e.g.&#160;CITES 2002, Southall&#160;<em>et al.&#160;</em>2005, Speedie<em>&#160;et al.</em>&#160;2009, Witt<em>&#160;et al.</em>&#160;2012, ICES 2018); landings data are available from Japanese waters (Yokawa 2017); and, sightings-per-unit-effort (SPUE) are available from New Zealand (Francis 2017, M. Francis unpubl. data).<br/><br/>In the Northeast Atlantic, the landings of Basking Sharks declined  dramatically during the period 1946–2017 (CITES 2002, ICES 2018). Landings within  ICES Subareas 1–14 peaked in the mid-1960s and mid-1970s at around 5,000  tonne (t), declined rapidly during the 1980s to less than 1,000 t  annually, after which there was a peak in 1992 of 1,697 t, followed by a rapid decline. There is evidence of serial exploitation and depletion patterns in different ICES Subareas during this fishery. For example,  the artisanal Achill Island fishery, which targeted Basking Sharks in a  single bay with rowing boats, nets, and hand harpoons, declined rapidly after a  decade of high catches during the 1950s and 1960s, and Basking Sharks did not return to this location (CITES 2002). Following the ban on target Basking Shark  fisheries in 2006–2007, landings  declined to &lt;30 t annually and have  been &lt;0.1 t since 2013  (ICES 2018). There are no effort data or catch-per-unit-effort (CPUE) data available for recent  years (ICES 2018) which means caution  is required in the interpretation of these data for population abundance  trends.<strong>&#160;</strong>However, the large catch declines during the  1960s to 1980s are believed to reflect unsustainable fishing levels and a  decline in population abundance (CITES 2002, Sims <em>et al.</em> 2015). Since then, public record sightings and boat  surveys in  the U.K. for 1988–2008 suggest population recovery following  cessation  of targeting in the mid-2000s, based on decreased sightings of  small  Basking Sharks and increased sightings of medium-sized and large  sharks  (Witt <em>et al. </em>2012). However, when current research  survey  encounter rates are compared with historical target fishery catch   rates, the population is estimated to be well below 30% of historical   abundance, although it is suspected to be stable and possibly increasing in   European waters (Sims <em>et al.</em> 2015).<br/><br/>In the Japanese target Basking Shark fishery of the 1960s and 1970s,  estimates of catches (in numbers) severely declined during the mid-1970s from a high of about 100 individuals per year until the  fishery closed in the early 1980s, with catches since then at, or near, zero (Uchida 1995, Yokawa 2017). These data are unusual, having records of the same catch (100 sharks) annually from 1967 to 1974 followed by a 50% increase in 1975 and an 87% decrease in 1976, with no information on effort; hence they must be interpreted with caution. In New Zealand, the SPUE over the period 1985–2015 peaked in 1988–1991, which may  have been due to Japanese trawl vessels targeting sharks during that time, but since the mid-2000s catches have been at, or near, zero. The reason for this decline cannot be definitively determined as it may be indicative of changed fishing practices,  regional shifts in availability of Basking Sharks, or a real abundance  decline (Francis and Sutton 2012, Francis 2017). The Japanese and New Zealand data may not be reliable indices of abundance.</p><p>Further to the landings and SPUE data above, there are estimates of population  changes from five regions: Northwest Atlantic, Mediterranean Sea, Southwest Atlantic, Northeast Pacific, and Southwest  Pacific. In the Canadian Northwest Atlantic, declines were estimated in  the Bay of Fundy between 2008 and 2011 based on aerial and boat surveys  from different studies, although direct comparison between the two  abundance estimates is constrained by different estimation methods  (Campana <em>et al.</em> 2008, Westgate <em>et al.</em> 2014). Furthermore,  population models in 2008 suggested a 23% probability that the abundance  was decreasing, although there was high uncertainty in the model data  (Campana <em>et al.</em> 2008). In United States Atlantic waters, there has been no evidence of decline since 1979 (Campana <em>et al</em>.  2008). Population trends in the  Mediterranean Sea are unknown, but it is suspected that the Basking Shark  has declined by at least 50% over three generations (Sims <em>et al. </em>2016).  In temperate waters of the Southwest Atlantic, Basking Shark were  historically common and are now rare (Soto 2000, Lucifora <em>et al. </em>2015).  In the Northeast Pacific, the Basking Shark was persecuted as a  destructive 'pest' and although targeted fisheries ceased in the  1970s,  the abundance is considered to still be at a historic low with fewer  than 6 sightings per year off the coast of British Colombia (Wallace and Gisborne 2006, McFarlane&#160;<em>et al.&#160;</em>2009, Dewar <em>et al.</em>  2018). In the Southwest Pacific, the New Zealand Threat Classification  System found that the Basking Shark was Vulnerable based on the criteria that the population size within New Zealand is likely to be &lt;5,000 mature individuals, with a predicted decline over three generations of 10–50% (Duffy <em>et al.</em> 2018).</p><p><strong></strong></p><strong></strong>Across  these regions, there have been some severe historic declines, however, the global population may now be beginning to stabilize, following cessation of target fishing, high levels of protection, and indications of recovery (particularly in the Northeast Atlantic, although elsewhere we have little information upon which is assess stability). Recovery is expected to take  hundreds of years due to the low biological productivity of Basking  Shark, exacerbated by the removal of adult females by target fisheries (CITES 2002). Abundances are still estimated to be well below historic levels  and there is ongoing demand for the high-value fins, and a 50–79% global  population reduction is suspected over the past three generations (102 years).  Therefore, the Basking Shark is assessed as Endangered A2bd.<p></p>",
+    "habitats": "<p>The Basking Shark is a planktivorous coastal-pelagic species named for its habit of swimming slowly at the surface but it also vertical migrates to depths of 1,264 m (Gore <em>et al. </em>2008). It occurs in temperate and tropical waters, but in temperate waters it is present near the surface and in tropical and equatorial waters, it occurs deeper, below the thermocline (Ebert <em>et al.</em> 2013, Dewar <em>et al</em>. 2018). It is the second largest shark after the Whale Shark (<em>Rhincodon typus</em>)  and reaches a maximum estimated size of 1,276–1,973 cm total length  (TL) (Parker and Stott 1965, Holden 1974, Weigmann 2016). The species  aggregates in coastal waters, with aggregations of up to 1,398  individuals observed in the northeast United States, and it also undertakes large-scale  migrations (Gore <em>et al.</em> 2008, Skomal <em>et al. </em>2009, Witt <em>et al. </em>2014, Doherty <em>et al.</em> 2017, Crowe <em>et al. </em>2018, Dewar<em> et al.</em>  2018). Males mature at 400–750 cm TL, females mature at 690–980 cm  TL, and size at birth is estimated at 150–200 cm TL (Matthews and Parker  1950, Parker and  Stott 1965, Pauly  1978, Compagno 1984, Sims&#160;<em>et al</em>. 1997,&#160;Fowler 2005, Ebert <em>et al. </em>2013,  Francis 2017). Reproduction is viviparous and oophagous with an  estimated gestation of 12–36 months and a likely resting period of two  years between litters (Parker and Stott 1965, Pauly 1978, 2002; Compagno 1984). Only one litter of 6 near-term pups has been reported  (Sund 1943). Female age-at-maturity is estimated at 16–20 years (18  years average) and maximum age is estimated at 50 years; generation  length is therefore 34 years (Compagno 1984, Pauly 2002, Fowler 2005).  Annual rate of population increase is estimated at 0.013–0.023 and  natural mortality is low at M = ~0.07 per year (Pauly 2002,  Fowler 2005).</p>",
+    "threats": "<p>  </p><p>Currently there are no target fisheries for the Basking Shark, however it was targeted for several centuries by harpoon and net fisheries for meat, fins, skin, cartilage, and liver oil (Rose 1996, Dewar <em>et al. </em>2018, SARA 2019). Surface fisheries have primarily caught large, recently-mated females (CITES 2002). The large fins are extremely valuable in the fin trade being worth up to US$57,000 for a single, large fin (Clarke <em>et al.</em> 2004, Magnussen <em>et al. </em>2007). Targeted fisheries were banned in many countries during the 2000s (ICES 2016, Dewar <em>et al. </em>2018).  The species is still taken as bycatch by trawl, trammel nets, and  set-net fisheries, and becomes entangled in pot lines (Fowler 2005,  Mancusi <em>et al</em>. 2005, COSEWIC 2009, Francis and Smith 2010, Francis and Sutton 2012, Francis and Lyon 2012, Murua <em>et al</em>.  2013, ICES 2018). Many range states across its distribution now have  regulations that require release of live individuals (see Conservation section).  Strikes from recreational and commercial shipping are a threat due to  the species' habit of spending time at the surface (Pirotta <em>et al. </em>2019). Collisions from recreational boats are relatively frequent in United Kingdom waters (OSPAR 2009).&#160;</p>",
+    "measures": "<p></p><p>The success of actions agreed through international wildlife and fisheries treaties depends on implementation at the domestic level; for sharks, such follow up actions have to date been seriously lacking. The Basking Shark was among the first shark species listed under several wildlife treaties. Many fishing nations worldwide and the European Union protect Basking Sharks through wildlife conservation legislation or apply zero quotas under fisheries management regulations.<br/><br/>In 2002, the Basking Shark was added to Appendix II of CITES, which requires Parties to ensure that exports be accompanied by permits based on findings that parts are sourced from legal and sustainable fisheries. In 2005, the Basking Shark was listed on Appendix I and II of the Convention on Migratory Species (CMS), which respectively, obligates Parties to strictly protect the species and to work regionally toward conservation, specifically through the CMS Memorandum of Understanding for Migratory Sharks.<br/><br/>In 2005, the North-East Atlantic Fisheries Commission (NEAFC) adopted its first ban on directed Basking Shark fisheries in the Convention Area. This measure has since been regularly renewed; the current ban, adopted in 2015, expires at the end of 2019 and will be reconsidered based on scientific advice (ICES 2016). There are a range of conservation measures in the UK, along with a recommended Basking Shark code of conduct (OSPAR 2009). The Basking Shark is listed on Appendix II of the Bern  Convention for the Conservation of European Wildlife and Habitats. In 2012, the General Fisheries Commission for the Mediterranean (GFCM) banned retention and mandated careful release for the Basking Shark and 23 other elasmobranch species listed on the Barcelona Convention Annex II. Implementation by GFCM Parties, however, has been very slow.<br/><br/>To allow recovery, it is recommended that all Basking Shark retention and landings be prohibited, at least as long as the global population is classified as Endangered. Initiatives to avoid contact, prevent capture, promote safe release, and improve catch (including discard) reporting are also urgently needed, as is full implementation of additional commitments agreed through international treaties (MarLIN 2018).<br/><br/>Basking Shark tourism is managed in some locations but if sustainable tourism industries are indeed to be developed around encounters with these sharks, they should be legislated, continuously monitored, and enforced with permitting systems to make sure operators and tourists are adhering to best practice protocols and codes of conduct.</p>    <p></p>",
+    "use_trade": "<p>No utilization or commercial trade of this species is currently known to exist, although prior to 2012, meat and fins were exported from Norway and fins from New Zealand.  No  commercial trade records have been noted in the Convention on International Trade in Endangered Species (CITES) trade database  since 2012, although not all trade records may be reported to CITES.  However, it is likely that if caught, the meat would still be used fresh for  either local consumption or exported internationally along with the  fins.</p><p></p>",
+    "rationale": "The Basking Shark (<em>Cetorhinus maximus</em>) is a very large (to ~1,100 cm total length), highly migratory, filter-feeding shark distributed mainly in the Atlantic and Pacific Oceans in coastal and pelagic habitats from the surface to 1,264 m. It occurs near the surface in temperate waters and deeper, below the thermocline, in tropical waters. The species has low biological productivity with limited fecundity and late age-at-maturity. Although no longer targeted, it is still caught as bycatch in trawl, trammel nets, and set-net fisheries, and becomes entangled in pot lines. The large fins are extremely valuable in the fin trade. Across regions, there have been some severe  historic decline, however there are indications of some stability  and possible slow recovery since cessation of target fishing and high levels of protection.  The global population may now be beginning  to stabilize, with signs of that from the Northeast Atlantic, although elsewhere there is little information upon which is assess stability.<strong> </strong>However, abundances  are still estimated to be well below historic levels  and there is  ongoing demand for the high-value fins, and a global population reduction of 50–79% is suspected over the past three generations (102 years). Therefore, the Basking Shark is assessed as Endangered A2bd.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    }
+  ],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - northeast"
+      },
+      "code": "67"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - eastern"
+      },
+      "code": "57"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - western"
+      },
+      "code": "51"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mediterranean and Black Sea"
+      },
+      "code": "37"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - eastern central"
+      },
+      "code": "77"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southwest"
+      },
+      "code": "41"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - northwest"
+      },
+      "code": "61"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - southeast"
+      },
+      "code": "87"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northwest"
+      },
+      "code": "21"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - southwest"
+      },
+      "code": "81"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - western central"
+      },
+      "code": "71"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southeast"
+      },
+      "code": "47"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - eastern central"
+      },
+      "code": "34"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northeast"
+      },
+      "code": "27"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - western central"
+      },
+      "code": "31"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Mesopelagic (200-1000m)"
+      },
+      "code": "10_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Bathypelagic (1000-4000m)"
+      },
+      "code": "10_3"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belgium"
+      },
+      "code": "BE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iceland"
+      },
+      "code": "IS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Galápagos"
+      },
+      "code": "GAL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Haiti"
+      },
+      "code": "HT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Suriname"
+      },
+      "code": "SR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Anguilla"
+      },
+      "code": "AI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tuvalu"
+      },
+      "code": "TV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Democratic People's Republic of"
+      },
+      "code": "KP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Trinidad and Tobago"
+      },
+      "code": "TT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Caledonia"
+      },
+      "code": "NC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Benin"
+      },
+      "code": "BJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Palau"
+      },
+      "code": "PW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Curaçao"
+      },
+      "code": "CW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Selvagens"
+      },
+      "code": "SEL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bosnia and Herzegovina"
+      },
+      "code": "BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Taiwan, Province of China"
+      },
+      "code": "TW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norfolk Island"
+      },
+      "code": "NF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sao Tome and Principe"
+      },
+      "code": "ST"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lebanon"
+      },
+      "code": "LB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominican Republic"
+      },
+      "code": "DO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "American Samoa"
+      },
+      "code": "AS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Samoa"
+      },
+      "code": "WS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Solomon Islands"
+      },
+      "code": "SB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cook Islands"
+      },
+      "code": "CK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, British"
+      },
+      "code": "VG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States Minor Outlying Islands"
+      },
+      "code": "UM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bermuda"
+      },
+      "code": "BM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "NZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Sahara"
+      },
+      "code": "EH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Republic of"
+      },
+      "code": "KR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Turks and Caicos Islands"
+      },
+      "code": "TC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sweden"
+      },
+      "code": "SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Denmark"
+      },
+      "code": "DK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cuba"
+      },
+      "code": "CU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uruguay"
+      },
+      "code": "UY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Antigua and Barbuda"
+      },
+      "code": "AG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Netherlands"
+      },
+      "code": "NL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Azores"
+      },
+      "code": "AZO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Puerto Rico (main island)"
+      },
+      "code": "PUE-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominica"
+      },
+      "code": "DM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Micronesia, Federated States of "
+      },
+      "code": "FM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cabo Verde"
+      },
+      "code": "CV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bonaire, Sint Eustatius and Saba"
+      },
+      "code": "BQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Puerto Rico"
+      },
+      "code": "PR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chile"
+      },
+      "code": "CL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cayman Islands"
+      },
+      "code": "KY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Faroe Islands"
+      },
+      "code": "FO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Côte d'Ivoire"
+      },
+      "code": "CI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Fiji"
+      },
+      "code": "FJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tonga"
+      },
+      "code": "TO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jersey"
+      },
+      "code": "JE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sierra Leone"
+      },
+      "code": "SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ghana"
+      },
+      "code": "GH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Barbados"
+      },
+      "code": "BB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Clipperton I."
+      },
+      "code": "CPI-CL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "El Salvador"
+      },
+      "code": "SV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Aruba"
+      },
+      "code": "AW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Liberia"
+      },
+      "code": "LR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guadeloupe"
+      },
+      "code": "GP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Polynesia"
+      },
+      "code": "PF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guernsey"
+      },
+      "code": "GG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Monaco"
+      },
+      "code": "MC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Martinique"
+      },
+      "code": "MQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nauru"
+      },
+      "code": "NR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pitcairn"
+      },
+      "code": "PN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hawaiian Is."
+      },
+      "code": "HAW-HI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kiribati"
+      },
+      "code": "KI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Wallis and Futuna"
+      },
+      "code": "WF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Marshall Islands"
+      },
+      "code": "MH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bahamas"
+      },
+      "code": "BS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malta"
+      },
+      "code": "MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guam"
+      },
+      "code": "GU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Navassa I."
+      },
+      "code": "HAI-NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Niue"
+      },
+      "code": "NU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Philippines"
+      },
+      "code": "PH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Papua New Guinea"
+      },
+      "code": "PG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Helena, Ascension and Tristan da Cunha"
+      },
+      "code": "SH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madeira"
+      },
+      "code": "MDR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ireland"
+      },
+      "code": "IE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gibraltar"
+      },
+      "code": "GI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jamaica"
+      },
+      "code": "JM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Falkland Islands (Malvinas)"
+      },
+      "code": "FK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal (mainland)"
+      },
+      "code": "POR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belize"
+      },
+      "code": "BZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tokelau"
+      },
+      "code": "TK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northern Mariana Islands"
+      },
+      "code": "MP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Christmas Island"
+      },
+      "code": "CX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cyprus"
+      },
+      "code": "CY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Equatorial Guinea"
+      },
+      "code": "GQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Vanuatu"
+      },
+      "code": "VU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea-Bissau"
+      },
+      "code": "GW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Isle of Man"
+      },
+      "code": "IM"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Shipping lanes"
+      },
+      "code": "4_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_4_4"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": "Yes",
+      "score": "Past Impact",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": "Yes",
+      "score": "Past Impact",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Rigby, C.L., Barreto, R., Carlson, J., Fernando, D., Fordham, S., Francis, M.P., Herman, K., Jabado, R.W., Liu, K.M., Marshall, A., Romanov, E. & Kyne, P.M.",
+      "value": [
+        "Katelyn Herman (Georgia Aquarium, Atlanta, Georgia / IUCN SSC Shark Specialist Group)",
+        "Daniel Fernando",
+        "Rima Jabado (Elasmo Project)",
+        "Peter Kyne (Charles Darwin University, Australia / IUCN SSC Shark RLA Coordinator)",
+        "Sonja Fordham (Shark Advocates International)",
+        "John Carlson (NOAA)",
+        "Andrea Marshall (IUCN SSC Shark Specialist Group)",
+        "Malcolm Francis (IUCN SSC Shark Specialist Group)",
+        "Cassandra Rigby (James Cook University, Queensland, Australia)",
+        "Evgeny Romanov",
+        "Kwang-Ming Liu",
+        "Rodrigo Barreto (Centro de Pesquisa e Conservação da Biodiversidade Marinha do Sudeste e Sul (CEPSUL/ICMBio))"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Dulvy, N.K. & Fowler, S.L.",
+      "value": [
+        "Nicholas Dulvy (Simon Fraser University, Canada / IUCN SSC Shark Specialist Group)",
+        "Sarah Fowler (IUCN SSC Shark Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Fowler, S.L. & Finucci, B.",
+      "value": [
+        "Brit Finucci (IUCN SSC Shark Specialist Group)",
+        "Sarah Fowler (IUCN SSC Shark Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Rigby, C.L., Kyne, P.M., Pollom, R., Herman, K. & Dulvy, N.K.",
+      "value": [
+        "Riley Pollom (Project Seahorse)",
+        "Katelyn Herman (Georgia Aquarium, Atlanta, Georgia / IUCN SSC Shark Specialist Group)",
+        "Nicholas Dulvy (Simon Fraser University, Canada / IUCN SSC Shark Specialist Group)",
+        "Cassandra Rigby (James Cook University, Queensland, Australia)",
+        "Peter Kyne (Charles Darwin University, Australia / IUCN SSC Shark RLA Coordinator)"
+      ]
+    },
+    {
+      "credit_type_name": "institutions",
+      "full": "Georgia Aquarium",
+      "value": [
+        "Georgia Aquarium"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "Paraguay was removed from the countries of occurrence as this was an error."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Weigmann, S. 2016. Annotated checklist of the living sharks, batoids and chimaeras (Chondrichthyes) of the world, with a focus on biogeographical diversity. <i>Journal of Fish Biology</i> 88(3): 837-1037.",
+      "year": "2016",
+      "title": "Annotated checklist of the living sharks, batoids and chimaeras (Chondrichthyes) of the world, with a focus on biogeographical diversity",
+      "author": "Weigmann, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ebert, D.A., Fowler, S. and Compagno, L. 2013. <i>Sharks of the World. A Fully Illustrated Guide</i>. Wild Nature Press, Plymouth, United Kingdom.",
+      "year": "2013",
+      "title": "Sharks of the World: A Fully Illustrated Guide",
+      "author": "Ebert, D.A., Fowler, S. and Compagno, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pauly, D. 2002. Growth and mortality of the basking shark <i>Cetorhinus maximus</i> and their implications for management of whale sharks <i>Rhincodon typus</i>. In: S.L. Fowler, T.M. Reed and F.A. Dipper (eds), <i>Elasmobranch Biodiversity, Conservation and Management. Proceedings of the International Seminar and Workshop, Sabah, Malaysia, July 1997</i>, pp. 199–208. IUCN SSC Shark Specialist Group. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "2002",
+      "title": "Growth and mortality of the basking shark <i>Cetorhinus maximus</i> and their implications for management of whale sharks <i>Rhincodon typus</i>",
+      "author": "Pauly, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Compagno, L.J.V. 1984. Sharks of the World. An annotated and illustrated catalogue of shark species to date. Part I (Hexanchiformes to Lamniformes). FAO Fisheries Synopsis, FAO, Rome.",
+      "year": "1984",
+      "title": "Sharks of the World. An annotated and illustrated catalogue of shark species to date. Part I (Hexanchiformes to Lamniformes)",
+      "author": "Compagno, L.J.V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rose, D.A. 1996. <i>An overview of world trade in sharks and other cartilaginous fishes</i>. TRAFFIC Network, Cambridge, UK.",
+      "year": "1996",
+      "title": "An overview of world trade in sharks and other cartilaginous fishes",
+      "author": "Rose, D.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Matthews, L.H. and Parker, H.W. 1950. Notes on the anatomy and biology of the basking shark, <i>Cetorhinus maximus</i> (Gunner). <i>Proceedings of the Zoological Society of London</i> 120: 535–576.",
+      "year": "1950",
+      "title": "Notes on the anatomy and biology of the basking shark, <i>Cetorhinus maximus</i> (Gunner)",
+      "author": "Matthews, L.H. and Parker, H.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Parker, H.W. and Stott, F.C. 1965. Age, size and vertebral calcification in the basking shark <i>Cetorhinus maximus</i> (Gunnerus). <i>Zoologische Mededelingen</i> 40: 305–319.",
+      "year": "1965",
+      "title": "Age, size and vertebral calcification in the basking shark <i>Cetorhinus maximus</i> (Gunnerus)",
+      "author": "Parker, H.W. and Stott, F.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sims, D.W., Fox, A.M. and Merrett, D.A. 1997. Basking shark occurrence off south-west England in relation to zooplankton abundance. <i>Journal of Fish Biology</i> 51: 436–440.",
+      "year": "1997",
+      "title": "Basking shark occurrence off south-west England in relation to zooplankton abundance",
+      "author": "Sims, D.W., Fox, A.M. and Merrett, D.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Holden, M.J. 1974. Problems in the rational exploitation of elasmobranch populations and some suggested solutions. In: F.R. Harden Jones (ed.), <i>Sea Fisheries Research</i>, Paul Elek (Scientific Books) Ltd, London, England.",
+      "year": "1974",
+      "title": "Problems in the rational exploitation of elasmobranch populations and some suggested solutions",
+      "author": "Holden, M.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Uchida, S. 1995. Basking shark. In: Japan Fisheries Resource Conservation Association (ed.), <i>Basic data for the Japanese rare wild animals II. (Japanese)</i>, pp. 159–167.",
+      "year": "1995",
+      "title": "Basking shark",
+      "author": "Uchida, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sund, O. 1943. Et brugdelbarsel. <i>Naturen</i> 67: 285–286.",
+      "year": "1943",
+      "title": "Et brugdelbarsel",
+      "author": "Sund, O.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pauly, D. 1978. A critique of some literature on the growth, reproduction and mortality of the lamnid shark Cetorhinus maximus (Gunnerus).  ICES Pelagic Fish Committee paper C.M. 1978/H:17.",
+      "year": "1978",
+      "title": "A critique of some literature on the growth, reproduction and mortality of the lamnid shark Cetorhinus maximus (Gunnerus).",
+      "author": "Pauly, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mancusi, C., Clò, S., Affronte, M., Bradaï, M.M., Hemida, F., Serena, F., Soldo, A. and Vacchi, M. 2005. On the presence of basking shark (<i>Cetorhinus maximus</i>) in the Mediterranean Sea. <i>Cybium</i> 29(4): 399-405.",
+      "year": "2005",
+      "title": "On the presence of basking shark (<i>Cetorhinus maximus</i>) in the Mediterranean Sea",
+      "author": "Mancusi, C., Clò, S., Affronte, M., Bradaï, M.M., Hemida, F., Serena, F., Soldo, A. and Vacchi, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Witt, M.J., Hardy, T., Johnson, L., McClellan, C.M., Pikesley, S.K., Ranger, S., Richardson, P.B., Solandt, J.-L., Speedie, C., Williams, R. and Godley, B.J. 2012. Basking sharks in the northeast Atlantic: spatio-temporal trends from sightings in UK waters. <i>Marine Ecology Progress Series</i> 459: 121-134.",
+      "year": "2012",
+      "title": "Basking sharks in the northeast Atlantic: spatio-temporal trends from sightings in UK waters",
+      "author": "Witt, M.J., Hardy, T., Johnson, L., McClellan, C.M., Pikesley, S.K., Ranger, S., Richardson, P.B., Solandt, J.-L., Speedie, C., Williams, R. and Godley, B.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Southall, E.J., Sims, D.W., Metcalfe, J.D., Doyle, J.I., Fanshawe, S., Lacey, C., Shrimpton, J., Solandt, J.-L. and Speedie, C.D. 2005. Spatial distribution patterns of basking sharks on the European shelf: preliminary comparison of satellite-tag geolocation, survey and public sightings data. <i>Journal of the Marine Biological Association of the United Kingdom</i> 85: 1083-1088.",
+      "year": "2005",
+      "title": "Spatial distribution patterns of basking sharks on the European shelf: preliminary comparison of satellite-tag geolocation, survey and public sightings data",
+      "author": "Southall, E.J., Sims, D.W., Metcalfe, J.D., Doyle, J.I., Fanshawe, S., Lacey, C., Shrimpton, J., Solandt, J.-L. and Speedie, C.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "ICES. 2016. Report of the Working Group on Elasmobranch Fishes (WGEF).  ICES CM/ACOM:20. ICES, Lisbon, Portugal.",
+      "year": "2016",
+      "title": "Report of the Working Group on Elasmobranch Fishes (WGEF)",
+      "author": "ICES",
+      "citation_short": null
+    },
+    {
+      "citation": "Winker, H., Carvalho, F. and Kapur, M. 2018. JABBA: Just Another Bayesian Biomass Assessment. <i>Fisheries Research </i> 204: 275–288.",
+      "year": "2018",
+      "title": "JABBA: Just Another Bayesian Biomass Assessment",
+      "author": "Winker, H., Carvalho, F. and Kapur, M. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2019. The IUCN Red List of Threatened Species. Version 2019-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 December 2019).",
+      "year": "2019",
+      "title": "The IUCN Red List of Threatened Species. Version 2019-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2019-3"
+    },
+    {
+      "citation": "Clarke, S. 2004. Shark product trade in Mainland China and Hong Kong and implementation of the CITES shark listings. Hong Kong, China: TRAFFIC East Asia.",
+      "year": "2004",
+      "title": "Shark product trade in Mainland China and Hong Kong and implementation of the CITES shark listings. Hong Kong, China: TRAFFIC East Asia",
+      "author": "Clarke, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Campana, S.E., Gibson, J, Brazner, J., Marks, L., Joyce, W., Gosselin, J-F., Kenney, R.D., Shelton, P., Simpson, M. and Lawson, J. 2008. Status of Basking Sharks in Atlantic Canada. Research Document 2008/004. Canadian Science Advisory Secretariat. Fisheries and Oceans Canada.",
+      "year": "2008",
+      "title": "Status of Basking Sharks in Atlantic Canada. Research Document 2008/004",
+      "author": "Campana, S.E., Gibson, J, Brazner, J., Marks, L., Joyce, W., Gosselin, J-F., Kenney, R.D., Shelton, P., Simpson, M. and Lawson, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "CITES. 2002. Basking Shark <i>Cetorhinus maximus</i> Proposal E12.36. Available at: <a href=\"https://www.cites.org/sites/default/files/eng/cop/12/prop/E12-P36.pdf.\">https://www.cites.org/sites/default/files/eng/cop/12/prop/E12-P36.pdf.</a>. (Accessed: 11 March 2019).",
+      "year": "2002",
+      "title": "Basking Shark <i>Cetorhinus maximus</i> Proposal E12.36",
+      "author": "CITES",
+      "citation_short": ""
+    },
+    {
+      "citation": "Committee on the Status of Endangered Wildlife in Canada (COSEWIC). COSEWIC assessment and status report on the Basking Shark <i>Cetorhinus maximus</i> Atlantic population in Canada. Special Concern.",
+      "year": null,
+      "title": "COSEWIC assessment and status report on the Basking Shark <i>Cetorhinus maximus</i> Atlantic population in Canada. Special Concern",
+      "author": "Committee on the Status of Endangered Wildlife in Canada (COSEWIC)",
+      "citation_short": null
+    },
+    {
+      "citation": "COSEWIC. 2009. COSEWIC assessment and status report on the Basking Shark <i>Cetorhinus maximus</i> Atlantic population in Canada. Special Concern. Committee on the Status of Endangered Wildlife in Canada, Ottawa.",
+      "year": "2009",
+      "title": "COSEWIC assessment and status report on the Basking Shark <i>Cetorhinus maximus</i> Atlantic population in Canada. Special Concern",
+      "author": "COSEWIC",
+      "citation_short": ""
+    },
+    {
+      "citation": "Crowe, L.M., O'Brien, O., Curtis, T.H., Leiter, S.M., Kenney, R.D., Duley, P. and Kraus, S.D. 2018.  Characterization of large basking shark <i>Cetorhinus maximus</i> aggregations in the western North Atlantic Ocean. <i>Journal of Fish Biology</i> 92(5): 1371-1384.",
+      "year": "2018",
+      "title": " Characterization of large basking shark <i>Cetorhinus maximus</i> aggregations in the western North Atlantic Ocean",
+      "author": "Crowe, L.M., O'Brien, O., Curtis, T.H., Leiter, S.M., Kenney, R.D., Duley, P. and Kraus, S.D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Dewar, H., Wilson, S.G., Hyde, J.R., Snodgrass, O.E., Leising, A., Lam, C.H., Domokos, R., Wraith, J.A., Bograd, S.J., Van Sommeran, S.R. and Kohin, S. 2018. Basking Shark (<i>Cetorhinus maximus</i>) movements in the Eastern North Pacific determined using satellite telemetry. <i>Frontiers in Marine Science </i> 5(163): doi: 10.3389/fmars.2018.00163.",
+      "year": "2018",
+      "title": "Basking Shark (<i>Cetorhinus maximus</i>) movements in the Eastern North Pacific determined using satellite telemetry",
+      "author": "Dewar, H., Wilson, S.G., Hyde, J.R., Snodgrass, O.E., Leising, A., Lam, C.H., Domokos, R., Wraith, J.A., Bograd, S.J., Van Sommeran, S.R. and Kohin, S",
+      "citation_short": ""
+    },
+    {
+      "citation": "Doherty, P.D., Baxter, J.M., Gell, F.R,  Godley, B.J., Graham, R.T., Hall, G., Hall, J., Hawkes, L.A., Henderson, S.M., Johnson, L., Speedie, C. and Witt, M.J. 2017. Long-term satellite tracking reveals variable seasonal migration strategies of basking sharks in the north-east Atlantic. <i>Scientific reports</i> 7(42837): 1-10.",
+      "year": "2017",
+      "title": "Long-term satellite tracking reveals variable seasonal migration strategies of basking sharks in the north-east Atlantic",
+      "author": "Doherty, P.D., Baxter, J.M., Gell, F.R,  Godley, B.J., Graham, R.T., Hall, G., Hall, J., Hawkes, L.A., Henderson, S.M., Johnson, L., Speedie, C. and Witt, M.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Duffy, C., Francis, M., Dunn, M., Finucci, B. Ford, R., Hitchmough, R. and Rolfe, J. 2018. Conservation status of New Zealand chondrichthyans (chimaeras, sharks and rays) 2016. Department of Conservation Te Papa Atawhai.",
+      "year": "2018",
+      "title": "Conservation status of New Zealand chondrichthyans (chimaeras, sharks and rays) 2016",
+      "author": "Duffy, C., Francis, M., Dunn, M., Finucci, B. Ford, R., Hitchmough, R. and Rolfe, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fahmi and White, W.T. 2015. First record of the basking shark <i>Cetorhinus maximus</i> (Lamniformes: Cetorhinidae) in Indonesia. <i>Marine Biodiversity Records</i> 8: e18.",
+      "year": "2015",
+      "title": "First record of the basking shark <i>Cetorhinus maximus</i> (Lamniformes: Cetorhinidae) in Indonesia",
+      "author": "Fahmi and White, W.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fahmi and White, W.T. 2015. First record of the basking shark <i>Cetorhinus maximus</i> (Lamniformes: Cetorhinidae) in Indonesia. <i>Marine Biodiversity Records</i> 8: e18.",
+      "year": "2015",
+      "title": "First record of the basking shark <i>Cetorhinus maximus</i> (Lamniformes: Cetorhinidae) in Indonesia",
+      "author": "Fahmi and White, W.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fowler, S.L. 2005. Basking shark <i>Cetorhinus maximus</i> (Gunnerus, 1765). In: Fowler, S.L., Cavanagh, R.D., Camhi, M., Burgess, G.H., Cailliet, G.M., Fordham, S.V., Simpfendorfer, C.A. and Musick, J.A (eds), <i>Sharks, Rays and Chimaeras: The Status of the Chondrichthyan Fishes. Status Survey</i>, pp. 252-256. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "2005",
+      "title": "Basking shark <i>Cetorhinus maximus</i> (Gunnerus, 1765)",
+      "author": "Fowler, S.L",
+      "citation_short": null
+    },
+    {
+      "citation": "Fowler, S.L. 2005. Basking shark <i>Cetorhinus maximus</i> (Gunnerus, 1765). In: Fowler, S.L., Cavanagh, R.D., Camhi, M., Burgess, G.H., Cailliet, G.M., Fordham, S.V., Simpfendorfer, C.A. and Musick, J.A (eds), <i>Sharks, Rays and Chimaeras: The Status of the Chondrichthyan Fishes. Status Survey</i>, pp. 252-256. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "2005",
+      "title": "Basking shark <i>Cetorhinus maximus</i> (Gunnerus, 1765)",
+      "author": "Fowler, S.L",
+      "citation_short": null
+    },
+    {
+      "citation": "Francis, M. 2017. Review of commercial fishery interactions and population information for New Zealand basking shark. Prepared for Department of Conservation. May 2017. National Institute of Water & Atmospheric Research.",
+      "year": "2017",
+      "title": "Review of commercial fishery interactions and population information for New Zealand basking shark. Prepared for Department of Conservation. May 2017",
+      "author": "Francis, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Francis, M.P. and Lyon, W. 2012. Review of commercial fishery interactions and population information for eight New Zealand protected fish species. NIWA, Wellington.",
+      "year": "2012",
+      "title": "Review of commercial fishery interactions and population information for eight New Zealand protected fish species",
+      "author": "Francis, M.P. and Lyon, W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Francis, M.P. and Smith, M.H. 2010. Basking shark (<i>Cetorhinus maximus</i>) bycatch in New Zealand fisheries, 1194-95 to 2007-08. NIWA, Wellington.",
+      "year": "2010",
+      "title": "Basking shark (<i>Cetorhinus maximus</i>) bycatch in New Zealand fisheries, 1194-95 to 2007-08",
+      "author": "Francis, M.P. and Smith, M.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Francis, M.P. and Sutton, P. 2012. Basking shark bycatch review. NIWA, Wellington.",
+      "year": "2012",
+      "title": "Basking shark bycatch review",
+      "author": "Francis, M.P. and Sutton, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gore, M.A., Allan, H., Berrow, S., Correale, V., Dick, C., Frey, P.H., Gilkes, G., Ormond, R.F. and Speedie, C. 2013. Just how mnay basking sharks are there? Using photo-identification to assess population abundance. Poter. <i>European Elamobranch Association. 17th Conference, Plymouth</i>.",
+      "year": "2013",
+      "title": "Just how mnay basking sharks are there? Using photo-identification to assess population abundance. Poter",
+      "author": "Gore, M.A., Allan, H., Berrow, S., Correale, V., Dick, C., Frey, P.H., Gilkes, G., Ormond, R.F. and Speedie, C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Gore, M.A., Frey, P.H., Ormond, R.F., Allan, H. and Gilkes, G. 2016. Use of photo-identification and mark-recapture methodology to assess Basking Shark (<i>Cetorhinus maximus</i>) populations. <i>PLOS ONE </i> 11(3): e0150160.",
+      "year": "2016",
+      "title": "Use of photo-identification and mark-recapture methodology to assess Basking Shark (<i>Cetorhinus maximus</i>) populations",
+      "author": "Gore, M.A., Frey, P.H., Ormond, R.F., Allan, H. and Gilkes, G",
+      "citation_short": null
+    },
+    {
+      "citation": "Gore, M.A., Frey, P.H., Ormond, R.F., Allan, H. and Gilkes, G. 2016. Use of photo-identification and mark-recapture methodology to assess Basking Shark (<i>Cetorhinus maximus</i>) populations. <i>PLOS ONE </i> 11(3): e0150160.",
+      "year": "2016",
+      "title": "Use of photo-identification and mark-recapture methodology to assess Basking Shark (<i>Cetorhinus maximus</i>) populations",
+      "author": "Gore, M.A., Frey, P.H., Ormond, R.F., Allan, H. and Gilkes, G",
+      "citation_short": null
+    },
+    {
+      "citation": "Gore, M.A., Frey, P.H., Ormond, R.F., Allan, H. and Gilkes, G. 2016. Use of photo-identification and mark-recapture methodology to assess Basking Shark (<i>Cetorhinus maximus</i>) populations. <i>PLOS ONE </i> 11(3): e0150160.",
+      "year": "2016",
+      "title": "Use of photo-identification and mark-recapture methodology to assess Basking Shark (<i>Cetorhinus maximus</i>) populations",
+      "author": "Gore, M.A., Frey, P.H., Ormond, R.F., Allan, H. and Gilkes, G",
+      "citation_short": null
+    },
+    {
+      "citation": "Gore, M.A., Frey, P.H., Ormond, R.F., Allan, H. and Gilkes, G. 2016. Use of photo-identification and mark-recapture methodology to assess Basking Shark (<i>Cetorhinus maximus</i>) populations. <i>PLOS ONE </i> 11(3): e0150160.",
+      "year": "2016",
+      "title": "Use of photo-identification and mark-recapture methodology to assess Basking Shark (<i>Cetorhinus maximus</i>) populations",
+      "author": "Gore, M.A., Frey, P.H., Ormond, R.F., Allan, H. and Gilkes, G",
+      "citation_short": null
+    },
+    {
+      "citation": "Gore, M.A., Frey, P.H., Ormond, R.F., Allan, H. and Gilkes, G. 2016. Use of photo-identification and mark-recapture methodology to assess Basking Shark (<i>Cetorhinus maximus</i>) populations. <i>PLOS ONE </i> 11(3): e0150160.",
+      "year": "2016",
+      "title": "Use of photo-identification and mark-recapture methodology to assess Basking Shark (<i>Cetorhinus maximus</i>) populations",
+      "author": "Gore, M.A., Frey, P.H., Ormond, R.F., Allan, H. and Gilkes, G",
+      "citation_short": null
+    },
+    {
+      "citation": "Gore, M.A., Rowat, D., Hall, J., Gell, F.R. and Ormond, R.F. 2008. Transatlantic migration and deep mid-ocean diving by basking shark. <i>Biology Letters</i> 4(4): 395-398.",
+      "year": "2008",
+      "title": "Transatlantic migration and deep mid-ocean diving by basking shark",
+      "author": "Gore, M.A., Rowat, D., Hall, J., Gell, F.R. and Ormond, R.F. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "ICES WGEF Report. 2018. Section 7 Basking Shark in the Northeast Atlantic (ICES Areas 1-14).  Report of the Working Group on Elasmobranch Fishes (WGEF). International Council for the Exploration of the Sea.",
+      "year": "2018",
+      "title": "Section 7 Basking Shark in the Northeast Atlantic (ICES Areas 1-14)",
+      "author": "ICES WGEF Report",
+      "citation_short": null
+    },
+    {
+      "citation": "Kenney, R. D., Owen, R. E. and Winn, H. E. 1985. Shark distributions off Northeast United States from marine mammal survey. <i>Copeia</i>: 220-223.",
+      "year": "1985",
+      "title": "Shark distributions off Northeast United States from marine mammal survey",
+      "author": "Kenney, R. D., Owen, R. E. and Winn, H. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lucifora, L.O., Figueroa, D.E., Barbini, S.A., Di Giácomo, E.E. and Waessle, J.A. 2015. Estimating the geographic range of a threatened shark in a data-poor region: <i>Cetorhinus maximus</i> in the South Atlantic Ocean. <i>Current Zoology</i> 61(5): 811-826.",
+      "year": "2015",
+      "title": "Estimating the geographic range of a threatened shark in a data-poor region: <i>Cetorhinus maximus</i> in the South Atlantic Ocean",
+      "author": "Lucifora, L.O., Figueroa, D.E., Barbini, S.A., Di Giácomo, E.E. and Waessle, J.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Magnussen, J.E., Pikitch, E.K., Clarke, S.C., Nicholson, C., Hoelzel, A.R. and Shivji, M.S. 2007. Genetic tracking of basking shark products in international trade. <i>Animal Conservation</i> 10(2): 199-207.",
+      "year": "2007",
+      "title": "Genetic tracking of basking shark products in international trade",
+      "author": "Magnussen, J.E., Pikitch, E.K., Clarke, S.C., Nicholson, C., Hoelzel, A.R. and Shivji, M.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "MarLIN. 2019. Basking Shark <i>Cetorhinus maximus</i>. Available at: <a href=\"https://www.marlin.ac.uk/species/detail/1438\">https://www.marlin.ac.uk/species/detail/1438</a>. (Accessed: 10 March 2019).",
+      "year": "2019",
+      "title": "Basking Shark <i>Cetorhinus maximus</i>",
+      "author": "MarLIN",
+      "citation_short": null
+    },
+    {
+      "citation": "McFarlane, G., King, J., Leask, K. and Christensen, L. B. 2009. Assessment of information used to develop a Recovery Potential Assessment for basking shark <i>Cetorhinus maximus</i> (Pacific Population) in Canada. DFO Canadian Science Advisory Secretariat Research Document.",
+      "year": "2009",
+      "title": "Assessment of information used to develop a Recovery Potential Assessment for basking shark <i>Cetorhinus maximus</i> (Pacific Population) in Canada",
+      "author": "McFarlane, G., King, J., Leask, K. and Christensen, L. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Murua, H., F. J. Abascal, J. Amande, J. Ariz, P. Bach, P. Chavance, R. Coelho, M. Korta, F. Poisson, M. N. Santos and Seret, B. 2013. Provision of scientific advice for the purpose of the implementation of the EUPOA sharks. Final Report. European Commission, Studies for Carrying out the Common Fisheries Policy (MARE/2010/11 - LOT 2). IOTC-2013-WPEB09-45.",
+      "year": "2013",
+      "title": "Provision of scientific advice for the purpose of the implementation of the EUPOA sharks. Final Report. European Commission, Studies for Carrying out the Common Fisheries Policy (MARE/2010/11 - LOT 2)",
+      "author": "Murua, H., F. J. Abascal, J. Amande, J. Ariz, P. Bach, P. Chavance, R. Coelho, M. Korta, F. Poisson, M. N. Santos and Seret, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Noble, L.R., Jones, C.S., Sarginson, J., Metcalfe, J.D., Sims, D.W. and Pawson, M.G. 2006. Conservation genetics of Basking Sharks. Final report for Defra Tender CR0288. Department for Environment, Food and Rural Affairs.",
+      "year": "2006",
+      "title": "Conservation genetics of Basking Sharks. Final report for Defra Tender CR0288",
+      "author": "Noble, L.R., Jones, C.S., Sarginson, J., Metcalfe, J.D., Sims, D.W. and Pawson, M.G",
+      "citation_short": null
+    },
+    {
+      "citation": "OSPAR. 2009. Background document on Basking Shark, <i>Cetorhinus maximus</i> - Update. Biodiversity and Ecosystem Series. OSPAR Commission.",
+      "year": "2009",
+      "title": "Background document on Basking Shark, <i>Cetorhinus maximus</i> - Update. Biodiversity and Ecosystem Series",
+      "author": "OSPAR",
+      "citation_short": null
+    },
+    {
+      "citation": "Pirotta, V., Grech, A., Jonsen, I.D., Laurance, W.F. and Harcourt, R.G. 2019. Consequences of global shipping traffic for marine giants. <i>Frontiers in Ecology and the Environment </i> 17(1): 39-47.",
+      "year": "2019",
+      "title": "Consequences of global shipping traffic for marine giants",
+      "author": "Pirotta, V., Grech, A., Jonsen, I.D., Laurance, W.F. and Harcourt, R.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sims, D., Fowler, S.L., Clò, S., Jung, A., Soldo, A. and Bariche, M. 2015. <i>Cetorhinus maximus</i>. Europe Regional Assessment The IUCN Red List of Threatened Species 2015: e.T4292A48953216. (Accessed: 5 March 2019).",
+      "year": "2015",
+      "title": "<i>Cetorhinus maximus</i>. Europe Regional Assessment The IUCN Red List of Threatened Species 2015: e.T4292A48953216",
+      "author": "Sims, D., Fowler, S.L., Clò, S., Jung, A., Soldo, A. and Bariche, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Sims, D., Fowler, S.L., Clò, S., Jung, A., Soldo, A. and Bariche, M. 2016. <i>Cetorhinus maximus</i>. Mediterranean Regional Assessment. The IUCN Red List of Threatened Species 2016: e.T4292A16527877. (Accessed: 5 March 2019).",
+      "year": "2016",
+      "title": "<i>Cetorhinus maximus</i>. Mediterranean Regional Assessment. The IUCN Red List of Threatened Species 2016: e.T4292A16527877",
+      "author": "Sims, D., Fowler, S.L., Clò, S., Jung, A., Soldo, A. and Bariche, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Skomal, G.B., Zeeman, S.I., Chisholm, J.H., Summers, E.L., Walsh, H.J., McMahon, K.W. and Thorrold, S.R. 2009. Transequatorial Migrations by Basking Sharks in the Western Atlantic Ocean. <i>Current Biology</i> 19(12): 1019-1022.",
+      "year": "2009",
+      "title": "Transequatorial Migrations by Basking Sharks in the Western Atlantic Ocean",
+      "author": "Skomal, G.B., Zeeman, S.I., Chisholm, J.H., Summers, E.L., Walsh, H.J., McMahon, K.W. and Thorrold, S.R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Soto, J.M.R. 2000. Sobre a presença do tubarão-peregrino, <i>Cetorhinus maximus</i> (Gunnerus, 1765) (Lamniformes, Cetorhinidae), em águas brasileiras. <i>Biotemas (UFSC)</i> 13(1): 73-88.",
+      "year": "2000",
+      "title": "Sobre a presença do tubarão-peregrino, <i>Cetorhinus maximus</i> (Gunnerus, 1765) (Lamniformes, Cetorhinidae), em águas brasileiras",
+      "author": "Soto, J.M.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Species at risk public register (SARA). 2019. Species Profile. Basking Shark Pacific Population. Available at: <a href=\"https://wildlife-species.canada.ca/species-risk-registry/species/speciesDetails_e.cfm?sid=977\">https://wildlife-species.canada.ca/species-risk-registry/species/speciesDetails_e.cfm?sid=977</a>. (Accessed: 10 March 2019).",
+      "year": "2019",
+      "title": "Species Profile. Basking Shark Pacific Population",
+      "author": "Species at risk public register (SARA)",
+      "citation_short": null
+    },
+    {
+      "citation": "Speedie, C.D., Johnson, L.A. and Witt,  M.J. 2009. Basking shark hotspots on the West Coast of Scotland: Key sites, threats and implications for conservation of the species. Scottish Natural Heritage Commissioned Report No. 339.",
+      "year": "2009",
+      "title": "Basking shark hotspots on the West Coast of Scotland: Key sites, threats and implications for conservation of the species",
+      "author": "Speedie, C.D., Johnson, L.A. and Witt,  M.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Wallace, S. and Gisborne, B. 2006. <i>Basking Sharks: The Slaughter of BC's Gentle Giants</i>. New Star Books, Vancouver.",
+      "year": "2006",
+      "title": "Basking Sharks: The Slaughter of BC's Gentle Giants",
+      "author": "Wallace, S. and Gisborne, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Westgate, A.J., Koopman, H.N., Siders, Z.A., Wong, S.N.P. and Ronconi, R.A. 2014. Population density and abundance of basking sharks <i>Cetorhinus maximus</i> in the lower Bay of Fundy, Canada. <i>Endangered Species Research</i> 23(2): doi: 10.3354/esr00567.",
+      "year": "2014",
+      "title": "Population density and abundance of basking sharks <i>Cetorhinus maximus</i> in the lower Bay of Fundy, Canada.",
+      "author": "Westgate, A.J., Koopman, H.N., Siders, Z.A., Wong, S.N.P. and Ronconi, R.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Witt, M.J., Doherty, P.D., Godley, B.J., Graham, R.T., Hawkes, L.A. and Henderson, S.M. 2014. Basking shark satellite tagging project: insights into basking shark (<i>Cetorhinus maximus</i>) movement, distribution and behaviour using satellite telemetry (Phase 1, July 2014). Scottish Natural Heritage Commissioned Report 752.",
+      "year": "2014",
+      "title": "Basking shark satellite tagging project: insights into basking shark (<i>Cetorhinus maximus</i>) movement, distribution and behaviour using satellite telemetry (Phase 1, July 2014).",
+      "author": "Witt, M.J., Doherty, P.D., Godley, B.J., Graham, R.T., Hawkes, L.A. and Henderson, S.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yokawa, K. 2017. Basking Shark <i>Cetorhinus maximus</i>. In: Agency JFRaE (ed.), <i>State of International Fisheries Resources 2016 (Kokusai Gyogyou Shigen No Genkyou 2016)</i>, Japan Fisheries Research and Education Agency [In Japanese].",
+      "year": "2017",
+      "title": "Basking Shark <i>Cetorhinus maximus</i>",
+      "author": "Yokawa, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2021. The IUCN Red List of Threatened Species. Version 2021-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 25 March 2021).",
+      "year": "2021",
+      "title": "The IUCN Red List of Threatened Species. Version 2021-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2021-1"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

@@ -1,0 +1,1294 @@
+{
+  "assessment_date": "2011-03-30T01:00:00.000+01:00",
+  "year_published": "2014",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 170155,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/170155/42736975",
+  "citation": "Pollard, D., Russell, B., Carpenter, K.E., Iwatsuki, Y., Vega-Cendejas, M., Jassim Kawari, A., Hartmann, S., Alnazry, H., Abdulqader, E., Alam, S., Bishop, J., Hassan-Al-Khalf, K. & Kaymaram, F. 2014. Diplodus sargus. The IUCN Red List of Threatened Species 2014: e.T170155A42736975. Accessed on 15 May 2026.",
+  "assessment_id": 42736975,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 170155,
+    "scientific_name": "Diplodus sargus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 170270,
+        "scientific_name": "Diplodus sargus ssp. ascensionis",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "ACTINOPTERYGII",
+        "order_name": "PERCIFORMES",
+        "family_name": "SPARIDAE",
+        "genus_name": "Diplodus",
+        "species_name": "sargus",
+        "subpopulation_name": null,
+        "infra_name": "ascensionis",
+        "authority": "(Valenciennes, 1830)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Snapper, Seabream & Grunt Specialist Group",
+            "url": "https://www.iucn.org/ssc-groups/fishes/snapper-seabream-and-grunts-specialist-group",
+            "description": "Co-Chairs: Barry Russell (email: barry.russell@nt.gov.au) and Ken Lindeman (email: lindeman@fit.edu)\nRed List Authority Coordinator: Barry Russell"
+          }
+        ],
+        "common_names": [
+          {
+            "main": true,
+            "name": "White Sea-bream",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 170278,
+        "scientific_name": "Diplodus sargus ssp. cadenati",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "ACTINOPTERYGII",
+        "order_name": "PERCIFORMES",
+        "family_name": "SPARIDAE",
+        "genus_name": "Diplodus",
+        "species_name": "sargus",
+        "subpopulation_name": null,
+        "infra_name": "cadenati",
+        "authority": "de la Paz, Bauchot &amp; Daget, 1974",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Snapper, Seabream & Grunt Specialist Group",
+            "url": "https://www.iucn.org/ssc-groups/fishes/snapper-seabream-and-grunts-specialist-group",
+            "description": "Co-Chairs: Barry Russell (email: barry.russell@nt.gov.au) and Ken Lindeman (email: lindeman@fit.edu)\nRed List Authority Coordinator: Barry Russell"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "White Seabream",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Sar Commun Du Maroc",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Sargo Marroquí",
+            "language": "spa"
+          },
+          {
+            "main": true,
+            "name": "Moroccan white Seabream",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Diplodus sargus ssp. typicus Cadenat, 1964",
+            "status": "ACCEPTED",
+            "genus_name": "Diplodus",
+            "species_name": "sargus",
+            "species_author": null,
+            "infrarank_author": "Cadenat, 1964",
+            "subpopulation_name": null,
+            "infra_type": "subspecies",
+            "infra_name": "typicus"
+          }
+        ]
+      },
+      {
+        "sis_id": 170277,
+        "scientific_name": "Diplodus sargus ssp. helenae",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "ACTINOPTERYGII",
+        "order_name": "PERCIFORMES",
+        "family_name": "SPARIDAE",
+        "genus_name": "Diplodus",
+        "species_name": "sargus",
+        "subpopulation_name": null,
+        "infra_name": "helenae",
+        "authority": "(Sauvage, 1879)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Snapper, Seabream & Grunt Specialist Group",
+            "url": "https://www.iucn.org/ssc-groups/fishes/snapper-seabream-and-grunts-specialist-group",
+            "description": "Co-Chairs: Barry Russell (email: barry.russell@nt.gov.au) and Ken Lindeman (email: lindeman@fit.edu)\nRed List Authority Coordinator: Barry Russell"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Old wife",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "White Seabream",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Sar Commun",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Sargo",
+            "language": "spa"
+          },
+          {
+            "main": true,
+            "name": "St. Helena white Seabream",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Diplodus helenae (Sauvage, 1879)",
+            "status": "ACCEPTED",
+            "genus_name": "Diplodus",
+            "species_name": "helenae",
+            "species_author": "(Sauvage, 1879)",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          },
+          {
+            "name": "Sargus helenae Sauvage, 1879",
+            "status": "ACCEPTED",
+            "genus_name": "Sargus",
+            "species_name": "helenae",
+            "species_author": "Sauvage, 1879",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          }
+        ]
+      },
+      {
+        "sis_id": 170271,
+        "scientific_name": "Diplodus sargus ssp. kotschyi",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "ACTINOPTERYGII",
+        "order_name": "PERCIFORMES",
+        "family_name": "SPARIDAE",
+        "genus_name": "Diplodus",
+        "species_name": "sargus",
+        "subpopulation_name": null,
+        "infra_name": "kotschyi",
+        "authority": "(Steindachner, 1876)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Snapper, Seabream & Grunt Specialist Group",
+            "url": "https://www.iucn.org/ssc-groups/fishes/snapper-seabream-and-grunts-specialist-group",
+            "description": "Co-Chairs: Barry Russell (email: barry.russell@nt.gov.au) and Ken Lindeman (email: lindeman@fit.edu)\nRed List Authority Coordinator: Barry Russell"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Onespot Porgy",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Sargo Luna Llena",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Sar Lune",
+            "language": "fre"
+          },
+          {
+            "main": true,
+            "name": "One Spot Seabream",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Sargus kotschyi Steindachner, 1876",
+            "status": "ACCEPTED",
+            "genus_name": "Sargus",
+            "species_name": "kotschyi",
+            "species_author": "Steindachner, 1876",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          }
+        ]
+      },
+      {
+        "sis_id": 170267,
+        "scientific_name": "Diplodus sargus ssp. lineatus",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "ACTINOPTERYGII",
+        "order_name": "PERCIFORMES",
+        "family_name": "SPARIDAE",
+        "genus_name": "Diplodus",
+        "species_name": "sargus",
+        "subpopulation_name": null,
+        "infra_name": "lineatus",
+        "authority": "(Valenciennes, 1830)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Snapper, Seabream & Grunt Specialist Group",
+            "url": "https://www.iucn.org/ssc-groups/fishes/snapper-seabream-and-grunts-specialist-group",
+            "description": "Co-Chairs: Barry Russell (email: barry.russell@nt.gov.au) and Ken Lindeman (email: lindeman@fit.edu)\nRed List Authority Coordinator: Barry Russell"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Sar Commun Du Cap Vert",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Sargo De Cabo Verde",
+            "language": "spa"
+          },
+          {
+            "main": true,
+            "name": "White Seabream",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Sargus lineatus Valenciennes, 1830",
+            "status": "ACCEPTED",
+            "genus_name": "Sargus",
+            "species_name": "lineatus",
+            "species_author": "Valenciennes, 1830",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          },
+          {
+            "name": "Diplodus sargus insularum Cadenat, 1964",
+            "status": "ACCEPTED",
+            "genus_name": "Diplodus",
+            "species_name": "sargus insularum",
+            "species_author": "Cadenat, 1964",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          }
+        ]
+      },
+      {
+        "sis_id": 170269,
+        "scientific_name": "Diplodus sargus ssp. sargus",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "ACTINOPTERYGII",
+        "order_name": "PERCIFORMES",
+        "family_name": "SPARIDAE",
+        "genus_name": "Diplodus",
+        "species_name": "sargus",
+        "subpopulation_name": null,
+        "infra_name": "sargus",
+        "authority": "(Linnaeus, 1758)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Snapper, Seabream & Grunt Specialist Group",
+            "url": "https://www.iucn.org/ssc-groups/fishes/snapper-seabream-and-grunts-specialist-group",
+            "description": "Co-Chairs: Barry Russell (email: barry.russell@nt.gov.au) and Ken Lindeman (email: lindeman@fit.edu)\nRed List Authority Coordinator: Barry Russell"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Blacktail",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Sar Commun",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Sargo",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Sar Rayé",
+            "language": "fre"
+          },
+          {
+            "main": true,
+            "name": "White Seabream",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Sargus vetula Valenciennes, 1830",
+            "status": "ACCEPTED",
+            "genus_name": "Sargus",
+            "species_name": "vetula",
+            "species_author": "Valenciennes, 1830",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          },
+          {
+            "name": "Sargus rondelettii Valenciennes, 1830",
+            "status": "ACCEPTED",
+            "genus_name": "Sargus",
+            "species_name": "rondelettii",
+            "species_author": "Valenciennes, 1830",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          }
+        ]
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "ACTINOPTERYGII",
+    "order_name": "PERCIFORMES",
+    "family_name": "SPARIDAE",
+    "genus_name": "Diplodus",
+    "species_name": "sargus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Snapper, Seabream & Grunt Specialist Group",
+        "url": "https://www.iucn.org/ssc-groups/fishes/snapper-seabream-and-grunts-specialist-group",
+        "description": "Co-Chairs: Barry Russell (email: barry.russell@nt.gov.au) and Ken Lindeman (email: lindeman@fit.edu)\nRed List Authority Coordinator: Barry Russell"
+      }
+    ],
+    "common_names": [
+      {
+        "main": true,
+        "name": "White Seabream",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Sparus sargus Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Sparus",
+        "species_name": "sargus",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": 150,
+    "upper_depth_limit": 0,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": "7",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<em>Diplodus sargus </em>is widespread, ranging from the Bay of Biscay, throughout the Mediterranean, along the West coast of Africa (Carpenter in prep.), including Cape Verde, the Canaries,&#160;Ascension Island (Bauchot and Hureau 1990), Helena Island, and in the Persian Gulf (Manilo and Bogorodsky 2003). This species occurs to 150 m depth (Pajuelo and Lorenzo 2002).&#160;<em><br/></em><em><br/></em>",
+    "population": "<em>Diplodus sargus </em>is very common and abundant in appropriate habitats throughout the Mediterranean and is locally abundant in the Persian Gulf (Y. Iwatsuki and K. Carpenter pers. comm. 2013). This species is also common in the eastern Atlantic region from the Bay of Biscay to Cape Verde. FAO catch statistics from the Mediterranean show a steady increase up to 1,000 tonnes landings per year from around 1980 to 2005. However, it is unclear if this increase in landings figures is due to increased effort, increased reporting or increasing populations. In southern Portugal this species alone represents up to 29% of the total catch by weight (Erzini&#160;<em>et al.</em>&#160;1996).<br/><br/>Larger individuals are mainly observed within marine protected areas, which may indicate some overfishing even if populations do not show any declines (P. Francour pers. comm.).",
+    "habitats": "<em>Diplodus sargus </em>inhabits shallow coastal waters on rocky, rough sandy and reef bottoms to 50 m depth (Bauchot and Smith 1984, Carpenter <em>et al. </em>1997).&#160;The juveniles are present over shallow sandy bottoms and enter lagoons during spring and return to the sea in autumn, whereas adults prefer deeper rocky areas covered by seaweed. The juveniles are omnivores (eating mainly algae, worms, small molluscs and hydrozoans), and the adults are carnivores (eating worms, molluscs, crustaceans and echinoderms) (Fischer&#160;<em>et al.</em>&#160;1987).&#160;The maximum length for this species is 45 cm and it can live to 12 years of age (Pajuelo and Lorenzo 2002).&#160;<em>Diplodus sargus</em>&#160;exhibits protandrous hermaphroditism (Abou-Seedo&#160;<em>et al.</em>&#160;1990, Pajuelo and Lorenzo 2002) but has also been described as a rudimentary hermaphrodite exhibiting partial protandry (Mouine <em>et al.</em>&#160;2007).&#160;<br/><br/>Generation length for <em>D. sargus</em>&#160;from the eastern Atlantic is estimated to be about seven years, using the following equation for a gonochoristic fish species: Generation length = Σxl<sub>x</sub>m<sub>x</sub>/Σl<sub>x</sub>m<sub>x</sub>",
+    "threats": "No major threats have been identified for this species; however, localized overfishing and size reduction as a result, are potential threats.",
+    "measures": "In the Canary Islands, the minimum landing size for this species is 22 cm (Pajuelo and Lorenzo 2002). It occurs in some marine protected areas within its range (World Database of Protected Areas, accessed March 2014)",
+    "use_trade": "<em>Diplodus sargus </em>is primarily taken by artisanal fishers and is captured using traps, gill net, and handlines, and can be caught as bycatch in shrimp trawls (Pajuelo and Lorenzo 2002, Y. Iwatsuki pers comm. 2013).&#160;Several attempts have been made to introduce the species in aquaculture in the Mediterranean (Abellan and Garcia-Alcazar 1995, Bodington 2000, Kentouri&#160;<em>et al.</em>&#160;1995). Many of these attempts to farm this species have been hindered by the slow growth of the species in captivity after the ﬁrst year of life. In many cases, this slow growth reduces the proﬁtability of commercial&#160;production (D’Anna&#160;<em>et al.</em>&#160;2004).",
+    "rationale": "<strong>Global</strong><em><br/></em><em><em><br/></em>Diplodus sargus </em>is widespread in the eastern Atlantic, occurring to 150 m depth. This species is harvested throughout its range and has experienced some localized declines and possible reduction in size. However, this species is very widespread and no significant global declines have been recorded. It is therefore listed as Least Concern.&#160;<br/><br/><strong>Persian Gulf</strong><br/><br/><br/><em>Diplodus sargus</em>&#160;is one of the most common sparid species in the Persian Gulf and comprises a major part of the sparid catch in Kuwait. It is therefore listed as Least Concern for the region.<br/><br/><strong>Europe</strong><strong><br/></strong><strong><br/></strong><strong><br/></strong>This species is commercially important throughout its European range but is widespread, and locally abundant. It is listed as Least Concern.",
+    "trend_justification": null,
+    "taxonomic_notes": "<em>Diplodus sargus </em>as presently recognized&#160;is an assemblage of genetically closely related species whose&#160;current taxonomic assignments of species and subspecies are somewhat inconsistent and require further work (Summerer&#160;<em>et al.</em>&#160;2001, Domingues&#160;<em>et al.</em>&#160;2007).&#160;Pending more detailed population genetic work, the six subspecies of&#160;<em>D. sargus</em>, are retained in individual species accounts but are not separated in the parents species account. &#160;<br/><br/>Two geographic subspecies of <em>Diplodus sargus</em> have been recognised in the European region:&#160;<em>Diplodus sargus </em>subspecies <em>sargus </em>in the Mediterranean; and <em>Diplodus sargus </em>subspecies <em>cadeneti</em> in the northeastern Atlantic - from the Bay of Biscay to Senegal, including the Azores, Madeira and the Canary Islands (Summerer <em>et al.</em> 2001). Only weak genetic differentiation is found for the European subspecies of <em>D. sargus</em> (Bargelloni <em>et al.</em> 2005) that is not associated with the transition between the Atlantic and the Mediterranean, contradicting the separation into distinct sub-species of the Mediterranean and Atlantic <em>D. sargus</em> populations, classified as <em>D. s. sargus</em> and <em>D. s. cadenati</em>, respectively (De la Paz <em>et al.</em> 1973, Bauchot and Hureau 1986).<br/><br/><em>Diplodus sargus&#160;</em>requires taxonomic revisions and there may also be two forms in the Persian Gulf (Y. Iwatsuki pers. comm. 2013)."
+  },
+  "biogeographical_realms": [],
+  "conservation_actions": [],
+  "faos": [
+    {
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southeast"
+      },
+      "code": "47"
+    },
+    {
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northeast"
+      },
+      "code": "27"
+    },
+    {
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - eastern central"
+      },
+      "code": "34"
+    },
+    {
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mediterranean and Black Sea"
+      },
+      "code": "37"
+    },
+    {
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - western"
+      },
+      "code": "51"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Seasonal Occurrence Unknown",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy"
+      },
+      "code": "9_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Seasonal Occurrence Unknown",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Loose Rock/pebble/gravel"
+      },
+      "code": "9_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Seasonal Occurrence Unknown",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Rock and Rocky Reefs"
+      },
+      "code": "9_2"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Arab Emirates"
+      },
+      "code": "AE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saudi Arabia"
+      },
+      "code": "SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Qatar"
+      },
+      "code": "QA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oman"
+      },
+      "code": "OM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lebanon"
+      },
+      "code": "LB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kuwait"
+      },
+      "code": "KW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iraq"
+      },
+      "code": "IQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cyprus"
+      },
+      "code": "CY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bahrain"
+      },
+      "code": "BH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Monaco"
+      },
+      "code": "MC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malta"
+      },
+      "code": "MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sicilia"
+      },
+      "code": "SIC-SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy (mainland)"
+      },
+      "code": "ITA-IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gibraltar"
+      },
+      "code": "GI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bosnia and Herzegovina"
+      },
+      "code": "BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Sahara"
+      },
+      "code": "EH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ukraine"
+      },
+      "code": "UA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cabo Verde"
+      },
+      "code": "CV"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": "Unknown",
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Pollard, D., Russell, B., Carpenter, K.E., Iwatsuki, Y., Vega-Cendejas, M., Jassim Kawari, A., Hartmann, S., Alnazry, H., Abdulqader, E., Alam, S., Bishop, J., Hassan-Al-Khalf, K. & Kaymaram, F.",
+      "value": [
+        "Kent Carpenter (IUCN SSC Global Marine Species Assessment, Old Dominion University, Virginia, US)",
+        "David Pollard (NSW Fisheries, Australia)",
+        "Yukio Iwatsuki (University of Miyazaki, Japan)",
+        "Barry Russell (Department of Natural Resources, Environment and the Arts, Brinkin, NT, Australia)",
+        "Khalid  Hassan-Al-Khalf (Qatar Ministry of Environment)",
+        "Stanley Hartmann (Abu Dhabi Environment Agency)",
+        "Ebrahim Abdulqader (Bahrain Center for Studies and Research)",
+        "James Bishop (Kuwait Institute of Scientific Research)",
+        "Farhad Kaymaram (Iranian Fisheries Research Institution)",
+        "Samsul Alam (Qatar Ministry of Environment)",
+        "Ali Jassim Kawari (Qatar Ministry of Environment)",
+        "Hussain  Alnazry (Saudi Arabia Ministry of Agriculture, Department of Marine Fisheries)",
+        "Maria Eugenia Vega-Cendejas (CINVESTAV-IPN, Unidad Merida)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "de Morais, L.",
+      "value": [
+        "Luis Tito de Morais (GIBAO and AMPHORE projects)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Comeros-Raynal, M. & Gorman, C.",
+      "value": [
+        "Mia Comeros (Old Dominion University)",
+        "Claire Gorman (IUCN Marine Biodiversity Unit)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Fischer, W., Bauchot, M.-L. and Schneider, M. 1987. <i>Fiches FAO d'identification des espèces pour les besoins de la pêche. (Révision 1). Méditerranée et mer Noire. Zone de Pêche 37</i>. FAO, Rome.",
+      "year": "1987",
+      "title": "Fiches FAO d'identification des espèces pour les besoins de la pêche. (Révision 1). Méditerranée et mer Noire. Zone de Pêche 37",
+      "author": "Fischer, W., Bauchot, M.-L. and Schneider, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Carpenter, K.E., Harrison, P.L., Hodgson, G., Alsaffer, A.H. and Alhazeem, S.H. 1997a. <i>The Corals and Coral Reef Fishes of Kuwait</i>. Kuwait Institute for Scientific Research and the Environmental Public Authority, Safat, Kuwait.",
+      "year": "1997a",
+      "title": "The Corals and Coral Reef Fishes of Kuwait",
+      "author": "Carpenter, K.E., Harrison, P.L., Hodgson, G., Alsaffer, A.H. and Alhazeem, S.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bauchot, M.-L. and Hureau, J.-C. 1986. Sparidae. In: P.J.P. Whitehead, M.-L., Bauchot, J.-C. Hureau, J. Nielsen and E. Tortonese (eds), <i>Fishes of the north-eastern Atlantic and the Mediterranean</i>, pp. 883-907. UNESCO, Paris.",
+      "year": "1986",
+      "title": "Sparidae",
+      "author": "Bauchot, M.-L. and Hureau, J.-C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bauchot, M.L. and Smith, M.M. 1984. Sparidae. In: W. Fischer and G. Bianchi (eds), <i>FAO species identification sheets for fishery purposes. Western Indian Ocean (Fishing Area 51)</i>, FAO, Rome.",
+      "year": "1984",
+      "title": "Sparidae",
+      "author": "Bauchot, M.L. and Smith, M.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Summerer, M., Hanel, R. and Sturmbauer, C. 2001. Mitochondrial phylogeny and biogeographic affinities of sea bream of the genus <i>Diplodus</i> (Sparidae). <i>Journal of Fish Biology</i> 59: 1639–1652.",
+      "year": "2001",
+      "title": "Mitochondrial phylogeny and biogeographic affinities of sea bream of the genus <i>Diplodus</i> (Sparidae)",
+      "author": "Summerer, M., Hanel, R. and Sturmbauer, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mouine, N., Francour, P., Ktari, M.M. and Chakroun-Marzouk, N. 2007. The reproductive biology of <i>Diplodus sargus</i> in the Gulf of  Tunis (Central Mediterranean). <i>Scientia Marina</i> 71(3): 461-469.",
+      "year": "2007",
+      "title": "The reproductive biology of <i>Diplodus sargus</i> in the Gulf of  Tunis (Central Mediterranean)",
+      "author": "Mouine, N., Francour, P., Ktari, M.M. and Chakroun-Marzouk, N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Abellan, E. and Garcia-Alcazar, A. 1995. Pre-growth and growth experiences with white seabream (<i>Diplodus sargus sargus</i>, Linnaeus, 1758) and sharpsnout seabream (<i>Diplodus puntazzo</i>, Cetti, 1977). <i>Cahiers Options Méditerranéennes</i> 16: 57–63.",
+      "year": "1995",
+      "title": "Pre-growth and growth experiences with white seabream (<i>Diplodus sargus sargus</i>, Linnaeus, 1758) and sharpsnout seabream (<i>Diplodus puntazzo</i>, Cetti, 1977)",
+      "author": "Abellan, E. and Garcia-Alcazar, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bodington, P. 2000. Enterprise experiences in the culture of new sparids. <i>Cahiers Options Méditerranéennes</i> 47 : 135–139.",
+      "year": "2000",
+      "title": "Enterprise experiences in the culture of new sparids",
+      "author": "Bodington, P. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Abou-Seedo, F., J.M. Wright and D.A. Clayton. 1990. Aspect of the biology of <i>Diplodus sargus kotschyi</i> (Sparidae) from Kuwait Bay. <i>Cybium</i> 14: 217-223.",
+      "year": "1990",
+      "title": "Aspect of the biology of <i>Diplodus sargus kotschyi</i> (Sparidae) from Kuwait Bay",
+      "author": "Abou-Seedo, F., J.M. Wright and D.A. Clayton.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Manilo, L.G. and Bogorodsky, S.V. 2003. Taxonomic composition, diversity and distribution of coastal fishes of the Arabian Sea. <i>Journal of Ichthyology</i> 43: S75-S149.",
+      "year": "2003",
+      "title": "Taxonomic composition, diversity and distribution of coastal fishes of the Arabian Sea",
+      "author": "Manilo, L.G. and Bogorodsky, S.V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pajuelo, J.G. and J.M. Lorenzo. 2002. Growth and age estimation of <i>Diplodus sargus cadenati</i> (Sparidae) off the Canary Islands. <i>Fisheries Research</i> 59: 93-100.",
+      "year": "2002",
+      "title": "Growth and age estimation of <i>Diplodus sargus cadenati</i> (Sparidae) off the Canary Islands",
+      "author": "Pajuelo, J.G. and J.M. Lorenzo",
+      "citation_short": ""
+    },
+    {
+      "citation": "Erzini, K., Gonçalves, J. M., Bentes, L., Lino, P. G. and Cruz, J. 1996. Species and size selectivity in a Portuguese multispecies artisanal long-line fishery. <i>ICES Journal of Marine Science: Journal du Conseil</i> 53(5):  811-819.",
+      "year": "1996",
+      "title": "Species and size selectivity in a Portuguese multispecies artisanal long-line fishery",
+      "author": "Erzini, K., Gonçalves, J. M., Bentes, L., Lino, P. G. and Cruz, J. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2014. The IUCN Red List of Threatened Species. Version 2014.3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 13 November 2014).",
+      "year": "2014",
+      "title": "The IUCN Red List of Threatened Species. Version 2014.3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2014.3"
+    },
+    {
+      "citation": "Domingues, V. S., Santos, R. S., Brito, A., Alexandrou, M. and Almada, V. C. 2007. Mitochondrial and nuclear markers reveal isolation by distance and effects of Pleistocene glaciations in the northeastern Atlantic and Mediterranean populations of the white seabream (<i>Diplodus sargus</i>, L.). <i>Journal of Experimental Marine Biology and Ecology</i> 346: 102-113.",
+      "year": "2007",
+      "title": "Mitochondrial and nuclear markers reveal isolation by distance and effects of Pleistocene glaciations in the northeastern Atlantic and Mediterranean populations of the white seabream (<i>Diplodus sargus</i>, L.)",
+      "author": "Domingues, V. S., Santos, R. S., Brito, A., Alexandrou, M. and Almada, V. C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Bargelloni, L., Alarcon, J.A.,  Alvarez, M.C.,  Penzo, E., Magoulas, A.,  Palma, J. and Patarnello, T. 2005. The Atlantic–Mediterranean transition: Discordant genetic patterns in two seabream species, Diplodus puntazzo (Cetti) and Diplodus sargus (L.). <i>Molecular Phylogenetics and Evolution</i> 36(3): 523-535.",
+      "year": "2005",
+      "title": "The Atlantic–Mediterranean transition: Discordant genetic patterns in two seabream species, Diplodus puntazzo (Cetti) and Diplodus sargus (L.)",
+      "author": "Bargelloni, L., Alarcon, J.A.,  Alvarez, M.C.,  Penzo, E., Magoulas, A.,  Palma, J. and Patarnello, T.  ",
+      "citation_short": null
+    },
+    {
+      "citation": "De la Paz, R.M., Bauchot, M.L., and Daget, J. 1973. Les Diplodus (Perciformes, Sparidae) du groupe Sargus: systématique et phylogénie. <i>Ichthyologia </i> 5: 113–128.",
+      "year": "1973",
+      "title": "Les Diplodus (Perciformes, Sparidae) du groupe Sargus: systématique et phylogénie.",
+      "author": "De la Paz, R.M., Bauchot, M.L., and Daget, J.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

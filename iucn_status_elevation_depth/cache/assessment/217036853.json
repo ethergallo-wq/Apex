@@ -1,0 +1,966 @@
+{
+  "assessment_date": "2024-10-11T01:00:00.000+01:00",
+  "year_published": "2025",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 40579,
+  "criteria": "A2abc+4abc",
+  "url": "https://www.iucnredlist.org/species/40579/217036853",
+  "citation": "Johnson, C. & Burbidge, A.A. 2025. Petauroides volans. The IUCN Red List of Threatened Species 2025: e.T40579A217036853. Accessed on 15 May 2026.",
+  "assessment_id": 217036853,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 40579,
+    "scientific_name": "Petauroides volans",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "DIPROTODONTIA",
+    "family_name": "PSEUDOCHEIRIDAE",
+    "genus_name": "Petauroides",
+    "species_name": "volans",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Kerr, 1792)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Australasian Marsupial and Monotreme Specialist Group",
+        "url": "https://www.iucn.org/commissions/ssc-groups/mammals/specialist-groups-a-e/australasian-marsupial-and-monotreme",
+        "description": "Co-Chairs: John Woinarski (email: John.Woinarski@cdu.edu.au) and Diana Fisher (email: d.fisher@uq.edu.au)\nRed List Authority Coordinator: Chris Johnson (email: c.n.johnson@utas.edu.au)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Greater Gliding Possum",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "Greater Glider",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Didelphis volans Kerr, 1792",
+        "status": "ACCEPTED",
+        "genus_name": "Didelphis",
+        "species_name": "volans",
+        "species_author": "Kerr, 1792",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Petauroides armillatus O. Thomas, 1923",
+        "status": "MERGE",
+        "genus_name": "Petauroides",
+        "species_name": "armillatus",
+        "species_author": "O. Thomas, 1923",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Petauroides minor (Collett, 1887)",
+        "status": "MERGE",
+        "genus_name": "Petauroides",
+        "species_name": "minor",
+        "species_author": "(Collett, 1887)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Endangered"
+    },
+    "code": "EN"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 1200,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "100000-500000",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "7",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Percentage of population protected by PAs",
+            "value": "31-40"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "Yes",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": "15960",
+    "continuing_decline_in_area_of_occupancy": "Yes",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "1003315",
+    "continuing_decline_in_extent_of_occurence": "Yes",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "The Greater Glider occurs in the eucalypt forests of eastern Australia, mainly along the east coast and near-coastal ranges, from sea level to approximately 1,200 m asl. It has a broad distribution from the Windsor Tableland in Queensland in the north, to the coast of Victoria in the south. There is a gap in distribution in the region of the Burdekin River, separating a small north-eastern portion of the range extending from Townsville north to the Windsor Tableland, from a much larger southern portion that extends southward from around Rockhampton. These two disjunct areas of distribution are considered as distinct subspecies,&#160;<em>P. volans minor</em>&#160;in the north and <em>P. v. volans </em>in the south. The westernmost occurrence is in the Wombat State Forest in central Victoria.",
+    "population": "There is no reliable estimate of population size. Lunney <em>et al</em>. (2008) considered that the species had a ‘presumed large population’ and was ‘locally common’. In New South Wales, Kavanagh (2004) considered it ‘widespread and common … particularly in north-eastern New South Wales’. Density estimates in Victoria range from 0.6 to 2.8 individuals/ha (Henry 1984, van der Ree <em>et al</em>. 2004), and across its broader range from 0.01 to 5 individuals/ha (Kavanagh 1984, Kehl and Borsboom 1984, Maloney 2007). In a locally abundant population in the northern part of the species range, Comport <em>et al.</em> (1996) estimated a density of 2.6-5.8 animals/ha. Population estimates are available for some sites: Goldingay <em>et al.</em> (2022) estimated that there were more than 2,400 mature Greater Gliders in a 157 km² national park in northern New South Wales. Cripps <em>et al</em>. (2021) estimated that there were 24,575 greater gliders (of all ages) in the 259 km² Strathbogie Ranges in Victoria. These estimates of density together with the wide distribution of the species demonstrate that the total population is well over 100,000.<br/><br/>Populations that have been monitored over the last 10 years or more show consistent evidence of decline, in some cases to local extinction. For example, declines in occupancy and detection rate in standardised surveys have been recorded for over more than two decades of monitoring in the Victorian Central Highlands (Lumsden <em>et al. </em>2013, Lindenmayer 2020, Lindenmayer <em>et al. </em>2024). There have been losses of subpopulations in NSW within the Jervis Bay and Blue Mountains areas (Lindenmayer <em>et al.</em> 2011, Smith and Smith 2018). In addition, the species was badly affected by the 2019–2020 bushfires, which severely affected much of its forest habitat in southeastern Australia. Post-fire surveys have indicated that in areas of high fire severity there is zero to very low occupancy (Smith and Smith 2022). A systematic analysis using mapping of fire severity classes over the species' distribution linked to expert elicitation to estimate effects on abundance concluded that there was an overall population decline of &gt;20% one year after the fires, which is expected to increase to &gt;30% within three generations after the fires (Legge <em>et al.</em> 2022).",
+    "habitats": "The Greater Glider is an arboreal marsupial of eastern Australian eucalypt forests and woodlands. Typically, it is most abundant in taller, montane, moist eucalypt forests, that have relatively old trees and abundant hollows (Andrews <em>et al</em>. 1994; Smith <em>et al</em>. 1994a,b; Kavanagh 2000; Eyre 2004; van der Ree <em>et al</em>. 2004; Vanderduys <em>et al</em>. 2012). The species' distribution may be patchy even in suitable habitat (Kavanagh 2000). The Greater Glider favours forests with a diversity of eucalypt species, due to seasonal variation in preference for food tree species (Kavanagh 1984).<br/><br/>The species is primarily folivorous, with a diet mostly comprising eucalypt leaves, and occasionally flowers and buds (Kehl and Borsboom 1984, Kavanagh and Lambert 1990, van der Ree&#160;<em>et al</em>. 2004). It feeds on a limited number of eucalypt species, and preferences for tree species vary regionally. Forests with high diversity of tree species are most valuable, because diversity compensates for seasonal differences in foliage production and nutrient composition among species. Approximately 85% of the Greater Glider’s water requirements are provided by consumed leaves (Foley <em>et al.</em> 1990). Free water is presumably obtained from dew condensation on leaf surfaces (Rübsamen <em>et al</em>. 1984).<br/><br/>During the day the Greater Glider shelters in tree hollows, requiring large hollows in large, old trees (Henry 1984, Kehl and Borsboom 1984, Lindenmayer <em>et al</em>. 1991, Smith <em>et al</em>. 2007, Goldingay 2012). In the Grafton/Casino, Urbenville and Urunga/Coffs Harbour Forestry Management Areas (FMAs) in northern New South Wales, the abundance of Greater Gliders on survey sites was significantly greater on sites with a higher abundance of tree hollows (Andrews <em>et al</em>. 1994, Smith <em>et al</em>. 1994a,b). In the Grafton/Casino FMA, the Greater Glider was absent from surveyed sites with fewer than six tree hollows per hectare (Smith <em>et al</em>. 1994a). In southern Queensland, Greater Gliders need at least 2-4 live den trees for every 2 ha of suitable forest habitat (Eyre 2002). Comport <em>et al.</em> (1996) found that individuals used 4-6 different dens over the course of a month.<br/><br/>Home ranges are typically relatively small (1–4 ha: Henry 1984, Kehl and Borsboom 1984, Comport <em>et al</em>. 1996, Gibbons and Lindenmayer 2002, Pope <em>et al</em>. 2005), but are larger in forests of lower productivity and woodlands that are more open (to 16 ha: Eyre 2004, Smith <em>et al</em>. 2007, McGregor <em>et al.</em> 2023), and larger for males than for females (Kavanagh and Wheeler 2004, Pope <em>et al</em>. 2005). Home ranges of males are mostly non-overlapping (Henry 1984, Kavanagh and Wheeler 2004, Pope <em>et al</em>. 2005).<br/><br/>The greater glider is highly sensitive to forest clearance (Tyndale-Biscoe and Smith 1969a), and to intensive logging (Kavanagh and Bamkin 1995, Kavanagh and Webb 1998, Kavanagh and Wheeler 2004, Kavanagh <em>et al</em>. 1995), although responses vary according to landscape context and the extent of tree removal and retention (Kavanagh 2000, Taylor <em>et al</em>. 2007). The species is also sensitive to wildfire (Lunney 1987, Andrews <em>et al</em>. 1994, Lindenmayer <em>et al</em>. 2011, Smith and Smith 2022, Green <em>et al</em>. 2024), and local populations are slow to recover following major disturbance (Kavanagh 2004) because of low rates of increase and low immigration rates due to limited dispersal capacity. In Urbenville FMA of northern New South Wales, the abundance of Greater Gliders on survey sites was significantly greater in forests that were infrequently burnt (Andrews <em>et al</em>. 1994).<br/><br/>Greater Gilders are sensitive to effects of habitat fragmentation (Eyre 2006, McCarthy and Lindenmayer 1999ab, Lindenmayer <em>et al.</em> 2000, Taylor and Goldingay 2009), because they have relatively low persistence in small forest fragments and disperse poorly across vegetation that is not native forest. Modelling suggests that they need native forest patches of at least 160 km² to maintain viable populations (Eyre 2002).<br/><br/>Females give birth to a single young, from March to June (Tyndale-Biscoe and Smith 1969b, McKay 2008). Sexual maturity is reached in the second year (Tyndale-Biscoe and Smith 1969b). Longevity has been estimated at 15 years (Harris and Maloney 2010), so generation length is <em>ca</em>&#160;7 years (TSSC 2023a). The relatively low reproductive rate (Henry 1984) may render small, isolated populations in small remnants prone to extinction (van der Ree 2004, Pope&#160;<em>et al</em>. 2005).",
+    "threats": "The most significant threats are increased intensity and frequency of bushfires (linked to climate change); increased temperature and changed rainfall patterns due to climate change; inappropriate prescribed burning; habitat clearing and fragmentation; and timber harvesting.<br/><br/><strong>Increased intensity and frequency of bushfires</strong><br/>Large losses or declines, including disappearance of local populations, have been documented following high-severity fires (McLean <em>et al. </em>2018,&#160;Smith and Smith 2022, Green <em>et al</em>. 2024). These effects may be the result of direct mortality from lethal heating or suffocation, or loss of key habitat features and resources.&#160;Following the 2009 Victorian bushfires, 79% of large living trees with cavities died in the affected&#160;<em>Eucalyptus regnans</em> (Mountain Ash) forests; recruitment of new cavities takes many years (Lindenmayer <em>et al. </em>2012).&#160;Populations have disappeared after major fires. The effects of fire can be compounded by habitat fragmentation, because the species does not readily disperse over gaps in forest habitat and so is slow to recolonise areas recovering from fire. No individuals were recorded for 19 years after a fire in an isolated area of habitat in Royal National Park near Sydney (Andrews <em>et al.</em> 2014). Recurring fires can therefore cause progressive regional decline in the proportion of forest habitat occupied. Indicators of forest fire danger in southeastern Australia point to an increase in the threat of severe fire in the near future, driven mainly by climate change (Boer <em>et al. </em>2020). More than 23% of the temperate forests of southeastern Australia were burnt in the 2019-2020 fire season. The conditions that cause these extreme fires are intensifying.<br/><strong><u><br/></u>Increased temperatures and changed rainfall patterns</strong><br/>Mean temperatures across the distribution of Greater Glider have risen by 1.4 degrees&#160;over the past century,&#160;and heat waves have become longer and more frequent (BOM and CSIRO 2020). In the southern part of the range, winter rainfall has declined by 12% since the 1990s, but summer rainfall remains unchanged. These trends are projected to continue under moderate and high emissions scenarios (CSIRO and BOM 2021).&#160;<br/><br/>A unique physiology and strict eucalypt diet make the Greater Glider vulnerable to high temperatures and low water availability (Rübsamen <em>et al.</em> 1984). Prolonged exposure to temperatures over 40°C is likely to lead to high mortality (Rübsamen <em>et al.</em> 1984). Moore <em>et al. </em>(2004) suggested that the preference of Greater Gliders for higher elevations is because they are sensitive to heat and must expend energy and water to cool themselves at ambient temperatures over 20°C.&#160;Increased night-time temperatures have been implicated in the decline of abundance in Victorian subpopulations (Wagner <em>et al.</em> 2020). At lower altitude (&lt;500 m) sites surveyed&#160;in the Blue Mountains, increasing mean annual temperatures were considered to be the cause of declines of Greater Gliders (Smith and Smith 2018, 2020).&#160;A marked reduction in detection rates was reported for greater gliders in forests in northern New South Wales during periods of drought (Goldingay <em>et al</em>. 2022).<br/><br/>Water stress limits growth in forest&#160;eucalypts (Matusick <em>et al. </em>2013) and reduces availability of browse. Combined with high temperature this may cause heat stress, drought stress and mortality (Vic SAC 2015). Extended droughts in a warmer climate are likely to reduce the quality of available foliage (e.g. young foliage is more palatable than older foliage; McKeirnan<em> et al.</em> 2014) for Greater Gliders, and could therefore reduce reproduction rates (DeGabriel <em>et al. </em>2009, Kearney <em>et al. </em>2010). Above temperatures of 35℃, Greater Gliders need to dissipate &gt;100% of metabolic heat production by evaporative means (Rübasamen 1984). At the same time, they reduce their food intake, leading to rapid expenditure of their energy and water stores (Beale <em>et al. </em>2018, Youngentob <em>et al. </em>2021). This can lead to death of both young and adult gliders, or reduced growth in milk-fed young (Youngentob <em>et al. </em>2021). Climate projections and biophysical modelling of the Greater Glider in the northern portion of its range (that is, for the subspecies <em>P. volans minor</em>) predict a severe range contraction and increase in fragmentation of the remaining range under a 3°C temperature increase (Kearney <em>et al. </em>2010).<br/><br/><strong>Inappropriate prescribed burning practices<br/></strong>In Victoria, loss of hollow-bearing trees due to mechanical site-preparation works associated with prescribed burning may reduce suitable habitat for the Greater Glider. This impact occurs primarily in foothill forests close to settled areas. Trees that are assessed as potentially hazardous (if they were to catch fire) are routinely removed from the perimeter of planned burns on public land in Victoria. They are also removed from bushfire control lines during and after bushfire suppression activities (DELWP n.d). Although not all hazardous trees are hollow-bearing, many are.<br/><br/>Too intense or frequent planned burning may contribute to population losses or declines in the southern part of the Greater Glider’s range. Bluff (2016) reported that hollow-bearing trees affected by fire during planned burns were 28 times more likely to collapse than those that were not burnt. Parnaby <em>et al. </em>(2010) found that following low intensity prescription burns in the Pilliga forests (NSW), mean collapse rates for burnt hollow-bearing trees were 14-26%. This was consistent with the collapse rate of 25.6% found by Bluff (2016). A survey following a planned burn at Tallarook Range (NSW) in 2021 found that a large number of potential Greater Glider habitat trees were burnt, with “many destroyed” (N. Stimson 2021, pers. comm. 26 June, cited in TSSC 2022a).<br/><br/>After fires, trees with large hollows are often felled for safety reasons (along roads, fire trails and walking trails) within Greater Glider habitat (DECCW 2011). Andrew (2001) reported that 120 hollow-bearing trees were felled after the 1994 bushfires in Royal National Park by NPWS due to concerns over public safety.<br/><br/><strong>Habitat clearing and fragmentation<br/></strong>The Greater Glider is absent from cleared areas and has little dispersal ability to move through cleared areas between fragments (Tyndale-Biscoe and Smith 1969b; McCarthy and Lindenmayer 1999a,b; Lindenmayer <em>et al. </em>2000; Eyre 2006; Taylor and Goldingay 2009). Population viability in small remnants is low due to the species’ low reproductive output and susceptibility to disturbance and edge effects.&#160;Extensive land clearing for development and agriculture has led to fragmentation of habitat in some areas, e.g. the Tumut area of NSW (Pope <em>et al.</em> 2005) where small subpopulations exist in a pine matrix. About 30 years after clearing in the Tumut area, Lindenmayer <em>et al.</em> (1999) found that the&#160;occupancy rate of Greater Gliders in remnant patches was 21% compared to 38% in the surrounding native forest, indicating limited recolonisation. The probability of occurrence was significantly greater in large remnants. Genetic analysis in the Tumut population by Taylor <em>et al.</em> (2007) indicated that some immigration into patches was occurring, but there were lower levels of immigration and genetic mixing in patches further (&gt;1 km) from continuous forest.<br/><br/><strong>Timber harvesting<br/></strong>The sensitivity of Greater Gliders to timber harvesting has been well documented. Although much habitat across the species’ range is found in conservation reserves (Smith and Smith 2018, Wagner <em>et al.</em> 2020), where timber harvesting is excluded and the removal of hollow-bearing trees is subject to constraints, much prime habitat coincides with areas suitable for timber harvesting (Braithwaite 1984). There is a progressive decline in numbers of hollow-bearing trees&#160;in some production forests, as harvesting rotations become shorter and dead stags collapse, and hollow-bearing trees&#160;are not replaced due to lack of recruitment (Ross 1999; Ball <em>et al. </em>1999; Lindenmayer <em>et al. </em>2011, 2012).<br/><br/>The degree of impact depends on forest type and timber harvesting intensity, with larger declines in more heavily logged sites (Tyndale-Biscoe and Smith 1969b, Lunney 1987, Kavanagh <em>et al. </em>1995, Kavanagh and Webb 1998, Kavanagh 2000, McLean <em>et al.</em> 2018). In the Central Highlands of Victoria, where clear-felling is undertaken, Lindenmayer <em>et al.</em> (2017b) found that the rate of loss of hollow-bearing trees&#160;greatly exceeded the rate of recruitment. The area of clear-felled forest adjacent to wildlife corridors was also found to increase the chance of collapse of hollow-bearing trees, possibly due to the greater exposure of stems to elevated wind speeds at corridor edges. However, models investigating the impacts of forest disturbance on the Greater Glider in the same area found that timber harvesting in the surrounding landscape was not a significant influence on the probability of occurrence of the species (Lindenmayer <em>et al.</em> 2020).<br/><br/>Recovery of subpopulations following timber harvesting is slow. Subpopulations in south-east New South Wales had not recovered 8 years after timber harvesting in sites retaining 62%, 52% and 21% of the original tree basal area (Kavanagh and Webb 1998). In the regrowth Mountain Ash forests (Central Highlands) of Vic, Greater Gliders (southern and central) were absent post-timber harvesting until the forests were &gt;38 years old (Macfarlane 1988).<br/><br/>Concerns about the conservation of greater gliders in production forests has been a high-profile issue and timber harvesting has been subject to many legal challenges (Wardell-Johnson and Robinson 2022). Partly as a consequence, the Victorian government ceased harvesting of native forests in 2024.<p></p>",
+    "measures": "The Greater Glider occurs in many conservation reserves across its extensive range. In production forests, some logging prescriptions have been imposed to reduce impacts upon this species. The Victorian government ceased logging in native forests in 2024.<br/><br/>The species is listed as Endangered (as ‘greater glider (southern and central) <em>Petauroides volans</em>’) and Vulnerable (as ‘greater glider (northern)&#160;<em>P. minor</em>’) under Australian law, with conservation advices to guide management (Threatened Species Scientific Committee 2022a,b). However, such management and legal protection has been ineffective at halting decline (Ashman <em>et al. </em>2021).",
+    "use_trade": null,
+    "rationale": "The Greater Glider is endemic to Australia. The species is assessed as Endangered (EN A2ab+4abc), based on evidence of recent and likely future rates of population decline and decline in habitat quality. The population of the Greater Glider is declining because of habitat loss, fragmentation, extensive fire, climate change, and some forestry practices. The species is particularly susceptible because of slow life history characteristics, specialist requirements for large tree hollows (and hence mature forests), and relatively specialised dietary requirements. Across its broad range, the population size and rate of decline is incompletely known, but several large-scale monitoring programs have demonstrated substantial declines.&#160;A large-scale (<em>ca</em>&#160;160 monitoring sites across the Central Highlands, Victoria), long-term (1997 to 2024) monitoring program reported declines of about 80% in the probability of occurrence of this species (Lindenmayer <em>et al</em>. 2021, 2024).&#160;A substantial monitoring program in a conservation reserve in coastal New South Wales reported a complete loss of the monitored subpopulation over the period 2002 to 2010 (Lindenmayer&#160;<em>et al</em>. 2011).&#160;Smith and Smith (2020) reported major declines in lower altitude forests of the Blue Mountains, with sampling in 2015–2016 failing to record the species in seven of 20 sites at which it was known in the 1980s. An ongoing monitoring program (from 2014) in forests of northern New South Wales reported a 60–70% decline in probability of detection, with decline coinciding with low rainfall years (Goldingay <em>et al</em>. 2022).&#160;At woodland sites in central Queensland first sampled in 1973–1976 and re-sampled in 2001–2002, abundance declined by 89% (Woinarski&#160;<em>et al</em>. 2006).&#160;<br/><br/>Large areas of the habitat of the Greater Glider were affected by the catastrophic bushfires of the summer of 2019/2020. A systematic analysis using mapping of fire severity classes over the species' distribution linked to expert elicitation to estimate effects on abundance concluded that there was an overall population decline of &gt;20% one year after the fires, which is expected to increase to &gt;30% within three generations after the fires (Legge <em>et al.</em> 2022).&#160;Subsequent sampling indicates that these fires did indeed cause major reductions in population size (Smith and Smith 2022, Green <em>et al</em>. 2024).<br/><br/>The Commonwealth of Australia Threatened Species Scientific Committee (TSSC 2022a), taking into account both the effects of the 2019/20 bushfires and other evidence on declines not related to those events, estimated that the overall rate of decline exceeds 50% over three generations (21 years). Current declines are likely to continue, as the causes of decline are still operating. This estimate of decline rate applies to the subspecies <em>P. v. volans</em>. There is no monitoring of populations of the northern subspecies <em>P. volans minor. </em>However, the northern subspecies&#160;is subject to many of the same threats as <em>P. v. volans,</em> and is also likely to be in decline. The subspecies <em>P. v. volans</em> represents the great majority of the distribution of <em>P. volans</em> (approx. 95%, Woinarski <em>et al.</em> 2014). It is therefore unlikely that a lower decline rate of <em>P. v. minor</em>&#160;could offset the declines recorded by monitoring of <em>P. v. volans</em>&#160;and justify an assessment of Vulnerable (VU) rather than EN (the subspecies <em>P. v. minor </em>is treated as a full species by the Australian Commonwealth and is listed as VU under Commonwealth legislation (TSSC 2022b), on the basis that&#160;modelling of the impacts of climate change indicated that populations might decline by approximately 30% over the next three generations (Kearney <em>et al. </em>2010), together with its small area of occupancy and number of locations).",
+    "trend_justification": null,
+    "taxonomic_notes": "The taxonomic treatment of <em>Petauroides volans</em> is contested and not fully resolved. A single species has long been accepted. However, Jackson (2015) and Jackson and Groves (2015) recognised three species: <em>Petauroides volans</em>, <em>P. minor</em> and <em>P. armillatus</em>, based on limited published evidence. A subsequent genetic study provided some support to this treatment (McGregor <em>et al</em>. 2020), and the three species are currently listed in the American Society of Mammalogists Mammal Diversity Database (version 1.13). In its most recent conservation assessment, the Australian government recognised two species: <em>P. volans</em> (including <em>P. armillatus</em>) and <em>P. minor</em> (Threatened Species Scientific Committee 2022a,b). However, that split is not recognised in a recent taxonomic review of Australasian marsupials (Baker <em>et al</em>. 2023), by the Australasian Mammal Taxonomy Consortium (as at August 2024) and, following this, by Jackson (2023). The previous Red List account was for the single species, <em>P. volans</em>; until the taxonomy is fully resolved, and the IUCN SSC Australasian Marsupial and Monotreme Specialist Group continues to follow this treatment."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Australasian"
+      },
+      "code": "2"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australian Capital Territory"
+      },
+      "code": "NSW-CT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New South Wales"
+      },
+      "code": "NSW-NS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Queensland"
+      },
+      "code": "QLD-QU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Victoria"
+      },
+      "code": "VIC-OO"
+    },
+    {
+      "is_endemic": true,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other impacts"
+      },
+      "code": "11_5"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_3_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Increase in fire frequency/intensity"
+      },
+      "code": "7_1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Johnson, C. & Burbidge, A.A.",
+      "value": [
+        "Andrew Burbidge (IUCN SSC Australasian Marsupial and Monotreme Specialist Group)",
+        "Christopher Johnson"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Woinarski, J.C.Z.",
+      "value": [
+        "John Woinarski (Natural Resources, Environment and The Arts, NT)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Martin, R., Lunney, D., Menkhorst, P., Oakwood, M., Eyre, T., Goldingay, R., Lindenmayer, D. & Quin, D.",
+      "value": [
+        "Teresa Eyre",
+        "Ross Goldingay",
+        "David Lindenmayer",
+        "Dan Lunney",
+        "Roger Martin",
+        "Peter Menkhorst",
+        "Meri Oakwood",
+        "Darren Quin"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Woinarski, J.C.Z., Burbidge, A.A. and Harrison, P.L. 2014. <i>The Action Plan for Australian Mammals 2012</i>. CSIRO Publishing, Collingwood.",
+      "year": "2014",
+      "title": "The Action Plan for Australian Mammals 2012",
+      "author": "Woinarski, J.C.Z., Burbidge, A.A. and Harrison, P.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "van der Ree, R., Ward, S.J. and Handasyde, K.A. 2004. Distribution and conservation status of possums and gliders in Victoria. In: R.L. Goldingay and S.M. Jackson (eds), <i>The biology of Australian possums and gliders</i>, pp. 91-110. Surrey Beatty and Sons, Chipping Norton.",
+      "year": "2004",
+      "title": "Distribution and conservation status of possums and gliders in Victoria",
+      "author": "van der Ree, R., Ward, S.J. and Handasyde, K.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kavanagh, R.P. 1984. Seasonal changes in habitat use by gliders and possums in southeastern New South Wales. In: A.P. Smith and I.D. Hume (eds), <i>Possums and gliders</i>, pp. 527-543. Surrey Beatty and Sons, Chipping Norton.",
+      "year": "1984",
+      "title": "Seasonal changes in habitat use by gliders and possums in southeastern New South Wales",
+      "author": "Kavanagh, R.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lunney, D. 1987. Effects of logging, fire and drought on possums and gliders in the coastal forests near Bega, N.S.W. <i>Australian Wildlife Research</i> 13: 67-92.",
+      "year": "1987",
+      "title": "Effects of logging, fire and drought on possums and gliders in the coastal forests near Bega, N.S.W.",
+      "author": "Lunney, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Eyre, T.J. 2002. Habitat preferences and management of large gliding possums in southern Queensland. Southern Cross University.",
+      "year": "2002",
+      "title": "Habitat preferences and management of large gliding possums in southern Queensland",
+      "author": "Eyre, T.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kavanagh, R. P. 2004. Distribution and conservation status of possums and gliders in New South Wales. In: R. L. Goldingay and S. M. Jackson (eds), <i>The biology of Australian possums and gliders</i>, pp. 130-148. Surrey Beatty and Sons, Chipping Norton.",
+      "year": "2004",
+      "title": "Distribution and conservation status of possums and gliders in New South Wales",
+      "author": "Kavanagh, R. P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Eyre, T.J. 2004. Distribution and conservation status of the possums and gliders of southern Queensland. In: R.L. Goldingay and S.M. Jackson (eds), <i>The biology of Australian possums and gliders</i>, pp. 1-25. Surrey Beatty and Sons, Chipping Norton.",
+      "year": "2004",
+      "title": "Distribution and conservation status of the possums and gliders of southern Queensland",
+      "author": "Eyre, T.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Smith, A.P., Moore, D.M. and Andrews, S.P. 1994. Fauna of the Grafton and Casino Forestry Study Areas: description and assessment of forestry impacts. Austeco Environmental Consultants, Armidale.",
+      "year": "1994",
+      "title": "Fauna of the Grafton and Casino Forestry Study Areas: description and assessment of forestry impacts",
+      "author": "Smith, A.P., Moore, D.M. and Andrews, S.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lindenmayer, D. B., Blanchard, W., McBurney, L., Blair, D., Banks, S., Likens, G. E., Franklin, J. F., Laurance, W. F., Stein, J. A. R., and Gibbons, P. 2012. Interacting factors driving a major loss of large trees with cavities in a forest ecosystem. <i>PLoS ONE </i> 7(10): e41864.",
+      "year": "2012",
+      "title": "Interacting factors driving a major loss of large trees with cavities in a forest ecosystem.",
+      "author": "Lindenmayer, D. B., Blanchard, W., McBurney, L., Blair, D., Banks, S., Likens, G. E., Franklin, J. F., Laurance, W. F., Stein, J. A. R., and Gibbons, P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Winter, J. W., Dillewarard, H. A., Williams, S. E., and Bolitho, E. E. 2004. Possums and gliders of north Queensland: distribution and conservation status. In: R. L. Goldingay and S. M. Jackson (eds), <i>The biology of Australian possums and gliders</i>, pp. 26-50. Surrey Beatty and Sons, Sydney.",
+      "year": "2004",
+      "title": "Possums and gliders of north Queensland: distribution and conservation status",
+      "author": "Winter, J. W., Dillewarard, H. A., Williams, S. E., and Bolitho, E. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pope, M. L., Lindenmayer, D. B., and Cunningham, R. B. 2005. Patch use by the greater glider (<i>Petauroides volans</i>) in a fragmented forest ecosystem.  I.  Home range size and movements. <i>Wildlife Research </i> 31: 559-568.",
+      "year": "2005",
+      "title": "Patch use by the greater glider (<i>Petauroides volans</i>) in a fragmented forest ecosystem.  I.  Home range size and movements",
+      "author": "Pope, M. L., Lindenmayer, D. B., and Cunningham, R. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Andrews, S.P., Gration, G., Quin, D., and Smith, A.P. 1994. Description and assessment of forestry impacts on fauna of the Urbenville Forestry Management Area. Report for State Forests of New South Wales Austeco Environmental Consultants, Armidale.",
+      "year": "1994",
+      "title": "Description and assessment of forestry impacts on fauna of the Urbenville Forestry Management Area",
+      "author": "Andrews, S.P., Gration, G., Quin, D., and Smith, A.P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kavanagh, R. P., and Wheeler, R. J. 2004. Home range of the greater glider <i>Petauroides volans</i> in tall montane forest of southeastern New South Wales, and changes following logging. In: R. L. Goldingay and S. M. Jackson (eds), <i>The biology of Australian possums and gliders</i>, pp. 413-425. Surrey Beatty & Sons, Sydney.",
+      "year": "2004",
+      "title": "Home range of the greater glider <i>Petauroides volans</i> in tall montane forest of southeastern New South Wales, and changes following logging",
+      "author": "Kavanagh, R. P., and Wheeler, R. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lindenmayer, D. B., Lacy, R. C. and Pope, M. L. 2000. Testing a simulation model for population viability analysis. <i>Ecological Applications </i> 10: 580–597.",
+      "year": "2000",
+      "title": "Testing a simulation model for population viability analysis",
+      "author": "Lindenmayer, D. B., Lacy, R. C. and Pope, M. L. ",
+      "citation_short": null
+    },
+    {
+      "citation": "McCarthy, M. A., and Lindenmayer, D. B. 1999. Incorporating metapopulations dynamics of greater gliders into reserve design in disturbed landscapes. <i>Ecology </i> 80: 651–667.",
+      "year": "1999",
+      "title": "Incorporating metapopulations dynamics of greater gliders into reserve design in disturbed landscapes",
+      "author": "McCarthy, M. A., and Lindenmayer, D. B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Goldingay, R. L. 2012. Characteristics of tree hollows used by Australian arboreal and scansorial mammals. <i>Australian Journal of Zoology </i> 59: 277-294.",
+      "year": "2012",
+      "title": "Characteristics of tree hollows used by Australian arboreal and scansorial mammals",
+      "author": "Goldingay, R. L. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kavanagh, R. P., and Lambert, M. 1990. Food selection by the greater glider: is foliar nitrogen a determinant of habitat quality? <i>Australian Wildlife Research </i> 17: 285–299.",
+      "year": "1990",
+      "title": "Food selection by the greater glider: is foliar nitrogen a determinant of habitat quality?",
+      "author": "Kavanagh, R. P., and Lambert, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Lindenmayer, D. B., Wood, J. T., McBurney, L., MacGregor, C., Youngentob, K. and Banks, S. C. 2011. How to make a common species rare: a case against conservation complacency. <i>Biological Conservation </i> 144: 1663–1672.",
+      "year": "2011",
+      "title": "How to make a common species rare: a case against conservation complacency",
+      "author": "Lindenmayer, D. B., Wood, J. T., McBurney, L., MacGregor, C., Youngentob, K. and Banks, S. C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Harris, J. M., and Maloney, S. 2010. <i>Petauroides volans</i> (Diprodontia: Pseudocheiridae). <i>Mammalian Species </i> 42: 207-219.",
+      "year": "2010",
+      "title": "<i>Petauroides volans</i> (Diprodontia: Pseudocheiridae)",
+      "author": "Harris, J. M., and Maloney, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Smith, A. P., Andrews, S. P, Gration, G., Quin, D, and Sullivan, B. 1994. Description and assessment of forestry impacts on fauna of the Urunga - Coffs Harbour Forestry Management Area. Report for State Forests of New South Wales. Austeco Environmental Consultants, Armidale.",
+      "year": "1994",
+      "title": "Description and assessment of forestry impacts on fauna of the Urunga - Coffs Harbour Forestry Management Area. Report for State Forests of New South Wales",
+      "author": "Smith, A. P., Andrews, S. P, Gration, G., Quin, D, and Sullivan, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lindenmayer, D. B., Cunningham, R. B., Tanton, M. T., Smith, A. P., and Nix, H. A. 1991. Characteristics of hollow-bearing trees occupied by arboreal marsupials in the montane ash forests of the Central Highlands of Victoria, south-east Australia. <i>Forest Ecology and Management </i> 40: 289-308.",
+      "year": "1991",
+      "title": "Characteristics of hollow-bearing trees occupied by arboreal marsupials in the montane ash forests of the Central Highlands of Victoria, south-east Australia",
+      "author": "Lindenmayer, D. B., Cunningham, R. B., Tanton, M. T., Smith, A. P., and Nix, H. A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Vanderduys, E.P., Kutt, A.S. and Kemp, J.E. 2012. Upland savannas: the vertebrate fauna of largely unknown but significant habitat in north-eastern Queensland. <i>Australian Zoologist </i> 36: 59-74.",
+      "year": "2012",
+      "title": "Upland savannas: the vertebrate fauna of largely unknown but significant habitat in north-eastern Queensland",
+      "author": "Vanderduys, E.P., Kutt, A.S. and Kemp, J.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Henry, S. R. 1984. Social organisation of the greater glider (<i>Petauroides volans</i>) in Victoria. In: A. P. Smith and I. D. Hume (eds), <i>Possums and Gliders</i>, pp. 221-228. Surrey Beatty and Sons, Chipping Norton.",
+      "year": "1984",
+      "title": "Social organisation of the greater glider (<i>Petauroides volans</i>) in Victoria",
+      "author": "Henry, S. R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Tyndale-Biscoe, C. H., and Smith, R. F. C. 1969. Studies on the marsupial glider, <i>Schoinobates volans</i> (Kerr). II. Population structure and regulatory mechanisms. <i>Journal of Animal Ecology </i> 38: 637–650.",
+      "year": "1969",
+      "title": "Studies on the marsupial glider, <i>Schoinobates volans</i> (Kerr). II. Population structure and regulatory mechanisms",
+      "author": "Tyndale-Biscoe, C. H., and Smith, R. F. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gibbons, P., and Lindenmayer, D. B. 2002. <i>Tree hollows and wildlife conservation in Australia </i>. CSIRO Publishing, Collingwood.",
+      "year": "2002",
+      "title": "Tree hollows and wildlife conservation in Australia ",
+      "author": "Gibbons, P., and Lindenmayer, D. B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Comport, S. S., Ward, S. J., and Foley, W. J. 1996. Home ranges, time budgets and food tree use in a high density tropical population of greater gliders, <i>Petauroides volans minor</i> (Pseudocheiridae: Marsupialia). <i>Wildlife Research </i> 23: 401-419.",
+      "year": "1996",
+      "title": "Home ranges, time budgets and food tree use in a high density tropical population of greater gliders, <i>Petauroides volans minor</i> (Pseudocheiridae: Marsupialia)",
+      "author": "Comport, S. S., Ward, S. J., and Foley, W. J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Tyndale-Biscoe, C. H., and Smith, R. F. C. 1969. Studies on the marsupial glider <i>Schoinobates volans</i> (Kerr).  III.  Response to habitat destruction. . <i>Journal of Animal Ecology </i> 38: 651-659.",
+      "year": "1969",
+      "title": "Studies on the marsupial glider <i>Schoinobates volans</i> (Kerr).  III.  Response to habitat destruction. ",
+      "author": "Tyndale-Biscoe, C. H., and Smith, R. F. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kavanagh, R. P., and Bamkin, K. L. 1995. Distribution of nocturnal forest birds and mammals in relation to the logging mosaic in south-eastern New South Wales, Australia. <i>Biological Conservation </i> 71: 41–53.",
+      "year": "1995",
+      "title": "Distribution of nocturnal forest birds and mammals in relation to the logging mosaic in south-eastern New South Wales, Australia",
+      "author": "Kavanagh, R. P., and Bamkin, K. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Woinarski, J. C. Z., McCosker, J. C., Gordon, G., Lawrie, B., James, C., Augusteyn, J., Slater, L., and Danvers, T. 2006. Monitoring change in the vertebrate fauna of central Queensland, Australia, over a period of broad-scale vegetation clearance, 1975-2002. <i>Wildlife Research </i> 33: 263-274.",
+      "year": "2006",
+      "title": "Monitoring change in the vertebrate fauna of central Queensland, Australia, over a period of broad-scale vegetation clearance, 1975-2002",
+      "author": "Woinarski, J. C. Z., McCosker, J. C., Gordon, G., Lawrie, B., James, C., Augusteyn, J., Slater, L., and Danvers, T. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Lunney, D., Menkhorst, P., Winter, J., Ellis, M., Strahan, R., Oakwood, M., Burnett, S., Denny, M., and Martin, R. 2008. <i>Petauroides volans</i>. In 'The IUCN Red List of Threatened Species'. Version 2012.2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 11 December 2012).",
+      "year": "2008",
+      "title": "<i>Petauroides volans</i>. In 'The IUCN Red List of Threatened Species'. Version 2012.2",
+      "author": "Lunney, D., Menkhorst, P., Winter, J., Ellis, M., Strahan, R., Oakwood, M., Burnett, S., Denny, M., and Martin, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kearney, M. R., Wintle, B. A., and Porter, W. P. 2010. Correlative and mechanistic models of species distribution provide congruent forecasts under climate change. <i>Conservation Letters </i> 3: 203-213.",
+      "year": "2010",
+      "title": "Correlative and mechanistic models of species distribution provide congruent forecasts under climate change",
+      "author": "Kearney, M. R., Wintle, B. A., and Porter, W. P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Smith, G. C., Mathieson, M., and Hogan, L. 2007. Home range and habitat use of a low-density population of Greater Glider, <i>Petauroides volans</i> (Pseudocheiridae: Marsupialia), in a hollow-limiting environment. <i>Wildlife Research </i> 34: 472-483.",
+      "year": "2007",
+      "title": "Home range and habitat use of a low-density population of Greater Glider, <i>Petauroides volans</i> (Pseudocheiridae: Marsupialia), in a hollow-limiting environment",
+      "author": "Smith, G. C., Mathieson, M., and Hogan, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kehl, J., and Borsboom, A. 1984. Home range, den tree use and activity patterns in the greater glider (<i>Petauroides volans</i>). In: A. P. Smith and I. D. Hume (eds), <i>Possums and gliders</i>, pp. 229-236. Surrey Beatty and Sons, Chipping Norton.",
+      "year": "1984",
+      "title": "Home range, den tree use and activity patterns in the greater glider (<i>Petauroides volans</i>)",
+      "author": "Kehl, J., and Borsboom, A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kavanagh, R. P. 2000. Effects of variable-intensity logging and the influence of habitat variables on the distribution of the Greater Glider <i>Petauroides volans</i> in montane forest, southeastern New South Wales. <i>Pacific Conservation Biology </i> 6: 18-30.",
+      "year": "2000",
+      "title": "Effects of variable-intensity logging and the influence of habitat variables on the distribution of the Greater Glider <i>Petauroides volans</i> in montane forest, southeastern New South Wales",
+      "author": "Kavanagh, R. P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Eyre, T. J. 2006. Regional habitat selection by large gliding possums at forest stand and landscape scales in southern Queensland, Australia. I. Greater Glider (<i>Petauroides volans</i>). <i>Forest Ecology and Management</i> 235: 270-282.",
+      "year": "2006",
+      "title": "Regional habitat selection by large gliding possums at forest stand and landscape scales in southern Queensland, Australia. I. Greater Glider (<i>Petauroides volans</i>)",
+      "author": "Eyre, T. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "McCarthy, M. A., and Lindenmayer, D. B. 1999. Conservation of the greater glider (<i>Petauroides volans</i>) in remnant native vegetation within exotic plantation forest. <i>Animal Conservation </i> 2: 203-209.",
+      "year": "1999",
+      "title": "Conservation of the greater glider (<i>Petauroides volans</i>) in remnant native vegetation within exotic plantation forest",
+      "author": "McCarthy, M. A., and Lindenmayer, D. B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Maloney, K. S. 2007. The status of the Greater Glider <i>Petauroides volans</i> in the Illawarra region. School of Biological Sciences, University of Wollongong.",
+      "year": "2007",
+      "title": "The status of the Greater Glider <i>Petauroides volans</i> in the Illawarra region",
+      "author": "Maloney, K. S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Taylor, B. D., and Goldingay, R. L. 2009. Can road-crossing structures improve population viability of an urban gliding mammal? <i>Ecology and Society </i> 14(2): 13.",
+      "year": "2009",
+      "title": "Can road-crossing structures improve population viability of an urban gliding mammal?",
+      "author": "Taylor, B. D., and Goldingay, R. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kavanagh, R. P.; Debus, S.; Tweedie, T.; Webster, R. 1995. Distribution of nocturnal forest birds and mammals in north-eastern New South Wales: relationships with environmental variables and management history. <i>Wildlife Research</i> 22: 359-377.",
+      "year": "1995",
+      "title": "Distribution of nocturnal forest birds and mammals in north-eastern New South Wales: relationships with environmental variables and management history",
+      "author": "Kavanagh, R. P.; Debus, S.; Tweedie, T.; Webster, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kavanagh, R.P., and Webb, G.A. 1998. Effects of variable-intensity logging on mammals, reptiles and amphibians at Waratah Creek, south-eastern New South Wales. <i>Pacific Conservation Biology </i> 4: 326–347.",
+      "year": "1998",
+      "title": "Effects of variable-intensity logging on mammals, reptiles and amphibians at Waratah Creek, south-eastern New South Wales",
+      "author": "Kavanagh, R.P., and Webb, G.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Taylor, A. C., Tyndale-Biscoe, C. H. and Lindenmayer. D. B. 2007. Unexpected persistence on habitat islands: genetic signatures reveal dispersal of a eucalypt-dependent marsupial through a hostile pine matrix. <i>Molecular Ecology </i> 16: 2655–2666.",
+      "year": "2007",
+      "title": "Unexpected persistence on habitat islands: genetic signatures reveal dispersal of a eucalypt-dependent marsupial through a hostile pine matrix",
+      "author": "Taylor, A. C., Tyndale-Biscoe, C. H. and Lindenmayer. D. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jackson, S. and Groves, C. 2015. <i>Taxonomy of Australian Mammals</i>. CSIRO, Clayton.",
+      "year": "2015",
+      "title": "Taxonomy of Australian Mammals",
+      "author": "Jackson, S. and Groves, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "McGregor, D.C., Padovan, A., Georges, A., Krockenberger, A., Yoon, H.-J. and Youngentob, K.N. 2020. Genetic evidence supports three previously described species of greater glider, <i>Petauroides volans</i>, <i>P. minor</i>, and <i>P. armillatus</i>. <i>Scientific Reports</i> 10: 1-11.",
+      "year": "2020",
+      "title": "Genetic evidence supports three previously described species of greater glider, <i>Petauroides volans</i>, <i>P. minor</i>, and <i>P. armillatus</i>",
+      "author": "McGregor, D.C., Padovan, A., Georges, A., Krockenberger, A., Yoon, H.-J. and Youngentob, K.N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Legge, S., Rumpff, L., Woinarski, J.C.Z., Whiterod, N.S., Ward, M., Southwell, D.G., Schelle, B.D., Nimmo, D.G., Lintermans, M., Geyle, H.M., Garnett., S.T.,  Hayward-Brown, B., Ensby, M., Ehmke, G., Ahyong, S.T., Blackmore, C.J., Bower, D.S., Brizuela-Torres, D., Burbidge, A.H., Burns, P.A., Butler, G., Catullo, R., Chapple, D.G., Dickman, C.R., Doyle, K.E., Ferris, J., Fisher, D., Gallagher, R., Gillespie, G.R., Greenlees, M.J., Hohnen, R., Hoskin, C.J., Hunter, D., Jolly, C., Kennard, M., King, A., Kuchinke, D., Law, B., Lawler, I., Lawler, S., Loyn, R., Lunney, D., Lyon, J., MacHunter, J., Mahony, M., Mahony, S., McCormack, R.B., Melville, J., Menkhorst, P., Michael, D., Mitchell, N., Mulder, E., Newell, D., Pearce, L., Raadik, T.A., Rowley, J.J.L., Sitters, H., Spencer, R., Valavi, R., West, M., Wilkinson, D.P. and Zukowski, S. 2022. The conservation impacts of ecological disturbance: Time-bound estimates of population loss and recovery for fauna affected by the 2019–2020 Australian megafires. <i>Global Ecology and Biogeography</i> 2022.",
+      "year": "2022",
+      "title": "The conservation impacts of ecological disturbance: Time-bound estimates of population loss and recovery for fauna affected by the 2019–2020 Australian megafires",
+      "author": "Legge, S., Rumpff, L., Woinarski, J.C.Z., Whiterod, N.S., Ward, M., Southwell, D.G., Schelle, B.D., Nimmo, D.G., Lintermans, M., Geyle, H.M., Garnett., S.T.,  Hayward-Brown, B., Ensby, M., Ehmke, G., Ahyong, S.T., Blackmore, C.J., Bower, D.S., Brizuela-Torres, D., Burbidge, A.H., Burns, P.A., Butler, G., Catullo, R., Chapple, D.G., Dickman, C.R., Doyle, K.E., Ferris, J., Fisher, D., Gallagher, R., Gillespie, G.R., Greenlees, M.J., Hohnen, R., Hoskin, C.J., Hunter, D., Jolly, C., Kennard, M., King, A., Kuchinke, D., Law, B., Lawler, I., Lawler, S., Loyn, R., Lunney, D., Lyon, J., MacHunter, J., Mahony, M., Mahony, S., McCormack, R.B., Melville, J., Menkhorst, P., Michael, D., Mitchell, N., Mulder, E., Newell, D., Pearce, L., Raadik, T.A., Rowley, J.J.L., Sitters, H., Spencer, R., Valavi, R., West, M., Wilkinson, D.P. and Zukowski, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2025. The IUCN Red List of Threatened Species. Version 2025-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 October 2025).",
+      "year": "2025",
+      "title": "The IUCN Red List of Threatened Species. Version 2025-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2025-2"
+    },
+    {
+      "citation": "Andrew, D., Koffel, D., Harvey, G., Griffiths, K., Fleming, M. 2014. Rediscovery of the Greater Glider <i>Petauroides volans</i> (Marsupialia: Petauroidea) in the Royal National Park, NSW. <i>Australian Zoologist</i> 37: 23-28.",
+      "year": "2014",
+      "title": "Rediscovery of the Greater Glider <i>Petauroides volans</i> (Marsupialia: Petauroidea) in the Royal National Park, NSW",
+      "author": "Andrew, D., Koffel, D., Harvey, G., Griffiths, K., Fleming, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ashman, K.R., Watchorn, D.J., Lindenmayer, D.B., and Taylor, M.F.J. 2021. Is Australia’s environmental legislation protecting threatened species? A case study of the national listing of the greater glider. . <i>Pacific Conservation Biology</i> 28: 277-289.",
+      "year": "2021",
+      "title": "Is Australia’s environmental legislation protecting threatened species? A case study of the national listing of the greater glider. ",
+      "author": "Ashman, K.R., Watchorn, D.J., Lindenmayer, D.B., and Taylor, M.F.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Baker, A.M., Eldridge, M.D., Fisher, D.O., Frankham, G., Helgen, K., Jackson, S.M., Potter, S., Travouillon, K.J. and Umbrello, L.S. 2023. Taxonomy and diversity of living Australasian marsupials. . In: N.C. Caceres and C.R. Dickman (eds), <i>American and Australasian Marsupials: an evolutionary, biogeographical, and ecological approach</i>, pp. 163-247. Springer.",
+      "year": "2023",
+      "title": "Taxonomy and diversity of living Australasian marsupials. ",
+      "author": "Baker, A.M., Eldridge, M.D., Fisher, D.O., Frankham, G., Helgen, K., Jackson, S.M., Potter, S., Travouillon, K.J. and Umbrello, L.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Boer, M. M., de Dios, V. R., Bradstock, R. A. 2020. Unprecedented burn area of Australian mega forest fires. <i>Nature Climate Change</i> 10: 171-172.",
+      "year": "2020",
+      "title": "Unprecedented burn area of Australian mega forest fires",
+      "author": "Boer, M. M., de Dios, V. R., Bradstock, R. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cripps, J.K., Nelson, J.L., Scroggie, M.P., Durkin, L.K., Ramsey, D.S.L., and Lumsden, L.F. 2021. 2021. Double-observer distance sampling improves the accuracy of density estimates for a threatened arboreal mammal. . <i>Wildlife Research</i> 48: 756-768.",
+      "year": "2021",
+      "title": "Double-observer distance sampling improves the accuracy of density estimates for a threatened arboreal mammal. ",
+      "author": "Cripps, J.K., Nelson, J.L., Scroggie, M.P., Durkin, L.K., Ramsey, D.S.L., and Lumsden, L.F. 2021. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Foley, W.J., Kehl, J.C., Nagy, K A., Kaplan, I.R. and Boorsboom, A.C. 1990. Energy and water metabolism in free-living Greater Gliders <i>Petauroides volans</i>. <i>Australian Journal of Zoology </i> 38: 1-10.",
+      "year": "1990",
+      "title": "Energy and water metabolism in free-living Greater Gliders <i>Petauroides volans</i>",
+      "author": "Foley, W.J., Kehl, J.C., Nagy, K A., Kaplan, I.R. and Boorsboom, A.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Goldingay, R.L., McHugh, D., and Parkyn, J.L. 2022. Multiyear monitoring of threatened iconic arboreal mammals in a mid‐elevation conservation reserve in eastern Australia. . <i>Ecology and Evolution</i> 12(e8935).",
+      "year": "2022",
+      "title": "Multiyear monitoring of threatened iconic arboreal mammals in a mid‐elevation conservation reserve in eastern Australia. ",
+      "author": "Goldingay, R.L., McHugh, D., and Parkyn, J.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Green, M.C., Michael, D.R., Turner, J.M., Wright, L.J., and Nimmo, D.G. 2024. The influence of severe wildfire on a threatened arboreal mammal. 51.",
+      "year": "2024",
+      "title": "The influence of severe wildfire on a threatened arboreal mammal",
+      "author": "Green, M.C., Michael, D.R., Turner, J.M., Wright, L.J., and Nimmo, D.G. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Jackson, S.M. 2015. Family Pseudocheiridae (Ringtail Possums and Greater Gliders). In: Mittermeier, R. A. & Wilson, D. E. (ed.), <i>Handbook of the Mammals of the World. Volume 5: Monotremes and Marsupials </i>, pp. 654-658. Springer, Barcelona.",
+      "year": "2015",
+      "title": "Family Pseudocheiridae (Ringtail Possums and Greater Gliders)",
+      "author": "Jackson, S.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jackson, S.M. 2023. Greater glider <i>Petauroides volans</i> . In: A.M. Baker and I.C. Gynther (eds), <i>Strahan’s Mammals of Australia, Fourth Edition.</i>, pp. 244-246. Reed New Holland, Wahroonga.",
+      "year": "2023",
+      "title": "Greater glider <i>Petauroides volans</i> ",
+      "author": "Jackson, S.M. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Jackson, S.M. and Groves, C.P. 2015. <i>Taxonomy of Australian Mammals. </i>. CSIRO Publishing, Clayton.",
+      "year": "2015",
+      "title": "Taxonomy of Australian Mammals. ",
+      "author": "Jackson, S.M. and Groves, C.P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Lindenmayer, D.B. 2009. <i>Forest pattern and ecological process: a synthesis of 25 years of research.</i> CSIRO Publishing, Melbourne.",
+      "year": "2009",
+      "title": "Forest pattern and ecological process: a synthesis of 25 years of research.",
+      "author": "Lindenmayer, D.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lindenmayer, D.B., Blanchard, W., Blair, D., McBurney, L., Taylor, C., Scheele, B.C., Westgate, M.J., Robinson, N., and Foster, C. 2021. The response of arboreal marsupials to long‐term changes in forest disturbance. . <i>Animal Conservation</i> 24: 246-248.",
+      "year": "2021",
+      "title": "The response of arboreal marsupials to long‐term changes in forest disturbance. ",
+      "author": "Lindenmayer, D.B., Blanchard, W., Blair, D., McBurney, L., Taylor, C., Scheele, B.C., Westgate, M.J., Robinson, N., and Foster, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lindenmayer, D.B., McBurney, L., Blanchard, W., Marsh, K., Bowd, E., Watchorn, D.J., Taylor, C. and Youngentob, K. 2022. Elevation, disturbance, and forest type drive the occurrence of a specialist arboreal folivore. . <i>PLoS ONE</i> 17(e0265963).",
+      "year": "2022",
+      "title": "Elevation, disturbance, and forest type drive the occurrence of a specialist arboreal folivore. ",
+      "author": "Lindenmayer, D.B., McBurney, L., Blanchard, W., Marsh, K., Bowd, E., Watchorn, D.J., Taylor, C. and Youngentob, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "McGregor, D.C., Nordberg, E.J., Yoon, H.-J., Youngentob, K., Schwarzkopf, L., and Krockenberger, A. 2023. Comparison of home range size, habitat use and the influence of resource variations between two species of greater gliders (Petauroides minor and Petauroides volans). . <i>PLoS ONE </i> 18(e0286813).",
+      "year": "2023",
+      "title": "Comparison of home range size, habitat use and the influence of resource variations between two species of greater gliders (Petauroides minor and Petauroides volans). ",
+      "author": "McGregor, D.C., Nordberg, E.J., Yoon, H.-J., Youngentob, K., Schwarzkopf, L., and Krockenberger, A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "McLean, C.M., Kavanagh, R.P., Penman, T. and Bradstock, R. 2018. The threatened status of the hollow dependent arboreal marsupial, the Greater Glider (<i>Petauroides volans</i>), can be explained by impacts from wildfire and selective logging. <i>Forest Ecology and Management</i> 415-16: 19-25.",
+      "year": "2018",
+      "title": "The threatened status of the hollow dependent arboreal marsupial, the Greater Glider (<i>Petauroides volans</i>), can be explained by impacts from wildfire and selective logging",
+      "author": "McLean, C.M., Kavanagh, R.P., Penman, T. and Bradstock, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rübsamen, K., Hume, I. D., Foley, W. J., Rübsamen, U. 1984. Implications of the large surface area to body mass ratio on the heat balance of the Greater Glider Petauroides volans. <i>Journal of Comparative Physiology, B-Biochemical, Systemic, and Environmental Physiology </i> 154: 105-111.",
+      "year": "1984",
+      "title": "Implications of the large surface area to body mass ratio on the heat balance of the Greater Glider Petauroides volans",
+      "author": "Rübsamen, K., Hume, I. D., Foley, W. J., Rübsamen, U.",
+      "citation_short": null
+    },
+    {
+      "citation": "Smith, P. and Smith, J. 2018.  Decline of the greater glider (<i>Petauroides volans</i>) in the lower Blue Mountains, New South Wales. <i>Australian Journal of Zoology</i> 66: 103-114.",
+      "year": "2018",
+      "title": " Decline of the greater glider (<i>Petauroides volans</i>) in the lower Blue Mountains, New South Wales",
+      "author": "Smith, P. and Smith, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Smith, P. and Smith, J. 2022. Impact of the 2019–20 drought, heatwaves and mega-fires on Greater Gliders (Petauroides volans) in the Greater Blue Mountains World Heritage Area, New South Wales. <i>Australian Zoologist</i> 42: 164-181.",
+      "year": "2022",
+      "title": "Impact of the 2019–20 drought, heatwaves and mega-fires on Greater Gliders (Petauroides volans) in the Greater Blue Mountains World Heritage Area, New South Wales.",
+      "author": "Smith, P. and Smith, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "TSSC. 2022b. Conservation Advice. Greater glider (northern) <i>Petauroides minor</i>. Department of Climate Change, Energy, the Environment and Water, Canberra.",
+      "year": "2022b",
+      "title": "Conservation Advice. Greater glider (northern) <i>Petauroides minor</i>.",
+      "author": "TSSC",
+      "citation_short": ""
+    },
+    {
+      "citation": "TSSC. 2022. Conservation Advice. Greater glider (southern and central) Petauroides volans. Department of Climate Change, Energy, the Environment and Water, Canberra.",
+      "year": "2022",
+      "title": "Conservation Advice. Greater glider (southern and central) Petauroides volans.",
+      "author": "TSSC",
+      "citation_short": null
+    },
+    {
+      "citation": "Wagner, B., Baker, P.J., Stewart, S.B., Lumsden, L.F., Nelson, J.L., Cripps, J.K., Durkin, L.K., Scroggie, M.P. and Nitschke, C.R. 2020. Climate change drives habitat contraction of a nocturnal arboreal marsupial at its physiological limits. <i>Ecosphere</i> 11(e03262).",
+      "year": "2020",
+      "title": "Climate change drives habitat contraction of a nocturnal arboreal marsupial at its physiological limits.",
+      "author": "Wagner, B., Baker, P.J., Stewart, S.B., Lumsden, L.F., Nelson, J.L., Cripps, J.K., Durkin, L.K., Scroggie, M.P. and Nitschke, C.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wardell-Johnson, G.W. and Robinson, T.P. 2022. Considerations in the protection of marsupial gliders and other mature-forest dependent fauna in areas of intensive logging in the tall forests of Victoria, Australia. <i>Pacific Conservation Biology</i> 29: 369-386.",
+      "year": "2022",
+      "title": "Considerations in the protection of marsupial gliders and other mature-forest dependent fauna in areas of intensive logging in the tall forests of Victoria, Australia.",
+      "author": "Wardell-Johnson, G.W. and Robinson, T.P. ",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

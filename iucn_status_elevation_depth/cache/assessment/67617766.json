@@ -1,0 +1,1522 @@
+{
+  "assessment_date": "2016-12-05T00:00:00.000+00:00",
+  "year_published": "2017",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 41006,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/41006/67617766",
+  "citation": "Pollom, R. 2017. Hippocampus guttulatus. The IUCN Red List of Threatened Species 2017: e.T41006A67617766. Accessed on 15 May 2026.",
+  "assessment_id": 67617766,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 41006,
+    "scientific_name": "Hippocampus guttulatus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "ACTINOPTERYGII",
+    "order_name": "SYNGNATHIFORMES",
+    "family_name": "SYNGNATHIDAE",
+    "genus_name": "Hippocampus",
+    "species_name": "guttulatus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Cuvier, 1829",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Seahorse, Pipefish & Seadragon Specialist Group",
+        "url": "https://iucn-seahorse.org/",
+        "description": "Chair: Amanda Vincent (email: a.vincent@oceans.ubc.ca)\nRed List Authority Coordinator: Riley Pollom (email: r.pollom@fisheries.ubc.ca)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Seahorse",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Caballito de Mar",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Cavaddruzzu",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Cavallo de mà",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Cavalluccie de mare",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Cavalluccio",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Cavalluccio 'e mare",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Cavalluccio marino",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Caval marino",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Cavalo-marinho-de-focinho-comprido",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Cavalo storno",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Cavvadduzzu 'i mari",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Cheval Marin",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Denizati baliği",
+        "language": "tur"
+      },
+      {
+        "main": false,
+        "name": "Denizaygiri baliklari",
+        "language": "tur"
+      },
+      {
+        "main": false,
+        "name": "Hippocampe Moucheté",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Qirrâq",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Ziegenbarsch",
+        "language": "mlt"
+      },
+      {
+        "main": false,
+        "name": "Ziemel",
+        "language": "mlt"
+      },
+      {
+        "main": false,
+        "name": "Ziemel tal-bahar halqu qasir",
+        "language": "mlt"
+      },
+      {
+        "main": false,
+        "name": "多枝海馬",
+        "language": "chi"
+      },
+      {
+        "main": false,
+        "name": "多枝海马",
+        "language": "chi"
+      },
+      {
+        "main": true,
+        "name": "Long-snouted Seahorse",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Hippocampus hippocampus ssp. microcoronatus Slastenenko, 1938",
+        "status": "ACCEPTED",
+        "genus_name": "Hippocampus",
+        "species_name": "hippocampus",
+        "species_author": null,
+        "infrarank_author": "Slastenenko, 1938",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "microcoronatus"
+      },
+      {
+        "name": "Hippocampus hippocampus ssp. microstephanus Slastenenko, 1937",
+        "status": "ACCEPTED",
+        "genus_name": "Hippocampus",
+        "species_name": "hippocampus",
+        "species_author": null,
+        "infrarank_author": "Slastenenko, 1937",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "microstephanus"
+      },
+      {
+        "name": "Hippocampus longirostris Schinz, 1822",
+        "status": "ACCEPTED",
+        "genus_name": "Hippocampus",
+        "species_name": "longirostris",
+        "species_author": "Schinz, 1822",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Hippocampus filamentosus Duméril, 187O",
+        "status": "ACCEPTED",
+        "genus_name": "Hippocampus",
+        "species_name": "filamentosus",
+        "species_author": "Duméril, 187O",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Hippocampus ramulosus Leach in Leach & Nodder, 1814",
+        "status": "ACCEPTED",
+        "genus_name": "Hippocampus",
+        "species_name": "ramulosus",
+        "species_author": "Leach in Leach & Nodder, 1814",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Data Deficient"
+    },
+    "code": "DD"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": 30,
+    "upper_depth_limit": 0,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": "2",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "No"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Unknown"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "Yes",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "Unknown",
+    "extreme_fluctuations_in_subpopulations": "Unknown",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Unknown",
+    "extreme_fluctuations_in_area_of_occupancy": "Unknown",
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": "Unknown",
+    "extreme_fluctuations_in_extent_of_occurence": "Unknown",
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": "Unknown"
+  },
+  "documentation": {
+    "range": "<em>Hippocampus guttulatus</em> is primarily a species of European waters. The species is present along the Atlantic coast from the UK, Ireland and Netherlands to the Mediterranean Sea. Distribution continues throughout the Mediterranean Sea and Black Seas (Woodall <em>et al. </em>2015, Lourie <em>et al.</em> 2016).",
+    "population": "There is no global estimate of <em>H. guttulatus</em> population size or trends in abundance. However there are several locations where datasets are available regarding population size and trends.<br/><br/>In the Ria Formosa lagoon (southern Portugal), the <em>H. guttulatus</em> population decreased by 94% from 2002 to 2007 (from 0.073 indivduals/m²&#160;to 0.004 individuals/m² -&#160;Curtis and Vincent 2005, Caldwell and Vincent 2012). More recent surveys at this location revealed that the population size is possibly increasing again to 0.039-0.140 indivduals/m² (Correia <em>et al.</em> 2014, 2015).&#160; <em>H. guttulatus</em> has been shown to utilise complex habitats (Curtis and Vincent 2005, Gristina <em>et al.</em> 2015), with populations apparently fluctuating according to the availability of holdfasts (Correia <em>et al.</em> 2015).<br/><br/>In the Thau Lagoon (Southern France), <em>H. guttulatus</em> populations have fluctuated each year, however no long term trend has been observed (2005–2009) (Louisy 2011). In the Arcachon Basin (Western France), interviews suggest that the population distribution is very patchy, but to date no trend has been established due to lack of consistent data collection (2005–2011) (Grima 2011).<br/><br/>In the Gulf of Lion, it is reported that this species was easily caught  in this area up until the 1980’s. Since that time, it has become rarer  and the populations appear to have declined significantly (anecdotal  evidence and field experience) (J.P. Quignard pers. comm. 2007). Mayol <em>et al. </em>(2000) state that there have been population declines in the Balearic Islands. Goffredo <em>et al.</em>  (2004) remarked that among the 3,061 seahorse specimens&#160;caught&#160;around  Italy, 68% were this species. <br/><br/>In the Mar Piccolo di Taranto, southeastern Italy, there was a mean abundance of 0.018 individuals/m²&#160;(SE  +/-0.003) in the summer of 2012 (ranging from a maximum of 0.035 individuals/m²&#160;(SE  +/-0.007) to a minimum of 0.008 individuals/m²&#160;(SE  +/-0.002)) (Gristina <em>et al. </em>2015).<br/><br/>Anecdotal evidence is available in other locations, but without exhaustive surveys and systematic data collection. In Mar Menor, (Southern Spain), Voiotias, (Greece) and Varna, (Bulgaria) the population size of <em>H. guttulatus</em> fluctuates greatly each year (2005–2011) (anecdotal evidence compiled by L. Woodall). In other coastal sites populations have both decreased (Badalona, Spain- J. Ortiz, SASBA, &#160;in. litt. 2012; Malaga, Spain- P. Cabrera, in. litt. 2012; Galicia, Spain- S. Valladares, in. litt. 2012) and increased (La Herradura, Spain- P. Cabrera, in. litt. 2012). It is therefore difficult to generalise on population trends for this species throughout its range. Systematic and range-wide monitoring need to be implemented on an ongoing basis in order to determine the true population size and trends in abundance for this species.",
+    "habitats": "<em>Hippocampus guttulatus</em> are mostly found inhabiting small home ranges in shallow coastal waters, lagoon systems and estuaries (0.5–15 m; Curtis and Vincent 2005,Curtis and Vincent 2006, Garrick-Maidment and Jones 2004, Woodall 2009) but there may be seasonal migration to deeper waters (30 m+) (Boisseau 1967, Garrick-Maidment 2007, Garrick-Maidment and Jones 2004). Adult <em>H. guttulatus</em> use varied habitats, of all sediment types, macroalgae and seagrass and in addition are often observed on artificial structures using them as holdfasts (Garrick-Maidment and Jones 2004, Curtis and Vincent 2005, Franco <em>et al.</em> 2006, Woodall 2009, Louisy 2010, Gristina et al. 2015).&#160;<br/><br/>In the Ria Formosa adult <em>H. guttulatus</em> are associated with complex habitats, including <em>Zostera marina</em>, <em>Ulva</em> spp., <em>Codium</em> spp. and artificial structures (Curtis and Vincent 2005, Correia <em>et al.</em> 2015). However this species is seen in different habitats such as rocky areas, sand/silt ripples, sessile invertebrates and sponges in other locations such as the U.K, Bulgaria, Spain, France and Greece (Garrick-Maidment and Jones 2004, Woodall 2009, Louisy 2010). <br/><br/>As an ambush predator, <em>H. guttulatus</em> has a wide dietary range that mainly comprises Amphipoda, Anmura, Decopoda and Mysidaceae (Kitsos <em>et al.</em> 2008, Gurkan <em>et al.</em> 2011) and thus is associated with highly productive habitats. Valladares <em>et al.</em> (2016) used stable isotopes to study diet, with Caprellidea being the primary source, followed by Gammaridea and Caridea.  Mysidae and Annelida were consumed in lower numbers.&#160; Sex differences in diet were found - Caprellidea was the most important  prey for females; Gammaridea was the dominant prey for males.<br/><br/><em>Hippocampus guttulatus</em> are seasonal breeders (approx. March to October) with a temperature limited mating and gestation period of around 21 days (Boisseau 1967, Curtis 2007). Like all other seahorses, they are ovoviviparous, and the males brood the young in a pouch prior to giving live birth (Foster and Vincent 2004). Predicted annual fecundity for this species is about 900 young and is correlated with fish size, but the size of the male brood pouch is inferred to be a limiting factor for both sexes (Curtis 2007).<br/><br/>In the Ria Formosa, newborn <em>H. guttulatus</em> are about 12 mm and are seen in adult habitat at 96 mm. Males are mature at 109 mm, reproduce at 125 mm and live for approximately 5 years (Curtis and Vincent 2006). Juvenile <em>H. guttulatus</em> (less than 96 mm) are rarely observed during surveys (Curtis and Vincent 2006, Woodall 2009, Louisy 2010). They spend the first weeks of life as plankton, but nothing more is known about them until recruitment at 96 mm (Boisseau 1967). Juvenile development <em>ex-situ</em> is determined by water temperature, food availability and condition at birth (J. Palma pers. comm. 2012).<br/><br/><em>Hippocampus guttulatus</em> adults have low dispersal and limited migration (Caldwell and Vincent 2012, 2013). This reduces their ability to colonise new areas, recolonise old ones, and in addition reduces their ability to move when habitat becomes unfavourable. <em>H. guttulatus</em>, consistent with other seahorses, has a genetically monogamous mating system, at least within a breeding season (Woodall <em>et al.</em> 2011), and this may reduce their reproductive potential if their partner is removed from the population (e.g. caught). However <em>H. guttulatus</em> matures at an early age, has rapid growth rates, and a short generation time, traits which suggest that it may recover rapidly when direct (e.g., exploitation) and indirect (e.g., by-catch and habitat damage) effects of disturbance cease, but it may then be vulnerable to extended periods of poor recruitment (Curtis and Vincent 2006).",
+    "threats": "The major continuing threat to <em>H. guttulatus</em> is habitat degradation and disturbance through direct anthropogenic activities such as coastal developments and the effect of fishing gear (e.g., trawls and dredges) (Caldwell and Vincent 2012). As it is a shallow coastal species it is extremely susceptible to anthropogenic activities. Habitat degradation through climate change continues across <em>H. guttulatus</em>' range. The species is also threatened by pollution and habitat degradation from shore side run-off (Islam and Tanaka 2004).<br/><br/>Seahorses are caught both intentionally and incidentally in Portugal, and sold for curiosities&#160;or into the live aquarium fish trade&#160;(J. Curtis, in litt. 2012). They are also caught incidentally in Italy, France, Spain and Croatia (J. Curtis 2012). The volume of this trade is unknown, but without appropriate management this trade might represent a threat to the species.",
+    "measures": "The entire genus <em>Hippocampus</em> is listed in Appendix II of CITES. <em>Hippocampus guttulatus </em>has been listed under OSPAR, European CITES, (Curd 2009) the Bern Convention and Barcelona Convention&#160;(Abdul Malak&#160;<em>et al.&#160;</em>2011)&#160;.<br/><br/>Regionally, it is listed as Near Threatened in the&#160;Mediterranean and Endangered in Croatia (Jardas <em>et al.&#160;</em>2007). In the Black Sea region, it is listed as Endangered by Turkey, Vulnerable in Georgia and the Ukraine, and Least Concern in Romania (Yankova 2012). The species is listed in National Red Data Books in Bulgaria, France, Portugal and Slovenia (Yankova 2012). <em>H. guttulatus </em>is protected by the UK Wildlife and Countryside Act of 2008 (DEFRA 2008) and is a UK Biodiversity Action Plan priority species (JNCC 2010).<br/><br/>Further research on this species' biology, ecology, habitat, abundance and distribution is needed. Long-term monitoring is required for this species across its geographic range focusing on population trends, harvest level trend and habitat trends.",
+    "use_trade": "No specific targeted fisheries are known in Europe for <em>H. guttulatus</em>. There may be exploited populations in Africa but the extent of the species' range in this region is unconfirmed. International trade is required to be documented as sustainable, as <em>H. guttulatus</em> is listed on CITES Appendix II. Recent CITES-reported trade is minimal and on the order of tens of animals per year (CITES 2016). Seahorse species are, however, often misidentified (L. Woodall pers. obs.). <br/><br/>Individuals retained in bycatch are sometimes sold as curiosities, good-luck charms and for use in traditional medicines (Portugal and France; L. Woodall pers. obs.; Vincent <em>et al.</em> 2011). This species is also collected occasionally under permits for displays in local public aquariums (Portugal and France; L. Woodall pers. obs.). It is not clear how much offtake is occurring and the overall effect of bycatch on this species is unknown.",
+    "rationale": "<em>Hippocampus guttulatus </em>is a coastal marine seahorse that inhabits macroalgae, seagrass, sand and mud, sessile invertebrates, reefs and lagoons in Europe and the Mediterranean. Populations appear to fluctuate widely, and trends in abundance indicate both declines and increases in different areas. Habitat loss and degradation have contributed to declines. The species is threatened by habitat loss and degradation due to pollution and destructive fishing practices, and is often caught as bycatch. Further research is needed in order to estimate population size and trends in abundance across this species' range, and population and habitat monitoring are needed. Therefore <em>H. guttulatus</em> is listed as Data Deficient.",
+    "trend_justification": null,
+    "taxonomic_notes": "All Black Sea specimens examined thus far have been genetically identified as <em>Hippocampus guttulatus</em>, with no evidence of a separate species (Woodall 2009). This supersedes previous suggestions that a new and different species or subspecies inhabits the Black Sea."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_2",
+      "description": {
+        "en": "Policies and regulations"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_2",
+      "description": {
+        "en": "Training"
+      }
+    }
+  ],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mediterranean and Black Sea"
+      },
+      "code": "37"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - eastern central"
+      },
+      "code": "34"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northeast"
+      },
+      "code": "27"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy"
+      },
+      "code": "9_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Loose Rock/pebble/gravel"
+      },
+      "code": "9_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Artificial/Marine - Marine Anthropogenic Structures"
+      },
+      "code": "15_11"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Marine Neritic - Macroalgal/Kelp"
+      },
+      "code": "9_7"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Seagrass (Submerged)"
+      },
+      "code": "9_9"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Marine Neritic - Subtidal Muddy"
+      },
+      "code": "9_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy-Mud"
+      },
+      "code": "9_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Marine Intertidal - Rocky Shoreline"
+      },
+      "code": "12_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ukraine"
+      },
+      "code": "UA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ireland"
+      },
+      "code": "IE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Monaco"
+      },
+      "code": "MC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cyprus"
+      },
+      "code": "CY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Netherlands"
+      },
+      "code": "NL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malta"
+      },
+      "code": "MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Area-based Management Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Handicrafts, jewellery, etc."
+      },
+      "code": "12"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Research"
+      },
+      "code": "14"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Nutrient loads"
+      },
+      "code": "9_3_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Soil erosion, sedimentation"
+      },
+      "code": "9_3_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_4_4"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Sewage"
+      },
+      "code": "9_1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Pollom, R.",
+      "value": [
+        "Riley Pollom (Project Seahorse)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Ralph, G.",
+      "value": [
+        "Gina Ralph (Marine Biodiversity Unit)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Woodall, L.",
+      "value": [
+        "Lucy Woodall (SPS SG)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Woodall, L.C. 2009. The population genetics and mating systems of European Seahorses. PhD thesis. Royal Holloway, University of London.",
+      "year": "2009",
+      "title": "The population genetics and mating systems of European Seahorses. PhD thesis",
+      "author": "Woodall, L.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lourie, S.A., Foster, S.J., Cooper, E.W.T. and Vincent, A.C.J. 2004. <i>A Guide to the Identification of Seahorses</i>. Project Seahorse and TRAFFIC North America, University of British Columbia and World Wildlife Fund, Washington D.C.",
+      "year": "2004",
+      "title": "A Guide to the Identification of Seahorses",
+      "author": "Lourie, S.A., Foster, S.J., Cooper, E.W.T. and Vincent, A.C.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "UNEP-WCMC. 2012a. <i>CITES trade statistics derived from the CITES Trade Database</i>. UNEP World Conservation Monitoring Centre, Cambridge, UK.",
+      "year": "2012a",
+      "title": "CITES trade statistics derived from the CITES Trade Database",
+      "author": "UNEP-WCMC",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vincent, A.C.J., Foster, S.J. and Koldewey, H.J. 2011. Conservation and management of seahorses and other Syngnathidae. <i>Journal of Fish Biology</i> 78: 1681-1724.",
+      "year": "2011",
+      "title": "Conservation and management of seahorses and other Syngnathidae",
+      "author": "Vincent, A.C.J., Foster, S.J. and Koldewey, H.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Foster, S.J. and Vincent, A.C.J. 2004. Life history and ecology of seahorses: implications for conservation and management. <i>Journal of Fish Biology</i> 65: 1-61.",
+      "year": "2004",
+      "title": "Life history and ecology of seahorses: implications for conservation and management",
+      "author": "Foster, S.J. and Vincent, A.C.J",
+      "citation_short": null
+    },
+    {
+      "citation": "Mayol, J., Grau, A., Riera, F. and Oliver, J. 2000. Llista vermella de peixos de les Balears. <i>Documents Tècnics de Conservació</i> 7: 1-126.",
+      "year": "2000",
+      "title": "Llista vermella de peixos de les Balears",
+      "author": "Mayol, J., Grau, A., Riera, F. and Oliver, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Malak, D.A., Livingstone, S.R., Pollard, D., Polidoro, B.A., Cuttelod, A., Bariche, M., Bilecenoglu, M., Carpenter, K.E., Collette, B.B., Francour, P., Goren, M., Kara, M.H., Massuti, E., Papaconstantinou, C. and Tunesi, L. 2011. Overview of the Conservation Status of the Marine Fishes of the Mediterranean Sea. In: IUCN (ed.). Gland, Switzerland.",
+      "year": "2011",
+      "title": "Overview of the Conservation Status of the Marine Fishes of the Mediterranean Sea",
+      "author": "Malak, D.A., Livingstone, S.R., Pollard, D., Polidoro, B.A., Cuttelod, A., Bariche, M., Bilecenoglu, M., Carpenter, K.E., Collette, B.B., Francour, P., Goren, M., Kara, M.H., Massuti, E., Papaconstantinou, C. and Tunesi, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Boisseau. J. 1967. Les régulations hormonales de l'incubation chez un Vertébré mâle: recherches sur la reproduction de l'Hippocampe.  PhD thèses, L’ Université de Bordeaux, France. 379 pp.",
+      "year": "1967",
+      "title": "Les régulations hormonales de l'incubation chez un Vertébré mâle: recherches sur la reproduction de l'Hippocampe.",
+      "author": "Boisseau, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Curtis, J.M.R. and Vincent, A.C.J. 2006. Life history of an unusual marine fish: survival, growth and movement patterns of Hippocampus guttulatus Cuvier 1829. <i>Journal of Fish Biology</i> 68: 707-733.",
+      "year": "2006",
+      "title": "Life history of an unusual marine fish: survival, growth and movement patterns of Hippocampus guttulatus Cuvier 1829",
+      "author": "Curtis, J.M.R. and Vincent, A.C.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Caldwell, I.R. and Vincent, A.C.J. 2012. Revisiting two sympatric European seahorse species: apparent decline in the absence of exploitation. <i>Aquatic Conservation: Marine and Freshwater Ecosystems Online </i> Early View.",
+      "year": "2012",
+      "title": "Revisiting two sympatric European seahorse species: apparent decline in the absence of exploitation",
+      "author": "Caldwell, I.R. and Vincent, A.C.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Curd, A. 2009. Background Document for the Long-snouted  seahorse Hippocampus guttulatus. <i>OSPAR Commission, Biodiversity Series</i>.",
+      "year": "2009",
+      "title": "Background Document for the Long-snouted  seahorse Hippocampus guttulatus",
+      "author": "Curd, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gurkan, A., Taskavak, E., Saver, T.M. and Akalin, S. 2011. Gut Contents of Two European Seahorses Hippocampus hippocampus  and Hippocampus guttulatus in the Aegean Sea, Coasts of Turkey. <i>Pakistan Journal of Zoology</i> 43(6): 1197-1201.",
+      "year": "2011",
+      "title": "Gut Contents of Two European Seahorses Hippocampus hippocampus  and Hippocampus guttulatus in the Aegean Sea, Coasts of Turkey",
+      "author": "Gurkan, A., Taskavak, E., Saver, T.M. and Akalin, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Curtis, J.M.R. and Vincent, A.C.J. 2005. Distribution of sympatric seahorse species along a gradient of habitat complexity in a seagrass dominated community. <i>Marine Ecology Progress Series</i> 291: 81-91.",
+      "year": "2005",
+      "title": "Distribution of sympatric seahorse species along a gradient of habitat complexity in a seagrass dominated community",
+      "author": "Curtis, J.M.R. and Vincent, A.C.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "JNCC. 2010. UK Priority Species data collation: <i>Hippocampus guttulatus</i>.  Species Pages for 2007 UK BAP Priority Species. Joint Nature Conservation Council.",
+      "year": "2010",
+      "title": "UK Priority Species data collation: <i>Hippocampus guttulatus</i>",
+      "author": "JNCC",
+      "citation_short": ""
+    },
+    {
+      "citation": "Jardas, I., Pallaoro, A. and Vrgoc, N. 2007. Croatian Red List: Saltwater fish . <i>Institute of Oceanography and Fisheries</i>.",
+      "year": "2007",
+      "title": "Croatian Red List: Saltwater fish ",
+      "author": "Jardas, I., Pallaoro, A. and Vrgoc, N. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Louisy, P. 2011. Hippocampus guttulatus, l’espèce commune de l’étang de Thau, Hippo-Thau Bilan Scientifique 2005-2009. <i>CPIE Bassin de Thau, Agde France</i>.",
+      "year": "2011",
+      "title": "Hippocampus guttulatus, l’espèce commune de l’étang de Thau, Hippo-Thau Bilan Scientifique 2005-2009",
+      "author": "Louisy, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Garrick-Maidment, N. 2007. British seahorse survey report. The Seahorse Trust, Topsham, UK.",
+      "year": "2007",
+      "title": "British seahorse survey report",
+      "author": "Garrick-Maidment, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yankova, M. 2012. Black Sea Fish Checklist: A Publication of the Commission on the Protection of the Black Sea Against Pollution. Available at: <a href=\"http://www.blacksea-commission.org/_publ-BSFishList.asp\">http://www.blacksea-commission.org/_publ-BSFishList.asp</a>. ",
+      "year": "2012",
+      "title": "Black Sea Fish Checklist: A Publication of the Commission on the Protection of the Black Sea Against Pollution",
+      "author": "Yankova, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "DEFRA (Department for Environment, Food and Rural Affairs). 2008. <i>The Wildlife and Countryside Act 1981 (Variation of Schedule 5) (England) Order 2008 No. 431</i>. England.",
+      "year": "2008",
+      "title": "The Wildlife and Countryside Act 1981 (Variation of Schedule 5) (England) Order 2008 No. 431",
+      "author": "DEFRA (Department for Environment, Food and Rural Affairs)",
+      "citation_short": null
+    },
+    {
+      "citation": "Garrick-Maidment, N. and Jones, L. 2004. British Seahorse Survey Report. The Seahorse Trust, Topsham UK.",
+      "year": "2004",
+      "title": "British seahorse survey report",
+      "author": "Garrick-Maidment, N. and Jones, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Franco, A., Franzoi, P., Malavasi, S., Riccato, F. and Torricelli, P. 2006. Fish assemblages in different shallow water habitats of the Venice lagoon. <i>Hydrobiologia</i> 555: 159-174.",
+      "year": "2006",
+      "title": "Fish assemblages in different shallow water habitats of the Venice lagoon",
+      "author": "Franco, A., Franzoi, P., Malavasi, S., Riccato, F. and Torricelli, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Grima, D. 2011. Etat des connaissances et ressources d’informations sur les hippocampes du Bassin d’Arcachon. Extrait du rapport remis à la mission pour le parc marin du bassin d’Arcachon et son ouvert. Arcachon, France.",
+      "year": "2011",
+      "title": "Etat des connaissances et ressources d’informations sur les hippocampes du Bassin d’Arcachon. Extrait du rapport remis à la mission pour le parc marin du bassin d’Arcachon et son ouvert. Arcachon, France",
+      "author": "Grima, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Islam, S. and Tanaka, M. 2004. Impacts of pollution on coastal and marine ecosystems including coastal and marine fisheries and approach for management: a review and synthesis. <i>Marine Pollution Bulletin</i> 48(7-8): 624-649.",
+      "year": "2004",
+      "title": "Impacts of pollution on coastal and marine ecosystems including coastal and marine fisheries and approach for management: a review and synthesis",
+      "author": "Islam, S. and Tanaka, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Curtis, J.M.R. 2007. Validation of a method for estimating realized annual fecundity in a multiple spawner, the long-snouted seahorse (Hippocampus guttulatus), using underwater visual census. <i>Fisheries Bulletin</i> 105: 327-336.",
+      "year": "2007",
+      "title": "Validation of a method for estimating realized annual fecundity in a multiple spawner, the long-snouted seahorse (Hippocampus guttulatus), using underwater visual census",
+      "author": "Curtis, J.M.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kitsos, M.S., Tzomos, T., Anagnostopoulou, L. and Koukouras, A. 2008. Diet composition of the seahorses, <i>Hippocampus guttulatus</i> Cuvier, 1829 and <i>Hippocampus hippocampus</i> (Teleostei, Syngnathidae) in the Aegean Sea. <i>Journal of Fish Biology</i> 72(6): 1259-1267.",
+      "year": "2008",
+      "title": "Diet composition of the seahorses, <i>Hippocampus guttulatus</i> Cuvier, 1829 and <i>Hippocampus hippocampus</i> (Teleostei, Syngnathidae) in the Aegean Sea",
+      "author": "Kitsos, M.S., Tzomos, T., Anagnostopoulou, L. and Koukouras, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gamito, S. 2008. Three main stressors acting on the Ria Formosa lagoonal system (Southern Portugal): Physical stress, organic matter pollution and the land–ocean gradient. <i>Estuarine, Coastal and Shelf Science</i> 7(4): 710-720.",
+      "year": "2008",
+      "title": "Three main stressors acting on the Ria Formosa lagoonal system (Southern Portugal): Physical stress, organic matter pollution and the land–ocean gradient",
+      "author": "Gamito, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Valladares, S., Soto, D. X., and Planas, M. 2016. Dietary composition of endangered seahorses determined by stable isotope analysis. <i>Marine and Freshwater Research</i> Online Early View: DOI  10.1071/MF16013.",
+      "year": "2016",
+      "title": "Dietary composition of endangered seahorses determined by stable isotope analysis",
+      "author": "Valladares, S., Soto, D. X., and Planas, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Caldwell, I. R., and Vincent, A. C. J. 2013. A sedentary fish on the move: effects of displacement on long-snouted seahorse (<i>Hippocampus guttulatus</i> Cuvier) movement and habitat use. <i>Environmental Biology of Fishes</i> 96(1): 67-75.",
+      "year": "2013",
+      "title": "A sedentary fish on the move: effects of displacement on long-snouted seahorse (<i>Hippocampus guttulatus</i> Cuvier) movement and habitat use",
+      "author": "Caldwell, I. R., and Vincent, A. C. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Correia, M., Caldwell, I. R., Koldewey, H. J., Andrade, J. P., and Palma, J. 2015. Seahorse (Hippocampinae) population fluctuations in the Ria Formosa Lagoon, south Portugal. <i>Journal of Fish Biology</i> 87(3): 679-690.",
+      "year": "2015",
+      "title": "Seahorse (Hippocampinae) population fluctuations in the Ria Formosa Lagoon, south Portugal",
+      "author": "Correia, M., Caldwell, I. R., Koldewey, H. J., Andrade, J. P., and Palma, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Correia, M., Palma, J., Koldewey, H., and Andrade, J. P. 2014. The use of a non-invasive tool for capture–recapture studies on a seahorse <i>Hippocampus guttulatus</i> population. <i>Journal of Fish Biology</i> 84: 872-844.",
+      "year": "2014",
+      "title": "The use of a non-invasive tool for capture–recapture studies on a seahorse <i>Hippocampus guttulatus</i> population",
+      "author": "Correia, M., Palma, J., Koldewey, H., and Andrade, J. P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gristina, M., Cardone, F., Carlucci, R., Castellano, L., Passarelli, S., and Corriero, G. 2015. Abundance, distribution and habitat preference of <i>Hippocampus guttulatus</i> and <i>Hippocampus hippocampus</i> in a semi-enclosed central Mediterranean marine area. <i>Marine Ecology</i> 36(1): 57-66.",
+      "year": "2015",
+      "title": "Abundance, distribution and habitat preference of <i>Hippocampus guttulatus</i> and <i>Hippocampus hippocampus</i> in a semi-enclosed central Mediterranean marine area",
+      "author": "Gristina, M., Cardone, F., Carlucci, R., Castellano, L., Passarelli, S., and Corriero, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Goffredo, S., Piccinetti, C. and Zaccardi, F. 2004. Volunteers in marine conservation monitoring: a study of the distribution of seahorses carried out in collaboration with recreational scuba divers. <i>Conservation Biology</i> 18(6): 1492-1503.",
+      "year": "2004",
+      "title": "Volunteers in marine conservation monitoring: a study of the distribution of seahorses carried out in collaboration with recreational scuba divers",
+      "author": "Goffredo, S., Piccinetti, C. and Zaccardi, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "CITES. 2016. CITES Trade Data Base (<i>Hippocampus guttulatus</i>). Available at: <a href=\"http://trade.cites.org/\">http://trade.cites.org/</a>. (Accessed: 05-December-2016).",
+      "year": "2016",
+      "title": "CITES Trade Data Base (<i>Hippocampus guttulatus</i>)",
+      "author": "CITES",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2017. The IUCN Red List of Threatened Species. Version 2017-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 5 December 2017).",
+      "year": "2017",
+      "title": "The IUCN Red List of Threatened Species. Version 2017-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2017-3"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [
+    {
+      "description": {
+        "en": "Black Sea"
+      },
+      "code": "4_2_5"
+    },
+    {
+      "description": {
+        "en": "Iberian Coastal"
+      },
+      "code": "4_2_10"
+    },
+    {
+      "description": {
+        "en": "North Sea"
+      },
+      "code": "4_2_6"
+    },
+    {
+      "description": {
+        "en": "Mediterranean Sea"
+      },
+      "code": "2_1_1"
+    },
+    {
+      "description": {
+        "en": "Celtic-Biscay"
+      },
+      "code": "4_2_8"
+    }
+  ],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

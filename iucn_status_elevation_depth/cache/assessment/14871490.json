@@ -1,0 +1,2961 @@
+{
+  "assessment_date": "2015-08-27T01:00:00.000+01:00",
+  "year_published": "2015",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 22823,
+  "criteria": "A3c",
+  "url": "https://www.iucnredlist.org/species/22823/14871490",
+  "citation": "Wiig, Ø., Amstrup, S., Atwood, T., Laidre, K., Lunn, N., Obbard, M., Regehr, E. & Thiemann, G. 2015. Ursus maritimus. The IUCN Red List of Threatened Species 2015: e.T22823A14871490. Accessed on 15 May 2026.",
+  "assessment_id": 14871490,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 22823,
+    "scientific_name": "Ursus maritimus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CARNIVORA",
+    "family_name": "URSIDAE",
+    "genus_name": "Ursus",
+    "species_name": "maritimus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Phipps, 1774",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Polar Bear Specialist Group",
+        "url": "http://pbsg.npolar.no/en/",
+        "description": "Co-Chairs: Dag Vongraven (email: dag.vongraven@npolar.no) and Nicholas Lunn (email: nick.lunn@canada.ca)\nRed List Authority Focal Point: Eric Regehr (email: eregehr@uw.edu)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Bely Medved",
+        "language": "rus"
+      },
+      {
+        "main": false,
+        "name": "Isbjørn",
+        "language": "nor"
+      },
+      {
+        "main": false,
+        "name": "Oso Polar",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Ours blanc",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Ours polaire",
+        "language": "fre"
+      },
+      {
+        "main": true,
+        "name": "Polar Bear",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Thalarctos maritimus (Phipps, 1774)",
+        "status": "ACCEPTED",
+        "genus_name": "Thalarctos",
+        "species_name": "maritimus",
+        "species_author": "(Phipps, 1774)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "9.8-13.6,11.5",
+    "congregatory": null,
+    "movement_patterns": "Nomadic",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": "19",
+    "continuing_decline_in_subpopulations": "No",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": "24000000",
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p>Polar Bears live throughout the ice-covered waters of the circumpolar Arctic (Obbard <em>et al.</em> 2010, <a href=\"http://www.pbsg.npolar.no\">www.pbsg.npolar.no</a>). Although some occur in the permanent multi-year pack ice of the central Arctic basin, they are most common in the annual ice over the continental shelf and inter-island archipelagos that surround the polar basin. Polar Bears that have continuous access to sea ice are able to hunt throughout the year. However, in those areas where the sea ice melts completely each summer,&#160;Polar Bears&#160;are forced to spend several months on land, where they primarily fast on stored fat reserves until freeze-up. Use of land by&#160;Polar Bears&#160;during the ice-free season appears to be increasing at least in some areas where sea ice duration has declined (e.g., Schliebe <em>et al.</em> 2008, Herreman and Peacock 2013).&#160;The southern extent of the range of&#160;Polar Bears&#160;occurs off the coast of Newfoundland, Canada in the northwest Atlantic Ocean. The northernmost documented observation of a&#160;Polar Bear&#160;was at 89°46’N, 25 km from the North Pole (van Meurs and Splettstoesser 2003).&#160;Currently, the most southerly known denning area is on Akimiski Island in James Bay, Canada, at about 52°35’N (Kolenosky and Prevett 1983).</p><p>The species is found in Canada (Manitoba, Newfoundland, Labrador, Nunavut, Northwest Territories, Quebec, Yukon Territory, Ontario), Greenland/Denmark, Norway (including Svalbard), Russian Federation (North European Russia, Siberia, Chukotka, Sakha (Yakutia), Krasnoyarsk), United States (Alaska). Also, vagrants occasionally reach Iceland.</p>",
+    "population": "At present, 19 subpopulation units of Polar Bears are recognized by the Polar Bear Specialist Group (PBSG) of the International Union for the Conservation of Nature (Obbard <em>et al</em>. 2010). Genetic studies have shown that gene flow occurs among the various subpopulations (Paetkau <em>et al</em>. 1999, Crompton <em>et al</em>. 2008, Peacock <em>et al</em>. 2015) and there is no evidence that any of the units have been evolutionarily separated for significant periods of time. Although demographic exchange may be limited between subpopulations (Mauritzen <em>et al</em>. 2002, Crompton <em>et al</em>. 2008, Peacock <em>et al</em>. 2015), some demographic and genetic exchange occurs. Consequently, the Polar Bear subpopulations cannot be considered as distinct demographic units and the term “management units” may be more accurate. Ongoing reductions in the duration, distribution, and quality of sea ice due to climate change (Sahanatien and Derocher 2012) may result in different levels of genetic and demographic exchange among subpopulations in the future (Derocher <em>et al</em>. 2004, Molnár <em>et al</em>. 2010), which could lead to&#160; new metapopulation dynamics or to functionally isolated subpopulations.<br/><br/>The PBSG summarized the best-available scientific information on the status of the 19 subpopulations of Polar Bears in 2014 (PBSG 2015) including an assessment of current trend (i.e., estimated change in population size over a 12-year period, centred on the time of assessment). The PBSG concluded that one subpopulation (M’Clintock Channel) has increased, six were stable (Davis Strait, Foxe Basin, Gulf of Boothia, Northern Beaufort Sea, Southern Hudson Bay, and Western Hudson Bay), three were considered to have declined (Baffin Bay, Kane Basin, and Southern Beaufort Sea) and, for the remaining nine (Arctic Basin, Barents Sea, Chukchi Sea, East Greenland, Kara Sea, Lancaster Sound, Laptev Sea, Norwegian Bay, and Viscount Melville Sound) there were insufficient data to provide an assessment of current trend. The type, precision, and time span of data used to estimate trends varies among subpopulations (PBSG 2015).<br/><br/>Estimating Polar Bear abundance is expensive and difficult because the animals often occur at low densities in remote habitats. Although abundance estimates have generally improved in recent decades (Obbard <em>et al</em>. 2010), information remains poor or outdated for some subpopulations. Summing across the most recent estimates for the 19 subpopulations (Table 3 in the Supplementary Material) results in a total of approximately 26,000 Polar Bears ( 95% CI = 22,000-31,000 ). We note that this number differs from what would be obtained by summing abundance estimates in PBSG (2015), because criteria were not the same for including abundance estimates in the two sources (section Population projections). The total number presented here does not include the Arctic Basin subpopulation, for which no information on abundance is available. The 95% confidence intervals presented here were generated using simulation based on estimates of uncertainty in Table 3 and an assumption that the abundance of every subpopulation is independent of the others (see the section <em>Population projections</em> in the Supplementary Material). The mixed quality and even lack of available information on each subpopulation means caution is warranted when establishing and reporting a single estimate of the number of polar bears across the circumpolar Arctic. Therefore we used the abundance data in Table 3 in a relative manner, to scale subpopulation-specific changes to changes in the global population size, rather than in an absolute manner.<br/><p></p>",
+    "habitats": "Polar Bears occur at low densities throughout the circumpolar Arctic and are more abundant in shallower, ice-covered waters associated with the continental shelf where currents or upwellings increase biological productivity. Seasonally, in the summer open water season, Polar Bears may be found on land in higher densities.<br/><br/>The Polar Bear is a K-selected species with late sexual maturity, small litter size, high maternal investment and high adult survival. The Polar Bear’s reproductive rate is among the lowest in all mammals (Bunnell and Tait 1981) although similar to that of other ursids. Females generally mature at 4-5 years, and enter a prolonged oestrus between late March and early June, although most mating occurs in April and early May. Ovulation is induced by mating (Stirling 2009), and implantation is delayed until autumn. The total gestation period ranges between 195-265 days (Uspenski 1977, Amstrup 2003). Whether or not the embryo implants and proceeds to develop is likely determined by body condition. Pregnant females enter dens in snow drifts or slopes on land, close to the sea (Andersen <em>et al</em>. 2012), or on sea ice (in the Chukchi and Beaufort seas) as early as September/October, but more typically in late autumn (Lentfer and Hensel 1980, Amstrup and Gardner 1994, Wiig 1998). Females give birth inside the den, usually in late December to early January (Derocher <em>et al</em>. 1992, Amstrup 2003). Polar Bears most often give birth to twin cubs; singleton and triplet litters are less frequent. Newborn Polar Bears are blind, sparsely haired and weigh approximately 0.6 kg (Blix and Lentfer 1979). They grow rapidly, fed on rich milk from their mother (36% fat; Derocher <em>et al</em>. 1993), and when they emerge from the den sometime between early March and late April (Pedersen 1945, Wiig 1998), they weigh 10-12 kg (Amstrup 2003). In some regions, after emerging from the den, the female may not have fed for a period up to 8 months, which may be the longest period of food deprivation for any mammal (Watts and Hansen 1987).<br/><br/>Cub mortality is high in the first year (Larsen 1985, Amstrup and Durner 1995, Wiig 1998), with the probability of cub survival largely determined by maternal condition. Mothers with larger fat stores in the fall emerge in the spring with larger cubs which are more likely to survive (Atkinson and Ramsay 1995, Derocher and Stirling 1998, Robbins <em>et al</em>. 2012a). The young usually stay with their mother for two years (Lønø 1970, Stirling et al. 1976, Amstrup and Durner 1995, Wiig 1998), and consequently females on average do not enter a new reproductive cycle more often than every third year most places (Amstrup 2003). In contrast to their low reproductive rates, adult Polar Bears have high survival rates (Obbard <em>et al</em>. 2010).<br/><br/>Polar Bears are the most carnivorous of the extant species of bears. Throughout their range, Ringed Seals (<em>Phoca hispida</em>), preferably young-of-the-year, and to a lesser extent Bearded Seals (<em>Erignathus barbatus</em>) are their primary prey (Derocher <em>et al</em>. 2002, Thiemann <em>et al</em>. 2008). In some areas they are also known to take Harp Seals (<em>Pagophilus groenlandicus</em>), Hooded Seals (<em>Cystophora cristata</em>), and even larger species such as Walrus (<em>Odobenus rosmarus</em>) and Beluga (<em>Delphinapterus leucas</em>) (Thiemann <em>et al</em>. 2008). Polar Bears digest fat more efficiently than protein (Best 1984). Polar Bears are large when compared to other ursid species, which is a consequence of their energy-rich diet. Although birds, fish, vegetation and kelp are eaten where locally available during the ice free-season (Pedersen 1945, Russell 1975, Dyck and Romberg 2007, Born <em>et al</em>. 2011, Gormezano and Rockwell 2013), it is unlikely that Polar Bears would be capable of gaining enough nutritional benefit to survive on a primarily terrestrial diet (Ramsay and Hobson 1991, Hobson <em>et al</em>. 2009, Rode <em>et al</em>. 2010b, Rode <em>et al</em>. 2015).",
+    "threats": "Anthropogenic and natural changes in Arctic environments, as well as recognition of the shortcomings of our knowledge of Polar Bear ecology, are increasing the challenges for Polar Bear conservation and management. Higher ambient temperatures and erratic weather fluctuations, symptoms of anthropogenic climate change, are increasing across the range of polar bears. Polar Bears are dependent upon Arctic sea ice for access to their prey. Their dependence on an ephemeral habitat that exists as a function of sea surface and atmospheric temperatures means that climate warming poses the single most important threat to the long-term persistence of Polar Bears (Obbard <em>et al</em>. 2010). Arctic sea ice loss has thus far progressed faster than most climate models have predicted (Stroeve <em>et al</em>. 2007) with September sea extent declining at a linear rate of 14% per decade from 1979 through 2011 (Stroeve <em>et al</em>. 2012, Stroeve <em>et al</em>. 2014). Because changes in sea-ice are known to alter Polar Bear abundance, productivity, body condition, and distribution (Stirling <em>et al</em>. 1999, Fischbach <em>et al</em>. 2007, Schleibe <em>et al</em>. 2008, Durner <em>et al</em>. 2009, Regehr <em>et al</em>. 2010, Rode <em>et al</em>. 2010a, 2012, 2014b, Bromaghin <em>et al</em>. 2015), continued climate warming will increase future uncertainty and pose severe risks to the welfare of Polar Bear subpopulations (Stirling and Derocher 2012, Derocher <em>et al</em>. 2013). Arctic sea ice extent is linearly related to global mean temperature, which in turn, is directly related to atmospheric greenhouse gas concentrations (Amstrup <em>et al</em>. 2010). Population and habitat models predict substantial declines in the distribution and abundance of Polar Bears in the future (Durner <em>et al</em>. 2009, Amstrup <em>et al</em>. 2008, Hunter <em>et al</em>. 2010, Castro de la Guardia <em>et al</em>. 2013, Hamilton et al. 2014). Although Polar Bears living in historically colder regions of the Arctic might derive transient benefit from a climate-driven transition away from multi-year ice (Derocher <em>et al</em>. 2004), the annual sea ice must persist long enough for Polar Bears to derive benefit from associated changes in seal availability and biological productivity. Recent sea ice simulations suggest large regions of the Canadian Arctic Archipelago will be ice free for &gt;5 months by the late 21<sup>st</sup> century (Hamilton <em>et al</em>. 2014). In other parts of the Arctic, the 5-month ice-free threshold may be reached by the middle of the 21<sup>st</sup> century (Atwood <em>et al</em>. 2015). These studies are based on sea-ice data obtained from the World Climate Research Programme's Coupled Model Intercomparison Project phase 5 (CMIP5) (<a href=\"http://cmip-pcmdi.llnl.gov/cmip5/\">http://cmip-pcmdi.llnl.gov/cmip5/</a>). An annual ice-free period of ≥5 months is likely to lead to extended fasting, which is predicted to lead to increased reproductive failure and starvation (Molnár <em>et al</em>. 2011, 2014a, Robbins <em>et al</em>. 2012b). Nevertheless, uncertainty and regional variability in the near-term effects of climate change must be included in Polar Bear management and conservation plans.<br/><br/>Although there have been local and regional studies on polar bear denning habitat (Kolenosky and Prevett 1983, Messier <em>et al</em>. 1994, Lunn <em>et al</em>. 2004, Richardson <em>et al</em>. 2005, Durner <em>et al</em>. 2003, 2006, 2013, Andersen <em>et al</em>. 2012), large scale mapping of Polar Bear denning habitat across the Arctic has not occurred. It is also unknown how climate change will change denning locations and habitats, though predicted increases in forest fires may have adverse effects on maternity denning habitat in sub-Arctic regions (Richardson <em>et al</em>. 2007). Declining sea ice availability can impair the ability of pregnant females to reach traditional denning areas (Derocher <em>et al</em>. 2011, Cherry <em>et al</em>. 2013) and increases of rain events will be detrimental for denning Polar Bears (Stirling and Derocher 1993, Derocher <em>et al</em>. 2004).<br/><br/>The occurrence of diseases and parasites in Polar Bears is rare compared with occurrences in other ursids. However, with warming Arctic temperatures, altered climate could influence&#160; infectious disease epidemiology through mechanisms such as novel pathogen introduction due to range expansion of carrier animals and arthropod vectors; modification of host susceptibility; changes in pathogen evolution, transmission, and number of generations per year; host immunosuppression; shifts in main food sources; altered behaviour; and co-infections with multiple agents (Harvell <em>et al</em>. 2002, Parmesan 2006, Burek <em>et al</em>. 2008, Hueffer <em>et al</em>. 2011). As a result, the potential for exposure to pathogens and resulting disease outbreaks may become more significant threats as Polar Bears experience the cumulative effects of multiple stressors (Patyk <em>et al</em>. 2015).<br/><br/>The warming climate has been associated with an increase in pathogens in other Arctic marine and terrestrial organisms. Parasitic agents that have developmental stages outside the bodies of warm-blooded hosts (e.g., nematodes: Laaksonen <em>et al</em>. 2010) will likely benefit from the warmer and wetter weather projected for the Arctic. Improved conditions for such parasites have already adversely affected the health of some Arctic mammals (Kutz <em>et al</em>. 2013). Bacterial parasites also are likely to benefit from a warmer and wetter Arctic (e.g., <em>Vibrio parahaemolyticu</em>s; Baker-Austin <em>et al</em>. 2012). As the effects of climate change become more prevalent, there is concern about the emergence of new pathogens within polar bear range, new threats from existing pathogens that may be able to infect immuno-compromised/stressed bears, and the potential for new and existing pathogens to cross human–animal boundaries (e.g., giardia). Because of the previous limited exposure of Polar Bears to diseases and parasites (Fagre <em>et al</em>. 2015), researchers have as yet been unable to determine whether they will be more susceptible to new pathogens. However, concern is exacerbated by the fact that Polar Bears appear to have a naïve immune system (Weber <em>et al</em>. 2013), which may make them particularly vulnerable to infection. Many different pathogens have been found in seal species that are Polar Bear prey; the potential therefore exists for transmission of these diseases to Polar Bears (Kirk <em>et al</em>. 2010). If Polar Bears become nutritionally stressed, altered foraging behaviours such as increased feeding on the internal organs of their primary prey and use of alternative foods (e.g., Prop et al. 2015) may increase the potential for exposure to pathogens. Ensuring the long-term persistence of Polar Bears will necessitate understanding how a rapidly changing physical environment modulates exposure to disease risk factors and, ultimately, population health.<br/><br/>Persistent organic pollutants, which reach Arctic regions via long range transport by air and ocean currents as well as river run off, also increase uncertainty for the welfare of polar bears (Obbard <em>et al</em>. 2010, <a href=\"www.pbsg.npolar.no\">www.pbsg.npolar.no</a>). Although Polar Bears live in relatively pristine Arctic regions, a variety of industrial toxic substances are brought into Polar Bear management areas from human anthropogenic activities around the world. Polar Bears are apex predators and are therefore exposed to high levels of pollutants, which magnify with each step in the food web resulting in high concentrations in polar bear tissue (Letcher <em>et al</em>. 2010). A key characteristic of these pollutants is that they persist in the environment due to low biotic and abiotic degradation. The contaminant burdens among Polar Bears are known to vary among regions (e.g., Letcher <em>et al</em>. 2010, McKinney <em>et al</em>. 2011). Even where contaminant burdens may be known, their effects on Polar Bear physiol­ogy and health are not well understood (Letcher <em>et al</em>. 2010, Sonne <em>et al</em>. 2012). However, Dietz <em>et al</em>. (2015) showed that the risk for reproductive, immune suppressive and carcinogenic effects in polar bear subpopulations across the Arctic are high due to PCB and perflourinated compounds (PFCs) exposure.<br/><br/>Many of the contaminants are lipophilic and bond tightly to lipophilic tissues. Polar Bears are particularly vulnerable to organochlorines because they eat a fat rich diet. Ringed, bearded, and harp seals comprise the main food of Polar Bears and the blubber layer is preferentially eaten by the bears and subsequently, the intake of pollutants is high (Letcher <em>et al</em>. 2010). Recent studies have documented new pollutants in polar bear tissues which expose the species to even more toxic and complex combination of industrial chemicals (Verreault <em>et al</em>. 2005, 2006; Muir <em>et al</em>. 2006; Smithwick <em>et al</em>. 2006; McKinney <em>et al</em>. 2009, 2011; Gebbink <em>et al</em>. submitted). The potential for contam­inants to impact Arctic systems is predicted to increase as climate warming alters global circulation and precipitation patterns (Macdonald <em>et al</em>. 2005, Jenssen <em>et al</em>. 2015) and predicting local and regional effects will become more complicated and uncertain.<br/><br/>A three decade study (1983-2010) of East Greenland Polar Bears revealed both declines of conventional POPs and increases in brominated flame retardants (BFRs) and PFCs (Dietz <em>et al</em>. 2008, 2013a,b; Riget <em>et al</em>. 2013). The last decade has showed climate related increases in PCBs as well as peaks of BFRs and PFCs due to recent industrial reductions (Dietz <em>et al</em>. 2013b McKinney <em>et al</em>. 2013).<br/><br/>Although the effects of pollutants on polar bears are only partially understood, levels of such pollutants in some subpopulations are already sufficiently high that they may interfere with hormone regulation, immune system function, and possibly reproduction (Wiig <em>et al</em>. 1998; Bernhoft <em>et al</em>. 2000; Skaare <em>et al</em>. 2000, 2001; Gustavson <em>et al</em>. 2015; Henriksen <em>et al</em>. 2001; Derocher <em>et al</em>. 2003; Derocher 2005; Dietz <em>et al</em>. 2015; Sonne <em>et al</em>. 2015). There are suggestions that species with delayed implantation are more vulnerable to the effects of pollution through endocrine (hormone) disruption (Knott <em>et al</em>. 2011). Further, because female Polar Bears are food deprived during gestation, their pollution load increases in their blood, when energy and pollutants are mobilized from their adipose tissue. Because the cubs are nursed on fat rich milk they are exposed to very high pollution loads from their mother (Polishuk <em>et al</em>. 2002, Bytingsvik <em>et al</em>. 2012). This may pose the greatest threat to the species as the vulnerability of pre- and neonatal polar bears is the most sensible to life-long health effects from long-range transported pollution which decreases immunity, survival and reproductive success (Letcher <em>et al</em>. 2010, Sonne 2010).<br/><br/>An additional emerging threat to Polar Bears is the increase in resource exploration and development in the Arctic along with increased ice-breaking and shipping. There are currently no data on the effects of ice-breaking on habitat use by Polar Bears. Although some studies suggest that Polar Bears are sensitive to localized disturbance at maternity den sites (Lunn <em>et al</em>. 2004, Durner <em>et al</em>. 2006), our knowledge about potential effects of large scale development is lacking.<br/><br/>Oil development in the Arctic poses a wide of range of threats to Polar Bears ranging from oil spills to increased human-bear interactions. It is probable that an oil spill in sea ice habitat would result in oil being concentrated in leads and between ice floes resulting in both Plar Bears and their main prey (Ringed Seal and Bearded Seal) being directly exposed to oil. Polar Bears are often attracted by the smells and sound associated with human activity. Polar Bears are known to ingest plastic, styrofoam, lead acid batteries, tin cans, oil, and other hazardous materials with lethal consequences in some cases (Lunn and Stirling 1985, Amstrup <em>et al</em>. 1989, Derocher and Stirling 1991). Another concern is that seals covered in oil may be a major source of oil to polar bears. Although the biological threats and impacts of oil and gas activities on Polar Bears are reasonably well understood (Øritsland <em>et al</em>. 1981; Hurst and Øritsland 1982; Stirling 1988, 1990; Isaksen <em>et al</em>. 1998; Amstrup <em>et al</em>. 2006), mitigation and response plans are currently lacking (but see Wilson <em>et al</em>. 2014). Moreover, how Polar Bears will be affected by other types of human activity are less well known (Vongraven <em>et al</em>. 2012).<br/><br/>Significant portions of the Polar Bear’s range already are being developed and exploration is proposed for many other areas. With warming induced sea ice decline, previously inaccess­ible areas will be exposed to development and other forms of anthropogenic activities (e.g., trans-Arctic shipping, tourism). The direct effects of human activities, the in­creased potential for negative human-bear encounters, and the potential for increased local pollution are all concerns that must be understood if we are to understand and manage impacts on the future for Polar Bears.<br/><br/>Our understanding of Polar Bear population dynamics has improved with ongoing development and refinement of analytical methods (e.g., Taylor <em>et al</em>. 1987, 2002, 2005, 2006, 2008a,b, 2009; Amstrup <em>et al</em>. 2001; McDonald and Amstrup 2001; Regehr <em>et al</em>. 2007, 2010, 2015; Aars <em>et al</em>. 2009; Stapleton <em>et al</em>. 2014). These improved and new tools suggest that previous estimates of population parameters and numbers can be biased. Vital rates are subpopulation specific, and different from the generalized rates that were often used to generate previous status reports (Taylor <em>et al</em>. 1987). For the two subpopulations (Southern Beaufort Sea, Western Hudson Bay) that are known to have been impacted by climate change and where a long time series of abundance exist, harvest represents an additive impact. Illegal take of polar bears in Russia, combined with legal subsistence harvest in the U.S., may exceed sustainable limits for the Chukchi subpopulation (<a href=\"http://pbsg.npolar.no/en/\">pbsg.npolar.no</a>). In many cases harvest documentation and the popula­tion data necessary to assess the impact of harvest both are insufficient to allow managers to provide the desired balance between potential yield and take. Given the cultural and eco­nomic importance of Polar Bear hunting in many regions, understanding the potential for and the impact of hunting continues to be a critical part of management (Obbard <em>et al</em>. 2010, Vongraven <em>et al</em>. 2012, <a href=\"http://pbsg.npolar.no/en/\">pbsg.npolar.no</a>).<br/><br/>It is important that subpopulation estimates and projections are based on substantiated scientific data. In some areas, studies to estimate abundance occur infrequently so if the harvest rate is either initially set above the sustainable level or it becomes so, the subpopulation may be reduced before the next inventory is made. In addition, harvest practices may have to be reconsidered given recent knowledge about long-term environmental trends and fluctuations that can affect sustainable removal rates. In some jurisdictions in Canada, the governance system includes aboriginal co-management boards and aboriginal hunting organizations. In some of these co-management systems, both local knowledge and science are to be considered equally in both management and research decisions. Although scientific studies have concluded that the long-term effects of capturing and collaring polar bears are minimal (Ramsay and Stirling 1986, Messier 2000, Thiemann <em>et al</em>. 2013, Rode <em>et al</em>. 2014a), some local groups nevertheless consider these techniques disrespectful or harmful to the animals. As a result, population inventory and ecological studies have been delayed or not permitted. On the other hand, alternative research techniques such as aerial surveys and genetic biopsy capture-recapture methods were designed and implemented. Reduced monitoring will constrain governments’ ability to assess sustainability of harvest especially if abundance is estimated from aerial surveys which cannot provide data on vital rates (Aars <em>et al</em>. 2009, Stapleton <em>et al</em>. 2014).<br/><br/>Human caused habitat change and increasing human-bear interactions also must be incorporated into polar bear population projections (e.g., Hunter <em>et al</em>. 2010) and polar bear harvest management in the future. Due to increased access to pre­viously isolated areas, Polar Bears will face increased risks from a variety of human–bear interactions. New settlements are possible with industrial development, and expansion of tourist visitations is assured. Although the fact of human–bear interactions can be reasonably measured, we have a long way to go to understand the effect of such interactions. The added stresses, resulting from a “more crowded” Arctic, may play an important role in the future welfare of Polar Bears.",
+    "measures": "Conservation actions for Polar Bears vary by jurisdiction and detailed information can be found in Obbard <em>et al</em>. (2010) and at <a href=\"www.pbsg.npolar.no\">www.pbsg.npolar.no</a>. The International Agreement on the Conservation of Polar Bears that was signed in 1973 by the five nations Canada, Denmark (Greenland) Norway, Soviet Union (Russian Federation) and USA, provides guidance. Article II of the Agreement states that each contracting party “…shall manage polar bear populations in accordance with sound conservation practices based on the best available scientific data,…” and according to Article VII, “The Contracting Parties shall conduct national research programs on Polar Bears…” and&#160; “...consult with each other on the management of migrating Polar Bear populations...”. These articles have been important for stimulating governments to support applied research to answer management questions regarding Polar Bears throughout their range.<br/><br/>In light of the growing concern over Polar Bear conservation in relation to climate change and a number of other issues, such as oil- and gas activities, shipping and tourism, the five Parties have agreed to initiate a process that would lead to a coordinated approach to conservation and management strategies for Polar Bears. A key aspect of this approach is the recognition that plans for action should be developed at a national level leading up to development of comprehensive circumpolar plan for action that address Polar Bear conservation. The Circumpolar Action Plan for Polar Bear is planned to be signed by the parties in autumn 2015.<br/><br/>The Parties recognize that Article VII of the Agreement calls for all Parties to conduct national research programs, particularly relating to the conservation and management of Polar Bears, and that they shall coordinate such research and exchange information on research programs, results, and data on bears taken. The Parties continue to be committed to carrying out research in support of Polar Bear conservation. The Parties also recognize that the technical support and scientific advice on Polar Bear conservation provided by the PBSG supports the 1973 Agreement and is a vital part of the decision making process that the competent authorities should consider in making management decisions. The PBSG has accepted to serve as an independent science advisory body to the Parties.<br/><br/>The PBSG regards the 1973 Agreement as the cornerstone and basis for any action plan on Polar Bears. The PBSG has identified the following research elements to be included in all action plans (Vongraven <em>et al</em>. 2012):<br/><ul><li>Assessment of subpopulation size and/or trend and projection of future status</li><li>Monitoring harvest and other removals</li><li>Understanding movements and distribution patterns and how they are changing with ongoing habitat changes</li><li>Establishing trends in physical condition and why they are changing</li><li>Documenting human-bear conflicts</li><li>Documenting trends in habitat use, availability and trends</li><li>Documenting trends in pollution and disease</li><li>Vital rates estimation, evaluating trends and projection</li></ul>The PBSG recognizes that particular elements (for example, monitoring of pollution and sea ice habitat) are of inter-jurisdictional concern and would benefit from multi-jurisdictional cooperation. Further, the Parties shall consult with each other on the management of shared Polar Bear subpopulations, and exchange information on research and management programs. The PBSG has reiterated that all management actions be based on the best scientific information. The PBSG has identified these management elements to be included in all action plans (Vongraven <em>et al</em>. 2012):<br/><ul><li>Protection of essential habitats</li><li>Use of scientific evidence</li><li>Monitoring, prevention and sound management of human-bear conflicts</li><li>Development of inter-jurisdictional agreements for shared populations</li><li>Development of management strategies to minimize impacts of human activities (e.g. mining, shipping, oil and gas activities, tourism and other human-caused disturbance)</li><li>Management of sustainable harvest</li><li>Ensure the active involvement of the local public living in polar bear areas in developing and achieving the goals of the action plan </li></ul><p></p>",
+    "use_trade": "The US, Canada, and Greenland allow and manage a subsistence harvest of Polar Bears; harvest is prohibited in Norway and Russia. The principal use of Polar Bears is for subsistence purposes (Obbard <em>et al</em>. 2010, <a href=\"www.pbsg.npolar.no\">www.pbsg.npolar.no</a>), including consumption of meat; use of hides for clothing; and small scale handicrafts. Whole hides may be used for subsistence needs, kept as trophies, or sold on open markets. The financial return from the sale of legally taken Polar Bear hides can provide important income for local people in Canada and Greenland. Sport hunting of Polar Bears only occurs in Canada and must be guided by local Inuit hunters. While communities can decide whether or not to allow sport hunts, these hunts must be accounted for within the annual quota assigned to a community; sport hunts are not additive to the quota. Sport hunting can be a major source of income for remote settlements because the financial return from the hunt greatly exceeds that of the hide value (Foote and Wenzel 2009). This often provides an important infusion into local, cash limited, economies.<br/><br/>Annual legal harvest of Polar Bears is between 700 and 800 or 3-4% of the estimated size of the total population of about 20-25,000 animals. The harvest level has been thought to be sustainable in most subpopulations (PBSG 2010). Although poaching, or illegal hunting of Polar Bears, is not thought to be of major concern, recent reports suggest that illegal hunting in eastern Russia may be as high as 100-200 bears per year (Kochnev 2004). At present, the PBSG is assessing the status of this problem in all jurisdictions. Mortality of bears in defence of life and property occur throughout the Polar Bears’ range and are probably inevitable in areas where Polar Bears and people co-exist.<br/><br/>Polar Bear based tourism, including public viewing and photography is increasing. Well established in Churchill, Canada, it is increasing in other remote areas, including Svalbard, Norway, and to a some extent in locations on the north coast of Alaska (primarily Kaktovik and to a lesser degree Barrow).<br/><br/>Polar Bear products are in trade. The range of different products and units of measure used in records makes it difficult to relate trade data to number of polar bears in trade. Export of Polar Bear products from Canada, where most polar bear products in trade originate, represented between 207 (2014) and 404 (2013) individuals in the period 2010-2014 (Canadian CITES authorities pers. comm.). Greenland introduced a voluntary temporary ban on export of Polar Bear products in 2007. All international trade in polar bear parts is surveyed and regulated by CITES. The polar bear is listed by CITES on Appendix II.",
+    "rationale": "Loss of Arctic sea ice due to climate change is the most serious threat to Polar Bears throughout their circumpolar range (Obbard <em>et al</em>. 2010, Stirling and Derocher 2012, USFWS 2015). We performed a data-based sensitivity analysis with respect to this threat by evaluating the potential response of the global Polar Bear population to projected sea-ice conditions. Our analyses included a comprehensive assessment of generation length (GL) for Polar Bears; development of a standardized sea-ice metric representing important habitat characteristics for the species; and population projections, over three Polar Bear generations, using computer simulation and statistical models representing alternative relationships between sea ice and Polar Bear abundance.<br/><br/>Our analyses highlight the potential for large reductions in the global Polar Bear population if sea-ice loss continues, which is forecast by climate models and other studies (IPCC 2013). Our analyses also highlight the large amount of uncertainty in statistical projections of Polar Bear abundance and the sensitivity of projections to plausible alternative assumptions. Across six scenarios that projected polar bear abundance three generations forward in time using the median and 95th percentile of estimated GL, the median probability of a reduction in the mean global population size greater than 30% was approximately 0.71 (range 0.20-0.95; see Table 4 in the attached Supporting Material). The median probability of a reduction greater than 50% was approximately 0.07 (range 0-0.35), and the probability of a reduction greater than 80% was negligible. The International Union for the Conservation of Nature Red List Guidelines suggests that assessors consider nearly the full range of uncertainty in potential outcomes, and adopt a precautionary but realistic attitude toward risk tolerance (Section 3.2.3, IUCN 2014). In light of the significant probability, across scenarios, of a reduction in mean global population size greater than 30%, and the relatively low probability of a reduction greater than 50%, we conclude that Polar Bears currently warrant listing as Vulnerable under criterion A3c (IUCN 2014).",
+    "trend_justification": null,
+    "taxonomic_notes": "<p>Phipps (1774) first described the Polar Bear as a distinct species and named it <em>Ursus maritimus</em>. Other names were suggested including <em>Thalassarctos, Thalarctos, and Thalatarctos. </em>Erdbrink (1953) and Thenius (1953) ultimately settled on <em>Ursus (Thalarctos) maritimus </em>because of interbreeding between Brown Bears (<em>Ursus arctos</em>) and Polar Bears in zoos. Based on the fossil record, Kurtén (1964) recommended the Phipps (1774) name <em>Ursus maritimus,</em> which was promoted by Harington (1966), Manning (1971) and Wilson (1976) and is used today (see DeMaster and Stirling 1981, Amstrup 2003, Wilson and Reeder 2005).</p>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_4",
+      "description": {
+        "en": "Scale unspecified"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_2",
+      "description": {
+        "en": "Training"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_1",
+      "description": {
+        "en": "Formal education"
+      }
+    }
+  ],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Arctic Sea"
+      },
+      "code": "18"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - northeast"
+      },
+      "code": "67"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - northwest"
+      },
+      "code": "61"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northeast"
+      },
+      "code": "27"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northwest"
+      },
+      "code": "21"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subarctic"
+      },
+      "code": "3_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Boreal"
+      },
+      "code": "1_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Tundra"
+      },
+      "code": "4_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Coastal Sand Dunes"
+      },
+      "code": "13_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Other"
+      },
+      "code": "17"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Sea Cliffs and Rocky Offshore Islands"
+      },
+      "code": "13_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Mud Flats and Salt Flats"
+      },
+      "code": "12_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Rocky Shoreline"
+      },
+      "code": "12_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Sandy Shoreline and/or Beaches, Sand Bars, Spits, Etc"
+      },
+      "code": "12_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Shingle and/or Pebble Shoreline and/or Beaches"
+      },
+      "code": "12_3"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Yakutiya"
+      },
+      "code": "YAK-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "West Siberia"
+      },
+      "code": "WSB-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "North European Russia"
+      },
+      "code": "RUN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Krasnoyarsk"
+      },
+      "code": "KRA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Alaska"
+      },
+      "code": "ASK-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greenland"
+      },
+      "code": "GL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Iceland"
+      },
+      "code": "IS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Svalbard and Jan Mayen"
+      },
+      "code": "SJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Labrador"
+      },
+      "code": "LAB-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Manitoba"
+      },
+      "code": "MAN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Newfoundland I"
+      },
+      "code": "NFL-NE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northwest Territories"
+      },
+      "code": "NWT-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nunavut"
+      },
+      "code": "NUN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ontario"
+      },
+      "code": "ONT-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Québec"
+      },
+      "code": "QUE-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Yukon"
+      },
+      "code": "YUK-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "European Russia"
+      },
+      "code": "RU-EU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Central Asian Russia"
+      },
+      "code": "RU-CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eastern Asian Russia"
+      },
+      "code": "RU-EA"
+    }
+  ],
+  "researches": [
+    {
+      "note": "Migrated from 3 Research Actions->3.7 Cultural relevance",
+      "code": "4",
+      "description": {
+        "en": "Other"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Area-based Management Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Harvest & Trade Management Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Handicrafts, jewellery, etc."
+      },
+      "code": "12"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Shipping lanes"
+      },
+      "code": "4_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Oil spills"
+      },
+      "code": "9_2_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Increase in fire frequency/intensity"
+      },
+      "code": "7_1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other threat"
+      },
+      "code": "12_1"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Herbicides and pesticides"
+      },
+      "code": "9_3_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Noise pollution"
+      },
+      "code": "9_6_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Oil & gas drilling"
+      },
+      "code": "3_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Problematic native species/diseases"
+      },
+      "code": "8_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Wiig, Ø., Amstrup, S., Atwood, T., Laidre, K., Lunn, N., Obbard, M., Regehr, E. & Thiemann, G.",
+      "value": [
+        "Øystein Wiig (IUCN SSC Polar Bear Specialist Group)",
+        "Kristin Laidre (Polar Science Center, APL/University of Washington)",
+        "Steven C. Amstrup",
+        "Todd C. Atwood",
+        "Nick Lunn",
+        "Martyn Obbard",
+        "Eric V. Regehr",
+        "Gregory W. Thiemann"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Rondinini, C.",
+      "value": [
+        "Carlo Rondinini (Global Mammal Assessment)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Akçakaya, H.R., Holmes, E., Reynolds, J., Stern, H., Schliebe, S. & Derocher, A.E",
+      "value": [
+        "Resit Akçakaya (Stony Brook University)",
+        "Elizabeth Holmes",
+        "Joel Reynolds",
+        "Harry Stern",
+        "Scott Schliebe (Ex IUCN SSC Polar Bear SG)",
+        "Andrew Derocher (IUCN SSC Polar Bear SG)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Wilson, D.E. and Reeder, D.M. (eds). 2005. <i>Mammal Species of the World: A Taxonomic and Geographical Reference</i>. Third edition. John Hopkins University Press, Baltimore.",
+      "year": "2005",
+      "title": "Mammal Species of the World: A Taxonomic and Geographical Reference. Third edition.",
+      "author": "Wilson, D.E. and Reeder, D.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Phipps, C.J. 1774. <i>A Voyage Towards the North Pole undertaken by His Majesty's Command, 1773</i>. J. Nourse, London.",
+      "year": "1774",
+      "title": "A Voyage Towards the North Pole undertaken by His Majesty's Command, 1773",
+      "author": "Phipps, C.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Erdbrink, D.P. 1953. <i>A review of fossil and recent bears of the Old World with remarks on their phylogeny based upon their dentition</i>. Drukkerij Jan de Lange, Deventer, Netherlands.",
+      "year": "1953",
+      "title": "A review of fossil and recent bears of the Old World with remarks on their phylogeny based upon their dentition",
+      "author": "Erdbrink, D.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Thenius, E. 1953. Concerning the analysis of the teeth of polar bears. <i>Mammalogical Bulletin</i> 1: 14-20.",
+      "year": "1953",
+      "title": "Concerning the analysis of the teeth of polar bears",
+      "author": "Thenius, E. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kurtén, B. 1964. The evolution of the polar bear, <i>Ursus maritimus</i> Phipps. <i>Acta Zoologica Fennica</i> 108: 1-30.",
+      "year": "1964",
+      "title": "The evolution of the polar bear, <i>Ursus maritimus</i> Phipps",
+      "author": "Kurtén, B. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Harington, C. R. 1966. A polar bear’s life. <i>Report on Polar Bears. Lectures presented at the Eighth Annual Meeting of the Washington Area Associates.</i>, pp. 3-7. Arctic Institute of North America Research Paper 34.",
+      "year": "1966",
+      "title": "A polar bear’s life",
+      "author": "Harington, C. R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Manning, T. H. 1971. <i>Geographical variation in the polar bear </i>Ursus maritimus<i> Phipps</i>. Canadian Wildlife Service, Ottawa, Canada.",
+      "year": "1971",
+      "title": "Geographical variation in the polar bear <i>Ursus maritimus</i> Phipps",
+      "author": "Manning, T. H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wilson, D.E. 1976. Cranial variation in polar bears. <i>International Conference on Bear Research and Management </i> 3: 447-453.",
+      "year": "1976",
+      "title": "Cranial variation in polar bears",
+      "author": "Wilson, D.E. ",
+      "citation_short": null
+    },
+    {
+      "citation": "DeMaster, D. and Stirling, I. 1981. <i>Ursus maritimus</i>. <i>Mammalian Species</i> 145: 1-7.",
+      "year": "1981",
+      "title": "<i>Ursus maritimus</i>",
+      "author": "DeMaster, D. and Stirling, I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Amstrup, S.C. 2003. Polar bear, <i>Ursus maritimus</i>. In: G.A. Feldhamer, B.C. Thomson and J.A. Chapman (eds), <i>Wild Mammals of North America: Biology, Management, and Conservation</i>, pp. 587–610. John Hopkins University Press, Baltimore, MD, USA.",
+      "year": "2003",
+      "title": "Polar bear, <i>Ursus maritimus</i>",
+      "author": "Amstrup, S.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Derocher, A. E., Lunn, N. J. and Stirling, I. 2004. Polar bears in a warming climate. <i>Integrated Comparative Biology</i> 44: 163–176.",
+      "year": "2004",
+      "title": "Polar bears in a warming climate",
+      "author": "Derocher, A. E., Lunn, N. J. and Stirling, I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rode, K.D., Pagano, A.M., Bromaghin, J.F., Atwood, T.C., Durner, G.M., Simac, K.S. and Amstrup, S.C. 2014a. Effects of capturing and collaring on polar bears: findings from long-term research on the southern Beaufort Sea population. . <i>Wildlife Research</i>.",
+      "year": "2014a",
+      "title": "Effects of capturing and collaring on polar bears: findings from long-term research on the southern Beaufort Sea population. ",
+      "author": "Rode, K.D., Pagano, A.M., Bromaghin, J.F., Atwood, T.C., Durner, G.M., Simac, K.S. and Amstrup, S.C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Amstrup, S.C., DeWeaver, E.T., Douglas, D.C., Marcot, B.G., Durner, G.M., Bitz, C.M. and Bailey, D.A. 2009. Greenhouse gas mitigation can reduce sea-ice loss and increase polar bear persistence. <i>Nature</i> 468: 955-958.",
+      "year": "2009",
+      "title": "Greenhouse gas mitigation can reduce sea-ice loss and increase polar bear persistence",
+      "author": "Amstrup, S.C., DeWeaver, E.T., Douglas, D.C., Marcot, B.G., Durner, G.M., Bitz, C.M. and Bailey, D.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Pedersen, A. 1945. <i>Der Eisbär: Verbreitung und Lebensweise</i>. E. Bruun, Copenhagen.",
+      "year": "1945",
+      "title": "Der Eisbär: Verbreitung und Lebensweise",
+      "author": "Pedersen, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Messier, F. 2000. Effects of capturing, tagging and radio-collaring polar bears for research and management purposes in Nunavut and Northwest Territories. . Government of Nunavut, Iqaluit, NU, Canada, 64 pp. .",
+      "year": "2000",
+      "title": "Effects of capturing, tagging and radio-collaring polar bears for research and management purposes in Nunavut and Northwest Territories. ",
+      "author": "Messier, F. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Amstrup, S. C., and C. L. Gardner. 1994. Polar bear maternity denning in the Beaufort Sea. . <i>Journal of Wildlife Management </i> 58(1): 1-10.",
+      "year": "1994",
+      "title": "Polar bear maternity denning in the Beaufort Sea. ",
+      "author": "Amstrup, S. C., and C. L. Gardner. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Lunn, N.J., Stirling, I., Andriashek, D. and Richardson, E. 2004. Selection of maternity dens by female polar bears in western Hudson Bay, Canada and the effects of human disturbance. <i>Polar Biology </i> 27: 350-356.",
+      "year": "2004",
+      "title": "Selection of maternity dens by female polar bears in western Hudson Bay, Canada and the effects of human disturbance",
+      "author": "Lunn, N.J., Stirling, I., Andriashek, D. and Richardson, E. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Durner, G.M., Amstrup, S.C. and Ambrosius, K.J. 2006. Polar bear maternal den habitat in the Arctic National Wildlife Refuge, Alaska. <i>Arctic</i> 59: 31-36.",
+      "year": "2006",
+      "title": "Polar bear maternal den habitat in the Arctic National Wildlife Refuge, Alaska",
+      "author": "Durner, G.M., Amstrup, S.C. and Ambrosius, K.J. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wiig, Ø. 1998. Survival and reproductive rates for polar bears at Svalbard. <i>Ursus</i> 10: 25-32.",
+      "year": "1998",
+      "title": "Survival and reproductive rates for polar bears at Svalbard",
+      "author": "Wiig, Ø. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Peacock, E., Taylor, M.K., Laake, J. and Stirling, I. 2013. Population ecology of polar bears in Davis Strait, Canada and Greenland. <i>Journal of Wildlife Management</i> 77: 463-476.",
+      "year": "2013",
+      "title": "Population ecology of polar bears in Davis Strait, Canada and Greenland",
+      "author": "Peacock, E., Taylor, M.K., Laake, J. and Stirling, I. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Durner, G. M., Simac, K. and S. C. Amstrup. 2013. Mapping polar bear maternal denning habitat in the National Petroleum Reserve-Alaska witn an IFSAR digital terrain model. <i>Arctic</i> 66(2): 197-206.",
+      "year": "2013",
+      "title": "Mapping polar bear maternal denning habitat in the National Petroleum Reserve-Alaska witn an IFSAR digital terrain model.",
+      "author": "Durner, G. M., Simac, K. and S. C. Amstrup. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bytingsvik, J., Lie, E., Aars, J., Derocher, A.E., Wiig, Ø., Jenssen, B.M. 2012. PCBs and OH-PCBs in polar bear mother-cub pairs: a comparative study based on plasma levels in 1998 and 2008. <i>Science of the Total Environment </i> 417-418: 117-128.",
+      "year": "2012",
+      "title": "PCBs and OH-PCBs in polar bear mother-cub pairs: a comparative study based on plasma levels in 1998 and 2008",
+      "author": "Bytingsvik, J., Lie, E., Aars, J., Derocher, A.E., Wiig, Ø., Jenssen, B.M",
+      "citation_short": null
+    },
+    {
+      "citation": "Gelman, A. and Hill, J. 2006. <i>Data Analysis Using Regression and Multilevel/Hierarchical Models</i>. Cambridge University Press, New York, NY, USA.",
+      "year": "2006",
+      "title": "Data Analysis Using Regression and Multilevel/Hierarchical Models",
+      "author": "Gelman, A. and Hill, J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Mauritzen, M., Derocher, A.E., Wiig, Ø., Belikov, S.E., Boltunov, A.N., Hansen, E. and Garner, G.W. 2002. Using satellite telemetry to define spatial population structure in polar bears in the Norwegian and western Russian Arctic. <i>Journal of Applied Ecology</i> 39: 79-90.",
+      "year": "2002",
+      "title": "Using satellite telemetry to define spatial population structure in polar bears in the Norwegian and western Russian Arctic",
+      "author": "Mauritzen, M., Derocher, A.E., Wiig, Ø., Belikov, S.E., Boltunov, A.N., Hansen, E. and Garner, G.W. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Taylor, M.K., DeMaster, D.P., Bunnell, F.L. and Schweinsburg, R.E. 1987. Modeling the sustainable harvest of female polar bears. <i>Journal of Wildlife Management</i> 51: 811-820.",
+      "year": "1987",
+      "title": "Modeling the sustainable harvest of female polar bears",
+      "author": "Taylor, M.K., DeMaster, D.P., Bunnell, F.L. and Schweinsburg, R.E. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Amstrup, S.C., McDonald, T.L. and Stirling, I. 2001. Polar bears in the Beaufort Sea: A 30-year mark-recapture case history. <i>Journal of Agricultural, Biological, and Environmental Statistics </i> 6: 221-234.",
+      "year": "2001",
+      "title": "Polar bears in the Beaufort Sea: A 30-year mark-recapture case history",
+      "author": "Amstrup, S.C., McDonald, T.L. and Stirling, I. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Stirling, I. 1988. Attraction of polar bears Ursus maritimus to off-shore drilling sites in the eastern Beaufort Sea. <i>Polar Record</i> 24: 1-8.",
+      "year": "1988",
+      "title": "Attraction of polar bears Ursus maritimus to off-shore drilling sites in the eastern Beaufort Sea",
+      "author": "Stirling, I. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Hueffer, K., T.M. O’Hara, and E.H. Follmann. 2011. Adaptation of mammalian host-pathogen interactions in a changing arctic environment. Acta Veterinaria Scandinavica 53:17. <i>Acta Veterinaria Scandinavica</i> 53: 17.",
+      "year": "2011",
+      "title": "Adaptation of mammalian host-pathogen interactions in a changing arctic environment. Acta Veterinaria Scandinavica 53:17",
+      "author": "Hueffer, K., T.M. O’Hara, and E.H. Follmann",
+      "citation_short": null
+    },
+    {
+      "citation": "Best, R.C. 1984. Digestibility of ringed seals by the polar bear. <i>Canadian Journal of Zoology</i> 63: 1033-1036.",
+      "year": "1984",
+      "title": "Digestibility of ringed seals by the polar bear",
+      "author": "Best, R.C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Henriksen, E.O., Wiig, Ø., Skaare, J.U., Gabrielsen, G.W. and Derocher, A.E. 2001. Monitoring PCBs in polar bears: lessons learned from Svalbard. <i>Journal of Environmental Monitoring</i> 3: 493-498.",
+      "year": "2001",
+      "title": "Monitoring PCBs in polar bears: lessons learned from Svalbard",
+      "author": "Henriksen, E.O., Wiig, Ø., Skaare, J.U., Gabrielsen, G.W. and Derocher, A.E. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Derocher, A.E., Wolkers, H., Colborn, T., Schlabach, M., Larsen, T.S. and Wiig, Ø. 2003. Contaminants in Svalbard polar bear samples archived since 1967 and possible population level effects. <i>Science of the Total Environment</i> 301: 163-174.",
+      "year": "2003",
+      "title": "Contaminants in Svalbard polar bear samples archived since 1967 and possible population level effects",
+      "author": "Derocher, A.E., Wolkers, H., Colborn, T., Schlabach, M., Larsen, T.S. and Wiig, Ø",
+      "citation_short": null
+    },
+    {
+      "citation": "Amstrup, S. C., Marcot, B.G. and Douglas, D.C. 2007. Forecasting the range-wide status of polar bears at selected times in the 21st century.  U.S. Geological Survey Administrative Report. Reston, VA, USA.",
+      "year": "2007",
+      "title": "Forecasting the range-wide status of polar bears at selected times in the 21st century",
+      "author": "Amstrup, S. C., Marcot, B.G. and Douglas, D.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Knott, K.K., Schenk, P., Beyerlein, S., Boyd, D., Ylitalo, G.M., O'Hara, T.M. 2011. Blood-based biomarkers of selenium and thyroid status indicate possible adverse biological effects of mercury and polychlorinated biphenyls in Southern Beaufort Sea polar bears. <i>Environmental Research </i> 111: 1124-1136.",
+      "year": "2011",
+      "title": "Blood-based biomarkers of selenium and thyroid status indicate possible adverse biological effects of mercury and polychlorinated biphenyls in Southern Beaufort Sea polar bears",
+      "author": "Knott, K.K., Schenk, P., Beyerlein, S., Boyd, D., Ylitalo, G.M., O'Hara, T.M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Rode, K.D., Reist, J.D., Peacock, E. and Stirling, I. 2010b. Comments in response to ‘‘Estimating the energetic contribution of polar bear (Ursus maritimus) summer diets to the total energy budget’’ by Dyck and Kebreab (2009). <i>Journal of Mammalogy 91</i> 91: 1517-1523.",
+      "year": "2010b",
+      "title": "Comments in response to ‘‘Estimating the energetic contribution of polar bear (Ursus maritimus) summer diets to the total energy budget’’ by Dyck and Kebreab (2009)",
+      "author": "Rode, K.D., Reist, J.D., Peacock, E. and Stirling, I. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Dietz, R., Bossi, R., Rigét, F.F., Sonne, C. and Born, E.W. 2008. Increasing perfluoroalkyl contaminants in East Greenland polar bears (Ursus maritimus): A new toxic threat to the Arctic bears. <i>Environmental Science & Technology</i> 42: 2701-2707.",
+      "year": "2008",
+      "title": "Increasing perfluoroalkyl contaminants in East Greenland polar bears (Ursus maritimus): A new toxic threat to the Arctic bears",
+      "author": "Dietz, R., Bossi, R., Rigét, F.F., Sonne, C. and Born, E.W. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kolenosky, G.B., Abraham, K.F. and Greenwood, C.J. 1992. Polar bears of southern Hudson Bay. Polar Bear Project, 1984-88. Final Report. Ontario Ministry of Natural Resources, Maple, ON, Canada.",
+      "year": "1992",
+      "title": "Polar bears of southern Hudson Bay. Polar Bear Project, 1984-88. Final Report",
+      "author": "Kolenosky, G.B., Abraham, K.F. and Greenwood, C.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Amstrup, S.C., Gardner, C., Meyers, K.C. and Oehme, F.W. 1989. Ethylene glycol (antifreeze) poisoning in a free-ranging polar bear. . <i>Veterinary and Human Toxicology</i> 31: 317-319.",
+      "year": "1989",
+      "title": "Ethylene glycol (antifreeze) poisoning in a free-ranging polar bear. ",
+      "author": "Amstrup, S.C., Gardner, C., Meyers, K.C. and Oehme, F.W. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Cavalieri, D.J., Parkinson, C.L., Gloersen, P. and Zwally, H. 1996, updated yearly. Sea Ice Concentrations from Nimbus-7 SMMR and DMSP SSM/I-SSMIS Passive Microwave Data, 1979-2014.  NASA National Snow and Ice Data Center Distributed Active Archive Center. Boulder, CO, USA.",
+      "year": "1996, updated yearly",
+      "title": "Sea Ice Concentrations from Nimbus-7 SMMR and DMSP SSM/I-SSMIS Passive Microwave Data, 1979-2014",
+      "author": "Cavalieri, D.J., Parkinson, C.L., Gloersen, P. and Zwally, H. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kutz, S.J., S. Checkley, G.G. Verocai, M. Dumond, E.P. Hoberg, R. Peacock, J.P. Wu, K. Orsel, K. Seegers, A.L. Warren, and A. Abrams. 2013. Invasion, establishment, and range expansion of two parasitic nematodes in the Canadian Arctic. <i>Global Change Biology</i> 19: 3254-3262.",
+      "year": "2013",
+      "title": "Invasion, establishment, and range expansion of two parasitic nematodes in the Canadian Arctic",
+      "author": "Kutz, S.J., S. Checkley, G.G. Verocai, M. Dumond, E.P. Hoberg, R. Peacock, J.P. Wu, K. Orsel, K. Seegers, A.L. Warren, and A. Abrams. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Smithwick, M., Norstrom, R.J., Mabury, S.A., Solomon, K., Evans, T.J., Stirling, I., Taylor, M.K. and  Muir, D.C.G. 2006. Temporal trends of perfluoroalkyl contaminants in polar bears (Ursus maritimus) from two locations in the North American Arctic, 1972-2002. <i>Environmental Science & Technology</i> 40: 1139-1143.",
+      "year": "2006",
+      "title": "Temporal trends of perfluoroalkyl contaminants in polar bears (Ursus maritimus) from two locations in the North American Arctic, 1972-2002.",
+      "author": "Smithwick, M., Norstrom, R.J., Mabury, S.A., Solomon, K., Evans, T.J., Stirling, I., Taylor, M.K. and  Muir, D.C.G",
+      "citation_short": null
+    },
+    {
+      "citation": "Regehr, E.V., Lunn, N.J. Amstrup, S.C. and Stirling, I. 2007. Effects of earlier sea ice breakup on survival and population size of polar bears in western Hudson Bay. <i>Journal of Wildlife Management</i> 71: 2673-2683.",
+      "year": "2007",
+      "title": "Effects of earlier sea ice breakup on survival and population size of polar bears in western Hudson Bay.",
+      "author": "Regehr, E.V., Lunn, N.J. Amstrup, S.C. and Stirling, I. ",
+      "citation_short": null
+    },
+    {
+      "citation": "PBSG. 2010. 2009 status report on the world’s polar bear subpopulations. In: Obbard, M.E., Thiemann, G.W., Peacock, E. and DeBruyn, T.D. (eds), <i>Polar Bears: Proceedings of the 15th Working Meeting of the IUCN/SSC Polar Bear Specialist Group, Copenhagen, Denmark, 29 June–3 July 2009</i>, pp. 31-80. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "2010",
+      "title": "2009 status report on the world’s polar bear subpopulations",
+      "author": "PBSG",
+      "citation_short": null
+    },
+    {
+      "citation": "Peacock, E., Sonsthagen, S.A., Obbard, M.E., Boltunov, A., Regehr, E.V., Ovsyanikov, N., Aars, J., Atkinson, S.N., Sage, G.K., Hope, A.G., Zeyl, E., Bachmann, L., Ehrich, D., Scribner, K.T., Amstrup, S.C., Belikov, S., Born, E.W., Derocher, A.E., Stirling, I., Taylor, M.K., Wiig, Ø., Paetkau, D. and Talbot, S.L. 2015. Implications of the circumpolar genetic structure of polar bears for their conservation in a rapidly warming Arctic. <i>PLoS ONE</i> 10: e11202.",
+      "year": "2015",
+      "title": "Implications of the circumpolar genetic structure of polar bears for their conservation in a rapidly warming Arctic",
+      "author": "Peacock, E., Sonsthagen, S.A., Obbard, M.E., Boltunov, A., Regehr, E.V., Ovsyanikov, N., Aars, J., Atkinson, S.N., Sage, G.K., Hope, A.G., Zeyl, E., Bachmann, L., Ehrich, D., Scribner, K.T., Amstrup, S.C., Belikov, S., Born, E.W., Derocher, A.E., Stirling, I., Taylor, M.K., Wiig, Ø., Paetkau, D. and Talbot, S.L. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Richardson, E.S., Stirling, I. and Kochtubajda, B. 2007. The effects of forest fires on polar bear maternity denning habitat in western Hudson Bay. <i>Polar Biology</i> 30: 369-378.",
+      "year": "2007",
+      "title": "The effects of forest fires on polar bear maternity denning habitat in western Hudson Bay",
+      "author": "Richardson, E.S., Stirling, I. and Kochtubajda, B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Dyck, M.G. and Romberg, S. 2007. Observations of a wild polar bear (Ursus maritimus) successfully fishing Arctic charr (Salvelinus alpinus) and Fourhorn sculpin (Myoxocephalus quadricornis). . <i>Polar Biology</i> 30: 1625-1628.",
+      "year": "2007",
+      "title": "Observations of a wild polar bear (Ursus maritimus) successfully fishing Arctic charr (Salvelinus alpinus) and Fourhorn sculpin (Myoxocephalus quadricornis). ",
+      "author": "Dyck, M.G. and Romberg, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Wilson, D.E. and Reeder, D M (eds). 2005. <i>Mammal Species of the World: A Taxonomic and Geographic Reference, 3rd edition</i>. The Johns Hopkins University Press, Baltimore, Maryland.",
+      "year": "2005",
+      "title": "Mammal Species of the World: A Taxonomic and Geographic Reference, 3rd edition",
+      "author": "Wilson, D.E. and Reeder, D M",
+      "citation_short": ""
+    },
+    {
+      "citation": "Molnár, P.K., Lewis, M.A. and Derocher, A.E. 2014b. Estimating allee dynamics before they can be observed: polar bears as a case study. <i>PLoS ONE</i> 9: e85410.",
+      "year": "2014b",
+      "title": "Estimating allee dynamics before they can be observed: polar bears as a case study",
+      "author": "Molnár, P.K., Lewis, M.A. and Derocher, A.E. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Erdbrink, D.C. 1953. A review of fossil and recent bears of the Old World with remarks on their phylogeny based upon their dentition. University of Utrecht.",
+      "year": "1953",
+      "title": "A review of fossil and recent bears of the Old World with remarks on their phylogeny based upon their dentition",
+      "author": "Erdbrink, D.C. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bernhoft, A., Skaare, J.U., Wiig, Ø., Derocher, A.E. and Larsen, H.J.S. 2000. Possible immunotoxic effects of organochlorines in polar bears (Ursus maritimus) at Svalbard. <i>Journal of Toxicology and Environmental Health, Part A</i> 59: 561-574.",
+      "year": "2000",
+      "title": "Possible immunotoxic effects of organochlorines in polar bears (Ursus maritimus) at Svalbard",
+      "author": "Bernhoft, A., Skaare, J.U., Wiig, Ø., Derocher, A.E. and Larsen, H.J.S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Derocher, A.E., Andersen, M., Wiig, Ø., Aars, J., Hansen, E. and Biuw, M. 2011. Sea ice and polar bear den ecology at Hopen Island, Svalbard. <i>Marine Ecology Progress Series</i> 441: 273-279.",
+      "year": "2011",
+      "title": "Sea ice and polar bear den ecology at Hopen Island, Svalbard",
+      "author": "Derocher, A.E., Andersen, M., Wiig, Ø., Aars, J., Hansen, E. and Biuw, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Regehr, E.V., Hunter, C.M., Caswell, H., Amstrup, S.C. and Stirling, I. 2010. Survival and breeding of polar bears in the southern Beaufort Sea in relation to sea ice. <i>Journal of Animal Ecology</i> 79: 117-127.",
+      "year": "2010",
+      "title": "Survival and breeding of polar bears in the southern Beaufort Sea in relation to sea ice",
+      "author": "Regehr, E.V., Hunter, C.M., Caswell, H., Amstrup, S.C. and Stirling, I. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Christensen-Dalsgaard, S.N., Aars, J., Andersen, M., Lockyer, C. and Yoccoz, N.G. 2010. Accuracy and precision in estimation of age of Norwegian Arctic polar bears (Ursus maritimus) using dental cementum layers from known-age individuals. <i>Polar Biology</i> 33: 589-597.",
+      "year": "2010",
+      "title": "Accuracy and precision in estimation of age of Norwegian Arctic polar bears (Ursus maritimus) using dental cementum layers from known-age individuals",
+      "author": "Christensen-Dalsgaard, S.N., Aars, J., Andersen, M., Lockyer, C. and Yoccoz, N.G. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Calvert, W. and Ramsay, M.A. 1988. Evaluation of age determination of polar bears by counts of cementum growth layer groups. <i>Ursus</i> 10: 449-453.",
+      "year": "1988",
+      "title": "Evaluation of age determination of polar bears by counts of cementum growth layer groups",
+      "author": "Calvert, W. and Ramsay, M.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Van Vuuren, D.P., Edmonds, J., Kainuma, M., Riahi, K., Thomson, A., Hibbard, K., Hurtt, G.C., Kram, R., Krey, V., Lamarque, J.-F., Masui, T., Meinshausen, M., Nakicenovic, N., Smith, S.J. and Rose, S.K. 2011. The representative concentration pathways: an overview. <i>Climate Change</i> 109: 5-31.",
+      "year": "2011",
+      "title": "The representative concentration pathways: an overview",
+      "author": "Van Vuuren, D.P., Edmonds, J., Kainuma, M., Riahi, K., Thomson, A., Hibbard, K., Hurtt, G.C., Kram, R., Krey, V., Lamarque, J.-F., Masui, T., Meinshausen, M., Nakicenovic, N., Smith, S.J. and Rose, S.K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Robbins, C.T., Ben-David, M., Fortin, J.K. and Nelson, O.L. 2012a. Maternal condition determines birth date and growth of newborn bear cubs. <i>Journal of Mammalogy</i> 93(540-546).",
+      "year": "2012a",
+      "title": "Maternal condition determines birth date and growth of newborn bear cubs",
+      "author": "Robbins, C.T., Ben-David, M., Fortin, J.K. and Nelson, O.L. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IPCC. 2014. <i>Climate Change 2014: Impacts, Adaptation, and Vulnerability. Part A: Global and Sectoral Aspects. Contribution of Working Group II to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change</i>. Cambridge University Press, Cambridge, UK.",
+      "year": "2014",
+      "title": "Climate Change 2014: Impacts, Adaptation, and Vulnerability. Part A: Global and Sectoral Aspects. Contribution of Working Group II to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change",
+      "author": "IPCC",
+      "citation_short": null
+    },
+    {
+      "citation": "Taylor, M.K., Laake, J., McLoughlin, P.D., Cluff, H.D. and Messier, F. 2009. Demography and population viability of polar bears in the Gulf of Boothia, Nunavut. . <i>Marine Mammal Science</i> 25: 778-796.",
+      "year": "2009",
+      "title": "Demography and population viability of polar bears in the Gulf of Boothia, Nunavut. ",
+      "author": "Taylor, M.K., Laake, J., McLoughlin, P.D., Cluff, H.D. and Messier, F. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Derocher, A.E. 2005. Population ecology of polar bears at Svalbard, Norway. <i>Population Ecology</i> 47: 267-275.",
+      "year": "2005",
+      "title": "Population ecology of polar bears at Svalbard, Norway",
+      "author": "Derocher, A.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN Standards and Petitions Subcommittee. 2014. <i>Guidelines for Using the IUCN Red List Categories and Criteria. Version 11</i>.",
+      "year": "2014",
+      "title": "Guidelines for Using the IUCN Red List Categories and Criteria. Version 11",
+      "author": "IUCN Standards and Petitions Subcommittee",
+      "citation_short": null
+    },
+    {
+      "citation": "Fischbach, A.S., Amstrup, S.C. and Douglas, D.C. 2007. Landward and eastward shift of Alaskan polar bear denning associated with recent sea ice changes. . <i>Polar Biology </i> 30: 1395-1405.",
+      "year": "2007",
+      "title": "Landward and eastward shift of Alaskan polar bear denning associated with recent sea ice changes. ",
+      "author": "Fischbach, A.S., Amstrup, S.C. and Douglas, D.C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Taylor, M. and Lee, J. 1994. Tetracycline as a biomarker for polar bears. <i>Wildlife Society Bulletin</i> 22: 83-89.",
+      "year": "1994",
+      "title": "Tetracycline as a biomarker for polar bears",
+      "author": "Taylor, M. and Lee, J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Gustavson, L., Ciesielski, T.M., Bytingsvik, J., Styrishave, B., Hansen, M., Lie, E., Aars, J., and Jenssen, B.M. 2015. Hydroxylated polychlorinated biphenyls decrease circulating steroids in female polar bears (Ursus maritimus). <i>Environmental Research</i> 138: 91-201.",
+      "year": "2015",
+      "title": "Hydroxylated polychlorinated biphenyls decrease circulating steroids in female polar bears (Ursus maritimus)",
+      "author": "Gustavson, L., Ciesielski, T.M., Bytingsvik, J., Styrishave, B., Hansen, M., Lie, E., Aars, J., and Jenssen, B.M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Sonne, C. 2010. Health effects from long-range transported contaminants in Arctic top predators: An integrated review based on studies of polar bears and relevant model species. <i>Environment International</i> 36: 461-491.",
+      "year": "2010",
+      "title": "Health effects from long-range transported contaminants in Arctic top predators: An integrated review based on studies of polar bears and relevant model species",
+      "author": "Sonne, C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Amstrup, S.C., I. Stirling, and J.W. Lentfer. 1986. Past and present status of polar bears in Alask. <i>Wildlife Society Bulletin</i> 14: 241-254.",
+      "year": "1986",
+      "title": "Past and present status of polar bears in Alask",
+      "author": "Amstrup, S.C., I. Stirling, and J.W. Lentfer. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Muir, D.C.G., Backus, S., Derocher, A.E., Dietz, R., Evans, T.J. Gabrielsen, G.W., Nagy, J., Norstrom, R.J., Sonne, C., Stirling, I., Taylor, M.K. and Letcher, R.J. 2006. Brominated flame retardants in polar bears (Ursus maritimus) from Alaska, the Canadian Arctic, East Greenland, and Svalbard. <i>Environmental Science & Technology</i> 40: 449-455.",
+      "year": "2006",
+      "title": "Brominated flame retardants in polar bears (Ursus maritimus) from Alaska, the Canadian Arctic, East Greenland, and Svalbard",
+      "author": "Muir, D.C.G., Backus, S., Derocher, A.E., Dietz, R., Evans, T.J. Gabrielsen, G.W., Nagy, J., Norstrom, R.J., Sonne, C., Stirling, I., Taylor, M.K. and Letcher, R.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Harvell, C. D., Mitchell, C. E., Ward, J. R., Altizer, S., Dobson, A. P., Ostfeld, R. S., and Samuel, M D. 2002. Climate warming and disease risks for terrestrial and marin biota. <i>Science</i> 296(5576): 2158-2162.",
+      "year": "2002",
+      "title": "Climate warming and disease risks for terrestrial and marin biota",
+      "author": "Harvell, C. D., Mitchell, C. E., Ward, J. R., Altizer, S., Dobson, A. P., Ostfeld, R. S., and Samuel, M D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Derocher, A.E., Wiig, Ø. and Andersen, M. 2002. Diet composition of polar bears in Svalbard and the western Barents Sea. <i>Polar Biology </i> 25: 448-452.",
+      "year": "2002",
+      "title": "Diet composition of polar bears in Svalbard and the western Barents Sea",
+      "author": "Derocher, A.E., Wiig, Ø. and Andersen, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Stirling, I., McDonald, T.L., Richardson, E.S., Regehr, E.V. and Amstrup, S.C. 2011. Polar bear population status in the northern Beaufort Sea, Canada, 1971–2006. <i>Ecological Applications</i> 21: 859-876.",
+      "year": "2011",
+      "title": "Polar bear population status in the northern Beaufort Sea, Canada, 1971–2006",
+      "author": "Stirling, I., McDonald, T.L., Richardson, E.S., Regehr, E.V. and Amstrup, S.C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Lentfer, J. W. and Hensel, R. J. 1980. Alaskan polar bear denning. <i>International Conference on Bear Research and Management</i> 4: 101-108.",
+      "year": "1980",
+      "title": "Alaskan polar bear denning",
+      "author": "Lentfer, J. W. and Hensel, R. J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Belikov, S.E. and Randla, T.E. 1987. Fauna of birds and mammals of Severnaya Zemlya. In: Syroyechkovskiy, E.E. (ed.), <i>Fauna and Ecology of Birds and Mammals in Middle Siberia</i>, pp. 18-28. Nauka, Moscow, USSR.",
+      "year": "1987",
+      "title": "Fauna of birds and mammals of Severnaya Zemlya",
+      "author": "Belikov, S.E. and Randla, T.E. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Aars, J., Marques, T.A.,  Buckland, S.T., Andersen, M., Belikov, S., Boltunov, A. and Wiig, Ø. 2009. Estimating the Barents Sea polar bear subpopulation size. . <i>Marine Mammal Science</i> 25: 35-52.",
+      "year": "2009",
+      "title": "Estimating the Barents Sea polar bear subpopulation size. ",
+      "author": "Aars, J., Marques, T.A.,  Buckland, S.T., Andersen, M., Belikov, S., Boltunov, A. and Wiig, Ø. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Wiig, Ø., Derocher, A.E., Cronin, M.M. and Skaare, J.U. 1998. Female pseudohermaphrodite polar bears at Svalbard. <i>Journal of Wildlife Diseases</i> 34: 792-796.",
+      "year": "1998",
+      "title": "Female pseudohermaphrodite polar bears at Svalbard",
+      "author": "Wiig, Ø., Derocher, A.E., Cronin, M.M. and Skaare, J.U. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Bromaghin, J.F., McDonald, T.L., Stirling, I., Derocher, A.E., Richardson, E.S., Regehr, E.V., Douglas, D.C., Durner, G.M., Atwood, T. and Amstrup, S.C. 2015. Polar bear population dynamics in the Beaufort Sea during a period of sea ice decline. <i>Ecological Applications</i> 25: 634-651.",
+      "year": "2015",
+      "title": "Polar bear population dynamics in the Beaufort Sea during a period of sea ice decline",
+      "author": "Bromaghin, J.F., McDonald, T.L., Stirling, I., Derocher, A.E., Richardson, E.S., Regehr, E.V., Douglas, D.C., Durner, G.M., Atwood, T. and Amstrup, S.C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Herreman, J. and Peacock, E. 2013. Polar bear use of a persitent food subsidy: insights from non-invasive genetic sampling in Alaska. <i>Ursus</i> 24: 148-163.",
+      "year": "2013",
+      "title": "Polar bear use of a persitent food subsidy: insights from non-invasive genetic sampling in Alaska",
+      "author": "Herreman, J. and Peacock, E. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Rode, K.D., Regehr, E.V., Douglas, D.C., Durner, G., Derocher, A.E., Thiemann, G.W. and Budge, S.M. 2014b. Variation in the response of an Arctic top predator experiencing habitat loss: feeding and reproductive ecology of two polar bear populations. <i>Global Change Biology</i> 20: 76-88.",
+      "year": "2014b",
+      "title": "Variation in the response of an Arctic top predator experiencing habitat loss: feeding and reproductive ecology of two polar bear populations",
+      "author": "Rode, K.D., Regehr, E.V., Douglas, D.C., Durner, G., Derocher, A.E., Thiemann, G.W. and Budge, S.M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Stirling, I. and Derocher, A.E. 2012. Effects of climate warming on polar bears: a review of the evidence. <i>Global Change Biology </i> 18: 2694-2706.",
+      "year": "2012",
+      "title": "Effects of climate warming on polar bears: a review of the evidence",
+      "author": "Stirling, I. and Derocher, A.E. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Stirling, I., Pearson, A.M. and Bunnell, F.L. 1976. Population ecology studies of polar and grizzly bears in northern Canada. <i>Transactions of the North American Wildlife and Natural Resources Conference</i> 41: 421-430.",
+      "year": "1976",
+      "title": "Population ecology studies of polar and grizzly bears in northern Canada",
+      "author": "Stirling, I., Pearson, A.M. and Bunnell, F.L. ",
+      "citation_short": null
+    },
+    {
+      "citation": "O’Neill, S.J., Osborn, T.J., Hulme, M., Lorenzoni, I. and Watkinson, A.R. 2008. Using expert knowledge to assess uncertainties in future polar bear populations under climate change. <i>Journal of Applied Ecology </i> 45: 1649-1659.",
+      "year": "2008",
+      "title": "Using expert knowledge to assess uncertainties in future polar bear populations under climate change",
+      "author": "O’Neill, S.J., Osborn, T.J., Hulme, M., Lorenzoni, I. and Watkinson, A.R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kirk, C., S.C. Amstrup, R. Swor, D. Holcomband and T.M. O’Hara. 2010. Morbillivirus and Toxoplasma exposure and association with hematological parameters for southern Beaufort Sea polar bears: potential response to infectious agents in a sentinel species. <i>EcoHealth</i> 7: 321-331.",
+      "year": "2010",
+      "title": "Morbillivirus and Toxoplasma exposure and association with hematological parameters for southern Beaufort Sea polar bears: potential response to infectious agents in a sentinel species",
+      "author": "Kirk, C., S.C. Amstrup, R. Swor, D. Holcomband and T.M. O’Hara. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Bunnell, F.L. and Tait, D.E.N. 1981. Population dynamics of bears - implications. In: Fowler, C.W. and Smith, T.D. (eds), <i>Dynamics of Large Mammal Populations. </i>, pp. 75-98. John Wiley and Sons, New York.",
+      "year": "1981",
+      "title": "Population dynamics of bears - implications",
+      "author": "Bunnell, F.L. and Tait, D.E.N. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Sutherland, W.J. 2006. Predicting the ecological consequences of environmental change: a review of the methods. . <i>Journal of Applied Ecology</i> 43: 599-616.",
+      "year": "2006",
+      "title": "Predicting the ecological consequences of environmental change: a review of the methods. ",
+      "author": "Sutherland, W.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "U.S. Fish and Wildlife Service [USFWS]. 2008. Endangered and threatened wildlife and plants; determination of threatened status for the polar bear (Ursus maritimus) throughout its range; final rule. <i>Federal Register</i> 73: 28212-28303.",
+      "year": "2008",
+      "title": "Endangered and threatened wildlife and plants; determination of threatened status for the polar bear (Ursus maritimus) throughout its range; final rule",
+      "author": "U.S. Fish and Wildlife Service [USFWS]",
+      "citation_short": ""
+    },
+    {
+      "citation": "Obbard, M.E., Thiemann, G.W., Peacock, E. and DeBruyn, T.D (eds). 2010. <i>Polar Bears: Proceedings of the 15th Working Meeting of the IUCN/SSC Polar Bear Specialist Group, Copenhagen, Denmark, 29 June–3 July 2009</i>. pp. 235. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "2010",
+      "title": "Polar Bears: Proceedings of the 15th Working Meeting of the IUCN/SSC Polar Bear Specialist Group, Copenhagen, Denmark, 29 June–3 July 2009",
+      "author": "Obbard, M.E., Thiemann, G.W., Peacock, E. and DeBruyn, T.D",
+      "citation_short": null
+    },
+    {
+      "citation": "Sonne, C., Dyck, M., Rigét, F.F., Beck Jensen, J.-E., Hyldstrup, L., Letcher, R.J., Gustavson, K., Gilbert, M.T.P. and Dietz, R. 2015. Penile density and globally used chemicals in Canadian and Greenland polar bears. <i>Environmental Research</i> 137: 287-291.",
+      "year": "2015",
+      "title": "Penile density and globally used chemicals in Canadian and Greenland polar bears",
+      "author": "Sonne, C., Dyck, M., Rigét, F.F., Beck Jensen, J.-E., Hyldstrup, L., Letcher, R.J., Gustavson, K., Gilbert, M.T.P. and Dietz, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Castro de la Guardia, L., Derocher, A.E., Myers, P.G., Terwisscha van Scheltinga, A.D. and Lunn, N.J. 2013. Future sea ice conditions in Western Hudson Bay and consequences for polar bears in the 21st century. <i>Global Change Biology</i> 19: 2675-2687.",
+      "year": "2013",
+      "title": "Future sea ice conditions in Western Hudson Bay and consequences for polar bears in the 21st century",
+      "author": "Castro de la Guardia, L., Derocher, A.E., Myers, P.G., Terwisscha van Scheltinga, A.D. and Lunn, N.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Rode, K.D., Peacock, E., Taylor, M., Stirling, I., Born, E.W., Laidre, K.L. and Wiig, Ø. 2012. A tale of two polar bear populations (Ursus maritimus): ice habitat, harvest, and body condition. <i>Population Ecology</i> 54: 3-18.",
+      "year": "2012",
+      "title": "A tale of two polar bear populations (Ursus maritimus): ice habitat, harvest, and body condition",
+      "author": "Rode, K.D., Peacock, E., Taylor, M., Stirling, I., Born, E.W., Laidre, K.L. and Wiig, Ø. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Stirling, I., Lunn, N.J. and Iacozza, J. 1999. Long-term trends in the population ecology of polar bears in western Hudson Bay in relation to climatic change. <i>Arctic </i> 52: 294-306.",
+      "year": "1999",
+      "title": "Long-term trends in the population ecology of polar bears in western Hudson Bay in relation to climatic change",
+      "author": "Stirling, I., Lunn, N.J. and Iacozza, J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Paetkau, D., Amstrup, S.C., Born, E.W., Calvert, W., Derocher, A.E., Garner, G.W., Messier, F., Stirling, I., Taylor, M.K., Wiig, Ø. and Strobeck, C. 1999. Genetic structure of the world's polar bear populations. <i>Molecular Ecology</i> 8: 1571-1584.",
+      "year": "1999",
+      "title": "Genetic structure of the world's polar bear populations",
+      "author": "Paetkau, D., Amstrup, S.C., Born, E.W., Calvert, W., Derocher, A.E., Garner, G.W., Messier, F., Stirling, I., Taylor, M.K., Wiig, Ø. and Strobeck, C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Stirling, I. and Derocher, A.E. 1993. Possible impacts of climatic warming on polar bears. <i>Arctic</i> 46: 240-245.",
+      "year": "1993",
+      "title": "Possible impacts of climatic warming on polar bears",
+      "author": "Stirling, I. and Derocher, A.E. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Messier, F., Taylor, M.K. and Ramsay, M.A. 1994. Denning ecology of polar bears in the Canadian Arctic Archipelago. <i>Journal of Mammalogy</i> 75: 420-430.",
+      "year": "1994",
+      "title": "Denning ecology of polar bears in the Canadian Arctic Archipelago",
+      "author": "Messier, F., Taylor, M.K. and Ramsay, M.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Manly, B.F.J. 1991. <i>Randomization and Monte Carlo Methods in Biology</i>. Chapman and Hall , New York, NY, USA.",
+      "year": "1991",
+      "title": "Randomization and Monte Carlo Methods in Biology",
+      "author": "Manly, B.F.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Dyck, M.G. and Romberg, S. 2007. Observations of a wild polar bear (Ursus maritimus) successfully fishing Arctic charr (Salvelinus alpinus) and Fourhorn sculpin (Myoxocephalus quadricornis). . <i>Polar Biology</i> 30: 1625-1628.",
+      "year": "2007",
+      "title": "Observations of a wild polar bear (Ursus maritimus) successfully fishing Arctic charr (Salvelinus alpinus) and Fourhorn sculpin (Myoxocephalus quadricornis). ",
+      "author": "Dyck, M.G. and Romberg, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Lunn, N.J. and Stirling, I. 1985. The significance of supplemental food to polar bears during the ice-free period of Hudson Bay. . <i>Canadian Journal of Zoology</i> 63: 2291-2297.",
+      "year": "1985",
+      "title": "The significance of supplemental food to polar bears during the ice-free period of Hudson Bay. ",
+      "author": "Lunn, N.J. and Stirling, I. ",
+      "citation_short": null
+    },
+    {
+      "citation": "McKinney, M.M., Iverson, S.J., Fisk, A.T., Sonne, C., Rigét, F.F., Letcher, R.J., Arts, M.T., Born, E.W., Rosing-Asvid, A. and Dietz, R. 2013. Global change effects on the long-term feeding ecology and contaminant exposures of East Greenland polar bears. <i>Global Change Biology</i> 19: 2360-2372.",
+      "year": "2013",
+      "title": "Global change effects on the long-term feeding ecology and contaminant exposures of East Greenland polar bears",
+      "author": "McKinney, M.M., Iverson, S.J., Fisk, A.T., Sonne, C., Rigét, F.F., Letcher, R.J., Arts, M.T., Born, E.W., Rosing-Asvid, A. and Dietz, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Overland, J.E. and Wang, M. 2013. When will the summer Arctic be nearly sea ice free? . <i>Geophysical Research Letters</i> 40: 2097-2101.",
+      "year": "2013",
+      "title": "When will the summer Arctic be nearly sea ice free? ",
+      "author": "Overland, J.E. and Wang, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "McKinney, M. A., Peacock, E. and Letcher, R.J. 2009. Sea ice-associated diet change increases the level of chlorinated and brominated contaminants in polar bears. <i>Environmental Science & Technology</i> 43: 4334-4339.",
+      "year": "2009",
+      "title": "Sea ice-associated diet change increases the level of chlorinated and brominated contaminants in polar bears",
+      "author": "McKinney, M. A., Peacock, E. and Letcher, R.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Atkinson, S.N. and Ramsay, M.A. 1995. The effects of prolonged fasting of the body composition and reproductive success of female polar bears (Ursus maritimus). <i>Functional Ecology </i> 9: 559-567.",
+      "year": "1995",
+      "title": "The effects of prolonged fasting of the body composition and reproductive success of female polar bears (Ursus maritimus)",
+      "author": "Atkinson, S.N. and Ramsay, M.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Blix, A.S. and Lentfer, J.W. 1979. Modes of thermal protection in polar bear cubs – at birth and on emergence from the den. <i> American Journal of Physiology</i> 236: R67-R74.",
+      "year": "1979",
+      "title": "Modes of thermal protection in polar bear cubs – at birth and on emergence from the den",
+      "author": "Blix, A.S. and Lentfer, J.W. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Taylor, M.K., Laake, J., McLoughlin, P.D., Cluff, H.D. and Messier, F. 2006b. Demographic parameters and harvest-explicit population viability analysis for polar bears in M'Clintock Channel, Nunavut, Canada. <i>Journal of Wildlife Management</i> 70(1667-1673).",
+      "year": "2006b",
+      "title": "Demographic parameters and harvest-explicit population viability analysis for polar bears in M'Clintock Channel, Nunavut, Canada",
+      "author": "Taylor, M.K., Laake, J., McLoughlin, P.D., Cluff, H.D. and Messier, F. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "PBSG. 1995. Summary of polar bear population status 1993. In: Wiig, Ø., Born, E.W. and Garner, G.W. (eds), <i>Polar Bears:  Proceedings of the 11th Working Meeting of the IUCN/SSC Polar Bear Specialist Group, Copenhagen, Denmark, 25-27 January 1993</i>, pp. 19-24. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1995",
+      "title": "Summary of polar bear population status 1993",
+      "author": "PBSG",
+      "citation_short": null
+    },
+    {
+      "citation": "Crompton, A.E., Obbard, M.E., Petersen, S.D. and Wilson, P.J. 2008. Population genetic structure in polar bears (Ursus maritimus) from Hudson Bay, Canada: Implications of future climate change. <i>Biological Conservation</i> 141: 2528-2539.",
+      "year": "2008",
+      "title": "Population genetic structure in polar bears (Ursus maritimus) from Hudson Bay, Canada: Implications of future climate change",
+      "author": "Crompton, A.E., Obbard, M.E., Petersen, S.D. and Wilson, P.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Derocher, A.E. and Stirling, I. 1991. Oil contamination of polar bears. <i>Polar Record</i> 27: 56-57.",
+      "year": "1991",
+      "title": "Oil contamination of polar bears",
+      "author": "Derocher, A.E. and Stirling, I. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Burek, K.A., F.M.D. Gulland, and T.M. O’Hara. 2008. Effects of climate change on Arctic marine mammal health. <i>Ecological Applications</i> 18: S126-S134.",
+      "year": "2008",
+      "title": "Effects of climate change on Arctic marine mammal health",
+      "author": "Burek, K.A., F.M.D. Gulland, and T.M. O’Hara. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Taylor, M.K., Laake, J., McLoughlin, P.D., Cluff, H.D. and Messier, F. 2008b. Mark-recapture and stochastic population models for polar bears of the High Arctic. <i>Arctic</i> 61: 143-152.",
+      "year": "2008b",
+      "title": "Mark-recapture and stochastic population models for polar bears of the High Arctic",
+      "author": "Taylor, M.K., Laake, J., McLoughlin, P.D., Cluff, H.D. and Messier, F. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Derocher, A.E., Andriashek, D. and Arnould, J.P Y. 1993. Aspects of milk composition and lactation in polar bears. <i>Canadian Journal of Zoology</i> 71: 561-567.",
+      "year": "1993",
+      "title": "Aspects of milk composition and lactation in polar bears",
+      "author": "Derocher, A.E., Andriashek, D. and Arnould, J.P Y. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Cherry, S.G., Derocher, A.E., Thiemann, G.W. and Lunn, N.J. 2013. Migration phenology and seasonal fidelity of an Arctic marine predator in relation to sea ice dynamics. <i>Journal of Animal Ecology </i> 82: 912-921.",
+      "year": "2013",
+      "title": "Migration phenology and seasonal fidelity of an Arctic marine predator in relation to sea ice dynamics",
+      "author": "Cherry, S.G., Derocher, A.E., Thiemann, G.W. and Lunn, N.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Sonne, C., Letcher, R.J., Bechshøft, T.Ø., Rigét, F.F., Muir, D.C.G., Leifsson, P.S., Born, E.W., Hyldstrup, L., Basu, N., Kirkegaard, M., and Dietz, R. 2012. Two decades of biomonitoring polar bear health in Greenland: a review. <i>Acta Veteterinaria Scandinavica</i> 54: S15.",
+      "year": "2012",
+      "title": "Two decades of biomonitoring polar bear health in Greenland: a review.",
+      "author": "Sonne, C., Letcher, R.J., Bechshøft, T.Ø., Rigét, F.F., Muir, D.C.G., Leifsson, P.S., Born, E.W., Hyldstrup, L., Basu, N., Kirkegaard, M., and Dietz, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Lønø, O. 1970. The polar bear (Ursus maritimus Phipps) in the Svalbard area. <i>Norsk Polarinstitutt Skrifter</i> 149: 1-115.",
+      "year": "1970",
+      "title": "The polar bear (Ursus maritimus Phipps) in the Svalbard area",
+      "author": "Lønø, O. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Schliebe, S., Wiig, Ø., Derocher, A. and Lunn, N. 2008. Ursus maritimus. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. ",
+      "year": "2008",
+      "title": "Ursus maritimus",
+      "author": "Schliebe, S., Wiig, Ø., Derocher, A. and Lunn, N. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Laaksonen, S.,Pusenius, J., Kumpula, J., Venäläinen, A., Kortet, R., Oksanen, A. and Hoberg, E. 2010. Climate change promotes the emergence of serious disease outbreaks of filarioid nematodes. <i>EcoHealth</i> 7: 7-13.",
+      "year": "2010",
+      "title": "Climate change promotes the emergence of serious disease outbreaks of filarioid nematodes",
+      "author": "Laaksonen, S.,Pusenius, J., Kumpula, J., Venäläinen, A., Kortet, R., Oksanen, A. and Hoberg, E. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "van Meurs, R. and Splettstoesser, J. F. 2003. Farthest north polar bear (Ursus maritimus). <i>Arctic</i> 56: 309.",
+      "year": "2003",
+      "title": "Farthest north polar bear (Ursus maritimus)",
+      "author": "van Meurs, R. and Splettstoesser, J. F. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Stirling, I. and Parkinson, C.L. 2006. Possible effects of climate warming on selected populations of polar bears (Ursus maritimus) in the Canadian Arctic. <i>Arctic</i> 59: 261-275.",
+      "year": "2006",
+      "title": "Possible effects of climate warming on selected populations of polar bears (Ursus maritimus) in the Canadian Arctic",
+      "author": "Stirling, I. and Parkinson, C.L. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Stirling, I., Spencer, C. and Andriashek, D. 1989. Immobilization of polar bears (Ursus maritimus) with Telazol® in the Canadian Arctic. <i>Journal of Wildlife Diseases</i> 25: 159-168.",
+      "year": "1989",
+      "title": "Immobilization of polar bears (Ursus maritimus) with Telazol® in the Canadian Arctic",
+      "author": "Stirling, I., Spencer, C. and Andriashek, D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Uspenski, S. M.,  (ed.). 1977. <i>The polar bear and its conservation in the Soviet Arctic. A collection of scientific papers</i>. Central Laboratory of Nature Conservation, Moscow.",
+      "year": "1977",
+      "title": "The polar bear and its conservation in the Soviet Arctic. A collection of scientific papers",
+      "author": "Uspenski, S. M., ",
+      "citation_short": null
+    },
+    {
+      "citation": "Sahanatien, V. and Derocher, A.E. 2012. Monitoring sea ice habitat fragmentation for polar bear conservation. <i>Animal Conservation</i> 15: 397-406.",
+      "year": "2012",
+      "title": "Monitoring sea ice habitat fragmentation for polar bear conservation",
+      "author": "Sahanatien, V. and Derocher, A.E. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Hobson, K.A., Stirling, I. and Andriashek, D.S. 2009. Isotopic homogeneity of breath CO2 from fasting and berry-eating polar bears: implications for tracing reliance on terrestrial foods in a changing Arctic. . <i>Canadian Journal of Zoology</i> 87: 50-55.",
+      "year": "2009",
+      "title": "Isotopic homogeneity of breath CO2 from fasting and berry-eating polar bears: implications for tracing reliance on terrestrial foods in a changing Arctic. ",
+      "author": "Hobson, K.A., Stirling, I. and Andriashek, D.S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "PBSG. 2015. Summary of polar bear population status per 2014. Available at: <a href=\" pbsg.npolar.no/en/status/status-table.html\"> pbsg.npolar.no/en/status/status-table.html</a>. (Accessed: 01 July 2015).",
+      "year": "2015",
+      "title": "Summary of polar bear population status per 2014",
+      "author": "PBSG",
+      "citation_short": ""
+    },
+    {
+      "citation": "Larsen, T. 1985. Polar bear denning and cub production in Svalbard, Norway. . <i>Journal of Wildlife Management</i> 49: 320-326.",
+      "year": "1985",
+      "title": "Polar bear denning and cub production in Svalbard, Norway. ",
+      "author": "Larsen, T. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Andersen, M., Derocher, A.E., Wiig, Ø. and Aars, J. 2012. Polar bear (Ursus maritimus) maternity den distribution in Svalbard, Norway. <i>Polar Biology</i> 35: 499-508.",
+      "year": "2012",
+      "title": "Polar bear (Ursus maritimus) maternity den distribution in Svalbard, Norway",
+      "author": "Andersen, M., Derocher, A.E., Wiig, Ø. and Aars, J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Rode, K.D., Robbins, C.T., Nelson, L. and Amstrup, S.C. 2015. Can polar bears use terrestrial foods to offset lost ice-based hunting opportunities? <i>Frontiers in Ecology and the Environment</i> 13: 138-145.",
+      "year": "2015",
+      "title": "Can polar bears use terrestrial foods to offset lost ice-based hunting opportunities?",
+      "author": "Rode, K.D., Robbins, C.T., Nelson, L. and Amstrup, S.C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kochnev, A.A. 2004. Polar bear in Chukotka: concerns and hopes (in Russian, English translation). <i>Wildlife Conservation </i> 3: 7-14.",
+      "year": "2004",
+      "title": "Polar bear in Chukotka: concerns and hopes (in Russian, English translation)",
+      "author": "Kochnev, A.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Derocher, A.E., Aars, J., Amstrup, S.C., Cutting, A., Lunn, N.J., Molnár, P.K., Obbard, M.E., Stirling, I., Thiemann, G.W., Vongraven, D., Wiig, Ø. and York, G. 2013. Rapid ecosystem change and polar bear conservation. <i>Conservation Letters </i> 6: 368-375.",
+      "year": "2013",
+      "title": "Rapid ecosystem change and polar bear conservation",
+      "author": "Derocher, A.E., Aars, J., Amstrup, S.C., Cutting, A., Lunn, N.J., Molnár, P.K., Obbard, M.E., Stirling, I., Thiemann, G.W., Vongraven, D., Wiig, Ø. and York, G. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IPCC. 2013. <i>Climate Change 2013: The Physical Science Basis. Contribution of Working Group I to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change</i>. Cambridge University Press, Cambridge, UK.",
+      "year": "2013",
+      "title": "Climate Change 2013: The Physical Science Basis. Contribution of Working Group I to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change",
+      "author": "IPCC",
+      "citation_short": null
+    },
+    {
+      "citation": "Parkinson, C.L. 2014. Spatially mapped reductions in the length of the Arctic sea ice season. <i>Geophysical Research Letters</i> 41: 4316-4322.",
+      "year": "2014",
+      "title": "Spatially mapped reductions in the length of the Arctic sea ice season",
+      "author": "Parkinson, C.L. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Skaare, J.U., Bernhoft, A., Wiig, Ø., Norum, K.R., Haug, E., Eide, D.M. and Derocher, A.E. 2001. Relationships between plasma levels of organochlorines, retinol and thyroid hormones from polar bears (Ursus maritimus) at Svalbard. <i>Journal of Toxicology and Environmental Health-Part A</i> 62: 227-241.",
+      "year": "2001",
+      "title": "Relationships between plasma levels of organochlorines, retinol and thyroid hormones from polar bears (Ursus maritimus) at Svalbard",
+      "author": "Skaare, J.U., Bernhoft, A., Wiig, Ø., Norum, K.R., Haug, E., Eide, D.M. and Derocher, A.E. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Dietz, R., Rigét, F.F., Sonne, C., Born, E.W., Bechshøft, T., McKinney, M.A., Drimmie, R.J., Muir, D.C.G., and Letcher, R.J. 2013b. Three decades (1983-2010) of contaminant trends in east Greenland polar bears (Ursus maritimus). Part 2: Brominated flame retardant . <i>Environment International</i> 59: 494-500.",
+      "year": "2013b",
+      "title": "Three decades (1983-2010) of contaminant trends in east Greenland polar bears (Ursus maritimus). Part 2: Brominated flame retardant ",
+      "author": "Dietz, R., Rigét, F.F., Sonne, C., Born, E.W., Bechshøft, T., McKinney, M.A., Drimmie, R.J., Muir, D.C.G., and Letcher, R.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Gormezano, L.J. and Rockwell, R.F. 2013. Submitted  Gormezano, L.J. and Rockwell, R.F. 2013. What to eat now? Shifts in polar bear diet during the ice-free season in western Hudson Bay. <i>Ecology and Evolution </i> 3: 3509-3523.",
+      "year": "2013",
+      "title": "Submitted  Gormezano, L.J. and Rockwell, R.F. 2013. What to eat now? Shifts in polar bear diet during the ice-free season in western Hudson Bay",
+      "author": "Gormezano, L.J. and Rockwell, R.F. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2012. <i>IUCN Red List Categories and Criteria: Version 3.1. Second Edition</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "2012",
+      "title": "IUCN Red List Categories and Criteria: Version 3.1. Second Edition",
+      "author": "IUCN",
+      "citation_short": ""
+    },
+    {
+      "citation": "Parmesan, C. 2006. Ecological and evolutionary responses to recent climate change. . <i>Annual Review of Ecology, Evolution, and Systematics </i> 37: 637-669.",
+      "year": "2006",
+      "title": "Ecological and evolutionary responses to recent climate change. ",
+      "author": "Parmesan, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "PBSG. 1998. Status of the polar bear. In: Derocher, A.E., Garner, G.W., Lunn, N.J. and Wiig, Ø. (eds), <i>Polar Bears:  Proceedings of the 12th Working Meeting of the IUCN/SSC Polar Bear Specialist Group, Oslo, Norway, 3-7 February 1997</i>, pp. 23-44. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1998",
+      "title": "Status of the polar bear",
+      "author": "PBSG",
+      "citation_short": null
+    },
+    {
+      "citation": "Taylor, M. K., Lee, J., Laake, J. & McLoughlin, P. D. 2006a. Estimating population size of polar bears in Foxe Basin, Nunavut using tetracycline biomarkers. Department of the Environment, Government of Nunavut.",
+      "year": "2006a",
+      "title": "Estimating population size of polar bears in Foxe Basin, Nunavut using tetracycline biomarkers",
+      "author": "Taylor, M. K., Lee, J., Laake, J. & McLoughlin, P. D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Amstrup, S.C., Marcot, B.G. and Douglas, D.C. 2008. A Bayesian network modeling approach to forecasting the 21st century worldwide status of polar bears. In: DeWeaver, E.T., Bitz, C.M. and Tremblay, L.B. (eds), <i>Arctic Sea Ice Decline: Observations, Projections, Mechanisms and Implications. </i>, pp. 213-268. Geophysical Monograph Series, American Geophysical Union, Washington, DC, USA.",
+      "year": "2008",
+      "title": "A Bayesian network modeling approach to forecasting the 21st century worldwide status of polar bears",
+      "author": "Amstrup, S.C., Marcot, B.G. and Douglas, D.C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Patyk, K., C. Duncan, P. Nol., C. Sonne, K. Laidre, M. Obbard, Ø. Wiig, J. Aars, E. Regehr, L. Gustafson, and T.C. Atwood. 2015. Establishing a definition of polar bear health to guide research and management activities. . <i>Science for the Total Environment</i> 514: 371-378.",
+      "year": "2015",
+      "title": "Establishing a definition of polar bear health to guide research and management activities. ",
+      "author": "Patyk, K., C. Duncan, P. Nol., C. Sonne, K. Laidre, M. Obbard, Ø. Wiig, J. Aars, E. Regehr, L. Gustafson, and T.C. Atwood. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Rhodes, J.R., Chooi, F.N., deVilliers, D.L., Preece, H.J., McAlpine, C.A. and Possingham, H.P. 2011. Using intergrated population modelling to quantify the implications of multiple threatening processes for a rapidly declining population. <i>Biological Conservation </i> 144: 1081-1088.",
+      "year": "2011",
+      "title": "Using intergrated population modelling to quantify the implications of multiple threatening processes for a rapidly declining population",
+      "author": "Rhodes, J.R., Chooi, F.N., deVilliers, D.L., Preece, H.J., McAlpine, C.A. and Possingham, H.P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Molnár, P.K., Derocher, A.E., Thiemann, G.W. and Lewis, M.A. 2010. Predicting survival, reproduction and abundance of polar bears under climate change. . <i>Biological Conservation</i> 143: 1612-1622.",
+      "year": "2010",
+      "title": "Predicting survival, reproduction and abundance of polar bears under climate change. ",
+      "author": "Molnár, P.K., Derocher, A.E., Thiemann, G.W. and Lewis, M.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2013. Documentation standards and consistency checks for IUCN Red List assessments and species accounts. Version 2. Adopted by the IUCN Red List Committee and IUCN SSC Steering Committee. Available at: <a href=\"http://www.iucnredlist.org/documents/RL_Standards_Consistency.pdf\">http://www.iucnredlist.org/documents/RL_Standards_Consistency.pdf</a>. ",
+      "year": "2013",
+      "title": "Documentation standards and consistency checks for IUCN Red List assessments and species accounts. Version 2. Adopted by the IUCN Red List Committee and IUCN SSC Steering Committee",
+      "author": "IUCN",
+      "citation_short": null
+    },
+    {
+      "citation": "Manning, T.H. 1971. Geographical variation in the polar bear, Ursus maritimus Phipps. <i>Canadian Wildlife Service Report</i> 13: 1-27.",
+      "year": "1971",
+      "title": "Geographical variation in the polar bear, Ursus maritimus Phipps",
+      "author": "Manning, T.H. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Stroeve, J.C., Kattsov, V., Barrett, A., Serreze, M., Pavlova, T., Holland, M. and Meier, W.N. 2012. Trends in Arctic sea ice extent from CMIP5, CMIP3 and observations. <i>Geophysical Research Letters</i> 39: L16502.",
+      "year": "2012",
+      "title": "Trends in Arctic sea ice extent from CMIP5, CMIP3 and observations",
+      "author": "Stroeve, J.C., Kattsov, V., Barrett, A., Serreze, M., Pavlova, T., Holland, M. and Meier, W.N. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Lunn, N.J., Servanty, S., Regehr, E.V., Converse, S.J., Richardson, E. and Stirling, I. 2014. Demography and population status of polar bears in western Hudson Bay, Canada.  Environment Canada Research Report. Edmonton, AB, Canada.",
+      "year": "2014",
+      "title": "Demography and population status of polar bears in western Hudson Bay, Canada",
+      "author": "Lunn, N.J., Servanty, S., Regehr, E.V., Converse, S.J., Richardson, E. and Stirling, I. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Øritsland, N.A., Engelhardt, F.R., Juck, F.A., Hurst, R.J. and Watts, P.D. 1981. Effect of crude oil on polar bears.  Environmental Studies 24,. Indian and Northern Affairs Canada, Ottawa, Canada.",
+      "year": "1981",
+      "title": "Effect of crude oil on polar bears",
+      "author": "Øritsland, N.A., Engelhardt, F.R., Juck, F.A., Hurst, R.J. and Watts, P.D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Watts, P.D. and Hansen, S.E. 1987. Cyclic starvation as a reproductive strategy in the polar bear. <i>Symposia of the Zoological Society of London</i> 57: 305-318.",
+      "year": "1987",
+      "title": "Cyclic starvation as a reproductive strategy in the polar bear",
+      "author": "Watts, P.D. and Hansen, S.E. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Dietz, R., Gustavson, K., Sonne, C., Desforges, J.-P., Rigét, F.F., Pavlova, V.,  McKinney, M.A., and Letcher, R.J. 2015. Physiologically-based pharmacokinetic modelling of immune, reproductive and carcinogenic effects from contaminant exposure in polar bears (Ursus maritimus) across the Arctic. <i>Environmental Research</i> 140: 45-55.",
+      "year": "2015",
+      "title": "Physiologically-based pharmacokinetic modelling of immune, reproductive and carcinogenic effects from contaminant exposure in polar bears (Ursus maritimus) across the Arctic.",
+      "author": "Dietz, R., Gustavson, K., Sonne, C., Desforges, J.-P., Rigét, F.F., Pavlova, V.,  McKinney, M.A., and Letcher, R.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Verreault, J., Gabrielsen, G.W., Chu, S., Muir, D.C.G., Andersen, M., Hamaed, A. and Letcher, R.J. 2005. Flame retardants and methoxylated and hydroxylated polybrominated diphenyl ethers in two Norwegian Arctic top predators: Glaucous gulls and polar bears. <i>Environmental Science & Technology</i> 39: 6021-6028.",
+      "year": "2005",
+      "title": "Flame retardants and methoxylated and hydroxylated polybrominated diphenyl ethers in two Norwegian Arctic top predators: Glaucous gulls and polar bears",
+      "author": "Verreault, J., Gabrielsen, G.W., Chu, S., Muir, D.C.G., Andersen, M., Hamaed, A. and Letcher, R.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Derocher, A.E., Stirling, I. and Andriashek, D. 1992. Pregnancy rates and serum progesterone levels of polar bears in western Hudson Bay. . <i>Canadian Journal of Zoology</i> 70: 561-566.",
+      "year": "1992",
+      "title": "Pregnancy rates and serum progesterone levels of polar bears in western Hudson Bay. ",
+      "author": "Derocher, A.E., Stirling, I. and Andriashek, D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Schliebe, S., Rode, K.D., Gleason, J.S., Wilder, J., Proffitt, K., Evans, T.J. and Miller, S. 2008. Effects of sea ice extent and food availability on spatial and temporal distribution of polar bears during the fall open-water period in the Beaufort Sea. <i>Polar Biology</i> 31: 999-1010.",
+      "year": "2008",
+      "title": "Effects of sea ice extent and food availability on spatial and temporal distribution of polar bears during the fall open-water period in the Beaufort Sea",
+      "author": "Schliebe, S., Rode, K.D., Gleason, J.S., Wilder, J., Proffitt, K., Evans, T.J. and Miller, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Stirling, I. 2009. Polar bear (Ursus maritimus). In: Perrin, W.F., Würsig, B.W. and Thewissen, J.G.M. (eds), <i>Encyclopedia of Marine Mammals, 2nd edition</i>, pp. 888-890. Academic Press, San Diego.",
+      "year": "2009",
+      "title": "Polar bear (Ursus maritimus)",
+      "author": "Stirling, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Russell, R.H. 1975. The food habits of polar bears of James Bay and Southwest Hudson Bay in summer and autumn. <i>Arctic</i> 28: 117-129.",
+      "year": "1975",
+      "title": "The food habits of polar bears of James Bay and Southwest Hudson Bay in summer and autumn",
+      "author": "Russell, R.H. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Wilson, R.R., Horne, J.S., Rode, K.D., Regehr, E.V. and Durner, G.M. 2014. Identifying polar bear resource selection patterns to inform offshore development in a dynamic and changing Arctic. <i>Ecosphere</i> 5(136).",
+      "year": "2014",
+      "title": "Identifying polar bear resource selection patterns to inform offshore development in a dynamic and changing Arctic",
+      "author": "Wilson, R.R., Horne, J.S., Rode, K.D., Regehr, E.V. and Durner, G.M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Durner, G. M., Amstrup, S.C. and Fischbach, A.S. 2003. Habitat characteristics of polar bear terrestrial maternal den sites in northern Alaska. <i>Arctic</i> 56: 55-62.",
+      "year": "2003",
+      "title": "Habitat characteristics of polar bear terrestrial maternal den sites in northern Alaska",
+      "author": "Durner, G. M., Amstrup, S.C. and Fischbach, A.S. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "USFWS. 2015. Polar Bear (Ursus maritimus) Conservation Management Plan, Draft. U.S. Fish and Wildlife Service, Region 7, Anchorage, Alaska.",
+      "year": "2015",
+      "title": "Polar Bear (Ursus maritimus) Conservation Management Plan, Draft",
+      "author": "USFWS",
+      "citation_short": null
+    },
+    {
+      "citation": "Ramsay, M.A. and Hobson, K.A. 1991. Polar bears make little use of terrestrial food webs: evidence from stable-carbon isotope analysis. <i>Oecologia</i> 86: 598-600.",
+      "year": "1991",
+      "title": "Polar bears make little use of terrestrial food webs: evidence from stable-carbon isotope analysis",
+      "author": "Ramsay, M.A. and Hobson, K.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "R Core Team. 2015. R: A language and environment for statistical computing. Vienna, Austria Available at: <a href=\"http://www.R-project.org/\">http://www.R-project.org/</a>. ",
+      "year": "2015",
+      "title": "R: A language and environment for statistical computing",
+      "author": "R Core Team ",
+      "citation_short": null
+    },
+    {
+      "citation": "Connors ,B.M., Cooper A.B., Peterman R.M. and Dulvy N.K. 2014. The false classification of extinction risk in noisy environments. <i>Proceedings of the Royal Society B 281: 20132935</i> 281: 20132935.",
+      "year": "2014",
+      "title": "The false classification of extinction risk in noisy environments",
+      "author": "Connors ,B.M., Cooper A.B., Peterman R.M. and Dulvy N.K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Taylor, M.K., Laake, J., McLoughlin, P.D., Born, E.W., Cluff, H.D., Ferguson, S.H., Rosing-Asvid, A., Schweinsburg, R. and Messier, F. 2005. Demography and viability of a hunted population of polar bears. <i>Arctic</i> 58: 203-214.",
+      "year": "2005",
+      "title": "Demography and viability of a hunted population of polar bears",
+      "author": "Taylor, M.K., Laake, J., McLoughlin, P.D., Born, E.W., Cluff, H.D., Ferguson, S.H., Rosing-Asvid, A., Schweinsburg, R. and Messier, F. ",
+      "citation_short": null
+    },
+    {
+      "citation": "McKinney, M.A., Letcher, R.J., Aars, J., Born, E.W., Branigan, M., Dietz, R., Evans, T.J., Gabrielsen, G.W., Peacock, E. and Sonne, C. 2011. Flame retardants and legacy contaminants in polar bears from Alaska, Canada, East Greenland and Svalbard, 2005-2008. <i>Environment International</i> 37: 265-274.",
+      "year": "2011",
+      "title": "Flame retardants and legacy contaminants in polar bears from Alaska, Canada, East Greenland and Svalbard, 2005-2008",
+      "author": "McKinney, M.A., Letcher, R.J., Aars, J., Born, E.W., Branigan, M., Dietz, R., Evans, T.J., Gabrielsen, G.W., Peacock, E. and Sonne, C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Amstrup, S.C. and Durner, G.M. 1995. Survival rates of radio-collared female polar bears and their dependent young. <i>Canadian Journal of Zoology </i> 73: 1312-1322.",
+      "year": "1995",
+      "title": "Survival rates of radio-collared female polar bears and their dependent young",
+      "author": "Amstrup, S.C. and Durner, G.M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kolenosky, G.B. and Prevett, J.P. 1983. Productivity and maternity denning of polar bears in Ontario. <i>International Conference on Bear Research and Management</i> 5: 238-245.",
+      "year": "1983",
+      "title": "Productivity and maternity denning of polar bears in Ontario",
+      "author": "Kolenosky, G.B. and Prevett, J.P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Baker-Austin, C., J.A. Trinanes, N.G.H. Taylor, R. Hartnell, A. Siitonen, and J. Martinez-Urtaza. 2012. Emerging Vibrio risk at high latitudes in response to ocean warming. <i>Nature Climate Change.  </i> 3: 73-77.",
+      "year": "2012",
+      "title": "Emerging Vibrio risk at high latitudes in response to ocean warming",
+      "author": "Baker-Austin, C., J.A. Trinanes, N.G.H. Taylor, R. Hartnell, A. Siitonen, and J. Martinez-Urtaza. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Obbard, M.E. McDonald, T.L., Howe, E.J., Regehr, E.V. and Richardson, E.S. 2007. Polar Bear Population Status in Southern Hudson Bay, Canada.  U.S. Geological Survey Administrative Report.  Reston, VA, USA.",
+      "year": "2007",
+      "title": "Polar Bear Population Status in Southern Hudson Bay, Canada",
+      "author": "Obbard, M.E. McDonald, T.L., Howe, E.J., Regehr, E.V. and Richardson, E.S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Skaare, J.U., Bernhoft, A., Derocher, A., Gabrielsen, G.W., Goksøyr, A., Henriksen, E., Larsen, H.J., Lie, E. and Wiig, Ø. 2000. Organochlorines in top predators at Svalbard - occurrence, levels and effects. <i>Toxicology Letters </i> 112-113: 103-109.",
+      "year": "2000",
+      "title": "Organochlorines in top predators at Svalbard - occurrence, levels and effects",
+      "author": "Skaare, J.U., Bernhoft, A., Derocher, A., Gabrielsen, G.W., Goksøyr, A., Henriksen, E., Larsen, H.J., Lie, E. and Wiig, Ø. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Isaksen, K., Bakken, V. and Wiig, Ø. 1998. Potential effects on seabirds and marine mammals of petroleum activity in the northern Barents Sea. <i>Norsk Polarinstitutt Meddelelser</i> 154: 1-66.",
+      "year": "1998",
+      "title": "Potential effects on seabirds and marine mammals of petroleum activity in the northern Barents Sea",
+      "author": "Isaksen, K., Bakken, V. and Wiig, Ø. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Letcher, R.J., Bustnes, J.O., Dietz, R., Jenssen, B.M., Jørgensen, E.H., Sonne, C., Verreault, J., Vijayan, M.M. and Gabrielsen, G.W. 2010. Exposure and effects assessment of persistent organohalogen contaminants in arctic wildlife and fish. <i>Science of the Total Environment</i> 408: 2995-3043.",
+      "year": "2010",
+      "title": "Exposure and effects assessment of persistent organohalogen contaminants in arctic wildlife and fish",
+      "author": "Letcher, R.J., Bustnes, J.O., Dietz, R., Jenssen, B.M., Jørgensen, E.H., Sonne, C., Verreault, J., Vijayan, M.M. and Gabrielsen, G.W. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Regehr, E.V., Wilson, R.R., Rode, K.D. and Runge, M.C. 2015. Resilience and risk – A demographic model to inform conservation planning for polar bears.  U.S. Geological Survey Open-File Report 2015-1029.",
+      "year": "2015",
+      "title": "Resilience and risk – A demographic model to inform conservation planning for polar bears",
+      "author": "Regehr, E.V., Wilson, R.R., Rode, K.D. and Runge, M.C.  ",
+      "citation_short": null
+    },
+    {
+      "citation": "Rigét, F., Bossi, R., Sonne, C., Vorkamp, K. and Dietz, R. 2013. Trends of perfluorochemicals in Greenland ringed seals and polar bears: indications of shifts to decreasing trends. <i>Chemosphere</i> 9: 1607-1614.",
+      "year": "2013",
+      "title": "Trends of perfluorochemicals in Greenland ringed seals and polar bears: indications of shifts to decreasing trends.",
+      "author": "Rigét, F., Bossi, R., Sonne, C., Vorkamp, K. and Dietz, R.  ",
+      "citation_short": null
+    },
+    {
+      "citation": "Hurst, R.J. and Øritsland, N.A. 1982. Polar bear thermoregulation: Effect of oil on the insulative properties of fur. <i>Journal of Thermal Biology</i> 7: 201-208.",
+      "year": "1982",
+      "title": "Polar bear thermoregulation: Effect of oil on the insulative properties of fur",
+      "author": "Hurst, R.J. and Øritsland, N.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Jenssen, B.M., Villanger, G.D., Gabrielsen, K.M., Bytingsvik, J., Bechshøft, T., Ciesielski, T.M., Sonne, C. and Dietz, R. 2015. Anthropogenic flank attack on polar bears: Interacting consequences of climate warming and pollutant exposure. <i>Frontiers in Ecology and Evolution </i> 3.",
+      "year": "2015",
+      "title": "Anthropogenic flank attack on polar bears: Interacting consequences of climate warming and pollutant exposure",
+      "author": "Jenssen, B.M., Villanger, G.D., Gabrielsen, K.M., Bytingsvik, J., Bechshøft, T., Ciesielski, T.M., Sonne, C. and Dietz, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Atwood, T.C., Marcot, B.G., Douglas, D.C., Amstrup, S.C., Rode, K.D., Durner, G.M. and Bromaghin, J.F. 2015. Evaluating and ranking threats to the long-term persistence of polar bears.  U.S. Geological Survey Open-File Report 2014-1254.",
+      "year": "2015",
+      "title": "Evaluating and ranking threats to the long-term persistence of polar bears.",
+      "author": "Atwood, T.C., Marcot, B.G., Douglas, D.C., Amstrup, S.C., Rode, K.D., Durner, G.M. and Bromaghin, J.F. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Verreault, J., Norstrom, R.J., Ramsay, M.A., Mulvihill, M. and Letcher, R.J. 2006. Composition of chlorinated hydrocarbon contaminants among major adipose tissue depots of polar bears (Ursus maritimus) from the Canadian high Arctic. <i>Science of the Total Environment </i> 370: 580-587.",
+      "year": "2006",
+      "title": "Composition of chlorinated hydrocarbon contaminants among major adipose tissue depots of polar bears (Ursus maritimus) from the Canadian high Arctic",
+      "author": "Verreault, J., Norstrom, R.J., Ramsay, M.A., Mulvihill, M. and Letcher, R.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Gough, W.A., Cornwell, A. R. and Tsuji, L.J.S. 2004. Trends in seasonal sea ice duration in southwestern Hudson Bay. <i>Arctic</i> 57: 298-304.",
+      "year": "2004",
+      "title": "Trends in seasonal sea ice duration in southwestern Hudson Bay",
+      "author": "Gough, W.A., Cornwell, A. R. and Tsuji, L.J.S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Schweinsburg, R.E., Lee, L.J. and Haigh, J.C. 1982. Capturing and handling polar bears in the Canadian Arctic. In: Nielsen, L., Haigh, J.C., and Fowler, M.E. (eds), <i>Chemical Immobilization of North American Wildlife</i>, pp. 267-288. The Wisconsin Humane Society, Milwaukee, WI, USA.",
+      "year": "1982",
+      "title": "Capturing and handling polar bears in the Canadian Arctic",
+      "author": "Schweinsburg, R.E., Lee, L.J. and Haigh, J.C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Foote, L. and Wenzel, G.W. 2009. Polar bear conservation hunting in Canada: economics, culture and unintended consequences. In: Freeman, M.M.R. and Foote, L. (eds), <i>Inuit, Polar Bears and Sustainable Use: Local, National and International Perspectives</i>, pp. 13-24. Canadian Circumpolar Institute  Press, Edmonton.",
+      "year": "2009",
+      "title": "Polar bear conservation hunting in Canada: economics, culture and unintended consequences",
+      "author": "Foote, L. and Wenzel, G.W. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Taylor, M.K., Laake, J., McLoughlin, P.D., Cluff, H.D., Born, E.W., Rosing-Asvid, A. and Messier, F. 2008a. Population parameters and harvest risks for polar bears (Ursus maritimus) of Kane Basin, Canada and Greenland. <i>Polar Biology</i> 31: 491-499.",
+      "year": "2008a",
+      "title": "Population parameters and harvest risks for polar bears (Ursus maritimus) of Kane Basin, Canada and Greenland",
+      "author": "Taylor, M.K., Laake, J., McLoughlin, P.D., Cluff, H.D., Born, E.W., Rosing-Asvid, A. and Messier, F. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Hamilton, S.G., Castro de la Guardia, L., Derocher, A.E., Sahanatien, V., Tremblay, B. and Huard, D. 2014. Projected polar bear sea ice habitat in the Canadian Arctic Archipelago. <i>PLoS ONE.</i> 9: e113746,doi:10.1371/journal.pone.0113746.",
+      "year": "2014",
+      "title": "Projected polar bear sea ice habitat in the Canadian Arctic Archipelago",
+      "author": "Hamilton, S.G., Castro de la Guardia, L., Derocher, A.E., Sahanatien, V., Tremblay, B. and Huard, D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Gelman, A. and Su, Y.-S. 2015. arm: Data Analysis Using Regression and   Multilevel/Hierarchical Models. R package version 1.8-5. Available at: <a href=\"http://CRAN.R-project.org/package=arm\">http://CRAN.R-project.org/package=arm</a>. ",
+      "year": "2015",
+      "title": "arm: Data Analysis Using Regression and   Multilevel/Hierarchical Models. R package version 1.8-5.",
+      "author": "Gelman, A. and Su, Y.-S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Dietz, R., Rigét, F.F., Sonne, C., Born, E.W., Bechshøft, T., McKinney, M.A. and Letcher, R.J. 2013a. Three decades (1983-2010) of contaminant trends in east Greenland polar bears (Ursus maritimus). Part 1: Legacy organochlorine contaminants. <i>Environment International</i> 59: 485-493.",
+      "year": "2013a",
+      "title": "Three decades (1983-2010) of contaminant trends in east Greenland polar bears (Ursus maritimus). Part 1: Legacy organochlorine contaminants",
+      "author": "Dietz, R., Rigét, F.F., Sonne, C., Born, E.W., Bechshøft, T., McKinney, M.A. and Letcher, R.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Arnold, S.F. 1990. <i>Mathematical Statistics</i>. Prentice Hall, Englewood Cliffs, NJ, USA.",
+      "year": "1990",
+      "title": "Mathematical Statistics",
+      "author": "Arnold, S.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Born, E.W., Heilmann, A., Kielsen Holm, L. and Laidre, K.L. 2011. <i>Polar Bears in Northwest Greenland: An Interview Survey about the Catch and the Climate</i>. Museum Tusculanum Press, Copenhagen.",
+      "year": "2011",
+      "title": "Polar Bears in Northwest Greenland: An Interview Survey about the Catch and the Climate",
+      "author": "Born, E.W., Heilmann, A., Kielsen Holm, L. and Laidre, K.L. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Stroeve, J., Holland, M.M., Meier, W., Scambos, T. and Serreze, M. 2007. Arctic sea ice decline: Faster than forecast. <i>Geophysical Research Letters 34</i> 34: L09501.",
+      "year": "2007",
+      "title": "Arctic sea ice decline: Faster than forecast",
+      "author": "Stroeve, J., Holland, M.M., Meier, W., Scambos, T. and Serreze, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Molnár, P.K., Derocher, A.E., Klanjscek, T. and Lewis, M.A. 2011. Predicting climate change impacts on polar bear litter size. <i>Nature Communications</i> 2(186).",
+      "year": "2011",
+      "title": "Predicting climate change impacts on polar bear litter size",
+      "author": "Molnár, P.K., Derocher, A.E., Klanjscek, T. and Lewis, M.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Hunter, C.M., Caswell, H., Runge, M.C., Regehr, E.V., Amstrup, S.C. and Stirling, I. 2010. Climate change threatens polar bear populations: a stochastic demographic analysis. <i>Ecology</i> 91: 2883-2897.",
+      "year": "2010",
+      "title": "Climate change threatens polar bear populations: a stochastic demographic analysis",
+      "author": "Hunter, C.M., Caswell, H., Runge, M.C., Regehr, E.V., Amstrup, S.C. and Stirling, I. ",
+      "citation_short": null
+    },
+    {
+      "citation": "McDonald, T.L. and Amstrup, S.C. 2001. Estimation of population size using open capture-recapture models. . <i>Journal of Agricultural, Biological, and Environmental Statistics</i> 6: 206-220.",
+      "year": "2001",
+      "title": "Estimation of population size using open capture-recapture models. ",
+      "author": "McDonald, T.L. and Amstrup, S.C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Derocher, A.E., Lunn, N.J. and Stirling, I. 2004. Polar bears in a warming climate. <i>Integrative and Comparative Biology </i> 44: 163-176.",
+      "year": "2004",
+      "title": "Polar bears in a warming climate",
+      "author": "Derocher, A.E., Lunn, N.J. and Stirling, I. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Matishov, G.G., Chelintsev, N.G., Goryaev, Yu.I., Makarevich, P.R. and Ishkulov, D.G. 2014. Assessment of the amount of polar bears (Ursus maritimus) on the basis of perennial vessel counts. <i>Doklady Earth Sciences </i> 458: 1312-1316.",
+      "year": "2014",
+      "title": "Assessment of the amount of polar bears (Ursus maritimus) on the basis of perennial vessel counts",
+      "author": "Matishov, G.G., Chelintsev, N.G., Goryaev, Yu.I., Makarevich, P.R. and Ishkulov, D.G. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Obbard, M.E., Middel, K.R., Stapleton, S., Thibault, I., Brodeur, V. and Jutras, C. 2015. Estimating abundance of the Southern Hudson Bay polar bear subpopulation with aerial surveys. <i>Polar Biology</i> In press.",
+      "year": "2015",
+      "title": "Estimating abundance of the Southern Hudson Bay polar bear subpopulation with aerial surveys",
+      "author": "Obbard, M.E., Middel, K.R., Stapleton, S., Thibault, I., Brodeur, V. and Jutras, C.  ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Harvell, C.D., C.E. Mitchell, J.R. Ward, S. Altizer, A.P. Dobson, R.S. Ostfeld, et al. 2002. Climate warming and disease risks for terrestrial and marine biota. <i>Science</i> 296: 2158-2162.",
+      "year": "2002",
+      "title": "Climate warming and disease risks for terrestrial and marine biota",
+      "author": "Harvell, C.D., C.E. Mitchell, J.R. Ward, S. Altizer, A.P. Dobson, R.S. Ostfeld, et al. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Molnár, P.K., Derocher, A.E., Thiemann, G.W. and Lewis, M.A. 2014a. Corrigendum to “Predicting survival, reproduction and abundance of polar bears under climate change” [Biol. Conserv. 143 (2010) 1612-1622]. <i>Biological Conservation</i> 177: 230-231.",
+      "year": "2014a",
+      "title": "Corrigendum to “Predicting survival, reproduction and abundance of polar bears under climate change” [Biol. Conserv. 143 (2010) 1612-1622]",
+      "author": "Molnár, P.K., Derocher, A.E., Thiemann, G.W. and Lewis, M.A. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fagre, A., P. Nol, T.C. Atwood, K. Patyk, K. Hueffer, and C. Duncan. 2015. A review of infectious agents in polar bears (Ursus maritimus) and their long-term ecological relevance. <i>EcoHealth: </i> doi: 10.1007/s10393-015-1023-6.",
+      "year": "2015",
+      "title": "A review of infectious agents in polar bears (Ursus maritimus) and their long-term ecological relevance.",
+      "author": "Fagre, A., P. Nol, T.C. Atwood, K. Patyk, K. Hueffer, and C. Duncan",
+      "citation_short": null
+    },
+    {
+      "citation": "Derocher, A.E. and Stirling, I. 1998. Maternal investment and factors affecting offspring size in polar bears (Ursus maritimus). <i>Journal of Zoology </i> 245: 253-260.",
+      "year": "1998",
+      "title": "Maternal investment and factors affecting offspring size in polar bears (Ursus maritimus)",
+      "author": "Derocher, A.E. and Stirling, I. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Polischuk, S.C., Norstrom, R.J. and Ramsay, M.A. 2002. Body burdens and tissue concentrations of organochlorines in polar bears (Ursus maritimus) vary during seasonal fasts. <i>Environmental Pollution</i> 118: 29-39.",
+      "year": "2002",
+      "title": "Body burdens and tissue concentrations of organochlorines in polar bears (Ursus maritimus) vary during seasonal fasts",
+      "author": "Polischuk, S.C., Norstrom, R.J. and Ramsay, M.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Durner, G.M., Douglas, D.C., Nielson, R.M., Amstrup, S.C., McDonald, T.L., Stirling, I., Mauritzen, M., Born, E.W.,Wiig, Ø., DeWeaver, E., Serreze, M.C., Belikov, S.E., Holland, M.M., Maslanik, J., Aars, J., Bailey, D.A. and Derocher, A.E. 2009. Predicting 21st-century polar bear habitat distribution from global climate models. <i>Ecological Monographs </i> 79: 25-58.",
+      "year": "2009",
+      "title": "Predicting 21st-century polar bear habitat distribution from global climate models",
+      "author": "Durner, G.M., Douglas, D.C., Nielson, R.M., Amstrup, S.C., McDonald, T.L., Stirling, I., Mauritzen, M., Born, E.W.,Wiig, Ø., DeWeaver, E., Serreze, M.C., Belikov, S.E., Holland, M.M., Maslanik, J., Aars, J., Bailey, D.A. and Derocher, A.E. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Stapleton, S., Atkinson, S., Hedman, D. and Garshelis, D. 2014. Revisiting Western Hudson Bay: Using aerial surveys to update polar bear abundance in a sentinel population. <i>Biological Conservation</i> 170: 38-47.",
+      "year": "2014",
+      "title": "Revisiting Western Hudson Bay: Using aerial surveys to update polar bear abundance in a sentinel population",
+      "author": "Stapleton, S., Atkinson, S., Hedman, D. and Garshelis, D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Richardson, E., Stirling, I. and Hik, D.S. 2005. Polar bear (Ursus maritimus) maternity denning habitat in western Hudson Bay: a bottom-up approach to resource selection functions. <i>Canadian Journal of Zoology</i> 83: 860-870.",
+      "year": "2005",
+      "title": "Polar bear (Ursus maritimus) maternity denning habitat in western Hudson Bay: a bottom-up approach to resource selection functions",
+      "author": "Richardson, E., Stirling, I. and Hik, D.S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Stapleton, S., Peacock, E., Garshelis, D. and Atkinson, S. 2012. Aerial survey population monitoring of polar bears in Foxe Basin.  Final project report (2-10-13) to the Nunavut Wildlife Research Trust..",
+      "year": "2012",
+      "title": "Aerial survey population monitoring of polar bears in Foxe Basin",
+      "author": "Stapleton, S., Peacock, E., Garshelis, D. and Atkinson, S.  ",
+      "citation_short": null
+    },
+    {
+      "citation": "Wilson, H.B., Kendall, B.E. and Possingham, H.P. 2011. Variability in population abundance and the classification of extinction risk. <i>Conservation Biology </i> 25: 747-757.",
+      "year": "2011",
+      "title": "Variability in population abundance and the classification of extinction risk",
+      "author": "Wilson, H.B., Kendall, B.E. and Possingham, H.P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Parmesan, C. 2006. Ecological and evolutionary responses to recent climate change. <i>Annual Review of Ecology Evolution and Systematics</i> 37: 637-669.",
+      "year": "2006",
+      "title": "Ecological and evolutionary responses to recent climate change",
+      "author": "Parmesan, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ramsay, M.A. and Stirling, I. 1986. Long-term effects of drugging and handling free-ranging polar bears. <i>Journal of Wildlife Management</i> 50: 619-626.",
+      "year": "1986",
+      "title": "Long-term effects of drugging and handling free-ranging polar bears",
+      "author": "Ramsay, M.A. and Stirling, I. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Stirling, I. 1990. Polar bears and oil: ecologic perspectives. In: Geraci, J.R. and St. Aubin, D.J. (eds), <i>Sea Mammals and Oil: Confronting the Risks</i>, pp. 223-234. Academic Press, San Diego, USA.",
+      "year": "1990",
+      "title": "Polar bears and oil: ecologic perspectives",
+      "author": "Stirling, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "PBSG. 2002. Status of the polar bear. In: Lunn, N.J., Schliebe, S. and Born, E.W. (eds), <i>Polar Bears:  Proceedings of the 14th Working Meeting of the IUCN/SSC Polar Bear Specialist Group, Nuuk, Greenland, 23-28 June 2001</i>, pp. 21-35. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "2002",
+      "title": "Status of the polar bear",
+      "author": "PBSG",
+      "citation_short": null
+    },
+    {
+      "citation": "Macdonald, R.W., Harner, T.T. and Fyfe, J. 2005. Recent climate change in the Arctic and its impact on contaminant pathways and interpretation of temporal trend data. <i>Science of the Total Environment </i> 13: 1-27.",
+      "year": "2005",
+      "title": "Recent climate change in the Arctic and its impact on contaminant pathways and interpretation of temporal trend data",
+      "author": "Macdonald, R.W., Harner, T.T. and Fyfe, J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Gebbink, W.A., Bossi, R., Rigét, F.F., Rosing-Asvid, A., Sonne, C., and Dietz, R. Submitted. Occurrence of emerging per- and polyfluoroalkyl substances (PFASs) in Arctic Greenland marine mammals.",
+      "year": "2015",
+      "title": "Occurrence of emerging per- and polyfluoroalkyl substances (PFASs) in Arctic Greenland marine mammals",
+      "author": "Gebbink, W.A., Bossi, R., Rigét, F.F., Rosing-Asvid, A., Sonne, C., and Dietz, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Thiemann, G.W., Iverson, S.J. and Stirling, I. 2008. Polar bear diets and arctic marine food webs: insights from fatty acid analysis. <i>Ecological Monographs</i> 78: 591-613.",
+      "year": "2008",
+      "title": "Polar bear diets and arctic marine food webs: insights from fatty acid analysis",
+      "author": "Thiemann, G.W., Iverson, S.J. and Stirling, I. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Weber D. S., P. J. Van Coeverden De Groot, E. Peacock, M. D. Schrenzel, D. A. Perez, S. Thomas, J. M. Shelton, C.K. Else, L.L. Darby, L. Acosta, C. Harris, J. Youngblood, P. Boag, and R. Desalle. 2013. Low MHC variation in the polar bear: implications in the face of Arctic warming? <i>Animal Conservation</i> 16: 671-683.",
+      "year": "2013",
+      "title": "Low MHC variation in the polar bear: implications in the face of Arctic warming?",
+      "author": "Weber D. S., P. J. Van Coeverden De Groot, E. Peacock, M. D. Schrenzel, D. A. Perez, S. Thomas, J. M. Shelton, C.K. Else, L.L. Darby, L. Acosta, C. Harris, J. Youngblood, P. Boag, and R. Desalle. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Robbins, C.T., Lopez-Alfaro, C., Rode, K.D., Tøien, Ø. and Nelson, O.L. 2012b. Hibernation and seasonal fasting in bears: the energetic costs and consequences for polar bears. <i>Journal of Mammalogy</i> 93: 1493-1503.",
+      "year": "2012b",
+      "title": "Hibernation and seasonal fasting in bears: the energetic costs and consequences for polar bears",
+      "author": "Robbins, C.T., Lopez-Alfaro, C., Rode, K.D., Tøien, Ø. and Nelson, O.L",
+      "citation_short": null
+    },
+    {
+      "citation": "Taylor, M.K., Laake, J., Cluff, H.D., Ramsay, M. and Messier, F. 2002. Managing the risk from hunting for the Viscount Melville Sound polar bear population. <i>Ursus</i> 13: 185-202.",
+      "year": "2002",
+      "title": "Managing the risk from hunting for the Viscount Melville Sound polar bear population",
+      "author": "Taylor, M.K., Laake, J., Cluff, H.D., Ramsay, M. and Messier, F. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Thiemann, G.W., Derocher, A.E., Cherry, S.G., Lunn, N.J., Peacock, E. and Sahanatien, V. 2913. Effects of chemical immobilization on the movement rates of free-ranging polar bears. <i>Journal of Mammalogy</i> 94: 386-397.",
+      "year": "2913",
+      "title": "Effects of chemical immobilization on the movement rates of free-ranging polar bears",
+      "author": "Thiemann, G.W., Derocher, A.E., Cherry, S.G., Lunn, N.J., Peacock, E. and Sahanatien, V. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Vongraven, D., Aars, J., Amstrup, S., Atkinson, S.N., Belikov, S., Born, E.W., DeBruyn, T.D., Derocher, A.E., Durner, G., Gill, M., Lunn, N.J., Obbard, M.E., Omelak, J., Ovsyanikov, N., Peacock, E., Richardson, E., Sahanatien, V., Stirling, I. and Wiig, Ø. 2012. A circumpolar monitoring framework for polar bears. <i>Ursus Monograph Series</i> 5: 1-66.",
+      "year": "2012",
+      "title": "A circumpolar monitoring framework for polar bears",
+      "author": "Vongraven, D., Aars, J., Amstrup, S., Atkinson, S.N., Belikov, S., Born, E.W., DeBruyn, T.D., Derocher, A.E., Durner, G., Gill, M., Lunn, N.J., Obbard, M.E., Omelak, J., Ovsyanikov, N., Peacock, E., Richardson, E., Sahanatien, V., Stirling, I. and Wiig, Ø.  ",
+      "citation_short": null
+    },
+    {
+      "citation": "Rode, K.D., Amstrup, S.C. and Regehr, E.V. 2010a. Reduced body size and cub recruitment in polar bears associated with sea ice de. <i>Ecological Applications</i> 20: 768-782.",
+      "year": "2010a",
+      "title": "Reduced body size and cub recruitment in polar bears associated with sea ice de",
+      "author": "Rode, K.D., Amstrup, S.C. and Regehr, E.V. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2015. The IUCN Red List of Threatened Species. Version 2015-4. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 19 November 2015).",
+      "year": "2015",
+      "title": "The IUCN Red List of Threatened Species. Version 2015-4",
+      "author": "IUCN",
+      "citation_short": "IUCN 2015-4"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [
+    {
+      "description": {
+        "en": "Hudson Bay"
+      },
+      "code": "1_1_1"
+    },
+    {
+      "description": {
+        "en": "Arctic Ocean"
+      },
+      "code": "1_1_8"
+    },
+    {
+      "description": {
+        "en": "Eastern Bering Sea"
+      },
+      "code": "1_2_1"
+    },
+    {
+      "description": {
+        "en": "Western Bering Sea"
+      },
+      "code": "1_2_2"
+    },
+    {
+      "description": {
+        "en": "Newfoundland-Labrador Shelf"
+      },
+      "code": "4_1_2"
+    },
+    {
+      "description": {
+        "en": "West Greenland Shelf"
+      },
+      "code": "4_2_1"
+    },
+    {
+      "description": {
+        "en": "East Greenland Shelf"
+      },
+      "code": "4_2_2"
+    },
+    {
+      "description": {
+        "en": "East Siberian Sea"
+      },
+      "code": "1_1_6"
+    },
+    {
+      "description": {
+        "en": "Chukchi Sea"
+      },
+      "code": "1_1_7"
+    },
+    {
+      "description": {
+        "en": "Beaufort Sea"
+      },
+      "code": "1_1_2"
+    },
+    {
+      "description": {
+        "en": "Barents Sea"
+      },
+      "code": "1_1_3"
+    },
+    {
+      "description": {
+        "en": "Kara Sea"
+      },
+      "code": "1_1_4"
+    },
+    {
+      "description": {
+        "en": "Laptev Sea"
+      },
+      "code": "1_1_5"
+    }
+  ],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Skewed sex ratios"
+      },
+      "code": "2_3_6"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

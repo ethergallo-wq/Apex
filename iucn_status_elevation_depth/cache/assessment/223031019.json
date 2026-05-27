@@ -1,0 +1,2345 @@
+{
+  "assessment_date": "2020-11-13T00:00:00.000+00:00",
+  "year_published": "2022",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 181008073,
+  "criteria": "A2bd",
+  "url": "https://www.iucnredlist.org/species/181008073/223031019",
+  "citation": "Gobush, K.S., Edwards, C.T.T, Balfour, D., Wittemyer, G., Maisels, F. & Taylor, R.D. 2022. Loxodonta africana (amended version of 2021 assessment). The IUCN Red List of Threatened Species 2022: e.T181008073A223031019. Accessed on 15 May 2026.",
+  "assessment_id": 223031019,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 181008073,
+    "scientific_name": "Loxodonta africana",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "PROBOSCIDEA",
+    "family_name": "ELEPHANTIDAE",
+    "genus_name": "Loxodonta",
+    "species_name": "africana",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Blumenbach, 1797)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC African Elephant Specialist Group",
+        "url": "https://www.iucn.org/ssc-groups/mammals/specialist-groups-a-e/african-elephant",
+        "description": "Co-Chairs: Benson Okita-Ouma (email: okitaben@gmail.com) and Robert Slotow (email: Slotow@ukzn.ac.za)\nRed List Authority Coordinator: Under discussion\nNewsletter: https://www.iucn.org/specialist-groups/african-elephant-sg/about/ssc-specialist-groups-and-red-list-authorities-17"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "African Bush Elephant",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "African Savannah Elephant",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Savanna Elephant",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Savannah Elephant",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Elefante de Sabana",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Éléphant de savane",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Njobvu",
+        "language": "nya"
+      },
+      {
+        "main": true,
+        "name": "African Savanna Elephant",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Elephas africana Blumenbach, 1797",
+        "status": "ACCEPTED",
+        "genus_name": "Elephas",
+        "species_name": "africana",
+        "species_author": "Blumenbach, 1797",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Loxodonta africana ssp. africana (Blumenbach, 1797)",
+        "status": "ACCEPTED",
+        "genus_name": "Loxodonta",
+        "species_name": "africana",
+        "species_author": null,
+        "infrarank_author": "(Blumenbach, 1797)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "africana"
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Endangered"
+    },
+    "code": "EN"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 2500,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "25",
+    "congregatory": null,
+    "movement_patterns": "Full Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p>African Savanna Elephants once occurred across all of Africa (Sikes 1971) and currently are found in 24 countries (see range map). Although knowledge of African Savanna Elephant distribution varies spatially and temporally, it is evident that the species’ distribution is retracting and becoming increasingly fragmented across their range in the continent. African Savanna Elephants occupy an estimated 15% of their historic pre- agricultural range (Chase <em>et al</em>. 2016). African Savanna Elephants are considered nationally extirpated in Burundi and Mauritania. In Eswatini, the once extirpated population has been re-established through reintroductions that began in the 1980s. Recent range expansion is evident in Kenya and Botswana (Douglas-Hamilton 1979; Said <em>et al</em>. 1995; Barnes <em>et al</em>. 1998; Blanc <em>et al</em>. 2003, 2007; Thouless <em>et al</em>. 2016).<br/><br/>The species' range map associated with this assessment is complete with the exception that some small private reserves in South Africa with less than 50 elephants each are absent as they were excluded from the African Elephant Database due to concerns about the census techniques.</p>",
+    "population": "<p>Over the past century, African Savanna Elephant subpopulations have declined across most of their range. The African Elephant Status Report 2016&#160;estimated a continental population of 415,428 (+/- 95% C.I. 20,111) for both African Savanna and African Forest Elephants combined and reported a continental decline of approximately 111,000 elephants since 2006 (Thouless <em>et al</em>. 2016). For a similar time period, following a survey of approximately 90% of their range, a decline of 30% of African Savanna Elephants was reported (Chase <em>et al</em>. 2016).</p><p><br/>For further information about this species, see the attached Supplementary Information document.</p><p><em></em></p>",
+    "habitats": "<p>African Savanna Elephants are found over a wide latitudinal range between the northern tropics in Mali (16° North) to the southern temperate zone (34° South) in South Africa. They occupy a variety of habitats ranging from montane forest, miombo and mopane woodland, thicket, savanna and grasslands to arid deserts and a wide altitudinal range from mountain slopes to oceanic beaches.<br/><br/>See also the list of habitats.<br/><br/>African Savanna Elephants are capable of moving long distances and naturally do so in arid ecosystems and in response to climatic conditions (e.g., seasonality and drought). Depending on productivity, and water availability African Savanna Elephants demonstrate range residence, migratory, semi-migratory and near nomadic movement patterns in different regions of the continent. Home range sizes vary by several orders of magnitude primarily in relation to plant productivity and human activity in different ecosystems (Loarie <em>et al</em>. 2009, Wall <em>et al</em>. 2013). Thirty African Savanna Elephant subpopulations (eight of which number more than 1,000 individuals) span international boundaries, including the more than 200,000 elephants in the five-country Kavango-Zambezi Transfrontier Conservation Area (Lindsay <em>et al</em>. 2017, KAZA Secretariat 2018).<br/><br/><strong>Ecosystem Services:<br/></strong>Ecosystem services provided by African Savanna Elephants vary and depend to a large extent on the ecosystem (forest, savanna, grassland or desert), specific conditions on the ground and the geographical context under consideration. In general, they play an important ecological role as bulk processors of plant material (Owen-Smith 1989). In savannas, African Savanna Elephants are manipulators of woody vegetation structure which in turn influences the tree to grass ratio with knock-on consequences for the fire regime and potentially species composition in the area (Dublin <em>et al</em>. 1990, Augustine and McNaughton 2004, Palmer <em>et al</em>. 2008, Holdo&#160;<em>et al</em>. 2009, Goheen&#160;<em>et al</em>. 2010, Pringle <em>et al</em>. 2016). Where they are associated with wetlands African Savanna Elephants can be important in maintaining channels and open water ways. Soil fertility can be maintained by the transport of nutrients by large herbivores from nutrient rich sources (e.g., eutrophic soils in flood plains and termite mounds) to dystrophic soils (e.g., upland miombo woodlands) (Cumming <em>et al</em>. 1997, Doughty <em>et al</em>. 2016, Malhi <em>et al</em>. 2016).</p><p><br/>The charismatic nature of African Savanna Elephants plays an important role in attracting tourism into national parks. They also hold important symbolic significance within the cultures of many African communities. African Savanna Elephants are one of the few iconic species that occur in the majority of African countries, and innumerable stories, songs, and cultural traditions revolve around them.</p>",
+    "threats": "Poaching of African Savanna Elephants for ivory is a major cause of individual death and population decline (Wittemyer&#160;<em>et al</em>. 2014, Thouless <em>et al</em>. 2016). After a sustained period of intense poaching between the late 1970s and 1989, many African Savanna Elephant populations (e.g., in Kenya, Tanzania, Zambia, Uganda) experienced two to three decades of recovery. Some northern African Savanna Elephant populations, however, experienced persistent poaching pressure through the last three decades (Bouche <em>et al</em>. 2011, 2012). Data collected as a part of the CITES Monitoring the Illegal Killing of Elephants programme (MIKE), indicate that poaching significantly intensified across the continent starting in 2008 and peaking in 2011 – an unsustainably high level of poaching has continued into current times in some areas of the continent (CITES 2018, 2019), and may be increasing in some of the historically less-affected southern African populations (CITES 2018, 2019). Rapid land use change by humans is driving the direct loss and fragmentation of habitat for African Savanna Elephants and is an increasing threat to populations across their range (Thouless <em>et al</em>. 2016, Mpakairi <em>et al</em>. 2019). Land conversion is a product of the ongoing expansion of the human population and associated agriculture and infrastructure development, which in turn are driven by economic and technological advances. A manifestation of this trend is the reported increase in human-elephant conflict (e.g., Pozo <em>et al</em>. 2018). Human population growth projections suggest land conversion will accelerate rapidly in the coming decades across Africa (see <a href=\"http://population.un.org/wpp/Publications/\">https://population.un.org/wpp/Publications/</a>) which will likely increase this threat.",
+    "measures": "<p>The African Savanna Elephant was listed in CITES Appendix I in 1989 when all African elephants were considered a single species. Subsequently, the populations of Botswana (1997), Namibia (1997), South Africa (2000) and Zimbabwe (1997) were transferred to Appendix II, each with specific annotations. These annotations have been recently replaced by a single annotation for all four countries, with specific sub-annotations for the populations of Namibia and Zimbabwe. A separate CITES listing for each species has not occurred yet because a formal designation as two separate species (i.e.,&#160;<em>Loxodonta africana</em> and <em>L. cyclotis</em>) is still in progress.<br/><br/>The African Elephant Action Plan (AEAP; developed and adopted by African elephant range countries) was adopted by CITES in March 2010 and is a statement by all range countries regarding the most important and immediate activities which require implementation and funding if Africa’s elephants are to be conserved. The African Elephant Fund was established to support the implementation of the African Elephant Action Plan. It should be noted that the AEAP does not distinguish different taxa of African elephant. The African Savanna Elephants which occur in transboundary populations introduce complications (e.g., matters of sovereignty) when considering national populations for CITES purposes (Lindsay <em>et al</em>. 2017).<br/><br/>A number of CITES-initiated instruments were created to monitor and combat illegal trade in ivory. The CITES MIKE programme, which was established in 2002, has 66 designated sites across African elephant range and provides the most detailed and reliable data available on continental poaching pressure (CITES 2018, 2019); this includes 39 sites in 18 range countries of the African Savanna Elephant (<a href=\"http://cites.org/eng/prog/mike\">https://cites.org/eng/prog/mike</a>, Accessed 16 August 2020). Eswatini, South Sudan, Central African Republic, the Democratic Republic of the Congo and Somalia do not have MIKE sites for their African Savanna Elephants. The Elephant Trade Information System (ETIS), established in 1996, is managed by TRAFFIC as a comprehensive information system for tracking illegal trade in ivory and other elephant products (CITES 2016, 2019). At a national level National Ivory Action Plans (NIAPs) are a tool designed to track significant and timely action to combat the illegal trade in ivory. Currently 24 African, Middle Eastern, and Asian countries, as identified by ETIS analyses, are required to produce and implement a NIAP (<a href=\"http://cites.org/eng/niaps\">https://cites.org/eng/niaps</a>, Accessed 16 August 2020); 11 of these are range countries of the African Savanna Elephant.<br/><br/>At a national level the African Savanna Elephant is subject to varying degrees of legal protection in the 23 range states, with most countries granting the species the highest protection status. Providing this protection is complicated by the fact that over half of the species’ range may extend beyond the boundaries of protected areas (Taylor 2009). This point is emphasized by the evidence that the degree of protection is an important predictor of African Savanna Elephant’s presence and density (de Boer <em>et al</em>. 2013).<br/><br/>Conservation measures usually include habitat management and protection through policy, legislation and law enforcement. Successful anti-poaching and management at a site level has contributed to the re-establishment or recovery of a number of populations of African Savanna Elephants. In instances where protection efforts have failed, the African Savanna Elephant population was reduced by 70% or more in a matter of a decade (Chase <em>et al</em>. 2016).<br/><br/>In the context where management culling was undertaken (mainly southern Africa) up until the late 1980s or early 1990s, culling has largely ceased and population density management is being attempted through actions such as translocation, contraception and range manipulation such as closure of artificial water point (Scholes and Mennell 2008). Fire management is being attempted in some transboundary situations to mitigate further habitat and/or woodland modification as a consequence of African Savanna Elephant activity (Starfield <em>et al</em>. 1993, Mapaure 2013, Eastment 2020).&#160;</p>",
+    "use_trade": "<strong>Ivory:</strong> Use of African Savanna Elephant ivory is entrenched in numerous cultures across the globe, primarily for ornamental and decorative items. Historically, demand for African Savanna Elephant ivory has been high in Europe, the USA and Asia. For example, beginning in the 1920s, Japanese carvers turned to African elephant ivory as Asian supplies diminished through the 1970s when Japan accounted for about 40% of the global ivory market (Martin 1986; Nishihara 2003, 2012).<br/><br/>In 1989, the Convention on International Trade of Endangered Species of Wild Flora and Fauna (CITES) banned the international commercial trade of ivory in response to a steep decline in African elephants across a substantial portion of their range. Thereafter, two CITES-sanctioned sales of national ivory stockpiles occurred in 2002 and 2008 with Botswana, Zimbabwe, Namibia and South Africa selling ivory to China and Japan. At the same time, a nine-year moratorium (ending in 2017) on any new ivory sale proposals from the four African countries followed (<a href=\"http://www.cites.org\">www.cites.org</a>). In the 2000s, Chinese demand for ivory greatly surpassed that of Japan where demand for ivory appeared to substantially decline (CITES 2014). As a consequence, prices rose steeply in China and in Africa (Wittemyer <em>et al</em>. 2011, 2014). Debates about the benefits and consequences of the sale of national ivory stockpiles are highly polarized with limited consensus (Stiles 2004, 't Sas-Rolfes <em>et al</em>. 2014, Bennett 2015, Biggs&#160;<em>et al</em>. 2017).<br/><br/>Analysis of ivory seizure data indicates that the volume of illegally trafficked ivory has increased substantially since 2006 (Underwood <em>et al</em>. 2013; Milliken 2016; CITES 2018, 2019). Undercover investigations and DNA forensics point to the laundering of illegal ivory in legal domestic ivory markets. Seizure analyses indicate that the majority of illegally trafficked ivory is destined for Asia, especially China, Viet Nam and Thailand (CITES 2016, 2018 and 2019; Lui 2015; Krishnasamy 2016). In response to this and other concerns, China closed its legal domestic ivory market in 2017; Hong Kong SAR took steps to do the same by 2021 (<a href=\"http://www.info.gov.hk/gia/general/201706/02/P2017060100655.htm\">https://www.info.gov.hk/gia/general/201706/02/P2017060100655.htm</a>), and Thailand tightened its domestic Asian Elephant ivory trade regulations in 2015 (<a href=\"http://www.mfa.go.th/main/en/media-center/14/52929-Thailand-Submits-First-Progress-Report-on-Implemen.htm\">http://www.mfa.go.th/main/en/media-center/14/52929-Thailand-Submits-First-Progress-Report-on-Implemen.html</a>). A substantial drop in ivory prices in mainland China has been associated with this action (Vigne and Martin 2017, Meijer <em>et al</em>. 2018). Significant illegal ivory markets remain in several Southeast Asian countries, such as Lao PDR and Viet Nam (<a href=\"http://www.cites.org\">www.cites.org</a>; Vigne and Martin 2017).<br/><strong><br/>Non-consumptive Tourism:&#160;</strong>African Savanna Elephants have significant tourism draw for wildlife watching and photographic tourism throughout their range substantially contributing to local economies (Naidoo <em>et al</em>. 2016). Tourism operations occur in national and local government protected areas, as well as on land under private or communal tenure.<br/><br/><strong>Trophy Hunting:</strong>&#160;In some range states sport hunting of African Savanna Elephants is legally permitted and forms an integral element of those countries’ wildlife management and community support programs (e.g., Naidoo <em>et al</em>. 2016). Botswana, Mozambique, Namibia, South Africa, Tanzania and Zimbabwe have trophy hunting industries and in 2020 applied to CITES for a combined quota of 2,404 tusks <a href=\"http://cites.org/eng/resources/quotas/index.php\">(https://cites.org/eng/resources/quotas/index.php</a> Accessed 16 August 2020). Depending on the governance and management structures, government bodies, private operations and local communities derive revenue from trophy hunting.<br/><br/><strong>Other Trade:</strong> A legal domestic trade in African Savanna Elephant hides is present in South Africa. There have been limited reports of African Savanna Elephant poaching for other body parts beyond ivory, such as meat, bone, skin and hair (Blignaut <em>et al</em>. 2008). International live trade in African Savanna Elephants occurs between South Africa and other countries, mainly in an effort to re-establish or fortify dwindling populations in some protected areas. Live trade in young African Savanna Elephants from Zimbabwe (Russo and Cruise 2016) and Eswatini (Madowo 2019) to Asia and elsewhere for zoological collections also occurs. Controversy surrounds these transactions as the conservation benefit to the species has been questioned. Domestic trade in African Savanna Elephants exists in South Africa at a low level for reintroduction purposes between reserves (Pretorius <em>et al</em>. 2018).",
+    "rationale": "<p>The African Savanna Elephant (<em>Loxodonta africana</em>) is assessed as Endangered A2bd. Analysis of estimates from 334 localities across their global range indicates a reduction of more than 50% of the continental population in the past three generations (75 years) that is understood to be continuing and likely irreversible. The continental trend is not, however, spatially uniform; some subpopulations are increasing or stable while others are declining significantly faster than the continental rate. Many local subpopulations have been extirpated.<br/><br/>A generation length (GL) of 25 years is used; calculated in the standard format as the average age of mothers in the population (IUCN SPC 2019, p. 29). This figure is based on analysis of the life table of culled Savanna Elephant family groups in South Africa (Whyte 2001) and a 14-year study of Savanna Elephants in Kenya (Wittemyer <em>et al</em>. 2013) which generated a range of 24.1–25 years.<br/><br/>Subcriterion A2 is applied because some of the major causes for population reduction, such as habitat loss due to human population expansion, have not ceased and are projected to increase in coming decades as well as unlikely to be reversible. The population reduction assessment for subcriterion A2 (considering three generations back) is inferred from published survey data using a modelling approach described in the Supplementary Information document. Density and distribution estimates for the African Savanna Elephant vary in methodology, completeness, regularity, date of first survey and confidence limits. Few credible estimates exist prior to the 1970s, and there is no credible estimate for the continental population more than two generations back. For this Red List assessment, an attempt was made to model the data three generations back to 1940 (see the attached Supplementary Information for description of data that is current as of and up to the end of 2015); however, given the sparseness of information available to inform the model, such modelling was of limited value. Therefore, rather than projecting declines well beyond the available data, we made the assumption that the continental African Savanna Elephant population of three generations back (1940) was equal to that of two generations back (i.e., 1965). Additional assumptions, necessary to fill gaps in the dataset, are detailed in the attached Supplementary Information document.<br/><br/>Subcriterion A3 has not been applied, because although the major threats to the species are known, projecting the level of such threats 25 or more years into the future (i.e., three generations, up to a maximum of 100 years) would likely introduce high levels of uncertainty.<br/><br/>An assessment of population reduction according to subcriterion A4 considering two generations back and one forward is in progress by this team of Assessors (Edwards <em>et al</em>. in prep.). Analysis of poaching and human influence in the recent past and anticipated in the future based upon available data of two representative indices (i.e., proportion of illegal killed elephants (PIKE) and the human footprint index) are being included as covariates in the projection.<br/><br/>Criteria B, C and D are not relevant to the threatened status as the species currently occupies more than 20,000 km<sup>2</sup> and there are more than 10,000 mature individuals. No quantitative analysis of the probability of extinction in the wild was conducted, and therefore criterion E does not apply.<br/><br/>The species is categorized as EN A2bd given the modelled estimate of population reduction and its distribution. However, considering the uncertainty of the estimate as communicated in Table 1a in the Supplementary Information and data sparsity issues during the earliest time period as explained, a category of Vulnerable (VU) is plausible (see also section 3.2.5. of the Guidelines for Using the IUCN Red List Categories and Criteria (IUCN SPC 2019)).<br/><br/><br/><strong>Previous Assessments of African Elephant:</strong></p><p>This is the first assessment of the African Savanna Elephant (<em>Loxodonta africana</em>) as a species separate from the African Forest Elephant (<em>L. cyclotis</em>).<br/><br/>The African Elephant, as a single species, was listed as Vulnerable (VU A2a) in the 2004 and 2008 updates of the IUCN Red List of Threatened Species, under the same IUCN Categories and Criteria used in this assessment (Version 3.1; IUCN 2001).<br/><br/>Previously the African Elephant, as a single species, was listed as Endangered (EN A1b) under the IUCN Categories and Criteria Version 2.3 (IUCN 1994), in an assessment conducted in 1996 by the IUCN SSC African Elephant Specialist Group.</p>",
+    "trend_justification": null,
+    "taxonomic_notes": "Three elephant taxa remain from the sixteen elephant-like species that are known from across the planet in the Pleistocene: Asian Elephant (<em>Eleph</em>as <em>maximus</em>), African Savanna Elephant (<em>Loxodonta africana</em>), and African Forest Elephant (<em>Loxodonta cyclotis</em>) (Faurby and Svenning 2015, Malhi <em>et al.&#160;</em>2016). The Asian and African ancestral lineages diverged approximately seven million years ago, and the African Savanna and African Forest ancestral lineages began diverging approximately one million years later (Rohland&#160;<em>et al</em>. 2010, Brandt <em>et al.</em> 2014, Roca <em>et al</em>. 2015, Meyer <em>et al</em>. 2017, Palkopoulou <em>et al</em>. 2018). The Third Edition of ‘Mammal Species of the World’ (Wilson and Reeder 2005) was the first to formally designate the African elephant as these two separate species. Recent genetic findings also support this designation (Roca <em>et al</em>. 2007, Ishida <em>et al</em>. 2011, Mondol <em>et al</em>. 2015, Palkopoulou <em>et al</em>. 2018, Kim and Wasser 2019). Hybridization between the two species appears restricted and evident at only 14 of the more than 100 localities recently examined across the vast forest-savanna ecotone. In nine of these 14 localities, hybrid individuals occurred alongside non-hybrid individuals of either one species or the other and not both (i.e., three localities had hybrids and African Forest Elephants only and assigned as this species; six localities had hybrids and African Savanna Elephants only and assigned as this species). For the IUCN Red List assessments, a distribution map published in Mondol <em>et al</em>. (2015) and recent data by Kim and Wasser (2019) are used to assign localities as range of either <em>L. africana</em> or <em>L. cyclotis</em>."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "5_1_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_3",
+      "description": {
+        "en": "Limiting population growth"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": null,
+      "code": "6_1",
+      "description": {
+        "en": "Linked enterprises & livelihood alternatives"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_1",
+      "description": {
+        "en": "Formal education"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_2",
+      "description": {
+        "en": "Training"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_1_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_1_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Shrub Dominated Wetlands"
+      },
+      "code": "5_3"
+    },
+    {
+      "majorImportance": "No",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": "No",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Moist"
+      },
+      "code": "2_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Desert - Hot"
+      },
+      "code": "8_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Desert - Cold"
+      },
+      "code": "8_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Seasonally Wet/Flooded"
+      },
+      "code": "4_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"
+      },
+      "code": "5_2"
+    },
+    {
+      "majorImportance": "No",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Mangrove Vegetation Above High Tide Level"
+      },
+      "code": "1_7"
+    },
+    {
+      "majorImportance": "No",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Swamp"
+      },
+      "code": "1_8"
+    },
+    {
+      "majorImportance": "No",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Inland Deltas"
+      },
+      "code": "5_13"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Passage"
+      ],
+      "description": {
+        "en": "Burkina Faso"
+      },
+      "code": "BF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Botswana"
+      },
+      "code": "BW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Burundi"
+      },
+      "code": "BI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Central African Republic"
+      },
+      "code": "CF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Zambia"
+      },
+      "code": "ZM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chad"
+      },
+      "code": "TD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malawi"
+      },
+      "code": "MW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mali"
+      },
+      "code": "ML"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Reintroduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eswatini"
+      },
+      "code": "SZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Zimbabwe"
+      },
+      "code": "ZW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ethiopia"
+      },
+      "code": "ET"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Sudan"
+      },
+      "code": "SS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uganda"
+      },
+      "code": "UG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rwanda"
+      },
+      "code": "RW"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Handicrafts, jewellery, etc."
+      },
+      "code": "12"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Shifting agriculture"
+      },
+      "code": "2_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Dams (size unknown)"
+      },
+      "code": "7_2_11"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_3_4"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other impacts"
+      },
+      "code": "11_5"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "War, civil unrest & military exercises"
+      },
+      "code": "6_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Trend Unknown/Unrecorded"
+      },
+      "code": "7_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder plantations"
+      },
+      "code": "2_2_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Droughts"
+      },
+      "code": "11_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Nomadic grazing"
+      },
+      "code": "2_3_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry plantations"
+      },
+      "code": "2_2_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects (species is not the target)"
+      },
+      "code": "5_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Oil & gas drilling"
+      },
+      "code": "3_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Utility & service lines"
+      },
+      "code": "4_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Gobush, K.S., Edwards, C.T.T, Balfour, D., Wittemyer, G., Maisels, F. & Taylor, R.D.",
+      "value": [
+        "Charles Edwards (CSIRO (Commonwealth Scientific and Industrial Research Organisation), Australia)",
+        "Russell Taylor (IUCN SSC African Elephant Specialist Group)",
+        "George Wittemyer (IUCN SSC African Elephant Specialist Group)",
+        "Kathleen Gobush (IUCN SSC African Elephant Specialist Group)",
+        "Dave Balfour (IUCN SSC African Elephant RLA)",
+        "Fiona Maisels (Wildlife Conservation Society)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Selier, J. & Sibanda, N.",
+      "value": [
+        "Nokuthaba Sibanda (Victoria University School Mathematics and Statistics, Wellington, New Zealand)",
+        "Jeanetta Selier (South African National Biodiversity Institute)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Blanc, J.",
+      "value": [
+        "Julian Blanc (IUCN SSC African Elephant Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Ross, J.P.",
+      "value": [
+        "Perran Ross (IUCN SSC Crocodile Specialist Group)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "The listing of the African Savana Elephant was petitioned in November 2021 and based on the ruling by the IUCN Standards and Petitions Committee, this amended assessments has been created to remove subcriterion A2a from the assessment and some new text has added to the Rationale to indicate that a Vulnerable listing is a plausible outcome given the uncertainties in the data (see the <a href=\"https://www.iucnredlist.org/resources/petitions\">Red List Petitions</a> page on the Red List website for further details on the ruling).<br/><br/>The assessment was previously amended so that Burkina Faso could be added to the list of Countries of Occurrence and  the supporting reference for the occurrence added to the Bibliography.  Also a reference cited in the Trade and Use section of the assessment  was deleted and removed from the Bibliography.&#160;In addition an  errata version of the Supplementary Material was attached; an error  in Figure 1 was corrected and some additional text about the data  in Tables 2 and 3 was added."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Blanc, J. J., Barnes, R. F. W., Craig, G. C., Dublin, H. T., Thouless, C. R., Douglas-Hamilton, I. and Hart, J. A. 2007. African Elephant Status Report 2007: An update from the African Elephant Database.  SSC Occasional Paper Series 33. IUCN, Gland, Switzerland.",
+      "year": "2007",
+      "title": "African Elephant Status Report 2007: An update from the African Elephant Database",
+      "author": "Blanc, J. J., Barnes, R. F. W., Craig, G. C., Dublin, H. T., Thouless, C. R., Douglas-Hamilton, I. and Hart, J. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2001. <i>IUCN Red List Categories and Criteria: version 3.1</i>. IUCN Species Survival Commission. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "2001",
+      "title": "IUCN Red List Categories and Criteria: version 3.1",
+      "author": "IUCN",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 1994. <i>IUCN Red List Categories</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1994",
+      "title": "IUCN Red List Categories",
+      "author": "IUCN",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wilson, D.E. and Reeder, D.M. 2005. <i>Mammal Species of the World</i>. Johns Hopkins University Press, Baltimore, MD, USA.",
+      "year": "2005",
+      "title": "Mammal Species of the World",
+      "author": "Wilson, D.E. and Reeder, D.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Blanc, J. J., Thouless, C. R., Hart, J. A., Dublin, H. T., Douglas-Hamilton, I., Craig, G. C. and Barnes, R. F. W. 2003. <i>African Elephant Status Report 2002: An update from the African Elephant Database</i>. SSC Occasional Paper Series  29. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "2003",
+      "title": "African Elephant Status Report 2002: An update from the African Elephant Database",
+      "author": "Blanc, J. J., Thouless, C. R., Hart, J. A., Dublin, H. T., Douglas-Hamilton, I., Craig, G. C. and Barnes, R. F. W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Barnes, R. F. W., Craig, G. C., Dublin, H. T., Overton, G., Simons, W. and Thouless, C. R. 1999. <i>African Elephant Database 1998</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1999",
+      "title": "African Elephant Database 1998",
+      "author": "Barnes, R. F. W., Craig, G. C., Dublin, H. T., Overton, G., Simons, W. and Thouless, C. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Douglas-Hamilton, I. 1979. The African elephant action plan. IUCN/WWF/NYZS Elephant Survey and Conservation Programme. Final report to US Fish and Wildlife Service. IUCN, Nairobi.",
+      "year": "1979",
+      "title": "The African elephant action plan. IUCN/WWF/NYZS Elephant Survey and Conservation Programme. Final report to US Fish and Wildlife Service",
+      "author": "Douglas-Hamilton, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Said, M. Y., Chunge, R. N., Craig, G. C., Thouless, C. R., Barnes, R. F. W. and Dublin, H. T. 1995. African Elephant Database 1995.  Occasional Paper of the IUCN Species Survival Commission. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1995",
+      "title": "African Elephant Database 1995",
+      "author": "Said, M. Y., Chunge, R. N., Craig, G. C., Thouless, C. R., Barnes, R. F. W. and Dublin, H. T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thouless, C.R., Dublin, H.T., Blanc, J.J., Skinner, D.P., Daniel, T.E., Taylor, R.D., Maisels, F., Frederick, H.L. and Bouché, P. 2016. African Elephant Status Report 2016: an update from the African Elephant Database.  In: IUCN / SSC Africa Elephant Specialist Group (ed.), Occasional Paper Series of the IUCN Species Survival Commission, No. 60. IUCN, Gland, Switzerland.",
+      "year": "2016",
+      "title": "African Elephant Status Report 2016: an update from the African Elephant Database",
+      "author": "Thouless, C.R., Dublin, H.T., Blanc, J.J., Skinner, D.P., Daniel, T.E., Taylor, R.D., Maisels, F., Frederick, H.L. and Bouché, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN Standards and Petitions Committee. 2019. Guidelines for Using the IUCN Red List Categories and Criteria. Version 14. Prepared by the Standards and Petitions Subcommittee. Available at: <a href=\"http://www.iucnredlist.org/documents/RedListGuidelines.pdf\">http://www.iucnredlist.org/documents/RedListGuidelines.pdf</a>. ",
+      "year": "2019",
+      "title": "Guidelines for Using the IUCN Red List Categories and Criteria. Version 14. Prepared by the Standards and Petitions Subcommittee",
+      "author": "IUCN Standards and Petitions Committee",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bennett, E.L. 2015. Legal ivory trade in a corrupt world and its impact on African elephant populations. <i>Conservation Biology</i> 29(1): 54–60. DOI: 10.1111/cobi.12377.",
+      "year": "2015",
+      "title": "Legal ivory trade in a corrupt world and its impact on African elephant populations",
+      "author": "Bennett, E.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Biggs, D., Holden, M.H., Braczkowski, A., Cook, C.N., Milner-Gulland, E.J., Phelps, J., Scholes, R.J., Smith, R.J., Underwood, F.M., Adams, V.M., Allan, J., Brink, H., Cooney, R., Gao, Y., Hutton, J., Macdonald-Madden, E., Maron, M., Redford, K.H., Sutherland, W.J. and Possingham, H.P. 2017. Breaking the deadlock on ivory. <i>Science</i> 358: 1378–1381. DOI: 10.1126/science.aan5215.",
+      "year": "2017",
+      "title": "Breaking the deadlock on ivory",
+      "author": "Biggs, D., Holden, M.H., Braczkowski, A., Cook, C.N., Milner-Gulland, E.J., Phelps, J., Scholes, R.J., Smith, R.J., Underwood, F.M., Adams, V.M., Allan, J., Brink, H., Cooney, R., Gao, Y., Hutton, J., Macdonald-Madden, E., Maron, M., Redford, K.H., Sutherland, W.J. and Possingham, H.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bouche, P., Douglas-Hamilton, I., Wittemyer, G., Nianogo, A.J., Doucet, J.L., Lejeune, P. and Vermeulen, C. 2011. Will elephants soon disappear from West African savannahs? <i>PloS One</i> 6(6): e20619. DOI: 10.1371/journal.pone.0020619.",
+      "year": "2011",
+      "title": "Will elephants soon disappear from West African savannahs?",
+      "author": "Bouche, P., Douglas-Hamilton, I., Wittemyer, G., Nianogo, A.J., Doucet, J.L., Lejeune, P. and Vermeulen, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Brandt, A.L., Hagos, Y., Yacob, Y., David, V.A., Georgiadis, N.J., Shoshani, J. and Roca, A.L. 2014. The elephants of Gash-Barka, Eritrea: nuclear and mitochondrial genetic patterns. <i>Journal of Heredity</i> 105(1): 82–90. DOI: 10.1093/jhered/est078.",
+      "year": "2014",
+      "title": "The elephants of Gash-Barka, Eritrea: nuclear and mitochondrial genetic patterns",
+      "author": "Brandt, A.L., Hagos, Y., Yacob, Y., David, V.A., Georgiadis, N.J., Shoshani, J. and Roca, A.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "CITES. 2014. Status of Elephant Populations, Levels of Illegal Killing and the Trade in Ivory: A Report to the CITES Standing Committee. Doc. 42.1.  Standing Committee 65 (ed.). CITES, Geneva, Switzerland.",
+      "year": "2014",
+      "title": "Status of Elephant Populations, Levels of Illegal Killing and the Trade in Ivory: A Report to the CITES Standing Committee. Doc. 42.1",
+      "author": "CITES",
+      "citation_short": ""
+    },
+    {
+      "citation": "CITES. 2016. Report on the Elephant Trade Information System (ETIS): A report to Conference of the Parties. Document 57.6 (Rev 1).  CoP17 (ed). CITES, Geneva, Switzerland.",
+      "year": "2016",
+      "title": "Report on the Elephant Trade Information System (ETIS): A report to Conference of the Parties. Document 57.6 (Rev 1)",
+      "author": "CITES",
+      "citation_short": ""
+    },
+    {
+      "citation": "CITES. 2018. Status of Elephant Populations, Levels of Illegal Killing and the Trade in Ivory: A Report to the CITES Standing Committee. Document 49.1 Annex I. In: Standing Committee 70 (ed.). CITES, Geneva.",
+      "year": "2018",
+      "title": "Status of Elephant Populations, Levels of Illegal Killing and the Trade in Ivory: A Report to the CITES Standing Committee. Document 49.1 Annex I",
+      "author": "CITES",
+      "citation_short": ""
+    },
+    {
+      "citation": "CITES. 2019. Report on the Elephant Trade Information System (ETIS): A report to Conference of the Parties. Document 69.3 (Rev1).  CoP18 (ed). CITES, Geneva, Switzerland.",
+      "year": "2019",
+      "title": "Report on the Elephant Trade Information System (ETIS): A report to Conference of the Parties. Document 69.3 (Rev1)",
+      "author": "CITES",
+      "citation_short": ""
+    },
+    {
+      "citation": "Faurby, S. and Svenning, J.C. 2015. Historic and prehistoric human-driven extinctions have reshaped global mammal diversity patterns. <i>Diversity and Distributions</i> 21(10): 1155–1166. DOI: 10.1111/ddi.12369.",
+      "year": "2015",
+      "title": "Historic and prehistoric human-driven extinctions have reshaped global mammal diversity patterns",
+      "author": "Faurby, S. and Svenning, J.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ishida, Y., Demeke, Y., van Coeverden de Groot, P.J., Georgiadis, N.J., Leggett, K.E., Fox, V.E. and Roca, A.L. 2011. Distinguishing forest and savanna African elephants using short nuclear DNA sequences. <i>Journal of Heredity</i> 102(5): 610–616.  DOI: 10.1093/jhered/esr073.",
+      "year": "2011",
+      "title": "Distinguishing forest and savanna African elephants using short nuclear DNA sequences",
+      "author": "Ishida, Y., Demeke, Y., van Coeverden de Groot, P.J., Georgiadis, N.J., Leggett, K.E., Fox, V.E. and Roca, A.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kim, H.J. and Wasser, S.K. 2019. Report for the IUCN African Elephant Specialist Group and U.S. Fish and Wildlife Service. University of Washington, Seattle, Washington.",
+      "year": "2019",
+      "title": "Report for the IUCN African Elephant Specialist Group and U.S. Fish and Wildlife Service",
+      "author": "Kim, H.J. and Wasser, S.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Krishnasamy, K. 2016. <i>Malaysia's Invisible Ivory Channel: An assessment of ivory seizures involving Malaysia from January 2003-May 2014</i>. TRAFFIC, Southeast Asia Regional Office, Petaling Jaya, Selangor, Malaysia.",
+      "year": "2016",
+      "title": "Malaysia's Invisible Ivory Channel: An assessment of ivory seizures involving Malaysia from January 2003-May 2014",
+      "author": "Krishnasamy, K",
+      "citation_short": null
+    },
+    {
+      "citation": "Lindsay, K., Chase, M., Landen, K. and Nowak, K. 2017. The shared nature of Africa’s elephants. <i>Biological Conservation</i> 215: 260–267. DOi: 10.1016/j.biocon.2017.08.021.",
+      "year": "2017",
+      "title": "The shared nature of Africa’s elephants",
+      "author": "Lindsay, K., Chase, M., Landen, K. and Nowak, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lui, H. 2015. Trafficking market goes wild in Vietnam. Available at: <a href=\"http://oxpeckers.org/2015/11/trafficking-market-goes-wild-in-vietnam/\">http://oxpeckers.org/2015/11/trafficking-market-goes-wild-in-vietnam/</a>. (Accessed: 2 May 2019).",
+      "year": "2015",
+      "title": "Trafficking market goes wild in Vietnam",
+      "author": "Lui, H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Malhi, Y., Doughty, C.E., Galetti, M., Smith, F.A., Svenning, J.-C. and Terborgh, J.W. 2016. Megafauna and ecosystem function from the Pleistocene to the Anthropocene. <i>Proceedings of the National Academy of Sciences</i> 113(4): 838–846. DOI: 10.1073/pnas.1502540113.",
+      "year": "2016",
+      "title": "Megafauna and ecosystem function from the Pleistocene to the Anthropocene",
+      "author": "Malhi, Y., Doughty, C.E., Galetti, M., Smith, F.A., Svenning, J.-C. and Terborgh, J.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Martin, R.B., Caldwell, J.R. and Bardzo, J.G. 1986. African Elephants, CITES and the Ivory Trade. Secretariat of the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES), Lausanne, Switzerland.",
+      "year": "1986",
+      "title": "African Elephants, CITES and the Ivory Trade",
+      "author": "Martin, R.B., Caldwell, J.R. and Bardzo, J.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Meijer, W., Scheer, S., Whan, E., Yang, C. and Kritski, E. 2018. Demand under the Ban – China Ivory Consumption Research Post-ban 2018. TRAFFIC and WWF, Beijing, China.",
+      "year": "2018",
+      "title": "Demand under the Ban – China Ivory Consumption Research Post-ban 2018",
+      "author": "Meijer, W., Scheer, S., Whan, E., Yang, C. and Kritski, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Meyer, M., Palkopoulou, E., Baleka, S., Stiller, M., Penkman, K. E. H., Alt, K. W., Ishida, Y., Mania, D., Mallick, S., Meijer, T., Meller, H., Nagel, S., Nickel, B., Ostritz, S., Rohland, N., Schauer, K., Schüler, T., Roca, A. L., Reich, D., Shapiro, B. and Hofreiter, M. 2017. Palaeogenomes of Eurasian straight-tusked elephants challenge the current view of elephant evolution. <i>eLife</i> 6: e25413. DOI: 10.7554/eLife.25413.",
+      "year": "2017",
+      "title": "Palaeogenomes of Eurasian straight-tusked elephants challenge the current view of elephant evolution",
+      "author": "Meyer, M., Palkopoulou, E., Baleka, S., Stiller, M., Penkman, K. E. H., Alt, K. W., Ishida, Y., Mania, D., Mallick, S., Meijer, T., Meller, H., Nagel, S., Nickel, B., Ostritz, S., Rohland, N., Schauer, K., Schüler, T., Roca, A. L., Reich, D., Shapiro, B. and Hofreiter, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Milliken, T., Underwood, F.M., Burn, R.W. and Sangalakula, L. 2016. The Elephant Trade Information System (ETIS) and the Illicit Trade in Ivory: A report to the 17th meeting of the Conference of the Parties to CITES. TRAFFIC, Cambridge, UK.",
+      "year": "2016",
+      "title": "The Elephant Trade Information System (ETIS) and the Illicit Trade in Ivory: A report to the 17th meeting of the Conference of the Parties to CITES",
+      "author": "Milliken, T., Underwood, F.M., Burn, R.W. and Sangalakula, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mondol, S., Moltke, I., Hart, J., Keigwin, M., Brown, L., Stephens, M. and Wasser, S.K. 2015. New evidence for hybrid zones of forest and savanna elephants in Central and West Africa. <i>Molecular Ecology</i> 24(24): 6134–6147. DOI: 10.1111/mec.13472.",
+      "year": "2015",
+      "title": "New evidence for hybrid zones of forest and savanna elephants in Central and West Africa",
+      "author": "Mondol, S., Moltke, I., Hart, J., Keigwin, M., Brown, L., Stephens, M. and Wasser, S.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Naidoo, R., Fisher, B., Manica, A. and Balmford, A. 2016. Estimating economic losses to tourism in Africa from the illegal killing of elephants. <i>Nature Communications</i> 7: 13379. DOI: 10.1038/ncomms13379.",
+      "year": "2016",
+      "title": "Estimating economic losses to tourism in Africa from the illegal killing of elephants",
+      "author": "Naidoo, R., Fisher, B., Manica, A. and Balmford, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nishihara, T. 2003. Elephant poaching and ivory trafficking in African tropical forests with special reference to the Republic of Congo. <i>Pachyderm</i> 34: 66–74.",
+      "year": "2003",
+      "title": "Elephant poaching and ivory trafficking in African tropical forests with special reference to the Republic of Congo",
+      "author": "Nishihara, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nishihara, T. 2012. Demand for forest elephant ivory in Japan. <i>Pachyderm</i> 52: 52–55.",
+      "year": "2012",
+      "title": "Demand for forest elephant ivory in Japan",
+      "author": "Nishihara, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Owen-Smith, R.N. 1989. <i>Megaherbivores: the Influence of very large body size on ecology</i>. Cambridge University Press, Cambridge, UK.",
+      "year": "1989",
+      "title": "Megaherbivores: the Influence of very large body size on ecology",
+      "author": "Owen-Smith, R.N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Palkopoulou, E., Lipson, M., Mallick, S., Nielsen, S., Rohland, N., Baleka, S., Karpinski, E., Ivancevic, A. M., To, T.-H., Kortschak, R. D., Raison, J. M., Qu, Z., Chin, T.-J., Alt, K. W., Claesson, S., Dalén, L., MacPhee, R. D. E., Meller, H., Roca, A. L., Ryder, O. A., Heiman, D., Young, S., Breen, M., Williams, C., Aken, B. L., Ruffier, M., Karlsson, E., Johnson, J., Palma, F. D., Alfoldi, J., Adelson, D. L., Mailund, T., Munch, K., Lindblad-Toh, K., Hofreiter, M., Poinar, H. and Reich, D. 2018. A comprehensive genomic history of extinct and living elephants. <i>Proceedings of the National Academy of Sciences</i> 115(11): E2566–2574. DOI: 10.1073/pnas.1720554115.",
+      "year": "2018",
+      "title": "A comprehensive genomic history of extinct and living elephants",
+      "author": "Palkopoulou, E., Lipson, M., Mallick, S., Nielsen, S., Rohland, N., Baleka, S., Karpinski, E., Ivancevic, A. M., To, T.-H., Kortschak, R. D., Raison, J. M., Qu, Z., Chin, T.-J., Alt, K. W., Claesson, S., Dalén, L., MacPhee, R. D. E., Meller, H., Roca, A. L., Ryder, O. A., Heiman, D., Young, S., Breen, M., Williams, C., Aken, B. L., Ruffier, M., Karlsson, E., Johnson, J., Palma, F. D., Alfoldi, J., Adelson, D. L., Mailund, T., Munch, K., Lindblad-Toh, K., Hofreiter, M., Poinar, H. and Reich, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Roca, A.L., Georgiadis, N. and O’Brien, S.J. 2007. Cyto-nuclear genomic dissociation and the African elephant species question. <i>Quaternary International</i> 169: 4–16. DOI: 10.1016/j.quaint.2006.08.008.",
+      "year": "2007",
+      "title": "Cyto-nuclear genomic dissociation and the African elephant species question",
+      "author": "Roca, A.L., Georgiadis, N. and O’Brien, S.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Roca, A.L., Ishida, Y., Brandt, A.L., Benjamin, N.R., Zhao, K. and Georgiadis, N.J. 2015. Elephant natural history: a genomic perspective. <i>Annual Review of Animal Biosciences</i> 3: 139–167.  DOI : 10.1146/annurev-animal-022114-110838.",
+      "year": "2015",
+      "title": "Elephant natural history: a genomic perspective",
+      "author": "Roca, A.L., Ishida, Y., Brandt, A.L., Benjamin, N.R., Zhao, K. and Georgiadis, N.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rohland, N., Reich, D., Mallick, S., Meyer, M., Green, R.E., Georgiadis, N.J., Roca, A.L. and Hofreiter, M. 2010. Genomic DNA sequences from mastodon and woolly mammoth reveal deep speciation of forest and savanna elephants. <i>PLoS Biology</i> 8(12): e1000564. DOI: 10.1371/journal.pbio.1000564.",
+      "year": "2010",
+      "title": "Genomic DNA sequences from mastodon and woolly mammoth reveal deep speciation of forest and savanna elephants",
+      "author": "Rohland, N., Reich, D., Mallick, S., Meyer, M., Green, R.E., Georgiadis, N.J., Roca, A.L. and Hofreiter, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Stiles, D. 2004. The ivory trade and elephant conservation. <i>Environmental Conservation</i> 31(4): 309–321. DOI: 10.1017/S0376892904001614.",
+      "year": "2004",
+      "title": "The ivory trade and elephant conservation",
+      "author": "Stiles, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "'t Sas-Rolfes, M., Moyle, B. and Stiles, D. 2014. The complex policy issue of elephant ivory stockpile management. <i>Pachyderm</i> 55: 62–77.",
+      "year": "2014",
+      "title": "The complex policy issue of elephant ivory stockpile management",
+      "author": "'t Sas-Rolfes, M., Moyle, B. and Stiles, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Underwood, F.M., Burn, R.W. and Milliken, T. 2013. Dissecting the Ivory Trade: an analysis of ivory seizures data. <i>PLoS One</i> 8: e76539. DOI: 10.1371/journal.pone.0076539.",
+      "year": "2013",
+      "title": "Dissecting the Ivory Trade: an analysis of ivory seizures data",
+      "author": "Underwood, F.M., Burn, R.W. and Milliken, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vigne, L. and Martin, E. 2017. Decline in the legal ivory trade in China in anticipation of a ban. Save the Elephants, Nairobi, Kenya.",
+      "year": "2017",
+      "title": "Decline in the legal ivory trade in China in anticipation of a ban",
+      "author": "Vigne, L. and Martin, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wittemyer, G., Daballen, D. and Douglas-Hamilton, I. 2011. Rising ivory prices threaten elephants. <i>Nature</i> 476: 282–283. DOI: 10.1038/476282c.",
+      "year": "2011",
+      "title": "Rising ivory prices threaten elephants",
+      "author": "Wittemyer, G., Daballen, D. and Douglas-Hamilton, I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wittemyer, G., Northrup, J.M., Blanc, J., Douglas-Hamilton, I., Omondi, P. and Burnham, K.P. 2014. Illegal killing for ivory drives global decline in African elephants. <i>Proceedings of the National Academy of Science</i> 111: 13117–13121.  DOI: 10.1073/pnas.1403984111.",
+      "year": "2014",
+      "title": "Illegal killing for ivory drives global decline in African elephants",
+      "author": "Wittemyer, G., Northrup, J.M., Blanc, J., Douglas-Hamilton, I., Omondi, P. and Burnham, K.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Augustine, D.J. and McNaughton, S.J. 2004. Temporal asynchrony in soil nutrient dynamics and plant production in a semiarid ecosystem. <i>Ecosystems</i> 7(8): 829–840.",
+      "year": "2004",
+      "title": "Temporal asynchrony in soil nutrient dynamics and plant production in a semiarid ecosystem",
+      "author": "Augustine, D.J. and McNaughton, S.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Blignaut, J., de Wit, M. and Barnes, J. 2008. The economic value of elephants. In: R. Scholes and K. Mennell (eds), <i>Elephant Management – A Scientific Assessment for South Africa</i>, Wits University Press, Johannesburg.",
+      "year": "2008",
+      "title": "The economic value of elephants",
+      "author": "Blignaut, J., de Wit, M. and Barnes, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bouche, P., Mange, R.N.M., Tankalet, F., Zowoya, F., Lejeune, P. and Vermeulen, C. 2012. Game over! Wildlife collapse in northern Central African Republic. <i>Environmental Monitoring and Assessment</i> 184(11): 7001–7011.",
+      "year": "2012",
+      "title": "Game over! Wildlife collapse in northern Central African Republic",
+      "author": "Bouche, P., Mange, R.N.M., Tankalet, F., Zowoya, F., Lejeune, P. and Vermeulen, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chase, M.J., Schlossberg, S., Griffin, C.R., Bouché, P.J.C., Djene, S.W., Elkan, P.W., Ferreira, S., Grossman, F., Kohi, E.M., Landen, K., Omondi, P., Peltier, A., Selier, S.A.J. and Sutcliffe, R. 2016. Continent-wide survey reveals massive decline in African savannah elephants. <i>PeerJ</i> 4: e2354. DOI: 10.7717/peerj.2354.",
+      "year": "2016",
+      "title": "Continent-wide survey reveals massive decline in African savannah elephants",
+      "author": "Chase, M.J., Schlossberg, S., Griffin, C.R., Bouché, P.J.C., Djene, S.W., Elkan, P.W., Ferreira, S., Grossman, F., Kohi, E.M., Landen, K., Omondi, P., Peltier, A., Selier, S.A.J. and Sutcliffe, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "CITES. 2019. Report and Addendum to the CITES Conference of the Parties Doc.69.2.  Conference of the Parties 18. Geneva.",
+      "year": "2019",
+      "title": "Report and Addendum to the CITES Conference of the Parties Doc.69.2",
+      "author": "CITES",
+      "citation_short": null
+    },
+    {
+      "citation": "Cumming, D.H.M., Fenton, M.B., Rautenbach, I.L., Taylor, R.D., Cumming, G.S., Cumming, M.S., Dunlop, J.M., Ford, A.G., Hovorka,, M.D., Johnston, D.S., Kalcounis, M., Mahlangu, Z and Portfors, C.V.R. 1997. Elephants, woodlands and biodiversity in southern Africa. <i>South African Journal of Science</i> 93: 231–236.",
+      "year": "1997",
+      "title": "Elephants, woodlands and biodiversity in southern Africa",
+      "author": "Cumming, D.H.M., Fenton, M.B., Rautenbach, I.L., Taylor, R.D., Cumming, G.S., Cumming, M.S., Dunlop, J.M., Ford, A.G., Hovorka,, M.D., Johnston, D.S., Kalcounis, M., Mahlangu, Z and Portfors, C.V.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "de Boer, W.F., van Langevelde, F., Prins, H.H.T., de Ruiter, P.C., Blanc, J., Vis, M.J.P., Gaston, K.J. and Hamilton, I.D. 2013. Understanding spatial differences in African elephant densities and occurrence, a continent-wide analysis. <i>Biological Conservation</i> 159: 468–476.",
+      "year": "2013",
+      "title": "Understanding spatial differences in African elephant densities and occurrence, a continent-wide analysis",
+      "author": "de Boer, W.F., van Langevelde, F., Prins, H.H.T., de Ruiter, P.C., Blanc, J., Vis, M.J.P., Gaston, K.J. and Hamilton, I.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Doughty, C.E., Roman, J., Faurby, S., Wolf, A., Haque, A., Bakker, E.S., Malhi, Y., Dunning, J.B. and Svenning, J.-C. 2016. Global nutrient transport in a world of giants. <i>Proceedings of the National Academy of Sciences</i> 113(4): 868–873.",
+      "year": "2016",
+      "title": "Global nutrient transport in a world of giants",
+      "author": "Doughty, C.E., Roman, J., Faurby, S., Wolf, A., Haque, A., Bakker, E.S., Malhi, Y., Dunning, J.B. and Svenning, J.-C. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dublin, H.T., Sinclair, A.R.E., Boutin, S., Anderson, E., Jago, M. and Arcese, P. 1990. Does competition regulate ungulate populations - further evidence from Serengeti, Tanzania. <i>Oecologia</i> 82(2): 283–288.",
+      "year": "1990",
+      "title": "Does competition regulate ungulate populations - further evidence from Serengeti, Tanzania",
+      "author": "Dublin, H.T., Sinclair, A.R.E., Boutin, S., Anderson, E., Jago, M. and Arcese, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Eastment, C. 2020. How has Bwabwata National Park’s woody vegetation changed in response to fire, rainfall and land use? MSc Conservation Biology, University of Cape Town.",
+      "year": "2020",
+      "title": "How has Bwabwata National Park’s woody vegetation changed in response to fire, rainfall and land use?",
+      "author": "Eastment, C. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Goheen, J.R., Palmer, T.M., Keesing, F., Riginos, C. and Young, T.P. 2010. Large herbivores facilitate savanna tree establishment via diverse and indirect pathways. <i>Journal of Animal Ecology</i> 79(2): 372–382.",
+      "year": "2010",
+      "title": "Large herbivores facilitate savanna tree establishment via diverse and indirect pathways",
+      "author": "Goheen, J.R., Palmer, T.M., Keesing, F., Riginos, C. and Young, T.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Holdo, R.M., Holt, R.D. and Fryxell, J.M. 2009. Grazers, browsers, and fire influence the extent and spatial pattern of tree cover in the Serengeti. <i>Ecological Applications</i> 19(1): 95–109.",
+      "year": "2009",
+      "title": "Grazers, browsers, and fire influence the extent and spatial pattern of tree cover in the Serengeti",
+      "author": "Holdo, R.M., Holt, R.D. and Fryxell, J.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "KAZA Secretariat. 2018. Strategic Planning Framework for the Conservation and Management of Elephants In the Kavango Zambezi Transfrontier Conservation Area. Kasana.",
+      "year": "2018",
+      "title": "Strategic Planning Framework for the Conservation and Management of Elephants In the Kavango Zambezi Transfrontier Conservation Area",
+      "author": "KAZA Secretariat",
+      "citation_short": ""
+    },
+    {
+      "citation": "Loarie, S.R., van Aarde, R.J. and Pimm, S.L. 2009. Elephant seasonal vegetation preferences across dry and wet savannas. <i>Biological Conservation</i> 142: 3099–3107.",
+      "year": "2009",
+      "title": "Elephant seasonal vegetation preferences across dry and wet savannas",
+      "author": "Loarie, S.R., van Aarde, R.J. and Pimm, S.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Loarie, S.R., van Aarde, R.J. and Pimm, S.L. 2009. Fences and artificial water affect African savannah elephant movement patterns. <i>Biological Conservation</i> 142: 3086–3098.",
+      "year": "2009",
+      "title": "Fences and artificial water affect African savannah elephant movement patterns",
+      "author": "Loarie, S.R., van Aarde, R.J. and Pimm, S.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Madowo, L. 2019. eSwatini - Taiwan's last friend in Africa. BBC News (14 January 2019). Available at: <a href=\"https://www.bbc.co.uk/news/world-africa-46831852\">https://www.bbc.co.uk/news/world-africa-46831852</a>. (Accessed: 13 November 2020).",
+      "year": "2019",
+      "title": "eSwatini - Taiwan's last friend in Africa. BBC News (14 January 2019)",
+      "author": "Madowo, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mapaure, I. 2013. A preliminary simulation model of individual and synergistic impacts of elephants and fire on the structure of semi-arid miombo woodlands in northwestern Zimbabwe. <i>Journal of Ecology and the Natural Environment</i> 5(10): 85–302.",
+      "year": "2013",
+      "title": "A preliminary simulation model of individual and synergistic impacts of elephants and fire on the structure of semi-arid miombo woodlands in northwestern Zimbabwe",
+      "author": "Mapaure, I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mpakairi, K.S., H. Ndaimani, P.T., Kuvawoga and H.T. Madiri. 2019. Human settlement drives African elephant (<i>Loxodonta africana</i>) movement in the Sebungwe Region, Zimbabwe. <i>African Journal of Ecology</i> 57(4): 1–8. DOI: 10.1111/aje.12639.",
+      "year": "2019",
+      "title": "Human settlement drives African elephant (<i>Loxodonta africana</i>) movement in the Sebungwe Region, Zimbabwe",
+      "author": "Mpakairi, K.S., H. Ndaimani, P.T., Kuvawoga and H.T. Madiri ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Naidoo, R., Weaver, L.C., Diggle, R.W., Matongo, G., Stuart-Hill, G. and Thouless, C.R. 2016. Complementary benefits of tourism and hunting to communal conservancies in Namibia. <i>Conservation Biology </i> 30(3): 628–638. DOI: 10.1111/cobi.12643.",
+      "year": "2016",
+      "title": "Complementary benefits of tourism and hunting to communal conservancies in Namibia",
+      "author": "Naidoo, R., Weaver, L.C., Diggle, R.W., Matongo, G., Stuart-Hill, G. and Thouless, C.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Palmer, T.M., Stanton, M.L., Young, T.P., Goheen, J.R., Pringle, R.M. and Karban, R. 2008. Breakdown of an ant-plant mutualism follows the loss of large herbivores from an African Savanna. <i>Science</i> 319(5860): 192–195. DOI: 10.1126/science.1151579.",
+      "year": "2008",
+      "title": "Breakdown of an ant-plant mutualism follows the loss of large herbivores from an African Savanna",
+      "author": "Palmer, T.M., Stanton, M.L., Young, T.P., Goheen, J.R., Pringle, R.M. and Karban, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pozo, R.A., Cusack, J.J., McCulloch, G., Stronza, A., Songhurst, A. and Coulson, T. 2018. Elephant space-use is not a good predictor of crop-damage. <i>Biological Conservation</i> 228: 241–251. DOI: 10.1016/j.biocon.2018.10.031.",
+      "year": "2018",
+      "title": "Elephant space-use is not a good predictor of crop-damage",
+      "author": "Pozo, R.A., Cusack, J.J., McCulloch, G., Stronza, A., Songhurst, A. and Coulson, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pretorius, Y., Garai, M. and Bates, L. 2018. The status of African elephant (<i>Loxodonta africana</i>) populations in South Africa. <i>Oryx</i> 53(4): 757–763.",
+      "year": "2018",
+      "title": "The status of African elephant (<i>Loxodonta africana</i>) populations in South Africa",
+      "author": "Pretorius, Y., Garai, M. and Bates, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pringle, R.M., Prior, K.M., Palmer, T.M., Young, T.P. and Goheen, J.R. 2016. Large herbivores promote habitat specialization and beta diversity of African savanna trees. <i>Ecology</i> 97(10): 2640–2657. DOI: 10.1002/ecy.1522.",
+      "year": "2016",
+      "title": "Large herbivores promote habitat specialization and beta diversity of African savanna trees",
+      "author": "Pringle, R.M., Prior, K.M., Palmer, T.M., Young, T.P. and Goheen, J.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Russo, C. and Cruise, A. 2016. Zimbabwe ships live elephants to wildlife parks in China. The Guardian (23 Dec 2016). Available at: <a href=\"https://www.theguardian.com/environment/2016/dec/23/zimbabwe-ships-live-elephants-to-wildlife-parks-in-china\">https://www.theguardian.com/environment/2016/dec/23/zimbabwe-ships-live-elephants-to-wildlife-parks-in-china</a>. (Accessed: 13 November 2020).",
+      "year": "2016",
+      "title": "Zimbabwe ships live elephants to wildlife parks in China. The Guardian (23 Dec 2016)",
+      "author": "Russo, C. and Cruise, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Scholes, R.J. and Mennell, K.G. 2008. <i>Elephant Management: A scientific assessment for South Africa</i>. Wits University Press, Johannesburg.",
+      "year": "2008",
+      "title": "Elephant Management: A scientific assessment for South Africa",
+      "author": "Scholes, R.J. and Mennell, K.G. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sikes, S.K. 1971. <i>The Natural History of the African Elephant</i>. Weidenfeld and Nicolson, London.",
+      "year": "1971",
+      "title": "The Natural History of the African Elephant",
+      "author": "Sikes, S.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Starfield, A.M., Cumming, D.H.M., Taylor, R.D. and Quadling, M.S. 1993. A frame based paradigm for dynamic ecosystem models. <i>AI Applications</i> 7: 1–13.",
+      "year": "1993",
+      "title": "A frame based paradigm for dynamic ecosystem models",
+      "author": "Starfield, A.M., Cumming, D.H.M., Taylor, R.D. and Quadling, M.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Taylor, R.D. 2009. Community based natural resource management in Zimbabwe: the experience of CAMPFIRE. <i>Biological Conservation</i> 18(10): 2563–2583. DOI: 10.1007/s10531-009-9612-8.",
+      "year": "2009",
+      "title": "Community based natural resource management in Zimbabwe: the experience of CAMPFIRE",
+      "author": "Taylor, R.D. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wall, J., Wittemyer, G., Klinkenberg, B., LeMay, V. and Douglas-Hamilton, I. 2013. Characterizing properties and drivers of long distance movements by elephants (<i>Loxodonta africana</i>) in the Gourma, Mali. <i>Biological Conservation</i> 157: 60–68.",
+      "year": "2013",
+      "title": "Characterizing properties and drivers of long distance movements by elephants (<i>Loxodonta africana</i>) in the Gourma, Mali",
+      "author": "Wall, J., Wittemyer, G., Klinkenberg, B., LeMay, V. and Douglas-Hamilton, I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Whyte, I.J. 2001. Conservation Management of the Kruger National Park Elephant Population. PhD Thesis. University of Pretoria.",
+      "year": "2001",
+      "title": "Conservation Management of the Kruger National Park Elephant Population",
+      "author": "Whyte, I.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wittemyer, G., Daballen, D. and Douglas-Hamilton, I. 2013. Comparative demography of an at-risk elephant population. <i>PLoS ONE</i> 8(1): e53726. DOI: 10.1371/journal.pone.0053726.",
+      "year": "2013",
+      "title": "Comparative demography of an at-risk elephant population",
+      "author": "Wittemyer, G., Daballen, D. and Douglas-Hamilton, I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2021. The IUCN Red List of Threatened Species. Version 2021-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 04 September 2021).",
+      "year": "2021",
+      "title": "The IUCN Red List of Threatened Species. Version 2021-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2021-2"
+    },
+    {
+      "citation": "Wall, J., Wittemyer, G., Klinkenberg, B., LeMay, V. and Douglas-Hamilton, I. 2013. Characterizing properties and drivers of long distance movements by elephants (<i>Loxodonta africana</i>) in the Gourma, Mali. <i>Biological Conservation</i> 157: 60-68. DOI: 10.1016/j.biocon.2012.07.019.",
+      "year": "2013",
+      "title": "Characterizing properties and drivers of long distance movements by elephants (<i>Loxodonta africana</i>) in the Gourma, Mali",
+      "author": "Wall, J., Wittemyer, G., Klinkenberg, B., LeMay, V. and Douglas-Hamilton, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2022. The IUCN Red List of Threatened Species. Version 2022-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 08 December 2022).",
+      "year": "2022",
+      "title": "The IUCN Red List of Threatened Species. Version 2022-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2022-2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Skewed sex ratios"
+      },
+      "code": "2_3_6"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

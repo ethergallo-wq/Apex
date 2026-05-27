@@ -1,0 +1,2851 @@
+{
+  "assessment_date": "2018-05-08T01:00:00.000+01:00",
+  "year_published": "2019",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 41775,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/41775/44141833",
+  "citation": "Keuling, O. & Leus, K. 2019. Sus scrofa. The IUCN Red List of Threatened Species 2019: e.T41775A44141833. Accessed on 15 May 2026.",
+  "assessment_id": 44141833,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 41775,
+    "scientific_name": "Sus scrofa",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "ARTIODACTYLA",
+    "family_name": "SUIDAE",
+    "genus_name": "Sus",
+    "species_name": "scrofa",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Linnaeus, 1758",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Eurasian Wild Pig",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Ryukyu Islands Wild Pig",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Cinghiale",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Jabalí",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Sanglier",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Sanglier d'Eurasie",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Schwarzwild",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Wildschwein",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Zerleg Gakhai",
+        "language": "mon"
+      },
+      {
+        "main": true,
+        "name": "Wild Boar",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Sus papuensis Lesson & Garnot, 1826",
+        "status": "New",
+        "genus_name": "Sus",
+        "species_name": "papuensis",
+        "species_author": "Lesson & Garnot, 1826",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Sus ternatensis Rolleston, 1877",
+        "status": "New",
+        "genus_name": "Sus",
+        "species_name": "ternatensis",
+        "species_author": "Rolleston, 1877",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Sus ceramensis Rosenberg, 1878",
+        "status": "New",
+        "genus_name": "Sus",
+        "species_name": "ceramensis",
+        "species_author": "Rosenberg, 1878",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Sus andamanensis Blyth, 1858",
+        "status": "New",
+        "genus_name": "Sus",
+        "species_name": "andamanensis",
+        "species_author": "Blyth, 1858",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Sus aruensis Rosenberg, 1878",
+        "status": "New",
+        "genus_name": "Sus",
+        "species_name": "aruensis",
+        "species_author": "Rosenberg, 1878",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Sus enganus Lyon, 1916",
+        "status": "New",
+        "genus_name": "Sus",
+        "species_name": "enganus",
+        "species_author": "Lyon, 1916",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Sus tuancus Lyon, 1916",
+        "status": "New",
+        "genus_name": "Sus",
+        "species_name": "tuancus",
+        "species_author": "Lyon, 1916",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Sus nicobaricus Miller, 1902",
+        "status": "New",
+        "genus_name": "Sus",
+        "species_name": "nicobaricus",
+        "species_author": "Miller, 1902",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Sus niger Finsch, 1886",
+        "status": "New",
+        "genus_name": "Sus",
+        "species_name": "niger",
+        "species_author": "Finsch, 1886",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Sus floresianus Jentink, 1905",
+        "status": "New",
+        "genus_name": "Sus",
+        "species_name": "floresianus",
+        "species_author": "Jentink, 1905",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Sus babi Miller, 1906",
+        "status": "New",
+        "genus_name": "Sus",
+        "species_name": "babi",
+        "species_author": "Miller, 1906",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Sus goramensis De Beaux, 1924",
+        "status": "New",
+        "genus_name": "Sus",
+        "species_name": "goramensis",
+        "species_author": "De Beaux, 1924",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Sus natunensis Miller, 1901",
+        "status": "New",
+        "genus_name": "Sus",
+        "species_name": "natunensis",
+        "species_author": "Miller, 1901",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": ">20,000",
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "The Eurasian Wild Pig, as hitherto described (but see Taxonomy), has one of the widest geographic distributions of all terrestrial mammals, and this range has been greatly expanded by human agency. The species now occurs in pure wild or barely modified feral form on all continents excepting Antarctica, and on many oceanic islands. It is the ancestor of most (but not all) ancient and modern domestic pig breeds, and there is evidence to suggest that it was independently domesticated in several different parts of its range, including Southeast Asia, the Far East and Asia Minor. As a wild form, it has constituted a primary resource of subsistence hunters since the earliest times, and it is one of the most important targets for recreational hunting wherever it remains sufficiently abundant. Over-hunting and changes in land use have resulted in the fragmentation of its range and its extermination throughout the British Isles, Scandinavia, parts of North Africa, and relatively extensive parts of its range in the former Soviet Union and northern Japan. Nevertheless, the species remained widely distributed and is recently wide spread and still increasinga dn dispersing in most parts of its range with locally abundant populations. As a result of its depredations on crops it is regarded as a pest in many countries, where it remains unprotected outside designated wildlife reserves or is managed as a game animal.<br/><br/><em>S. scrofa</em> has by far the largest range of all pigs. It occurs throughout the steppe and broadleaved forest regions of the Palaearctic, from western Europe to the Russian Far East, extending southwards as far North Africa, the Mediterranean Basin and the Middle East, through India, Indo-China, Japan (including the Ryukyu Chain), Taiwan and the Greater Sunda Islands of South-east Asia. Populations east of Bali are probably all introduced. It has been extinct in the British Isles since sometime in the 17th century, despite attempted introductions of new stock from Europe (Harting 1880) (though see below for more recent information). It was also extinct in southern Scandinavia (but see below), over extensive portions of its recent range in west-central and eastern parts of the former Soviet Union (Heptner <em>et al</em>. 1961), and in northern Japan (Chiba 1964, 1975). The species was last reported in Libya in the 1880s, and it became extinct in Egypt in about 1902 (Hufnagl 1972). <br/><br/>Groves and Grubb (1993) distinguished four 'subspecies groupings', based on both geographic and morphological criteria, as follows:<br/><br/>1.  'Western races' of Europe (<em>scrofa</em> and <em>meridionalis</em>), North Africa (<em>algira</em>) and the Middle East (<em>lybicus</em>), extending at least as far east as Soviet Central Asia (<em>attila and nigripes</em>);  <br/><br/>2.  'Indian races' of the sub-Himalayan region from Iran in the west (<em>davidi</em>) to north India and adjacent countries as far east as Myanmar and west Thailand (<em>cristatus</em>), and south India and Sri Lanka (<em>affinis</em> and subsp. nov.); <br/><br/>3.  'Eastern races' of Mongolia and the Soviet Far East (<em>sibiricus</em> and <em>ussuricus</em>), Japan (<em>leucomystax</em> and <em>riukiuanus</em>), Taiwan (<em>taivanus</em>), to south-east China and Viet Nam (<em>moupinensis</em>); and <br/><br/>4.  'Indonesian race' (or banded pig) from the Malay Peninsular, Sumatra, Java, Bali and certain offshore islands (<em>vittatus</em>).<br/><br/>Recently, this systematics is under revision. Thus S. scrofa remains only as the western Species, whilst most other subspecies may be own species.<br/><br/>In Europe, it is widespread in most continental areas, with the exception of northern Fennoscandia and European Russia. As mentioned above, it disappeared from the British Isles and Scandinavia in the 17th century, although it has now been reintroduced to Sweden and escaped animals have established themselves in the wild in Britain (Spitz 1999). There are at least three small wild populations in England, on the Kent/East Sussex border, in Dorset, and in Hereford (Battersby 2005). It is native to Corsica and Sardinia, but the population in Sicily was introduced (Spitz 1999). Introduced populations are not included in the distribution map.",
+    "population": "This species is abundant in many parts of its range, though populations can be depressed in places where hunting intensity is high (for example in eastern and southeastern Asia). Eurasian wild pig populations in Europe increased markedly during the latter part of the 20th century (Spitz 1999). Recently population increases seem to slow down, but still go on in most areas. Especially in range expansion areas and recolonised countries like England, southern Sweden and Finland populations may still be increasing (Battersby 2005). In eastern Europe populations are infected with african swine fever. However, influence on the population densities is unknown. Although there is no global population estimate, numbers can be high in many places. For example, in 1982 in Mongolia, there was a population density of 0.9 per 1,000 ha in the Khovsgol area. By 1989, it was estimated that 34,000 individuals were living in the Khentii and Khangai Mountain regions of Mongolia, with an average density of 1 - 2 per 1,000 ha.",
+    "habitats": "The Eurasian wild pig occupies a wide variety of temperate and tropical habitats, from semi-desert to tropical rain forests, temperate woodlands, grasslands and reed jungles; often venturing onto agricultural land to forage. It is found in a variety of habitats. In Europe, it prefers broadleaved forests and especially evergreen oak forests, but may also be found in more open habitats such as steppe, Mediterranean shrubland, and farmland, so long as there is water and tree cover nearby (Spitz 1999). In Europe it is found from sea level to 2,400 in the Pyrenees (Palomo and Gisbert 2002), but it can be found at higher elevations in Asia.<br/><br/>The species is omnivorous, though stomach and fecal contents analyses indicate that vegetable matter, principally fruits, seeds, roots and tubers, constitutes about 90% of the diet (Spitz 1986). A field study of the Indonesian wild pig, <em>S. s. vittatus, </em>in Ujung Kulon National Park in Java, indicated that these animals are predominately frugivorous, feeding on about 50 species of fruits, especially those of strangling figs (<span style=\"font-style: italic;\">Ficus</span> spp.), and that they are important seed dispersal agents (Pauwels 1980). By comparison, analyses of the stomach contents of wild pigs (also <span style=\"font-style: italic;\">S. s. vittatus</span>) in agricultural areas of West Malaysia by Diong (1973), revealed that sugar cane, tapioca and rice were the commonest food items, but that usually more than one type of food had been eaten, even where a single cultivated crop was abundant. Other items commonly consumed by these pigs included soil, earthworms, roots and other vegetable matter and, in mangrove areas, molluscs, crabs and other arthropods and even fishes. The consumption of invertebrate and small vertebrate prey may be a necessary component of the diet, since a study of free-ranging domestic pigs in Papua New Guinea revealed that animals fed ad libitum lost weight when denied earthworms (Rose and Williams 1983). In common with its feral derivatives (Oliver and Brisbin 1993), <span style=\"font-style: italic;\">S. scrofa</span> has also occasionally been reported to predate larger vertebrates, such as deer fawns and (tethered) goats (Hoogerwerf 1970), though it is possible that such incidents involve only a few individuals in the population; an aspect also noted by Pauwels (1980) when referring to the predation of sea turtle nests by wild pigs in Ujung Kulon. Similarly, a large boar (<span style=\"font-style: italic;\">S. s. cristatus</span>) in Royal Chitawan National Park, Nepal, which was seen to displace an adult leopard from its kill, a domestic buffalo calf, which it then partly consumed (W. Oliver pers. obs.), was reported by Park staff to regularly commandeer such kills, but that no other individual pigs had been seen to do this.<br/><br/>Wild pigs are normally most active in the early morning and late afternoon, though they become nocturnal in disturbed areas, where activity usually commences shortly before sunset and continues throughout the night. A total of 4 to 8 hours are spent foraging or traveling to feeding areas. Feeding is generally a social activity (even solitary males may join feeding groups) which also provides an opportunity for display and other agonistic behaviours (Beuerle 1975). Radio telemetry studies in southern France indicate that they generally travel between 2 and 15 km per night, though this is often within an area of only 20 to 150 ha. However, the home range estimates for adult females and adult males over a 2-3 month period varied from 500-1,000 ha and 1,000-2,000 ha, respectively. During this same period, subadults covered an area of 500- 5,000 ha, and after 6 to 12 months they may have covered more than 10,000 ha; the larger home ranges of these animals being related to their expulsion from their natal groups and then undergoing a wandering phase. Movements over long distances (50 to 250 km) have also been recorded in Europe, but the extent and purpose of these movements has yet to be studied (Spitz 1986). Experiments in which tagged animals are released and subsequently recovered provide evidence that they disperse freely over even larger areas (500 to 750 km<sup>2</sup>), which may also indicate the area occupied by large population units. The density of free-ranging <span style=\"font-style: italic;\">S. s. scrofa</span> in Europe rarely exceeds 5 individuals/km<sup>2</sup>&#160;(Spitz, 1986), though much higher concentrations have been reported elsewhere, e.g. 27-32/km<sup>2</sup> on Peucang Island in Ujung Kulon National Park, Java (Pauwels 1980) and 32.2-72.1/km<sup>2</sup>&#160;in sugarcane areas in the Punjab, Pakistan (Shafi and Khokhar, 1985). <br/><br/>Wild pigs are gregarious, forming herds or 'sounders' of varying size depending on locality and season, but usually of between 6-20 individuals, though aggregations of over 100 have been reported (Prater 1971, Legakul and McNeely 1977, Briedermann 1990). The basic social unit is a nucleus of one or more females and their last litters. Animals peripheral to this comprise subadults from previous litters, and adult males during the mating season. However, the latter tend to stay in relatively close contact with 1 or 2 female groups at other times of the year, and subadult males or mixed sex groups of subadults may also form longer-term associations (Spitz and Janeau 1990). The dynamics of the basic group include the isolation of the preparturient female, her re-entry with young, entry of nulliparous females, the arrival of adult males with the simultaneous departure of subadult animals (Spitz 1986). In contrast to its domestic derivatives, reproductive activity in S. scrofa tends to be seasonal and positively correlated with the relative availability of principal foodstuffs or related climatic factors. In tropical countries, such as Sri Lanka, peak estrus activity has been recorded during the wettest months of November and December (Santiapillai and Chambers 1980). However, social organization may also play a role in modulating the timing of reproductive events, since farrowing is often synchronized amongst females in the same social groups, which suggests a mechanism for synchronizing the onset of estrus (Spitz 1986).<br/><br/>Wide fluctuations in the numbers of animals killed by hunters, particularly in the (former) U.S.S.R. and in France, suggest cyclic changes in the numbers of wild pigs available for hunting. Annual recruitment into the total population depends on reproductive rate (i.e. the number and prolificacy of females) and juvenile mortality, both of which factors may be influenced by the availability of foodstuffs and other external factors (Spitz 1986). In western Europe, litter size is usually between 4 and 7 piglets (Briedermann 199), though Harrison and Bates (1991) cite reports of 5 and 7-10 piglets per litter as being usual in Iraq and Armenia, respectively. Pauwels (1980) recorded an average litter size of 6-10 piglets at the beginning of the breeding season in Java, but this number dropped to only 2-4 piglets per litter towards the end of the breeding season. In the Ryukyu Islands, south of Japan, there is evidence that the wild pigs (<em>S. s. riukiuanus</em>) have two breeding seasons per year, though it remains uncertain whether individual sows normally produce litters twice a year (Yasuma 1984). Juvenile mortality averages 15% in the first three months in western Europe, though between 50% and 75% mortality have been reported by the end of the first year of life (Jezierski 1977, Briedermann 1990). These mortality rates are thought to be highly dependant on such external factors as predation and climatic hazards, at least in wilderness areas (Spitz 1986). Similarly, Pauwel (1982) suggested that the principal causes of juvenile mortality in wild pigs in Ujung Kulon were predation (particularly as a consequence of the accidental separation of infants from their mothers), along with differences in the relative rate of development of litter-mates and various parasite-related causes. These factors resulted in only about 15% of all progeny surviving to independence.",
+    "threats": "At a global level, there are no major threats to the species. However, there are many threats at a more local level, principally habitat destruction and hunting pressure, either for food, sport or in reprisal for crop damage, particularly in areas near human habitation. In Afghanistan, Hassinger (1973) cited reports of the decrease in the numbers of wild pigs in the Pul-i-Khumri District in the 1950s as a result of the draining of marshlands for agricultural purposes, and hunting by Europeans; but noted that they were still numerous in other districts where: \"they invade the fields and cause serious damage during the harvest\". In parts of Perak and Johore in West Malaysia, Diong (1973) reported that the numbers of wild pigs (<em>S. s. vittatus</em>) had diminished drastically as a result of increased hunting pressure, particularly for commercial purposes, and that most hunting methods, whether with guns, dogs or snares, was entirely non-selective. Nonetheless, wild pigs are still included in Malaysia's 'Agricultural Pest Ordinance, 1977', on account of their damage to a variety of crops, including sugar cane, tapioca, rice and even coconuts. Lay (1967) also remarked upon the damage to crops by wild pigs in Iran which: \"...brings great wrath upon them, usually ineffectual, from the local farmers\". In Pakistan, the expansion of the sugar cane industry in the 1960s and early 1970s brought about local increases in the numbers of wild pigs (<em>S. s. davidi</em>), whose depredations in the cane fields (estimated at an annual loss rate of Rs.5 million in 1978) led to the development of control measures, including the use of poison baits (Shafi and Khokhar 1985). <br/><br/>Although actually referring to wild pigs in India, it is clear that Prater's (1971) opinion that: \"No animal is more destructive to crops and, in cultivated areas, it is impossible to make a plea for its protection\", would find popular support in many other countries. In the Ryukyu Islands, south of Japan, the endemic <em>S. s. riukiuanus</em> is actively regarded as an environmental pest, and bounties are paid to farmers for killing them by the Japanese Government, despite the fact that this taxon is recognized internationally as being seriously threatened throughout it extremely restricted range (see later text). In various places in Indonesia, most notably in Java, deliberate attempts have been made in the past to eradicate wild pigs altogether by means of organized shooting parties and poisoning campaigns. However, despite many thousands of wild pigs being destroyed in this way, it is clear that this has had little lasting effect on these animals which, according to Hoogerwerf (1970), have: \"remained further removed from extinction than any other species of game in Java\". This situation evidently obtains in a number of other countries, including Viet Nam (R. Ratajszsak pers. comm.) and Taiwan (K. Nowell pers. comm.), where wild pigs are reported to survive in a number of nominally protected areas where all or most of the other principal 'game' species have been eradicated by sustained hunting pressure. <br/><br/>In these and many other (non-Islamic) countries or local communities, wild pigs often constitute the single most important game animal to subsistence and/or recreational hunters. Sport hunting accounts for about 30 to 50% of animals heavier than 20 kg in southern France, though this figure may be as high as 50 to 75% in some heavily populated countries, where hunting remains largely or wholly uncontrolled (Spitz, 1986). For example, the wild pig population inhabiting the 25,000 ha of broadleaved woodlands around Monticiano in Italy, has apparently been able to sustain its numbers despite an annual hunter-kill rate of about 50% (c. 500 animals) of the population (Devitt, 1984). <br/><br/>According to figures produced by the Japanese Environment Agency a total of 1,279,453 (an average of 63,973 per annum) wild pigs were harvested in Japan between 1970 and 1989 (incl.), of which 1,083,858 (85%) were taken by hunters, and the remaining 195,596 were destroyed as crop pests during the closed season. The great majority of these animals are <em>S. s. leucomystax</em> from the main islands of Honshu, Shikoko and Kyushu, and this subspecies is evidently able to withstand high levels of harvesting to judge from contemporary reports of marginal expansions in the overall range of this subspecies (Hanai, 1982; Takahashi, 1980). Unfortunately, however, these totals do not differentiate between the numbers of <em>S. s. leucomystax</em> and those of <em>S. s. riukiuanus</em> from the three small islands of Amami Oshima, Tokuno Shima and Kakeroma Jima, which are also included in these figures. As previously indicated, the latter subspecies is declining rapidly in numbers on these islands, and on the neighbouring island of Okinawa, largely as a result of over-hunting (Barber <em>et al</em>. 1984, H. Obara pers. comm.). This conclusion is also borne out by official figures on the annual harvest of <em>S. s. riukiuanus</em> from two other islands, Iriomote and Ishigaki, in the Ryukyu chain between 1965 and 1981, which indicate a downward trend in the numbers of these animals (Yasuma 1984) and a marked increase in the amount of effort required by local hunters to obtain smaller catches (Hanai 1982). Nonetheless, according to these figures an average of 530 and 190 wild pigs were still being taken annually on Iriomote and Ishigaki, respectively; of which slightly more than 50% were killed as 'agricultural pests', i.e. mostly out of season, often with a Government bounty being paid. Moreover, it is certain that these totals are a serious underestimate - perhaps by as much as 50-100% - of the actual numbers killed, since many hunters operate without licenses and do not declare their catches (Barber <em>et al</em>. 1984, Yasuma 1984). Formerly, virtually all of these pigs were consumed locally but, following the restoration of electricity (and, hence, refrigeration) in 1972, commercial traders began operating on the islands, and the majority of carcasses are now exported to gourmet markets in Osaka, where they realize relatively high prices and ensure a continued demand for wild-caught meat (Yasuma 1984). <br/><br/>Wild pigs are also susceptible to a variety of highly contagious diseases which can decimate their populations. Santiapillai <em>et al</em>. (1991) referred to a catastrophic crash in the wild pig population of Ruhuna National Park in Sri Lanka in 1989 owing to an outbreak of swine fever, but that population numbers had apparently recovered by June 1991. Many wild pigs are also reported to have died during an outbreak of disease in the Kanto Region on Honshu Island, Japan in 1877 (Yanagida 1913). It is possible that this was hog cholera, contracted from domestic pigs which were imported to the region at that time (Chiba 1975), and this may have been one of the factors contributing to the extirpation of <em>S. s. leucomystax</em> throughout the north of their range on this island. An outbreak of severe skin disease (tentatively identified as sarcoptic mange) on Iriomote, which was first noted in 1976, had spread throughout the Island by 1980, and infected up to 83% of the <em>S. s. riukiuanus</em> population according to data based on hunter-killed samples (Yasuma 1984).<br/><br/>The Ryukyu pigs are also threatened by genetic contamination through contact with free-ranging domesticates. On Ishigaki Island, interbreeding with domestic pigs has been so prevalent that it is doubtful if the remaining wild stock can be considered genetically pure (Obara 1982). Moreover, it is unlikely that this problem will be confined to Ishigaki, given that the meat from wild x domestic hybrids or 'ino-buta' is popular and local farmers will continue to produce it. Indeed, ino-buta have been farmed commercially on Iriomote for many years, often in poorly controlled conditions. As a result, feral ino-buta have become established on the adjacent, smaller islands of Sotobanare and Uchibanare, and it is claimed that a number of these animals have crossed onto Iriomote at low tide; thereby posing a further, serious threat to the remaining wild stock there (Yasuma 1984, Takahashi and Tisdell 1992). <br/><br/>Similarly, Genov <em>et al</em>. (1991) reported that the traditional practice of rearing 'domestic' pigs in semi-wild conditions in Bulgaria has resulted in their hybridizing with the wild boar populations in the eastern and north-eastern parts of that country, and that genetically pure wild boars now occur only in the Rila-Pirin-Rhodopes Mountains in the south of this country, where domestic pigs are not reared in the wild. The principal threat to the survival of the Monticiano population in Italy, lies not so much with the high annual hunter-kill rate but with the fact that the genetic integrity of the native population has been seriously compromised by the introduction of Central European boars after World War II, which have interbred with these animals. Indeed, the introduction of non-native wild pigs, by hunting interest groups in the belief that these were more desirable because of their larger size and reputed greater fecundity, has been so widespread in Italy that the only surviving pure-bred native stock is thought to be in the presidential reserve in Castel Porziano, near Rome (Devitt 1984).",
+    "measures": "Generally, few, if any, practical measures have been taken in any country for the specific purpose of conserving wild populations of any subspecies of <em>S. scrofa</em>, except in the sense of maintaining stock levels for hunting, particularly for sport hunting. Thus Genov <em>et al</em>. (1991) reported a gradual increase of the wild boar population in Bulgaria in the late 1950s following legal measures to regulate hunting, and because of the reintroduction of animals from breeding farms in the north-east of the country, in the Balkan Range and Sredna Gora. Even in this instance, however, other factors may also be operating, since similar increases in the local wild pig populations in Spain, France, Switzerland, Czechoslovakia and eastern Russia have been described by Sáez-Royuela and Tellería (1986), who simply attributed this trend to a progression to a more temperate climate and, hence, progressively milder winters of benefit to these animals. <br/><br/>Local wild pig populations are also reported to be increasing in numbers in several countries as a consequence of the spread of Islam. For example, the north-west African race, <em>S. s. algira</em>, although extinct in Libya, is thought to be expanding in neighboring Algeria where it is designated a game animal but, as the meat is now seldom eaten in this country, hunting pressure has been greatly reduced since colonial times (Kowalski and Rzebik-Kowalski 1991). These authors also cite earlier reports of wild boars hybridizing with domestic pigs, but the latter are no longer kept in Algeria.<br/><br/><em>S. s. riukiuanus</em> has been included in the IUCN Red List since 1982, where its 'Vulnerable' status reflected a widespread concern about the environmentally destructive development of the Ryukyu Islands and the growing number of threats to the ecosystems and endemic species of Iriomote and other islands in this region. In 1978, these concerns led to the passing of a resolution at the 14th IUCN General Assembly in Ashkhabad, which called upon the Government of Japan to take immediate steps to ensure the conservation of Iriomote Island and its endemic taxa, and for the subsequent designation of the whole of the Nansei Shoto Region (often referred to as the 'Galápagos of the East' on account of the high percent endemicity of its fauna and flora) as a bio-geographical priority region in the World Conservation Strategy. In 1982, the 'Nansei Shoto Conservation Project' was launched by WWF-Japan, with initial emphasis being placed on the conduct of wildlife and socio-economic surveys on Iriomote and Amami Oshima (Obara 1984a, 1984b). In the interim, however, the desired increased protection of the Nansei Shoto Region was clearly at odds with the Japanese Government's regional policies, and the development of the islands continued - a circumstance which led to the passage of a another resolution, highlighting Japan's treatment of the region, at the 16th General Assembly of IUCN in Costa Rica in 1986. This also appears to have had little affect, as evinced by further major development plans, including the controversial Ishigaki Airport extension, and recent plans to construct a new dam and road on Iriomote Island. Although one third of Iriomote has been designated as a national park, the proposed road will cut through the park and will also increase access by poachers who have already reduced the wild pig to less than half of its numbers before the park was created (Brazil 1988). <br/><br/>Of all wild pigs species, <em>S. scrofa</em> is by far the most widely maintained and bred in captivity, though general perceptions about the relative abundance of this species has resulted in diminished interest in its propagation. Many zoos, particularly in western Europe, have therefore disposed of their stocks of these animals, mostly to 'wild boar breeding farms', which have escalated in number to meet growing demands in the gourmet meat markets and for commercial diversification. In addition, increasingly restrictive quarantine and other veterinary regulations appertaining to the international movements of all live suids, has made it extremely difficult to establish new breeding programs.<br/><br/>Contrarily, since these animals are most easily acquired in their countries of origin, local stocks are most likely to be pure-bred and, hence, most valuable for research and conservation purposes. In this situation, priority should be given to the establishment of national or regional breeding programmes for each of the rarest subspecies, especially <em>S. s. riukiuanus</em>.<br/><br/>As a general rule, <em>S. scrofa</em> is both highly adaptable and highly resistant to a variety of degradative processes, and may thrive under conditions of habitat modification and hunting pressure which have devastated other forms of wildlife. In addition, most subspecies are well represented in protected areas in their relatively extensive ranges. Nonetheless, there are reasons for concern about a number of distinct populations of <em>S. scrofa</em>, of which the Ryukyu pigs are undoubtedly the most seriously threatened. Indeed, <em>riukiuanus</em> is the only subspecies of <em>S. scrofa</em> to be included in the IUCN Red List of Threatened Animals (IUCN 1990), where it has been accorded the status of 'Vulnerable' since 1982, but is already thought to be 'Endangered' on at least four of the six islands in the Ryukyu Chain which constitute its entire, and therefore extremely restricted, range. This particular form is also the most distinct, and (with an average adult male body weight of only about 45 kg; Barber <em>et al</em>. 1984) by far the smallest, subspecies. It is therefore of some interest as a potential genetic resource, as well as being one of the principal 'flagship' animals for increased conservation activity in the crucially important Nansei Shoto Region. For all of these reasons, the following recommendations (taken from Oliver <em>et al</em> 1993) are mostly confined to the immediate and longer-term management requirements of this taxon.<br/><br/><strong>Objectives</strong><ol><li>To promote local interest in, and the enhanced future protection and management of, the Ryukyu Islands' dwarf wild pig, <span style=\"font-style: italic;\">S. s. riukiuanus</span>, and any other threatened native subspecies may be identified in the future;</li><li>To promote further applied research on the taxonomy, distribution, conservation status and biology of the species, particularly the least known forms;</li><li>To discourage any future releases of any specimens of any subspecies of this species, or its domestic and feral derivatives, outside their known former ranges, and encourage the eradication or control of such introduced populations as may exist at present;</li><li>To investigate the cultural and economic significance of these animals to local people, particularly in southeast Asia, and their potential genetic importance in terms of: a) possibilities for their further domestication and/or b) an enhanced understanding of the origins and relationships of present day domestic and wild populations</li></ol><strong>Priority Projects</strong><br/><ol><li>Provide all appropriate support to any existing or proposed future conservation initiatives in the Nansei Shoto Region, relevant to the enhanced future management and protection of the Ryukyu Island's dwarf wild pig, <span style=\"font-style: italic;\">S. s. riukiuanus</span>. </li><li>Conduct (preliminary or repeat) status surveys on all (six) islands in the Ryukyu Group known to support remnant populations of <span style=\"font-style: italic;\">S. s. riukiuanus</span> (i.e. Iriomote, Ishigaki, Okinawa, Tokunoshima, Amamioshima and Kakerome), and implement emergent recommendations.</li><li>Promote development of a coordinated breeding programmed for <span style=\"font-style: italic;\">S. s. riukiuanus</span><em>,</em> both nationally and internationally<em>.</em></li><li>Collect, evaluate and disseminate data on the taxonomic relationships, distribution and conservation status of other, less-known forms, with a view to the resolution of certain outstanding taxonomic problems and the development of recommendations for their enhanced future protection, if so required. Additional data is needed on the distribution and status of some, poorly-known subspecies and populations, including a tentatively assigned form (subsp. nov.) from the central highlands of Sri Lanka and the insular taivanus (Taiwan). Efforts should also be made to resolve outstanding questions relating to the genetic distinctness and range limitations of many of the continental races, which are poorly understood at present.</li><li>Promote further research on the biology and ecology of all less-studied populations, particularly those in extreme habitats, or in areas of sympatry with other species of <span style=\"font-style: italic;\">Sus</span>. Most of the information on this species has originated from studies conducted in Europe or on the feral populations in the U.S.A., Australia and New Zealand. Priority should therefore be given to studies of other populations elsewhere, particularly those in semi-desert regions or other extreme habitats, and/or studies focused on the ecological and genetic relationships between this and other species of <span style=\"font-style: italic;\">Sus</span> in those areas where sympatry occurs (e.g. with <span style=\"font-style: italic;\">S. barbatus</span> in the Malaysian Peninsular and Sumatra, and with <span style=\"font-style: italic;\">S. verrucosus</span> on Java).</li></ol>",
+    "use_trade": "This species is hunted for food and for sport.",
+    "rationale": "Listed as Least Concern due to its wide range, abundance, tolerance to habitat disturbance, and presence in many protected areas.",
+    "trend_justification": null,
+    "taxonomic_notes": "In a major review of the Genus <em>Sus</em>, Groves (1981) recognized 16, possibly 17, subspecies, whilst also either synonymizing or discounting many previously accepted subspecies. The latter including various insular southeast Asian feral and/or hybrid populations. This treatment was followed by Groves and Grubb (1993); though Groves (2001) has since suggested the likely future separation of one subspecies, i.e. the Banded Pig <em>S. s. vittatus</em>, as a full species (Groves 2001)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "3_4_1",
+      "description": {
+        "en": "Captive breeding/artificial propagation"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_1",
+      "description": {
+        "en": "Formal education"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_3",
+      "description": {
+        "en": "Limiting population growth"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Desert - Cold"
+      },
+      "code": "8_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Shrub Dominated Wetlands"
+      },
+      "code": "5_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    },
+    {
+      "majorImportance": "No",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical High Altitude"
+      },
+      "code": "3_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Subtropical/Tropical Heavily Degraded Former Forest"
+      },
+      "code": "14_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Mangrove Vegetation Above High Tide Level"
+      },
+      "code": "1_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Moist"
+      },
+      "code": "2_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Swamp"
+      },
+      "code": "1_8"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Desert - Temperate"
+      },
+      "code": "8_2"
+    },
+    {
+      "majorImportance": "No",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical High Altitude"
+      },
+      "code": "4_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Desert - Hot"
+      },
+      "code": "8_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Mediterranean-type Shrubby Vegetation"
+      },
+      "code": "3_8"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Seasonally Flooded Agricultural Land"
+      },
+      "code": "15_8"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Seasonally Wet/Flooded"
+      },
+      "code": "4_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Haiti"
+      },
+      "code": "HT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Reintroduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sweden"
+      },
+      "code": "SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cuba"
+      },
+      "code": "CU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lesser Sunda Is."
+      },
+      "code": "LSI-LS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Democratic People's Republic of"
+      },
+      "code": "KP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hungary"
+      },
+      "code": "HU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Republic of"
+      },
+      "code": "KR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kentucky"
+      },
+      "code": "KTY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovakia"
+      },
+      "code": "SK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "San Marino"
+      },
+      "code": "SM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ireland"
+      },
+      "code": "IE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hawaiian Is."
+      },
+      "code": "HAW-HI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Corsica"
+      },
+      "code": "COR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Galápagos"
+      },
+      "code": "GAL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mongolia"
+      },
+      "code": "MN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lao People's Democratic Republic"
+      },
+      "code": "LA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kazakhstan"
+      },
+      "code": "KZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sicilia"
+      },
+      "code": "SIC-SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "North Carolina"
+      },
+      "code": "NCA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ukraine"
+      },
+      "code": "UA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Netherlands"
+      },
+      "code": "NL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sardegna"
+      },
+      "code": "SAR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jordan"
+      },
+      "code": "JO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Estonia"
+      },
+      "code": "EE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belarus"
+      },
+      "code": "BY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Taiwan, Province of China"
+      },
+      "code": "TW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Armenia"
+      },
+      "code": "AM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "NZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jamaica"
+      },
+      "code": "JM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nepal"
+      },
+      "code": "NP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tajikistan"
+      },
+      "code": "TJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Mexico"
+      },
+      "code": "NWM-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GEO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belgium"
+      },
+      "code": "BE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jawa"
+      },
+      "code": "JAW-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, U.S."
+      },
+      "code": "VI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Liechtenstein"
+      },
+      "code": "LI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominican Republic"
+      },
+      "code": "DO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Texas"
+      },
+      "code": "TEX-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Luxembourg"
+      },
+      "code": "LU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mississippi"
+      },
+      "code": "MSI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lithuania"
+      },
+      "code": "LT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uzbekistan"
+      },
+      "code": "UZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Latvia"
+      },
+      "code": "LV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Moldova"
+      },
+      "code": "MD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Monaco"
+      },
+      "code": "MC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Denmark"
+      },
+      "code": "DK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sumatera"
+      },
+      "code": "SUM-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virginia"
+      },
+      "code": "VRG-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bhutan"
+      },
+      "code": "BT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "North Macedonia"
+      },
+      "code": "MK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Turkmenistan"
+      },
+      "code": "TM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Azerbaijan"
+      },
+      "code": "AZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kyrgyzstan"
+      },
+      "code": "KG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iraq"
+      },
+      "code": "IQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Czechia"
+      },
+      "code": "CZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cyprus"
+      },
+      "code": "CY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Papua New Guinea"
+      },
+      "code": "PG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Austria"
+      },
+      "code": "AT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Arizona"
+      },
+      "code": "ARI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Florida"
+      },
+      "code": "FLA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tennessee"
+      },
+      "code": "TEN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Palestine, State of"
+      },
+      "code": "PS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "West Virginia"
+      },
+      "code": "WVA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Afghanistan"
+      },
+      "code": "AF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Poland"
+      },
+      "code": "PL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Antigua and Barbuda"
+      },
+      "code": "AG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bali"
+      },
+      "code": "LSI-BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Andorra"
+      },
+      "code": "AD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Fiji"
+      },
+      "code": "FJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bosnia and Herzegovina"
+      },
+      "code": "BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Finland"
+      },
+      "code": "FI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lebanon"
+      },
+      "code": "LB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Serbia"
+      },
+      "code": "RS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Papua"
+      },
+      "code": "NWG-IJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Switzerland"
+      },
+      "code": "CH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hong Kong"
+      },
+      "code": "HK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Reintroduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Great Britain"
+      },
+      "code": "GRB-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Reintroduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Establishing ex-situ production *"
+      },
+      "code": "16"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Nomadic grazing"
+      },
+      "code": "2_3_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Sus domesticus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Keuling, O. & Leus, K.",
+      "value": [
+        "Kristin Leus (IUCN SSC Wild Pig Specialist Group)",
+        "Oliver Keuling (Stiftung Tierärztliche Hochschule Hannover Institute for Wildlife Research)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Meijaard, E.",
+      "value": [
+        "Erik Meijaard (IUCN SSC Wild Pig Specialist Group)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Palomo, L.J. and Gisbert, J. 2002. Atlas de los mamíferos terrestres de España.  Dirección General de Conservación de la Naturaleza. SECEM-SECEMU, Madrid, Spain.",
+      "year": "2002",
+      "title": "Atlas de los mamíferos terrestres de España",
+      "author": "Palomo, L.J. and Gisbert, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 1990. <i>IUCN Red List of Threatened Animals</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1990",
+      "title": "IUCN Red List of Threatened Animals",
+      "author": "IUCN",
+      "citation_short": "IUCN 1990"
+    },
+    {
+      "citation": "Hoogerwerf, A. 1970. <i>Udjung Kulon. The Land of the Last Javan Rhinoceros</i>. E.J. Brill, Leiden, The Netherlands.",
+      "year": "1970",
+      "title": "Udjung Kulon. The Land of the Last Javan Rhinoceros",
+      "author": "Hoogerwerf, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Oliver, W.L.R. 1993. <i>Pigs, Peccaries, and Hippos</i>. IUCN SSC Pigs and Peccaries Specialist Group and Hippos Specialist Group. IUCN – The World Conservation Union, Gland, Switzerland.",
+      "year": "1993",
+      "title": "Pigs, Peccaries, and Hippos",
+      "author": "Oliver, W.L.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Harrison, D.L. and Bates, P.J.J. 1991. <i>The Mammals of Arabia</i>. Harrison Zoological Museum, Sevenoaks, UK.",
+      "year": "1991",
+      "title": "The Mammals of Arabia",
+      "author": "Harrison, D.L. and Bates, P.J.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lekagul, B. and McNeely, J.A. 1977. <i>Mammals of Thailand</i>. Association for the Conservation of Wildlife, Bangkok, Thailand.",
+      "year": "1977",
+      "title": "Mammals of Thailand",
+      "author": "Lekagul, B. and McNeely, J.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lay, D.M. 1967. A study of the mammals of Iran, resulting from the Street Expedition of 1962-63. <i>Fieldiana Zoology</i> 54: 1-282.",
+      "year": "1967",
+      "title": "A study of the mammals of Iran, resulting from the Street Expedition of 1962-63",
+      "author": "Lay, D.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hassinger, J.D. 1973. A survey of the Mammals of Afghanistan resulting from the 1965 Street Expedition (excluding bats). <i>Fieldiana Zoology</i> 60: 1-195.",
+      "year": "1973",
+      "title": "A survey of the Mammals of Afghanistan resulting from the 1965 Street Expedition (excluding bats)",
+      "author": "Hassinger, J.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kowalski, K. and Rzebik-Kowalska, B. 1991. <i>Mammals of Algeria</i>. Institute of Systematics and Evolution of Animals, Polish Academy of Sciences, Wroclaw, Poland.",
+      "year": "1991",
+      "title": "Mammals of Algeria",
+      "author": "Kowalski, K. and Rzebik-Kowalska, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nowak, R.M. 1991. <i>Walker's Mammals of the World</i>. The Johns Hopkins University Press, Baltimore, USA and London, UK.",
+      "year": "1991",
+      "title": "Walker's Mammals of the World",
+      "author": "Nowak, R.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wilson, D.E. and Reeder, D.M. 1993. <i>Mammal Species of the World. A Taxonomic and Geographic Reference</i>. Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "1993",
+      "title": "Mammal Species of the World. A Taxonomic and Geographic Reference",
+      "author": "Wilson, D.E. and Reeder, D.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hufnagl, E. 1972. <i>Lybian Mammals</i>. The Oleander Press, New York, USA.",
+      "year": "1972",
+      "title": "Lybian Mammals",
+      "author": "Hufnagl, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Prater, S. 1971. <i>The Book of Indian Animals</i>. Bombay Natural History Society, Bombay, India.",
+      "year": "1971",
+      "title": "The Book of Indian Animals",
+      "author": "Prater, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ministry of Nature and Environment. 2005. Manual for Foreign Hunters and Fishers. Ministry of Nature and Environment. State Inspection Agency and German Technical Cooperation, Ulaanbaatar.",
+      "year": "2005",
+      "title": "Manual for Foreign Hunters and Fishers",
+      "author": "Ministry of Nature and Environment",
+      "citation_short": null
+    },
+    {
+      "citation": "Ministry of Nature and Environment. 1997. Mongolian Red Book. In: Ts. Shiirevdamba, O. Shagdarsuren, G. Erdenejav, T. Amgalan and Ts. Tsetsegmaa (eds). ADMON Printing, Ulaanbaatar.",
+      "year": "1997",
+      "title": "Mongolian Red Book",
+      "author": "Ministry of Nature and Environment",
+      "citation_short": ""
+    },
+    {
+      "citation": "Danzig, T. 1992. <i>Biological Values for Selected Mammals</i>. American Association of Zoo Keepers Inc, Kansas, USA.",
+      "year": "1992",
+      "title": "Biological Values for Selected Mammals",
+      "author": "Danzig, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Groves, C.P. 2001. Taxonomy of wild pigs of Southeast Asia. <i>IUCN/SSC Pigs, Peccaries, and Hippos Specialist Group (PPHSG) Newsletter</i> 1(1): 3-4.",
+      "year": "2001",
+      "title": "Taxonomy of wild pigs of Southeast Asia",
+      "author": "Groves, C.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ministry of Nature and Environment. 1996. Biodiversity Conservation Action Plan for Mongolia. Ministry of Nature and Environment, Ulaanbaatar.",
+      "year": "1996",
+      "title": "Biodiversity Conservation Action Plan for Mongolia",
+      "author": "Ministry of Nature and Environment",
+      "citation_short": null
+    },
+    {
+      "citation": "Heptner, V. G., Nasimovich, A. A. and Bannikov, A. G. 1961. <i>Mammals of the Soviet Union [in Russian]</i>. Vischay Shkola, Nauka, Moscow, Russia.",
+      "year": "1961",
+      "title": "Mammals of the Soviet Union [in Russian]",
+      "author": "Heptner, V. G., Nasimovich, A. A. and Bannikov, A. G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Battersby, J. 2005. UK Mammals: Species Status and Population Trends.  First Report by the Tracking Mammals Partnership. JNCC / The Tracking Mammals Partnership.",
+      "year": "2005",
+      "title": "UK Mammals: Species Status and Population Trends",
+      "author": "Battersby, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Groves, C.P. 1981. Ancestors for the Pigs: Taxonomy and Phylogeny of the Genus <i>Sus</i>. <i>Technical Bulletin, Department of Prehistory, School Pacific Studies, Australian National University</i> 3: 1-9.",
+      "year": "1981",
+      "title": "Ancestors for the Pigs: Taxonomy and Phylogeny of the Genus <i>Sus</i>",
+      "author": "Groves, C.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Groves, C.P. and Grubb, P. 1993. The Eurasian suids (<i>Sus</i> and <i>Babyrousa</i>). Taxonomy and description. In: W. L. R. Oliver (ed.), <i>Pigs, Peccaries, and Hippos:  Status Survey and Conservation Action Plan</i>, pp. 107-111. International Union for the Conservation of Nature, Gland, Switzerland.",
+      "year": "1993",
+      "title": "The Eurasian suids (<i>Sus</i> and <i>Babyrousa</i>). Taxonomy and description",
+      "author": "Groves, C.P. and Grubb, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Devitt, J. 1984. All-Italian boars. <i>BBC Wildlife Magazine</i> December 1984: 604.",
+      "year": "1984",
+      "title": "All-Italian boars",
+      "author": "Devitt, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pauwels, W. 1980. Study of <i>Sus scrofa vittatus</i>, its ecology and behaviour in Ujung Kulon Nature Reserve, Java, Indonesia. Ph.D. Thesis, University of Basel.",
+      "year": "1980",
+      "title": "Study of <i>Sus scrofa vittatus</i>, its ecology and behaviour in Ujung Kulon Nature Reserve, Java, Indonesia",
+      "author": "Pauwels, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Chiba, T. 1975. Distributions of large wild mammals and their changes in the eastern foot of Mt. Zao, Miyagi Prefecture, northern Honshu. <i>Annals of the Tohoko Geographical Association (Tohoko Chiri)</i> 27(2): 74-81.",
+      "year": "1975",
+      "title": "Distributions of large wild mammals and their changes in the eastern foot of Mt. Zao, Miyagi Prefecture, northern Honshu",
+      "author": "Chiba, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Spitz, F. 1986. Current state of knowledge of wild boar biology. <i>Pig News and Information</i> 7(2): 171-175.",
+      "year": "1986",
+      "title": "Current state of knowledge of wild boar biology",
+      "author": "Spitz, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Beuerle, W. 1975. Frielanduntersuchungen zum kampf-und sexualverhalten des Europischen wildschweines (<i>Sus scrofa</i> L.). <i>Zeitschrift Tierpsychologie</i> 39: 211-258.",
+      "year": "1975",
+      "title": "Frielanduntersuchungen zum kampf-und sexualverhalten des Europischen wildschweines (<i>Sus scrofa</i> L.)",
+      "author": "Beuerle, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jezierski, W. 1977. Longevity and mortality rate in a population of wild boar. <i>Acta Theriologica</i> 22/24: 337-348.",
+      "year": "1977",
+      "title": "Longevity and mortality rate in a population of wild boar",
+      "author": "Jezierski, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Takahashi, S. and Tisdell, C. 1992. The feral and near feral animals of Iriomote Island: pigs, goats and cattle. <i>Geographical Review of Japan (Series B)</i> 65(1): 66-72.",
+      "year": "1992",
+      "title": "The feral and near feral animals of Iriomote Island: pigs, goats and cattle",
+      "author": "Takahashi, S. and Tisdell, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Spitz, F. 1999. <i>Sus scrofa</i>. In: A. J. Mitchell-Jones, G. Amori, W. Bogdanowicz, B. Kryštufek, P. J. H. Reijnders, F. Spitzenberger, M. Stubbe, J. B. M. Thissen, V. Vohralík and J. Zima (eds), <i>The Atlas of European Mammals</i>, Academic Press, London, UK.",
+      "year": "1999",
+      "title": "<i>Sus scrofa</i>",
+      "author": "Spitz, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Diong, C. H. 1973. Studies of the Malayan wild pig in Parak and Johore. <i>Malayan Nature Journal</i> 26: 120-151.",
+      "year": "1973",
+      "title": "Studies of the Malayan wild pig in Parak and Johore",
+      "author": "Diong, C. H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rose, C. J. and Williams, W. T. 1983. Ingestion of earthworms, <i>Pontoscolex corethrurus</i>, by village pigs, <i>Sus scrofa papuensis</i>, in the highlands of Papua New Guinea. <i>Applied Animal Ethology</i> 11: 131-139.",
+      "year": "1983",
+      "title": "Ingestion of earthworms, <i>Pontoscolex corethrurus</i>, by village pigs, <i>Sus scrofa papuensis</i>, in the highlands of Papua New Guinea",
+      "author": "Rose, C. J. and Williams, W. T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Chiba, T. 1964. Geographical distribution of wild boars and deer in the Japanese Islands and their areal and quantitative fluctuations. <i>Geographical Review</i> 37(11): 575-592.",
+      "year": "1964",
+      "title": "Geographical distribution of wild boars and deer in the Japanese Islands and their areal and quantitative fluctuations",
+      "author": "Chiba, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shafi, M. M. and Khokhar, A. R. 1985. Some observations on wild boar (<i>Sus scrofa</i>) and its control in sugarcane areas of Pujab, Pakistan. <i>Journal of Bombay Natural History Society</i> 83: 63-67.",
+      "year": "1985",
+      "title": "Some observations on wild boar (<i>Sus scrofa</i>) and its control in sugarcane areas of Pujab, Pakistan",
+      "author": "Shafi, M. M. and Khokhar, A. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Oliver, W. L. R. and Brisbin, I. L. 1993. Introduced and feral pigs, problems, policy and priorities. In: W. L. R. Oliver (ed.), <i>Pigs, Peccaries and Hippos. Status Survey and Conservation Action Plan</i>, pp. 179-191. IUCN, Gland, Switzerland.",
+      "year": "1993",
+      "title": "Introduced and feral pigs, problems, policy and priorities",
+      "author": "Oliver, W. L. R. and Brisbin, I. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Obara, H. 1982. The present status of the Iriomote dwarf hog.",
+      "year": "1982",
+      "title": "The present status of the Iriomote dwarf hog",
+      "author": "Obara, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Herre, W. 1986. <i>Sus scrofa</i> Linnaeus 1758 - Wildschwein. In: J. Niethammer and F. Krapp (eds), <i>Handbuch der Säugetiere Europas, Band 2/II: Paarhufer</i>, Akademische Verlagsgesellschaft, Wiesbaden, Germany.",
+      "year": "1986",
+      "title": "<i>Sus scrofa</i> Linnaeus 1758 - Wildschwein",
+      "author": "Herre, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yanagida, K. 1913. <i>Changes in Distribution of Wild Animals</i>.",
+      "year": "1913",
+      "title": "Changes in Distribution of Wild Animals",
+      "author": "Yanagida, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Genov, P., Nikolov, H., Massei, G. and Gerasimov, S. 1991. Craniometrical analysis of Bulgarian wild boar (<i>Sus scrofa</i>) populations. <i>Journal of Zoology (London)</i> 225: 309-325.",
+      "year": "1991",
+      "title": "Craniometrical analysis of Bulgarian wild boar (<i>Sus scrofa</i>) populations",
+      "author": "Genov, P., Nikolov, H., Massei, G. and Gerasimov, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sáez-Royuela, C. and Tellería, J. L. 1986. The increased population of wild boar (<i>Sus scrofa</i> L.) in Europe. <i>Mammal Review</i> 16(2): 97-101.",
+      "year": "1986",
+      "title": "The increased population of wild boar (<i>Sus scrofa</i> L.) in Europe",
+      "author": "Sáez-Royuela, C. and Tellería, J. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brazil, M. 1988. Japan's string of pearls loses its lustre. <i>New Scientist</i> 117(1606): 47-51.",
+      "year": "1988",
+      "title": "Japan's string of pearls loses its lustre",
+      "author": "Brazil, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Barber, G., Horne, L., Mason, E. and Perkins, E. 1984. Nansei Shoto Expedition Japan - Expedition Report.",
+      "year": "1984",
+      "title": "Nansei Shoto Expedition Japan - Expedition Report",
+      "author": "Barber, G., Horne, L., Mason, E. and Perkins, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Obara, H. 1984. Nansei Shoto Conservation Project by WWFJ. <i>Conservation of the Nansei Shoto: Part I</i>, pp. 1-2. WWF Japan Scientific Committee, World Wildlife Fund Japan.",
+      "year": "1984",
+      "title": "Nansei Shoto Conservation Project by WWFJ",
+      "author": "Obara, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Santiapillai, C., Dissanayake, S., Sumanasena, A. H., Padmasiri, U. Wijesinghe, G., Jaymane, H. P. and Badaranaike, C. 1991. Population structure, activity and density of the wild pig (<i>Sus scrofa</i>) in the Ruhuna National Park, Sri Lanka. W.W.F.- 3988 Project Report Asia: conservation of large mammals, August 1991.",
+      "year": "1991",
+      "title": "Population structure, activity and density of the wild pig (<i>Sus scrofa</i>) in the Ruhuna National Park, Sri Lanka",
+      "author": "Santiapillai, C., Dissanayake, S., Sumanasena, A. H., Padmasiri, U. Wijesinghe, G., Jaymane, H. P. and Badaranaike, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Spitz, F. and Janeau, G. 1990. Spatial strategies: an attempt to classify daily movements in wild boars. <i>Acta Theriologica</i> 35: 129-149.",
+      "year": "1990",
+      "title": "Spatial strategies: an attempt to classify daily movements in wild boars",
+      "author": "Spitz, F. and Janeau, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Briedermann, L. 1990. <i>Schwarzwild</i>. VEB Deutscher Landwirtschaftsverlag, Berlin.",
+      "year": "1990",
+      "title": "Schwarzwild",
+      "author": "Briedermann, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Harting, J. E. 1880. <i>British Animals, Extinct within Historic Times</i>. Trübner & Co, London, UK.",
+      "year": "1880",
+      "title": "British Animals, Extinct within Historic Times",
+      "author": "Harting, J. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yasuma, S. 1984. The Iriomote wild pig in danger of extinction (August 1982 Survey). <i>Conservation of the Nansei Shoto: Part I</i>, pp. 177-185. WWF Japan Scientific Committee, World Wildlife Fund Japan.",
+      "year": "1984",
+      "title": "The Iriomote wild pig in danger of extinction (August 1982 Survey)",
+      "author": "Yasuma, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Oliver, W. L. R., Brisbin, I. L. and Takahashi, S. 1993. The Eurasian wild pig (<i>Sus scrofa</i>). In: W. L. R. Oliver (ed.), <i>Pigs, Peccaries, and Hippos: Status Survey and Conservation Action Plan</i>, pp. 112-121. IUCN, Gland, Switzerland.",
+      "year": "1993",
+      "title": "The Eurasian wild pig (<i>Sus scrofa</i>)",
+      "author": "Oliver, W. L. R., Brisbin, I. L. and Takahashi, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Santiapillai, C. and Chambers, M. R. 1980. Aspects of the population dynamics of the wild pig (<i>Sus scrofa</i>, Linnaeus 1758) in the Ruhana National Park, Sri Lanka. <i>Spixiana</i> 3(3): 239-250.",
+      "year": "1980",
+      "title": "Aspects of the population dynamics of the wild pig (<i>Sus scrofa</i>, Linnaeus 1758) in the Ruhana National Park, Sri Lanka",
+      "author": "Santiapillai, C. and Chambers, M. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bosma, A., De Haan, N. A. and Macdonald, A. A. 1984. Karyoptype variability in the wild boar (<i>Sus scrofa</i>). Symposium International sur le Sanglier, Toulouse 1984. <i>Colloque de l'INRA</i> 22: 53-56.",
+      "year": "1984",
+      "title": "Karyoptype variability in the wild boar (<i>Sus scrofa</i>). Symposium International sur le Sanglier, Toulouse 1984",
+      "author": "Bosma, A., De Haan, N. A. and Macdonald, A. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Obara, H. 1984. Conservation issues in Japan. <i>IUCN Species Survival Commission Newsletter</i> 3: 9-10.",
+      "year": "1984",
+      "title": "Conservation issues in Japan",
+      "author": "Obara, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Takahashi, S. 1980. Recent changes in the distribution of wild boars and the trade of their flesh in Japan. <i>Geographical Sciences (Chiri-Kagaku)</i> 34: 24-31.",
+      "year": "1980",
+      "title": "Recent changes in the distribution of wild boars and the trade of their flesh in Japan",
+      "author": "Takahashi, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hanai, M. 1982. Fluctuations in numbers of Ryukyu inoshishi (wild pigs). Unpublished manuscript.",
+      "year": "1982",
+      "title": "Fluctuations in numbers of Ryukyu inoshishi (wild pigs)",
+      "author": "Hanai, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2019. The IUCN Red List of Threatened Species. Version 2019-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 December 2019).",
+      "year": "2019",
+      "title": "The IUCN Red List of Threatened Species. Version 2019-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2019-3"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Hybridisation"
+      },
+      "code": "2_3_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

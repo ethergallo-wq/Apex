@@ -1,0 +1,3364 @@
+{
+  "assessment_date": "2018-08-07T01:00:00.000+01:00",
+  "year_published": "2019",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 22694623,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/22694623/155537726",
+  "citation": "BirdLife International 2019. Sterna hirundo (amended version of 2018 assessment). The IUCN Red List of Threatened Species 2019: e.T22694623A155537726. Accessed on 15 May 2026.",
+  "assessment_id": 155537726,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 22694623,
+    "scientific_name": "Sterna hirundo",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AVES",
+    "order_name": "CHARADRIIFORMES",
+    "family_name": "LARIDAE",
+    "genus_name": "Sterna",
+    "species_name": "hirundo",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Linnaeus, 1758",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Bird Red List Authority (BirdLife International)",
+        "url": "https://www.birdlife.org/",
+        "description": "Red List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Sterne pierregarin",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "الخرشنة الشائعة,  خطاف البحر",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Ποταμογλάρονο",
+        "language": "gre"
+      },
+      {
+        "main": true,
+        "name": "Common Tern",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 4000,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Unknown",
+    "generational_length": "11.5",
+    "congregatory": "Congregatory (and dispersive)",
+    "movement_patterns": "Full Migrant",
+    "continuing_decline_in_area": "Unknown",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "Unknown",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Unknown",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "84300000",
+    "continuing_decline_in_extent_of_occurence": "Unknown",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "This species has a circumpolar distribution and can be found breeding in most of Europe, Asia and North America, except the in the extreme north. It winters further south, being found along the coast and inland of South America down to the <strong>Falkland Islands</strong> (<strong>Islas Malvinas</strong>), along the coast of Africa (excluding northern Africa), along parts of the Arabian Peninsula, the coast of <strong>India</strong> and throughout much of south-east Asia and Australasia, excluding New Zealand (del Hoyo <em>et al.</em> 1996).",
+    "population": "The global population is estimated to number c.1,600,000-3,600,000 individuals (Wetlands International 2015).&#160;The European population is estimated at 316,000-605,000 breeding pairs (BirdLife International 2015).",
+    "habitats": "<strong>Behaviour</strong> This species is a strongly migratory coastal seabird (del Hoyo <em>et al.</em> 1996, Snow and Perrins 1998). It breeds between April and June in solitary pairs or colonially in groups of up to several thousand pairs (del Hoyo <em>et al.</em> 1996). Palearctic breeders migrate south after breeding between August and October, returning to the breeding grounds in March or April (del Hoyo <em>et al.</em> 1996). The species may moult on arrival in its the wintering grounds, when it may become vulnerable to human exploitation (van Halewyn and Norton 1984). It is gregarious throughout the year (Snow and Perrins 1998). Shoals of fish may attract dense feeding flocks, although it otherwise feeds singly or in small loose groups (del Hoyo <em>et al.</em> 1996, Snow and Perrins 1998). In some cases, it is territorial; in Massachusetts, feeding territories usually consist of linear strips of shoreline, which are occupied and defended regularly by both members of a pair. The prevalence of territoriality at feeding sites varies between colonies and is related to food species availability (Nisbet 1983). Most individuals forage 5-10 km from breeding colonies, occasionally feeding at sea 15 km offshore (del Hoyo <em>et al.</em> 1996). Common Terns forage over fresh water as well as marine habitats, and often follow predatory fish, waiting for panicking baitfish to surface. They sometimes forage in mixed-species flocks together with other terns (Safina 1990, Brenninkmeijer <em>et al. </em>2002).<strong> <br/></strong><strong>Habitat</strong> <em>Breeding</em> The species breeds in a wide variety of habitats in coastal and inland areas from sea-level to heights of greater than 4,000 m (del Hoyo <em>et al.</em> 1996). Along the coast, it shows a preference for nesting on flat rock surfaces on inshore islands, open shingle and sandy beaches, dunes and spits, vegetated inter-dune areas, sandy, rocky, shell-strewn or well-vegetated islands in estuaries and coastal lagoons, saltmarshes, mainland peninsulas and grassy plateaus atop coastal cliffs (Richards 1990, del Hoyo <em>et al.</em> 1996, Snow and Perrins 1998). Inland, it may nest in similar habitats, including sand or shingle lakes shores, shingle banks in rivers, sandy, rocky, shell-strewn or well-vegetated islands in lakes and rivers, sand- or gravel-pits, marshes, ponds, grassy areas and patches of dredged soil (Richards 1990, del Hoyo <em>et al.</em> 1996, Snow and Perrins 1998).<strong> </strong><em>Non-breeding</em> The species winters on sheltered coastal waters, estuaries and along large rivers, occupying harbours, jetties, piers, beaches and coastal wetlands including lagoons, rivers, lakes, swamps and saltworks, mangroves and saltmarshes (del Hoyo <em>et al.</em> 1996, Higgins and Davies 1996). During this season, it roosts on unvegetated sandy beaches, shores of estuaries or lagoons, sandbars and rocky shores (Higgins and Davies 1996). <strong><br/></strong><strong>Diet</strong> The species is opportunistic, its diet consisting predominantly of small fish and occasionally planktonic crustaceans and insects (del Hoyo <em>et al.</em> 1996). <br/><strong>Breeding site</strong> The nest is a shallow depression on open substrates with little or no vegetation placed near a vertical object (e.g. rock, shell, plant or artefact) to provide shelter for chicks and to facilitate nest identification (del Hoyo <em>et al.</em> 1996). Nest sites include the edges of bare sand amongst vegetation, rocks or logs, open areas on the margins of vegetation on beaches, the edges of mats of vegetation in marshes, and grassy or rocky substrates on rocky islets (del Hoyo <em>et al.</em> 1996). The species will also readily nest on artificial rafts (del Hoyo <em>et al.</em> 1996). <strong><br/></strong><strong>Foraging range </strong>Studies have observed foraging birds at up to 37 km from the nearest colony (Cramp 1985, BirdLife International 2000). However, although Common Terns tend to range further than Roseate Terns (BirdLife International 2000), most are observed within 10 km of a breeding colony (Becker <em>et al.</em> 1993, Wanless <em>et al.</em> 1998, Newton and Crowe 1999). At various sites, visual observations, e.g. of direction of flight, also suggest that most feeding trips are to sites within 10 km of the colony (Hopkins and Wiley 1972, Duffy 1986, Uttley <em>et al.</em> 1989, Burness <em>et al.</em> 1994, BirdLife International 2000), although birds in these studies were recorded at a maximum of 18 km from the colony (Duffy 1986). Radio-tagging at the Wadden Sea has shown that birds forage at a mean radius of at least 6.3 km (Becker <em>et al.</em> 1993), although the total distance travelled by individuals on these foraging trips is much greater, around 26-30 km. In Massachusetts, feeding territories tend to be located in shallow water up to 75 m from shore, and may be at least 8.5 km away from the breeding colony (Lemmetyinen 1973, Nisbet 1983, BirdLife International 2000), as well as areas where depth changes abruptly and tidal currents are strong, which presumably produces much upwelling and mixing of cold, deep water with warmer surface water (Safina 1990). Birds lower the rate at which they attempt to forage when windspeed is high (Taylor 1983).",
+    "threats": "<p>During the breeding season, the species is vulnerable to human disturbance at nesting colonies (Buckley and Buckley 1984, Blokpoel and Scharf 1991), with sources of disturbance including off-road vehicles, recreation, motor-boats, personal watercraft and dogs (van Halewyn and Norton 1984, Hyde 1997, Burger 1998, Gochfeld <em>et al.</em> 2018). The flooding of nest sites as a result of naturally fluctuating water levels can also result in complete breeding failure of the effected colony (Buckley and Buckley 1984, Hyde 1997, Gochfeld<em> et al.</em> 2018). Previously, this species has experienced significant declines due to egging, hunting and the millinery trade (Gochfeld <em>et al.</em> 2018). Although in most places populations have recovered, hunting remains a significant problem in some areas, including parts of West Africa, where human predation results in a fledging success rate of only 12% (Gochfeld <em>et al. </em>2018).</p>",
+    "measures": "<strong>Conservation Actions Underway</strong><br/>Management techniques used to increase the breeding numbers and reproductive success of the species in the Great Lakes region of North America include creating artificial nesting sites, vegetation management, enhancement of existing nesting habitat, using models and vocalisation to attract breeding pairs and predator control (e.g. mammal-exclusion, destruction of gull nests, direct predator removal, or preventative measures against gull nesting) (Blokpoel and Scharf 1991)<strong></strong>. A conservation scheme for the protection of gull and tern breeding colonies in coastal lagoons and deltas (e.g. Po Delta, Italy) involves protection from human disturbance, prevention of erosion of islet complexes, habitat maintenance and the creation of new islets for nest sites (Fasola and Canova 1996).&#160;Habitat restoration work was carried out on Praia Islet in the Azores Archipelago, including rabbit eradication, control of soil erosion, reintroduction of native plants and installation of nest boxes for the species (Bried&#160;<em>et al</em>. 2009).<br/><br/><strong>Conservation Actions Proposed</strong><br/>Maintain bare islets with 30-100 % cover of low vegetation (sward heights less than 20 cm) or artificially create some as nesting sites (Fasola and Canova 1996)<strong></strong>. Offer artificial nesting rafts to promote breeding in areas where there is a lack of suitable nesting habitat or where human disturbance is a particular threat (del Hoyo <em>et al.</em> 1996). Use controlled fire to expose the ground surface in areas where vegetation succession is proceeding too far towards closed vegetation stages (Hyde 1997). Enhance breeding productivity by deterring predatory gulls, either by culling or by the use of non-lethal harassment techniques, e.g. egg and nest destruction, conspicuous human observers, gull displacement walks, and pyrotechnics (Guillemette and Brousseau 2001, Donehower <em>et al.</em> 2007). <p></p><strong></strong>",
+    "use_trade": null,
+    "rationale": "This species has an extremely large range, and hence does not approach the thresholds for Vulnerable under the range size criterion (Extent of Occurrence &lt;20,000 km<sup>2</sup> combined with a declining or fluctuating range size, habitat extent/quality, or population size and a small number of locations or severe fragmentation). The population trend is unclear but it is not thought to approach the thresholds for Vulnerable under the population trend criterion (&gt;30% decline over ten years or three generations). The population size is extremely large, and hence does not approach the thresholds for Vulnerable under the population size criterion (&lt;10,000 mature individuals with a continuing decline estimated to be &gt;10% in ten years or three generations, or with a specified population structure). For these reasons the species is evaluated as Least Concern.",
+    "trend_justification": "The overall population trend is unclear. Some populations may be stable, while others have unknown trends (Wetlands International 2015). In North America, the species has undergone a large and statistically significant decrease over the last 40 years (-70.4% decline over 40 years, equating to a -26.2% decline per decade; data from Breeding Bird Survey and/or Christmas Bird Count: Butcher and Niven 2007). In Europe, the population is estimated to be increasing (BirdLife International 2015).",
+    "taxonomic_notes": "The BirdLife Taxonomic Working Group is aware that phylogenetic analyses have been published which have proposed generic rearrangements which may affect this species, but prefers to wait until work by other taxonomists reveals how these changes affect the entire groups involved."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Antarctic"
+      },
+      "code": "1"
+    },
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    },
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    },
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    },
+    {
+      "description": {
+        "en": "Oceanian"
+      },
+      "code": "6"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "Maintain bare islets with 30-100 % cover of low vegetation (sward heights less than 20 cm) or artificially create some as nesting sites. Offer artificial nesting rafts to promote breeding in areas where there is a lack of suitable nesting habitat or where human disturbance is a particular threat.",
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    },
+    {
+      "note": "Enhance breeding productivity by deterring predatory gulls, either by culling or by the use of non-lethal harassment techniques, e.g. egg and nest destruction, conspicuous human observers, gull displacement walks, and pyrotechnics.",
+      "code": "2_2",
+      "description": {
+        "en": "Invasive/problematic species control"
+      }
+    },
+    {
+      "note": "Use controlled fire to expose the ground surface in areas where vegetation succession is proceeding too far towards closed vegetation stages.",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "No",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Sea Cliffs and Rocky Offshore Islands"
+      },
+      "code": "13_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Shingle and/or Pebble Shoreline and/or Beaches"
+      },
+      "code": "12_3"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Sandy Shoreline and/or Beaches, Sand Bars, Spits, Etc"
+      },
+      "code": "12_2"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Rocky Shoreline"
+      },
+      "code": "12_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Estuaries"
+      },
+      "code": "9_10"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Estuaries"
+      },
+      "code": "9_10"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Seagrass (Submerged)"
+      },
+      "code": "9_9"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Seagrass (Submerged)"
+      },
+      "code": "9_9"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Macroalgal/Kelp"
+      },
+      "code": "9_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Macroalgal/Kelp"
+      },
+      "code": "9_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy-Mud"
+      },
+      "code": "9_5"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_5"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Rock and Rocky Reefs"
+      },
+      "code": "9_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Rock and Rocky Reefs"
+      },
+      "code": "9_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Loose Rock/pebble/gravel"
+      },
+      "code": "9_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Loose Rock/pebble/gravel"
+      },
+      "code": "9_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy"
+      },
+      "code": "9_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy"
+      },
+      "code": "9_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy-Mud"
+      },
+      "code": "9_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Mongolia"
+      },
+      "code": "MN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Passage"
+      ],
+      "description": {
+        "en": "Yemen"
+      },
+      "code": "YE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Uzbekistan"
+      },
+      "code": "UZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "United Arab Emirates"
+      },
+      "code": "AE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Turkmenistan"
+      },
+      "code": "TM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Tajikistan"
+      },
+      "code": "TJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Passage"
+      ],
+      "description": {
+        "en": "Saudi Arabia"
+      },
+      "code": "SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Passage"
+      ],
+      "description": {
+        "en": "Qatar"
+      },
+      "code": "QA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Passage"
+      ],
+      "description": {
+        "en": "Palestine, State of"
+      },
+      "code": "PS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Oman"
+      },
+      "code": "OM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Passage"
+      ],
+      "description": {
+        "en": "Lebanon"
+      },
+      "code": "LB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Kyrgyzstan"
+      },
+      "code": "KG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Passage"
+      ],
+      "description": {
+        "en": "Kuwait"
+      },
+      "code": "KW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Kazakhstan"
+      },
+      "code": "KZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mauritius"
+      },
+      "code": "MU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mali"
+      },
+      "code": "ML"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Malawi"
+      },
+      "code": "MW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Liberia"
+      },
+      "code": "LR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guinea-Bissau"
+      },
+      "code": "GW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Ghana"
+      },
+      "code": "GH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Equatorial Guinea"
+      },
+      "code": "GQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Djibouti"
+      },
+      "code": "DJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Côte d'Ivoire"
+      },
+      "code": "CI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Congo"
+      },
+      "code": "CG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Comoros"
+      },
+      "code": "KM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cabo Verde"
+      },
+      "code": "CV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Benin"
+      },
+      "code": "BJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Singapore"
+      },
+      "code": "SG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Philippines"
+      },
+      "code": "PH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Nepal"
+      },
+      "code": "NP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Maldives"
+      },
+      "code": "MV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Brunei Darussalam"
+      },
+      "code": "BN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bhutan"
+      },
+      "code": "BT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Suriname"
+      },
+      "code": "SR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Falkland Islands (Malvinas)"
+      },
+      "code": "FK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cayman Islands"
+      },
+      "code": "KY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Western Sahara"
+      },
+      "code": "EH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Barbados"
+      },
+      "code": "BB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "South Georgia and the South Sandwich Islands"
+      },
+      "code": "GS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Gibraltar"
+      },
+      "code": "GI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Iceland"
+      },
+      "code": "IS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Liechtenstein"
+      },
+      "code": "LI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Anguilla"
+      },
+      "code": "AI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Luxembourg"
+      },
+      "code": "LU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Malta"
+      },
+      "code": "MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Antigua and Barbuda"
+      },
+      "code": "AG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Aruba"
+      },
+      "code": "AW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bahamas"
+      },
+      "code": "BS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "El Salvador"
+      },
+      "code": "SV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cuba"
+      },
+      "code": "CU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Dominica"
+      },
+      "code": "DM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Dominican Republic"
+      },
+      "code": "DO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Grenada"
+      },
+      "code": "GD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Haiti"
+      },
+      "code": "HT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Martinique"
+      },
+      "code": "MQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Montserrat"
+      },
+      "code": "MS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cocos (Keeling) Islands"
+      },
+      "code": "CC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cook Islands"
+      },
+      "code": "CK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Puerto Rico"
+      },
+      "code": "PR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "New Caledonia"
+      },
+      "code": "NC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "NZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Papua New Guinea"
+      },
+      "code": "PG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Solomon Islands"
+      },
+      "code": "SB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Vanuatu"
+      },
+      "code": "VU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Saint Kitts and Nevis"
+      },
+      "code": "KN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Saint Lucia"
+      },
+      "code": "LC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bolivia, Plurinational States of"
+      },
+      "code": "BO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Saint Vincent and the Grenadines"
+      },
+      "code": "VC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Trinidad and Tobago"
+      },
+      "code": "TT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Chile"
+      },
+      "code": "CL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Réunion"
+      },
+      "code": "RE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Seychelles"
+      },
+      "code": "SC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Sierra Leone"
+      },
+      "code": "SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Togo"
+      },
+      "code": "TG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Zambia"
+      },
+      "code": "ZM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Hong Kong"
+      },
+      "code": "HK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Korea, Democratic People's Republic of"
+      },
+      "code": "KP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Korea, Republic of"
+      },
+      "code": "KR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Taiwan, Province of China"
+      },
+      "code": "TW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Austria"
+      },
+      "code": "AT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Belgium"
+      },
+      "code": "BE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Bosnia and Herzegovina"
+      },
+      "code": "BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Czechia"
+      },
+      "code": "CZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Denmark"
+      },
+      "code": "DK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Estonia"
+      },
+      "code": "EE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Faroe Islands"
+      },
+      "code": "FO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Finland"
+      },
+      "code": "FI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident",
+        "Passage"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident",
+        "Passage"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Hungary"
+      },
+      "code": "HU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Ireland"
+      },
+      "code": "IE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Latvia"
+      },
+      "code": "LV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Lithuania"
+      },
+      "code": "LT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "North Macedonia"
+      },
+      "code": "MK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Netherlands"
+      },
+      "code": "NL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Poland"
+      },
+      "code": "PL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Serbia"
+      },
+      "code": "RS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovakia"
+      },
+      "code": "SK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident",
+        "Passage"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Sweden"
+      },
+      "code": "SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Switzerland"
+      },
+      "code": "CH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Belize"
+      },
+      "code": "BZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Bermuda"
+      },
+      "code": "BM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Bonaire, Sint Eustatius and Saba"
+      },
+      "code": "BQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Sint Eustatius"
+      },
+      "code": "NLA-SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Saba"
+      },
+      "code": "NLA-SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Saint Pierre and Miquelon"
+      },
+      "code": "PM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Curaçao"
+      },
+      "code": "CW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Guadeloupe"
+      },
+      "code": "GP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Belarus"
+      },
+      "code": "BY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Moldova"
+      },
+      "code": "MD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "European Russia"
+      },
+      "code": "RU-EU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Central Asian Russia"
+      },
+      "code": "RU-CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Eastern Asian Russia"
+      },
+      "code": "RU-EA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Jamaica"
+      },
+      "code": "JM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Ukraine"
+      },
+      "code": "UA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Bonaire"
+      },
+      "code": "NLA-BO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Passage"
+      ],
+      "description": {
+        "en": "Fiji"
+      },
+      "code": "FJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Guam"
+      },
+      "code": "GU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Marshall Islands"
+      },
+      "code": "MH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Micronesia, Federated States of "
+      },
+      "code": "FM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Northern Mariana Islands"
+      },
+      "code": "MP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Palau"
+      },
+      "code": "PW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Saint Barthélemy"
+      },
+      "code": "BL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Saint Martin (French part)"
+      },
+      "code": "MF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Sint Maarten (Dutch part)"
+      },
+      "code": "SX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Turks and Caicos Islands"
+      },
+      "code": "TC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Virgin Islands, British"
+      },
+      "code": "VG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Virgin Islands, U.S."
+      },
+      "code": "VI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Passage"
+      ],
+      "description": {
+        "en": "Paraguay"
+      },
+      "code": "PY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Uruguay"
+      },
+      "code": "UY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Timor-Leste"
+      },
+      "code": "TL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Passage"
+      ],
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Afghanistan"
+      },
+      "code": "AF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Armenia"
+      },
+      "code": "AM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Azerbaijan"
+      },
+      "code": "AZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Passage"
+      ],
+      "description": {
+        "en": "Bahrain"
+      },
+      "code": "BH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cyprus"
+      },
+      "code": "CY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Iraq"
+      },
+      "code": "IQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Passage"
+      ],
+      "description": {
+        "en": "Jordan"
+      },
+      "code": "JO"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "BirdLife International",
+      "value": [
+        " BirdLife International (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Hermes, C.",
+      "value": [
+        "Claudia Hermes (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Ashpole, J, Butchart, S., Calvert, R., Ekstrom, J., Hatchett, J., Malpas, L., Martin, R. & Stuart, A.",
+      "value": [
+        "Jonathan Ekstrom (BirdLife International)",
+        "Stuart Butchart (BirdLife International)",
+        "Lucy Malpas (BirdLife International)",
+        "Rob Calvert (BirdLife International)",
+        "Jess Hatchett (BirdLife International)",
+        "Joscelyne Ashpole (BirdLife)",
+        "Rob Martin (BirdLife)",
+        "Alice Stuart"
+      ]
+    },
+    {
+      "credit_type_name": "institutions",
+      "full": "BirdLife International",
+      "value": [
+        "BirdLife International"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "Map for UAE Range updated, updated EOO."
+    }
+  ],
+  "references": [
+    {
+      "citation": "del Hoyo, J., Elliott, A., and Sargatal, J. 1996. <i>Handbook of the Birds of the World, vol. 3: Hoatzin to Auks</i>. Lynx Edicions, Barcelona, Spain.",
+      "year": "1996",
+      "title": "Handbook of the Birds of the World, vol. 3: Hoatzin to Auks",
+      "author": "del Hoyo, J., Elliott, A., and Sargatal, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "BirdLife International. 2000. <i>The Development of Boundary Selection Criteria for the Extension of Breeding Seabird Special Protection Areas into the Marine Environment. OSPAR Convention for the Protection of the Marine Environment of the North-East Atlantic.</i> Vlissingen (Flushing).",
+      "year": "2000",
+      "title": "The Development of Boundary Selection Criteria for the Extension of Breeding Seabird Special Protection Areas into the Marine Environment. OSPAR Convention for the Protection of the Marine Environment of the North-East Atlantic.",
+      "author": "BirdLife International",
+      "citation_short": null
+    },
+    {
+      "citation": "Wanless, S., Harris, M.P. and Greenstreet, S.P.R. 1998. Summer sandeel consumption by seabirds breeding in the Firth of Forth, south-east Scotland. <i>ICES Journal of Marine Science</i> 55(6): 1141-1151.",
+      "year": "1998",
+      "title": "Summer sandeel consumption by seabirds breeding in the Firth of Forth, south-east Scotland",
+      "author": "Wanless, S., Harris, M.P. and Greenstreet, S.P.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Snow, D.W. and Perrins, C.M. 1998. <i>The Birds of the Western Palearctic, Volume 1: Non-Passerines</i>. Oxford University Press, Oxford.",
+      "year": "1998",
+      "title": "The Birds of the Western Palearctic, Volume 1: Non-Passerines",
+      "author": "Snow, D.W. and Perrins, C.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Richards, A. 1990. <i>Seabirds of the northern hemisphere</i>. Dragon's World Ltd, Limpsfield, U.K.",
+      "year": "1990",
+      "title": "Seabirds of the northern hemisphere",
+      "author": "Richards, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fasola, M.; Canova, L. 1996. Conservation of gull and tern colony sites in north-eastern Italy, an internationally important bird area. <i>Colonial Waterbirds</i> 19: 59-67.",
+      "year": "1996",
+      "title": "Conservation of gull and tern colony sites in north-eastern Italy, an internationally important bird area",
+      "author": "Fasola, M.; Canova, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Delany, S. and Scott, D. 2006. <i>Waterbird population estimates</i>. Wetlands International, Wageningen, The Netherlands.",
+      "year": "2006",
+      "title": "Waterbird population estimates",
+      "author": "Delany, S. and Scott, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lemmetyinen, R. 1973. Feeding ecology of Sterna paradisea Pontopp. and S. hirundo L. in the Archipelago of Southwest Finland. <i>Annales Zoologici Fennici</i> 10: 507-525.",
+      "year": "1973",
+      "title": "Feeding ecology of Sterna paradisea Pontopp. and S. hirundo L. in the Archipelago of Southwest Finland",
+      "author": "Lemmetyinen, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Newton, S. F.; Crowe, O. 2000. <i>Roseate Terns - The Natural Connection.</i> IWC-BirdWatch Ireland, Monkstown, County Dublin.",
+      "year": "2000",
+      "title": "Roseate Terns - The Natural Connection.",
+      "author": "Newton, S. F.; Crowe, O.",
+      "citation_short": null
+    },
+    {
+      "citation": "Safina, C. 1990. Bluefish mediation of foraging competition between roseate and common terns. <i>Ecology</i> 71: 1804-1809.",
+      "year": "1990",
+      "title": "Bluefish mediation of foraging competition between roseate and common terns",
+      "author": "Safina, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Taylor, I. R. 1983. Effect of Wind on the Foraging Behaviour of Common and Sandwich Terns. <i>Ornis Scandinavica</i> 14(2): 90-96.",
+      "year": "1983",
+      "title": "Effect of Wind on the Foraging Behaviour of Common and Sandwich Terns",
+      "author": "Taylor, I. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "van Halewyn, R.; Norton, R. L. 1984. The status and conservation of seabirds in the Caribbean. In: Croxall. J. P. (ed.), <i>Seabird Status and Conservation: A Supplement</i>, pp. 169-222. International Council for Bird Preservation, Cambridge, U.K.",
+      "year": "1984",
+      "title": "The status and conservation of seabirds in the Caribbean",
+      "author": "van Halewyn, R.; Norton, R. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Burness, G.P., Morris, R.D. and Bruce, J.P. 1994. Seasonal and annual variation in brood attendance, prey type delivered to chicks, and foraging patterns of male common terns (Sterna-hirundo). <i>Canadian Journal of Zoology</i> 72(7): 1243-1251.",
+      "year": "1994",
+      "title": "Seasonal and annual variation in brood attendance, prey type delivered to chicks, and foraging patterns of male common terns (Sterna-hirundo)",
+      "author": "Burness, G.P., Morris, R.D. and Bruce, J.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Becker, P.H., Schuhmann, S. and Koepff, C. 1993. Hatching failure in common terns (Sterna-hirundo) in relation to environmental chemicals. <i>Environmental Pollution</i> 79(3): 207-213.",
+      "year": "1993",
+      "title": "Hatching failure in common terns (Sterna-hirundo) in relation to environmental chemicals",
+      "author": "Becker, P.H., Schuhmann, S. and Koepff, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Duffy, D.C. 1986. Foraging at patches: interactions between common and roseate terns. <i>Ornis Scandinavica</i> 17: 47-52.",
+      "year": "1986",
+      "title": "Foraging at patches: interactions between common and roseate terns",
+      "author": "Duffy, D.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nisbet, I.C.T. 1983. Paralytic shellfish poisoning: effects on breeding terns. <i>Condor</i> 85: 338-345.",
+      "year": "1983",
+      "title": "Paralytic shellfish poisoning: effects on breeding terns",
+      "author": "Nisbet, I.C.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Buckley, P. A.; Buckley, F. G. 1984. Seabirds of the north and middle Atlantic coasts of the United States: their status and conservation. In: Croxall, J.P.; Evans, P.G.H.; Schreiber, R.W. (ed.), <i>Status and conservation of the world's seabirds</i>, pp. 101-133. International Council for Bird Preservation, Cambridge, U.K.",
+      "year": "1984",
+      "title": "Seabirds of the north and middle Atlantic coasts of the United States: their status and conservation",
+      "author": "Buckley, P. A.; Buckley, F. G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Guillemette, M.; Brousseau, P. 2001. Does culling predatory gulls enhance the productivity of breeding common terns? <i>Journal of Applied Ecology</i> 38: 1-8.",
+      "year": "2001",
+      "title": "Does culling predatory gulls enhance the productivity of breeding common terns?",
+      "author": "Guillemette, M.; Brousseau, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Donehower, C. E.; Bird, D. M.; Hall, C. S.; Kress, S. W. 2007. Effects of Gull Predation and Predator Control on Tern Nesting Success at Eastern Egg Rock, Maine. <i>Waterbirds</i> 30(1): 29-39.",
+      "year": "2007",
+      "title": "Effects of Gull Predation and Predator Control on Tern Nesting Success at Eastern Egg Rock, Maine",
+      "author": "Donehower, C. E.; Bird, D. M.; Hall, C. S.; Kress, S. W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hopkins, C.D. and Wiley, R.H. 1972. Food parasitism and competition in two terns. <i>Auk</i> 89: 583-594.",
+      "year": "1972",
+      "title": "Food parasitism and competition in two terns",
+      "author": "Hopkins, C.D. and Wiley, R.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Blokpoel, H.; Scharf, W. C. 1991. Status and conservation of seabirds nesting in the Great Lakes of North America. In: Croxall. J. P. (ed.), <i>Seabird Status and Conservation: A Supplement</i>, pp. 17-41. International Council for Bird Preservation.",
+      "year": "1991",
+      "title": "Status and conservation of seabirds nesting in the Great Lakes of North America.",
+      "author": "Blokpoel, H.; Scharf, W. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Uttley, J; Monaghan, P; White, S. 1989. Differential-effects of reduced Sandeel availability on 2 sympatrically breeding species of tern. <i>Ornis Scandinavica  </i> 20(4): 273-277.",
+      "year": "1989",
+      "title": "Differential-effects of reduced Sandeel availability on 2 sympatrically breeding species of tern",
+      "author": "Uttley, J; Monaghan, P; White, S",
+      "citation_short": null
+    },
+    {
+      "citation": "Hyde, D. A. 1997. <i>Special animal abstract for </i>Sterna hirundo<i> (common tern).</i> Michigan Natural Features Inventory, Lansing, MI.",
+      "year": "1997",
+      "title": "Special animal abstract for <i>Sterna hirundo</i> (common tern).",
+      "author": "Hyde, D. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brenninkmeijer, A., Stienen, E.W.M., Klaassen, M. and Kersten, M. 2002. Feeding ecology of wintering terns in Guinea-Bissau. <i>Ibis</i> 144(4): 602-613.",
+      "year": "2002",
+      "title": "Feeding ecology of wintering terns in Guinea-Bissau",
+      "author": "Brenninkmeijer, A., Stienen, E.W.M., Klaassen, M. and Kersten, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bried, J., Magalhães, M.C., Bolton, M., Neves, V.C., Bell, E., Pereira, J.C., Aguiar, L., Monteiro, L.R. and Santos, R.S. 2009. Seabird habitat restoration on Praia Islet, Azores Archipelago. <i>Ecological Restoration</i> 27(1): 27-36.",
+      "year": "2009",
+      "title": "Seabird habitat restoration on Praia Islet, Azores Archipelago",
+      "author": "Bried, J., Magalhães, M.C., Bolton, M., Neves, V.C., Bell, E., Pereira, J.C., Aguiar, L., Monteiro, L.R. and Santos, R.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Butcher, G. S.; Niven, D. K. 2007. <i>Combining data from the Christmas bird count and the breeding bird survey to determine the continental status and trends of North American birds</i>.",
+      "year": "2007",
+      "title": "Combining data from the Christmas bird count and the breeding bird survey to determine the continental status and trends of North American birds",
+      "author": "Butcher, G. S.; Niven, D. K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brazil, M. 2009. <i>Birds of East Asia: eastern China, Taiwan, Korea, Japan, eastern Russia</i>. Christopher Helm, London.",
+      "year": "2009",
+      "title": "Birds of East Asia: eastern China, Taiwan, Korea, Japan, eastern Russia",
+      "author": "Brazil, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "BirdLife International. 2015. European Red List of Birds. Office for Official Publications of the European Communities, Luxembourg.",
+      "year": "2015",
+      "title": "European Red List of Birds",
+      "author": "BirdLife International",
+      "citation_short": null
+    },
+    {
+      "citation": "Wetlands International. 2015. Waterbird Population Estimates. Available at: <a href=\"wpe.wetlands.org\">wpe.wetlands.org</a>. (Accessed: 17/09/2015).",
+      "year": "2015",
+      "title": "Waterbird Population Estimates",
+      "author": "Wetlands International",
+      "citation_short": null
+    },
+    {
+      "citation": "Cramp, S. 1985. <i>Handbook of the birds of Europe, the Middle East and Africa. The birds of the western Palearctic vol IV: terns to woodpeckers</i>. Oxford University Press, Oxford.",
+      "year": "1985",
+      "title": "Handbook of the birds of Europe, the Middle East and Africa. The birds of the western Palearctic vol IV: terns to woodpeckers",
+      "author": "Cramp, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2018. The IUCN Red List of Threatened Species. Version 2018-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 15 November 2018).",
+      "year": "2018",
+      "title": "The IUCN Red List of Threatened Species. Version 2018-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2018-2"
+    },
+    {
+      "citation": "Gochfeld, M., Burger, J., Christie, D.A. and Garcia, E.F.J. 2018. Common Tern (<i>Sterna hirundo</i>). In: del Hoyo, J., Elliott, A., Sargatal, J., Christie, D.A. and de Juana, E. (eds), <i>Handbook of the Birds of the World Alive</i>, Lynx Edicions, Barcelona. https://www.hbw.com/node/54025.",
+      "year": "2018",
+      "title": "Common Tern (<i>Sterna hirundo</i>)",
+      "author": "Gochfeld, M., Burger, J., Christie, D.A. and Garcia, E.F.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Butler, C. J. 2003. The disproportionate effect of global warming on the arrival dates of short-distance migratory birds in North America. <i>Ibis</i> 145: 484-495.",
+      "year": "2003",
+      "title": "The disproportionate effect of global warming on the arrival dates of short-distance migratory birds in North America",
+      "author": "Butler, C. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2019. The IUCN Red List of Threatened Species. Version 2019-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 December 2019).",
+      "year": "2019",
+      "title": "The IUCN Red List of Threatened Species. Version 2019-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2019-3"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    },
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

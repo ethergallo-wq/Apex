@@ -1,0 +1,2636 @@
+{
+  "assessment_date": "2023-06-27T01:00:00.000+01:00",
+  "year_published": "2023",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 13653,
+  "criteria": "D1",
+  "url": "https://www.iucnredlist.org/species/13653/238637039",
+  "citation": "Karamanlidis, A.A., Dendrinos, P., Fernandez de Larrinoa, P., Kıraç, C.O., Nicolaou, H. & Pires, R. 2023. Monachus monachus. The IUCN Red List of Threatened Species 2023: e.T13653A238637039. Accessed on 15 May 2026.",
+  "assessment_id": 238637039,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 13653,
+    "scientific_name": "Monachus monachus",
+    "species_taxa": [],
+    "subpopulation_taxa": [
+      {
+        "sis_id": 120868933,
+        "scientific_name": "Monachus monachus Cabo Blanco subpopulation",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "CARNIVORA",
+        "family_name": "PHOCIDAE",
+        "genus_name": "Monachus",
+        "species_name": "monachus",
+        "subpopulation_name": "Cabo Blanco subpopulation",
+        "infra_name": null,
+        "authority": "(Hermann, 1779)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Pinniped Specialist Group (seals and walruses)",
+            "url": null,
+            "description": "Chair: Kit Kovacs (email: kit.kovacs@npolar.no)\nRed List Authority Coordinator: Simon Goldsworthy (email: simon.goldsworthy@sa.gov.au) and Alexandros Karamanlidis (email: akaramanlidis@gmail.com)"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Foca Monje",
+            "language": "spa"
+          },
+          {
+            "main": true,
+            "name": "Mediterranean Monk Seal Cabo Blanco subpopulation",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Phoca monachus Hermann, 1779",
+            "status": "ADD",
+            "genus_name": "Phoca",
+            "species_name": "monachus",
+            "species_author": "Hermann, 1779",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          }
+        ]
+      },
+      {
+        "sis_id": 120868935,
+        "scientific_name": "Monachus monachus Eastern Mediterranean subpopulation",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "CARNIVORA",
+        "family_name": "PHOCIDAE",
+        "genus_name": "Monachus",
+        "species_name": "monachus",
+        "subpopulation_name": "Eastern Mediterranean subpopulation",
+        "infra_name": null,
+        "authority": "(Hermann, 1779)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Pinniped Specialist Group (seals and walruses)",
+            "url": null,
+            "description": "Chair: Kit Kovacs (email: kit.kovacs@npolar.no)\nRed List Authority Coordinator: Simon Goldsworthy (email: simon.goldsworthy@sa.gov.au) and Alexandros Karamanlidis (email: akaramanlidis@gmail.com)"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Foca Monje",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Phoque-moine Méditerranéen",
+            "language": "fre"
+          },
+          {
+            "main": true,
+            "name": "Mediterranean Monk Seal Eastern Mediterranean Subpopulation",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Phoca monachus Hermann, 1779",
+            "status": "ACCEPTED",
+            "genus_name": "Phoca",
+            "species_name": "monachus",
+            "species_author": "Hermann, 1779",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          }
+        ]
+      },
+      {
+        "sis_id": 120868931,
+        "scientific_name": "Monachus monachus Madeira Islands subpopulation",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "CARNIVORA",
+        "family_name": "PHOCIDAE",
+        "genus_name": "Monachus",
+        "species_name": "monachus",
+        "subpopulation_name": "Madeira Islands subpopulation",
+        "infra_name": null,
+        "authority": "(Hermann, 1779)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Pinniped Specialist Group (seals and walruses)",
+            "url": null,
+            "description": "Chair: Kit Kovacs (email: kit.kovacs@npolar.no)\nRed List Authority Coordinator: Simon Goldsworthy (email: simon.goldsworthy@sa.gov.au) and Alexandros Karamanlidis (email: akaramanlidis@gmail.com)"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Mediterranean Monk Seal Madeira Islands Subpopulation",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Foca Monje",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Phoque-moine Méditerranéen",
+            "language": "fre"
+          },
+          {
+            "main": true,
+            "name": "Madeira Islands Monk Seals",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Phoca monachus Hermann, 1779",
+            "status": "ACCEPTED",
+            "genus_name": "Phoca",
+            "species_name": "monachus",
+            "species_author": "Hermann, 1779",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          }
+        ]
+      }
+    ],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CARNIVORA",
+    "family_name": "PHOCIDAE",
+    "genus_name": "Monachus",
+    "species_name": "monachus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Hermann, 1779)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Pinniped Specialist Group (seals and walruses)",
+        "url": null,
+        "description": "Chair: Kit Kovacs (email: kit.kovacs@npolar.no)\nRed List Authority Coordinator: Simon Goldsworthy (email: simon.goldsworthy@sa.gov.au) and Alexandros Karamanlidis (email: akaramanlidis@gmail.com)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Akdeniz Foku",
+        "language": "tur"
+      },
+      {
+        "main": false,
+        "name": "Foca Monje",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Lobo-marinho",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Phoque-moine Méditerranéen",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Μεσογειακή φώκια",
+        "language": "gre"
+      },
+      {
+        "main": true,
+        "name": "Mediterranean Monk Seal",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Phoca monachus Hermann, 1779",
+        "status": "ACCEPTED",
+        "genus_name": "Phoca",
+        "species_name": "monachus",
+        "species_author": "Hermann, 1779",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Increasing"
+    },
+    "code": "0"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": "2-5",
+    "upper_elevation_limit": 5,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": 429,
+    "upper_depth_limit": 0,
+    "population_size": "444-600",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "No",
+    "generational_length": "11.2",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": "3",
+    "continuing_decline_in_subpopulations": "No",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": "247-402",
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "No",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": "No",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "No",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "<em>Monachus monachus</em> (Mediterranean Monk Seals) were once widely and continuously distributed throughout the entire Mediterranean and Black Sea and the Archipelagos of the Canary, Madeira and Azores Islands (Karamanlidis <em>et al</em>. 2016a), as well as the north-western coast of Africa and the coast of the Iberian Peninsula in the north-eastern Atlantic Ocean (González 2015). Today the global distribution of the species is fragmented into three main subpopulations, one in the eastern Mediterranean Sea and two in the northeastern Atlantic Ocean. In the eastern Mediterranean Sea, the most important reproductive areas of the species are at islands in the Ionian and Aegean Seas, and along the coasts of mainland Greece, Türkiye and Cyprus (Adamantopoulou <em>et al</em>. 1999, Güçlüsoy <em>et al</em>. 2004, Gücü <em>et al</em>. 2004, Gücü <em>et al</em>. 2009a, Gücü <em>et al</em>. 2009b, Nicolaou <em>et al</em>. 2019, Beton <em>et al</em>. 2021, Adamantopoulou <em>et al</em>. 2022). In the Turkish Black Sea, Mediterranean Monk Seals are believed to be extinct since 1997 (Kıraç and Savas 1996; Kıraç 2001, 2011); some individuals still survive in the Sea of Marmara (Inanmaz <em>et al.</em> 2014, Kıraç and Veryeri 2018). Following a number of sightings (Bundone <em>et al</em>. 2022) and the birth of a pup in 2019 (Eastern Adriatic Monk seal Project 2019) the species is considered to be resident now also in Albania.<br/><br/>Sightings/occurrences of vagrant animals, most likely originating from Greece and Türkiye, are reported/assumed from throughout the Mediterranean (Karamanlidis<em> et al</em>. 2016a, Bundone <em>et al</em>. 2019): e.g., Italy (Fioravanti <em>et al</em>. 2020, Valsecchi <em>et al</em>. 2022), Montenegro and Croatia (Eastern Adriatic Monk seal Project 2019), Lebanon, Israel (Scheinin <em>et al</em>. 2011), Libya (Alfaghi <em>et al</em>. 2013), Egypt and Spain (Valsecchi <em>et al</em>. 2022). Mediterranean Monk Seals are considered extinct in Algeria, Bosnia and Herzegovina, Bulgaria, Cabo Verde, France, Gambia, Georgia, Malta, Monaco, Morocco, Portugal (continental part and Archipelago of Azores), Romania, Russia, Senegal, Slovenia, Spain (including the Canary Islands in the Atlantic Ocean), Tunisia and Ukraine.<br/><br/>In the north-eastern Atlantic Ocean Monk seals have gone extinct throughout their historical range and survive nowadays only in the Cabo Blanco Peninsula (Ras Nouadhibou) and the Archipelago of Madeira (Pires and Neves 2001, Karamanlidis <em>et al</em>. 2003, Karamanlidis <em>et al</em>. 2004, Pires <em>et al</em>. 2008, González 2015, Pires <em>et al.</em> 2020, Fernández de Larrinoa <em>et al</em>. 2021, Pires <em>et al</em>. 2023).",
+    "population": "The once abundant Mediterranean Monk Seal has disappeared from most of its historical range; the most significant declines in the Mediterranean Sea occurred during ancient and historic times (Johnson and Lavigne 1999, Johnson 2004) and along the Atlantic coasts of northwest Africa during the 14th–16th centuries when commercial exploitation of the Monk Seal colonies on open beaches took place (González 2015). Deliberate killing up until the first half of the 20th century reduced Monk Seal populations further (Karamanlidis <em>et al</em>. 2016a). All these significant population declines occurred more than three generations ago.&#160;Nine <a href=\"https://www.marinemammalhabitat.org/imma-eatlas/\">Important Marine Mammal Areas</a> (IMMAs) have been identified for this species, including the Cabo Blanco IMMA, the Madeira and Desertas IMMA, and seven IMMAs in the eastern Mediterranean.<br/><br/>Conservation measures introduced over the last 35 years have helped to stem the decline, and there is now evidence of an increase in the size of the surviving subpopulations in the Atlantic Sea, i.e., Cabo Blanco Peninsula (Ras Nouadhibou) and the Archipelago of Madeira (Pires <em>et al</em>. 2020, Fernández de Larrinoa <em>et al</em>. 2021, Pires <em>et al</em>. 2023), as well as a recent, significant increase in the range of the Mediterranean Monk Seal in Greece, in the eastern Mediterranean Sea (Adamantopoulou <em>et al</em>. 2022). However, the global population of the Mediterranean Monk Seal remains small and still faces many threats (see the 'Threats' section). The Mediterranean Monk Seal is regarded as one of the most endangered pinniped species in the world, with an estimated total global population size of fewer than 1,000 mature individuals (Karamanlidis and Dendrinos 2015, Karamanlidis <em>et al</em>. 2019, CBD Habitat, Department of Fisheries and Marine Research Cyprus, MOm, IFCN, SAD-AFAG unpublished data September 2023).<br/><br/>Three subpopulations are globally recognised, two in the Atlantic Ocean and one in the Mediterranean Sea. The Atlantic Ocean subpopulations have been the subject of intensive monitoring efforts for more than 10 years that have produced accurate population size estimates: The 2021 census of the subpopulation in the Archipelago of Madeira identified 27 individuals (Pires <em>et al</em>. 2023). The colony in the Cabo Blanco Peninsula (Ras Nouadhibou), which is concentrated in a small area, has been estimated to number approximately 350 seals (CBD-Habitat unpublished data September 2023). The other large Monk Seal subpopulation is widely distributed, mainly throughout the eastern Mediterranean Sea (Karamanlidis and Dendrinos 2015, Karamanlidis <em>et al</em>. 2019). Based on population parameters from the Monk Seal subpopulations in the Cabo Blanco Peninsula (Ras Nouadhibou) (P. Fernandez de Larrinoa pers. comm. September 2023), Madeira (Pires <em>et al.</em> 2023), and the reproductive nuclei in Astakida (MOm 2008a) and Gyaros (Karamanlidis and Dendrinos 2012) in Greece, a minimum annual pup production in the eastern Mediterranean of 97 [i.e., Greece: 75; Türkiye: 17 (M. Ok and C.O. Kiraç pers. comm. September 2023), Cyprus: 3; Remainder: 2] and a “pup multiplier” created from the relationship between the number of pups born annually and the number of reproducing animals in a given subpopulation (A. Karamanlidis pers. comm. September 2023), the global number of mature animals is likely 444-600.",
+    "habitats": "Mediterranean Monk Seals are medium-sized phocids that reach 2.3-2.8 m in length (Littnan <em>et al</em>. 2018). Based on seals examined after a mass mortality event in the Cabo Blanco Peninsula (Ras Nouadhibou), average adult lengths were estimated at 2.42 m in females and 2.51 m in males. Pups up to three months of age averaged 1.08 m in length with a range of 0.74-1.38 m (Samaranch and González 2000). In Europe, new-born pups average 1.02 m and 15.5 kg in weight (Dendrinos 2011). Adults weigh from 240-300 kg (Littnan <em>et al</em>. 2018), with maximum records for a male weighing 400 kg and a pregnant female 302 kg (Sergeant <em>et al</em>. 1978).<br/><br/>Mediterranean Monk Seal pups in the Cabo Blanco Peninsula (Ras Nouadhibou) moult on average 64 days after birth in the case of females and 82 days on average in the case of males; the moult occurs partly in the water and is completed after approximately 15 days (Badosa <em>et al.</em> 2006). In contrast, in the eastern Mediterranean Sea, the first moult occurs 19-57 days postpartum (Dendrinos 2011). Adult male Monk Seals develop the characteristic, black, adult pelage at the age of 4-6 years (Koemtzopoulos <em>et al</em>. 2022; R. Pires pers. comm. September 2023).<br/><br/>Mediterranean Monk Seals once hauled out on open beaches (Johnson and Lavigne 1999, Johnson 2004), but today they primarily use throughout their range marine caves for hauling out, resting, and pupping (González 2015, Karamanlidis <em>et al</em>. 2016a). However, in recent years Monk Seals in the Archipelago of Madeira (since 1997) (Pires <em>et al</em>. 2020) and in Greece (Dendrinos <em>et al</em>. 2008, Dendrinos <em>et al</em>. 2022) have been observed hauling out increasingly on open beaches and resting in the water (Pires 2011, Karamanlidis <em>et al</em>. 2017).<br/><br/>Most marine caves used by Mediterranean Monk Seals for resting and pupping possess a set of common geophysical characteristics, that include an entrance corridor and a dry surface/area where the seals haul out (Karamanlidis <em>et al</em>. 2004, Dendrinos <em>et al</em>. 2007b). Seal preferences regarding cave selection and use in an area are influenced by numerous parameters (Dendrinos <em>et al.</em> 1994). As a result, Monk Seals in the eastern Mediterranean and the Archipelago of Madeira use a high number of marine caves for resting and pupping (Gücü <em>et al</em>. 2004; MOm 2007, 2008b, 2009). In Greece, more than 500 caves have been found to be occupied by the species and more than 100 are used for pupping (MOm 2007, 2008b, 2009). Similarly, in a study that covered the coastline inhabited by Monk Seals in the Cilician Basin region of southern Türkiye 39 marine caves were discovered, including three that were used for pupping and 16 that were actively used at the time of the survey (Gücü <em>et al</em>. 2004). At the island of Madeira and the sub-archipelago of the Desertas Islands 12 and 13 marine caves are considered to be suitable for the Mediterranean Monk Seal; from these, two and nine respectively are currently used by the species (Pires <em>et al</em>. 2020). In contrast, in the Cabo Blanco Peninsula (Ras Nouadhibou) only three caves are primarily used for hauling out and pupping (Fernández de Larrinoa <em>et al</em>. 2021). Cave selection may be influenced by changes in the internal morphology of a cave, as has been seen to occur in the Cabo Blanco Peninsula (Ras Nouadhibou) (González <em>et al</em>. 1997) or the state of the tide (only in the Atlantic populations, as tides in the Mediterranean are negligible) (Pires <em>et al</em>. 2007). Monk Seal activity in and around the marine caves in the eastern Mediterranean Sea and the Archipelago of Madeira is highest in autumn and winter and coincides with the pupping season of the species (Dendrinos <em>et al</em>. 1994, Gücü <em>et al</em>. 2004, Pires <em>et al</em>. 2007, Dendrinos 2011).<br/><br/>Monk Seal pupping in the eastern Mediterranean Sea and the Archipelago of Madeira is quite synchronous, occurring mainly in the months of October and November. This has been the case for more than 220 pups born in Greece from 1990 to 2014 (Dendrinos <em>et al</em>. 1994, Dendrinos 2011, MOm unpublished data September 2023), for 11 pups born at the Cilician Basin (Gücü <em>et al</em>. 2004) and six pups born at the coasts of İzmir and Muğla in Türkiye (SAD-AFAG unpublished data September 2023) and the majority of pups born in Madeira from 1990 onwards (Pires 2011, IFCN unpublished data September 2023). In contrast, in the Cabo Blanco Peninsula (Ras Nouadhibou) births can take place throughout the year (P. Fernández de Larrinoa pers. comm. September 2023). Pups begin to catch fish toward the end of their lactation period (Pastor and Aguilar 2003) and are weaned when they are about four months old, with up to five months reported (Pastor and Aguilar 2003, Aguilar <em>et al</em>. 2007, Dendrinos 2011, Kıraç and Ok 2019). Fostering and allosuckling are not uncommon and have been recorded in the Cabo Blanco Peninsula (Ras Nouadhibou) (Aguilar <em>et al</em>. 2007), the Archipelago of Madeira (Pires 2004), and in Greece (Karamanlidis <em>et al</em>. 2013). At the Cabo Blanco subpopulation, in 26.6% of the suckling episodes observed in mother–pup pairs of known identity, pups suckled from females other than their mothers. Some females nursed more than one pup at least occasionally, and in some cases, a pup was fostered long-term by an unrelated female (Aguilar <em>et al</em>. 2007). Pups enter the water and begin diving during the first week of their life (Karamanlidis <em>et al</em>. 2010, Karamanlidis <em>et al</em>. 2021a).<br/><br/>Generation length for the Mediterranean Monk Seal is estimated to be 11.2 years (Pacifici <em>et al</em>. 2013). Female Monk Seals in the Cabo Blanco Peninsula (Ras Nouadhibou) become sexually mature at three years of age (Fernández de Larrinoa <em>et al</em>. 2021) and can give birth in successive years. In contrast, in the Archipelago of Madeira, the age of first reproduction of females has been estimated at 6-7 years of age (Pires <em>et al</em>. 2020, Pires <em>et al</em>. 2023). Male Monk Seals have been recorded to become sexually mature at the age of four in Cabo Blanco, at the age of 4.5 in Greece (Koemtzopoulos <em>et al</em>. 2022) and at the age of 4-6 years in the Archipelago of Madeira (R. Pires pers. comm. September 2023).<br/><br/>Annual pup survival in the Cabo Blanco Peninsula (Ras Nouadhibou) is 0.59 (0.55-0.62) at two months of age and 0.46 (0.43-0.49) from birth to the age of one year (Fernández de Larrinoa <em>et al</em>. 2021). In the Archipelago of Madeira, the survival rate during the first year of life is 0.47 (0.31-0.64) (Pires <em>et al</em>. 2023). In the eastern Mediterranean Sea, and more specifically in Greece, annual pup survival until weaning has not been estimated, but is suspected to be generally higher (i.e., 0.7) than that recorded in the Atlantic subpopulations, which is most likely due to the fact that lactating females and their pups have a higher number of suitable caves to choose from when seeking refuge from severe weather conditions.<br/><br/>Telemetry studies have been performed in the Cabo Blanco Peninsula (Ras Nouadhibou) and in the Archipelago of Madeira in order to assess the diving behaviour of the Monk Seal. In the Cabo Blanco Peninsula, the maximum depth and duration of diving for one lactating female were 78 m and 15 minutes respectively (Gazo and Aguilar 2005), and 100 m for an adult male (P. Fernandez de Larrinoa pers. comm. September 2023). Although maximum dive depths for an adult male and an adult female of 393 m and 429 m have been recorded in the Archipelago of Madeira respectively, the majority (i.e., 80%) of the dives were between 0 m and 49 m and 99.6% of the dives occurred up to a depth of 200 m (Pires <em>et al</em>. 2020). In the eastern Mediterranean Sea, maximum dive depths for a rehabilitated male and a female Monk Seal in Greece were 123 m (Dendrinos <em>et al</em>. 2007a) and 191 m (MOm unpublished data September 2023), respectively. In Türkiye, adult Monk Seals have been observed to dive for an average of approximately 6.5 minutes and then rest at the surface for approximately one minute (Kıraç <em>et al</em>. 2002). Monk seals in the eastern Mediterranean Sea have been recorded to travel ~288 km in three months with a maximum straight distance travelled of ~78 km (Adamantopoulou <em>et al</em>. 2011).<br/><br/>Stomach content analysis of dead Monk Seals has revealed that they have a heterogeneous diet consisting of bony fishes, cephalopods, and crustaceans. In Greece for example, Monk Seals are known to eat more than 70 different prey species [50% cephalopods, 48% fishes, 1.5% non-cephalopod molluscs, 0.4% crustaceans (Pierce <em>et al</em>. 2011)]. The Common Octopus (<em>Octopus vulgaris</em> ~34%) and bony fish from the family Sparidae (~28%) were most frequently identified in Monk Seal stomachs (Pierce <em>et al</em>. 2011). Collectively, results from throughout the range of the species from direct observations (Neves 1998, Neves and Pires 1999), stomach content (Machado 1979, Salman <em>et al</em>. 2001, Karamanlidis <em>et al</em>. 2011, Pierce <em>et al</em>. 2011, Tonay <em>et al</em>. 2016, Pires <em>et al</em>. 2020) and stable isotope analyses (Karamanlidis <em>et al</em>. 2014) suggest that Monk Seals in the eastern Mediterranean Sea and in the Archipelago of Madeira forage primarily on the continental shelf along the coast.",
+    "threats": "Mediterranean Monk Seals have a long history of interaction with humans that includes exploitation for subsistence needs, commercial harvest, and persecution as a competitor for fisheries resources or because they caused actual and perceived damage to fishing gear (Johnson and Lavigne 1999, Stringer <em>et al</em>. 2008, González 2015). Once abundant, Monk Seals were written about and illustrated in the literature of classical antiquity (Johnson 2004).<br/><br/>The major reasons for the population decline of Monk Seals in the 20th century include: increased human pressure displacing seals from their original habitat; destruction/alteration of suitable habitat; negative interactions with the fisheries industry (including aquaculture), i.e., deliberate aggression by fishermen to eliminate a competitor, even in countries and areas where the species is legally protected; fisheries bycatch and a mass mortality (Forcada <em>et al</em>. 1999, Kıraç <em>et al</em>. 2013, Karamanlidis <em>et al</em>. 2016a, Karamanlidis <em>et al</em>. 2020, Kıraç <em>et al</em>. 2020, Pires <em>et al</em>. 2020).<br/><br/>Habitat deterioration, destruction, and fragmentation have played a significant role in the plight of the Mediterranean Monk Seal. Once an open beach dweller, the species has been persecuted by humans for centuries and forced into increasingly marginal habitat. This habitat shift has been thoroughly documented (Johnson and Lavigne 1999). This marginalization is still the case today, both, in the eastern Mediterranean Sea (MOm 2007, Kıraç <em>et al</em>. 2013, Dendrinos <em>et al</em>. 2020) and in the Atlantic Ocean, where the high pup mortality recorded currently has been associated with pupping in suboptimal habitat (Pires <em>et al</em>. 2020). An alarming decline in pupping success has been recorded in the most important pupping location of the species in southern Türkiye, due to increased human activity (i.e., industrial development, including the construction of a thermal and nuclear power plant and a marine terminal). Critical Monk Seal habitat has been affected by increased tourism activities throughout Türkiye, even in protected areas such as the Olympos Beydagları National Park, and the Kas, Kekova Specially Protected Area. Although some resting activity by Mediterranean Monk Seals continues in these caves, no pupping has been recorded recently (Gücü <em>et al</em>. 2009b). Tourists and SCUBA divers, boat excursions, and even unauthorized and incompetent research activities in Monk Seal shelters in Türkiye appear to have increased in the last decade and are considered a disturbance to the species (Kıraç and Savaş 2019, SAD-AFAG unpublished data September 2023). Similarly, in the Archipelago of Madeira tourism activities at sea are considered to be a disturbance to Mediterranean Monk Seals if not conducted properly (Pires <em>et al</em>. 2020). With human populations and coastal activities increasing throughout the range of the species there are corresponding increases in threats to the species' habitat.<br/><br/>Interactions with fisheries remain a great conservation concern throughout the entire range of the Monk Seal (Güçlüsoy and Savaş 2003; Güçlüsoy 2008a,b; Karamanlidis <em>et al</em>. 2008, Karamanlidis <em>et al</em>. 2020). The deliberate killing of Monk Seals, mainly by fishermen, has been responsible for at least 110 dead seals recorded throughout Greece from 1990 on (MOm unpublished data September 2023) and is considered one of the most important sources of mortality for the species in the eastern Mediterranean (Androukaki <em>et al</em>. 1999). Deliberate killing, hunting, and the capture of live animals for exhibition purposes were the main cause for the population reduction of the species in Türkiye until 1980 (Kıraç <em>et al</em>. 2013). At least 14 Monk Seals have died from entanglement in fishing gear in the Turkish Aegean and Mediterranean Sea (Kıraç <em>et al</em>. 2020, SAD-AFAG unpublished data September 2023). In the Archipelago of Madeira the aquaculture industry increasingly represents a threat to the local Monk Seal population (Pires <em>et al</em>. 2020).<br/><br/>Mediterranean Monk Seals have been entangled in a wide variety of fishing gear including set-nets, trawl nets, and long-lines (Johnson and Karamanlidis 2000) and entanglement remains a major source of mortality in the eastern Mediterranean Sea, especially for sub-adult animals (Karamanlidis <em>et al</em>. 2008, Kıraç <em>et al</em>. 2013, Karamanlidis <em>et al</em>. 2020, Kıraç <em>et al</em>. 2020). In the Archipelago of Madeira, despite original indications that negative interactions with fisheries were lower than in other areas of the species’ distribution (Hale <em>et al</em>. 2011), recent data indicate that accidental catches in fishing traps and deliberate killings associated with this industry are on the rise (Pires <em>et al</em>. 2020).<br/><br/>Potentially, limited availability of food sources, genetic inbreeding, pollution, cave collapses and epizootic outbreaks could constitute threats to the survival of the Monk Seal. In the Archipelago of Madeira for example, limited food resources have been associated with the poor nutritional status of individual Monk Seals and the late sexual maturity of females compared to other areas of the species’ distribution (Pires <em>et al</em>. 2020). Similarly, in the Cabo Blanco Peninsula, a mass mortality event such as the one that occurred in 1997 (Forcada <em>et al</em>. 1999) and/or the collapse of one or more of the remaining marine caves used by the species (González <em>et al</em>. 1997) would have detrimental effects on this subpopulation (Fernández de Larrinoa <em>et al</em>. 2021).<br/><br/>Genetic analyses of mitochondrial and nuclear DNA (Pastor <em>et al</em>. 2007, Karamanlidis <em>et al</em>. 2016b, Gaubert <em>et al</em>. 2019, Rey-Iglesia <em>et al</em>. 2020, Karamanlidis <em>et al</em>. 2021b) have shown that as a consequence of severe population bottlenecks and population/habitat fragmentation, Monk Seals have suffered a dramatic decrease in genetic diversity over the last few centuries. The genetic diversity of Mediterranean Monk Seals is among the lowest found in pinnipeds; it is comparable to Hawaiian Monk Seals (<em>Neomonachus schauinslandi</em>) and Northern Elephant Seals (<em>Mirounga angustirostris</em>) (Karamanlidis <em>et al.</em> 2016b). The potential consequences of the loss of genetic variability and genetic inbreeding are still hard to evaluate for the Mediterranean Monk Seal. Additionally, low fitness and increased susceptibility to disease may be an effect of genetic erosion.<br/><br/>Contaminant burdens have always been suspected to be a threat to the Mediterranean Monk Seal (Boulva 1979, Reijnders <em>et al.</em> 1993). Research on organochlorine pollutants, which were analysed in the blubber of individuals collected during the 1990s from the Cabo Blanco and the subpopulation in the eastern Mediterranean, indicate that residue levels were very low in the former subpopulation and moderate to high in the latter (Yediler <em>et al</em>. 1993, Borrell <em>et al</em>. 1997, Borrell <em>et al</em>. 2007). More recent research efforts indicate that trace elements do not constitute a major conservation threat for Monk Seals in Greece (Formigaro <em>et al</em>. 2016).<br/><br/>Mediterranean Monk Seals are at an unknown, but suspected, medium level of risk from oil spills. This results from increased tanker traffic, and a greater chance for accidents, disturbance, and collisions near important habitats. In Türkiye, at least three such accidents that have affected Monk Seals and their habitat have occurred (Kıraç 1998, Kıraç <em>et al</em>. 2022). In response to one of these accidents, a clean-up operation and regulatory measures were taken in Türkiye to reduce the threat from oil spills (Kıraç and Güçlüsoy 2007). Accumulation of solid waste negatively affecting suitable monk seal habitat has been recorded in Greece, Türkiye and Cyprus and has been dealt with, with clean-up operations (Dendrinos<em> et al.</em> 2015).<br/><br/>The arrival of Lessepsian fishes in the eastern Mediterranean Sea, such as the toxic Silver-cheeked Toadfish (<em>Lagocephalus sceleratus</em>), could have a negative impact on Monk Seals in the region. This fish has been implicated in the death of at least one Monk Seal in northern Cyprus (A.C. Gücü pers. comm. November 2022).",
+    "measures": "The Mediterranean Monk Seal is legally protected throughout its range through numerous national laws and regional (Notarbartolo di Sciara 2013) and international treaties [e.g., the Convention on International Trade in Endangered Species of Wild Fauna and Flora (a.k.a. the CITES Convention), the Convention on the Conservation of Migratory Species of Wild Animals (CMS or the Bonn Convention), the Convention on the Conservation of European Wildlife and Natural Habitats (the&#160; Bern Convention), the Convention on Biological Diversity (CBD) and the United Nations Convention on the Law of the Sea (UNCLOS)], as well as European Union (EU) regulations (e.g., Council Directive 92/43/EEC-Natura 2000 on the Conservation of Natural Habitats of Wild Fauna and Flora, and Directive 2008/56/EC of the European Parliament and of the Council of 17 June 2008, the “Marine Strategy Framework Directive”).<br/><br/>Legislative measures and research, management, and conservation actions to effectively protect important Monk Seal populations in Greece are carried out throughout the country (Dendrinos<em> et al</em>. 2020), and have been supported by several EU-funded LIFE projects (e.g., “Monk seal &amp; fisheries: Mitigating the conflict in Greek seas”, LIFE05 NAT/GR/000083; “Integrated monk seal conservation in Northern Cyclades”, LIFE12 NAT/GR/000688). In Türkiye, conservation measures are carried out primarily in four provinces: İzmir, Muğla, Antalya and Mersin. In addition, five coastal locations were adopted as monk seal priority conservation zones in the country in 2004: Gökçeada, Foça-Karaburun, Alaçatı-Sıgacık, the Bodrum Peninsula, and the Cilician coasts (Kıraç <em>et al.</em> 2013). In Cyprus, the Mediterranean Monk Seal has been legally protected since 1971 by the Fisheries Law and Regulations. Research (i.e., including intense monitoring efforts), effective management of marine protected areas designated for the species and public awareness, are some of the conservation measures implemented to effectively protect and conserve the Monk Seal in Cyprus (Department of Fisheries and Marine Research 2022). In Madeira, legislative measures and research, management, and conservation actions to effectively protect Monk Seals and their habitat are carried out throughout the Archipelago since 1988 (Pires <em>et al</em>. 2020). Recent conservation efforts in the region have been supported by the LIFE “Mediterranean monk seal conservation in Madeira and development of a conservation status surveillance system” Project LIFE13NAT/ES/000974. Monk Seal habitat in the Cabo Blanco Peninsula (Ras Nouadhibou) is currently protected by several coastal and marine protected areas, as well as by ‘no take’ reserves. The local Monk Seal subpopulation has been permanently monitored and protected by an International Conservation Program since 2000.<br/><br/>Additionally, the species is explicitly mentioned in numerous Natura 2000 sites within the countries of the EU (i.e., Greece, Cyprus and Madeira in Portugal). According to the Council’s Directive 92/43EEC ‘on the conservation of natural habitats of wild fauna and flora’ the Mediterranean Monk Seal is considered a species of community importance. Based on the above Directive, Natura 2000 sites are legally considered by EU Member States as Protected Areas. All marine caves used by Monk Seals in the Archipelago of Madeira are situated within the local Natura 2000 network (Pires <em>et al</em>. 2020).<br/><br/>Throughout the range of the species, widespread action has been taken to sensitize the general public towards Monk Seal conservation, to protect pupping caves, to restrict fishing gear and relocate the most dangerous fishing practices, to develop monitoring programs and intervention protocols, and to increase on-site capability to rehabilitate sick and injured individuals, particularly pups. Numerous agreements, conventions, and treaties (on a regional, national, and international level) are in force to protect Monk Seals and many workshops and conferences have brought together scientists and managers to discuss Monk Seal conservation issues and problems. Furthermore, numerous international bodies and fora, including the Regional Activity Centre for Specially Protected Areas (SPA/RAC) and the General Fisheries Commission for the Mediterranean, have put forward initiatives and proposals in order to ameliorate existing threats and mitigate pressures from relevant sectors (i.e., fisheries, bycatch, etc.). An International Action Plan for the recovery of the Monk Seal in the eastern Atlantic Ocean has been developed by the national authorities of Mauritania, Morocco, Portugal and Spain and has been successfully implemented over the last 20 years, thus improving the conservation status of the species in the region (González <em>et al</em>. 2006).<br/><br/>In Greece, the “Action plan for the Mediterranean Monk Seal” (Dendrinos <em>et al.</em> 2020) describes in detail actions that should be carried out in the country until 2027 in order to safeguard the future of the species. In Türkiye, nationwide conservation and public awareness and educational efforts have been ongoing for more than three decades. Conservation activities have included the protection of critical Monk Seal habitat (i.e., including the prohibition of the illegal entering into Monk Seal caves), scientific monitoring of the species, rescue and rehabilitation of orphan, sick and wounded seals, clean-up activities in and around important Monk Seal caves and widespread awareness and educational activities in schools and fishing communities (Kıraç <em>et al.</em> 2013). Despite stable population trends, numerous threats to the Monk seal persist in Türkiye and the status of the species should be considered critical. Therefore, effective conservation measures for the species and its habitat remain of critical importance in Türkiye and should be pursued with vigour (C.O. Kıraç and M. Ok pers. comm. September 2023). In Cyprus, habitat restoration activities, promoting public awareness, developing and establishing a National Action Plan and a national monitoring protocol, scientific monitoring of the species and habitat protection are some of the priorities for, and conservation actions taken, to safeguard the future of the species in the country (Department of Fisheries and Marine Research 2022). Following the conservation priorities identified in the Action Plan for the recovery of the Monk Seal in the eastern Atlantic Ocean (González <em>et al</em>. 2006), conservation actions for Monk Seals in the Archipelago of Madeira have included, among others, the standardized, systematic monitoring of the species and its habitat, mitigating negative fishery-Monk Seal interactions, public awareness and habitat protection (Instituto das Florestas e Conservação da Natureza unpublished data September 2023). In 2020 a Strategy for the Conservation of the Mediterranean Monk Seal was approved by the Government Council of Madeira (Pires <em>et al.</em> 2020). Following the same priorities, conservation actions in the Cabo Blanco Peninsula (Ras Nouadhibou) have included the permanent protection and monitoring of the reproductive areas of the local Monk Seal population, the standardized, systematic monitoring of the population, the identification of critical terrestrial and marine (e.g. foraging areas) habitats, the development of a social aid program focused on artisan fishermen to improve their living and working conditions, as well as the implementation of a wide awareness and information program for local communities, fishermen and the general public.<br/><br/>Priority conservation actions for the Mediterranean Monk Seal include: a) strengthening the legal framework for the protection of the terrestrial and marine habitat of the species, b) effective protection of the species (i.e., reduction of deliberate killing) and its terrestrial and marine habitat, c) population and habitat monitoring (including, for example, determining food availability and primary death causes), d) rescue and rehabilitation of injured, orphaned and sick individuals, e) public awareness, f) monitoring and mitigating negative seal – fishery interactions (Karamanlidis <em>et al</em>. 2016a), and g) expansion of the species’ current geographic range in the Atlantic Ocean (González <em>et al</em>. 2006).",
+    "use_trade": "In the past, Mediterranean Monk Seals were hunted by humans for their fur, oil, meat, and for medicinal use. Evidence suggests that Monk Seal colonies in the Mediterranean Sea and the Atlantic Ocean were severely depleted during the Roman era (Johnson and Lavigne 1999, Johnson 2004), the Middle Ages (González 2015), up until the 20th century (González and Fernandez de Larrinoa 2012, Karamanlidis <em>et al</em>. 2016a). Today there is no commercial exploitation of the species.",
+    "rationale": "The Mediterranean Monk Seal (<em>Monachus monachus</em>) is one of the most endangered pinniped species and an Evolutionarily Distinct and Globally Endangered (EDGE) mammal (Isaac <em>et al</em>. 2007).<br/><br/>Historically, commercial seal hunting and human persecution (Johnson and Lavigne 1998, Johnson 2004, González 2015) wiped out colonies living on open beaches and reduced Mediterranean Monk Seal populations to small numbers. This in turn led to a change in terrestrial habitat use and produced severe bottleneck(s) that significantly reduced genetic diversity. For most of the 20th century, numbers continued to decline, mostly as a consequence of human invasion into critical seal habitat, persecution and adverse fishing interactions. This resulted ultimately in the fragmentation of the species into several subpopulations and its disappearance from most of its historical range. At the species level, the Mediterranean Monk Seal was listed on the IUCN Red List as “Critically Endangered” at the Global scale in 2008 (Aguilar and Lowry 2008); a re-assessment in 2015 listed the species as “Endangered” (EN) (Karamanlidis and Dendrinos 2015). In 2019, the subpopulation in the eastern Mediterranean Sea was also listed as Endangered (Karamanlidis <em>et al</em>. 2019).<br/><br/>Mediterranean Monk Seals continue to be exposed to a number of substantial threats, including habitat loss and deterioration [e.g., in the Cabo Blanco Peninsula (Ras Nouadhibou) and the Archipelago of Madeira pup mortality has been attributed mainly to pupping in unsuitable habitat (Pires <em>et al</em>. 2020, Fernández de Larrinoa <em>et al</em>. 2021)], displacement, as well as persecution and negative interactions with fisheries (Karamanlidis <em>et al</em>. 2016a, Karamanlidis <em>et al.</em> 2020) and tourism (Pires <em>et al</em>. 2020). Currently, however, the primary constraint for population growth of the small Monk Seal subpopulation in the Archipelago of Madeira are the low reproductive rates that are likely a result of the low marine productivity around Madeira (Pires <em>et al</em>. 2023). Unpredictable threats, such as disease, toxic algal blooms (red tides) (Martínez-Jauregui <em>et al</em>. 2012), cave collapses (González<em> et al</em>. 1997), pollution (e.g., oil spills, microplastic) and habitat change due to climate change also pose (potential) threats to the Mediterranean Monk Seal.<br/><br/>There is recent evidence of a significant increase in the range of the Monk Seal in Greece, which is one of the main reproductive areas of the European Mediterranean Monk Seal subpopulation (Adamantopoulou <em>et al</em>. 2022). In Türkiye a range expansion and an increase in sightings have also been documented (SAD-AFAG unpublished data September 2023), while in the Archipelago of Madeira, the population has been growing from 2012 to 2021 slowly, but steadily, with a rate of 3% (Pires <em>et al</em>. 2023). In the Cabo Blanco Peninsula, the local Monk Seal subpopulation has grown to its pre-mass die-off levels (Fernández de Larrinoa <em>et al</em>. 2021). The number of mature individuals is now thought to be globally more than 250, but less than 1,000 individuals. Because the global population of the Monk Seal still remains small, it qualifies as Vulnerable (VU) under Red List Criterion D1.<br/><br/>Conservation priorities for the Mediterranean Monk Seal include: a) strengthening the legal framework for the protection of the terrestrial and marine habitat of the species, b) effective protection of the species (i.e., reduction of deliberate killing) and its terrestrial and marine habitat, c) population and habitat monitoring (including, for example, determining food availability and primary death causes), d) rescue and rehabilitation of injured, orphaned and sick individuals, e) public awareness, f) monitoring and mitigating negative seal – fishery interactions (Karamanlidis <em>et al</em>. 2016a), and g) expansion of the species’ current geographic range in the Atlantic Ocean (González <em>et al</em>. 2006).",
+    "trend_justification": null,
+    "taxonomic_notes": "The Mediterranean Monk Seal (<em>Monachus monachus</em>) is the sole representative of the genus <em>Monachus </em>(Scheel<em> et al</em>. 2014). The global distribution of the species includes one subpopulation in the eastern Mediterranean Sea and two subpopulations in the North Atlantic [i.e., one in the Cabo Blanco Peninsula (Ras Nouadhibou), western Africa and one in the Archipelago of Madeira]. Examination of mitochondrial and nuclear DNA has indicated genetic differences among and between Monk Seal subpopulations in the Atlantic and the eastern Mediterranean Sea (Pastor <em>et al</em>. 2007, Karamanlidis <em>et al</em>. 2016b, Gaubert <em>et al</em>. 2019, Rey-Iglesia <em>et al</em>. 2020, Salmona <em>et al</em>. 2022), but to date no separation of this species into subspecies has been suggested taxonomically."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "Conservation priorities identified in the local Action Plans should be implemented.",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": "Yes, important pupping sites should be effectively protected.",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "Formal education of public authorities and bodies is necessary in order to effectively implement priority conservation actions.",
+      "code": "4_1",
+      "description": {
+        "en": "Formal education"
+      }
+    },
+    {
+      "note": "See 4.1",
+      "code": "4_2",
+      "description": {
+        "en": "Training"
+      }
+    },
+    {
+      "note": "Public awareness and education actions are necessary, especially in: a) areas where the Mediterranean Monk Seal has been re-establishing itself (e.g., Albania, Cyprus) and b) areas where it is being planned to be potentially reintroduced.",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "The marine and coastal environment should be protected horizontally in order to ensure the survival of the species.",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_2",
+      "description": {
+        "en": "Policies and regulations"
+      }
+    },
+    {
+      "note": "Habitat protection should be implemented more effectively.",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "See 1.1",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "Creation of new population nuclei in the Atlantic Monk Seal subpopulation.",
+      "code": "3_3_1",
+      "description": {
+        "en": "Reintroduction"
+      }
+    }
+  ],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mediterranean and Black Sea"
+      },
+      "code": "37"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - eastern central"
+      },
+      "code": "34"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northeast"
+      },
+      "code": "27"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Rocky Shoreline"
+      },
+      "code": "12_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Sandy Shoreline and/or Beaches, Sand Bars, Spits, Etc"
+      },
+      "code": "12_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Sea Cliffs and Rocky Offshore Islands"
+      },
+      "code": "13_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/supratidal - Coastal Caves/Karst"
+      },
+      "code": "13_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Mesopelagic (200-1000m)"
+      },
+      "code": "10_2"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Bosnia and Herzegovina"
+      },
+      "code": "BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "European Russia"
+      },
+      "code": "RU-EU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Azores"
+      },
+      "code": "AZO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye-in-Europe"
+      },
+      "code": "TUE-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Spain (mainland)"
+      },
+      "code": "SPA-SP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Krym"
+      },
+      "code": "KRY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye-in-Asia"
+      },
+      "code": "TUR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Corsica"
+      },
+      "code": "COR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Sinai"
+      },
+      "code": "SIN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Ukraine (main part)"
+      },
+      "code": "UKR-UK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Malta"
+      },
+      "code": "MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Ukraine"
+      },
+      "code": "UA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cyprus"
+      },
+      "code": "CY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Portugal (mainland)"
+      },
+      "code": "POR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "France (mainland)"
+      },
+      "code": "FRA-FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Sardegna"
+      },
+      "code": "SAR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "South European Russia"
+      },
+      "code": "RUS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Monaco"
+      },
+      "code": "MC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Italy (mainland)"
+      },
+      "code": "ITA-IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madeira"
+      },
+      "code": "MDR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Canary Is."
+      },
+      "code": "CNY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "East Aegean Is."
+      },
+      "code": "EAI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece (mainland)"
+      },
+      "code": "GRC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Sicilia"
+      },
+      "code": "SIC-SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kriti"
+      },
+      "code": "KRI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Cabo Verde"
+      },
+      "code": "CV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Lebanon"
+      },
+      "code": "LB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Baleares"
+      },
+      "code": "BAL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Sahara"
+      },
+      "code": "EH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Palestine, State of"
+      },
+      "code": "PS"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Area-based Management Plan"
+      }
+    },
+    {
+      "note": "Yes, population trends of important subpopulations should be closely monitored.",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": "Yes, important subpopulations should be closely monitored.",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Fuels"
+      },
+      "code": "7"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Fibre"
+      },
+      "code": "8"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_4_5"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_2_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "War, civil unrest & military exercises"
+      },
+      "code": "6_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_3_4"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Problematic native species/diseases"
+      },
+      "code": "8_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Diseases of unknown cause"
+      },
+      "code": "8_6"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": "No",
+      "score": "Past Impact",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Oil spills"
+      },
+      "code": "9_2_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_4_4"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Shipping lanes"
+      },
+      "code": "4_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other ecosystem modifications"
+      },
+      "code": "7_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Lagocephalus sceleratus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Karamanlidis, A.A., Dendrinos, P., Fernandez de Larrinoa, P., Kıraç, C.O., Nicolaou, H. & Pires, R.",
+      "value": [
+        "Cem Kıraç (Underwater Research Society - Mediterranean Seal Research Group (SAD-AFAG))",
+        "Haris Nicolaou (Department of Forests, Ministry of Agriculture, Rural Development and Environment, Cyprus)",
+        "A.A. Karamanlidis",
+        "Pablo Fernandez de Larrinoa (Fundación CBD-Habitat)",
+        "Rosa Pires (Parque Natural da Madeira)",
+        "Panagiotis  Dendrinos (MOm/Hellenic Society for the Study and Protection of the Monk seal)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Baker, J. & Muñoz Cañas, M.",
+      "value": [
+        "Jason Baker (National Marine Fisheries Service Pacific Islands Fisheries Science Center, NOAA)",
+        "Mercedes Muñoz Cañas (IUCN)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Beton, D., Marcou, M. & Ok, M.",
+      "value": [
+        "Meltem Ok (Department of Marine Biology and Fisheries, Middle Eastern Technical University)",
+        "Damla Beton (North Cyprus Society for Protection of Turtles, PK.65, Kyrenia, North Cyprus)",
+        "Melina Marcou (Department of Fisheries and Marine Research, Ministry of Agriculture, Rural Development and Environment, Nicosia, Cyprus)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Scheel D.M., Slater G.J., Kolokotronis S-O., Potter C.W., Rotstein D.S., Tsangaras K., Greenwood, A.D. and Helgen, K.M. 2014. Biogeography and taxonomy of extinct and endangered monk seals illuminated by ancient DNA and skull morphology. <i>ZooKeys </i> 409: 1-33.",
+      "year": "2014",
+      "title": "Biogeography and taxonomy of extinct and endangered monk seals illuminated by ancient DNA and skull morphology",
+      "author": "Scheel D.M., Slater G.J., Kolokotronis S-O., Potter C.W., Rotstein D.S., Tsangaras K., Greenwood, A.D. and Helgen, K.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C. 2013. Generation length for mammals. <i>Nature Conservation</i> 5: 87–94.",
+      "year": "2013",
+      "title": "Generation length for mammals",
+      "author": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Reijnders, P., Brasseur, S., van der Toorn, J., van der Wolf, P., Boyd, I., Harwood, J., Lavigne, D. and Lowry, L. 1993. <i>Seals, fur seals, sea lions, and walrus. Status survey and conservation action plan</i>. IUCN Seal Specialist Group.",
+      "year": "1993",
+      "title": "Seals, fur seals, sea lions, and walrus. Status survey and conservation action plan",
+      "author": "Reijnders, P., Brasseur, S., van der Toorn, J., van der Wolf, P., Boyd, I., Harwood, J., Lavigne, D. and Lowry, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gücü, A.C., Gücü, G. and Orek, H. 2004. Habitat use and preliminary demographic evaluation of the critically endangered Mediterranean monk seal (<i>Monachus monachus</i>) in the Cilician Basin (Eastern Mediterranean). <i>Biological conservation</i> 116(3): 417-431.",
+      "year": "2004",
+      "title": "Habitat use and preliminary demographic evaluation of the critically endangered Mediterranean monk seal (<i>Monachus monachus</i>) in the Cilician Basin (Eastern Mediterranean)",
+      "author": "Gücü, A.C., Gücü, G. and Orek, H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Badosa, E., Pastor, T., Gazo, M. and Aguilar, A. 2006. Moult in the Mediterranean monk seal from Cap Blanc, western Sahara. <i>African Zoology</i> 41(2): 183-192.",
+      "year": "2006",
+      "title": "Moult in the Mediterranean monk seal from Cap Blanc, western Sahara",
+      "author": "Badosa, E., Pastor, T., Gazo, M. and Aguilar, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Güçlüsoy, H. and Savas, Y. 2003. Interaction between monk seals <i>Monachus monachus</i> (Hermann, 1779) and marine fish farms in the Turkish Aegean and the management of the problem. <i>Aquaculture Research</i> 34: 777-783.",
+      "year": "2003",
+      "title": "Interaction between monk seals <i>Monachus monachus</i> (Hermann, 1779) and marine fish farms in the Turkish Aegean and the management of the problem",
+      "author": "Güçlüsoy, H. and Savas, Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Borrell, A., Aguilar, A. and Pastor, T. 1997. Organochlorine pollutant levels in Mediterranean monk seals from the western Mediterranean and the Sahara coast. <i>Marine Pollution Bulletin</i> 34(7): 505-510.",
+      "year": "1997",
+      "title": "Organochlorine pollutant levels in Mediterranean monk seals from the western Mediterranean and the Sahara coast",
+      "author": "Borrell, A., Aguilar, A. and Pastor, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gazo, M. and Aguilar, A. 2005. Maternal attendance and diving behavior of a lactating Mediterranean monk seal. <i>Marine Mammal Science</i> 21(2): 340-345.",
+      "year": "2005",
+      "title": "Maternal attendance and diving behavior of a lactating Mediterranean monk seal",
+      "author": "Gazo, M. and Aguilar, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Samaranch, R. and Gonzalez, L.M. 2000. Changes in morphology with age in Mediterranean monk seals (<i>Monachus monachus</i>). <i>Marine Mammal Science</i> 16(1): 141-157.",
+      "year": "2000",
+      "title": "Changes in morphology with age in Mediterranean monk seals (<i>Monachus monachus</i>)",
+      "author": "Samaranch, R. and Gonzalez, L.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Forcada, J., Hammond, P.S. and Aguilar, A. 1999. The status of the Mediterranean monk seal <i>Monachus monachus</i> in the Western Sahara and the implications of a mass mortality event. <i>Marine Ecology Progress Series</i> 188: 249-261.",
+      "year": "1999",
+      "title": "The status of the Mediterranean monk seal <i>Monachus monachus</i> in the Western Sahara and the implications of a mass mortality event",
+      "author": "Forcada, J., Hammond, P.S. and Aguilar, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pastor, T. and Aguilar, A. 2003. Reproductive cycle of the female Mediterranean monk seal in the western Sahara. <i>Marine Mammal Science</i> 19(2): 318-330.",
+      "year": "2003",
+      "title": "Reproductive cycle of the female Mediterranean monk seal in the western Sahara",
+      "author": "Pastor, T. and Aguilar, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Boulva, J. 1979. Mediterranean monk seal. <i>Mammals in the seas, Vol. II: Pinniped species summaries and report on sirenians</i>, pp. 95-100. FAO Fisheries, Rome, Italy.",
+      "year": "1979",
+      "title": "Mediterranean monk seal",
+      "author": "Boulva, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Androukaki, E., Adamantopoulou, S., Dendrinos, P., Tounta, E. and Kotomatas, S. 1999. Causes of mortality in the Mediterranean monk seal (<i>Monachus monachus</i>) in Greece. <i>Contributions to the Zoology and Ecology of the Eastern Mediterranean Region</i> 1: 405-411.",
+      "year": "1999",
+      "title": "Causes of mortality in the Mediterranean monk seal (<i>Monachus monachus</i>) in Greece",
+      "author": "Androukaki, E., Adamantopoulou, S., Dendrinos, P., Tounta, E. and Kotomatas, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pastor, T., Garza, J.C., Aguilar, A., Tounta, E. and Androukaki, E. 2007. Genetic diversity and differentiation between the two remaining populations of the critically endangered Mediterranean monk seal. <i>Animal Conservation</i> 10(4): 461-469.",
+      "year": "2007",
+      "title": "Genetic diversity and differentiation between the two remaining populations of the critically endangered Mediterranean monk seal",
+      "author": "Pastor, T., Garza, J.C., Aguilar, A., Tounta, E. and Androukaki, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Borrell, A., Cantos, G., Aguilar, A., Androukaki, E. and Dendrinos, P. 2007. Concentrations and patterns of organochlorine pesticides and PCBs in Mediterranean monk seals (<i>Monachus monachus</i>) from Western Sahara and Greece. <i>Science of the Total Environment</i> 381(1-3): 316-325.",
+      "year": "2007",
+      "title": "Concentrations and patterns of organochlorine pesticides and PCBs in Mediterranean monk seals (<i>Monachus monachus</i>) from Western Sahara and Greece",
+      "author": "Borrell, A., Cantos, G., Aguilar, A., Androukaki, E. and Dendrinos, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Güçlüsoy, H., Kiraç, C.O., Veryeri, N.O. and Savas, Y. 2004. Status of the Mediterranean monk seal, <i>Monachus monachus</i> (Hermann, 1779) in the coastal waters of Turkey. <i>E. U. Journal of Fisheries and Aquatic Sciences</i> 21(3-4): 201-210.",
+      "year": "2004",
+      "title": "Status of the Mediterranean monk seal, <i>Monachus monachus</i> (Hermann, 1779) in the coastal waters of Turkey",
+      "author": "Güçlüsoy, H., Kiraç, C.O., Veryeri, N.O. and Savas, Y.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Neves, H.C. 1998. Preliminary findings on the feeding behaviour and general ecology strategy of the Mediterranean monk seal <i>Monachus monachus</i> (Pinnipedia: Monachinae) on the Desertas Islands. <i>Boletim do Museum Municipal do Funchal Suppl. No.</i> 5: 263-271.",
+      "year": "1998",
+      "title": "Preliminary findings on the feeding behaviour and general ecology strategy of the Mediterranean monk seal <i>Monachus monachus</i> (Pinnipedia: Monachinae) on the Desertas Islands",
+      "author": "Neves, H.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "González, L.M. Aguilar, A., Lopez-Jurado, L.F. and Grau, E. 1997. Status and Distribution of the Mediterranean Monk Seal <i>Monachus monachus</i> on the Cabo Blanco Peninsula (Western Sahara-Mauritania) in 1993-1994. <i>Biological Conservation</i> 80(3): 225-233.",
+      "year": "1997",
+      "title": "Status and Distribution of the Mediterranean Monk Seal <i>Monachus monachus</i> on the Cabo Blanco Peninsula (Western Sahara-Mauritania) in 1993-1994",
+      "author": "González, L.M. Aguilar, A., Lopez-Jurado, L.F. and Grau, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sergeant, D.E., Ronald, K., Boulva, J. and Berkes, F. 1978. The recent status of <i>Monachus monachus</i>, the Mediterranean monk seal. <i>Biological Conservation</i> 14: 259-287.",
+      "year": "1978",
+      "title": "The recent status of <i>Monachus monachus</i>, the Mediterranean monk seal",
+      "author": "Sergeant, D.E., Ronald, K., Boulva, J. and Berkes, F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Salman, A., Bilecenoglu, M. and Güçlüsoy, H. 2001. Stomach contents of two Mediterranean monk seals (<i>Monachus monachus</i>) from the Aegean Sea, Turkey. <i>Journal of the Marine Biology Association of the United Kingdom</i> 81: 719-720.",
+      "year": "2001",
+      "title": "Stomach contents of two Mediterranean monk seals (<i>Monachus monachus</i>) from the Aegean Sea, Turkey",
+      "author": "Salman, A., Bilecenoglu, M. and Güçlüsoy, H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Aguilar, A., Cappozzo, L.H., Gazo, M., Pastor, T., Forcada, J. and Grau, E. 2007. Lactation and mother-pup behaviour in the Mediterranean Monk Seal <i>Monachus monachus</i>: an unusual pattern for a Phocid. <i>Journal of Marine Biology Association of the United Kingdom</i> 87(1): 93-99.",
+      "year": "2007",
+      "title": "Lactation and mother-pup behaviour in the Mediterranean Monk Seal <i>Monachus monachus</i>: an unusual pattern for a Phocid",
+      "author": "Aguilar, A., Cappozzo, L.H., Gazo, M., Pastor, T., Forcada, J. and Grau, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pires, R. and Neves, H. C. 2001. Mediterranean monk seal <i>Monachus monachus</i> conservation: A case study in the Desertas Islands. <i>Mammalia</i> 65(3): 301-308.",
+      "year": "2001",
+      "title": "Mediterranean monk seal <i>Monachus monachus</i> conservation: A case study in the Desertas Islands",
+      "author": "Pires, R. and Neves, H. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Isaac, N.J.B., Turvey, S.T., Collen, B., Waterman, C. and Baillie, J.E.M. 2007. Mammals on the EDGE: Conservation Priorities Based on Threat and Phylogeny. <i>PLoS ONE</i> 2(3): e296.",
+      "year": "2007",
+      "title": "Mammals on the EDGE: Conservation Priorities Based on Threat and Phylogeny",
+      "author": "Isaac, N.J.B., Turvey, S.T., Collen, B., Waterman, C. and Baillie, J.E.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kiraç, C.O., Savas, Y., Güçlüsoy, H. and Veryeri, N.O. 2002. Observations on diving behaviour of free ranging monk seals <i>Monachus monachus</i> on the turkish coasts. <i>The Monachus Guardian</i> 5(1): 37-42. Available at: http://www.monachus-guardian.org/mguard09/09scien2.htm. (Accessed: 29 June 2018).",
+      "year": "2002",
+      "title": "Observations on diving behaviour of free ranging monk seals <i>Monachus monachus</i> on the turkish coasts.",
+      "author": "Kiraç, C.O., Savas, Y., Güçlüsoy, H. and Veryeri, N.O.",
+      "citation_short": ""
+    },
+    {
+      "citation": "González, L.M., Larrinoa, P., Mas, J., M’ Barek, H., Cedenilla, M., Moumni, A., Idrissi, H., Jiddou, A., Araújo, A., Costa Neves, H. and Pires, R. 2006. <i>Action Plan for the Recovery of the Mediterranean Monk Seal in the Eastern Atlantic.</i> Naturaleza y Parques Nacionales, Series Especies Amenazadas. Servicio de Publicaciones del Ministerio de Medio ambiente. Madrid, Spain.",
+      "year": "2006",
+      "title": "Action Plan for the Recovery of the Mediterranean Monk Seal in the Eastern Atlantic.",
+      "author": "González, L.M., Larrinoa, P., Mas, J., M’ Barek, H., Cedenilla, M., Moumni, A., Idrissi, H., Jiddou, A., Araújo, A., Costa Neves, H. and Pires, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pires, R. 2004. One pup - three mothers. <i>The Monachus Guardian</i> 7(1): 33-34.",
+      "year": "2004",
+      "title": "One pup - three mothers",
+      "author": "Pires, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Karamanlidis, A.A., Kallianiotis, A., Psaradellis, M. and Adamantopoulou, S. 2011. Stomach contents of a subadult Mediterranean monk seal (<i>Monachus monachus</i>) from the Aegean Sea. <i>Aquatic Mammals</i> 37(3): 280-283.",
+      "year": "2011",
+      "title": "Stomach contents of a subadult Mediterranean monk seal (<i>Monachus monachus</i>) from the Aegean Sea",
+      "author": "Karamanlidis, A.A., Kallianiotis, A., Psaradellis, M. and Adamantopoulou, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Adamantopoulou, S., Androukaki, E. and Kotomatas, S. 1999. The Distribution of the Mediterranean Monk Seal in Greece based on an information network. <i>Contributions to the Zoogeography and Ecology of the Eastern Mediterranean Region</i> 1: 399-404.",
+      "year": "1999",
+      "title": "The Distribution of the Mediterranean Monk Seal in Greece based on an information network.",
+      "author": "Adamantopoulou, S., Androukaki, E. and Kotomatas, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gücü, A.C., Sakinan, S. and Ok, M. 2009b. Occurrence of the critically endangered Mediterranean monk seal, <i>Monachus monachus</i>, at Olympos-Beydaglari National Park, Turkey. <i>Zoology in the Middle East</i> 46: 3-8.",
+      "year": "2009b",
+      "title": "Occurrence of the critically endangered Mediterranean monk seal, <i>Monachus monachus</i>, at Olympos-Beydaglari National Park, Turkey",
+      "author": "Gücü, A.C., Sakinan, S. and Ok, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pierce, G.J., Hernandez-Milian, G., Santos, M.B., Dendrinos, P., Psaradellis, M., Tounta, E., Androukaki, E. and Edridge, A. 2011. Diet of the Monk seal (<i>Monachus monachus</i>) in Greek waters. <i>Aquatic Mammals</i> 37(3): 284-297.",
+      "year": "2011",
+      "title": "Diet of the Monk seal (<i>Monachus monachus</i>) in Greek waters.",
+      "author": "Pierce, G.J., Hernandez-Milian, G., Santos, M.B., Dendrinos, P., Psaradellis, M., Tounta, E., Androukaki, E. and Edridge, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dendrinos, P., Karamanlidis, A.A., Androukaki, E. and McConnell, B.J. 2007a. Diving development and behavior of a rehabilitated Mediterranean monk seal (<i>Monachus monachus</i>). <i>Marine Mammal Science</i> 23(3): 387-397.",
+      "year": "2007a",
+      "title": "Diving development and behavior of a rehabilitated Mediterranean monk seal (<i>Monachus monachus</i>)",
+      "author": "Dendrinos, P., Karamanlidis, A.A., Androukaki, E. and McConnell, B.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kiraç, C.O. 1998. Oil Spill at Cavus Island. <i>The Monachus Guardian</i> 1(1): 16-18. Available at: http://monachus-guardian.org/mguard01/01infocu.htm. (Accessed: 29 June 2018).",
+      "year": "1998",
+      "title": "Oil Spill at Cavus Island",
+      "author": "Kiraç, C.O.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Johnson, W.M. 2004. Monk seals in post-classical history. The role of the Mediterranean monk seal (<i>Monachus monachus</i>) in European history and culture, from the fall of Rome to the 20th century. <i>Mededelingen</i> 39: 1-91.",
+      "year": "2004",
+      "title": "Monk seals in post-classical history. The role of the Mediterranean monk seal (<i>Monachus monachus</i>) in European history and culture, from the fall of Rome to the 20th century.",
+      "author": "Johnson, W.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kiraç, C.O. 2011. Conservation of the Mediterranean monk seal <i>Monachus monachus</i> in Turkey and the role of coastal and marine protected areas. Proceedings of the Second International Conference on Marine Protected Areas. Fort-de-France, Martinique.",
+      "year": "2011",
+      "title": "Conservation of the Mediterranean monk seal <i>Monachus monachus</i> in Turkey and the role of coastal and marine protected areas.",
+      "author": "Kiraç, C.O.",
+      "citation_short": ""
+    },
+    {
+      "citation": "MOm. 2009. <i>Annual Technical Report 2008, on the Status of the Mediterranean Monk Seal (Monachus monachus) in Greece</i>. Athens, Greece.",
+      "year": "2009",
+      "title": "Annual Technical Report 2008, on the Status of the Mediterranean Monk Seal (Monachus monachus) in Greece",
+      "author": "MOm.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kiraç, C. and Savas, Y. 1996. Status of the Monk Seal (<i>Monachus monachus</i>) in the neighborhood of Eregli, Black Sea Coast of Turkey. <i>Zoology in the Middle East</i> 12: 5-12.",
+      "year": "1996",
+      "title": "Status of the Monk Seal (<i>Monachus monachus</i>) in the neighborhood of Eregli, Black Sea Coast of Turkey",
+      "author": "Kiraç, C. and Savas, Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yediler, A., Panou, A. and Schramel, P. 1993. Heavy metals in Hair Samples of the Mediterranean monk seal (<i>Monachus monachus</i>). <i>Marine Pollution Bulletin</i> 26(3): 156-159.",
+      "year": "1993",
+      "title": "Heavy metals in Hair Samples of the Mediterranean monk seal (<i>Monachus monachus</i>).",
+      "author": "Yediler, A., Panou, A. and Schramel, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Karamanlidis, A.A., Pires, R., Silva, N.C. and Neves, H.C. 2004. The availability of resting and pupping habitat for the Critically Endangered Mediterranean monk seal <i>Monachus monachus</i> in the archipelago of Madeira. <i>Oryx</i> 38(2): 180-185.",
+      "year": "2004",
+      "title": "The availability of resting and pupping habitat for the Critically Endangered Mediterranean monk seal <i>Monachus monachus</i> in the archipelago of Madeira",
+      "author": "Karamanlidis, A.A., Pires, R., Silva, N.C. and Neves, H.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kiraç, C.O., Veryeri, N.O., Güçlüsoy, H. and Savaş, H. 2013. <i>National Action Plan for the Conservation of Mediterranean monk seal Monachus monachus in Türkiye.</i> UNEP MAP RAC/SPA and Republic of Türkiye, Ministry of Forest and Water Works. Ankara, Turkey.",
+      "year": "2013",
+      "title": "National Action Plan for the Conservation of Mediterranean monk seal Monachus monachus in Türkiye.",
+      "author": "Kiraç, C.O., Veryeri, N.O., Güçlüsoy, H. and Savaş, H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gücü, A.C., Ok, M. and Sakinan, S. 2009a. A survey of the critically endangered Mediterranean monk seal, <i>Monachus monachus</i> (Hermann, 1779) along the coast of Northern Cyprus. <i>Israel Journal of Ecology and Evolution</i> 55: 77-82.",
+      "year": "2009a",
+      "title": "A survey of the critically endangered Mediterranean monk seal, <i>Monachus monachus</i> (Hermann, 1779) along the coast of Northern Cyprus",
+      "author": "Gücü, A.C., Ok, M. and Sakinan, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Notarbartolo di Sciara, G. 2013. <i>Draft regional strategy for the conservation of monk seals in the Mediterranean (2014 - 2019)</i>. Tethys Research Institute, Milano, Italy.",
+      "year": "2013",
+      "title": "Draft regional strategy for the conservation of monk seals in the Mediterranean (2014 - 2019)",
+      "author": "Notarbartolo di Sciara, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pires, R. 2011. <i>Lobos-marinhos do arquipélago da Madeira.</i> Edições do Serviço do Parque Natural da Madeira, Funchal, Madeira.",
+      "year": "2011",
+      "title": "Lobos-marinhos do arquipélago da Madeira.",
+      "author": "Pires, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Karamanlidis, A.A., Pires, R., Neves, H.C. and Santos, C. 2003. Habitat of the endangered Mediterranean monk seal (<i>Monachus monachus</i>) at São Lourenço-Madeira. <i>Aquatic Mammals</i> 29(3): 400-403.",
+      "year": "2003",
+      "title": "Habitat of the endangered Mediterranean monk seal (<i>Monachus monachus</i>) at São Lourenço-Madeira",
+      "author": "Karamanlidis, A.A., Pires, R., Neves, H.C. and Santos, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Karamanlidis, A.A., Adamantopoulou, S., Paravas, V., Psaradellis, M. and Dendrinos, P. 2013. Demographic structure and social behavior of the unique Mediterranean monk seal colony of the island of Gyaros. 20th Biennial Conference on the Biology of Marine Mammals. Dunedin, New Zealand.",
+      "year": "2013",
+      "title": "Demographic structure and social behavior of the unique Mediterranean monk seal colony of the island of Gyaros.",
+      "author": "Karamanlidis, A.A., Adamantopoulou, S., Paravas, V., Psaradellis, M. and Dendrinos, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dendrinos, P., Karamanlidis, A.A., Kotomatas, S., Legakis, A., Tounta, E. and Matthiopoulos, J. 2007b. Pupping habitat use in the Mediterranean monk seal: a long-term study. <i>Marine Mammal Science</i> 23(3): 615-628.",
+      "year": "2007b",
+      "title": "Pupping habitat use in the Mediterranean monk seal: a long-term study",
+      "author": "Dendrinos, P., Karamanlidis, A.A., Kotomatas, S., Legakis, A., Tounta, E. and Matthiopoulos, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dendrinos, P., Karamanlidis, A.A., Kotomatas, S., Paravas, V. and Adamantopoulou, S. 2008. Report of a new Mediterranean Monk Seal (<i>Monachus monachus</i>) breeding colony in the Aegean Sea, Greece. <i>Aquatic Mammals</i> 34(3): 355-361.",
+      "year": "2008",
+      "title": "Report of a new Mediterranean Monk Seal (<i>Monachus monachus</i>) breeding colony in the Aegean Sea, Greece",
+      "author": "Dendrinos, P., Karamanlidis, A.A., Kotomatas, S., Paravas, V. and Adamantopoulou, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kiraç, C.O. and Güçlüsoy, H. 2007. Regulation on ships navigation to reduce risk of marine accidents in favour of marine and coastal ecosystems on the Aegean coasts in Turkey.  Rapport Commission International pour l'exploration scientifique de la Mer Mediterranée 38.",
+      "year": "2007",
+      "title": "Regulation on ships navigation to reduce risk of marine accidents in favour of marine and coastal ecosystems on the Aegean coasts in Turkey",
+      "author": "Kiraç, C.O. and Güçlüsoy, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pires, R., Neves, H.C. and Karamanlidis, A.A. 2007. Activity Patterns of the Mediterranean Monk Seal (<i>Monachus monachus</i>) in the Archipelago of Madeira. <i>Aquatic Mammals</i> 33(3): 327-336.",
+      "year": "2007",
+      "title": "Activity Patterns of the Mediterranean Monk Seal (<i>Monachus monachus</i>) in the Archipelago of Madeira",
+      "author": "Pires, R., Neves, H.C. and Karamanlidis, A.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pires, R., Neves, H.C. and Karamanlidis, A.A. 2008. The Critically Endangered Mediterranean monk seal <i>Monachus monachus</i> in the archipelago of Madeira: priorities for conservation. <i>Oryx</i> 42(2): 278-285.",
+      "year": "2008",
+      "title": "The Critically Endangered Mediterranean monk seal <i>Monachus monachus</i> in the archipelago of Madeira: priorities for conservation.",
+      "author": "Pires, R., Neves, H.C. and Karamanlidis, A.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dendrinos, P. 2011. Contribution to the study of the Mediterranean monk seal’s (<i>Monachus monachus</i>) ecology and biology at the island complex of Northern Sporades, Greece. National and Kapodistrian University of Athens.",
+      "year": "2011",
+      "title": "Contribution to the study of the Mediterranean monk seal’s (<i>Monachus monachus</i>) ecology and biology at the island complex of Northern Sporades, Greece.",
+      "author": "Dendrinos, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Inanmaz, O.E., Degirmenci, O. and Gücü, A.C. 2014. A new sighting of the Mediterranean Monk Seal, <i>Monachus monachus</i> (Hermann, 1779), in the Marmara Sea (Turkey). <i>Zoology in the Middle East</i> 60(3): 278-280.",
+      "year": "2014",
+      "title": "A new sighting of the Mediterranean Monk Seal, <i>Monachus monachus</i> (Hermann, 1779), in the Marmara Sea (Turkey)",
+      "author": "Inanmaz, O.E., Degirmenci, O. and Gücü, A.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Stringer, C.B., Finlayson, J.C., Barton, R.N.E., Fernandez-Jalvo, Y., Caceres, I., Sabin, R.C., Rhodes, E.J., Currant, A.P., Rodriguez-Vidal, J., Giles-Pacheco, F. and Riquelme-Cantal, J.A. 2008. Neanderthal exploitation of marine mammals in Gibraltar. <i>Proceedings of the National Academy of Sciences </i> 105(38): 14319-14324.",
+      "year": "2008",
+      "title": "Neanderthal exploitation of marine mammals in Gibraltar",
+      "author": "Stringer, C.B., Finlayson, J.C., Barton, R.N.E., Fernandez-Jalvo, Y., Caceres, I., Sabin, R.C., Rhodes, E.J., Currant, A.P., Rodriguez-Vidal, J., Giles-Pacheco, F. and Riquelme-Cantal, J.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Neves, H.C. and Pires, R. 1999. <i>O Lobo Marinho no Arquipelago da Madeira</i>. Funchal, Madeira.",
+      "year": "1999",
+      "title": "O Lobo Marinho no Arquipelago da Madeira",
+      "author": "Neves, H.C. and Pires, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Johnson, W.M. and Karamanlidis, A.A. 2000. When fishermen save seals. <i>The Monachus Guardian</i> 3(1): 18-22. Available at: http://monachus-guardian.org/mguard05/05covsto.htm. (Accessed: 29 June 2018).",
+      "year": "2000",
+      "title": "When fishermen save seals.",
+      "author": "Johnson, W.M. and Karamanlidis, A.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dendrinos, P., Tounta, E., Kotomatas, S. and Kottas, A. 1994. Recent data on the Mediterranean Monk Seal population of the Northern Sporades. <i>Bios (Macedonia/Greece)</i> 2: 11-16.",
+      "year": "1994",
+      "title": "Recent data on the Mediterranean Monk Seal population of the Northern Sporades",
+      "author": "Dendrinos, P., Tounta, E., Kotomatas, S. and Kottas, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Martínez-Jauregui, M., Tavecchia, G., Cedenilla, M.A., Coulson, T., Fernández de Larrinoa, P., Muñoz, M. and González, L.M. 2012. Population resilience of the Mediterranean monk seal <i>Monachus monachus</i> at Cabo Blanco peninsula. <i>Marine Ecology Progress Series</i> 461: 273-281.",
+      "year": "2012",
+      "title": "Population resilience of the Mediterranean monk seal <i>Monachus monachus</i> at Cabo Blanco peninsula.",
+      "author": "Martínez-Jauregui, M., Tavecchia, G., Cedenilla, M.A., Coulson, T., Fernández de Larrinoa, P., Muñoz, M. and González, L.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Adamantopoulou, S., Androukaki, E., Dendrinos, P., Kotomatas, S., Paravas, V., Psaradellis, M., Tounta, E. and Karamanlidis, A.A. 2011. Movements of Mediterranean monk seals (<i>Monachus monachus</i>) in the Eastern Mediterranean Sea. <i>Aquatic Mammals </i> 37(3): 256-261.",
+      "year": "2011",
+      "title": "Movements of Mediterranean monk seals (<i>Monachus monachus</i>) in the Eastern Mediterranean Sea",
+      "author": "Adamantopoulou, S., Androukaki, E., Dendrinos, P., Kotomatas, S., Paravas, V., Psaradellis, M., Tounta, E. and Karamanlidis, A.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Karamanlidis, A.A., Androukaki, E., Adamantopoulou, S., Chatzispyrou, A., Johnson, W.M., Kotomatas, S., Papadopoulos, A., Paravas, V., Paximadis, G., Pires, R., Tounta, E. and Dendrinos, P. 2008. Assessing accidental entanglement as a threat to the Mediterranean monk seal <i>Monachus monachus</i>. <i>Endangered Species Research</i> 5(2-3): 205-213.",
+      "year": "2008",
+      "title": "Assessing accidental entanglement as a threat to the Mediterranean monk seal <i>Monachus monachus</i>.",
+      "author": "Karamanlidis, A.A., Androukaki, E., Adamantopoulou, S., Chatzispyrou, A., Johnson, W.M., Kotomatas, S., Papadopoulos, A., Paravas, V., Paximadis, G., Pires, R., Tounta, E. and Dendrinos, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Aguilar, A. and Lowry, L. 2008. <i>Monachus monachus</i>. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. ",
+      "year": "2008",
+      "title": "<i>Monachus monachus</i>",
+      "author": "Aguilar, A. and Lowry, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Alfaghi, I. E., Abed, A.S., Dendrinos, P., Psaradellis, M. and Karamanlidis, A.A. 2013. First confirmed sighting of the Mediterranean monk seal (<i>Monachus monachus</i>) in Libya since 1972. <i>Aquatic Mammals</i> 39(1): 81-84.",
+      "year": "2013",
+      "title": "First confirmed sighting of the Mediterranean monk seal (<i>Monachus monachus</i>) in Libya since 1972.",
+      "author": "Alfaghi, I. E., Abed, A.S., Dendrinos, P., Psaradellis, M. and Karamanlidis, A.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Formigaro, C., Karamanlidis, A.A., Dendrinos, P., Marsili, L., Silvi, M. and Zaccaroni, A. 2016. Trace element concentrations in the Mediterranean monk seal (<i>Monachus monachus</i>) in the Eastern Mediterranean Sea. <i>Science of the Total Environment</i> 576: 528-537.",
+      "year": "2016",
+      "title": "Trace element concentrations in the Mediterranean monk seal (<i>Monachus monachus</i>) in the Eastern Mediterranean Sea",
+      "author": "Formigaro, C., Karamanlidis, A.A., Dendrinos, P., Marsili, L., Silvi, M. and Zaccaroni, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Johnson, W.M. and Lavigne, D.M. 1999. Monk Seals in Antiquity. The Mediterranean Monk Seal (<i>Monachus monachus</i>) in Ancient History and Literature. <i>Mededelingen</i> 35: 1-101.",
+      "year": "1999",
+      "title": "Monk Seals in Antiquity. The Mediterranean Monk Seal (<i>Monachus monachus</i>) in Ancient History and Literature.",
+      "author": "Johnson, W.M. and Lavigne, D.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Karamanlidis, A.A., Dendrinos, P., Fernández de Larrinoa, P., Gücü, A.C., Johnson, W.M., Kiraç, C.O. and Pires, R. 2016a. The Mediterranean monk seal <i>Monachus monachus</i>: status, biology, threats, and conservation priorities. <i>Mammal Review</i> 46: 92-105.",
+      "year": "2016a",
+      "title": "The Mediterranean monk seal <i>Monachus monachus</i>: status, biology, threats, and conservation priorities",
+      "author": "Karamanlidis, A.A., Dendrinos, P., Fernández de Larrinoa, P., Gücü, A.C., Johnson, W.M., Kiraç, C.O. and Pires, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Karamanlidis, A.A., Gaughran, S., Aguilar, A., Dendrinos, P., Huber, D., Pires, R., Schultz, J., Skrbinšek, T. and Amato, G. 2016b. Shaping species conservation strategies using mtDNA analysis: The case of the elusive Mediterranean monk seal (<i>Monachus monachus</i>). <i>Biological Conservation</i> 193: 71-79.",
+      "year": "2016b",
+      "title": "Shaping species conservation strategies using mtDNA analysis: The case of the elusive Mediterranean monk seal (<i>Monachus monachus</i>)",
+      "author": "Karamanlidis, A.A., Gaughran, S., Aguilar, A., Dendrinos, P., Huber, D., Pires, R., Schultz, J., Skrbinšek, T. and Amato, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Karamanlidis, A.A., Lyamin, O., Adamantopoulou, S. and Dendrinos, P. 2017. First observations of aquatic sleep in the Mediterranean monk seal (<i>Monachus monachus</i>). <i>Aquatic Mammals</i> 43: 82-86.",
+      "year": "2017",
+      "title": "First observations of aquatic sleep in the Mediterranean monk seal (<i>Monachus monachus</i>)",
+      "author": "Karamanlidis, A.A., Lyamin, O., Adamantopoulou, S. and Dendrinos, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Karamanlidis, A., and Dendrinos, P. 2015. <i>Monachus monachus</i>. The IUCN Red List of Threatened Species 2015: e.T13653A45227543. Available at: <a href=\"http://dx.doi.org/10.2305/IUCN.UK.2015- 4.RLTS.T13653A45227543.en\">http://dx.doi.org/10.2305/IUCN.UK.2015- 4.RLTS.T13653A45227543.en</a>. (Accessed: 3 June 2018).",
+      "year": "2015",
+      "title": "<i>Monachus monachus</i>. The IUCN Red List of Threatened Species 2015: e.T13653A45227543",
+      "author": "Karamanlidis, A., and Dendrinos, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Karamanlidis, A.A., Paravas, V., Trillmich, F. and Dendrinos, P. 2010. First observations of parturition and postpartum behavior in the Mediterranean monk seal (<i>Monachus monachus</i>) in the Eastern Mediterranean. <i>Aquatic Mammals</i> 36: 27-32.",
+      "year": "2010",
+      "title": "First observations of parturition and postpartum behavior in the Mediterranean monk seal (<i>Monachus monachus</i>) in the Eastern Mediterranean",
+      "author": "Karamanlidis, A.A., Paravas, V., Trillmich, F. and Dendrinos, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Littnan, C., Karamanlidis, A.A. and Dendrinos, P. 2018. Monk seals. <i>Monachus monachus</i>, <i>Neomonachus schauinslandi</i> and <i>N. tropicalis</i>. In: B. Wuersig, J.G.M. Thewissen & K.M. Kovacs (ed.), <i>Encyclopedia of Marine Mammals, Third Edition</i>, pp. 618-622. Academic Press/Elsevier, San Diego, CA, USA.",
+      "year": "2018",
+      "title": "Monk seals. <i>Monachus monachus</i>, <i>Neomonachus schauinslandi</i> and <i>N. tropicalis</i>",
+      "author": "Littnan, C., Karamanlidis, A.A. and Dendrinos, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tonay, A.M., Danyer, E., Dede, A., Öztürk, B. and Öztürk, A.A. 2016. The stomach content of a Mediterranean Monk Seal (<i>Monachus monachus</i>): finding of Green Turtle (<i>Chelonia mydas</i>) remains. <i>Zoology in the Middle East</i> 62: 212-216.",
+      "year": "2016",
+      "title": "The stomach content of a Mediterranean Monk Seal (<i>Monachus monachus</i>): finding of Green Turtle (<i>Chelonia mydas</i>) remains",
+      "author": "Tonay, A.M., Danyer, E., Dede, A., Öztürk, B. and Öztürk, A.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2023. The IUCN Red List of Threatened Species. Version 2023-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 07 December 2023).",
+      "year": "2023",
+      "title": "The IUCN Red List of Threatened Species. Version 2023-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2023-1"
+    },
+    {
+      "citation": "Adamantopoulou, S., Karamanlidis, A. A., Dendrinos, D. and Olivier, J. 2022. Citizen science indicates significant range recovery and defines new conservation priorities for Earth's most endangered Pinniped in Greece. <i>Animal Conservation</i> 26(1): 115-125. https://doi.org/10.1111/acv.12806",
+      "year": "2022",
+      "title": "Citizen science indicates significant range recovery and defines new conservation priorities for Earth's most endangered Pinniped in Greece.",
+      "author": "Adamantopoulou, S., Karamanlidis, A. A., Dendrinos, D. and Olivier, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Beton, D., Broderick, A.C., Godley, B.J., Kolac, E., Ok, M. and Snape, R.T.E. 2021. New monitoring confirms regular breeding of the Mediterranean monk seal in Northern Cyprus. <i>Oryx</i> 55(4): 522-525.",
+      "year": "2021",
+      "title": "New monitoring confirms regular breeding of the Mediterranean monk seal in Northern Cyprus.",
+      "author": "Beton, D., Broderick, A.C., Godley, B.J., Kolac, E., Ok, M. and Snape, R.T.E",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bundone, L., Hernandez-Milian, G., Hysolakoj, N., Bakiu, R., Mehillaj, T., Lazaj, L., Deng, H., Lusher, A. and Pojana, G. 2022. First documented uses of caves along the coast of Albania by Mediterranean monk seals (<i>Monachus monachus</i>, Hermann 1779): Ecological and Conservation Inferences. <i>Animals </i> 12(19): 2620. https://doi.org/10.3390/ani12192620",
+      "year": "2022",
+      "title": "First documented uses of caves along the coast of Albania by Mediterranean monk seals (<i>Monachus monachus</i>, Hermann 1779): Ecological and Conservation Inferences",
+      "author": "Bundone, L., Hernandez-Milian, G., Hysolakoj, N., Bakiu, R., Mehillaj, T., Lazaj, L., Deng, H., Lusher, A. and Pojana, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bundone, L., Panou, A. and Molinaroli, E. 2019. On sightings of (vagrant?) monk seals, <i>Monachus monachus</i>, in the Mediterranean Basin and their importance for the conservation of the species. <i>Aquatic Conservation - Marine and Freshwater Ecosystems</i> 29(4): 554-563.",
+      "year": "2019",
+      "title": "On sightings of (vagrant?) monk seals, <i>Monachus monachus</i>, in the Mediterranean Basin and their importance for the conservation of the species",
+      "author": "Bundone, L., Panou, A. and Molinaroli, E",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dendrinos, D., Adamantopoulou, S., Koemtzopoulos, K., Mpatzios, P., Paxinos, P., Tounta, E., Tsiakalos, D. and Karamanlidis, A.A. 2022. Anecdotal observations of the use of open beaches by female Mediterranean monk seals <i>Monachus monachus</i> and their pups in Greece: Implications for conservation. <i>Aquatic Mammals</i> 6: 602-609.",
+      "year": "2022",
+      "title": "Anecdotal observations of the use of open beaches by female Mediterranean monk seals <i>Monachus monachus</i> and their pups in Greece: Implications for conservation.",
+      "author": "Dendrinos, D., Adamantopoulou, S., Koemtzopoulos, K., Mpatzios, P., Paxinos, P., Tounta, E., Tsiakalos, D. and Karamanlidis, A.A",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dendrinos, D., Karamanlidis, A.A., Adamantopoulou, S., Koemtzopoulos, K., Komninou, A. and Tounta, E. 2020. LIFE-IP 4 NATURA: Integrated actions for the conservation and management of Natura 2000 sites, species, habitats and ecosystems in Greece. Deliverable Action A.1: Action Plan for the Mediterranean monk seal (<i>Monachus monachus</i>). Hellenic Ministry of Environment and Energy, Athens.",
+      "year": "2020",
+      "title": "LIFE-IP 4 NATURA: Integrated actions for the conservation and management of Natura 2000 sites, species, habitats and ecosystems in Greece. Deliverable Action A.1: Action Plan for the Mediterranean monk seal (<i>Monachus monachus</i>)",
+      "author": "Dendrinos, D., Karamanlidis, A.A., Adamantopoulou, S., Koemtzopoulos, K., Komninou, A. and Tounta, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dendrinos, D., Papadas, C., Samara, E. and Karamanlidis, Α.Α. 2015. Conservation in action: clean-up of an important Mediterranean monk seal pupping site at the island of Gyaros, Greece. International Congress on the Zoogeography and Ecology of Greece and Adjacent Areas: 107. Irakleio, Crete.",
+      "year": "2015",
+      "title": "Conservation in action: clean-up of an important Mediterranean monk seal pupping site at the island of Gyaros, Greece",
+      "author": "Dendrinos, D., Papadas, C., Samara, E. and Karamanlidis, Α.Α",
+      "citation_short": ""
+    },
+    {
+      "citation": "Department of Fisheries and Marine Research. 2022. Available at: <a href=\"http://www.moa.gov.cy/moa/dfmr/dfmr.nsf/index_en/index_en?OpenDocument\">http://www.moa.gov.cy/moa/dfmr/dfmr.nsf/index_en/index_en?OpenDocument</a>",
+      "year": "2022",
+      "title": "",
+      "author": "Department of Fisheries and Marine Research",
+      "citation_short": ""
+    },
+    {
+      "citation": "Eastern Adriatic Monk seal Project. 2019. Eastern Adriatic Monk seal Project. Available at: <a href=\"httpss://www.adriaticmonkseal.org\">httpss://www.adriaticmonkseal.org</a>. ",
+      "year": "2019",
+      "title": "Eastern Adriatic Monk seal Project",
+      "author": "Eastern Adriatic Monk seal Project",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fernandez de Larrinoa, P., Baker, J.D., Cedenilla, M.A., Harting, A.L., Haye, M.O., Munoz, M., M'Bareck, H., M'Bareck, A., Aparicio, F., Centenera, S. and Gonzalez, l.M. 2021. Age-specific survival and reproductive rates of Mediterranean monk seals at the Cabo Blanco Peninsula, West Africa. <i>Endangered Species Research</i> 45: 315-329.",
+      "year": "2021",
+      "title": "Age-specific survival and reproductive rates of Mediterranean monk seals at the Cabo Blanco Peninsula, West Africa.",
+      "author": "Fernandez de Larrinoa, P., Baker, J.D., Cedenilla, M.A., Harting, A.L., Haye, M.O., Munoz, M., M'Bareck, H., M'Bareck, A., Aparicio, F., Centenera, S. and Gonzalez, l.M",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fioravanti, T., Splendiani, A., Righi, T., Maio, N., Lo Brutto, S., Petrella, A. and Caputo Barucchi, V. 2020. A Mediterranean monk seal pup on the Apulian coast (Southern Italy): Sign of an ongoing recolonisation? <i>Diversity</i> 12(6): 258. https://doi.org/10.3390/d12060258.",
+      "year": "2020",
+      "title": "A Mediterranean monk seal pup on the Apulian coast (Southern Italy): Sign of an ongoing recolonisation?",
+      "author": "Fioravanti, T., Splendiani, A., Righi, T., Maio, N., Lo Brutto, S., Petrella, A. and Caputo Barucchi, V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gaubert, P., Justy, F., Mo, G., Aguilar, A., Danyer, E., Borrell, A., Dendrinos, P., Öztürk, B., Improta, R., Tonay, A. M. and Karamanlidis, A. A. 2019. Insights from 180 years of mitochondrial variability in the endangered Mediterranean monk seal (<i>Monachus monachus</i>). <i>Marine Mammal Science</i> 35(4): 1489-1511.",
+      "year": "2019",
+      "title": "Insights from 180 years of mitochondrial variability in the endangered Mediterranean monk seal (<i>Monachus monachus</i>).",
+      "author": "Gaubert, P., Justy, F., Mo, G., Aguilar, A., Danyer, E., Borrell, A., Dendrinos, P., Öztürk, B., Improta, R., Tonay, A. M. and Karamanlidis, A. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "González, L.M. and de Larrinoa, P.F. 2012. Mediterranean monk seal <i>Monachus monachus</i> distribution and fisheries interactions in the Atlantic Sahara during the second half of the 20th century. <i>Mammalia</i> 77(1): 41-49.",
+      "year": "2012",
+      "title": "Mediterranean monk seal <i>Monachus monachus</i> distribution and fisheries interactions in the Atlantic Sahara during the second half of the 20th century",
+      "author": "González, L.M. and de Larrinoa, P.F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Güçlüsoy, H. 2008a. Interaction between monk seals, <i>Monachus monachus</i> (Hermann, 1779), and artisanal fisheries in the Foça Pilot Monk Seal Conservation Area, Turkey. <i>Zoology in the Middle East</i> 43(1): 13-20.",
+      "year": "2008a",
+      "title": "Interaction between monk seals, <i>Monachus monachus</i> (Hermann, 1779), and artisanal fisheries in the Foça Pilot Monk Seal Conservation Area, Turkey",
+      "author": "Güçlüsoy, H",
+      "citation_short": null
+    },
+    {
+      "citation": "Güçlüsoy, H. 2008b. Damage by monk seals to gear of the artisanal fishery in the Foça Monk Seal Pilot Conservation Area, Turkey. <i>Fisheries Research</i> 90: 70-77.",
+      "year": "2008b",
+      "title": "Damage by monk seals to gear of the artisanal fishery in the Foça Monk Seal Pilot Conservation Area, Turkey",
+      "author": "Güçlüsoy, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hale, R., Pires, R., Santos, P. and Karamanlidis, A.A. 2011. Mediterranean monk seal (<i>Monachus monachus</i>): Fishery interactions in the Archipelago of Madeira. <i>Aquatic Mammals</i> 37(3): 298-304.",
+      "year": "2011",
+      "title": "Mediterranean monk seal (<i>Monachus monachus</i>): Fishery interactions in the Archipelago of Madeira",
+      "author": "Hale, R., Pires, R., Santos, P. and Karamanlidis, A.A",
+      "citation_short": ""
+    },
+    {
+      "citation": "Johnson, W.M. and Lavigne, D.M. 1998. <i>The Mediterranean monk seal. Conservation Guidelines</i>. International Marine Mammal Association, Guelph.",
+      "year": "1998",
+      "title": "The Mediterranean monk seal. Conservation Guidelines",
+      "author": "Johnson, W.M. and Lavigne, D.M",
+      "citation_short": ""
+    },
+    {
+      "citation": "Karamanlidis, A.A., Adamantopoulou, S., Kallianiotis, A., Tounta, E. and Dendrinos, D. 2020. An interview-based approach to assess seal – small-scale fishery interactions informs the conservation strategy of the endangered Mediterranean monk seal. <i>Aquatic Conservation - Marine and Freshwater Ecosystems</i> 30(5): 928-936.",
+      "year": "2020",
+      "title": "An interview-based approach to assess seal – small-scale fishery interactions informs the conservation strategy of the endangered Mediterranean monk seal",
+      "author": "Karamanlidis, A.A., Adamantopoulou, S., Kallianiotis, A., Tounta, E. and Dendrinos, D",
+      "citation_short": ""
+    },
+    {
+      "citation": "Karamanlidis, A.A., Adamantopoulou, S., Tounta, E. and Dendrinos, D. 2019. <i>Monachus monachus</i> Eastern Mediterranean subpopulation. <i>The IUCN Red List of Threatened Species</i> 2019(1): e.T120868935A120869697. https://dx.doi.org/10.2305/IUCN.UK.2019-1.RLTS.T120868935A120869697.en",
+      "year": "2019",
+      "title": "<i>Monachus monachus</i> Eastern Mediterranean subpopulation",
+      "author": "Karamanlidis, A.A., Adamantopoulou, S., Tounta, E. and Dendrinos, D",
+      "citation_short": ""
+    },
+    {
+      "citation": "Karamanlidis, A.A. and Dendrinos, D. 2012. A glimpse into the past, a prospect for the future: studying the status and behavior and promoting conservation of Mediterranean monk seals at the island of Gyaros. Final report to the National Geographic Grant #W178-11. MOm/Hellenic Society for the study and Protection of the Monk seal.",
+      "year": "2012",
+      "title": "A glimpse into the past, a prospect for the future: studying the status and behavior and promoting conservation of Mediterranean monk seals at the island of Gyaros. Final report to the National Geographic Grant #W178-11",
+      "author": "Karamanlidis, A.A. and Dendrinos, D",
+      "citation_short": null
+    },
+    {
+      "citation": "Karamanlidis, A.A., Curtis, P.J., Hirons, A.C., Psaradellis, M., Dendrinos, P. and Hopkins, J.B., III. 2014. Stable isotopes confirm a coastal diet for critically endangered Mediterranean monk seals. <i>Isotopes in Environmental and Health Studies</i> 50(3): 332-342.",
+      "year": "2014",
+      "title": "Stable isotopes confirm a coastal diet for critically endangered Mediterranean monk seals.",
+      "author": "Karamanlidis, A.A., Curtis, P.J., Hirons, A.C., Psaradellis, M., Dendrinos, P. and Hopkins, J.B., III.",
+      "citation_short": null
+    },
+    {
+      "citation": "Karamanlidis, A.A., Dendrinos, P. and Trillmich, F. 2021a. Maternal behavior and early behavioral ontogeny of the Mediterranean monk seal <i>Monachus monachus</i> in Greece. <i>Endangered Species Research</i> 45: 13-20.",
+      "year": "2021a",
+      "title": "Maternal behavior and early behavioral ontogeny of the Mediterranean monk seal <i>Monachus monachus</i> in Greece",
+      "author": "Karamanlidis, A.A., Dendrinos, P. and Trillmich, F",
+      "citation_short": null
+    },
+    {
+      "citation": "Karamanlidis, A.A., Skrbinšek, T., Amato, G., Dendrinos, D., Gaughran, S., Kasapidis, P., Kopatz, A. and Vik Stronen, A. 2021b. Genetic and demographic history define a conservation strategy for Earth’s most endangered Pinniped, the Mediterranean monk seal <i>Monachus monachus</i>. <i>Scientific Reports</i> 11: 373.",
+      "year": "2021b",
+      "title": "Genetic and demographic history define a conservation strategy for Earth’s most endangered Pinniped, the Mediterranean monk seal <i>Monachus monachus</i>",
+      "author": "Karamanlidis, A.A., Skrbinšek, T., Amato, G., Dendrinos, D., Gaughran, S., Kasapidis, P., Kopatz, A. and Vik Stronen, A",
+      "citation_short": null
+    },
+    {
+      "citation": "Kıraç, C.O. 2001. Witnessing the monk seal's extinction in the Black Sea. <i>The Monachus Guardian</i> 4(2).",
+      "year": "2001",
+      "title": "Witnessing the monk seal's extinction in the Black Sea",
+      "author": "Kıraç, C.O",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kıraç, C.O. and Ok, M. 2019. Diet of a Mediterranean monk seal <i>Monachus monachus</i> in a transitional post-weaning phase and its implications for the conservation of the species. <i>Endangered Species Research</i> 39: 315-320.",
+      "year": "2019",
+      "title": "Diet of a Mediterranean monk seal <i>Monachus monachus</i> in a transitional post-weaning phase and its implications for the conservation of the species",
+      "author": "Kıraç, C.O. and Ok, M",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kıraç, C.O. and Savaş, Y. 2019. Assessments for threats and ecological needs of monk seal populations in Turkish Aegean and the Sea of Marmara. <i>The 5th International Conference on Marine Protected Areas</i>.",
+      "year": "2019",
+      "title": "Assessments for threats and ecological needs of monk seal populations in Turkish Aegean and the Sea of Marmara",
+      "author": "Kıraç, C.O. and Savaş, Y",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kıraç, C.O. and Veryeri, N.O. 2018. The Sea of Marmara is home to more monk seals than expected. <i>The Monachus Guardian</i>: 16 September 2018: https://monachus-guardian.org/wordpress/2018/09/16/the-sea-of-marmara-is-home-to-more-monk-seals-than-expected/.",
+      "year": "2018",
+      "title": "The Sea of Marmara is home to more monk seals than expected",
+      "author": "Kıraç, C.O. and Veryeri, N.O",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kıraç, C.O., Korçak M., Güler, I. and Yalçıner, A.C. 2022. Çandarlı Körfezi’nde Olası Petrol Kirliliği Risk Değerlendirmesi; Deniz Çevresi, Sosyo-Ekonomi ve Deniz Ulaştırma [Risk Assessment of Probable Oil Pollution in Çandarlı Bay, İzmir; Marine environment, Socio-economy and Maritime transport]. SAD Underwater Research Society, Ankara, Turkey.",
+      "year": "2022",
+      "title": "Çandarlı Körfezi’nde Olası Petrol Kirliliği Risk Değerlendirmesi; Deniz Çevresi, Sosyo-Ekonomi ve Deniz Ulaştırma [Risk Assessment of Probable Oil Pollution in Çandarlı Bay, İzmir; Marine environment, Socio-economy and Maritime transport]",
+      "author": "Kıraç, C.O., Korçak M., Güler, I. and Yalçıner, A.C",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kıraç, C.O., Veryeri, N.O. and Savaş, Y. 2020. Mediterranean monk seal bycatch along Turkish coasts.  Technical Report submitted to The Republic of Turkey, Ministry of Agriculture & Forest - DG Fishery and Aqua Products. SAD-AFAG, Ankara, Turkey.",
+      "year": "2020",
+      "title": "Mediterranean monk seal bycatch along Turkish coasts",
+      "author": "Kıraç, C.O., Veryeri, N.O. and Savaş, Y",
+      "citation_short": ""
+    },
+    {
+      "citation": "Koemtzopoulos, K., Adamantopoulou, S., Dendrinos, P., Komnenou, A., Tounta, E. and Karamanlidis, A. A. 2022. Molt chronology of a male Mediterranean monk seal (<i>Monachus monachus</i>) from the Eastern Mediterranean Sea. <i>Aquatic Mammals</i> 48(1): 15-20.",
+      "year": "2022",
+      "title": "Molt chronology of a male Mediterranean monk seal (<i>Monachus monachus</i>) from the Eastern Mediterranean Sea.",
+      "author": "Koemtzopoulos, K., Adamantopoulou, S., Dendrinos, P., Komnenou, A., Tounta, E. and Karamanlidis, A. A. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Machado, A.J.M. 1979. Os Lobos-marinhos (Género <i>Monachus</i>, Fleming 1822) - Contribuição para o seu Estudo e Protecção. <i>Museu do Mar, Unidade de Mamalogia, Cascais</i>: 1-242.",
+      "year": "1979",
+      "title": "Os Lobos-marinhos (Género <i>Monachus</i>, Fleming 1822) - Contribuição para o seu Estudo e Protecção",
+      "author": "Machado, A.J.M",
+      "citation_short": ""
+    },
+    {
+      "citation": "MOm. 2008a. Final Report on the Monitoring of the Status of the Population of the Monk Seal, in Karpathos and Saria. MOm/Hellenic Society for the Study and Protection of the Monk seal, Athens, Greece.",
+      "year": "2008a",
+      "title": "Final Report on the Monitoring of the Status of the Population of the Monk Seal, in Karpathos and Saria",
+      "author": "MOm",
+      "citation_short": null
+    },
+    {
+      "citation": "MOm. 2008b. Annual Technical Report 2007. On the Status of the Mediterranean Monk Seal (<i>Monachus monachus</i>) in Greece. The Hellenic Society for the Study and Protection of the Monk Seal (MOm), Athens, Greece.",
+      "year": "2008b",
+      "title": "Annual Technical Report 2007. On the Status of the Mediterranean Monk Seal (<i>Monachus monachus</i>) in Greece",
+      "author": "MOm",
+      "citation_short": null
+    },
+    {
+      "citation": "Nicolaou, H., Dendrinos, D., Marcou, M., Michaelides, S. and Karamanlidis, A.A. 2019. Re-establishment of the Mediterranean monk seal <i>Monachus monachus</i> in Cyprus: priorities for conservation. <i>Oryx</i> 55(4): 526-528.",
+      "year": "2019",
+      "title": "Re-establishment of the Mediterranean monk seal <i>Monachus monachus</i> in Cyprus: priorities for conservation.",
+      "author": "Nicolaou, H., Dendrinos, D., Marcou, M., Michaelides, S. and Karamanlidis, A.A",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pires, R., Aparicio, F. and Fernandez de Larrinoa, P. 2020. Strategy for the Conservation of the Mediterranean Monk Seal in the Madeira Archipelago. Instituto das Florestas e Conservação da Natureza.",
+      "year": "2020",
+      "title": "Strategy for the Conservation of the Mediterranean Monk Seal in the Madeira Archipelago.",
+      "author": "Pires, R., Aparicio, F. and Fernandez de Larrinoa, P",
+      "citation_short": null
+    },
+    {
+      "citation": "Pires, R., Aparicio, F., Baker, J., Pereira, S., Caires, N., Cedenilla, M. A., Harting, A., Menezes, D. and Fernandez de Larrinoa, P. 2023. First demographic parameter estimates for the Mediterranean monk seal population at Madeira, Portugal. <i>Endangered Species Research</i> 51: 269-283.",
+      "year": "2023",
+      "title": "First demographic parameter estimates for the Mediterranean monk seal population at Madeira, Portugal",
+      "author": "Pires, R., Aparicio, F., Baker, J., Pereira, S., Caires, N., Cedenilla, M. A., Harting, A., Menezes, D. and Fernandez de Larrinoa, P",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rey-Iglesia, A., Gaubert, P., Espregueira, T., Pires, R., De la Fuente, C., Freitas, L., Aguilar, A., Borrell, A., Krakhmalnaya, T., Vasconcelos, R. and Campos, P. F. 2020. Mitogenomics of the endangered Mediterranean monk seal (<i>Monachus monachus</i>) reveals dramatic loss of diversity and supports historical gene-flow between Atlantic and eastern Mediterranean populations. <i>Zoological Journal of the Linnean Society</i> 191(4): 1147-1159. https://doi.org/10.1093/zoolinnean/zlaa084",
+      "year": "2020",
+      "title": "Mitogenomics of the endangered Mediterranean monk seal (<i>Monachus monachus</i>) reveals dramatic loss of diversity and supports historical gene-flow between Atlantic and eastern Mediterranean populations",
+      "author": "Rey-Iglesia, A., Gaubert, P., Espregueira, T., Pires, R., De la Fuente, C., Freitas, L., Aguilar, A., Borrell, A., Krakhmalnaya, T., Vasconcelos, R. and Campos, P. F",
+      "citation_short": ""
+    },
+    {
+      "citation": "Salmona, J., Dayon, J., Lecompte, E., Karamanlidis, A.A., Aguilar, A., Fernandez de Larrinoa, P., Pires, R., Mo, G., Panou, A., Agnesi, S., Borrell, A., Danyer, E., Öztürk, B., Tonay, A., Anestis, A.K., González, L.M., Dendrinos, D. and Gaubert, P. 2022. The antique genetic plight of the Mediterranean monk seal (<i>Monachus monachus</i>). <i>Proceedings of the Royal Society B</i> 298: 20220846. http://doi.org/10.1098/rspb.2022.0846.",
+      "year": "2022",
+      "title": "The antique genetic plight of the Mediterranean monk seal (<i>Monachus monachus</i>)",
+      "author": "Salmona, J., Dayon, J., Lecompte, E., Karamanlidis, A.A., Aguilar, A., Fernandez de Larrinoa, P., Pires, R., Mo, G., Panou, A., Agnesi, S., Borrell, A., Danyer, E., Öztürk, B., Tonay, A., Anestis, A.K., González, L.M., Dendrinos, D. and Gaubert, P",
+      "citation_short": ""
+    },
+    {
+      "citation": "Scheinin, A.P., Goffman, O., Elasar, M., Perelberg, A. and Kerem, D.H. 2011. Mediterranean monk seal (<i>Monachus monachus</i>) resighted along the Israeli coastline after more than half a century. <i>Aquatic Mammals</i> 37(3): 241-242.",
+      "year": "2011",
+      "title": "Mediterranean monk seal (<i>Monachus monachus</i>) resighted along the Israeli coastline after more than half a century",
+      "author": "Scheinin, A.P., Goffman, O., Elasar, M., Perelberg, A. and Kerem, D.H",
+      "citation_short": ""
+    },
+    {
+      "citation": "Valsecchi, E., Coppola, E., Pires, R., Parmegiani, A., Casiraghi, M., Galli, P. and Bruno, A. 2022. A species-specific qPCR assay provides novel insight into range expansion of the Mediterranean monk seal (<i>Monachus monachus</i>) by means of eDNA analysis. <i>Biodiversity and Conservation</i> 31: 1175-1196.",
+      "year": "2022",
+      "title": "A species-specific qPCR assay provides novel insight into range expansion of the Mediterranean monk seal (<i>Monachus monachus</i>) by means of eDNA analysis",
+      "author": "Valsecchi, E., Coppola, E., Pires, R., Parmegiani, A., Casiraghi, M., Galli, P. and Bruno, A",
+      "citation_short": ""
+    },
+    {
+      "citation": "González, L.M. 2015. Prehistoric and historic distributions of the critically endangered Mediterranean monk seal (<i>Monachus monachus</i>) in the eastern Atlantic. <i>Marine Mammal Science</i> 31(3): 1168-1192.",
+      "year": "2015",
+      "title": "Prehistoric and historic distributions of the critically endangered Mediterranean monk seal (<i>Monachus monachus</i>) in the eastern Atlantic",
+      "author": "González, L.M",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [
+    {
+      "description": {
+        "en": "Mediterranean Sea"
+      },
+      "code": "2_1_1"
+    },
+    {
+      "description": {
+        "en": "Canary Current"
+      },
+      "code": "2_1_2"
+    }
+  ],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

@@ -1,0 +1,750 @@
+{
+  "assessment_date": "2024-10-11T01:00:00.000+01:00",
+  "year_published": "2025",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 40556,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/40556/258654868",
+  "citation": "Old, J., Stannard, H., Woinarski, J.C.Z. & Burbidge, A.A. 2025. Vombatus ursinus. The IUCN Red List of Threatened Species 2025: e.T40556A258654868. Accessed on 15 May 2026.",
+  "assessment_id": 258654868,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 40556,
+    "scientific_name": "Vombatus ursinus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "DIPROTODONTIA",
+    "family_name": "VOMBATIDAE",
+    "genus_name": "Vombatus",
+    "species_name": "ursinus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Shaw, 1800)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Australasian Marsupial and Monotreme Specialist Group",
+        "url": "https://www.iucn.org/commissions/ssc-groups/mammals/specialist-groups-a-e/australasian-marsupial-and-monotreme",
+        "description": "Co-Chairs: John Woinarski (email: John.Woinarski@cdu.edu.au) and Diana Fisher (email: d.fisher@uq.edu.au)\nRed List Authority Coordinator: Chris Johnson (email: c.n.johnson@utas.edu.au)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Coarse-haired Wombat",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Common Wombat",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Wombat Commun",
+        "language": "fre"
+      },
+      {
+        "main": true,
+        "name": "Bare-nosed Wombat",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": "20-2000",
+    "upper_elevation_limit": 2200,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "1000000-2000000",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "No",
+    "generational_length": "9.7",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "No",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Percentage of population protected by PAs",
+            "value": "21-30"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Unknown"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": "8476-592372",
+    "continuing_decline_in_area_of_occupancy": "No",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "978658",
+    "continuing_decline_in_extent_of_occurence": "No",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "No",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "The Bare-nosed Wombat is endemic to south-eastern Australia, where it has a discontinuous and fragmented range in mainland Australia from south-eastern Queensland to south-eastern South Australia, on the Tasmanian mainland and on Flinders, Bruny, Dog, King, Rigby, Snake, Sunday and Rotamah Islands (Abbott and Burbidge 1995, McIlroy 2023). Populations on Cape Barren and Clarke Islands have been extirpated (Hope 1973, Abbott and Burbidge 1995). It ranges in elevation from sea level to 2200 m (Matthews <em>et al</em>. 2012).&#160;<br/>&#160; <br/>A population was also introduced in the 1960s to Maria Island (Tasmania).",
+    "population": "<p>The Bare-nosed Wombat is common. Densities of wombats range from 0.12 to 1.9 individuals per hectare (McIlroy 1977; Mallett and Cooke 1986; Taylor 1993; Buchan and Goldney 1998; Skerratt <em>et al. </em>2004, Evans 2008, Burgess <em>et al</em>. 2023), with lower densities possibly reflecting poorer habitat and/or food quality. Recent studies have estimated the total population at 840,000 in Tasmania, 72,000 on Flinders Island and 432,000 in Victoria (Heard and Ramsay 2023, Knoblauch <em>et al</em>. 2023), with comparable numbers likely in New South Wales.</p>  <p>Population trends are not well established across the range of Bare-nosed Wombats. However, there are several monitoring programs of varying intensity, spatial scales and duration. The most substantial is that in Tasmania, which has monitored the abundance of wombats (and other species) at 132 transects across much of mainland Tasmania and eight transects on Flinders Island every year for 34 years. Over this period, the wombat population increased by 2.6 times on Tasmania and 3.5 times on Flinders Island (Carver <em>et al</em>. 2021, Driessen <em>et al</em>. 2021). However, population trends were variable across regions and recent decline has occurred at one monitored Tasmanian region, due to sarcoptic mange (Martin <em>et al</em>. 2018).</p>",
+    "habitats": "Bare-nosed Wombats are found in temperate forested areas, sclerophyll forest, coastal scrub, and heathland (McIlroy 2023). They live in a system of burrows, and use between one and six in a night and up to 20 burrows over several weeks (McIlroy 2023). Breeding can take place at any time of the year. Usually a single young is born (McIlroy 2023). The young are dependent on the female for at least 17 months. Bare-nosed Wombats become sexually mature at about two years, and can live up to 15 years in the wild (McIlroy 2023). Wombats have cube shaped scats and will deposit their scats on rocks, logs and in prominent locations to mark their territory. Wombats are grazers consuming mostly grasses as well as sedges and rushes (Mallett and Cooke 1986, Evans <em>et al.</em> 2006, Green <em>et al.</em> 2015, Old <em>et al.</em> 2024). Their diet is nutrient-poor and their metabolism is among the lowest extreme for mammals &gt;10 kg (Carver <em>et al</em>. 2024).<br/><br/>Wombat burrows are used for shelter by many other animal species, and particularly may provide critical refuges for many species during and after wildfire (Linley <em>et al</em>. 2024).",
+    "threats": "The main threats to Bare-nosed Wombats are starvation (associated with prolonged drought), sarcoptic mange, predation by dogs, collisions with vehicles and persecution by humans (McIlroy 2023, Thorley and Old 2020). Historically population declines occurred through conversion of native vegetation to agricultural land, and further reductions may continue to be a threat in parts of the wombat’s range. Conversely, wombats may also benefit from patchy clearing that results in a mosaic of forest and pasture (Carver <em>et al</em>. 2021, Driessen <em>et al</em>. 2021).<br/><br/>  Sarcoptic mange caused by the mite <em>Sarcoptes scabiei</em>&#160;that burrows into the skin and causes a hypersensitivity reaction, is an increasing concern. Infected wombats lose fur, the skin becomes crusted and cracked causing open wounds. If left untreated afflicted wombats may die. Sarcoptic mange is present across the entire geographic distribution of the Bare-nosed Wombat, and has been documented to affect up to 42% of a population (Martin <em>et al.</em> 1998, Skerratt 1998; Skerratt <em>et al</em>. 2004, Hartley and English 2005, Stannard <em>et al</em>. 2021, Mayadunnage <em>et al</em>. 2024). Sarcoptic mange led to a 94% decline in the wombat population in Narawntapu National Park, Tasmania over a 7-year period, 2010-2016 (Martin <em>et al</em>. 2018).&#160;A camera-trap survey of the distribution of wombats and of symptoms of mange across Tasmania and the larger Bass Strait islands showed that while mange is widespread the manifestation of mange is heterogeneous. As well as being generally correlated with habitat suitability for wombats, manifestation of mange was more likely at sites with low annual precipitation, near sources of freshwater, and with low topographic roughness. Because the habitat preferences of wombats are broader, a large proportion of the species range is in areas with low environmental suitability for mange (Ringwaldt <em>et al.</em> 2023). This suggests that while locally significant mange is unlikely to be causing large-scale decline.<br/><br/>  Collision with motor vehicles is an ongoing threat (Driessen <em>et al</em>. 2021), especially for individuals that live close to urban areas. Records collected by citizen scientists from 2015 to 2019 reported 2,391 wombat deaths across New South Wales, the Australian Capital Territory, Victoria and Tasmania due to collisions with motor vehicles (Mayadunnage <em>et al.</em> 2023). Collisions with motor vehicles also cause young to become orphaned and require care, which is costly and labour intensive.<br/><br/>  The Bare-nosed Wombat may also be threatened by the increasing extent and severity of wildfires. Although their deep burrows probably act as shelter and thereby reduce mortality in fires, the post-fire landscape may provide few food resources. About 30% of the distributional range of Bare-nosed Wombats was burnt in the Black Summer (2019-20) wildfires, much at high intensity (Legge <em>et al</em>. 2021); however monitoring at 12 months post-fire showed little impact - and indeed higher abundance in burnt compared with matched unburnt sites (Spencer&#160;<em>et al</em>. 2022).",
+    "measures": "Wombats are present in many protected areas and are protected in all states where they occur. Wombats can cause damage to stock fences, and pasture, and dig burrows under houses or in dam walls, leading to human-wildlife conflict. Ideally, wombats should be managed to prevent potential conflicts, either using fencing, wombat gates, marking burrows, or using excluding mesh. As a last resort lethal control can be used but must be licensed by the state authority.<br/><br/>Although the threat remains formidable and extensive, there is some local-scale success with management of sarcoptic mange, such as through the use of burrow-flaps that apply antiparasitical medications when the wombat leaves its burrow (Bains <em>et al</em>. 2022).",
+    "use_trade": null,
+    "rationale": "The Bare-nosed Wombat is Least Concern as the species is common, has a wide distribution, tolerates a broad range of habitats, and is unlikely to be undergoing a decline in population.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Australasian"
+      },
+      "code": "2"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Invasive/problematic species control"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australian Capital Territory"
+      },
+      "code": "NSW-CT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New South Wales"
+      },
+      "code": "NSW-NS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Queensland"
+      },
+      "code": "QLD-QU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Australia"
+      },
+      "code": "SOA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tasmania"
+      },
+      "code": "TAS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Victoria"
+      },
+      "code": "VIC-OO"
+    },
+    {
+      "is_endemic": true,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Canis familiaris",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Sarcoptes scabiei",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Increase in fire frequency/intensity"
+      },
+      "code": "7_1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Old, J., Stannard, H., Woinarski, J.C.Z. & Burbidge, A.A.",
+      "value": [
+        "John Woinarski (Natural Resources, Environment and The Arts, NT)",
+        "Andrew Burbidge (IUCN SSC Australasian Marsupial and Monotreme Specialist Group)",
+        "Hayley Stannard",
+        "Julie Old"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Johnson, C.N.",
+      "value": [
+        "Christopher Johnson (University of Tasmania, Hobart, Australia)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Menkhorst, P. & Taggart, D.",
+      "value": [
+        "Peter Menkhorst",
+        "David Taggart"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Abbott, I. and Burbidge, A.A. 1995. The occurrence of mammal species on the islands of Australia: a summary of existing knowledge. <i>CALMScience</i> 1(3): 259-324.",
+      "year": "1995",
+      "title": "The occurrence of mammal species on the islands of Australia: a summary of existing knowledge",
+      "author": "Abbott, I. and Burbidge, A.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "McIlroy, J. C. 2008. Common Wombat, <i>Vombatus ursinus</i>. In: S. Van Dyck and R. Strahan (eds), <i>The mammals of Australia. Third Edition</i>, pp. 206-208. Reed New Holland, Sydney, Australia.",
+      "year": "2008",
+      "title": "Common Wombat, <i>Vombatus ursinus</i>",
+      "author": "McIlroy, J. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "AnAge. 2012. The animal aging and longevity database. Available at: <a href=\"http://genomics.senescence.info/species/\">http://genomics.senescence.info/species/</a>. ",
+      "year": "2012",
+      "title": "The animal aging and longevity database",
+      "author": "AnAge",
+      "citation_short": null
+    },
+    {
+      "citation": "Legge, S., Woinarski, J., Scheele, B., Garnett, S. T., Lintermans, M., Nimmo, D., Whiterod, N. S., Southwell, D., Ehmke, G., Buchan, A., Gray, J. E., Rumpff, L., van Leeuwen, S., Williams, D., Ahyong, S. T., Hossain, A., Hunter, D., Kennard, M., Marsh, J., McCormack, R. B., Michael, D., Mitchell, N., Newell, D., Raadik, T. A. and Tingley, R. 2022. Rapid assessment of the biodiversity impacts of a megafire to guide urgent management intervention and recovery. <i>Diversity and Distributions</i> 28: 571-591.",
+      "year": "2022",
+      "title": "Rapid assessment of the biodiversity impacts of a megafire to guide urgent management intervention and recovery",
+      "author": "Legge, S., Woinarski, J., Scheele, B., Garnett, S. T., Lintermans, M., Nimmo, D., Whiterod, N. S., Southwell, D., Ehmke, G., Buchan, A., Gray, J. E., Rumpff, L., van Leeuwen, S., Williams, D., Ahyong, S. T., Hossain, A., Hunter, D., Kennard, M., Marsh, J., McCormack, R. B., Michael, D., Mitchell, N., Newell, D., Raadik, T. A. and Tingley, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2025. The IUCN Red List of Threatened Species. Version 2025-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 27 March 2025).",
+      "year": "2025",
+      "title": "The IUCN Red List of Threatened Species. Version 2025-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2025-1"
+    },
+    {
+      "citation": "Bains, J., Carver, S., and Hua, S. 2022. Pathophysiological and pharmaceutical considerations for enhancing the control of Sarcoptes scabiei in wombats through improved transdermal drug delivery. <i>Frontiers in veterinary science </i> 9: 944578.",
+      "year": "2022",
+      "title": "Pathophysiological and pharmaceutical considerations for enhancing the control of Sarcoptes scabiei in wombats through improved transdermal drug delivery",
+      "author": "Bains, J., Carver, S., and Hua, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Buchan, A., and Goldney, D.C. 1998. The common wombat Vombatus ursinus in a fragmented landscape. In: Wells, R.T., and Pridmore, P.A. (eds), <i>Wombats</i>, pp. 251-261. Surrey Beatty and Sons, Chipping Norton.",
+      "year": "1998",
+      "title": "The common wombat Vombatus ursinus in a fragmented landscape",
+      "author": "Buchan, A., and Goldney, D.C. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Burgess, L.G., Richards, S.A., Driessen, M.M., Wilkinson, V., Amin, R.J. and Carver, S. 2023. Fine‐scale landscape epidemiology: Sarcoptic mange in bare‐nosed wombats (Vombatus ursinus). . <i>Transboundary and Emerging Diseases </i> 2023: 2955321.",
+      "year": "2023",
+      "title": "Fine‐scale landscape epidemiology: Sarcoptic mange in bare‐nosed wombats (Vombatus ursinus). ",
+      "author": "Burgess, L.G., Richards, S.A., Driessen, M.M., Wilkinson, V., Amin, R.J. and Carver, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Carver, S., Charleston, M., Hocking, G., Gales, R. and Driessen, M.M. 2021. Long‐term spatiotemporal dynamics and factors associated with trends in bare‐nosed wombats. <i>The Journal of Wildlife Management </i> 85: 449-461.",
+      "year": "2021",
+      "title": "Long‐term spatiotemporal dynamics and factors associated with trends in bare‐nosed wombats",
+      "author": "Carver, S., Charleston, M., Hocking, G., Gales, R. and Driessen, M.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Carver, S., Stannard, G.I., and Martin, A.M. 2024. The distinctive biology and characteristics of the Bare-Nosed Wombat (Vombatus ursinus). <i>Annual Review of Animal Biosciences</i> 12: 135-160.",
+      "year": "2024",
+      "title": "The distinctive biology and characteristics of the Bare-Nosed Wombat (Vombatus ursinus)",
+      "author": "Carver, S., Stannard, G.I., and Martin, A.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Driessen, M.M., Dewar, E., Carver, S., Lawrence, C. and Gales, R. 2021. Conservation status of common wombats in Tasmania II: population distribution and trends, and the incidence and significance of roadkill. <i>Pacific Conservation Biology </i> 28: 115-123.",
+      "year": "2021",
+      "title": "Conservation status of common wombats in Tasmania II: population distribution and trends, and the incidence and significance of roadkill",
+      "author": "Driessen, M.M., Dewar, E., Carver, S., Lawrence, C. and Gales, R",
+      "citation_short": ""
+    },
+    {
+      "citation": "Evans, M.C. 2008. Home range, burrow-use and activity patterns in common wombats (Vombatus ursinus). <i>Wildlife Research</i> 35: 455-462.",
+      "year": "2008",
+      "title": "Home range, burrow-use and activity patterns in common wombats (Vombatus ursinus)",
+      "author": "Evans, M.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Evans, M.C., Macgregor, C. and Jarman, P.J. 2006. Diet and feeding selectivity of common wombats. <i>Wildlife Research</i> 33: 321-330.",
+      "year": "2006",
+      "title": "Diet and feeding selectivity of common wombats",
+      "author": "Evans, M.C., Macgregor, C. and Jarman, P.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Green, K., Davis, N.E. and Robinson, W.A. 2015. The diet of the common wombat (Vombatus ursinus) above the winter snowline in the decade following a wildfire. <i>Australian Mammalogy </i> 37: 146-156.",
+      "year": "2015",
+      "title": "The diet of the common wombat (Vombatus ursinus) above the winter snowline in the decade following a wildfire",
+      "author": "Green, K., Davis, N.E. and Robinson, W.A. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hartley, M. and English, A. 2005. Sarcoptes scabei var. wombati infection in the common wombat (Vombatus ursinus). <i>European Journal of Wildlife Research </i> 51: 117-121.",
+      "year": "2005",
+      "title": "Sarcoptes scabei var. wombati infection in the common wombat (Vombatus ursinus)",
+      "author": "Hartley, M. and English, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Heard, G.W. and Ramsey, D.S.L. 2020. Modelling the abundance of the common wombat across Victoria. Arthur Rylah Institute, Melbourne.",
+      "year": "2020",
+      "title": "Modelling the abundance of the common wombat across Victoria",
+      "author": "Heard, G.W. and Ramsey, D.S.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hope, J.H. 1973. Mammals of the Bass Strait Islands. <i>Proceedings of the Royal Society of Victoria </i> 85: 163-196.",
+      "year": "1973",
+      "title": "Mammals of the Bass Strait Islands",
+      "author": "Hope, J.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Knoblauch, W., Carver, S., Driessen, M.M., Gales, R. and Richards, S.A. 2023. Abundance and population growth estimates for bare-nosed wombats. <i>Ecology and Evolution</i> 13: e10465.",
+      "year": "2023",
+      "title": "Abundance and population growth estimates for bare-nosed wombats",
+      "author": "Knoblauch, W., Carver, S., Driessen, M.M., Gales, R. and Richards, S.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Linley, G.D., Geary, W.L., Jolly, C.J., Spencer, E.E., Ashman, K.R., Michael, D.R., Westaway, D.M. and Nimmo, D.G. 2004. Wombat burrows are hotspots for small vertebrates in a landscape subject to gigafire. <i>Journal of Mammalogy</i> 105: gyae034.",
+      "year": "2004",
+      "title": "Wombat burrows are hotspots for small vertebrates in a landscape subject to gigafire",
+      "author": "Linley, G.D., Geary, W.L., Jolly, C.J., Spencer, E.E., Ashman, K.R., Michael, D.R., Westaway, D.M. and Nimmo, D.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mallett, K. and Cooke, B. 1986. <i>The Ecology of the Common Wombat in South Australia</i>. The Nature Conservation Society of South Australia, Inc, Stepney, SA.",
+      "year": "1986",
+      "title": "The Ecology of the Common Wombat in South Australia",
+      "author": "Mallett, K. and Cooke, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Martin, A.M., Burridge, C.P., Ingram, J., Fraser, T.A. and Carver, S. 2018. Invasive pathogen drives host population collapse: Effects of a travelling wave of sarcoptic mange on bare-nosed wombats. <i>Journal of Applied Ecology</i> 55: 331-341.",
+      "year": "2018",
+      "title": "Invasive pathogen drives host population collapse: Effects of a travelling wave of sarcoptic mange on bare-nosed wombats",
+      "author": "Martin, A.M., Burridge, C.P., Ingram, J., Fraser, T.A. and Carver, S. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Martin, R., Handasyde, K. and Skerratt, L. 1998. Current distribution of sarcoptic mange in wombats. <i>Australian Veterinary Journal </i> 76: 411-414.",
+      "year": "1998",
+      "title": "Current distribution of sarcoptic mange in wombats",
+      "author": "Martin, R., Handasyde, K. and Skerratt, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Matthews, A., Spooner, P., and Lunney, D. 2012. Herbivores in alpine herbfields: will wombats shift to higher altitudes with climate change? In: Lunney, D., and Hutchings, P. (eds), <i>'Wildlife and Climate Change: Towards robust conservation strategies for Australian fauna'</i>, pp. 68-79. Royal Zoological Society of New South Wales, Sydney.",
+      "year": "2012",
+      "title": "Herbivores in alpine herbfields: will wombats shift to higher altitudes with climate change?",
+      "author": "Matthews, A., Spooner, P., and Lunney, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mayadunnage, S., Stannard, H.J., West, P. and Old, J.M. 2024. Spatial and temporal patterns of sarcoptic mange in wombats using the citizen science tool, WomSAT. <i>Integrative Zoology</i> 10: 387-390.",
+      "year": "2024",
+      "title": "Spatial and temporal patterns of sarcoptic mange in wombats using the citizen science tool, WomSAT",
+      "author": "Mayadunnage, S., Stannard, H.J., West, P. and Old, J.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "McIlroy, J. 1977. Aspects of the ecology of the common wombat, Vombatus ursinus. II. Methods for estimating population numbers. <i>Australian Wildlife Research</i> 4: 223-228.",
+      "year": "1977",
+      "title": "Aspects of the ecology of the common wombat, Vombatus ursinus. II. Methods for estimating population numbers",
+      "author": "McIlroy, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "McIlroy, J. 1977. Aspects of the ecology of the common wombat, Vombatus ursinus. II. Methods for estimating population numbers. <i>Australian Wildlife Research</i> 4: 223-228.",
+      "year": "1977",
+      "title": "Aspects of the ecology of the common wombat, Vombatus ursinus. II. Methods for estimating population numbers",
+      "author": "McIlroy, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "McIlroy, J.C. 2023. Common Wombat, Vombatus ursinus. In: Baker, A.M. and Gynther, I.C. (eds), <i>Strahan’s Mammals of Australia. Fourth Edition</i>, pp. 209-211. Reed New Holland, Wahroonga, NSW.",
+      "year": "2023",
+      "title": "Common Wombat, Vombatus ursinus",
+      "author": "McIlroy, J.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Old, J.M., Vallin, B.L., Thorley, R.K., Casey, F.F. and Stannard, H.J. 2023. DNA metabarcoding analysis of the bare-nosed wombat (Vombatus ursinus) diet. <i>Ecology and Evolution </i> 14: e11432.",
+      "year": "2023",
+      "title": "DNA metabarcoding analysis of the bare-nosed wombat (Vombatus ursinus) diet",
+      "author": "Old, J.M., Vallin, B.L., Thorley, R.K., Casey, F.F. and Stannard, H.J. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ringwaldt, E.M., Brook, B.W., Buettel, J.C., Cunningham, C.X., Fuller, C., Gardiner, R., Hamer, R., Jones, M., Martin, A.M. and Carver, S. 2023. Host, environment, and anthropogenic factors drive landscape dynamics of an environmentally transmitted pathogen: Sarcoptic mange in the bare-nosed wombat. <i>Journal of Animal Ecology</i> 92: 1786-1801.",
+      "year": "2023",
+      "title": "Host, environment, and anthropogenic factors drive landscape dynamics of an environmentally transmitted pathogen: Sarcoptic mange in the bare-nosed wombat",
+      "author": "Ringwaldt, E.M., Brook, B.W., Buettel, J.C., Cunningham, C.X., Fuller, C., Gardiner, R., Hamer, R., Jones, M., Martin, A.M. and Carver, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Skerratt, L.F. 1998. Diseases and parasites of the common wombat Vombatus ursinus in the Healesville area of Victoria. In: Wells, R.T., and Pridmore, P.A. (eds), <i>Wombats</i>, pp. 317-328. Surrey Beatty and Sons, Chipping Norton.",
+      "year": "1998",
+      "title": "Diseases and parasites of the common wombat Vombatus ursinus in the Healesville area of Victoria",
+      "author": "Skerratt, L.F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Skerratt, L.F., Skerratt, J.H.L., Banks, S., Martin, R. and Handasyde, K. 2004. Aspects of the ecology of common wombats (Vombatus ursinus) at high density on pastoral land in Victoria. <i>Australian Journal of Zoology</i> 52: 303-330.",
+      "year": "2004",
+      "title": "Aspects of the ecology of common wombats (Vombatus ursinus) at high density on pastoral land in Victoria",
+      "author": "Skerratt, L.F., Skerratt, J.H.L., Banks, S., Martin, R. and Handasyde, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Spencer, E.E., Dickman, C.R., Wardle, G.M., Newsome, T.M. and Greenville, A.C. 2022. One year on: rapid assessment of fauna and red fox diet after the 2019–20 mega-fires in the Blue Mountains, New South Wales. <i>Australian Zoologist</i> 42: 304-325.",
+      "year": "2022",
+      "title": "One year on: rapid assessment of fauna and red fox diet after the 2019–20 mega-fires in the Blue Mountains, New South Wales",
+      "author": "Spencer, E.E., Dickman, C.R., Wardle, G.M., Newsome, T.M. and Greenville, A.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Stannard, H.J., Wolfenden, J., Hermsen, E.M., Vallin, B.T., Hunter, N.E. and Old, J.M. 2021. Incidence of sarcoptic mange in bare-nosed wombats (Vombatus ursinus). . <i>Australian Mammalogy</i> 43: 85-95.",
+      "year": "2021",
+      "title": "Incidence of sarcoptic mange in bare-nosed wombats (Vombatus ursinus). ",
+      "author": "Stannard, H.J., Wolfenden, J., Hermsen, E.M., Vallin, B.T., Hunter, N.E. and Old, J.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Taylor, R.J. 1993. Observations on the behaviour and ecology of the common wombat, Vombatus ursinus, in northeast Tasmania. <i>Australian Mammalogy</i> 16: 1-7.",
+      "year": "1993",
+      "title": "Observations on the behaviour and ecology of the common wombat, Vombatus ursinus, in northeast Tasmania",
+      "author": "Taylor, R.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thorley, R.K. and Old, J.M. 2020. Distribution, abundance and threats to bare-nosed wombats (Vombatus ursinus). <i>Australian Mammalogy</i> 42: 2490256.",
+      "year": "2020",
+      "title": "Distribution, abundance and threats to bare-nosed wombats (Vombatus ursinus)",
+      "author": "Thorley, R.K. and Old, J.M.",
+      "citation_short": ""
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

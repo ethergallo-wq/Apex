@@ -1,0 +1,347 @@
+{
+  "assessment_date": "2016-01-31T00:00:00.000+00:00",
+  "year_published": "2016",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 20024,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/20024/22246448",
+  "citation": "Reid, F. 2016. Sciurus variegatoides. The IUCN Red List of Threatened Species 2016: e.T20024A22246448. Accessed on 15 May 2026.",
+  "assessment_id": 22246448,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 20024,
+    "scientific_name": "Sciurus variegatoides",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "RODENTIA",
+    "family_name": "SCIURIDAE",
+    "genus_name": "Sciurus",
+    "species_name": "variegatoides",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Ogilby, 1839",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Small Mammal Specialist Group",
+        "url": "http://www.small-mammals.org/",
+        "description": "Co-Chairs: Thomas Lacher (email: tlacher@tamu.edu) and Rosalind Kennerley (email: Rosalind.Kennerley@durrell.org)\nRed List Authority Coordinator: Roslaind Kennedy (email: Rosalind.Kennerley@durrell.org)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Variegated Squirrel",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "5-6",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "715093",
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species occurs from south Chiapas, Mexico to Panama (Thorington and Hoffmann 2005). It occurs from lowlands to 1,800 m (Reid 1997). However, there are some records at 2,600 m on Poás Volcano, Costa Rica (Giacalone <em>et al.</em> 1987). In Panama, it does not occur at high elevations except near the border with Costa Rica.",
+    "population": "This species is widespread and common (Reid 1997).",
+    "habitats": "This species occurs in dry deciduous forest, semideciduous forest, evergreen forest, second growth, and in plantations (Reid 1997). In some locations it is considered a crop pest.<br/><br/>Like other large squirrels, this species is diurnal. It is mainly arboreal and crosses open areas by travelling along fencerows or low trees. This species dens in tree holes and constructs leaf nests on branches. The diet consists of soft fruits including mangos, guavas, hog plums (<em>Spondias mombin</em>), and guacimo (<em>Guazuma ulmifolia</em>) (Reid 1997).  Low chucks and harsh chatters are occasionally given (Reid 1997).",
+    "threats": "No major threats are known. Although not considered a major threat at this time, this species' habitat may be threatened by deforestation.",
+    "measures": "This species occurs in a number of protected areas.",
+    "use_trade": null,
+    "rationale": "This species is listed as Least Concern in view of its wide distribution, presumed large population, tolerance of a broad range of habitats, occurrence in a number of protected areas, and because it does not appear to be under threat and is unlikely to be declining at nearly the rate required to qualify for listing in a threatened category.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "El Salvador"
+      },
+      "code": "SV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [],
+  "threats": [],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Reid, F.",
+      "value": [
+        "Fiona Reid (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Amori, G.",
+      "value": [
+        "Giovanni Amori (Italian National Research Council, La Sapienza University in Rome, Italy)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Koprowski, J., Roth, L., Woodman, N. & Timm, R.",
+      "value": [
+        "J. Koprowski",
+        "Neal Woodman (USGS Patuxent Wildlife Research Center\")",
+        "Robert Timm",
+        "L. Roth"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Reid, F. 2009. <i>A Field Guide to the Mammals of Central America and Southeast Mexico</i>. Oxford University Press, New York, USA.",
+      "year": "2009",
+      "title": "A Field Guide to the Mammals of Central America and Southeast Mexico",
+      "author": "Reid, F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C. 2013. Generation length for mammals. <i>Nature Conservation</i> 5: 87–94.",
+      "year": "2013",
+      "title": "Generation length for mammals",
+      "author": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hoffmann, R.S. and Thorington, R.J. 2005. Family Sciuridae. In: E. Wilson and D.M. Reeder (eds), <i>Mammal Species of the World</i>, pp. 754-818. John Hopkins University Press, Baltimore, Maryland, USA.",
+      "year": "2005",
+      "title": "Family Sciuridae",
+      "author": "Hoffmann, R.S. and Thorington, R.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Best, T.L. 1995. <i>Sciurus variegatoides</i>. <i>Mammalian Species</i> 500: 1-3.",
+      "year": "1995",
+      "title": "<i>Sciurus variegatoides</i>",
+      "author": "Best, T.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Giacalone, J., Wells, N. and Willis, G. 1987. Observations on <i>Syntheosciurus brochus</i> in Volcán Poás National Park, Costa Rica. <i>Journal of Mammalogy</i> 68: 145-147.",
+      "year": "1987",
+      "title": "Observations on <i>Syntheosciurus brochus</i> in Volcán Poás National Park, Costa Rica",
+      "author": "Giacalone, J., Wells, N. and Willis, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 04 September 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

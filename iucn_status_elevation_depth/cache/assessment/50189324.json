@@ -1,0 +1,941 @@
+{
+  "assessment_date": "2016-01-07T00:00:00.000+00:00",
+  "year_published": "2016",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 11035,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/11035/50189324",
+  "citation": "IUCN SSC Antelope Specialist Group 2016. Kobus ellipsiprymnus. The IUCN Red List of Threatened Species 2016: e.T11035A50189324. Accessed on 15 May 2026.",
+  "assessment_id": 50189324,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 11035,
+    "scientific_name": "Kobus ellipsiprymnus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 11040,
+        "scientific_name": "Kobus ellipsiprymnus ssp. defassa",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "BOVIDAE",
+        "genus_name": "Kobus",
+        "species_name": "ellipsiprymnus",
+        "subpopulation_name": null,
+        "infra_name": "defassa",
+        "authority": "(Rüppell, 1835)",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Defassa Waterbuck",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 11039,
+        "scientific_name": "Kobus ellipsiprymnus ssp. ellipsiprymnus",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "BOVIDAE",
+        "genus_name": "Kobus",
+        "species_name": "ellipsiprymnus",
+        "subpopulation_name": null,
+        "infra_name": "ellipsiprymnus",
+        "authority": "(Ogilbyi, 1833)",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Ellipsen Waterbuck",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Kringgat",
+            "language": "afr"
+          },
+          {
+            "main": true,
+            "name": "Common Waterbuck",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "ARTIODACTYLA",
+    "family_name": "BOVIDAE",
+    "genus_name": "Kobus",
+    "species_name": "ellipsiprymnus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Ogilbyi, 1833)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Common Waterbuck",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Cobe onctueux",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Wasserbock",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Waterbok",
+        "language": "afr"
+      },
+      {
+        "main": true,
+        "name": "Waterbuck",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Antilope ellipsiprymnus Ogilbyi, 1833",
+        "status": "ACCEPTED",
+        "genus_name": "Antilope",
+        "species_name": "ellipsiprymnus",
+        "species_author": "Ogilbyi, 1833",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 3000,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "7.1",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Percentage of population protected by PAs",
+            "value": "51-60"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "The Waterbuck (<em>Kobus ellipsiprymnus</em>) formerly occurred throughout most of sub-Saharan Africa. It has been eliminated widely within its former range, but survives in many protected areas and in some other areas which are sparsely populated by humans. The Defassa Waterbuck is found west of the western Rift Valley and south of the Sahel from Eritrea in the east to Guinea Bissau in the west; its most northerly point of distribution is in southern Mali. A population still exists in Niokola-Koba in Senegal. Defassa Waterbuck also range east of the Congo Basin forest, spreading west below the basin’s southern limit through Zambia into Angola. Another branch of the distribution extends northwards, west to the Congo River in Congo Republic. Waterbuck are extinct in Gambia, though vagrants may enter from Senegal (Spinage 2013). East of the eastern Rift Valley, the Defassa Waterbuck is replaced by the Common Waterbuck, which extends southwards to about the Hluhluwe-Umfolozi N.P. in KwaZulu-Natal and central Namibia. Common Waterbuck are extinct in Ethiopia, though Defassa remain (Spinage 2013).",
+    "population": "Citing various authors East (1999) indicates that population densities can reach high levels within localized areas of favourable habitat (e.g., &gt;10.0/km² in Lake Nakuru National Park). More typical density estimates obtained by aerial surveys of areas where the species is reasonably common are of the order 0.05-0.15/km². Higher densities of 0.2-0.9/km² have been recorded in aerial surveys of a few areas. Ground surveys have provided density estimates of the order 0.4-1.5/km² in areas where the species is common. <br/>East (1999) produced a total population estimate of about 200,000, approximately 95,000 Defassa Waterbuck and 105,000 Common Waterbuck. No recent global population estimate is available. Overall population trend is suspected to be decreasing.",
+    "habitats": "Inhabits savanna woodlands and forest-savanna mosaics near permanent water (East 1999). Defassa Waterbuck are generally limited to areas receiving at least 750 mm annual rainfall, whereas Common Waterbuck persist in drier regimes (Spinage 2013). The species has been recorded to at least 2,100 m in Ethiopia, and perhaps to 3,000 m (Yalden <em>et al.</em> 1996). Waterbuck are able to exploit a range of habitats to which its congeners are specifically adapted, albeit only to a varying degree, being not as aquatic as the Lechwe, nor as independent of water as the Kob (Spinage 2013). Waterbuck are classified as grazers, but also browse.",
+    "threats": "Waterbuck have been eliminated widely within their former range mainly due to hunting (Spinage 2013). Even though they remain well represented in protected areas, several populations have undergone steep declines (especially those of the Defassa Waterbuck), including those in Queen Elizabeth N. P., Murschison Falls N.P., Akagera N.P., Lake Nakuru N.P., and Comoe N.P. (Spinage 2013, and references therein).",
+    "measures": "More than half the population survives in protected areas, with about 60% of Defassa Waterbuck and more than half of Common Waterbuck in protected areas, plus 13% on private land (East 1999). The species occurs in Niokolo-Koba (Senegal), Comoe (Côte d'Ivoire), Arly-Singou and Nazinga (Burkina Faso), Mole and Bui (Ghana), Pendjari (Benin), the national parks and hunting zones of North Province (Cameroon), Manovo-Gounda-St. Floris (Central African Republic), Moukalaba (Gabon), Garamba and Virunga (Congo-Kinshasa), the Awash Valley and Omo-Mago-Murule (Ethiopia), Murchison Falls and Queen Elizabeth National Parks (Uganda), Serengeti, Moyowosi-Kigosi, Ugalla River and Katavi-Rukwa (Tanzania) and Kafue (Zambia), but about half of these populations are in decline because of poaching (East 1999). Important populations of the Common Waterbuck occur in areas such as Tsavo, Laikipia, Kajiado, Lake Nakuru and the coastal rangelands (Kenya), Tarangire and Selous-Mikumi (Tanzania), the Luangwa Valley (Zambia), and Kruger, Hluhluwe-Umfolozi and private land (South Africa) (East 1999).",
+    "use_trade": "Waterbuck are hunted for food and sport and are particularly susceptible due to their sedentary nature and fondness for cultivation (Spinage 2013).",
+    "rationale": "Waterbuck remains widespread across western, central, eastern and southern Africa. East (1999) estimated the total population at about 200,000, over half of which occurring in protected areas. No subsequent global population estimate is available. The species is susceptible to poaching and several population declines, some of them severe, have been documented. The species is suspected to be declining overall, but there is no evidence so far to confirm that the rate of decline has reached a level that would meet the requirements for Near Threatened or Vulnerable status. However, if the declining trend continues, and reliable population estimates become available, then the status of the species may warrant uplisting in the near or medium-term future.",
+    "trend_justification": null,
+    "taxonomic_notes": "Two subspecies are recognized (formerly regarded as distinct species): Defassa Waterbuck (<em>K. e. defassa</em>) and  Common Waterbuck (<em>K. e. ellipsiprymnus</em>). Lorenzen <em>et al.</em> (2006) found a high degree of genetic differentiation between the subspecies and strongly confirmed hybridization in Kenya’s Nairobi N.P. population."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Moist"
+      },
+      "code": "2_2"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Seasonally Wet/Flooded"
+      },
+      "code": "4_6"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Possibly Extinct",
+      "seasonality": null,
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Burundi"
+      },
+      "code": "BI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uganda"
+      },
+      "code": "UG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eswatini"
+      },
+      "code": "SZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Burkina Faso"
+      },
+      "code": "BF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea-Bissau"
+      },
+      "code": "GW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chad"
+      },
+      "code": "TD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malawi"
+      },
+      "code": "MW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Zambia"
+      },
+      "code": "ZM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Zimbabwe"
+      },
+      "code": "ZW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mali"
+      },
+      "code": "ML"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sierra Leone"
+      },
+      "code": "SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ghana"
+      },
+      "code": "GH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ethiopia"
+      },
+      "code": "ET"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Benin"
+      },
+      "code": "BJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rwanda"
+      },
+      "code": "RW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Togo"
+      },
+      "code": "TG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Niger"
+      },
+      "code": "NE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo"
+      },
+      "code": "CG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Botswana"
+      },
+      "code": "BW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Central African Republic"
+      },
+      "code": "CF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Côte d'Ivoire"
+      },
+      "code": "CI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Sudan"
+      },
+      "code": "SS"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Unknown",
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "IUCN SSC Antelope Specialist Group",
+      "value": [
+        "falsemail@gen.iucnsis.org"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Hoffmann, M.",
+      "value": [
+        "Michael Hoffmann (Zoological Society of London / IUCN SSC Canid Specialist Group)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "East, R. (compiler). 1999. <i>African Antelope Database 1998</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1999",
+      "title": "African Antelope Database 1998",
+      "author": "East, R. (compiler)",
+      "citation_short": ""
+    },
+    {
+      "citation": "Yalden, D.W., Largen, M.J., Kock, D. and Hillman, J.C. 1996. Catalogue of the Mammals of Ethiopia and Eritrea. 7. Revised checklist, zoogeography and conservation. <i>Tropical Zoology</i> 9(1): 73-164.",
+      "year": "1996",
+      "title": "Catalogue of the Mammals of Ethiopia and Eritrea. 7. Revised checklist, zoogeography and conservation",
+      "author": "Yalden, D.W., Largen, M.J., Kock, D. and Hillman, J.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Spinage, C.A. 2013. <i>Kobus ellipsiprymnus</i> Waterbuck. In: J. Kingdon & M. Hoffmann (ed.), <i>The Mammals of Africa. VI. Pigs, Hippopotamuses, Chevrotain, Giraffes, Deer, and Bovids</i>, pp. 461-468. Bloomsbury Publishing, London, UK.",
+      "year": "2013",
+      "title": "<i>Kobus ellipsiprymnus</i> Waterbuck",
+      "author": "Spinage, C.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lorenzen, E.D., Simonsen, B.T., Kat, P.W., Arctander, P. and Siegismund, H.R. 2006. Hybridization between subspecies of waterbuck (<i>Kobus ellipsiprymnus</i>) in zones of overlap with limited introgression. <i>Molecular Ecology</i> 15: 3787-3799.",
+      "year": "2006",
+      "title": "Hybridization between subspecies of waterbuck (<i>Kobus ellipsiprymnus</i>) in zones of overlap with limited introgression",
+      "author": "Lorenzen, E.D., Simonsen, B.T., Kat, P.W., Arctander, P. and Siegismund, H.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 04 September 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

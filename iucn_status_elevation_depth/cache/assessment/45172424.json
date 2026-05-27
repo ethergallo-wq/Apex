@@ -1,0 +1,1473 @@
+{
+  "assessment_date": "2016-06-20T01:00:00.000+01:00",
+  "year_published": "2016",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 41013,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/41013/45172424",
+  "citation": "King, S.R.B. & Moehlman, P.D. 2016. Equus quagga. The IUCN Red List of Threatened Species 2016: e.T41013A45172424. Accessed on 15 May 2026.",
+  "assessment_id": 45172424,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 41013,
+    "scientific_name": "Equus quagga",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 41019,
+        "scientific_name": "Equus quagga ssp. antiquorum",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "PERISSODACTYLA",
+        "family_name": "EQUIDAE",
+        "genus_name": "Equus",
+        "species_name": "quagga",
+        "subpopulation_name": null,
+        "infra_name": "antiquorum",
+        "authority": "Hamilton Smith, 1841",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Equid Specialist Group (horses, asses and zebras)",
+            "url": "http://www.equids.org/",
+            "description": "Co-Chairs: Patricia Moehlman (email: tan.guides@habari.co.tz) and Sarah King (email: king_srb@yahoo.com)\nRed List Authority Coordinator: Sarah King (email: king_srb@yahoo.com"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Demara Zebra",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Equus burchelli ssp. antiquorum Hamilton Smith, 1841",
+            "status": "ADDED",
+            "genus_name": "Equus",
+            "species_name": "burchelli",
+            "species_author": null,
+            "infrarank_author": "Hamilton Smith, 1841",
+            "subpopulation_name": null,
+            "infra_type": "subspecies",
+            "infra_name": "antiquorum"
+          }
+        ]
+      },
+      {
+        "sis_id": 41018,
+        "scientific_name": "Equus quagga ssp. boehmi",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "PERISSODACTYLA",
+        "family_name": "EQUIDAE",
+        "genus_name": "Equus",
+        "species_name": "quagga",
+        "subpopulation_name": null,
+        "infra_name": "boehmi",
+        "authority": "Matschie, 1892",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Equid Specialist Group (horses, asses and zebras)",
+            "url": "http://www.equids.org/",
+            "description": "Co-Chairs: Patricia Moehlman (email: tan.guides@habari.co.tz) and Sarah King (email: king_srb@yahoo.com)\nRed List Authority Coordinator: Sarah King (email: king_srb@yahoo.com"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Grant's Zebra",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Equus burchelli ssp. boehmi Matschie, 1892",
+            "status": "ADDED",
+            "genus_name": "Equus",
+            "species_name": "burchelli",
+            "species_author": null,
+            "infrarank_author": "Matschie, 1892",
+            "subpopulation_name": null,
+            "infra_type": "subspecies",
+            "infra_name": "boehmi"
+          }
+        ]
+      },
+      {
+        "sis_id": 41014,
+        "scientific_name": "Equus quagga ssp. burchelli",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "PERISSODACTYLA",
+        "family_name": "EQUIDAE",
+        "genus_name": "Equus",
+        "species_name": "quagga",
+        "subpopulation_name": null,
+        "infra_name": "burchelli",
+        "authority": "(Gray, 1824)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Equid Specialist Group (horses, asses and zebras)",
+            "url": "http://www.equids.org/",
+            "description": "Co-Chairs: Patricia Moehlman (email: tan.guides@habari.co.tz) and Sarah King (email: king_srb@yahoo.com)\nRed List Authority Coordinator: Sarah King (email: king_srb@yahoo.com"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Burchell's Zebra",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Equus burchellii ssp. burchellii (Gray, 1824)",
+            "status": "S",
+            "genus_name": "Equus",
+            "species_name": "burchellii",
+            "species_author": null,
+            "infrarank_author": "(Gray, 1824)",
+            "subpopulation_name": null,
+            "infra_type": "subspecies",
+            "infra_name": "burchellii"
+          },
+          {
+            "name": "Equus burchelli ssp. burchelli (Gray, 1824)",
+            "status": "ADDED",
+            "genus_name": "Equus",
+            "species_name": "burchelli",
+            "species_author": null,
+            "infrarank_author": "(Gray, 1824)",
+            "subpopulation_name": null,
+            "infra_type": "subspecies",
+            "infra_name": "burchelli"
+          }
+        ]
+      },
+      {
+        "sis_id": 41015,
+        "scientific_name": "Equus quagga ssp. chapmani",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "PERISSODACTYLA",
+        "family_name": "EQUIDAE",
+        "genus_name": "Equus",
+        "species_name": "quagga",
+        "subpopulation_name": null,
+        "infra_name": "chapmani",
+        "authority": "Layard, 1865",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Equid Specialist Group (horses, asses and zebras)",
+            "url": "http://www.equids.org/",
+            "description": "Co-Chairs: Patricia Moehlman (email: tan.guides@habari.co.tz) and Sarah King (email: king_srb@yahoo.com)\nRed List Authority Coordinator: Sarah King (email: king_srb@yahoo.com"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Chapman's Zebra",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Equus burchellii ssp. chapmani Layard, 1865 [orth. error]",
+            "status": "S",
+            "genus_name": "Equus",
+            "species_name": "burchellii",
+            "species_author": null,
+            "infrarank_author": "Layard, 1865 [orth. error]",
+            "subpopulation_name": null,
+            "infra_type": "subspecies",
+            "infra_name": "chapmani"
+          },
+          {
+            "name": "Equus burchelli ssp. chapmani Layard, 1865",
+            "status": "ADDED",
+            "genus_name": "Equus",
+            "species_name": "burchelli",
+            "species_author": null,
+            "infrarank_author": "Layard, 1865",
+            "subpopulation_name": null,
+            "infra_type": "subspecies",
+            "infra_name": "chapmani"
+          }
+        ]
+      },
+      {
+        "sis_id": 41016,
+        "scientific_name": "Equus quagga ssp. crawshayi",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "PERISSODACTYLA",
+        "family_name": "EQUIDAE",
+        "genus_name": "Equus",
+        "species_name": "quagga",
+        "subpopulation_name": null,
+        "infra_name": "crawshayi",
+        "authority": "de Winton, 1897",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Equid Specialist Group (horses, asses and zebras)",
+            "url": "http://www.equids.org/",
+            "description": "Co-Chairs: Patricia Moehlman (email: tan.guides@habari.co.tz) and Sarah King (email: king_srb@yahoo.com)\nRed List Authority Coordinator: Sarah King (email: king_srb@yahoo.com"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Crawshay's Zebra",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Equus burchellii ssp. crawshayi de Winton, 1897 [orth. error]",
+            "status": "S",
+            "genus_name": "Equus",
+            "species_name": "burchellii",
+            "species_author": null,
+            "infrarank_author": "de Winton, 1897 [orth. error]",
+            "subpopulation_name": null,
+            "infra_type": "subspecies",
+            "infra_name": "crawshayi"
+          },
+          {
+            "name": "Equus burchelli ssp. crawshayi de Winton, 1897",
+            "status": "ADDED",
+            "genus_name": "Equus",
+            "species_name": "burchelli",
+            "species_author": null,
+            "infrarank_author": "de Winton, 1897",
+            "subpopulation_name": null,
+            "infra_type": "subspecies",
+            "infra_name": "crawshayi"
+          }
+        ]
+      },
+      {
+        "sis_id": 7957,
+        "scientific_name": "Equus quagga ssp. quagga",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "PERISSODACTYLA",
+        "family_name": "EQUIDAE",
+        "genus_name": "Equus",
+        "species_name": "quagga",
+        "subpopulation_name": null,
+        "infra_name": "quagga",
+        "authority": "Boddaert, 1785",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Equid Specialist Group (horses, asses and zebras)",
+            "url": "http://www.equids.org/",
+            "description": "Co-Chairs: Patricia Moehlman (email: tan.guides@habari.co.tz) and Sarah King (email: king_srb@yahoo.com)\nRed List Authority Coordinator: Sarah King (email: king_srb@yahoo.com"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Quagga",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 41017,
+        "scientific_name": "Equus quagga ssp. zambeziensis",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "PERISSODACTYLA",
+        "family_name": "EQUIDAE",
+        "genus_name": "Equus",
+        "species_name": "quagga",
+        "subpopulation_name": null,
+        "infra_name": "zambeziensis",
+        "authority": "Prazak, 1898",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Equid Specialist Group (horses, asses and zebras)",
+            "url": "http://www.equids.org/",
+            "description": "Co-Chairs: Patricia Moehlman (email: tan.guides@habari.co.tz) and Sarah King (email: king_srb@yahoo.com)\nRed List Authority Coordinator: Sarah King (email: king_srb@yahoo.com"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Upper Zambezi Zebra",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Equus burchellii ssp. zambeziensis Prazak, 1898 [orth. error]",
+            "status": "S",
+            "genus_name": "Equus",
+            "species_name": "burchellii",
+            "species_author": null,
+            "infrarank_author": "Prazak, 1898 [orth. error]",
+            "subpopulation_name": null,
+            "infra_type": "subspecies",
+            "infra_name": "zambeziensis"
+          },
+          {
+            "name": "Equus burchelli ssp. zambeziensis Prazak, 1898",
+            "status": "ADDED",
+            "genus_name": "Equus",
+            "species_name": "burchelli",
+            "species_author": null,
+            "infrarank_author": "Prazak, 1898",
+            "subpopulation_name": null,
+            "infra_type": "subspecies",
+            "infra_name": "zambeziensis"
+          }
+        ]
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "PERISSODACTYLA",
+    "family_name": "EQUIDAE",
+    "genus_name": "Equus",
+    "species_name": "quagga",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Boddaert, 1785",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Equid Specialist Group (horses, asses and zebras)",
+        "url": "http://www.equids.org/",
+        "description": "Co-Chairs: Patricia Moehlman (email: tan.guides@habari.co.tz) and Sarah King (email: king_srb@yahoo.com)\nRed List Authority Coordinator: Sarah King (email: king_srb@yahoo.com"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Burchell's Zebra",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Common Zebra",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Painted Zebra",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Bontsebra",
+        "language": "afr"
+      },
+      {
+        "main": false,
+        "name": "Punda Milia",
+        "language": "swa"
+      },
+      {
+        "main": true,
+        "name": "Plains Zebra",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Equus burchellii Schinz, 1845",
+        "status": "New",
+        "genus_name": "Equus",
+        "species_name": "burchellii",
+        "species_author": "Schinz, 1845",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Equus burchelli (Gray, 1824) [orth. error]",
+        "status": "S",
+        "genus_name": "Equus",
+        "species_name": "burchelli",
+        "species_author": "(Gray, 1824) [orth. error]",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Near Threatened"
+    },
+    "code": "NT"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 4300,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "150000-250000",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "10",
+    "congregatory": "Congregatory (year-round)",
+    "movement_patterns": "Full Migrant",
+    "continuing_decline_in_area": "Unknown",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Unknown"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "No"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Not Applicable"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Unknown"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": "70",
+    "continuing_decline_in_subpopulations": "Yes",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": "20800",
+    "estimated_area_of_occupancy": "2250000",
+    "continuing_decline_in_area_of_occupancy": "Unknown",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "4180000",
+    "continuing_decline_in_extent_of_occurence": "Yes",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "Plains Zebra range from South Sudan and southern Ethiopia, east of the Nile River, to southern Angola and northern Namibia and northern South Africa (formerly ranging south of the Orange and Vaal Rivers to the Cape) (Hack <em><em><em><em><em><em><em><em><em><em><em>et al.</em></em></em></em></em></em></em></em></em></em></em> 2002, Klingel 2013). They are now extinct in two countries in which they formerly occurred: Burundi and Lesotho, and are likely to be extinct in Somalia.&#160;<br/><br/>The six morphologically defined subspecies are distributed as follows (following Groves and Bell 2004):<br/><br/><em>E. q. crawshaii&#160;</em>(Crawshay’s Zebra) occurs in Zambia, east of the Luangwa River, Malawi, south-eastern Tanzania from Lake Rukwa east to Mahungoi, and Mozambique as far south as the Gorongoza district; <br/><br/><em>E. q. borensis</em> ranges in north-west Kenya, from Guas ngishu and Lake Baringo, to the Karamoja district of Uganda and south-east South Sudan, east of the Nile River to the northern limit of the species at 32°N; <br/><br/><em>E. q. boehmi</em> (Grant’s Zebra or Boehm's Zebra) is found in Zambia, west of the Luangwa River, west to Kariba, Shaba Province of DR Congo north to Kibanzao Plateau; Tanzania north from Nyangaui and Kibwezi into south-west Uganda, south-west Kenya as far as Sotik, and east Kenya, east of the Rift Valley, into southern Ethiopia and perhaps to the Juba River in Somalia.<br/><br/><em>E. q. chapmani</em> (Chapman's Zebra) ranges from north-east South Africa, from about 24°S, 31°E, north to Zimbabwe, west into Botswana at about 19°S, 24°E, the Caprivi Strip in Namibia, and southeastern Angola (east of the Cubango river);<br/><br/><em>E. q. burchellii</em> (Burchell's Zebra) formerly occurred north of the Vaal/Orange Rivers, extending north-west via southern Botswana to Etosha National Park and the Kaokoveld, south-east to KwaZulu-Natal and Swaziland, and in southwestern Angola. It is now extinct in the middle of its range. <em>E. b. antiquorum</em> is now included in this subspecies;<br/><br/><em>E. q. quagga</em> (Quagga) occurred in the former Cape Province, south of the Orange and Vaal Rivers and west of the Drakensberg. Now extinct.",
+    "population": "Plains Zebra are considered common and widespread across Africa, but there has been a population decline in 10 out of the 17 range states since the 1992 and 2002 IUCN Red List assessments. In many countries Plains Zebra are only found in protected areas, with little or no individuals outside them. Lack of surveys outside protected areas makes assessing trends and population sizes difficult across most of the species’ range. <br/><br/>Total population across the species’ range is estimated at over 500,000 animals; if 30% to 50% of animals are mature (based on maturity rates in other zebra species) this gives a population of 150,000 to 250,000 mature individuals. Total numbers were estimated at about 660,000 in 2002 (Hack <em><em><em><em><em><em><em>et al.</em></em></em></em></em></em></em> 2002), roughly the same as they were in 1992 (671,000 animals; Duncan and Gakahu 1992). This represents a population reduction of 24% since 2002, and a 25% decline since 1992 (about 2.5 generations, as generation length is about 10 years). It is very likely that 3 generations ago (in 1985) that the population was similar in size to numbers given in 1992, so it is a fair assumption that the population reduction has occurred within the last 3 generations. The exact number of Plains Zebra is unknown due to different survey methods applied across their range, and many areas having no recent survey data. This makes comparison of survey data problematic. In the country specific data below confidence intervals or other range descriptors are given when available, but most accounts do not provide this information. However when comparing data over the past few generations any error in calculating total population size is likely to have remained constant, as intensity and accuracy of surveys are unlikely to have greatly improved. <br/><br/>Overall, populations in Ethiopia, Malawi, and South Africa appear stable; they are possibly stable in Angola (they were considered likely extinct here in the 2002 assessment); in Mozambique they are stable or increasing; in Namibia and Swaziland populations are increasing; but in Botswana, Congo, Kenya, Rwanda, Somalia, Sudan, Tanzania, Uganda, Zambia, and Zimbabwe populations are declining (Table 1). Of particular concern is that decline is being seen in Kenya and Tanzania, where the species is most numerous. However the world's largest single Plains Zebra population in Serengeti National Park appears stable. <br/><br/><strong>Angola</strong><br/><br/>The Plains Zebra population in Angola has declined drastically since the 1960s and 1970s and has been extirpated from most of its former range in the country. Plains Zebra has likely been eliminated from Iona National Park (NP), and is probably extinct elsewhere along the coastal plain and neighboring regions of southwestern Angola (Pedro Vaz Pinto and Luis Verissimo pers. comm. 2015). Recent anecdotal reports of the species presence in Bikuar NP need confirmation. Plains Zebra remain extant in small groups in a trans-boundary population in Luengue-Luiana NP, due to animals moving from Bwabwata National Park in Namibia and there is a possibility of its presence elsewhere in southeast Kuando Cubango province (Pedro Vaz Pinto and Luis Verissimo pers. comm. 2015). Population size in the country is unknown.<br/><br/><strong>Botswana</strong><br/><br/>Nationwide total is about 99,500 Plains Zebra from a stratified sample count in 2012 (Botswana DWNP unpublished data). While the population is increasing significantly in Ngamiland and Central Botswana, there is a non-significant decreasing trend in Chobe, with no information on trends for the smaller populations in Ghanzi and the north-east and southern parts of the country. Countrywide the species was considered stable (or increasing non-significantly) in 2012, and has increased from about 35,000 in 2002 (Hack <em><em><em><em><em><em><em>et al.</em></em></em></em></em></em></em> 2002).<br/><br/><strong>Democratic Republic of Congo</strong><br/><br/>A 2008 survey recorded 62 Plains Zebra in Upemba NP, but none in Kunedelungu NP (Vanleeuwe 2009). This indicates a decline in the Congo population as &lt;1,000 were reported in 2002 (Hack <em><em><em><em><em><em><em>et al.</em></em></em></em></em></em></em> 2002).<br/><br/><strong>Ethiopia</strong><br/><br/>The 2014 nationwide population was about 7,500 zebra (F. Kebede, EWCA, unpublished data). This population overall appears stable since 2002. The population in Omo NP-Mago NP-Tama WR was estimated as 1,630 from a 1997 aerial survey (F. Kebede pers. comm.<em><em><em><em><em><em></em></em></em></em></em></em>), decreasing to 1,000 in a 2014 informed estimate. The Nechisar NP population remains stable at about 3,000 animals in both 1995 and 2014 (C. Zewdie and G. Wondimu, EWCO, unpublished data), and the Yabello WS (now Borena NP) population increased from 2,840 in a 1995 aerial survey (Thouless 1995) to an informed estimate of 3,500 in 2014 (F. Kebede unpublished data).<br/><br/><strong>Kenya</strong><br/><br/>While Plains Zebra remain numerous in Kenya the population appears to be declining. In 1995 the population was estimated as 152,490 from aerial surveys (Hack <em><em><em><em><em><em><em>et al.</em></em></em></em></em></em></em> 2002); in surveys from 2008-2015 the population is estimated at only 98,820 animals (Kenya Wildlife Service 2015 unpublished data). This represents a decline of 35% in 20 years. Plains Zebra have been extirpated (or nearly so) from some protected areas (e.g. Kora NP and Sibilo NP; Thomas Butynski pers. comm. 2015), while in other areas densities remain high. Only about 10% of Plains Zebra are on protected lands in Kenya (Grunblatt <em><em><em><em><em><em><em>et al.</em></em></em></em></em></em></em> 1995), meaning that protection for zebras outside these areas is vital.<br/><br/>Plains Zebra populations have declined in Maasai Mara Nature Reserve (MMNR) and nearby ranches from wet season numbers as high as 60,764 ± 18201 in 1978 to 38,560 ± 10,935 in 2007 (Ogutu <em><em><em><em><em><em><em>et al.</em></em></em></em></em></em></em> 2011), although 2014 Kenya Wildlife Service aerial survey data indicated a population of 42,126. This represents the largest population in Kenya. Zebra tended not to be resident in MMNR during the wet season (December to May) although they remained in surrounding ranches. Fewer zebra now migrate in to the Mara region during the dry season, despite few changes in the source population in the Serengeti (Ogutu <em><em><em><em><em><em><em>et al.</em></em></em></em></em></em></em> 2011).<br/><br/>In 1995 the Laikipia Plains Zebra population was considered to be increasing (Hack <em><em><em><em><em><em><em>et al.</em></em></em></em></em></em></em> 2002). Surveys conducted in 2001 and 2012 found a 9.6% reduction from 27,544 to 24,887±5,853 indicating that the population is roughly stable (Kinnaird <em><em><em><em><em><em><em>et al.</em></em></em></em></em></em></em> 2012). Plains Zebra are the most abundant wildlife species in this area, yet like all wildlife are experiencing a decline since the 1980s.<br/><br/><strong>Malawi</strong><br/><br/>Aerial surveys from 2012 to 2015 report about 748 zebra in protected areas in Malawi. The largest population in Majete WR increased from 262 in 2012 to 571 in 2015 (D. Macpherson pers. comm. 2015). The second largest population in Nyika NP declined from 279 in 2013 to 153 in 2015 (Macpherson 2013 and pers. comm.). Vwaza Marsh WR, Kasungu NP and Liwonde NP each have less than 20 (D. Macpherson pers. comm. 2015). There are also small populations of Plains Zebra at three or four game ranches in Malawi.<br/><br/><strong>Mozambique</strong><br/><br/>Plains Zebra were likely eradicated from south-western Mozambique during 22 years of war (1964-1974; 1980-1992). Between 2002 and 2008, 1361 zebra were (re-)introduced to the western section of the newly created Limpopo National Park (LNP), from the adjoining Kruger National Park (KNP) in South Africa. Subsequent aerial surveys (2010, 2013) indicate a sharp reduction in zebra abundances in LNP and restriction of zebra distribution to the western boundary. Recent ground surveys (2014) documented natural range expansion of zebra into central LNP. Illegal hunting is widespread in LNP and may explain reduced zebra abundances. Zebra were not detected in Banhine National Park during 2004, 2007, 2009 and 2014 surveys.<br/><br/>The country-wide total is about 3,400 zebras in Mozambique. The population estimate from aerial surveys in Limpopo NP has declined from 494 in 2010 to 183 in 2013 due to illegal hunting (Kristoffer Everatt pers. comm. 2015). The population in Niassa Reserve is stable, with numbers remaining around 3,000 between the aerial survey in 1998 which estimated 2,854 zebras (1852-3855) and in 2014 which estimated 3,197 (2400-3994), although an anomalous survey in 2009 recorded 6,229 (5033-4672) possibly due to better observers that year (Colleen Begg pers. comm. 2015). Plains Zebras are present in Magoe in Tete province, but no longer present in Banhina NP (2004-2014). Fourteen Plains Zebra were reintroduced to Gorongosa NP in 2012, but only one foal had been produced by 2015 (Marcelino Denja pers. comm. 2015).<br/><br/><strong>Namibia</strong><br/><br/>There are about 40,000 Plains Zebras in Namibia, with an estimated increasing trend due to populations on private/freehold land. Legislative changes during the 1960s-1970s in Namibia giving landowners user rights to wildlife has led to an increase in the populations of Hartmann’s mountain zebra, and has benefitted Plains Zebra as well. An aerial survey of Etosha NP in 2012 estimated 16,174 Plains Zebra, with an aerial survey of the north-east (Kavango East and Zambezi) estimating 1,421 Plains Zebras (Kenneth Uiseb, Namibia MET, unpublished data). In 2014, aerial surveys of the Zambezi Region (including Bwabwata, Mudumu and Nkasa Lupara national parks and communal conservancies) and Mangetti NP estimated 5,435 and 140 zebras respectively (Kenneth Uiseb, Namibia MET, unpublished data). It should be noted that the 950-2037 zebras in Bwabwata NP are the same population that has some animals moving in to Angola. The total number of Plains Zebra on private land is unknown, but is between 19,000 and 25,000 (Lindsey <em><em><em><em><em><em><em>et al.</em></em></em></em></em></em></em> 2013).<br/><br/><strong>Rwanda</strong><br/><br/>The only data on Plains Zebra from Rwanda are from a 2013 aerial survey that estimated 999 Plains Zebra in Akagera National Park (African Parks website). It is unlikely that there are many Plains Zebra outside this protected area.<br/><br/><strong>South Africa</strong><br/><br/>The Plains Zebra was assessed as Least Concern in the South African National Red List as the species remains widespread, common, and there are no major threats resulting in a range-wide population decline (Stears <em><em><em><em><em><em><em>et al.</em></em></em></em></em></em></em> 2015). The population is stable, consisting of at least 46,000 animals; in 2002 there were over 55,000 Plains Zebras estimated in the country (Hack <em><em><em><em><em><em><em>et al.</em></em></em></em></em></em></em> 2002). Kruger National Park has around 70% of the free-roaming population in South Africa with 29,000-43,450 individuals in 2012. This is the only South African population that is migratory. Plains Zebras are also present in the northern KwaZulu-Natal, and in Limpopo, North West, Free State and Northern Cape provinces, with large numbers on private land (9,411 individuals and 3,232 individuals on private land in the North West and Free State provinces respectively).<br/><br/><strong>South Sudan</strong><br/><br/>In 1980 there were 24,078 in the wet season and 29,460 in the dry season in Boma NP, and 3,889 in the wet season and 4,533 in the dry season in Jonglei National Park (Fay <em><em><em><em><em><em><em>et al.</em></em></em></em></em></em></em> 2007). A 2007 aerial survey saw a small group of Plains Zebra in Boma, and none in Jonglei (Fay <em><em><em><em><em><em><em>et al.</em></em></em></em></em></em></em> 2007). In 2007, 2008 and 2009 a few small group of Plains Zebra were seen during aerial surveys, and in 2013 there was an unconfirmed report of Plains Zebra from a charter plane pilot, but otherwise no Plains Zebras have been seen in South Sudan in recent years (Paul Elkan pers. comm. 2015).<br/><br/><strong>Swaziland</strong><br/><br/>There are about 2,900 Plains Zebras in Swaziland (Mickey Reilly unpublished data 2015). In the Kingdom of Swaziland’s Big Game Parks there are about 1,250: 320 recorded from an aerial count in Mkhaya in 2014, 850 estimated in Hlane, and about 80 estimated in Milwane. In Government parks there are about 185, and up to 800 on private land (although this is likely an over-estimate; Mickey Reilly unpublished data 2015). This represents an increase compared to 1000 Plains Zebra reported in Swaziland in 2002 (Hack <em><em><em><em><em><em><em>et al.</em></em></em></em></em></em></em> 2002).<br/><br/><strong>Tanzania</strong><br/><br/>Plains Zebras are still widespread and common in Tanzania with a population of over 260,000 (±20-30%) animals, however all but three populations appear to be declining (TAWIRI/NCAA unpublished data 2015), and the species is restricted to protected areas. The populations in the Serengeti Ecosystem and the Ngorongoro Crater appear stable, with 207,166 ±37,638 in a 2010 aerial survey of the Serengeti, and 4,942 in a total count of Ngorongoro Crater (Ngorongoro Conservation Area Authority Ecological Monitoring Program, NEMP). The Serengeti population is the largest within the species’ range, and contains 42% of all wild Plains Zebras. The West Kilimanjaro population is possibly stable, with 1,632 in a 2013 total count. All other populations are declining or have an unknown trend. The Tarangire Manyara ecosystem population dropped from 33,330 ± 1,254 in 2004 to 15,662 ± 5,118 in 2011 (CIMU unpublished data), with other populations having a similar level of decline.<br/><br/><strong>Uganda</strong><br/><br/>There are 425 ± 636 Plains Zebras in Uganda, almost all in the Kidepo landscape (Wanyama <em><em><em><em><em><em><em>et al.</em></em></em></em></em></em></em> 2014). Of these zebras, 154 are in Kidepo National Park, representing a decline from 651 in 1971 (Wanyama <em><em><em><em><em><em><em>et al.</em></em></em></em></em></em></em> 2014). Some Plains Zebras are also present in Lake Mburo National Park. It is unlikely that there are any Plains Zebras outside the protected areas (Julian Fennessy pers. comm. 2015). Plains Zebras are now locally extinct in Pian Upe Wildlife Reserve, from over 2,000 in 1968 (Zwick <em><em><em><em><em><em><em>et al.</em></em></em></em></em></em></em> 1998). No Plains Zebras were seen in Murchison Falls or Queen Elizabeth National Parks in a 2014 survey (Wanyama <em><em><em><em><em><em><em>et al.</em></em></em></em></em></em></em> 2014). This represents a severe decline in this country from over 3,000 in 2002 (Hack <em><em><em><em><em><em><em>et al.</em></em></em></em></em></em></em> 2002).<br/><br/><strong>Zambia</strong><br/><br/>There are between 8,000 and 16,000 Plains Zebra in Zambia, with populations declining in most protected areas (Peter Lindsay pers. comm. 2015). These zebras consist of about 9,400 in the protected area network, and over 2,000 on game ranches (Lindsay <em><em><em><em><em><em><em>et al.</em></em></em></em></em></em></em> 2013, 2014). There may have been a decline from over 18,000 Plains Zebra in 2002 (Hack <em><em><em><em><em><em><em>et al.</em></em></em></em></em></em></em> 2002).<br/><br/><strong>Zimbabwe</strong><br/><br/>There are over 4,000 Plains Zebras in Zimbabwe. In Hwange 2,155 were reported in 1999, and 1,685 ± 26 in Gonarezhou National Park in 2013 (Dunham <em><em><em><em><em><em><em>et al.</em></em></em></em></em></em></em> 2013). This latter population is thought to be increasing. Plains Zebra also occur in other protected areas and outside these areas in Zimbabwe, but we do not have the survey data to assess how many.",
+    "habitats": "Plains Zebra live in all habitats in Africa from sea level to 4,300 m on Mount Kenya, with the exception of rain forests, deserts, dune forests, and Cape Sclerophyllous vegetation (Duncan 1992).<br/><br/>Plains Zebra live in family groups of a stallion with mares and their juvenile offspring. While each of these groups have a home range, the groups join together and move as herds in some or all parts of the year (Klingel 1969, Rubenstein 2010). The home range of Plains Zebras varies across the continent, being determined by seasonal vegetation changes and habitat quality (Smuts 1975). In East Africa, home ranges in Ngorongoro were 80-250 km² in different parts of the crater (Klingel 1969), whereas they were larger in the Serengeti: 3-400 km² in the wet season and 4-600 km² in the dry season (Klingel 1969). Combined with a migration route of 100 to 150 km in each direction, Serengeti zebras cover at least 1000 km² in a year. This can be compared with annual home ranges of 49-566 km² in Kruger National Park (Smuts 1975). In some areas the herds form discrete subpopulations, separated by natural barriers or marginal habitats (Smuts 1974). These subpopulations cover areas from 28-136 km² in Zululand (Brooks 1982) to 1530-1560 km² in Kruger National Park (Smuts 1974). In areas where resources are scarce or patchily distributed, zebras daily cover a lot of ground. In the dry season zebras moved up to 34.5 km to forage in Botswana (Brooks and Harris 2008), whereas in Ngorongoro they moved about 6 km (Klingel 1969); in Kruger National Park they tended to move less than 2 km in a day across the year (Owen-Smith 2013). Studies of zebras have shown how their spatial awareness allows them to orient movements towards preferred forage patches or the nearest water source, and thus move efficiently across large distances (Brooks and Harris 2008).<br/><br/>A central feature of Plains Zebra ecology is their migration, tracking resource abundance across the seasons (Young <em><em><em><em>et al.</em></em></em></em> 2005). One of the biggest ungulate migrations in the world occurs in the Serengeti. At a large scale zebras follow the long grass that grows after the rains (Bell 1971), at a finer scale they move to maximize intake of food of sufficient quality, while minimizing time spent in habitats where they may encounter predators (Hopcraft <em><em><em><em>et al.</em></em></em></em> 2010). Not all zebra herds migrate (e.g., Stelfox <em><em><em><em>et al.</em></em></em></em> 1986, Georgiadis <em><em><em><em>et al.</em></em></em></em> 2003), with different herds reacting differently to changing conditions (Owen-Smith 2013): in the Okavango Delta of Botswana only about 55% of zebras make the 588 km round trip (Bartlam-Brooks <em><em><em><em>et al.</em></em></em></em> 2011). Migration allows zebras to optimize their nutrition by moving to prime grasslands during the wet season (Bartlam-Brooks <em><em><em><em>et al.</em></em></em></em> 2013), selecting higher quality resources rather than absolute abundance of grass (Bartlam-Brooks <em><em><em><em>et al.</em></em></em></em> 2011). The start and pace of migration is controlled by the environment: it is initiated by cumulative precipitation, with daily movement being a function of precipitation rate and NDVI (Bartlam-Brooks <em><em><em><em>et al.</em></em></em></em> 2013). Zebras have the flexibility to alter their migration patterns to avoid adverse conditions or to find new resources (Bartlam-Brooks <em><em><em><em>et al.</em></em></em></em> 2013). As fences constrain many populations (Shem <em><em><em><em>et al.</em></em></em></em> 2013), this allows them to re-establish migrations once barriers are removed (Bartlam-Brooks <em><em><em><em>et al.</em></em></em></em> 2011).<br/><br/>Plains Zebras tend to be found in mid-productive grasslands in areas where there is the highest green standing crop (McNaughton 1985), selecting areas of the highest grass biomass regardless of quality (Groom and Harris 2010). Across studies Plains Zebras were found in open savanna with an abundance of grass and the presence of some trees or open woodland. The Plains Zebra diet consists almost entirely of grasses (Bodenstein <em><em><em><em>et al.</em></em></em></em> 2000), with occasional browse to maintain protein levels (Berry and Louw 1982). Compared to ruminants, zebras are generalist and bulk feeders, spending more time foraging (Seydack <em><em><em><em>et al.</em></em></em></em> 2012, Owen-Smith and Goodall 2014), and having a diet that is of lower quality (McNaughton 1985, Ben-Shahar 1991) and higher fiber (30-36% of dry matter, Macandza <em><em><em><em>et al.</em></em></em></em> 2013) than sympatric bovids of a similar size.",
+    "threats": "The quagga was driven to extinction in the late 19th century by overhunting and competition with livestock.<br/><br/>While equid meat is often not a preferred choice, Plains Zebra are threatened by hunting through much of their range, especially when they move out of protected areas. Hunting for their skins occurs, particularly in East Africa as these subspecies do not have the shadow stripe present in southern African subspecies (Foley <em><em><em>et al.</em></em></em> 2014). Fencing areas can block migration corridors (Foley <em><em><em>et al.</em></em></em> 2014), although Plains Zebras have been shown to re-establish migration routes if barriers are removed, even if they are blocked for over 30 years (Bartlam-Brooks <em><em><em>et al.</em></em></em> 2011).",
+    "measures": "Plains Zebra occur in numerous protected areas across their range, including the Serengeti National Park (Tanzania), Tsavo and Masaai Mara (Kenya), Hwange National Park (Zimbabwe), Etosha National Park (Namibia), and Kruger National Park (South Africa).<br/><br/>Hack <em><em>et al.</em></em> (2002) proposed the following conservation actions for the species: 1) Improve coverage and frequency of monitoring; 2) Improve risk assessment; 3) Quantify and manage genetic diversity both globally and locally; 4) Increase the understanding of the species' basic biology'; and 5) Investigate the economics of alternative utilization strategies.<br/><br/>In Malawi several conservation measures for the species are ongoing:&#160;Majete Wildlife Reserve, Liwonde National Park and Nkhotakota Wildlife Reserve are now being managed by the African Parks Network, an anti-poaching project (funded by IFAW) is now running in&#160;Kasungu National Park that has trans-frontier capacity in interest to include Likusuzi and Luambe NP's in Zambia, and there is a Nyika&#160;Trans-Frontier Project which covers Nyika NP, Vwaza Marsh WR in Malawi and Musalangu Game Management Area plus the Mitenge and Lundazi Forest Reserves in Zambia (funded by KWF and run by the Malawi Department of National Parks and Wildlife).",
+    "use_trade": "There is trade in skins of this species. Meat is rarely used, but there is some hunting for bushmeat. Poaching occurs in some areas, and some by-catch in snares has been reported.",
+    "rationale": "Plains Zebra is listed as Near Threatened as it is close to qualifying for Vulnerable under A2a+3c+4ac. Total population across the species’ range is estimated at over 500,000 animals; if 30% to 50% of animals are mature (based on maturity rates in other zebra species) this gives a population of 150,000 to 250,000 mature individuals. However there has been a population reduction of 24% since 2002, and a 25% decline since 1992 (about 2.5 generations, as generation length is about 10 years). Total numbers were estimated at about 660,000 in 2002 (Hack <em><em>et al.</em></em> 2002), roughly the same as they were in 1992 (671,000 animals; Duncan and Gakahu 1992). It is very likely that 3 generations ago (in 1985) that the population was similar in size, so it is a fair assumption that the population reduction has occurred within the last 3 generations. Although it is problematic to compare survey data conducted across time, there is no reason to think that error has changed drastically as the methods used remain roughly the same. Should the population reduction increase at the time of the next assessment it is possible that the species will qualify as VU under Criterion A.<br/><br/>There has been a population reduction in 10 out of the 17 range states since the 1992 and 2002 IUCN Red List assessments. In many countries Plains Zebra are only found in protected areas, with little or no individuals outside them. Lack of surveys outside protected areas makes assessing trends and population sizes difficult across most of the species’ range, but for a species that is considered common and widespread the observed decline is worrying.",
+    "trend_justification": null,
+    "taxonomic_notes": "The Plains Zebra exhibits a morphological and genetic cline from north to south across its range (Groves and Bell 2004, Lorenzen 2008). Research has now firmly established that the Extinct quagga is a subspecies of the plains zebra (Rau 1978, Higuchi <em>et al.</em> 1984, George and Ryder 1986, Leonard <em>et al</em>. 2005). However, this view is in opposition to some morphological evidence (e.g., Bennett 1980, Klein and Cruz-Uribe 1999).  <br/> <br/>Groves and Bell (2004) recognized six subspecies, based on coat patterns, skull metrics, and the presence or absence of a mane and of the infundibulum on the lower incisors (intergrades are observed). A recent genetic study analyzed 17 plains zebra populations, representing five of the six subspecies recognized by these authors (Lorenzen <em>et al</em>. 2008). The study found very little differentiation among populations. In fact, populations across the entire species distribution range were less differentiated than Namibian populations of Hartmann’s mountain zebra. The five sampled plains zebra subspecies, which included the extinct quagga, could not be distinguished with the genetic markers used and no genetic structuring was found indicative of distinct taxonomic units. The molecular data represented a genetic cline and was differentiated along a gradient in agreement with the progressive increase in body size and reduction in stripes towards the south. This is consistent with the overlapping morphological parameters and geographical distribution of subspecies reported in literature. Hence, the subspecies splits based on the morphological cline may be arbitrary, but are useful from a management perspective."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Seasonally Wet/Flooded"
+      },
+      "code": "4_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Moist"
+      },
+      "code": "2_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Botswana"
+      },
+      "code": "BW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Uganda"
+      },
+      "code": "UG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": null,
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Malawi"
+      },
+      "code": "MW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Rwanda"
+      },
+      "code": "RW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Lesotho"
+      },
+      "code": "LS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Zimbabwe"
+      },
+      "code": "ZW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Zambia"
+      },
+      "code": "ZM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Eswatini"
+      },
+      "code": "SZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Burundi"
+      },
+      "code": "BI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Ethiopia"
+      },
+      "code": "ET"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Sudan"
+      },
+      "code": "SS"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Handicrafts, jewellery, etc."
+      },
+      "code": "12"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Unknown",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "War, civil unrest & military exercises"
+      },
+      "code": "6_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Scale Unknown/Unrecorded"
+      },
+      "code": "2_3_4"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Droughts"
+      },
+      "code": "11_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "evaluator",
+      "full": "Hoffmann, M. & Mallon, D.",
+      "value": [
+        "Michael Hoffmann (Zoological Society of London / IUCN SSC Canid Specialist Group)",
+        "David Mallon (IUCN SSC Antelope RLA)"
+      ]
+    },
+    {
+      "credit_type_name": "assessor",
+      "full": "King, S.R.B. & Moehlman, P.D.",
+      "value": [
+        "Sarah King (Colorado State University, Colorado, USA)",
+        "Patricia Moehlman (Columbia University EcoHealth Alliance)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Bradley, J., Hack, M., Everatt, K., Kinnaird, M., Begg, C., Fennessy, J., Plumptre, A., Cotts, M., Macpherson, D., Parker, A., Denja, M., Lindsay, P., Verissimo, L., Vaz Pinto, P., Uiseb, K., Elkan, P., Foley, C. & Lorenzen, E.",
+      "value": [
+        "Andrew Plumptre (WCS)",
+        "Pedro Vaz Pinto (Universidade Católica de Angola)",
+        "Margaret Kinnaird (Wildlife Conservation Society)",
+        "Colleen Begg (ALWG)",
+        "Julian Fennessy (International Giraffe Working Group; IUCN SSC Giraffe and Okapi Specialist Group)",
+        "Charles Foley",
+        "James Bradley",
+        "Mace Hack",
+        "Kristoffer Everatt",
+        "Mick Cotts",
+        "Derek Macpherson",
+        "Andrew Parker",
+        "Marcelino Denja",
+        "Peter Lindsay",
+        "Luis Verissimo",
+        "Kenneth Uiseb",
+        "Paul Elkan",
+        "E Lorenzen"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Zwick, K.L., Sivell, D., Bamlett, R., Devon, I., Lloyd, J., MacGregor, H., and Stewart, L. 1998. Pian-Upe Wildlife Reserve: biological and socio-economic survey.  Frontier-Uganda Wildlife Protected Areas Project Baseline Surveys Programme Report No. 12. The Society for Environmental Exploration, London & Uganda Wildlife Authority, Kampala.",
+      "year": "1998",
+      "title": "Pian-Upe Wildlife Reserve: biological and socio-economic survey",
+      "author": "Zwick, K.L., Sivell, D., Bamlett, R., Devon, I., Lloyd, J., MacGregor, H., and Stewart, L",
+      "citation_short": null
+    },
+    {
+      "citation": "George, M. and Ryder, O. A. 1986. Mitochondrial DNA evolution in the genus <i>Equus</i>. <i>Molecular Biology and Evolution</i> 3: 535-546.",
+      "year": "1986",
+      "title": "Mitochondrial DNA evolution in the genus <i>Equus</i>",
+      "author": "George, M. and Ryder, O. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rubenstein, D.I. 1986. Life history and social organization in arid adapted ungulates. In: D. I. Rubenstein and R. W. Wrangham (eds), <i>Ecological Aspects of social evolution</i>, pp. 282-302. Princeton University Press, Princeton.",
+      "year": "1986",
+      "title": "Life history and social organization in arid adapted ungulates",
+      "author": "Rubenstein, D.I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Grogan, P. J. P. 1973. Some Aspects of Nutrient Utilization by Burchell ’s zebra (<i>Equus burchelli bohmi</i> MATSCHIE) in the Serengeti-Mara region, East Africa. M.Sc. Thesis, Texas A&M University, College Station.",
+      "year": "1973",
+      "title": "Some Aspects of Nutrient Utilization by Burchell ’s zebra (<i>Equus burchelli bohmi</i> MATSCHIE) in the Serengeti-Mara region, East Africa",
+      "author": "Grogan, P. J. P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lorenzen, E. D., Arctander, P. and Siegismund, H. R. 2008. High variation and very low differentiation in wide ranging plains zebra (<i>Equus quagga</i>): insights from mtDNA and microsatellites. <i>Molecular Ecology</i> 17(12): 2812-2824.",
+      "year": "2008",
+      "title": "High variation and very low differentiation in wide ranging plains zebra (<i>Equus quagga</i>): insights from mtDNA and microsatellites",
+      "author": "Lorenzen, E. D., Arctander, P. and Siegismund, H. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "East, R. 1997. Current status of Burchell's Zebra in Africa, with additional information on Grevy’s Zebra and Cape Mountain Zebra. IUCN/SSC Equid Specialist Group.",
+      "year": "1997",
+      "title": "Current status of Burchell's Zebra in Africa, with additional information on Grevy’s Zebra and Cape Mountain Zebra",
+      "author": "East, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hack, A. M., East, R. and Rubenstein, D. I. 2002. Status and Action Plan for the Plains Zebra. In: P. D. Moehlman (ed.), <i>Equids: Zebras, Asses and Horses. Status Survey and Conservation Action Plan</i>, pp. 43-60. IUCN, Gland, Switzerland.",
+      "year": "2002",
+      "title": "Status and Action Plan for the Plains Zebra",
+      "author": "Hack, A. M., East, R. and Rubenstein, D. I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Smuts, G. L. 1976. Population characteristics of Burchell's Zebra (<i>Equus burchelli antiquorum</i>, H. Smith, 1841) in the Kruger National Park. <i>South African Journal of Wildlife Research</i> 6: 99-112.",
+      "year": "1976",
+      "title": "Population characteristics of Burchell's Zebra (<i>Equus burchelli antiquorum</i>, H. Smith, 1841) in the Kruger National Park",
+      "author": "Smuts, G. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Klingel, H. 1967. Soziale Organisation und Verhalten freilebender Steppenzebras. <i>Zeitschrift für Tierpsychologie</i> 24: 580-624.",
+      "year": "1967",
+      "title": "Soziale Organisation und Verhalten freilebender Steppenzebras",
+      "author": "Klingel, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rau, R. E. 1978. Additions to the revised list of observed material of the extinct Cape Colony quagga and notes on the relationship and distribution of southern plains zebras. <i>Annals of the South African Museum</i> 77: 27-45.",
+      "year": "1978",
+      "title": "Additions to the revised list of observed material of the extinct Cape Colony quagga and notes on the relationship and distribution of southern plains zebras",
+      "author": "Rau, R. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Duncan, P. 1992. <i>Zebras, Asses and Horses: an Action Plan for the Conservation of Wild Equids</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1992",
+      "title": "Zebras, Asses and Horses: an Action Plan for the Conservation of Wild Equids",
+      "author": "Duncan, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Leonard, J. A., Rohland, N., Glaberman, S., Fleischer, R. C., Caccone, A. and Hofreiter, M. 2005. A rapid loss of stripes: the evolutionary history of the extinct quagga. <i>Biology Letters</i> 1: 291-295.",
+      "year": "2005",
+      "title": "A rapid loss of stripes: the evolutionary history of the extinct quagga",
+      "author": "Leonard, J. A., Rohland, N., Glaberman, S., Fleischer, R. C., Caccone, A. and Hofreiter, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Grubb, P. 2005. Order Perissodactyla. In: D. E. Wilson and D. M. Reeder (eds), <i>Mammal Species of the World</i>, pp. 629-636. The Johns Hopkins University Press, Baltimore, Maryland, USA.",
+      "year": "2005",
+      "title": "Order Perissodactyla",
+      "author": "Grubb, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Higuchi, A., Bowman, B., Freiberger, M., Fyder, O. A. and Wilson, A. C. 1984. DNA sequences from the quagga, an extinct member of the horse family. <i>Nature</i> 312: 282-284.",
+      "year": "1984",
+      "title": "DNA sequences from the quagga, an extinct member of the horse family",
+      "author": "Higuchi, A., Bowman, B., Freiberger, M., Fyder, O. A. and Wilson, A. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Klein, R. G. and Cruz-Uribe, K. 1999. Craniometry of the genus <i>Equus</i> and the taxonomic affinities of the extinct South African quagga. <i>South African Journal of Science</i> 95: 81-86.",
+      "year": "1999",
+      "title": "Craniometry of the genus <i>Equus</i> and the taxonomic affinities of the extinct South African quagga",
+      "author": "Klein, R. G. and Cruz-Uribe, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Klingel, H. 2013. <i>Equus quagga</i>. In: J. S. Kingdon and M. Hoffmann (eds), <i>The Mammals of Africa</i>, Academic Press, Amsterdam, The Netherlands.",
+      "year": "2013",
+      "title": "<i>Equus quagga</i>",
+      "author": "Klingel, H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bennett, D.K. 1980. Stripes do not a zebra make. A cladistic analysis of <i>Equus</i>. <i>Systematic Zoology</i> 29: 272-287.",
+      "year": "1980",
+      "title": "Stripes do not a zebra make. A cladistic analysis of <i>Equus</i>",
+      "author": "Bennett, D.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Groves, C.P. and Bell, C.H. 2004. New investigations on the taxonomy of the zebras genus <i>Equus</i>, subgenus <i>Hippotigris</i>. <i>Mammalian Biology</i> 69: 182-196.",
+      "year": "2004",
+      "title": "New investigations on the taxonomy of the zebras genus <i>Equus</i>, subgenus <i>Hippotigris</i>",
+      "author": "Groves, C.P. and Bell, C.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Macpherson, D. 2013. Report on an Aerial Census of Akagera National Park, Rwanda - August 2013. Cluny.",
+      "year": "2013",
+      "title": "Report on an Aerial Census of Akagera National Park, Rwanda - August 2013",
+      "author": "Macpherson, D",
+      "citation_short": null
+    },
+    {
+      "citation": "Jones, K.E., Bielby, J., Cardillo, M., Fritz, S.A., O'Dell, J., Orme, C.D.L., Safi, K., Sechrest, W., Boakes, E.H., Carbone, C., Connolly, C., Cutts, M.J., Foster, J.K., Grenyer, R., Habib, M., Plaster, C.A., Price, S.A., Rigby, E.A., Rist, J., Teacher, A., Bininda-Emonds, O.R.P., Gittleman, J.L., Mace, G.M. and Purvis, A. 2009. PanTHERIA: a species-level database of life history, ecology and geography of extant and recently extinct mammals. <i>Ecology</i> 90: 2648.",
+      "year": "2009",
+      "title": "PanTHERIA: a species-level database of life history, ecology and geography of extant and recently extinct mammals",
+      "author": "Jones, K.E., Bielby, J., Cardillo, M., Fritz, S.A., O'Dell, J., Orme, C.D.L., Safi, K., Sechrest, W., Boakes, E.H., Carbone, C., Connolly, C., Cutts, M.J., Foster, J.K., Grenyer, R., Habib, M., Plaster, C.A., Price, S.A., Rigby, E.A., Rist, J., Teacher, A., Bininda-Emonds, O.R.P., Gittleman, J.L., Mace, G.M. and Purvis, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bodenstein, V., Meissner, H.H. and van Hoven, W. 2000. Food selection by Burchell's zebra and blue wildebeest in the Timbavati area of the Northern Province Lowveld. <i>South African Journal of Wildlife Research</i> 30: 63-72.",
+      "year": "2000",
+      "title": "Food selection by Burchell's zebra and blue wildebeest in the Timbavati area of the Northern Province Lowveld",
+      "author": "Bodenstein, V., Meissner, H.H. and van Hoven, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brooks, C. J. and Harris, S. 2008. Directed movement and orientation across a large natural landscape by zebras, <i>Equus burchelli antiquorum</i>. <i>Animal Behaviour </i> 76: 277-285.",
+      "year": "2008",
+      "title": "Directed movement and orientation across a large natural landscape by zebras, <i>Equus burchelli antiquorum</i>",
+      "author": "Brooks, C. J. and Harris, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bell, R. 1971. A grazing ecosystem in the Serengeti. <i>Scientific American </i> 225: 86-93.",
+      "year": "1971",
+      "title": "A grazing ecosystem in the Serengeti",
+      "author": "Bell, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Owen-Smith, N. and Goodall, V. 2014. Coping with savanna seasonality: comparative daily activity patterns of African ungulates as revealed by GPS- telemetry. <i>Journal of Zoology</i> 293: 181-191.",
+      "year": "2014",
+      "title": "Coping with savanna seasonality: comparative daily activity patterns of African ungulates as revealed by GPS- telemetry",
+      "author": "Owen-Smith, N. and Goodall, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Smuts, G.L. 1975. Home range sizes for Burchell's zebra <i>Equus burchelli antiquorum</i> from the Kruger National Park. <i>Koedoe </i> 18: 139-146.",
+      "year": "1975",
+      "title": "Home range sizes for Burchell's zebra <i>Equus burchelli antiquorum</i> from the Kruger National Park",
+      "author": "Smuts, G.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thouless, R.C. 1995. Aerial survey for wildlife in Omo valley, Chew Bahir, and Borana areas of southern Ethiopia. Ethiopian Wildlife Conservation Organization. Ecosystems Consultants, London, UK.",
+      "year": "1995",
+      "title": "Aerial survey for wildlife in Omo valley, Chew Bahir, and Borana areas of southern Ethiopia",
+      "author": "Thouless, R.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Owen-Smith, N., le Roux, E. and Macandza, V. 2013. Are relatively rare antelope narrowly selective feeders? A sable antelope and zebra comparison. <i>Jouranl of Zoology</i> 291: 163-170.",
+      "year": "2013",
+      "title": "Are relatively rare antelope narrowly selective feeders? A sable antelope and zebra comparison",
+      "author": "Owen-Smith, N., le Roux, E. and Macandza, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fay, M.,Elkan, P., Marjan, M. and Grossman, F. 2007. Aerial surveys of wildlife, livestock, and human activity in and around existing and proposed protected areas of southern Sudan, dry season 2007. WCS - Southern Sudan Technical Report.",
+      "year": "2007",
+      "title": "Aerial surveys of wildlife, livestock, and human activity in and around existing and proposed protected areas of southern Sudan, dry season 2007",
+      "author": "Fay, M.,Elkan, P., Marjan, M. and Grossman, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brooks, P.M. 1982. Zebra, wildebeest and buffalo sub-population areas in the Hluhluwe-Corridor-Umfolozi Complex, Zululand, and their application in management. <i>South African Journal of Wildlife Research </i> 12: 140-146.",
+      "year": "1982",
+      "title": "Zebra, wildebeest and buffalo sub-population areas in the Hluhluwe-Corridor-Umfolozi Complex, Zululand, and their application in management",
+      "author": "Brooks, P.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Klingel, H. 1969. The social organisation and population ecology of the plains zebra (<i>Equus quagga</i>). <i>Zoologica Africana</i> 4: 249-263.",
+      "year": "1969",
+      "title": "The social organisation and population ecology of the plains zebra (<i>Equus quagga</i>)",
+      "author": "Klingel, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Stelfox, J.G., Peden, D.G., Epp, H., Hudson, R.J., Mbugua, S.W., Agatsiva, J.L. and Amuyunzu, C.L. 1986. Herbivore dynamics in southern Narok, Kenya. <i>Journal of Wildlife Management</i> 50: 339.",
+      "year": "1986",
+      "title": "Herbivore dynamics in southern Narok, Kenya",
+      "author": "Stelfox, J.G., Peden, D.G., Epp, H., Hudson, R.J., Mbugua, S.W., Agatsiva, J.L. and Amuyunzu, C.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bartlam-Brooks, H.L.A., Bonyongo, M.C. and Harris, S. 2011. Will reconnecting ecosystems allow long-distance mammal migrations to resume? A case study of a zebra <i>Equus burchelli</i> migration in Botswana. <i>Oryx </i> 45: 210-216.",
+      "year": "2011",
+      "title": "Will reconnecting ecosystems allow long-distance mammal migrations to resume? A case study of a zebra <i>Equus burchelli</i> migration in Botswana",
+      "author": "Bartlam-Brooks, H.L.A., Bonyongo, M.C. and Harris, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Duncan, P. and Gakahu, C. 1992. Plains Zebras (<i>Equus burchelli</i> Gray). In: Duncan, P. (ed.), <i>Zebras, Asses, and Horses. An Action Plan for the Conservation of Wild Equids</i>, pp. 12-15. IUCN/SSC Equid Specialist Group, Gland, Switzerland.",
+      "year": "1992",
+      "title": "Plains Zebras (<i>Equus burchelli</i> Gray)",
+      "author": "Duncan, P. and Gakahu, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vanleeuwe, H. 2009. Large mammals and human impact survey. Upemba and Kundelungi National Parks, DRC, USFWS/WCS/Panthera unpublished report.",
+      "year": "2009",
+      "title": "Large mammals and human impact survey",
+      "author": "Vanleeuwe, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lindsey, P.A., Barnes, J., Nyirenda, V., Pumfrett, B., Tambling, C.J., Taylor, W.A. and t'SasRolfes, M. 2013. The Zambian wildlife ranching industry: scale, associated benefits, and limitations affecting its development. <i>PLoS ONE</i> 8: e81761.",
+      "year": "2013",
+      "title": "The Zambian wildlife ranching industry: scale, associated benefits, and limitations affecting its development",
+      "author": "Lindsey, P.A., Barnes, J., Nyirenda, V., Pumfrett, B., Tambling, C.J., Taylor, W.A. and t'SasRolfes, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Macandza, V., Owen‐Smith, N. and Roux, E. 2013. Faecal nutritional indicators in relation to the comparative population performance of sable antelope and other grazers. <i>African Journal of Ecology</i> 52: 300-307.",
+      "year": "2013",
+      "title": "Faecal nutritional indicators in relation to the comparative population performance of sable antelope and other grazers",
+      "author": "Macandza, V., Owen‐Smith, N. and Roux, E. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Shem M, M., Van, S.E. and Ignas MA,H. 2013. Seasonal resource use and niche breadth in an assemblage of coexisting grazers in a fenced Park. <i>Open Journal of Ecology</i> 3: 383-388.",
+      "year": "2013",
+      "title": "Seasonal resource use and niche breadth in an assemblage of coexisting grazers in a fenced Park",
+      "author": "Shem M, M., Van, S.E. and Ignas MA,H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Foley, C., Foley, L., Lobora, A., De Luca, D., Msuha, M., Davenport, T.R.B. and Durant, S. 2014. <i>A Field Guide to the Larger Mammals of Tanzania</i>. Princeton University Press, Princeton, USA.",
+      "year": "2014",
+      "title": "A Field Guide to the Larger Mammals of Tanzania",
+      "author": "Foley, C., Foley, L., Lobora, A., De Luca, D., Msuha, M., Davenport, T.R.B. and Durant, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Seydack, A.H., Grant, C.C., Smit, I.P., Vermeulen, W.J., Baard, J. and Zambatis, N. 2012. Climate and vegetation in a semi-arid savanna: Development of a climate–vegetation response model linking plant metabolic performance to climate and the effects on forage availability for large herbivores. <i>Koedoe </i> 54: 12.",
+      "year": "2012",
+      "title": "Climate and vegetation in a semi-arid savanna: Development of a climate–vegetation response model linking plant metabolic performance to climate and the effects on forage availability for large herbivores",
+      "author": "Seydack, A.H., Grant, C.C., Smit, I.P., Vermeulen, W.J., Baard, J. and Zambatis, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Grunblatt, J., Said, M., Njuguna, E. and Ojwang, J. 1995. SRSRS protected and adjacent areas analysis. Ministry of Planning and National Development, Department of Resource Surveys and Remote Sensing, Nairobi, Kenya.",
+      "year": "1995",
+      "title": "SRSRS protected and adjacent areas analysis",
+      "author": "Grunblatt, J., Said, M., Njuguna, E. and Ojwang, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "McNaughton, S.J. 1985. Ecology of a grazing ecosystem: the Serengeti. <i>Ecological Monographs</i> 55: 259.",
+      "year": "1985",
+      "title": "Ecology of a grazing ecosystem: the Serengeti",
+      "author": "McNaughton, S.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lindsey, P. A., Havemann, C. P., Lines, R. M., Price, A. E., Retief, T. A., Rhebergen, T., Van der Waal, C. and Romanach, S.S. 2013. Benefits of wildlife-based land uses on private lands in Namibia and limitations affecting their development. <i>Oryx </i> 47: 41-53.",
+      "year": "2013",
+      "title": "Benefits of wildlife-based land uses on private lands in Namibia and limitations affecting their development",
+      "author": "Lindsey, P. A., Havemann, C. P., Lines, R. M., Price, A. E., Retief, T. A., Rhebergen, T., Van der Waal, C. and Romanach, S.S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Groom, R. and Harris, S. 2010. Factors affecting the distribution patterns of zebra and wildebeest in a resource-stressed environment. <i>African Journal of Ecology </i> 48: 159-168.",
+      "year": "2010",
+      "title": "Factors affecting the distribution patterns of zebra and wildebeest in a resource-stressed environment",
+      "author": "Groom, R. and Harris, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Rubenstein, D.I. 2010. Ecology, social behavior, and conservation in zebras. In: R. Macedo (ed.), <i>Advances in the Study Behavior: Behavioral Ecology of Tropical Animals</i>, pp. 231-258. Elsevier Press, Oxford, UK.",
+      "year": "2010",
+      "title": "Ecology, social behavior, and conservation in zebras",
+      "author": "Rubenstein, D.I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bartlam-Brooks, H.L.A., Beck, P.S.A., Bohrer, G. and Harris, S. 2013. In search of greener pastures: Using satellite images to predict the effects of environmental change on zebra migration. <i>Journal of Geophysical Research: Biogeosciences</i> 118: 1427-1437.",
+      "year": "2013",
+      "title": "In search of greener pastures: Using satellite images to predict the effects of environmental change on zebra migration",
+      "author": "Bartlam-Brooks, H.L.A., Beck, P.S.A., Bohrer, G. and Harris, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Stears, K., Shrader, A., Selier, J. and Castley, G. 2015. <i>Equus quagga</i>– Plains Zebra. In: M.F. Child, E. Do Linh San, D. Raimondo, H. Davies-Mostert and L. Roxburgh (eds), <i>The Red List of Mammals of South Africa, Swaziland and Lesotho</i>, South African National Biodiversity Institute and Endangered Wildlife Trust, South Africa.",
+      "year": "2015",
+      "title": "<i>Equus quagga</i>– Plains Zebra",
+      "author": "Stears, K., Shrader, A., Selier, J. and Castley, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wanyama, F., Elkan, P., Grossman, F., Mendiguetti, S., Modi, A., Kisame, F., Kato, R., Okiring, D., Loware, S. and Plumptre, A.J. 2014. Aerial surveys of Kidepo Valley National Park and Karenga Community Wildlife Area. Unpublished Technical Report.",
+      "year": "2014",
+      "title": "Aerial surveys of Kidepo Valley National Park and Karenga Community Wildlife Area",
+      "author": "Wanyama, F., Elkan, P., Grossman, F., Mendiguetti, S., Modi, A., Kisame, F., Kato, R., Okiring, D., Loware, S. and Plumptre, A.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ben-Shahar, R. and Coe, M.J. 1992. The relationships between soil factors, grass nutrients and the foraging behaviour of wildebeest and zebra. <i>Oecologia</i> 90: 422-428.",
+      "year": "1992",
+      "title": "The relationships between soil factors, grass nutrients and the foraging behaviour of wildebeest and zebra",
+      "author": "Ben-Shahar, R. and Coe, M.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lindsey, P.A., Nyirenda, V.R., Barnes, J.I., Becker, M.S., McRobb, R., Tambling, C.J., Taylor, W.A., Watson, F.G. and t’Sas-Rolfes, M. 2014. Underperformance of African protected area networks and the case for new conservation models: insights from Zambia. <i>PLoS ONE</i> 9(5): e94109.",
+      "year": "2014",
+      "title": "Underperformance of African protected area networks and the case for new conservation models: insights from Zambia",
+      "author": "Lindsey, P.A., Nyirenda, V.R., Barnes, J.I., Becker, M.S., McRobb, R., Tambling, C.J., Taylor, W.A., Watson, F.G. and t’Sas-Rolfes, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hopcraft, J.G.C., Morales, J.M., Beyer, H.L., Haydon, D.T., Borner, M., Sinclair, A.R.E. and Olff, H. 2010. <i>Serengeti wildebeest and zebra migrations are affected differently by food resources and predation risks</i>. Rijksuniversiteit Groningen, Groningen.",
+      "year": "2010",
+      "title": "Serengeti wildebeest and zebra migrations are affected differently by food resources and predation risks",
+      "author": "Hopcraft, J.G.C., Morales, J.M., Beyer, H.L., Haydon, D.T., Borner, M., Sinclair, A.R.E. and Olff, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Berry, H.H. and Louw, G.N. 1982. Nutritional balance between grassland productivity and large herbivore demand in the Etosha National Park. <i>Madoqua</i> 13: 141-150.",
+      "year": "1982",
+      "title": "Nutritional balance between grassland productivity and large herbivore demand in the Etosha National Park",
+      "author": "Berry, H.H. and Louw, G.N. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Young, T.P., Palmer, T.M. and Gadd, M.E. 2005. Competition and compensation among cattle, zebras, and elephants in a semi-arid savanna in Laikipia, Kenya. <i>Biological Conservation</i> 122: 351-359.",
+      "year": "2005",
+      "title": "Competition and compensation among cattle, zebras, and elephants in a semi-arid savanna in Laikipia, Kenya",
+      "author": "Young, T.P., Palmer, T.M. and Gadd, M.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Foley, C. and Foley, L. 2014. Migratory Corridors and Wildlife Trends in the Tarangire Ecosystem. Wildlife Conservation Society, Tanzania program.",
+      "year": "2014",
+      "title": "Migratory Corridors and Wildlife Trends in the Tarangire Ecosystem",
+      "author": "Foley, C. and Foley, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ogutu, J.O., Owen‐Smith, N., Piepho, H.P. and Said, M.Y. 2011. Continuing wildlife population declines and range contraction in the Mara region of Kenya during 1977–2009. <i>Journal of Zoology</i> 285: 99-109.",
+      "year": "2011",
+      "title": "Continuing wildlife population declines and range contraction in the Mara region of Kenya during 1977–2009",
+      "author": "Ogutu, J.O., Owen‐Smith, N., Piepho, H.P. and Said, M.Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Georgiadis, N. J., Hack, M.A. and Turpin, K. 2003. The influence of rainfall on zebra population dynamics: implications for management. <i>Journal of Applied Ecology</i> 40: 125-136.",
+      "year": "2003",
+      "title": "The influence of rainfall on zebra population dynamics: implications for management",
+      "author": "Georgiadis, N. J., Hack, M.A. and Turpin, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Smuts, G.L. 1974. Game movements in the Kruger National Park and their relationship to the segregation of sub-populations and the allocation of culling compartments. <i>Journal of the South African Wildlife Management Association</i> 4: 51-58.",
+      "year": "1974",
+      "title": "Game movements in the Kruger National Park and their relationship to the segregation of sub-populations and the allocation of culling compartments",
+      "author": "Smuts, G.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kinnaird, M, O’Brien, T. and Ojwang, G. 2012. Sample count aerial surveys as a monitoring tool for wildlife and livestock: a case study from Laikipia County. Unpublished report to the Laikipia Wildlife Forum.",
+      "year": "2012",
+      "title": "Sample count aerial surveys as a monitoring tool for wildlife and livestock: a case study from Laikipia County",
+      "author": "Kinnaird, M, O’Brien, T. and Ojwang, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dunham, K.M., van der Westhuizen, E., van der Westhuizen., H.F. and Ndaimani, H. 2013. Aerial survey of elephants and other large herbivores in Gonarezhou National Park (Zimbabwe) and surrounding areas. Frankfurt Zoological Society unpublished report.",
+      "year": "2013",
+      "title": "Aerial survey of elephants and other large herbivores in Gonarezhou National Park (Zimbabwe) and surrounding areas",
+      "author": "Dunham, K.M., van der Westhuizen, E., van der Westhuizen., H.F. and Ndaimani, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 04 September 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

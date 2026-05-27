@@ -1,0 +1,798 @@
+{
+  "assessment_date": "2015-11-21T00:00:00.000+00:00",
+  "year_published": "2021",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 14352,
+  "criteria": "A2acd+4acd",
+  "url": "https://www.iucnredlist.org/species/14352/195372486",
+  "citation": "Boonratana, R., Cheyne, S.M., Traeholt, C., Nijman, V. & Supriatna, J. 2021. Nasalis larvatus (amended version of 2020 assessment). The IUCN Red List of Threatened Species 2021: e.T14352A195372486. Accessed on 15 May 2026.",
+  "assessment_id": 195372486,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 14352,
+    "scientific_name": "Nasalis larvatus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "PRIMATES",
+    "family_name": "CERCOPITHECIDAE",
+    "genus_name": "Nasalis",
+    "species_name": "larvatus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Wurmb, 1787)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Primate Specialist Group",
+        "url": "http://www.primate-sg.org/",
+        "description": "Chair: Russell Mittermeier (email: rmittermeier@globalwildlife.org)\nRed List Authority Focal Points: \nProsimians, monkeys and smaller apes - Sanjay Molur (email: sanjay@zooreach.org) and Christoph Schwitzer (email: cschwitzer@bristolzoo.org.uk)\nVice-Chair for great apes - Dirck S. Byler (email: dbyler@globalwildlife.org)\nVice-Chair for small apes - Susan M. Cheyne (email: section.small.apes@gmail.com)\nJournals and Newsletters: \nPrimate Conservation: http://www.primate-sg.org/primate_conservation/\nNeotropical Primates: http://www.primate-sg.org/neotropical_primates/\nAsian Primates: http://www.primate-sg.org/asian_primates_newsletter/ and http://www.primate-sg.org/asian_primates_journal/\nLemur News: http://www.primate-sg.org/lemur_news/\nAfrican Primates: http://www.primate-sg.org/african_primates/\n"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Long-nosed Monkey",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Mono Narigudo",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Nasique",
+        "language": "fre"
+      },
+      {
+        "main": true,
+        "name": "Proboscis Monkey",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Nasalis nasica (Lacépède, 1799)",
+        "status": "New",
+        "genus_name": "Nasalis",
+        "species_name": "nasica",
+        "species_author": "(Lacépède, 1799)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Nasalis capistratus (Kerr, 1792)",
+        "status": "New",
+        "genus_name": "Nasalis",
+        "species_name": "capistratus",
+        "species_author": "(Kerr, 1792)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Nasalis recurvus Vigors & Horsfield, 1828",
+        "status": "New",
+        "genus_name": "Nasalis",
+        "species_name": "recurvus",
+        "species_author": "Vigors & Horsfield, 1828",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Endangered"
+    },
+    "code": "EN"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 350,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "Yes",
+    "population_continuing_decline": "Yes",
+    "generational_length": "12",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "No"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Not Applicable"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "Unknown",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species is endemic to Borneo, occurring in Brunei, Indonesia (Kalimantan) and Malaysia (Sabah and Sarawak). It was originally found over the whole of coastal Borneo, as well as on the satellite islands of Berhala, Sebatik and Pulau Laut (Groves 2001).",
+    "population": "In Sarawak, less than 1,000 animals are thought to remain in patchily distributed populations. In Sabah, the only remaining large populations are in the Kinabatangan flood plain, and around Dewurst Bay in the Eastern Deltas. Brunei estuaries support one population. The species is in greater abundance in Kalimantan (Indonesian Borneo), where Meijaard surveyed the population. The Indonesian populations range in size from over 1,000 to less than 100, depending on past and current threats (Meijaard and Nijman 2000). The Pulau Kaget Nature Reserve population in South Kalimantan has reportedly been extinct since 1997 (Meijaard and Nijman 2000). Also, the population in the Mahakam Delta, East Kalimantan which would have numbered in the thousands up until the early 1990s, has now been decimated due to conversion of the coastal swamps to shrimp farms (E. Meijaard pers. comm.).",
+    "habitats": "This species is associated with riparian-riverine forests, coastal lowland forest, including mangroves, peat swamp, and freshwater swamp forest (Boonratana 2000). It rarely ranges far from its local habitat's waterway (Meijaard and Nijman 2000). It has been suggested that it is restricted to the coastal areas and areas near rivers because the interior has soils that are low in minerals and salts, which are a necessary part of its diet (Bennett and Sebastian 1988). It is found at low elevations, up to no more than about 350 m asl (Meijaard and Nijman 2000).<br/><br/>The species is mostly folivorous (about 52% of all feedings) and frugivorous (about 40% of all feedings), and prefers young leaves and unripened non-fleshy fruits. Monthly diet of this species changes with availability throughout the year (Yeager 1989). Boonratana (2000) observed this species swimming across the Kinabatangan River in northern Borneo, and frequently across its tributaries. The home range size of a focal one-male group was 220.5 ha (Boonratana 2000). Boonratana (2000) reports that this species never entered agricultural lands, nor areas used intermittently as log dumps for logging operations carried out in the area before and during the study. This species returned to the river every night at the study site of Sukau, moving inland during the day (Boonratana 2000). It avoids areas with heavy deforestation, such as agricultural land (Salter and MacKenzie 1985). Where there is no hunting the species can persist in disturbed forests and secondary habitats.",
+    "threats": "Because of this species' association with riverine and coastal habitat, the major cause for its recent decline is thought to be habitat destruction. People favour these animals' habitats for logging, cultivation, and settlement. The planned land use for Central Kalimantan cited by E. Meijaard illustrates this tendency, with much of the riverine forest being marked for conversion. Clearing riverbanks and mangroves has a significant impact. Forest fires, especially those along the rivers, have a major impact on distribution. The 1997-1998 Bornean forest fires were thought to have destroyed the greatest proportion of remaining habitat of any primate in Kalimantan.<br/><br/>The species is relatively lethargic and easily hunted; with little effort entire populations can be hunted to extirpation. Opportunistic hunting of <em>Nasalis larvatus</em> for food occurs; the species is also hunted for bezoar stones, an intestinal secretion used in traditional Chinese medicine. Hunting has been felt most significantly in the Bornean interior, but is increasing in coastal areas (Meijaard and Nijman 2000).",
+    "measures": "This species is listed on CITES Appendix I, and is protected by law throughout its range (Meijaard and Nijman 2000). In some portions of its range its legal protection suffers from governmental and institutional deficiencies, including lack of conservation funds and knowledge, and poor and inappropriate management (Meijaard and Nijman 2000). It is known to occur in 16 protected areas: Danau Sentarum Wildlife Reserve, Gunung Palung Nature Reserve, Kendawangan Nature Reserve, Kutai National Park, Lesan Protection Forest, Muara Kaman Nature Reserve, Mandor Reserve, Tanjung Putting National Park (Indonesia); Bako National Park, Gunung Pueh Forest Reserve, Kabili-Sepilok Forest Reserve, Klias National Park, Kulamba Wildlife Reserve, Lower Kinabatangan Wildlife Sanctuary, Sungei Samunsam Wildlife Sanctuary, Ulu Segama Reserve (Malaysia). It formerly occurred in Pulau Kaget Nature Reserve (Indonesia), but is now extirpated there.<br/><br/>This species is almost never seen in captivity outside of Asia, as, owing to their dietary specialization on particular leaves and other vegetable material, they are hard to keep alive (E. Meijaard pers. comm.).",
+    "use_trade": "As well as being hunted for food, the species is also hunted for bezoar stones, an intestinal secretion used in traditional Chinese medicine.",
+    "rationale": "The species is listed as Endangered as it has undergone extensive population reductions across its range, and ongoing hunting and habitat destruction continue to threaten most populations. Numbers are estimated to have declined by over 70% (but probably less that 80%) over the past three generations (36 years), and based on the continuing threats it is predicted to decline at the same rate over the next one generation in the future at least.",
+    "trend_justification": null,
+    "taxonomic_notes": "There is very little difference between the two subspecies, and indeed <em>Nasalis larvatus orientalis</em> is not recognized by all authorities (M. Richardson pers. comm)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_1",
+      "description": {
+        "en": "Formal education"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_2",
+      "description": {
+        "en": "Training"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Mangrove Vegetation Above High Tide Level"
+      },
+      "code": "1_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Swamp"
+      },
+      "code": "1_8"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brunei Darussalam"
+      },
+      "code": "BN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kalimantan"
+      },
+      "code": "BOR-KA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sabah"
+      },
+      "code": "BOR-SB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sarawak"
+      },
+      "code": "BOR-SR"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Motivation Unknown/Unrecorded"
+      },
+      "code": "5_3_5"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Trend Unknown/Unrecorded"
+      },
+      "code": "7_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Boonratana, R., Cheyne, S.M., Traeholt, C., Nijman, V. & Supriatna, J.",
+      "value": [
+        "Susan Cheyne (IUCN SSC Primate Specialist Group’s Section on Small Apes (SSA))",
+        "Jatna Supriatna (Research Center for Climate Change, University of Indonesia)",
+        "Ramesh Boonratana (Mahidol University International College, Thailand)",
+        "Carl Traeholt (Copenhagen Zoo)",
+        "Vincent Nijman (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Molur, S. & Mittermeier, R.A.",
+      "value": [
+        "Sanjay Molur (ZOO (Eastern Himalayas))",
+        "Russell A. Mittermeier (Conservation International)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This amended assessment was created to remove reference to the former subspecies <em>larvatus </em>and <em>orientalis</em> in the assessment text and in the distribution map (the species is now monotypic)."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Groves C.P. 2001. <i>Primate Taxonomy</i>. Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "2001",
+      "title": "Primate Taxonomy",
+      "author": "Groves C.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Payne, J., Francis, C.M. and Phillipps, K. 1985. <i>A field guide to the mammals of Borneo</i>. The Sabah Society and WWF Malaysia, Kota Kinabalu and Kuala Lumpur, Malaysia.",
+      "year": "1985",
+      "title": "A field guide to the mammals of Borneo",
+      "author": "Payne, J., Francis, C.M. and Phillipps, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Yeager, C. P. 1991. Proboscis monkey (<i>Nasalis larvatus</i>) social organization: intergroup patterns of association. <i>American Journal of Primatology</i> 23: 73-86.",
+      "year": "1991",
+      "title": "Proboscis monkey (<i>Nasalis larvatus</i>) social organization: intergroup patterns of association",
+      "author": "Yeager, C. P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yeager, C. 1990. Proboscis monkey (<i>Nasalis larvatus</i>) social organization: group structure. <i>American Journal of Primatology</i> 20(2): 95-106.",
+      "year": "1990",
+      "title": "Proboscis monkey (<i>Nasalis larvatus</i>) social organization: group structure",
+      "author": "Yeager, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yeager, C. 1990. Notes on the sexual behavior of the proboscis monkey (<i>Nasalis larvatus</i>). <i>American Journal of Primatology</i> 21(3): 223-227.",
+      "year": "1990",
+      "title": "Notes on the sexual behavior of the proboscis monkey (<i>Nasalis larvatus</i>)",
+      "author": "Yeager, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jeffrey, S. 1982. Threats to the proboscis monkey. <i>Oryx</i> 16: 337–339.",
+      "year": "1982",
+      "title": "Threats to the proboscis monkey",
+      "author": "Jeffrey, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Yeager, C. 1989. Feeding ecology of the proboscis monkey (<i>Nasalis larvatus</i>). <i>International Journal of Primatology</i> 10(6): 497-529.",
+      "year": "1989",
+      "title": "Feeding ecology of the proboscis monkey (<i>Nasalis larvatus</i>)",
+      "author": "Yeager, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Salter, R. and MacKenzie, N. 1985. Conservation status of proboscis monkey in Sarawak. <i>Biological Conservation</i> 33: 119 - 132.",
+      "year": "1985",
+      "title": "Conservation status of proboscis monkey in Sarawak",
+      "author": "Salter, R. and MacKenzie, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yeager, C. P. 1992. Proboscis monkey (<i>Nasalis larvatus</i>) social organization: nature and possible functions of intergroup patterns of association. <i>American Journal of Primatology</i> 26: 133-137.",
+      "year": "1992",
+      "title": "Proboscis monkey (<i>Nasalis larvatus</i>) social organization: nature and possible functions of intergroup patterns of association",
+      "author": "Yeager, C. P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yeager, C. 1996. Conservation status of proboscis monkey groups and the effects of habitat degradation. <i>Asian Primates Newsletter</i> 5: 3-5.",
+      "year": "1996",
+      "title": "Conservation status of proboscis monkey groups and the effects of habitat degradation",
+      "author": "Yeager, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Meijaard, E. and Nijman, V. 2000. Distribution and conservation of the proboscis monkey (<i>Nasalis larvatus</i>) in Kalimantan, Indonesia. <i>Biological Conservation</i> 92: 15-24.",
+      "year": "2000",
+      "title": "Distribution and conservation of the proboscis monkey (<i>Nasalis larvatus</i>) in Kalimantan, Indonesia",
+      "author": "Meijaard, E. and Nijman, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bennett, E. and Sebastian, A. 1988. Social organization and ecology of proboscis monkeys (<i>Nasalis larvatus</i>) in mixed coastal forest of Sarawak. <i>International Journal of Primatology</i> 9(3): 233–255.",
+      "year": "1988",
+      "title": "Social organization and ecology of proboscis monkeys (<i>Nasalis larvatus</i>) in mixed coastal forest of Sarawak",
+      "author": "Bennett, E. and Sebastian, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Boonratana, R. 1993. The ecology and behaviour of the proboscis monkey (<i>Nasalis larvatus</i>) in the lower Kinabatangan, Sabah. <i>Asian Primates</i> 4(1): 13-14.",
+      "year": "1993",
+      "title": "The ecology and behaviour of the proboscis monkey (<i>Nasalis larvatus</i>) in the lower Kinabatangan, Sabah",
+      "author": "Boonratana, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bennett, E. 1988. Proboscis monkeys and their swamp forests in Sarawak. <i>Oryx</i> 22(1): 69-74.",
+      "year": "1988",
+      "title": "Proboscis monkeys and their swamp forests in Sarawak",
+      "author": "Bennett, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Boonratana, R. 1999. Dispersal in proboscis monkeys (<i>Nasalis larvatus</i>) in the Lower Kinabatangan, northern Borneo. <i>Tropical Biodiversity</i> 6: 179-187.",
+      "year": "1999",
+      "title": "Dispersal in proboscis monkeys (<i>Nasalis larvatus</i>) in the Lower Kinabatangan, northern Borneo",
+      "author": "Boonratana, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Boonratana, R. 2000. Ranging behavior of proboscis monkeys (<i>Nasalis larvatus</i>) in the Lower Kinabatangan, northern Borneo. <i>International Journal of Primatology</i> 21: 497–518.",
+      "year": "2000",
+      "title": "Ranging behavior of proboscis monkeys (<i>Nasalis larvatus</i>) in the Lower Kinabatangan, northern Borneo",
+      "author": "Boonratana, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Boonratana, R. 2002. Social organisation of proboscis monkeys (<i>Nasalis larvatus</i>) in the Lower Kinabatangan, Sabah, Malaysia. <i>Malayan Nature Journal</i> 56: 57-75.",
+      "year": "2002",
+      "title": "Social organisation of proboscis monkeys (<i>Nasalis larvatus</i>) in the Lower Kinabatangan, Sabah, Malaysia",
+      "author": "Boonratana, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Meijaard, E. and Nijman, V. 1999. The local extinction of the proboscis monkey <i>Nasalis larvatus</i> in Pulau Kaget Nature Reserve, Indonesia. <i>Oryx</i> 34: 66-70.",
+      "year": "1999",
+      "title": "The local extinction of the proboscis monkey <i>Nasalis larvatus</i> in Pulau Kaget Nature Reserve, Indonesia",
+      "author": "Meijaard, E. and Nijman, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 13 June 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-2"
+    },
+    {
+      "citation": "IUCN. 2021. The IUCN Red List of Threatened Species. Version 2021-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 25 March 2021).",
+      "year": "2021",
+      "title": "The IUCN Red List of Threatened Species. Version 2021-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2021-1"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

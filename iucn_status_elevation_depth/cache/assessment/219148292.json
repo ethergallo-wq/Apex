@@ -1,0 +1,1800 @@
+{
+  "assessment_date": "2022-07-26T01:00:00.000+01:00",
+  "year_published": "2023",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 59467,
+  "criteria": "A3ce",
+  "url": "https://www.iucnredlist.org/species/59467/219148292",
+  "citation": "IUCN SSC Amphibian Specialist Group 2023. Salamandra salamandra. The IUCN Red List of Threatened Species 2023: e.T59467A219148292. Accessed on 15 May 2026.",
+  "assessment_id": 219148292,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 59467,
+    "scientific_name": "Salamandra salamandra",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AMPHIBIA",
+    "order_name": "CAUDATA",
+    "family_name": "SALAMANDRIDAE",
+    "genus_name": "Salamandra",
+    "species_name": "salamandra",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Amphibian Specialist Group",
+        "url": "https://www.iucn-amphibians.org/",
+        "description": "Chair: Ariadne Angulo (email: aangulo@amphibians.org)\nRed List Authority Coordinator: Jennifer Luedtke (email: jluedtke@amphibians.org)\nNewsletter: http://www.amphibians.org/froglog/"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "European Salamander",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Fire Salamander",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Spotted Salamander",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "E bukura e dheut",
+        "language": "alb"
+      },
+      {
+        "main": false,
+        "name": "Feuersalamander",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Foltos szalamandra",
+        "language": "hun"
+      },
+      {
+        "main": false,
+        "name": "Foltos szalamandra",
+        "language": "hun"
+      },
+      {
+        "main": false,
+        "name": "Navadni močerad",
+        "language": "slv"
+      },
+      {
+        "main": false,
+        "name": "Obyknovennaya Salamandra",
+        "language": "rus"
+      },
+      {
+        "main": false,
+        "name": "Pjegavi daždevnjak",
+        "language": "bos"
+      },
+      {
+        "main": false,
+        "name": "Salamandra",
+        "language": "rum"
+      },
+      {
+        "main": false,
+        "name": "Salamandra Común",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Salamandra Pezzata",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Salamandra Plamista",
+        "language": "pol"
+      },
+      {
+        "main": false,
+        "name": "Salamandre tachetée",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Šareni daždevnjak",
+        "language": "scc"
+      },
+      {
+        "main": false,
+        "name": "Šareni daždevnjak",
+        "language": "scr"
+      },
+      {
+        "main": false,
+        "name": "Σαλαμάνδρα",
+        "language": "gre"
+      },
+      {
+        "main": false,
+        "name": "Дъждовник",
+        "language": "bul"
+      },
+      {
+        "main": false,
+        "name": "Шарен дождовник",
+        "language": "mac"
+      },
+      {
+        "main": true,
+        "name": "Common Fire Salamander",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Lacerta salamandra Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Lacerta",
+        "species_name": "salamandra",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Salamandra terrestris Bonnaterre, 1789",
+        "status": "ACCEPTED",
+        "genus_name": "Salamandra",
+        "species_name": "terrestris",
+        "species_author": "Bonnaterre, 1789",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Salamandra longirostris Joger & Steinfartz, 1994",
+        "status": "undefined",
+        "genus_name": "Salamandra",
+        "species_name": "longirostris",
+        "species_author": "Joger & Steinfartz, 1994",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Salamandra candida ssp. candida Laurenti, 1768",
+        "status": "ACCEPTED",
+        "genus_name": "Salamandra",
+        "species_name": "candida",
+        "species_author": null,
+        "infrarank_author": "Laurenti, 1768",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "candida"
+      },
+      {
+        "name": "Salamandra maculosa Laurenti, 1768",
+        "status": "ACCEPTED",
+        "genus_name": "Salamandra",
+        "species_name": "maculosa",
+        "species_author": "Laurenti, 1768",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 2500,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "7-15",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species is endemic to Europe, where it is present across much of central, eastern and southern Europe. In the former Soviet Union, it is only known from the mountains and foothills of the Ukrainian Carpathians. The subpopulations of this species in Iberia are very fragmented (there is a small area of occupancy within the wider extent of occurrence). It occurs from lowland areas up to 2,500 m asl (in central Spain).<br/><br/>Some subpopulations of <em>Salamandra</em> species reported from western Anatolia (Türkiye, not mapped) require further investigation and are coded as 'Presence Uncertain' until that has been done; there is at present no records of the species in Anatolia, though suitable habitat occurs there (J. Speybroeck pers. comm. October 2022).",
+    "population": "A number of large, stable subpopulations of this salamander exist in Central Europe. Some local subpopulation declines have been observed over parts of its range (e.g. through habitat loss, introduced predatory fish, and increased aridity in Spain). A severe decline has been reported in the Netherlands. Some local subpopulations have disappeared, and its population density has also been reduced in parts of Spain. In Italy, localized declines due to habitat loss have been observed in Apen (F. Ficetola and R. Manenti pers. comm. September 2019). Due to the ongoing decline in the extent and quality of its habitat and the threat of <em>Bsal</em>, the population is continuing to decrease.<br/><br/>The generation length of this species is estimated to be between 7–15 years, and hence three generations is 21–45 years. It is conservatively estimated that <em>Bsal </em>will naturally advance at a rate of between 10–20 km per year. Therefore, a worst-case scenario of the impact of <em>Bsal </em>would be an outward spread of the disease from each current epicentre of 900 km (45 years at 20 km year), and the best-case scenario would be an outward spread of 210 km (21 years at 10 km year). In the attached map (see Figure 5 in Supplementary Information), the inner circle around each epicentre has a radius of 210 km, and the outer circle has a radius of 900 km and shows the modelled spread of the disease. When overlaid on the current range of the species, the best-case scenario has 15% of the range impacted, whereas the worst-case scenario has 70% of the range impacted (see calculations in Supplementary Information). A good estimate of the projected decline due to <em>Bsal </em>in the next three generations for this species is the midpoint of these two scenarios which is 42.5%. Habitat loss and degradation are also likely to contribute to this decline hence a conservation estimate is that the species will decline by between 30–49% in the next three generations which qualifies it for Vulnerable status.",
+    "habitats": "This species is associated with wet cool deciduous, mixed, or rarely, coniferous forests with well shaded brooks and small rivers. Within the mountain forest belt, the species can be found in woodlands, glades and forest edges, rocky slopes, dense bush, and herbaceous vegetation. It is possible, that the occurrence of <em>Salamandra salamandra</em> on woodless mountain pastures and within hayfields indicates the past existence of forests. In the Iberian Peninsula the species may be found in upland Mediterranean type forest and associated habitats. The species prefers microhabitats covered with dense leaf-litter and moss. It does tolerate some habitat modification, and has even been found in gardens. In general, the female gives birth to well-developed larvae, that complete metamorphosis in streams, ponds and still waters. However, the subspecies, <em>S. s. bernardezi</em> and <em>S. s. fastusa</em> may give birth to two to eight fully metamorphosed young on land.<br/><br/>Generation length has been estimated to be 7–15 years.",
+    "threats": "The principal threats include localized general habitat destruction, including the installation of run-of-river small hydropower plants throughout Balkan Peninsula (Crnobrnja-Isailović<em> et al</em>. 2021), unsympathetic forest management, and pollution of breeding sites by agrochemicals, collection for commercial purposes (i.e. the pet trade), introduction of predatory species (salmonids and crayfish (<em>Procambarus clarkii</em>)) and population fragmentation. The mortality of adults on roads is a localized threat in some parts of its range. The presence of chytridiomycosis has been reported in some Spanish subpopulations. <em><br/></em><em><br/></em><em>Batrachochytrium salamandrivorans</em> (<em>Bsal</em>) is an emerging fungal pathogen affecting amphibians and is closely related to <em>B. dendrobatidis</em> (<em>Bd</em>), which has had a devastating impact on amphibian populations around the world. Both pathogens cause the infectious disease chytridiomycosis, and both are believed to have originated in Asia (for <em>Bsal</em>: Martel <em>et al.</em> 2014, for <em>Bd</em>: O'Hanlon<em>et al. </em>2018). While <em>Bd</em> can cause disease in frogs, salamanders and caecilians, <em>Bsal </em>has only been reported to cause disease in salamanders and newts, although the pathogen has been detected in some frog species (Martel <em>et al.</em> 2013). <em>Bd</em> has spread globally, but at present <em>Bsal</em> is only known in Asia and has been introduced to Europe, most likely through the pet trade in salamanders (Martel <em>et al.</em> 2014, Nguyen <em>et al.</em> 2017). Currently in Europe, <em>Bsal</em> has been detected in the wild in the Netherlands, Belgium, Germany (e.g. Thein<em> et al</em>. 2020) and Spain (Martel <em>et al</em>. 2020), and has been shown to be highly pathogenic to most urodelan taxa in Europe (Martel <em>et al.</em> 2014). <em>Bsal</em> is a threat to this species and has caused declines in both wild and captive populations (A. Martel and F. Pasmans pers. comm. September 2019). Based on current distribution data for <em>Bsal</em>, it is expected that the natural advancement of the infection could be between 10–20 km per year.. With multiple outbreaks occurring within its range, modelling (see attached Supplementary Information) has found this species to be at extremely significant risk from <em>Bsal</em> in the next 21–45 years (which represents three generations). However, this does not take into account further human-induced introduction of the disease, and should new outbreaks occur within this species’ range then it will need to be reassessed as soon as possible.",
+    "measures": "<strong><em>Conservation Actions In-Place</em></strong><br/>This species is listed on Appendix III of the Bern Convention and is protected by national legislation over much of its range. It occurs in many protected areas, and is listed in a number of national and sub national Red Data Books and Lists. Some subpopulations of this salamander are being monitored (e.g. central Spain, Zlote Mountains [southwestern Poland, East Sudety Mountains]).&#160;<br/><br/><em>Bsal</em>&#160;is included in Annex II of EU regulation 2018/1882 of the Animal Health Law, which means&#160;<em>Bsal</em>&#160;should be mitigated (the legislation explicitly mentions wild animals). However, mitigation efforts are currently not coordinated at an EU scale, and consist of mostly local initiatives which are currently limited to&#160;<em>ex situ</em>&#160;efforts [in the Netherlands] and preventing spread through informing the public [in Belgium and the Netherlands] (F. Pasmans and A. Martel pers. comm. August 2021).&#160;There has been a single attempt to actively contain a <em>Bsal</em> outbreak (in northern Spain) using fencing, host removal, disinfection and perimeter surveillance but it is unknown to what extent this has been able to continue during 2020-2021 (F. Pasmans and A. Martel pers. comm. August 2021).<br/><br/><strong><em>Conservation Needed</em></strong><br/>There is also an urgent need for a EU (European Union) wide coordinated approach and implementation of the <em>Bsal</em> Action Plan by Gilbert <em>et al</em>. (2020), which was commissioned by the European Commission.&#160;<br/><br/><strong><em>Research Needed</em></strong><br/>Further research is also required into the impacts of chytridiomycosis on this salamander.",
+    "use_trade": "This species is found in the pet trade.",
+    "rationale": "Global and European regional assessment: Vulnerable (VU)<br/>EU 27 regional assessment: Vulnerable (VU)<br/><br/>This species is considered to be endemic to Europe at present. It is assessed as Vulnerable (A3ce) both globally and for the EU27 Member States due to a projected population decline estimated to be greater than 30% over the next 21–45 years (which represents three generation lengths), from the potential impact of <em>Batrachochytrium salamandrivorans</em> (<em>Bsal</em>) on this species, and ongoing habitat loss and degradation that is occurring throughout its range.<br/><br/>A number of subspecies of <em>Salamandra salamandra</em> are restricted in range and may be considered to be threatened, in particular: <em>S. s. longirostris</em> in southern Spain (listed as Vulnerable in Spain), and <em>S. s. bejarae-almanzoris</em> in the mountains of north-central Spain (listed as Vulnerable in Spain).",
+    "trend_justification": null,
+    "taxonomic_notes": "This account follows the suggested <em>Salamandra</em> monophyletic group distribution presented in Steinfartz&#160;<em>et al.</em> (2000). See also Burgon <em>et al.</em>&#160;(2021).<br/><br/>The identity of some subpopulations of <em>Salamandra</em> species reported from western Anatolia (Türkiye) require further investigation and are not included within this concept."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "5_1_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_2",
+      "description": {
+        "en": "Policies and regulations"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Invasive/problematic species control"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_1",
+      "description": {
+        "en": "International level"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"
+      },
+      "code": "5_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_8"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece (mainland)"
+      },
+      "code": "GRC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bosnia and Herzegovina"
+      },
+      "code": "BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye-in-Europe"
+      },
+      "code": "TUE-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Serbia"
+      },
+      "code": "YUG-SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hungary"
+      },
+      "code": "HU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ukraine (main part)"
+      },
+      "code": "UKR-UK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovakia"
+      },
+      "code": "SK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Andorra"
+      },
+      "code": "AD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Austria"
+      },
+      "code": "AT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belgium"
+      },
+      "code": "BE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy (mainland)"
+      },
+      "code": "ITA-IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kosovo"
+      },
+      "code": "YUG-KO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Switzerland"
+      },
+      "code": "CH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Netherlands"
+      },
+      "code": "NL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ukraine"
+      },
+      "code": "UA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Czechia"
+      },
+      "code": "CZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Poland"
+      },
+      "code": "PL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain (mainland)"
+      },
+      "code": "SPA-SP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Liechtenstein"
+      },
+      "code": "LI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Luxembourg"
+      },
+      "code": "LU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "San Marino"
+      },
+      "code": "SM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Serbia"
+      },
+      "code": "RS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "North Macedonia"
+      },
+      "code": "MK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France (mainland)"
+      },
+      "code": "FRA-FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye-in-Asia"
+      },
+      "code": "TUR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal (mainland)"
+      },
+      "code": "POR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Procambarus clarkii",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Herbicides and pesticides"
+      },
+      "code": "9_3_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_3_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_2_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Unspecified SALMONIDAE",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Batrachochytrium dendrobatidis",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Batrachochytrium salamandrivorans",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Renewable energy"
+      },
+      "code": "3_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "IUCN SSC Amphibian Specialist Group",
+      "value": [
+        " IUCN SSC Amphibian Specialist Group (IUCN SSC)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Chanson, J.S.",
+      "value": [
+        "Janice Chanson (IUCN SSC Amphibian Red List Authority)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Anderson, S., Andreone, F., Anthony, B.P., Beebee, T., Bogaerts, S., Bosch, J., Crnobrnja-Isailović, J., Denoel, M., Ishchenko, V., Kuzmin, S., Martel, A., Ogielska, M., Ogrodowczyk, A., Papenfuss, T., Pasmans, F., Schmidt, B.R., Sparreboom, M., Tarkhnishvili, D. & Ugurtas, I.H.",
+      "value": [
+        "An Martel",
+        "Franco Andreone (Zoology Department, Museo Regionale di Scienze Naturali di Torino, Torino, Italy)",
+        "Jelka Crnobrnja-Isailović (IUCN SSC Amphibian Specialist Group)",
+        "Theodore Papenfuss (Museum of Vertebrate Zoology, University of California)",
+        "Steven Anderson (University of the Pacific, Stockton, California, USA)",
+        "Sergius Kuzmin (Amphibian RLA)",
+        "Benedikt R. Schmidt (Amphibian RLA)",
+        "Ishmail Ugurtas (GRA, SRLI Reptile Assessment)",
+        "David Tarkhnishvili",
+        "Trevor Beebee",
+        "Vladimir Ishchenko",
+        "Mathieu Denoel (Amphibian RLA)",
+        "Max Sparreboom",
+        "Jaime Bosch",
+        "Brandon P. Anthony",
+        "Agnieszka Ogrodowczyk",
+        "Maria Ogielska (maria.ogielska@uwr.edu.pl)",
+        "Frank Pasmans",
+        "Sergé  Bogaerts"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Hobin, L.",
+      "value": [
+        "Louise Hobin (SSC Amphibian RLA)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Martel, A., Spitzen-van der Sluijs, A., Blooi, M., Bert, M., Ducatelle, R., Fisher, M.C., Woeltjes, A., Bosman, W., Chiers, K., Bossuyt, F. and Pasmans, F. 2013. <i>Batrachochytrium salamandrivorans</i> sp. nov. causes lethal chytridiomycosis in amphibians. <i>Proceedings of the National Academy of Sciences of the United States of America</i> Early Edition: doi: 10.1073/pnas.1307356110.",
+      "year": "2013",
+      "title": "<i>Batrachochytrium salamandrivorans</i> sp. nov. causes lethal chytridiomycosis in amphibians",
+      "author": "Martel, A., Spitzen-van der Sluijs, A., Blooi, M., Bert, M., Ducatelle, R., Fisher, M.C., Woeltjes, A., Bosman, W., Chiers, K., Bossuyt, F. and Pasmans, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dubois, A., and Raffaëlli, J. 2009. A new ergotaxonomy of the family Salamandridae Goldfuss, 1820 (Amphibia, Urodela). <i>Alytes</i> 26: 1–85.",
+      "year": "2009",
+      "title": "A new ergotaxonomy of the family Salamandridae Goldfuss, 1820 (Amphibia, Urodela)",
+      "author": "Dubois, A., and Raffaëlli, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sindaco, R., Doria, G., Razzetti, E. and Bernini, F. 2006. <i>Atlas of Italian Amphibians and Reptiles\\\\Atlante Degli Anfibi E Dei Rettili D'Italia.</i> Societas Herpetologica Italica - Edizioni Polistampa, Firenze.",
+      "year": "2006",
+      "title": "Atlas of Italian Amphibians and Reptiles\\\\Atlante Degli Anfibi E Dei Rettili D'Italia.",
+      "author": "Sindaco, R., Doria, G., Razzetti, E. and Bernini, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gasc, J.-P. <i>et al.</i> (ed.). 1997. <i>Atlas of Amphibians and Reptiles in Europe</i>. pp. 494. Societas Europea Herpetologica & Museum National d’Histoire Naturelle, Paris.",
+      "year": "1997",
+      "title": "Atlas of Amphibians and Reptiles in Europe",
+      "author": "Gasc, J.-P. <i>et al.</i>",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lizana, M., Pérez-Mellado, V. and Ciudad, M.J. 1990. Analysis of the structure of an amphibian community in the Central System of Spain. <i>Herpetological Journal</i> 1: 435-446.",
+      "year": "1990",
+      "title": "Analysis of the structure of an amphibian community in the Central System of Spain",
+      "author": "Lizana, M., Pérez-Mellado, V. and Ciudad, M.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mlynarski, M. 1966. Plazy I Gady Polski. <i>Panstwowe Zaklady Wydawnictw Szkolnych, Warszawa</i> 75.",
+      "year": "1966",
+      "title": "Plazy I Gady Polski",
+      "author": "Mlynarski, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pleguezuelos, J.M., Márquez, R. and Lizana, M. 2002. <i>Atlas y Libro Rojo de los Anfibios y Reptiles de España</i>. Dirección General de la Conservación de la naturaleza-Associación Herpetológica Española, Madrid.",
+      "year": "2002",
+      "title": "Atlas y Libro Rojo de los Anfibios y Reptiles de España",
+      "author": "Pleguezuelos, J.M., Márquez, R. and Lizana, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Demirsoy, A. 1996. <i>Tükiye Omurgalilari, Sürüngenler</i>. Meteksen, Ankara.",
+      "year": "1996",
+      "title": "Tükiye Omurgalilari, Sürüngenler",
+      "author": "Demirsoy, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pleguezuelos, J.M. and Villafranca, C. 1997. Distribución altitudinal de la herpetofauna ibérica. In: J.M. Pleguezuelos (ed.), <i>Distribucion y Biogeografia de los Anfibios y Reptiles en España y Portugal</i>, pp. 321-334. Monografías de Herpetología 3. Universidad de Granada-Asociación Herpetológica Española, Granada.",
+      "year": "1997",
+      "title": "Distribución altitudinal de la herpetofauna ibérica",
+      "author": "Pleguezuelos, J.M. and Villafranca, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "1995. <i>Amphibian Populations in the Commonwealth of Independent States: Current Status and Declines</i>. Pensoft, Moscow.",
+      "year": "1995",
+      "title": "Amphibian Populations in the Commonwealth of Independent States: Current Status and Declines",
+      "author": null,
+      "citation_short": null
+    },
+    {
+      "citation": "Puky, M. 2000. A kétéltûek védelme Magyarországon (Conservation of amphibians in Hungary). In: Faragó, S. (ed.), <i>Gerinces állatfajok védelme (Conservation of vertebrate species)</i>, pp. 143-158. Nyugat-Magyarországi Egyetem Erdõmérnöki Kar, Sopron.",
+      "year": "2000",
+      "title": "A kétéltûek védelme Magyarországon (Conservation of amphibians in Hungary)",
+      "author": "Puky, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Puky, M. et al. 2003. <i>Preliminary herpetological atlas of Hungary</i>. Varangy Akciócsoport Egyesület, Budapest.",
+      "year": "2003",
+      "title": "Preliminary herpetological atlas of Hungary",
+      "author": "Puky, M. et al.",
+      "citation_short": null
+    },
+    {
+      "citation": "Smit, G. 1998. DAPTF-Netherlands Report. <i>FrogLog</i> 28.",
+      "year": "1998",
+      "title": "DAPTF-Netherlands Report",
+      "author": "Smit, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Godinho, R., Teixeira, J., Rebelo, R., Segurado, P., Loureiro, A., Álvares, F., Gomes, N., Cardoso, P., Camilo-Alves, C. and Brito, J.C. 1999. Atlas of the continental Portuguese herpetofauna: an assemblage of published and new data. <i>Revista Española de Herpetología</i> 13: 61-81.",
+      "year": "1999",
+      "title": "Atlas of the continental Portuguese herpetofauna: an assemblage of published and new data",
+      "author": "Godinho, R., Teixeira, J., Rebelo, R., Segurado, P., Loureiro, A., Álvares, F., Gomes, N., Cardoso, P., Camilo-Alves, C. and Brito, J.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kalezic, M. and Dzukic, G. 2001. Amphibian status in Serbia and Montenegro (FR Yugoslavia). <i>FrogLog</i> 45.",
+      "year": "2001",
+      "title": "Amphibian status in Serbia and Montenegro (FR Yugoslavia)",
+      "author": "Kalezic, M. and Dzukic, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Grossenbacher, K. 1994. Rote Liste der gefährdeten Amphibien der Schweiz. In: BUWAL (ed.), <i>Rote Liste der gefährdeten Tierarten in der Schweiz</i>, pp. 33-34. BUWAL (Bundesamt für Umwelt, Wald und Landschaft), Bern.",
+      "year": "1994",
+      "title": "Rote Liste der gefährdeten Amphibien der Schweiz",
+      "author": "Grossenbacher, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kuzmin, S.L. 1995. <i>Die Amphibien Russlands und Angrenzender Gebiete</i>. Westarp – Spektrum, Magdeburg - Heidelberg.",
+      "year": "1995",
+      "title": "Die Amphibien Russlands und Angrenzender Gebiete",
+      "author": "Kuzmin, S.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dely, G. 1967. <i>Kétéltűek-Amphibia: Magyarország Állatvilága, Faunae Hungariae</i>. Ákadémiai Kiadó, Budapest.",
+      "year": "1967",
+      "title": "Kétéltűek-Amphibia: Magyarország Állatvilága, Faunae Hungariae",
+      "author": "Dely, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pleguezuelos, J.M. 1997. <i>Distribucion y Biogeografia de los Anfibios y Reptiles en España y Portugal</i>. Asociacion Herpetologica Española, Las Palmas de Gran Canarias.",
+      "year": "1997",
+      "title": "Distribucion y Biogeografia de los Anfibios y Reptiles en España y Portugal",
+      "author": "Pleguezuelos, J.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kuzmin, S.L. 1996. Threatened amphibians in the former Soviet Union: the current situation and the main threats. <i>Oryx</i> 30: 24-30.",
+      "year": "1996",
+      "title": "Threatened amphibians in the former Soviet Union: the current situation and the main threats",
+      "author": "Kuzmin, S.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vogrin, N. 1997. The status of amphibians in Slovenia. <i>FrogLog</i> 20.",
+      "year": "1997",
+      "title": "The status of amphibians in Slovenia",
+      "author": "Vogrin, N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kuzmin, S.L. 1999. <i>The Amphibians of the Former Soviet Union</i>. Pensoft, Sofia-Moscow.",
+      "year": "1999",
+      "title": "The Amphibians of the Former Soviet Union",
+      "author": "Kuzmin, S.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "García-París, M. and Martín, C. 1987. Amphibians of the Sierra del Guadarrama (1800-2430m altitude). In: J.J. van Gelder, H. Strijbosch and P.J. Bergers (eds), <i>Proceedings. 4th Ordinary General Meeting of the Societas Europaea Herpetologica</i>, pp. 135-138. Nijmegen, Netherlands.",
+      "year": "1987",
+      "title": "Amphibians of the Sierra del Guadarrama (1800-2430m altitude)",
+      "author": "García-París, M. and Martín, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Malkmus, R. 2004. <i>Amphibians and reptiles of Portugal, Madeira and the Azores-Archipelago</i>. A.R.G. Gantner Verlag K.G., Ruggel (Germany).",
+      "year": "2004",
+      "title": "Amphibians and reptiles of Portugal, Madeira and the Azores-Archipelago",
+      "author": "Malkmus, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bannikov, A.G., Darevsky, I.S., Ishchenko, V.G., Rustamov, A.K. and Szczerbak, N.N. 1977. <i>Opredelitel Zemnovodnykh i Presmykayushchikhsya Fauny SSSR [Guide to Amphibians and Reptiles of the USSR Fauna]</i>. Prosvechshenie, Moscow.",
+      "year": "1977",
+      "title": "Opredelitel Zemnovodnykh i Presmykayushchikhsya Fauny SSSR [Guide to Amphibians and Reptiles of the USSR Fauna]",
+      "author": "Bannikov, A.G., Darevsky, I.S., Ishchenko, V.G., Rustamov, A.K. and Szczerbak, N.N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Reques, R. 2000. <i>Anfibios. Ecología y Conservación</i>. Diputación de Córdoba, Córdoba.",
+      "year": "2000",
+      "title": "Anfibios. Ecología y Conservación",
+      "author": "Reques, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Arnold, E.N. 2003. <i>Reptiles and amphibians of Europe</i>. Princeton University Press.",
+      "year": "2003",
+      "title": "Reptiles and amphibians of Europe",
+      "author": "Arnold, E.N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Martínez-Solano, I., Barbadillo, L. J. and Lapeña, M. 2003. <i>Effect of introduced fish on amphibian species richness and densities at a montane assemblage in the Sierra de Neila (Spain). Herpetological Journal, 13: 167-173.</i>.",
+      "year": "2003",
+      "title": "Effect of introduced fish on amphibian species richness and densities at a montane assemblage in the Sierra de Neila (Spain). Herpetological Journal, 13: 167-173.",
+      "author": "Martínez-Solano, I., Barbadillo, L. J. and Lapeña, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Özeti, N. and Yilmaz, I. 1994. Türkiye amphibileri. <i>Ege Üniversitesi Fen Fakültesi Kitaplar Serisi</i> 151: 221.",
+      "year": "1994",
+      "title": "Türkiye amphibileri",
+      "author": "Özeti, N. and Yilmaz, I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Thorn, R. 1968. <i>Les salamandres d’Europe, d’Asia, et d’Afrique du Nord</i>. Éditions Paul Lechevalier, Paris.",
+      "year": "1968",
+      "title": "Les salamandres d’Europe, d’Asia, et d’Afrique du Nord",
+      "author": "Thorn, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Griffiths, R.A. 1996. <i>Newts and Salamanders of Europe</i>. Poyser Natural History, London.",
+      "year": "1996",
+      "title": "Newts and Salamanders of Europe",
+      "author": "Griffiths, R.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Böhme, W, Grossenbacher, K. and Thiesmeier, B. 1999. <i>Handbuch der Reptilien und Amphibien Europas, band 4/I:Schwanzlurche (</i>Urodela<i>)</i>.",
+      "year": "1999",
+      "title": "",
+      "author": "Böhme, W, Grossenbacher, K. and Thiesmeier, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Brändel, M. and Rödel, M-O. 1994. Beiträge zur Kenntnis der iberischen Herpetofauna (Amphibia; Reptilia). <i>Herpetozoa</i>: 19-27.",
+      "year": "1994",
+      "title": "Beiträge zur Kenntnis der iberischen Herpetofauna (Amphibia; Reptilia)",
+      "author": "Brändel, M. and Rödel, M-O.",
+      "citation_short": null
+    },
+    {
+      "citation": "Veith, M., Steinfartz, S., Zardoya, R., Seitz, A. and Meyer, A. 1998. A molecular phylogeny of “true” salamanders (family Salamandridae) and the evolution of terrestriality of reproductive modes. <i>Journal of Zoological Systematics and Evolutionary Research</i> 36: 7-16.",
+      "year": "1998",
+      "title": "A molecular phylogeny of “true” salamanders (family Salamandridae) and the evolution of terrestriality of reproductive modes",
+      "author": "Veith, M., Steinfartz, S., Zardoya, R., Seitz, A. and Meyer, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Steinfartz, S., Veith, M. and Tautz, D. 2000. Mitochondrial sequence analysis of <i>Salamandra</i> taxa suggests old splits of major lineages and postglacial recolonisations of Central Europe from distinct source populations of <i>Salamandra salamandra</i>. <i>Molecular Ecology</i> 9: 397-410.",
+      "year": "2000",
+      "title": "Mitochondrial sequence analysis of <i>Salamandra</i> taxa suggests old splits of major lineages and postglacial recolonisations of Central Europe from distinct source populations of <i>Salamandra salamandra</i>",
+      "author": "Steinfartz, S., Veith, M. and Tautz, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Szczerbak, N.N. and Szczerban, M.I. 1980. <i>Zemnovodnye i Presmykayushchiesya Ukrainskikh Karpat [Amphibians and Reptiles of Ukrainian Carpathians]</i>. Naukova Dumka, Kiev.",
+      "year": "1980",
+      "title": "Zemnovodnye i Presmykayushchiesya Ukrainskikh Karpat [Amphibians and Reptiles of Ukrainian Carpathians]",
+      "author": "Szczerbak, N.N. and Szczerban, M.I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cogălniceanu, D., Aioanei, F. and Matei, B. 2000. <i>Amfibienii din România. Determinator. [Amphibians of Romania].</i> Editura Ars Docendi.",
+      "year": "2000",
+      "title": "Amfibienii din România. Determinator. [Amphibians of Romania].",
+      "author": "Cogălniceanu, D., Aioanei, F. and Matei, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Martínez-Solano, I., Bosch, J. and García-París, M. 2003. Demographic trends and community stability in a montane amphibian assemblage. <i>Conservation Biology</i> 17(1): 238-244.",
+      "year": "2003",
+      "title": "Demographic trends and community stability in a montane amphibian assemblage",
+      "author": "Martínez-Solano, I., Bosch, J. and García-París, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Malkmus, R. 1996. Die herpetofauna der Überschwemmungstümpel des unteren Rio Guadiana (Portugal). <i>Herpetozoa</i>: 145-154.",
+      "year": "1996",
+      "title": "Die herpetofauna der Überschwemmungstümpel des unteren Rio Guadiana (Portugal)",
+      "author": "Malkmus, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Öz, M. 1987. Anadoludaki <i>Salamandra salamandra</i> nin Taksonomi, Biyoloji ve Dagilişi Üzerine Araştirmalar. <i>Doĝa Tu Zooloji D.</i>: 136-154.",
+      "year": "1987",
+      "title": "Anadoludaki <i>Salamandra salamandra</i> nin Taksonomi, Biyoloji ve Dagilişi Üzerine Araştirmalar",
+      "author": "Öz, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Baran, I. and Öz, M. 1994. <i>Salamandra salamandra</i> of Anatolia. <i>Mertensiella</i>: 25-32.",
+      "year": "1994",
+      "title": "<i>Salamandra salamandra</i> of Anatolia",
+      "author": "Baran, I. and Öz, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Joger, U. and Steinfartz, S. 1994. Zur subspezifischen Gliederung der südiberischen Feuersalamander (Salamandra salamandra-Komplex). <i>Abhandlungen und Berichte für Naturkunde</i>: 83-98.",
+      "year": "1994",
+      "title": "Zur subspezifischen Gliederung der südiberischen Feuersalamander (Salamandra salamandra-Komplex)",
+      "author": "Joger, U. and Steinfartz, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Odierna, G., Andreone, F., Aprea, G., Capriglione, T. and Guarino, F.M. 2001. <i>Differenze cromosomiche fra le due sottospecie di salamandra pezzata, Salamandra salamandra salamandra (Linnaeus, 1758) e S. salamandra gigliolii Eiselt, Lanza, 1956, presenti in Italia</i>. Atti del 3° Congresso Nazionale della Societas Herpetologica Italica. (Pavia, 14-16 September 2000), Pianura.",
+      "year": "2001",
+      "title": "Differenze cromosomiche fra le due sottospecie di salamandra pezzata, Salamandra salamandra salamandra (Linnaeus, 1758) e S. salamandra gigliolii Eiselt, Lanza, 1956, presenti in Italia",
+      "author": "Odierna, G., Andreone, F., Aprea, G., Capriglione, T. and Guarino, F.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "García-París, M., Alcobendas, M. and Alberch, P. 1998. Influence of the Guadalquivir River Basin on Mitochondrial DNA evolution of Salamandra salamandra (Caudata: Salamandridae) from Southern Spain. <i>Copeia</i>: 173-176.",
+      "year": "1998",
+      "title": "Influence of the Guadalquivir River Basin on Mitochondrial DNA evolution of Salamandra salamandra (Caudata: Salamandridae) from Southern Spain",
+      "author": "García-París, M., Alcobendas, M. and Alberch, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Martínez-Solano, I., Alcobendas, M., Buckley, D. and García-París, M. 2005. <i>Molecular characterization of the endangered Salamandra salamandra almanzoris (Caudata, Salamandridae). Annales Zoologici Fennici, 42: 57-68.</i>.",
+      "year": "2005",
+      "title": "Molecular characterization of the endangered Salamandra salamandra almanzoris (Caudata, Salamandridae). Annales Zoologici Fennici, 42: 57-68.",
+      "author": "Martínez-Solano, I., Alcobendas, M., Buckley, D. and García-París, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Alcobendas, M., Dopazo, H. and Alberch, P. 1994. Genetic structure and differentiation in Salamandra salamandra populations from the northern Iberian Peninsula. <i>Mertensiella</i>: 7-23.",
+      "year": "1994",
+      "title": "Genetic structure and differentiation in Salamandra salamandra populations from the northern Iberian Peninsula",
+      "author": "Alcobendas, M., Dopazo, H. and Alberch, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bosch, J. and Martínez-Solano, I. 2006. <i>Chytrid fungus infection related to unusual mortalities of Salamandra salamandra and Bufo bufo in the Peñalara Natural Park (Central Spain). Oryx, 40: 84-89.</i>.",
+      "year": "2006",
+      "title": "Chytrid fungus infection related to unusual mortalities of Salamandra salamandra and Bufo bufo in the Peñalara Natural Park (Central Spain). Oryx, 40: 84-89.",
+      "author": "Bosch, J. and Martínez-Solano, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Joger, U. and Steinfartz, S. 1994. Electrophoretic investigations in the evolutionary history of the West Mediterranean Salamandra. <i>Mertensiella</i>: 241-254.",
+      "year": "1994",
+      "title": "Electrophoretic investigations in the evolutionary history of the West Mediterranean Salamandra",
+      "author": "Joger, U. and Steinfartz, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Benavides, J., Viedma, A., Clivilles, J., Ortiz, A. and Gutiérrez, J.M. 2000. Albinismo en <i>Altyes dickhilleni</i> y <i>Salamandra salamandra</i> en la Sierra de Castril (Granada). <i>Boletín de la Asociación Herpetológica Española</i>: 83.",
+      "year": "2000",
+      "title": "Albinismo en <i>Altyes dickhilleni</i> y <i>Salamandra salamandra</i> en la Sierra de Castril (Granada)",
+      "author": "Benavides, J., Viedma, A., Clivilles, J., Ortiz, A. and Gutiérrez, J.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Feldmann, R. 1987. Ueberwinterung, Ortstreue und Lebensalter des Feuersalamanders. Schlussbericht einer Langzeituntersuchung. <i>Jahrbuch für Feldherpetologie</i>: 33-44.",
+      "year": "1987",
+      "title": "Ueberwinterung, Ortstreue und Lebensalter des Feuersalamanders. Schlussbericht einer Langzeituntersuchung",
+      "author": "Feldmann, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "García París, M., Alcobendas, M., Buckley, D. and Wake, D. 2003. Dispersal of viviparity across contact zones in Iberian populations of fire salamanders (Salamandra) inferred from discordance of genetic and morphological traits. <i>Evolution</i>: 129-143.",
+      "year": "2003",
+      "title": "Dispersal of viviparity across contact zones in Iberian populations of fire salamanders (Salamandra) inferred from discordance of genetic and morphological traits",
+      "author": "García París, M., Alcobendas, M., Buckley, D. and Wake, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Veith, M. 1992. The fire salamander, Salamandra salamandra in Central Europe, subspecies distribution and intergradation. <i>Amphibia-Reptilia</i>: 297-313.",
+      "year": "1992",
+      "title": "The fire salamander, Salamandra salamandra in Central Europe, subspecies distribution and intergradation",
+      "author": "Veith, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "O'Hanlon, S., Rieux, A., Farrer, R., Rosa, G.M., Waldman, B., Bataille, A., Kosch, T., Murray, K., Brookes, L., Brankovics, B., Martel, A., Pasmans, F., Sanchez, A., Cunningham, A., Schmidt, B., Miaud, C., Soto-Azat, C., Gower, D.J., Schmeller, D., Loyau, A., Courtois, E., Wombwell, E., Toledo, L.F., Clare, F., Spagnoletti, M., Smith, F., Höglund, J., Vörös, J., Zamudio, K.R., Berger, L., Skerratt, L., Fumagalli, M., Böll, S., Martin, M., Wales, N., Ghosh, P., Verster, R., Meurling, S., Minting, P., Doherty-Bone, T.M., Jenkinson, T., James, T.J., Gilbert, T., Shelton, J., Wierzbicki, C., Hintz, W., Tessa, G., Aanensen, D., Weldon, C., Bosch, J., Balloux, F., Garner, T.W.J. and Fisher, M.C. 2018. Recent Asian origin of chytrid fungi causing global amphibian declines. <i>Science</i> 6389: 621-627.",
+      "year": "2018",
+      "title": "Recent Asian origin of chytrid fungi causing global amphibian declines.",
+      "author": "O'Hanlon, S., Rieux, A., Farrer, R., Rosa, G.M., Waldman, B., Bataille, A., Kosch, T., Murray, K., Brookes, L., Brankovics, B., Martel, A., Pasmans, F., Sanchez, A., Cunningham, A., Schmidt, B., Miaud, C., Soto-Azat, C., Gower, D.J., Schmeller, D., Loyau, A., Courtois, E., Wombwell, E., Toledo, L.F., Clare, F., Spagnoletti, M., Smith, F., Höglund, J., Vörös, J., Zamudio, K.R., Berger, L., Skerratt, L., Fumagalli, M., Böll, S., Martin, M., Wales, N., Ghosh, P., Verster, R., Meurling, S., Minting, P., Doherty-Bone, T.M., Jenkinson, T., James, T.J., Gilbert, T., Shelton, J., Wierzbicki, C., Hintz, W., Tessa, G., Aanensen, D., Weldon, C., Bosch, J., Balloux, F., Garner, T.W.J. and Fisher, M.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gilbert, M.J., Spitzen-van der Sluij, A.M., Canessa, S., Bosch, J., Cunningham, A.A., Grasselli, E., Laudelout, A., Lötters, S., Miaud, C., Salvidio, S., Veith, M., Martel, A. and\tPasmans, F. 2020. Mitigating\t<i>Batrachochytrium salamandrivorans</i> in Europe. <i>Batrachochytrium salamandrivorans</i> Action Plan for European urodeles. EU Commission, Nijmegen, the Netherlands.",
+      "year": "2020",
+      "title": "Mitigating\t<i>Batrachochytrium salamandrivorans</i> in Europe. <i>Batrachochytrium salamandrivorans</i> Action Plan for European urodeles.",
+      "author": "Gilbert, M.J., Spitzen-van der Sluij, A.M., Canessa, S., Bosch, J., Cunningham, A.A., Grasselli, E., Laudelout, A., Lötters, S., Miaud, C., Salvidio, S., Veith, M., Martel, A. and\tPasmans, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Martel, A., Blooi, M., Adriaensen, C., Van Rooij, P., Beukema, W., Fisher, M.C., Farrer, R.A., Schmidt, B.R., Tobler, U., Goka, K. and Lips, K.R. 2014. Recent introduction of a chytrid fungus endangers Western Palearctic salamanders. <i>Science</i> 346: 630-631.",
+      "year": "2014",
+      "title": "Recent introduction of a chytrid fungus endangers Western Palearctic salamanders",
+      "author": "Martel, A., Blooi, M., Adriaensen, C., Van Rooij, P., Beukema, W., Fisher, M.C., Farrer, R.A., Schmidt, B.R., Tobler, U., Goka, K. and Lips, K.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Martel, A., Vila‐Escale, M., Fernández‐Giberteau, D., Martinez‐Silvestre, A., Canessa, S., Van Praet, S., Pannon, P., Chiers, K., Ferran, A., Kelly, M. and Picart, M. 2020. Integral chain management of wildlife diseases. <i>Conservation Letters</i> 13(2): p.e12707.",
+      "year": "2020",
+      "title": "Integral chain management of wildlife diseases",
+      "author": "Martel, A., Vila‐Escale, M., Fernández‐Giberteau, D., Martinez‐Silvestre, A., Canessa, S., Van Praet, S., Pannon, P., Chiers, K., Ferran, A., Kelly, M. and Picart, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nguyen, T.T., Nguyen, T.V., Ziegler, T., Pasmans, F. and Martel, A. 2017. Trade in wild anurans vectors the urodelan pathogen <i>Batrachochytrium salamandrivorans</i> into Europe. <i>Amphibia-Reptilia</i> 38: 554-556.",
+      "year": "2017",
+      "title": "Trade in wild anurans vectors the urodelan pathogen <i>Batrachochytrium salamandrivorans</i> into Europe",
+      "author": "Nguyen, T.T., Nguyen, T.V., Ziegler, T., Pasmans, F. and Martel, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Thein, J., Reck, U., Dittrich, C., Martel, A., Schulz, V. and Hansbauer, G. 2020. Preliminary report on the occurrence of <i>Batrachochytrium salamandrivorans</i> in the Steigerwald, Bavaria, Germany. <i>Salamandra</i> 56(3): 227-229.",
+      "year": "2020",
+      "title": "Preliminary report on the occurrence of <i>Batrachochytrium salamandrivorans</i> in the Steigerwald, Bavaria, Germany.",
+      "author": "Thein, J., Reck, U., Dittrich, C., Martel, A., Schulz, V. and Hansbauer, G",
+      "citation_short": ""
+    },
+    {
+      "citation": "Crnobrnja-Isailović, J., Jovanović, B., Ilić, M., Ćorović, J., Čubrić, T., Stojadinović, D. and Ćosić, N. 2021. Small Hydropower Plants' Proliferation Would Negatively Affect Local Herpetofauna. <i>Frontiers in Ecology and Evolution</i> 9: 610325.",
+      "year": "2021",
+      "title": "Small Hydropower Plants' Proliferation Would Negatively Affect Local Herpetofauna",
+      "author": "Crnobrnja-Isailović, J., Jovanović, B., Ilić, M., Ćorović, J., Čubrić, T., Stojadinović, D. and Ćosić, N",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2023. The IUCN Red List of Threatened Species. Version 2023-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 07 December 2023).",
+      "year": "2023",
+      "title": "The IUCN Red List of Threatened Species. Version 2023-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2023-1"
+    },
+    {
+      "citation": "Burgon, J.D., Vences, M., Steinfartz, S., Bogaerts, S., Bonato, L., Donaire-Barroso, D., Martínez-Solano, I., Velo-Antón, G., Vieites, D.R., Mable, B.K. and Elmer, K.R. 2021. Phylogenomic inference of species and subspecies diversity in the Palearctic salamander genus <i>Salamandra</i>. <i>Molecular Phylogenetics and Evolution</i> 157: 107063. DOI: 10.1016/j.ympev.2020.107063.",
+      "year": "2021",
+      "title": "Phylogenomic inference of species and subspecies diversity in the Palearctic salamander genus <i>Salamandra</i>",
+      "author": "Burgon, J.D., Vences, M., Steinfartz, S., Bogaerts, S., Bonato, L., Donaire-Barroso, D., Martínez-Solano, I., Velo-Antón, G., Vieites, D.R., Mable, B.K. and Elmer, K.R.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    },
+    {
+      "description": {
+        "en": "Europe"
+      },
+      "code": "2"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

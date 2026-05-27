@@ -1,0 +1,1365 @@
+{
+  "assessment_date": "2015-11-20T00:00:00.000+00:00",
+  "year_published": "2024",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 12554,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/12554/256057746",
+  "citation": "Singh, M., Kumar, A. & Kumara, H.N. 2024. Macaca mulatta (amended version of 2020 assessment). The IUCN Red List of Threatened Species 2024: e.T12554A256057746. Accessed on 15 May 2026.",
+  "assessment_id": 256057746,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 12554,
+    "scientific_name": "Macaca mulatta",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "PRIMATES",
+    "family_name": "CERCOPITHECIDAE",
+    "genus_name": "Macaca",
+    "species_name": "mulatta",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Zimmermann, 1780)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Primate Specialist Group",
+        "url": "http://www.primate-sg.org/",
+        "description": "Chair: Russell Mittermeier (email: rmittermeier@globalwildlife.org)\nRed List Authority Focal Points: \nProsimians, monkeys and smaller apes - Sanjay Molur (email: sanjay@zooreach.org) and Christoph Schwitzer (email: cschwitzer@bristolzoo.org.uk)\nVice-Chair for great apes - Dirck S. Byler (email: dbyler@globalwildlife.org)\nVice-Chair for small apes - Susan M. Cheyne (email: section.small.apes@gmail.com)\nJournals and Newsletters: \nPrimate Conservation: http://www.primate-sg.org/primate_conservation/\nNeotropical Primates: http://www.primate-sg.org/neotropical_primates/\nAsian Primates: http://www.primate-sg.org/asian_primates_newsletter/ and http://www.primate-sg.org/asian_primates_journal/\nLemur News: http://www.primate-sg.org/lemur_news/\nAfrican Primates: http://www.primate-sg.org/african_primates/\n"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Rhesus Macaque",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Macaque Rhésus",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Mono Resus",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "Rhesus Monkey",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Macaca siamica Kloss, 1917",
+        "status": "New",
+        "genus_name": "Macaca",
+        "species_name": "siamica",
+        "species_author": "Kloss, 1917",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Macaca mcmahoni Pocock, 1932",
+        "status": "New",
+        "genus_name": "Macaca",
+        "species_name": "mcmahoni",
+        "species_author": "Pocock, 1932",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Macaca rhesus (Audebert, 1798)",
+        "status": "New",
+        "genus_name": "Macaca",
+        "species_name": "rhesus",
+        "species_author": "(Audebert, 1798)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Macaca brevicaudatus (Elliot, 1913)",
+        "status": "New",
+        "genus_name": "Macaca",
+        "species_name": "brevicaudatus",
+        "species_author": "(Elliot, 1913)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Macaca erythraea (Shaw, 1800)",
+        "status": "New",
+        "genus_name": "Macaca",
+        "species_name": "erythraea",
+        "species_author": "(Shaw, 1800)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Macaca littoralis (Elliot, 1909)",
+        "status": "New",
+        "genus_name": "Macaca",
+        "species_name": "littoralis",
+        "species_author": "(Elliot, 1909)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Macaca brachyurus (Elliot, 1909)",
+        "status": "New",
+        "genus_name": "Macaca",
+        "species_name": "brachyurus",
+        "species_author": "(Elliot, 1909)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Macaca fulvus (Kerr, 1792)",
+        "status": "New",
+        "genus_name": "Macaca",
+        "species_name": "fulvus",
+        "species_author": "(Kerr, 1792)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Macaca nipalensis Hodgson, 1840",
+        "status": "New",
+        "genus_name": "Macaca",
+        "species_name": "nipalensis",
+        "species_author": "Hodgson, 1840",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Macaca lasiotus (Gray, 1868)",
+        "status": "New",
+        "genus_name": "Macaca",
+        "species_name": "lasiotus",
+        "species_author": "(Gray, 1868)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Macaca sancti-johannis (Swinhoe, 1866)",
+        "status": "New",
+        "genus_name": "Macaca",
+        "species_name": "sancti-johannis",
+        "species_author": "(Swinhoe, 1866)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Macaca villosa (True, 1894)",
+        "status": "New",
+        "genus_name": "Macaca",
+        "species_name": "villosa",
+        "species_author": "(True, 1894)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Macaca oinops Hodgson, 1840",
+        "status": "New",
+        "genus_name": "Macaca",
+        "species_name": "oinops",
+        "species_author": "Hodgson, 1840",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Macaca tcheliensis (Milne-Edwards, 1872)",
+        "status": "New",
+        "genus_name": "Macaca",
+        "species_name": "tcheliensis",
+        "species_author": "(Milne-Edwards, 1872)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Macaca vestita (Milne-Edwards, 1892)",
+        "status": "New",
+        "genus_name": "Macaca",
+        "species_name": "vestita",
+        "species_author": "(Milne-Edwards, 1892)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 4000,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "No"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Not Applicable"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": "Unknown",
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": "Unknown",
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p>From c.36°N (Afghanistan, Pakistan, India, China) S to c.15°N (India, Thailand, Laos, Vietnam), in Nepal, Bhutan, Bangladesh, Myanmar, Hainan Islands. The isolated NE China population was extirpated in 1987. </p>    <p>The&#160;species&#160;as&#160;a&#160;whole&#160;is&#160;found&#160;throughout&#160;most&#160;of&#160;southern&#160;Asia,&#160;in&#160;eastern&#160;Afghanistan, Bangladesh,&#160;Bhutan,&#160;central&#160;and&#160;southern&#160;China&#160;(Anhui,&#160;Fujian,&#160;Guangdong,&#160;Guangxi, Guizhou,&#160;Hebei,&#160;Henan,&#160;Hubei,&#160;Hunan,&#160;Shaanxi,&#160;Sichuan,&#160;Tibet,&#160;and&#160;Yunnan,&#160;as&#160;well&#160;as&#160;the island&#160; of&#160; Hainan), northern and central India (in the states of Andhra Pradesh, Arunachal Pradesh,&#160;Assam,&#160;Bihar,&#160;Chattisgarh,&#160;Gujarat,&#160;Haryana,&#160;Himachal Pradesh, Jammu&#160;and Kashmir, Jharkand, Madhya&#160;Pradesh, Maharashtra, Manipur, Meghalaya, Mizoram, Nagaland,&#160;Odisha,&#160;Punjab,&#160;Rajasthan, Sikkim,&#160;Tripura, Uttaranchal, Uttar Pradesh and&#160;West Bengal), Lao&#160;PDR, Myanmar, Nepal, northern Pakistan, northern Thailand, and&#160;Viet&#160;Nam.&#160;</p>  <p>It&#160;occurs&#160;to&#160;the&#160;north&#160;of&#160;the&#160;Krishna&#160;River&#160;in&#160;central&#160;and&#160;eastern&#160;India&#160;and&#160;to&#160;the&#160;north&#160;of&#160;the lower Tapti River in western India, north intoAfghanistan, Nepal,Sikkim,&#160; Bhutan, and northeast&#160;into&#160;China,&#160;where&#160;it&#160;extends&#160;to&#160;the&#160; Yangtze&#160;and&#160;north&#160;of&#160;its&#160; middle&#160;course&#160;to&#160;about 33°N,&#160; 110°E. <br/></p><p>It&#160;is&#160;absent&#160;north&#160;of&#160;the&#160;lower&#160;Yangtze,&#160;but&#160;there&#160;is&#160;an&#160;additional,&#160;possibly introduced&#160;population&#160;in&#160;northern&#160;China&#160;north&#160;of&#160;the&#160;lower&#160;Hwang&#160;He&#160;(Yellow&#160;River), formerly&#160;occurring&#160;as&#160;far&#160;as&#160;Beijing&#160;(Groves&#160;2001).&#160;  </p>  <p>There&#160;are&#160;introduced&#160;populations&#160;(mostly&#160;not&#160;mapped)&#160;in&#160;areas&#160;within&#160;this&#160;region&#160;as&#160;well&#160;as outside&#160; it, for&#160; instance south of&#160;the Krishna River&#160;in India; Kowloon and&#160;a&#160; few&#160;small&#160;islands near&#160;Hong&#160;Kong;&#160;and&#160;to&#160;various&#160;other&#160;locations&#160;worldwide, including parts&#160;of&#160;Florida,&#160;USA and on Cayo Santiago island near Puerto Rico (M.&#160;Richardson pers.&#160;comm.).</p>    <p>Kumar <em>et al.</em>&#160;2011 reported of range extension by the <em>Macaca mulatta</em> southward, by 3500km<sup>2</sup> displacing the Bonnet macaques, sometimes coexisting as mixed groups with the latter and some other time, just existing as separate species groups in sympatry.</p>",
+    "population": "<p>This species is widely distributed in south, southeast and east Asia. Populations are sizable, but increasingly commensal with humans, resulting in some fragmentation of the distribution (Molur <em>et al.</em> 2003). It can be abundant in many places, including in cities. Hunting of this species in Lao PDR and Viet Nam has severely depressed populations in these countries although it still remains widespread. In Namdapha National Park, India, this species was found to have a group density of 0.44 groups/km<sup>2</sup>, with an average group size of 12.3 individuals (Chetry <em>et al.</em> 2003).</p>  <p>The average group size in other parts of India is much higher (Siddiqui and Southwick 2004). Srivastava and Mohnot (2001) consider this species to be rare in the forests of north­eastern India. </p>  <p>J.-Q, Lu (2007) reported c.2100 macaques in Taihangshan mountains, through direct surveys and review of previous reports of the other half of the park not surveyed. </p>  <p>Population estimate of the macaques in Aligarh, Uttar Pradesh yielded a total of 4051 individuals from various habitats. Average group size of 48 ranging between 15 and 155 (Imam &amp; Ahmed 2013). </p>  <p>In Shimla, density of <em>Macaca mulatta</em> was 37.02 individuals/km<sup>2</sup>. Mean group size of 16.65 (6-38), total individuals of 817 an group density of 2.22 groups/km<sup>2</sup> (Chauhan and Pirta 2010). </p>",
+    "habitats": "<p>This species is diurnal and omnivorous, and alternatively arboreal and terrestrial. It resides in a range of habitats, including temperate coniferous, moist and dry deciduous, bamboo, and mixed forests, mangroves, scrub, rainforest, and around human habitations and developments, including cultivated areas, temples, and roadsides (Choudhury 2001; Srivastava and Mohnot 2001). In Pakistan this monkey remains in mountainous&#160; regions with forest cover; it is typically associated with Himalayan moist temperate&#160; forest (Roberts 1997). It is found at elevations up to 4,000 m (Molur et al. 2003).&#160; Due to hunting in Lao PDR and Viet Nam the species does not occur in commensal situations there, and is restricted to forest areas where it is generally&#160; associated with riverine environments over a range of altitudes (Timmins pers. comm.).&#160; In&#160; western and northern parts of its range it seems to occur in a wider array of environments. It is highly adaptable to man­ made habitat. Its generation time is 12 years (Molur <em>et al</em>. 2003). </p>  <p>Most records are from under 2000m but they are also known to occur in 3200 m in Nepal and c.4000 m in Quinghai, China. They are commensally found in human habitation both in urban and rural landscapes.<br/> <br/> Primarily vegetarian, their diet is highly diverse and varies geographically. As in Sundarbans, they are known to fishing on mudflats. Other animal food includes crabs, shellfish, bird eggs, honeycombs, crayfish, crabs, and spiders. Plant materials include fruits, seeds, flowers, leaves, shoots, twigs, roots, twigs, shoots, buds, stems, gums and pith.<br/> <br/> Seasonal breeding with the mating activities peaking in autumn, winter and births in spring and summer. Gestation of 133-200 days at an average of 166 days. Mean annual birth rate in wild population 42.9-90.8%. In a study conducted on breeding energetic, high ranking or breeding males were found to be more spent and restless during copulation or breeding season and were seen to feed more and refurbish energy during birthing.(Higham et al, 2010). Interbirth intervals as studied Cayo Santiago macaques, of a data set of 50 years, ranged 300-2591 days and a median life span of 15 years. Average inter-interval for the age category 4 and 18 ranged 392 and 463 days (mean-425.6 days) but average increased to 541 days at 19 years (Hoffman <em>et al</em>. 2010)<br/> <br/> Diurnal. Forest dwelling population are more arboreal than their urban dwelling conspecifics. They are though known to spend 72% of their active time on the ground and just 28% on the trees. Home range of c.65ha as seen in 323 non-forest groups and of 198ha in 129 forest groups.</p>",
+    "threats": "<p>This species is generally unthreatened, though its original habitat is increasingly being lost to development. While <em>M. mulatta</em> exists easily around humans, the increasing level of cohabitation has been associated with waning levels of human tolerance for the animals (Molur <em>et al.</em>&#160;2003). Confiscation for laboratory testing is a mostly localized threat, but it is considerable in certain areas (A. Kumar pers. comm.). Capture and release of laboratory and “problem monkeys”&#160; from rural and urban&#160; areas into natural forests is a major&#160; threat to wild macaques.</p><p>In Lao PDR and Viet Nam the major threat to the species is hunting, although loss of forest in river valleys has also likely impacted the species (R. Timmins pers. comm.).&#160; In Indochina hunting pressure is high, and thus tolerance to human disturbance is low. Introduction, through release of confiscated <em>M. fasicularis</em>, is at least a localized threat in parts of the species' Viet Namese range (R. Timmins pers. comm.).&#160; Tolerance of the species varies locally, from heavily hunted and persecuted, to worshipped and fed.</p><p>Main threat at present include habitat loss and habitat deterioration, human-primate conflict. Hunting for subsistence in eastern parts of India and trapping for pet trade in Afghanistan should also be considered as threats. Himachal Pradesh government in Indian undertook state wide sterilization program for these macaques but as to how successful they were from a conservation perspective is highly questionable.<br/></p><p>Opinion surveys conducted in Aligarh, Uttar Pradesh report that 61% of the people coexisting with macaques find macaques to be damaging of crops and property, while 86 % want them relocated. (Imam and Ahmad 2013).</p><p>Chauhan and Pirta (2010) argue that despite the relocation, macaques in Shimla continue to flourish unabated. They also point to the many threats in the region from man made hazards to garbage that seem to form a big part of the city dwelling macaques.</p><p>Chauhan &amp; Pirta (2010b) report of a macaque threatening behavior wherein the macaques in urban areas steal or grab valuable things off passers by and would not let go until threatened or given food in exchange. Such behaviors create a sense of panic and antagonism against these macaques in the minds of people, further complication conservation action.   </p><p>&#160;</p>",
+    "measures": "<p>This species is listed on CITES Appendix II. It is also listed in Schedule III in the Bangladesh Wildlife (Preservation) (Amendment) Act, 1974 and in Schedule I, Part I in the Indian Wildlife (Protection) Act (amended up to 2002), on Category II of the Chinese Wildlife Protection Act (1989), and is protected with all other primates in the Nepalese National Parks and Wildlife Conservation Act, 1973. Protection status varies widely throughout the species range. </p>  <p><em>Rhesus macaques</em> reside in a large number of protected areas throughout their range.</p>",
+    "use_trade": "Hunted for food and live trapped for research purposes.",
+    "rationale": "This&#160;species&#160;is&#160;listed&#160;as&#160;Least&#160;Concern&#160;in&#160;view&#160;of&#160;its&#160;wide&#160;distribution,&#160;presumed&#160;large  population,&#160;is  tolerant&#160;of&#160;a&#160;broad&#160;range&#160;of&#160;habitats,&#160;and&#160;because&#160;it&#160;is&#160;unlikely to&#160;be  declining at&#160;anything&#160;close&#160;to&#160;the  rate&#160;required&#160;to&#160;qualify&#160;for&#160;listing&#160;in a&#160;threatened category.",
+    "trend_justification": null,
+    "taxonomic_notes": "<p>This&#160;species&#160;has&#160;been&#160;revised&#160;by&#160;Fooden&#160;(2000),&#160;who&#160;regards&#160;<em>Macaca mulatt</em>a as monotypic. The molecular differences identified among&#160;<em>M.&#160;mulatta</em>&#160;populations&#160;(Melnick&#160;<em>et&#160;al</em>.&#160;1993; Morales and Melnick 1998; Tosi 2000; Tosi <em>et al. </em>2000, 2002, 2003; Zhang and Shi 1993) are alone not consistent enough to conclusively define any subspecies.<br/><br/>Three subpopulation designated by molecular studies: Indian, Chinese, Indochinese (Indochinese being an introgression with <em>M. fascicularis</em>). Considerable hybridization with <em>M. fascicularis</em> in Laos, Thailand and Viet Nam and the both share an interspecific boundary of <em>ca</em> 2,000 km across the Indochinese peninsula in the south-east. Both <em>M. fascicularis</em> and <em>M. mulatta </em>share a range between 17°N and 14°N in Viet Nam, Laos and probably Thailand.</p>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Subtropical/Tropical Heavily Degraded Former Forest"
+      },
+      "code": "14_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Moist"
+      },
+      "code": "2_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Mangrove Vegetation Above High Tide Level"
+      },
+      "code": "1_7"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bhutan"
+      },
+      "code": "BT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Florida"
+      },
+      "code": "FLA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gujarat"
+      },
+      "code": "IND-GU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madhya Pradesh"
+      },
+      "code": "IND-MP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Manipur"
+      },
+      "code": "ASS-MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maharashtra"
+      },
+      "code": "IND-MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hong Kong"
+      },
+      "code": "HK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Punjab"
+      },
+      "code": "IND-PU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uttar Pradesh"
+      },
+      "code": "IND-UP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Afghanistan"
+      },
+      "code": "AF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Andhra Pradesh"
+      },
+      "code": "IND-AP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Orissa"
+      },
+      "code": "IND-OR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Arunachal Pradesh"
+      },
+      "code": "EHM-AP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mizoram"
+      },
+      "code": "ASS-MI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rajasthan"
+      },
+      "code": "IND-RA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sikkim"
+      },
+      "code": "EHM-SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "West Bengal"
+      },
+      "code": "IND-WB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Himachal Pradesh"
+      },
+      "code": "WHM-HP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Assam"
+      },
+      "code": "ASS-AS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nagaland"
+      },
+      "code": "ASS-NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tripura"
+      },
+      "code": "ASS-TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lao People's Democratic Republic"
+      },
+      "code": "LA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Meghalaya"
+      },
+      "code": "ASS-ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nepal"
+      },
+      "code": "NP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uttaranchal"
+      },
+      "code": "WHM-UT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Haryana"
+      },
+      "code": "IND-HA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jammu-Kashmir"
+      },
+      "code": "WHM-JK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jharkand"
+      },
+      "code": "IND-JK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bihar"
+      },
+      "code": "IND-BI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chattisgarh"
+      },
+      "code": "IND-CT"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Research"
+      },
+      "code": "14"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Singh, M., Kumar, A. & Kumara, H.N.",
+      "value": [
+        "M Singh",
+        "Ajith Kumar",
+        "H.N. Kumara"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Molur, S. & Mittermeier, R.A.",
+      "value": [
+        "Sanjay Molur (ZOO (Eastern Himalayas))",
+        "Russell A. Mittermeier (Conservation International)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This amended assessment was published to correct the origin coding for the United States; this was previously listed as \"native\" which was erroneous; it has now been corrected to \"introduced\"."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Groves C.P. 2001. <i>Primate Taxonomy</i>. Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "2001",
+      "title": "Primate Taxonomy",
+      "author": "Groves C.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Roberts, T.J. 1977. <i>The Mammals of Pakistan</i>. Ernest Benn, London, UK.",
+      "year": "1977",
+      "title": "The Mammals of Pakistan",
+      "author": "Roberts, T.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Molur, S., Brandon-Jones, D., Dittus, W., Eudey, A., Kumar, A., Singh, M., Feeroz, M. M., Chalise, M., Priya, P. and Walker, S. 2003. Status of South Asian Primates: Conservation Assessment and Managment Plan Report.  Workshop Report, 2003. Zoo Outreach Organization/CBSG-South Asia, Coimbatore, India.",
+      "year": "2003",
+      "title": "Status of South Asian Primates: Conservation Assessment and Managment Plan Report",
+      "author": "Molur, S., Brandon-Jones, D., Dittus, W., Eudey, A., Kumar, A., Singh, M., Feeroz, M. M., Chalise, M., Priya, P. and Walker, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Choudhury, A. 2001. Primates in Northeast India: An overview of their distribution and conservation. <i>ENVIS Bulletin: Wildlife and Protected Areas</i> 1(1): 92-101.",
+      "year": "2001",
+      "title": "Primates in Northeast India: An overview of their distribution and conservation",
+      "author": "Choudhury, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Srivastava, A. and Mohnot, S.M. 2001. Distribution, conservation status and priorities for primates in Northeast India. <i>ENVIS Bulletin: Wildlife and Protected Areas</i> 1(1): 102-108.",
+      "year": "2001",
+      "title": "Distribution, conservation status and priorities for primates in Northeast India",
+      "author": "Srivastava, A. and Mohnot, S.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chetry, D., Medhi, R., Biswas, J., Das, D. and Bhattacharjee, P. C. 2003. Nonhuman primates in the Namdapha National Park, Arunachal Pradesh, India. <i>International Journal of Primatology</i> 24(2): 383-388.",
+      "year": "2003",
+      "title": "Nonhuman primates in the Namdapha National Park, Arunachal Pradesh, India",
+      "author": "Chetry, D., Medhi, R., Biswas, J., Das, D. and Bhattacharjee, P. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fooden, J. 1964. Rhesus and crab-eating macaques: intergradation in Thailand. <i>Science</i> 143(3604): 363-365.",
+      "year": "1964",
+      "title": "Rhesus and crab-eating macaques: intergradation in Thailand",
+      "author": "Fooden, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zhang, Y.P. and Shi, L.M. 1993. Phylogeny of rhesus monkeys (<i>Macaca mulatta</i>) as revealed by mitochondrial DNA restriction enzyme analysis. <i>International Journal of Primatology</i> 14: 587–605.",
+      "year": "1993",
+      "title": "Phylogeny of rhesus monkeys (<i>Macaca mulatta</i>) as revealed by mitochondrial DNA restriction enzyme analysis",
+      "author": "Zhang, Y.P. and Shi, L.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Jiang, H., Wang, Y. and Ma, S. 1991. Taxonomic revision and distribution of subspecies of rhesus monkey (<i>Macaca mulatta</i>) in China. <i>Zoological Research</i> 12: 241-247.",
+      "year": "1991",
+      "title": "Taxonomic revision and distribution of subspecies of rhesus monkey (<i>Macaca mulatta</i>) in China",
+      "author": "Jiang, H., Wang, Y. and Ma, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tosi, A.J., Morales, J.C. and Melnick, D.J. 2002. Y-chromosome and mitochondrial markers in <i>Macaca fascicularis</i> indicate introgression with <i>M. mulatta</i> and a biogeographic barrier in the Isthmus of Kra. <i>International Journal of Primatology</i> 23: 161–178.",
+      "year": "2002",
+      "title": "Y-chromosome and mitochondrial markers in <i>Macaca fascicularis</i> indicate introgression with <i>M. mulatta</i> and a biogeographic barrier in the Isthmus of Kra",
+      "author": "Tosi, A.J., Morales, J.C. and Melnick, D.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tosi, A.J., Morales, J.C. and Melnick, D.J. 2003. Paternal, maternal, and biparental molecular markers provide unique windows onto the evolutionary history of macaque monkeys. <i>Evolution</i> 57: 1419–1435.",
+      "year": "2003",
+      "title": "Paternal, maternal, and biparental molecular markers provide unique windows onto the evolutionary history of macaque monkeys",
+      "author": "Tosi, A.J., Morales, J.C. and Melnick, D.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Melnick, D.J., Hoelzer, G.A., Absher, R. and Ashley, M.V. 1993. Mt DNA diversity in rhesus monkeys reveals overestimates of divergence time and paraphyly with neighboring species. <i>Molecular Biology and Evolution</i> 10: 282–295.",
+      "year": "1993",
+      "title": "Mt DNA diversity in rhesus monkeys reveals overestimates of divergence time and paraphyly with neighboring species",
+      "author": "Melnick, D.J., Hoelzer, G.A., Absher, R. and Ashley, M.V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Morales, J.C. and Melnick, D.J. 1998. Phylogenetic relationships of the macaques (Cercopithecidae: <i>Macaca</i>), as revealed by high resolution restriction site mapping of mitochondrial ribosomal genes. <i>Journal of Human Evolution</i> 34: 1-23.",
+      "year": "1998",
+      "title": "Phylogenetic relationships of the macaques (Cercopithecidae: <i>Macaca</i>), as revealed by high resolution restriction site mapping of mitochondrial ribosomal genes",
+      "author": "Morales, J.C. and Melnick, D.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tosi, A.J., Morales, J.C. and Melnick, D.J. 2000. Comparison of Y-chromosome and mtDNA phylogenies leads to unique inferences of macaque evolutionary history. <i>Molecular Phylogenetics and Evolution</i> 17: 133–144.",
+      "year": "2000",
+      "title": "Comparison of Y-chromosome and mtDNA phylogenies leads to unique inferences of macaque evolutionary history",
+      "author": "Tosi, A.J., Morales, J.C. and Melnick, D.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tosi, A.J. 2000. Evolutionary Relationships Among Members of the Genus <i>Macaca</i> as Inferred From Paternal, Maternal, and Biparental Molecular Markers. Columbia University.",
+      "year": "2000",
+      "title": "Evolutionary Relationships Among Members of the Genus <i>Macaca</i> as Inferred From Paternal, Maternal, and Biparental Molecular Markers",
+      "author": "Tosi, A.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Neville, M. 1968. Ecology and activity of Himalayan foothill rhesus monkeys (<i>Macaca mulatta</i>). <i>Ecology</i> 49(1): 110-123.",
+      "year": "1968",
+      "title": "Ecology and activity of Himalayan foothill rhesus monkeys (<i>Macaca mulatta</i>)",
+      "author": "Neville, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jiang, H., Zhenhe, L., Yongzu, Z. and Southwick, C. 1991. Population ecology of rhesus monkeys (<i>Macaca mulatta</i>) at Nanwan Nature Reserve, Hainan, China. <i>American Journal of Primatology</i> 25(4): 207-217.",
+      "year": "1991",
+      "title": "Population ecology of rhesus monkeys (<i>Macaca mulatta</i>) at Nanwan Nature Reserve, Hainan, China",
+      "author": "Jiang, H., Zhenhe, L., Yongzu, Z. and Southwick, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fooden, J. 2000. Systematic review of the rhesus macaque, <i>Macaca mulatta</i> (Zimmermann, 1780). <i>Fieldiana Zoologica</i> 96: 1–180.",
+      "year": "2000",
+      "title": "Systematic review of the rhesus macaque, <i>Macaca mulatta</i> (Zimmermann, 1780)",
+      "author": "Fooden, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 13 June 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-2"
+    },
+    {
+      "citation": "Chauhan, A., and Pirta, R.S. 2010. Agonistic interactions between humans and two species of monkeys (Macaca mulatta) and Hanuman Langur (Semnopithecus entellus) in Shimla, Himachal Pradesh. <i>Journal of Psychology</i> 1(1): 9-14.",
+      "year": "2010",
+      "title": "Agonistic interactions between humans and two species of monkeys (Macaca mulatta) and Hanuman Langur (Semnopithecus entellus) in Shimla, Himachal Pradesh.",
+      "author": "Chauhan, A., and Pirta, R.S. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chauhan, A., and Pirta, R.S. 2010. Socio-ecology of non-human primates, Rhesus monkey (Macaca mulatta) and Hanuman Langur (Semnopithecus entellus) in Shimla, Himachal Pradesh. <i>Journal of Human Ecology </i> 30(3): 171-177.",
+      "year": "2010",
+      "title": "Socio-ecology of non-human primates, Rhesus monkey (Macaca mulatta) and Hanuman Langur (Semnopithecus entellus) in Shimla, Himachal Pradesh.",
+      "author": "Chauhan, A., and Pirta, R.S. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Habibi, K. 2003. <i>Mammals of Afghanistan. </i>. Zoo Outreach Organisation/USFWS, Coimbatore,  India.",
+      "year": "2003",
+      "title": "Mammals of Afghanistan. ",
+      "author": "Habibi, K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Higham, J.P., Heistermann, M., and Maestripieri, D. 2011. <i>The energetics of male-male endurance rivalry in free ranging rhesus macaques, Macaca mulatta.</i> Animal behavior 81:1001-1007.",
+      "year": "2011",
+      "title": "The energetics of male-male endurance rivalry in free ranging rhesus macaques, Macaca mulatta.",
+      "author": "Higham, J.P., Heistermann, M., and Maestripieri, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hoffman, C,L., Higham, J,P., Mas-Rivera, A., Ayala, J,E., and Maestripieri, D. 2010. <i>Terminal investment and senescence in rhesus macaques (Macaca mulatta) in Caya Santiago. </i>. Behavioral Ecology (2010): arq098.",
+      "year": "2010",
+      "title": "Terminal investment and senescence in rhesus macaques (Macaca mulatta) in Caya Santiago. ",
+      "author": "Hoffman, C,L., Higham, J,P., Mas-Rivera, A., Ayala, J,E., and Maestripieri, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Imam, E and Ahmad, A. 2013. Population status of Rhesus monkey (Macaca mulatta) and their menace : A threat for future conservation. <i>International Journal of Environmental Sciences </i> 3(4): 1279-1289.",
+      "year": "2013",
+      "title": "Population status of Rhesus monkey (Macaca mulatta) and their menace : A threat for future conservation.",
+      "author": "Imam, E and Ahmad, A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kumar, R., Radhakrishna, S., and Sinha, A. 2011. Of least concern? Range extension by <i>Rhesus macaque</i> (<i>Macaca mulatta</i>) threatens long term survival of Bonnet macaques (<i>M. radiata</i>) in peninsular India. <i>International Journal of Primatology </i> 32(945-959).",
+      "year": "2011",
+      "title": "Of least concern? Range extension by <i>Rhesus macaque</i> (<i>Macaca mulatta</i>) threatens long term survival of Bonnet macaques (<i>M. radiata</i>) in peninsular India",
+      "author": "Kumar, R., Radhakrishna, S., and Sinha, A. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lu, J-Q., Hou, J-H., Wang, H-F., and Qu, W-Y. 2007. Current status of Macaca mulatta in Taihangshan Mountains Area, Jiyuan,Henan, China. <i>International Journal of Primatology </i> 28: 1085-1091.",
+      "year": "2007",
+      "title": "Current status of Macaca mulatta in Taihangshan Mountains Area, Jiyuan,Henan, China.",
+      "author": "Lu, J-Q., Hou, J-H., Wang, H-F., and Qu, W-Y. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Timmins, R.J., Richardson, M., Chhangani, A. & Yongcheng, L. 2008. <i>Macaca mulatta. In: The IUCN Red List of Threatened Species. Version 2015.2. <www.iucnredlist.org>. Downloaded on 30 July 2015.</i>.",
+      "year": "2008",
+      "title": "Macaca mulatta. In: The IUCN Red List of Threatened Species. Version 2015.2. <www.iucnredlist.org>. Downloaded on 30 July 2015.",
+      "author": "Timmins, R.J., Richardson, M., Chhangani, A. & Yongcheng, L. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2024. The IUCN Red List of Threatened Species. Version 2024-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 27 June 2024).",
+      "year": "2024",
+      "title": "The IUCN Red List of Threatened Species. Version 2024-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2024-1"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

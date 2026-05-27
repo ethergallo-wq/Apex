@@ -1,0 +1,959 @@
+{
+  "assessment_date": "2022-10-08T01:00:00.000+01:00",
+  "year_published": "2024",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 61591,
+  "criteria": "A2c",
+  "url": "https://www.iucnredlist.org/species/61591/260760059",
+  "citation": "Ursenbacher, S., Bowles, P., Martínez-Freiría, F., Pleguezuelos, J.M., Joger, U., Zuffi, M.A.L. & Crochet, P.-A. 2024. Vipera aspis (errata version published in 2024). The IUCN Red List of Threatened Species 2024: e.T61591A260760059. Accessed on 15 May 2026.",
+  "assessment_id": 260760059,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 61591,
+    "scientific_name": "Vipera aspis",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "VIPERIDAE",
+    "genus_name": "Vipera",
+    "species_name": "aspis",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Viper Specialist Group",
+        "url": "http://www.oriannesociety.org/iucn-viper-specialist-group",
+        "description": "Co-Chairs: Jesús Sigala-Rodríguez (email: jjsigala@gmail.com) and Stephen Spear (email: sspear@thewilds.org)\nRed List Authority Coordinator: Johannes Penner (email: johannes.penner@web.de)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Aspisviper",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Vibora áspid",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Vipera Comune",
+        "language": "ita"
+      },
+      {
+        "main": true,
+        "name": "Asp Viper",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Coluber aspis Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Coluber",
+        "species_name": "aspis",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Vipera zinnikeri Kramer, 1958",
+        "status": "ACCEPTED",
+        "genus_name": "Vipera",
+        "species_name": "zinnikeri",
+        "species_author": "Kramer, 1958",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Vipera aspis ssp. montecristi Mertens, 1956",
+        "status": "ACCEPTED",
+        "genus_name": "Vipera",
+        "species_name": "aspis",
+        "species_author": null,
+        "infrarank_author": "Mertens, 1956",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "montecristi"
+      },
+      {
+        "name": "Vipera francisciredi Laurenti, 1768",
+        "status": "ACCEPTED",
+        "genus_name": "Vipera",
+        "species_name": "francisciredi",
+        "species_author": "Laurenti, 1768",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Vipera hugyi Schinz, 1833",
+        "status": "ACCEPTED",
+        "genus_name": "Vipera",
+        "species_name": "hugyi",
+        "species_author": "Schinz, 1833",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 3300,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "8",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Unknown",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": "Unknown",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "This species is endemic to Europe, where it ranges from northeastern Spain, Andorra, through much of France (except the north and part of the Mediterranean coast), southwestern Germany, western and central Switzerland, throughout Italy (and the islands of Sicily and Elba, although its presence on Aeolian islands requires confirmation; E. Razzetti pers. comm. 2022) and western Slovenia (Speybroeck <em>et al</em>. 2016, Martínez-Freiría 2021). The species may occur in Monaco, however, its presence is unconfirmed.<br/><br/>In Germany, it is known from a single locality in the Black Forest, where it currently occurs over an area of only 270 ha (Rote-Liste-Gremium Amphibien und Reptilien 2020). The species may have been present in Grenzacher Horn (Baden-Württemberg) in Germany until the beginning of the 20th century, based on dubious reports of an \"adder\" at this locality in the late 19<sup>th</sup> century and a museum record from 1902 (Rote-Liste-Gremium Amphibien und Reptilien 2020); extensive surveys at this locality since 1983 indicate that the snake no longer occurs here, although this extinction's causes are unclear (Rote-Liste-Gremium Amphibien und Reptilien 2020).<br/><br/>It occurs on Montecristo Island (Italy), to which it was introduced from Sicily between the 8th and 3rd centuries BC (Barbanera <em>et al</em>. 2009). An introduced population is known from Bollenberg in northern France, and a \"very small and marginal\" one was recently identified from a French site near the Belgian border, although it is unclear whether this has become established (J. Speybroeck pers. comm. 2022).<br/><br/>It can be found from sea level up to 3,300 m asl, the latter the highest elevation recorded for any European snake (Speybroeck <em>et al</em>. 2016, Geniez 2018).",
+    "population": "This is a common species across much of its range. Densities in studied subpopulations in France and Switzerland vary between 0.9 and 9.1 individuals/ha (Martínez-Freiría 2021). Datasets from most range states indicate that the population is strongly declining in many areas, although no declines have been documented in montane areas of Spain (Santos <em>et al</em>. 2022) and it appears to be at least stable—and possibly increasing—in Mediterranean shrubland of the Languedoc region (France) where natural reforestation is underway (P. Geniez pers. comm. 2023). Long-term (2005–2017) data from a French study locality suggested a generally stable subpopulation, although one den was lost during this period (Luiselli <em>et al</em>. 2018). In the Black Forest area of Germany the population is considered to be stable (maximal reduction of 10%; Rote-Liste-Gremium Amphibien und Reptilien 2020).<br/><br/>A study modelling population trends based on citizen science data collected between 1980 and 2017 found that the relative abundance of this species in Spain within the overall reptile fauna had declined by 84.0% over this period, corresponding to declines of 33.16% over a presumed minimal three-generation period of 15 years (Santos <em>et al</em>. 2022). The subpopulations in Spain have undergone significant declines outside mountain areas (where no declines have been documented). Based on data provided by Santos <em>et al</em>. (2022), F. Martínez-Freiría and J.M. Pleguezuelos (pers. comm. October 2022) calculated a decline of 53.07% in Spain over 24 years (a three-generation period assuming a generation length of eight years, rather than the five years suggested by Santos <em>et al</em>. 2022).<br/><br/>Based on citizen science data collected in the Languedoc region of France between 1980 and 2018, Santos <em>et al</em>. (2022) found that the relative abundance of the snake had declined by 74.2% in southern France over this period, corresponding to declines of 28.51% respectively over a presumed minimal three-generation period of 15 years. Based on data provided by Santos <em>et al</em>. (2022), F. Martínez-Freiría and J.M. Pleguezuelos (pers. comm. October 2022) calculated a decline of 45.63% in France over 24 years (a three-generation period assuming a generation length of eight years, rather than the five years suggested by Santos <em>et al</em>. 2022). The results of Santos <em>et al</em>. (2022) from both Spain and France carry the caveat that the relative abundance of some non-snake species increased over the study period (which was moderate in Spain and strong in France - Santos <em>et al</em>. 2022), and consequently a decline in the relative abundance of snakes may not correspond to a decline of similar magnitude (P.-A. Crochet pers. comm. 2023). The results are, however, consistent with reports that the species is \"declining, and strongly so\" in many areas of France, although mostly limited in areas under strong anthropogenic pressure (P.-A. Crochet pers. comm. 2024).<br/><br/>The results of 210 transects (which covered sites countrywide, but were concentrated in the western half) conducted over at least three years within the timeframe 2015–2022 indicate a strongly decreasing population trend (Trochet <em>et al</em>. 2023): transect occupancy probability decreased from approximately 22% in 2015 to 2% in 2022. This corresponds to a mean decline in occupancy of 90% over eight years (potentially a single generation), although older data is lacking to determine whether this rate of decline has been constant over the past three generations but on a precautionary basis it is assumed that it may have declined by up to 92% over this period. If the population was stable prior to 2015, the decline over three generations may have been as low as 30%. The methodology applied by Trochet <em>et al</em>. (2023) is based on the use of plastic or rubber covered objects which may be used by snakes less frequently in hotter conditions, which may result in reduced detectability as the climate warms, but whether and to what extent this contributes to the observed decline is unknown (P.-A. Crochet pers. comm. 2023).<br/><br/>In Switzerland, a 58% reduction in the population over a three-generation period calculated as 24 years—inferred from a decline in the number of occupied cells from 76 to 50 (34.2%) over the 14 years from 2003–2004 to 2017–2018—has been estimated for the national Red List in 2023 (OFEV and info fauna 2023).<br/><br/>In Italy, a comparison of the records in the new national data atlas (Sperone and Zuffi, in prep.) and the one from 2006 (Zuffi 2006) revealed stable or increased occupancy in 74% of the administrative regions in which the species occurs, with an average increase per region of 82%; and conversely an average decline of 76% in the remaining regions. The overall trend in Italy was recognised as stable, with an increase in occupancy of 6.6% over 17 years across the dataset as a whole (M.A.L. Zuffi pers. comm. December 2023), which would equate to a 9.2% increase in occupancy over a three-generation period of 24 years. Luiselli <em>et al.</em> (2018) studied den occupancy records for a 30 year period (1987–2017) in Italy's Tolfa Mountains. Den occupancy - and, due to the low vagility and site philopatry of this species, presumably numbers - was stable from the beginning of the survey period until 2000, and rapidly declined thereafter until the end of the study (Luiselli <em>et al</em>. 2018). Declines have also been recorded in the Po plain, Apulia etc (C. Corti pers. comm. 2022) following dramatic landscape changes over the last 80 years (E. Razzetti pers. comm. 2022).<br/><br/>On the assumption that these datasets are comparable, and assuming the maximum rate of decline in France, the species has declined by an average of 44.4% over 24 years across its range as a whole (excluding the marginal subpopulations in Germany and Slovenia). On a minimal estimate for the rate of decline in France (which corresponds to approximately 40% of the range) of 30% over this period, the overall population has declined by 27.3% across its range as a whole. As Switzerland represents only 10% of the species' range, rates of decline in the European Union - which encompasses the entirety of the rest of the range - will be comparable.",
+    "habitats": "This species is found in generally dry, rocky areas of open scrubland, open woodlands, closed forest, hedges, pastures and stone walls. It can however occur in wet areas, including those in mountains, wet meadows and peat bogs (Speybroeck <em>et al</em>. 2016, Geniez 2018). It usually occurs in areas with some vegetation cover (Speybroeck <em>et al.</em> 2016). It often occurs on the edge of natural habitats, and is characteristic of chestnut woods in Italy. It can also be found in suburban areas and arable land, including extensive areas of crop fields, although it avoids urban or intensively farmed areas (Geniez 2018, Martínez-Freiría 2021). The females give birth to between five and 20 live young (Speybroeck<em> et al.</em> 2016, Geniez 2018), and a female, locally, may produce only a single litter during its lifetime (Bonnet<em> et al.</em> 1999).<br/><br/>It hibernates in most of its range, and individuals frequently occupy the same winter dens (Luiselli <em>et al.</em> 2018). In an Italian subpopulation for which long-term monitoring data are available, animals were found to enter hibernation dens later and disperse from them earlier over a 25 year period, correlated with increases in average temperatures recorded over the same period, with the most pronounced effects in the years since 1998 (Rugiero<em> et al. </em>2013). Animals reach sexual maturity at three to four years of age (Bonnet <em>et al. </em>1999), but ages at maturity as high as five to six have been recorded (summarised by Martínez-Freiría 2021). It had an assumed generation length of five years (Santos <em>et al.</em> 2022), inferred by these authors to be a year later than age at maturity. However, based on the data provided by Martínez-Freiría (2021) it is likely that this is an underestimate, and for the Swiss national Red List a generation of eight years was estimated. At least in Switzerland, longevity of up to 20 years has been recorded (S. Ursenbacher pers. comm. 2022). Globally, sexual maturity and generation time is highly variable between its distribution area (S. Ursenbacher pers. comm. February 2023).<p></p>",
+    "threats": "This species is threatened by loss of habitat through agricultural intensification, forest increase, and to a lesser degree loss of habitat resulting from the development of tourist facilities and urbanisation (Jaggi and Baur 1999). The species is often found in open areas and overgrowth of these sites is an additional threat (for example in the Jura Mountains; Jaggi and Baur 1999). The species is persecuted by people and illegally collected for the pet trade. It does not seem to be at major risk in the Iberian Peninsula and may have benefitted from the abandonment of traditional agricultural land which has likely reduced its exposure to persecution (Gosá 2002), however, habitat loss due to agricultural intensification and the development of tourist and urban infrastructure represent threats and it is locally sensitive to mortality from traffic and direct persecution (Martínez-Freiría 2021). In France, while historical data are lacking it is likely that there was a past decline due to high levels of persecution (including a bounty system which encouraged people to kill the animal in very large numbers) (P.-A. Crochet pers. comm. 2022). The bounty system has been discontinued, and it is unknown whether persecution is an ongoing threat in France (P.-A. Crochet pers. comm. 2022).<br/><br/>The decline in Italy's Tolfa Mountains is correlated with a local temperature rise between 2001 and 2017 of 2.2 °C (Luiselli<em> et al. </em>2018). While cautioning that it is unclear whether this is a causal relationship, these authors observe that this species' reproductive strategy (which relies on the accumulation of substantial resources to support a single litter) and the reliance on very precise thermoregulation of gravid females make it potentially sensitive to disruption of its thermal ecology. Consistent with this suggestion Brischoux<em> et al.</em> (2016) found that asp vipers experimentally exposed to \"mild wintering conditions\" (approximately 14 °C) for a month exhibited a significant decrease in body condition, which over an extended period in wild subpopulations has the potential to reduce reproductive output and affect the persistence of subpopulations.<br/><br/>Remote imagery suggests that the species' core habitat in Germany has remained essentially unchanged since the 1950s, but that in marginal areas of its range canopy cover has increased in some areas by more than 50%, partly due to increased nutrient loads (Rote-Liste-Gremium Amphibien und Reptilien 2020). This afforestation reduces habitat suitability and connectivity for this species, and as many of these forest areas are protected there are limited opportunities to improve habitat quality by opening the canopy (Rote-Liste-Gremium Amphibien und Reptilien 2020).",
+    "measures": "This species is listed in Annex III of the Bern Convention, Annex IV of the European Union Habitat and Species Directive, and is protected by national legislation in parts of its range (e.g. France, Switzerland and Germany). The species has been assessed as Least Concern in Spain (Pleguezuelos<em> et al.</em> 2002), France (which encompasses most of the range)(UICN France<em> et al</em>. 2015) and Italy (Rondinini <em>et al</em>. 2022), and as Endangered in Switzerland (OFEV and info fauna 2023) and Slovenia (Anonymous 2010). In the former Swiss Red list (Monney and Meyer 2005), the subspecies <em>Vipera aspis aspis</em> is categorised as Critically Endangered, <em>V. a. atra</em> is categorised as Vulnerable; and <em>V. a. francisciredi</em> is categorised as Endangered. It occurs in many protected areas.<br/><br/>More intense long-term monitoring is important for clarifying population trends in snakes at possible risk from climate change.",
+    "use_trade": "This species is locally harvested for the international pet trade.",
+    "rationale": "Global and European regional assessment: Vulnerable (VU)<br/>EU 27 regional assessment: Vulnerable (VU)<br/><br/>This European endemic species is assessed as Vulnerable in both Europe and the EU 27 Member States (which encompasses the majority of its range) on the basis that, while both generation length in this species and the timeframes over which declines have taken place are imprecisely-known, available evidence encompassing most of the species' range implies that occupancy has declined by at least 27.3%, and possibly by almost 45%, over a 24 year period assumed to equate to three generations in the past. As most of the population decline estimate is above 30%, this species has been assessed as Vulnerable (A2c).",
+    "trend_justification": null,
+    "taxonomic_notes": "This species consists of four divergent genetic lineages (Ursenbacher<em> et al.</em> 2006, Barbanera <em>et al.</em> 2009, Martínez-Freiría <em>et al</em>. 2020), broadly corresponding to four of the five recognised subspecies: <em>Vipera a. aspis; V. a. hugyi</em>, <em>V. a. zinnikeri</em>, <em>V. a. franciscredi</em>. The fifth, <em>V. a. atra</em>, is not recognised by some authors as it is nested within <em>V. a.</em><em> aspis </em>(Ursenbacher <em>et al.</em> 2006) Although proposed specific status for these subspecies (Zuffi 2002) has been rejected by later authors, further analysis is required to clarify the systematics of this possible complex (Crochet and Dubois 2004). A further proposed subspecies - <em>V. a. montecristi </em>- is now recognised as an introduced population of <em>V. a. hugyi </em>(Barbanera <em>et al.</em> 2009). More recent genetic studies demonstrated the occurrence of several additional mtDNA lineages but should not conduct to the determination of additional subspecies (Martinez-Freiria <em>et al</em>. 2020)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Rocky areas (eg. inland cliffs, mountain peaks)"
+      },
+      "code": "6"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France (mainland)"
+      },
+      "code": "FRA-FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Andorra"
+      },
+      "code": "AD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy (mainland)"
+      },
+      "code": "ITA-IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sicilia"
+      },
+      "code": "SIC-SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Monaco"
+      },
+      "code": "MC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Switzerland"
+      },
+      "code": "CH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain (mainland)"
+      },
+      "code": "SPA-SP"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "None",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": "None",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "None",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Temperature extremes"
+      },
+      "code": "11_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other ecosystem modifications"
+      },
+      "code": "7_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Ursenbacher, S., Bowles, P., Martínez-Freiría, F., Pleguezuelos, J.M., Joger, U., Zuffi, M.A.L. & Crochet, P.-A.",
+      "value": [
+        "Pierre-André Crochet (CNRS-UMR 5175 Centre d'Ecologie Fonctionnelle et Evolutive, 1919, route de Mende, 34293 Montpellier cedex 5, France)",
+        "Ulrich Joger (State Natural History Museum, Braunschweig, Germany)",
+        "Juan Pleguezuelos (Dep Animal Biology, Fac Sciences, Granada Univer, E-18071 Granada, Spain)",
+        "Philip Bowles (IUCN SSC/CI Biodiversity Assessment Unit)",
+        "Fernando Martínez-Freiría",
+        "Sylvain Ursenbacher",
+        "Marco Zuffi (Museum Natural History, University of Pisa)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Crnobrnja-Isailović, J., Carretero, M., Cogălniceanu, D., Corti, C., Crochet, P.-A., Doronin, I.V., Halpern, B., Jablonski, D., Jelić, D., Joger, U., Kirschey, T., Lymberakis, P., Maletzky, A., Martínez-Freiría, F., Mebert, K., Mizsei, E., Razzetti, E., Romano, A., Salvi, D., Speybroeck, J. & Stănescu, F.",
+      "value": [
+        "Jelka Crnobrnja-Isailović (IUCN SSC Amphibian Specialist Group)",
+        "Dan Cogălniceanu (Amphibian RLA)",
+        "Claudia Corti (Museo di Storia Naturale dell'Università di Firenze, Sezione di Zoologia \"La Specola\", Italy)",
+        "Pierre-André Crochet (CNRS-UMR 5175 Centre d'Ecologie Fonctionnelle et Evolutive, 1919, route de Mende, 34293 Montpellier cedex 5, France)",
+        "Ulrich Joger (State Natural History Museum, Braunschweig, Germany)",
+        "Dušan Jelić (Global Reptile Assessment)",
+        "Antonio Romano",
+        "Igor Doronin (Zoological Institute, Russian Academy of Sciences)",
+        "Edvárd Mizsei (University of Debrecen, Hungary)",
+        "Konrad Mebert",
+        "Fernando Martínez-Freiría",
+        "Tom Kirschey",
+        "Daniele Salvi",
+        "Bálint Halpern",
+        "Florina Stănescu",
+        "Miguel Carretero",
+        "Jeroen Speybroeck",
+        "Petros Lymberakis (Natural History Museum of Crete - University of Crete)",
+        "Daniel Jablonski (Comenius University in Bratislava)",
+        "Edoardo Razzetti",
+        "Andreas Maletzky"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Cheylan, M., Corti, C., Geniez, P., Marquez, R., Meyer, A., Nettmann, H.K., Pérez Mellado, V. & Schmidt, B.R.",
+      "value": [
+        "Marc Cheylan (Centre d’Ecologie Fonctionnelle et Evolutive (UMR 5175 CNRS), 1919 route de Mende, 34293 Montpellier cedex 5, France)",
+        "Claudia Corti (Museo di Storia Naturale dell'Università di Firenze, Sezione di Zoologia \"La Specola\", Italy)",
+        "Philippe Geniez (EPHE-UMR 5175, CEFE-CNRS, 1919 Route de Mende, F-34293 Montpellier cedex 5, France)",
+        "Andreas Meyer (SRLI Reptile Assessment)",
+        "Hans Nettmann (SRLI Reptile Assessment)",
+        "Valentín Pérez Mellado (Universidad de Salamanca; European Red List of Reptiles; SRLI Reptile Assessment)",
+        "Benedikt R. Schmidt (Amphibian RLA)",
+        "Rafael Marquez"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This errata version of the assessment was created to correct the generation length recorded for this species: the generation length data field recorded 5 years, but this should have been 8 years."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Crochet, P.-A. and Dubois, A. 2004. Recent changes in the taxonomy of European amphibians and reptiles. In: J.-P. Gasc, A. Cabela,J. Crnobrnja-Isailovic, D. Dolmen, K. Grossenbacher, P. Haffner, J. Lescure, H. Martens, J.P Martínez Rica., H. Maurin, M.E. Oliveira, T.S. Sofianidou, M. Veith and A. Zuiderwijk (eds), <i>Atlas of Amphibians and Reptiles in Europe. Re-edition</i>, Muséum national d'Histoire naturelle, Paris.",
+      "year": "2004",
+      "title": "Recent changes in the taxonomy of European amphibians and reptiles.",
+      "author": "Crochet, P.-A. and Dubois, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pleguezuelos, J.M., Márquez, R. and Lizana, M. 2002. <i>Atlas y Libro Rojo de los Anfibios y Reptiles de España.</i> Dirección General de la Conservación de la naturaleza-Associación Herpetológica Española, Madrid.",
+      "year": "2002",
+      "title": "Atlas y Libro Rojo de los Anfibios y Reptiles de España",
+      "author": "Pleguezuelos, J.M., Márquez, R. and Lizana, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Monney, J.-C. and Meyer, A. 2005. <i>Rote Liste der gefährdeten Reptilien der Schweiz.</i> BUWAL-Reihe: Vollzug Umwelt, 50 S. BUWAL, Bern, Switzerland.",
+      "year": "2005",
+      "title": "Rote Liste der gefährdeten Reptilien der Schweiz",
+      "author": "Monney, J.-C. and Meyer, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jaggi, C. and Baur, B. 1999. Overgrowing forest as a possible cause for the local extinction of <i>Vipera aspis</i> in the northern Swiss Jura mountains. <i>Amphibia-Reptilia</i> 20(1): 25–34",
+      "year": "1999",
+      "title": "Overgrowing forest as a possible cause for the local extinction of <i>Vipera aspis</i> in the northern Swiss Jura mountains.",
+      "author": "Jaggi, C. and Baur, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ursenbacher, S., Conelli, A., Golay, P., Monney, J.-C., Zuffi, M.A.L., Thiery, G., Durand, T. and Fumagalli, L. 2006. Phylogeography of the asp viper (<i>Vipera aspis</i>) inferred from mitochondrial DNA sequence data: Evidence for multiple Mediterranean refugial areas. <i>Molecular Phylogenetics and Evolution</i> 38(2): 546–552",
+      "year": "2006",
+      "title": "Phylogeography of the asp viper (<i>Vipera aspis</i>) inferred from mitochondrial DNA sequence data: Evidence for multiple Mediterranean refugial areas.",
+      "author": "Ursenbacher, S., Conelli, A., Golay, P., Monney, J.-C., Zuffi, M.A.L., Thiery, G., Durand, T. and Fumagalli, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zuffi, M.A.L. 2002. A critique of the systematic position of the asp viper subspecies Vipera aspis aspis (Linnaeus, 1758), Vipera aspis atra Meisner, 1820, Vipera aspis francisciredi Laurenti, 1768, Vipera aspis hugyi Schinz, 1833 and Vipera aspis zinnikeri Kramer, 1958 <i>Amphibia-Reptilia</i> 23(2): 191–213",
+      "year": "2002",
+      "title": "A critique of the systematic position of the asp viper subspecies Vipera aspis aspis (Linnaeus, 1758), Vipera aspis atra Meisner, 1820, Vipera aspis francisciredi Laurenti, 1768, Vipera aspis hugyi Schinz, 1833 and Vipera aspis zinnikeri Kramer, 1958",
+      "author": "Zuffi, M.A.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Geniez, P. 2018. <i>Snakes of Europe, North Africa & the Middle East: A Photographic Guide</i>. Princeton University Press, Princeton, New Jersey.",
+      "year": "2018",
+      "title": "Snakes of Europe, North Africa & the Middle East: A Photographic Guide",
+      "author": "Geniez, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Speybroeck, J., Beukema, W., Bok, B., and van der Woort, J. 2016. <i>Field Guide to the Amphibians & Reptiles of Britain and Europe</i>. Bloomsbury, London.",
+      "year": "2016",
+      "title": "Field Guide to the Amphibians & Reptiles of Britain and Europe",
+      "author": "Speybroeck, J., Beukema, W., Bok, B., and van der Woort, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "UICN France, MNHN & SHF. 2015. <i>La Liste rouge des espèces menacées en France - Chapitre Reptiles et Amphibiens de France métropolitaine.</i> Paris.",
+      "year": "2015",
+      "title": "La Liste rouge des espèces menacées en France - Chapitre Reptiles et Amphibiens de France métropolitaine.",
+      "author": "UICN France, MNHN & SHF. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2024. The IUCN Red List of Threatened Species. Version 2024-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 27 June 2024).",
+      "year": "2024",
+      "title": "The IUCN Red List of Threatened Species. Version 2024-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2024-1"
+    },
+    {
+      "citation": "Santos, X., Pleguezuelos, J.M., Chergui, B., Geniez, P. and Cheylan, M. 2022. Citizen-science data shows long-term decline of snakes in southwestern Europe. <i>Biodiversity and Conservation</i> 31: 1609–1625. https://doi.org/10.1007/s10531-022-02415-8.",
+      "year": "2022",
+      "title": "Citizen-science data shows long-term decline of snakes in southwestern Europe",
+      "author": "Santos, X., Pleguezuelos, J.M., Chergui, B., Geniez, P. and Cheylan, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "OFEV and info fauna. 2023. Liste rouge des reptiles. Espèces menacées en Suisse.  L’environnement pratique n° 2023. Office fédéral de l’environnement et Info fauna – Karch, Berne and Neushatel.",
+      "year": "2023",
+      "title": "Liste rouge des reptiles. Espèces menacées en Suisse",
+      "author": "OFEV and info fauna  ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rote-Liste-Gremium Amphibien und Reptilien. 2020. Rote Liste und Gesamtartenliste der Reptilien (Reptilia) Deutschlands. <i>Naturschutz und Biologische Vielfalt</i> 170(3): 64.",
+      "year": "2020",
+      "title": "Rote Liste und Gesamtartenliste der Reptilien (Reptilia) Deutschlands",
+      "author": "Rote-Liste-Gremium Amphibien und Reptilien",
+      "citation_short": null
+    },
+    {
+      "citation": "Anonymous. 2010. Rules on the inclusion of endangered plant and animal species in the Red List, Annex 5: Red List of Reptiles (Reptilia). <i>Official Gazette of the Republic of Slovenia</i> No. 82/02 and 42/10.",
+      "year": "2010",
+      "title": "Rules on the inclusion of endangered plant and animal species in the Red List, Annex 5: Red List of Reptiles (Reptilia)",
+      "author": "Anonymous",
+      "citation_short": null
+    },
+    {
+      "citation": "Barbanera, F., Zuffi, M.A.L, Guerrini, M., Gentilli, A., Tofanelli, S., Fasola, M. and Dini, F. 2009. Molecular phylogeography of the asp viper <i>Vipera aspis</i> (Linnaeus, 1758) in Italy: evidence for introgressive hybridization and mitochondrial DNA capture. <i>Molecular Phylogenetics and Evolution</i> 52(1): 103-114.",
+      "year": "2009",
+      "title": "Molecular phylogeography of the asp viper <i>Vipera aspis</i> (Linnaeus, 1758) in Italy: evidence for introgressive hybridization and mitochondrial DNA capture",
+      "author": "Barbanera, F., Zuffi, M.A.L, Guerrini, M., Gentilli, A., Tofanelli, S., Fasola, M. and Dini, F",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bonnet, X., Naulleau, G., Lourdais, O. and Vacher-Vallas, M. 1999. Growth in the asp viper (<i>Vipera aspis</i> L.): insights from long term field study. In: C. Miaud and R Guyetant (eds), <i>Current studies in herpetology</i>, pp. 63-69. SHE, Le Bourget du Lac, France.",
+      "year": "1999",
+      "title": "Growth in the asp viper (<i>Vipera aspis</i> L.): insights from long term field study",
+      "author": "Bonnet, X., Naulleau, G., Lourdais, O. and Vacher-Vallas, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brischoux, F., Dupoué, A., Lourdais, O. and Angelier, F. 2016. Effects of mild wintering conditions on body mass and corticosterone levels in a temperate reptile, the aspic viper (<i>Vipera aspis</i>). <i>Comparative Biochemistry and Physiology Part A: Molecular & Integrative Physiology</i> 192: 52-56.",
+      "year": "2016",
+      "title": "Effects of mild wintering conditions on body mass and corticosterone levels in a temperate reptile, the aspic viper (<i>Vipera aspis</i>)",
+      "author": "Brischoux, F., Dupoué, A., Lourdais, O. and Angelier, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gosá, A. 2002. <i>Vipera aspis</i>. In: Pleguezuelos, J.M. Márquez, R. and M. Lizana (eds), <i>Atlas y Libro Rojo de los Anfibios y Reptiles de España</i>, pp. 295-297. Dirección General de Conservación de la Naturaleza – Asociación Herpetológica Española, Madrid.",
+      "year": "2002",
+      "title": "<i>Vipera aspis</i>",
+      "author": "Gosá, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Luiselli, L., Vignoli, L., Rugiero, L. and Meek, R. 2018. Declining occupancy rates in the hibernacula of aspic vipers (<i>Vipera aspis</i>) in Italy and France; evidence for climatic effects? <i>Herpetological Journal</i> 28(4): 137-142.",
+      "year": "2018",
+      "title": "Declining occupancy rates in the hibernacula of aspic vipers (<i>Vipera aspis</i>) in Italy and France; evidence for climatic effects?",
+      "author": "Luiselli, L., Vignoli, L., Rugiero, L. and Meek, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Martínez-Freiría, F. 2021. Víbora áspid – <i>Vipera aspis</i>. In: P. López, J. Martín and F. Martínez-Freiría (eds), <i>Enciclopedia Virtual de los Vertebrados Españoles</i>, Museo Nacional de Ciencias Naturales, Madrid.",
+      "year": "2021",
+      "title": "Víbora áspid – <i>Vipera aspis</i>",
+      "author": "Martínez-Freiría, F",
+      "citation_short": ""
+    },
+    {
+      "citation": "Martinez-Freiría, F., Freitas, I., Zuffi, M.A.L., Golay, P. and Ursenbacher, S. 2020. Climatic refugia boosted allopatric diversification in Western Mediterranean vipers. <i>Journal of Biogeography</i> 47(8): 1698-1713.",
+      "year": "2020",
+      "title": "Climatic refugia boosted allopatric diversification in Western Mediterranean vipers",
+      "author": "Martinez-Freiría, F., Freitas, I., Zuffi, M.A.L., Golay, P. and Ursenbacher, S",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rondinini, C., Battistoni, A. and Teofili, C. (compilatori). 2022. <i>Lista Rossa IUCN dei vertebrati italiani 2022</i>. Comitato Italiano IUCN e Ministero dell'Ambiente e della Sicurezza Energetica, Rome.",
+      "year": "2022",
+      "title": "Lista Rossa IUCN dei vertebrati italiani 2022",
+      "author": "Rondinini, C., Battistoni, A. and Teofili, C. (compilatori)",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rugiero, L., Milana, G., Petrozzi, F., Capula, M. and Luiselli, L. 2013. Climate-change-related shifts in annual phenology of a temperate snake during the last 20 years. <i>Oecologica</i> 51: 42-48.",
+      "year": "2013",
+      "title": "Climate-change-related shifts in annual phenology of a temperate snake during the last 20 years",
+      "author": "Rugiero, L., Milana, G., Petrozzi, F., Capula, M. and Luiselli, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sperone, E. and Zuffi, M.A.L. In prep. <i>Vipera aspis</i> (Linnaeus, 1758). Vipera comune, Asp viper. In: R. Sindaco, E. Razzetti, C. Liuzzi and G. Bruni (eds), <i>Nuovo Atlante degli Anfibi e Rettili d’Italia / New Atlas of Italian Amphibians and Reptiles</i>, Societas Herpetologica Italica, Edizioni Belvedere (Latina), \"historia naturae”.",
+      "year": "In prep",
+      "title": "<i>Vipera aspis</i> (Linnaeus, 1758). Vipera comune, Asp viper",
+      "author": "Sperone, E. and Zuffi, M.A.L",
+      "citation_short": ""
+    },
+    {
+      "citation": "Trochet, A., Hugon, F., Lombardi, A. and Besnard, A. 2023. Suivi des reptiles de France métropolitaine en 2022. Société Herpétologique de France.",
+      "year": "2023",
+      "title": "Suivi des reptiles de France métropolitaine en 2022",
+      "author": "Trochet, A., Hugon, F., Lombardi, A. and Besnard, A",
+      "citation_short": ""
+    },
+    {
+      "citation": "Zuffi, M.A.L. 2006. <i>Vipera aspis</i> (Linnaeus, 1758). Vipera comune, Asp viper. In: R. Sindaco, G. Doria, E. Razzetti and F. Bernini (eds), <i>Atlante degli Anfibi e dei Rettili d'Italia. Atlas of Italian Amphibians and Reptiles</i>, pp. 594-599. Edizioni Polistampa, Firenze.",
+      "year": "2006",
+      "title": "<i>Vipera aspis</i> (Linnaeus, 1758). Vipera comune, Asp viper",
+      "author": "Zuffi, M.A.L",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2024. The IUCN Red List of Threatened Species. Version 2024-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 28 October 2024).",
+      "year": "2024",
+      "title": "The IUCN Red List of Threatened Species. Version 2024-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2024-2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    },
+    {
+      "description": {
+        "en": "Europe"
+      },
+      "code": "2"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

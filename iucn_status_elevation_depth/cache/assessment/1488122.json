@@ -1,0 +1,659 @@
+{
+  "assessment_date": "2011-08-31T01:00:00.000+01:00",
+  "year_published": "2012",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 177487,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/177487/1488122",
+  "citation": "Stuart, B. & Wogan, G. 2012. Naja kaouthia. The IUCN Red List of Threatened Species 2012: e.T177487A1488122. Accessed on 15 May 2026.",
+  "assessment_id": 1488122,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 177487,
+    "scientific_name": "Naja kaouthia",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "ELAPIDAE",
+    "genus_name": "Naja",
+    "species_name": "kaouthia",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Lesson, 1831",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Monocled Cobra",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Monocellate Cibra",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Monokelkobra",
+        "language": "ger"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Naja naja ssp. kaouthia Lesson, 1831",
+        "status": "ADD",
+        "genus_name": "Naja",
+        "species_name": "naja",
+        "species_author": null,
+        "infrarank_author": "Lesson, 1831",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "kaouthia"
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 1000,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species occurs from northeastern India, Bangladesh and Bhutan across southern China, southward to northern Peninsular Malaysia (Wüster 1996). It is absent from the central dry zone of Myanmar. Its presence in northern Lao PDR has not been confirmed although it has been recorded from the southern part of the country. It is absent from North Viet Nam, where records attributed to this species likely reflect confusion with <em>N. atra</em> or <em>N. siamensis</em>.",
+    "population": "This species is common in most of its range. G. Zug (pers. comm.) states that it is widespread and common in Myanmar. It is also fairly common in Indochina. It is considered to have declined by over 30% over the preceding ten years in China as a result of overharvesting (Wang and Xie 2009), although China forms a small part of its range. It is explicitly included within the concept of <em>Naja naja</em> that the Viet Nam Red Data Book estimates has suffered a 50% population decline over the same period (Dang <em>et al.</em> 2007), but rates of decline specifically attributable to this species in Viet Nam are unknown. It is unclear whether this species is undergoing significant declines elsewhere within its range.",
+    "habitats": "This species can adapt to a range of habitats, including both natural and anthropogenically-modified environments. It prefers habitats associated with water, such as paddy fields, swamps, and mangroves, but can also be found in grasslands, shrublands, and forests. It also occurs in agricultural land and human settlements, including cities. It occurs up to 1,000 m elevation.",
+    "threats": "The species is probably threatened in China, Myanmar and much of Indochina, as a result of heavy exploitation for use in traditional medicine, including snake wine in Viet Nam, and for skins and food. CITES data indicates, however, that it is unclear whether these pressures are sufficient to threaten the survival of subpopulations.",
+    "measures": "This species is listed on CITES Appendix II. Its large geographic distribution is coincident with a number of protected areas. As part of the <em>Naja naja</em> complex (with <em>N. naja</em>, <em>N. atra</em> and <em>N. siamensis</em>), this species is protected in Vietnam (where members of the complex are listed as nationally Endangered - Dang <em>et al.</em> 2007) by government decree, limiting commercial exploitation. The China Species Red List lists this snake as nationally Vulnerable (Wang and Xie 2009). Due to its extensive use more research on how harvesting is impacting the population in major areas of its range is recommended.",
+    "use_trade": "This species is harvested in Lao PDR, Viet Nam, Myanmar and China for both domestic use and export to supply demand for Chinese traditional medicine (Stuart 2004). It is also used in snake wine in Viet Nam (Somaweera and Somaweera 2010) and probably throughout its range. Harvesting is quite extensive in Indochina, where it is collected for food and skin as well as for medicinal purposes (Q.T. Nguyen pers. comm. August 2011). CITES data indicate that between 2000 and 2009 live exports and medicinal parts were predominantly taken from captive-bred or, in smaller numbers, farmed animals, while skins were almost exclusively from wild specimens, with the export of 6,882 skins reported from Thailand over this period (M. Auliya pers. comm. December 2011). It is of some interest in the international pet trade (M. Auliya pers. comm. December 2011).",
+    "rationale": "<em>Naja kaouthia</em> has been assessed as Least Concern owing to its large distribution, tolerance of a broad range of modified habitats, and its reported abundance. No major threats have been reported although it is extensively used for food, snake wine, skin trade and medicinal purposes, and has undergone at least localized population declines in the eastern part of its range. For this reason it is listed in appendix II of CITES. However, it is not known whether it is undergoing a significant population decline and more research is needed to establish whether this species might warrant reassessment.",
+    "trend_justification": null,
+    "taxonomic_notes": "This species was formerly treated as a subspecies of <span style=\"font-style: italic;\">Naja naja </span>(see             Wüster 1996 for nomenclatural review)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Shrub Dominated Wetlands"
+      },
+      "code": "5_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Swamp"
+      },
+      "code": "1_8"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Mangrove Vegetation Above High Tide Level"
+      },
+      "code": "1_7"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Seasonally Wet/Flooded"
+      },
+      "code": "4_6"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nepal"
+      },
+      "code": "NP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Peninsular Malaysia"
+      },
+      "code": "MLY-PM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bhutan"
+      },
+      "code": "BT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lao People's Democratic Republic"
+      },
+      "code": "LA"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Establishing ex-situ production *"
+      },
+      "code": "16"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "No decline",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Stuart, B. & Wogan, G.",
+      "value": [
+        "Bryan Stuart (Chicago Field Museum, Chicago, USA)",
+        "Guinevere Wogan (University of California, Berkeley)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Bowles, P. & Cox, N.A.",
+      "value": [
+        "Philip Bowles (IUCN SSC/CI Biodiversity Assessment Unit)",
+        "Neil Cox (Biodiversity Assessment Unit)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Zug, G., De Silva, R., Milligan, HT, Wearn, O.R., Wren, S., Zamin, T., Sears, J., Wilson, P., Lewis, S., Lintott, P. & Powney, G.",
+      "value": [
+        "Ranmali De Silva (IOZ)",
+        "Harriet Milligan (IOZ)",
+        "Oliver Wearn (Imperial College/ Institute of Zoology, London, UK)",
+        "Sally Wren (Zoological Society of London, UK)",
+        "Tara Zamin (ex ZSL)",
+        "George Zug (Smithsonian Institution, USA)",
+        "Jennifer Sears (SRLI Reptile Assessment)",
+        "Penny Wilson (SRLI Reptile Assessment)",
+        "Sarah Lewis (SRLI Reptile Assessment)",
+        "Paul Lintott (SRLI Reptile Assessment)",
+        "Gary Powney (SRLI Reptile Assessment)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Cox, M.J. 1991. <i>The Snakes of Thailand and Their Husbandry</i>. Krieger Publishing Company, Florida.",
+      "year": "1991",
+      "title": "The Snakes of Thailand and Their Husbandry",
+      "author": "Cox, M.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dang, N.T., Tran, K., Tran, Dang, H.H., Nguyen, T.N., Nguyen, Y.H. and Dang, D.T. (eds.). 2007. <i>Vietnam Red Data Book. Part I. Animals</i>.",
+      "year": "2007",
+      "title": "Vietnam Red Data Book. Part I. Animals",
+      "author": "Dang, N.T., Tran, K., Tran, Dang, H.H., Nguyen, T.N., Nguyen, Y.H. and Dang, D.T. (eds.)",
+      "citation_short": null
+    },
+    {
+      "citation": "Daniel, J.C. 2002. <i>The Book of Indian Reptiles and Amphibians</i>. Oxford University Press / Bombay Natural History Society, Oxford.",
+      "year": "2002",
+      "title": "The Book of Indian Reptiles and Amphibians",
+      "author": "Daniel, J.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wang, S. and Xie, Y. (eds.). 2009. <i>China Species Red List Vol. II - Vertebrates Part 2</i>. Biodiversity Working Group of China Council for International Cooperation on Environment and Development, Beijing.",
+      "year": "2009",
+      "title": "China Species Red List Vol. II - Vertebrates Part 2",
+      "author": "Wang, S. and Xie, Y. (eds.)",
+      "citation_short": ""
+    },
+    {
+      "citation": "Zug, G.R. 2007. <i>pers. comm. Red List Assessment</i>.",
+      "year": "2007",
+      "title": "pers. comm. Red List Assessment",
+      "author": "Zug, G.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Stuart, B.L. 2004. The Harvest and Trade of Reptiles at U Minh Thuong National Park, Southern Viet Nam.  TRAFFIC Bulletin. TRAFFIC.",
+      "year": "2004",
+      "title": "The Harvest and Trade of Reptiles at U Minh Thuong National Park, Southern Viet Nam",
+      "author": "Stuart, B.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Somaweera, R. and Somaweera, N. 2010. Serpents in jars: the snake wine industry in Vietnam. <i>Journal of Threatened Taxa</i> 2(11): 1251-1260.",
+      "year": "2010",
+      "title": "Serpents in jars: the snake wine industry in Vietnam",
+      "author": "Somaweera, R. and Somaweera, N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bain, R.H. 2007. <i>pers. comm. Red List Assessment</i>.",
+      "year": "2007",
+      "title": "pers. comm. Red List Assessment",
+      "author": "Bain, R.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "O'Shea, M. 2005. <i>Venomous Snakes of the World</i>. New Holland Publishers, London.",
+      "year": "2005",
+      "title": "Venomous Snakes of the World",
+      "author": "O'Shea, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sharma, R.C. 2003. <i>Handbook - Indian Snakes</i>. Zoological Survey of India, Kolkata.",
+      "year": "2003",
+      "title": "Handbook - Indian Snakes",
+      "author": "Sharma, R.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Asean Regional Centre for Biodiversity Conservation (ARCBC). 2006. Biodiversity Information Sharing Service. Available at: <a href=\"http://www.arcbc.org\">http://www.arcbc.org</a>. ",
+      "year": "2006",
+      "title": "Biodiversity Information Sharing Service",
+      "author": "Asean Regional Centre for Biodiversity Conservation (ARCBC)",
+      "citation_short": null
+    },
+    {
+      "citation": "Wüster, W. 1996. Taxonomic changes and toxinology: systematic revisions of the Asiatic cobras (<i>Naja naja</i> species complex). <i>Toxicon</i> 34: 399-406.",
+      "year": "1996",
+      "title": "Taxonomic changes and toxinology: systematic revisions of the Asiatic cobras (<i>Naja naja</i> species complex)",
+      "author": "Wüster, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Trutnau, L. 2004. <i>Venomous Snakes: Snakes in the Terrarium</i>. Krieger Publishing Company, Florida.",
+      "year": "2004",
+      "title": "Venomous Snakes: Snakes in the Terrarium",
+      "author": "Trutnau, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2012. IUCN Red List of Threatened Species (ver. 2012.1). Available at: <a href=\"http://www.iucnredlist.org\">http://www.iucnredlist.org</a>. (Accessed: 19 June 2012).",
+      "year": "2012",
+      "title": "IUCN Red List of Threatened Species (ver. 2012.1)",
+      "author": "IUCN",
+      "citation_short": "IUCN 2012.1"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

@@ -1,0 +1,1006 @@
+{
+  "assessment_date": "2020-01-28T00:00:00.000+00:00",
+  "year_published": "2020",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 40647,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/40647/17953200",
+  "citation": "Wallis, J. 2020. Papio anubis. The IUCN Red List of Threatened Species 2020: e.T40647A17953200. Accessed on 15 May 2026.",
+  "assessment_id": 17953200,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 40647,
+    "scientific_name": "Papio anubis",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "PRIMATES",
+    "family_name": "CERCOPITHECIDAE",
+    "genus_name": "Papio",
+    "species_name": "anubis",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Lesson, 1827)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Primate Specialist Group",
+        "url": "http://www.primate-sg.org/",
+        "description": "Chair: Russell Mittermeier (email: rmittermeier@globalwildlife.org)\nRed List Authority Focal Points: \nProsimians, monkeys and smaller apes - Sanjay Molur (email: sanjay@zooreach.org) and Christoph Schwitzer (email: cschwitzer@bristolzoo.org.uk)\nVice-Chair for great apes - Dirck S. Byler (email: dbyler@globalwildlife.org)\nVice-Chair for small apes - Susan M. Cheyne (email: section.small.apes@gmail.com)\nJournals and Newsletters: \nPrimate Conservation: http://www.primate-sg.org/primate_conservation/\nNeotropical Primates: http://www.primate-sg.org/neotropical_primates/\nAsian Primates: http://www.primate-sg.org/asian_primates_newsletter/ and http://www.primate-sg.org/asian_primates_journal/\nLemur News: http://www.primate-sg.org/lemur_news/\nAfrican Primates: http://www.primate-sg.org/african_primates/\n"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Anubis Baboon",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Babouin anubis",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Papión Oliva",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "Olive Baboon",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Papio hamadryas ssp. anubis (Lesson, 1827)",
+        "status": "ACCEPTED",
+        "genus_name": "Papio",
+        "species_name": "hamadryas",
+        "species_author": null,
+        "infrarank_author": "(Lesson, 1827)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "anubis"
+      },
+      {
+        "name": "Papio anubis ssp. furax Elliot, 1907",
+        "status": "ACCEPTED",
+        "genus_name": "Papio",
+        "species_name": "anubis",
+        "species_author": null,
+        "infrarank_author": "Elliot, 1907",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "furax"
+      },
+      {
+        "name": "Papio anubis ssp. tessellatus Elliot, 1909",
+        "status": "ACCEPTED",
+        "genus_name": "Papio",
+        "species_name": "anubis",
+        "species_author": null,
+        "infrarank_author": "Elliot, 1909",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "tessellatus"
+      },
+      {
+        "name": "Papio anubis ssp. doguera (Pucheran & Schimper, 1856)",
+        "status": "ACCEPTED",
+        "genus_name": "Papio",
+        "species_name": "anubis",
+        "species_author": null,
+        "infrarank_author": "(Pucheran & Schimper, 1856)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "doguera"
+      },
+      {
+        "name": "Papio anubis ssp. tibestianus Dekeyser & Derivot, 1960",
+        "status": "ACCEPTED",
+        "genus_name": "Papio",
+        "species_name": "anubis",
+        "species_author": null,
+        "infrarank_author": "Dekeyser & Derivot, 1960",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "tibestianus"
+      },
+      {
+        "name": "Papio anubis ssp. neumanni Matschie, 1897",
+        "status": "ACCEPTED",
+        "genus_name": "Papio",
+        "species_name": "anubis",
+        "species_author": null,
+        "infrarank_author": "Matschie, 1897",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "neumanni"
+      },
+      {
+        "name": "Papio anubis ssp. heuglini Matschie, 1898",
+        "status": "ACCEPTED",
+        "genus_name": "Papio",
+        "species_name": "anubis",
+        "species_author": null,
+        "infrarank_author": "Matschie, 1898",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "heuglini"
+      },
+      {
+        "name": "Simia anubis Lesson, 1827",
+        "status": "ACCEPTED",
+        "genus_name": "Simia",
+        "species_name": "anubis",
+        "species_author": "Lesson, 1827",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 2500,
+    "lower_elevation_limit": 360,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p>Olive Baboons are the most extensively distributed of the baboons. They range throughout the Sahelian woodland and forest-mosaic habitats from southern Mauritania and Mali eastward through the Sudan to central Somalia. The range extends southwards as far as the Democratic Republic of Congo and Tanzania. Outlying populations inhabit the Tibesti and Air massifs in the Sahara (in Niger and Chad) and in the Pare and Usambara Mountains of Tanzania.</p>  <p>In East Africa, the distribution appears to be actively changing. In fact, wherever the range of Olive Baboons encounters that of other <em>Papio</em> species, there are hybrid zones. For example, Olive Baboons form a narrow hybrid zone with <em>P. hamadryas</em> below the Awash Falls and elsewhere in northern Ethiopia and hybridize with <em>P. cynocephalus</em> in the eastern part of Tsavo and Amboseli National Parks in Kenya.</p>  <p>In the clinal hybrid zone of <em>P. anubis</em> x <em>P. cynocephalus</em> between Laikipia District, just to the northeast and east of Mt. Kenya, and the Lower Tana River, near the Kenya coast, the baboons are intermediate and cannot be readily allocated to either <em>P. anubis</em> or <em>P. cynocephalus. They </em>become increasingly “yellow-like” in their phenotypes towards the Kenya Coast (De Jong and Butynski 2009, Zinner 2013). <em>Papio anubis</em> x <em>P. cynocephalus</em> hybrids are found near the Pare and Usambara Mountains in Tanzania. They are sympatric with a number of other primate species, including Chimpanzees (<em>Pan</em> <em>troglodytes</em>), <em>Chlorocebus</em> spp., several <em>Cercopithecus</em> species and <em>Erythrocebus patas</em>, across their range.<em></em></p>",
+    "population": "<p>The Olive Baboon is widespread and locally common despite trapping, shooting and poisoning campaigns in parts of their range.</p>",
+    "habitats": "<p>The Olive Baboon inhabits a wide variety of habitats, including semi-desert, thorn scrub and open savanna. Most often, however, they are found in woodland and forest-mosaic habitats that may include high-elevation forest, gallery forest and rainforest up to 2,500 m in elevation. They are also found in rocky hills; some populations live in broad areas where woodlands have overtaken volcanic rock craters, such as those seen in northeastern Nigeria (Wallis pers. obs. 2005). They can readily persist in secondary and/or highly fragmented vegetation, including cultivated areas. Because water is a limiting factor, troops will travel long distances to find it. On occasion, they dig into semi-dry riverbeds to make small pools to access water.</p><p>Olive Baboons are omnivorous opportunists; their diet varies and adapts according to region, season and time of day. They eat mainly fruits and leaves, as well as flowers, seeds, shoots, buds, tuberous roots, bark, bulbs, twigs, sap, mushrooms and lichens (Zinner 2013). In dry seasons, they may use fallback foods such as resin, gum and bark. Olive Baboons eat animal prey, including a variety of invertebrates, lizards, birds, reptile and bird eggs and small mammals. The later include some primate species such as infant <em>Chlorocebus</em> spp. When meat-eating occurs, it typically involves randomly “stumbling” upon the item and eating it. Rarely does active hunting occur. When it does, it is individual hunting and not a cooperative organized group hunting such as that seen in Chimpanzees (Palombit 2013).</p><p>Because they often live near human habitations, Olive Baboons raid crops and garbage dumps. Thus, their diet can also include a variety of cultivated crops such as sugarcane, corn, bananas and beans. Crop-raiding can vary considerably; peaks in consumption may be associated with forest fruit shortages in some areas (see Naughton-Treves <em>et al.</em> 1998).</p><p>The species typically forages in extended, well-spaced troops that may occasionally number up to 200 animals, although more typically average about 80 individuals. As with most other baboons, the species is not territorial but instead uses home ranges that may overlap with other troops’ ranges. Home ranges vary in size and daily movements are usually less than 7 km (Zinner 2013). In addition to food and water, home ranges must contain suitable sleeping sites. For Olive Baboons, these typically require large trees and rocky outcroppings.</p><p>                             </p><p>Olive Baboons typically live in multimale-multifemale troops, although some uni-male troops have been reported in West Africa. Extensive review and summary of the Olive Baboon’s social structure, behaviour, anatomy and reproduction may be found in Palombit (2013) and Zinner (2013).</p>",
+    "threats": "<p>There are currently no major threats to this species that reduce population numbers across its range. However, some populations are under local pressure from agriculture and development projects. Although not well documented, they are hunted for bushmeat in some areas (Wallis pers. obs. Tanzania 1991, Wallis pers. obs. in Nigeria 2006–2008, van Vliet <em>et al</em>. 2012). The potential for increased hunting pressure should be monitored. With rising numbers in the human population and declining numbers of other wildlife species, Olive Baboons may eventually become a more sought-after target; at 30 kg, an adult male provides a substantial source of protein. It should be noted that Olive Baboons have been found to harbour Simian Immunodeficiency Viruses (SIV) (Peeters <em>et al.</em> 2002) and Ebola virus (Leroy <em>et al.</em> 2004), thus highlighting the health risks of baboon meat consumption to humans.</p>  <p>Both <em>Papio anubis</em> and <em>P. cynocephalus</em> are naturally infected with <em>Treponema pallidum</em> subspecies <em>pertenue</em>, the bacterium that causes human yaws and closely related to the bacterium that causes syphilis (<em>T. p. pallidum</em>) (see Harper <em>et al</em>. 2012, Chuma <em>et al</em>. 2019). In <em>Papio</em> sp., the infection appears to spread through sexual contact and is associated with open lesions in and around the genitalia of both sexes. The degree of morbidity varies, including some cases of deaths occurring in the Tanzania’s Gombe National Park’s Olive Baboons, when the genitalia are so badly damaged that urinary flow was obstructed (Wallis and Lee 1999). Similar lesions appear in some other Olive Baboon populations throughout their range, most notably in Lake Manyara National Park in Tanzania (Chuma <em>et al.</em> 2019) and Yankari Game Reserve in Nigeria (Wallis pers. obs. 2007).</p>  <p>Thus, although hunting pressure, persecution for crop-raiding and incidence of disease transmission do not currently constitute “major threats”, both phenomena merit attention and monitoring.</p>",
+    "measures": "<p>This species is listed under Appendix II of CITES and as Vermin under the African Convention.</p>  <p>Olive Baboons are found in a many protected areas across their range. These include: Pendjari National Park in Benin; west of the Niger National Park in Burkina Faso; Bénoué, Bouba Ndjida and Waza National Parks, Faro Reserve and Kimbe River and Mbi Crater Game Reserves in Cameroon; Zakouma National Park in Chad; Garamba, Kahuzi-Biega and Virunga National Parks and Tayna Gorilla Reserve in the Democratic Republic of Congo; Awash and Bale Mountains National Parks, Stephanie Wildlife Sanctuary and Menagesha-Suba National Forest in Ethiopia; Bui, Digya and Mole National Parks, Kogyae Strict Nature Reserve, Bomfobiri Wildlife Sanctuary and Willi Falls Reserve in Ghana; Marahoué, Comoé and Mount Peko National Parks in Cote d’Ivoire; Lake Nakuru, Marsabit, Meru, Nairobi and Samburu National Parks and Masai Mara Game Reserve in Kenya; West National Park in Niger; Cross River, Gashaka-Gumti and Kainji Lake National Parks, Ngel Nyaki Forest Reserve, Yankari Game Reserve in Nigeria; Akagera, Nyungwe and Volcanoes National Parks in Rwanda; Dinder National Park in Sudan; Nimule National Park in South Sudan; Arusha, Gombe, Kilimanjaro, Lake Manyara, Serengeti and Tarangire National Parks in Tanzania; Keran and Fazao-Malfacassa National Parks and Koue Reserve in Togo; and Bwindi Impenetrable, Kibale, Murchison Falls and Queen Elizabeth National Parks and Budongo Forest Reserve in Uganda (Zinner 2013).</p>  <p>As mentioned under Threats, the Olive Baboon may see local population pressure from trapping due to crop-raiding and bushmeat use. They are also susceptible to the spread of <em>Treponema pallidum</em>, which can have debilitating or even deadly consequences. Thus, research and ongoing monitoring for hunting pressure and disease transmission is recommended.</p>  <p>The isolated subpopulations on Saharan massifs in Niger and Chad, as well as the area of the Pare mountains in Tanzania merit further protection and research. Research into their range, boundaries and hybridization could be useful for conservation planning. Attention should be given to the likely effects of climate change on ecosystem distribution across much of the Olive Baboon’s range (see Ponce-Reyes <em>et al.</em> 2017 for suggested study approaches).</p>  <p>&#160;</p>",
+    "use_trade": "<p>Hunting of Olive Baboons occurs in parts of their range, particularly in the west. There is no indication that their trade – as bushmeat – occurs beyond local or regional use, however.</p>",
+    "rationale": "<em>Papio anubis</em> is listed as Least Concern as the species is very widespread and abundant. It is often persecuted as a crop raider and hunted for bushmeat in some locations. However, there are currently no major threats believed to be resulting in a range-wide population decline.",
+    "trend_justification": null,
+    "taxonomic_notes": "<p>This species was previously treated as a subspecies of <em>Papio hamadryas</em>, but now is considered a species (Kingdon 1997, Groves 2001, 2005, Grubb <em>et al.</em> 2003). There are some regional differences in morphology and pelage colour, but there are no currently recognised subspecies (Zinner 2013).<br/><br/><em>Papio anubis</em> hybridizes with <em>P. cynocephalus</em> in a broad clinal zone between Laikipia district to the northeast of Mont Kenya and the Lower Tana River near the Kenya coast. In that 200-km wide area, baboons are intermediate in appearance and are difficult to allocate to either species (Zinner 2013). Hybridization with <em>P. papio</em> is likely but has not been confirmed. Hybridization with <em>Theropithecus gelada</em> has been observed in the wild and even hybridization with White-naped Mangabeys (<em>Cercocebus lunulatus</em>) is suspected (R. Matsuda Goodwin pers. comm. 2020). <br/><br/>According to a review presented by Zinner (2013), <em>P. anubis</em> from Eritrea and Ethiopia carry maternally inherited mitochondria that are closely related to <em>P. hamadryas</em> mitochondria and <em>P. anubis</em> in Kenya and Tanzania carry mitochondria closely related to <em>P. cynocephalus</em> mitochondria, indicating that male introgression by <em>P. anubis</em> might be the major form of hybridization.</p>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    },
+    {
+      "majorImportance": null,
+      "season": "Passage",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Passage",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": null,
+      "season": "Passage",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Subtropical/Tropical Heavily Degraded Former Forest"
+      },
+      "code": "14_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Moist"
+      },
+      "code": "2_2"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ghana"
+      },
+      "code": "GH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Burundi"
+      },
+      "code": "BI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Burkina Faso"
+      },
+      "code": "BF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rwanda"
+      },
+      "code": "RW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo"
+      },
+      "code": "CG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Côte d'Ivoire"
+      },
+      "code": "CI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ethiopia"
+      },
+      "code": "ET"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Central African Republic"
+      },
+      "code": "CF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Benin"
+      },
+      "code": "BJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mali"
+      },
+      "code": "ML"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uganda"
+      },
+      "code": "UG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Togo"
+      },
+      "code": "TG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sierra Leone"
+      },
+      "code": "SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Niger"
+      },
+      "code": "NE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chad"
+      },
+      "code": "TD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Sudan"
+      },
+      "code": "SS"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects (species is not the target)"
+      },
+      "code": "5_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Wallis, J.",
+      "value": [
+        "Janette Wallis (PSG)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Williamson, E.A.",
+      "value": [
+        "Elizabeth A. Williamson (University of Stirling)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Kingdon, J., Butynski, T.M. & De Jong, Y.A.",
+      "value": [
+        "Thomas Butynski (Bioko Biodiversity Protection Program)",
+        "Jonathan Kingdon (IUCN SSC Afrotheria Specialist Group)",
+        "Yvonne De Jong (Eastern Africa Primate Diversity and Conservation Program)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Groves C.P. 2001. <i>Primate Taxonomy</i>. Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "2001",
+      "title": "Primate Taxonomy",
+      "author": "Groves C.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Groves, C.P. 2005. Order Primates. In: D.E. Wilson and D.M. Reeder (eds), <i>Mammal Species of the World</i>, pp. 111-184. The Johns Hopkins University Press, Baltimore, Maryland, USA.",
+      "year": "2005",
+      "title": "Order Primates",
+      "author": "Groves, C.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Grubb, P., Butynski, T.M., Oates, J.F., Bearder, S.K., Disotell, T.R., Groves, C.P. and Struhsaker, T.T. 2003. Assessment of the diversity of African primates. <i>International Journal of Primatology</i> 24(6): 1301-1357.",
+      "year": "2003",
+      "title": "Assessment of the diversity of African primates",
+      "author": "Grubb, P., Butynski, T.M., Oates, J.F., Bearder, S.K., Disotell, T.R., Groves, C.P. and Struhsaker, T.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kingdon, J. 1997. <i>The Kingdon Field Guide to African Mammals</i>. Academic Press, San Diego, California, USA.",
+      "year": "1997",
+      "title": "The Kingdon Field Guide to African Mammals",
+      "author": "Kingdon, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "De Jong, Y.A and Butynski. 2009. Primate biogeography, diversity, taxonomy and conservation of the coastal forests of Kenya. . Unpublished report to the Critical Ecosystem Partnership Fund. Eastern Africa Primate Diversity and Conservation Program, Nanyuki, Kenya.",
+      "year": "2009",
+      "title": "Primate biogeography, diversity, taxonomy and conservation of the coastal forests of Kenya. ",
+      "author": "De Jong, Y.A and Butynski",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 13 June 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-2"
+    },
+    {
+      "citation": "Chuma, I.S., Roos, C., Atickem, A., Bohm, T., Collins, D.A., Grillova, L., Hallmaier-Wacker, L.K., Kazwala, R.R., Keyyu, J.D., Lüert, S., Maloueki, U., Oppelt, J. Petrželková, K.J., Piel, A., Stewart, F.A., Smajs, D. and Knauf, S. 2019. Strain diversity of Treponema pallidum subsp. pertenue suggests rare interspecies transmission in African nonhuman primates. <i>Scientific Reports</i> 9: 14243.",
+      "year": "2019",
+      "title": "Strain diversity of Treponema pallidum subsp. pertenue suggests rare interspecies transmission in African nonhuman primates",
+      "author": "Chuma, I.S., Roos, C., Atickem, A., Bohm, T., Collins, D.A., Grillova, L., Hallmaier-Wacker, L.K., Kazwala, R.R., Keyyu, J.D., Lüert, S., Maloueki, U., Oppelt, J. Petrželková, K.J., Piel, A., Stewart, F.A., Smajs, D. and Knauf, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Harper, K.N., Fyumagwa, R.D., Hoare, R., Wambura, P.N., Coppenhaver, D.H., Sapolsky, R.M., Alberts, S.C., Tung, J., Rogers, J., Kilewo, M. Batamuzi, E.K., Leendertz, F.H., Armelagos, G.J. and Knauf, S. 2012. Treponema pallidum infection in the wild baboons of East Africa: distribution and genetic characterization of the strains responsible. <i>PLoS One</i> 7: e50882.",
+      "year": "2012",
+      "title": "Treponema pallidum infection in the wild baboons of East Africa: distribution and genetic characterization of the strains responsible",
+      "author": "Harper, K.N., Fyumagwa, R.D., Hoare, R., Wambura, P.N., Coppenhaver, D.H., Sapolsky, R.M., Alberts, S.C., Tung, J., Rogers, J., Kilewo, M. Batamuzi, E.K., Leendertz, F.H., Armelagos, G.J. and Knauf, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Leroy, E.M., Telfer, P., Kumulungui, B., Yaba, P., Rouguet, P., Roques, P., Gonzalez, J.-P., Ksiazek, T.G., Rollin, P.E. and Nerrienet, E. 2004. A serological survey of Ebola virus infection in Central African nonhuman primates. <i>The Journal of Infectious Disease</i> 190: 1895-1899.",
+      "year": "2004",
+      "title": "A serological survey of Ebola virus infection in Central African nonhuman primates",
+      "author": "Leroy, E.M., Telfer, P., Kumulungui, B., Yaba, P., Rouguet, P., Roques, P., Gonzalez, J.-P., Ksiazek, T.G., Rollin, P.E. and Nerrienet, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Naughton-Treves, L., Treves, A., Chapman, C. and Wrangham, R. 1998. Temporal patterns of crop-raiding by primates: linking food availability in croplands and adjacent forest. <i>Journal of Applied Ecology</i> 35: 596-606.",
+      "year": "1998",
+      "title": "Temporal patterns of crop-raiding by primates: linking food availability in croplands and adjacent forest",
+      "author": "Naughton-Treves, L., Treves, A., Chapman, C. and Wrangham, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Palombit, R.A. 2013. <i>Papio anubis</i>  Olive Baboon (Anubis Baboon). In: T.M. Butynski, J. Kingdon and J. Kalina (eds), <i>Mammals of Africa. Volume II: Primates</i>, pp. 233-239. Bloomsbury Publishing, London.",
+      "year": "2013",
+      "title": "<i>Papio anubis</i>  Olive Baboon (Anubis Baboon)",
+      "author": "Palombit, R.A",
+      "citation_short": null
+    },
+    {
+      "citation": "Ponce-Reyes, R., Plumptre, A.J., Segan, D., Ayebare, S., Fuller, R.A., Possingham, H.P. and Watson, J.E.M. 2017. Forecasting ecosystem responses to climate change across Africa’s Albertine Rift. <i>Biological Conservation</i> 209: 464-472.",
+      "year": "2017",
+      "title": "Forecasting ecosystem responses to climate change across Africa’s Albertine Rift",
+      "author": "Ponce-Reyes, R., Plumptre, A.J., Segan, D., Ayebare, S., Fuller, R.A., Possingham, H.P. and Watson, J.E.M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "van Vliet, N., Nebesse, C., Gambalemoke, S., Akaibe, D. and Nasi, R. 2012. The bushmeat market in Kisangani, Democratic Republic of Congo: implications for conservation and food security. <i>Oryx </i> 46: 196-203.",
+      "year": "2012",
+      "title": "The bushmeat market in Kisangani, Democratic Republic of Congo: implications for conservation and food security",
+      "author": "van Vliet, N., Nebesse, C., Gambalemoke, S., Akaibe, D. and Nasi, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wallis, J. and Lee, D.R. 1999. Primate conservation: the prevention of disease transmission. <i>International Journal of Primatology</i> 20: 803-825.",
+      "year": "1999",
+      "title": "Primate conservation: the prevention of disease transmission",
+      "author": "Wallis, J. and Lee, D.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zinner, D. 2013. Olive baboon <i>Papio anubis</i>. In: R.A. Mittermeier, A.B. Rylands & D.E. Wilson (ed.), <i>In Handbook of the Mammals of the World Volume 3: Primates</i>, pp. 663-664. Lynx, Barcelona.",
+      "year": "2013",
+      "title": "Olive baboon <i>Papio anubis</i>",
+      "author": "Zinner, D.",
+      "citation_short": ""
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

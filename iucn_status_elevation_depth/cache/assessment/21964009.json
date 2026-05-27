@@ -1,0 +1,1001 @@
+{
+  "assessment_date": "2014-04-22T01:00:00.000+01:00",
+  "year_published": "2016",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 40488,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/40488/21964009",
+  "citation": "Woinarski, J. & Burbidge, A.A. 2016. Ornithorhynchus anatinus. The IUCN Red List of Threatened Species 2016: e.T40488A21964009. Accessed on 15 May 2026.",
+  "assessment_id": 21964009,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 40488,
+    "scientific_name": "Ornithorhynchus anatinus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "MONOTREMATA",
+    "family_name": "ORNITHORHYNCHIDAE",
+    "genus_name": "Ornithorhynchus",
+    "species_name": "anatinus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Shaw, 1799)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Australasian Marsupial and Monotreme Specialist Group",
+        "url": "https://www.iucn.org/commissions/ssc-groups/mammals/specialist-groups-a-e/australasian-marsupial-and-monotreme",
+        "description": "Co-Chairs: John Woinarski (email: John.Woinarski@cdu.edu.au) and Diana Fisher (email: d.fisher@uq.edu.au)\nRed List Authority Coordinator: Chris Johnson (email: c.n.johnson@utas.edu.au)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Duck-billed Platypus",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Ornithorynque",
+        "language": "fre"
+      },
+      {
+        "main": true,
+        "name": "Platypus",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Platypus anatinus Shaw, 1799",
+        "status": "ACCEPTED",
+        "genus_name": "Platypus",
+        "species_name": "anatinus",
+        "species_author": "Shaw, 1799",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Near Threatened"
+    },
+    "code": "NT"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": "100",
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "30000-300000, 50000",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "9-12",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Percentage of population protected by PAs",
+            "value": "21-30"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "Yes",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": "12400",
+    "continuing_decline_in_area_of_occupancy": "Yes",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "1096396",
+    "continuing_decline_in_extent_of_occurence": "No",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Yes",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "The Platypus is endemic to Australia, where it is dependent on rivers, streams, and bodies of freshwater. It is present in eastern Queensland and New South Wales, in eastern, central, and south-western Victoria, throughout Tasmania, and on King Island. An introduced population is established at the western end of Kangaroo Island (Carrick <em>et al.</em> 2008). Its occurrence is reasonably continuous within some catchments, but discontinuous in others (e.g., the Bega River catchment in New South Wales; Lunney <em>et al.</em>&#160;2008), and in many catchments its actual distribution is poorly known. In Victoria, fewer than 200 individuals occupy the Wimmera-Avon River basin (distributed over an area of &gt;2,400,000 ha), and the species appears to have recently become extinct in the neighbouring Avoca River basin (Australian Platypus Conservancy, unpublished data) (T. Grant, S. Munks, F. Carrick, and M. Serena <em>pers. comm. </em>2014). The species now appears to be extinct also from its former range in the Adelaide Hills and Mount Lofty Ranges in South Australia.",
+    "population": "<p>Difficulties in reliably quantifying platypus abundance compromise estimation of population size and its trends (Gust and Griffiths 2009). There has been no robust assessment of the population size of the Platypus either nationwide or for the key states in the species’ geographic range. Lunney <em>et al</em>. (2008) stated that ‘It is a common species’, but noted that ‘in general there is a surprising lack of knowledge about its abundance’. Carrick <em>et al</em>. (2008) considered it ‘common (though rarely abundant)’ but regarded it as ‘potentially vulnerable due to its specialised dependence on established water bodies for food and shelter’. Grant and Temple-Smith (2003) noted that the current and future conservation status of the Platypus is not easily predicted since their abundance is not readily measured. Since abundance is difficult to determine, population trends are generally poorly defined and the impacts of particular threats have been suggested and inferred, but rarely rigorously demonstrated (Gust and Griffiths 2009).<br/><br/>However, there have been some estimates of the number of individuals or of density for (parts of) individual rivers and for some areas. For Kangaroo Island, the size of the introduced subpopulation has been robustly estimated to be about 110 individuals (Furlan <em>et al</em>. 2012), with an effective population size of 11 individuals: this subpopulation was derived from a small number of individuals introduced between 1928 and the 1940s.<br/><br/>Platypus population densities in two reliably perennial rural streams in southern Victoria ranged from 1.3-2.1 subadults and adults per kilometre of channel (Serena 1994; Gardner and Serena 1995). In streams in high quality native forests at Lake Eildon National Park in central Victoria, densities were only 0.1-0.3 subadults and adults recorded per kilometre of perennial stream channel (Serena <em>et al</em>. 2001a, b). In a Tasmanian study of one catchment, catch rates were lower in headwaters than downstream reaches and in areas exposed to previous logging than in unmodified areas (Koch <em>et al</em>. 2006).<br/><br/>The extent of knowledge of population trends, and the trends themselves, have varied across its range. There is little available information on trends in Queensland. In New South Wales, Dickman (1994) noted that it had ‘declined in all regions’; and some studies have demonstrated local declines or even disappearances in recent decades (e.g. Grant and Denny 1991; Grant 1992, 1993, 1998; Rohweder 1992, Rohweder and Baverstock 1999; Lunney <em>et al</em>. 2008; Serena and Williams 2010d). A state-wide survey in 1987-88 concluded that its overall distribution had not changed significantly since the 1950s (Grant and Denny 1991; Grant 1992), and this pattern was broadly evident in some subsequent broad-scale assessment in 1994-96 (Grant <em>et al</em>. 2000). A more detailed and systematic assessment was undertaken in 2006, based on community knowledge (D. Lunney <em>pers. comm.</em> 2013). This concluded that there had been no sharp overall decline, but there were more locations showing decline than increase.<br/><br/>In Victoria, the Platypus is faring far less well, with substantial declines over recent decades. Mark-recapture studies carried out along the Wimmera River and its tributaries indicated that this system (conservatively estimated to have supported &gt;1,500 Platypus at the time of European settlement) supported fewer than 200 individuals by the late 1990s, with numbers declining to &lt;30 individuals by 2007 (Serena and Williams 2007b); juveniles have not been recorded in this system since 2006 (Griffiths and Weeks 2012). Capture frequency in replicated surveys in the Coliban River in central Victoria declined five-fold from 2001 to 2010, presumably due to drought (Williams 2010). It has been lost from several largely self-contained catchments, including the Cardinia Creek system in the mid-1980s (Serena and Williams 2004), the Curdies River system in the mid-1990s (Serena <em>et al.</em> 2002), and the Bass and Avoca River systems in the mid-2000s (Serena and Williams 2007a; M. Serena <em>pers. comm</em>. 2014). In the greater Melbourne area (across four hydrologically independent drainage basins) numerous subpopulations have contracted or become fragmented since 1995 as a by-product of urban or agricultural development and these are continuing to decline (Serena and Williams 2008a; Griffiths <em>et al</em>. 2012). Elsewhere in Victoria, both reduced flow regimes and severe flooding have contributed to the local depletion or disappearance of Platypus subpopulations (e.g. Serena and Williams 2007b, 2008b, 2010c).<br/><br/>There is little information on recent population trends in South Australia (Kangaroo Island). In Tasmania, trapping surveys in 2008-09 indicated that it remains widespread (Geragthy <em>et al</em>. 2011) and occupies a diverse array of water bodies (Gust <em>et al.&#160;</em>2009). The lack of evidence for major reductions in abundance or distribution across Tasmania should be treated cautiously given the insensitivity of existing measures to detect change, the lack of systematic, rigorous monitoring for the species, and the possibility that significant localised declines occurred but went unnoticed (Gust and Griffiths 2010).&#160;</p><p></p>",
+    "habitats": "The Platypus is restricted to streams and suitable freshwater bodies, including some shallow water storage lakes and ponds (Carrick <em>et al.</em> 2008). Its food is almost exclusively benthic macroinvertebrates and so the species is water-dependent. Platypuses are largely solitary, and when not foraging in water they normally occupy a resting or nesting burrow in earth banks, although some individuals have been found resting in accumulated stream debris or in low dense vegetation. The species is seldom observed moving on land in mainland Australia, but is frequently seen out of the water in Tasmania, where its predator, the fox (<em>Vulpes vulpes</em>), has been introduced only relatively recently (T. Grant, S. Munks, F. Carrick, and M. Serena <em>pers. comm. </em>2014). The breeding season varies widely depending on location. Females produce one to three eggs annually, but usually two (Carrick <em>et al.</em> 2008). Platypuses are long-lived animals (up to 20 years in the wild).",
+    "threats": "Currently, the predominant threat to the species on the mainland is reduction in stream and river flows due to recent successive droughts, stream regulation, and extraction of water for agricultural, domestic, and industrial supplies. It is also at risk from the opposite extremes associated with climate change – extensive flooding both in space and time associated with recent tropical cyclones that have resulted in increased mortality and all but eliminated recruitment in 2006 over a substantial part of the species’ northern range. Habitat modification due to bank erosion and stream sedimentation (as a result of poor land management practices in agriculture, forestry, and urbanization) are also of great concern. In the case of urban streams, Platypus populations may be adversely affected by poor water quality (in the form of suspended solids and nutrient enrichment), contamination of sediment by heavy metals (Serena and Pettigrove 2005) and entanglement in or ingestion of plastic, rubber and metal litter. Accidental drowning in nets and traps set for fish and crustaceans has the potential to impact<em> Platypus</em> distribution and abundance in all parts of its range, especially in small streams where populations may be critically small. Populations in Tasmania are affected by mucormycosis (associated with the fungal pathogen <em>Mucor amphibiorum</em>) (Obendorf <em>et al.</em> 1993). Across its range, the Platypus is also subject to predation by the introduced Red Fox, dogs and cats.",
+    "measures": "Conservation of the Platypus is limited to its listing as a legally protected species in all states in which it occurs and its incidental inclusion in some national parks and reserves. Legislation prohibiting or controlling problematic fishing activities has been enacted in New South Wales and Victoria, but regulations concerning illegal netting and trapping are often poorly enforced. The most widespread field monitoring program for the species is in Victoria (Australian Platypus Conservancy). There are also a few system-specific studies in other states and community-based reporting of anecdotal occurrences of the species to a variety of institutional and private databases. Still more information about population numbers and monitoring are crucial, especially for a long-lived species such as the Platypus where a lack of recruitment can be masked until a dramatic population crash occurs as adults reach the end of their lifespan.<br/><br/>Population studies of fragmented populations should be a research priority, together with studies to help verify the current distribution and baseline population parameters in areas where the species has declined (Grant and Temple-Smith 2003). Once the Platypus becomes extinct in a river system, the likelihood of its re-colonising that system without human intervention is minimal (T. Grant, S. Munks, F. Carrick, and M. Serena <em>pers. comm.</em> 2014). One reintroduction program is underway in a single fire-affected stream in Victoria (Australian Platypus Conservancy). <br/><br/>Some populations of Platypuses have exhibited antibodies to <em>Leptospirosis</em>, probably transmitted via cattle, but no clinical symptoms have been observed. Mortality from an ulcerative dermatitis caused by Mucor fungus, however, has been recorded across many river systems in Tasmania. There is currently limited investigation of this disease, which should be a research priority both in that state and on the mainland where the fungus is also found (T. Grant, S. Munks, F. Carrick, and M. Serena <em>pers. comm. </em>2014).",
+    "use_trade": "Formerly (mostly before the 20th century) hunted for pelts; and this trade may have affected the status of some subpopulations (Burrell 1927; Grant and Denny 1991)",
+    "rationale": "The Platypus has an extensive range and a large population size that precludes eligibility under criteria B, C and D. However, an overall decline can be inferred and projected from information from a small set of monitoring programs and suspected from threats directly affecting this species and its habitat. This decline is inconsistent across its range, and the overall rate of decline is poorly defined, but is likely to approach but not exceed &gt;30% over a 27-36 year (=three generation) period.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Australasian"
+      },
+      "code": "2"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Invasive/problematic species control"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Victoria"
+      },
+      "code": "VIC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tasmania"
+      },
+      "code": "TAS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Australia"
+      },
+      "code": "SOA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Queensland"
+      },
+      "code": "QLD-QU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New South Wales"
+      },
+      "code": "NSW-NS"
+    },
+    {
+      "is_endemic": true,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Droughts"
+      },
+      "code": "11_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Motivation Unknown/Unrecorded"
+      },
+      "code": "5_3_5"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_2_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_3_4"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Storms & flooding"
+      },
+      "code": "11_4"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Dams (size unknown)"
+      },
+      "code": "7_2_11"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": "Feral",
+      "virus": null,
+      "ias": "Vulpes vulpes",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": "Feral",
+      "virus": null,
+      "ias": "Felis catus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": "Feral",
+      "virus": null,
+      "ias": "Canis familiaris",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Woinarski, J. & Burbidge, A.A.",
+      "value": [
+        "John Woinarski (Natural Resources, Environment and The Arts, NT)",
+        "Andrew Burbidge (IUCN SSC Australasian Marsupial and Monotreme Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Hawkins, C.",
+      "value": [
+        "Clare Hawkins (Department of Primary Industries, Parks, Water & Environment, Hobart, Tasmania, Australia)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Menkhorst, P., Grant, T., Dickman, C., Lunney, D., Serena, M., Gust, N. & Copley, P.",
+      "value": [
+        "Peter Copley",
+        "Chris Dickman",
+        "Tom Grant",
+        "Nick Gust",
+        "Dan Lunney",
+        "Peter Menkhorst",
+        "Melody Serena"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 30 June 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-1"
+    },
+    {
+      "citation": "Carrick, F. N., Grant, T. R. and Temple-Smith, P. D. 2008. Platypus, <i>Ornithorhynchus anatinus</i>. In: S. Van Dyck and R. Strahan (eds), <i>The mammals of Australia. Third Edition</i>, pp. 32-35. Reed New Holland, Sydney, Australia.",
+      "year": "2008",
+      "title": "Platypus, <i>Ornithorhynchus anatinus</i>",
+      "author": "Carrick, F. N., Grant, T. R. and Temple-Smith, P. D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Serena, M. and Pettigrove, V. 2005. Relationship of sediment toxicants and water quality to the distribution of platypus populations in urban streams. <i>Journal of the North American Benthological Society</i> 24: 679-689.",
+      "year": "2005",
+      "title": "Relationship of sediment toxicants and water quality to the distribution of platypus populations in urban streams",
+      "author": "Serena, M. and Pettigrove, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Grant, T. R. and Temple-Smith, P. D. 2003. Conservation of the platypus, <i>Ornithorhynchus anatinus</i>: Threats and challenges. <i>Aquatic Health and Management</i> 6: 1-15.",
+      "year": "2003",
+      "title": "Conservation of the platypus, <i>Ornithorhynchus anatinus</i>: Threats and challenges",
+      "author": "Grant, T. R. and Temple-Smith, P. D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Serena, M., and Williams, G. 2010. Factors contributing to platypus mortality in Victoria. <i>The Victorian Naturalist</i> 127: 178-183.",
+      "year": "2010",
+      "title": "Factors contributing to platypus mortality in Victoria",
+      "author": "Serena, M., and Williams, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Serena, M., Worley, M., Swinnerton, M. and Williams, G. A. 2001. Effect of food availability and habitat on the distribution of platypus (Ornithorhynchus anatinus) foraging activity. <i>Australian Journal of Zoology</i> 49: 263-277.",
+      "year": "2001",
+      "title": "Effect of food availability and habitat on the distribution of platypus (Ornithorhynchus anatinus) foraging activity",
+      "author": "Serena, M., Worley, M., Swinnerton, M. and Williams, G. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gust, N., and Griffiths, J. 2010. Tasmanian Platypus management plan. State of Tasmania, Biodiversity Conservation Branch. Department of Primary Industries, Parks, Water and Environment, Hobart.",
+      "year": "2010",
+      "title": "Tasmanian Platypus management plan. State of Tasmania, Biodiversity Conservation Branch",
+      "author": "Gust, N., and Griffiths, J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Grant, T. R. 1993. The past and present freshwater fishery in New South Wales and the distribution and status of the Platypus <i>Ornithorhynchus anatinus</i>. <i>Australian Zoologist </i> 29: 105-113.",
+      "year": "1993",
+      "title": "The past and present freshwater fishery in New South Wales and the distribution and status of the Platypus <i>Ornithorhynchus anatinus</i>",
+      "author": "Grant, T. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gardner, J. L., and Serena, M. 1995. Spatial organisation and movement patterns of adult male platypus, <i>Ornithorhynchus anatinus</i> (Monotremata: Ornithorhynchidae). <i>Australian Journal of Zoology </i> 43: 91-103.",
+      "year": "1995",
+      "title": "Spatial organisation and movement patterns of adult male platypus, <i>Ornithorhynchus anatinus</i> (Monotremata: Ornithorhynchidae)",
+      "author": "Gardner, J. L., and Serena, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Furlan, E., Stoklosa, J., Griffiths, J., Gust, N., Ellis, R., Huggins, R. M., and Weeks, A. R. 2012. Small population size and extremely low levels of genetic diversity in island populations of the platypus, <i>Ornithorhynchus anatinus</i>. <i>Ecology and Evolution </i> 2: 844-857.",
+      "year": "2012",
+      "title": "Small population size and extremely low levels of genetic diversity in island populations of the platypus, <i>Ornithorhynchus anatinus</i>",
+      "author": "Furlan, E., Stoklosa, J., Griffiths, J., Gust, N., Ellis, R., Huggins, R. M., and Weeks, A. R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Williams, G. A. 2010. Results of a platypus live-trapping survey along the Coliban River, Malmsbury, October 2010. Report to North Central Catchment Management Agency. Australian Platypus Conservancy, Wiseleigh.",
+      "year": "2010",
+      "title": "Results of a platypus live-trapping survey along the Coliban River, Malmsbury, October 2010. Report to North Central Catchment Management Agency",
+      "author": "Williams, G. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Woinarski, J.C.Z., Burbidge, A.A. and Harrison, P.L. 2014. <i>Action Plan for Australian Mammals</i>. CSIRO Publishing, Collingwood, Victoria.",
+      "year": "2014",
+      "title": "Action Plan for Australian Mammals",
+      "author": "Woinarski, J.C.Z., Burbidge, A.A. and Harrison, P.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Serena, M., and Williams, G. A. 2004. An experimental reintroduction of platypus (<i>Ornithorhynchus anatinus</i>) to Cardinia Creek (April-June 2004). Report to Melbourne Water. Australian Platypus Conservancy, Whittlesea.",
+      "year": "2004",
+      "title": "An experimental reintroduction of platypus (<i>Ornithorhynchus anatinus</i>) to Cardinia Creek (April-June 2004). Report to Melbourne Water. Australian Platypus Conservancy, Whittlesea",
+      "author": "Serena, M., and Williams, G. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Serena, M., and Williams, G. A. 2008. The status of platypus in flood- and fire-affected catchments in Gippsland, 2008. Report to Victorian Department of Sustainability and Environment and Parks Victoria. Australian Platypus Conservancy, Wiseleigh.",
+      "year": "2008",
+      "title": "The status of platypus in flood- and fire-affected catchments in Gippsland, 2008. Report to Victorian Department of Sustainability and Environment and Parks Victoria",
+      "author": "Serena, M., and Williams, G. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Koch, N., Munks, S. A., Utesch, M., Davies, P. E., and McIntosh, P. D. 2006. The platypus <i>Ornithorhynchus anatinus</i> in headwater streams, and effects of pre-Code forest clearfelling, in the South Esk River catchment, Tasmania, Australia. <i>Australian Zoologist </i> 33: 458-473.",
+      "year": "2006",
+      "title": "The platypus <i>Ornithorhynchus anatinus</i> in headwater streams, and effects of pre-Code forest clearfelling, in the South Esk River catchment, Tasmania, Australia",
+      "author": "Koch, N., Munks, S. A., Utesch, M., Davies, P. E., and McIntosh, P. D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Obendorf, D. L., Peel, B. F., and Munday, B. L. 1993. Mucor amphibiorum infection in platypus (<i>Ornithorhynchus anatinus</i>) from Tasmania. <i>Journal of Wildlife Diseases </i> 29: 485-487.",
+      "year": "1993",
+      "title": "Mucor amphibiorum infection in platypus (<i>Ornithorhynchus anatinus</i>) from Tasmania",
+      "author": "Obendorf, D. L., Peel, B. F., and Munday, B. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Griffiths, J., Kelly, T., and Weeks, A. 2012. Distribution and relative abundance of platypuses in the greater Melbourne area: survey results 2011/12. Report to Melbourne Water. CESAR, Parkville.",
+      "year": "2012",
+      "title": "Distribution and relative abundance of platypuses in the greater Melbourne area: survey results 2011/12. Report to Melbourne Water",
+      "author": "Griffiths, J., Kelly, T., and Weeks, A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Dickman, C. R. 1994. Native mammals of western New South Wales: past neglect, future rehabilitation? In: D. Lunney, S. Hand, P. Reed and D. Butcher (eds), <i>Future of the fauna of western New South Wales</i>, pp. 81-91. Royal Zoological Society of NSW, Mosman.",
+      "year": "1994",
+      "title": "Native mammals of western New South Wales: past neglect, future rehabilitation?",
+      "author": "Dickman, C. R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Grant, T. R. and Denny, M. J. S. 1991. Historical and current distribution of the Platypus in Australia, with guidelines for the management and conservation of the species. Report to Australian National Parks and Wildlife Service by Mt. King Ecological Surveys.",
+      "year": "1991",
+      "title": "Historical and current distribution of the Platypus in Australia, with guidelines for the management and conservation of the species. Report to Australian National Parks and Wildlife Service by Mt. King Ecological Surveys.",
+      "author": "Grant, T. R. and Denny, M. J. S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Serena, M., Williams, G. A., and Johnston, L. D. 2002. Status of platypus in the Curdies River catchment: live-trapping surveys and local sightings, summer 2002. Report to Corangamite Catchment Management Authority, Whittlesea.",
+      "year": "2002",
+      "title": "Status of platypus in the Curdies River catchment: live-trapping surveys and local sightings, summer 2002. Report to Corangamite Catchment Management Authority, Whittlesea",
+      "author": "Serena, M., Williams, G. A., and Johnston, L. D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Grant, T. R. 1992. Historical and current distribution of the platypus, <i>Ornithorhynchus anatinus</i>, in Australia. In: M. L. Augee (ed.), <i>Platypus and Echidnas</i>, pp. 232-254. Royal Zoological Society of NSW, Sydney.",
+      "year": "1992",
+      "title": "Historical and current distribution of the platypus, <i>Ornithorhynchus anatinus</i>, in Australia",
+      "author": "Grant, T. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rohweder, D. 1992. Management of platypus in the Richmond River catchment, northern New South Wales. University of New England Northern Rivers.",
+      "year": "1992",
+      "title": "Management of platypus in the Richmond River catchment, northern New South Wales",
+      "author": "Rohweder, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gust, N., and Griffiths, J. 2009. Platypus mucormycosis and its conservation implications. <i>Australasian Mycologist</i> 28: 1-8.",
+      "year": "2009",
+      "title": "Platypus mucormycosis and its conservation implications",
+      "author": "Gust, N., and Griffiths, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Grant, T. R. 1998. Current and historical occurrence of platypuses (<i>Ornithorhynchus anatinus</i>) around Sydney. <i>Australian Mammalogy</i> 20: 257-266.",
+      "year": "1998",
+      "title": "Current and historical occurrence of platypuses (<i>Ornithorhynchus anatinus</i>) around Sydney",
+      "author": "Grant, T. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lunney, D., Dickman, C., Copley, P., Grant, T., Munks, S., Carrick, F., Serena, M., and Ellis, M. 2008. <i>Ornithorhynchus anatinus</i>. In 'The IUCN Red List of Threatened Species'. Version 2012.2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 4 November 2012).",
+      "year": "2008",
+      "title": "<i>Ornithorhynchus anatinus</i>. In 'The IUCN Red List of Threatened Species'. Version 2012.2",
+      "author": "Lunney, D., Dickman, C., Copley, P., Grant, T., Munks, S., Carrick, F., Serena, M., and Ellis, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Burrell, H. 1927. <i>The Platypus</i>. Angus and Robertson, Sydney.",
+      "year": "1927",
+      "title": "The Platypus",
+      "author": "Burrell, H. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Grant, T. R., Gehrke, P. C., Harris, J. H., and Hartley, S. 2000. Distribution of the platypus (<i>Ornithorhynchus anatinus</i>) in New South Wales: Results of the 1994-1996 New South Wales Rivers Survey. <i>Australian Mammalogy </i> 21: 177-184.",
+      "year": "2000",
+      "title": "Distribution of the platypus (<i>Ornithorhynchus anatinus</i>) in New South Wales: Results of the 1994-1996 New South Wales Rivers Survey",
+      "author": "Grant, T. R., Gehrke, P. C., Harris, J. H., and Hartley, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Serena, M., and Williams, G. A. 2010. Platypus population assessment and recommended management actions along Broken Creek. Report to Goulburn Broken Catchment Management Authority. Australian Platypus Conservancy, Wiseleigh.",
+      "year": "2010",
+      "title": "Platypus population assessment and recommended management actions along Broken Creek. Report to Goulburn Broken Catchment Management Authority",
+      "author": "Serena, M., and Williams, G. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Serena, M., and Williams, G. A. 2010. Platypus sightings records for the Murray River upstream of Lake Hume and its tributaries, 2009-2010. Report to Upper Murray Landcare Network. Australian Platypus Conservancy, Wiseleigh.",
+      "year": "2010",
+      "title": "Platypus sightings records for the Murray River upstream of Lake Hume and its tributaries, 2009-2010. Report to Upper Murray Landcare Network",
+      "author": "Serena, M., and Williams, G. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Serena, M. 1994. Use of time and space by the platypus (<i>Ornithorhynchus anatinus</i>) along a Victorian stream. <i>Journal of Zoology </i> 232: 117-131.",
+      "year": "1994",
+      "title": "Use of time and space by the platypus (<i>Ornithorhynchus anatinus</i>) along a Victorian stream",
+      "author": "Serena, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Geraghty, D. P., Griffiths, J., Stewart, N., Robertson, I. K., and Gust, N. 2011. Hematological, plasma, biochemical, and other indicators of the health of Tasmanian platypuses (<i>Ornithorhynchus anatinus</i>): predictors of mucormycosis. <i>Journal of Wildlife Diseases </i> 47: 483-493.",
+      "year": "2011",
+      "title": "Hematological, plasma, biochemical, and other indicators of the health of Tasmanian platypuses (<i>Ornithorhynchus anatinus</i>): predictors of mucormycosis",
+      "author": "Geraghty, D. P., Griffiths, J., Stewart, N., Robertson, I. K., and Gust, N. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Serena, M., Williams, G. A., Swinnerton, M. 2001. Results of platypus population surveys in the Taponga River catchment, May 2001.  Report to the Victorian Department of Natural resources and Environment. Australian Platypus Conservancy, Whittlesea.",
+      "year": "2001",
+      "title": "Results of platypus population surveys in the Taponga River catchment, May 2001.",
+      "author": "Serena, M., Williams, G. A., Swinnerton, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Serena, M., and Williams, G. A. 2008. Distribution and management of platypus in the greater Melbourne region. Report to Melbourne Water. Australian Platypus Conservancy, Wiseleigh.",
+      "year": "2008",
+      "title": "Distribution and management of platypus in the greater Melbourne region. Report to Melbourne Water",
+      "author": "Serena, M., and Williams, G. A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Rohweder, D. A. and Baverstock, P. R. 1999. Distribution of platypus, <i>Ornithorhynchus anatinus</i>, in the Richmond River Catchment, northern New South Wales. <i>Australian Zoologist </i> 31: 30-37.",
+      "year": "1999",
+      "title": "Distribution of platypus, <i>Ornithorhynchus anatinus</i>, in the Richmond River Catchment, northern New South Wales",
+      "author": "Rohweder, D. A. and Baverstock, P. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Serena, M., and Williams, G. A. 2010. Conserving Platypus and water-rats: information and guidelines. Australian Platypus Conservancy, Wiseleigh.",
+      "year": "2010",
+      "title": "Conserving Platypus and water-rats: information and guidelines",
+      "author": "Serena, M., and Williams, G. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gust, N., Griffiths, J., Driessen, M., Philips, A., Stewart, N., and Geraghty, D. 2009. Distribution, prevalence and persistence of mucormycosis in Tasmanian platypuses (<i>Ornithorhynchus anatinus</i>). <i>Australian Journal of Zoology</i> 57: 245-254.",
+      "year": "2009",
+      "title": "Distribution, prevalence and persistence of mucormycosis in Tasmanian platypuses (<i>Ornithorhynchus anatinus</i>)",
+      "author": "Gust, N., Griffiths, J., Driessen, M., Philips, A., Stewart, N., and Geraghty, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Serena, M., and Williams, G. 2007. Summary of recent platypus sightings and related information for the Melbourne Water extended area of operations. Report to Melbourne Water. Australian Platypus Conservancy, Wiseleigh.",
+      "year": "2007",
+      "title": "Summary of recent platypus sightings and related information for the Melbourne Water extended area of operations. Report to Melbourne Water",
+      "author": "Serena, M., and Williams, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Serena, M., and Williams, G. A. 2007. Wimmera platypus conservation manual. Report to Wimmera Catchment Management Authority. Australian Platypus Conservancy, Wiseleigh.",
+      "year": "2007",
+      "title": "Wimmera platypus conservation manual. Report to Wimmera Catchment Management Authority",
+      "author": "Serena, M., and Williams, G. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Griffiths, J., and Weeks, A. 2012. Distribution and relative abundance of platypuses in the Mackenzie River: survey results 2011/12. Report to Wimmera Catchment Management Authority. CESAR, Parkville.",
+      "year": "2012",
+      "title": "Distribution and relative abundance of platypuses in the Mackenzie River: survey results 2011/12. Report to Wimmera Catchment Management Authority",
+      "author": "Griffiths, J., and Weeks, A.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

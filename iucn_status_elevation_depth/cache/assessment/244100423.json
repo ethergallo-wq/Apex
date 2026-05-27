@@ -1,0 +1,843 @@
+{
+  "assessment_date": "2024-08-09T01:00:00.000+01:00",
+  "year_published": "2025",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 4704,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/4704/244100423",
+  "citation": "Superina, M. & Abba, A.M. 2025. Chlamyphorus truncatus. The IUCN Red List of Threatened Species 2025: e.T4704A244100423. Accessed on 15 May 2026.",
+  "assessment_id": 244100423,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 4704,
+    "scientific_name": "Chlamyphorus truncatus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CINGULATA",
+    "family_name": "CHLAMYPHORIDAE",
+    "genus_name": "Chlamyphorus",
+    "species_name": "truncatus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Harlan, 1825",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Anteater, Sloth and Armadillo Specialist Group",
+        "url": "http://www.xenarthrans.org/index",
+        "description": "Chair: Mariella Superina (email: mariella@superina.ch)\nRed List Authority Coordinator: Agustin Abba (email: abbaam@yahoo.com.ar)\nNewsletter: http://www.xenarthrans.org/bibliography/edentata"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Lesser Fairy Armadillo",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Lesser Pichi Ciego",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Pichiciego",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Gürtelmaus",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Gürtelmull",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Kleiner Gürtelmull",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Pichiciego",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Schildwurf",
+        "language": "ger"
+      },
+      {
+        "main": true,
+        "name": "Pink Fairy Armadillo",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Data Deficient"
+    },
+    "code": "DD"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 1500,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "Yes",
+    "population_continuing_decline": "Unknown",
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Percentage of population protected by PAs",
+            "value": "2"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "Unknown",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": "Unknown",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This smallest of all armadillo species is endemic to central Argentina, where it is found in the provinces of Buenos Aires (southern part only), Catamarca, Córdoba, La Pampa, La Rioja, Mendoza, Neuquén, Rio Negro, San Juan and San Luis (Borghi <em>et al</em>. 2011, Abba <em>et al</em>. 2012). It occurs from sea level to 1,500 m asl.",
+    "population": "This smallest of all armadillos may be relatively rare, but nothing is known about its population size or trend. Records are very isolated from each other.",
+    "habitats": "<p>This poorly known, nocturnal species is found in dry grassland and sandy plains with shrubby vegetation, always on sandy soils.&#160;<span lang=\"EN-US\">Areas with high temperature seasonality seem to be more suitable for pink fairy armadillos&#160;<span lang=\"EN-US\">(Torres&#160;<em>et al</em>.&#160;2015)<span lang=\"EN-US\">. Field sightings are rare and incidental due to its subterranean and nocturnal habits.</span></p><p><span lang=\"EN-US\">Pink fairy armadillos are probably generalist insectivores&#160;</span><span lang=\"EN-US\">(Redford 1985)<span lang=\"EN-US\">. As a desert-adapted species,&#160;<span lang=\"DE-CH\"><em>C. truncatus</em><span lang=\"EN-US\">&#160;does not drink water but rather obtains moisture from its food; one individual under human care for eight months was never observed drinking&#160;<span lang=\"EN-US\">(Superina 2011)<span lang=\"EN-US\">.</span></span></span></p><p><span lang=\"EN-US\">Females probably give birth to 1-2 offspring in spring or early summer; anecdotal reports suggest that the newborn are about 3-4 cm long&#160;<span lang=\"EN-US\">(Minoprio 1945)<span lang=\"EN-US\">. A large proportion of records correspond to juvenile males observed in February and March (M. Superina pers. comm. 2024), which suggests that they become independent and leave their mother’s territory at less than 6 months of age. No information is available about survival rates, longevity, reproductive lifespan, gestation length or growth rates of pink fairy armadillos.</span></p>",
+    "threats": "<p>Habitat conversion due to agriculture (ploughing of fields) and cattle ranching (compaction of soil) are probably the predominant threats this species is facing, but predation by domestic cats and dogs is also contributing to its decline. Furthermore, the species is illegally collected to be kept as a pet or with the intention to sell it on the black market, but the large majority of specimens removed from the wild die within 8 days (M. Superina pers. comm. 2024).&#160;<span lang=\"EN-US\">Global climate change may also affect the species, as past climate variations probably caused its current low densities due to fluctuations in the amount of suitable habitat&#160;<span lang=\"EN-US\">(Torres&#160;<em>et al</em>. 2015)<span lang=\"EN-US\">.</span></p>",
+    "measures": "The pink fairy armadillo is present in a number of protected areas including Lihué Calel National Park in La Pampa (9,905 ha) and some provincial protected areas in Mendoza, such as Bosques Telteca and the MAB Reserve Ñacuñán. Nevertheless, distribution models suggest that in Argentina, this is the armadillo species with the lowest percentage of its range (1.7%) within National Parks (Tognelli <em>et al</em>. 2011).&#160;The species is listed as Data Deficient in Argentina (Superina&#160;<em>et al</em>.&#160;2019). There is national and provincial legislation specifically in place for its protection, such as Provincial Law 6,599 Mendoza that declares the pink fairy armadillo a \"natural monument\" and establishes a total and permanent hunting ban for the species.&#160;Further studies into the population status, demography and ecology of this species are needed.",
+    "use_trade": "The species is illegally collected to be kept as a pet, although it does not survive long in captivity.",
+    "rationale": "<span style=\"font-style: italic;\">Chlamyphorus truncatus</span> is listed as Data Deficient because there is little information on the population status of this species, and its biology and ecology are poorly known. Throughout its range there is extensive habitat degradation, especially from cattle and goat ranching, but the actual effect on the population is not well understood. Collection of individuals to keep them as pets or sell them on the black market is increasingly threatening the species, as it does not survive in captivity. The species remains a priority for further survey work, as the availability of additional information may well show that the species requires listing as Near Threatened or in a threatened category.",
+    "trend_justification": null,
+    "taxonomic_notes": "Three subspecies have been described (Yepes 1932)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "5_1_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_1_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_2",
+      "description": {
+        "en": "Invasive/problematic species control"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Desert - Temperate"
+      },
+      "code": "8_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "San Luis"
+      },
+      "code": "AGW-SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "La Pampa"
+      },
+      "code": "AGE-LP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "San Juan"
+      },
+      "code": "AGW-SJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "La Rioja"
+      },
+      "code": "AGW-LR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mendoza"
+      },
+      "code": "AGW-ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rio Negro"
+      },
+      "code": "AGS-RN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Catamarca"
+      },
+      "code": "AGW-CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Neuquén"
+      },
+      "code": "AGS-NE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Córdoba"
+      },
+      "code": "AGE-CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Buenos Aires"
+      },
+      "code": "AGE-BA"
+    },
+    {
+      "is_endemic": true,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Area-based Management Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Canis familiaris",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Felis catus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Superina, M. & Abba, A.M.",
+      "value": [
+        "Mariella Superina (CONICET)",
+        "Agustín Abba (CONICET)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Abba, A.M. & Morales-Campos, J.",
+      "value": [
+        "Agustín Abba (CONICET)",
+        "Jesús Morales-Campos (Independent)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Superina, M.",
+      "value": [
+        "Mariella Superina (CONICET)"
+      ]
+    },
+    {
+      "credit_type_name": "institutions",
+      "full": "IUCN SSC Anteater, Sloth and Armadillo Specialist Group",
+      "value": [
+        "IUCN SSC Anteater, Sloth and Armadillo Specialist Group"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Wetzel, R.M. 1982. Systematics, distribution, ecology, and conservation of South American edentates. In: M.A. Mares and H.H. Genoways (eds), <i>Mammalian biology in South America</i>, pp. 345-375. University of Pittsburgh, Pittsburgh, PA, USA.",
+      "year": "1982",
+      "title": "Systematics, distribution, ecology, and conservation of South American edentates",
+      "author": "Wetzel, R.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gardner, A.L. 2005. Order Cingulata. In: D.E. Wilson and D.M. Reeder (eds), <i>Mammal Species of the World: A taxonomic and geographic reference. Third edition.</i>, pp. 94-99. The Johns Hopkins University Press, Baltimore, Maryland, USA.",
+      "year": "2005",
+      "title": "Order Cingulata",
+      "author": "Gardner, A.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Superina, M. 2006. New information on population declines in Pink Fairy Armadillos. <i>Edentata</i> 7: 48-50.",
+      "year": "2006",
+      "title": "New information on population declines in Pink Fairy Armadillos",
+      "author": "Superina, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Abba, A.M., Tognelli, M.F., Seitz, V.P., Bender, J.B. and Vizcaíno, S.F. 2012. Distribution of extant xenarthrans (Mammalia: Xenarthra) in Argentina using species distribution models. <i>Mammalia</i> 76: 123-136.",
+      "year": "2012",
+      "title": "Distribution of extant xenarthrans (Mammalia: Xenarthra) in Argentina using species distribution models",
+      "author": "Abba, A.M., Tognelli, M.F., Seitz, V.P., Bender, J.B. and Vizcaíno, S.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Abba, A.M. and Vizcaíno, S.F. 2011. Distribución de los armadillos (Xenarthra: Dasypodidae) en la provincia de Buenos Aires, Argentina. <i>Mastozoología Neotropical</i> 18: 185-206.",
+      "year": "2011",
+      "title": "Distribución de los armadillos (Xenarthra: Dasypodidae) en la provincia de Buenos Aires, Argentina",
+      "author": "Abba, A.M. and Vizcaíno, S.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Superina, M., Pagnutti, N. and Abba, A.M. 2014. What do we know about armadillos? An analysis of four centuries of knowledge about a group of South American mammals, with emphasis on their conservation. <i>Mammal Review</i> 44: 69-80.",
+      "year": "2014",
+      "title": "What do we know about armadillos? An analysis of four centuries of knowledge about a group of South American mammals, with emphasis on their conservation",
+      "author": "Superina, M., Pagnutti, N. and Abba, A.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Delsuc, F., Superina, M., Tilak, M.K., Douzery, E.J. and Hassanin, A. 2012. Molecular phylogenetics unveils the ancient evolutionary origins of the enigmatic fairy armadillos. <i>Molecular Phylogenetics and Evolution</i> 62: 673-680.",
+      "year": "2012",
+      "title": "Molecular phylogenetics unveils the ancient evolutionary origins of the enigmatic fairy armadillos",
+      "author": "Delsuc, F., Superina, M., Tilak, M.K., Douzery, E.J. and Hassanin, A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Borghi, C.E., Campos, C.M., Giannoni, S.M., Campos, V.E. and Sillero-Zubiri, C. 2011. Updated distribution of the pink fairy armadillo <i>Chlamyphorus truncatus</i> (Xenarthra, Dasypodidae), the world's smallest armadillo. <i>Edentata</i> 12: 14-19.",
+      "year": "2011",
+      "title": "Updated distribution of the pink fairy armadillo <i>Chlamyphorus truncatus</i> (Xenarthra, Dasypodidae), the world's smallest armadillo",
+      "author": "Borghi, C.E., Campos, C.M., Giannoni, S.M., Campos, V.E. and Sillero-Zubiri, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tognelli, M.F., Abba, A.M., Bender, J.B. and Seitz, V.P. 2011. Assessing conservation priorities of xenarthrans in Argentina. <i>Biodiversity and Conservation </i> 20(1): 141-151.",
+      "year": "2011",
+      "title": "Assessing conservation priorities of xenarthrans in Argentina",
+      "author": "Tognelli, M.F., Abba, A.M., Bender, J.B. and Seitz, V.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yepes, J. 1932. Las formas geográficas de pichiciego menor (<i>Chlamyphorus truncatus</i> Harl.). <i>Physis (Buenos Aires)</i> 11: 9-18.",
+      "year": "1932",
+      "title": "Las formas geográficas de pichiciego menor (<i>Chlamyphorus truncatus</i> Harl.).",
+      "author": "Yepes, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2025. The IUCN Red List of Threatened Species. Version 2025-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 27 March 2025).",
+      "year": "2025",
+      "title": "The IUCN Red List of Threatened Species. Version 2025-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2025-1"
+    },
+    {
+      "citation": "Superina, M. and Abba, A.M. 2018. Family Chlamyphoridae (Chlamyphorid armadillos). In: Wilson, D.E. and Mittermeier, R.A. (eds), <i>Handbook of the mammals of the world. Volume 8: insectivores, sloths and colugos</i>, pp. 48-73. Lynx Edicions, Barcelona.",
+      "year": "2018",
+      "title": "Family Chlamyphoridae (Chlamyphorid armadillos)",
+      "author": "Superina, M. and Abba, A.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Torres, R., Abba, A.M. and Superina, M. 2015. Climate fluctuations as a cause of rarity in fairy armadillos. <i>Mammalian Biology</i> 80: 452-458.",
+      "year": "2015",
+      "title": "Climate fluctuations as a cause of rarity in fairy armadillos",
+      "author": "Torres, R., Abba, A.M. and Superina, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Minoprio, J.D.L. 1945. Sobre el <i>Chlamyphorus truncatus</i> Harlan. <i>Acta Zoologica Lilloana</i> 3: 5-58.",
+      "year": "1945",
+      "title": "Sobre el <i>Chlamyphorus truncatus</i> Harlan",
+      "author": "Minoprio, J.D.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Redford, K.H. 1985. Food habits of armadillos (Xenarthra: Dasypodidae). In: Montgomery, G.G. (ed.), <i>The evolution and ecology of armadillos, sloths, and vermilinguas</i>, pp. 429-437. Smithsonian Institution Press, Washington and London.",
+      "year": "1985",
+      "title": "Food habits of armadillos (Xenarthra: Dasypodidae)",
+      "author": "Redford, K.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Superina, M. 2011. Husbandry of a pink fairy armadillo (<i>Chlamyphorus truncatus</i>): case study of a cryptic and little known species in captivity. <i>Zoo Biology</i> 30: 225-231.",
+      "year": "2011",
+      "title": "Husbandry of a pink fairy armadillo (<i>Chlamyphorus truncatus</i>): case study of a cryptic and little known species in captivity",
+      "author": "Superina, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Superina, M., Abba, A.M., Tamburini, D.M., Soibelzon, E., Rogel, T.G., Agüero, A.J. and Albrecht, C.D. 2019. <i>Chlamyphorus truncatus</i>. In: SAyDS-SAREM (ed.), <i>Categorización 2019 de los mamíferos de Argentina según su riesgo de extinción. Lista Roja de los mamíferos de Argentina. http://cma.sarem.org.ar</i>.",
+      "year": "2019",
+      "title": "<i>Chlamyphorus truncatus</i>",
+      "author": "Superina, M., Abba, A.M., Tamburini, D.M., Soibelzon, E., Rogel, T.G., Agüero, A.J. and Albrecht, C.D.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

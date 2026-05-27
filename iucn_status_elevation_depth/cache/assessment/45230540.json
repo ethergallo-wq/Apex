@@ -1,0 +1,807 @@
+{
+  "assessment_date": "2014-10-26T01:00:00.000+01:00",
+  "year_published": "2015",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 41668,
+  "criteria": "A2ab",
+  "url": "https://www.iucnredlist.org/species/41668/45230540",
+  "citation": "Trillmich, F. 2015. Zalophus wollebaeki. The IUCN Red List of Threatened Species 2015: e.T41668A45230540. Accessed on 15 May 2026.",
+  "assessment_id": 45230540,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 41668,
+    "scientific_name": "Zalophus wollebaeki",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CARNIVORA",
+    "family_name": "OTARIIDAE",
+    "genus_name": "Zalophus",
+    "species_name": "wollebaeki",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Sivertsen, 1953",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Pinniped Specialist Group (seals and walruses)",
+        "url": null,
+        "description": "Chair: Kit Kovacs (email: kit.kovacs@npolar.no)\nRed List Authority Coordinator: Simon Goldsworthy (email: simon.goldsworthy@sa.gov.au) and Alexandros Karamanlidis (email: akaramanlidis@gmail.com)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Galápagos Seelöwe",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Leon Marino de Galápagos",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Lobo de un Pelo de Galápagos",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Lobo Marino de Galápagos",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "Galápagos Sea Lion",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Zalophus californianus ssp. wollebaeki (Sivertsen, 1953)",
+        "status": "S",
+        "genus_name": "Zalophus",
+        "species_name": "californianus",
+        "species_author": null,
+        "infrarank_author": "(Sivertsen, 1953)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "wollebaeki"
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Endangered"
+    },
+    "code": "EN"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 5,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": 584,
+    "upper_depth_limit": 0,
+    "population_size": "9200-10600",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Unknown",
+    "generational_length": "10",
+    "congregatory": "Congregatory (and dispersive)",
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "No",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Percentage of population protected by PAs",
+            "value": "91-100"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "Yes",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": "106472",
+    "continuing_decline_in_area_of_occupancy": "No",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "325468",
+    "continuing_decline_in_extent_of_occurence": "No",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "No",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "<p>Galápagos Sea Lions are found throughout the Galápagos Archipelago on all the major islands and on many smaller islands and rocks. A colony was established in 1986 at Isla de la Plata (coast of mainland Ecuador, 1°17' S, 81°04' W), just offshore from mainland Ecuador, but this site is not regularly used. Vagrants can be seen from the Ecuadorian coast north to Isla Gorgona in Colombia. There is also a record from Isla del Coco, Costa Rica, approximately 500 km southwest of Costa Rica. This record lacks genetic substantiation, so it cannot be decided whether the individual belonged to the Galápagos or the California species of Sea Lion.<br/><em></em></p>",
+    "population": "Age-structure data are not available for the Galápagos Sea Lion population, so the generation time and the fraction mature cannot be calculated reliably. However, with sexual maturity attained at about six years of age and a maximum longevity of approximately 20 years, the average age of reproducing individuals should be around 10 years. It is likely that about two-thirds of all animals in the population are mature.<br/><br/>In 1978, Galápagos Sea Lions were estimated to number about 40,000 individuals (Trillmich 1979). This estimate was based on a nearly complete survey of the coastlines of all Galapagos Islands conducted by observers onshore and in boats nearshore. This resulted in an actual count of 9,093 individuals. The number counted was expanded to account for animals missed by observers on boats and to account for animals not onshore at the time of the counts. In November 2001, 7,942 Sea Lions were counted at haulouts and rookeries in the Galápagos Islands (Alava and Salazar 2006). By correcting for the probability that animals could be seen at a distance, total abundance was estimated to be 14-16,000. The corresponding number of mature individuals was likely about 26,400 in 1978 and 9,200-10,600 in 2001, which indicates a substantial reduction of about 60-65% in population size of the Galápagos Sea Lion. No further estimates of total population size have been made since 2001. Census data from a colony in the centre of the range (on the islet of Caamaño near Santa Cruz Island) covering the years from 2003 to 2013 showed no significant trend in total numbers of Sea Lions counted (mean ± SD; 244 ± 63) nor in the number of pups born (mean 103 ± 34.7), but substantial fluctuations around the mean. This variability suggests that single counts as represented by the 1978 and 2001 census may be misleading about trends in total Sea Lion numbers.<br/><br/>The available data suggest that the Galápagos Sea Lion population declined greatly between 1978 and 2001, and suggest that it has not recovered since then. If the number of adults in 2014 is still about 9,200-10,600 that would be a reduction of 60-65% in 36 years (3.6 generations). Assuming an exponential decline pattern between 1978 and 2001 (with an annual decline of 3.9%), and a relatively stable population from 2001-2014, this would still represent a reduction of &gt;50% (49-54%) over the last three generations (1984-2014). The causes of the reduction are partly understood, have not ceased, and may not be reversible.",
+    "habitats": "Galápagos Sea Lions are very similar in appearance to California Sea Lions (<em>Zalophus californianus</em>), but are smaller and differ slightly in behaviour and skull morphology. Galápagos Sea Lions are sexually dimorphic, with males larger than females and having a suite of secondary sexual characteristics. The degree of sexual dimorphism appears to be less than in California Sea Lions, although few weights and measurements are available for adults to confirm this suggestion. Adult males are estimated to weigh up to 200 kg, but direct measurements outside the reproductive period showed a maximum of 158 kg (Trillmich <em>et al</em>. 2014). Adult females caring for pups weigh between 50 and 95 kg (mean 60 kg, Trillmich et al. 2014). Pups of both sexes are born already size dimorphic. Male newborns weigh on average 6.7 kg, females 5.8 kg (Kraus et al. 2013). Young are weaned when 1-3 years old at approximately 25-45 kg. Pups are born with a brownish-black lanugo coat that fades to pale brown by three to five months. Pups go through their first moult at around five to six months of age and emerge with the pelage of adult females and juveniles.<br/><br/>Female age at first birth is around six years (Trillmich <em>et al</em>. unpubl. data) and males are believed to mature sexually at about the same age, although male social maturity is attained at older age. Females produce one pup after a gestation of about 11 months, but may fail to become pregnant or abort if they are still caring for an older offspring (Trillmich and Wolf 2008). Longevity is estimated to be 15-24 years but the higher ages are not confirmed (Reijnders <em>et al</em>. 1993).<br/><br/>Galápagos Sea Lions are polygynous and males hold territories mostly along the shoreline in shallow water that they vociferously and aggressively defend. Male tenure on territories usually lasts from a few days to one month. Males may be more than once on territory during the drawn out reproductive period. Most copulations occur in the water.<br/><br/>Pupping and breeding take place across an extended period from May through February. The timing varies among islands within the archipelago. Because of the protracted breeding season and extended care provided to offspring (up to three years) by females, there are dependent offspring on the rookeries year-round. Females may wean offspring in 11-12 months in productive years or areas, but most continue to suckle yearlings for a second year. Some females care for a yearling along with a newborn pup. Pups are attended continuously for the first 4-7 days after birth, after which the female goes to sea to feed. With the departure, the female begins a cycle of foraging trips that last 0.5-3 days during the cold season, but may last considerably longer in the warm season. Pups will enter the water and begin to develop swimming skills 1-2 weeks after birth. In some colonies, females return at night to nurse their pup, departing again the next morning (Trillmich 1986). Females and pups recognize each other and reunite based on calls and scent (Trillmich 1981). Galápagos Sea Lion females feed during day and night, in contrast to Galápagos Fur Seals, which primarily feed at night (Jeglinski <em>et al</em>. 2013; Villegas-Amtmann <em>et al</em>. 2008, 2013).<br/><br/>Galápagos Sea Lions are non-migratory. They are rather unafraid of humans when ashore, at least in the sites where they regularly encounter humans. Haul-out sites can be on rugged shoreline types, including steep rocky shorelines, ledges and offshore stacks, but colonies are mostly on gently sloping sandy and rocky beaches. Sea lions will use shade from vegetation, rocks, and cliffs, and enter tidal and drainage pools or move into the ocean, as needed during the heat of the day to avoid overheating.<br/><br/>Diving has been studied on Fernandina, Floreana, Caamaño and San Cristóbal. The maximum dive depth recorded for an adult female was 584 m and mean maximal duration was 9.8 minutes (Jeglinski <em>et al</em>. 2013). Average depth of dives varied between 45 and 94 m and dives lasted for 3-5 minutes (Villegas-Amtmann <em>et al</em>. 2008, Jeglinski <em>et al</em>. 2012, 2013). Galápagos Sea Lion females mostly use shelf areas for foraging. When resting at sea they will raft at the surface with one or more flippers held vertically in the air.<br/><br/>Galápagos Sea Lions prey on sardines (Dellinger and Trillmich 1999) as well as myctophids and bathylagids together with small squid. Diet breadth apparently varies across years and perhaps also seasonally and appears to be influenced by El Niño events (Paez-Rosas <em>et al</em>. 2014). During El Niño events prey includes green-eyes and myctophids, suggesting a change in foraging strategy.<br/><br/>Feral and uncontrolled dogs have been reported to kill Sea Lion pups and bite juveniles and adults. Shark predation is evident from animals seen with injuries and scars from attacks, and killer whales are presumed to be another predator on Galápagos Sea Lions. Interestingly, juvenile and adult Galápagos Sea Lions have been observed to mob Galápagos sharks that approach colonies, and also at haul out sites and resting places in shallow bays (Trillmich 1996).",
+    "threats": "Population abundance has fluctuated widely due to die-offs and cessation of reproduction during strong El Niño events, when marine productivity collapses (Trillmich and Limberger 1985, Trillmich and Dellinger 1991). During strong El Niños, 100% of pups, 50% of yearlings, and substantial numbers of adults may die (Limberger 1985; Trillmich and Dellinger 1991). Smaller El Niños likely have more subtle, but possibly still significant, effects on productivity and survival. Epidemics of unknown causation have occurred during El Niño events, adding to the stress on Sea Lions from low food abundance.<br/><br/>Oceanographers differ in their predictions of how the frequency and intensity of El Niño events may change with climate warming. Cai <em>et al</em>. (2014) suggest that the total number of El Niño events will decrease slightly, but the total number of extreme events will double as global warming continues. In contrast, Santoso <em>et al</em>. (2013) predict a doubling of the frequency of El Niño events with global warming. In the historical long-term perspective offered by Cobb <em>et al</em>. (2014) the frequency of El Niño during the last 50 years is unusually high, but still within the range of variability observed over the last 7,000 years. The most likely projection seems to be that El Niño events will be more frequent, and perhaps stronger, in the immediate future. In their review of otariid extinctions, Gerber and Hilborn (2001)  conclude that for species subject to El Niño impacts, \"the concern about  species recovery should focus on changes in frequency of El Niño  events.\"<br/><br/>Infectious diseases occur commonly in pinnipeds and may have substantial impacts on their populations.&#160; Frequent direct contact between Sea Lions and domestic dogs in the settlements on San Cristobal, Santa Cruz and Isabela islands present a great danger of disease transmission. A viral outbreak (of canine distemper?) occurred in 2001 in which 569 dogs either died or were euthanized, and it was recommended that all dogs on the islands be vaccinated to reduce the risk of transmission to Sea Lions (Salazar <em>et al</em>. 2001). The identity of the virus has not been confirmed. The populations near settlements were shown to express higher immune activity than more isolated ones (Brock <em>et al</em>. 2013).<br/><br/>Plastic refuse drifting at sea and on shore is becoming an increasing problem, frequently entangling Sea Lions (Alava and Salazar 2006). Cargo ships running aground (like the \"Jessica\" in 2001) may lead to oil spills that could gravely affect pups onshore (in particular close to the harbours of San Cristobal and Puerto Ayora) and foraging adults.",
+    "measures": "The Galápagos Sea Lion population lives in the Galápagos Archipelago, which is an Ecuadorian National Park surrounded by a marine resources reserve. Tourism occurs on a large scale, but is largely controlled to protect wildlife from disturbance. Local fishing is controlled by the National Park authorities. Unfortunately, despite a quarantine system introduction of domestic animals from the mainland is still occurring occasionally.",
+    "use_trade": "The Galápagos Sea Lion population lives in the Galápagos Archipelago, which is an Ecuadorian National Park surrounded by a marine resources reserve. There is no use or trade of this species.",
+    "rationale": "The Galápagos Sea Lion population declined by 60-65% from 1978 to 2001. Since then there is no evidence of further decline or increase; therefore it is likely that the population has still undergone a reduction of more than 50% over the last three generations (1984-2014). The causes of the reduction are partly understood, have not ceased, and may not be reversible. Impacts from El Niño events and infectious diseases continue to threaten the population. Galápagos Sea Lions qualify for listing as EN under criterion A2ab.  However, the lack of quantitative survey information for the past 13 years greatly increases the uncertainty of this assessment.<em></em>",
+    "trend_justification": null,
+    "taxonomic_notes": "<p>The species has been considered a subspecies of <em>Z. californianus</em> (<em>Z. c. wollebaeki</em>) by many authors. Rice (1998) argued for the retention of <em>Z. californianus</em>, <em>Z. japonicus</em>, and <em>Z. wollebaeki</em> as distinct species. Recent genetic data support the classification as a separate species that separated from the California Sea Lion (<em>Zalophus californianus</em>) about 2.3 ± 0.5 million years ago (Wolf <em>et al</em>. 2007).<br/></p>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    }
+  ],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - southeast"
+      },
+      "code": "87"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Sea Cliffs and Rocky Offshore Islands"
+      },
+      "code": "13_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Rocky Shoreline"
+      },
+      "code": "12_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Mesopelagic (200-1000m)"
+      },
+      "code": "10_2"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": "No",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "No",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Cocos I."
+      },
+      "code": "CPI-CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Galápagos"
+      },
+      "code": "GAL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Ecuador (mainland)"
+      },
+      "code": "ECU-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "No",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": true,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    }
+  ],
+  "researches": [
+    {
+      "note": "A monitoring scheme appears highly desirable given the uncertainty about changes in the population size over the last 3 decades",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "High Impact: 8",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other impacts"
+      },
+      "code": "11_5"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Garbage & solid waste"
+      },
+      "code": "9_4"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Unspecified Canis",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": "This pertains to diseases.",
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Canis familiaris",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_2_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Trillmich, F.",
+      "value": [
+        "Fritz Trillmich"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Aurioles-Gamboa, D.",
+      "value": [
+        "David Aurioles-Gamboa"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Lowry, L., Pollock, C.M., Ahonen, H., Chiozza, F. & Battistoni, A.",
+      "value": [
+        "Caroline Pollock (IUCN Red List Unit)",
+        "Lloyd Lowry (Deceased Nov 2018. Formerely atUniversity of Alaska Fairbanks)",
+        "Alessia Battistoni (Global Mammal Assessment)",
+        "Heidi Ahonen (Norwegian Polar Institute)",
+        "Federica Chiozza"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Baillie, J.E.M., Hilton-Taylor, C. and Stuart, S.N. 2004. <i>2004 IUCN Red List of Threatened Species. A Global Species Assessment</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "2004",
+      "title": "2004 IUCN Red List of Threatened Species. A Global Species Assessment",
+      "author": "Baillie, J.E.M., Hilton-Taylor, C. and Stuart, S.N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Reijnders, P., Brasseur, S., van der Toorn, J., van der Wolf, P., Boyd, I., Harwood, J., Lavigne, D. and Lowry, L. 1993. <i>Seals, fur seals, sea lions, and walrus. Status survey and conservation action plan</i>. IUCN Seal Specialist Group.",
+      "year": "1993",
+      "title": "Seals, fur seals, sea lions, and walrus. Status survey and conservation action plan",
+      "author": "Reijnders, P., Brasseur, S., van der Toorn, J., van der Wolf, P., Boyd, I., Harwood, J., Lavigne, D. and Lowry, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rice, D.W. 1998. <i>Marine Mammals of the World: Systematics and Distribution</i>. Society for Marine Mammalogy, Special Publication Number 4, Lawrence, Kansas.",
+      "year": "1998",
+      "title": "Marine Mammals of the World: Systematics and Distribution",
+      "author": "Rice, D.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Alava, J.J. and Salazar, S. 2006. Status and conservation of Otariids in Ecuador and the Galápagos Islands. In: A.W. Trites, S.K. Atkinson, D.P. DeMaster, L.W. Fritz, T.S. Gelatt, L.D. Rea and K.M. Wynne (eds), <i>Sea Lions of the World</i>, pp. 495-520. Fairbanks: Alaska Sea Grant College Program, Alaska, USA.",
+      "year": "2006",
+      "title": "Status and conservation of Otariids in Ecuador and the Galápagos Islands",
+      "author": "Alava, J.J. and Salazar, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wolf, J.B.W., Tautz, D. and Trillmich, F. 2007. Galapagos and Californian sea lions are separate species: genetic analysis of the genus <i>Zalophus</i> and its implications for conservation management. <i>Frontiers in Zoology</i> 4: doi:10.1186/1742-9994-4-20.",
+      "year": "2007",
+      "title": "Galapagos and Californian sea lions are separate species: genetic analysis of the genus <i>Zalophus</i> and its implications for conservation management",
+      "author": "Wolf, J.B.W., Tautz, D. and Trillmich, F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dellinger, T. and Trillmich, F. 1999. Fish prey of the sympatric Galápagos fur seals and sea lions: seasonal variation and niche separation. <i>Canadian Journal of Zoology</i> 77: 1204-1216.",
+      "year": "1999",
+      "title": "Fish prey of the sympatric Galápagos fur seals and sea lions: seasonal variation and niche separation",
+      "author": "Dellinger, T. and Trillmich, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Trillmich, F. and Dellinger, T. 1991. The effects of El Niño on Galápagos pinnipeds. In: F. Trillmich and K.A. Ono (eds), <i>Pinnipeds and El Niño: Responses to environmental stress</i>, pp. 66-74. Springer-Verlag, Berlin, Germany.",
+      "year": "1991",
+      "title": "The effects of El Niño on Galápagos pinnipeds",
+      "author": "Trillmich, F. and Dellinger, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Trillmich, F. and Limberger, D. 1985. Drastic effects of El Niño on Galápagos pinnipeds. <i>Oecologia</i> 67: 19-22.",
+      "year": "1985",
+      "title": "Drastic effects of El Niño on Galápagos pinnipeds",
+      "author": "Trillmich, F. and Limberger, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Trillmich, F. and Trillmich, K.G.K. 1984. The mating systems of pinnipeds and marine iguanas: convergent evolution of polygyny. <i>Biological Journal of the Linnean Society</i> 21: 209-216.",
+      "year": "1984",
+      "title": "The mating systems of pinnipeds and marine iguanas: convergent evolution of polygyny",
+      "author": "Trillmich, F. and Trillmich, K.G.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Trillmich, F. 1979. Noticias de Galapagos. <i>Noticias de Galapagos</i> 29: 8-14.",
+      "year": "1979",
+      "title": "Noticias de Galapagos",
+      "author": "Trillmich, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Villegas-Amtmann, S., Costa, D.P., Tremblay, Y., Salazar, S. and Aurioles-Gamboa, D. 2008. Multiple foraging strategies in a marine apex predator, the Galapagos Sea Lion <i>Zalophus wollebaeki</i>. <i>Marine Ecology Progress Series</i> 363: 299-309.",
+      "year": "2008",
+      "title": "Multiple foraging strategies in a marine apex predator, the Galapagos Sea Lion <i>Zalophus wollebaeki</i>",
+      "author": "Villegas-Amtmann, S., Costa, D.P., Tremblay, Y., Salazar, S. and Aurioles-Gamboa, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Trillmich, F. 1986. Attendance behavior of Galapagos sea lions. In: R. L. Gentry and G. L. Kooyman (eds), <i>Fur seals: Maternal strategies on land and at sea</i>, pp. 196-208. Princeton University Press, Princeton, NJ, USA.",
+      "year": "1986",
+      "title": "Attendance behavior of Galapagos sea lions",
+      "author": "Trillmich, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Villegas-Amtmann, S., Jeglinski, J.W.E., Costa, D.P., Robinson, P.W. and Trillmich, F. 2013. Individual foraging strategies reveal niche overlap between endangered Galapagos Pinnipeds. <i>PLOS ONE</i> 8(8): doi:101371/journal.pone.0070748.",
+      "year": "2013",
+      "title": "Individual foraging strategies reveal niche overlap between endangered Galapagos Pinnipeds",
+      "author": "Villegas-Amtmann, S., Jeglinski, J.W.E., Costa, D.P., Robinson, P.W. and Trillmich, F. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gerber, L.R. and Hilborn, R. 2001. Catastrophic events and recovery from low densities in populations of otariids: implications for risk of extinction. <i>Mammal Review</i> 31(2): 131-150.",
+      "year": "2001",
+      "title": "Catastrophic events and recovery from low densities in populations of otariids: implications for risk of extinction",
+      "author": "Gerber, L.R. and Hilborn, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cobb, K.M., Westphal, N., Sayani, H.R., Watson, J.T., Di Lorenzo, E., Cheng, H., Edwards, R.L. and Charles, C.D. 2013. Highly variable El Niño-Southern Oscillation throughout the Holocene. <i>Science </i> 339: 67-70.",
+      "year": "2013",
+      "title": "Highly variable El Niño-Southern Oscillation throughout the Holocene",
+      "author": "Cobb, K.M., Westphal, N., Sayani, H.R., Watson, J.T., Di Lorenzo, E., Cheng, H., Edwards, R.L. and Charles, C.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cai, W., Borlace, S., Lengaigne, M., van Rensch, P., Collins, M., Vecci, G., Timmermann, A., Santoso, A., McPhaden, M.J., Wu, L., England, M.H., Guojian, W. and Jin, F-F. 2014. Increasing frequency of extreme El Niño events due to greenhouse warming. <i>Nature Climate Change</i> 4: 111-116.",
+      "year": "2014",
+      "title": "Increasing frequency of extreme El Niño events due to greenhouse warming.",
+      "author": "Cai, W., Borlace, S., Lengaigne, M., van Rensch, P., Collins, M., Vecci, G., Timmermann, A., Santoso, A., McPhaden, M.J., Wu, L., England, M.H., Guojian, W. and Jin, F-F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Trillmich, F. and Wolf, J.B.W. 2008. Parent-offspring and sibling conflict in the Galápagos fur seals and sea lions. <i>Behavioral Ecology and Sociobiology</i> 62: 363-375.",
+      "year": "2008",
+      "title": "Parent-offspring and sibling conflict in the Galápagos fur seals and sea lions",
+      "author": "Trillmich, F. and Wolf, J.B.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jeglinski, J.W.E, Goetz, K.T., Werner, C., Costa, D.P. and Trillmich F. 2013. Same size – same niche? Foraging niche separation between sympatric juvenile Galapagos sea lions and adult Galapagos fur seals. <i>Journal of Animal Ecology</i> 82: 694-706.",
+      "year": "2013",
+      "title": "Same size – same niche? Foraging niche separation between sympatric juvenile Galapagos sea lions and adult Galapagos fur seals",
+      "author": "Jeglinski, J.W.E, Goetz, K.T., Werner, C., Costa, D.P. and Trillmich F. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Brock, P.M., Hall, A.J., Goodman, S.J. and Acevedo-Whitehouse, K. 2013. Applying the tools of ecological immunology to conservation: a test case in the Galapagos sea lion. <i>Animal Conservation</i> 16: 19-31.",
+      "year": "2013",
+      "title": "Applying the tools of ecological immunology to conservation: a test case in the Galapagos sea lion",
+      "author": "Brock, P.M., Hall, A.J., Goodman, S.J. and Acevedo-Whitehouse, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Trillmich, F. 1996. Parental investment in pinnipeds. <i>Advances in the Study of Behavior</i> 25: 533-577.",
+      "year": "1996",
+      "title": "Parental investment in pinnipeds",
+      "author": "Trillmich, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Salazar, S. 2001. Auscultación y estudio de cadáveres de lobos marinos encontrados en “La Lobería” –Isla San Cristóbal.  Informe Técnico. Estación Científica Charles Darwin. Departamento de Investigación y Conservación Marina. Santa Cruz, Galápagos, Ecuador.",
+      "year": "2001",
+      "title": "Auscultación y estudio de cadáveres de lobos marinos encontrados en “La Lobería” –Isla San Cristóbal",
+      "author": "Salazar, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Trillmich, F. 1981. Mutual mother-pup recognition in Galápagos fur seals and sea lions: cues used and functional significance. <i>Behaviour </i> 78: 21-42.",
+      "year": "1981",
+      "title": "Mutual mother-pup recognition in Galápagos fur seals and sea lions: cues used and functional significance",
+      "author": "Trillmich, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jeglinski, J.W.E., Werner, C., Robinson, P.W., Costa, D.P. and Trillmich, F. 2012. Age, body mass and environmental variation shape the foraging ontogeny of Galapagos sea lions. <i>Marine Ecology Progress Series</i> 453: 279-296.",
+      "year": "2012",
+      "title": "Age, body mass and environmental variation shape the foraging ontogeny of Galapagos sea lions",
+      "author": "Jeglinski, J.W.E., Werner, C., Robinson, P.W., Costa, D.P. and Trillmich, F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kraus, C., Mueller, B., Meise, K., Piedrahita, P., Pörschmann, U. and Trillmich, F. 2013. Mama’s boy: sex differences in juvenile survival in a highly dimorphic large mammal, the Galapagos sea lion. <i>Oecologia </i> 171: 893-903.",
+      "year": "2013",
+      "title": "Mama’s boy: sex differences in juvenile survival in a highly dimorphic large mammal, the Galapagos sea lion",
+      "author": "Kraus, C., Mueller, B., Meise, K., Piedrahita, P., Pörschmann, U. and Trillmich, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sivertsen, E. 1953. A new species of sea lion, <i>Zalophus wollebaeki</i>, from the Galapagos Islands. <i>Det Kongelige Norske Videnskabers Selskabs Forhandlinger</i> 26: 1-3.",
+      "year": "1953",
+      "title": "A new species of sea lion, <i>Zalophus wollebaeki</i>, from the Galapagos Islands",
+      "author": "Sivertsen, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Trillmich, F., Jeglinski, J.W.E., Meise, K. and Piedrahita, P. 2014. The Galapagos sea lion: Adaptation to spatial and temporal diversity of marine resources within the archipelago. In: J. Denkinger and L. Vinueza (eds), <i>The Galapagos Marine Reserve</i>, pp. 61-70. Springer Verlag, New York.",
+      "year": "2014",
+      "title": "The Galapagos sea lion: Adaptation to spatial and temporal diversity of marine resources within the archipelago",
+      "author": "Trillmich, F., Jeglinski, J.W.E., Meise, K. and Piedrahita, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Páez-Rosas, D., Riofrío-Lazo, M. and Aurioles-Gamboa, D. 2014. Flexibility in the foraging strategies of the Galapagos sea lion inferred from a multiple approach analysis. In: J. Denkinger and L. Vinueza (eds), <i>The Galapagos Marine Reserve</i>, pp. 71-80. Springer Verlag, New York.",
+      "year": "2014",
+      "title": "Flexibility in the foraging strategies of the Galapagos sea lion inferred from a multiple approach analysis",
+      "author": "Páez-Rosas, D., Riofrío-Lazo, M. and Aurioles-Gamboa, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2015. The IUCN Red List of Threatened Species. Version 2015.2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 23 June 2015).",
+      "year": "2015",
+      "title": "The IUCN Red List of Threatened Species. Version 2015.2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2015.2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

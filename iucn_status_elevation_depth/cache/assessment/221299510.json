@@ -1,0 +1,2635 @@
+{
+  "assessment_date": "2025-06-10T01:00:00.000+01:00",
+  "year_published": "2025",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 12436,
+  "criteria": "C2b",
+  "url": "https://www.iucnredlist.org/species/12436/221299510",
+  "citation": "Woodroffe, R., McNutt, T., Groom, R. & Ngatia, D. 2025. Lycaon pictus. The IUCN Red List of Threatened Species 2025: e.T12436A221299510. Accessed on 15 May 2026.",
+  "assessment_id": 221299510,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 12436,
+    "scientific_name": "Lycaon pictus",
+    "species_taxa": [],
+    "subpopulation_taxa": [
+      {
+        "sis_id": 16991111,
+        "scientific_name": "Lycaon pictus North Africa subpopulation",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "CARNIVORA",
+        "family_name": "CANIDAE",
+        "genus_name": "Lycaon",
+        "species_name": "pictus",
+        "subpopulation_name": "North Africa subpopulation",
+        "infra_name": null,
+        "authority": "(Temminck, 1820)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Canid Specialist Group (foxes, jackals and wild dogs)",
+            "url": "http://www.canids.org/",
+            "description": "Chair: Claudio Sillero-Zubiri (email: canids@zoology.oxford.ac.uk)\nRed List Authority Coordinator: Michael Hoffmann (email: mike.hoffmann@zsl.org)\nNewsletter: http://www.canids.org/c-b-c"
+          }
+        ],
+        "common_names": [
+          {
+            "main": true,
+            "name": "African Wild Dog",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 16991108,
+        "scientific_name": "Lycaon pictus West Africa subpopulation",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "CARNIVORA",
+        "family_name": "CANIDAE",
+        "genus_name": "Lycaon",
+        "species_name": "pictus",
+        "subpopulation_name": "West Africa subpopulation",
+        "infra_name": null,
+        "authority": "(Temminck, 1820)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Canid Specialist Group (foxes, jackals and wild dogs)",
+            "url": "http://www.canids.org/",
+            "description": "Chair: Claudio Sillero-Zubiri (email: canids@zoology.oxford.ac.uk)\nRed List Authority Coordinator: Michael Hoffmann (email: mike.hoffmann@zsl.org)\nNewsletter: http://www.canids.org/c-b-c"
+          }
+        ],
+        "common_names": [
+          {
+            "main": true,
+            "name": "African Wild Dog",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CARNIVORA",
+    "family_name": "CANIDAE",
+    "genus_name": "Lycaon",
+    "species_name": "pictus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Temminck, 1820)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Canid Specialist Group (foxes, jackals and wild dogs)",
+        "url": "http://www.canids.org/",
+        "description": "Chair: Claudio Sillero-Zubiri (email: canids@zoology.oxford.ac.uk)\nRed List Authority Coordinator: Michael Hoffmann (email: mike.hoffmann@zsl.org)\nNewsletter: http://www.canids.org/c-b-c"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Cape Hunting Dog",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Painted Dog",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Cynhyene",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Hyänenhund",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Licaon",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Licaone",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Loup-peint",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Lycaon",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Wildehond",
+        "language": "afr"
+      },
+      {
+        "main": true,
+        "name": "African Wild Dog",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Hyaena picta Temminck, 1820",
+        "status": "ACCEPTED",
+        "genus_name": "Hyaena",
+        "species_name": "picta",
+        "species_author": "Temminck, 1820",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Endangered"
+    },
+    "code": "EN"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": "45",
+    "upper_elevation_limit": 4000,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "1676",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "5",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Percentage of population protected by PAs",
+            "value": "31-40"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "Unknown"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": "The African wild dog is almost unmistakeable, a large but lightly built canid, with long, slim legs, and large, rounded ears. The colouration of the pelage is distinctive but highly variable, with a combination of irregular black, yellow-brown and white blotches on the back, sides and legs. Each animal's pelage colouration is unique, and can be used to identify individual animals&#160;(Maddock &amp; Mills 1994). Colouration of the head and tail is more consistent: almost all wild dogs have a yellow-brown head with a black 'mask', black ears, and a black line following the sagittal crest, with a white tip to the tail. The length of the pelage varies regionally, but the hair is generally very short on the limbs and body but longer on neck, sometimes giving a shaggy appearance at the throat, especially in southern Africa. There are four digits on each foot, all with claws, and the pads of the middle two digits are fused proximally. Females have six to eight pairs of nipples. Males are slightly larger than females&#160;(McNutt &amp; Gusset 2012)&#160;and have a conspicuous prepuce.",
+    "extreme_fluctuations": "Yes",
+    "no_of_subpopulations": "31",
+    "continuing_decline_in_subpopulations": "Yes",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": "535",
+    "estimated_area_of_occupancy": "1523996",
+    "continuing_decline_in_area_of_occupancy": "Yes",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "15114629",
+    "continuing_decline_in_extent_of_occurence": "Yes",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Yes",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "African Wild Dogs historically were&#160;distributed across Africa, south of the Sahara. However, as people degraded and destroyed natural habitat, wild dogs were extirpated across most of their historical range. Today, wild dogs are known to persist in just 8% of their historical range, with approximately two-thirds of this land lying outside IUCN Category I-IV protected areas (IUCN/SSC 2016, IUCN/SSC in review, IUCN/SSC in prep). The global wild population is estimated to number below 700 packs globally.<br/><br/>African Wild Dog status varies across different regions of Africa. Their numbers are most robust in Southern Africa, where approximately 17% of the species’ historical range still supports breeding packs, comprising roughly two-thirds of the global population (IUCN/SSC 2016). The single largest subpopulation inhabits the Kavango-Zambezi (KAZA) Transfrontier Conservation Area, spanning northern Botswana, eastern Namibia, south-eastern Angola, south-western Zambia, and western Zimbabwe: KAZA alone supports nearly a third of the world’s African wild dogs (IUCN/SSC 2016). In eastern Africa, approximately 10% of historical range is still occupied by breeding packs, supporting nearly a third of the global population, the biggest subpopulation is in the Selous/Nyerere complex of southern Tanzania, which is thought to connect to Southern Africa via a corridor to northern Mozambique (IUCN/SSC in review). In Central Africa, wild dogs remain in just 5% of their historical range, with the largest subpopulation in and around Chinko National Park in the Central African Republic (IUCN/SSC in review). In West Africa the situation is even more serious, with a single remaining subpopulation in Sénégal’s Niokolo Koba National Park, covering just 0.2% of the region’s historical range and representing less than 0.5% of the global population (IUCN/SSC in prep-b). Most of North Africa falls outside wild dogs’ historical range, and the species is believed to be extinct in this region (IUCN/SSC in review).",
+    "population": "Population estimates drew upon the best available evidence for each area of resident range. Where on-the-ground monitoring projects were in place, these projects were asked to provide up-to-date subpopulation size estimates (numbers of packs, and numbers of animals aged ≥12 months), for their areas of operation, these estimates drew on a range of data sources including tracking known individuals and packs with GPS-collars, visual monitoring, camera trap surveys, tourist photos, spoor surveys, and extrapolation from intensive study areas to nearby areas. Where there was no alternative data source, subpopulation size estimates were derived by multiplying the area of the resident range polygon by a conservative estimate of adult population density, with the number of packs then estimated using a mean pack size of 10 adults (McNutt and Silk 2008, Woodroffe <em>et al.</em> 2019).<br/> <br/><strong><u>Mature individuals</u></strong><br/>For African wild dogs, the estimation of numbers of mature individuals is complicated by the species’ cooperative breeding behaviour, which means that many sexually mature individuals do not reproduce and hence do not contribute genetically to the next generation (Malcolm and Marten 1982, Creel <em>et al.</em> 1997, Girman <em>et al.</em> 1997a, McNutt and Silk 2008, Woodroffe <em>et al.</em> 2019). For this assessment, the number of mature individuals was estimated from the number of packs, by assuming that every pack contained a single alpha female and a single alpha male, while a proportion of packs also contained subdominant breeders in addition to the alphas. We used published data to calculate, separately, the average number of subdominant females, and the average number of subdominant males, reproducing each year, in addition to the alpha pair. Across seven study areas in Botswana, Kenya, Zimbabwe, Tanzania, and South Africa, behavioural observations indicated that 32 of 343 litters were born to subdominant mothers (Frame <em>et al.</em> 1979, Girman <em>et al.</em> 1997b, Creel and Creel 2002, Spiering <em>et al.</em> 2010, McNutt 2019). As there were 32 litters born to subdominants and 311 born to alpha females, we inferred that, on average, there were 32/311 (0.103) subdominant breeding females for every alpha female. This value compared well with available genetic evidence (from two of the study subpopulations, Girman <em>et al.</em> 1997b, Spiering <em>et al.</em> 2010) which showed that, in South Africa, 10 of 137 pups had subdominant mothers, indicating that subdominant females produced 0.079 pups for every pup born to an alpha female.<br/><br/>Male reproductive success can be measured only using genetics. In the same two genetic studies (Girman <em>et al.</em> 1997b, Spiering <em>et al.</em> 2010) 27 of 115 pups had subdominant fathers, indicating that subdominant males fathered 0.307 pups for every pup fathered by an alpha male.<br/><br/>On the basis of this evidence, we estimated the number of mature individuals per subpopulation from the number of packs as:<br/><br/>Mature individuals =&#160;Number of alpha females (= number of packs) +&#160;Number of subdominant breeding females (= number of packs x 0.103) +&#160;Number of alpha males (= number of packs) +&#160;Number of subdominant breeding males (= number of packs x 0.307).<br/><br/>The estimate for each subpopulation was then rounded to the nearest whole number, and summed across all subpopulations to give a global population estimate.<br/> <br/><strong><u>Trend in population size</u></strong><br/>The global estimate for the number of African wild dogs in the current assessment (2025: 1,676 mature individuals) exceeds the estimate for the previous assessment (2012: 1,409 mature individuals). However, this difference reflects two important changes, unrelated to real population trajectories. First, several additional wild dog subpopulations were discovered since the previous estimate, including those in south-eastern Angola (Funston <em>et al.</em> 2017), western Angola (Overton <em>et al.</em> 2020), and eastern parts of the Central African Republic (Aebischer <em>et al.</em> 2020). The addition of these subpopulations contributed to an increase in the global population estimate, but this change reflected a more accurate estimate rather than actual population growth. <br/>Second, for this assessment we slightly altered our method for estimating number of mature individuals. In contrast with the previous (2012) assessment, we based our estimate on the numbers of packs per site, rather than the numbers of adults, both because pack number can be easier to estimate in the field, and because it is more meaningful as a measure of population size (Woodroffe, O’Neill and Rabaiotti 2019). Additionally, the number of genetic studies available to inform our estimates of the number of subdominant breeders per pack increased from one (Girman <em>et al.</em> 1997a) to two (Girman<em>et al.</em> 1997a, Spiering <em>et al.</em> 2010). For females, the rate of subdominant reproduction reported in the newer study (7.0% of pups with subdominant mothers, Spiering <em>et al.</em> 2010) was similar to that from the older study (7.8% of pups with subdominant mothers, Girman <em>et al.</em> 1997a), and was also consistent with behavioural data from seven sites. In contrast, for males the rate of subdominant reproduction could only be measured from genetics (rather than from behaviour as for females), and was found to be much higher in the newer study (27.9% of pups with subdominant fathers, Spiering <em>et al.</em>2010) than in the older study (10.3% of pups with subdominant fathers, Girman <em>et al.</em> 1997a). Unlike the older study (Girman <em>et al.</em> 1997a), the newer study came from a small, isolated subpopulation (Spiering <em>et al.</em> 2010) where limited opportunities to disperse and form new packs may have encouraged subdominant reproduction, and it is not clear to what extent it was representative of wild dog subpopulations more generally. However, as both studies had small sample sizes, we chose to include them both to draw upon the widest possible array of data to inform our estimates. However, we are aware that, in so doing, we may have inflated the estimated number of mature individuals, the global total (1,676 mature individuals) would have been 8% lower (1,543 mature individuals) had we drawn only on the older study of subdominant paternity. Indeed, the global total would have been 17% lower (1,392 mature individuals) had we ignored subdominant reproduction, as in the 2001 assessment.<br/><br/>To avoid bias introduced by these methodological differences, we estimated recent population change by (i) restricting comparisons over time to sites with subpopulation size estimates in both 2012 and 2025, and (ii) comparing the estimated numbers of adults (animals aged ≥12 months) between the two time points, rather than the numbers of mature individuals, as this measure was estimated at both time points.<br/><br/>On this basis, we estimated a 17% decline over the past three generations (15 years). The comparison period includes the population crash in Kenya’s Ewaso ecosystem (Mutinda <em>et al.</em> 2017), loss of wild dogs from Zambia’s Liuwa Plain (Zambia Carnivore Programme 2016) and the WAP Complex in West Africa (IUCN/SSC in review), and multiple whole-pack deaths in South Africa (Du <br/><br/>Plessis 2016, Loots <em>et al.</em> 2017) and Tanzania (Grumeti Fund 2018). Across Africa, threats to wild dog populations are growing rather than declining, as human impacts on formerly wildlife-friendly habitats expand. As time passes, we expect there to be less habitat, fewer prey, more snares, more roads, and more domestic dogs and so more disease transmission. Facing this mass of threats, we expect wild dogs to continue the pattern of decline observed in recent years.<br/><br/><strong><u>Extreme fluctuations</u></strong><br/>Wild dogs experience dramatic “boom and bust” population dynamics. Litter sizes are large, allowing populations to grow rapidly when conditions are favourable (e.g., Pole 2000, Woodroffe 2011a, Davies-Mostert <em>et al.</em> 2015). However, episodes of very high mortality are also relatively frequent, and are typically linked to disease outbreaks (e.g., Alexander <em>et al.</em> 2010, Goller <em>et al.</em> 2010). Since the last assessment there have been multiple episodes of this type (e.g., Du Plessis 2016, Zambia Carnivore Programme 2016, Grumeti Fund 2018, Loots <em>et al.</em> 2018, van Schalkwyk <em>et al.</em> 2019), including an epidemic of canine distemper virus  which killed an estimated 20 packs in Kenya’s Laikipia County (part of the Ewaso ecosystem) within a three-month period in 2017 (Mutinda, Cook and Kinya 2017). For perspective, 23 of the 31 wild dog subpopulations remaining in Africa are estimated to number et al. 2000, Hofmeyr <em>et al.</em> 2004, Grumeti Fund 2018), as well as prompting two reintroductions to replace populations lost to disease (Masenga <em>et al.</em> 2017, African Parks 2021).<br/><br/>Historical accounts show that disease-related wild dog die-offs are not a recent phenomenon. The earliest accounts document the loss of wild dogs from what is now the northern part of South Africa’s Kruger National Park during an epidemic attributed to “pulmonary distemper” in 1920, thought to have been transmitted by domestic dogs and to have entered from neighbouring Zimbabwe (Stevenson-Hamilton 1939). This die-off in the northern part of Kruger was followed in 1926 by the emergence of another disease (thought to be rickettsiosis) which led to wild dogs’ disappearance from the southern part of the park by 1931 (Stevenson-Hamilton 1939). Wild dogs were reported to have recolonised from neighbouring Mozambique in 1934 (Stevenson-Hamilton 1947), but rapidly disappeared again, with population recovery only beginning in earnest in 1948 (Reich 1981). A similar pattern has been observed elsewhere. Hoier (1955), noted wild dogs’ sudden appearance in, and equally sudden disappearance from, Albert National Park (now Virunga National Park in DRC), and proposed infectious disease as the cause. Wild dogs disappeared from Kenya’s Laikipia County during the 1980s in association with a disease outbreak, before recolonising two decades later (Woodroffe 2011a). Likewise, wild dogs disappeared from the Serengeti-Mara ecosystem on the Kenya-Tanzania border in a disease outbreak in 1990-1 (Gascoyne <em>et al.</em> 1993, Alexander and Appel 1994), returning after a decade (Marsden <em>et al.</em> 2011). The disappearance of wild dogs from the northern sections of Kruger National Park in the late 1990s may also have been caused by disease (Endangered Wildlife Trust 2017), this subpopulation recovered recently, after remaining low for two decades (Nicholson <em>et al.</em> 2020).<br/><br/>These periods of very rapid disease-related decline, followed by prolonged absence and then recovery, are consistent with two other elements of African wild dogs’ life history. First, the very long-range movements of dispersers (Fuller <em>et al.</em> 1992, Davies-Mostert <em>et al.</em> 2012, Masenga <em>et al.</em> 2016, Cozzi <em>et al.</em> 2020, Woodroffe <em>et al.</em> 2020, Sandoval-Seres <em>et al.</em> 2022, Beytell <em>et al.</em> 2024) make it possible for them to detect and colonise (or recolonise) suitable habitat, even when it is located at some distance from resident populations. Second, wild dogs are capable of rapid population growth. Because litters are large, packs can easily double or even triple in size within a single breeding attempt (e.g., Mills 1993, Woodroffe <em>et al.</em> 2019) and, where environmental conditions are favourable, populations may grow rapidly. For example, wild dogs recolonising Kenya’s Laikipia County grew from one pack to 19 packs in eight years (Woodroffe 2011a), those establishing South Africa’s managed metapopulation grew from 17 individuals to 202 in seven years (Davies-Mostert <em>et al.</em> 2015), and two packs reintroduced to Mozambique’s Gorongosa National Park in 2018-9 (Bouley <em>et al.</em> 2021) had grown to 11 packs by late 2024 (Mercia Angela, pers. comm.). Other species with excellent dispersal abilities and high reproductive rates are adapted to exploit environmental conditions which are unpredictable and ephemeral (e.g., pioneer tree species which colonise and rapidly exploit gaps in rainforest canopy), and it may be the case that African wild dogs’ facility for (re)colonisation may indicate a similar adaptation. While the ephemeral resource to be exploited is likely to involve habitat with abundant prey and/or few competitors, one source of such habitat is land vacated due to disease mortality.<br/><br/>Wild dogs’ “boom and bust” life history is relevant to their conservation (and hence to their red list assessment) for three reasons. First, rapid die-offs due to disease have occurred in large populations (e.g., Kruger in 1920 and Laikipia in 2017) as well as small populations, and inside protected areas (e.g., Serengeti in 1991 and Kruger in 2016) as well as outside, showing that neither population size nor protected status is sufficient to avoid sudden die-offs. Accounting for this additional risk is an important element of evaluating red list status. Second, although long-distance dispersal would, in the past, have allowed wild dogs to recolonise habitat vacated following disease die-offs, the habitat fragmentation typical of today’s human-dominated landscape acts as a barrier to dispersal (Cozzi <em>et al.</em> 2013, Jackson <em>et al.</em> 2016, Cozzi <em>et al.</em> 2020, O'Neill <em>et al.</em> 2020, O’Neill <em>et al.</em> 2022), impeding natural recolonisation and thus intensifying the impact of infectious disease on metapopulation persistence. Third, even if natural or assisted dispersal can return wild dogs to sites devastated by disease, other anthropogenic threats (including human-wildlife conflict, prey loss, climate change, and other infectious diseases) are all likely to hinder subpopulation recovery.<br/><br/>In our view, this evidence of repeated disease-related die-offs, followed by natural recolonisation and recovery, makes the “extreme fluctuations” criterion appropriate to this species.",
+    "habitats": "African Wild Dogs are native to Africa, south of the Sahara, historically absent only from the dense rainforests of the Congo Basin. Wild dogs occupy a range of habitats including short-grass plains (Kuhme 1965), semi-desert (Fraser-Celin&#160;<em>et al.</em> 2017), bushy savannas (Creel and Creel 2002, Woodroffe 2011b), woodland (Alting <em>et al.</em> 2021), and even upland forest (Malcolm and Sillero-Zubiri 2001). When searching for new territories, young wild dogs range very widely (e.g., Davies-Mostert <em>et al.</em> 2012), including through unsuitable habitat (O'Neill <em>et al.</em> 2020); this behaviour means that occasional records from unusual habitats (such as the top of Mount Kilimanjaro (Thesiger 1970), and deep in the Sahara Desert (Monod 1928)) are unlikely to indicate the presence of resident packs.<br/><br/>Although wild dogs’ long-range dispersal behaviour is particularly extreme, resident wild dog packs also occupy much larger home ranges (Gittleman and Harvey 1982), and live at much lower population densities (Carbone and Gittleman 2002), than would be expected on the basis of their energy demands. These patterns are thought to reflect the impact of competition with larger carnivores such as lions (<em>Panthera leo</em>) and spotted hyaenas (<em>Crocuta crocuta</em>), which kill wild dogs and steal their kills (Fanshawe and FitzGibbon 1993, Creel and Creel 1996, Mills and Gorman 1997, Swanson <em>et al.</em> 2014, Groom <em>et al.</em> 2016).<br/><br/>Wild dogs’ low population density and wide-ranging behaviour helps to explain why they tend to have persisted only in extremely large areas of habitat (Woodroffe and Ginsberg 1998). Today, wild dog distribution is limited primarily by human activities, which have fragmented and degraded wildlife-friendly habitat, rather than by the loss of a specific habitat type.<br/><br/>African wild dogs mostly hunt medium-sized antelope, relying on speed, endurance, and strength of numbers rather than stealth. Across much of eastern and southern Africa their primary prey are impala (<em>Aepyceros melampus</em>), with greater kudu (<em>Tragelaphus strepsiceros</em>), Thomson's gazelle (<em>Eudorcas thomsonii</em>), Wildebeest (<em>Connochaetes taurinus</em>) also important prey species (Fanshawe and FitzGibbon 1993, Pole <em>et al.</em> 2004, Dröge <em>et al.</em> 2017, Creel <em>et al.</em> 2018). Small antelope, such as dik-diks (<em>Madoqua spp.</em>) and Steenbok (<em>Raphicerus campestris</em>) are important in some areas, as are Warthogs (<em>Phacochoerus spp.</em>). Wild dogs also take very small prey such as hares and lizards (Woodroffe <em>et al.</em> 2007c), but these make a very small contribution to their diet.<br/><br/>African wild dogs are highly social, cooperating to hunt (Creel and Creel 1995, Hubel <em>et al.</em> 2016), defend themselves and their kills (Fanshawe and FitzGibbon 1993), and to breed (Malcolm and Marten 1982). Typically, only one female and one male produce pups in each pack (Malcolm and Marten 1982, Girman <em>et al.</em> 1997b, McNutt and Silk 2008), but all pack members may contribute to raising the pups. As females have very seldom been observed to raise pups to adulthood without assistance from other pack members (but see Woodroffe <em>et al.</em> 2009), packs, rather than individuals, are often used as the units of measuring wild dog population size. Larger packs consistently raise larger litters (Creel <em>et al.</em> 2004, Rasmussen <em>et al.</em> 2008, Gusset and Macdonald 2010, Woodroffe <em>et al.</em> 2017).<br/><br/>Dispersal behaviour is central to wild dog population dynamics. Because inbreeding avoidance is strong (Girman <em>et al.</em>1997b) yet joining a pack (rather than being born into it) is very rare (e.g., Woodroffe, O’Neill and Rabaiotti 2019), most young wild dogs cannot find a mate in their natal pack and instead disperse to find unrelated mates elsewhere and to form new packs (e.g., McNutt 1996, Woodroffe <em>et al.</em> 2020). For the same reason, when an alpha animal dies, the surviving alpha may find no unrelated mate remaining in the pack. Under such circumstances, packs tend to fragment (e.g., Woodroffe <em>et al.</em> 2020). Thus, packs have a finite lifetime which very seldom exceeds that of their founders, and the formation of new packs is essential to population persistence (Woodroffe <em>et al.</em> 2019).",
+    "threats": "Wild dogs’ decline has been related to their limited ability to inhabit human-dominated landscapes. Where human densities are high and habitat consequently degraded and fragmented, wild dogs encounter few prey, hostile farmers and ranchers, snares set to catch wild ungulates, high speed traffic, and domestic dogs harbouring potentially fatal diseases. These factors make it impossible for wild dogs to survive in areas heavily modified by people, especially those where settlement and cultivation have irreversibly destroyed former habitat.<br/><br/>Faced with this widespread habitat destruction, wild dogs are dependent on remaining patches of wildlife-friendly habitat. However, wild dogs’ low population densities mean that even quite large patches of habitat may be too small to sustain viable populations, and their wide-ranging behaviour means that they are often exposed to people, and the associated threats, on the boundaries of nominally protected areas (Woodroffe and Ginsberg 1998). Typically, areas of <em>ca</em> 10,000 sq km are the minimum required to support a viable population. Hence, habitat loss is an over-arching threat to wild dogs, through its direct role in reducing space for wild dogs to inhabit, and through its indirect role in exposing wild dogs to other threats.<br/><br/>In addition to this broad threat of habitat loss, wild dog populations face an array of local threats. Importantly, the relative importance of each threat varies between populations (Woodroffe <em>et al.</em> 2007a). Hence, the order in which these threats are presented below is not intended to reflect their relative importance.<br/><br/>As hunters of medium-sized ungulates, wild dogs are well-equipped to hunt livestock (importantly, there are no confirmed accounts of wild dogs hunting people). Where wild dogs kill livestock, or are perceived as a threat to livestock, they may be killed in retaliation or as a preventative measure. The resulting human-wildlife conflict can be locally severe (e.g., Rasmussen 1996, Woodroffe <em>et al.</em> 2005, Fraser-Celin <em>et al.</em> 2017).<br/><br/>Hunting of wild ungulates for meat threatens wild dogs both directly and indirectly. Indirectly, lack of wild prey limits food intake, constraining pack size and expanding home range size (Goodheart <em>et al.</em> 2021) while also encouraging predation on livestock (Woodroffe <em>et al.</em> 2005). Moreover, where people use snares to hunt wild ungulates, wild dogs are often caught as by-catch, causing mortality sufficient to drive population decline (Leigh 2005, Becker <em>et al.</em> 2013), as well as inflicting suffering through major injuries.<br/><br/>Infectious disease is another major threat to wild dog populations, sufficient to have temporarily extirpated wild dogs from what is now Kruger National Park in the 1920s (Stevenson-Hamilton 1939), the Serengeti-Mara ecosystem in 1990-1 (Gascoyne <em>et al.</em> 1993), and Kenya’s Laikipia County in 2017 (Mutinda <em>et al.</em> 2017). These sites were all recolonised naturally, indicating that connectivity remained to other, nearby populations. However, such recolonisation will be increasingly unlikely as human activity constrains the movements of dispersers, exacerbating the metapopulation-level impact of disease. Domestic dogs have been implicated (albeit to different extents) in the transmission of both rabies and canine distemper to wild dogs (Alexander and Appel 1994, Prager <em>et al.</em> 2012, Prager <em>et al.</em> 2013), and were thought to have been the source of the (unidentified) disease which temporarily extirpated wild dogs from Kruger (Stevenson-Hamilton 1939). Hence, as human development encroaches on wild dog habitat, contact with domestic dogs is likely increase and, with it, exposure to potentially fatal pathogens (Woodroffe and Donnelly 2011, Woodroffe <em>et al.</em> 2012).<br/><br/>As coursing predators, wild dogs like to use roads for travelling (Abrahms <em>et al.</em> 2016, O'Neill <em>et al.</em> 2020). This behaviour exposes them to the risk of road traffic accidents, which can have a major impact where high-speed roads run close to, or through, key wildlife areas (e.g., van der Meer <em>et al.</em> 2014).<br/><br/>While other threats operate on a local (albeit extensive) geographic scale, and so could, in principle, be addressed through local conservation efforts, the threat posed by climate change results from global, rather than local, human activities. High ambient temperatures constrain wild dogs’ hunting opportunities (Rabaiotti and Woodroffe 2019), and periods of hot weather have been linked to increased pup mortality, extended inter-birth intervals, lower adult survival, and altered phenology (Woodroffe <em>et al.</em> 2017, Rabaiotti <em>et al.</em> 2021, Abrahms <em>et al.</em> 2022). These demographic impacts of high temperatures help to explain why the energy-intensive pup-rearing period coincides with the coolest part of the year (McNutt <em>et al.</em> 2019). Projecting the potential impacts of climate change indicates that even quite probable carbon emission scenarios may be sufficient to prompt wild dog population collapse (Rabaiotti <em>et al.</em> 2023). Unfortunately, although this threat is well understood and not reversible in the short term, wild dogs’ short generation time means that it is projected to operate too slowly to trigger threat criteria under “projected decline” (Rabaiotti 2019).",
+    "measures": "Conservation action for African wild dogs is guided by regional strategies for southern Africa (IUCN/SSC 2016), eastern Africa (IUCN/SSC in prep), and North, West, and Central Africa (IUCN/SSC in review). These regional strategies each cover 10 years, and each has been updated at least once (IUCN/SSC 2008, IUCN/SSC 2010, IUCN/SSC 2012). Many range states have chosen to use their corresponding regional strategy as a template for developing National Action Plans (e.g., Tanzania Wildlife Research Institute 2016).<br/><br/>Given the central threat from habitat loss, habitat conservation is the most important action needed to prevent wild dog extinction. Wild dogs require habitat conservation at scales seldom considered for other species, making them an excellent flagship for very large protected areas (e.g., South Africa’s Kruger National Park), protected area complexes (e.g., Tanzania’s Selous Game Reserve/Nyerere National Park), and Trans-Frontier Conservation Areas (e.g., KAZA). These three areas together support over half of the world’s wild dogs, and maintaining their integrity is the top priority for wild dog conservation. Wild dogs can also persist at scale outside protected areas, where land use is conducive, for example the pastoralist areas of northern and eastern Kenya support important populations almost entirely on community land, while combining private ranches in Zimbabwe into multi-owner conservancies fostered impressive recoveries, and persistence, of wild dogs on private land. Education, at all levels of society, is important to explain, justify, and promote the prioritisation of wildlife conservation at such scales.<br/><br/>Although wild dog conservation is compatible with some hunting offtake of other species (e.g., in well-managed hunting reserves), indiscriminate hunting with snares has devastating impacts on wild dogs, which are highly susceptible to accidental capture. Control of snaring is a vital element of wild dog conservation (Becker <em>et al.</em> 2013), while removal of snares from the environment, antipoaching, and support for alternative livelihoods may all reduce snaring impacts on wildlife, removal of snares from injured animals may also play an important role in preventing population decline (Banda <em>et al.</em> 2023). Where snaring is a major concern, close monitoring of packs fitted with tracking collars can help with detecting and removing snares.<br/><br/>Where wild dogs share the landscape with people, livestock farming is likely to be the primary human land use, creating opportunities for livestock predation and hence human-wildlife conflict. Approaches to mitigating human-wildlife conflict include conserving wild prey, as well as encouraging forms of livestock husbandry which deter predation (e.g., Rasmussen 1996, Woodroffe <em>et al.</em> 2005, Woodroffe <em>et al.</em> 2007b).<br/><br/>Infectious disease is a biologically complex and hence challenging threat to wild dogs. Across much of Africa, rabies persists in domestic dog populations, and mass vaccination of domestic dogs is an effective way to protect local people and domestic animals, as well as wild carnivores, from a devastating disease (Cleaveland <em>et al.</em> 2003, Cleaveland <em>et al.&#160;</em>2006, Prager <em>et al.</em> 2013, Hayes <em>et al.</em> 2022). However, wildlife likely play a key role in the persistence of canine distemper virus (Craft <em>et al.</em> 2008, Prager <em>et al.</em> 2012, Prager <em>et al.</em> 2013, Viana <em>et al.</em> 2015), meaning that domestic dog vaccination is unlikely to be as effective for distemper as it should be for rabies. Vaccination of wild dogs themselves has been shown to be both safe and effective against both pathogens (Reuben <em>et al.</em> in prep, Woodroffe <em>et al.</em> in prep, Gold <em>et al.</em> in review), the Canid Specialist group is current preparing guidelines to support wild dog managers in deciding which intervention is most important under which circumstances. As for snaring, monitoring using tracking collars is a vital tool for detecting and responding to disease outbreaks.<br/><br/>Reducing the impact of road mortality on wild dogs is best achieved by avoiding routing major roads in and near wild dog habitat. Where such roads are already in place, measures such as signage and speed bumps may help to reduce impacts. Elsewhere in the world, over- and under-passes are used to reduce road mortality for both people and wildlife, such approaches are not yet widely practised in Africa, but could be valuable where road improvement or construction in or near wild dog habitat is unavoidable.<br/><br/>As climate change is a global phenomenon, only global action to reduce carbon emissions can entirely avoid or reverse its negative consequences for African wild dogs. However, analyses suggest that weather impacts on adult wild dogs operate, at least in part, by increasing their susceptibility to existing causes of mortality such as disease and human wildlife conflict (Rabaiotti <em>et al.</em> 2021). Hence, climate impacts might be mitigated, to some extent by addressing other threats to wild dog populations.<br/><br/>As is apparent from the narrative above, wild dog conservation action is often species-specific, hence it can only be implemented where wild dogs are known to occur. Important wild dog populations remained undetected in Angola and CAR until recent years, and it is possible that some other populations are yet to be confirmed. Surveys are much-needed, especially in areas identified in conservation strategies as “possible range” (IUCN/SSC 2016, IUCN/SSC in prep, IUCN/SSC in review). Likewise, monitoring of key populations is crucial to targeting conservation interventions, assessing their efficacy, and identifying new threats.<br/><br/>Participants in strategic planning have identified few areas of “recoverable range”, where natural recolonisation or reintroduction could be considered (IUCN/SSC 2016, IUCN/SSC in prep, IUCN/SSC in review). While conserving existing populations should be prioritised over attempting to restore lost ones, reintroduction may have an important role to play in certain areas. Methods for reintroduction have been developed and honed in South Africa, in the course of establishing and maintaining a \"managed metapopulation\" of very small subpopulations across an array of small, fenced reserves, none of which would be viable on its own but which, under intensive management, has proven very successful when viewed as a single unit (Davies-Mostert <em>et al.</em> 2015). The methods developed in managing the metapopulation have been applied to reintroductions outside South Africa, most notably the successful restoration of wild dogs to Mozambique’s Gorongosa National Park (Bouley <em>et al.</em> 2021), which numbered 11 packs at the most recent estimate. Thus far, reintroductions have been restricted to southern Africa, translocations further afield should be guided by (ongoing; Ramage <em>et al.</em> in prep) studies of wild dog sub-specific taxonomy and evolutionarily significant units (Hoelzel 2023), as has been agreed recently for lions (Becker <em>et al.</em> 2022, Bertola <em>et al.</em> 2022).<br/><br/>While it is now well-established that wild dog translocations should rely on wild-reared animals which have the survival skills needed for life in the wild, captive populations also have an important role to play in wild dog conservation. Developing guidelines for managing disease would have been far more difficult had it not been possible to evaluate vaccines and vaccination protocols in captivity before trialling them in the wild (e.g., Connolly <em>et al.</em> 2013, Connolly <em>et al.&#160;</em>2015, Wahldén <em>et al.</em> 2018). Likewise, accelerometry collars used to better understand the impacts of prey loss and climate change were evaluated first in captivity (English <em>et al.</em> 2023). Zoos play a vital role in educating and inspiring people worldwide to care about wild dogs, and provide a vital stream of funding to support conservation action in the field.",
+    "use_trade": "Across most of its geographical range, there is minimal consumptive use of this species. Evidence of localised traditional use has been reported in Zimbabwe (Davies and Du Toit 2004), but this is not reported from other areas. There is a low level of international trade in captive animals from South Africa to zoos worldwide, but no recent reports of animals being taken from the wild to support this trade.",
+    "rationale": "Although African Wild Dogs occupy a large geographic area, their population densities are extremely low, leading to a global population estimate of fewer than 700 packs. Breeding is typically restricted to a single alpha male and female in each pack, and death of one of the alphas can lead the whole pack to fragment. Accounting for all alphas and occasional subdominant breeders, the global population of mature individuals is estimated at 1,676, with an estimated 16.9% population decline over three generations. Part of that decline reflects a sudden and major population crash in Kenya caused by an epidemic of canine distemper virus. Such crashes, with recovery facilitated by wild dogs’ extraordinary dispersal abilities and large litters, have been documented repeatedly over the past century, including the temporary loss of wild dogs from Kruger National Park in the 1920s, and from Serengeti National Park in the 1990s. Historical accounts (e.g. from what is now Virunga National Park in DRC) also document the sudden appearance of wild dogs, followed by equally sudden disappearance some years later. This evidence of “boom and bust” demography indicates that wild dogs should be considered to experience “extreme fluctuations” in population size. Since the last assessment (when the species was classified as EN C2a(i)), the discovery of additional packs in south-eastern Angola took the size estimate for the largest subpopulation (in and around the KAZA Transfrontier Conservation Area) above the EN threshold for criterion C2a(i). Hence, on the basis of small population size and extreme fluctuations, the African wild dog is classified as Endangered (EN C2b).",
+    "trend_justification": null,
+    "taxonomic_notes": "The taxonomy of all the canids, including <em>Lycaon pictus</em>, is currently under review by the Canid Specialist Group. Standard taxonomic texts recognise five subspecies: <em>L. pictus pictus </em>in southern Africa, <em>L. pictus lupinus</em> in eastern Africa, <em>L. pictus somalicus</em> in north-eastern Africa Africa, <em>L. pictus sharicus</em> in central Africa, and <em>L. pictus manguensis</em> in West Africa (Wilson and Reeder 2005). Morphological and genetic data from southern and eastern Africa initially tended to support the <em>pictus/lupinus</em> division (Girman <em>et al.</em> 1993); however, later analyses suggested greater mixing between the two regions (Girman <em>et al.</em> 2001). Ongoing genomic analyses over a broader geographical area (Ramage <em>et al.</em> in prep) will inform the Canid Specialist Group assessment."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "4_1",
+      "description": {
+        "en": "Formal education"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": "",
+      "code": "6_1",
+      "description": {
+        "en": "Linked enterprises & livelihood alternatives"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3_1",
+      "description": {
+        "en": "Reintroduction"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_2",
+      "description": {
+        "en": "Training"
+      }
+    },
+    {
+      "note": "",
+      "code": "6_5",
+      "description": {
+        "en": "Non-monetary values"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_2",
+      "description": {
+        "en": "Policies and regulations"
+      }
+    },
+    {
+      "note": "",
+      "code": "6_4",
+      "description": {
+        "en": "Conservation payments"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_3",
+      "description": {
+        "en": "Private sector standards & codes"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Invasive/problematic species control"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Desert - Hot"
+      },
+      "code": "8_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Mangrove Vegetation Above High Tide Level"
+      },
+      "code": "1_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Moist"
+      },
+      "code": "2_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rwanda"
+      },
+      "code": "RW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ethiopia"
+      },
+      "code": "ET"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Togo"
+      },
+      "code": "TG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Côte d'Ivoire"
+      },
+      "code": "CI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea-Bissau"
+      },
+      "code": "GW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Zimbabwe"
+      },
+      "code": "ZW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ghana"
+      },
+      "code": "GH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Benin"
+      },
+      "code": "BJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Botswana"
+      },
+      "code": "BW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Burkina Faso"
+      },
+      "code": "BF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mali"
+      },
+      "code": "ML"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eswatini"
+      },
+      "code": "SZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Burundi"
+      },
+      "code": "BI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malawi"
+      },
+      "code": "MW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Niger"
+      },
+      "code": "NE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Sudan"
+      },
+      "code": "SS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Central African Republic"
+      },
+      "code": "CF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chad"
+      },
+      "code": "TD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uganda"
+      },
+      "code": "UG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sierra Leone"
+      },
+      "code": "SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Zambia"
+      },
+      "code": "ZM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Area-based Management Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": "",
+      "code": "4",
+      "description": {
+        "en": "Other"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Oil & gas drilling"
+      },
+      "code": "3_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Temperature extremes"
+      },
+      "code": "11_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_5_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": "Disease",
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "War, civil unrest & military exercises"
+      },
+      "code": "6_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Nomadic grazing"
+      },
+      "code": "2_3_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects (species is not the target)"
+      },
+      "code": "5_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Woodroffe, R., McNutt, T., Groom, R. & Ngatia, D.",
+      "value": [
+        "Dedan Kabuu Ngatia (University of Wyoming)",
+        "Tico McNutt (Botswana Predator Conservation Trust)",
+        "Rosemary Groom (Zoological Society of London (was African Wildlife Conservation Fund))",
+        "Rosie Woodroffe (Wildlife Conservation Society)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Hoffmann, M. & Hennelly, L.M.",
+      "value": [
+        "Lauren Hennelly",
+        "Michael Hoffmann (Zoological Society of London / IUCN SSC Canid Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Aebischer, T., Anderson, N., Angela, M., Becker, M., Beverly, G., Blinston, P., Claase, M., Funston, P.F., Kalyahe, M., Linden, J., Maude, G., Morkel, B., Parsais, S., Searle, C., Strampelli, P. & Waiguchu, G.",
+      "value": [
+        "G Waiguchu",
+        "S Parsais",
+        "B Morkel",
+        "M Kalyahe",
+        "J Linden",
+        "P Blinston",
+        "G Beverly",
+        "M Angela",
+        "Megan Claase (African Parks)",
+        "Charlotte E. Searle",
+        "Thierry Aebischer (African Parks)",
+        "Paolo Strampelli (Panthera)",
+        "Natasha Anderson (International Rhino Foundation / IUCN SSC African Rhino Specialist Group)",
+        "Glyn Maude (Kalahari Research and Conservation)",
+        "Matthew Becker (ALWG)",
+        "Paul Funston (Panthera)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Wilson, D.E. and Reeder, D.M. 2005. <i>Mammal Species of the World</i>. Johns Hopkins University Press, Baltimore, MD, USA.",
+      "year": "2005",
+      "title": "Mammal Species of the World",
+      "author": "Wilson, D.E. and Reeder, D.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Malcolm, J.R. and Sillero-Zubiri, C. 2001. Recent records of African wild dogs (<i>Lycaon pictus</i>) from Ethiopia. <a href=\"http://www.canids.org/canidnews/4/ethiopian_wild_dog.htm\"><i>Canid News</i> 4:2</a>",
+      "year": "2001",
+      "title": "Recent records of African wild dogs (<i>Lycaon pictus</i>) from Ethiopia",
+      "author": "Malcolm, J.R. and Sillero-Zubiri, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thesiger, W. 1970. Wild dog at 5,894 m (19,340 ft). <i>East African Wildlife Journal</i> 8: 202.",
+      "year": "1970",
+      "title": "Wild dog at 5,894 m (19,340 ft)",
+      "author": "Thesiger, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rhodes, C.J., Atkinson, R.P.D., Anderson R.M. and Macdonald, D.W. 1998. Rabies in Zimbabwe: reservoir dogs and the implications for disease control. <i>Philosophical Transactions of the Royal Society of London B</i>. 353:999-1010.",
+      "year": "1998",
+      "title": "Rabies in Zimbabwe: reservoir dogs and the implications for disease control.",
+      "author": "Rhodes, C.J., Atkinson, R.P.D., Anderson R.M. and Macdonald, D.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Maddock, A. H. & Mills, M. G. L. 1994. Population characteristics of the African wild dogs Lycaon pictus in the eastern Transvaal lowveld, South Africa, as revealed through photographic records. <i>Biological Conservation</i> 67: 57-62.",
+      "year": "1994",
+      "title": "Population characteristics of the African wild dogs Lycaon pictus in the eastern Transvaal lowveld, South Africa, as revealed through photographic records",
+      "author": "Maddock, A. H. & Mills, M. G. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mills, M. G. L. 1993. Social systems and behaviour of the African wild dog Lycaon pictus and the spotted hyaena Crocuta crocuta with special reference to rabies. <i>Onderstepoort Journal of Veterinary Research</i> 60: 405-409.",
+      "year": "1993",
+      "title": "Social systems and behaviour of the African wild dog Lycaon pictus and the spotted hyaena Crocuta crocuta with special reference to rabies",
+      "author": "Mills, M. G. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "McNutt, J. W. & Silk, J. B. 2008. Pup production, sex ratios, and survivorship in African wild dogs, Lycaon pictus. <i>Behavioural Ecology and Sociobiology</i> 62: 1061-1067.",
+      "year": "2008",
+      "title": "Pup production, sex ratios, and survivorship in African wild dogs, Lycaon pictus",
+      "author": "McNutt, J. W. & Silk, J. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Marsden, C. D., Wayne, R. K. & Mable, B. K. 2011. Inferring the ancestry of African wild dogs that returned to the Serengeti-Mara. <i>Conservation Genetics</i> 13: 525-533.",
+      "year": "2011",
+      "title": "Inferring the ancestry of African wild dogs that returned to the Serengeti-Mara",
+      "author": "Marsden, C. D., Wayne, R. K. & Mable, B. K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Girman, D., Mills, M. G. L., Geffen, E. & Wayne, R. K. 1997. A molecular genetic analysis of social structure, dispersal, and interpack relations of the African wild dog (Lycaon pictus). <i>Behavioural Ecology and Sociobiology</i> 40: 187-198.",
+      "year": "1997",
+      "title": "A molecular genetic analysis of social structure, dispersal, and interpack relations of the African wild dog (Lycaon pictus)",
+      "author": "Girman, D., Mills, M. G. L., Geffen, E. & Wayne, R. K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN SSC. 2008. Regional conservation strategy for the cheetah and wild dog in eastern Africa. IUCN, Gland.",
+      "year": "2008",
+      "title": "Regional conservation strategy for the cheetah and wild dog in eastern Africa",
+      "author": "IUCN SSC",
+      "citation_short": null
+    },
+    {
+      "citation": "McNutt, J. W. 1996. Sex-biased dispersal in African wild dogs, Lycaon pictus. <i>Animal Behaviour</i> 52(1067-1077).",
+      "year": "1996",
+      "title": "Sex-biased dispersal in African wild dogs, Lycaon pictus",
+      "author": "McNutt, J. W.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN SSC. 2012. Regional conservation strategy for the cheetah and wild dog in West, Central and North Africa. IUCN, Gland.",
+      "year": "2012",
+      "title": "Regional conservation strategy for the cheetah and wild dog in West, Central and North Africa",
+      "author": "IUCN SSC",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lindsey, P.A., Havemann, C.P., Lines, R., Palazy, L., Price, A.E., Retief, T. A., Rhebergen, T. and van der Waal, C. 2013. Determinants of persistence and tolerance of carnivores on Namibian ranches: implications for conservation on Southern African private lands. <i>PLoS ONE</i> 8(1).",
+      "year": "2013",
+      "title": "Determinants of persistence and tolerance of carnivores on Namibian ranches: implications for conservation on Southern African private lands",
+      "author": "Lindsey, P.A., Havemann, C.P., Lines, R., Palazy, L., Price, A.E., Retief, T. A., Rhebergen, T. and van der Waal, C.",
+      "citation_short": "Lindsey et al. 2013"
+    },
+    {
+      "citation": "Woodroffe, R. and Ginsberg, J.R. 1998. Edge effects and the extinction of populations inside protected areas. <i>Science</i> 280: 2126-2128.",
+      "year": "1998",
+      "title": "Edge effects and the extinction of populations inside protected areas",
+      "author": "Woodroffe, R. and Ginsberg, J.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Woodroffe, R. and Sillero-Zubiri, C. 2012. <i>Lycaon pictus. The IUCN Red List of Threatened Species. Version 2014.3</i>. IUCN.",
+      "year": "2012",
+      "title": "Lycaon pictus. The IUCN Red List of Threatened Species. Version 2014.3",
+      "author": "Woodroffe, R. and Sillero-Zubiri, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Goller, K.V., Fyumagwa, R.D., Nikolin, V., East, M.L., Kilewo, M., Speck, S., Müller, T., Matzke, M. and Wibbelt, G. 2010. Fatal canine distemper infection in a pack of African wild dogs in the Serengeti ecosystem, Tanzania. <i>Veterinary Microbiology </i> 146: 245–252.",
+      "year": "2010",
+      "title": "Fatal canine distemper infection in a pack of African wild dogs in the Serengeti ecosystem, Tanzania",
+      "author": "Goller, K.V., Fyumagwa, R.D., Nikolin, V., East, M.L., Kilewo, M., Speck, S., Müller, T., Matzke, M. and Wibbelt, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Roelke-Parker, M.E., Munson, L., Packer, C., Kock, R., Cleaveland, S., Carpenter, M., O’Brien, S.J., Pospischil, A.,     Hofmann-Lehmann, R., Lutz, H., Mwamengele, G.L.M., Mgasa, M.N., Machange, G.A., Summers, B.A. and Appel, M.J.G. 1996. A canine distemper virus epidemic in Serengeti lions (<i>Panthera leo</i>). <i>Nature </i> 379: 441-445.",
+      "year": "1996",
+      "title": "A canine distemper virus epidemic in Serengeti lions (<i>Panthera leo</i>)",
+      "author": "Roelke-Parker, M.E., Munson, L., Packer, C., Kock, R., Cleaveland, S., Carpenter, M., O’Brien, S.J., Pospischil, A.,     Hofmann-Lehmann, R., Lutz, H., Mwamengele, G.L.M., Mgasa, M.N., Machange, G.A., Summers, B.A. and Appel, M.J.G. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Bertola, L.D., Miller, S.M., Williams, V.L., Naude, V.N., Coals, P., Dures, S.G., Henschel, P., Chege, M., Sogbohossou, E.A., Ndiaye, A., Kiki, M., Gaylard, A., Ikanda, D.K., Becker, M.S. and Lindsey, P. 2021. Genetic guidelines for translocations: Maintaining intraspecific diversity in the lion (<i>Panthera leo</i>). <i>Evolutionary Applications</i> 15(1): 22–39. DOI: 10.1111/eva.13318.",
+      "year": "2021",
+      "title": "Genetic guidelines for translocations: Maintaining intraspecific diversity in the lion (<i>Panthera leo</i>)",
+      "author": "Bertola, L.D., Miller, S.M., Williams, V.L., Naude, V.N., Coals, P., Dures, S.G., Henschel, P., Chege, M., Sogbohossou, E.A., Ndiaye, A., Kiki, M., Gaylard, A., Ikanda, D.K., Becker, M.S. and Lindsey, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2025. The IUCN Red List of Threatened Species. Version 2025-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 October 2025).",
+      "year": "2025",
+      "title": "The IUCN Red List of Threatened Species. Version 2025-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2025-2"
+    },
+    {
+      "citation": "Abrahms, B., Jordan, N.R., Golabek, K.A., McNutt, J.W., Wilson, A.M. and Brashares, J.S. 2016. Lessons from integrating behaviour and resource selection: activity-specific responses of African wild dogs to roads. <i>Animal Conservation</i> 19: 247-255.",
+      "year": "2016",
+      "title": "Lessons from integrating behaviour and resource selection: activity-specific responses of African wild dogs to roads",
+      "author": "Abrahms, B., Jordan, N.R., Golabek, K.A., McNutt, J.W., Wilson, A.M. and Brashares, J.S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Abrahms, B., Rafiq, K., Jordan, N.R. and McNutt, J.W. 2022. Long-term, climate-driven phenological shift in a tropical large carnivore. <i>Proceedings of the National Academy of Science</i> 119: e2121667119.",
+      "year": "2022",
+      "title": "Long-term, climate-driven phenological shift in a tropical large carnivore",
+      "author": "Abrahms, B., Rafiq, K., Jordan, N.R. and McNutt, J.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Aebischer, T., Ibrahim, T., Hickisch, R., Furrer, R.D., Leuenberger, C. and Wegmann, D. 2020. Apex predators decline after an influx of pastoralists in former Central African Republic hunting zones. <i>Biological Conservation</i> 241: 108326. DOI: 0.1016/j.biocon.2019.108326.",
+      "year": "2020",
+      "title": "Apex predators decline after an influx of pastoralists in former Central African Republic hunting zones",
+      "author": "Aebischer, T., Ibrahim, T., Hickisch, R., Furrer, R.D., Leuenberger, C. and Wegmann, D. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "African Parks. 2021. Three wild dogs translocated to Liuwa Plain National Park, Zambia. Available at: <a href=\". https://www.africanparks.org/three-wild-dogs-translocated-liuwa-plain-national-park-zambia\">. https://www.africanparks.org/three-wild-dogs-translocated-liuwa-plain-national-park-zambia</a>. ",
+      "year": "2021",
+      "title": "Three wild dogs translocated to Liuwa Plain National Park, Zambia",
+      "author": "African Parks",
+      "citation_short": null
+    },
+    {
+      "citation": "Alexander, K.A., McNutt, J.W., Briggs, M.B., Standers, P.E., Funston, P., Hemson, G., Keet, D. and van Vuuren, M. 2010. Multi-host pathogens and carnivore management in southern Africa. <i>Comparative Immunology Microbiology and Infectious Diseases</i> 33: 249-265.",
+      "year": "2010",
+      "title": "Multi-host pathogens and carnivore management in southern Africa",
+      "author": "Alexander, K.A., McNutt, J.W., Briggs, M.B., Standers, P.E., Funston, P., Hemson, G., Keet, D. and van Vuuren, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Alexander, K. and Appel, M. 1994. African wild dogs (<i>Lycaon pictus</i>) endangered by a canine distemper epizootic among domestic dogs near the Masai Mara National Reserve, Kenya. <i>Journal of Wildlife Diseases</i> 30: 481-485.",
+      "year": "1994",
+      "title": "African wild dogs (<i>Lycaon pictus</i>) endangered by a canine distemper epizootic among domestic dogs near the Masai Mara National Reserve, Kenya",
+      "author": "Alexander, K. and Appel, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Alting, B.F., Bennitt, E., Golabek, K.A., Pitcher, B.J., McNutt, J.W., Wilson, A.M., Bates, H. and Jordan, N.R. 2021. The characteristics and consequences of African wild dog (<i>Lycaon pictus</i>) den site selection. <i>The characteristics and consequences of African wild dog (</i>Lycaon pictus<i>) den site selection</i> 75: 109.",
+      "year": "2021",
+      "title": "The characteristics and consequences of African wild dog (<i>Lycaon pictus</i>) den site selection",
+      "author": "Alting, B.F., Bennitt, E., Golabek, K.A., Pitcher, B.J., McNutt, J.W., Wilson, A.M., Bates, H. and Jordan, N.R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Banda, K., Creel, S., Sichande, M., Mweetwa, T., Mwape, H., de Merkle, J.R., Bwalya, L.M., Simpamba, T., McRobb, R. and Becker, M.S. 2023. Effects of de-snaring on the demography and population dynamics of African lions. <i>Biological Conservation</i> 286: 110273.",
+      "year": "2023",
+      "title": "Effects of de-snaring on the demography and population dynamics of African lions",
+      "author": "Banda, K., Creel, S., Sichande, M., Mweetwa, T., Mwape, H., de Merkle, J.R., Bwalya, L.M., Simpamba, T., McRobb, R. and Becker, M.S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Becker, M., McRobb, R., Watson, F., Droge, E., Kanyembo, B., Murdoch, J. and Kakumbi, C. 2013. Evaluating wire-snare poaching trends and the impacts of by-catch on elephants and large carnivores. <i>Biological Conservation</i> 158: 26-36.",
+      "year": "2013",
+      "title": "Evaluating wire-snare poaching trends and the impacts of by-catch on elephants and large carnivores",
+      "author": "Becker, M., McRobb, R., Watson, F., Droge, E., Kanyembo, B., Murdoch, J. and Kakumbi, C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Becker, M.S., Almeida, J., Begg, C., Bertola, L., Breitenmoser, C., Breitenmoser, U., Coals, P., Funston, P., Gaylard, A., Groom, R., Henschel, P., Ikanda, D., Jorge, A., Kruger, J., Lindsey, P., Maimbo, H., Mandisodza-Chikerema, R., Maude, G., Mbizah, M., Miller, S.M., Mudongo, E., Mwape, H., Mweetwa, T., Naude, V., Nyirenda, V.R., Parker, A., Parker, D., Reid, C., Robson, A., Sayer, E., Selier, S.A.J., Sichande, M., Simukonda, C., Uiseb, K., Williams, V.L., Zimba, D. and Hunter, L. 2022. Guidelines for evaluating the conservation value of African lion (<i>Panthera leo</i>) translocations. <i>Frontiers in Conservation Science</i> 3: 963961.",
+      "year": "2022",
+      "title": "Guidelines for evaluating the conservation value of African lion (<i>Panthera leo</i>) translocations",
+      "author": "Becker, M.S., Almeida, J., Begg, C., Bertola, L., Breitenmoser, C., Breitenmoser, U., Coals, P., Funston, P., Gaylard, A., Groom, R., Henschel, P., Ikanda, D., Jorge, A., Kruger, J., Lindsey, P., Maimbo, H., Mandisodza-Chikerema, R., Maude, G., Mbizah, M., Miller, S.M., Mudongo, E., Mwape, H., Mweetwa, T., Naude, V., Nyirenda, V.R., Parker, A., Parker, D., Reid, C., Robson, A., Sayer, E., Selier, S.A.J., Sichande, M., Simukonda, C., Uiseb, K., Williams, V.L., Zimba, D. and Hunter, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Beytell, P., Hanssen, L., Aschenborn, O. and Naidoo, R. 2024. Long-distance, transfrontier carnivore dispersals in southern Africa. <i>Ecology and Evolution</i> 14(e70574).",
+      "year": "2024",
+      "title": "Long-distance, transfrontier carnivore dispersals in southern Africa",
+      "author": "Beytell, P., Hanssen, L., Aschenborn, O. and Naidoo, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bouley, P., Paulo, A., Angela, M., Du Plessis, C. and Marneweck, D.G. 2021. The successful reintroduction of African wild dogs (<i>Lycaon pictus</i>) to Gorongosa National Park, Mozambique. <i>PLOS One</i> 16: e0249860.",
+      "year": "2021",
+      "title": "The successful reintroduction of African wild dogs (<i>Lycaon pictus</i>) to Gorongosa National Park, Mozambique",
+      "author": "Bouley, P., Paulo, A., Angela, M., Du Plessis, C. and Marneweck, D.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Carbone, C. and Gittleman, J.L. 2002. A common rule for the scaling of carnivore density. <i>Science</i> 295: 2273-2276.",
+      "year": "2002",
+      "title": "A common rule for the scaling of carnivore density",
+      "author": "Carbone, C. and Gittleman, J.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cleaveland, S., Kaare, M., Tiringa, P., Mlengeya, T. and Barrat, J. 2003. A dog rabies vaccination campaign in rural Africa: impact on the incidence of dog rabies and human dog-bite injuries. <i>Vaccine</i> 21: 1965-1973.",
+      "year": "2003",
+      "title": "A dog rabies vaccination campaign in rural Africa: impact on the incidence of dog rabies and human dog-bite injuries",
+      "author": "Cleaveland, S., Kaare, M., Tiringa, P., Mlengeya, T. and Barrat, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "CMS/CITES. 2020. Joint CITES/CMS African Carnivores Initiative UNEP/CMS/COP13/Doc.26.3.1. . Available at: <a href=\"https://www.cms.int/en/document/african-carnivores-initiative-2\">https://www.cms.int/en/document/african-carnivores-initiative-2</a>. ",
+      "year": "2020",
+      "title": "Joint CITES/CMS African Carnivores Initiative UNEP/CMS/COP13/Doc.26.3.1. ",
+      "author": "CMS/CITES",
+      "citation_short": null
+    },
+    {
+      "citation": "Connolly, M., Thomas, P., Woodroffe, R. and Raphael, B.L. 2015. Single- versus double-dose rabies vaccination in captive African wild dogs (<i>Lycaon pictus</i>). <i>Journal of Zoo and Wildlife Medicine</i> 46: 691-698.",
+      "year": "2015",
+      "title": "Single- versus double-dose rabies vaccination in captive African wild dogs (<i>Lycaon pictus</i>)",
+      "author": "Connolly, M., Thomas, P., Woodroffe, R. and Raphael, B.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cozzi, G., Behr, D.M., Webster, H.S., Claase, M., Bryce, C.M., Modise, B., McNutt, J.W. and Ozgul, A. 2020. African wild dog dispersal and implications for management. <i>Journal of Wildlife Management</i> 84: 614-621.",
+      "year": "2020",
+      "title": "African wild dog dispersal and implications for management",
+      "author": "Cozzi, G., Behr, D.M., Webster, H.S., Claase, M., Bryce, C.M., Modise, B., McNutt, J.W. and Ozgul, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cozzi, G., Broekhuis, F., McNutt, J.W. and Schmid, B. 2013. Comparison of the effects of artificial and natural barriers on large African carnivores: Implications for inter-specific relationships and connectivity. <i>Journal of Animal Ecology</i> 82: 707-715.",
+      "year": "2013",
+      "title": "Comparison of the effects of artificial and natural barriers on large African carnivores: Implications for inter-specific relationships and connectivity",
+      "author": "Cozzi, G., Broekhuis, F., McNutt, J.W. and Schmid, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Craft, M.E. 2015. Infectious disease transmission and contact networks in wildlife and livestock. <i>Philosophical Transactions of the Royal Society B-Biological Sciences</i> 370.",
+      "year": "2015",
+      "title": "Infectious disease transmission and contact networks in wildlife and livestock",
+      "author": "Craft, M.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Craft, M.E., Hawthorne, P.L., Packer, C. and Dobson, A.P. 2008. Dynamics of a multihost pathogen in a carnivore community. <i>Journal of Animal Ecology</i> 77: 1257-1264.",
+      "year": "2008",
+      "title": "Dynamics of a multihost pathogen in a carnivore community",
+      "author": "Craft, M.E., Hawthorne, P.L., Packer, C. and Dobson, A.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Creel, S. and Creel, N.M. 1995. Communal hunting and pack size in African wild dogs, <i>Lycaon pictus</i>. <i>Animal Behaviour</i> 50: 1325-1339.",
+      "year": "1995",
+      "title": "Communal hunting and pack size in African wild dogs, <i>Lycaon pictus</i>",
+      "author": "Creel, S. and Creel, N.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Creel, S., Creel, N.M., Mills, M.G.L. and Monfort, S.L. 1997. Rank and reproduction in cooperatively breeding African wild dogs: Behavioral and endocrine correlates. <i>Behavioural Ecology</i> 8: 298-306.",
+      "year": "1997",
+      "title": "Rank and reproduction in cooperatively breeding African wild dogs: Behavioral and endocrine correlates",
+      "author": "Creel, S., Creel, N.M., Mills, M.G.L. and Monfort, S.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Creel, S., Matandiko, W., Schuette, P., Rosenblatt, E., Sanguinetti, C., Banda, K., Vink, M. and Becker, M. 2018. Changes in African large carnivore diets over the past half-century reveal the loss of large prey. <i>Journal of Applied Ecology</i> 55: 2908-2916.",
+      "year": "2018",
+      "title": "Changes in African large carnivore diets over the past half-century reveal the loss of large prey",
+      "author": "Creel, S., Matandiko, W., Schuette, P., Rosenblatt, E., Sanguinetti, C., Banda, K., Vink, M. and Becker, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Creel, S., Mills, M.G.L. and McNutt, J.W. 2004. Demography and population dynamics of African wild dogs in three critical populations. In: D.W. Macdonald and C. Sillero-Zubiri (eds), <i>The biology and conservation of wild canids </i>, pp. 337-350. Oxford University Press, Oxford.",
+      "year": "2004",
+      "title": "Demography and population dynamics of African wild dogs in three critical populations",
+      "author": "Creel, S., Mills, M.G.L. and McNutt, J.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Creel, S.R. and Creel, N.M. 1996. Limitation of African wild dogs by competition with larger carnivores. <i>Conservation Biology</i> 10: 1-15.",
+      "year": "1996",
+      "title": "Limitation of African wild dogs by competition with larger carnivores",
+      "author": "Creel, S.R. and Creel, N.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Davies, H. and Du Toit, J.T. 2014. Anthropogenic factors affecting wild dog <i>Lycaon pictus</i> reintroductions: a case study in Zimbabwe. <i>Oryx</i> 38: 32-39.",
+      "year": "2014",
+      "title": "Anthropogenic factors affecting wild dog <i>Lycaon pictus</i> reintroductions: a case study in Zimbabwe",
+      "author": "Davies, H. and Du Toit, J.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Davies-Mostert HT, Kamler JF, Mills MG, Jackson CR, Rasmussen GS, Groom RJ, Macdonald DW. 2012. Long-distance transboundary dispersal of African wild dogs among protected areas in southern Africa. <i>African Journal of Ecology</i> 50: 500–506.",
+      "year": "2012",
+      "title": "Long-distance transboundary dispersal of African wild dogs among protected areas in southern Africa",
+      "author": "Davies-Mostert HT, Kamler JF, Mills MG, Jackson CR, Rasmussen GS, Groom RJ, Macdonald DW.",
+      "citation_short": null
+    },
+    {
+      "citation": "Davies-Mostert, H.T., Mills, M.G. and Macdonald, D.W. 2015. The demography and dynamics of an expanding, managed African wild dog metapopulation. <i>South African Journal of Wildlife Research</i> 45: 258–273.",
+      "year": "2015",
+      "title": "The demography and dynamics of an expanding, managed African wild dog metapopulation",
+      "author": "Davies-Mostert, H.T., Mills, M.G. and Macdonald, D.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dröge, E., Creel, S., Becker, M.S. and M'Soka, J. 2017. Spatial and temporal avoidance of risk within a large carnivore guild. <i>Ecology and Evolution</i> 7: 188-199.",
+      "year": "2017",
+      "title": "Spatial and temporal avoidance of risk within a large carnivore guild",
+      "author": "Dröge, E., Creel, S., Becker, M.S. and M'Soka, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Du Plessis, C. 2016. Canine distemper virus inoculations at HIP. Available at: <a href=\"https://wildlifeact.com/blog/canine-distemper-virus-inoculations-hip/\">https://wildlifeact.com/blog/canine-distemper-virus-inoculations-hip/</a>. ",
+      "year": "2016",
+      "title": "Canine distemper virus inoculations at HIP",
+      "author": "Du Plessis, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "El Khidir, S.A. and Ali, O.M.M. 2018. The impact of war on wildlife in Radom National Park, Southern Darfur State-Sudan. <i>Journal of Biodiversity and Endangered Species</i> 6: 220.",
+      "year": "2018",
+      "title": "The impact of war on wildlife in Radom National Park, Southern Darfur State-Sudan",
+      "author": "El Khidir, S.A. and Ali, O.M.M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Endangered Wildlife Trust. 2017. Who let the Dogs in? Endangered African Wild Dogs introduced into northern Kruger National Park. Available at: <a href=\"https://endangeredwildlifetrust.wordpress.com/2017/09/21/who-let-the-dogs-in-endangered-african-wild-dogs-introduced-into-northern-kruger-national-park/\">https://endangeredwildlifetrust.wordpress.com/2017/09/21/who-let-the-dogs-in-endangered-african-wild-dogs-introduced-into-northern-kruger-national-park/</a>. ",
+      "year": "2017",
+      "title": "Who let the Dogs in? Endangered African Wild Dogs introduced into northern Kruger National Park",
+      "author": "Endangered Wildlife Trust",
+      "citation_short": null
+    },
+    {
+      "citation": "English, H.M., Harvey, L., Wilson, R.P., Gunner, R.M., Holton, M.D., Woodroffe, R. and Borger, L. 2023. Multi-sensor biologgers and innovative training allow data collection with high conservation and welfare value in zoos. <i>Journal of Zoo and Aquarium Research</i> 11: 220-231.",
+      "year": "2023",
+      "title": "Multi-sensor biologgers and innovative training allow data collection with high conservation and welfare value in zoos",
+      "author": "English, H.M., Harvey, L., Wilson, R.P., Gunner, R.M., Holton, M.D., Woodroffe, R. and Borger, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fanshawe, J.H. and FitzGibbon, C.D. 1993. Factors influencing the hunting success of an African wild dog pack. <i>Animal Behaviour</i> 45: 479-490.",
+      "year": "1993",
+      "title": "Factors influencing the hunting success of an African wild dog pack",
+      "author": "Fanshawe, J.H. and FitzGibbon, C.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Frame LH, Malcolm JR, Frame GW, Lawick H. 1979. Social organization of African wild dogs (Lycaon pictus) on the Serengeti plains, Tanzania 1967–19781. <i>Zeitschrift für Tierpsychologie</i> 50: 225–249.",
+      "year": "1979",
+      "title": "Social organization of African wild dogs (Lycaon pictus) on the Serengeti plains, Tanzania 1967–19781",
+      "author": "Frame LH, Malcolm JR, Frame GW, Lawick H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fraser-Celin, V.-L., Hovorka, A.J., Hovork, M. and Maude, G. 2017. Farmer-African wild dog (<i>Lycaon pictus</i>) relations in the eastern Kalahari region of Botswana. <i>Koedoe : African Protected Area Conservation and Science</i> 59: 1-10.",
+      "year": "2017",
+      "title": "Farmer-African wild dog (<i>Lycaon pictus</i>) relations in the eastern Kalahari region of Botswana",
+      "author": "Fraser-Celin, V.-L., Hovorka, A.J., Hovork, M. and Maude, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fuller TK, Kat PW, Bulger JB, Maddock AH, Ginsberg JR, Burrows R, McNutt JW, Mills MGL. 1992. Population dynamics of African wild dogs. In: McCullough DR, Barrett RH. (ed.), <i>Wildlife 2001: Populations</i>, pp. 1125–1139. Elsevier Applied Science, London, UK.",
+      "year": "1992",
+      "title": "Population dynamics of African wild dogs",
+      "author": "Fuller TK, Kat PW, Bulger JB, Maddock AH, Ginsberg JR, Burrows R, McNutt JW, Mills MGL.",
+      "citation_short": null
+    },
+    {
+      "citation": "Funston P., Henschel P., Petracca L., Maclennan S., Whitesell C., Fabiano E. and Castro I. 2017. The distribution and status of lions and other large carnivores in Luengue-Luiana and Mavinga National Parks, Angola. KAZA TFCA Secretariat (KAZA), Gaborone, Botswana.",
+      "year": "2017",
+      "title": "The distribution and status of lions and other large carnivores in Luengue-Luiana and Mavinga National Parks, Angola",
+      "author": "Funston P., Henschel P., Petracca L., Maclennan S., Whitesell C., Fabiano E. and Castro I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gascoyne, S.C., King, A.A., Laurenson, M.K., Borner, M., Schildger, B. and Barrat, J. 1993. Aspects of rabies infection and control in the conservation of the African wild dog (<i>Lycaon pictus</i>) in the Serengeti region, Tanzania. <i>Onderstepoort Journal of Veterinary Research</i> 60: 415-420.",
+      "year": "1993",
+      "title": "Aspects of rabies infection and control in the conservation of the African wild dog (<i>Lycaon pictus</i>) in the Serengeti region, Tanzania",
+      "author": "Gascoyne, S.C., King, A.A., Laurenson, M.K., Borner, M., Schildger, B. and Barrat, J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Gilbert, M. 2016. Understanding and managing canine distemper virus as a disease threat to Amur tigers. PhD thesis, University of Glasgow.",
+      "year": "2016",
+      "title": "Understanding and managing canine distemper virus as a disease threat to Amur tigers",
+      "author": "Gilbert, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Girman, D.J., Vilà, C., Geffen, E., Creel, S., Mills, M.G.L. and McNutt, J.W. 2001. Patterns of population subdivision, gene flow and genetic variability in the African wild dog (<i>Lycaon pictus</i>). <i>Molecular Ecology</i> 10: 1703-1723.",
+      "year": "2001",
+      "title": "Patterns of population subdivision, gene flow and genetic variability in the African wild dog (<i>Lycaon pictus</i>)",
+      "author": "Girman, D.J., Vilà, C., Geffen, E., Creel, S., Mills, M.G.L. and McNutt, J.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Girman, D.J., Wayne, R.K., Kat, P.W., Mills, M.G.L., Ginsberg, J.R., Borner, M., Wilson, V., Fanshawe, J.H., FitzGibbon, C.D. and Lau, L.M. 1993. Molecular-genetic and morphological analyses of the African wild dog (<i>Lycaon pictus</i>). <i>Journal of Heredity</i> 84: 450-459.",
+      "year": "1993",
+      "title": "Molecular-genetic and morphological analyses of the African wild dog (<i>Lycaon pictus</i>)",
+      "author": "Girman, D.J., Wayne, R.K., Kat, P.W., Mills, M.G.L., Ginsberg, J.R., Borner, M., Wilson, V., Fanshawe, J.H., FitzGibbon, C.D. and Lau, L.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gittleman, J.L. and Harvey, P.H. 1982. Carnivore home range size, metabolic needs and ecology. <i>Behavioural Ecology and Sociobiology</i> 10: 57-63.",
+      "year": "1982",
+      "title": "Carnivore home range size, metabolic needs and ecology",
+      "author": "Gittleman, J.L. and Harvey, P.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gold, S., Banda, K., Becker, M.S., Beverley, G., Blinston, P., Clegg, S., Donnelly, C.A., Goodheart, B., Groom, R., Madzikanda, H., Ngatia, D.K., Nouvellet, P., van Schalkwyk, L. and Woodroffe, R. in review. Evaluating rabies outbreaks and intervention effectiveness across endangered African wild dog populations with recommendations for future mitigation.",
+      "year": "in review",
+      "title": "Evaluating rabies outbreaks and intervention effectiveness across endangered African wild dog populations with recommendations for future mitigation",
+      "author": "Gold, S., Banda, K., Becker, M.S., Beverley, G., Blinston, P., Clegg, S., Donnelly, C.A., Goodheart, B., Groom, R., Madzikanda, H., Ngatia, D.K., Nouvellet, P., van Schalkwyk, L. and Woodroffe, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Goodheart, B., Creel, S., Becker, M.S., Vinks, M., Schuette, P., Banda, K., Sanguinetti, C., Rosenblatt, E., Dart, C., Kusler, A., Young-Overton, K., Stevens, X., Mwanza, A. and Simukonda, C. 2021. Low apex carnivore density does not release a subordinate competitor when driven by prey depletion. <i>Biological Conservation</i> 261: 109273.",
+      "year": "2021",
+      "title": "Low apex carnivore density does not release a subordinate competitor when driven by prey depletion",
+      "author": "Goodheart, B., Creel, S., Becker, M.S., Vinks, M., Schuette, P., Banda, K., Sanguinetti, C., Rosenblatt, E., Dart, C., Kusler, A., Young-Overton, K., Stevens, X., Mwanza, A. and Simukonda, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Groom, R.J., Lannas, K. and Jackson, C.R. 2016. The impact of lions on the demography and ecology of endangered African wild dogs. <i>Animal Conservation.</i>.",
+      "year": "2016",
+      "title": "The impact of lions on the demography and ecology of endangered African wild dogs",
+      "author": "Groom, R.J., Lannas, K. and Jackson, C.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Grumeti Fund. 2018. Wild dog report.",
+      "year": "2018",
+      "title": "Wild dog report",
+      "author": "Grumeti Fund",
+      "citation_short": null
+    },
+    {
+      "citation": "Gusset, M. and Macdonald, D.W. 2010. Group size effects in cooperatively breeding African wild dogs. <i>Animal Behaviour</i> 79: 425-428.",
+      "year": "2010",
+      "title": "Group size effects in cooperatively breeding African wild dogs",
+      "author": "Gusset, M. and Macdonald, D.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gusset, M., Maddock, A.H., Gunther, G.J., Szykman, M., Slotow, R., Walters, M. and Somers, M.J. 2008. Conflicting human interests over the re-introduction of endangered wild dogs in South Africa. <i>Biodiversity and Conservation</i> 17: 83-101.",
+      "year": "2008",
+      "title": "Conflicting human interests over the re-introduction of endangered wild dogs in South Africa",
+      "author": "Gusset, M., Maddock, A.H., Gunther, G.J., Szykman, M., Slotow, R., Walters, M. and Somers, M.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hampson, K., Dushoff, J., Cleaveland, S., Haydon, D.T., Kaare, M., Packer, C. and Dobson, A. 2009. Transmission dynamics and prospects for the elimination of canine rabies. <i>PLOS Biology</i> 7: e1000053.",
+      "year": "2009",
+      "title": "Transmission dynamics and prospects for the elimination of canine rabies",
+      "author": "Hampson, K., Dushoff, J., Cleaveland, S., Haydon, D.T., Kaare, M., Packer, C. and Dobson, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hayes, S., Lushasi, K., Sambo, M., Changalucha, J., Ferguson, E.A., Sikana, L., Hampson, K., Nouvellet, P. and Donnelly, C.A. 2022. Understanding the incidence and timing of rabies cases in domestic animals and wildlife in south-east Tanzania in the presence of widespread domestic dog vaccination campaigns. <i>Veterinary Research</i> 53.",
+      "year": "2022",
+      "title": "Understanding the incidence and timing of rabies cases in domestic animals and wildlife in south-east Tanzania in the presence of widespread domestic dog vaccination campaigns",
+      "author": "Hayes, S., Lushasi, K., Sambo, M., Changalucha, J., Ferguson, E.A., Sikana, L., Hampson, K., Nouvellet, P. and Donnelly, C.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hoelzel, A.R. 2023. Where to now with the evolutionarily significant unit? . <i>Trends in Ecology and Evolution</i> 38: 1134-1142.",
+      "year": "2023",
+      "title": "Where to now with the evolutionarily significant unit? ",
+      "author": "Hoelzel, A.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hofmeyr, M., Bingham, J., Lane, E.P., Ide, A. and Nel, L. 2000. Rabies in African wild dogs (<i>Lycaon pictus</i>) in the Madikwe Game Reserve, South Africa. <i>Veterinary Record</i> 146: 50-52.",
+      "year": "2000",
+      "title": "Rabies in African wild dogs (<i>Lycaon pictus</i>) in the Madikwe Game Reserve, South Africa",
+      "author": "Hofmeyr, M., Bingham, J., Lane, E.P., Ide, A. and Nel, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hofmeyr M, Hofmeyr D, Nel L, Bingham J. 2004. A second outbreak of rabies in African wild dogs (Lycaon pictus) in Madikwe Game Reserve, South Africa, demonstrating the efficacy of vaccination against natural rabies challenge. <i>Animal Conservation</i> 7: 193–198.",
+      "year": "2004",
+      "title": "A second outbreak of rabies in African wild dogs (Lycaon pictus) in Madikwe Game Reserve, South Africa, demonstrating the efficacy of vaccination against natural rabies challenge",
+      "author": "Hofmeyr M, Hofmeyr D, Nel L, Bingham J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hoier, R. 1955. A travers plaines et volcans au Parc National Albert. Institut des Parcs Nationaux du Congo Belge, Brussels.",
+      "year": "1955",
+      "title": "A travers plaines et volcans au Parc National Albert",
+      "author": "Hoier, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hubel, T.Y., Myatt, J.P., Jordan, N.R., Dewhirst, O.P., McNutt, J.W. and Wilson, A.M. 2016. Energy cost and return for hunting in African wild dogs and cheetahs. <i>Nature Communications</i> 7: 11034.",
+      "year": "2016",
+      "title": "Energy cost and return for hunting in African wild dogs and cheetahs",
+      "author": "Hubel, T.Y., Myatt, J.P., Jordan, N.R., Dewhirst, O.P., McNutt, J.W. and Wilson, A.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN SSC. 2010. Regional conservation strategy for the cheetah and wild dog in southern Africa. IUCN, Gland.",
+      "year": "2010",
+      "title": "Regional conservation strategy for the cheetah and wild dog in southern Africa",
+      "author": "IUCN SSC",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN SSC. 2016. Regional conservation strategy for the cheetah and wild dog in southern Africa. IUCN, Gland.",
+      "year": "2016",
+      "title": "Regional conservation strategy for the cheetah and wild dog in southern Africa",
+      "author": "IUCN SSC",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN SSC. In prep. Conservation strategy for the cheetah and African wild dog in eastern Africa. IUCN, Gland.",
+      "year": null,
+      "title": "Conservation strategy for the cheetah and African wild dog in eastern Africa",
+      "author": "IUCN SSC",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN SSC. in review. Conservation strategy for the cheetah and African wild dog in north, west, and central Africa. IUCN, Gland.",
+      "year": "in review",
+      "title": "Conservation strategy for the cheetah and African wild dog in north, west, and central Africa",
+      "author": "IUCN SSC",
+      "citation_short": null
+    },
+    {
+      "citation": "Jackson, C.R., Marnewick, K., Lindsey, P.A., Roskaft, E. and Robertson, M.P. 2016. Evaluating habitat connectivity methodologies: a case study with endangered African wild dogs in South Africa. <i>Landscape Ecology</i> 31: 1433-1447.",
+      "year": "2016",
+      "title": "Evaluating habitat connectivity methodologies: a case study with endangered African wild dogs in South Africa",
+      "author": "Jackson, C.R., Marnewick, K., Lindsey, P.A., Roskaft, E. and Robertson, M.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kuhme, W.D. 1965. Communal food distribution and division of labour in African hunting dogs. <i>Nature</i> 205: 442-444.",
+      "year": "1965",
+      "title": "Communal food distribution and division of labour in African hunting dogs",
+      "author": "Kuhme, W.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Leigh, K.A. 2005. The ecology and conservation biology of the endangered African wild dog (<i>Lycaon pictus</i>) in the Lower Zambezi, Zambia. PhD thesis, University of Sydney..",
+      "year": "2005",
+      "title": "The ecology and conservation biology of the endangered African wild dog (<i>Lycaon pictus</i>) in the Lower Zambezi, Zambia",
+      "author": "Leigh, K.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Linden, J., Rabaiotti, D. and Woodroffe, R. In prep. Range-wide, multi-scale distribution modelling of the endangered African wild dog (<i>Lycaon pictus</i>) to inform conservation.",
+      "year": null,
+      "title": "Range-wide, multi-scale distribution modelling of the endangered African wild dog (<i>Lycaon pictus</i>) to inform conservation",
+      "author": "Linden, J., Rabaiotti, D. and Woodroffe, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lindsey, P.A., Alexander, R., Mills, M.G.L., Romañach, S.S. and Woodroffe, R. 2007. Wildlife viewing preferences of visitors to protected areas in South Africa: implications for the role of ecotourism in conservation. <i>Journal of Ecotourism</i> 6: 19-33.",
+      "year": "2007",
+      "title": "Wildlife viewing preferences of visitors to protected areas in South Africa: implications for the role of ecotourism in conservation",
+      "author": "Lindsey, P.A., Alexander, R., Mills, M.G.L., Romañach, S.S. and Woodroffe, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lindsey PA, Du Toit JT, Mills MGL. 2005. Attitudes of ranchers towards African wild dogs <i>Lycaon pictus</i>: conservation implications on private land. <i>Biological Conservation</i> 125: 113-121.",
+      "year": "2005",
+      "title": "Attitudes of ranchers towards African wild dogs <i>Lycaon pictus</i>: conservation implications on private land",
+      "author": "Lindsey PA, Du Toit JT, Mills MGL.",
+      "citation_short": null
+    },
+    {
+      "citation": "Loots, A.K., Mitchell, E., Dalton, D.L., Kotze, A. and Venter, E.H. 2017. Advances in canine distemper virus pathogenesis research: a wildlife perspective. <i>Journal of General Virology</i> 98: 311-321.",
+      "year": "2017",
+      "title": "Advances in canine distemper virus pathogenesis research: a wildlife perspective",
+      "author": "Loots, A.K., Mitchell, E., Dalton, D.L., Kotze, A. and Venter, E.H. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Loots, A.K., Mokgokong, P.S., Mitchell, E., Venter, E.H., Kotze, A. and Dalton, D.L. 2018. Phylogenetic analysis of canine distemper virus in South African wildlife. <i>PLOS One</i> 13: e0199993.",
+      "year": "2018",
+      "title": "Phylogenetic analysis of canine distemper virus in South African wildlife",
+      "author": "Loots, A.K., Mokgokong, P.S., Mitchell, E., Venter, E.H., Kotze, A. and Dalton, D.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Malcolm, J.R. and Marten, K. 1982. Natural selection and the communal rearing of pups in African wild dogs (<i>Lycaon pictus</i>). <i>Behavioural Ecology and Sociobiology</i> 10: 1-13.",
+      "year": "1982",
+      "title": "Natural selection and the communal rearing of pups in African wild dogs (<i>Lycaon pictus</i>)",
+      "author": "Malcolm, J.R. and Marten, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Marneweck, D.G., Druce, D.J., Cromsigt, J., le Roux, E. and Somers, M.J. 2022. The relative role of intrinsic and extrinsic drivers in regulating population change and survival of African wild dogs (<i>Lycaon pictus</i>). <i>Mammalian Biology</i> 102: 1215-1229.",
+      "year": "2022",
+      "title": "The relative role of intrinsic and extrinsic drivers in regulating population change and survival of African wild dogs (<i>Lycaon pictus</i>)",
+      "author": "Marneweck, D.G., Druce, D.J., Cromsigt, J., le Roux, E. and Somers, M.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Masenga, E.H., Jackson, C.R., Mjingo, E.E., Jacobson, A., Riggio, J., Lyamuya, R.D., Fyumagwa, R.D., Borner, M. and Roskaft, E. 2016. Insights into long-distance dispersal by African wild dogs in East Africa. <i>African Journal of Ecology</i> 54: 95-98.",
+      "year": "2016",
+      "title": "Insights into long-distance dispersal by African wild dogs in East Africa",
+      "author": "Masenga, E.H., Jackson, C.R., Mjingo, E.E., Jacobson, A., Riggio, J., Lyamuya, R.D., Fyumagwa, R.D., Borner, M. and Roskaft, E. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Masenga, E.H., Lyamuya, R.D., Mjingo, E.E., Fyumagwa, R.D. and Røskaft, E. 2017. Communal knowledge and perceptions of African wild dog (<i>Lycaon pictus</i>) reintroduction in the western part of Serengeti National Park, Tanzania. <i>International Journal of Biodiversity and Conservation</i> 9: 122-129.",
+      "year": "2017",
+      "title": "Communal knowledge and perceptions of African wild dog (<i>Lycaon pictus</i>) reintroduction in the western part of Serengeti National Park, Tanzania",
+      "author": "Masenga, E.H., Lyamuya, R.D., Mjingo, E.E., Fyumagwa, R.D. and Røskaft, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "McNutt, J.W. and Gusset, M. 2012. Declining body size in an endangered large mammal. <i>Biological Journal of the Linnean Society</i> 105: 8-12.",
+      "year": "2012",
+      "title": "Declining body size in an endangered large mammal",
+      "author": "McNutt, J.W. and Gusset, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "McNutt, J.W., Groom, R. and Woodroffe, R. 2019. Ambient temperature provides an adaptive explanation for seasonal reproduction in a tropical mammal. <i>Journal of Zoology</i> 309: 153-160.",
+      "year": "2019",
+      "title": "Ambient temperature provides an adaptive explanation for seasonal reproduction in a tropical mammal",
+      "author": "McNutt, J.W., Groom, R. and Woodroffe, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mills, M.G. and Gorman, M.L. 1997. Factors affecting the density and distribution of wild dogs in the Kruger National Park. <i>Conservation Biology</i> 11: 1397–1406.",
+      "year": "1997",
+      "title": "Factors affecting the density and distribution of wild dogs in the Kruger National Park",
+      "author": "Mills, M.G. and Gorman, M.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Monod, T. 1928. Sur la presence au Sahara du <i>Lycaon pictus</i>  (Temm.). <i>Bulletin de la Société Zoologique de France</i> 53: 262-264.",
+      "year": "1928",
+      "title": "Sur la presence au Sahara du <i>Lycaon pictus</i>  (Temm.)",
+      "author": "Monod, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mutinda, M., Cook, A. and Kinya, S. 2017. Canine distemper outbreak in wild and domestic carnivores in Laikipia ecosystem of Kenya. <i>Kenya Wildlife Service, Nairobi</i>.",
+      "year": "2017",
+      "title": "Canine distemper outbreak in wild and domestic carnivores in Laikipia ecosystem of Kenya",
+      "author": "Mutinda, M., Cook, A. and Kinya, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nicholson, S.K., Marneweck, D.G., Lindsey, P.A., Marnewick, K. and Davies-Mostert, H.T. 2020. A 20-year review of the status and distribution of African wild dogs (<i>Lycaon pictus</i>) in South Africa. <i>African Journal of Wildlife Research</i> 50: 8-19.",
+      "year": "2020",
+      "title": "A 20-year review of the status and distribution of African wild dogs (<i>Lycaon pictus</i>) in South Africa",
+      "author": "Nicholson, S.K., Marneweck, D.G., Lindsey, P.A., Marnewick, K. and Davies-Mostert, H.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "O'Neill, H.M.K., Durant, S.M. and Woodroffe, R. 2020. What wild dogs want: habitat selection differs across life stages and orders of selection in a wide-ranging carnivore. <i>Bmc Zoology</i> 5: 11.",
+      "year": "2020",
+      "title": "What wild dogs want: habitat selection differs across life stages and orders of selection in a wide-ranging carnivore",
+      "author": "O'Neill, H.M.K., Durant, S.M. and Woodroffe, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "O’Neill, H.M.K., Durant, S.M., Strebel, S. and Woodroffe, R. 2022. Fencing affects African wild dog movement patterns and population dynamics. <i>Oryx</i> 56: 128-136.",
+      "year": "2022",
+      "title": "Fencing affects African wild dog movement patterns and population dynamics",
+      "author": "O’Neill, H.M.K., Durant, S.M., Strebel, S. and Woodroffe, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Overton, J.M., Castells, D.E., Elizalde, S.R.F.F., Valerio, H.M., Zumbo, M.N.A., Groom, R.J. and Durant, S.M. 2020. Endangered African wild dogs (<i>Lycaon pictus</i> Temm.) in Angola: Filling a 50-year gap of knowledge with findings from two National Parks. <i>African Journal of Ecology</i> 58: 582-587.",
+      "year": "2020",
+      "title": "Endangered African wild dogs (<i>Lycaon pictus</i> Temm.) in Angola: Filling a 50-year gap of knowledge with findings from two National Parks",
+      "author": "Overton, J.M., Castells, D.E., Elizalde, S.R.F.F., Valerio, H.M., Zumbo, M.N.A., Groom, R.J. and Durant, S.M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Parker, D.M., Watermeyer, J.P., Davies-Mostert, H.T., Beverley, G. and Marnewick, K. 2018. Attitudes and tolerance of private landowners shape the African wild dog conservation landscape in the greater Kruger National Park. <i>Endangered Species Research</i> 36: 173-181.",
+      "year": "2018",
+      "title": "Attitudes and tolerance of private landowners shape the African wild dog conservation landscape in the greater Kruger National Park",
+      "author": "Parker, D.M., Watermeyer, J.P., Davies-Mostert, H.T., Beverley, G. and Marnewick, K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Petracca, L.S., Funston, P.J., Henschel, P., Cohen, J.B., Maclennan, S. and Frair, J.L. 2020. Modeling community occupancy from line transect data: a case study with large mammals in post-war Angola. <i>Animal Conservation</i> 23: 420-433.",
+      "year": "2020",
+      "title": "Modeling community occupancy from line transect data: a case study with large mammals in post-war Angola",
+      "author": "Petracca, L.S., Funston, P.J., Henschel, P., Cohen, J.B., Maclennan, S. and Frair, J.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pole, A. 2000. The behaviour and ecology of African wild dogs (<i>Lycaon pictus</i>)  in an environment with reduced competitor density. University of Aberdeen, PhD thesis..",
+      "year": "2000",
+      "title": "The behaviour and ecology of African wild dogs (<i>Lycaon pictus</i>)  in an environment with reduced competitor density",
+      "author": "Pole, A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Pole, A., Gordon, I.J., Gorman, M.L. and MacAskill, M. 2004. Prey selection by African wild dogs (<i>Lycaon pictus</i>) in southern Zimbabwe. <i>Journal of Zoology</i> 262: 207-215.",
+      "year": "2004",
+      "title": "Prey selection by African wild dogs (<i>Lycaon pictus</i>) in southern Zimbabwe",
+      "author": "Pole, A., Gordon, I.J., Gorman, M.L. and MacAskill, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Prager, K.C., Mazet, J.A.K., Munson, L., Dubovi, E.J., Szykman Gunther, M., Davies-Mostert, H., McNutt, J.W., Rasmussen, G.S.A., Terio, K., Cleaveland, S., Mills, M.G.L. and Woodroffe, R. 2012. The effect of protected areas on pathogen exposure in endangered African wild dog (<i>Lycaon pictus</i>) populations. <i>Biological Conservation</i> 150: 15-22.",
+      "year": "2012",
+      "title": "The effect of protected areas on pathogen exposure in endangered African wild dog (<i>Lycaon pictus</i>) populations",
+      "author": "Prager, K.C., Mazet, J.A.K., Munson, L., Dubovi, E.J., Szykman Gunther, M., Davies-Mostert, H., McNutt, J.W., Rasmussen, G.S.A., Terio, K., Cleaveland, S., Mills, M.G.L. and Woodroffe, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Prager, K.C., Mazet, J.K., Dubovi, E.J., Frank, L.G., Munson, L., Rupprecht, C.E., Wagner, A. and Woodroffe, R. 2013. Rabies and canine distemper virus in wild and domestic carnivores in northern Kenya: Are domestic dogs the reservoir? <i>Ecohealth</i> 9: 483.",
+      "year": "2013",
+      "title": "Rabies and canine distemper virus in wild and domestic carnivores in northern Kenya: Are domestic dogs the reservoir?",
+      "author": "Prager, K.C., Mazet, J.K., Dubovi, E.J., Frank, L.G., Munson, L., Rupprecht, C.E., Wagner, A. and Woodroffe, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Rabaiotti, D. 2019. The impact of climate change on a tropical carnivore: from individuals to species. PhD thesis, University College London.",
+      "year": "2019",
+      "title": "The impact of climate change on a tropical carnivore: from individuals to species",
+      "author": "Rabaiotti, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rabaiotti, D. and Woodroffe, R. 2019. Coping with climate change: limited behavioural responses to hot weather in a tropical carnivore. <i>Oecologia</i> 189: 587-599.",
+      "year": "2019",
+      "title": "Coping with climate change: limited behavioural responses to hot weather in a tropical carnivore",
+      "author": "Rabaiotti, D. and Woodroffe, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rabaiotti, D., Coulson, T. and Woodroffe, R. 2023. Climate change is predicted to cause population collapse in a cooperative breeder. <i>Global Change Biology</i> 21: 6002-6017.",
+      "year": "2023",
+      "title": "Climate change is predicted to cause population collapse in a cooperative breeder",
+      "author": "Rabaiotti, D., Coulson, T. and Woodroffe, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rabaiotti, D., Groom, R., McNutt, J.W., Watermeyer, J., O'Neill, H.M.K. and Woodroffe, R. 2021. High temperatures and human pressures interact to influence mortality in an African carnivore. <i>Ecology and Evolution</i> 11: 8495–8506.",
+      "year": "2021",
+      "title": "High temperatures and human pressures interact to influence mortality in an African carnivore",
+      "author": "Rabaiotti, D., Groom, R., McNutt, J.W., Watermeyer, J., O'Neill, H.M.K. and Woodroffe, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ramage, A., Brace, S., Day, J. and Woodroffe, R. In prep.",
+      "year": null,
+      "title": null,
+      "author": "Ramage, A., Brace, S., Day, J. and Woodroffe, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rasmussen, G.S.A. 1996. A case study of livestock predation by the painted hunting dog <i>Lycaon pictus</i> in a cattle ranching area. . Natural History Museum, Bulawayo.",
+      "year": "1996",
+      "title": "A case study of livestock predation by the painted hunting dog <i>Lycaon pictus</i> in a cattle ranching area. ",
+      "author": "Rasmussen, G.S.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rasmussen, G.S.A., Gusset, M., Courchamp, F. and Macdonald, D.W. 2008. Achilles' heel of sociality revealed by energetic poverty trap in cursorial hunters. <i>American Naturalist</i> 172: 508-518.",
+      "year": "2008",
+      "title": "Achilles' heel of sociality revealed by energetic poverty trap in cursorial hunters",
+      "author": "Rasmussen, G.S.A., Gusset, M., Courchamp, F. and Macdonald, D.W",
+      "citation_short": null
+    },
+    {
+      "citation": "Reich, A. 1981. The behaviour and ecology of the African wild dog (<i>Lycaon pictus</i>) in the Kruger National Park. PhD thesis, Yale University.",
+      "year": "1981",
+      "title": "The behaviour and ecology of the African wild dog (<i>Lycaon pictus</i>) in the Kruger National Park",
+      "author": "Reich, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Reuben, M., van Schalkwyk, L., Meyer, L.C.R. and Woodroffe, R. In prep. Protecting African wild dogs from Canine Distemper Virus: a first-in-the-field trial.",
+      "year": null,
+      "title": "Protecting African wild dogs from Canine Distemper Virus: a first-in-the-field trial",
+      "author": "Reuben, M., van Schalkwyk, L., Meyer, L.C.R. and Woodroffe, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Romañach, S.S., Lindsey, P.A. and Woodroffe, R. 2007. Determinants of attitudes toward predators in central Kenya, and suggestions for increasing tolerance in livestock dominated landscapes. <i>Oryx</i> 41: 185-195.",
+      "year": "2007",
+      "title": "Determinants of attitudes toward predators in central Kenya, and suggestions for increasing tolerance in livestock dominated landscapes",
+      "author": "Romañach, S.S., Lindsey, P.A. and Woodroffe, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Sandoval-Seres, E., Moyo, W., Madhlamoto, D., Madzikanda, H., Blinston, P., Kotze, R., van der Meer, E. and Loveridge, A. 2022. ) Long-distance African wild dog dispersal within the Kavango-Zambezi transfrontier conservation area. <i>African Journal of Ecology</i> 60: 1262-1266.",
+      "year": "2022",
+      "title": ") Long-distance African wild dog dispersal within the Kavango-Zambezi transfrontier conservation area",
+      "author": "Sandoval-Seres, E., Moyo, W., Madhlamoto, D., Madzikanda, H., Blinston, P., Kotze, R., van der Meer, E. and Loveridge, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Scheepers, J.L. and Venzke, K.A.E. 1995. Attempts to reintroduce African wild dogs <i>Lycaon pictus</i> into Etosha National Park, Namibia. <i>South African Journal of Wildlife Research</i> 25: 138-140.",
+      "year": "1995",
+      "title": "Attempts to reintroduce African wild dogs <i>Lycaon pictus</i> into Etosha National Park, Namibia",
+      "author": "Scheepers, J.L. and Venzke, K.A.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Spiering, P.A., Somers, M.J., Maldonado, J.E., Wildt, D.E. and Gunther, M.S. 2010. Reproductive sharing and proximate factors mediating cooperative breeding in the African wild dog (Lycaon pictus). <i>Behavioral Ecology and Sociobiology</i> 64: 583–592.",
+      "year": "2010",
+      "title": "Reproductive sharing and proximate factors mediating cooperative breeding in the African wild dog (Lycaon pictus).",
+      "author": "Spiering, P.A., Somers, M.J., Maldonado, J.E., Wildt, D.E. and Gunther, M.S. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Stevenson-Hamilton, J. 1939. The health of wild animals. <i>Journal of the South African Veterinary Medical Association</i> 10: 56-64.",
+      "year": "1939",
+      "title": "The health of wild animals",
+      "author": "Stevenson-Hamilton, J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Stevenson-Hamilton J. 1947. <i>Wild Life in South Africa</i>. Cassell, London, UK.",
+      "year": "1947",
+      "title": "Wild Life in South Africa",
+      "author": "Stevenson-Hamilton J",
+      "citation_short": null
+    },
+    {
+      "citation": "Swanson, A., Caro, T., Davies-Mostert, H., Mills, M.G.L., Macdonald, D.W., Borner, M., Masenga, E. and Packer, C. 2014. Cheetahs and wild dogs show contrasting patterns of suppression by lions. <i>Journal of Animal Ecology</i> 83: 1418-1427.",
+      "year": "2014",
+      "title": "Cheetahs and wild dogs show contrasting patterns of suppression by lions",
+      "author": "Swanson, A., Caro, T., Davies-Mostert, H., Mills, M.G.L., Macdonald, D.W., Borner, M., Masenga, E. and Packer, C. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tanzania Wildlife Research Institute. 2016. National action plan for the conservation of cheetahs and African wild dogs in Tanzania. Tanzania Wildlife Research Institute, Arusha.",
+      "year": "2016",
+      "title": "National action plan for the conservation of cheetahs and African wild dogs in Tanzania",
+      "author": "Tanzania Wildlife Research Institute ",
+      "citation_short": null
+    },
+    {
+      "citation": "van der Meer, E., Badza, M.N. and Ndhlovu, A. 2016. Large carnivores as tourism flagship species for the Zimbabwe component of the Kavango Zambezi Transfrontier Conservation Area. <i>African Journal of Wildlife Research</i> 46: 121-134.",
+      "year": "2016",
+      "title": "Large carnivores as tourism flagship species for the Zimbabwe component of the Kavango Zambezi Transfrontier Conservation Area",
+      "author": "van der Meer, E., Badza, M.N. and Ndhlovu, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "van der Meer, E., Fritz, H., Blinston, P. and Rasmussen, G.S.A. 2014. Ecological trap in the buffer zone of a protected area: effects of indirect anthropogenic mortality on the African wild dog <i>Lycaon pictus</i>. <i>Oryx</i> 48: 285-293.",
+      "year": "2014",
+      "title": "Ecological trap in the buffer zone of a protected area: effects of indirect anthropogenic mortality on the African wild dog <i>Lycaon pictus</i>",
+      "author": "van der Meer, E., Fritz, H., Blinston, P. and Rasmussen, G.S.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "van Schalkwyk, L., De Klerk-Lorist, L.-M., Buss, P. and Beverley, G. 2019. Health survey and targeted vaccination of the Kruger National Park African wild dog population south of the Olifants River. Final Report to SANParks.",
+      "year": "2019",
+      "title": "Health survey and targeted vaccination of the Kruger National Park African wild dog population south of the Olifants River",
+      "author": "van Schalkwyk, L., De Klerk-Lorist, L.-M., Buss, P. and Beverley, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Viana, M., Cleaveland, S., Matthiopoulos, J., Halliday, J., Packer, C., Craft, M.E., Hampson, K., Czupryna, A., Dobson, A.P., Dubovi, E., Eblate, E., Fyumagwa, R.D., Hoare, R., Hopcraft, J.G.C., Horton, D.L., Kaare, M.T., Kanellos, T., Lankester, F., Mentzel, C., Mlengeya, T., Mzimbiri, I., Takahashi, E., Willett, B., Haydon, D.T. and Lembo, T. 2015. Dynamics of a morbillivirus at the domestic–wildlife interface: Canine distemper virus in domestic dogs and lions. <i>Proceedings of the National Academy of Sciences</i> 112: 1464-1469.",
+      "year": "2015",
+      "title": "Dynamics of a morbillivirus at the domestic–wildlife interface: Canine distemper virus in domestic dogs and lions",
+      "author": "Viana, M., Cleaveland, S., Matthiopoulos, J., Halliday, J., Packer, C., Craft, M.E., Hampson, K., Czupryna, A., Dobson, A.P., Dubovi, E., Eblate, E., Fyumagwa, R.D., Hoare, R., Hopcraft, J.G.C., Horton, D.L., Kaare, M.T., Kanellos, T., Lankester, F., Mentzel, C., Mlengeya, T., Mzimbiri, I., Takahashi, E., Willett, B., Haydon, D.T. and Lembo, T. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Wahldén, L., Emanuelson, U., Møller, T. and Wensman, J.J. 2018. Evaluation of immunogenicity of a commercially available live attenuated vaccine for dogs containing canine distemper virus and canine parvovirus in African wild dog (<i>Lycaon pictus pictus</i>). <i>Hosts and Viruses</i> 5: 26-34.",
+      "year": "2018",
+      "title": "Evaluation of immunogenicity of a commercially available live attenuated vaccine for dogs containing canine distemper virus and canine parvovirus in African wild dog (<i>Lycaon pictus pictus</i>)",
+      "author": "Wahldén, L., Emanuelson, U., Møller, T. and Wensman, J.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Woodroffe, R. 2011a. Demography of a recovering African wild dog (Lycaon pictus) population. <i>Journal of Mammalogy</i> 92: 305-315.",
+      "year": "2011a",
+      "title": "Demography of a recovering African wild dog (Lycaon pictus) population",
+      "author": "Woodroffe, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Woodroffe, R. 2011b. Ranging behaviour of African wild dog packs in a human-dominated landscape. <i>Journal of Zoology</i> 283: 88-97.",
+      "year": "2011b",
+      "title": "Ranging behaviour of African wild dog packs in a human-dominated landscape",
+      "author": "Woodroffe, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Woodroffe, R. and Donnelly, C.A. 2011. Risk of contact between endangered African wild dogs <i>Lycaon pictus</i> and domestic dogs: opportunities for pathogen transmission. <i>Journal of Applied Ecology</i> 48: 1345-1354.",
+      "year": "2011",
+      "title": "Risk of contact between endangered African wild dogs <i>Lycaon pictus</i> and domestic dogs: opportunities for pathogen transmission",
+      "author": "Woodroffe, R. and Donnelly, C.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Woodroffe, R., Chapman, K. and Lemusana, E. 2009. Solitary breeding in an African wild dog (<i>Lycaon pictus</i>). <i>African Journal of Ecology</i> 47: 790-791.",
+      "year": "2009",
+      "title": "Solitary breeding in an African wild dog (<i>Lycaon pictus</i>)",
+      "author": "Woodroffe, R., Chapman, K. and Lemusana, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Woodroffe, R., Chege, S., Donnelly, C.A., Laurenson, M.K., Charles Musyoki, C., Mutinda, M., Rupprecht, C.E. and Gakuya, F. In prep. Safety of rabies vaccination in endangered African wild dogs (<i>Lycaon pictus</i>): a “first-in-the-field” trial.",
+      "year": null,
+      "title": "Safety of rabies vaccination in endangered African wild dogs (<i>Lycaon pictus</i>): a “first-in-the-field” trial",
+      "author": "Woodroffe, R., Chege, S., Donnelly, C.A., Laurenson, M.K., Charles Musyoki, C., Mutinda, M., Rupprecht, C.E. and Gakuya, F. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Woodroffe, R., Davies-Mostert, H., Ginsberg, J.R., Graf, J.A., Leigh, K., McCreery, E.K., Mills, M.G.L., Pole, A., Rasmussen, G.S.A., Robbins, R., Somers, M. and Szykman, M. 2007a. Rates and causes of mortality in endangered African wild dogs Lycaon pictus: lessons for management and monitoring. <i>Oryx </i> 41: 215–223.",
+      "year": "2007a",
+      "title": "Rates and causes of mortality in endangered African wild dogs Lycaon pictus: lessons for management and monitoring",
+      "author": "Woodroffe, R., Davies-Mostert, H., Ginsberg, J.R., Graf, J.A., Leigh, K., McCreery, E.K., Mills, M.G.L., Pole, A., Rasmussen, G.S.A., Robbins, R., Somers, M. and Szykman, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Woodroffe, R., Frank, L.G., Lindsey, P.A., ole Ranah, S.M.K. and Romañach, S.S. 2007b. Livestock husbandry as a tool for carnivore conservation in Africa's community rangelands: a case-control study. <i>Biodiversity and Conservation</i> 16: 1245-1260.",
+      "year": "2007b",
+      "title": "Livestock husbandry as a tool for carnivore conservation in Africa's community rangelands: a case-control study",
+      "author": "Woodroffe, R., Frank, L.G., Lindsey, P.A., ole Ranah, S.M.K. and Romañach, S.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Woodroffe, R., Groom, R. and McNutt, J.W. 2017. Hot dogs: high ambient temperatures influence reproductive success in a tropical mammal. <i>Journal of Animal Ecology</i> 86: 1329-1338.",
+      "year": "2017",
+      "title": "Hot dogs: high ambient temperatures influence reproductive success in a tropical mammal",
+      "author": "Woodroffe, R., Groom, R. and McNutt, J.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Woodroffe, R., Lindsey, P.A., Romañach, S.S. and ole Ranah, S.M.K. 2007c. African wild dogs (<i>Lycaon pictus</i>) can subsist on small prey: implications for conservation. <i>Journal of Mammalogy</i> 88: 181-193.",
+      "year": "2007c",
+      "title": "African wild dogs (<i>Lycaon pictus</i>) can subsist on small prey: implications for conservation",
+      "author": "Woodroffe, R., Lindsey, P.A., Romañach, S.S. and ole Ranah, S.M.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Woodroffe, R., Lindsey, P.A., Romañach, S.S., Stein, A. and ole Ranah, S.M.K. 2005. Livestock predation by endangered African wild dogs (<i>Lycaon pictus</i>) in northern Kenya. <i>Biological Conservation</i> 124: 225-234.",
+      "year": "2005",
+      "title": "Livestock predation by endangered African wild dogs (<i>Lycaon pictus</i>) in northern Kenya",
+      "author": "Woodroffe, R., Lindsey, P.A., Romañach, S.S., Stein, A. and ole Ranah, S.M.K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Woodroffe, R., O’Neill, H.M.K. and Rabaiotti, D. 2019. Within- and between-group dynamics in an obligate cooperative breeder. <i>Journal of Animal Ecology</i> 89: 530-540.",
+      "year": "2019",
+      "title": "Within- and between-group dynamics in an obligate cooperative breeder",
+      "author": "Woodroffe, R., O’Neill, H.M.K. and Rabaiotti, D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Woodroffe, R., Prager, K.C., Munson, L., Conrad, P.A., Dubovi, E.J. and Mazet, J.A.K. 2012. Contact with domestic dogs increases pathogen exposure in endangered African wild dogs (<i>Lycaon pictus</i>). <i>PLOS One</i> 7: e30099.",
+      "year": "2012",
+      "title": "Contact with domestic dogs increases pathogen exposure in endangered African wild dogs (<i>Lycaon pictus</i>)",
+      "author": "Woodroffe, R., Prager, K.C., Munson, L., Conrad, P.A., Dubovi, E.J. and Mazet, J.A.K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Woodroffe, R., Rabaiotti, D., Ngatia, D.K., Smallwood, T.R.C., Strebel, S. and O’Neill, H.M.K. 2020. Dispersal behaviour of African wild dogs in Kenya. <i>African Journal of Ecology</i> 58: 46-57.",
+      "year": "2020",
+      "title": "Dispersal behaviour of African wild dogs in Kenya",
+      "author": "Woodroffe, R., Rabaiotti, D., Ngatia, D.K., Smallwood, T.R.C., Strebel, S. and O’Neill, H.M.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zambia Carnivore Programme. 2016. Annual Report 2016.",
+      "year": "2016",
+      "title": "Annual Report 2016",
+      "author": "Zambia Carnivore Programme ",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

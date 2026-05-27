@@ -1,0 +1,753 @@
+{
+  "assessment_date": "2016-07-07T01:00:00.000+01:00",
+  "year_published": "2016",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 22047,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/22047/115164600",
+  "citation": "IUCN SSC Antelope Specialist Group 2016. Tragelaphus eurycerus (errata version published in 2017). The IUCN Red List of Threatened Species 2016: e.T22047A115164600. Accessed on 15 May 2026.",
+  "assessment_id": 115164600,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 22047,
+    "scientific_name": "Tragelaphus eurycerus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 22058,
+        "scientific_name": "Tragelaphus eurycerus ssp. eurycerus",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "BOVIDAE",
+        "genus_name": "Tragelaphus",
+        "species_name": "eurycerus",
+        "subpopulation_name": null,
+        "infra_name": "eurycerus",
+        "authority": "(Ogilbyi, 1837)",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Western Bongo",
+            "language": "eng"
+          },
+          {
+            "main": true,
+            "name": "Lowland Bongo",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 22057,
+        "scientific_name": "Tragelaphus eurycerus ssp. isaaci",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "BOVIDAE",
+        "genus_name": "Tragelaphus",
+        "species_name": "eurycerus",
+        "subpopulation_name": null,
+        "infra_name": "isaaci",
+        "authority": "(Thomas, 1902)",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Eastern Bongo",
+            "language": "eng"
+          },
+          {
+            "main": true,
+            "name": "Mountain Bongo",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "ARTIODACTYLA",
+    "family_name": "BOVIDAE",
+    "genus_name": "Tragelaphus",
+    "species_name": "eurycerus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Ogilbyi, 1837)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Bongo",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Bongo",
+        "language": "fre"
+      },
+      {
+        "main": true,
+        "name": "Bongo",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Near Threatened"
+    },
+    "code": "NT"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 4300,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "15000-25000",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "8.0",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Percentage of population protected by PAs",
+            "value": "51-60"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "Bongo has a disjunct distribution in three separate patches. The Western or Lowland Bongo ranges from Sierra Leone to Togo (where they now probably only occur in Fazao National Park) and Benin (where a few may still exist in the Mt. Kouffe area); and then from SW Cameroon through Central African Republic to SW South Sudan, NE Gabon, N Republic of Congo and the northern half of DR Congo (East 1999, Elkan and Smith 2013). The gap in distribution is assumed to reflect patterns of expansion and contraction of forest habitats resulting from climatic fluctuations.<br/><br/>The Eastern or Mountain Bongo formerly occurred in and around forested mountains zones of Mt. Kenya, the Aberdares, Mau forest, Cherengani hills and Chepalungu hills in Kenya and Mount Elgon in Kenya and Uganda (Elkan and Smith 2013). Mountain Bongo was exterminated from the Uganda side of Mount Elgon around 1913-1914 (Kingdon 1982) and it is now confined to four completely isolated populations in patches of forest on Mt. Kenya, Mau Forest, Eburu Forest and the Aberdares in Kenya&#160;(Elkan and Smith 2013, Mountain Bongo Surveillance Project&#160;2015).",
+    "population": "East (1999) estimated the total population of Lowland Bongo at 28,000, with populations in the order of a few thousand in West Africa (where populations are fragmented), and tens of thousands in the Central African forest zone. It tends to be naturally rare or absent over large parts of the equatorial forest zone. Dense forest habitat, patchy distributions, wide-ranging patterns,  retiring behaviour and crepuscular/nocturnal activity patterns hinder  any reliable estimation of Bongo densities (Elkan and Smith 2013).  Hillman (1986) estimated 1.2/km² in South Sudan based on observations of  group size and distribution of mineral licks. There are no reliable estimates of current population size.<br/><br/>The current population estimate (Mountain Bongo Surveillance Project&#160;2015) for the Mountain Bongo is <em>ca</em>. 100 individuals: Aberdare Mts (&lt;50); Mt Kenya (10-15);&#160;Eburu Forest (<em>ca</em>. 10);&#160;Maasai Mau Forest Complex (20+;&#160;new Bongo groups discovered May 2013); and SW Mau Forest (&lt;10).",
+    "habitats": "The Bongo is associated with rainforest, disturbed forest areas and the forest-savanna ecotone in the West and Central African lowlands and montane forests in the Kenya highlands.<br/><br/>Bongo thrive on transition vegetation at the forest edge and in new growth areas that occur after disturbance (post-timber exploitation, elephant disturbance, tree-falls, landslides, burned fields; Elkan and Smith 2013). Forest clearings and mineral licks are important for geophagy and socialization (Elkan and Smith 2013, and references therein). Bongo are primarily browsers, but exhibit some seasonal grazing on grasses (Elkan and Smith 2013). There is a record from 4,300 m on Mount Kenya (Young and Evans 1993).",
+    "threats": "The Lowland Bongo faces an ongoing population decline as habitat destruction and hunting for meat (mainly through snares) and Bongo trophies increase with the relentless expansion of commercial forestry exploitation and human settlement (East 1999, Elkan and Smith 2013). Despite its large size Bongo is a shy and reclusive species, attributes that may offer some degree of protection from hunting.<br/><br/>Threats to Mountain Bongo include hunting with dogs and loss of habitat in the Mau and Eburu forests to illegal logging. The decline of Mountain Bongo populations in the Aberdares in recent years has been attributed to increased hunting by local people and habitat loss, and even to the increased numbers of Lion in the area (Elkan and Smith 2013). Although these factors have no doubt contributed to the decline of Mountain Bongo, the impact of disease has probably been underestimated: the grazing of cattle in the forest reserves of Mount Kenya and the Aberdares as high as the Hagenia forest on the Aberdares plateau may have greater implications for Bongo conservation than hunting pressure in terms of disease transmission (L. Estes pers. comm. in Elkan and Smith 2013). Percival (1928) reported that rinderpest drastically reduced the populations of Mountain Bongo in the 1890s, and populations are thought to have suffered greatly in later epidemics in the early 1900s.",
+    "measures": "As the largest and most spectacular forest antelope, the Lowland Bongo is both an important flagship species for protected areas such as national parks, and a major trophy species which has been taken in increasing numbers in Central Africa by international sport hunters during the 1990s. Both of these factors are strong incentives to provide effective protection and management of Lowland Bongo populations.<br/><br/>East (1999) estimated that perhaps 60% of Bongo numbers were confined to protected areas. In Central Africa, these include Dzanga-Ndoki National Park and Bangassou areas of the Central African Republic, Lobeke National Park (Cameroon), and in Nouabale-Ndoki National Park and Odzala National Park (Republic of Congo); in West Africa, strongholds include Taï (Côte d’Ivoire), Sapo (Liberia), and Kakum National Parks (Ghana) (East 1999, Elkan and Smith 2013). However, because the highest known abundances of Bongo in Central Africa occur in logging concessions not protected areas, an approach is needed that incorporates both protected areas and logging concessions (Elkan 2003, Elkan and Smith 2013).<br/><br/>The Mountain Bongo’s survival in the wild is dependent on more effective protection of the surviving remnant populations in Kenya (East 1999). Two conservation initiatives are currently in progress on Mountain Bongo. A program to reintroduce Bongo to Mt Kenya began in 2004, when 18 animals where flown from North American zoos to a captive-breeding facility at Mount Kenya Game Ranch, on the north-western slope of the mountain. A second phase began in 2005, with the commencement of a research program into the Mountain Bongo’s ecology. This project will attempt to determine the configuration of Bongo habitat on both the Aberdares and Mount Kenya, using recently collected field and remotely sensed data (L. Estes pers. comm. in Elkan and Smith 2013). Meanwhile, the Bongo Surveillance Program, initiated in 2004, has been investigating the status of the remaining wild Bongo populations in Kenya (L. Estes pers. comm. in Elkan and Smith 2013).",
+    "use_trade": "Lowland Bongo are subject to snare hunting associated with expanding commercial forestry exploitation and high demand for Bongo trophies (Elkan and Smith 2013). In fact, Bongos are the primary target of tourist safari hunting in the forests of central Africa and increasing demand over the past decade, the use of dogs and inadequate regulation has resulted in over-hunting in several areas (Elkan 1995, 2003). In contrast, trophy hunting also has the potential to provide economic justification for the preservation of larger areas of Bongo habitat than national parks, especially in remote regions of Central Africa where possibilities for commercially successful tourism are very limited (East 1999). Traditionally, due to taboos against eating of the meat, Bongo are not considered a preferred game species by local people, at least in some sites (Hillman 1986; Elkan 1995, 2003), although there is still heavy loss due to indiscriminate snaring. Furthermore, the erosion of traditional beliefs and expanding commercial hunting are creating new pressures and its meat is sometimes smoked and sold as 'buffalo' (Elkan and Smith 2013). There has been an increase in hunting of Mountain Bongo by local people, including hunting with dogs.",
+    "rationale": "The species faces an ongoing population decline as habitat loss and hunting pressures increase with the expansion of human settlement and commercial forestry. The level of decline is estimated to have reached more than 20% over 24 years (three generations), hence meeting the threshold for Near Threatened. This decrease may be an underestimate and the species may be approaching the threshold for Vulnerable under criterion A2cd;&#160;however there is at present inadequate information to complete a more thorough evaluation, and more intensive monitoring is required.",
+    "trend_justification": null,
+    "taxonomic_notes": "Two subspecies are currently recognized: Mountain or Eastern Bongo (<em>T. e. isaaci</em>) and the Lowland or Western Bongo (<em>T. e. eurycerus</em>), although the validity of these forms has not been confirmed by genetic analysis. Furthermore, the two populations of Lowland Bongo, in West and Central Africa respectively, have been geographically separated for an unknown - but long - period of time. Carrying out a detailed phylogenetic anlysis across the species' entire range is highly desirable. Until then, the three disjunct populations should be treated as separate conservation units."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_3_1",
+      "description": {
+        "en": "Reintroduction"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Subtropical/Tropical Heavily Degraded Former Forest"
+      },
+      "code": "14_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Côte d'Ivoire"
+      },
+      "code": "CI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Central African Republic"
+      },
+      "code": "CF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ghana"
+      },
+      "code": "GH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo"
+      },
+      "code": "CG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sierra Leone"
+      },
+      "code": "SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Benin"
+      },
+      "code": "BJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Liberia"
+      },
+      "code": "LR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Niger"
+      },
+      "code": "NE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Togo"
+      },
+      "code": "TG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Sudan"
+      },
+      "code": "SS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Uganda"
+      },
+      "code": "UG"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Problematic native species/diseases"
+      },
+      "code": "8_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry plantations"
+      },
+      "code": "2_2_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "IUCN SSC Antelope Specialist Group",
+      "value": [
+        "falsemail@gen.iucnsis.org"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Hoffmann, M.",
+      "value": [
+        "Michael Hoffmann (Zoological Society of London / IUCN SSC Canid Specialist Group)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This errata assessment has been created because the map was accidentally left out of the version published previously."
+    }
+  ],
+  "references": [
+    {
+      "citation": "IUCN. 2017. The IUCN Red List of Threatened Species. Version 2017-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 27 April 2017).",
+      "year": "2017",
+      "title": "The IUCN Red List of Threatened Species. Version 2017-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2017-1"
+    },
+    {
+      "citation": "East, R. (compiler). 1999. <i>African Antelope Database 1998</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1999",
+      "title": "African Antelope Database 1998",
+      "author": "East, R. (compiler)",
+      "citation_short": ""
+    },
+    {
+      "citation": "Young, T.P. and Evans, M.R. 1993. Alpine vertebrates of Mount Kenya, with particular notes on the rock hyrax. <i>Journal of the East Africa Natural History Society and National Museum</i> 82(202): 55-79.",
+      "year": "1993",
+      "title": "Alpine vertebrates of Mount Kenya, with particular notes on the rock hyrax",
+      "author": "Young, T.P. and Evans, M.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kingdon, J. 1982. <i>East African Mammals: An Atlas of Evolution in Africa</i>. Academic Press, London, UK.",
+      "year": "1982",
+      "title": "East African Mammals: An Atlas of Evolution in Africa",
+      "author": "Kingdon, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Elkan, P. W. and Smith, J. L. D. 2013. <i>Tragelaphus eurycerus</i>. In: J. S. Kingdon and M. Hoffmann (eds), <i>The Mammals of Africa. VI. Pigs, Hippopotamuses, Chevrotain, Giraffes, Deer, and Bovids</i>, Bloomsbury Publishing, London, UK.",
+      "year": "2013",
+      "title": "<i>Tragelaphus eurycerus</i>",
+      "author": "Elkan, P. W. and Smith, J. L. D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Elkan, P. W. 2003. Ecology and conservation of bongo antelope (<i>Tragelaphus eurycerus</i>) in lowland forest, northern Republic of Congo. Ph.D. Thesis, University of Minnesota.",
+      "year": "2003",
+      "title": "Ecology and conservation of bongo antelope (<i>Tragelaphus eurycerus</i>) in lowland forest, northern Republic of Congo",
+      "author": "Elkan, P. W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hillman, J. C. 1986. Aspects of the biology of the bongo antelope <i>Tragelaphus euryceros</i> (Ogilby 1837) in the south west Sudan. <i>Biological Conservation</i> 38: 255-272.",
+      "year": "1986",
+      "title": "Aspects of the biology of the bongo antelope <i>Tragelaphus euryceros</i> (Ogilby 1837) in the south west Sudan",
+      "author": "Hillman, J. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Percival, A.B. 1928. <i>A game ranger on Safari</i>. J. Nisbet and Co, London, UK.",
+      "year": "1928",
+      "title": "A game ranger on Safari",
+      "author": "Percival, A.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Elkan, P. W. 1995. Preliminary surveys of bongo antelope and assessment of safari hunting in south-eastern Cameroon. Unpublished report to Wildlife Conservation Society and USAID.",
+      "year": "1995",
+      "title": "Preliminary surveys of bongo antelope and assessment of safari hunting in south-eastern Cameroon.",
+      "author": "Elkan, P. W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mountain Bongo Surveillance Project. 2015. Monitoring and Surveillance Programme. Available at: <a href=\"http://www.mountainbongo.org/monitoring-and-surveillance-programme.php\">http://www.mountainbongo.org/monitoring-and-surveillance-programme.php</a>. (Accessed: 02 September 2015).",
+      "year": "2015",
+      "title": "Monitoring and Surveillance Programme",
+      "author": "Mountain Bongo Surveillance Project",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 07 December 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-3"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

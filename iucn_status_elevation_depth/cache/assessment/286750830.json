@@ -1,0 +1,908 @@
+{
+  "assessment_date": "2019-09-02T01:00:00.000+01:00",
+  "year_published": "2025",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 172707,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/172707/286750830",
+  "citation": "Stuart, B.L., Grismer, L., Auliya, M., Chan-Ard, T., Srinivasulu, C., Srinivasulu, B., Mohapatra, P. & Achyuthan, N.S. 2025. Ahaetulla nasuta (amended version of 2021 assessment). The IUCN Red List of Threatened Species 2025: e.T172707A286750830. Accessed on 15 May 2026.",
+  "assessment_id": 286750830,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 172707,
+    "scientific_name": "Ahaetulla nasuta",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "COLUBRIDAE",
+    "genus_name": "Ahaetulla",
+    "species_name": "nasuta",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Lacépède, 1789)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Green Vine Snake",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Long-nosed Whip Snake",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Baumschnüffler",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Nasenpeitschennatter",
+        "language": "ger"
+      },
+      {
+        "main": true,
+        "name": "Long-nosed Tree Snake",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Dryophis nasuta Lacépède, 1789",
+        "status": "ACCEPTED",
+        "genus_name": "Dryophis",
+        "species_name": "nasuta",
+        "species_author": "Lacépède, 1789",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Dryophis mycterizans ssp. tephrogaster Wall, 1908: 783 (fide Smith 1943)",
+        "status": "ACCEPTED",
+        "genus_name": "Dryophis",
+        "species_name": "mycterizans",
+        "species_author": null,
+        "infrarank_author": "Wall, 1908: 783 (fide Smith 1943)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "tephrogaster"
+      },
+      {
+        "name": "Coluber nasutus Lacépède, 1789",
+        "status": "ACCEPTED",
+        "genus_name": "Coluber",
+        "species_name": "nasutus",
+        "species_author": "Lacépède, 1789",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Dryophis mycterizans ssp. rhodonotus Wall, 1921 (<i>fide</i> Smith, 1943)",
+        "status": "ACCEPTED",
+        "genus_name": "Dryophis",
+        "species_name": "mycterizans",
+        "species_author": null,
+        "infrarank_author": "Wall, 1921 (<i>fide</i> Smith, 1943)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "rhodonotus"
+      },
+      {
+        "name": "Dryophis mycterizans ssp. rhodogaster Wall, 1908 (<i>fide</i> Smith, 1943)",
+        "status": "ACCEPTED",
+        "genus_name": "Dryophis",
+        "species_name": "mycterizans",
+        "species_author": null,
+        "infrarank_author": "Wall, 1908 (<i>fide</i> Smith, 1943)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "rhodogaster"
+      },
+      {
+        "name": "Coluber mycterizans Russell, 1796 (not Linnaeus, <i>fide</i> Smith, 1943)",
+        "status": "ACCEPTED",
+        "genus_name": "Coluber",
+        "species_name": "mycterizans",
+        "species_author": "Russell, 1796 (not Linnaeus, <i>fide</i> Smith, 1943)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Dryophis hammatorhynchus Fitzinger, 1826 : 61 (nom. subst. pro C. myct.)",
+        "status": "ACCEPTED",
+        "genus_name": "Dryophis",
+        "species_name": "hammatorhynchus",
+        "species_author": "Fitzinger, 1826 : 61 (nom. subst. pro C. myct.)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Dryophis mycterizans ssp. cineroventer Wall, 1908: 919 (fide Smith 1943)",
+        "status": "ACCEPTED",
+        "genus_name": "Dryophis",
+        "species_name": "mycterizans",
+        "species_author": null,
+        "infrarank_author": "Wall, 1908: 919 (fide Smith 1943)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "cineroventer"
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 1300,
+    "lower_elevation_limit": 10,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": ".1",
+    "extreme_fluctuations_in_area_of_occupancy": "Unknown",
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": "Unknown",
+    "extreme_fluctuations_in_extent_of_occurence": "Unknown",
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<span style=\"font-style: italic;\"></span>This species occurs from Nepal, India and Sri Lanka eastward to Vietnam, and southward to the Isthmus of Kra in southern Thailand. In India, it is known from throughout the peninsular and south of the Indo-Gangetic plain, and is also known from Jalpaiguri in West Bengal and Assam in northeast India. The northeastern limit of this species in India is uncertain (Wall 1919, Daniel 2002, Whitaker and Captain 2004). It occurs in the foothills of the Himalaya in Uttarakhand State in northern India (Vasudevan and Sondhi 2010). It has been recorded from 10-1,300 m asl.",
+    "population": "This species is locally common in much of its range. It is uncommon in the foothills of the Himalaya in Uttarakhand, India (Vasudevan and Sondhi 2010).",
+    "habitats": "Occurs&#160;in varied habitats from dry scrub forest, tropical dry deciduous forests, semi evergreen hill forest, evergreen forest and mangroves. It is also found in grasslands and near to human habitations, including gardens. It is a diurnal and arboreal snake and has been noted to feed on frogs, geckos and small birds, mice, tadpoles, fish, insects and other smaller snakes. The species is ovoviviparous and gives birth to up to 23 young between March and December (Whitaker and Captain 2004, Khaire 2006, Vasudevan and Sondhi 2010).",
+    "threats": "There are no apparent threats to this adaptable snake, and exploitation occurs at only low levels that are not likely to threaten the population.",
+    "measures": "No species-specific conservation measures are required. The species occurs in numerous protected areas across its large range.",
+    "use_trade": "The species is commonly used in the snake wine industry in southern Vietnam (Somaweera and Somaweera 2010). It is commonly found in the domestic pet trade in Thailand (L. Grismer and T. Chan-ard pers. comm. August 2011), and is also found in small numbers in the international pet trade (M. Auliya pers. comm. August 2011).",
+    "rationale": "Listed as Least Concern in view of its wide distribution, there are no major threats, and because it is unlikely to be declining fast enough to qualify for listing in a more threatened category.",
+    "trend_justification": null,
+    "taxonomic_notes": "The taxonomic history of <em>Ahaetulla anomala</em>&#160;was discussed by Mahopatra<em>&#160;et al</em>. (2017), who elevated it to specific status from within&#160;<em>Ahaetulla nasuta&#160;</em>and redescribed it, clarifying its distribution. Subspecific divisions within <em>A. nasuta </em>remain in need of clarification, as a number may represent distinct species and multiple varieties appear to exist within Sri Lanka - the type locality - alone (Deepak <em>et al.</em> 2019). This species complex is presently under revision (Achyuthan pers. comm. 2019).<span style=\"font-style: italic;\"></span>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Mangrove Vegetation Above High Tide Level"
+      },
+      "code": "1_7"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "West Bengal"
+      },
+      "code": "IND-WB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Andhra Pradesh"
+      },
+      "code": "IND-AP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Assam"
+      },
+      "code": "ASS-AS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bihar"
+      },
+      "code": "IND-BI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chattisgarh"
+      },
+      "code": "IND-CT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tamil Nadu"
+      },
+      "code": "IND-TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Goa"
+      },
+      "code": "IND-GO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gujarat"
+      },
+      "code": "IND-GU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kerala"
+      },
+      "code": "IND-KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lao People's Democratic Republic"
+      },
+      "code": "LA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jharkand"
+      },
+      "code": "IND-JK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madhya Pradesh"
+      },
+      "code": "IND-MP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uttaranchal"
+      },
+      "code": "WHM-UT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pondicherry"
+      },
+      "code": "IND-PO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nepal"
+      },
+      "code": "NP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Karnataka"
+      },
+      "code": "IND-KT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Orissa"
+      },
+      "code": "IND-OR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maharashtra"
+      },
+      "code": "IND-MR"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Stuart, B.L., Grismer, L., Auliya, M., Chan-Ard, T., Srinivasulu, C., Srinivasulu, B., Mohapatra, P. & Achyuthan, N.S.",
+      "value": [
+        "Tanya Chan-Ard (Thailand Natural History Museum)",
+        "N.S Achyuthan (Freelance consultant / GRA Western Ghats Workshop)",
+        "Pratyush Mohapatra (North Orissa University, Baripada)",
+        "Bryan Stuart (Chicago Field Museum, Chicago, USA)",
+        "Lee Grismer (SRLI Reptile Assessment)",
+        "Mark Auliya (Zoologisches Forschungsmuseum Alexander Koenig (ZFMK) Adenauerallee 160, 53113 Bonn, Germany)",
+        "Bhargavi Srinivasulu (Osmania University, Hyderabad, India / GRA Western Ghats Workshop)",
+        "Chelmala Srinivasulu (Osmania University, Hyderabad, India / GRA Western Ghats Workshop)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Cox, N.A.",
+      "value": [
+        "Neil Cox (Biodiversity Assessment Unit)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Bowles, P.",
+      "value": [
+        "Philip Bowles (IUCN SSC/CI Biodiversity Assessment Unit)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "The assessment date has been corrected to 2019, the time of the final workshop which assessed this species under the concept described in the published Taxonomic Note (incorporating a taxonomic change made in 2017). The map has been corrected accordingly."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Daniel, J.C. 2002. <i>The Book of Indian Reptiles and Amphibians</i>. Oxford University Press / Bombay Natural History Society, Oxford.",
+      "year": "2002",
+      "title": "The Book of Indian Reptiles and Amphibians",
+      "author": "Daniel, J.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Somaweera, R. and Somaweera, N. 2010. Serpents in jars: the snake wine industry in Vietnam. <i>Journal of Threatened Taxa</i> 2(11): 1251-1260.",
+      "year": "2010",
+      "title": "Serpents in jars: the snake wine industry in Vietnam",
+      "author": "Somaweera, R. and Somaweera, N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Stuebing, R.B. and Inger, R.F. 1999. <i>A Field Guide to the Snakes of Borneo</i>. Natural History Publications (Borneo), Kota Kinabalu.",
+      "year": "1999",
+      "title": "A Field Guide to the Snakes of Borneo",
+      "author": "Stuebing, R.B. and Inger, R.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Whitaker, R. and Captain, A. 2004. <i>Snakes of India. The Field Guide</i>. Draco Books, India.",
+      "year": "2004",
+      "title": "Snakes of India. The Field Guide",
+      "author": "Whitaker, R. and Captain, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vyas, R. 2007. Herpetofauna of Purna Wildlife Sanctuary, Gujarat, India. <i>Reptile Rap Newsletter of the South Asian Reptile Network</i> 8: 10-15.",
+      "year": "2007",
+      "title": "Herpetofauna of Purna Wildlife Sanctuary, Gujarat, India",
+      "author": "Vyas, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Khaire, N. 2006. <i>A Guide to the Snakes of Maharashtra, Goa & Karnataka</i>. Indian Herpetological Society, Pune.",
+      "year": "2006",
+      "title": "A Guide to the Snakes of Maharashtra, Goa & Karnataka",
+      "author": "Khaire, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vyas, R. 2004. Herpetofauna of Vansda National Park, Gujarat. <i>Zoos' Print Journal</i> 19(6): 1512-1514.",
+      "year": "2004",
+      "title": "Herpetofauna of Vansda National Park, Gujarat",
+      "author": "Vyas, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nande, R. and Deshmukh, S. 2007. Snakes of Amravati district including Melghat, Maharashtra, with important records of the Indian egg-eater, montane trinket snake and Indian smooth snake. <i>Zoos' Print Journal</i> 22(12): 2920-2924.",
+      "year": "2007",
+      "title": "Snakes of Amravati district including Melghat, Maharashtra, with important records of the Indian egg-eater, montane trinket snake and Indian smooth snake",
+      "author": "Nande, R. and Deshmukh, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Deepak, V., Narayanan, S., Sarkar, V., Dutta, S.K. and Mohapatra, P.P. 2019. A new species of <i>Ahaetulla</i> Link, 1807 (Serpentes: Colubridae: Ahaetullinae) from India. <i>Journal of Natural History</i> 53(9-10): 497–516. DOI:10.1080/00222933.2019.1589591.",
+      "year": "2019",
+      "title": "A new species of <i>Ahaetulla</i> Link, 1807 (Serpentes: Colubridae: Ahaetullinae) from India",
+      "author": "Deepak, V., Narayanan, S., Sarkar, V., Dutta, S.K. and Mohapatra, P.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2021. The IUCN Red List of Threatened Species. Version 2021-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 09 December 2021).",
+      "year": "2021",
+      "title": "The IUCN Red List of Threatened Species. Version 2021-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2021-3"
+    },
+    {
+      "citation": "Khan, M.M.H. 2018. Photographic Guide to the Wildlife of Bangladesh. <i>Arannayk Foundation, Dhaka, Bangladesh</i>: 488.",
+      "year": "2018",
+      "title": "Photographic Guide to the Wildlife of Bangladesh",
+      "author": "Khan, M.M.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thakur, S. 2011. A note on snakes of Kanha National Park and surrounding areas. <i>Reptile Rap</i> 11: 2-5.",
+      "year": "2011",
+      "title": "A note on snakes of Kanha National Park and surrounding areas",
+      "author": "Thakur, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Alfred, J.R.B. and K. Chandra. 2005. Fauna of Pench Tiger Reserve. <i>ENVIS Newsletter, Zoological Survey of India</i> 11(1&2): 2-9.",
+      "year": "2005",
+      "title": "Fauna of Pench Tiger Reserve",
+      "author": "Alfred, J.R.B. and K. Chandra",
+      "citation_short": null
+    },
+    {
+      "citation": "Baskaran, N. and D. Boominathan. 2010. Roadkill of animals by highway traffic in the tropical forest of Mudumalai Tiger Reserve, southern India. <i>Journal of Threatened Taxa</i> 2(3): 753-759.",
+      "year": "2010",
+      "title": "Roadkill of animals by highway traffic in the tropical forest of Mudumalai Tiger Reserve, southern India",
+      "author": "Baskaran, N. and D. Boominathan",
+      "citation_short": null
+    },
+    {
+      "citation": "Hasan, M.K., Khan, M.M.H. and Feeroz, M.M. 2014. Amphibian and Reptiles of Bangladesh: A Field Guide. <i>Arannayk Foundation, Dhaka, Bangladesh</i>: 191.",
+      "year": "2014",
+      "title": "Amphibian and Reptiles of Bangladesh: A Field Guide",
+      "author": "Hasan, M.K., Khan, M.M.H. and Feeroz, M.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kabir, M.T. 2015. <i>Ahaetulla nasuta</i>. In: IUCN Bangladesh (ed.), <i>Red List of Bangladesh Volume 4: Reptiles and Amphibians</i>, pp. 128. IUCN, International Union for Conservation of Nature, Dhaka, Bangladesh.",
+      "year": "2015",
+      "title": "<i>Ahaetulla nasuta</i>",
+      "author": "Kabir, M.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mohapatra, P.P., Dutta, S.K., Kar, N.B., Das, A., Murthy, B.H.C.K. and Deepak, V. 2017. <i>Ahaetulla nasuta anomala</i> (Annandale, 1906) (Squamata: Colubridae), resurrected as a valid species with marked sexual dichromatism. <i>Zootaxa</i> 4263(2): 318-332.",
+      "year": "2017",
+      "title": "<i>Ahaetulla nasuta anomala</i> (Annandale, 1906) (Squamata: Colubridae), resurrected as a valid species with marked sexual dichromatism",
+      "author": "Mohapatra, P.P., Dutta, S.K., Kar, N.B., Das, A., Murthy, B.H.C.K. and Deepak, V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vasudevan, K. and S. Sondhi. 2010. <i>Amphibians and Reptiles of Uttarakhand, India</i>. Wildlife Institute of India, Dehradun.",
+      "year": "2010",
+      "title": "Amphibians and Reptiles of Uttarakhand, India",
+      "author": "Vasudevan, K. and S. Sondhi",
+      "citation_short": null
+    },
+    {
+      "citation": "Wall, F. 1919. Notes on a collection of snakes made in the Nilgiris and the adjacent Wynaad. <i>Journal of the Bombay Natural History Society</i> 26(2): 552-584.",
+      "year": "1919",
+      "title": "Notes on a collection of snakes made in the Nilgiris and the adjacent Wynaad.",
+      "author": "Wall, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2025. The IUCN Red List of Threatened Species. Version 2025-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 October 2025).",
+      "year": "2025",
+      "title": "The IUCN Red List of Threatened Species. Version 2025-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2025-2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

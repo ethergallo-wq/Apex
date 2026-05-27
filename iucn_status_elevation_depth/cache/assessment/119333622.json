@@ -1,0 +1,3564 @@
+{
+  "assessment_date": "2015-08-23T01:00:00.000+01:00",
+  "year_published": "2017",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 3897,
+  "criteria": "A2b",
+  "url": "https://www.iucnredlist.org/species/3897/119333622",
+  "citation": "Casale, P. & Tucker, A.D. 2017. Caretta caretta (amended version of 2015 assessment). The IUCN Red List of Threatened Species 2017: e.T3897A119333622. Accessed on 15 May 2026.",
+  "assessment_id": 119333622,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 3897,
+    "scientific_name": "Caretta caretta",
+    "species_taxa": [],
+    "subpopulation_taxa": [
+      {
+        "sis_id": 83644804,
+        "scientific_name": "Caretta caretta Mediterranean subpopulation",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "REPTILIA",
+        "order_name": "TESTUDINES",
+        "family_name": "CHELONIIDAE",
+        "genus_name": "Caretta",
+        "species_name": "caretta",
+        "subpopulation_name": "Mediterranean subpopulation",
+        "infra_name": null,
+        "authority": "(Linnaeus, 1758)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Marine Turtle Specialist Group",
+            "url": "http://iucn-mtsg.org/",
+            "description": "Co-Chairs: Roderic B. Mast (email: mast@oceanicsociety.org) and Paolo Casale (email: paolo.casale1@gmail.com)\nRed List Authority Coordinator: Bryan Wallace (email: bryanpwallace@gmail.com)\nNewsletter: http://www.seaturtle.org/"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Caguama",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Careba Amarela",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Cabeçuda",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Comum",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Vermelha",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Cabezona",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Turtue caouanne",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Turtuga Boba",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Turtuga Careta",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Turtuga Comun",
+            "language": "spa"
+          },
+          {
+            "main": true,
+            "name": "Loggerhead Turtle",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 83776383,
+        "scientific_name": "Caretta caretta North East Atlantic subpopulation",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "REPTILIA",
+        "order_name": "TESTUDINES",
+        "family_name": "CHELONIIDAE",
+        "genus_name": "Caretta",
+        "species_name": "caretta",
+        "subpopulation_name": "North East Atlantic subpopulation",
+        "infra_name": null,
+        "authority": "(Linnaeus, 1758)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Marine Turtle Specialist Group",
+            "url": "http://iucn-mtsg.org/",
+            "description": "Co-Chairs: Roderic B. Mast (email: mast@oceanicsociety.org) and Paolo Casale (email: paolo.casale1@gmail.com)\nRed List Authority Coordinator: Bryan Wallace (email: bryanpwallace@gmail.com)\nNewsletter: http://www.seaturtle.org/"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Caguama",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Careba Amarela",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Cabeçuda",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Comum",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Vermelha",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tortue caouanne",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Boba",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Cabezona",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Careta",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Comun",
+            "language": "spa"
+          },
+          {
+            "main": true,
+            "name": "Loggerhead Turtle",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 84126444,
+        "scientific_name": "Caretta caretta North East Indian Ocean subpopulation",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "REPTILIA",
+        "order_name": "TESTUDINES",
+        "family_name": "CHELONIIDAE",
+        "genus_name": "Caretta",
+        "species_name": "caretta",
+        "subpopulation_name": "North East Indian Ocean subpopulation",
+        "infra_name": null,
+        "authority": "(Linnaeus, 1758)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Marine Turtle Specialist Group",
+            "url": "http://iucn-mtsg.org/",
+            "description": "Co-Chairs: Roderic B. Mast (email: mast@oceanicsociety.org) and Paolo Casale (email: paolo.casale1@gmail.com)\nRed List Authority Coordinator: Bryan Wallace (email: bryanpwallace@gmail.com)\nNewsletter: http://www.seaturtle.org/"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Caguama",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Careba Amarela",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Cabeçuda",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Comum",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Vermelha",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tortue caouanne",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Boba",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Cabezona",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Careta",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Comun",
+            "language": "spa"
+          },
+          {
+            "main": true,
+            "name": "Loggerhead Turtle",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 83652278,
+        "scientific_name": "Caretta caretta North Pacific subpopulation",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "REPTILIA",
+        "order_name": "TESTUDINES",
+        "family_name": "CHELONIIDAE",
+        "genus_name": "Caretta",
+        "species_name": "caretta",
+        "subpopulation_name": "North Pacific subpopulation",
+        "infra_name": null,
+        "authority": "(Linnaeus, 1758)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Marine Turtle Specialist Group",
+            "url": "http://iucn-mtsg.org/",
+            "description": "Co-Chairs: Roderic B. Mast (email: mast@oceanicsociety.org) and Paolo Casale (email: paolo.casale1@gmail.com)\nRed List Authority Coordinator: Bryan Wallace (email: bryanpwallace@gmail.com)\nNewsletter: http://www.seaturtle.org/"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Caguama",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Careba Amarela",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Cabeçuda",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Comum",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Vermelha",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tortue caouanne",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Boba",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Cabezona",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Careta",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Comun",
+            "language": "spa"
+          },
+          {
+            "main": true,
+            "name": "Loggerhead Turtle",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 84131194,
+        "scientific_name": "Caretta caretta North West Atlantic subpopulation",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "REPTILIA",
+        "order_name": "TESTUDINES",
+        "family_name": "CHELONIIDAE",
+        "genus_name": "Caretta",
+        "species_name": "caretta",
+        "subpopulation_name": "North West Atlantic subpopulation",
+        "infra_name": null,
+        "authority": "(Linnaeus, 1758)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Marine Turtle Specialist Group",
+            "url": "http://iucn-mtsg.org/",
+            "description": "Co-Chairs: Roderic B. Mast (email: mast@oceanicsociety.org) and Paolo Casale (email: paolo.casale1@gmail.com)\nRed List Authority Coordinator: Bryan Wallace (email: bryanpwallace@gmail.com)\nNewsletter: http://www.seaturtle.org/"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Caguama",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Careba Amarela",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Comum",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Vermelha",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tarteruga Cabeçuda",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tortue caouanne",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Boba",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Cabezona",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Careta",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Comun",
+            "language": "spa"
+          },
+          {
+            "main": true,
+            "name": "Loggerhead Turtle",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 84127873,
+        "scientific_name": "Caretta caretta North West Indian Ocean subpopulation",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "REPTILIA",
+        "order_name": "TESTUDINES",
+        "family_name": "CHELONIIDAE",
+        "genus_name": "Caretta",
+        "species_name": "caretta",
+        "subpopulation_name": "North West Indian Ocean subpopulation",
+        "infra_name": null,
+        "authority": "(Linnaeus, 1758)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Marine Turtle Specialist Group",
+            "url": "http://iucn-mtsg.org/",
+            "description": "Co-Chairs: Roderic B. Mast (email: mast@oceanicsociety.org) and Paolo Casale (email: paolo.casale1@gmail.com)\nRed List Authority Coordinator: Bryan Wallace (email: bryanpwallace@gmail.com)\nNewsletter: http://www.seaturtle.org/"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Caguama",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Careba Amarela",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Cabeçuda",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Comum",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Vermelha",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tortue caouanne",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Boba",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Cabezona",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga careta",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Comun",
+            "language": "spa"
+          },
+          {
+            "main": true,
+            "name": "Loggerhead Turtle",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 84189617,
+        "scientific_name": "Caretta caretta South East Indian Ocean subpopulation",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "REPTILIA",
+        "order_name": "TESTUDINES",
+        "family_name": "CHELONIIDAE",
+        "genus_name": "Caretta",
+        "species_name": "caretta",
+        "subpopulation_name": "South East Indian Ocean subpopulation",
+        "infra_name": null,
+        "authority": "(Linnaeus, 1758)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Marine Turtle Specialist Group",
+            "url": "http://iucn-mtsg.org/",
+            "description": "Co-Chairs: Roderic B. Mast (email: mast@oceanicsociety.org) and Paolo Casale (email: paolo.casale1@gmail.com)\nRed List Authority Coordinator: Bryan Wallace (email: bryanpwallace@gmail.com)\nNewsletter: http://www.seaturtle.org/"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Tortue caouanne",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Caguama",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Careba Amarela",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Cabeçuda",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Comum",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Vermelha",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Boba",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Cabezona",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Careta",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Comun",
+            "language": "spa"
+          },
+          {
+            "main": true,
+            "name": "Loggerhead Turtle",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 84156809,
+        "scientific_name": "Caretta caretta South Pacific subpopulation",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "REPTILIA",
+        "order_name": "TESTUDINES",
+        "family_name": "CHELONIIDAE",
+        "genus_name": "Caretta",
+        "species_name": "caretta",
+        "subpopulation_name": "South Pacific subpopulation",
+        "infra_name": null,
+        "authority": "(Linnaeus, 1758)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Marine Turtle Specialist Group",
+            "url": "http://iucn-mtsg.org/",
+            "description": "Co-Chairs: Roderic B. Mast (email: mast@oceanicsociety.org) and Paolo Casale (email: paolo.casale1@gmail.com)\nRed List Authority Coordinator: Bryan Wallace (email: bryanpwallace@gmail.com)\nNewsletter: http://www.seaturtle.org/"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Caguama",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Careba Amarela",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Cabeçuda",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Comum",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Vermelha",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tortue caouanne",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Boba",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Cabezona",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Careta",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Comun",
+            "language": "spa"
+          },
+          {
+            "main": true,
+            "name": "Loggerhead Turtle",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 84191235,
+        "scientific_name": "Caretta caretta South West Atlantic subpopulation",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "REPTILIA",
+        "order_name": "TESTUDINES",
+        "family_name": "CHELONIIDAE",
+        "genus_name": "Caretta",
+        "species_name": "caretta",
+        "subpopulation_name": "South West Atlantic subpopulation",
+        "infra_name": null,
+        "authority": "(Linnaeus, 1758)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Marine Turtle Specialist Group",
+            "url": "http://iucn-mtsg.org/",
+            "description": "Co-Chairs: Roderic B. Mast (email: mast@oceanicsociety.org) and Paolo Casale (email: paolo.casale1@gmail.com)\nRed List Authority Coordinator: Bryan Wallace (email: bryanpwallace@gmail.com)\nNewsletter: http://www.seaturtle.org/"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Caguama",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Careba Amarela",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Cabeçuda",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Comum",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Vermelha",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tortue caouanne",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Boba",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Cabezona",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Careta",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Comun",
+            "language": "spa"
+          },
+          {
+            "main": true,
+            "name": "Loggerhead Turtle",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 84199475,
+        "scientific_name": "Caretta caretta South West Indian Ocean subpopulation",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "REPTILIA",
+        "order_name": "TESTUDINES",
+        "family_name": "CHELONIIDAE",
+        "genus_name": "Caretta",
+        "species_name": "caretta",
+        "subpopulation_name": "South West Indian Ocean subpopulation",
+        "infra_name": null,
+        "authority": "(Linnaeus, 1758)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Marine Turtle Specialist Group",
+            "url": "http://iucn-mtsg.org/",
+            "description": "Co-Chairs: Roderic B. Mast (email: mast@oceanicsociety.org) and Paolo Casale (email: paolo.casale1@gmail.com)\nRed List Authority Coordinator: Bryan Wallace (email: bryanpwallace@gmail.com)\nNewsletter: http://www.seaturtle.org/"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Caguama",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Careba Amarela",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Cabeçuda",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Comum",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tartaruga Vermelha",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tortue caouanne",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Boba",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Cabezona",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Careta",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tortuga Comun",
+            "language": "spa"
+          },
+          {
+            "main": true,
+            "name": "Loggerhead Turtle",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "TESTUDINES",
+    "family_name": "CHELONIIDAE",
+    "genus_name": "Caretta",
+    "species_name": "caretta",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Marine Turtle Specialist Group",
+        "url": "http://iucn-mtsg.org/",
+        "description": "Co-Chairs: Roderic B. Mast (email: mast@oceanicsociety.org) and Paolo Casale (email: paolo.casale1@gmail.com)\nRed List Authority Coordinator: Bryan Wallace (email: bryanpwallace@gmail.com)\nNewsletter: http://www.seaturtle.org/"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Caguama",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Careba Amarela",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Tartaruga Cabeçuda",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Tartaruga Comum",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Tartaruga Vermelha",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Tortue caouanne",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Tortuga Boba",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Tortuga Cabezona",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Tortuga Careta",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Tortuga Comun",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "سلحفاة بحرية ضخمة الرأس",
+        "language": "ara"
+      },
+      {
+        "main": true,
+        "name": "Loggerhead Turtle",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Testudo caretta Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Testudo",
+        "species_name": "caretta",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": "45",
+    "congregatory": null,
+    "movement_patterns": "Full Migrant",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "The Loggerhead Turtle is globally distributed throughout the subtropical and temperate regions of the Mediterranean Sea and Pacific, Indian, and Atlantic Oceans (Wallace <em>et al</em>. 2010) (see Figure 1 in the Supplementary Material).",
+    "population": "Loggerheads are a single species globally comprising 10 biologically described regional management units (RMUs; Wallace <em>et al</em>. 2010) – hereafter subpopulations - which describe biologically and geographically explicit population segments by integrating information from nesting sites, mitochondrial and nuclear DNA studies, movements and habitat use by all life stages. Regional management units are functionally equivalent to IUCN subpopulations, thus providing the appropriate demographic unit for Red List assessments. There are 10 Loggerhead subpopulations: NorthWest Atlantic Ocean, North East Atlantic Ocean, South West Atlantic Ocean, Mediterranean Sea, North East Indian Ocean, North West Indian Ocean, South East Indian Ocean, South West Indian Ocean, North Pacific Ocean, and South Pacific Ocean (see Figure 2 in the Supplementary Material). Multiple genetic stocks have been defined according to geographically disparate nesting areas around the world and are included within RMU delineations (Wallace <em>et al</em>. 2010)  (shapefiles can be viewed and downloaded at: <a href=\"http://seamap.env.duke.edu/swot\">http://seamap.env.duke.edu/swot</a>).<br/><br/>Total population size is unknown. The most common proxy for population abundance in sea turtles is the annual number of nests. A total of about 200,000 clutches are laid annually by the 10 subpopulations altogether (see Table 2 in the Supplementary Material). Considering a range of 3 to 5.5 clutches per female, the above value would correspond to approximately 36,000-67,000 nesting females annually.",
+    "habitats": "The Loggerhead Turtle nests on insular and mainland sandy beaches throughout the temperate and subtropical regions worldwide. Like most sea turtles, Loggerhead Turtles are highly migratory and use a wide range of broadly separated localities and habitats during their lifetimes (Bolten and Witherington 2003). Upon leaving the nesting beach, hatchlings begin an oceanic phase in major current systems (gyres) that serve as open-ocean developmental grounds (Bolten and Witherington 2003, Putman and Mansfield 2015). After 4-19 years in the oceanic zone, Loggerheads recruit to neritic developmental areas rich in benthic prey or epipelagic prey where they forage and grow until maturity at 10–39 years (Avens and Snover 2013). Upon attaining sexual maturity Loggerhead Turtles undertake breeding migrations between foraging grounds and nesting areas at remigration intervals of one to several years with a mean of 2.5–3 years for females (Schroeder <em>et al</em>. 2003) while males would have a shorter remigration interval (e.g., Hays <em>et al</em>. 2010, Wibbels <em>et al</em>. 1990). Migrations are carried out by both males and females and may traverse oceanic zones spanning hundreds to thousands of kilometres (Plotkin 2003). During non-breeding periods adults reside at coastal neritic feeding areas that sometimes coincide with juvenile developmental habitats (Bolten and Witherington 2003).<br/><br/><strong><em>Generation length</em></strong><br/>The IUCN Red List Criteria define generation length to be the average age of parents in a population (i.e., older than the age at maturity and younger than the oldest mature individual) and care should be taken to avoid underestimation (IUCN Standards and Petitions Subcommittee 2014). Although different subpopulations may have different generation length, since this information is limited we adopted the same value for all the subpopulations, taking care to avoid underestimation as recommended by IUCN (IUCN Standards and Petitions Subcommittee 2014).<br/><br/>Loggerheads attain maturity at 10-39 years (Avens and Snover 2013), and we considered here 30 years to be equal or greater than the average age at maturity. Data on reproductive longevity in Loggerheads are limited, but are becoming available with increasing numbers of intensively monitored, long-term projects on protected beaches. Tagging studies have documented reproductive histories up to 28 years in the North Western Atlantic Ocean (Mote Marine Laboratory, unpubl. data), up to 18 years in the South Western Indian Ocean (Nel <em>et al</em>. 2013), up to 32 years in the South Western Atlantic Ocean (Projeto Tamar unpubl. data), and up to 37 years in the South Western Pacific Ocean, where females nesting for 20-25 years are common (C. Limpus, pers. comm). We considered 15 years to be equal or greater than the average reproductive longevity. Therefore, we considered here 45 years to be equal or greater than the average generation length, therefore avoiding underestimation as recommended by IUCN (IUCN Standards and Petitions Subcommittee 2014).",
+    "threats": "Threats to Loggerheads vary in time and space, and in relative impact to populations. Threat categories affecting marine turtles, including Loggerheads, were described by Wallace <em>et al</em>. (2011) as:<br/><ol><li>Fisheries bycatch: incidental capture of marine turtles in fishing gear targeting other species;</li><li>Take: direct utilization of turtles or eggs for human use (i.e., consumption, commercial products);</li><li>Coastal Development affecting critical turtle habitat: human-induced alteration of coastal environments due to construction, dredging, beach modification, etc;</li><li>Pollution and Pathogens: marine pollution and debris that affect marine turtles (i.e., through ingestion or entanglement, disorientation caused by artificial lights), as well as impacts of pervasive pathogens (for example fibropapilloma virus) on turtle health;</li><li>Climate change: current and future impacts from climate change on marine turtles and their habitats (increasing sand temperatures on nesting beaches affecting hatchling sex ratios, sea level rise, storm frequency and intensity affecting nesting habitats, etc.).</li><li>The relative impacts of individual threats to all Loggerhead subpopulations were assessed by by Wallace <em>et al</em>. (2011). Fisheries bycatch was classified as the highest threat to Loggerheads globally, followed by coastal development and human consumption of eggs, meat, or other products. Due to lack of information, pollution and pathogens was only scored as affecting three subpopulations and climate change was only scored for two subpopulations. Enhanced efforts to assess and reduce the impacts of these threats on Loggerheads—and other marine turtle species—should be a high priority for future conservation efforts. </li></ol>More detailed information at regional level can found in the specific subpopulation assessments.",
+    "measures": "Loggerhead Turtles are afforded legislative protection under a number of treaties and laws (Wold 2002). Annex II of the SPAW Protocol to the Cartagena Convention (a protocol concerning specially protected areas and wildlife); Appendix I of CITES (Convention on International Trade in Endangered Species of Wild Fauna and Flora); and Appendices I and II of the Convention on Migratory Species (CMS). A partial list of the International Instruments that benefit Loggerhead Turtles includes the Inter-American Convention for the Protection and Conservation of Sea Turtles, the Memorandum of Understanding on the Conservation and Management of Marine Turtles and their Habitats of the Indian Ocean and South-East Asia (IOSEA), the Memorandum of Understanding on ASEAN Sea Turtle Conservation and Protection, the Memorandum of Agreement on the Turtle Islands Heritage Protected Area (TIHPA), and the Memorandum of Understanding Concerning Conservation Measures for Marine Turtles of the Atlantic Coast of Africa.<br/><br/>As a result of these designations and agreements, many of the intentional impacts directed at sea turtles have been lessened: harvest of eggs and adults has been slowed at several nesting areas through nesting beach conservation efforts and an increasing number of community-based initiatives are in place to slow the take of turtles in foraging areas. In regard to incidental take, the implementation of Turtle Excluder Devices has proved to be beneficial in some areas, primarily in the United States and South and Central America (National Research Council 1990). Guidelines are available to reduce sea turtle mortality in fishing operations in coastal and high seas fisheries (FAO 2009). However, despite these advances, human impacts continue throughout the world. In most areas, the lack of effective monitoring in pelagic and near-shore fisheries operations still allows substantial direct and indirect mortality, and the uncontrolled development of coastal and marine habitats threatens to destroy the supporting ecosystems of long-lived Loggerhead Turtles.<br/><br/>More detailed information at regional level can be found in the specific subpopulation assessments.",
+    "use_trade": "Loggerhead Turtles and their eggs are taken for human use (i.e., consumption and commercial products).",
+    "rationale": "<em><strong>Rationale<br/></strong></em>The global population of the Loggerhead Turtle (<em>Caretta caretta</em>) comprises 10 subpopulations (see Figure 2 in the Supplementary Material) that vary widely in population size, geographic range, and population trends, and are the appropriate units for assessment of global conservation status for this species (Wallace <em>et al</em>. 2010, 2011). As such, assessments have been completed for each of the 10 subpopulations, in addition to the combined global population assessment required by the IUCN (see Table 1 in the Supplementary Material). At the global level, both geographic distribution and population size are much larger than required to qualify for a threatened category. The available long-term series of nest counts (used as an index of population abundance) show an important decrease in the past (47%). Therefore, the Loggerhead Turtle is considered as Vulnerable under current IUCN Red List Criteria (criterion A2b). The previous listing, published in 1996, was Endangered under criterion A1bd (Marine Turtle Specialist Group 1996).<br/><br/>Results indicate that the Loggerhead Turtle, as a single taxonomic entity, will not go extinct globally in the next generation according to any Red List criteria. However, the global listing is not an appropriate representation of the conservation status of the biologically relevant subpopulations that make up the global Loggerhead Turtle population. Subpopulation assessments demonstrated wide variation not only in status of individual subpopulations (as indicated by IUCN Red List Categories), but also in the criteria under which the individual subpopulations qualified for a threatened category (see Table 1 in the Supplementary Material). For these reasons, the subpopulation-level assessments for the Loggerhead Turtle should be given priority in evaluating the true global conservation status of this species. This conclusion follows the precedent for other long-lived, widely distributed species, including the Leatherback Turtle (Wallace <em>et al</em>. 2013).<br/><br/><em><strong>Justification<br/></strong></em>The extent of occurrence and area of occupancy exceeds the thresholds for criterion B, and the population size exceeds the thresholds for criteria C and D. Regarding criterion A, trends were estimated on time series datasets with ≥10 years of data of nesting activities (nest counts) at 153 index nesting sites from six subpopulations out of 10 (North West Atlantic, Mediterranean, South West Atlantic, North West Indian, South West Indian, North Pacific). These six subpopulations comprise about 90% of the current annual nests globally (see Table 2 in the Supplementary Material). The analysis revealed different trends for different subpopulations, with an overall -47% population decrease relative to population size three generations ago, which qualifies for the Vulnerable category (under criterion A2). The species trend at a global scale is basically determined by the two most abundant subpopulations, the North West Atlantic and the North West Indian, which altogether comprise about 75% of the current annual nests. They showed positive and negative trends, respectively. The other four subpopulations for which trends could be calculated show positive trends. For the remaining four subpopulations (comprising about 10% of the current annual nests; North East Atlantic, North East Indian, South East Indian, South Pacific), current trends are unclear, however past negative trends are known or suspected at least for the South Pacific and the North East Atlantic subpopulations respectively.<br/>&#160;<br/>The overall scenario suggests that, on the basis of the current knowledge, the extinction of the species at the global level is highly unlikely to occur in the short and medium term. However, the global status of the species in terms of distribution, number of subpopulations, genetic variability, regional ecological roles, and vulnerability, could change dramatically from the past and current situations. For this reason, the global assessment cannot be considered as an indicator of the true conservation status of the species, and priority should be given to the subpopulation assessments.<br/><br/><em><strong>Assessment Procedure:</strong></em><br/><u>Criterion A</u><br/>For marine turtles, annual counts of nesting females and their nesting activities (more often the latter) are the most frequently recorded and reported abundance metric across index monitoring sites, species, and geographic regions (National Research Council 2010).<br/><br/>To apply criterion A, three generations (or a minimum of ten years, whichever is longer) of abundance data are required (IUCN Standards and Petitions Subcommittee 2014). In the case of the Loggerhead, we conservatively estimate its generation time as 45 years (see the Habitats and Ecology section below). For criterion A, data from three generations ago (~135 years) are necessary to estimate population declines beginning three generations ago up to the present (i.e., assessment) year. The challenges of this requirement on long-lived species like turtles—with generation lengths of 30 years or more—are obvious (see Seminoff and Shanker 2008 for a review). Abundance data from ~135 years ago are not available for Loggerheads anywhere in the world. Extrapolating backward using population trends based on current datasets was considered inappropriate because estimates produced would be biologically unrealistic and unsubstantiated, given what is currently known about sea turtle nesting densities on beaches and other factors (Mrosovsky 2003). In the absence of better information, we assumed that population abundance three generations ago (~135 years, one generation estimated 45 years; see Habitats and Ecology section below) was similar to the first observed abundance rather than to assume that the population has always been in a decline (or increase) of the same magnitude as in the current generation. A similar approach was used in the Red List assessment of another sea turtle species, the Leatherback Turtle (<em>Dermochelys coriacea</em>) (Wallace <em>et al</em>. 2013) and of another long-lived, geographically widespread taxon, the African Elephant (Blanc 2008). Thus, to apply criterion A we assumed that the abundance at the beginning of an available time series dataset had not changed significantly in the preceding three generations, and therefore used the same abundance value in trend calculations. For the Loggerhead global and subpopulation assessments we only considered time series datasets of ≥10 years.<br/><br/>For the global Loggerhead population, we considered time series datasets of 10-50 years, from 153 index nesting sites from six subpopulations (see the individual subpopulation assessments). The index nesting sites included in the analysis are assumed to be representative of their subpopulations, and these six subpopulations comprise about 90% of the current total annual nests (Table 2 in the Supplementary Material).<br/><br/>The assessment under criterion A was conducted in three steps, as follows. Please see the separate subpopulation assessments for further details.<br/><ul><li><strong>Step 1:</strong> We estimated past trends for each of the six individual subpopulations. Specifically, from one past and one recent abundance values (each representing the annual average of five year nest counts) we calculated overall trends (past-present) for each index nesting sites within subpopulations, and then we calculated overall subpopulation past trends for each subpopulation (criteria A1-A2).</li></ul><ul></ul><ul><li><strong>Step 3:</strong> The past and present total abundance values of the six subpopulations (obtained from Step 2) were summed and from these totals the overall population change (past-present) was calculated (Table 3 in the Supplementary Material). </li></ul>Five of the above six subpopulations showed positive trends and one showed a negative trend. Altogether, they showed a negative trend (-47%). The overall negative trend depended on the negative trend of one subpopulation (North West Indian) where criterion A2 was appropriate – i.e. the causes of reduction may not have ceased or may not be understood or may not be reversible. Therefore, the overall trend of the six subpopulations was assessed against criterion A2. The past estimated trend was above the threshold for the Vulnerable category under criterion A2 (30% decline) but below the threshold for the Endangered category (50% decline). Therefore, the Loggerhead Turtle qualifies for the Vulnerable category under criterion A2 and the applicable subcriterion is (b), an index of abundance appropriate to the taxon (counts of nests or tracks).<br/><br/>Although these trends consider only 6 of 10 subpopulations, these subpopulations with sufficient available data account for about 90% of the current global population abundance (Table 2 in the Supplementary Material). Therefore, these trends likely reflect the complete global trend and represent the best information available about the global population trend. Similarly, the global Leatherback Turtle assessment used only five of seven subpopulations to estimate global trends due to lack of sufficient data for two subpopulations (Wallace <em>et al</em>. 2013).<br/><br/><u>Criterion B</u><br/>Since the population area extends over entire oceans around the world, the extent of occurrence (EOO) exceeds the threatened category threshold (20,000 km²). The area of occupancy (AOO) for sea turtles is identified with the nesting beach habitat, which represents the smallest habitat for a critic life stage. Since the appropriate scale for AOO is a grid 2x2 km, the threshold of 2,000 km² corresponds to 1,000 km of linear coastal tract, which is easily exceeded (by orders of magnitude) by the total length of nesting beaches globally. In conclusion, the global population does not trigger any of the thresholds for a threatened category under criterion B.<br/><br/><u>Criterion C</u><br/>To apply criterion C, the number of adults is needed and can be derived from the number of nests per year with the following formula:&#160; Adults = Nests * Nests per female<sup>-1</sup> * Remigration interval * Female proportion<sup>-1</sup>. With a current estimate of annual number of nests of about 200,000, for any reasonable value of the other parameters the population would easily exceed the threshold of 10,000 adults required to qualify for a threatened category under criterion C.<br/><br/><u>Criterion D</u><br/>The number of mature individuals (see criterion C) and AOO value (see criterion B) exceeded the respective thresholds. In conclusion, the population does not trigger any of the thresholds for a threatened category under criterion D.<br/><br/><u>Criterion E</u><br/>Although population viability analyses (PVA) were attempted at subpopulation level (Conant <em>et al</em>. 2009, Van Houtan 2011), in most cases they were not suitable for criterion E under this assessment. No PVA has been attempted at species level and such an approach would also be questionable because the subpopulations are independent units by definition.<br/><br/><strong><em>Sources of Uncertainty</em></strong><br/>Although monitoring of nesting activities by adult female sea turtles is the most common metric recorded and reported across sites and species, globally, there are several disadvantages to using it as a proxy for overall population dynamics, some methodological, some interpretive (National Research Council 2010). First, because nesting females are a very small proportion of a sea turtle population, using abundance of nesting females and their activities as proxies for overall population abundance and trends requires knowledge of other key demographic parameters (several mentioned below) to allow proper interpretation of cryptic trends in nesting abundance (National Research Council 2010). However, there remains great uncertainty about most of these fundamental demographic parameters for Loggerheads, including age at maturity, generation length, survivorship across life stages, adult and hatchling sex ratios, and conversion factors among reproductive parameters (e.g., clutch frequency, nesting success, remigration intervals, etc.). These values can vary within and among subpopulations, further complicating the process of combining subpopulation abundance and trend estimates to obtain global population abundance and trend estimates, and contributing to the uncertainty in these estimates. Second, despite the prevalence of nesting abundance data for marine turtles, monitoring effort and methodologies can vary widely within and across study sites, complicating comparison of nesting count data across years within sites and across different sites as well as robust estimation of population size and trends. However, we have reduced this source of uncertainty by using in the analyses those data sets obtained though standardized monitoring.<br/><br/>For the trend analyses (criterion A) we used data from index rookeries from six populations out of 10. Possible negative past trends associated to high past abundances in the other four subpopulations not included in the analysis could have changed the final result of the assessment (past trends, criterion A2), if such information was available.<br/><br/>For further reading on sources of uncertainty in marine turtle Red List assessments, see Seminoff and Shanker (2008).",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Australasian"
+      },
+      "code": "2"
+    },
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    },
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    },
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Invasive/problematic species control"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "6_5",
+      "description": {
+        "en": "Non-monetary values"
+      }
+    },
+    {
+      "note": "",
+      "code": "6_4",
+      "description": {
+        "en": "Conservation payments"
+      }
+    },
+    {
+      "note": "",
+      "code": "6_1",
+      "description": {
+        "en": "Linked enterprises & livelihood alternatives"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_3",
+      "description": {
+        "en": "Limiting population growth"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_1",
+      "description": {
+        "en": "Formal education"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_2",
+      "description": {
+        "en": "Training"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_2",
+      "description": {
+        "en": "Policies and regulations"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_3",
+      "description": {
+        "en": "Private sector standards & codes"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_1",
+      "description": {
+        "en": "International level"
+      }
+    }
+  ],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - western central"
+      },
+      "code": "31"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - southwest"
+      },
+      "code": "41"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - southeast"
+      },
+      "code": "47"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Indian Ocean - eastern"
+      },
+      "code": "57"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Indian Ocean - western"
+      },
+      "code": "51"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mediterranean and Black Sea"
+      },
+      "code": "37"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - eastern central"
+      },
+      "code": "77"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - northeast"
+      },
+      "code": "67"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - northwest"
+      },
+      "code": "61"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - southeast"
+      },
+      "code": "87"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - southwest"
+      },
+      "code": "81"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - western central"
+      },
+      "code": "71"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - eastern central"
+      },
+      "code": "34"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - northeast"
+      },
+      "code": "27"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - northwest"
+      },
+      "code": "21"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Sandy Shoreline and/or Beaches, Sand Bars, Spits, Etc"
+      },
+      "code": "12_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Estuaries"
+      },
+      "code": "9_10"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Seagrass (Submerged)"
+      },
+      "code": "9_9"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Coral Reef"
+      },
+      "code": "9_8"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Muddy"
+      },
+      "code": "9_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy-Mud"
+      },
+      "code": "9_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy"
+      },
+      "code": "9_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Loose Rock/pebble/gravel"
+      },
+      "code": "9_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Rock and Rocky Reefs"
+      },
+      "code": "9_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Republic of"
+      },
+      "code": "KR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Yemen"
+      },
+      "code": "YE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Arab Emirates"
+      },
+      "code": "AE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Qatar"
+      },
+      "code": "QA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lebanon"
+      },
+      "code": "LB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kuwait"
+      },
+      "code": "KW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cabo Verde"
+      },
+      "code": "CV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Philippines"
+      },
+      "code": "PH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Uruguay"
+      },
+      "code": "UY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Virgin Islands, British"
+      },
+      "code": "VG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Turks and Caicos Islands"
+      },
+      "code": "TC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Saint Lucia"
+      },
+      "code": "LC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Papua New Guinea"
+      },
+      "code": "PG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "New Caledonia"
+      },
+      "code": "NC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Puerto Rico"
+      },
+      "code": "PR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Montserrat"
+      },
+      "code": "MS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Jamaica"
+      },
+      "code": "JM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Haiti"
+      },
+      "code": "HT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guadeloupe"
+      },
+      "code": "GP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Belize"
+      },
+      "code": "BZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bahamas"
+      },
+      "code": "BS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Canary Is."
+      },
+      "code": "CNY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cayman Islands"
+      },
+      "code": "KY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cuba"
+      },
+      "code": "CU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Dominican Republic"
+      },
+      "code": "DO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Grenada"
+      },
+      "code": "GD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bahrain"
+      },
+      "code": "BH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cyprus"
+      },
+      "code": "CY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Oman"
+      },
+      "code": "OM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Anguilla"
+      },
+      "code": "AI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malta"
+      },
+      "code": "MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Aruba"
+      },
+      "code": "AW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Barbados"
+      },
+      "code": "BB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bermuda"
+      },
+      "code": "BM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bonaire, Sint Eustatius and Saba"
+      },
+      "code": "BQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Curaçao"
+      },
+      "code": "CW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bonaire"
+      },
+      "code": "NLA-BO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Fiji"
+      },
+      "code": "FJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Polynesia"
+      },
+      "code": "PF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "NZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Niue"
+      },
+      "code": "NU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Solomon Islands"
+      },
+      "code": "SB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tokelau"
+      },
+      "code": "TK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tonga"
+      },
+      "code": "TO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Barthélemy"
+      },
+      "code": "BL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Kitts and Nevis"
+      },
+      "code": "KN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Vincent and the Grenadines"
+      },
+      "code": "VC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Trinidad and Tobago"
+      },
+      "code": "TT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chile"
+      },
+      "code": "CL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, U.S."
+      },
+      "code": "VI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Suriname"
+      },
+      "code": "SR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Comoros"
+      },
+      "code": "KM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Djibouti"
+      },
+      "code": "DJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritius"
+      },
+      "code": "MU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sierra Leone"
+      },
+      "code": "SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Harvest & Trade Management Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Area-based Management Plan"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Light pollution"
+      },
+      "code": "9_6_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Garbage & solid waste"
+      },
+      "code": "9_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": "Herpes Virus",
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_5_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Temperature extremes"
+      },
+      "code": "11_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Work & other activities"
+      },
+      "code": "6_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Storms & flooding"
+      },
+      "code": "11_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Casale, P. & Tucker, A.D.",
+      "value": [
+        "Paolo Casale (IUCN SSC Marine Turtle Specialist Group / Department of Biology and Biotechnology “Charles Darwin,” University of Rome “La Sapienza,” Rome, Italy)",
+        "Anton Tucker (Mote Marine Laboratory & Aquarium, Sarasota, FL, USA)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Wallace, B.P. & Pilcher, N.J.",
+      "value": [
+        "Nicolas Pilcher (IUCN SSC Marine Turtle Specialist Group / Marine Research Foundation, Sabah, Malaysia)",
+        "Bryan Wallace (IUCN SSC Marine Turtle RLA Coordinator)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This amended version of the 2015 assessment was created to add Portugal to the countries of occurrence list."
+    }
+  ],
+  "references": [
+    {
+      "citation": "IUCN Standards and Petitions Subcommittee. 2016. Guidelines for Using the  IUCN Red List Categories and Criteria. Version 12. Prepared by the Standards and Petitions Subcommittee. Available at: <a href=\"http://www.iucnredlist.org/documents/RedListGuidelines.pdf\">http://www.iucnredlist.org/documents/RedListGuidelines.pdf</a>. ",
+      "year": "2016",
+      "title": "Guidelines for Using the  IUCN Red List Categories and Criteria. Version 12",
+      "author": "IUCN Standards and Petitions Subcommittee",
+      "citation_short": ""
+    },
+    {
+      "citation": "National Research Council. 1990. <i>Decline of the Sea Turtles: Causes and Prevention</i>. National Research Council, Washington, DC, USA.",
+      "year": "1990",
+      "title": "Decline of the Sea Turtles: Causes and Prevention",
+      "author": "National Research Council",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wallace, B.P., DiMatteo, A.D., Hurley, B.J., Finkbeiner, E.M., Bolten, A.B., Chaloupka, M.Y., Hutchinson, B.J., Abreu-Grobois, F.A., Amorocho, D., Bjorndal, K.A., Bourjea, J., Bowen, B.W., Briseño-Dueñas, R., Casale, P., Choudhury, B.C., Costa, A., Dutton, P.H., Fallabrino, A., Girard, A., Girondot, M., Godfrey, M.H., Hamann, M., López-Mendilaharsu, M., Marcovaldi, M.A., Mortimer, J.A., Musick, J.A., Nel, R., Pilcher, N.J., Seminoff, J.A., Troëng, S., Witherington, B. and Mast, R.B. 2010. Regional Management Units for marine turtles: A novel framework for prioritizing conservation and research across multiple scales. <i>PLoS ONE</i> 5(12): e15465. doi/10.1371/journal.pone.0015465.",
+      "year": "2010",
+      "title": "Regional Management Units for marine turtles: A novel framework for prioritizing conservation and research across multiple scales",
+      "author": "Wallace, B.P., DiMatteo, A.D., Hurley, B.J., Finkbeiner, E.M., Bolten, A.B., Chaloupka, M.Y., Hutchinson, B.J., Abreu-Grobois, F.A., Amorocho, D., Bjorndal, K.A., Bourjea, J., Bowen, B.W., Briseño-Dueñas, R., Casale, P., Choudhury, B.C., Costa, A., Dutton, P.H., Fallabrino, A., Girard, A., Girondot, M., Godfrey, M.H., Hamann, M., López-Mendilaharsu, M., Marcovaldi, M.A., Mortimer, J.A., Musick, J.A., Nel, R., Pilcher, N.J., Seminoff, J.A., Troëng, S., Witherington, B. and Mast, R.B",
+      "citation_short": null
+    },
+    {
+      "citation": "Wallace, B.P., DiMatteo, A.D., Bolten, A.B., Chaloupka, M.Y., Hutchinson, B.J., Abreu-Grobois, F.A., Mortimer, J.A., Seminoff, J.A., Amorocho, D., Bjorndal, K.A., Bourjea, J., Bowen, B.W., Briseño-Dueñas, R., Casale, P., Choudhury, B.C., Costa, A., Dutton, P.H., Fallabrino, A., Finkbeiner, E.M., Girard, A., Girondot, M., Hamann, .M, Hurley, B.J., López-Mendilaharsu, M., Marcovaldi, M.A., Musick, J.A., Nel, R., Pilcher, N.J., Troëng, S., Witherington, B. and Mast, RB. 2011. Global conservation priorities for marine turtles. <i>PLoS ONE</i> 6(9): e24510. doi:10.1371/journal.pone.0024510.",
+      "year": "2011",
+      "title": "Global conservation priorities for marine turtles",
+      "author": "Wallace, B.P., DiMatteo, A.D., Bolten, A.B., Chaloupka, M.Y., Hutchinson, B.J., Abreu-Grobois, F.A., Mortimer, J.A., Seminoff, J.A., Amorocho, D., Bjorndal, K.A., Bourjea, J., Bowen, B.W., Briseño-Dueñas, R., Casale, P., Choudhury, B.C., Costa, A., Dutton, P.H., Fallabrino, A., Finkbeiner, E.M., Girard, A., Girondot, M., Hamann, .M, Hurley, B.J., López-Mendilaharsu, M., Marcovaldi, M.A., Musick, J.A., Nel, R., Pilcher, N.J., Troëng, S., Witherington, B. and Mast, RB.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Blanc, J. 2008. African Elephant (<i>Loxodonta africana</i>). Available at: <a href=\"http://www.iucnredlist.org/details/12392/0\">http://www.iucnredlist.org/details/12392/0</a>. (Accessed: 21/09/2012).",
+      "year": "2008",
+      "title": "African Elephant (<i>Loxodonta africana</i>)",
+      "author": "Blanc, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "National Research Council (NRC) of the National Academies, USA. 2010. Assessment of sea turtle status and trends: Integrating demography and abundance.  The National Academies Press. Washington, DC.",
+      "year": "2010",
+      "title": "Assessment of sea turtle status and trends: Integrating demography and abundance",
+      "author": "National Research Council (NRC) of the National Academies, USA ",
+      "citation_short": null
+    },
+    {
+      "citation": "Nel, R., Punt, A.E. and Hughes, G.R. 2013. Are coastal protected areas always effective in achieving population recovery for nesting sea turtles? . <i>PLoS ONE </i> 8(5): e63525. doi:10.1371/journal.pone.0063525.",
+      "year": "2013",
+      "title": "Are coastal protected areas always effective in achieving population recovery for nesting sea turtles? ",
+      "author": "Nel, R., Punt, A.E. and Hughes, G.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mrosovsky, N. 2003. <i>Predicting extinction: fundamental flaws in IUCN’s Red List system, exemplified by the case of sea turtles</i>.",
+      "year": "2003",
+      "title": "Predicting extinction: fundamental flaws in IUCN’s Red List system, exemplified by the case of sea turtles",
+      "author": "Mrosovsky, N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Yakushima Umigame-Kan. 2011. Report on sea turtle research in Yakuhshima Island (1985-2009). Yakushima Umigame-kan.",
+      "year": "2011",
+      "title": "Report on sea turtle research in Yakuhshima Island (1985-2009)",
+      "author": "Yakushima Umigame-Kan",
+      "citation_short": null
+    },
+    {
+      "citation": "Conant, T.A., Dutton, P.H., Eguchi, T., Epperly, S.P., Fahy, C.C., Godfrey, M.H., MacPherson, S.L., Possardt, E.E., Schroeder, B.A., Seminoff, J.A., Snover, M.L., Upite, C.M. and Witherington, B.E. 2009. Loggerhead sea turtle (<i>Caretta caretta</i>) 2009 status review under the U.S. Endangered Species Act. Report of the Loggerhead Biological Review Team to the National Marine Fisheries Service, August 2009.",
+      "year": "2009",
+      "title": "Loggerhead sea turtle (<i>Caretta caretta</i>) 2009 status review under the U.S. Endangered Species Act",
+      "author": "Conant, T.A., Dutton, P.H., Eguchi, T., Epperly, S.P., Fahy, C.C., Godfrey, M.H., MacPherson, S.L., Possardt, E.E., Schroeder, B.A., Seminoff, J.A., Snover, M.L., Upite, C.M. and Witherington, B.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Witherington, B., Willson, A., Baldwin, R., Al-Kiyumi, A., Al Harth, S., Al Blooshi, A. and Possardt, E. 2015 (in press). Comparison of recent and historical surveys of nesting by loggerhead turtles on beaches of Masirah island, Sultanate of Oman. Proceedings of the 35th Annual Symposium on Sea Turtle Biology and Conservation.",
+      "year": "2015 (in press)",
+      "title": "Comparison of recent and historical surveys of nesting by loggerhead turtles on beaches of Masirah island, Sultanate of Oman",
+      "author": "Witherington, B., Willson, A., Baldwin, R., Al-Kiyumi, A., Al Harth, S., Al Blooshi, A. and Possardt, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wibbels, T., Owens, D.W., Limpus, C.J., Reed, P.C. and Amoss, M.S. 1990. Seasonal changes in serum gonadal steroids associated with migration, mating, and nesting in the loggerhead sea turtle (<i>Caretta caretta</i>). <i>General and Comparative Endocrinology</i> 79: 154-164.",
+      "year": "1990",
+      "title": "Seasonal changes in serum gonadal steroids associated with migration, mating, and nesting in the loggerhead sea turtle (<i>Caretta caretta</i>)",
+      "author": "Wibbels, T., Owens, D.W., Limpus, C.J., Reed, P.C. and Amoss, M.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lombard, P. and Kyle, S. 2014. Marine turtle monitoring and conservation in southern Mozambique.",
+      "year": "2014",
+      "title": "Marine turtle monitoring and conservation in southern Mozambique",
+      "author": "Lombard, P. and Kyle, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Başkale, E., Katilmis, Y., Azmaz, M., Yaka, H., Çapar, D. and Kaska, Y. 2013. Monitoring and conservation of sea turtle (<i>Caretta carreta</i>, <i>Chelonia mydas</i>) populations within the scope of Fethiye Göcek specially protected area monitoring species and habitat project 2013. General Director of the General Directorate of the Protection of Natural Assets Ministry of Environment and Urbanization, Ankara.",
+      "year": "2013",
+      "title": "Monitoring and conservation of sea turtle (<i>Caretta carreta</i>, <i>Chelonia mydas</i>) populations within the scope of Fethiye Göcek specially protected area monitoring species and habitat project 2013",
+      "author": "Başkale, E., Katilmis, Y., Azmaz, M., Yaka, H., Çapar, D. and Kaska, Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yakushima Umigame-Kan. 2011. Report on sea turtle research in Yakuhshima Island (2010). Yakushima Umigame-kan.",
+      "year": "2011",
+      "title": "Report on sea turtle research in Yakuhshima Island (2010)",
+      "author": "Yakushima Umigame-Kan",
+      "citation_short": null
+    },
+    {
+      "citation": "Durmuş, H. and Oruç, A. 2009. Çıralı, Maden Koyu, Beycik Bükü, Küçük Boncuk Koyu ve Tekirova Bükü kumsalları Deniz Kaplumbağası (<i>Caretta caretta</i>) ve Yumuşak Kabuklu Nil Kaplumbağası (<i>Trionyx triunguis</i>) Populasyonlarının Araştırılması, İzlenmesi ve Korunması Çalışması.",
+      "year": "2009",
+      "title": "Çıralı, Maden Koyu, Beycik Bükü, Küçük Boncuk Koyu ve Tekirova Bükü kumsalları Deniz Kaplumbağası (<i>Caretta caretta</i>) ve Yumuşak Kabuklu Nil Kaplumbağası (<i>Trionyx triunguis</i>) Populasyonlarının Araştırılması, İzlenmesi ve Korunması Çalışması",
+      "author": "Durmuş, H. and Oruç, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Durmuş, H. and Oruç, A. 2008. Çıralı, Maden Koyu, Beycik Bükü, Küçük Boncuk Koyu ve Tekirova Bükü kumsalları Deniz Kaplumbağası (<i>Caretta caretta</i>) ve Yumuşak Kabuklu Nil Kaplumbağası (<i>Trionyx triunguis</i>) Populasyonlarının Araştırılması, İzlenmesi ve Korunması Çalışması.",
+      "year": "2008",
+      "title": "Çıralı, Maden Koyu, Beycik Bükü, Küçük Boncuk Koyu ve Tekirova Bükü kumsalları Deniz Kaplumbağası (<i>Caretta caretta</i>) ve Yumuşak Kabuklu Nil Kaplumbağası (<i>Trionyx triunguis</i>) Populasyonlarının Araştırılması, İzlenmesi ve Korunması Çalışması",
+      "author": "Durmuş, H. and Oruç, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "FAO. 2009. Guidelines to reduce sea turtle mortality in fishing operations. FAO, Rome.",
+      "year": "2009",
+      "title": "Guidelines to reduce sea turtle mortality in fishing operations",
+      "author": "FAO",
+      "citation_short": null
+    },
+    {
+      "citation": "Durmuş, H. and Oruç, A. 2010. Çıralı, Maden Koyu, Beycik Bükü, Küçük Boncuk Koyu ve Tekirova Bükü kumsalları Deniz Kaplumbağası (<i>Caretta caretta</i>) ve Yumuşak Kabuklu Nil Kaplumbağası (<i>Trionyx triunguis</i>) Populasyonlarının Araştırılması, İzlenmesi ve Korunması Çalışması.",
+      "year": "2010",
+      "title": "Çıralı, Maden Koyu, Beycik Bükü, Küçük Boncuk Koyu ve Tekirova Bükü kumsalları Deniz Kaplumbağası (<i>Caretta caretta</i>) ve Yumuşak Kabuklu Nil Kaplumbağası (<i>Trionyx triunguis</i>) Populasyonlarının Araştırılması, İzlenmesi ve Korunması Çalışması",
+      "author": "Durmuş, H. and Oruç, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kaska, Y., Dusen, S., Sozbilen, D. and Sezgin, C. 2013. Monitoring and conservation of sea turtles (<i>Caretta caretta</i>, <i>Chelonia mydas</i>) and soft-shelled nile turtle (<i>Trionyx triunguis</i>) populations within the scope of Köyceğiz Dalyan specially protected area monitoring species and habitat project 2013. General Director of The General Directorate of the Protection of Natural Assets - Ministry of Environment and Urbanization, Ankara.",
+      "year": "2013",
+      "title": "Monitoring and conservation of sea turtles (<i>Caretta caretta</i>, <i>Chelonia mydas</i>) and soft-shelled nile turtle (<i>Trionyx triunguis</i>) populations within the scope of Köyceğiz Dalyan specially protected area monitoring species and habitat project 2013",
+      "author": "Kaska, Y., Dusen, S., Sozbilen, D. and Sezgin, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yakushima Umigame-Kan. 2012. Report on sea turtle research in Yakuhshima Island (2011). Yakushima Umigame-kan.",
+      "year": "2012",
+      "title": "Report on sea turtle research in Yakuhshima Island (2011)",
+      "author": "Yakushima Umigame-Kan",
+      "citation_short": null
+    },
+    {
+      "citation": "Margaritoulis, D. 2005. Nesting activity and reproductive output of loggerhead sea turtles, <i>Caretta caretta</i>, over 19 seasons (1984-2002) at Laganas Bay, Zakynthos, Greece: the largest rookery in the Mediterranean. <i>Chelonian Conservation and Biology</i> 4: 916-929.",
+      "year": "2005",
+      "title": "Nesting activity and reproductive output of loggerhead sea turtles, <i>Caretta caretta</i>, over 19 seasons (1984-2002) at Laganas Bay, Zakynthos, Greece: the largest rookery in the Mediterranean.",
+      "author": "Margaritoulis, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hays, G.C., Fossette, S., Katselidis, K.A., Schofield, G. and Gravenor, M.B. 2010. Breeding periodicity for male sea turtles, operational sex ratios, and implications in the face of climate change. <i>Conservation Biology</i> 24: 1636-1643.",
+      "year": "2010",
+      "title": "Breeding periodicity for male sea turtles, operational sex ratios, and implications in the face of climate change",
+      "author": "Hays, G.C., Fossette, S., Katselidis, K.A., Schofield, G. and Gravenor, M.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Durmuş, H. and Oruç, A. 2011. Çıralı, Maden Koyu, Beycik Bükü, Küçük Boncuk Koyu ve Tekirova Bükü kumsalları Deniz Kaplumbağası (<i>Caretta caretta</i>) ve Yumuşak Kabuklu Nil Kaplumbağası (<i>Trionyx triunguis</i>) Populasyonlarının Araştırılması, İzlenmesi ve Korunması Çalışması.",
+      "year": "2011",
+      "title": "Çıralı, Maden Koyu, Beycik Bükü, Küçük Boncuk Koyu ve Tekirova Bükü kumsalları Deniz Kaplumbağası (<i>Caretta caretta</i>) ve Yumuşak Kabuklu Nil Kaplumbağası (<i>Trionyx triunguis</i>) Populasyonlarının Araştırılması, İzlenmesi ve Korunması Çalışması",
+      "author": "Durmuş, H. and Oruç, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Margaritoulis, D., Panagopoulou, A. and Rees, A.F. 2009. Loggerhead nesting in Rethymno, Island of Crete, Greece: Fifteen-year nesting data (1990-2004) indicate a declining population. In: A. Demetropoulos, O. Turkozan (ed.), Proceedings of the Second Mediterranean Conference on Marine Turtles, pp. 116-119.",
+      "year": "2009",
+      "title": "Loggerhead nesting in Rethymno, Island of Crete, Greece: Fifteen-year nesting data (1990-2004) indicate a declining population",
+      "author": "Margaritoulis, D., Panagopoulou, A. and Rees, A.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yakushima Umigame-Kan. 2013. Report on sea turtle research in Yakuhshima Island (2012). Yakushima Umigame-kan.",
+      "year": "2013",
+      "title": "Report on sea turtle research in Yakuhshima Island (2012)",
+      "author": "Yakushima Umigame-Kan",
+      "citation_short": null
+    },
+    {
+      "citation": "Tucker, A.D., Baldwin, R., Willson, A., Al-Kiyumi, A., Schroeder, B., Possardt, E. and Witherington, B. 2013. Preliminary estimates for loggerhead clutch frequency from Masirah, Oman derived from satellite tracking. In: T. Tucker, L. Belskis, A. Panagopoulou, A. Rees, M. Frick, K. Williams, R. Leroux & K. Stewart (ed.), Proceedings of the 33rd Annual Symposium on Sea Turtle Biology and Conservation. NOAA Tech. Mem NMFS-SEFSC-645: 243.",
+      "year": "2013",
+      "title": "Preliminary estimates for loggerhead clutch frequency from Masirah, Oman derived from satellite tracking",
+      "author": "Tucker, A.D., Baldwin, R., Willson, A., Al-Kiyumi, A., Schroeder, B., Possardt, E. and Witherington, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Türkozan, O. and Kaska, Y. 2010. Turkey. In: P. Casale & D. Margaritoulis (ed.), <i>Sea Turtles in the Mediterranean: distribution, threats and conservation priorities</i>, pp. 257-293. IUCN, Gland, Switzerland.",
+      "year": "2010",
+      "title": "Turkey",
+      "author": "Türkozan, O. and Kaska, Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wold, C. 2002. The status of sea turtles under international environmental law and international environmental agreements. <i>Journal of International Wildlife Law and Policy</i> 5: 11-48.",
+      "year": "2002",
+      "title": "The status of sea turtles under international environmental law and international environmental agreements",
+      "author": "Wold, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Van Houtan, K.S. 2011. Assessing the impact of fishery actions to marine turtle populations in the North Pacific using classical and climate-based models, Internal Report IR-11-024. NOAA Fisheries, Pacific Islands Science Center, Honolulu, Hawaii, USA.",
+      "year": "2011",
+      "title": "Assessing the impact of fishery actions to marine turtle populations in the North Pacific using classical and climate-based models, Internal Report IR-11-024",
+      "author": "Van Houtan, K.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bolten, A.B. and Witherington, B.E. 2003. <i>Loggerhead Sea Turtles</i>. Smithsonian Books, Washington, D.C., USA.",
+      "year": "2003",
+      "title": "Loggerhead Sea Turtles",
+      "author": "Bolten, A.B. and Witherington, B.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Margaritoulis, D. and Rees, A.F. 2006. Loggerhead nesting in Koroni, southern Peloponnesus, Greece: nesting data 1995-2002. In: N.J. Pilcher (ed.), Twenty-third Annual Symposium on Sea Turtle Biology and Conservation, pp. 151-154. Miami, FL, USA.",
+      "year": "2006",
+      "title": "Loggerhead nesting in Koroni, southern Peloponnesus, Greece: nesting data 1995-2002",
+      "author": "Margaritoulis, D. and Rees, A.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yakushima Umigame-Kan. 2014. Report on sea turtle research in Yakuhshima Island (2013). Yakushima Umigame-kan.",
+      "year": "2014",
+      "title": "Report on sea turtle research in Yakuhshima Island (2013)",
+      "author": "Yakushima Umigame-Kan",
+      "citation_short": null
+    },
+    {
+      "citation": "Plotkin, P. 2003. Adult migrations and habitat use. In: P.L. Lutz, J.A. Musick & J. Wyneken (ed.), <i>The Biology of Sea Turtles. Volume II</i>, pp. 225-241. CRC Marine Biology Series, CRC Press, Inc., Boca Raton, London, New York, Washington D.C.",
+      "year": "2003",
+      "title": "Adult migrations and habitat use",
+      "author": "Plotkin, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Margaritoulis, D. and Rees, A. 2001. The Loggerhead Turtle, <i>Caretta </i>caretta, population nesting in Kyparissia Bay, Peloponnesus, Greece: results of beach surveys over seventeen seasons and determination of the core nesting habitat. <i>Zoology in the Middle East</i> 24: 75-90.",
+      "year": "2001",
+      "title": "The Loggerhead Turtle, <i>Caretta </i>caretta, population nesting in Kyparissia Bay, Peloponnesus, Greece: results of beach surveys over seventeen seasons and determination of the core nesting habitat",
+      "author": "Margaritoulis, D. and Rees, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Avens, L. and Snover, M.L. 2013. Age and age estimation in sea turtles. In: J. Wyneken, K.J. Lohmann & J.A. Musick (ed.), <i>The biology of sea turtles. Volume III.</i>, pp. 97-133. CRC Press, Boca Raton, FL, USA.",
+      "year": "2013",
+      "title": "Age and age estimation in sea turtles",
+      "author": "Avens, L. and Snover, M.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Seminoff, J.A. and Shanker, K. 2008. Marine turtles and IUCN Red Listing: A review of the process, the pitfalls, and novel assessment approaches. <i>Journal of Experimental Marine Biology and Ecology</i> 356: 52-68.",
+      "year": "2008",
+      "title": "Marine turtles and IUCN Red Listing: A review of the process, the pitfalls, and novel assessment approaches",
+      "author": "Seminoff, J.A. and Shanker, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sea Turtle Association of Japan. 2002. Current status of Japanese loggerhead turtle nesting and beach environment. In: N. Kamezaki, Y. Toji & Y. Matsuzawa (ed.). Sea Turtle Association of Japan, Osaka, Japan.",
+      "year": "2002",
+      "title": "Current status of Japanese loggerhead turtle nesting and beach environment",
+      "author": "Sea Turtle Association of Japan",
+      "citation_short": null
+    },
+    {
+      "citation": "Schroeder, B.A., Foley, A.M. and Bagley, D.A. 2003. Nesting patterns, reproductive migrations, and adult foraging areas of Loggerhead Turtles. In: A.B. Bolten & B.E. Witherington (ed.), <i>Loggerhead Sea Turtles</i>, pp. 114-124. Smithsonian Books, Washington, D.C.",
+      "year": "2003",
+      "title": "Nesting patterns, reproductive migrations, and adult foraging areas of Loggerhead Turtles",
+      "author": "Schroeder, B.A., Foley, A.M. and Bagley, D.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Demetropoulos, A. and Hadjichristophorou, M. 2010. Cyprus - Region B. In: P. Casale, D. Margaritoulis (eds), <i>Sea Turtles in the Mediterranean: distribution, threats and conservation priorities</i>, pp. 53-64. IUCN, Gland, Switzerland.",
+      "year": "2010",
+      "title": "Cyprus - Region B",
+      "author": "Demetropoulos, A. and Hadjichristophorou, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Margaritoulis, D., Rees, A.F., Dean, C.J. and Riggall, T. 2011. Reproductive data of loggerhead turtles in Laganas Bay, Zakynthos Island, Greece, 2003-2009. <i>Marine Turtle Newsletter</i> 131: 2-6.",
+      "year": "2011",
+      "title": "Reproductive data of loggerhead turtles in Laganas Bay, Zakynthos Island, Greece, 2003-2009",
+      "author": "Margaritoulis, D., Rees, A.F., Dean, C.J. and Riggall, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Oruç, A., Türkecan, O. and Yerli, S. 2007. Çıralı, Maden Koyu, Beycik Bükü, Küçük Boncuk Koyu ve Tekirova Bükü kumsalları Deniz Kaplumbağası (<i>Caretta caretta</i>) ve Yumuşak Kabuklu Nil Kaplumbağası (<i>Trionyx triunguis</i>) Populasyonlarının Araştırılması, İzlenmesi ve Korunması Çalışması.",
+      "year": "2007",
+      "title": "Çıralı, Maden Koyu, Beycik Bükü, Küçük Boncuk Koyu ve Tekirova Bükü kumsalları Deniz Kaplumbağası (<i>Caretta caretta</i>) ve Yumuşak Kabuklu Nil Kaplumbağası (<i>Trionyx triunguis</i>) Populasyonlarının Araştırılması, İzlenmesi ve Korunması Çalışması",
+      "author": "Oruç, A., Türkecan, O. and Yerli, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2015. The IUCN Red List of Threatened Species. Version 2015-4. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 19 November 2015).",
+      "year": "2015",
+      "title": "The IUCN Red List of Threatened Species. Version 2015-4",
+      "author": "IUCN",
+      "citation_short": "IUCN 2015-4"
+    },
+    {
+      "citation": "IUCN. 2017. The IUCN Red List of Threatened Species. Version 2017-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 14 September 2017).",
+      "year": "2017",
+      "title": "The IUCN Red List of Threatened Species. Version 2017-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2017-2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Skewed sex ratios"
+      },
+      "code": "2_3_6"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

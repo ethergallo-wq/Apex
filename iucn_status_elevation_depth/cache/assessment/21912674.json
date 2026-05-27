@@ -1,0 +1,2133 @@
+{
+  "assessment_date": "2022-03-03T00:00:00.000+00:00",
+  "year_published": "2024",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 135606,
+  "criteria": "A2bcde",
+  "url": "https://www.iucnredlist.org/species/135606/21912674",
+  "citation": "Ford, M. 2024. Dicentrarchus labrax. The IUCN Red List of Threatened Species 2024: e.T135606A21912674. Accessed on 15 May 2026.",
+  "assessment_id": 21912674,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 135606,
+    "scientific_name": "Dicentrarchus labrax",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "ACTINOPTERYGII",
+    "order_name": "PERCIFORMES",
+    "family_name": "MORONIDAE",
+    "genus_name": "Dicentrarchus",
+    "species_name": "labrax",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "European Bass",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Almindelig bars",
+        "language": "dan"
+      },
+      {
+        "main": false,
+        "name": "Baicolo",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Bar européen",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Bayağı levrek",
+        "language": "tur"
+      },
+      {
+        "main": false,
+        "name": "Biban de mare",
+        "language": "rum"
+      },
+      {
+        "main": false,
+        "name": "Birrâq",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Brancin",
+        "language": "scc"
+      },
+      {
+        "main": false,
+        "name": "Brancin",
+        "language": "scr"
+      },
+      {
+        "main": false,
+        "name": "Branzino",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Deniz Levreği",
+        "language": "tur"
+      },
+      {
+        "main": false,
+        "name": "Europese zeebaars",
+        "language": "dut"
+      },
+      {
+        "main": false,
+        "name": "Gemeiner seebarsch",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Gemeiner wolfsbarsch",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Labraks europejski",
+        "language": "pol"
+      },
+      {
+        "main": false,
+        "name": "Levreku",
+        "language": "alb"
+      },
+      {
+        "main": false,
+        "name": "Llobarro",
+        "language": "cat"
+      },
+      {
+        "main": false,
+        "name": "Loup",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Lubin",
+        "language": "scr"
+      },
+      {
+        "main": false,
+        "name": "Lubina",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Robaliza",
+        "language": "glg"
+      },
+      {
+        "main": false,
+        "name": "Robalo",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Spigola Europea",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "سمك باس البحر",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Λαβράκι",
+        "language": "gre"
+      },
+      {
+        "main": false,
+        "name": "европейский морской окунь",
+        "language": "rus"
+      },
+      {
+        "main": true,
+        "name": "European Sea Bass",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Morone labrax (Linnaeus, 1758)",
+        "status": "ACCEPTED",
+        "genus_name": "Morone",
+        "species_name": "labrax",
+        "species_author": "(Linnaeus, 1758)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Sciaena diacantha Bloch, 1792",
+        "status": "ACCEPTED",
+        "genus_name": "Sciaena",
+        "species_name": "diacantha",
+        "species_author": "Bloch, 1792",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Perca elongata Geoffroy Saint-Hilaire, 1817",
+        "status": "ACCEPTED",
+        "genus_name": "Perca",
+        "species_name": "elongata",
+        "species_author": "Geoffroy Saint-Hilaire, 1817",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Labrax linnei Malm, 1877",
+        "status": "ACCEPTED",
+        "genus_name": "Labrax",
+        "species_name": "linnei",
+        "species_author": "Malm, 1877",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Centropomus lupus Lacepède, 1802",
+        "status": "ACCEPTED",
+        "genus_name": "Centropomus",
+        "species_name": "lupus",
+        "species_author": "Lacepède, 1802",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Centropomus mullus Lacepède, 1802",
+        "status": "ACCEPTED",
+        "genus_name": "Centropomus",
+        "species_name": "mullus",
+        "species_author": "Lacepède, 1802",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Perca sinuosa Geoffroy Saint-Hilaire, 1817",
+        "status": "ACCEPTED",
+        "genus_name": "Perca",
+        "species_name": "sinuosa",
+        "species_author": "Geoffroy Saint-Hilaire, 1817",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Labrax vulgaris Guérin-Méneville, 1829-38",
+        "status": "ACCEPTED",
+        "genus_name": "Labrax",
+        "species_name": "vulgaris",
+        "species_author": "Guérin-Méneville, 1829-38",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Perca labrax Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Perca",
+        "species_name": "labrax",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Perca punctulata Gmelin, 1789",
+        "status": "ACCEPTED",
+        "genus_name": "Perca",
+        "species_name": "punctulata",
+        "species_author": "Gmelin, 1789",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Near Threatened"
+    },
+    "code": "NT"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "6",
+    "congregatory": "Congregatory (year-round)",
+    "movement_patterns": "Full Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "No"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "No",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Yes",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": "Yes",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "This species inhabits the continental shelves of the northeast Atlantic Ocean from Morocco to Norway, including the British Isles, plus the Mediterranean and southern Black Sea basins. There are occasional records of vagrant individuals from the Baltic Sea and Atlantic coastline of North Africa as far south as Senegal. Recent records suggest that it has invaded the northern Red Sea basin via the Suez Canal.",
+    "population": "This species' global population trend has not been quantified, but ongoing  threats throughout its range are  estimated to be driving a general decline. The overall population size might also be affected  by  extended  periods  of  enhanced  or  reduced  recruitment  which  appear  to  be  related  to  changes  in  sea  temperature, particularly in the northeast Atlantic.<br/><br/>Intensive   exploitation around the British Isles during the late 1970s   and 1980s led to a major decrease in landings, but management measures   implemented in 1990 resulted in partial recovery.<br/><br/>The northeast Atlantic subpopulation is currently subdivided into four individual stocks by the International Council for the Exploration of the Sea (ICES), an intergovernmental marine science organisation which advises the European Union (EU). According  to ICES data the biomass of spawning individuals belonging to the northern stock (which inhabits the North Sea, English Channel, Irish Sea and Celtic Sea) has declined significantly since 2009 and reached its lowest point for 20 years in 2013, while recruitment has been low without a clear trend since 2008. The southern stock (Bay of Biscay), appears more stable but a decreasing trend in spawning stock biomass has been detected since 2010. At time of writing, population trends of the remaining two northeast Atlantic stocks (comprising Southern Ireland/Western Scotland and Portugal/northern Spain, respectively) and the Mediterranean subpopulation are unclear.",
+    "habitats": "The European sea bass inhabits shallow (typically &lt;100 metres depth) coastal waters. It is euryhaline (0-40 ppt salinity) and eurythermal (2-32°C). Adults forage in estuaries, coastal lagoons, harbours and the lower reaches of rivers from spring to autumn. During winter adults migrate up to several hundred kilometres from coastlines to deeper waters, where the temperature is more stable. <br/><br/>It is is characterised by slow growth and late maturity. Males attain sexual maturity at four to seven years of age and females at five to eight years of age depending on subpopulation, with both sexes maturing earlier in the Mediterranean. Young individuals are gregarious and form schools, whereas adults are more solitary but form offshore spawning aggregations from December to March in the  Mediterranean and January to June in the Atlantic. <br/><br/>Adults exhibit fidelity to particular foraging and spawning sites, implying that the overall population is spatially-structured. Females produce an average of 200,000 eggs/kg, which are fertilised externally. Eggs  hatch after three to five days, and larvae (measuring 4 mm at hatching) reach the  post‐larval stage (22 mm) in two to three months while migrating to  inshore nursery areas such as estuaries and lagoons. This species is an adaptable and opportunistic predator, feeding on plankton at the larval stage and on  other fishes and crustaceans at the juvenile and adult stages. Experimental evidence suggests it is able to adopt different feeding strategies in order to exploit a range of environments,  possibly in response to tidal conditions.",
+    "threats": "Ongoing anthropogenic degradation of coastal wetlands due to pollution or drainage for agricultural, industrial and urban development has driven a reduction in the extent and quality of coastal aquatic environments throughout this species' range. These issues may be driving localised declines given its fidelity to particular foraging and nursery sites. <br/><br/>Moreover, its relatively predictable behaviour patterns, whereby it forms spawning aggregations at known offshore sites in winter before moving inshore to feed at other times of the year, makes it vulnerable to exploitation by both inshore and offshore fisheries. In the northeast Atlantic, overharvesting of the northern and southern stocks remains a major threat despite recent management measures (see 'Conservation'). In addition, illegal, unreported, and unregulated landings are known to be widespread in this region. <br/><br/>In the Mediterranean basin, expanding sea-pen aquaculture has resulted in cultured individuals escaping into the wild. These display differences in both phenotype and genetic structure compared with natural subpopulations, and have raised concerns of introgression and disease transmission. <br/><br/>Climate change also appears to be exerting an influence on population dynamics, with the species expanding further into the North Atlantic.",
+    "measures": "In the northeast Atlantic this species is not covered by the EU's Common Fisheries Policy. It was managed at the national level until 2015, when the EU Commission introduced a series of emergency measures to curb declines in the northern stock. These rules cover both commercial and recreational fishing and included strict monthly catch limits, daily bag limits, closed seasons and an increase in minimum landing size. They have generated considerable controversy and conflict between the commercial and recreational fishing sectors, leading to inconsistencies in their implementation.<br/><br/>Overall commercial and recreational fishing mortality for the northern stock has fallen below the maximum sustainable yield as a result of the measures, although spawning biomass remains low. As of 2020 the EU continues to adjust the measures on an annual basis based on independent scientific advice issued by ICES. The southern stock is managed by France for commercial fisheries and the EU for recreational anglers, with catch and daily bag limit allowances slightly greater than for the northern stock.<br/><br/>In the Mediterranean Sea a minimum landing size is in place, but this subpopulation is not otherwise managed for conservation purposes, and studies regarding its status are urgently required.<br/><br/>Research published to date recommends that the genetic diversity identified both between and within the Atlantic and Mediterranean stocks should be taken into account when planning any future management efforts.",
+    "use_trade": "The European sea bass is a highly-valued delicacy in many European countries and elsewhere, with intra-EU trade particularly important. Wild-caught sea bass fetch the highest prices, and in the northeast Atlantic they are harvested by fishing fleets from France, Spain, the UK and, to a lesser extent, Belgium and the Netherlands. From 2010-2019 it was the most expensive fish on average among major commercial species in the northeast Atlantic region, comprising on average 10% of the landing value of small-scale fleets, and up to 50% for some vessels in the Netherlands. Smaller vessels using hooks and line are usually able sell the fish at higher prices than trawlers due to their perceived greater quality and sustainable landing methods. <br/><br/>France and the UK represent the largest markets with a final price of up to €35/kg in the former country as of 2020. In the Mediterranean it accounts for c. 5% of small-scale fleet landing value, with an average final price of €22/kg. Harvesting of wild individuals only accounts for &lt;10% of global production, however, since the species is farmed intensively throughout the Mediterranean basin. It was the first non‐salmonid marine species to be commercially cultured in Europe, and in countries such as Italy and Spain it has long been reared by methods which involve trapping the fish inside coastal lagoons and allowing them to feed naturally until they are harvested. <br/><br/>By the 1980s hatchery techniques were widely established and these have today largely replaced such traditional procedures. In most cases the fish are cultivated in floating cages, although some farms employ land-based tanks. The EU is the largest producer of farmed sea bass with a market share of c. 80% worth €504 million in 2018, while Egypt and Türkiye are also significant contributors. Within the EU, Greece is the most important producer, followed by Spain, Italy and to a lesser extent, France and Portugal. A number of dedicated aquaculture facilities also operate in the UK.<br/><br/>Recreational fisheries also play an important role in the exploitation of all stocks, with the socio-economic value of recreational sea bass fishing in the EU and UK estimated to exceed €200 million per year.",
+    "rationale": "The global population trend of the European sea bass remains unquantified, but it is estimated to be declining.<br/><br/>While measures are in place to combat documented declines over some of the northeast Atlantic portion of its range, the annual commercial and recreational fishing mortality in this region continues to hover around the maximum sustainable yield. The status of the Mediterranean subpopulation remains unclear, but plausible threats include overfishing, widespread habitat loss, climate change, and genetic introgression with domesticated conspecifics.<br/><br/>Although the species remains widespread, major declines in spawning biomass within the last three generations have been confirmed throughout the northern part of its range and have plausibly occurred elsewhere. It is therefore assessed as Near Threatened under Criterion A (A2bcde).",
+    "trend_justification": null,
+    "taxonomic_notes": "Molecular analyses have revealed the existence of  distinct northeast Atlantic and Mediterranean evolutionary lineages within this taxon, which probably originated through allopatric  isolation during the  Pleistocene (Duranton <em>et al</em>. 2018). <br/><br/>Some studies have suggested that these represent semi‐isolated species (i.e., independent lineages in which speciation remains incomplete)  rather than differentiated  populations of the same taxon. The two lineages hybridise throughout a post-glacial secondary contact  zone located in the Alboran Sea, with a sharp divide at the Almeria-Oran Front (AOF). The AOF serves as a barrier by separating colder, less-saline Atlantic waters from the denser Mediterranean (Robinet <em>et al</em>. 2020). <br/><br/>This phenomenon has generated a supplementary layer of genetic subdivision between Sea Bass inhabiting the eastern and western Mediterranean, respectively (Quéré <em>et al</em>. 2012). Additional genetic diversity has been detected within individual Mediterranean basins, e.g., the Adriatic and Levantine seas, and is potentially present in the Black Sea (Souche <em>et al</em>. 2015)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mediterranean and Black Sea"
+      },
+      "code": "37"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - eastern central"
+      },
+      "code": "34"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northeast"
+      },
+      "code": "27"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Coastal Brackish/Saline Lagoons/Marine Lakes"
+      },
+      "code": "13_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Canals and Drainage Channels, Ditches"
+      },
+      "code": "15_9"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy"
+      },
+      "code": "9_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy-Mud"
+      },
+      "code": "9_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Muddy"
+      },
+      "code": "9_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Estuaries"
+      },
+      "code": "9_10"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Rock and Rocky Reefs"
+      },
+      "code": "9_2"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Monaco"
+      },
+      "code": "MC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ukraine"
+      },
+      "code": "UA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gibraltar"
+      },
+      "code": "GI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bosnia and Herzegovina"
+      },
+      "code": "BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guernsey"
+      },
+      "code": "GG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Denmark"
+      },
+      "code": "DK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ireland"
+      },
+      "code": "IE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Isle of Man"
+      },
+      "code": "IM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lebanon"
+      },
+      "code": "LB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sweden"
+      },
+      "code": "SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Palestine, State of"
+      },
+      "code": "PS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Netherlands"
+      },
+      "code": "NL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belgium"
+      },
+      "code": "BE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Faroe Islands"
+      },
+      "code": "FO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jersey"
+      },
+      "code": "JE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cyprus"
+      },
+      "code": "CY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Lithuania"
+      },
+      "code": "LT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malta"
+      },
+      "code": "MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Baleares"
+      },
+      "code": "BAL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Poland"
+      },
+      "code": "PL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France (mainland)"
+      },
+      "code": "FRA-FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sicilia"
+      },
+      "code": "SIC-SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Krasnodar"
+      },
+      "code": "NCS-KR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Corsica"
+      },
+      "code": "COR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece (mainland)"
+      },
+      "code": "GRC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy (mainland)"
+      },
+      "code": "ITA-IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Adzhariya"
+      },
+      "code": "TCS-AD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kriti"
+      },
+      "code": "KRI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal (mainland)"
+      },
+      "code": "POR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "European Russia"
+      },
+      "code": "RU-EU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ukraine (main part)"
+      },
+      "code": "UKR-UK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sardegna"
+      },
+      "code": "SAR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northern Ireland"
+      },
+      "code": "IRE-NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye-in-Europe"
+      },
+      "code": "TUE-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Abkhaziya"
+      },
+      "code": "TCS-AB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain (mainland)"
+      },
+      "code": "SPA-SP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spanish North African Territories"
+      },
+      "code": "MOR-SP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "East Aegean Is."
+      },
+      "code": "EAI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Great Britain"
+      },
+      "code": "GRB-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Krym"
+      },
+      "code": "KRY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Kaliningrad"
+      },
+      "code": "BLT-KA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt (African part)"
+      },
+      "code": "EGY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South European Russia"
+      },
+      "code": "RUS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gruziya"
+      },
+      "code": "TCS-GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye-in-Asia"
+      },
+      "code": "TUR-OO"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Industrial aquaculture"
+      },
+      "code": "2_4_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Introduced genetic material"
+      },
+      "code": "8_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Garbage & solid waste"
+      },
+      "code": "9_4"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Unknown",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Unknown",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Nutrient loads"
+      },
+      "code": "9_3_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Sewage"
+      },
+      "code": "9_1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Herbicides and pesticides"
+      },
+      "code": "9_3_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Run-off"
+      },
+      "code": "9_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "evaluator",
+      "full": "Freyhof, J., Hunter, E., De Pontual, H., Woillez, M. & Bourjea, J.",
+      "value": [
+        "Helene De Pontual",
+        "Ewan Hunter",
+        "Mathieu Woillez",
+        "Jörg Freyhof (Museum für Naturkunde, Leibniz Institute for Evolution and Biodiversity Science, Berlin)",
+        "Jérôme Bourjea (IUCN SSC Marine Turtle Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "assessor",
+      "full": "Ford, M.",
+      "value": [
+        "Matthew Ford (Seriously Fish)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Kottelat, M. and Freyhof, J. 2007. Handbook of European freshwater fishes. <i>Cornol, Switzerland, Publications Kottelat</i>:  i-xiii + 1-646.",
+      "year": "2007",
+      "title": "Handbook of European freshwater fishes",
+      "author": "Kottelat, M. and Freyhof, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2024. The IUCN Red List of Threatened Species. Version 2024-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 28 October 2024).",
+      "year": "2024",
+      "title": "The IUCN Red List of Threatened Species. Version 2024-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2024-2"
+    },
+    {
+      "citation": "Arechavala-Lopez, P., Uglem, I., Fernandez-Jover, D., Bayle-Sempere, J.T. and Sanchez-Jerez, P. 2011. Immediate post-escape behaviour of farmed seabass (<i>Dicentrarchus labrax</i> L.) in the Mediterranean Sea. <i>Journal of Applied Ichthyology</i> 27(6): 1375-1378.",
+      "year": "2011",
+      "title": "Immediate post-escape behaviour of farmed seabass (<i>Dicentrarchus labrax</i> L.) in the Mediterranean Sea",
+      "author": "Arechavala-Lopez, P., Uglem, I., Fernandez-Jover, D., Bayle-Sempere, J.T. and Sanchez-Jerez, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cambiè, G., Kaiser, M.J., Marriott, A.L., Fox, J., Lambert, G., Hiddink, J.G., Overy, T., Bennet, S.A., Leng, M.J. and McCarthy, I.D. 2016. Stable isotope signatures reveal small-scale spatial separation in populations of European sea bass. <i>Marine Ecology Progress Series</i> 546: 213-223.",
+      "year": "2016",
+      "title": "Stable isotope signatures reveal small-scale spatial separation in populations of European sea bass",
+      "author": "Cambiè, G., Kaiser, M.J., Marriott, A.L., Fox, J., Lambert, G., Hiddink, J.G., Overy, T., Bennet, S.A., Leng, M.J. and McCarthy, I.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Castilho, R. and Ciftci, Y. 2005.  Genetic differentiation between close eastern Mediterranean <i>Dicentrarchus labrax</i> (L.) populations. <i>Journal of Fish Biology</i> 67(6): 1746-1752.",
+      "year": "2005",
+      "title": " Genetic differentiation between close eastern Mediterranean <i>Dicentrarchus labrax</i> (L.) populations",
+      "author": "Castilho, R. and Ciftci, Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Council of the European Union. 2020. Council Regulation (EU) 2020/123 of 27 January 2020 fixing for 2020 the fishing opportunities for certain fish stocks and groups of fish stocks, applicable in Union waters and, for Union fishing vessels, in certain non-Union waters. <i>Official Journal of the European Union</i> L 25: 1-156.",
+      "year": "2020",
+      "title": "Council Regulation (EU) 2020/123 of 27 January 2020 fixing for 2020 the fishing opportunities for certain fish stocks and groups of fish stocks, applicable in Union waters and, for Union fishing vessels, in certain non-Union waters",
+      "author": "Council of the European Union",
+      "citation_short": null
+    },
+    {
+      "citation": "De Pontual, H., Lalire, M., Fablet, R., Laspougeas, C., Garren, F., Martin, S., Drogou, M. and Woillez, M. 2019. New insights into behavioural ecology of European seabass off the West Coast of France: implications at local and population scales. <i>ICES Journal of Marine Science</i> 76(2): 501-515.",
+      "year": "2019",
+      "title": "New insights into behavioural ecology of European seabass off the West Coast of France: implications at local and population scales",
+      "author": "De Pontual, H., Lalire, M., Fablet, R., Laspougeas, C., Garren, F., Martin, S., Drogou, M. and Woillez, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Doyle, T.K., Haberlin, D., Clohessy, J., Bennison, A. and Jessopp, M. 2017. Localised residency and inter-annual fidelity to coastal foraging areas may place sea bass at risk to local depletion. <i>Nature Scientific Reports</i> 7(1): 1-9.",
+      "year": "2017",
+      "title": "Localised residency and inter-annual fidelity to coastal foraging areas may place sea bass at risk to local depletion",
+      "author": "Doyle, T.K., Haberlin, D., Clohessy, J., Bennison, A. and Jessopp, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Duranton, M., Allal, F., Fraïsse, C., Bierne, N., Bonhomme, F. and Gagnaire, P.A. 2018. The origin and remolding of genomic islands of differentiation in the European sea bass. <i>Nature Communications</i> 9(1): 1-11.",
+      "year": "2018",
+      "title": "The origin and remolding of genomic islands of differentiation in the European sea bass",
+      "author": "Duranton, M., Allal, F., Fraïsse, C., Bierne, N., Bonhomme, F. and Gagnaire, P.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "European Market Observatory for Fisheries and Aquaculture Products. 2020. Commercial and recreational fisheries for wild seabass in the Atlantic. <i>Luxembourg: Publications Office of the European Union</i>: 1-24.",
+      "year": "2020",
+      "title": "Commercial and recreational fisheries for wild seabass in the Atlantic",
+      "author": "European Market Observatory for Fisheries and Aquaculture Products",
+      "citation_short": null
+    },
+    {
+      "citation": "European Market Observatory for Fisheries and Aquaculture Products. 2020. The EU Fish Market. 2020 Edition. <i>Luxembourg: Publications Office of the European Union</i>: 1-100.",
+      "year": "2020",
+      "title": "The EU Fish Market. 2020 Edition",
+      "author": "European Market Observatory for Fisheries and Aquaculture Products",
+      "citation_short": null
+    },
+    {
+      "citation": "ICES. 2019. Sea bass (<i>Dicentrarchus labrax</i>) in divisions 4.b–c, 7.a, and 7.d–h (central and southern North Sea, Irish Sea, English Channel, Bristol Channel, and Celtic Sea). <i>ICES Advice on fishing opportunities, catch, and effort Celtic Seas and Greater North Sea ecoregions. In: Report of the ICES Advisory Committee, 2019</i> Published 30 June 2020: 1-9.",
+      "year": "2019",
+      "title": "Sea bass (<i>Dicentrarchus labrax</i>) in divisions 4.b–c, 7.a, and 7.d–h (central and southern North Sea, Irish Sea, English Channel, Bristol Channel, and Celtic Sea)",
+      "author": "ICES",
+      "citation_short": null
+    },
+    {
+      "citation": "ICES. 2020. Working Group for the Bay of Biscay and the Iberian Waters Ecoregion (WGBIE). <i>ICES Scientific Reports</i> 2(49): 1-845.",
+      "year": "2020",
+      "title": "Working Group for the Bay of Biscay and the Iberian Waters Ecoregion (WGBIE)",
+      "author": "ICES",
+      "citation_short": null
+    },
+    {
+      "citation": "Pawson, M.G., Brown, M., Leballeur, J. and Pickett, G.D. 2008. Will philopatry in sea bass, <i>Dicentrarchus labrax</i>, facilitate the use of catch-restricted areas for management of recreational fisheries? <i>Fisheries Research</i> 93(1-2): 240-243.",
+      "year": "2008",
+      "title": "Will philopatry in sea bass, <i>Dicentrarchus labrax</i>, facilitate the use of catch-restricted areas for management of recreational fisheries?",
+      "author": "Pawson, M.G., Brown, M., Leballeur, J. and Pickett, G.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pawson, M.G., Kupschus, S. and Pickett, G.D. 2007. The status of sea bass (<i>Dicentrarchus labrax</i>) stocks around England and Wales, derived using a separable catch-at-age model, and implications for fisheries management. <i>ICES Journal of Marine Science</i> 64(2): 346-356.",
+      "year": "2007",
+      "title": "The status of sea bass (<i>Dicentrarchus labrax</i>) stocks around England and Wales, derived using a separable catch-at-age model, and implications for fisheries management",
+      "author": "Pawson, M.G., Kupschus, S. and Pickett, G.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Quéré, N., Desmarais, E., Tsigenopoulos, C.S., Belkhir, K., Bonhomme, F. and Guinand, B. 2012. Gene flow at major transitional areas in sea bass (<i>Dicentrarchus labrax</i>) and the possible emergence of a hybrid swarm. <i>Ecology and Evolution</i> 2(12): 3061-3078.",
+      "year": "2012",
+      "title": "Gene flow at major transitional areas in sea bass (<i>Dicentrarchus labrax</i>) and the possible emergence of a hybrid swarm",
+      "author": "Quéré, N., Desmarais, E., Tsigenopoulos, C.S., Belkhir, K., Bonhomme, F. and Guinand, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Robinet, T., Roussel, V., Cheze, K. and Gagnaire, P.A. 2020. Spatial gradients of introgressed ancestry reveal cryptic connectivity patterns in a high gene flow marine fish. <i>Molecular Ecology</i> 29(20): 3857-3871.",
+      "year": "2020",
+      "title": "Spatial gradients of introgressed ancestry reveal cryptic connectivity patterns in a high gene flow marine fish",
+      "author": "Robinet, T., Roussel, V., Cheze, K. and Gagnaire, P.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Souche, E.L., Hellemans, B., Babbucci, M., MacAoidh, E., Guinand, B., Bargelloni, L., Chistiakov, D.A., Patarnello, T., Bonhomme, F., Martinsohn, J.T. and Volckaert, F.A. 2015. Range-wide population structure of European sea bass <i>Dicentrarchus labrax</i>. <i>Biological Journal of the Linnean Society</i> 116(1): 86-105.",
+      "year": "2015",
+      "title": "Range-wide population structure of European sea bass <i>Dicentrarchus labrax</i>",
+      "author": "Souche, E.L., Hellemans, B., Babbucci, M., MacAoidh, E., Guinand, B., Bargelloni, L., Chistiakov, D.A., Patarnello, T., Bonhomme, F., Martinsohn, J.T. and Volckaert, F.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vandeputte, M., Gagnaire, P.A. and Allal, F. 2019. The European sea bass: a key marine fish model in the wild and in aquaculture. <i>Animal Genetics</i> 50(3): 195-206.",
+      "year": "2019",
+      "title": "The European sea bass: a key marine fish model in the wild and in aquaculture.",
+      "author": "Vandeputte, M., Gagnaire, P.A. and Allal, F.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [
+    {
+      "description": {
+        "en": "Iberian Coastal"
+      },
+      "code": "4_2_10"
+    },
+    {
+      "description": {
+        "en": "Mediterranean Sea"
+      },
+      "code": "2_1_1"
+    },
+    {
+      "description": {
+        "en": "Black Sea"
+      },
+      "code": "4_2_5"
+    },
+    {
+      "description": {
+        "en": "North Sea"
+      },
+      "code": "4_2_6"
+    },
+    {
+      "description": {
+        "en": "Norwegian Sea"
+      },
+      "code": "4_2_7"
+    },
+    {
+      "description": {
+        "en": "Celtic-Biscay"
+      },
+      "code": "4_2_8"
+    },
+    {
+      "description": {
+        "en": "Faroe Plateau Shelf"
+      },
+      "code": "4_2_4"
+    }
+  ],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Hybridisation"
+      },
+      "code": "2_3_1"
+    },
+    {
+      "description": {
+        "en": "Hybridisation"
+      },
+      "code": "2_3_1"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    },
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

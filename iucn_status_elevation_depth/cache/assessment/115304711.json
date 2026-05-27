@@ -1,0 +1,898 @@
+{
+  "assessment_date": "2012-02-07T00:00:00.000+00:00",
+  "year_published": "2012",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 164729,
+  "criteria": "A2abcd+4abcd",
+  "url": "https://www.iucnredlist.org/species/164729/115304711",
+  "citation": "Wilms, T., Eid, E.K.A., Al Johany, A.M.H., Amr, Z.S.S., Els, J., Baha El Din, S., Disi, A.M., Sharifi, M., Papenfuss, T., Shafiei Bafti, S. & Werner, Y.L. 2012. Uromastyx aegyptia (errata version published in 2017). The IUCN Red List of Threatened Species 2012: e.T164729A115304711. Accessed on 15 May 2026.",
+  "assessment_id": 115304711,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 164729,
+    "scientific_name": "Uromastyx aegyptia",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 129041511,
+        "scientific_name": "Uromastyx aegyptia ssp. leptieni",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "REPTILIA",
+        "order_name": "SQUAMATA",
+        "family_name": "AGAMIDAE",
+        "genus_name": "Uromastyx",
+        "species_name": "aegyptia",
+        "subpopulation_name": null,
+        "infra_name": "leptieni",
+        "authority": "Wilms &amp; Böhme, 2000",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Dhub",
+            "language": "ara"
+          },
+          {
+            "main": false,
+            "name": "سحلية لبتيني شوكية الذيل / الضب",
+            "language": "ara"
+          },
+          {
+            "main": true,
+            "name": "Leptien's Spiny-tailed Lizard",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Uromastyx leptieni Wilms & Böhme, 2000",
+            "status": "ACCEPTED",
+            "genus_name": "Uromastyx",
+            "species_name": "leptieni",
+            "species_author": "Wilms & Böhme, 2000",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          }
+        ]
+      },
+      {
+        "sis_id": 129041712,
+        "scientific_name": "Uromastyx aegyptia ssp. microlepis",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "REPTILIA",
+        "order_name": "SQUAMATA",
+        "family_name": "AGAMIDAE",
+        "genus_name": "Uromastyx",
+        "species_name": "aegyptia",
+        "subpopulation_name": null,
+        "infra_name": "microlepis",
+        "authority": "Arnold, 1980",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": false,
+            "name": "السحلية المصرية شوكية الذيل",
+            "language": "ara"
+          },
+          {
+            "main": true,
+            "name": "Small-scaled Spiny-tailed Lizard",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "AGAMIDAE",
+    "genus_name": "Uromastyx",
+    "species_name": "aegyptia",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Forskål, 1775)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Dabb Lizard",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Egyptian Mastigure",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Ägyptischer Dornschwanz",
+        "language": "ger"
+      },
+      {
+        "main": true,
+        "name": "Egyptian Spiny–tailed Lizard",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Lacerta aegyptia Forskål, 1775",
+        "status": "ACCEPTED",
+        "genus_name": "Lacerta",
+        "species_name": "aegyptia",
+        "species_author": "Forskål, 1775",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 1500,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species ranges from Egypt (east of the Nile), eastwards into the southern half of Israel, south and northeastern Jordan, southern Syria, Iraq and Iran (currently known only from a historical record from the mainland, which needs confirmation, and a population on Sirri Island and Hengman Island (Anderson 1999, T. Papenfuss pers. comm. September 2008) in the Persian Gulf; the species may occur along the Gulf coast), and southwards into the Arabian Peninsula. The nominate subspecies has an eastern range margin east of Wadi Araba in Jordan and Wadi Sawawin in extreme northwestern Saudi Arabia (Wilms <span style=\"font-style: italic;\">et al. </span>2007). <span style=\"font-style: italic;\">U. a. microlepis</span> is widespread in Saudi Arabia, Oman, Yemen, the United Arab Emirates, Qatar and Kuwait, while <span style=\"font-style: italic;\">U. a. leptieni </span>is found in Oman's Hajar al-Gharbi Mountains and the northeastern United Arab Emirates (Wilms <span style=\"font-style: italic;\">et al. </span>2007). It can occur up to 1,500 m asl on Sinai.",
+    "population": "Its occurrence is very patchy and this is not easily explained by available habitat. This species is widespread but declining in parts of Jordan. It is locally common on the Arabian Peninsula (T. Papenfuss pers. comm. September 2008). It is generally uncommon and declining throughout its range in Egypt. There are possibly under 100 adults on Hengman Island, Iran (T. Papenfuss pers. comm. September 2008). Overall, the species is believed to be in decline due to habitat loss and over-harvesting.",
+    "habitats": "This species occurs in open, flat, gravelly, stony and rocky areas, and it is infrequently seen in sandy areas. The species lives in loose colonies that can be found close to their burrows. Animals forage on low vegetation close to their burrows. It lays 7-17 (occasionally up to 23) eggs. It is not present in agricultural land.",
+    "threats": "This species has been regularly reported in the international pet and medicinal trade. Some of this trade is illegal. There is severe collection pressure on the species. The species is locally used for food and medicinal purposes (exported to Malaysia). Its habitat is also being lost due to over-grazing, human settlement, large-scale agricultural expansion, land reclamation, solid waste dumping and off-road vehicles. In Egypt large portions of its range have been lost to quarrying for gravel and building material, especially in the Eastern Desert. Its populations are very fragmented throughout its wide range. On the Arabian Peninsula, the species is still locally common in some places, especially protected areas.",
+    "measures": "This species is listed on Appendix II of CITES. Egypt has banned the export of this species, however the illegal export of animals from this country has continued. In Jordan it is protected under Appendix I of the Hunting Law. It occurs in several protected areas. The establishment of protected areas for important localities throughout the species range should be established. Awareness raising and community conservation measures should be developed for the conservation of this species. Further research into captive-propagation of this species is being undertaken to reduce the collection pressure on wild populations.",
+    "use_trade": "In general some people are known to eat this species regularly. It is also used in parts of its range for medicinal use (oil), and there is a trade in the species for the international pet trade. The oil from this species is also exported for medicinal use. This species is listed on CITES Appendix II.",
+    "rationale": "This species is listed as Vulnerable as there has been a suspected population decline of over 30% over the past 15 years (3 generations) and this is expected to continue into the future. The decline may be close to meeting the decline rate of 50% over three generations and population declines need to be monitored.",
+    "trend_justification": null,
+    "taxonomic_notes": "Due to low levels of genetic differentiation between members of the <span style=\"font-style: italic;\">Uromastyx aegyptia </span>species group (considered to include <span style=\"font-style: italic;\">U. aegyptia</span>, <span style=\"font-style: italic;\">U. leptieni</span>, <span style=\"font-style: italic;\">U. microlepis </span>and <span style=\"font-style: italic;\">U. occidentalis</span>), Wilms <span style=\"font-style: italic;\">et al. </span>(2007) recognize <span style=\"font-style: italic;\">U. aegyptia </span>as a single species with three subspecies: <span style=\"font-style: italic;\">U. a. aegyptia</span>, <span style=\"font-style: italic;\">U. a. leptieni</span> and <span style=\"font-style: italic;\">U. a. microlepis</span>.<br/><br/>The relationship of <span style=\"font-style: italic;\">U. occidentalis</span>, which was not included in genetic analysis, to <span style=\"font-style: italic;\">U. aegyptia </span>remains in need of clarification, however Wilms <span style=\"font-style: italic;\">et al. </span>(2007) continue to recognize it as a full species due to its geographical separation from the remaining <span style=\"font-style: italic;\">U. aegyptia</span>-group taxa."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Rocky areas (eg. inland cliffs, mountain peaks)"
+      },
+      "code": "6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Desert - Hot"
+      },
+      "code": "8_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Qatar"
+      },
+      "code": "QA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saudi Arabia"
+      },
+      "code": "SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iraq"
+      },
+      "code": "IQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Yemen"
+      },
+      "code": "YE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oman"
+      },
+      "code": "OM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Arab Emirates"
+      },
+      "code": "AE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jordan"
+      },
+      "code": "JO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kuwait"
+      },
+      "code": "KW"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Nomadic grazing"
+      },
+      "code": "2_3_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Wilms, T., Eid, E.K.A., Al Johany, A.M.H., Amr, Z.S.S., Els, J., Baha El Din, S., Disi, A.M., Sharifi, M., Papenfuss, T., Shafiei Bafti, S. & Werner, Y.L.",
+      "value": [
+        "Mozafar Sharifi (GRA, SRLI Reptile Assessment)",
+        "Johannes Els (Breeding Centre for Endangered Arabian Wildlife, Sharjah, UAE)",
+        "Awad Al Johany (King Saud University, Riyadh, Saudi Arabia)",
+        "Ehab Eid (The Royal Society for the Conservation of Nature, Jordan)",
+        "Sherif Baha El Din (SRLI & Global Reptile Assessment)",
+        "Ahmad Mohammed Mousa Disi (GRA, SRLI Reptile Assessment)",
+        "Yehudah Werner (Department of Evolution, Systematics and Ecology, The Hebrew University of Jerusalem, 91904 Jerusalem, Israel)",
+        "Thomas Wilms (Frankfurt Zoological Society, Germany)",
+        "Zuhair Amr (Jordan University of Science & Technology, Jordan)",
+        "Theodore Papenfuss (Museum of Vertebrate Zoology, University of California)",
+        "Soheila Shafiei Bafti (GRA, SRLI Reptile Assessment)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Cox, N.A. & Bowles, P.",
+      "value": [
+        "Neil Cox (Biodiversity Assessment Unit)",
+        "Philip Bowles (IUCN SSC/CI Biodiversity Assessment Unit)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Cox, N.A.",
+      "value": [
+        "Neil Cox (Biodiversity Assessment Unit)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This errata assessment has been created because the map was accidentally left out of the version published previously."
+    }
+  ],
+  "references": [
+    {
+      "citation": "IUCN. 2017. The IUCN Red List of Threatened Species. Version 2017-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 27 April 2017).",
+      "year": "2017",
+      "title": "The IUCN Red List of Threatened Species. Version 2017-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2017-1"
+    },
+    {
+      "citation": "Sindaco, R. and Jeremčenko, V.K. 2008. <i>The Reptiles of the Western Palearctic. 1. Annotated Checklist and Distributional Atlas of the Turtles, Crocodiles, Amphibians and Lizards of Europe, North Africa, Middle East and Central Asia</i>. Edizioni Belvedere, Latina (Italy).",
+      "year": "2008",
+      "title": "The Reptiles of the Western Palearctic. 1. Annotated Checklist and Distributional Atlas of the Turtles, Crocodiles, Amphibians and Lizards of Europe, North Africa, Middle East and Central Asia",
+      "author": "Sindaco, R. and Jeremčenko, V.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Saleh, M.A. 1997. <i>Amphibians and Reptiles of Egypt</i>. National Biodiversity Unit, Cairo.",
+      "year": "1997",
+      "title": "Amphibians and Reptiles of Egypt",
+      "author": "Saleh, M.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Baha El Din, S.M. 2001. The herpetofauna of Egypt: species, communities and assemblages. <i>Phd unpublished</i>, University of Nottingham School of Biological Sciences, Nottingham, UK.",
+      "year": "2001",
+      "title": "The herpetofauna of Egypt: species, communities and assemblages",
+      "author": "Baha El Din, S.M",
+      "citation_short": ""
+    },
+    {
+      "citation": "Disi, A.M., Modrý, D., Nečas, P. and Rifai, L. 2001. <i>Amphibians and reptiles of the Hashemite Kingdom of Jordan</i>. Edition Chimaira, Frankfurt.",
+      "year": "2001",
+      "title": "Amphibians and Reptiles of the Hashemite Kingdom of Jordan",
+      "author": "Disi, A.M., Modrý, D., Nečas, P. and Rifai, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Amr, Z.S., Al-Oran, R. and Disi, A. 1994. Reptiles of southern Jordan. <i>The Snake</i> 26: 41-49.",
+      "year": "1994",
+      "title": "Reptiles of southern Jordan",
+      "author": "Amr, Z.S., Al-Oran, R. and Disi, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Disi, A.M. and Böhme, W. 1996. Zoogeography of the amphibians and reptiles of Syria, with additional new records. <i>Herpetozoa</i> 9(1/2): 63-70.",
+      "year": "1996",
+      "title": "Zoogeography of the amphibians and reptiles of Syria, with additional new records",
+      "author": "Disi, A.M. and Böhme, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Martens, H. 1997. A review of \"Zoogeography of amphibians and reptiles of Syria, with additional new records\" (<i>Herpetozoa</i> 9 (1/2), 1996). <i>Herpetozoa</i> 10(3/4): 99-106.",
+      "year": "1997",
+      "title": "A review of \"Zoogeography of amphibians and reptiles of Syria, with additional new records\" (<i>Herpetozoa</i> 9 (1/2), 1996)",
+      "author": "Martens, H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Flower, S. 1933. Notes on the recent reptiles and amphibians of Egypt, with a list of the species recorded from that kingdom. <i>Proceedings of the Zoological Society of London</i> 1933: 735-851.",
+      "year": "1933",
+      "title": "Notes on the recent reptiles and amphibians of Egypt, with a list of the species recorded from that kingdom",
+      "author": "Flower, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Anderson, S.C. 1999. <i>The Lizards of Iran</i>. Society for the Study of Amphibians and Reptiles, St Louis, Missouri.",
+      "year": "1999",
+      "title": "The Lizards of Iran",
+      "author": "Anderson, S.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Arnold, E.N. 1980. The scientific results of the Oman flora and fauna survey 1977 (Dhofar). The reptiles and amphibians of Dhofar, southern Arabia. <i>Journal of Oman Studies Special Report</i> 2: 273-332.",
+      "year": "1980",
+      "title": "The scientific results of the Oman flora and fauna survey 1977 (Dhofar). The reptiles and amphibians of Dhofar, southern Arabia",
+      "author": "Arnold, E.N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Arnold, E.N. 1980. The scientific results of the Oman flora and fauna survey 1977 (Dhofar). The reptiles and amphibians of Dhofar, southern Arabia. <i>Journal of Oman Studies Special Report (No. 2)</i>: 273-332.",
+      "year": "1980",
+      "title": "The scientific results of the Oman flora and fauna survey 1977 (Dhofar). The reptiles and amphibians of Dhofar, southern Arabia.",
+      "author": "Arnold, E.N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Leviton, A.E. and Anderson, S.C. 1967. Survey of the reptiles of the Sheikdom of Abu Dhabi, Arabian Peninsula. Part II. Systematic account of the collction of reptiles made in the Sheikdom of Abu Daby by John Gasperetti. <i>Proceedings of the California Academy of Sciences, Series 4</i> 39: 157-192.",
+      "year": "1967",
+      "title": "Survey of the reptiles of the Sheikdom of Abu Dhabi, Arabian Peninsula. Part II. Systematic account of the collction of reptiles made in the Sheikdom of Abu Daby by John Gasperetti",
+      "author": "Leviton, A.E. and Anderson, S.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "van der Kooij, J. 2001. The herpetofauna of the Sultanate of Oman: Part 1: The amphibians, worm lizards, agamas and chameleons. <i>Podarcis</i> 1(3): 70-82.",
+      "year": "2001",
+      "title": "The herpetofauna of the Sultanate of Oman: Part 1: The amphibians, worm lizards, agamas and chameleons",
+      "author": "van der Kooij, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wilms, T. 2001. <i>Dornschwanzagamen: Lebensweise, Pflege und Zucht.</i> Herpeton-Verlag., Offenbach, Germany.",
+      "year": "2001",
+      "title": "Dornschwanzagamen: Lebensweise, Pflege und Zucht.",
+      "author": "Wilms, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Joger, U. 1987. An interpetation of reptile zoogeography in Arabia, with special reference to Arabian herpetofaunal relations with Africa. In: Krupp, F., Schneider, W. and Kinzelbach, R (eds), <i>Proceedings of the symposium on the fauna and zoogeography of the Middle East.</i>, pp. 257-271. Beihefte zum Tübinger Atlas des Vorderen Orients, A 28.",
+      "year": "1987",
+      "title": "An interpetation of reptile zoogeography in Arabia, with special reference to Arabian herpetofaunal relations with Africa.",
+      "author": "Joger, U.",
+      "citation_short": null
+    },
+    {
+      "citation": "van der Kooij, J. 2000. The herpetofauna of the sultanate of Oman. Part 1: The amphibians, worm lizards, agamas and chameleons. <i>Podarcis</i> 1(3): 70-102.",
+      "year": "2000",
+      "title": "The herpetofauna of the sultanate of Oman. Part 1: The amphibians, worm lizards, agamas and chameleons.",
+      "author": "van der Kooij, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wilms, T. and Böhme, W. 2000. A new Uromastyx species from south-eastern Arabia, with comments on the taxonomy of Uromastyx aegyptia (Forskål, 1775) (Squamata: Sauria. Agamidae). <i>Herpetozoa</i>: 133-148.",
+      "year": "2000",
+      "title": "A new Uromastyx species from south-eastern Arabia, with comments on the taxonomy of Uromastyx aegyptia (Forskål, 1775) (Squamata: Sauria. Agamidae).",
+      "author": "Wilms, T. and Böhme, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Knapp, A. 2004. <i>An assessment of the international trade in Spiny-tailed Lizards Uromastyx with a focus on the role of the European Union.</i> TRAFFIC Europe. European Commission., Brussels.",
+      "year": "2004",
+      "title": "An assessment of the international trade in Spiny-tailed Lizards Uromastyx with a focus on the role of the European Union.",
+      "author": "Knapp, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2012. IUCN Red List of Threatened Species (ver. 2012.2). Available at: <a href=\"http://www.iucnredlist.org\">http://www.iucnredlist.org</a>. (Accessed: 17 October 2012).",
+      "year": "2012",
+      "title": "IUCN Red List of Threatened Species (ver. 2012.2)",
+      "author": "IUCN",
+      "citation_short": "IUCN 2012.2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

@@ -1,0 +1,986 @@
+{
+  "assessment_date": "2022-10-08T01:00:00.000+01:00",
+  "year_published": "2024",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 165594257,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/165594257/165594282",
+  "citation": "Bowles, P. 2024. Natrix helvetica. The IUCN Red List of Threatened Species 2024: e.T165594257A165594282. Accessed on 15 May 2026.",
+  "assessment_id": 165594282,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 165594257,
+    "scientific_name": "Natrix helvetica",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "NATRICIDAE",
+    "genus_name": "Natrix",
+    "species_name": "helvetica",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Lacépède, 1789)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Cobra de Àgua de Colar",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Couleuvre à collier",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Culebra de Collar",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Natrice dal Collare",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Ringelnatter",
+        "language": "ger"
+      },
+      {
+        "main": true,
+        "name": "European Grass Snake",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Coluber helveticus Lacépède, 1789",
+        "status": "ACCEPTED",
+        "genus_name": "Coluber",
+        "species_name": "helveticus",
+        "species_author": "Lacépède, 1789",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Natrix natrix ssp. helvetica (Lacépède, 1789)",
+        "status": "ACCEPTED",
+        "genus_name": "Natrix",
+        "species_name": "natrix",
+        "species_author": null,
+        "infrarank_author": "(Lacépède, 1789)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "helvetica"
+      },
+      {
+        "name": "Coluber jenisonii Gistel, 1848",
+        "status": "ACCEPTED",
+        "genus_name": "Coluber",
+        "species_name": "jenisonii",
+        "species_author": "Gistel, 1848",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Natrix natrix lanzai Kramer, 1970",
+        "status": "ADD",
+        "genus_name": "Natrix",
+        "species_name": "natrix lanzai",
+        "species_author": "Kramer, 1970",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Natrix natrix calabra Vanni & Lanza, 1983",
+        "status": "ACCEPTED",
+        "genus_name": "Natrix",
+        "species_name": "natrix calabra",
+        "species_author": "Vanni & Lanza, 1983",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Natrix torquata var. Semescens Minà Palumbo, 1863",
+        "status": "ACCEPTED",
+        "genus_name": "Natrix",
+        "species_name": "torquata var. Semescens",
+        "species_author": "Minà Palumbo, 1863",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Tropidonotus natrix britannicus Hecht, 1930",
+        "status": "ACCEPTED",
+        "genus_name": "Tropidonotus",
+        "species_name": "natrix britannicus",
+        "species_author": "Hecht, 1930",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Tropidonotus natrix var. bulsanensis Gredler, 1882",
+        "status": "ACCEPTED",
+        "genus_name": "Tropidonotus",
+        "species_name": "natrix var. bulsanensis",
+        "species_author": "Gredler, 1882",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Tropidonotus natrix var. nigri-torquata Ninni, 1880",
+        "status": "ACCEPTED",
+        "genus_name": "Tropidonotus",
+        "species_name": "natrix var. nigri-torquata",
+        "species_author": "Ninni, 1880",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Vipera vissena Rafinesque, 1814",
+        "status": "ACCEPTED",
+        "genus_name": "Vipera",
+        "species_name": "vissena",
+        "species_author": "Rafinesque, 1814",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "No",
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Unknown",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": "Unknown",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "This species is endemic to Europe, where it ranges from southwestern mainland France and Corsica, east to western Germany, south to Italy (including Sardinia and Sicily) and north to Great Britain, where it occurs in most of England and Wales but is absent from Scotland (Kindler <em>et al.</em> 2017). It occurs in Slovenia and the Istria region of northern Croatia (Geniez 2018). This species co-occurs with the Iberian Grass Snake <em>Natrix aspreptophora</em> in mainland France.",
+    "population": "It is a common species but with fragmented subpopulations through parts of its range. The subspecies recognised from Sardinia and Corsica are all very localised. Restoration of habitat in non-protected areas of the Netherlands since <em>ca</em>. 1985, including creating habitat such as ditches for the Common Frog, a common prey species, has resulted in significant increases of both European Grass Snake and Common Frog subpopulations since around 2000 (C.C. De Haan pers. comm.).",
+    "habitats": "This snake is typically found in damp places, such as wet meadows, around standing water and along the banks of streams. It is sometimes found a long way from any standing water and can often be found in wooded localities and in heathland. It is tolerant of heavily-modified lansdcapes where suitable watersources are present, and can live in domestic gardens and urban parkland. This species swims well and typically forages on fish and amphibians. It also eats young birds and small mammals. Larger females may lay up to 100 eggs (but usually fewer) during June and July (Speybroeck <em>et al.</em> 2016). Young females lay about 10 eggs (Spellerberg 2002).",
+    "threats": "It is locally impacted in parts of its range by water pollution impacting prey populations (principally amphibians), drainage of wetland habitats (in Switzerland 90% of wetland habitats have been drained [A. Meyer pers. comm.]) and general intensification of agricultural methods. Two subpopulations - described as the subspecies <em>Natrix helvetica cetti</em> (Sardinia) and <em>N. h. corsa</em> (Corsica) - are considered to be threatened with extinction. As with many snakes this species is generally persecuted by people. The species appears to have strongly declined in Belgium (considered there as Vulnerable), a decline that may be linked to a rapid expansion of wild boar populations in this country (Graitson <em>et al</em>. 2018). Santos <em>et al.</em> (2022) detected a moderate decrease for the <em>N. natrix</em> complex in Spain (-23.3% over three generations) and in Southern France (-25.3%). In Germany wetland clearance over the past century is considered to have led to significant declines in the two grass snake species in this country, although subpopulations may now be stable or increasing in areas where this pressure has slowed or wetland restoration has taken place (Rote-Liste-Gremium Amphibien und Reptilien 2020). In Switzerland, a reduction of 37.5% over three generations was observation (OFEV and info fauna, 2023). This reduction follows a previous reduction of 43% (evaluated on random square kilometers) observed during the previous red list (Monney and Meyer, 2005).",
+    "measures": "<em>Natrix natrix</em>, encompassing the older concept of this species that included populations now referred to <em>N. helvetica</em>, is listed on Annex III of the Bern Convention. As subspecies of <em>Natrix natrix</em>, <em>N. h cetti </em>and <em>N. h. corsa</em> are listed on Annex IV of the European Union Habitat and Species Directive. It is protected by national legislation in some range countries. It is present in many protected areas throughout its range. <br/><br/>The construction of corridors underneath roads could aid in significantly reducing mortality on roads for some subpopulations (J.M. Pleguezuelos pers. comm. 2008). <em>N. helvetica </em>(as a subspecies of <em>N. natrix</em>) is categorised as Vulnerable in Switzerland (Monney and Meyer 2005). Wetland restoration is recommended to increase habitat connectivity and benefit amphibian prey populations (Rote-Liste-Gremium Amphibien und Reptilien 2020). In the UK, it is illegal to sell or harm this species.",
+    "use_trade": "There appears to be no substantial use of this species.",
+    "rationale": "Global and European regional assessment: Least Concern (LC)<br/>EU 27 regional assessment: Least Concern (LC)<br/><br/>The European Grass Snake is endemic to Europe. The species is assessed as Least Concern in both Europe and the EU 27 Member States (which encompasses the majority of the species' global range) on the basis that this species is abundant and widespread, although it is undergoing recognised declines in parts of its distribution.",
+    "trend_justification": null,
+    "taxonomic_notes": "The <em>Natrix natrix </em>complex has long been treated as a single widespread species throughout Europe and temperate Asia. Numerous subspecies have traditionally been recognized; recent molecular evidence indicates that most of these are not supported genetically (Speybroeck <em>et al</em>. 2016) but that the grass snake forms three geographically discrete clusters, each of which has recently been recognized as distinct species: <em>Natrix astreptophora </em>(Iberia) (Porkrant <em>et al</em>. 2016), <em>N. helvetica </em>(northern and central Europe) (Kindler <em>et al</em>. 2017) and <em>N. natrix</em>.<br/><br/>Kindler and Fritz (2018) \"tentatively\" elected to recognise five traditional subspecies within <em>N. helvetica </em>on the basis of molecular and morphological data: <em>N. h. cetti</em>, <em>N. h. corsa</em>, <em>N. h. lanzai </em>and <em>N. h. sicula </em>in addition to the nominate form. These authors acknowledge that <em>N. h. cetti </em>and <em>N. h. corsa </em>are not \"unambiguously\" distinct, and are indeed likely to represent the same form, but recommend retaining them as distinct for conservation purposes as both are recognized as being rare and at risk. Microsatellite data suggest that <em>N. h. cetti </em>is not distinct from <em>N. h. corsa&#160;</em>(Schultze<em>&#160;et al.&#160;</em>2020), but this was based on a small sample size and Fritz and Schmidtler (2020) advise the collection of more data before formally synonymising <em>N. h. corsa </em>within <em>N. h. cetti</em><em> </em>as this may have negative implications for the conservation of the Sardinian population. These authors also synonymized <em>N. h. lanzai </em>within <em>N. h. siculus</em>."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Freshwater Springs and Oases"
+      },
+      "code": "5_9"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_8"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_6"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_5"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Shrub Dominated Wetlands"
+      },
+      "code": "5_3"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"
+      },
+      "code": "5_2"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Water Storage Areas (over 8ha)"
+      },
+      "code": "15_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Ponds (below 8ha)"
+      },
+      "code": "15_2"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Excavations (open)"
+      },
+      "code": "15_5"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Irrigated Land (includes irrigation channels)"
+      },
+      "code": "15_7"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Canals and Drainage Channels, Ditches"
+      },
+      "code": "15_9"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Great Britain"
+      },
+      "code": "GRB-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Corsica"
+      },
+      "code": "COR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France (mainland)"
+      },
+      "code": "FRA-FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy (mainland)"
+      },
+      "code": "ITA-IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sardegna"
+      },
+      "code": "SAR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sicilia"
+      },
+      "code": "SIC-SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Switzerland"
+      },
+      "code": "CH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Monaco"
+      },
+      "code": "MC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Luxembourg"
+      },
+      "code": "LU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belgium"
+      },
+      "code": "BE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Netherlands"
+      },
+      "code": "NL"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_1_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_3_4"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_2_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of surface water (unknown use)"
+      },
+      "code": "7_2_4"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Bowles, P.",
+      "value": [
+        "Philip Bowles (IUCN SSC/CI Biodiversity Assessment Unit)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Carretero, M., Cogălniceanu, D., Corti, C., Crnobrnja-Isailović, J., Crochet, P.-A., Doronin, I.V., Halpern, B., Jablonski, D., Jelić, D., Joger, U., Kirschey, T., Lymberakis, P., Maletzky, A., Martínez-Freiría, F., Mebert, K., Mizsei, E., Razzetti, E., Romano, A., Salvi, D., Speybroeck, J. & Stănescu, F.",
+      "value": [
+        "Andreas Maletzky",
+        "Daniele Salvi",
+        "Tom Kirschey",
+        "Fernando Martínez-Freiría",
+        "Pierre-André Crochet (CNRS-UMR 5175 Centre d'Ecologie Fonctionnelle et Evolutive, 1919, route de Mende, 34293 Montpellier cedex 5, France)",
+        "Claudia Corti (Museo di Storia Naturale dell'Università di Firenze, Sezione di Zoologia \"La Specola\", Italy)",
+        "Dan Cogălniceanu (Amphibian RLA)",
+        "Konrad Mebert",
+        "Edvárd Mizsei (University of Debrecen, Hungary)",
+        "Igor Doronin (Zoological Institute, Russian Academy of Sciences)",
+        "Antonio Romano",
+        "Jelka Crnobrnja-Isailović (IUCN SSC Amphibian Specialist Group)",
+        "Dušan Jelić (Global Reptile Assessment)",
+        "Ulrich Joger (State Natural History Museum, Braunschweig, Germany)",
+        "Edoardo Razzetti",
+        "Bálint Halpern",
+        "Florina Stănescu",
+        "Miguel Carretero",
+        "Jeroen Speybroeck",
+        "Petros Lymberakis (Natural History Museum of Crete - University of Crete)",
+        "Daniel Jablonski (Comenius University in Bratislava)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "De Haan, C.C., Meyer, A. & Wilkinson, J.",
+      "value": [
+        "Andreas Meyer (SRLI Reptile Assessment)",
+        "John Wilkinson (Amphibian RLA)",
+        "Cornelius De Haan (SRLI Reptile Assessment)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Monney, J.-C. and Meyer, A. 2005. <i>Rote Liste der gefährdeten Reptilien der Schweiz.</i> BUWAL-Reihe: Vollzug Umwelt, 50 S., (BUWAL, Bern, Switzerland).",
+      "year": "2005",
+      "title": "Rote Liste der gefährdeten Reptilien der Schweiz.",
+      "author": "Monney, J.-C. and Meyer, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Geniez, P. 2018. <i>Snakes of Europe, North Africa & the Middle East: A Photographic Guide</i>. Princeton University Press, Princeton, New Jersey.",
+      "year": "2018",
+      "title": "Snakes of Europe, North Africa & the Middle East: A Photographic Guide",
+      "author": "Geniez, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Speybroeck, J. Beuckema, W., Bok, B. and Voort, J.V.D. 2016. <i>Field Guide to the Amphibians and Reptiles</i>. Bloomsbury Publishing Plc, London.",
+      "year": "2016",
+      "title": "Field Guide to the Amphibians and Reptiles",
+      "author": "Speybroeck, J. Beuckema, W., Bok, B. and Voort, J.V.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Speybroeck, J., Beukema, W., Bok, B., and van der Woort, J. 2016. <i>Field Guide to the Amphibians & Reptiles of Britain and Europe</i>. Bloomsbury, London.",
+      "year": "2016",
+      "title": "Field Guide to the Amphibians & Reptiles of Britain and Europe",
+      "author": "Speybroeck, J., Beukema, W., Bok, B., and van der Woort, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kindler, C., Chèvre, M., Ursenbacher, S., Böhme, W., Hille, A., Jablonski, D., Vamberger, M. and Fritz, U. 2017. Hybridization patterns in two contact zones of grass snakes reveal a new Central European snake species. <i>Scientific Reports</i> 7: 7378.",
+      "year": "2017",
+      "title": "Hybridization patterns in two contact zones of grass snakes reveal a new Central European snake species",
+      "author": "Kindler, C., Chèvre, M., Ursenbacher, S., Böhme, W., Hille, A., Jablonski, D., Vamberger, M. and Fritz, U.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Porkrant, F., KIndler, C., Ivanov, M., Cheylan, M., Geniez, P., Böhme, W. and Fritz. U. 2016. Integrative taxonomy provides evidence for the species status of the Ibero-Mahgrebian grass snake <i>Natrix natrix</i>. <i>Biological Journal of the Linnean Society</i> 118(4): 873-888.",
+      "year": "2016",
+      "title": "Integrative taxonomy provides evidence for the species status of the Ibero-Mahgrebian grass snake <i>Natrix natrix</i>",
+      "author": "Porkrant, F., KIndler, C., Ivanov, M., Cheylan, M., Geniez, P., Böhme, W. and Fritz. U.",
+      "citation_short": null
+    },
+    {
+      "citation": "Spellerberg I. F. 2002. <i>Amphibians and Reptiles of North-west Europe, their Natural History, Ecology and Conservation</i>. Science Publishers, Inc., NH, USA.",
+      "year": "2002",
+      "title": "Amphibians and Reptiles of North-west Europe, their Natural History, Ecology and Conservation",
+      "author": "Spellerberg I. F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Graitson, E., Barbraud, C. and Bonnet, X. 2018. Catastrophic impact of wild boars: insufficient hunting pressure pushes snakes to the brink. <i>Animal Conservation</i> 22: 165-176.",
+      "year": "2018",
+      "title": "Catastrophic impact of wild boars: insufficient hunting pressure pushes snakes to the brink",
+      "author": "Graitson, E., Barbraud, C. and Bonnet, X",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2024. The IUCN Red List of Threatened Species. Version 2024-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 27 June 2024).",
+      "year": "2024",
+      "title": "The IUCN Red List of Threatened Species. Version 2024-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2024-1"
+    },
+    {
+      "citation": "Santos, X., Pleguezuelos, J.M., Chergui, B., Geniez, P. and Cheylan, M. 2022. Citizen-science data shows long-term decline of snakes in southwestern Europe. <i>Biodiversity and Conservation</i> 31: 1609–1625. https://doi.org/10.1007/s10531-022-02415-8.",
+      "year": "2022",
+      "title": "Citizen-science data shows long-term decline of snakes in southwestern Europe",
+      "author": "Santos, X., Pleguezuelos, J.M., Chergui, B., Geniez, P. and Cheylan, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "OFEV and info fauna. 2023. Liste rouge des reptiles. Espèces menacées en Suisse.  L’environnement pratique n° 2023. Office fédéral de l’environnement et Info fauna – Karch, Berne and Neushatel.",
+      "year": "2023",
+      "title": "Liste rouge des reptiles. Espèces menacées en Suisse",
+      "author": "OFEV and info fauna  ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rote-Liste-Gremium Amphibien und Reptilien. 2020. Rote Liste und Gesamtartenliste der Reptilien (Reptilia) Deutschlands. <i>Naturschutz und Biologische Vielfalt</i> 170(3): 64.",
+      "year": "2020",
+      "title": "Rote Liste und Gesamtartenliste der Reptilien (Reptilia) Deutschlands",
+      "author": "Rote-Liste-Gremium Amphibien und Reptilien",
+      "citation_short": null
+    },
+    {
+      "citation": "Fritz, U. and Schmidtler, J.F. 2020. The Fifth Labour of Heracles: Cleaning the Linnean stable of names for grass snakes (<i>Natrix astreptophora</i>, <i>N. helvetica</i>, <i>N. natrix</i> sensu stricto). <i>Vertebrate Zoology</i> 70(4): 621-665.",
+      "year": "2020",
+      "title": "The Fifth Labour of Heracles: Cleaning the Linnean stable of names for grass snakes (<i>Natrix astreptophora</i>, <i>N. helvetica</i>, <i>N. natrix</i> sensu stricto)",
+      "author": "Fritz, U. and Schmidtler, J.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kindler, C. and Fritz, U. 2018. Phylogeography and taxonomy of the barred grass snake (<i>Natrix helvetica</i>) with a discussion of the subspecies category in zoology. <i>Vertebrate Zoology</i> 68(3): 253-267.",
+      "year": "2018",
+      "title": "Phylogeography and taxonomy of the barred grass snake (<i>Natrix helvetica</i>) with a discussion of the subspecies category in zoology",
+      "author": "Kindler, C. and Fritz, U.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schultze N., Spitzweg C., Corti C., Delaugerre M., Di Nicola MR., Geniez P., Lapini L., Liuzzi C., Lunghi E., Novarini N. and Picariello O. 2020. Mitochondrial ghost lineages blur phylogeography and taxonomy of <i>Natrix helvetica</i> and <i>N. natrix</i> in Italy and Corsica. <i>Zoologica Scripta</i> 49(4): 395-411.",
+      "year": "2020",
+      "title": "Mitochondrial ghost lineages blur phylogeography and taxonomy of <i>Natrix helvetica</i> and <i>N. natrix</i> in Italy and Corsica",
+      "author": "Schultze N., Spitzweg C., Corti C., Delaugerre M., Di Nicola MR., Geniez P., Lapini L., Liuzzi C., Lunghi E., Novarini N. and Picariello O.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    },
+    {
+      "description": {
+        "en": "Europe"
+      },
+      "code": "2"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

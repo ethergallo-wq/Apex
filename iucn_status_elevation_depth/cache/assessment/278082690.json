@@ -1,0 +1,917 @@
+{
+  "assessment_date": "2024-08-09T01:00:00.000+01:00",
+  "year_published": "2025",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 21974,
+  "criteria": "A2cd",
+  "url": "https://www.iucnredlist.org/species/21974/278082690",
+  "citation": "Ferreiro, A., Smith, P., Aliaga-Rossel, E. & Abba, A.M. 2025. Tolypeutes matacus (errata version published in 2025). The IUCN Red List of Threatened Species 2025: e.T21974A278082690. Accessed on 15 May 2026.",
+  "assessment_id": 278082690,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 21974,
+    "scientific_name": "Tolypeutes matacus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CINGULATA",
+    "family_name": "CHLAMYPHORIDAE",
+    "genus_name": "Tolypeutes",
+    "species_name": "matacus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Desmarest, 1804)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Anteater, Sloth and Armadillo Specialist Group",
+        "url": "http://www.xenarthrans.org/index",
+        "description": "Chair: Mariella Superina (email: mariella@superina.ch)\nRed List Authority Coordinator: Agustin Abba (email: abbaam@yahoo.com.ar)\nNewsletter: http://www.xenarthrans.org/bibliography/edentata"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Corechi",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Kugelgürteltier",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Mataco Bola",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Quirquincho Bola",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Tatou du Sud",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Tatú Bolita",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "Southern Three-banded Armadillo",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Loricatus matacus Desmarest, 1804",
+        "status": "ACCEPTED",
+        "genus_name": "Loricatus",
+        "species_name": "matacus",
+        "species_author": "Desmarest, 1804",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Near Threatened"
+    },
+    "code": "NT"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 800,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "4",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<em>Tolypeutes matacus</em> is found from eastern Bolivia and southwestern Brazil, south through the Gran Chaco of Paraguay, to Argentina, with San Luis province being its southernmost limit (Feijó&#160;<em>et al</em>. 2015, Ferreiro <em>et al</em>. 2022). The species was once present in southern Buenos Aires Province (Yepes 1928) but recent surveys suggest that it is now extinct in this area (Abba and Vizcaíno 2008, 2011; Abba <em>et al</em>. 2012). The reason for its disappearance from Buenos Aires is unknown, but may be related to climate. It ranges from sea level up to 800 m asl (Argentina).",
+    "population": "Few data are available about the abundance of&#160;<em>Tolypeutes matacus</em>.&#160;It was previously abundant in most xeric parts of the Paraguayan Chaco and Bolivia (Redford and Eisenberg 1992, Meritt 2008, Noss&#160;<em>et al</em>. 2010, Aguirre<em>&#160;et al</em>. 2019), but field workers in the area have reported a decline in recent years, at least in the Paraguayan subpopulations (P. Smith pers. comm. 2024). More than 20 years ago, it was recorded at densities of 1.9 animals per km² in the Bolivian Chaco (Cuéllar 2002) and of 0.28 animals per km² in the Pantanal of Mato Grosso in Brazil (Schaller 1983). There are no population data of this armadillo in Argentina, but based on the higher number of presence records, higher genetic diversity (Ferreiro&#160;<em>et al</em>. 2023) and comments from locals, it is thought to have a higher abundance in the provinces of Chaco and Formosa. The wild population is decreasing, mainly due to intense hunting and habitat loss.<br/><br/>Although no data exist on the longevity of wild individuals, generation length has been estimated at four years based on an extrapolation from other armadillo species.",
+    "habitats": "This armadillo, which can roll into a ball when threatened, is found in areas of dry vegetation within the Chaco (Bolkovic <em>et al</em>. 1995). Although capable of digging its own burrows (Attias <em>et al</em>. 2015), it often uses abandoned burrows of other species or hides in dense vegetation. It has a slow reproductive rate; the females give birth to a single young per litter and per year. Its generation length has been estimated at four years; this estimate is based on an extrapolation from other armadillo species.",
+    "threats": "<em>Tolypeutes matacus</em> is threatened by hunting for food. In Santiago del Estero, Argentina, it was found to constitute 55% of the wild fauna in the diet of local people. In the Argentine Chaco it made up 18.4% of the diet of local people and was consumed a mean of 16.5 days per year (+/-1.07) (Altrichter 2006). In Bolivia it is the second most hunted armadillo species by the Izoceño indigenous group, contributing 2% of their total diet.<br/><br/>As it is less fossorial than other species and often active by day, it is easier to hunt than other armadillo species. It is also threatened by habitat destruction through conversion of suitable habitat to cultivated land; however, it is able to adapt to low levels of agricultural disturbance. This species is exported to zoos and, especially, for the pet trade, and there is a high mortality of individuals during this export process. It is sometimes killed on roads. The slow reproductive rate suggests that it may struggle to recover from steep population declines.",
+    "measures": "<em>Tolypeutes matacus</em> has been recorded from a number of protected areas but with no more than 12% of its suitable area under protection (Ferreiro 2022; A. Ferreiro pers. comm. 2024). There is a Population Management Plan in place for the captive populations in North American and European zoos.",
+    "use_trade": "This armadillo is heavily hunted for food and used as a pet species, especially by indigenous groups both within its range and in other countries. It is also used to make handicrafts. In Bolivia, overhunting and habitat destruction present a worrying threat to the species (Noss <em>et al</em>. 2010). In 2010, Paraguay established quotas for harvesting this species for export abroad under the Proyecto de Conservación y Utilización de la Vida Silvestre, and landowners received a payment for each individual captured on their land (P. Smith pers. comm. 2024). However, captive breeding programmes in the USA have reduced the need to import wild-caught three-banded armadillos especially to zoos, which has reduced hunting pressure.",
+    "rationale": "<em>Tolypeutes matacus</em> is listed as Near Threatened because this species is probably in significant decline (albeit at a rate of less than 30% over 12 years) because of widespread habitat loss through much of its range, and because of exploitation for food, thus making the species close to qualifying for Vulnerable under criterion A2cd.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Savanna - Moist"
+      },
+      "code": "2_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Catamarca"
+      },
+      "code": "AGW-CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tucumán"
+      },
+      "code": "AGW-TU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mato Grosso do Sul"
+      },
+      "code": "BZC-MS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Santiago del Estero"
+      },
+      "code": "AGW-SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Paraguay"
+      },
+      "code": "PY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chaco"
+      },
+      "code": "AGE-CH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Córdoba"
+      },
+      "code": "AGE-CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mato Grosso"
+      },
+      "code": "BZC-MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Formosa"
+      },
+      "code": "AGE-FO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "La Rioja"
+      },
+      "code": "AGW-LR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mendoza"
+      },
+      "code": "AGW-ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Salta"
+      },
+      "code": "AGW-SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "San Juan"
+      },
+      "code": "AGW-SJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "San Luis"
+      },
+      "code": "AGW-SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bolivia, Plurinational States of"
+      },
+      "code": "BO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Santa Fé"
+      },
+      "code": "AGE-SF"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Area-based Management Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Harvest & Trade Management Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Handicrafts, jewellery, etc."
+      },
+      "code": "12"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Unknown",
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Scale Unknown/Unrecorded"
+      },
+      "code": "2_1_4"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Ferreiro, A., Smith, P., Aliaga-Rossel, E. & Abba, A.M.",
+      "value": [
+        "Agustín Abba (CONICET)",
+        "Paul Smith (Fauna Paraguay)",
+        "E Aliaga-Rossel",
+        "Alejandro Ferreiro"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Superina, M. & Morales-Campos, J.",
+      "value": [
+        "Mariella Superina (CONICET)",
+        "Jesús Morales-Campos (Independent)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Superina, M.",
+      "value": [
+        "Mariella Superina (CONICET)"
+      ]
+    },
+    {
+      "credit_type_name": "institutions",
+      "full": "IUCN SSC Anteater, Sloth and Armadillo Specialist Group",
+      "value": [
+        "IUCN SSC Anteater, Sloth and Armadillo Specialist Group"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This errata assessment has been created to fix various formatting and typographical issues. References cited in the text but missing from the Bibliography have also been added."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Redford, K.H. and Eisenberg, J.F. 1992. <i>Mammals of the Neotropics, The Southern Cone: Chile, Argentina, Uruguay, Paraguay</i>. University of Chicago Press, Chicago, USA.",
+      "year": "1992",
+      "title": "Mammals of the Neotropics, The Southern Cone: Chile, Argentina, Uruguay, Paraguay",
+      "author": "Redford, K.H. and Eisenberg, J.F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Meritt Jr., D.A. 2008. Xenarthrans of the Paraguayan Chaco. In: S.F. Vizcaino and W.J. Loughry (eds), <i>The Biology of the Xenarthra</i>, pp. 294-299. University Press of Florida, Gainesville, FL, USA.",
+      "year": "2008",
+      "title": "Xenarthrans of the Paraguayan Chaco",
+      "author": "Meritt Jr., D.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gardner, A.L. 2005. Order Cingulata. In: D.E. Wilson and D.M. Reeder (eds), <i>Mammal Species of the World: A taxonomic and geographic reference. Third edition.</i>, pp. 94-99. The Johns Hopkins University Press, Baltimore, Maryland, USA.",
+      "year": "2005",
+      "title": "Order Cingulata",
+      "author": "Gardner, A.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tarifa, T. 2009. <i>Tolypeutes matacus</i>. In: Aguirre, L.F., Aguayo, R., Balderrama, J.A., Cortez, C., Tarifa, T., and Rocha O., O. (eds), <i>Libro rojo de la fauna silvestre de vertebrados de Bolivia</i>, pp. 499-502. Ministerio de Medio Ambiente y Agua, La Paz.",
+      "year": "2009",
+      "title": "<i>Tolypeutes matacus</i>",
+      "author": "Tarifa, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cuellar, E. 2002. Census of the three-banded armadillo <i>Tolypeutes matacus</i> using dogs, southern Chaco, Bolivia. <i>Mammalia</i> 66: 448-451.",
+      "year": "2002",
+      "title": "Census of the three-banded armadillo <i>Tolypeutes matacus</i> using dogs, southern Chaco, Bolivia",
+      "author": "Cuellar, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Abba, A.M. and Vizcaíno, S.F. 2008. Los xenartros (Mammalia: Xenarthra) del Museo Argentino de Ciencias Naturales 'Bernardino Rivadavia' y el Museo de La Plata. <i>Contribuciones del MACN</i> 4: 1-37.",
+      "year": "2008",
+      "title": "Los xenartros (Mammalia: Xenarthra) del Museo Argentino de Ciencias Naturales 'Bernardino Rivadavia' y el Museo de La Plata.",
+      "author": "Abba, A.M. and Vizcaíno, S.F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Schaller, G. B. 1983. Mammals and their biomass on a Brazilian ranch. <i>Arquivos Zoologia</i> 31(1): 1-36.",
+      "year": "1983",
+      "title": "Mammals and their biomass on a Brazilian ranch",
+      "author": "Schaller, G. B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Abba, A.M., Tognelli, M.F., Seitz, V.P., Bender, J.B. and Vizcaíno, S.F. 2012. Distribution of extant xenarthrans (Mammalia: Xenarthra) in Argentina using species distribution models. <i>Mammalia</i> 76: 123-136.",
+      "year": "2012",
+      "title": "Distribution of extant xenarthrans (Mammalia: Xenarthra) in Argentina using species distribution models",
+      "author": "Abba, A.M., Tognelli, M.F., Seitz, V.P., Bender, J.B. and Vizcaíno, S.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Noss, A., Cuéllar, E., Gómez, H., Tarifa, T. and Aliaga-Rossel, E. 2010. Dasypodidae. In: R.B. Wallace, H. Gómez, Z.R. Porcel and D.I. Rumiz (eds), <i>Distribución, ecología y conservación de los mamíferos medianos y grandes de Bolivia</i>, pp. 173-212. Centro de Ecología Difusión Simón I. Patiño, Santa Cruz de la Sierra, Bolivia.",
+      "year": "2010",
+      "title": "Dasypodidae",
+      "author": "Noss, A., Cuéllar, E., Gómez, H., Tarifa, T. and Aliaga-Rossel, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cuéllar, E. 2008. Biology and ecology of armadillos in the Bolivian Chaco. In: S.F. Vizcaíno and W.J. Loughry (eds), <i>The Biology of the Xenarthra</i>, pp. 306-312. University Press of Florida, Gainesville.",
+      "year": "2008",
+      "title": "Biology and ecology of armadillos in the Bolivian Chaco",
+      "author": "Cuéllar, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Abba, A.M. and Vizcaíno, S.F. 2011. Distribución de los armadillos (Xenarthra: Dasypodidae) en la provincia de Buenos Aires, Argentina. <i>Mastozoología Neotropical</i> 18: 185-206.",
+      "year": "2011",
+      "title": "Distribución de los armadillos (Xenarthra: Dasypodidae) en la provincia de Buenos Aires, Argentina",
+      "author": "Abba, A.M. and Vizcaíno, S.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Noss, A.J. 2013. Seguimiento del corechi (<i>Tolypeutes matacus</i>) por medio de carreteles de hilo en el Chaco boliviano. <i>Edentata</i> 14: 15-22.",
+      "year": "2013",
+      "title": "Seguimiento del corechi (<i>Tolypeutes matacus</i>) por medio de carreteles de hilo en el Chaco boliviano",
+      "author": "Noss, A.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bolkovic, M. L., S. M. Caziani, and J. J. Protomastro. 1995. Food habits of the three-banded armadillo (Xenarthra: Dasypodidae) in the dry Chaco, Argentina. <i>Journal of Mammalogy</i> 76: 1199-1204.",
+      "year": "1995",
+      "title": "Food habits of the three-banded armadillo (Xenarthra: Dasypodidae) in the dry Chaco, Argentina.",
+      "author": "Bolkovic, M. L., S. M. Caziani, and J. J. Protomastro.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yepes, J. 1928. Los Edentata argentinos. <i>Revista Universitaria de Buenos Aires</i> 2a(1): 1-50.",
+      "year": "1928",
+      "title": "Los Edentata argentinos.",
+      "author": "Yepes, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Aguirre, L.F., Tarifa, T., Wallace, R.B., Bernal, N., Siles, L., Aliaga-Rossel, E. and Salazar-Bravo, J. 2019. Lista actualizada y comentada de los mamíferos de Bolivia- Updated and annotated checklist of mammals from Bolivia. <i>Ecología en Bolivia</i> 54(2): 107-147.",
+      "year": "2019",
+      "title": "Lista actualizada y comentada de los mamíferos de Bolivia- Updated and annotated checklist of mammals from Bolivia",
+      "author": "Aguirre, L.F., Tarifa, T., Wallace, R.B., Bernal, N., Siles, L., Aliaga-Rossel, E. and Salazar-Bravo, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Aliaga-Rossel, E., Quiroga, C.J., Velez-Liendo, X., Romero-Muñoz, A., Porcel, Z., Wallace, R.B., Ayala, G.M., Viscarra, M.E., Cuéllar Soto, E., Tarifa, E. and Noss, A. 2021. Distribution, ecology, and conservation of Xenarthra in Bolivia - update to 2021. <i>Edentata</i> 22: 16-37.",
+      "year": "2021",
+      "title": "Distribution, ecology, and conservation of Xenarthra in Bolivia - update to 2021",
+      "author": "Aliaga-Rossel, E., Quiroga, C.J., Velez-Liendo, X., Romero-Muñoz, A., Porcel, Z., Wallace, R.B., Ayala, G.M., Viscarra, M.E., Cuéllar Soto, E., Tarifa, E. and Noss, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2025. The IUCN Red List of Threatened Species. Version 2025-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 27 March 2025).",
+      "year": "2025",
+      "title": "The IUCN Red List of Threatened Species. Version 2025-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2025-1"
+    },
+    {
+      "citation": "Superina, M. and Abba, A.M. 2018. Family Chlamyphoridae (Chlamyphorid armadillos). In: Wilson, D.E. and Mittermeier, R.A. (eds), <i>Handbook of the mammals of the world. Volume 8: insectivores, sloths and colugos</i>, pp. 48-73. Lynx Edicions, Barcelona.",
+      "year": "2018",
+      "title": "Family Chlamyphoridae (Chlamyphorid armadillos)",
+      "author": "Superina, M. and Abba, A.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Altrichter, M. 2006. Wildlife in the life of local people of the semi-arid Argentine Chaco. <i>Biodiversity and Conservation</i> 15: 2719-2736.",
+      "year": "2006",
+      "title": "Wildlife in the life of local people of the semi-arid Argentine Chaco",
+      "author": "Altrichter, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Attias, N., Miranda, F.R., Sena, L.M.M., Tomas, W.M. and Mourão, G.M. 2016. Yes, they can! Three-banded armadillos <i>Tolypeutes</i> sp. (Cingulata: Dasypodidae) dig their own burrows. <i>Zoologia</i> 33: e20160035.",
+      "year": "2016",
+      "title": "Yes, they can! Three-banded armadillos <i>Tolypeutes</i> sp. (Cingulata: Dasypodidae) dig their own burrows",
+      "author": "Attias, N., Miranda, F.R., Sena, L.M.M., Tomas, W.M. and Mourão, G.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ferreiro, A.M. 2022. Filogeografía y modelado de distribución potencial para determinar unidades de conservación de <i>Tolypeutes matacus</i> (Dasypodidae, Xenarthra) en Argentina. Universidad Nacional de Córdoba.",
+      "year": "2022",
+      "title": "Filogeografía y modelado de distribución potencial para determinar unidades de conservación de <i>Tolypeutes matacus</i> (Dasypodidae, Xenarthra) en Argentina",
+      "author": "Ferreiro, A.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ferreiro, A.M., Soibelzon, E., Pinotti, J.D., Poljak, S. and Chiappero, M.B. 2022. Reconstructing the distribution of Chacoan biota from current and past evidence: the case of the southern three‑banded armadillo <i>Tolypeutes matacus</i> (Desmarest, 1804). <i>Zoological Journal of the Linnean Society</i> 200(3): 825-836.",
+      "year": "2022",
+      "title": "Reconstructing the distribution of Chacoan biota from current and past evidence: the case of the southern three‑banded armadillo <i>Tolypeutes matacus</i> (Desmarest, 1804)",
+      "author": "Ferreiro, A.M., Soibelzon, E., Pinotti, J.D., Poljak, S. and Chiappero, M.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2025. The IUCN Red List of Threatened Species. Version 2025-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 October 2025).",
+      "year": "2025",
+      "title": "The IUCN Red List of Threatened Species. Version 2025-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2025-2"
+    },
+    {
+      "citation": "Feijó, A., Garbino, G.S.T., Campos, B.A.T.P., Rocha, P.A., Ferrari, S.F. and Langguth, A. 2015. Distribution of <i>Tolypeutes</i> Illiger, 1811 (Xenarthra: Cingulata) with comments on its biogeography and conservation. <i>Zoological Science</i> 32: 77-87.",
+      "year": "2015",
+      "title": "Distribution of <i>Tolypeutes</i> Illiger, 1811 (Xenarthra: Cingulata) with comments on its biogeography and conservation",
+      "author": "Feijó, A., Garbino, G.S.T., Campos, B.A.T.P., Rocha, P.A., Ferrari, S.F. and Langguth, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ferreiro, A.M., Soibelzon, E., Pinotti, J.D., Poljak, S. and Chiappero, M.B. 2023. Effects of Quaternary climatic oscillations over the Chacoan fauna: phylogeographic patterns in the southern three-banded armadillo <i>Tolypeutes matacus</i> (Cingulata: Chlamyphoridae). <i>Zoological Journal of the Linnean Society</i> 200(3): 825-836. DOI: 10.1093/zoolinnean/zlad091.",
+      "year": "2023",
+      "title": "Effects of Quaternary climatic oscillations over the Chacoan fauna: phylogeographic patterns in the southern three-banded armadillo <i>Tolypeutes matacus</i> (Cingulata: Chlamyphoridae)",
+      "author": "Ferreiro, A.M., Soibelzon, E., Pinotti, J.D., Poljak, S. and Chiappero, M.B.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

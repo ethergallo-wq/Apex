@@ -1,0 +1,855 @@
+{
+  "assessment_date": "2024-05-10T01:00:00.000+01:00",
+  "year_published": "2025",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 199899729,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/199899729/199899746",
+  "citation": "Miranda, F., Pool, M. & De Thoisy, B. 2025. Cyclopes didactylus. The IUCN Red List of Threatened Species 2025: e.T199899729A199899746. Accessed on 15 May 2026.",
+  "assessment_id": 199899746,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 199899729,
+    "scientific_name": "Cyclopes didactylus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "PILOSA",
+    "family_name": "CYCLOPEDIDAE",
+    "genus_name": "Cyclopes",
+    "species_name": "didactylus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Linnaeus, 1758",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Anteater, Sloth and Armadillo Specialist Group",
+        "url": "http://www.xenarthrans.org/index",
+        "description": "Chair: Mariella Superina (email: mariella@superina.ch)\nRed List Authority Coordinator: Agustin Abba (email: abbaam@yahoo.com.ar)\nNewsletter: http://www.xenarthrans.org/bibliography/edentata"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Common Pygmy Anteater",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Dwergmiereneter",
+        "language": "dut"
+      },
+      {
+        "main": false,
+        "name": "Fourmilier Nain",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Hormiguero Sedoso Común",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Myrmidon",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Tamanduaí",
+        "language": "por"
+      },
+      {
+        "main": true,
+        "name": "Common Silky Anteater",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Myrmecophaga didactyla Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Myrmecophaga",
+        "species_name": "didactyla",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Eurypterna didactyla (Linnaeus, 1758)",
+        "status": "ACCEPTED",
+        "genus_name": "Eurypterna",
+        "species_name": "didactyla",
+        "species_author": "(Linnaeus, 1758)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Cyclothurus didactyla (Linnaeus, 1758)",
+        "status": "ACCEPTED",
+        "genus_name": "Cyclothurus",
+        "species_name": "didactyla",
+        "species_author": "(Linnaeus, 1758)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 1500,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": "Unknown",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "2500000",
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "The Common Silky Anteater is known from eastern Colombia, eastern and southern Venezuela, Trinidad Island, the Guianas, and northern and northeastern Brazil, with the southern limit being the São Francisco River. <em>Cyclopes didactylus</em> has a genetically separated subpopulation (i.e., a disjunct distribution) in Brazil. One is limited to the northeast of the Brazilian Amazon (state of Pará), towards the Brazilian states of Maranhão and Piauí, and the other is a disjunct subpopulation in the northeastern Atlantic forest, including the states of Rio Grande do Norte, Paraíba, Pernambuco, and Alagoas.",
+    "population": "The population status and trend of&#160;<span style=\"font-style: italic;\">C. didactylus</span> are not known, but presumably the tendency is stable.&#160;The population density has been estimated at 4.62-5.50 individuals/km<sup>2</sup>&#160;in a mangrove swamp on Trinidad Island (Bhagratty&#160;<em>et al</em>. 2013). <span lang=\"EN-US\">It is quite abundant, but difficult to observe in the Brazilian Amazon (F.R. Miranda pers. comm. 2022).",
+    "habitats": "The common silky anteater has a head-body length of 20 cm and a tail of 16.5–29.5 cm length. It weighs around 300 grams. The general colour is brownish yellow, with a grey rump, legs, and tail. There is an irregular but distinctive dorsal stripe, with evident dorsal and ventral black stripes.&#160;<em>Cyclopes didactylus</em>&#160;can be found in evergreen tropical, mangrove, and secondary forests. The subpopulation in north-eastern Brazil is restricted to tropical moist lowland forests in the Atlantic Forest biome. It has been observed in red and white mangrove habitats. Not much is known about the ecology of this arboreal anteater. On Trinidad Island, population density has been estimated at 4.6–5.5 individuals per&#160;km².&#160;This is an opportunistic forager that almost entirely feeds on ants, but can also ingest beetles.&#160;No termites have been identified in any dietary study of&#160;<em>Cyclopes</em>&#160;(Miranda&#160;<em>et al</em>. 2009).&#160;Female common silky anteaters usually give birth to a single young per year, usually in September-November, after a gestation of 120–150 days.",
+    "threats": "<span lang=\"EN-US\"><span class=\"msoIns\">The species&#160;is affected by habitat loss, especially in the Brazilian Atlantic forest where large areas of native forests have been replaced by sugarcane plantations.<span class=\"msoIns\">&#160;In Suriname, the indigenous people from the hinterland consi<span class=\"msoIns\">der that&#160;<span class=\"msoIns\">the species&#160;<span class=\"msoIns\">brings bad luck, because of which they always kill it when they find one (M. Pool pers. comm. 2022).</span></span></span>",
+    "measures": "<span style=\"font-style: italic;\">Cyclopes didactylus</span> is present in a number of protected areas.",
+    "use_trade": "Silky anteaters are sometimes captured and kept as a pet species in the country of origin.",
+    "rationale": "<em>Cyclopes didactylus</em> is listed as Least Concern in view of its wide distribution, presumed large population, its occurrence in a number of protected areas, its tolerance of a degree of habitat modification, and because it is unlikely to be declining fast enough to qualify for listing in a more threatened category.",
+    "trend_justification": null,
+    "taxonomic_notes": "Until recently, it was thought that there was only a single species of silky anteaters. However, a 10-year long investigation by Miranda&#160;<em>et al.</em>&#160;(2018) provided evidence that there are actually seven species of&#160;<em>Cyclopes</em>.&#160;<span lang=\"EN-US\">Phylogeographic studies are being carried out to determine the taxonomic status of the disjunct subpopulation of the Brazilian Amazon and Atlantic Forest, which has been separated from the main population for more than 2.3 million years."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Mangrove Vegetation Above High Tide Level"
+      },
+      "code": "1_7"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pernambuco"
+      },
+      "code": "BZE-PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pará"
+      },
+      "code": "BZN-PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maranhão"
+      },
+      "code": "BZE-MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela (mainland)"
+      },
+      "code": "VEN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tocantins"
+      },
+      "code": "BZN-TO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rio Grande do Norte"
+      },
+      "code": "BZE-RN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Roraima"
+      },
+      "code": "BZN-RM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia (mainland)"
+      },
+      "code": "CLM-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Trinidad and Tobago"
+      },
+      "code": "TT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Amapá"
+      },
+      "code": "BZN-AP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Paraíba"
+      },
+      "code": "BZE-PB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Amazonas"
+      },
+      "code": "BZN-AZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Suriname"
+      },
+      "code": "SR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Alagoas"
+      },
+      "code": "BZE-AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ceará"
+      },
+      "code": "BZE-CE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Piauí"
+      },
+      "code": "BZE-PI"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "2_2",
+      "description": {
+        "en": "Area-based Management Plan"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Miranda, F., Pool, M. & De Thoisy, B.",
+      "value": [
+        "Flavia Miranda (CONICET)",
+        "Monique Pool (Green Heritage Fund Suriname)",
+        "Benoit De Thoisy (IUCN SSC Cat Specalist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Morales-Campos, J. & Abba, A.M.",
+      "value": [
+        "Agustín Abba (CONICET)",
+        "Jesús Morales-Campos (Independent)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Noss, A., Santos, P., Schappert, I., Turcios Casco, M., Aliaga-Rossel, E. & Wallace, R.B.",
+      "value": [
+        "Andrew Noss",
+        "Robert B. Wallace (IUCN SSC Specialist Group member - several groups)",
+        "E Aliaga-Rossel",
+        "Manfredo Turcios Casco",
+        "Paloma Marques Santos",
+        "Ilona Schappert"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Superina, M. & Tognelli, M.F.",
+      "value": [
+        "Marcelo Tognelli (IUCN)",
+        "Mariella Superina (CONICET)"
+      ]
+    },
+    {
+      "credit_type_name": "institutions",
+      "full": "IUCN SSC Anteater, Sloth and Armadillo Specialist Group",
+      "value": [
+        "IUCN SSC Anteater, Sloth and Armadillo Specialist Group"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Lord, R. 2000. <i>Wild mammals of Venezuela</i>. Armitano Editores, C. A., Caracas, Venezuela.",
+      "year": "2000",
+      "title": "Wild mammals of Venezuela",
+      "author": "Lord, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Engstrom, M. and Lim, B. 2000. <i>Checklist of the mammals of Guyana</i>. Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "2000",
+      "title": "Checklist of the mammals of Guyana",
+      "author": "Engstrom, M. and Lim, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Miranda, F., Veloso, R., Superina, M. and Zara, F.J. 2009. Food habits of wild silky anteaters (<i>Cyclopes didactylus</i>) of São Luis do Maranhão, Brazil. <i>Edentata</i> 8-10: 1-5.",
+      "year": "2009",
+      "title": "Food habits of wild silky anteaters (<i>Cyclopes didactylus</i>) of São Luis do Maranhão, Brazil",
+      "author": "Miranda, F., Veloso, R., Superina, M. and Zara, F.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bhagratty, J., Taylor, K., Lawrence, A., Devenish-Nelson, E.S. and Nelson, H.P. 2013. Population density of silky anteaters (<i>Cyclopes didactylus</i> Xenarthra: Cyclopedidae) in a protected mangrove swamp on the island of Trinidad. <i>Mammalia</i> 77(4): 447-450.",
+      "year": "2013",
+      "title": "Population density of silky anteaters (<i>Cyclopes didactylus</i> Xenarthra: Cyclopedidae) in a protected mangrove swamp on the island of Trinidad",
+      "author": "Bhagratty, J., Taylor, K., Lawrence, A., Devenish-Nelson, E.S. and Nelson, H.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hayssen, V., Miranda, F. and Pasch, B. 2012. <i>Cyclopes didactylus</i> (Pilosa: Cyclopedidae). <i>Mammalian Species</i> 44(895): 51-58.",
+      "year": "2012",
+      "title": "<i>Cyclopes didactylus</i> (Pilosa: Cyclopedidae)",
+      "author": "Hayssen, V., Miranda, F. and Pasch, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Miranda, F.R., Casali, D.M., Perini, F.A., Machado, F.A. and Santos, F.R. 2018. Taxonomic review of the genus <i>Cyclopes</i> Gray, 1821 (Xenarthra: Pilosa), with the revalidation and description of new species. <i>Zoological Journal of the Linnean Society</i> 183: 687-721.",
+      "year": "2018",
+      "title": "Taxonomic review of the genus <i>Cyclopes</i> Gray, 1821 (Xenarthra: Pilosa), with the revalidation and description of new species",
+      "author": "Miranda, F.R., Casali, D.M., Perini, F.A., Machado, F.A. and Santos, F.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2025. The IUCN Red List of Threatened Species. Version 2025-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 27 March 2025).",
+      "year": "2025",
+      "title": "The IUCN Red List of Threatened Species. Version 2025-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2025-1"
+    },
+    {
+      "citation": "Miranda, F.R. 2018. Family Cyclopedidae (silky anteaters). In: D.E. Wilson and R.A. Mittermeier (eds), <i>Handbook of the mammals of the world - volume 8: insectivores, sloths and colugos</i>, pp. 92-102. Lynx Edicions, Barcelona.",
+      "year": "2018",
+      "title": "Family Cyclopedidae (silky anteaters)",
+      "author": "Miranda, F.R.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

@@ -1,0 +1,647 @@
+{
+  "assessment_date": "2022-08-15T01:00:00.000+01:00",
+  "year_published": "2022",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 219709082,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/219709082/219667057",
+  "citation": "IUCN SSC Amphibian Specialist Group 2022. Theloderma corticale. The IUCN Red List of Threatened Species 2022: e.T219709082A219667057. Accessed on 15 May 2026.",
+  "assessment_id": 219667057,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 219709082,
+    "scientific_name": "Theloderma corticale",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AMPHIBIA",
+    "order_name": "ANURA",
+    "family_name": "RHACOPHORIDAE",
+    "genus_name": "Theloderma",
+    "species_name": "corticale",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Boulenger, 1903)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Amphibian Specialist Group",
+        "url": "https://www.iucn-amphibians.org/",
+        "description": "Chair: Ariadne Angulo (email: aangulo@amphibians.org)\nRed List Authority Coordinator: Jennifer Luedtke (email: jluedtke@amphibians.org)\nNewsletter: http://www.amphibians.org/froglog/"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Moss Bug-eyed Frog",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "Tonkin Bug-eyed Frog",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Rhacophorus corticalis Boulenger, 1903",
+        "status": "ACCEPTED",
+        "genus_name": "Rhacophorus",
+        "species_name": "corticalis",
+        "species_author": "Boulenger, 1903",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Rhacophorus fruhstorferi Ahl, 1927",
+        "status": "ACCEPTED",
+        "genus_name": "Rhacophorus",
+        "species_name": "fruhstorferi",
+        "species_author": "Ahl, 1927",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Theloderma kwangsiense (Liu &amp; Hu, 1962)",
+        "status": "MERGE",
+        "genus_name": "Theloderma",
+        "species_name": "kwangsiense",
+        "species_author": "(Liu &amp; Hu, 1962)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 1320,
+    "lower_elevation_limit": 500,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species was previously known only from northern (Boulenger 1903, Orlov 1997, Inger <em>et al.</em> 1999, Orlov <em>et al.</em> 2002, Nguyen <em>et al.</em> 2009) and central (Luu <em>et al</em>. 2014) Viet Nam between 470–1,500 m asl. Following revision of the genus in China (Hou <em>et al.</em> 2017), <em>Theloderma kwangsiense </em>has now been synonymised with this species. The distribution of the species now extends through the south of China including the island of Hainan, southwards through northern and central Viet Nam and across the border in to central eastern Lao People's Democratic Republic (Lao PDR) (Hou&#160;<em>et al.</em>&#160;2017, Brakels <em>et al. </em>2021). In China it has been recorded from Guangdong, Guangxi and Hainan provinces, and is expected to occur more widely in these provinces, as well as the neighbouring provinces of Fujian, Hunan, Yunnan and Zhejiang, where there is suitable habitat near know localities (Hou&#160;<em>et al.</em>&#160;2017). It has been recorded between 500–1,320 m asl.",
+    "population": "This species is known from several studies (Boulenger 1903, Orlov 1997, Inger <em>et al. </em>1999, Luu <em>et al</em>. 2014, <em>etc</em>.), and was described as abundant at Tam Dao, northern Viet Nam in the 1990s (Orlov 1997). Hou<em> et al. </em>(2017) described it as rare as it can be difficult to find, although this may be because it spends most of its time in tree holes making it difficult to detect. Deforestation continues to affect habitat in this species' range (Sodhi <em>et al</em>. 2009), and is very likely causing some declines.",
+    "habitats": "This species occurs in primary subtropical and tropical forest and is sometimes associated with steep, rocky cliffs in Viet Nam (Orlov 1997). It is usually found sheltering in water-filled tree holes or in wet moss (Hou&#160;<em>et al.</em>&#160;2017). Reproduction has been observed between March and December (Orlov <em>et al</em>. 2006). This species deposits eggs in water-filled rock cavities, where the tadpoles remain until metamorphosis&#160;(Orlov 1997).",
+    "threats": "Habitat loss and degradation due to the effects of rapidly expanding agriculture is an ongoing threat to biodiversity throughout southeast Asia (Sodhi&#160;<em>et al</em>. 2009). Satellite imagery reveals areas of land cleared for agriculture throughout much of this species' range, however its occurrence in steep, rocky areas (Orlov 1997) may offer some protection from habitat loss associated with agriculture. Despite this species having been successfully bred in captivity (Orlov<em> et al</em>. 2006, Gawor <em>et al</em>. 2012), it may also be threatened by collection from the wild to meet the demand for the international pet trade, as is the case for similarly attractive frog species from the region (Rowley <em>et al</em>. 2010). In China, its habitat is threatened by agriculture, logging, construction of dams for hydropower, as well as, illegal collection for the pet trade.",
+    "measures": "<strong><em>Conservation Actions In-Place</em></strong><br/>This species is known from a number of protected areas including Tam Dao (Orlov <em>et al</em>. 1997, Inger <em>et al</em>. 1999) and Phong Nha-Ke Bang National Parks (Luu <em>et al</em>. 2014) in Viet Nam, and Nakai Nam Theun National Park in Lao PDR (Brakels <em>et al.</em> 2021), as well as, Shiwandashan National Nature Reserve in China. There are captive populations of the species in Vietnamese (Gawore <em>et al</em>. 2012) and European (Orlov <em>et al</em>. 2006, Rauhaus <em>et al</em>. 2012) zoological institutions, as well as in private collections.<br/><br/><strong><em>Research Needed</em></strong><br/>Further research on its distribution, threats, the size and trends of its population, and rates of harvest would inform conservation decisions.",
+    "use_trade": "This species is in the international pet trade and is in relatively high demand due to its attractive form and colouration; an online search in December 2015 revealed a number of websites selling this species for approximately US $60–120 per individual (T. Cutajar pers. comm. 2015). The species is also kept in a number of zoos (Rauhaus <em>et al</em>. 2012).",
+    "rationale": "Listed as Least Concern as this species is widespread and its population is unlikely to be declining fast enough for listing in a more threatened category.",
+    "trend_justification": null,
+    "taxonomic_notes": "<em>Theloderma kwangsiensis</em>&#160;has been synonymised with&#160;<em>T. corticale</em>&#160;by Hou&#160;<em>et al.&#160;</em>(<em>2</em>017)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lao People's Democratic Republic"
+      },
+      "code": "LA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guangdong"
+      },
+      "code": "CHS-GD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guangxi"
+      },
+      "code": "CHS-GX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hainan"
+      },
+      "code": "CHH-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Fujian"
+      },
+      "code": "CHS-FJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hunan"
+      },
+      "code": "CHS-HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Yunnan"
+      },
+      "code": "CHC-YN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Zhejiang"
+      },
+      "code": "CHS-ZJ"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Unknown",
+      "timing": "Unknown",
+      "internationalTrade": "Yes",
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_3_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Large dams"
+      },
+      "code": "7_2_10"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "IUCN SSC Amphibian Specialist Group",
+      "value": [
+        " IUCN SSC Amphibian Specialist Group (IUCN SSC)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Neam, K.",
+      "value": [
+        "Kelsey Neam (Amphibian RLA)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Cutajar, T.",
+      "value": [
+        "Timothy Cutajar (Amphibian RLA)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Chanson, J.S.",
+      "value": [
+        "Janice Chanson (IUCN SSC Amphibian Red List Authority)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Rowley, J., Brown, R., Bain, R, Kusrini, M., Inger, R., Stuart, B., Wogan, G., Thy, N., Chan-ard, T, Trung, C.T., Diesmos, A., Iskandar, D.T., Lau, M., Ming, L.T., Makchai, S., Nguyen, Q.T. and Phimmachak, S. 2010. Impending conservation crisis for Southeast Asian amphibians. <i>Biology Letters</i> 6(3): 336-338.",
+      "year": "2010",
+      "title": "Impending conservation crisis for Southeast Asian amphibians",
+      "author": "Rowley, J., Brown, R., Bain, R, Kusrini, M., Inger, R., Stuart, B., Wogan, G., Thy, N., Chan-ard, T, Trung, C.T., Diesmos, A., Iskandar, D.T., Lau, M., Ming, L.T., Makchai, S., Nguyen, Q.T. and Phimmachak, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Orlov, N.L., Murphy, R.W., Ananjeva, N.B., Ryabov, S.A. and Cuc, H.T. 2002. Herpetofauna of Vietnam, A checklist. Part I. Amphibia. <i>Russian Journal of Herpetology</i> 9(2): 81-104.",
+      "year": "2002",
+      "title": "Herpetofauna of Vietnam, A checklist. Part I. Amphibia",
+      "author": "Orlov, N.L., Murphy, R.W., Ananjeva, N.B., Ryabov, S.A. and Cuc, H.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nguyen, V.S., Ho, T.C. and Nguyen, Q.T. 2009. <i>Herpetofauna of Vietnam</i>. Edition Chimaira, Frankfurt am Main.",
+      "year": "2009",
+      "title": "Herpetofauna of Vietnam",
+      "author": "Nguyen, V.S., Ho, T.C. and Nguyen, Q.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sodhi, N.S., Lee, T.M., Koh, L.P. and Brook, B.W. 2009. A meta-analysis of the impact of anthropogenic forest disturbance on Southeast Asias biotas. <i>Biotropica</i> 41: 103-109.",
+      "year": "2009",
+      "title": "A meta-analysis of the impact of anthropogenic forest disturbance on Southeast Asias biotas",
+      "author": "Sodhi, N.S., Lee, T.M., Koh, L.P. and Brook, B.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Inger, R.F., Orlov, N. and Darevsky, I.S. 1999. Frogs of Vietnam: A report on new collections. <i>Fieldiana: Zoology</i> 92: 1-46.",
+      "year": "1999",
+      "title": "Frogs of Vietnam: A report on new collections",
+      "author": "Inger, R.F., Orlov, N. and Darevsky, I.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Orlov, N.L., Dutta, S.K., Ghate, H.V. and Kent, Y. 2006. New species of <i>Theloderma</i> from Kon Tum Province (Vietnam) and Nagaland State (India) [Anura: Rhacophoridae]. <i>Russian Journal of Herpetology</i> 13: 135-154.",
+      "year": "2006",
+      "title": "New species of <i>Theloderma</i> from Kon Tum Province (Vietnam) and Nagaland State (India) [Anura: Rhacophoridae]",
+      "author": "Orlov, N.L., Dutta, S.K., Ghate, H.V. and Kent, Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Orlov, N.L. 1997. Die <i>Theloderma</i>-arten Vietnams. <i>Herpetofauna</i> 19(110): 5-9.",
+      "year": "1997",
+      "title": "Die <i>Theloderma</i>-arten Vietnams",
+      "author": "Orlov, N.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Boulenger, G.A. 1903. Descriptions of three new batrachians from Tonkin. <i>Annual Magazine of Natural History</i> 12(9): 186.",
+      "year": "1903",
+      "title": "Descriptions of three new batrachians from Tonkin",
+      "author": "Boulenger, G.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Luu, V.Q., Nguyen, T.Q., Pham, C.T., Dang, K.N., Vu, T.N., Miskovic, S., Bonkowski, M. and Ziegler, T. 2014. No end in sight? Further new records of amphibians and reptiles from Phong Nha-Ke Bang National Park, Quang Binh Province, Vietnam . <i>Biodiversity Journal</i> 4(2): 285-300.",
+      "year": "2014",
+      "title": "No end in sight? Further new records of amphibians and reptiles from Phong Nha-Ke Bang National Park, Quang Binh Province, Vietnam ",
+      "author": "Luu, V.Q., Nguyen, T.Q., Pham, C.T., Dang, K.N., Vu, T.N., Miskovic, S., Bonkowski, M. and Ziegler, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rauhaus, A., Gawor, A., Perl, R. G. B., Scheld, S., van der Straeten, K., Pham, D. Nguyen, T. Q. & Ziegler, T. 2012. Larval development, stages and an international comparison of husbandry parameters of the Vietnamese Mossy Frog Theloderma corticale (Boulenger, 1903) (Anura: Rhacophoridae). <i>Asian Journal of Conservation Biology</i> 1(2): 51-66.",
+      "year": "2012",
+      "title": "Larval development, stages and an international comparison of husbandry parameters of the Vietnamese Mossy Frog Theloderma corticale (Boulenger, 1903) (Anura: Rhacophoridae)",
+      "author": "Rauhaus, A., Gawor, A., Perl, R. G. B., Scheld, S., van der Straeten, K., Pham, D. Nguyen, T. Q. & Ziegler, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gawor, A., Chapuis, S., Pham, C. T., Nguyen, T. Q., Schmitz, A. and Ziegler, T. 2012. Larval morphology of two species of the genus Theloderma (Tschudi, 1838) from Vietnam (Anura: Rhacophoridae: Rhacophorinae). <i>Zootaxa</i> 3395: 59-64.",
+      "year": "2012",
+      "title": "Larval morphology of two species of the genus Theloderma (Tschudi, 1838) from Vietnam (Anura: Rhacophoridae: Rhacophorinae)",
+      "author": "Gawor, A., Chapuis, S., Pham, C. T., Nguyen, T. Q., Schmitz, A. and Ziegler, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hou, M., Yu, G-H., Chen, H-M., Liao, C-I., Zhang, L., Chen, J., Li, P-P. and Orlov, N.L. 2017. The taxonomic status and distribution range of six <i>Theloderma</i> species (Anura: Rhacophoridae) with a new record in China. <i>Russian Journal of Herpetology</i> 24: 99-127.",
+      "year": "2017",
+      "title": "The taxonomic status and distribution range of six <i>Theloderma</i> species (Anura: Rhacophoridae) with a new record in China.",
+      "author": "Hou, M., Yu, G-H., Chen, H-M., Liao, C-I., Zhang, L., Chen, J., Li, P-P. and Orlov, N.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2022. The IUCN Red List of Threatened Species. Version 2022-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 08 December 2022).",
+      "year": "2022",
+      "title": "The IUCN Red List of Threatened Species. Version 2022-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2022-2"
+    },
+    {
+      "citation": "Brakels, P., Nanthavong, C. and Nguyen, T.V. 2021. Geographic distribution: <i>Theloderma corticale</i>. <i>Herpetological Review</i> 52: 792.",
+      "year": "2021",
+      "title": "Geographic distribution: <i>Theloderma corticale</i>",
+      "author": "Brakels, P., Nanthavong, C. and Nguyen, T.V.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

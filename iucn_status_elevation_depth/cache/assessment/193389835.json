@@ -1,0 +1,1022 @@
+{
+  "assessment_date": "2020-12-21T00:00:00.000+00:00",
+  "year_published": "2022",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 59453,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/59453/193389835",
+  "citation": "IUCN SSC Amphibian Specialist Group 2022. Notophthalmus viridescens. The IUCN Red List of Threatened Species 2022: e.T59453A193389835. Accessed on 15 May 2026.",
+  "assessment_id": 193389835,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 59453,
+    "scientific_name": "Notophthalmus viridescens",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AMPHIBIA",
+    "order_name": "CAUDATA",
+    "family_name": "SALAMANDRIDAE",
+    "genus_name": "Notophthalmus",
+    "species_name": "viridescens",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Rafinesque, 1820)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Amphibian Specialist Group",
+        "url": "https://www.iucn-amphibians.org/",
+        "description": "Chair: Ariadne Angulo (email: aangulo@amphibians.org)\nRed List Authority Coordinator: Jennifer Luedtke (email: jluedtke@amphibians.org)\nNewsletter: http://www.amphibians.org/froglog/"
+      }
+    ],
+    "common_names": [
+      {
+        "main": true,
+        "name": "Eastern Newt",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Triturus viridescens Rafinesque, 1820",
+        "status": "ACCEPTED",
+        "genus_name": "Triturus",
+        "species_name": "viridescens",
+        "species_author": "Rafinesque, 1820",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "6612280",
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species can be found throughout the eastern United States of America and adjacent southern Canada; west to Minnesota, eastern Kansas, and eastern Texas (Petranka 1998).",
+    "population": "This is an abundant and widespread species, with a stable population.",
+    "habitats": "Adults and larvae inhabit ponds, swamps, and quiet stream pools. Animals may burrow into mud if pond dries. Efts and sometimes adults (i.e., over wintering ones) inhabit wooded areas (terrestrial eft stage lasts 2–7 years). The adults are generally permanently aquatic in northeastern USA, but may leave ponds in summer or fall in some areas (e.g. montane Virginia). Eggs are attached to submerged vegetation.",
+    "threats": "Roads negatively impact salamander abundance in roadside habitat and might serve as partial barriers to movement (deMaynadier and Hunter 2000). Introduced Bluegill Sunfish might cause declines in larval abundance (Smith <em>et al</em>. 1999). However, on a range-wide basis, the species has no major threats.",
+    "measures": "<strong><em>Conservation Actions In-Place</em></strong><br/>This species is present in several protected areas throughout its range.<br/><strong><em><br/></em></strong><strong><em>Research Needed</em></strong><strong><em><br/></em></strong>Monitoring and research on population trends is recommended.",
+    "use_trade": "There are no records of this species being utilized.",
+    "rationale": "Listed as Least Concern in view of its wide distribution and number of subpopulations, presumed large population size, and remaining suitable habitat across its range.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"
+      },
+      "code": "5_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_8"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Brunswick"
+      },
+      "code": "NBR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nova Scotia"
+      },
+      "code": "NSC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ontario"
+      },
+      "code": "ONT-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Jersey"
+      },
+      "code": "NWJ-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New York"
+      },
+      "code": "NWY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Massachusetts"
+      },
+      "code": "MAS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Michigan"
+      },
+      "code": "MIC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "West Virginia"
+      },
+      "code": "WVA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Québec"
+      },
+      "code": "QUE-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Illinois"
+      },
+      "code": "ILL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Vermont"
+      },
+      "code": "VER-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kentucky"
+      },
+      "code": "KTY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pennsylvania"
+      },
+      "code": "PEN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Texas"
+      },
+      "code": "TEX-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Minnesota"
+      },
+      "code": "MIN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Alabama"
+      },
+      "code": "ALA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virginia"
+      },
+      "code": "VRG-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ohio"
+      },
+      "code": "OHI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maine"
+      },
+      "code": "MAI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Missouri"
+      },
+      "code": "MSO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Wisconsin"
+      },
+      "code": "WIS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rhode Island"
+      },
+      "code": "RHO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Arkansas"
+      },
+      "code": "ARK-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Carolina"
+      },
+      "code": "SCA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kansas"
+      },
+      "code": "KAN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maryland"
+      },
+      "code": "MRY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tennessee"
+      },
+      "code": "TEN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GEO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iowa"
+      },
+      "code": "IOW-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Connecticut"
+      },
+      "code": "CNT-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "North Carolina"
+      },
+      "code": "NCA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Delaware"
+      },
+      "code": "DEL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Florida"
+      },
+      "code": "FLA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mississippi"
+      },
+      "code": "MSI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oklahoma"
+      },
+      "code": "OKL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indiana"
+      },
+      "code": "INI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Louisiana"
+      },
+      "code": "LOU-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Hampshire"
+      },
+      "code": "NWH-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Prince Edward I."
+      },
+      "code": "PEI-OO"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Lepomis macrochirus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_4_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "IUCN SSC Amphibian Specialist Group",
+      "value": [
+        " IUCN SSC Amphibian Specialist Group (IUCN SSC)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "García, N.",
+      "value": [
+        "Nieves García (Former IUCN staff, affiliated through various projects)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Hammerson, G.A. & Pelletier, S.",
+      "value": [
+        "Geoffrey Hammerson (NatureServe)",
+        "Simon Pelletier (Ministry of Natural Resources, Government of Quebec)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Neam, K.",
+      "value": [
+        "Kelsey Neam (Amphibian RLA)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Blackburn, L., Nanjappa, P. and Lannoo, M.J. 2001. <i>An Atlas of the Distribution of U.S. Amphibians</i>. Ball State University, Muncie, IN, USA.",
+      "year": "2001",
+      "title": "An Atlas of the Distribution of U.S. Amphibians",
+      "author": "Blackburn, L., Nanjappa, P. and Lannoo, M.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vogt, R.C. 1981. <i>Natural History of Amphibians and Reptiles of Wisconsin</i>. Milwaukee Public Museum, Milwaukee, WI, USA.",
+      "year": "1981",
+      "title": "Natural History of Amphibians and Reptiles of Wisconsin",
+      "author": "Vogt, R.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Minton Jr, S.A. 1972. <i>Amphibians and Reptiles of Indiana</i>. Indiana Academy of Science Monographs 3, Indianapolis, IN, USA.",
+      "year": "1972",
+      "title": "Amphibians and Reptiles of Indiana",
+      "author": "Minton Jr, S.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Frost, D.R. 1985. <i>Amphibian Species of the World: A Taxonomic and Geographic Reference</i>. Allen Press and the Association of Systematic Collections, Lawrence, Kansas.",
+      "year": "1985",
+      "title": "Amphibian Species of the World: A Taxonomic and Geographic Reference",
+      "author": "Frost, D.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Petranka, J.W. 1998. <i>Salamanders of the United States and Canada</i>. Smithsonian Institution Press, Washington, D.C.",
+      "year": "1998",
+      "title": "Salamanders of the United States and Canada",
+      "author": "Petranka, J.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Behler, J.L. and King, F.W. 1979. <i>The Audubon Society Field Guide to North American Reptiles and Amphibians</i>. New York.",
+      "year": "1979",
+      "title": "The Audubon Society Field Guide to North American Reptiles and Amphibians",
+      "author": "Behler, J.L. and King, F.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Green, N.B. and Pauley, T.K. 1987. <i>Amphibians and Reptiles in West Virginia</i>. University of Pittsburgh Press, Pittsburgh, PA, USA.",
+      "year": "1987",
+      "title": "Amphibians and Reptiles in West Virginia",
+      "author": "Green, N.B. and Pauley, T.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Reilly, S.M. 1990. Biochemical systematics and evolution of the eastern North American newts, genus <i>Notophthalmus</i> (Caudata: Salamandridae). <i>Herpetologica</i>: 51-59.",
+      "year": "1990",
+      "title": "Biochemical systematics and evolution of the eastern North American newts, genus <i>Notophthalmus</i> (Caudata: Salamandridae)",
+      "author": "Reilly, S.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Conant, R. and Collins, J.T. 1998. <i>A Field Guide to Reptiles and Amphibians: Eastern and Central North America. Third edition, Expanded</i>. Houghton Mifflin Company, Boston, MA, USA.",
+      "year": "1998",
+      "title": "A Field Guide to Reptiles and Amphibians: Eastern and Central North America. Third edition, Expanded",
+      "author": "Conant, R. and Collins, J.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "DeGraaf, R.M. and Rudis, D.D. 1983. <i>Amphibians and Reptiles of New England: Habitats and Natural History</i>. University of Massachusetts Press, Amherst, MA, USA.",
+      "year": "1983",
+      "title": "Amphibians and Reptiles of New England: Habitats and Natural History",
+      "author": "DeGraaf, R.M. and Rudis, D.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Smith, G.R., Rettig, J.E., Mittelbach, G.G., Valiulis, J.L. and Schaack, S.R. 1999. The effects of fish on assemblages of amphibians in ponds: a field experiment. <i>Freshwater Biology</i>: 829-837.",
+      "year": "1999",
+      "title": "The effects of fish on assemblages of amphibians in ponds: a field experiment",
+      "author": "Smith, G.R., Rettig, J.E., Mittelbach, G.G., Valiulis, J.L. and Schaack, S.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "deMaynadier, P.G. and Hunter, Jr., M.L. 2000. Road effects on amphibian movements in a forested landscape. <i>Natural Areas Journal</i>: 56-65.",
+      "year": "2000",
+      "title": "Road effects on amphibian movements in a forested landscape",
+      "author": "deMaynadier, P.G. and Hunter, Jr., M.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Harris, R.N., Alford, R.A. and Wilbur, H.M. 1988. Density and phenology of Notophthalmus viridescens dorsalis in a natural pond. <i>Herpetologica</i>: 234-242.",
+      "year": "1988",
+      "title": "Density and phenology of Notophthalmus viridescens dorsalis in a natural pond",
+      "author": "Harris, R.N., Alford, R.A. and Wilbur, H.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hurlbert, S.H. 1970. The post-larval migration of the red-spotted newt, Notophthalmus viridescens (Rafinesque). <i>Copeia</i>: 515-528.",
+      "year": "1970",
+      "title": "The post-larval migration of the red-spotted newt, Notophthalmus viridescens (Rafinesque)",
+      "author": "Hurlbert, S.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Forester, D.C. and Lykens, D.V. 1991. Age structure in a population of red-spotted newts from the Allegheny Plateau of Maryland. <i>Journal of Herpetology</i>: 373-376.",
+      "year": "1991",
+      "title": "Age structure in a population of red-spotted newts from the Allegheny Plateau of Maryland",
+      "author": "Forester, D.C. and Lykens, D.V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Healy, W.R. 1975. Terrestial activity and home range of efts of Notophthalmus viridescens. <i>American Midland Naturalist</i>: 131-138.",
+      "year": "1975",
+      "title": "Terrestial activity and home range of efts of Notophthalmus viridescens",
+      "author": "Healy, W.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mecham, J.S. 1967. Notophthalmus viridescens. <i>Catalogue of American Amphibians and Reptiles</i>: 1-4.",
+      "year": "1967",
+      "title": "Notophthalmus viridescens",
+      "author": "Mecham, J.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Raffaëlli, J. 2007. <i>Les Urodèles du monde</i>. Penclen Édition, Condé-sur-Noireau, France.",
+      "year": "2007",
+      "title": "Les Urodèles du monde",
+      "author": "Raffaëlli, J",
+      "citation_short": null
+    },
+    {
+      "citation": "Bruckskotten, M., Looso, M., Reinhardt, R., Braun, T., Borchardt, T. 2012. Newt-omics: a comprehensive repository for omics data from the newt <i>Notophthalmus viridescens</i>. <i>Nucleic Acids Research</i> 40(D1): D895-D900.",
+      "year": "2012",
+      "title": "Newt-omics: a comprehensive repository for omics data from the newt <i>Notophthalmus viridescens</i>",
+      "author": "Bruckskotten, M., Looso, M., Reinhardt, R., Braun, T., Borchardt, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Smith, K. G. 2006. Keystone predators (eastern newts, <i>Notophthalmus viridescens</i>) reduce the impacts of an aquatic invasive species. <i>Oecologia</i> 148(2): 342-349.",
+      "year": "2006",
+      "title": "Keystone predators (eastern newts, <i>Notophthalmus viridescens</i>) reduce the impacts of an aquatic invasive species",
+      "author": "Smith, K. G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sever, D. M. 2006. The \"False Breeding Season\" of the Eastern Newt, <i>Notophthalmus viridescens</i>. <i>Bulletin of the Chicago Herpetological Society</i> 41(8): 149-153.",
+      "year": "2006",
+      "title": "The \"False Breeding Season\" of the Eastern Newt, <i>Notophthalmus viridescens</i>",
+      "author": "Sever, D. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Roe, A. W., Grayson, K. L. 2008. Terrestrial movements and habitat use of juvenile emigrating adult eastern red-spotted newts, <i>Notophthalmus viridescens</i>. <i>Journal of Herpetology</i> 42(1): 22-30.",
+      "year": "2008",
+      "title": "Terrestrial movements and habitat use of juvenile emigrating adult eastern red-spotted newts, <i>Notophthalmus viridescens</i>",
+      "author": "Roe, A. W., Grayson, K. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schlegel, P. A. 2007. Spontaneous preferences for magnetic compass direction in the American red-spotted newt, <i>Notophthalmus viridescens</i> (Salamandridae, Urodela). <i>Journal of Ethology</i> 25(2): 177-184.",
+      "year": "2007",
+      "title": "Spontaneous preferences for magnetic compass direction in the American red-spotted newt, <i>Notophthalmus viridescens</i> (Salamandridae, Urodela)",
+      "author": "Schlegel, P. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2022. The IUCN Red List of Threatened Species. Version 2022-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 21 July 2022).",
+      "year": "2022",
+      "title": "The IUCN Red List of Threatened Species. Version 2022-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2022-1"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

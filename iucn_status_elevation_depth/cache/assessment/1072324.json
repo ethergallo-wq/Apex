@@ -1,0 +1,607 @@
+{
+  "assessment_date": "2019-08-07T01:00:00.000+01:00",
+  "year_published": "2021",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 164745,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/164745/1072324",
+  "citation": "Papenfuss, T., Shafiei Bafti, S. & Sharifi, M. 2021. Eublepharis macularius. The IUCN Red List of Threatened Species 2021: e.T164745A1072324. Accessed on 15 May 2026.",
+  "assessment_id": 1072324,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 164745,
+    "scientific_name": "Eublepharis macularius",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "EUBLEPHARIDAE",
+    "genus_name": "Eublepharis",
+    "species_name": "macularius",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Blyth, 1854)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Spotted fat-tailed gecko",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "Common Leopard Gecko",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Eublepharis afghanicus Börner, 1976",
+        "status": "ACCEPTED",
+        "genus_name": "Eublepharis",
+        "species_name": "afghanicus",
+        "species_author": "Börner, 1976",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Eublepharis macularius ssp. fasciolatus Günther, 1864",
+        "status": "ACCEPTED",
+        "genus_name": "Eublepharis",
+        "species_name": "macularius",
+        "species_author": null,
+        "infrarank_author": "Günther, 1864",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "fasciolatus"
+      },
+      {
+        "name": "Eublepharis fasciolatus Günther, 1864",
+        "status": "ACCEPTED",
+        "genus_name": "Eublepharis",
+        "species_name": "fasciolatus",
+        "species_author": "Günther, 1864",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Eublepharis gracilis Börner, 1974",
+        "status": "ACCEPTED",
+        "genus_name": "Eublepharis",
+        "species_name": "gracilis",
+        "species_author": "Börner, 1974",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Eublepharis macularius ssp. afghanicus Börner, 1976",
+        "status": "ACCEPTED",
+        "genus_name": "Eublepharis",
+        "species_name": "macularius",
+        "species_author": null,
+        "infrarank_author": "Börner, 1976",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "afghanicus"
+      },
+      {
+        "name": "Cyrtodactylus macularius Blyth, 1854",
+        "status": "ACCEPTED",
+        "genus_name": "Cyrtodactylus",
+        "species_name": "macularius",
+        "species_author": "Blyth, 1854",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 2500,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": "Unknown",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This South Asian species ranges from south of the Hindu Kush (Afghanistan) and Northwest Frontier Province (Pakistan), through Pakistan south to Rajputana and the Khandesh District of western India (Anderson 1999). There is an early 1900s record of a gecko tentatively assigned to this taxon from Khorasan in Iran, near the Afghan border, but the specimens were lost before they could be deposited and the presence of the species in Iran remains uncertain (Anderson 1999). It is widespread within most of its range, however, there appears to be a disjunct subpopulation in eastern Afghanistan (Sindaco and Jeremčenko 2008). This may be an artefact of limited surveying in the Registan Desert area. A recent record from the Kamdi Biological Corridor represents the first record from Nepal (Rawat <em>et al. </em>2019); these authors also reported photographic evidence of the species' occurrence in a village in Nawalparasi District and in school grounds in Gurvakot in Surkhet District. The Nepalese records represent a range of extension of around 500 km to the east of the closest known Indian locality (Rawat <em>et al. </em>2019). It occurs up to around 2,500 m asl (Szczerbak and Golubev 1996).",
+    "population": "In Iran, this species is known only from a single tentative record. It is common in stony habitats in Pakistan (Khan 2006). Its distribution and abundance in Afghanistan are uncertain due to limited recent sampling: Wagner<em> et al.</em> (2016) report five localities, each represented by one or two specimens.",
+    "habitats": "This is a nocturnal and terrestrial species. In Afghanistan, it has been found on fairly open alluvial soil (Anderson 1999). In Pakistan, it has been recorded in rocky desert and sparse grassland with clay, and crevices in rock walls (Minton 1966, Anderson 1999), and colonies appear to exhibit a preference for stone boundary walls around fields or houses (Khan 2006). The Kamdi record was of two males found hibernating in a dead tree in mixed hardwood forest, a more mesic and densely-vegetated habitat than other known localities which nonetheless represents the driest montane habitat in Nepal (Rawat <em>et al</em>. 2019). The species lives in colonies (Minton 1966), and it can be found in large numbers on warm, humid nights in the wet season (Khan 2006). It hibernates between October and February in much of its range, but may be active into November in warmer areas (Khan 2006). The female lays several clutches of one or two eggs; in captivity animals have been recorded laying four clutches with a four week interval over a year (Szczerbak and Golubev 1996). Eggs take approximately a month to hatch (Khan 2006).",
+    "threats": "There appear to be no major threats to this species as a whole. This species breeds regularly in captivity and is common in the international pet trade, however both legal and illegal collection from the wild are ongoing (Mirza <em>et al. </em>2014). Animals are frequently confiscated at the Nepal-India border; while these have been thought to originate in India at least some of these animals may represent offtake from recently-identified Nepalese subpopulations (Rawat <em>et al. </em>2019). The Kambi subpopulation is known from forest where logging has been observed, while one of the other Nepalese records was taken during gravel extraction (Rawat <em>et al. </em>2019).",
+    "measures": "It is presumably present in a number of protected areas within its range. Further studies are needed to determine if this species is present in extreme southeastern Iran, and in future to clarify the extent of its distribution in Afghanistan. Taxonomic clarification of the validity of <em>Eublepharus afghanicus</em> is recommended.",
+    "use_trade": "The leopard gecko is extremely common in the international pet trade, and is widely bred in captivity. It may be that most animals found in the pet trade are now captive-bred. It is consequently unclear whether wild-caught animals are still entering the pet trade in significant numbers (although collection from the wild is ongoing - Mirza <em>et al</em>. 2014), and Pakistan has strict permitting requirements for export. Local communities in Pakistan include traditional collectors of this species, suggesting that there remain economic incentives for harvesting this species.",
+    "rationale": "Listed as Least Concern in view of its wide distribution, presumed large population, and because it is unlikely to be declining.",
+    "trend_justification": null,
+    "taxonomic_notes": "<p><em>Eublepharis macularius fuscus </em>has been elevated to specific status (Das 1997), but the validity of several proposed subspecies and their status is unclear (discussed in (Sindaco and Jeremčenko 2008, Khan 2006 and Wagner <em>et al.</em> 2016). This assessment follows Wagner<em> et al.</em> (2016) in treating the proposed species <em>E. gracilis</em>, described from a captive specimen of unknown origindescribed from a captive specimen of unknown origin, as a nomen dubium. These authors propose recognizing <em>E. m. afghanicus </em>as a full species but note that this status needs to be verified. On this basis,&#160;<em>E. afghanicus</em>&#160;is tentatively retained within the synonym of&#160;<em>E. macularius&#160;</em>in this assessment&#160;</p>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Rocky areas (eg. inland cliffs, mountain peaks)"
+      },
+      "code": "6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Desert - Hot"
+      },
+      "code": "8_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Afghanistan"
+      },
+      "code": "AF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rajasthan"
+      },
+      "code": "IND-RA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jammu-Kashmir"
+      },
+      "code": "WHM-JK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Punjab"
+      },
+      "code": "IND-PU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nepal"
+      },
+      "code": "NP"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Motivation Unknown/Unrecorded"
+      },
+      "code": "5_3_5"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Papenfuss, T., Shafiei Bafti, S. & Sharifi, M.",
+      "value": [
+        "Theodore Papenfuss (Museum of Vertebrate Zoology, University of California)",
+        "Soheila Shafiei Bafti (GRA, SRLI Reptile Assessment)",
+        "Mozafar Sharifi (GRA, SRLI Reptile Assessment)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Bowles, P. & Cox, N.A.",
+      "value": [
+        "Neil Cox (Biodiversity Assessment Unit)",
+        "Philip Bowles (IUCN SSC/CI Biodiversity Assessment Unit)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Sindaco, R. and Jeremčenko, V.K. 2008. <i>The Reptiles of the Western Palearctic. 1. Annotated Checklist and Distributional Atlas of the Turtles, Crocodiles, Amphibians and Lizards of Europe, North Africa, Middle East and Central Asia</i>. Edizioni Belvedere, Latina (Italy).",
+      "year": "2008",
+      "title": "The Reptiles of the Western Palearctic. 1. Annotated Checklist and Distributional Atlas of the Turtles, Crocodiles, Amphibians and Lizards of Europe, North Africa, Middle East and Central Asia",
+      "author": "Sindaco, R. and Jeremčenko, V.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mirza, Z.A., Sanap, R.V., Raju, D., Gawai, A. and Ghadekar, P. 2014. A new species of lizard of the genus <i>Eublepharis</i> (Squamata: Eublepharidae) from India. <i>Phyllomedusa</i> 13(2): 75-90.",
+      "year": "2014",
+      "title": "A new species of lizard of the genus <i>Eublepharis</i> (Squamata: Eublepharidae) from India",
+      "author": "Mirza, Z.A., Sanap, R.V., Raju, D., Gawai, A. and Ghadekar, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Khan, M.S. 2006. <i>Amphibians and reptiles of Pakistan</i>. Krieger Publishing Company, Malabar, Florida, USA.",
+      "year": "2006",
+      "title": "Amphibians and reptiles of Pakistan",
+      "author": "Khan, M.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Minton Jr., S.A. 1966. A contribution to the herpetology of West Pakistan. <i>Bulletin of the American Museum of Natural History</i> 134(2): 27-184.",
+      "year": "1966",
+      "title": "A contribution to the herpetology of West Pakistan",
+      "author": "Minton Jr., S.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ščerbak, N.N. and Golubev, M.L. 1996. <i>Gecko Fauna of the USSR and Contiguous Regions</i>. SSSR.",
+      "year": "1996",
+      "title": "Gecko Fauna of the USSR and Contiguous Regions",
+      "author": "Ščerbak, N.N. and Golubev, M.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Anderson, S.C. 1999. <i>The Lizards of Iran. Contributions to Herpetology Volume 15</i>. Society for the Study of Amphibians and Reptiles, Saint Louis, Missouri.",
+      "year": "1999",
+      "title": "The Lizards of Iran. Contributions to Herpetology Volume 15",
+      "author": "Anderson, S.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wagner, P., Bauer, A.M., Leviton, A., Wilms, T.M. and Böhme, W. 2016. A checklist of the amphibians and reptiles of Afghanistan - Exploring herpetodiversity using biodiversity archives. <i>Proceedings of the California Academy of Sciences. Series 4</i> 63(13): 457-565.",
+      "year": "2016",
+      "title": "A checklist of the amphibians and reptiles of Afghanistan - Exploring herpetodiversity using biodiversity archives",
+      "author": "Wagner, P., Bauer, A.M., Leviton, A., Wilms, T.M. and Böhme, W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Das, I. 1997. Resolution of the systematic status of <i>Eublepharis macularius fuscus</i> Börner, 1981 (Eublepharidae: Sauria: Squamata). <i>Hamadryad</i> 22(1): 13-20.",
+      "year": "1997",
+      "title": "Resolution of the systematic status of <i>Eublepharis macularius fuscus</i> Börner, 1981 (Eublepharidae: Sauria: Squamata)",
+      "author": "Das, I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2021. The IUCN Red List of Threatened Species. Version 2021-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 09 December 2021).",
+      "year": "2021",
+      "title": "The IUCN Red List of Threatened Species. Version 2021-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2021-3"
+    },
+    {
+      "citation": "Khan, M.S. 2002. Key and checklist to the lizards of Pakistan. <i>Herpetozoa</i> 15(3/4): 99-119.",
+      "year": "2002",
+      "title": "Key and checklist to the lizards of Pakistan.",
+      "author": "Khan, M.S",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rais, M., Akram, A., Ali, S.M., Asadi, M.A., Jahangir, M., Jilani, M.J. and Anwar, M. 2015. Qualitative analysis of factors influencing the diversity and spatial distribution of herpetofauna in Chakwal Tehsil (Chakwal District), Punjab, Pakistan. <i>Herpetological Conservation and Biology</i> 10(3): 801-810.",
+      "year": "2015",
+      "title": "Qualitative analysis of factors influencing the diversity and spatial distribution of herpetofauna in Chakwal Tehsil (Chakwal District), Punjab, Pakistan",
+      "author": "Rais, M., Akram, A., Ali, S.M., Asadi, M.A., Jahangir, M., Jilani, M.J. and Anwar, M",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nikitina, N.G. and Ananjeva, N.B. 2009. Characteristics of dentition in gekkonid lizards of the genus <i>Teratoscincus</i> and other Gekkota (Sauria, Reptilia). <i>Biology Bulletin </i> 36(2): 193-198. DOI:10.1134/S1062359009020125.",
+      "year": "2009",
+      "title": "Characteristics of dentition in gekkonid lizards of the genus <i>Teratoscincus</i> and other Gekkota (Sauria, Reptilia).",
+      "author": "Nikitina, N.G. and Ananjeva, N.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Das, I. 1992. <i>Cyrtodactylus madarensis</i> Sharma (1980), a junior synonym of <i>Eublepharis macularius</i> (Blyth, 1854. <i>Asiatic Herpetological Research</i> 4: 55-56.",
+      "year": "1992",
+      "title": "<i>Cyrtodactylus madarensis</i> Sharma (1980), a junior synonym of <i>Eublepharis macularius</i> (Blyth, 1854",
+      "author": "Das, I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Flores, D., Tousignant, A. and Crews, D. 1994. Incubation temperature affects the behavior of adult leopard geckos (<i>Eublepharis macularius</i>). <i>Physiology & Behavior</i> 55(6): 1067-1072.",
+      "year": "1994",
+      "title": "Incubation temperature affects the behavior of adult leopard geckos (<i>Eublepharis macularius</i>)",
+      "author": "Flores, D., Tousignant, A. and Crews, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Jančúchová-Lásková, J., Landová, E. and Frynta D. 2015. Experimental crossing of two distinct species of leopard geckos, <i>Eublepharis angramainyu</i> and <i>E. macularius</i>: viability, fertility and phenotypic variation of the hybrids. <i>PloS ONE</i> 10(12): e0143630.",
+      "year": "2015",
+      "title": "Experimental crossing of two distinct species of leopard geckos, <i>Eublepharis angramainyu</i> and <i>E. macularius</i>: viability, fertility and phenotypic variation of the hybrids",
+      "author": "Jančúchová-Lásková, J., Landová, E. and Frynta D. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mason, R.T. and Gutzke, W.H. 1990.  Sex recognition in the leopard gecko, <i>Eublepharis macularius</i> (Sauria: Gekkonidae) Possible mediation by skin-derived semiochemicals. <i>Journal of Chemical Ecology</i> 16(1): 27-36.",
+      "year": "1990",
+      "title": " Sex recognition in the leopard gecko, <i>Eublepharis macularius</i> (Sauria: Gekkonidae) Possible mediation by skin-derived semiochemicals",
+      "author": "Mason, R.T. and Gutzke, W.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Masroor, R. 2012. A Contribution to the Herpetology of Northern Pakistan: The Amphibians and Reptiles of Margalla Hills National Park and Surrounding Regions. <i>Journal of Threatened Taxa </i> 4(6): 2670-2672.",
+      "year": "2012",
+      "title": "A Contribution to the Herpetology of Northern Pakistan: The Amphibians and Reptiles of Margalla Hills National Park and Surrounding Regions.",
+      "author": "Masroor, R",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rawat, Y.B., Thapa, K.B., Bhattarai, S. and Shah, K.B. 2019. First Records of the Common Leopard Gecko, <i>Eublepharis macularius</i> (Blyth 1854) (Eublepharidae), in Nepal. <i>IRCF Reptiles & Amphibians</i> 26(1): 58-61.",
+      "year": "2019",
+      "title": "First Records of the Common Leopard Gecko, <i>Eublepharis macularius</i> (Blyth 1854) (Eublepharidae), in Nepal",
+      "author": "Rawat, Y.B., Thapa, K.B., Bhattarai, S. and Shah, K.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sharma, R.C. & Gaur, S. 2005. <i>Changing ecology and faunal diversity of amphibians and reptiles in the Thar Desert of Rajasthan, India</i>. Kumar Scientific Publishers, Jodhpur.",
+      "year": "2005",
+      "title": "Changing ecology and faunal diversity of amphibians and reptiles in the Thar Desert of Rajasthan, India",
+      "author": "Sharma, R.C. & Gaur, S.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

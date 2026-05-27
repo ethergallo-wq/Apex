@@ -1,0 +1,3951 @@
+{
+  "assessment_date": "2021-05-01T01:00:00.000+01:00",
+  "year_published": "2022",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 170338,
+  "criteria": "A2bd",
+  "url": "https://www.iucnredlist.org/species/170338/46649664",
+  "citation": "Collette, B.B., Di Natale, A., Fox, W., Graves, J., Juan Jorda, M., Pohlot, B., Restrepo, V. & Schratwieser, J. 2022. Istiophorus platypterus. The IUCN Red List of Threatened Species 2022: e.T170338A46649664. Accessed on 15 May 2026.",
+  "assessment_id": 46649664,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 170338,
+    "scientific_name": "Istiophorus platypterus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "ACTINOPTERYGII",
+    "order_name": "PERCIFORMES",
+    "family_name": "ISTIOPHORIDAE",
+    "genus_name": "Istiophorus",
+    "species_name": "platypterus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Shaw, 1792)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Tuna and Billfish Specialist Group",
+        "url": null,
+        "description": "Chair: Bruce Collette (email: colletteb@si.edu)\nRed List Authority Coordinator: Beth Polidoro (email: Beth.Polidoro@asu.edu)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Aguja de Abanico",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Agulhão",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Agulhão-bandeira",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Bashôkajiki",
+        "language": "jpn"
+      },
+      {
+        "main": false,
+        "name": "Empereur Éventail",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Espadon Voilier",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Peixe-vela",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Pez Velo",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Picudo Banderón",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "Sailfish",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Makaira albicans Latreille, 1804",
+        "status": "ACCEPTED",
+        "genus_name": "Makaira",
+        "species_name": "albicans",
+        "species_author": "Latreille, 1804",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Istiophorus amarui Curtiss, 1944",
+        "status": "ACCEPTED",
+        "genus_name": "Istiophorus",
+        "species_name": "amarui",
+        "species_author": "Curtiss, 1944",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Histiophorus americanus Cuvier,1832",
+        "status": "ACCEPTED",
+        "genus_name": "Histiophorus",
+        "species_name": "americanus",
+        "species_author": "Cuvier,1832",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Histiophorus ancipitirostris Cuvier, 1832",
+        "status": "ACCEPTED",
+        "genus_name": "Histiophorus",
+        "species_name": "ancipitirostris",
+        "species_author": "Cuvier, 1832",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Istiophorus brookei Fowler, 1933",
+        "status": "ACCEPTED",
+        "genus_name": "Istiophorus",
+        "species_name": "brookei",
+        "species_author": "Fowler, 1933",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Histiophorus dubius Bleeker, 1872",
+        "status": "ACCEPTED",
+        "genus_name": "Histiophorus",
+        "species_name": "dubius",
+        "species_author": "Bleeker, 1872",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Istiophorus eriquius Jordan, 1926",
+        "status": "ACCEPTED",
+        "genus_name": "Istiophorus",
+        "species_name": "eriquius",
+        "species_author": "Jordan, 1926",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Istiophorus gladifer Lacepède, 1801",
+        "status": "ACCEPTED",
+        "genus_name": "Istiophorus",
+        "species_name": "gladifer",
+        "species_author": "Lacepède, 1801",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Scomber gladius Bloch, 1793",
+        "status": "ACCEPTED",
+        "genus_name": "Scomber",
+        "species_name": "gladius",
+        "species_author": "Bloch, 1793",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Histiophorus gracilirostris Cuvier, 1832",
+        "status": "ACCEPTED",
+        "genus_name": "Histiophorus",
+        "species_name": "gracilirostris",
+        "species_author": "Cuvier, 1832",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Histiophorus granulifer Castelnau, 1861",
+        "status": "ACCEPTED",
+        "genus_name": "Histiophorus",
+        "species_name": "granulifer",
+        "species_author": "Castelnau, 1861",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Istiophorus greyi Jordan & Evermann, 1926",
+        "status": "ACCEPTED",
+        "genus_name": "Istiophorus",
+        "species_name": "greyi",
+        "species_author": "Jordan & Evermann, 1926",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Skeponopodus guebucu Nardo, 1833",
+        "status": "ACCEPTED",
+        "genus_name": "Skeponopodus",
+        "species_name": "guebucu",
+        "species_author": "Nardo, 1833",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Histiophorus immaculatus Rüppell, 1830",
+        "status": "ACCEPTED",
+        "genus_name": "Histiophorus",
+        "species_name": "immaculatus",
+        "species_author": "Rüppell, 1830",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Istiophorus japonicus Jordan & Thompson, 1914",
+        "status": "ACCEPTED",
+        "genus_name": "Istiophorus",
+        "species_name": "japonicus",
+        "species_author": "Jordan & Thompson, 1914",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Histiophorus indicus Cuvier, 1832",
+        "status": "ACCEPTED",
+        "genus_name": "Histiophorus",
+        "species_name": "indicus",
+        "species_author": "Cuvier, 1832",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Histiophorus magnioci Jordan, 1927",
+        "status": "ACCEPTED",
+        "genus_name": "Histiophorus",
+        "species_name": "magnioci",
+        "species_author": "Jordan, 1927",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Istiophorus ludibundus Whitley, 1933",
+        "status": "ACCEPTED",
+        "genus_name": "Istiophorus",
+        "species_name": "ludibundus",
+        "species_author": "Whitley, 1933",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Histiophorus orientalis Temminck & Schlegel, 1844",
+        "status": "ACCEPTED",
+        "genus_name": "Histiophorus",
+        "species_name": "orientalis",
+        "species_author": "Temminck & Schlegel, 1844",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Istiophorus maguirei Jordan & Evermann, 1926",
+        "status": "ACCEPTED",
+        "genus_name": "Istiophorus",
+        "species_name": "maguirei",
+        "species_author": "Jordan & Evermann, 1926",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Istiophorus triactis Klunzinger, 1871",
+        "status": "ACCEPTED",
+        "genus_name": "Istiophorus",
+        "species_name": "triactis",
+        "species_author": "Klunzinger, 1871",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Histiophorus pulchellus Cuvier, 1832",
+        "status": "ACCEPTED",
+        "genus_name": "Histiophorus",
+        "species_name": "pulchellus",
+        "species_author": "Cuvier, 1832",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Makaira velifera Cuvier, 1832",
+        "status": "ACCEPTED",
+        "genus_name": "Makaira",
+        "species_name": "velifera",
+        "species_author": "Cuvier, 1832",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Xiphias velifer Bloch & Schneider, 1801",
+        "status": "ACCEPTED",
+        "genus_name": "Xiphias",
+        "species_name": "velifer",
+        "species_author": "Bloch & Schneider, 1801",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Istiophorus wrighti Jordan & Evermann, 1926",
+        "status": "ACCEPTED",
+        "genus_name": "Istiophorus",
+        "species_name": "wrighti",
+        "species_author": "Jordan & Evermann, 1926",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Xiphias platypterus Shaw, 1792",
+        "status": "ACCEPTED",
+        "genus_name": "Xiphias",
+        "species_name": "platypterus",
+        "species_author": "Shaw, 1792",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": 500,
+    "upper_depth_limit": 0,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "4.3",
+    "congregatory": null,
+    "movement_patterns": "Full Migrant",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p>In the Indian and Pacific oceans, Sailfish occur between approximately 45.5°N and 40.35°S in the western Pacific, 35°N and 35°S in the eastern Pacific, 45°S in the western Indian Ocean and 35°S in the eastern Indian Ocean. Based on differences in mitochondrial DNA, the population of Sailfish in the Arabian Gulf differs significantly from that in the western Indian Ocean (Hoolihan <em>et al</em>. 2004) and tagged individuals have all stayed within the Gulf (Hoolihan and Luo 2007). In the Eastern Pacific, Sailfish are found from southern California and the lower three fourths of the Gulf of California to Peru, including around all the oceanic islands. Sailfish are widely distributed in the tropical and temperate waters of the Atlantic Ocean from approximately 40°N in the northwest Atlantic, 50°N in the northeast Atlantic, to 40°S in the southwest Atlantic, and 32° S in the southeast Atlantic, mostly associated with the shore, but there is a record from Ascension Island in the mid-Atlantic (Wirtz <em>et al</em>. 2014). Sailfish are reported (always as <em>Istiophorus albicans</em>) to have entered the Mediterranean Sea from the Red Sea via the Suez Canal, although the records are few and mostly based on juvenile specimens; there are also some records there from before the opening of the Suez Canal, possibly indicating Atlantic vagrants. Furthermore, in at least one case (Ben-Tuvia 1966), a specimen recorded from the Mediterranean as a sailfish was subsequently identified as a Mediterranean Spearfish, <em>Tetrapturus belone</em> (Collette and Graves 2019).</p>",
+    "population": "Sailfish are managed in five stocks: Western Atlantic, Eastern Atlantic, Eastern Pacific, Western Central Pacific and Indian oceans. In the Atlantic Ocean, the species is managed by ICCAT as <em>Istiophorus albicans</em>.<br/><br/>Where possible, changes in population over a period of three generation lengths (approximately 12 years) were estimated for each stock using approximately 3 year averages for the endpoints and assuming a linear decline. Based on stock-size weighted changes in SSB, B/Bmsy&#160;or biomass,&#160;there has been an estimated 30% decline globally over the past 12 years (2000/2005–2012/2017). To account for differences in stock size, calculated declines for individual stocks were weighted by their most recent MSY. <strong><br/><br/>Atlantic Ocean</strong><br/>There are two stocks of Sailfish in the Atlantic, the Western Atlantic and the Eastern Atlantic. The latest (ICCAT 2016) assessment results for both stocks were uncertain and caution should be used in interpreting them.<br/><br/>In the Eastern Atlantic, the greatest declines in abundance were suffered prior to 1990 based on trends in abundance. The trend in recent years depends on the CPUE series selected. However, the stock is overfished (B/BMSY = 0.22-0.7) and overfishing is possibly occurring (F/FMSY = 0.33-2.85). MSY = 1635-2157 t (ICCAT, 2016). Based on the ASPIC model outputs for the eastern Atlantic (ICCAT 2016), B/Bmsy has declined by approximately 60% over the past 12 years (2003 -2015). With MSY estimated as 1,896 t, the eastern Atlantic stock represents about 7% of this species' global population.<br/><br/>In the Western Atlantic, the production model formulations and the stock synthesis model had varying degrees of difficulty fitting the decreasing or increasing CPUE trends. Management recommendations were based on the stock synthesis models. In the Western Atlantic, the stock is likely not overfished (SSB/SSBMSY = 1.16-1.81) and overfishing is likely not occurring (F/FMSY = 0.33-63). MSY = 1438-1636 t (ICCAT, 2016). Based on model 1.1 and 2.1 (Fig. 20 ICCAT 2016) and management advice, SSB has increased by approximately 22% over the past 12 years (2002-2014). With MSY estimated as 1,537 t, the western Atlantic stock represents about 6% of this species' global population.<strong><br/><br/>Eastern Pacific Ocean</strong><br/><strong></strong>IATTC (2019) conducted an assessment of sailfish in the Eastern Pacific using a surplus production model. However, the status of the stock could not be determined with respect to specific management parameters such as MSY, as it was not possible to derive from the model results the parameter estimates used in making these determinations. From 2013 to 2017, average annual reported catches were approximately 740 t, significantly below the 1993–2007 average of approximately 2,100 t. There was a downward trend in abundance during 1994–2009. Since then, abundance has been relatively constant or increasing slightly. According to the model results, the levels of unreported catch are significant, and the actual catch in earlier years probably exceeded those reported for 1993-2007. Assuming harvest was at this level for many years, the stock condition will probably not deteriorate if catch is not increased above current levels (IATTC, 2019). Based on biomass and B/Bmedian (IATTC 2019), this species is estimated to have declined approximately 16% over the past 12 years (2000–2012). MSY is not known, but most recent catch estimates from 2016 are approximately 500 t (IATTC 2019). <strong><br/><br/>Western Central Pacific</strong><br/>The stock is managed by the WCPFC. There are no stock assessment data for the Western Central Pacific.<strong><br/><br/>Indian Ocean</strong><strong></strong><br/>In the Indian Ocean catches of all billfishes have greatly increased from around 5,000 t in the early 1990s to almost 29,000 t in 2011 due largely to development of a gillnet/longline fishery in Sri Lanka and extension of the area of operation of Iranian gillnet vessels (IOTC 2013; Collette and Graves, 2019). Reported catches of billfishes rose to 33,280 mt in 2017 (IOTC, 2018a).<br/><br/>The latest stock assessment for Indo-Pacific Sailfish was carried out in 2015, with additional indicators presented in 2019 using a C-MSY model. Based on data poor methods for the stock assessment using Stock Reduction Analysis techniques, the stock in 2015 was not yet overfished but was subject to overfishing. It appears that catches have continued to increase since then, indicating that levels of fishing mortality may be becoming too high. Aspects of this species’ biology, productivity and fisheries combined with the lack of a more formal assessment is also a concern. On the weight of the available evidence, it is determined that the stock in 2018 is still not overfished (B/Bmsy =1.14) but subject to overfishing (F/Fmsy=1.22) (IOTC, 2019). Based on the B/Bmsy C-MSY model and B/Bmsy Stock Reduction Analyses, there has been an estimated 27% to 33% decline over the past three generation lengths (2005-2017). With MSY estimated as 23,900 t, (IOTC 2019), the Indian Ocean stock may represent about 87% of this species' global population, however, as MSY is unknown for the Eastern Pacific and the Western Central Pacific, this proportion may be overestimated.",
+    "habitats": "Sailfish are oceanic and epipelagic, spending most of their time in the upper 10 m (Hoolihan 2006, Chiang <em>et al</em>. 2013, Mourato <em>et al</em>. 2014) in a temperature range between 21 and 28 °C. However, on occasion they descend into deeper waters, greater than 100 m (Chiang <em>et al</em>. 2013, Mourato <em>et al</em>. 2014). Off the coast of Brazil, one of four Sailfish tagged with pop-up satellite archival tags made a dive exceeding 500 m (Mourato <em>et al</em>. 2014). It is the least oceanic of the billfishes, and it often migrates into near-shore waters. It is most densely distributed in waters close to coasts and islands. In the western Atlantic, it is concentrated particularly in the Caribbean Sea, the Gulf of Mexico and around the West Indies and Florida. Distribution along the east coast of the United States appears to be influenced by meteorological conditions (wind) and by water temperatures; during summer, the fish move northward along&#160;with the extension of warm water, and with the beginning of cold weather and northerly winds they are driven back southward&#160;to congregate in schools off the Florida coast. In the eastern Atlantic, shifts of the frontal zone of the Canaries Current and the Equatorial Counter-current are responsible for aggregation of the populations off West Africa; in spring the population in that area moves northward along the coast, and apparently returns toward the south in autumn, following the 28 °C isotherm; the period of increased abundance off the Ivory Coast coincides with the period of maximum surface water temperature, around 28 °C. The sporadic individuals found in the Mediterranean Sea seem to be vagrants, but their origin is uncertain because some were found before the opening of the Suez Canal (Nardo 1833, 1846). In both the eastern tropical Pacific and the eastern tropical Atlantic, Sailfish concentrate in shallower waters than in the western part of both oceans due to hypoxia-based habitat compression over oxygen minimum zones in the eastern tropical seas (Prince <em>et al</em>. 2010).<br/><br/>Although Sailfish probably compete for food with many other large pelagic fishes, such as other billfishes, tunas, sharks and dolphin fishes, they are most likely less affected by food competition than other species of billfishes. In the Atlantic, Sailfish overlap in geographical range and hence, compete for food during certain seasons of the year, particularly with White and Blue Marlin. Around Florida, adults have been shown to feed mainly on pelagic fishes such as Little Tunny, halfbeaks, cutlass fishes, needlefishes, sardines, jacks as well as paper nautilus and squids (Voss 1953).&#160; Off the coast of Mazatlán, Mexico (Arizmendi-Rodríguez <em>et al</em>. 2006), the most important food items by both frequency and weight were cephalopods, particularly the jumbo squid (<em>Dosidicus gigas</em>) in 67% of the stomachs and paper nautilus in 58% followed by a triggerfish (40%) and frigate tunas (14%). Off northeastern Brazil, a fish (<em>Brama brama</em>) and a squid (<em>Ornithoteuthis antillarum</em>) comprised 47% of the diet of 101 Sailfish sampled (Vaske <em>et al</em>. 2004). Thirty-one species of fishes were found in stomachs of Sailfish from Brazil (Amorin <em>et al</em>. 2011) with sardines the most important (23.1%) followed by paper nautilus (12.7%). In eastern Taiwan, stomach contents indicated that Sailfish were generalist predators feeding mainly on epipelagic fishes especially Bullet Tuna, <em>Auxis rochei</em> (Tsai <em>et al</em>. 2014). Major food categories in the Indian Ocean (Ganga <em>et al</em>. 2012) are fishes (81% occurrence), crabs (31%), and squids (25%). In the eastern Arabian Sea, diet was dominated by finfishes (flyingfishes, frigate tunas, snake mackerels, and jacks) in terms of weight and frequency of occurrence but by squids in terms of numbers (Varghese <em>et al</em>. 2013). Sailfish also feed on bottom-dwelling organisms including sea robins (Triglidae), cephalopods and gastropods.<br/><br/>Sailfish occasionally form schools or smaller groups of 3–30 individuals, but often occur in loose aggregations over a wide area. They most likely school by size. They undergo spawning migrations in the Pacific (Nakamura 1985).<br/><br/>Sailfish appear to spawn throughout the year in tropical and subtropical waters of the Pacific with peak spawning occurring in the respective local summer seasons. There are no external morphological characters or colour to distinguish males and females; large fish are usually females. Spawning occurs with males and females swimming in pairs or with two or three males chasing a single female. Around Florida, USA, Sailfish often move inshore into shallow waters where females, swimming sluggishly with their dorsal fins extended and accompanied each by one or more males may spawn near the surface in the warm season (Voss 1953, Jolley 1977). Spawning also occurs in offshore waters beyond the 100-fathom isobath south of Cuba and northwards to Carolina, USA from April to September (Gehringer 1956). In the eastern Atlantic, spawning has been observed in West African shelf waters throughout the year with peak intensity during the summer months in the Conakry-St. Luis region and from February to April in the Conakry-Freetown region (Ovchinnikov 1970). Spawning peaks in September and October and size at sex maturity is 150.2 cm eye-FL off the southeast Mexican Pacific coast (Cerdenares-Ladrón de Guevara et al. 2013). Oocyte development is asynchronous, resulting in fractional or multiple spawning and indeterminate fecundity (Jolley 1977, Cerdenares-Ladrón de Guevara et al. 2013). Off southeast Florida, a 33.4 kg female may shed up to 4.8 million eggs in three batches during one spawning season (Jolley 1977). Batch fecundity of Sailfish off the Pacific coast of Mexico, estimated for 21 females, was 1,710,000 ± 600,000 eggs per spawning (Hernandez-Herrera et al. 2000). The relationship between batch fecundity in thousands (F) and total weight of the fish in kilograms (w) was F = -245 + 61.68 w. Of 93 mature females, the average interval between spawnings was 3.6 days. Fecundity increases sharply with size of the female (Nakamura 1985, de Sylva and Breder 1997, Richards and Luthy 2005, Chiang et al. 2006a, 2006b, Wang <em>et al</em>. 2006).<br/><br/>Cross-sections of the fourth dorsal fin spine were used to age Sailfish from southeast Florida, resulting in a maximum age of 7 years, although spines from the largest Sailfish were not available (Hedgepeth and Jolley 1983). The same method was applied to sailfish in waters off eastern Taiwan and the results indicated that growth differed significantly between the sexes; females grew faster and reached larger sizes than did males. The maximum age was 11 years for males and 12 years for females. The maximum size was 232 cm LJFL for females and 221 cm LJFL for males (Chiang et al. 2004). Sailfish grow rapidly, reaching 100 cm in the second age class, which is more than 50% of the mean asymptotic eye-fork length (Cerdenares-Ladrón de Guevara 2011; Collette and Graves, 2019). Using&#160;the best available data, longevity is estimated to be 13 years and age of maturity 2.5 years (Prince <em>et al</em>. 1986, Ortiz <em>et al</em>. 2003, IUCN SSC Tuna and Billfishes Specialist Group).&#160;Using a longevity of 13 years and age of maturity of 2.5 years, the generation length was estimated to be 4.3 years in the previous Red List Assessment. The generation length is calculated as: age of first reproduction + z * (longevity - age of first maturity), where z is 0.15 (Collette <em>et al</em>. 2011).<br/><br/>Sailfish grow larger in the Pacific than in the Atlantic. The all-tackle game fish record in the Pacific is of a 221 lb. (100.24 kg) fish caught off Santa Cruz Island, Ecuador in 1947 while the largest sailfish from the Atlantic was only 142 lb., 6 oz. (64.6 kg) and was caught off Lobito, Angola in 2014 (IGFA 2016). The majority of sports fishing catches in southern Florida range from about 102 to 140 cm body length (or 173-229 cm total length) with considerable differences in weight (from 6.0-49.4 kg). The second-largest size group ranges from 61 to 94 cm body length, averaging less than 6 kg in weight. Small fish begin to appear in the catches in late summer, becoming prominent in November, December and January. The body length of individuals caught by commercial tuna longliners in the Atlantic ranges from about 125 to 210 cm (mostly between 150 and 195 cm). Sailfish taken by drift gill nets off eastern Taiwan ranged 80–289 cm lower jaw fork length for females, 78-227 cm for males (Chiang <em>et al</em>. 2009, Collette and Graves 2019).",
+    "threats": "<p>In the Atlantic, Sailfish are primarily targeted by coastal artisanal and recreational fleets, but also caught as bycatch in longline, purse seine, trawl and gillnet fisheries (ICCAT 2016).<br/><br/>In the Eastern Pacific Ocean, sailfish are mainly captured by: (1) the large-scale tuna longline fishery (mostly China, China Taipei, Japan and Korea); (2) the small-vessel longline fisheries targeting tuna and other species, and in particular, those operating off Central America; (3) the artisanal and recreational fisheries of Central and South America. Occasionally, the species is also caught in the purse-seine fisheries targeting tropical tunas, especially in more coastal regions (IATTC 2019).<br/><br/>There are nearly year-round U.S. recreational fisheries for sailfish in the Florida Straits and southern Gulf of Mexico (NMFS 1998), and similar fisheries are increasing throughout the Caribbean Sea as more countries develop tourist-based recreational fishing infrastructure. Ditton and Stoll (1998) estimated that over 230,000 anglers in the United States alone target billfish for a combined 2,137,000 days annually. Billfish anglers are also among the highest spending saltwater anglers, with an estimated $180 million in expenditures by billfish tournament anglers in 1989 alone (Fisher and Ditton 1992, Collette and Graves 2019).<br/><br/>In the Indian Ocean, around 70% of total catches come from gillnets, followed by 21% from troll and hand lines (21%). The remaining catches are recorded under longlines and other gears. This species is important for sport fisheries. Although there is not enough information to evaluate impact, the recent increase in coastal gillnet catch and effort is highly concerning. The 2017 catches (34,891 t) also exceed the catch limit prescribed in Resolution 18/05 (25,000 t) (IOTC 2018).</p>",
+    "measures": "This is a highly migratory species is listed in Annex I of the 1982 Convention on the Law of the Sea (FAO Fisheries Department 1994).<br/>There is a high amount of uncertainty in the Atlantic stock assessments. Conflicting abundance trends exist for both the Eastern and the Western stocks. Reported catches (including dead discards) may also be incomplete. In the Eastern Atlantic,&#160;it has been established that the total catch harvested must not exceed 1,271 t (67% of the average estimate of the MSY). However, the current catch is greater than this level (2,008 mt in 2019). In the Western Atlantic, it has been established that the catch must not exceed 1030 t (or 67% of the MSY average estimate). However, here also the current catch is greater than this level (1,258 mt in 2019). Domestic regulations have been established by some countries to limit the catch of sailfish. These regulations include the requirement to release all billfish from longline vessels, minimum size restrictions, and the use of circle hooks and catch and release strategies in sports fisheries (ICCAT 2016, 2021). <br/><br/>In the Eastern Pacific, the IATTC recommends a precautionary approach that does not increase fishing effort directed at sailfish, and that monitors catch closely until there is sufficient data to conduct another assessment. To ensure a reliable assessment of sailfish resources in the EPO, it is also recommended that; (1) where possible, historical catch data be obtained; (2) catches be reported by species in fisheries where reports of sailfish catch are currently commingled with other species; (3) existing data from small-scale fisheries be compiled and that catch monitoring programs be implemented where necessary to enable identification of catches by species (IATTC 2019).<br/><br/>In the Indian Ocean, Resolution 18/05 catch limits have been exceeded. It is recommended that mechanisms be provided to ensure none of the fisheries concerned exceed catch limits. There is also a need for further development of possible CPUE indicators from gillnet fisheries, and further exploration of stock assessment approaches for fisheries that are data poor. Furthermore, the lack of catch records in the Persian Gulf should be examined to determine the extent of localized depletion in Indian Ocean coastal areas (IOTC 2018).",
+    "use_trade": "<p>This species is caught as bycatch and in targeted fisheries.</p>",
+    "rationale": "See the Supplementary Information for a glossary of abbreviations and acronyms used throughout this assessment.<br/><br/>Sailfish (<em>Istiophorus platypterus</em>) occur circumglobally and are caught as food and sportfish. The Indian Ocean stock, which represents 87% of this species' global population, based on known MSY, is overfished with overfishing occurring, and is estimated to have declined by approximately 27% to 33% over the past 12 years (2005–2017).&#160;Although there is some uncertainty, the eastern Atlantic stock has declined by approximately 60% over the past 3 generation lengths, or 12 years (2003–2015), and also may be subject to overfishing. In other parts of its range in the Western Atlantic, this species is increasing, but in the Eastern Pacific, this species may also be declining. The status of Sailfish in the Western and Central Pacific Ocean is unknown. Based on calculated declines for each stock over the past 12 years, weighted by the most recent known MSY, there has been an estimated 30% decline of Sailfish over the past three generation lengths. Given that the Indian Ocean stock represents the majority of this species' global population, where it is overfished and overfishing is occurring, this species is listed as Vulnerable under criterion A2.",
+    "trend_justification": null,
+    "taxonomic_notes": "There is no genetic evidence in the mtDNA control region to indicate that the Atlantic (<em>Istiophorus albicans</em>) and Indo-Pacific (<em>Istiophorus platypterus</em>) Sailfishes are separate species (Collette <em>et al</em>. 2006). However, there are two distinct mtDNA clades, both evident in the Atlantic while only one is found in the Indo-Pacific (McDowell 2002). There is also no difference in pectoral fin length or in any other morphometric or meristic characters between the Atlantic and Indo-Pacific populations of sailfish (Morrow and Harbo 1969, McDowell 2002)."
+  },
+  "biogeographical_realms": [],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_2",
+      "description": {
+        "en": "Policies and regulations"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    }
+  ],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - eastern central"
+      },
+      "code": "34"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northeast"
+      },
+      "code": "27"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - Antarctic"
+      },
+      "code": "58"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northwest"
+      },
+      "code": "21"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southeast"
+      },
+      "code": "47"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - western"
+      },
+      "code": "51"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - southeast"
+      },
+      "code": "87"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southwest"
+      },
+      "code": "41"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Mediterranean and Black Sea"
+      },
+      "code": "37"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - northwest"
+      },
+      "code": "61"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - eastern central"
+      },
+      "code": "77"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - eastern"
+      },
+      "code": "57"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - southwest"
+      },
+      "code": "81"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - western central"
+      },
+      "code": "71"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - western central"
+      },
+      "code": "31"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Antigua and Barbuda"
+      },
+      "code": "AG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ghana"
+      },
+      "code": "GH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Palau"
+      },
+      "code": "PW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cayman Islands"
+      },
+      "code": "KY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Galápagos"
+      },
+      "code": "GAL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hong Kong"
+      },
+      "code": "HK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Puerto Rico"
+      },
+      "code": "PR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "NZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Yemen"
+      },
+      "code": "YE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Suriname"
+      },
+      "code": "SR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Réunion"
+      },
+      "code": "RE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Côte d'Ivoire"
+      },
+      "code": "CI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maldives"
+      },
+      "code": "MV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritius"
+      },
+      "code": "MU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Lucia"
+      },
+      "code": "LC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Clipperton I."
+      },
+      "code": "CPI-CL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Haiti"
+      },
+      "code": "HT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Djibouti"
+      },
+      "code": "DJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mayotte"
+      },
+      "code": "YT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Comoros"
+      },
+      "code": "KM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Togo"
+      },
+      "code": "TG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Easter Is."
+      },
+      "code": "EAS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hawaiian Is."
+      },
+      "code": "HAW-HI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uruguay"
+      },
+      "code": "UY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Kitts and Nevis"
+      },
+      "code": "KN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "American Samoa"
+      },
+      "code": "AS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Afghanistan"
+      },
+      "code": "AF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Monaco"
+      },
+      "code": "MC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Arab Emirates"
+      },
+      "code": "AE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sierra Leone"
+      },
+      "code": "SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kuwait"
+      },
+      "code": "KW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominican Republic"
+      },
+      "code": "DO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "US Line Is."
+      },
+      "code": "LIN-US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tokelau"
+      },
+      "code": "TK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Vincent and the Grenadines"
+      },
+      "code": "VC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Marshall Islands"
+      },
+      "code": "MH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Qatar"
+      },
+      "code": "QA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Vanuatu"
+      },
+      "code": "VU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bahamas"
+      },
+      "code": "BS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Johnston I."
+      },
+      "code": "HAW-JI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canary Is."
+      },
+      "code": "CNY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saudi Arabia"
+      },
+      "code": "SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "British Indian Ocean Territory"
+      },
+      "code": "IO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cook Islands"
+      },
+      "code": "CK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Solomon Islands"
+      },
+      "code": "SB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Southern Territories"
+      },
+      "code": "TF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iraq"
+      },
+      "code": "IQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jordan"
+      },
+      "code": "JO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chile"
+      },
+      "code": "CL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northern Mariana Islands"
+      },
+      "code": "MP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kiribati"
+      },
+      "code": "KI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guam"
+      },
+      "code": "GU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norfolk Island"
+      },
+      "code": "NF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Crozet Is."
+      },
+      "code": "CRZ-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea-Bissau"
+      },
+      "code": "GW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Barbados"
+      },
+      "code": "BB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Philippines"
+      },
+      "code": "PH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Democratic People's Republic of"
+      },
+      "code": "KP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Seychelles"
+      },
+      "code": "SC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Andaman Is."
+      },
+      "code": "AND-AN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pitcairn"
+      },
+      "code": "PN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cyprus"
+      },
+      "code": "CY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guadeloupe"
+      },
+      "code": "GP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cabo Verde"
+      },
+      "code": "CV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Trinidad and Tobago"
+      },
+      "code": "TT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Papua New Guinea"
+      },
+      "code": "PG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Republic of"
+      },
+      "code": "KR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Grenada"
+      },
+      "code": "GD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Helena, Ascension and Tristan da Cunha"
+      },
+      "code": "SH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Polynesia"
+      },
+      "code": "PF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Christmas Island"
+      },
+      "code": "CX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tuvalu"
+      },
+      "code": "TV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cuba"
+      },
+      "code": "CU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Taiwan, Province of China"
+      },
+      "code": "TW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Caledonia"
+      },
+      "code": "NC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Singapore"
+      },
+      "code": "SG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bermuda"
+      },
+      "code": "BM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Equatorial Guinea"
+      },
+      "code": "GQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Sahara"
+      },
+      "code": "EH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Wallis and Futuna"
+      },
+      "code": "WF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Micronesia, Federated States of "
+      },
+      "code": "FM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Benin"
+      },
+      "code": "BJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Howland-Baker Is."
+      },
+      "code": "HBI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Macao"
+      },
+      "code": "MO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Samoa"
+      },
+      "code": "WS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Turks and Caicos Islands"
+      },
+      "code": "TC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malta"
+      },
+      "code": "MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belize"
+      },
+      "code": "BZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oman"
+      },
+      "code": "OM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Fiji"
+      },
+      "code": "FJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madeira"
+      },
+      "code": "MDR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "El Salvador"
+      },
+      "code": "SV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Niue"
+      },
+      "code": "NU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominica"
+      },
+      "code": "DM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bahrain"
+      },
+      "code": "BH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Azores"
+      },
+      "code": "AZO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sao Tome and Principe"
+      },
+      "code": "ST"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Wake Is."
+      },
+      "code": "WAK-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nauru"
+      },
+      "code": "NR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States Minor Outlying Islands"
+      },
+      "code": "UM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jamaica"
+      },
+      "code": "JM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, British"
+      },
+      "code": "VG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, U.S."
+      },
+      "code": "VI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cocos (Keeling) Islands"
+      },
+      "code": "CC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Lebanon"
+      },
+      "code": "LB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Liberia"
+      },
+      "code": "LR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tonga"
+      },
+      "code": "TO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sint Maarten (Dutch part)"
+      },
+      "code": "SX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Martin (French part)"
+      },
+      "code": "MF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Barthélemy"
+      },
+      "code": "BL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montserrat"
+      },
+      "code": "MS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Martinique"
+      },
+      "code": "MQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Aruba"
+      },
+      "code": "AW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Anguilla"
+      },
+      "code": "AI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bonaire, Sint Eustatius and Saba"
+      },
+      "code": "BQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Curaçao"
+      },
+      "code": "CW"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Medium Impact: 7",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Medium Impact: 7",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_3"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_4_4"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Collette, B.B., Di Natale, A., Fox, W., Graves, J., Juan Jorda, M., Pohlot, B., Restrepo, V. & Schratwieser, J.",
+      "value": [
+        "Victor  Restrepo (ISSF)",
+        "Bruce Collette (Smithsonian, USA)",
+        "Jason Schratwieser (IGFA)",
+        "Bruce Pohlot (IGFA)",
+        "Antonio Di Natale (AQUASTUDIO Research Institute, Italy)",
+        "John Graves (VIMS)",
+        "William Fox (World Wildlife Fund, USA)",
+        "Maria Jose Juan Jorda (Recursos Marinos y Pesquerias, Spain)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Polidoro, B., Kemppinen, K., Sun, C.-L., Pollard, D.A. & Hinton, M.",
+      "value": [
+        "Chi-Lu Sun (National Taiwan University)",
+        "Michael Hinton (IATTC)",
+        "Krista Kemppinen (Arizona State Univeristy)",
+        "Beth Polidoro (GMSA)",
+        "David Pollard (NSW Fisheries, Australia)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Shiffman, D., Pires Ferreira Travassos, P.E., Uozumi, Y., Serra, R., Salas, E., Nelson, R., Miyabe, N., Guzman-Mora, A.G., Die, D., de Oliveira Leite Jr., N., Cardenas, G., Amorim, A.F., Acero, A., Canales Ramirez, C., Carpenter, K.E., Boustany, A., Fredou, F.L., Viera Hazin, F.H., Minte Vera, C., Montano Cruz, R., Oxenford, H., Schaefer, K., Yanez, E. & Teixeira Lessa, R.P.",
+      "value": [
+        "Cristian Canales Ramirez (Chilean Fisheries)",
+        "Fabio Hissa Viera Hazin (UFRPE)",
+        "Paulo Eurico Pires Ferreira Travassos (UFRPE)",
+        "Rosangela Paula Teixeira Lessa (UFRPE)",
+        "Flavia Lucena Fredou (UFRPE)",
+        "David Die (University of Miami)",
+        "Alberto Ferreira Amorim (IUCN SSC Shark Specialist Group)",
+        "David Shiffman (Arizona State University)",
+        "Kurt Schaefer (IATTC)",
+        "Rodolfo Serra (Chilean Fisheries)",
+        "Kent Carpenter (IUCN SSC Global Marine Species Assessment, Old Dominion University, Virginia, US)",
+        "Ramon Montano Cruz (Ecuadorian Fisheries)",
+        "Eleuterio Yanez (Global Marine Species Assessments)",
+        "Gladys Cardenas (IMARPE)",
+        "Eva Salas (University of Costa Rica)",
+        "Ana Gloria Guzman-Mora (University of Costa Rica)",
+        "Carolina Minte Vera (Guest)",
+        "Nilamon de Oliveira Leite Jr. (ICMBio)",
+        "Hazel Oxenford (CERMES, University of the West Indies)",
+        "Arturo Acero (Globak Marine Species Assessments)",
+        "Andre Boustany (Duke University)",
+        "Russell Nelson (The Billfish Foundation, USA)",
+        "Yuji Uozumi (National Research Institute of Far Seas Fisheries, Japan)",
+        "Naozumi Miyabe (National Research Institute of Far Seas Fisheries, Japan)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Wirtz, P., Bingeman, J., Bingeman, J., Fricke, R., Hook, T.J. and Young, J. 2014. The fishes of Ascension Island, central Atlantic Ocean–new records and an annotated checklist. <i>Journal of the Marine Biological Association of the United Kingdom</i>: 1-16.",
+      "year": "2014",
+      "title": "The fishes of Ascension Island, central Atlantic Ocean–new records and an annotated checklist",
+      "author": "Wirtz, P., Bingeman, J., Bingeman, J., Fricke, R., Hook, T.J. and Young, J. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Collette, B.B., Carpenter, K.E., Polidoro, B.A., Juan-Jorda, M.J., Boustany, A., Die, D.J., Elfes, C., Fox, W., Graves, J., Harrison, L., McManus, R., Minte-Vera, C., Nelson, R., Restrepo, V., Schratwieser, J., Sun, C-L, Brick Peres, M., Canales, C., Cardenas, G., Chang, S.-K., Chiang, W-C, de Oliveira Leite, N., Harwell, H., Lessa, R., Fredou, F.L., Oxenford, H.A., Serra, R., Shao, K.-T., Sumalia, R., Wang, S-P, Watson, R. and Yanez, E. 2011. High value and long life: Double jeopardy for tunas and billfishes. <i>Science</i> 333: 291-292.",
+      "year": "2011",
+      "title": "High value and long life: Double jeopardy for tunas and billfishes",
+      "author": "Collette, B.B., Carpenter, K.E., Polidoro, B.A., Juan-Jorda, M.J., Boustany, A., Die, D.J., Elfes, C., Fox, W., Graves, J., Harrison, L., McManus, R., Minte-Vera, C., Nelson, R., Restrepo, V., Schratwieser, J., Sun, C-L, Brick Peres, M., Canales, C., Cardenas, G., Chang, S.-K., Chiang, W-C, de Oliveira Leite, N., Harwell, H., Lessa, R., Fredou, F.L., Oxenford, H.A., Serra, R., Shao, K.-T., Sumalia, R., Wang, S-P, Watson, R. and Yanez, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IATTC. 2008. The Fishery for Tunas and Billfishes in the Eastern Pacific Ocean in 2007.  In: IATTC Document IATTC-78-05 (ed.), IATTC 78th Meeting 23-27 June 2008. Panama.",
+      "year": "2008",
+      "title": "The Fishery for Tunas and Billfishes in the Eastern Pacific Ocean in 2007",
+      "author": "IATTC",
+      "citation_short": null
+    },
+    {
+      "citation": "Garcia, S. 1994. <i>World review of highly migratory species and straddling stocks</i>. Rome.",
+      "year": "1994",
+      "title": "World review of highly migratory species and straddling stocks",
+      "author": "Garcia, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Collette, B.B. 2010. Reproduction and Development in Epipelagic Fishes. In: Cole, K.S. (ed.), <i>Reproduction and sexuality in marine fishes: patterns and processes</i>, pp. 21-63. University of California Press, Berkeley.",
+      "year": "2010",
+      "title": "Reproduction and Development in Epipelagic Fishes",
+      "author": "Collette, B.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ben-Tuvia, A. 1966. Red Sea fishes recently found in the Mediterranean. <i>Copeia</i> 1966(2): 254-275.",
+      "year": "1966",
+      "title": "Red Sea fishes recently found in the Mediterranean",
+      "author": "Ben-Tuvia, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Richards WJ, Luthy SA. 2005. Istiophoridae: billfishes. In: Richards WJ, ed. (ed.), <i>Early stages of Atlantic fishes: an identification guide for the western central North Atlantic.</i>, CRC Press.",
+      "year": "2005",
+      "title": "Istiophoridae: billfishes.",
+      "author": "Richards WJ, Luthy SA.",
+      "citation_short": null
+    },
+    {
+      "citation": "de Sylva, D.P. and P.R. Breder. 1997. Reproduction, gonad histology, and spawning cycles of North Atlantic billfishes (Istiophoridae). <i>Bull. Mar. Sci.</i> 60(3): 668-697.",
+      "year": "1997",
+      "title": "Reproduction, gonad histology, and spawning cycles of North Atlantic billfishes (Istiophoridae).",
+      "author": "de Sylva, D.P. and P.R. Breder",
+      "citation_short": null
+    },
+    {
+      "citation": "Collette, B.B.,  McDowell, J.R. and Graves, J.E. 2006. Phylogeny of recent billfishes (Xiphioidei). <i>Bulletin of Marine Science</i> 79(3): 455-468.",
+      "year": "2006",
+      "title": "Phylogeny of recent billfishes (Xiphioidei)",
+      "author": "Collette, B.B.,  McDowell, J.R. and Graves, J.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "González-Armas R, Klett-Traulsen A, Hernández-Herrera A. 2006. Evidence of billfish reproduction in the southern Gulf of California, Mexico. <i>Bulletin of Marine Science</i> 70(3): 705-717.",
+      "year": "2006",
+      "title": "Evidence of billfish reproduction in the southern Gulf of California, Mexico",
+      "author": "González-Armas R, Klett-Traulsen A, Hernández-Herrera A",
+      "citation_short": null
+    },
+    {
+      "citation": "Wang S-P, Sun C-L, Yeh S-Z, Chiang W-C, Su N-J, Chang Y-J, Liu C-H. 2006. Length distributions, weight-length relationships, and sex ratios at lengths for the billfishes in Taiwan waters. <i>Bulletin of Marine Science</i> 79(3): 865-869.",
+      "year": "2006",
+      "title": "Length distributions, weight-length relationships, and sex ratios at lengths for the billfishes in Taiwan waters.",
+      "author": "Wang S-P, Sun C-L, Yeh S-Z, Chiang W-C, Su N-J, Chang Y-J, Liu C-H",
+      "citation_short": null
+    },
+    {
+      "citation": "D Croz, L., J.A.V. Martínez and V.M. Vega. 1994. Las Pesquerías. <i>Scientia (Panamá)</i> 8(2): 145-152.",
+      "year": "1994",
+      "title": "Las Pesquerías",
+      "author": "D Croz, L., J.A.V. Martínez and V.M. Vega",
+      "citation_short": null
+    },
+    {
+      "citation": "Shomura RS, Williams F, 1975. Proceedings of the International Billfish Symposium Kailua-Kona, Hawaii, 9-12 August 1972. Part 3.  In: NOAA Technical Report NMFS (ed.), Species synopses.",
+      "year": "1975",
+      "title": "Proceedings of the International Billfish Symposium Kailua-Kona, Hawaii, 9-12 August 1972. Part 3.",
+      "author": "Shomura RS, Williams F,",
+      "citation_short": null
+    },
+    {
+      "citation": "ICCAT. 2006. Report of the 2006 ICCAT Billfish Stock Assessment. Madrid.",
+      "year": "2006",
+      "title": "Report of the 2006 ICCAT Billfish Stock Assessment",
+      "author": "ICCAT",
+      "citation_short": null
+    },
+    {
+      "citation": "Ortiz, M., Price, E.D., Serafy, J.E., Holts, D.B., Dary, K.B, Pepperell, J.G., Lowry, M.B., Holdsworth, J.C. 2003. Global overview of the major constitutent-based billfish tagging programs and their results since 1954. <i>Mar. Freshwater Res.</i> 54: 489-507.",
+      "year": "2003",
+      "title": "Global overview of the major constitutent-based billfish tagging programs and their results since 1954.",
+      "author": "Ortiz, M., Price, E.D., Serafy, J.E., Holts, D.B., Dary, K.B, Pepperell, J.G., Lowry, M.B., Holdsworth, J.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Prince, E.D., Luo, J., Goodyear, C.P.,  Hoolihan, J.P., Snodgrass, D., Orbeson, E.S., Serafy, J.E., Ortiz, M. and Schirripa, M. 2010. Ocean scale hypoxia-based habitat compression of Atlantic istiophorid billfishes. <i>Fish. Oceanogr.</i> 19: 448-462.",
+      "year": "2010",
+      "title": "Ocean scale hypoxia-based habitat compression of Atlantic istiophorid billfishes",
+      "author": "Prince, E.D., Luo, J., Goodyear, C.P.,  Hoolihan, J.P., Snodgrass, D., Orbeson, E.S., Serafy, J.E., Ortiz, M. and Schirripa, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Prince, E.D., Lee, C.A., Dean, J.M. 1986. Longevity and age validation of a tag-recaptured Atlantic sailfish <i>Istiophorus platypterus</i>, using dorsal spines and otoliths. <i>Fish. Bull.</i> 84: 493-502.",
+      "year": "1986",
+      "title": "Longevity and age validation of a tag-recaptured Atlantic sailfish <i>Istiophorus platypterus</i>, using dorsal spines and otoliths.",
+      "author": "Prince, E.D., Lee, C.A., Dean, J.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "ICCAT. 2001. Report of the 2001 Billfish Species Group Session. In: ICCAT SCRS (ed.). Madrid.",
+      "year": "2001",
+      "title": "Report of the 2001 Billfish Species Group Session",
+      "author": "ICCAT",
+      "citation_short": null
+    },
+    {
+      "citation": "Voss, G.L. 1953. A contribution to the life history and biology of the sailfish, Istiophorus americanus Cuv. and Val. in Florida waters. <i>Bull. Mar. Sci. Gulf Carib.</i> 3: 206-240.",
+      "year": "1953",
+      "title": "A contribution to the life history and biology of the sailfish, Istiophorus americanus Cuv. and Val. in Florida waters.",
+      "author": "Voss, G.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nakamura, I. 1985. <i>Billfishes of the world. An annotated and illustrated catalogue of marlins, sailfishes, spearfishes and swordfishes known to date.</i> FAO Fish. Synop. 125, vol. 5.",
+      "year": "1985",
+      "title": "Billfishes of the world. An annotated and illustrated catalogue of marlins, sailfishes, spearfishes and swordfishes known to date.",
+      "author": "Nakamura, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Morrow, J.E., Harbo, S.J. 1969. A revision of the sailfish genus <i>Istiophorus</i>. <i>Copeia</i> 1969: 34-44.",
+      "year": "1969",
+      "title": "A revision of the sailfish genus <i>Istiophorus</i>",
+      "author": "Morrow, J.E., Harbo, S.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Beardsley, G.L., N.R. Merrett, and W.J. Richards. 1975. Synopsis of the biology of the sailfish, Istiophorus platypterus (Shaw and Nodder, 1791). <i>NOAA Tech. Rep. NMFS SSRF</i> 675(3): 95-120.",
+      "year": "1975",
+      "title": "Synopsis of the biology of the sailfish, Istiophorus platypterus (Shaw and Nodder, 1791)",
+      "author": "Beardsley, G.L., N.R. Merrett, and W.J. Richards",
+      "citation_short": null
+    },
+    {
+      "citation": "Chiang, W.C., Sun, C.L., Wang, S.P., Yeh, S.Z., Chen, Y., Su, W.C., Liu, D.C., Chen, W.Y. 2009. Analysis of sex-specific spawning biomass per recruit of the sailfish (<i>Istiophorus platypterus</i>) in the waters off eastern Taiwan. <i>Fish. Bull.</i> 107(3): 265-277.",
+      "year": "2009",
+      "title": "Analysis of sex-specific spawning biomass per recruit of the sailfish (<i>Istiophorus platypterus</i>) in the waters off eastern Taiwan.",
+      "author": "Chiang, W.C., Sun, C.L., Wang, S.P., Yeh, S.Z., Chen, Y., Su, W.C., Liu, D.C., Chen, W.Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "McDowell, J.R. 2002. Genetic stock structure of the sailfish, Istiophorus platypterus, based on nuclear and mitochondrial DNA. Ph.D. dissertation, Virginia Inst. Mar. Sci..",
+      "year": "2002",
+      "title": "Genetic stock structure of the sailfish, Istiophorus platypterus, based on nuclear and mitochondrial DNA",
+      "author": "McDowell, J.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Chiang W-C, Sun C-L, Yeh S-Z, Su W-C, Liu D-C, Chen W-Y. 2006. Sex ratios, size at sexual maturity, and spawning season seasonality of sailfish Istiophorus platypterus from eastern Taiwan. <i>Bulletin of Marine Science</i> 3: 985-994.",
+      "year": "2006",
+      "title": "Sex ratios, size at sexual maturity, and spawning season seasonality of sailfish Istiophorus platypterus from eastern Taiwan.",
+      "author": "Chiang W-C, Sun C-L, Yeh S-Z, Su W-C, Liu D-C, Chen W-Y",
+      "citation_short": null
+    },
+    {
+      "citation": "Hoolihan, J.P., Premanandh, J., D'Aloia-Palmieri, M.-A. and Benzie, J.A.H. 2004. Intraspecific phylogeographic isolation of Arabian Gulf sailfish <i>Istiophorus platypterus</i> inferred from mitochondrial DNA. <i>Marine Biology</i> 145: 465-475.",
+      "year": "2004",
+      "title": "Intraspecific phylogeographic isolation of Arabian Gulf sailfish <i>Istiophorus platypterus</i> inferred from mitochondrial DNA",
+      "author": "Hoolihan, J.P., Premanandh, J., D'Aloia-Palmieri, M.-A. and Benzie, J.A.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ganga, U., Elayathu, M.N.K., Prakasan, D., Rajool Shanis, C.P., Akhilesh, K.V. and Retheesh, T.B. 2012. Resource dynamics of the Indo-Pacific sailfish <i>Istiophorus platypterus</i> (Shaw,1792) from the south-eastern Arabian Sea. <i>Indian J. Fish.</i> 59(3): 61-64.",
+      "year": "2012",
+      "title": "Resource dynamics of the Indo-Pacific sailfish <i>Istiophorus platypterus</i> (Shaw,1792) from the south-eastern Arabian Sea",
+      "author": "Ganga, U., Elayathu, M.N.K., Prakasan, D., Rajool Shanis, C.P., Akhilesh, K.V. and Retheesh, T.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hoolihan, J.P. and Luo, J. 2007. Determining summer residence status and vertical habitat use of Sailfish(<i>Istiophorus platypterus</i>) in the Arabian Gulf. <i>ICES Journal of Marine Science</i> 64: 1791-1799.",
+      "year": "2007",
+      "title": "Determining summer residence status and vertical habitat use of Sailfish(<i>Istiophorus platypterus</i>) in the Arabian Gulf",
+      "author": "Hoolihan, J.P. and Luo, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hoolihan, J.P. 2006. Estimating survival and recovery probabilities for Arabian Gulf Sailfish (<i>Istiophorus platypterus</i>) from tag recovery studies. <i>Bulletin of Marine Science</i> 79(3): 577-587.",
+      "year": "2006",
+      "title": "Estimating survival and recovery probabilities for Arabian Gulf Sailfish (<i>Istiophorus platypterus</i>) from tag recovery studies",
+      "author": "Hoolihan, J.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Oritz, M., Diaz, G.A., Hoolihan, J.P., 2010. Updated sailfish (<I>Istiophorus platypterus</i>) catch rates From the u.s. pelagic longline fishery in the northwest Atlantic and Gulf of Mexico 1986-2008. <i>Collected Volumes of Scientific Papers ICCAT</i> 65(5): 1661-1676.",
+      "year": "2010",
+      "title": "Updated sailfish (<I>Istiophorus platypterus</i>) catch rates From the u.s. pelagic longline fishery in the northwest Atlantic and Gulf of Mexico 1986-2008",
+      "author": "Oritz, M., Diaz, G.A., Hoolihan, J.P.,",
+      "citation_short": null
+    },
+    {
+      "citation": "Collette, B.B. and Graves, J. 2019. <i>Tunas and Billfishes of the World</i>. Johns Hopkins University Press, Baltimore, Maryland.",
+      "year": "2019",
+      "title": "Tunas and Billfishes of the World",
+      "author": "Collette, B.B. and Graves, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IATTC. 2019. Report on the tuna fishery, stocks, and ecosystem in the Eastern Pacific Ocean in 2018.",
+      "year": "2019",
+      "title": "Report on the tuna fishery, stocks, and ecosystem in the Eastern Pacific Ocean in 2018",
+      "author": "IATTC",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2022. The IUCN Red List of Threatened Species. Version 2022-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 21 July 2022).",
+      "year": "2022",
+      "title": "The IUCN Red List of Threatened Species. Version 2022-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2022-1"
+    },
+    {
+      "citation": "Amorin, A.F. de, Pimenta, E.G. and Amorin, M.C. C. de. 2011. <i>Peixes-de-bico do Atlȃntico</i>. Santos, Ediçăo do Autor, 108 p.",
+      "year": "2011",
+      "title": "Peixes-de-bico do Atlȃntico",
+      "author": "Amorin, A.F. de, Pimenta, E.G. and Amorin, M.C. C. de",
+      "citation_short": null
+    },
+    {
+      "citation": "IGFA. 2016. <i>IGFA World Record Game Fishes</i>. International Game Fish Association, Dania Beach, Florida.",
+      "year": "2016",
+      "title": "IGFA World Record Game Fishes",
+      "author": "IGFA",
+      "citation_short": ""
+    },
+    {
+      "citation": "ICCAT. 2021. Report of the Intersessional Meeting of the Billfishes Species Group (<i>Online, 8-12 March 2021).",
+      "year": "2021",
+      "title": "Report of the Intersessional Meeting of the Billfishes Species Group (<i>Online, 8-12 March 2021)",
+      "author": "ICCAT",
+      "citation_short": null
+    },
+    {
+      "citation": "Arizmendi-Rodríguez, D.I., Abitia-Cárdenas, L.A., Galván-Magaña, F. and Trejo-Escamilla, I. 2006. Food habits of Sailfish Istiophorus platypterus off Mazatlan, Mexico. <i>Bulletin of Marine Science</i> 79(3): 777-791.",
+      "year": "2006",
+      "title": "Food habits of Sailfish Istiophorus platypterus off Mazatlan, Mexico",
+      "author": "Arizmendi-Rodríguez, D.I., Abitia-Cárdenas, L.A., Galván-Magaña, F. and Trejo-Escamilla, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cerdenares-Ladrón de Guevara, G., E. Morales-Bojórquez, C. Rodríguez-Jaramillo, A. Hernández-Herrera and A. Abitia-Cárdenas. 2013. Seasonal reproduction of sailfish Istiophorus platypterus from the southeast Mexican Pacific. <i>Marine Biology Research</i> 9(4): 407-420.",
+      "year": "2013",
+      "title": "Seasonal reproduction of sailfish Istiophorus platypterus from the southeast Mexican Pacific",
+      "author": "Cerdenares-Ladrón de Guevara, G., E. Morales-Bojórquez, C. Rodríguez-Jaramillo, A. Hernández-Herrera and A. Abitia-Cárdenas",
+      "citation_short": null
+    },
+    {
+      "citation": "Cerdenares-Ladrón de Guevara, G., Morales-Bojórquez, E. and Rodríguez-Sánchez, R. 2011. Age and growth of the sailfish Istiophorus platypterus (Istiophoridae) in the Gulf of Tehuantepec, Mexico. <i>Marine Biology Research</i> 7(5): 488-499.",
+      "year": "2011",
+      "title": "Age and growth of the sailfish Istiophorus platypterus (Istiophoridae) in the Gulf of Tehuantepec, Mexico",
+      "author": "Cerdenares-Ladrón de Guevara, G., Morales-Bojórquez, E. and Rodríguez-Sánchez, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Chiang, W.C., Sun, C.L., Yeh, S.Z. and Su, W.C. 2004. Age and growth of the saildfish (<i>Istiophorus platypterus</i>) in the eastern Taiwan waters. <i>Fisheries Bulletin</i> 102(2): 251-263.",
+      "year": "2004",
+      "title": "Age and growth of the saildfish (<i>Istiophorus platypterus</i>) in the eastern Taiwan waters",
+      "author": "Chiang, W.C., Sun, C.L., Yeh, S.Z. and Su, W.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Chiang, W.C., Sun, C.L., Yeh, S.Z., Su, W.C. and Liu, D.C. 2006. Spawning frequency and batch fecundity of the sailfish (<i>Istiophorus platypterus</i>) in waters off eastern Taiwan. <i>Zoological Studies</i> 45(4): 483-491.",
+      "year": "2006",
+      "title": "Spawning frequency and batch fecundity of the sailfish (<i>Istiophorus platypterus</i>) in waters off eastern Taiwan",
+      "author": "Chiang, W.C., Sun, C.L., Yeh, S.Z., Su, W.C. and Liu, D.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ditton, R.B. and Stoll, J.R. 1998. A socio-economic review of recreational billfish fisheries. <i>Proceedings of the Gulf and Caribbean Fisheries Institute</i> 51: 666-681.",
+      "year": "1998",
+      "title": "A socio-economic review of recreational billfish fisheries",
+      "author": "Ditton, R.B. and Stoll, J.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fisher, M.R. and Ditton, R.B. 1992. Characteristics of billfish anglers in the U.S. Atlantic Ocean. <i>Marine fisheries Review</i> 54(1): 1-8.",
+      "year": "1992",
+      "title": "Characteristics of billfish anglers in the U.S. Atlantic Ocean",
+      "author": "Fisher, M.R. and Ditton, R.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gehringer, J.W. 1956. Observations on the development of the Atlantic Sailfish Istiophorus americanus (Cuvier) with notes on an unidentified species of istiophorid. <i>Fishery Bulletin</i> 57: 140-171.",
+      "year": "1956",
+      "title": "Observations on the development of the Atlantic Sailfish Istiophorus americanus (Cuvier) with notes on an unidentified species of istiophorid",
+      "author": "Gehringer, J.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hedgepeth, M.Y. and Jolley, Jr., J.W. 1983. Age and growth of Sailfish, Istiophorus platypterus, using cross sections from the fourth dorsal spine.  In: Prince, E.D. and Pulos, L.M. (eds), Proceedings of the International Workshop on Age Determination of Oceanic Pelagic Fishes: Tunas, Billfishes, and Sharks. NOAA Technical Report NMFS 8:131-135.",
+      "year": "1983",
+      "title": "Age and growth of Sailfish, Istiophorus platypterus, using cross sections from the fourth dorsal spine",
+      "author": "Hedgepeth, M.Y. and Jolley, Jr., J.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hernández-Herrera, A., Ramirez-Rodríguez, M. and Muhlia-Melo, A. 2000. Batch fecundity and spawning frequency of Sailfish (Istiophorus platypterus) off the Pacific coast of Mexico. <i>Pacific Science</i> 54(2): 189-194.",
+      "year": "2000",
+      "title": "Batch fecundity and spawning frequency of Sailfish (Istiophorus platypterus) off the Pacific coast of Mexico",
+      "author": "Hernández-Herrera, A., Ramirez-Rodríguez, M. and Muhlia-Melo, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "ICCAT. 2016. Report of the 2016 sailfish stock assessment meeting. Executive summary.",
+      "year": "2016",
+      "title": "Report of the 2016 sailfish stock assessment meeting. Executive summary",
+      "author": "ICCAT",
+      "citation_short": null
+    },
+    {
+      "citation": "IOTC. 2013. Status of the Indian Ocean Indo-Pacific Sailfish (SFA: Istiophorus platypterus) resource. IOTC–2013–SC16–ES15[E].",
+      "year": "2013",
+      "title": "Status of the Indian Ocean Indo-Pacific Sailfish (SFA: Istiophorus platypterus) resource. IOTC–2013–SC16–ES15[E]",
+      "author": "IOTC",
+      "citation_short": null
+    },
+    {
+      "citation": "IOTC. 2018a. Report of the 21st Session of the IOTC Scientific Committee.",
+      "year": "2018a",
+      "title": "Report of the 21st Session of the IOTC Scientific Committee",
+      "author": "IOTC",
+      "citation_short": ""
+    },
+    {
+      "citation": "IOTC. 2018b. Status of the Indo-Pacific sailfish resource. Executive summary.",
+      "year": "2018b",
+      "title": "Status of the Indo-Pacific sailfish resource. Executive summary",
+      "author": "IOTC",
+      "citation_short": ""
+    },
+    {
+      "citation": "IOTC. 2019. Assessment of Indian Ocean Indo-Pacific Sailfish (Istiophorus platypterus) using catch-only methods. IOTC–2019–WPB–24.",
+      "year": "2019",
+      "title": "Assessment of Indian Ocean Indo-Pacific Sailfish (Istiophorus platypterus) using catch-only methods",
+      "author": "IOTC",
+      "citation_short": null
+    },
+    {
+      "citation": "Jolley, J.W., Jr. 1977. The biology and fishery of Atlantic Sailfish, Istiophorus platypterus, from southeast Florida. <i>Florida Marine Research Publication</i> 28(1-31).",
+      "year": "1977",
+      "title": "The biology and fishery of Atlantic Sailfish, Istiophorus platypterus, from southeast Florida",
+      "author": "Jolley, J.W., Jr.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mourato, B.L., Carvalho, F., Musyl, M., Amorin, A., Pacheco, J.D., Hazin, H. and Hazin, F. 2014. Short-term movements and habitat preferences of Sailfish, Istiophorus platypterus (Istiophoridae), along the southeast coast of Brazil. <i>Neotropical Ichthyology</i> 12(4): 861-870.",
+      "year": "2014",
+      "title": "Short-term movements and habitat preferences of Sailfish, Istiophorus platypterus (Istiophoridae), along the southeast coast of Brazil",
+      "author": "Mourato, B.L., Carvalho, F., Musyl, M., Amorin, A., Pacheco, J.D., Hazin, H. and Hazin, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nardo, G.D. 1833. De <i>Scheponopodo</i> novo piscium genere et de <i>Guebucu Margravii</i> specie illi cognata etc. Mem. letta al Congresso dei naturalisti e medici in Vienna (1832). <i>Isis (Oken)</i> 26: 415-419.",
+      "year": "1833",
+      "title": "De <i>Scheponopodo</i> novo piscium genere et de <i>Guebucu Margravii</i> specie illi cognata etc. Mem. letta al Congresso dei naturalisti e medici in Vienna (1832)",
+      "author": "Nardo, G.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nardo, G.D. 1846. Prima nota sulla identità dei due generi <i>Tetrapturus</i> e <i>Histiophorus</i> e su qualche particolarità anatomica di essi. <i>Ottava Riunione degli Scienziati Italiani</i>, pp. 461-463. Tip. Ferrando, Genova.",
+      "year": "1846",
+      "title": "Prima nota sulla identità dei due generi <i>Tetrapturus</i> e <i>Histiophorus</i> e su qualche particolarità anatomica di essi",
+      "author": "Nardo, G.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tsai, C-N., Chang, W-C., Sun, C-L., Shao, K-T., Chen, S-Y. and Yeh, S-Z. 2014. Trophic size-structure of sailfish Istiophorus platypterus in eastern Taiwan estimated by stable isotope analysis. <i>Journal of Fish Biology</i> 84(2): 354-371.",
+      "year": "2014",
+      "title": "Trophic size-structure of sailfish Istiophorus platypterus in eastern Taiwan estimated by stable isotope analysis",
+      "author": "Tsai, C-N., Chang, W-C., Sun, C-L., Shao, K-T., Chen, S-Y. and Yeh, S-Z.",
+      "citation_short": null
+    },
+    {
+      "citation": "Varghese, S.P., Somvanshi, V.S. and Gulati, D.K. 2013. Ontogenetic and seasonal variations in the feeding ecology of Indo-Pacific sailfish, Istiophorus platypterus (Shaw, 1792), of the eastern Arabian Sea. <i>Indian Journal of Geo-Marine Sciences</i> 42(5): 593-605.",
+      "year": "2013",
+      "title": "Ontogenetic and seasonal variations in the feeding ecology of Indo-Pacific sailfish, Istiophorus platypterus (Shaw, 1792), of the eastern Arabian Sea",
+      "author": "Varghese, S.P., Somvanshi, V.S. and Gulati, D.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Varghese, S.P., Somvanshi, V.S. and Gulati, D.K. 2013. Ontogenetic and seasonal variations in the feeding ecology of Indo-Pacific sailfish, Istiophorus platypterus (Shaw, 1792), of the eastern Arabian Sea. <i>Indian Journal of Geo-Marine Sciences</i> 42(5): 593-605.",
+      "year": "2013",
+      "title": "Ontogenetic and seasonal variations in the feeding ecology of Indo-Pacific sailfish, Istiophorus platypterus (Shaw, 1792), of the eastern Arabian Sea",
+      "author": "Varghese, S.P., Somvanshi, V.S. and Gulati, D.K.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [
+    {
+      "description": {
+        "en": "North Brazil Shelf"
+      },
+      "code": "4_3_3"
+    },
+    {
+      "description": {
+        "en": "Black Sea"
+      },
+      "code": "4_2_5"
+    },
+    {
+      "description": {
+        "en": "California Current"
+      },
+      "code": "4_5_2"
+    },
+    {
+      "description": {
+        "en": "NE US Continental Shelf"
+      },
+      "code": "4_1_3"
+    },
+    {
+      "description": {
+        "en": "Patagonian Shelf"
+      },
+      "code": "4_3_2"
+    },
+    {
+      "description": {
+        "en": "South Brazil Shelf"
+      },
+      "code": "4_3_4"
+    },
+    {
+      "description": {
+        "en": "Mediterranean Sea"
+      },
+      "code": "2_1_1"
+    },
+    {
+      "description": {
+        "en": "SE US Continental Shelf"
+      },
+      "code": "4_1_4"
+    },
+    {
+      "description": {
+        "en": "Humboldt Current"
+      },
+      "code": "4_5_3"
+    },
+    {
+      "description": {
+        "en": "Pacific Central American Coastal"
+      },
+      "code": "4_5_8"
+    },
+    {
+      "description": {
+        "en": "Indonesian Seas"
+      },
+      "code": "4_5_4"
+    },
+    {
+      "description": {
+        "en": "Benguela Current"
+      },
+      "code": "2_1_4"
+    },
+    {
+      "description": {
+        "en": "Sea of Okhotsk"
+      },
+      "code": "4_5_9"
+    },
+    {
+      "description": {
+        "en": "Arabian Sea"
+      },
+      "code": "4_6_2"
+    },
+    {
+      "description": {
+        "en": "Somali Current"
+      },
+      "code": "4_6_3"
+    },
+    {
+      "description": {
+        "en": "East China Sea"
+      },
+      "code": "4_5_11"
+    },
+    {
+      "description": {
+        "en": "Sulu-Celebes Sea"
+      },
+      "code": "4_5_7"
+    },
+    {
+      "description": {
+        "en": "Guinea Current"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "description": {
+        "en": "Northeast Australian Shelf"
+      },
+      "code": "4_4_3"
+    },
+    {
+      "description": {
+        "en": "Gulf of Mexico"
+      },
+      "code": "3_1_2"
+    },
+    {
+      "description": {
+        "en": "Gulf of Thailand"
+      },
+      "code": "4_5_13"
+    },
+    {
+      "description": {
+        "en": "Agulhas Current"
+      },
+      "code": "4_6_4"
+    },
+    {
+      "description": {
+        "en": "Red Sea"
+      },
+      "code": "4_6_5"
+    },
+    {
+      "description": {
+        "en": "Canary Current"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "description": {
+        "en": "Caribbean Sea"
+      },
+      "code": "3_1_1"
+    },
+    {
+      "description": {
+        "en": "East Brazil Shelf"
+      },
+      "code": "4_3_1"
+    },
+    {
+      "description": {
+        "en": "Gulf of California"
+      },
+      "code": "4_5_1"
+    },
+    {
+      "description": {
+        "en": "South China Sea"
+      },
+      "code": "4_5_12"
+    },
+    {
+      "description": {
+        "en": "Northwest Australian Shelf"
+      },
+      "code": "4_4_2"
+    },
+    {
+      "description": {
+        "en": "West-Central Australian Shelf"
+      },
+      "code": "4_4_1"
+    },
+    {
+      "description": {
+        "en": "Insular Pacific Hawaiian"
+      },
+      "code": "3_2_1"
+    },
+    {
+      "description": {
+        "en": "Iberian Coastal"
+      },
+      "code": "4_2_10"
+    },
+    {
+      "description": {
+        "en": "North Australian Shelf"
+      },
+      "code": "4_4_4"
+    },
+    {
+      "description": {
+        "en": "Oyashio Current"
+      },
+      "code": "2_2_2"
+    },
+    {
+      "description": {
+        "en": "Sea of Japan"
+      },
+      "code": "4_5_5"
+    },
+    {
+      "description": {
+        "en": "Celtic-Biscay"
+      },
+      "code": "4_2_8"
+    },
+    {
+      "description": {
+        "en": "Bay of Bengal"
+      },
+      "code": "4_6_1"
+    },
+    {
+      "description": {
+        "en": "Southwest Australian Shelf"
+      },
+      "code": "4_4_7"
+    },
+    {
+      "description": {
+        "en": "Southeast Australian Shelf"
+      },
+      "code": "4_4_6"
+    },
+    {
+      "description": {
+        "en": "Kuroshio Current"
+      },
+      "code": "2_2_1"
+    },
+    {
+      "description": {
+        "en": "East-Central Australian Shelf"
+      },
+      "code": "4_4_5"
+    },
+    {
+      "description": {
+        "en": "Yellow Sea"
+      },
+      "code": "4_5_10"
+    },
+    {
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "4_5_6"
+    }
+  ],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

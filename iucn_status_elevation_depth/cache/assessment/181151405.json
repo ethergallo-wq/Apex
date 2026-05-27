@@ -1,0 +1,769 @@
+{
+  "assessment_date": "2020-08-28T01:00:00.000+01:00",
+  "year_published": "2020",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 22697636,
+  "criteria": "C2a(i); D",
+  "url": "https://www.iucnredlist.org/species/22697636/181151405",
+  "citation": "BirdLife International 2020. Gymnogyps californianus. The IUCN Red List of Threatened Species 2020: e.T22697636A181151405. Accessed on 15 May 2026.",
+  "assessment_id": 181151405,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 22697636,
+    "scientific_name": "Gymnogyps californianus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AVES",
+    "order_name": "CATHARTIFORMES",
+    "family_name": "CATHARTIDAE",
+    "genus_name": "Gymnogyps",
+    "species_name": "californianus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Shaw, 1797)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Bird Red List Authority (BirdLife International)",
+        "url": "https://www.birdlife.org/",
+        "description": "Red List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Cóndor Californiano",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Cóndor de California",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "California Condor",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Vultur californianus Shaw, 1797",
+        "status": "ACCEPTED",
+        "genus_name": "Vultur",
+        "species_name": "californianus",
+        "species_author": "Shaw, 1797",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Increasing"
+    },
+    "code": "0"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Critically Endangered"
+    },
+    "code": "CR"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": "2-5",
+    "upper_elevation_limit": 2000,
+    "lower_elevation_limit": 450,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "93",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "18.57",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Unknown",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "No"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": "117-134&#160;cm. Huge and unmistakable. Black with white wing-linings and silvery panel on upper secondaries. Head naked and orange/red. Immatures with black head and underwing mottled dark. Soars on horizontal wings with primaries curled up. <strong>Hints</strong> Only likely to be seen near reintroduction sites, but expanding in range, occasionally 70-100 miles from release sites as observed in northern Arizona and southern Utah.<p></p>",
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": "3",
+    "continuing_decline_in_subpopulations": "No",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": "62",
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Unknown",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "405000",
+    "continuing_decline_in_extent_of_occurence": "Unknown",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "This species declined rapidly throughout its historic range from British Columbia to Baja California during the 19th century and reportedly disappeared from outside California, <strong>U.S.A.</strong>, in 1937 (Wilbur and Kiff 1980, L. Kiff <em>in litt. </em>2009)<strong></strong>. The population had dropped to an all-time low of just 22 birds by 1981, and in 1983 eggs were first taken from wild nests for captive-rearing; in 1987 the species became extinct in the wild when the last of the six wild individuals was captured to join a captive-breeding recovery programme involving 27 birds (Wilbur and Kiff 1980,<em></em> Toops 2009)<strong></strong>. Due to intensive captive breeding and reintroduction efforts the population increased to 223 birds by August 2003, comprising 138 in captivity, and 85 reintroduced in California and northern Arizona (L. Kiff <em>in</em> <em>litt. </em>2003)<strong></strong>. Breeding in the wild resumed in 2002 and now occurs in all wild subpopulations (California, Arizona/Utah and Baja, <strong>Mexico</strong>).<br/><br/>The sub-population in California comprises 200 wild individuals in two distinct but loosely intermixing flocks. The Southern Californian flock is managed by the USFWS Hopper Mountain National Wildlife Refuge Condor Recovery staff and the Central California flock is managed collectively by the Ventana Wildlife Society and Pinnacles National Park. Each of the&#160;California flocks includes approximately 100 free flying individuals as of December 31st 2019 (S. Kirkland <em>in litt</em>. 2020).&#160;The Arizona sub-population includes 98 free-flying individuals and there are an additional 39 free-flying individuals in the Baja, Mexico subpopulation. The combined total wild population as of December 2019 stands at 337 with an additional 181 captive individuals, for a total world population of 518. The regular movements of the Arizona birds are mostly confined to Coconnino County (Arizona) and Kane County (Utah), although several individuals have been documented wandering in Wyoming, southwestern Colorado and New Mexico before returning to the Vermilion Cliffs release area (C. N. Parish <em>in litt</em>. 2020). The California birds occur regularly in Ventura, Kern, Santa Barbara, San Luis Obispo, Monterrey, San Benito, Tulare and Fresno Counties. Currently, range expansion has been documented as far north as Alameda County in the west and Madera County in the east along the foothills of the Central Sierra Nevada Mountains. The species's geographic range continues to expand as the population grows in size (Bakker <em>et al</em>. 2017).<br/><br/>The reintroduction programme continues and has expanded its geographic coverage, with six birds released into the Sierra de San Pedro Martir in Baja California, Mexico in 2002 (USFWS 2002)<strong></strong>. A release site in Baja was established in October 2003. The first chick hatched in Mexico for over 75 years hatched in April 2007. The Baja California birds are  largely confined to the Sierra de San Pedro Martir (L. Kiff <em>in litt. </em>2006)<strong></strong>, where release efforts are ongoing to augment the wild population; these birds have continued to expand their range and have reached both the Pacific and Gulf of California coasts (S. Kirkland <em>in litt</em>. 2020). It is hoped these birds will range widely enough to be effectively connected with birds in the southern U.S.A., and a bird from the Baja population was seen in San Diego County in April 2007. Second generation birds have matured to breeding age and wild fledged pairs have now fledged their own chicks into the wild however, no population can be deemed sustainable, and without substantial reductions in the use of lead-based ammunition within the condor's range, none are likely to become so (Finkelstein <em>et al.</em> 2012)<strong></strong>. The recovery programme for the species continues to address threats to the wild population, but lead contamination remains the greatest of these threats (Finkelstein <em>et al</em>. 2012, Bakker <em>et al</em>. 2017); lead poisoning represents approximately 50 percent of all known causes of death in the total population (S. Kirkland <em>in litt</em>. 2020).<p></p>",
+    "population": "There are currently 201 adults in the wild that are old enough to breed (age 5 and older), and 93 have produced viable offspring.&#160;Twenty-three wild birds turned five years old in 2019 and 17 more will turn five years old in 2020.&#160; A total of 141 wild birds are 8 years old or older, the observed average age of productivity (i.e. producing young when greater than or equal to eight years of age). Since mature individuals (as defined by IUCN) only includes individuals in the wild that are currently capable of reproduction, and re-introduced individuals must have produced viable offspring before they are counted as mature individuals, the current global population <span style=\"font-style: italic;\">sensu</span> IUCN is 93 mature individuals as of March 2020 (USFWS California Condor Recovery Program, <em>unpublished data</em>).",
+    "habitats": "Its range includes rocky, open-country scrubland, coniferous forest and oak savanna<strong></strong>. Cavities in ledges on cliffs, rocky outcrops or in large trees are used as nest sites (USFWS 1996)<strong></strong>.  It scavenges on the carcasses of large mammals and also feeds on the carcasses of small mammals. California ground squirrels are a documented small mammal food source in California and a source of lead poisoning as they are routinely shot as nuisance animals on private ranges. Investigations into the amount of small mammal use as a food source in the Arizona/Utah population is ongoing (S. Kirkland <em>in litt</em>. 2020). Relative to foraging, released birds reach independence soon after release, and may range more than 400 km from release sites (Anon. 1998), though the distance an individual ranges can vary depending on season and individuals released at different sites have shown significantly different home range sizes (Rivers <em>et al. </em>2014), suggesting local ecological factors may play a role.<p></p>",
+    "threats": "The drastic population decline during the 20th century is principally attributed to persecution and accidental ingestion of fragments and residues from lead bullets and lead shot from carcasses (C. N. Parish <span style=\"font-style: italic;\">in litt.</span> 2012), resulting in lead poisoning. Lead poisoning remains a key threat and the leading cause of death for released birds (Rideout <em>et al</em>. 2012, Kelly <em>et al</em>. 2014) and has caused many fatalities and resulted in the treatment of many more birds (Anon. 2001, Parish <em>et al</em><span style=\"font-style: italic;\">.</span> 2007, Walters <em style=\"font-style: italic;\">et al</em><span style=\"font-style: italic;\">.</span> 2010).&#160;As a result of their life history strategy, characterised by&#160;high adult survival, long life expectancy, and low reproductive rates, condor populations are particularly sensitive to lead poisoning, which severely impacts adult survival; lead can build up initially in the blood, but then in the bone and tissues to dangerous levels over longer periods having been ingested over a broad area (Hunt&#160;<em>et al</em><span style=\"font-style: italic;\">.&#160;</span>2007, S. Kirkland&#160;<em>in litt</em>. 2020)<strong></strong>. Lead poisoning therefore continues to be the principal threat to condors and at current levels threaten the long-term sustainability of reintroduced populations (Cade 2007, Finkelstein <em>et al</em>. 2012, Rideout <em>et al</em>. 2012). It was reported in 2009 that over 90% of condors released in Arizona still test positive for lead (Toops 2009) whilst Rideout <em>et al</em>. (2012) determined that lead toxicosis was the leading, identifiable cause of death in juvenile (26% of deaths where the cause could be determined) and adult (67%) free-ranging California Condors since the inception of the reintroduction program in 1992. A study conducted in California, using samples collected in 2004-2009, suggests that around one third of condors have blood lead values associated with toxicological effects based on inhibition of the&#160;heme biosyntheticenzyme δ-aminolevulinic acid dehydratase (Finkelstein <em>et al</em>. 2012). Sequential feather samples have been used to reconstruct a condor’s lead exposure history over the 3-4-month time frame of feather growth and this data demonstrates that condors are exposed to lead more frequently, and at higher levels than indicated by blood monitoring data (Finkelstein <em>et al</em>. 2010,&#160;2012). A study using samples collected between 1997 and 2011 showed that blood lead concentrations increased as birds became less reliant on provisioned food, as they became older and as their home range size increased (Kelly&#160;<em>et al</em>. 2014) and Bakker <em>et al</em>. (2017) found that condor survivorship was negatively related to time spent feeding on provisioned food. In 2017, 69 of the 78 birds in the Arizona/Utah population showed high levels of lead exposure; despite a treatment, two individuals died from severe lead-poisoning (Vulture Specialist Group 2017).<br/><br/>The population along the Central Pacific Californian coast also suffers from reduced eggshell thickness, consistent with the effects of DDE exposure, a breakdown compound of the pesticide DDT, compromising reproduction in the wild (Burnett <em>et al.</em> 2013). Apparently restricted to condors feeding on the coast, DDE exposure has been linked to feeding on the carcasses of California Sea Lions that had been exposed to the pesticide during their lifetimes (Kurle <em>et al</em>. 2016). The lack of additional DDT inputs suggests that these effects will decrease over time, though at present this is an impediment to sustainable wild reproduction in the coastal population. Ingested anthropogenic material has been responsible for the deaths of nestlings and strongly implicated in a number of other nestling deaths. The dead condors were found to have swallowed significant quantities of micro-trash (e.g. glass fragments, wire, plastic cartridge cases, etc.) and Rideout <em>et al</em>. (2012) observed this to be the leading cause of death in nestlings (76% of identifiable causes); micro-trash has however, recently been observed not to be&#160;significant source of lead poisoning and that the vast majority of lead micro-trash items were related to lead-ammunition (Finkelstein <em>et al</em>. 2015). Shooting still occurs and is often identified in live birds that have been radiographed during lead testing or in relation to other injuries. Eleven birds have been killed as a result of being shot since 1998 (USFWS 2019, <em>unpublished data</em>).<br/><br/>Puppet-reared birds were initially thought to exhibit greater problematic human-oriented behaviour, such as tameness and vandalising property, than parent-reared birds (Meretsky&#160;<em>et al.&#160;</em>2000)<strong></strong>. However, there is no apparent difference in mortality between released birds that were puppet-reared and those which were parent-reared (Woods&#160;<em>et al.</em>&#160;2007)<strong></strong>.&#160;Clark <em>et al</em>. (2007) modified puppet rearing practices to try and address concerns with initial captive reared birds. Wallace <em>et al</em>. (2007) compared the post-release results of birds reared with modified puppet rearing techniques in an isolated population in Baja, Mexico, with those released in the United States and evidenced that changes in socialisation techniques of young captive reared birds largely alleviated early problems with captive reared birds. At present, condors in the current wild subpopulations are not entirely immune to some interactions with human structures (i.e. perching on communication towers, mountain homes, South rim of the Grand Canyon) and behavioural modifications including attempts to haze them when possible are still employed. Cade <em>et al</em>. (2004) identified three types of interactions with humans and human structures where Type 1 and 2 were acceptable, while Type 3 was considered unacceptable and associated with birds showing no fear of humans, approaching them with no escape route. These categories remain the general benchmarks for the Recovery Program in determining whether or not a condor is exhibiting problematic behaviour and few condors are now removed from the wild due to behavioural problems. In the early 1990s a number of captive-reared birds were lost owing to collisions with power-lines and a conditioning programme with mock power poles was initiated to address it (L. Kiff&#160;<em>in litt.&#160;</em>2005)<strong></strong>.&#160;This practice has since been adopted in the field to help avoid power pole electrocutions in wild-fledged condors. However, collisions and subsequent electrocution following mid-span collisions continue to periodically occur. Seventeen total cases of electrocution have been documented since 1993, including several in 2015, 2016 and 2019, with lead poisoning being identified as a cofactor in at least one of these deaths (USFWS 2019,&#160;<em>unpublished data</em>).&#160;&#160;<br/><br/>The spread of west Nile virus has not been a significant problem for the species as most birds are still vaccinated (L. Kiff <em>in litt. </em>2005) however, as the wild population continues to grow, it is anticipated that it will not remain feasible to vaccinate all wild nestlings. Therefore, efforts to understand the potential significance of west Nile virus on the recovery of the species are under way.&#160;Lead poisoning however, continues to represent the most significant known cause of mortality in the wild; approximately 50% of all deaths with a determined cause are lead poisoning (USFWS 2019,&#160;<em>unpublished data</em>). The&#160;effect of treating individual birds for lead poisoning is currently being studied to assess whether it has any effect on survivorship in the wild California population (S. Kirkland <em>in litt</em>. 2020).&#160;Currently, the population would not continue to grow without the continued release of captive-bred birds.",
+    "measures": "<strong>Conservation Actions Underway</strong><br/>CITES Appendix I and II. A large-scale, integrated captive-breeding programme, managed by the Peregrine Fund (at the World Center for Birds of Prey), Los Angeles Zoo, Oregon Zoo, San Diego Wild Animal Park and Chapultepec Zoo, Mexico City, and reintroduction program, managed by the U.S. Fish and Wildlife Service,&#160;Ventana Wildlife Society, Peregrine Fund, Pinnacles National Park and Government of Mexico, is maintaining and growing the population in the wild (USFWS 2019).&#160;The success of the captive breeding program has seen an increase from one chick hatched in 1988 to approximately 30 birds produced for release to the wild annually. The genetic diversity of the population is maintained through careful distribution and representation of founder genotypes at each captive-breeding facility and reintroduction site. Consequently the current population retains 99.5% of the likely heterozygosity of a wild panmictic population (Ralls and Ballou 2004)<strong></strong>. 'Aversion training' to avoid power poles&#160;appears successful in preventing electrocution from perching on power poles and is ongoing (S. Kirkland <em>in litt</em>. 2020).&#160;Condors still periodically collide with powerlines during flight hence&#160;California power companies have buried and replaced some above ground power lines with insulated lines in areas with high levels of condor activity; insulated&#160;lines protect condors from electrocution following mid-span collision and anecdotally may be more visible to the birds since they are darker and slightly thicker (S. Kirkland <em>in litt</em>. 2020).&#160;<br/><br/>A total of 287 condors were released into the wild between 1992 and 2019 (USFWS 2019,&#160;<em>unpublished data</em>)<strong></strong>. Clean carcasses are provided for reintroduced birds to&#160;supplement the food they would otherwise receive from their parents in the wild, and to assist in trapping to replace transmitters, test for lead, and assess general health. Education programs aim to minimise persecution&#160;and educate the public about the conservation benefits of using non-lead ammunition for hunting and land management (Hunting with non-lead 2020, North American Non-lead Partnership 2020).&#160;However, as the recovery of the species has continued, individuals are now ranging further than when the population was younger and smaller, and are less likely to take the food provided for them after age two (Bakker <em>et al</em>. 2017). A huge step has been taken towards trying to eliminate the threat of lead-poisoning with the signing in 2007 of the Ridley-Tree Condor Preservation Act, and Assembly Bill 711 which requires the use of non-lead ammunition for the taking of all wildlife species throughout the state of California; lead-based ammunition can however, still be used for the putting down of livestock, impacting condors that frequent livestock ranch lands for foraging (A. Brickey&#160;<em>in litt</em>. 2020). The effectiveness&#160;of these regulatory bans on the survivorship and recovery of the species remains to be seen. Meanwhile, there is a growing program to promote the use of non-lead ammunition in hunting and wildlife management. The Ventana Wildlife Society, Arizona Game and Fish Department and Utah Division of Wildlife Resources are distributing non-lead&#160;bullets free of charge to hunters within the foraging range of the condors. In 2008 an agreement was struck between the Tejon Ranch and five conservation organisations in California to preserve 240,000 acres of the 270,000 acre property as an open space in return for not opposing the development of the remaining land, providing a vast amount of foraging habitat for the condor (L. Kiff <em>in litt. </em>2009)<strong></strong>.&#160;This conservation program has certainly reduced the amount of lead available to condors, as larger and larger percentage of the Southern California flock continue to forage there, however this area only represents approximately 2.5 % of the 9,600,000 acre geographic range this flock occupies.&#160;The North American Non-lead Partnership is engaging State Wildlife Management Agencies, to promote the voluntary use of non-lead ammunition as a traditional wildlife management practice that benefits non-target trust wildlife resources by eliminating secondary poisoning from the ingestion of spent lead ammunition.&#160; A willing partnership between hunting and endangered species conservation that facilitates a cultural shift away from hunting with traditional lead ammunition, may be the most practical way a significant reduction in the use of lead ammunition is likely to occur.&#160;&#160;<br/><br/><br/><strong>Conservation Actions Proposed</strong><br/>Continue to monitor population trends.&#160;Revise the recovery plan using updated population modeling (Bakker <em>et al.</em> 2017) and management information, to determine survivorship and demographic parameters for a self sustaining population of condors. Resume release programme in Mexico and establish new release sites in northern California. Maintain and increase the productivity of the captive population. Continue releases of captive-bred birds<strong></strong><strong></strong>. Maintain suitable habitat (USFWS 1996, Anon. 1998)<strong></strong><strong></strong>.&#160; Continue supplemental feeding&#160;as a food source for newly reintroduced birds and to maintain suitable flock behaviors and facilities for population management and maintenance. Continue and expand information and education programmes (USFWS 1996, Anon. 1998, Walters<span style=\"font-style: italic;\">&#160;</span><em>et al</em><span style=\"font-style: italic;\">.</span>&#160;2010)<strong></strong><strong></strong>. Continue supplying alternative lead-free ammunition to hunters and ranchers.<p></p>",
+    "use_trade": null,
+    "rationale": "After the removal of all surviving birds into captivity in 1987, an intensive conservation programme involving reintroduction and release of captive-bred birds has led to a small but increasing population of this species in the wild. However, the population in the wild remains dependent on intensive conservation management efforts. The population currently numbers 93 mature individuals, with 62 mature individuals in the largest subpopulation and as a result, it currently meets the threshold for listing as Endangered. However, the population only increased sufficiently above the threshold for listing as Critically Endangered in 2019, hence the species continues to be listed as Critically Endangered under the five-year rule. Should such population increases continue, it will warrant downlisting in 2024.<p></p> <p></p>",
+    "trend_justification": "Wilbur (1978) states that the vulture population during the period 1920-1950 numbered more than 70 birds.  Today, owing to an intensive captive-breeding and reintroduction programme, the world population comprises 518 individuals and is continuing to increase (USFWS 2019, S. Kirklank <em>in litt</em>. 2020). However, population growth in all three sub-populations (Arizona/Utah, California and Mexico) is currently occurring as a result of the continued release of captive bred birds as mortality currently exceeds natural recruitment into the population from wild fledged birds (USFWS 2019).<p></p>",
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "*Continue the recovery plan to achieve two disjunct, self-sustaining populations of 150 individuals comprising 15 breeding pairs<SUP>4</SUP>. \n\n</P>",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": "*Continue releases of captive-bred birds<SUP>1,6</SUP>. \n</P>",
+      "code": "3_3_1",
+      "description": {
+        "en": "Reintroduction"
+      }
+    },
+    {
+      "note": "*Identify further potential release sites in southern New Mexico<SUP>1,2,6</SUP>. \n</P>",
+      "code": "3_3_1",
+      "description": {
+        "en": "Reintroduction"
+      }
+    },
+    {
+      "note": "*Maintain and increase the productivity of the captive population<SUP>1,6</SUP>. \n</P>",
+      "code": "3_4_1",
+      "description": {
+        "en": "Captive breeding/artificial propagation"
+      }
+    },
+    {
+      "note": "*Continue and expand information and education programmes<SUP>1,6</SUP>.\n\n</P>",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "Develop a bill banning the use of lead ammunition for hunting given that alternatives are already available.\n</P>",
+      "code": "5_1_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "*Maintain suitable habitat<SUP>1,6</SUP>. \n</P>",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Reintroduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Reintroduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    }
+  ],
+  "researches": [
+    {
+      "note": "*Continue to monitor population trends. \n</P>",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "No decline",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Renewable energy"
+      },
+      "code": "3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Herbicides and pesticides"
+      },
+      "code": "9_3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Past, Likely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": "No decline",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Utility & service lines"
+      },
+      "code": "4_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects (species is not the target)"
+      },
+      "code": "5_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": "West Nile Virus (WNV)",
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_5_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "BirdLife International",
+      "value": [
+        " BirdLife International (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Fernando, E.",
+      "value": [
+        "Eresha Fernando (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Ashpole, J, Battistone, C., Benstead, P., Bird, J., Brickey, A., Calvert, R., Cooper, D., Finkelstein, M., Grantham, J., Harding, M., Isherwood, I., Khwaja, N., Kiff, L., Kirkland, S., Palmer, B., Parish, C., Sharpe, C.J., Symes, A., Taylor, J., Temple, H., Toone, W.D., Wege, D. & Westrip, J.R.S.",
+      "value": [
+        "David Wege (BirdLife International)",
+        "Isabel Isherwood (BirdLife International)",
+        "Phil Benstead (BirdLife International)",
+        "Matt Harding (BirdLife International)",
+        "Helen Temple (BirdLife International)",
+        "Dan Cooper (California Audubon Society)",
+        "Jesse Grantham (Texas Audubon Society)",
+        "Lloyd Kiff (The Peregrine Fund)",
+        "Bruce Palmer (US Fish & Wildlife Service)",
+        "W. D. Toone (BirdLife International)",
+        "Jeremy Bird (BirdLife International)",
+        "Joe Taylor (BirdLife International)",
+        "Andy Symes (BirdLife International)",
+        "Rob Calvert (BirdLife International)",
+        "Chris Sharpe (BirdLife)",
+        "Nyil Khwaja (BirdLife)",
+        "Joscelyne Ashpole (BirdLife)",
+        "Chris N. Parish",
+        "James Westrip (BirdLife International)",
+        "Carie Battistone",
+        "Steve Kirkland",
+        "Amedee Brickey",
+        "Myra Finkelstein"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Everest, J., Hermes, C. & Martin, R.",
+      "value": [
+        "Rob Martin (BirdLife)",
+        "Claudia Hermes (BirdLife International)",
+        "Joseph Everest (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "institutions",
+      "full": "BirdLife International & IUCN SSC Vulture Specialist Group",
+      "value": [
+        "BirdLife International",
+        "IUCN SSC Vulture Specialist Group"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Ralls, K.; Ballou, J.D. 2004. Genetic status and management of California Condors. <i>Condor</i> 106: 215-228.",
+      "year": "2004",
+      "title": "Genetic status and management of California Condors",
+      "author": "Ralls, K.; Ballou, J.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Meretsky, V. J.; Snyder, N. F. R.; Beissinger, S. R.; Clendenen, D. A.; Wiley, J. W. 2000. Demography of the California Condor: implications for reestablishment. <i>Conservation Biology</i> 14: 957-967.",
+      "year": "2000",
+      "title": "Demography of the California Condor: implications for reestablishment",
+      "author": "Meretsky, V. J.; Snyder, N. F. R.; Beissinger, S. R.; Clendenen, D. A.; Wiley, J. W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Parish, C.N.; Heinrich, W. R.; Hunt, W. G. 2007. Lead exposure, diagnosis, and treatment in California Condors released in Arizona. In: Mee, A; Hall, LS; Grantham, J (ed.), <i>California Condors in the 21st century</i>, pp. 97-108. American Ornithologists Union, McLean, VA, U.S.A.",
+      "year": "2007",
+      "title": "Lead exposure, diagnosis, and treatment in California Condors released in Arizona",
+      "author": "Parish, C.N.; Heinrich, W. R.; Hunt, W. G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mee, A.; Rideout, B. A.; Hamber, J. A.; Todd, J. N.; Austin, G.; Clark, M; Wallace, M. P. 2007. Junk ingestion and nestling mortality in a reintroduced population of California Condors <I>Gymnogyps californianus</I>. <i>Bird Conservation International</i> 17(2): 1-13.",
+      "year": "2007",
+      "title": "Junk ingestion and nestling mortality in a reintroduced population of California Condors <I>Gymnogyps californianus</I>",
+      "author": "Mee, A.; Rideout, B. A.; Hamber, J. A.; Todd, J. N.; Austin, G.; Clark, M; Wallace, M. P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Woods, C. P.; Heinrich, W. R.; Farry, S.C.; Parish, C.N.; Osborn, S. A.H.; Cade, T.J. 2007. Survival and reproduction of California Condors released in Arizona. In: Mee, A; Hall, LS; Grantham, J (ed.), <i>California Condors in the 21st century</i>, pp. 57-78. American Ornithologists' Union, McLean, VA, U.S.A.",
+      "year": "2007",
+      "title": "Survival and reproduction of California Condors released in Arizona",
+      "author": "Woods, C. P.; Heinrich, W. R.; Farry, S.C.; Parish, C.N.; Osborn, S. A.H.; Cade, T.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wilbur, S. R.; Kiff, L. F. 1980. The California Condor in Baja California, Mexico. <i>American Birds</i> 34: 856-859.",
+      "year": "1980",
+      "title": "The California Condor in Baja California, Mexico",
+      "author": "Wilbur, S. R.; Kiff, L. F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hunt, W. G.; Parish, C.N.; Farry, S.C.; Lord, T. G.; Sieg, R. 2007. Movements of introduced California Condors in Arizona in relation to lead exposure. In: Mee, A; Hall, LS; Grantham, J (ed.), <i>California Condors in the 21st century</i>, pp. 79-96. American Ornithologists Union, McLean, VA, U.S.A.",
+      "year": "2007",
+      "title": "Movements of introduced California Condors in Arizona in relation to lead exposure",
+      "author": "Hunt, W. G.; Parish, C.N.; Farry, S.C.; Lord, T. G.; Sieg, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Anon. 1998. <i></i>California Condor restoration<i></i>. In The Peregrine Fund. <i>Annual Report 1998</i>. Boise, USA:The Peregrine Fund.",
+      "year": "1998",
+      "title": "<i>California Condor restoration</i>",
+      "author": "Anon.",
+      "citation_short": null
+    },
+    {
+      "citation": "U. S. Fish and Wildlife Service. 1996. <i>California Condor recovery plan</i>.",
+      "year": "1996",
+      "title": "California Condor recovery plan",
+      "author": "U. S. Fish and Wildlife Service",
+      "citation_short": null
+    },
+    {
+      "citation": "Cade, T. J. 2007. Exposure of California Condors to lead from spent ammunition. <i>Journal of Wildlife Management</i> 71(7): 2125-2133.",
+      "year": "2007",
+      "title": "Exposure of California Condors to lead from spent ammunition",
+      "author": "Cade, T. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Anon. 2001. Lead kills condors in the Grand Canyon National Park. <i>Oryx</i> 35: 108.",
+      "year": "2001",
+      "title": "Lead kills condors in the Grand Canyon National Park",
+      "author": "Anon.",
+      "citation_short": null
+    },
+    {
+      "citation": "U. S. Fish and Wildlife Service. 2002. <i>California Condors return to Mexico</i>.",
+      "year": "2002",
+      "title": "California Condors return to Mexico",
+      "author": "U. S. Fish and Wildlife Service",
+      "citation_short": null
+    },
+    {
+      "citation": "Finkelstein, M.E., Doak, D.F., George, D., Burnett, J., Brandt, J., Church, M., Grantham, J., and Smith, D.R. 2012. Lead poisoning and the deceptive recovery of the critically endangered California condor. <i>Proceedings of the National Academy of Sciences</i>: DOI: 10.1073/pnas.1203141109.",
+      "year": "2012",
+      "title": "Lead poisoning and the deceptive recovery of the critically endangered California condor",
+      "author": "Finkelstein, M.E., Doak, D.F., George, D., Burnett, J., Brandt, J., Church, M., Grantham, J., and Smith, D.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kelly, T.R., Grantham, J., George, D., Welch, A., Brandt, J., Burnett, L.J., Sorenson, K.J., Johnson, M., Battistone, C. and Johnson, C.K. 2014. Spatiotemporal patterns and risk factors for lead exposure in endangered California Condors during 15 years of reintroduction. <i>Conservation Biology</i> 28(6): 1721-1730.",
+      "year": "2014",
+      "title": "Spatiotemporal patterns and risk factors for lead exposure in endangered California Condors during 15 years of reintroduction",
+      "author": "Kelly, T.R., Grantham, J., George, D., Welch, A., Brandt, J., Burnett, L.J., Sorenson, K.J., Johnson, M., Battistone, C. and Johnson, C.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kurle, C. M.; Bakker, V. J.; Copeland, H.; Burnett, J.; Scherbinski, J. J.; Brandt, J.; Finkelstein, M. E. 2016. Terrestrial Scavenging of Marine Mammals: Cross-Ecosystem Contaminant Transfer and Potential Risks to Endangered California Condors (<i>Gymnogyps californianus</i>). <i>Environ. Sci. Technol.</i> 50(17): 9114-9123.",
+      "year": "2016",
+      "title": "Terrestrial Scavenging of Marine Mammals: Cross-Ecosystem Contaminant Transfer and Potential Risks to Endangered California Condors (<i>Gymnogyps californianus</i>)",
+      "author": "Kurle, C. M.; Bakker, V. J.; Copeland, H.; Burnett, J.; Scherbinski, J. J.; Brandt, J.; Finkelstein, M. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rivers, J. W.; Johnson, J. M.; Haig, S. M.; Schwarz, C. J.; Burnett, L. J.; Brandt, J.; George, D.; Grantham, J. 2014. An analysis of monthly home range size in the critically endangered California Condor <i>Gymnogyps californianus</i>. <i>Bird Conservation International</i> 24(4): 492-504.",
+      "year": "2014",
+      "title": "An analysis of monthly home range size in the critically endangered California Condor <i>Gymnogyps californianus</i>",
+      "author": "Rivers, J. W.; Johnson, J. M.; Haig, S. M.; Schwarz, C. J.; Burnett, L. J.; Brandt, J.; George, D.; Grantham, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bakker, V. J.; Smith, D. R.; Copeland, H.; Brandt, J.; Wolstenholme, R.; Burnett, J.; Kirkland, S.; Finkelstein, M. R. 2017. Effects of lead exposure, flock behavior, and management actions on the survival of California Condors (<i> Gymnogyps californianus</i>). <i>EcoHealth</i> 14: S92-S105.",
+      "year": "2017",
+      "title": "Effects of lead exposure, flock behavior, and management actions on the survival of California Condors (<i> Gymnogyps californianus</i>)",
+      "author": "Bakker, V. J.; Smith, D. R.; Copeland, H.; Brandt, J.; Wolstenholme, R.; Burnett, J.; Kirkland, S.; Finkelstein, M. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Toops, C. 2009. New dawn in Condor country. <i>Bird Watcher's Digest</i> 32(1): 38-45.",
+      "year": "2009",
+      "title": "New dawn in Condor country",
+      "author": "Toops, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vulture Specialist Group. 2017. Vulture updates No. 7 - October 2017. Vulture Specialist Group - IUCN Species Survival Commission.",
+      "year": "2017",
+      "title": "Vulture updates No. 7 - October 2017",
+      "author": "Vulture Specialist Group",
+      "citation_short": null
+    },
+    {
+      "citation": "Burnett, L.J.; Sorenson, K.J.; Brandt, J.; Sandhaus, E.A.; Ciani, D.; Clark, M.; David, C.; Theule, J.; Kasielke, S.; Risebrough, R.W. 2013. Eggshell thinning and depressed hatching success of California Condors reintroduced to Central California. <i>The Condor</i> 115(3): 477-491.",
+      "year": "2013",
+      "title": "Eggshell thinning and depressed hatching success of California Condors reintroduced to Central California",
+      "author": "Burnett, L.J.; Sorenson, K.J.; Brandt, J.; Sandhaus, E.A.; Ciani, D.; Clark, M.; David, C.; Theule, J.; Kasielke, S.; Risebrough, R.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wilbur, S. 1978. <i>The California Condor, 1966-76: a look at its past and future</i>. U.S. Department of the Interior, Washington, D.C.",
+      "year": "1978",
+      "title": "The California Condor, 1966-76: a look at its past and future",
+      "author": "Wilbur, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Walters, J. R.; Derrickson, S. R.; Fry, D. M.; Haig, S. M.; Marzluff, J. M.; Wunderle, J. M., Jr. 2010. Status of the California Condor (<i>Gymnogyps californianus</i>) and efforts to achieve its recovery. <i>The Auk</i> 127(4): 969-1001.",
+      "year": "2010",
+      "title": "Status of the California Condor (<i>Gymnogyps californianus</i>) and efforts to achieve its recovery",
+      "author": "Walters, J. R.; Derrickson, S. R.; Fry, D. M.; Haig, S. M.; Marzluff, J. M.; Wunderle, J. M., Jr.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 December 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-3"
+    },
+    {
+      "citation": "Bird, J.P., Martin, R., Akçakaya, H.R., Gilroy, J., Burfield, I.J., Garnett, S.G., Symes, A., Taylor, J., Şekercioğlu, Ç.H. and Butchart, S.H.M. 2020. Generation lengths of the world’s birds and their implications for extinction risk. <i>Conservation Biology</i> 34(5): 1252-1261.",
+      "year": "2020",
+      "title": "Generation lengths of the world’s birds and their implications for extinction risk",
+      "author": "Bird, J.P., Martin, R., Akçakaya, H.R., Gilroy, J., Burfield, I.J., Garnett, S.G., Symes, A., Taylor, J., Şekercioğlu, Ç.H. and Butchart, S.H.M. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cade, T. J.; Osborn, S. A.; Hunt, W. G.; Woods, C. P. 2004. Commentary on Released California Condors <i>Gymnogyps californianus</i> in Arizona. In: Chancellor, R. D.; Meyburg, B. U. (ed.), Worldwide raptors. Proceedings conference.",
+      "year": "2004",
+      "title": "Commentary on Released California Condors <i>Gymnogyps californianus</i> in Arizona.",
+      "author": "Cade, T. J.; Osborn, S. A.; Hunt, W. G.; Woods, C. P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Clark, M.; Wallace, M. P.; David, C. 2007. Rearing California Condors for release using a modified puppet-rearing technique. <i>California Condors in the 21st Century</i>: 213-226.",
+      "year": "2007",
+      "title": "Rearing California Condors for release using a modified puppet-rearing technique.",
+      "author": "Clark, M.; Wallace, M. P.; David, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Finkelstein, M. E.; Brandt, J.; Sandhaus, E.; Mee, A.; Schuppert, P.; Smith, D. R. 2015. Lead exposure risk from trash ingestion in the endangered California condor (<i>Gymnogyps californianus</i>). <i>Journal of Wildlife Diseases</i> 51(4): 901-906.",
+      "year": "2015",
+      "title": "Lead exposure risk from trash ingestion in the endangered California condor (<i>Gymnogyps californianus</i>).",
+      "author": "Finkelstein, M. E.; Brandt, J.; Sandhaus, E.; Mee, A.; Schuppert, P.; Smith, D. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Finkelstein, M. E.; George, D.; Scherbinski, S.; Gqiazda, R.; Johnson, M.; Burnett, J.; Brandt, J.; Lawrey, S.; Pessier, A. P.; Clark, M. Wynne, J.; Grantham, J.; Smith, D. R. 2010. Feather lead concentrations and 207Pb/206Pb ratios reveal lead exposure history of California condors (<i>Gymnogyps californianus</i>). <i>Environmental Science and Technology</i> 44(7): 2639-2647.",
+      "year": "2010",
+      "title": "Feather lead concentrations and 207Pb/206Pb ratios reveal lead exposure history of California condors (<i>Gymnogyps californianus</i>).",
+      "author": "Finkelstein, M. E.; George, D.; Scherbinski, S.; Gqiazda, R.; Johnson, M.; Burnett, J.; Brandt, J.; Lawrey, S.; Pessier, A. P.; Clark, M. Wynne, J.; Grantham, J.; Smith, D. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hunting with Non-Lead. 2020. Available at: <a href=\"http://www.huntingwithnonlead.org/\">http://www.huntingwithnonlead.org/</a>. (Accessed: 28th August 2020).",
+      "year": "2020",
+      "title": null,
+      "author": "Hunting with Non-Lead",
+      "citation_short": null
+    },
+    {
+      "citation": "North American Non-Lead Partnership. 2020. Available at: <a href=\"http://nonleadpartnership.org/\">http://nonleadpartnership.org/</a>. (Accessed: 28th August 2020).",
+      "year": "2020",
+      "title": "",
+      "author": "North American Non-Lead Partnership",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rideout, B. A.; Stalis, I.; Papendick, R.; Pessier, A.; Puschner, B.; Finkeltein, M. E.; Smith, D. R.; Johnson, M.; Mace, M.; Stroud, R.; Brandt, J.; Burnett, J.; Parish, C.; Petterson, J.; Witte, C.; Stringfield, C.; Orr, K.; Zuba, J.; Wallace, M.; Grantham, J. 2012. Patterns of mortality in free-ranging California condors (<i>Gymnogyps californianus</i>). <i>Journal of Wildlife Diseases</i> 48: 95-112.",
+      "year": "2012",
+      "title": "Patterns of mortality in free-ranging California condors (<i>Gymnogyps californianus</i>)",
+      "author": "Rideout, B. A.; Stalis, I.; Papendick, R.; Pessier, A.; Puschner, B.; Finkeltein, M. E.; Smith, D. R.; Johnson, M.; Mace, M.; Stroud, R.; Brandt, J.; Burnett, J.; Parish, C.; Petterson, J.; Witte, C.; Stringfield, C.; Orr, K.; Zuba, J.; Wallace, M.; Grantham, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "U.S. FIsh and Wildlife Service. 2019. California Condor Recovery Program Annual Population Status.",
+      "year": "2019",
+      "title": "California Condor Recovery Program Annual Population Status.",
+      "author": "U.S. FIsh and Wildlife Service",
+      "citation_short": null
+    },
+    {
+      "citation": "Wallace, M. P.; Clark, M.; Vargas, J.; Porras, M. C. 2007. Release of puppetreared California Condors in Baja California: Evaluation of a modified rearing technique. <i>California Condors in the 21st Century</i>: 227-242.",
+      "year": "2007",
+      "title": "Release of puppetreared California Condors in Baja California: Evaluation of a modified rearing technique.",
+      "author": "Wallace, M. P.; Clark, M.; Vargas, J.; Porras, M. C.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

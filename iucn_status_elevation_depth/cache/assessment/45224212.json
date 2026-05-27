@@ -1,0 +1,1546 @@
+{
+  "assessment_date": "2015-03-02T00:00:00.000+00:00",
+  "year_published": "2015",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 2060,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/2060/45224212",
+  "citation": "Hofmeyr, G.J.G. 2015. Arctocephalus pusillus. The IUCN Red List of Threatened Species 2015: e.T2060A45224212. Accessed on 15 May 2026.",
+  "assessment_id": 45224212,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 2060,
+    "scientific_name": "Arctocephalus pusillus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 2067,
+        "scientific_name": "Arctocephalus pusillus ssp. doriferus",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "CARNIVORA",
+        "family_name": "OTARIIDAE",
+        "genus_name": "Arctocephalus",
+        "species_name": "pusillus",
+        "subpopulation_name": null,
+        "infra_name": "doriferus",
+        "authority": "Wood Jones, 1925",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Pinniped Specialist Group (seals and walruses)",
+            "url": null,
+            "description": "Chair: Kit Kovacs (email: kit.kovacs@npolar.no)\nRed List Authority Coordinator: Simon Goldsworthy (email: simon.goldsworthy@sa.gov.au) and Alexandros Karamanlidis (email: akaramanlidis@gmail.com)"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Tasmanian Fur Seal",
+            "language": "eng"
+          },
+          {
+            "main": true,
+            "name": "Australian Fur Seal",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 2066,
+        "scientific_name": "Arctocephalus pusillus ssp. pusillus",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "CARNIVORA",
+        "family_name": "OTARIIDAE",
+        "genus_name": "Arctocephalus",
+        "species_name": "pusillus",
+        "subpopulation_name": null,
+        "infra_name": "pusillus",
+        "authority": "(von Schreber, 1775)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Pinniped Specialist Group (seals and walruses)",
+            "url": null,
+            "description": "Chair: Kit Kovacs (email: kit.kovacs@npolar.no)\nRed List Authority Coordinator: Simon Goldsworthy (email: simon.goldsworthy@sa.gov.au) and Alexandros Karamanlidis (email: akaramanlidis@gmail.com)"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Brown Fur Seal",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "South African Fur Seal",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Inja Yolwandle Yasekapa",
+            "language": "xho"
+          },
+          {
+            "main": false,
+            "name": "Kaapse Pelsrob",
+            "language": "afr"
+          },
+          {
+            "main": true,
+            "name": "Cape Fur Seal",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CARNIVORA",
+    "family_name": "OTARIIDAE",
+    "genus_name": "Arctocephalus",
+    "species_name": "pusillus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(von Schreber, 1775)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Pinniped Specialist Group (seals and walruses)",
+        "url": null,
+        "description": "Chair: Kit Kovacs (email: kit.kovacs@npolar.no)\nRed List Authority Coordinator: Simon Goldsworthy (email: simon.goldsworthy@sa.gov.au) and Alexandros Karamanlidis (email: akaramanlidis@gmail.com)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Australian Fur Seal",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Brown Fur Seal",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Cape Fur Seal",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "South African Fur Seal",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Arctocéphale d'Afrique du Sud",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Inja Yolwandle Yasekapa",
+        "language": "xho"
+      },
+      {
+        "main": false,
+        "name": "Kaapse Pelsrob",
+        "language": "afr"
+      },
+      {
+        "main": false,
+        "name": "Südafrikanischer Seebär",
+        "language": "ger"
+      },
+      {
+        "main": true,
+        "name": "Afro-Australian Fur Seal",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Phoca pusilla von Schreber, 1775",
+        "status": "ACCEPTED",
+        "genus_name": "Phoca",
+        "species_name": "pusilla",
+        "species_author": "von Schreber, 1775",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Increasing"
+    },
+    "code": "0"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": "61",
+    "upper_elevation_limit": 50,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": 204,
+    "upper_depth_limit": null,
+    "population_size": "1060000",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "No",
+    "generational_length": "9.1",
+    "congregatory": "Congregatory (and dispersive)",
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "No",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Percentage of population protected by PAs",
+            "value": "31-40"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": "828836",
+    "continuing_decline_in_area_of_occupancy": "No",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "19612766",
+    "continuing_decline_in_extent_of_occurence": "No",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "No",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "<p>Cape Fur Seals range along the southwestern and southern coasts of Africa, from Ilha dos Tigres in southern Angola, along the coast of Namibia to Algoa Bay in South Africa (Kirkman <em>et al</em>. 2013, Oosthuizen 1991). Sightings of vagrants are limited to one record from Gabon (Thibault 1999) and one from the Prince Edward Islands, South Africa (Kerley 1983). Australian Fur Seals are endemic to southeastern Australian waters and are found from the coasts of Tasmania, New South Wales, Victoria and across to South Australia with the centre of their distribution in Bass Strait (Kirkwood <em>et al</em>. 2010). The ranges of both subspecies are expanding, with the new colonies established in the last decade (Kirkman <em>et al</em>. 2007, Kirkwood <em>et al</em>. 2010, Shaughnessy&#160;<em>et al</em>. 2010, Kirkman&#160;<em>et al</em>. 2013, McIntosh <em>et al</em>. 2014, Shaughnessy <em>et al</em>. 2014). While both subspecies seldom move beyond the continental shelves, Cape Fur Seals have been recorded up to 220 km offshore (Shaughnessy 1979).</p>",
+    "population": "<p><span lang=\"EN-US\">Estimates indicate that approximately two million Cape Fur Seals bred at some 40 colonies or colony groups in 2009. However, there have been substantial changes in distribution during this time period with an increase in the number of colonies, a northward shift in range and an increase in abundance in some areas (northern Namibia and northwestern South Africa; Kirkman<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2013). In 2004 some 75% of Cape Fur Seals bred at three sites: the Atlas Bay-Wolf Bay-Long Islands Complex and Cape Cross in Namibia, and Kleinzee in South Africa (Kirkman<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2007). All of these sites have experienced small declines in abundance since that time (Kirkman<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2013). Most of the smaller rookeries are estimated to contain more than 1,000 adults. While the abundances of the larger rookeries are relatively stable, they do experience fluctuations. Fluctuations are greater in southern Namibian rookeries (Kirkman<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2013) which have experienced major mortality events due to the impact of poor environmental conditions on prey populations (Gammelsrød<span class=\"apple-converted-space\">&#160;<em>et al</em>. 1998, Gerber and Hilborn 2001). Smaller rookeries tend to experience greater fluctuations than larger rookeries (Kirkman<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2007, 2013).<br/> <br/> Australian Fur Seal pup production has been assessed during three national surveys at approximately five-year intervals since 2002/03. These have indicated a mean annual increase in pup production between 1986 and 2002/03 of 5%, slowing to 0.3% per year between 2002/03 and 2007/08 seasons. It is not clear if the apparent 6% per year decline between the 2007/08 and 2013/14 estimates is due to a poor pupping season in 2013/14, or represents a real decline in population over that period, as no colonies are monitored on an annual basis. The most recent estimate (2013/14) of pup production was 15,063 (McIntosh<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2014). Based on the 2007/08 surveys, two colonies adjacent to the Victorian coast, Seal Rocks (5,660 pups) and Lady Julia Percy Island (5,574 pups), account for 51% the total pup production. Based on these surveys the total Australian Fur Seal population is estimated to be 120,000 individuals (Kirkwood<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2010).<br/> <br/> In terms of national distributions, approximately 55% of pup production for this species takes place at 23 sites in Namibia, 38% at 16 sites in South Africa, less than 2% at a single site in Angola and 5% at 17 sites in Australia (Kirkman<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2007, Kirkwood<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2010,&#160;</span>Shaughnessy<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2010,&#160;Kirkman<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2013,&#160;McIntosh<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2014, Shaughnessy<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2014).</span></span></span></span></span></span></p><p><span lang=\"EN-US\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"> While rookeries of Cape Fur Seals are separated by between a few to several hundred kilometres, tag data (Oosthuizen 1991) and genetic evidence (Matthee<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2006) indicate substantial movement between them and no distinct subpopulations.<br/> <br/> Generation length has been calculated at 9.1 years (Pacifici<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2013). Population change for the species over three generations from 1982-2009 has been positive (Kirkman<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2013, McIntosh<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2014).<br/> <span lang=\"EN-US\"></span></span></span></span></span></span></span></span></span></p>",
+    "habitats": "<p><span lang=\"EN-US\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"> <span lang=\"EN-US\"></span></span></span></span></span></span></span></span></span></p><p><span lang=\"EN-US\">Afro-Australian Fur Seals are the largest of all Fur Seals. Mean asymptotic mass and length of males is 229 kg (range 218-360 kg) and 221 cm (range 201-227 cm), and females are 85 kg (range 41-113 kg) and 163 cm (136-171 cm; Arnould and Warneke 2002, Kirkwood and Goldsworthy 2013). Pups at birth are 60-80 cm in length and weigh 5-12 kg. The Cape Fur Seal is slightly smaller (Warneke 1995).<br/> <br/> Females become sexually mature at three to six years and males at nine to 12 years. Maximum longevity recorded is 16.9 years for males and 20.9 years for females (Arnould and Warneke 2002). The annual pregnancy rate of females has been estimated at 71% for Cape Fur Seals and 73% for Australian Fur Seals (Warneke and Shaughnessy 1985, Wickens and York 1997). Gestation lasts 51 weeks, including a three-month delay of implantation. Adult mortality rates are unknown (Butterworth<span class=\"apple-converted-space\"> <em>et al</em><span class=\"apple-converted-space\">. 1995, Reijnders <em>et al</em><span class=\"apple-converted-space\">. 1993).<br/> <br/> <span class=\"apple-converted-space\">Cape Fur Seals are highly polygynous. The breeding season is highly synchronous, taking place between late October and the beginning of January, with adult males arriving at the colonies first. Females give birth 1.5-2 days after arrival ashore. The peak of pupping is in the first week of December (</span></span>Warnecke and Shaughnessy 1985, David 1987a, De Villiers and Roux 1992). Adult females attend the pup for about six to nine days before coming into oestrous, mating, and departing on their first foraging trip (Rand 1955, Warnecke and Shaughnessy 1985). Foraging intervals are shorter for Cape Fur Seals (an average of 5.2 days) than Australian Fur Seals (six days), probably reflecting greater availability of food (Gamel <em>et al</em><span class=\"apple-converted-space\">. 2005, Kirkwood and Arnould 2011). While some pups may start foraging at seven months, they are usually weaned at 10-12 months, with suckling rarely continuing for two to three years (</span>Warneke and Shaughnessy 1985, David and Rand 1986).</p><p><span lang=\"EN-US\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"> <span class=\"apple-converted-space\">While Cape Fur Seals forage in both pelagic and benthic environments (Kooyman and Gentry 1986,&#160;</span></span></span>David 1987b, Stewardson 2001), Australian Fur Seals are primarily benthic feeders (Arnould and Kirkwood 2008, Kirkwood and Arnould 2011, Kirkwood and Goldsworthy 2013). Characteristics of dives vary between sites (Kooyman and Gentry 1986, Stewardson 2001, Arnould and Kirkwood 2008, Kirkwood and Arnould 2011). The majority of recorded dives of Cape Fur Seals on the west coast of South Africa are to less than 50 m depth (Kooyman and Gentry 1986), while those on the southeast coast are to more than 60 m (Stewardson 2001). Mean dive duration of Cape Fur Seals varies between one minute (Stewardson 2001) and 2.1 minutes (Kooyman and Gentry 1986). Foraging dives by lactating Australian Fur Seal females are usually to 65–85 m with a maximum depth of 164 m, and dives usually last from 2.0-3.7 minutes, with a maximum duration of 8.9 minutes (Arnould and Hindell 2001). The diurnal frequency of Cape Fur Seal dives shows a bimodal distribution with most dives taking place at dusk or during the first half of the night, with a smaller peak after dawn (Kooyman and Gentry 1986, Stewardson 2001). The maximum recorded diving depth is 204 m (Kooyman and Gentry 1986).</p><p><span lang=\"EN-US\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"> <span class=\"apple-converted-space\">Cape Fur Seals are generalist foragers that take a wide variety of prey, including Cape Hake, Horse Mackerel, Pelagic Goby, Pilchards, Anchovy, squid of the genus <em>Loligo</em><span class=\"apple-converted-space\">, Rock Lobster, shrimp, prawns and amphipods (David 1987b, de Bruyn <em>et al</em><span class=\"apple-converted-space\">. 2003, Mecenero <em>et al</em><span class=\"apple-converted-space\">. 2006). They have also been reported to occasionally take African Penguins and several species of flying seabirds (Makhado <em>et al</em><span class=\"apple-converted-space\">. 2006). Australian Fur Seals eat a wide range of fish species including Redbait, Leatherjacket species, Jack Mackerel, Barracouta, Red Rock Cod and Flathead (<span class=\"apple-converted-space\">Goldsworthy <em>et al</em><span class=\"apple-converted-space\">. 2003, Hume <em>et al</em><span class=\"apple-converted-space\">. 2004,&#160;</span></span></span></span></span></span></span></span>Page&#160;<em>et al</em><span class=\"apple-converted-space\">. 2005<span lang=\"EN-US\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\">, Littnan <em>et al</em><span class=\"apple-converted-space\">. 2007<span class=\"apple-converted-space\">,&#160;</span></span></span></span></span></span></span></span></span>Kirkwood&#160;<em>et al</em><span class=\"apple-converted-space\">. 2008,&#160;</span>Deagle&#160;<em>et al</em><span class=\"apple-converted-space\">. 2009). Cephalopods are also important prey with key species being Gould’s Squid, <em>Octopus </em><span class=\"apple-converted-space\">spp., and Cuttlefish (Hume <em>et al</em><span class=\"apple-converted-space\">. 2004<span class=\"apple-converted-space\">, Page <em>et al</em><span class=\"apple-converted-space\">. 2005,&#160;</span></span>Kirkwood&#160;<em>et al</em><span class=\"apple-converted-space\">. 2008</span>).</p><p><span lang=\"EN-US\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"> <span class=\"apple-converted-space\">Great White Sharks (<span class=\"apple-converted-space\">Pemberton and Kirkwood 1994,&#160;</span></span></span></span></span></span></span></span></span></span></span></span>Martin&#160;<em>et al</em><span class=\"apple-converted-space\">. 2005) and Killer Whales (Rice and Saayman 1987) are predators of Afro-Australian Fur Seals at sea. On shore, Cape Fur Seal pups are preyed on by Black-backed Jackals and Brown Hyenas (Skinner&#160;<em>et al</em><span class=\"apple-converted-space\">. 1995</span><span class=\"apple-converted-space\">, Oosthuizen <em>et al</em><span class=\"apple-converted-space\">. 1997<span class=\"apple-converted-space\">,&#160;</span>Kuhn&#160;<em>et al</em><span class=\"apple-converted-space\">. 2008</span>).</p><p><span lang=\"EN-US\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"> <span lang=\"EN-US\"></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>",
+    "threats": "<p><span lang=\"EN-US\">Cape and Australian Fur Seals were hunted heavily during the 17th, 18th and 19th centuries and populations of both&#160;were reduced to low levels (Warnecke and Shaughnessy 1985,&#160;David 1987a). Under protection, both have recovered, although the Cape subspecies to a much greater extent than the Australian subspecies, which has not returned to estimated pre-exploitation levels (Kirkman<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2013; Kirkwood<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2005). Levels of exploitation of Cape Fur Seals were not as severe as those experienced by other species of Fur Seals and genetic variation remains high (Matthee<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2006).</span></span></p><p><span lang=\"EN-US\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"> Harvests of Cape Fur Seals in South Africa were first controlled in 1893 and were suspended in 1990 (Wickens<span class=\"apple-converted-space\">&#160;<em>et al</em>. 1991). Harvesting continues in Namibia at the mainland colonies of Cape Cross and the Wolf and Atlas Bays group (Japp<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2012). Harvest levels have remained high even in years with high levels of pup and adult natural mortality (Japp<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2012, Kirkman<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2007). This mortality has been attributed to a scarcity of fish and poor marine productivity along the coast of Namibia, which occurs at intervals (Gammelsrød<span class=\"apple-converted-space\">&#160;<em>et al</em>. 1998, Gerber and Hilborn 2001). Australian Fur Seals are not harvested.<br/> <br/> The foraging distributions of both subspecies overlap extensively with commercial fishing activities, especially trawl fisheries operating in southeastern Australia (David 1987b<span class=\"apple-converted-space\">, Wickens<span class=\"apple-converted-space\">&#160;<em>et al</em>. 1992,&#160;</span>Goldsworthy<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2003). Fisheries interactions therefore constitute one of the most important threats to the species, and especially for the less abundant Australian Fur Seal (v, National Seal Strategy Group and Stewardson 2007). This subspecies is subject to significant and ongoing bycatch mortality associated with demersal and mid-water trawling operations, and they constitute a significant bycatch in the mid-water trawl sector of the small pelagic fishery (Knuckey<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2002,&#160;Hamer and Goldsworthy 2006<span class=\"apple-converted-space\">, Tilzey<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2006,&#160;&#160;Lyle and Willcox 2008, Tuck<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2013). Ecological interactions with fisheries also pose a potential threat, given their reliance on small pelagics (</span>Goldsworthy<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2003,&#160;Deagle<em>et al</em>. 2009<span class=\"apple-converted-space\">). Australian Fur Seals also interact regularly with finfish (Salmon) aquaculture farms in Tasmania (Pemberton and Shaughnessy 1993, Hume<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2002, National Seal Strategy Group and Stewardson 2007, Robinson<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2008). At aquaculture farms, Seals are at risk of becoming entangled in nets and having their behaviour changed by becoming habituated to a predictable food source (National Seal Strategy Group and Stewardson 2007).</span></span></span></span></span></span></span></span></p><p><span lang=\"EN-US\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"> Cape Fur Seals are reported to interact with commercial fisheries, both via direct competition and operationally. A number of commercially exploited species of fish are eaten by Seals (David 1987b, Wickens<span class=\"apple-converted-space\">&#160;<em>et al</em>. 1992). While the effects of these interactions are difficult to assess due to the complexities of the marine food web and the range of species that Seals prey on (David 1987b, Punt and Butterworth 1995), it is possible that changes in fishing effort and changes in the abundance and distribution of commercially harvested fish species may result in reduced prey populations (Barange<span class=\"apple-converted-space\">&#160;<em>et al</em>. 1999,&#160;</span></span>Roy<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2007,&#160;Moloney<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2013, Roux<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2013<span class=\"apple-converted-space\">). The impact of direct mortality of Cape Fur Seals due to fisheries is not well known and the effects of current interactions have not been studied. Seals have been taken incidentally in past fishing operations and levels of take have been estimated to be low (Wickens<span class=\"apple-converted-space\">&#160;<em>et al</em>. 1992,&#160;</span>David and Wickens 2003<span class=\"apple-converted-space\">). A number are also shot illegally during fishing operations (Wickens<span class=\"apple-converted-space\">&#160;<em>et al</em>. 1992).</span></span></span></span></span></span></span></span></span></span></p><p><span lang=\"EN-US\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"> While climate change does not pose the same level of threat to the Afro-Australian Fur Seals as it does for many other species of pinnipeds, it remains important (Kovacs<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2012). Climate mediated changes in prey species (Barange<span class=\"apple-converted-space\">&#160;<em>et al</em>. 1999,&#160;</span></span></span>Roy<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2007,&#160;Moloney<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2013, Roux<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2013<span class=\"apple-converted-space\">) may be responsible for changes in the distribution of rookeries of Cape Fur Seals (Kirkman<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2013). It is also possible that climate change was responsible for recent periods of high mortality along the Namibian coast (Gammelsrød<span class=\"apple-converted-space\">&#160;<em>et al</em>. 1998, Gerber and Hilborn 2001). Pups are vulnerable to high temperatures (De Villiers and Roux 1992), and changes leading to higher ambient temperatures and fewer windy days may increase mortality (Kovacs<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2012). A number of pups are born on small and low lying islands (</span>Kirkwood<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2010,&#160;Kirkman<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2013<span class=\"apple-converted-space\">) and are susceptible to high mortality during summer storms (Hofmeyr<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2011). Rising sea levels and possible changes in the frequency of such storms induced by climate change will threaten such colonies with extirpation.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></p><p><span lang=\"EN-US\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"> Entanglement in marine debris poses a potential threat to the Afro-Australian Fur Seals (</span></span></span></span></span>Shaughnessy 1999, Lynch<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2011ab,&#160;Kirkwood and Goldsworthy 2013). Rates of entanglement vary by colony, but have been estimated to be between 0.12%-0.66% for the Cape Fur Seal (Shaughnessy 1980).</span></span></span></span></span></span></span></span></span></span></span></span></span></p><p><span lang=\"EN-US\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"> Like all Fur Seals, Afro-Australian Fur Seals are vulnerable to oil spills because of their dependence on their thick pelage for thermoregulation (Bonner 1978). Cape Fur Seals come in regular contact with a number of species of terrestrial carnivores, and both subspecies are at risk of exposure to viruses and other disease types that could lead to epidemics (</span></span></span></span></span>Lavigne and Schmitz 1990, Kirkman 2006).</span></span></span></span></span></span></span></span></span></span></span></span></span></p><p><span lang=\"EN-US\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"> Both subspecies are visited by tourists at a number of colonies. Disturbance is believed to be minimal (Kirkwood<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2003).<br/> <span lang=\"EN-US\"></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>",
+    "measures": "Australian Fur Seals are protected nationally by the Environment Protection and Biodiversity Conservation Act (1999). They are also protected in all Australian states in which they occur by state-specific legislation (National Seal Strategy Group and Stewardson 2007).<br/><br/>Although Cape Fur Seals have been protected in South Africa since 1893 by the Fish Protection Act, and in Namibia since 1922 by the Sealing and Fisheries Proclamation, they were still subject to government run or government authorized commercial harvests (Wickens&#160;<em>et al.</em>&#160;1991,&#160;Butterworth <em><em>et al.</em></em> 1995, David and Wickens 2003). Harvests ceased in South Africa in 1990 (Wickens <em><em>et al.</em></em> 1991) but continue in Namibia (Japp <em><em>et al.</em></em> 2012). In South Africa the Sea Birds and Seals Protection Act of 1973, provides broad protection for Seals. Furthermore, the commercial killing of Seals is now prohibited in South Africa under terms of the Policy on the Management of Seals, Seabirds and Shorebirds (MLRA 2007). While the conservation and harvesting of Seals in Namibia was previously controlled by the Sea Birds and Seals Protection Act, this has been replaced by the Marine Resources Act of 2000 which relaxed restrictions aimed at ensuring a humane harvest (Kirkman 2006,&#160;Algers <em><em>et al.</em></em> 2007).",
+    "use_trade": "The commercial harvesting of Cape Fur Seals in South Africa ceased in 1990 (Wickens <em>et al.</em> 1991) and is now prohibited under terms of the Policy on the Management of Seals, Seabirds and Shorebirds (MLRA 2007).<br/><br/>Cape Fur Seals continue to be harvested commercially and hunted for trophies in Namibia under permits issued in terms of the Marine Resources Act of 2000 (Campbell <em>et al.</em> 2011). The most profitable product is thought to be male genitalia (Kirkman 2006), but others products are pelts, leather products, oil, meat, and bone meal for consumption (Campbell <em>et al.</em> 2011). In 2010, 43,168 pups and 4,573 adult males were harvested, while the 2011 harvest was 45,794 pups and 3,626 adult males (Japp <em>et al.</em> 2012).<br/><br/>The Australian Fur Seal is not harvested.",
+    "rationale": "<p>Abundance of Cape Fur Seals is estimated to be approximately 2,000,000 animals, while that of Australian Fur Seals is 120,000. No subpopulations exist for either subspecies and no localities are isolated from any others. Total abundance for each subspecies is estimated to have increased over the past three generations. Cape Fur Seal abundance has been stable over the past two generations while Australian Fur Seals increased up to 2007, but have since experienced a 6% mean annual decrease in pup production. It is unknown whether this apparent reduction is due to a poor pupping season in 2013/14, or if it represents a real decline in the population. Fluctuations in the abundance of Cape Fur Seals have been seen in the southern Namibian rookeries as a result of poor environmental conditions affecting prey populations. No major threats currently put any of the breeding sites at risk of extinction. Australian Fur Seals are subject to persistent bycatch mortality from trawl fisheries in part of their range, and both subspecies may be affected by global climate change should it have impacts upon their abiotic environment or prey species. Smaller island rookeries of both subspecies are possibly more vulnerable to such changes. The Afro-Australian Fur Seal does not meet the IUCN criteria for any threatened category and should be listed as Least Concern.</p>",
+    "trend_justification": null,
+    "taxonomic_notes": "<p>The two recognized subspecies of Afro-Australian Fur Seal, the Cape Fur Seal (<em>Arctocephalus pusillus pusillus</em>) and the Australian Fur Seal (<em>A. p. doriferus</em>), are almost identical in both anatomy and behaviour (Warnecke and Shaughnessy 1985). Repenning<span class=\"apple-converted-space\">&#160;<em>et al</em>. (1971) accorded them subspecific status based on one cranial character and separate geographic ranges. Very low genetic divergence indicates that they split relatively recently, with the Australian subspecies being the more recently established (Lento<span class=\"apple-converted-space\">&#160;<em>et al</em>. 1997, Wynen<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2001), possibly derived as a consequence of late Pleistocene/Holocene (~12,000 years before present) migration events from southern Africa to southern Australia via west-wind drift across the Indian Ocean (Deméré<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2003, Lancaster<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2010, Wynen<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2001).&#160;<br/> <br/> The Afro-Australian Fur Seal holds a somewhat enigmatic position within the Otariidae, with its large body size, locomotion pattern (alternate gait on land), vocalization and thigmotactic behaviour being more similar to the Sea Lion genera (Goldsworthy<span class=\"apple-converted-space\">&#160;<em>et al</em>. 1997). Furthermore, multiple genetic analyses have noted the apparent paraphyly of the genus<span class=\"apple-converted-space\">&#160;<em>Arctocephalus</em>, with this species consistently aligning more closely with Sea Lions instead of the other&#160;<em>Arctocephalus</em><span class=\"apple-converted-space\"><em>&#160;</em>species (Berta and Churchill 2011, Nyakatura and Bininda-Emonds 2012, Yonezawa<span class=\"apple-converted-space\">&#160;<em>et al</em>. 2009).<br/> <br/> Afro-Australian Fur Seals have previously been named<span class=\"apple-converted-space\">&#160;<em>Arctocephalus forsteri</em>,<span class=\"apple-converted-space\">&#160;<em>A. doriferus</em>, and<span class=\"apple-converted-space\">&#160;<em>A. tasmanicus</em><span class=\"apple-converted-space\">&#160;(Repenning<span class=\"apple-converted-space\">&#160;<em>et al</em>. 1971).</span></span></span></span></span></span></span></p>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Australasian"
+      },
+      "code": "2"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    }
+  ],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - eastern"
+      },
+      "code": "57"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southeast"
+      },
+      "code": "47"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Indian Ocean - western"
+      },
+      "code": "51"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - southwest"
+      },
+      "code": "81"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Rocky Shoreline"
+      },
+      "code": "12_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Sea Cliffs and Rocky Offshore Islands"
+      },
+      "code": "13_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Marion-Prince Edward Is."
+      },
+      "code": "MPE-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Australia"
+      },
+      "code": "SOA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Cape"
+      },
+      "code": "CPP-WC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tasmania"
+      },
+      "code": "TAS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eastern Cape Province"
+      },
+      "code": "CPP-EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Victoria"
+      },
+      "code": "VIC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New South Wales"
+      },
+      "code": "NSW-NS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Oil spills"
+      },
+      "code": "9_2_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Garbage & solid waste"
+      },
+      "code": "9_4"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Temperature extremes"
+      },
+      "code": "11_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "No decline",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_2_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_4_4"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Hofmeyr, G.J.G.",
+      "value": [
+        "Greg Hofmeyr (Port Elizabeth Museum at Bayworld)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Goldsworthy, S.D.",
+      "value": [
+        "Simon Goldsworthy (South Australian Research & Development Institute, Australia)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Kirkman, S., Meÿer, M. & Roux, J.-P",
+      "value": [
+        "Steven Kirkman (Department of Environmental Affairs, South Africa)",
+        "Michael Meÿer (Department of Environmental Affairs, South Africa)",
+        "roux.gen.1419467377012@gen.iucnsis.org"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Lowry, L., Ahonen, H., Pollock, C.M., Chiozza, F. & Battistoni, A.",
+      "value": [
+        "Caroline Pollock (IUCN Red List Unit)",
+        "Federica Chiozza (Global Mammal Assessment)",
+        "Lloyd Lowry (Deceased Nov 2018. Formerely atUniversity of Alaska Fairbanks)",
+        "Alessia Battistoni (Global Mammal Assessment)",
+        "Heidi Ahonen (Norwegian Polar Institute)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C. 2013. Generation length for mammals. <i>Nature Conservation</i> 5: 87–94.",
+      "year": "2013",
+      "title": "Generation length for mammals",
+      "author": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Moloney, C.L., Fennessey, S.T., Gibbons, M.J., Roychoudhury, A., Shillington, F.A. von der Heyden, B.P. and Watermeyer, K. 2013. Reviewing evidence of marine ecosystem change off South Africa. <i>African Journal of Marine Science</i> 35(3): 427-448.",
+      "year": "2013",
+      "title": "Reviewing evidence of marine ecosystem change off South Africa",
+      "author": "Moloney, C.L., Fennessey, S.T., Gibbons, M.J., Roychoudhury, A., Shillington, F.A. von der Heyden, B.P. and Watermeyer, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Reijnders, P., Brasseur, S., van der Toorn, J., van der Wolf, P., Boyd, I., Harwood, J., Lavigne, D. and Lowry, L. 1993. <i>Seals, fur seals, sea lions, and walrus. Status survey and conservation action plan</i>. IUCN Seal Specialist Group.",
+      "year": "1993",
+      "title": "Seals, fur seals, sea lions, and walrus. Status survey and conservation action plan",
+      "author": "Reijnders, P., Brasseur, S., van der Toorn, J., van der Wolf, P., Boyd, I., Harwood, J., Lavigne, D. and Lowry, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lavigne D.M. and Schmitz, O.J. 1990. Global warming and increasing population densities: a prescription for seal plagues. <i>Marine Pollution Bulletin</i> 21: 280-284.",
+      "year": "1990",
+      "title": "Global warming and increasing population densities: a prescription for seal plagues",
+      "author": "Lavigne D.M. and Schmitz, O.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Goldsworthy, S.D., Bulman, C., He, X., Larcombe, J. and Littnan, C.L. 2003. Trophic interactions between marine mammals and Australian fisheries: an ecosystem approach. <i>Marine mammals: fisheries, tourism and management issues</i>, pp. 62-99. CSIRO Publishing, Melbourne, Victoria, Australia.",
+      "year": "2003",
+      "title": "Trophic interactions between marine mammals and Australian fisheries: an ecosystem approach",
+      "author": "Goldsworthy, S.D., Bulman, C., He, X., Larcombe, J. and Littnan, C.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Shaughnessy, P.D. 1999. The action plan for Australian seals. Environment Australia., Canberra, Australia.",
+      "year": "1999",
+      "title": "The action plan for Australian seals",
+      "author": "Shaughnessy, P.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Repenning, C.A., Peterson, R.S. and Hubbs, C.L. 1971. Contributions to the systematics of the southern fur seals, with particular reference to the Juan Fernández and Guadalupe species. In: W.H. Burt (ed.), <i>Antarctic Pinnipedia</i>, pp. 1-34. Antarctic Research Series 18, American Geophysical Union, New York, USA.",
+      "year": "1971",
+      "title": "Contributions to the systematics of the southern fur seals, with particular reference to the Juan Fernández and Guadalupe species",
+      "author": "Repenning, C.A., Peterson, R.S. and Hubbs, C.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Stewardson, C. L. 2007. National Assessment of Interactions between Humans and Seals: Fisheries, Aquaculture and Tourism. Department of Agriculture, Fisheries and Forestry, Canberra, Australia.",
+      "year": "2007",
+      "title": "National Assessment of Interactions between Humans and Seals: Fisheries, Aquaculture and Tourism",
+      "author": "Stewardson, C. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kirkwood, R., Boren, L., Shaughnessy, P.D., Szteren, D., Mawson, P., Hückstädt, L., Hofmeyr, G.J.G., Oosthuizen, H., Campagna, C. and Berris, M. 2003. Pinniped-focused tourism in the Southern Hemisphere: a review of the industry. In: N. Gales, M. Hindell and R. Kirkwood (eds), <i>Marine mammals and humans: Fisheries, Tourism and Management Issues</i>, pp. 257-276. CSIRO Publishing, Melbourne, Australia.",
+      "year": "2003",
+      "title": "Pinniped-focused tourism in the Southern Hemisphere: a review of the industry",
+      "author": "Kirkwood, R., Boren, L., Shaughnessy, P.D., Szteren, D., Mawson, P., Hückstädt, L., Hofmeyr, G.J.G., Oosthuizen, H., Campagna, C. and Berris, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Arnould, J.P.Y. and Hindell, M.A. 2001. Dive behaviour, foraging locations, and maternal-attendance patterns of Australian fur seals (<i>Arctocephalus pusillus doriferus</i>). <i>Canadian Journal of Zoology</i> 79: 35-48.",
+      "year": "2001",
+      "title": "Dive behaviour, foraging locations, and maternal-attendance patterns of Australian fur seals (<i>Arctocephalus pusillus doriferus</i>)",
+      "author": "Arnould, J.P.Y. and Hindell, M.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Skinner, J.D., Van Aarde, R.J. and Goss, R.A. 1995. Space and resource use by brown hyenas <i>Hyaena brunnea</i> in the Namib Desert. <i>Journal of Zoology, London</i> 237: 123-131.",
+      "year": "1995",
+      "title": "Space and resource use by brown hyenas <i>Hyaena brunnea</i> in the Namib Desert",
+      "author": "Skinner, J.D., Van Aarde, R.J. and Goss, R.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Warneke, R.M. and Shaughnessy, P.D. 1985. <i>Arctocephalus pusillus</i>, the South African and Australian fur seal: taxonomy, evolution, biogeography and life history. In: J.K. Ling and M.M. Bryden. (eds), <i>Studies of Sea Mammals in South Latitudes</i>, pp. 53-77. South Australian Museum, Adelaide, Australia.",
+      "year": "1985",
+      "title": "<i>Arctocephalus pusillus</i>, the South African and Australian fur seal: taxonomy, evolution, biogeography and life history",
+      "author": "Warneke, R.M. and Shaughnessy, P.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bonner, W. N. 1978. Man's impact on seals. <i>Mammal Review</i> 8: 3-13.",
+      "year": "1978",
+      "title": "Man's impact on seals",
+      "author": "Bonner, W. N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lento, G.M., Haddon. M., Chambers, G.K. and Baker, C.S. 1997. Genetic variation of southern hemisphere fur seals (<i>Arctocephalus</i> spp.): Investigation of population structure and species identity. <i>Journal of Heredity</i> 88(3): 202-208.",
+      "year": "1997",
+      "title": "Genetic variation of southern hemisphere fur seals (<i>Arctocephalus</i> spp.): Investigation of population structure and species identity",
+      "author": "Lento, G.M., Haddon. M., Chambers, G.K. and Baker, C.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Thibault, M. 1999. Sighting of a South African fur seal on a beach in south-western Gabon. <i>American Journal of Ecology</i> 37: 119–120.",
+      "year": "1999",
+      "title": "Sighting of a South African fur seal on a beach in south-western Gabon",
+      "author": "Thibault, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Roux, J.-P. 1998. The impact of environmental variability on the seal population. <i>Namibia Brief</i> 20: 138-140.",
+      "year": "1998",
+      "title": "The impact of environmental variability on the seal population",
+      "author": "Roux, J.-P.",
+      "citation_short": null
+    },
+    {
+      "citation": "de Bruyn, P.J.N., Bester, M.N., Mecenero, S., Kirkman, S.P., Roux, J.-P. and Klages, N.T.W. 2003. Temporal variation of cephalopods in the diet of Cape fur seals in Namibia. <i>South African Journal of Wildlife Research</i> 33: 85-96.",
+      "year": "2003",
+      "title": "Temporal variation of cephalopods in the diet of Cape fur seals in Namibia",
+      "author": "de Bruyn, P.J.N., Bester, M.N., Mecenero, S., Kirkman, S.P., Roux, J.-P. and Klages, N.T.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kirkman, S.P., Oosthuizen, W.H., Meyer, M.A., Kotze, P.G.H , Roux, J.-P. and Underhill, L.G. 2007. Making sense of censuses and dealing with missing data: trends in pup counts of Cape fur seal <i>Arctocephalus pusillus pusillus</i> for the period 1972-2004. <i>South African Journal of Marine Science</i> 29: 161-176.",
+      "year": "2007",
+      "title": "Making sense of censuses and dealing with missing data: trends in pup counts of Cape fur seal <i>Arctocephalus pusillus pusillus</i> for the period 1972-2004",
+      "author": "Kirkman, S.P., Oosthuizen, W.H., Meyer, M.A., Kotze, P.G.H , Roux, J.-P. and Underhill, L.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kerley, G.I.H. 1983. Record for the Cape fur seal <i>Arctocephalus pusillus pusillus</i> for subantarctic Marion Island. <i>South African Journal of Zoology</i> 18: 139-140.",
+      "year": "1983",
+      "title": "Record for the Cape fur seal <i>Arctocephalus pusillus pusillus</i> for subantarctic Marion Island",
+      "author": "Kerley, G.I.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "David, J.H.M. 1987a. Diet of the South African (Cape) fur seal (1974-1 985) and an assessment of competition with fisheries in southern Africa. <i>South African Journal of Marine Science</i> 5: 693-713.",
+      "year": "1987a",
+      "title": "Diet of the South African (Cape) fur seal (1974-1 985) and an assessment of competition with fisheries in southern Africa",
+      "author": "David, J.H.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wickens, P. A., David, J. H. M., Shelton, P. A. and Field, J. G. 1991. Trends in harvest and pup numbers of the South African fur seal: Implications for management. <i>South African Journal of Marine Science</i> 11: 307-326.",
+      "year": "1991",
+      "title": "Trends in harvest and pup numbers of the South African fur seal: Implications for management",
+      "author": "Wickens, P. A., David, J. H. M., Shelton, P. A. and Field, J. G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Shaughnessy P.D. 1979. Cape (South African) Fur Seal. <i>Mammals in the Seas, Vol. II: Pinniped species summaries and report on sirenians</i>, pp. 37-40. Food and Agricultural Organization, Rome, Italy.",
+      "year": "1979",
+      "title": "Cape (South African) Fur Seal",
+      "author": "Shaughnessy P.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wickens, P. A., Japp, D. W., Shelton, P. A., Kriel, F., Goosen, P. C., Rose, B., Augustyn, C. J., Bross, C. A. R., Penney, A. J. and Krohn, R. G. 1992. Seals and fisheries in South Africa - competition and conflict. In: A.I.L. Payne, K.H. Brink, K.H. Mann, and R. Hilborn (eds.). Benguela Trophic Functioning. <i>South African Journal of Marine Science</i> 12: 773-789.",
+      "year": "1992",
+      "title": "Seals and fisheries in South Africa - competition and conflict. In: A.I.L. Payne, K.H. Brink, K.H. Mann, and R. Hilborn (eds.). Benguela Trophic Functioning",
+      "author": "Wickens, P. A., Japp, D. W., Shelton, P. A., Kriel, F., Goosen, P. C., Rose, B., Augustyn, C. J., Bross, C. A. R., Penney, A. J. and Krohn, R. G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wickens, P. and York, A.E. 1997. Comparative population dynamics of fur seals. <i>Marine Mammal Science</i> 13(2): 241-292.",
+      "year": "1997",
+      "title": "Comparative population dynamics of fur seals",
+      "author": "Wickens, P. and York, A.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Shaughnessy, P.D. 1980. Entanglement of Cape fur seals with man-made objects. <i>Marine Pollution Bulletin</i> 11: 332-336.",
+      "year": "1980",
+      "title": "Entanglement of Cape fur seals with man-made objects",
+      "author": "Shaughnessy, P.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mecenero, S., Kirkman, S.P. and Roux, J.-P. 2006. A dynamic fish consumption model for lactating Cape fur seals <i>Arctocephalus pusillus pusillus</i> based on scat analyses. <i>Journal of Marine Science</i> 63: 1551–1566.",
+      "year": "2006",
+      "title": "A dynamic fish consumption model for lactating Cape fur seals <i>Arctocephalus pusillus pusillus</i> based on scat analyses",
+      "author": "Mecenero, S., Kirkman, S.P. and Roux, J.-P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Warneke, R.M. 1995. Australian fur-seal <i>Arctocephalus pusillus</i> (Schreber, 1775). In: R. Strahan (ed.), <i>The Mammals of Australia. Second Edition.</i>, pp. 680-682. Reed Books, Chatswood, UK.",
+      "year": "1995",
+      "title": "Australian fur-seal <i>Arctocephalus pusillus</i> (Schreber, 1775)",
+      "author": "Warneke, R.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pemberton, D. and Kirkwood, R. J. 1994. Pup production and distribution of the Australian fur seal, <i>Arctocephalus pusillus doriferus</i>, in Tasmania. <i>Wildlife Research</i> 21: 341–352.",
+      "year": "1994",
+      "title": "Pup production and distribution of the Australian fur seal, <i>Arctocephalus pusillus doriferus</i>, in Tasmania",
+      "author": "Pemberton, D. and Kirkwood, R. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kirkwood, R., Gales, R., Terauds, A., Arnould, J.P.Y., Pemberton, D., Shaughnessy, P.D., Mitchell, A.T. and Gibbens, J. 2005. Pup production and population trends of the Australian fur seal (<i>Arctocephalus pusillus doriferus</i>). <i>Marine Mammal Science</i> 21(2): 260-282.",
+      "year": "2005",
+      "title": "Pup production and population trends of the Australian fur seal (<i>Arctocephalus pusillus doriferus</i>)",
+      "author": "Kirkwood, R., Gales, R., Terauds, A., Arnould, J.P.Y., Pemberton, D., Shaughnessy, P.D., Mitchell, A.T. and Gibbens, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Matthee, C.A., Fourie, F., Oosthuizen, W.H., Meÿer, M.A. and Tolley, K.A. 2006. Mitochondrial DNA sequence data of the Cape fur seal (<i>Arctocephalus pusillus pusillus</i>) suggest that population numbers may be affected by climatic shifts. <i>Marine Biology</i> 148: 899-905.",
+      "year": "2006",
+      "title": "Mitochondrial DNA sequence data of the Cape fur seal (<i>Arctocephalus pusillus pusillus</i>) suggest that population numbers may be affected by climatic shifts",
+      "author": "Matthee, C.A., Fourie, F., Oosthuizen, W.H., Meÿer, M.A. and Tolley, K.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "David, J.H.M. 1987b. South African fur seal, <i>Arctocephalus pusillus pusillus</i>. In: J. P. Croxall and R. L. Gentry (eds), <i>Status, biology, and ecology of fur seals</i>, pp. 73-77. NOAA Techn. Rep. NMFS 51.",
+      "year": "1987b",
+      "title": "South African fur seal, <i>Arctocephalus pusillus pusillus</i>",
+      "author": "David, J.H.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kirkman, S.P. 2006. Warfare to welfare: southern Africa’s dynamic seal-human interface. International Fund for Animal Welfare, Cape Town, South Africa.",
+      "year": "2006",
+      "title": "Warfare to welfare: southern Africa’s dynamic seal-human interface",
+      "author": "Kirkman, S.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "de Villiers, D. J., and Roux, J.-P. 1992. Mortality of newborn pups of the South African fur seal <i>Arctocephalus pusillus pusillus</i> in Namibia. <i>South African Journal of Marine Science</i> 12: 881-889.",
+      "year": "1992",
+      "title": "Mortality of newborn pups of the South African fur seal <i>Arctocephalus pusillus pusillus</i> in Namibia",
+      "author": "de Villiers, D. J., and Roux, J.-P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gamel, C.M., Davis, R.W., David, J.H.M. and Meÿer M.A. 2005. Reproductive energetics and females attendance patterns of Cape fur seals (<i>Arctocephalus pusillus pusillus</i>) during early lactation. <i>American Midland Naturalist</i> 153: 152-170.",
+      "year": "2005",
+      "title": "Reproductive energetics and females attendance patterns of Cape fur seals (<i>Arctocephalus pusillus pusillus</i>) during early lactation",
+      "author": "Gamel, C.M., Davis, R.W., David, J.H.M. and Meÿer M.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Butterworth, D.S., Punt, A.E. and Wickens, P.A. 1995. The effects of future consumption by the Cape fur seal on catches and catch rates of the Cape hakes. 3. Modelling the dynamics of the Cape fur seal <i>Arctocephalus pusillus pusillus</i>. <i>South African Journal of Marine Science</i> 16: 161-183.",
+      "year": "1995",
+      "title": "The effects of future consumption by the Cape fur seal on catches and catch rates of the Cape hakes. 3. Modelling the dynamics of the Cape fur seal <i>Arctocephalus pusillus pusillus</i>",
+      "author": "Butterworth, D.S., Punt, A.E. and Wickens, P.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wynen, L.P., Goldsworthy, S.D., Insley, S.J., Adams, M., Bickham, J.W., Francis, J., Gallo, J.P., Hoelzel, A.R., Majluf, P., White, R.W.G. and Slade, R. 2001. Phylogenetic relationships within the eared seals (Otariidae: Carnivora): Implications for the historical biogeography of the family. <i>Molecular Phylogenetics and Evolution</i> 21(2): 270-284.",
+      "year": "2001",
+      "title": "Phylogenetic relationships within the eared seals (Otariidae: Carnivora): Implications for the historical biogeography of the family",
+      "author": "Wynen, L.P., Goldsworthy, S.D., Insley, S.J., Adams, M., Bickham, J.W., Francis, J., Gallo, J.P., Hoelzel, A.R., Majluf, P., White, R.W.G. and Slade, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Page, B., McKenzie, J. and Goldsworthy, S.D. 2005a. Dietary resource partitioning among sympatric New Zealand and Australian fur seals. <i>Marine Ecology Progress Series</i> 293: 283-302.",
+      "year": "2005a",
+      "title": "Dietary resource partitioning among sympatric New Zealand and Australian fur seals",
+      "author": "Page, B., McKenzie, J. and Goldsworthy, S.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Makhado, A.B., Crawford, R.J.M. and Underhill, L.G. 2006. Impact of predation by cape fur seals <i>Arctocephalus pusillus pusillus</i> on Cape gannets Morus capensis at Malgas Island, Western Cape, South Africa. <i>African Journal of Marine Science</i> 28(3-4): 681-687.",
+      "year": "2006",
+      "title": "Impact of predation by cape fur seals <i>Arctocephalus pusillus pusillus</i> on Cape gannets Morus capensis at Malgas Island, Western Cape, South Africa",
+      "author": "Makhado, A.B., Crawford, R.J.M. and Underhill, L.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nyakatura, K. and Bininda-Emonds, O.R.P. 2012. Updating the evolutionary history of Carnivora (Mammalia): a new species-level supertree complete with divergence time estimates. <i>BMC Biology</i> 10: 12.",
+      "year": "2012",
+      "title": "Updating the evolutionary history of Carnivora (Mammalia): a new species-level supertree complete with divergence time estimates",
+      "author": "Nyakatura, K. and Bininda-Emonds, O.R.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gerber, L.R. and Hilborn, R. 2001. Catastrophic events and recovery from low densities in populations of otariids: implications for risk of extinction. <i>Mammal Review</i> 31(2): 131-150.",
+      "year": "2001",
+      "title": "Catastrophic events and recovery from low densities in populations of otariids: implications for risk of extinction",
+      "author": "Gerber, L.R. and Hilborn, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Oosthuizen, W.H. 1991. General movements of South African (Cape) fur seals <i>Arctocephalus pusillus pusillus</i> from analysis of recoveries of tagged animals. <i>South African Journal of Marine Science</i> 11: 21-29.",
+      "year": "1991",
+      "title": "General movements of South African (Cape) fur seals <i>Arctocephalus pusillus pusillus</i> from analysis of recoveries of tagged animals",
+      "author": "Oosthuizen, W.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hume, F., Hindell, M.A., Pemberton, D. and Gales, R. 2004. Spatial and temporal variation in the diet of a high trophic level predator, the Australian fur seal (<i>Arctocephalus pusillus doriferus</i>). <i>Marine Biology</i> 144: 407-415.",
+      "year": "2004",
+      "title": "Spatial and temporal variation in the diet of a high trophic level predator, the Australian fur seal (<i>Arctocephalus pusillus doriferus</i>)",
+      "author": "Hume, F., Hindell, M.A., Pemberton, D. and Gales, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "David, J. and Wickens, P. 2003. Management of Cape fur seals and fisheries in South Africa. In: N.J. Gales, M.A. Hindell and R. Kirkwood (eds), <i>Marine mammals: fisheries, tourism and management issues</i>, pp. 116-135. CSIRO, Collingwood, Australia.",
+      "year": "2003",
+      "title": "Management of Cape fur seals and fisheries in South Africa",
+      "author": "David, J. and Wickens, P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kirkwood, R. and Arnould, J.P.Y. 2011. Foraging trip strategies and habitat use during late pup rearing by lactating Australian fur seals. <i>Australian Journal of Zoology</i> 59(4): 216-226.",
+      "year": "2011",
+      "title": "Foraging trip strategies and habitat use during late pup rearing by lactating Australian fur seals",
+      "author": "Kirkwood, R. and Arnould, J.P.Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lynch, M., Duignan, P.J., Taylor, T., Nielsen, O., Kirkwood, R., Gibbens, J. and Arnould, J.P.Y. 2011a. Epidemiology of <i>Brucella</i> infection in Australian fur seals. <i>Journal of Wildlife Diseases</i> 47: 352-363.",
+      "year": "2011a",
+      "title": "Epidemiology of <i>Brucella</i> infection in Australian fur seals",
+      "author": "Lynch, M., Duignan, P.J., Taylor, T., Nielsen, O., Kirkwood, R., Gibbens, J. and Arnould, J.P.Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "National Seal Strategy Group and Stewardson, C. 2007. National Strategy to Address Interactions between Humans and Seals: Fisheries, Aquaculture and Tourism.  Australian Government Department of Agriculture, Fisheries and Forestry. Canberra, Australia.",
+      "year": "2007",
+      "title": "National Strategy to Address Interactions between Humans and Seals: Fisheries, Aquaculture and Tourism",
+      "author": "National Seal Strategy Group and Stewardson, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Algers, B., Blokhuis, H.J., Broom, D.M., Costa, P., Domingo, M., Greiner, M., Guemene, D., Hartung, J., Koenen, F., Muller-Graf, C., Morton, D.B., Osterhaus, A., Pfeiffer, D.U., Roberts, R., Sanaa, M., Salman, M., Sharp, J.M., Vannier, P., Wierup, M. and Wooldridge, M. 2007. Scientific opinion of the panel on animal health and welfare on a request from the Commission on the animal welfare aspects of the killing and skinning of seals. <i>The European Food Safety Authority Journal</i> 610: 1-123.",
+      "year": "2007",
+      "title": "Scientific opinion of the panel on animal health and welfare on a request from the Commission on the animal welfare aspects of the killing and skinning of seals",
+      "author": "Algers, B., Blokhuis, H.J., Broom, D.M., Costa, P., Domingo, M., Greiner, M., Guemene, D., Hartung, J., Koenen, F., Muller-Graf, C., Morton, D.B., Osterhaus, A., Pfeiffer, D.U., Roberts, R., Sanaa, M., Salman, M., Sharp, J.M., Vannier, P., Wierup, M. and Wooldridge, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Yonezawa, T., Kohno, N. and Hasegawa, M. 2009. The monophyletic origin of sea lions and fur seals (Carnivora; Otariidae) in the Southern Hemisphere. <i>Gene</i> 441: 89-99.",
+      "year": "2009",
+      "title": "The monophyletic origin of sea lions and fur seals (Carnivora; Otariidae) in the Southern Hemisphere",
+      "author": "Yonezawa, T., Kohno, N. and Hasegawa, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shaughnessy, P.D., Goldsworthy, S.D. and Mackay, A.I. 2014. Status and trends in abundance of New Zealand fur seal populations in South Australia.  SARDI Research Report Series No. 781. Adelaide, Australia.",
+      "year": "2014",
+      "title": "Status and trends in abundance of New Zealand fur seal populations in South Australia",
+      "author": "Shaughnessy, P.D., Goldsworthy, S.D. and Mackay, A.I. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Goldsworthy, S.D., Pemberton, D. and Warneke, R.M. 1997. Field identification of Australian and New Zealand fur seals (<i>Arctocephalus</i> spp.). In: M.A. Hindell and C. Kemper (eds), <i>Marine Mammal Research in Australia and New Zealand</i>, pp. 63-71. Surrey Beatty and Sons.",
+      "year": "1997",
+      "title": "Field identification of Australian and New Zealand fur seals (<i>Arctocephalus</i> spp.)",
+      "author": "Goldsworthy, S.D., Pemberton, D. and Warneke, R.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "De Villiers, D. and Roux, J.-P. 1992. Mortality of newborn pups of the South African fur seal <i>Arctocephalus pusillus pusillus in</i> Namibia. <i>South African Journal of Marine Science</i> 12: 881-889.",
+      "year": "1992",
+      "title": "Mortality of newborn pups of the South African fur seal <i>Arctocephalus pusillus pusillus in</i> Namibia",
+      "author": "De Villiers, D. and Roux, J.-P. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Roy, C., Van Der Lingen, C.D., Coetzee, J.C. and Lutjeharms, J.R.E. 2007. Abrupt environmental shift associated with changes in the distribution of Cape anchovy <i>Engraulis encrasicolus</i> spawners in the southern Benguela. <i>African Journal of Marine Science</i> 29: 309-319.",
+      "year": "2007",
+      "title": "Abrupt environmental shift associated with changes in the distribution of Cape anchovy <i>Engraulis encrasicolus</i> spawners in the southern Benguela",
+      "author": "Roy, C., Van Der Lingen, C.D., Coetzee, J.C. and Lutjeharms, J.R.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kirkwood, R. and Goldsworthy, S.D. 2013. <i>Fur Seals and Sea Lions</i>. CSIRO Publishing, Collingwood, Victoria, Australia.",
+      "year": "2013",
+      "title": "Fur Seals and Sea Lions",
+      "author": "Kirkwood, R. and Goldsworthy, S.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hofmeyr, G.J.G., Du Toit, M. and Kirkman, S.P. 2011. Early post-release survival of stranded Cape fur seal pups at Black Rocks, Algoa Bay. <i>African Journal of Marine Science</i> 33: 453-461.",
+      "year": "2011",
+      "title": "Early post-release survival of stranded Cape fur seal pups at Black Rocks, Algoa Bay",
+      "author": "Hofmeyr, G.J.G., Du Toit, M. and Kirkman, S.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tuck, G.N., Knuckey, I. and Klaer, N.L. 2013. Informing the review of the Commonwealth Policy on Fisheries Bycatch through assessing trends in bycatch of key Commonwealth fisheries.  Final Report to the Fisheries Research and Development Corporation (FRDC), Project: 2012/046. CSIRO Marine and Atmospheric Research.",
+      "year": "2013",
+      "title": "Informing the review of the Commonwealth Policy on Fisheries Bycatch through assessing trends in bycatch of key Commonwealth fisheries",
+      "author": "Tuck, G.N., Knuckey, I. and Klaer, N.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kirkwood, R., Pemberton, D., Gales, R., Hoskins, A.J., Mitchell, A., Shaughnessy, P.D. and Arnould, J.P.Y. 2010. Continued population recovery by Australian fur seals. <i>Marine and Freshwater Research</i> 61: 695-701.",
+      "year": "2010",
+      "title": "Continued population recovery by Australian fur seals",
+      "author": "Kirkwood, R., Pemberton, D., Gales, R., Hoskins, A.J., Mitchell, A., Shaughnessy, P.D. and Arnould, J.P.Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kirkman, S.P., Yemane, D., Oosthuizen, W.H., Meÿer, M.A., Kotze, P.G.H., Skrypzeck, H., Vaz Velho, F. and Underhill, L.G. 2013. Spatio-temporal shifts of the dynamic Cape fur seal population in southern Africa, based on aerial censuses (1972-2009). <i>Marine Mammal Science</i> 29: 497-524.",
+      "year": "2013",
+      "title": "Spatio-temporal shifts of the dynamic Cape fur seal population in southern Africa, based on aerial censuses (1972-2009)",
+      "author": "Kirkman, S.P., Yemane, D., Oosthuizen, W.H., Meÿer, M.A., Kotze, P.G.H., Skrypzeck, H., Vaz Velho, F. and Underhill, L.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Roux, J.P., van der Lingen, C.D., Gibbons, M.J., Moroff, N.E., Shannon, L.J., Smith, A.D. and Cury, P.M. 2013. Jellyfication of marine ecosystems as a likely consequence of overfishing small pelagic fishes: lessons from the Benguela. <i>Bulletin of Marine Science</i> 89: 249-284.",
+      "year": "2013",
+      "title": "Jellyfication of marine ecosystems as a likely consequence of overfishing small pelagic fishes: lessons from the Benguela",
+      "author": "Roux, J.P., van der Lingen, C.D., Gibbons, M.J., Moroff, N.E., Shannon, L.J., Smith, A.D. and Cury, P.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lyle, J.M. and Willcox, S.T. 2008. Dolphin and seal interactions with mid-water trawling in the Small Pelagic Fishery, including an assessment of bycatch mitigation strategies.  Final Report Project R05/0996. Tasmanian Aquaculture and Fisheries Institute and Australian Fisheries Management Authority.",
+      "year": "2008",
+      "title": "Dolphin and seal interactions with mid-water trawling in the Small Pelagic Fishery, including an assessment of bycatch mitigation strategies",
+      "author": "Lyle, J.M. and Willcox, S.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Martin, A.R., Hammerschlag, N., Collier, R.S. and Fallows, C. 2005. Predatory behaviour of white sharks (<i>Carcharodon carcharias</i>) at Seal Island, South Africa. <i>Journal of the Marine Biological Association of the UK</i> 85: 1121-1135.",
+      "year": "2005",
+      "title": "Predatory behaviour of white sharks (<i>Carcharodon carcharias</i>) at Seal Island, South Africa",
+      "author": "Martin, A.R., Hammerschlag, N., Collier, R.S. and Fallows, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lynch, M., Kirkwood, R., Mitchell, A. and Arnould, J.P.Y. 2011b. Prevalence and significance of an alopecia syndrome in Australian fur seals (<i>Arctocephalus pusillus doriferus</i>). <i>Journal of Mammalogy</i> 92: 342-351.",
+      "year": "2011b",
+      "title": "Prevalence and significance of an alopecia syndrome in Australian fur seals (<i>Arctocephalus pusillus doriferus</i>)",
+      "author": "Lynch, M., Kirkwood, R., Mitchell, A. and Arnould, J.P.Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kovacs, K.M., Aguilar, A., Aurioles, D., Burkanov, V., Campagna, C., Gales, N.J., Gelatt, T., Goldsworthy, S.D., Goodman, S.J., Hofmeyr, G.J.G., Härkönen, T., Lowry, L., Lydersen, L., Schipper, J., Sipilä, T., Southwell, C., Thompson, D. and Trillmich, F. 2012. Global threats to pinnipeds. <i>Marine Mammal Science</i> 28: 414-436.",
+      "year": "2012",
+      "title": "Global threats to pinnipeds",
+      "author": "Kovacs, K.M., Aguilar, A., Aurioles, D., Burkanov, V., Campagna, C., Gales, N.J., Gelatt, T., Goldsworthy, S.D., Goodman, S.J., Hofmeyr, G.J.G., Härkönen, T., Lowry, L., Lydersen, L., Schipper, J., Sipilä, T., Southwell, C., Thompson, D. and Trillmich, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Deagle, B.E., Kirkwood, R. and Jarman, S.N. 2009. Evaluating trophic links by pyrosequencing prey DNA in faeces: a population level dietary study on Australian fur seals. <i>Molecular Ecology</i> 18: 2022-2038.",
+      "year": "2009",
+      "title": "Evaluating trophic links by pyrosequencing prey DNA in faeces: a population level dietary study on Australian fur seals",
+      "author": "Deagle, B.E., Kirkwood, R. and Jarman, S.N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Deméré, T.A., Berta, A. and Adam, P.J. 2003. Pinnipedimorph evolutionary biogeography. <i>Bulletin of the American Museum Natural History</i> 279: 32-76.",
+      "year": "2003",
+      "title": "Pinnipedimorph evolutionary biogeography",
+      "author": "Deméré, T.A., Berta, A. and Adam, P.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hamer, D.J. and Goldsworthy, S.D. 2006. Seal–fishery operational interactions: Identifying the environmental and operational aspects of a trawl fishery that contribute to by-catch and mortality of Australian fur seals (<i>Arctocephalus pusillus doriferus</i>). <i>Biological Conservation</i> 130: 517-529.",
+      "year": "2006",
+      "title": "Seal–fishery operational interactions: Identifying the environmental and operational aspects of a trawl fishery that contribute to by-catch and mortality of Australian fur seals (<i>Arctocephalus pusillus doriferus</i>)",
+      "author": "Hamer, D.J. and Goldsworthy, S.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rand, R.W. 1955. Reproduction in the female Cape fur seal, <i>Arctocephalus pusillus</i> (Schreber). <i>Proceedings of the Zoological Society, London</i> 124: 717-740.",
+      "year": "1955",
+      "title": "Reproduction in the female Cape fur seal, <i>Arctocephalus pusillus</i> (Schreber)",
+      "author": "Rand, R.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Arnould, J.P.Y. and Kirkwood, R. 2008. Habitat selection in a benthic diver: the foraging areas of female Australian fur seals (<i>Arctocephalus pusillus doriferus</i>). <i>Aquatic Conservation: Marine and Freshwater Ecosystems </i> 17: S53-S67.",
+      "year": "2008",
+      "title": "Habitat selection in a benthic diver: the foraging areas of female Australian fur seals (<i>Arctocephalus pusillus doriferus</i>)",
+      "author": "Arnould, J.P.Y. and Kirkwood, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Campbell, R., Knowles, T. and O’Connor, S. 2011. A report for Humane Society International, World Society for the Protection of Animals, Bont Voor Dieren (NL) and Respect for Animals (UK), prepared by Economists at Large.",
+      "year": "2011",
+      "title": "A report for Humane Society International, World Society for the Protection of Animals, Bont Voor Dieren (NL) and Respect for Animals (UK), prepared by Economists at Large",
+      "author": "Campbell, R., Knowles, T. and O’Connor, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kirkwood, R., Hume, F. and Hindell, M. 2008. Sea temperature variations mediate annual changes in the diet of Australian fur seals in Bass Strait. <i>Marine Ecology Progress Series</i> 369: 297-309.",
+      "year": "2008",
+      "title": "Sea temperature variations mediate annual changes in the diet of Australian fur seals in Bass Strait",
+      "author": "Kirkwood, R., Hume, F. and Hindell, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Littnan, C.L., Arnould, J., P.Y. and Harcourt, R.G. 2007. Effect of proximity to the shelf edge on the diet of female Australian fur seals. <i>Marine Ecology Progress Series</i> 338: 257-267.",
+      "year": "2007",
+      "title": "Effect of proximity to the shelf edge on the diet of female Australian fur seals",
+      "author": "Littnan, C.L., Arnould, J., P.Y. and Harcourt, R.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Stewardson, C.L. 2001. Biology and conservation of the Cape (South African) fur seal <i>Arctocephalus pusillus pusillus</i> (Pinnipedia: Otariidae) from the Eastern Cape Coast of South Africa. PhD thesis, Australian National University, Canberra.",
+      "year": "2001",
+      "title": "Biology and conservation of the Cape (South African) fur seal <i>Arctocephalus pusillus pusillus</i> (Pinnipedia: Otariidae) from the Eastern Cape Coast of South Africa",
+      "author": "Stewardson, C.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Barange, M., Hampton, I. and Roel, B.A. 1999. Trends in the abundance and distribution of anchovy and sardine on the South African continental shelf in the 1990s, deduced from acoustic surveys. <i>South African Journal of Marine Science</i> 21: 367-391.",
+      "year": "1999",
+      "title": "Trends in the abundance and distribution of anchovy and sardine on the South African continental shelf in the 1990s, deduced from acoustic surveys",
+      "author": "Barange, M., Hampton, I. and Roel, B.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Oosthuizen, W.H., Meyer, M.A., David, J.H.M., Summers, N.M., Kotze, P.G.H., Swanson, S.W. and Shaughnessy, P.D. 1997. Variation in jackal numbers at the Van ReenenBay seal colony with comment on the likely importance of jackals as predators. <i>African Journal of Wildlife Research</i> 27: 26-29.",
+      "year": "1997",
+      "title": "Variation in jackal numbers at the Van ReenenBay seal colony with comment on the likely importance of jackals as predators",
+      "author": "Oosthuizen, W.H., Meyer, M.A., David, J.H.M., Summers, N.M., Kotze, P.G.H., Swanson, S.W. and Shaughnessy, P.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Punt, A.E. and Butterworth, D.S. 1995. The effects of future consumption by the Cape fur seal on catches and catch rates of the Cape hakes. 4. Modelling the biological interaction between Cape fur seals <i>Arctocephalus pusillus pusillus</i> and the Cape hakes <i>Merluccius capensis</i> and <i>M. paradoxus</i>. <i>South African Journal of Marine Science</i> 16: 255-285.",
+      "year": "1995",
+      "title": "The effects of future consumption by the Cape fur seal on catches and catch rates of the Cape hakes. 4. Modelling the biological interaction between Cape fur seals <i>Arctocephalus pusillus pusillus</i> and the Cape hakes <i>Merluccius capensis</i> and <i>M. paradoxus</i>",
+      "author": "Punt, A.E. and Butterworth, D.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gammelsrød, T., Bartholomae, C.H., Boyer, D.C., Filipe, V.L.L. and O’Toole, M.J. 1998. Intrusion of warm surface water along the Angolan-Namibian coast in February-March 1995: The 1995 Benguela N. <i>Journal of Marine Science</i> 19: 41-56.",
+      "year": "1998",
+      "title": "Intrusion of warm surface water along the Angolan-Namibian coast in February-March 1995: The 1995 Benguela N",
+      "author": "Gammelsrød, T., Bartholomae, C.H., Boyer, D.C., Filipe, V.L.L. and O’Toole, M.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Lancaster, M.L., Arnould, J.P.Y. and Kirkwood, R. 2010. Genetic status of an endemic marine mammal, the Australian fur seal, following historical harvesting. <i>Animal Conservation</i> 13: 247-255.",
+      "year": "2010",
+      "title": "Genetic status of an endemic marine mammal, the Australian fur seal, following historical harvesting",
+      "author": "Lancaster, M.L., Arnould, J.P.Y. and Kirkwood, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "MLRA. 2007. Policy on the Management of Seals, Seabirds and Shorebirds, 2007. Marine Living Resources Act, 1998. Government Gazette no. 30534.",
+      "year": "2007",
+      "title": "Policy on the Management of Seals, Seabirds and Shorebirds, 2007. Marine Living Resources Act, 1998",
+      "author": "MLRA",
+      "citation_short": null
+    },
+    {
+      "citation": "Shaughnessy, P.D., McKenzie, J., Lancaster, M.L., Goldsworthy, S.D. and Dennis, T.E. 2010. Australian fur seals establish haulout sites and a breeding colony in South Australia. <i>Australian Journal of Zoology</i> 58: 94-103.",
+      "year": "2010",
+      "title": "Australian fur seals establish haulout sites and a breeding colony in South Australia",
+      "author": "Shaughnessy, P.D., McKenzie, J., Lancaster, M.L., Goldsworthy, S.D. and Dennis, T.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Berta, A. and Churchill, M. 2011. Pinniped taxonomy: review of currently recognized species and subspecies, and evidence used for their description. <i>Mammal Review</i> 42: 207-234.",
+      "year": "2011",
+      "title": "Pinniped taxonomy: review of currently recognized species and subspecies, and evidence used for their description",
+      "author": "Berta, A. and Churchill, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "David, J.H.M. and Rand, R.W. 1986. Attendance behaviour of South African fur seals. In: R.L. Gentry and G.L. Kooyman (eds), <i>Fur seals: maternal strategies on land and at sea</i>, pp. 126-141. Princeton University Press, Princeton, New Jersey.",
+      "year": "1986",
+      "title": "Attendance behaviour of South African fur seals",
+      "author": "David, J.H.M. and Rand, R.W. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kuhn, B.F., Wiesel, I. and Skinner, J.D. 2008. Diet of brown hyaenas (<i>Parahyaena brunnea</i>) on the Namibian coast. <i>Transactions of the Royal Society of South Africa</i> 63: 1-8.",
+      "year": "2008",
+      "title": "Diet of brown hyaenas (<i>Parahyaena brunnea</i>) on the Namibian coast",
+      "author": "Kuhn, B.F., Wiesel, I. and Skinner, J.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tilzey, R.D.J., Goldsworthy, S., Cawthorn, M., Calvert, N., Hamer, D., Russell, S., Shaughnessy, P.D., Wize, B. and Stewardson, C. 2006. Assessment of seal-fishery interactions in the winter blue grenadier fishery off west Tasmania and the development of fishing practices and Seal Exclusion Devices to mitigate seal bycatch by factory trawlers.  Final Report to the FRDC. Project no. 2001/008.",
+      "year": "2006",
+      "title": "Assessment of seal-fishery interactions in the winter blue grenadier fishery off west Tasmania and the development of fishing practices and Seal Exclusion Devices to mitigate seal bycatch by factory trawlers",
+      "author": "Tilzey, R.D.J., Goldsworthy, S., Cawthorn, M., Calvert, N., Hamer, D., Russell, S., Shaughnessy, P.D., Wize, B. and Stewardson, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Knuckey, I.A., Eayrs, S. and Bosschietter, B. 2002. Options for reducing incidental catch of seals on wet-boats in the SETF: a preliminary report.  Final Report to the Australian Fisheries Management Authority. ARF Project R01/0887. Marine and Freshwater Resources Institute.",
+      "year": "2002",
+      "title": "Options for reducing incidental catch of seals on wet-boats in the SETF: a preliminary report",
+      "author": "Knuckey, I.A., Eayrs, S. and Bosschietter, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Robinson, S., Terauds, A., Gales, R. and Greenwood, M. 2008a. Mitigating fur seal interactions: relocation from Tasmanian aquaculture farms. <i>Aquatic Conservation: Marine and Freshwater Ecosystems</i> 18(7): 1180-1188.",
+      "year": "2008a",
+      "title": "Mitigating fur seal interactions: relocation from Tasmanian aquaculture farms",
+      "author": "Robinson, S., Terauds, A., Gales, R. and Greenwood, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Japp, D.W., Purves, M.G. and Wilkinson, S. 2012. Benguela Current Large Marine Ecosystem: State of the Stocks Review. Report No. 2 (2012). Benguela Current Commission. Capricorn Fisheries Monitoring, Cape Town, South Africa.",
+      "year": "2012",
+      "title": "Benguela Current Large Marine Ecosystem: State of the Stocks Review. Report No. 2 (2012)",
+      "author": "Japp, D.W., Purves, M.G. and Wilkinson, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "McIntosh, R.R., Sutherland, D., Dann, P., Kirkwood, R., Thalman, S., Alderman, R., Arnould, J.P.Y., Mitchell, A., Kirkman, S., Salton, M. and Slip, D. 2014. Pup production of Australian and New Zealand fur seals between 2007 and 2014.  Report by the Phillip Island Nature Park.",
+      "year": "2014",
+      "title": "Pup production of Australian and New Zealand fur seals between 2007 and 2014",
+      "author": "McIntosh, R.R., Sutherland, D., Dann, P., Kirkwood, R., Thalman, S., Alderman, R., Arnould, J.P.Y., Mitchell, A., Kirkman, S., Salton, M. and Slip, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rice, F.H. and Saayman, G.S. 1987. Distribution and behaviour of killer whales (<i>Orcinus orca</i>) off the coasts of southern Africa. <i>Investigations on Cetacea</i> 20: 231-250.",
+      "year": "1987",
+      "title": "Distribution and behaviour of killer whales (<i>Orcinus orca</i>) off the coasts of southern Africa",
+      "author": "Rice, F.H. and Saayman, G.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kooyman, G.L. and Gentry, R.L. 1986. Diving behaviour of South African fur seals. In: R.L. Gentry and G.L. Kooyman (eds), <i>Fur seals - maternal strategies on land and at sea</i>, pp. 142-152. Princeton University Press, Princeton.",
+      "year": "1986",
+      "title": "Diving behaviour of South African fur seals",
+      "author": "Kooyman, G.L. and Gentry, R.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pemberton, D. and Shaughnessy, P.D. 1993. Interaction between seals and marine fish-farms in Tasmania and management of the problem. <i>Aquatic Conservation: Marine and Freshwater Ecosystems</i> 3: 149-158.",
+      "year": "1993",
+      "title": "Interaction between seals and marine fish-farms in Tasmania and management of the problem",
+      "author": "Pemberton, D. and Shaughnessy, P.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2015. The IUCN Red List of Threatened Species. Version 2015-4. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 19 November 2015).",
+      "year": "2015",
+      "title": "The IUCN Red List of Threatened Species. Version 2015-4",
+      "author": "IUCN",
+      "citation_short": "IUCN 2015-4"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [
+    {
+      "description": {
+        "en": "Agulhas Current"
+      },
+      "code": "4_6_4"
+    },
+    {
+      "description": {
+        "en": "Southeast Australian Shelf"
+      },
+      "code": "4_4_6"
+    },
+    {
+      "description": {
+        "en": "Benguela Current"
+      },
+      "code": "2_1_4"
+    },
+    {
+      "description": {
+        "en": "East-Central Australian Shelf"
+      },
+      "code": "4_4_5"
+    }
+  ],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

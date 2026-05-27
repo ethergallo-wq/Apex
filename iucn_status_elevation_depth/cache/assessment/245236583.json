@@ -1,0 +1,2458 @@
+{
+  "assessment_date": "2023-08-17T01:00:00.000+01:00",
+  "year_published": "2025",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 4038,
+  "criteria": "A2cd",
+  "url": "https://www.iucnredlist.org/species/4038/245236583",
+  "citation": "Petersen, W.J., Coudrat, C.N.Z., Dhendup, T., Ghimirey, Y., Gray, T.N.E., Shariff, M., Montomery, C., Mukherjee, S., Rahman, H. & Kun, S. 2025. Catopuma temminckii. The IUCN Red List of Threatened Species 2025: e.T4038A245236583. Accessed on 15 May 2026.",
+  "assessment_id": 245236583,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 4038,
+    "scientific_name": "Catopuma temminckii",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CARNIVORA",
+    "family_name": "FELIDAE",
+    "genus_name": "Catopuma",
+    "species_name": "temminckii",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Vigors &amp; Horsfield, 1827)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Cat Specialist Group (wild cats)",
+        "url": "http://www.catsg.org/",
+        "description": "Chair: Christine Breitenmoser (email: ch.breitenmoser@kora.ch) and Urs Max Breitenmoser (email: urs.breitenmoser@vetsuisse.unibe.ch)\nRed List Authority Coordinator: Tabea Lanz (email: t.lanz@kora.ch)\nNewsletter: http://www.catsg.org/index.php?id=7"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Asiatic Golden Cat",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Golden Cat",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Temminck's Cat",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Asiatische Goldkatze",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Chat de Temminck",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Chat doré d'Asie",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Gato Dorado Asiático",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Jinmao/金猫",
+        "language": "chi"
+      },
+      {
+        "main": false,
+        "name": "Kucing Emas",
+        "language": "ind"
+      },
+      {
+        "main": false,
+        "name": "Kucing Tulap",
+        "language": "may"
+      },
+      {
+        "main": false,
+        "name": "Seua faii/เสือไฟ",
+        "language": "tha"
+      },
+      {
+        "main": true,
+        "name": "Asian Golden Cat",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Pardofelis temminckii (Vigors &amp; Horsfield, 1827)",
+        "status": "NEW",
+        "genus_name": "Pardofelis",
+        "species_name": "temminckii",
+        "species_author": "(Vigors &amp; Horsfield, 1827)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Felis temminckii Vigors & Horsfield, 1827",
+        "status": "ACCEPTED",
+        "genus_name": "Felis",
+        "species_name": "temminckii",
+        "species_author": "Vigors & Horsfield, 1827",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 4600,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "1000-12000, 7000",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "6-7",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Percentage of population protected by PAs",
+            "value": "21-30"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Unknown"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Unknown"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "Yes",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": "518924",
+    "continuing_decline_in_area_of_occupancy": "Yes",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "5697094",
+    "continuing_decline_in_extent_of_occurence": "Unknown",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Yes",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "Historically, the Asian Golden Cat was distributed from the Eastern Himalayas through southern and central China, mainland Southeast Asia, and the island of Sumatra (Patel <em>et al. </em>2016, Smith <em>et al. </em>2010; see also Supplemental Maps). Although it remains widely distributed, the species’ current distribution has become both contracted and fragmented due to extensive habitat loss and unsustainable levels of hunting across its range.<br/>A country-by-country breakdown of the Asian Golden Cat’s current known distribution is as follows:<br/><br/><u>Bangladesh:</u> The Asian Golden Cat is restricted to Bangladesh’s remaining tropical wet evergreen and semi-evergreen forest cover in the Chittagong Hill Tracts of southeastern Bangladesh (Chakma 2015, Creative Conservation Alliance 2016) and the northeastern forest complex along the border with the Indian state of Tripura (Rahman <em>et al. </em>2021, M. Akash pers. comm. 2022).<br/><br/><u>Bhutan:</u> Formal studies on the Asian Golden Cat’s geographic range in Bhutan have so far been limited to literature reviews (e.g., Dhendup 2016) and regional modelling efforts (e.g., Petersen <em>et al.</em> 2021). The findings of these studies, and others, combined with the nation’s relatively extensive forest cover and protected area network (both exceeding 50% of Bhutan’s landmass), suggest the species to be widespread. Recently published bycatch data gathered from the country’s national Tiger (<em>Panthera tigris</em>) survey (Penjor <em>et al. </em>2021, in supplemental material Figure S18) have confirmed this conclusion, revealing widespread occurrence throughout the entire country except for areas well above the tree line and associated shrub matrices (ca. 4,000-5,000 m depending on local conditions; Miehe <em>et al. </em>2007). Indeed, an informal investigation of this bycatch data suggests an elevational range from approximately 100 to 4,600 meters above sea level (rounded to the nearest 100 meters due to locational uncertainty), which closely tracks the elevational range of tree and shrub cover in the country (Miehe <em>et al.</em> 2007). <br/><br/><u>Cambodia:</u> Historically, the Asian Golden Cat was presumably distributed widely throughout Cambodia’s forests. Today, best available data suggest the Asian Golden Cat is restricted to the country’s two largest remaining semi-evergreen forest landscapes: the Cardamom Mountains in the country’s southwest and Virachey National Park in the northeast. A review of 31 camera-trap studies across 23 protected areas, including both published and unpublished data and conducted for the purpose of this assessment, found Asian Golden Cats to be detected in only 8 studies and five protected areas. These areas comprised the Central Cardamom Protected Forest (Gray <em>et al. </em>2017), Southern Cardamom National Park (Gray <em>et al.</em> 2017), Tatai Wildlife Sanctuary (Gray<em> et al.</em> 2017), Siem Pang Wildlife Sanctuary (Loveridge <em>et al.</em> 2018), Samlout Multiple Use Area (Fauna &amp; Flora International, unpub. data), and Virachey National Park (McCann<em> et al.</em> 2020). The last records from the Eastern Plains Landscape, a combination of deciduous dipterocarp and mixed evergreen forests, occurred in the mid-2010s and there have been no further records from this landscape, despite extensive subsequent camera-trapping.<br/><br/><u>China:</u> The Asian Golden Cat was once widely distributed throughout the tropical and subtropical forests of Southern, Southeastern, and Central China (Smith <em>et al. </em>2010). Currently, confirmed records are available from a handful of localities in Sichuan (e.g., Gongga Mountain National Nature Reserve, Sichuan Tangjiahe National Nature Reserve), Gansu, and Shaanxi provinces, southeastern Tibet, and western and southern Yunnan (Bai <em>et al.</em> 2018, Shen <em>et al.</em> 2019, Li <em>et al.</em> 2020, Ma <em>et al. </em>2020, Wang <em>et al.</em> 2022, He <em>et al. </em>2023, Liu <em>et al.</em> 2023).<br/><br/><u>India:</u> India’s remaining natural habitats have been more extensively camera-trapped compared with other range countries. These surveys indicate the Asian Golden Cat’s distribution is limited to the country’s northeastern region, with recent records in Sikkim (e.g., Bashir <em>et al. </em>2011), West Bengal (e.g., Ghose <em>et al.</em> 2019), Assam (e.g., Lalthanpuia <em>et al.</em> 2014), Arunachal Pradesh (e.g., Mukherjee<em> et al. </em>2019), Nagaland (e.g., Joshi <em>et al. </em>2019), Meghalaya (e.g., Mukherjee<em> et al. </em>2019), and Mizoram (e.g., Mukherjee <em>et al.</em> 2019). In addition, the species is presumably present in the state of Tripura given the presence of nearby records in Bangladesh’s northeastern forests (Rahman <em>et al.</em> 2021). Individual records are reported from Khangchendzonga Biosphere Reserve (Bashir <em>et al.</em> 2011), Neora Valley National Park (Chatterjee <em>et al.</em> 2018), Buxa Tiger Reserve (Ghose et al. 2019), Nongkhyllem Wildlife Sanctuary (Mukherjee <em>et al.</em> 2019), Eaglenest Wildlife Sanctuary (Mukherjee <em>et al. </em>2019), Dampa Tiger Reserve (Singh and Macdonald 2017), Singchung Bugun Village Community Reserve (Mukherjee<em> et al. </em>2019), Pakke Tiger Reserve (Mukherjee et al. 2019), Kachanjuri wildlife-corridor (Lalthanpuia<em> et al. </em>2014), Talley Valley Wildlife Sanctuary (Mukherjee <em>et al. </em>2019), Dzkou Valley Community Forests (Joshi <em>et al.</em> 2019), Choklangan Village Community Forests (Longchar<em> et al.</em> 2017), Dibang Wildlife Sanctuary (Jhala <em>et al. </em>2020), Kamlang Tiger Reserve and Wildlife Sanctuary (Jhala <em>et al.</em> 2020), and Namdapha National Park (Jhala <em>et al.</em> 2020).<br/><br/><u>Indonesia:</u> The Asian Golden Cat is still relatively widespread across Sumatra’s forests. Published records include those from Bukit Barisan Selatan National Park (Fitria <em>et al.</em> 2019, Weiskopf <em>et al.</em> 2019, Allen <em>et al.</em> 2020), Bengkunat Protected Forest (Khalil 2019), Batutegi Protected Forest (Huda <em>et al.</em> 2020), Kerinci Seblat National Park (Haidir<em> et al. </em>2021), Bukit Tigapuluh Landscape (Subrata<em> et al. </em>2022), Peranap (Sunarto et al. 2015), Rimbang Baling (Sunarto <em>et al.</em> 2015), Malampah Nature Reserve (Ladyfandela <em>et al. </em>2018, SIF. 2024), Pasaman Regency (iNaturalist 2023), Batang Angkola Landscape (Ario<em> et al.</em> 2020), Gunung Leuser National Park, Beutong, Bengkung, Southwestern Aceh,&#160; (Pusparini <em>et al. </em>2014, MoEF, SIF, FKL, Panthera 2024), and the Ulu Masen Ecosystem (Radinal <em>et al. </em>2019).<br/><br/><u>Lao PDR:</u> Asian Golden Cats were presumably once widespread throughout the forests of Lao PDR. By 2023, the species’ geographic range appears to be greatly diminished, presumably due to intensive hunting practices (see Coudrat et al. 2014, Coudrat 2019). Recent records exist only from northern and central Lao PDR, in the provinces of Khammouane (Phou Hin Poun National Protected Area; Brakels and Souwideth, unpubl. data), Bolikhamxai (Nam Kading National Protected Area and Nam Chouane – Nam Xang area; WCS Lao PDR, unpubl. data), Houaphanh (Nam Et – Phou Louey National Protected Area; Rasphone <em>et al.</em> 2019), Xaisomboun (Nam Ngiep 1 Sub Catchment area; WCS Lao PDR, unpubl. data), Xaignabouli (i.e., Nam Pouy National Protected Area; WWF-Laos, unpubl. data), Louang Namtha (North Corridor between Nam Ha and Nam Kan National Parks; WCS Lao PDR, unpubl. data), and Oudomxay (La District; CCL-Laos and WWF-Laos, unpubl. data).<br/><br/><u>Malaysia:</u> Available data indicate the Asian Golden Cat is still relatively widespread across Peninsular Malaysia. The species continues to be detected within multiple areas throughout the country’s Central Forest Spine, an approximately 53,000 km<sup>2</sup> forested landscape. Recent records from this landscape come from large forest complexes including the Bintang Hijau Forest Complex (Gunung Inas Forest Reserve, WWF-Malaysia, unpubl. data), the Main Range Forest Complex (e.g., Royal Belum State Park, Temengor Forest Reserve; Mohamad<em> et al. </em>2015, Amanjaya Forest Reserve, Rayan <em>et al.</em> 2013, Gunan Basor Forest Reserve, Stong Utara Forest Reserve, WWF-Malaysia, unpubl. data), the Greater Taman Nagara Forest Complex (e.g., Taman Negara National Park, Jambari <em>et al.</em> 2019; Hulu Terengganu Hydroelectric Dam Catchment, Adyla<em> et al</em>. 2016, Tembat Forest Reserve, Zainol <em>et al. </em>2021), and the Endau Rompin-Sedili Forest Complex (e.g., Endau Rompin National Park, Gumal <em>et al.</em> 2014; Lesong&#160; Forest Reserve, Sungai Pukin Forest Reserve, Rompin State Park, Labis Utara Forest Reserve, Labis Tengah Forest Reserve, Labis Timur Forest Reserve, Mersing Forest Reserve, Lenggor Forest Reserve, Kluang Forest Reserve, Aramijaya concession, Ulu Sedili Forest Reserve, and Panti Forest Reserve, WCS-Malaysia, unpubl. data), as well as various corridors connecting these complexes (e.g., Primary Linkage 1/Taman Negara Wildlife Corridor; Razak <em>et al. </em>2021, Primary Linkage 7/Kenyir Wildlife Corridor, Clements 2013, Linkage 8/Bintang Hijau Wildlife Corridor, Clements 2013).<br/><br/><u>Myanmar:</u> Most of Myanmar’s forests are considered ecologically suitable for, and within the historical range of, Asian Golden Cats (Than Zaw <em>et al. </em>2008). However, understanding of the species’ current distribution in the country remains incomplete. Recurring political instability and other logistical challenges have led to survey efforts not being uniformly distributed throughout the country. In the south, camera-trap surveys continue to document the species’ presence throughout large portions of the Dawna – Tennasarim Range including both the Kawthoolei and Tanintharyi (Moo<em> et al. </em>2018, Greenspan <em>et al. </em>2020, Kawthoolei Forestry Department, unpubl. data; Fauna and Flora International, unpubl. data). However, nowhere in the landscape does the species appear to be particularly common (Kawthoolei Forestry Department, unpubl. data; Fauna and Flora International, unpubl. data) and in a few seemingly suitable areas there have been no detections at all (e.g., Tu Ter Lor Wildlife Sanctuary; Moo <em>et al.</em> 2018, Kawthoolei Forestry Department, unpubl. data). Elsewhere, available records place the species in Bago Yoma (North Zamari Reserve Forest, WWF-Myanmar, unpubl. data) and the southern Rakhine Yoma (Rakhine Yoma Elephant Range Wildlife Sanctuary, Cremonesi <em>et al.</em> 2021, Ayeyarwady Region, Suzuki<em> et al. </em>2019). Few to no studies have been conducted in Shan State or the northern Rakhine Yoma and Chin Hills, and in these areas the species’ continued existence remains unverified. Presence is assumed in the latter two areas though, based on records from neighbouring landscapes (e.g., Chittagong Hill Tracts of Bangladesh; Chakma 2015, Creative Conservation Alliance 2016). In the far north, the species was previously considered widespread based on records from the 1990s and early 2000s (Than Zaw <em>et al.</em> 2008). Few follow-up studies have been conducted in these areas though, with recent Asian Golden Cat records limited to just Hukaung Valley Wildlife Sanctuary (Naing<em> et al.</em> 2015), Htamanthi Wildlife Sanctuary (Naing<em> et al.</em> 2017), and the proposed southern extension to Hkakaborazi National Park (Lwin <em>et al.</em> 2021).<br/><br/><u>Nepal:</u> The Asian Golden Cat is known only from northeastern Nepal, with recent records from Makalu-Barun National Park (Ghimirey and Pal 2009), the Tinjure-Milke-Jaljale Area (Rai <em>et al.</em> 2019), Gaurishankar Conservation Area (Koju<em> et al. </em>2020), and the Panchthar-Ilam-Taplejung Corridor (Lama <em>et al.</em> 2019).&#160;<br/><u><br/>Singapore:</u> The Asian Golden Cat’s historical range presumably included Singapore, though published historical records are unavailable (e.g., Chasen 1925). The Asian Golden Cat, like other moderate to large sized wild cats (i.e., clouded leopard <em>Neofelis</em>), is considered extirpated from Singapore.<br/><br/><u>Thailand:</u> The Asian Golden Cat appears to be widely distributed throughout Thailand’s highly fragmented forests according to the results of a recent literature review (Petersen <em>et al.</em> 2021). As is common elsewhere across the species range, most records in Thailand are derived from Tiger survey bycatch data; therefore, generalizations about possible occurrence in un-surveyed areas should be made cautiously. Recent published camera-trap records (2010 onwards) confirm presence in most major forest complexes (FC) including the Western FC, Kaeng Krachan FC, Khlong Saeng – Khao Sok FC; Hala Bala FC, Eastern FC, Dong Phayayen – Khao Yai FC, Phu Khieo – Nam Nao FC, and Lum Nam Pai-Salawin (FC). The species’ status in less frequently surveyed areas, however, is uncertain. Specifically, there are a lack of recent published records from the relatively unexplored forest complexes in northern (i.e., Sri Lanna – Khun Tan FC, Doi Phu Kha – Mae Yom FC, Mae Ping – Om Koi FC, and Phu Meang-Phu Thong FC), northeastern (i.e., Phu Parn FC and Phanom Dongkrak – Pha Tam), and southern Thailand (i.e., Khao Luang FC and Khao Bantad FC).<br/><br/><u>Viet Nam:</u> Since 2005, there have been no Asian Golden Cat records, despite extensive camera-trap surveys throughout most forested areas in the country (see reviews in Willcox <em>et al.</em> 2013; Petersen <em>et al. </em>2021). Given the industrial level hunting that continues to take place in Viet Nam, the species is presumed extirpated. Remnant populations, however, may exist in remote parts of the Annamite Range along Viet Nam’s borders with Lao PDR and Cambodia, as evidenced by recent records of other small cats in these areas (e.g., Marbled Cat, Cao <em>et al.</em> 2022). These occasional occurrences, if they do exist, almost certainly occur at such low population densities as to be considered functionally extinct.<br/><br/>It should be noted that this assessment’s distribution map was constructed with a mapping approach different from the previous assessment’s distribution map. As such, differences between the two maps do not represent genuine changes in the species’ distribution and should not be interpreted as such.",
+    "population": "As of this assessment no robust population estimates or population trends exist for the Asian Golden Cat. This lack of data makes it difficult to accurately assess the true population status of this species. Nonetheless, available evidence in the form of published camera-trap survey results suggests there has been a substantial population decline during the assessment period as evidenced by the species’ apparent disappearance from many areas across its range (Petersen <em>et al. </em>2021), including several protected areas (e.g., Lao PDR’s Nakai – Nam Theun National Park, Coudrat <em>et al.</em> 2014, Coudrat 2019), landscapes (e.g., Cambodia’s Eastern Plains, Gray <em>et al. </em>2012), and even countries (e.g., Viet Nam, Willcox <em>et al. </em>2014). Indeed, multiple camera-trap surveys in otherwise suitable habitats have reported low numbers of detections or no detections at all (e.g., Moo <em>et al. </em>2017). However, declines in population are expected to decrease in the future as the species becomes increasingly restricted to a few “safe” havens, mostly located in the Eastern Himalayas, Thailand, Malaysia, and Sumatra, provided that hunting pressures do not increase in these areas and remain unmitigated elsewhere (i.e., other populations will trend towards extinction; see Geographic Range / Population / Threats).<br/><br/>A recent modelling paper estimated the amount of habitat where Asian Golden Cats would be expected to occur at frequencies greater than chance (defined using predicted-to-expected ratios &gt; 1.0, following Hirzel<em> et al.</em> 2006) has declined by 68% between 2000 and 2020 and is projected to decline by a further 18% between 2020 and 2040 (Petersen <em>et al. </em>2021). However, a decline in habitat occupied/area of occupancy (AOO) generally does not translate to a 1:1 decline in population size. Therefore, we conservatively assume for this assessment that the percent decline in mature individuals is at least half of the percent decline in habitat/AOO, resulting in a suspected past population decline of 34% and projected future decline of 9% over the previous and next three generations, respectively. The assumption that the percent decline in mature individuals was half the percent decline in AOO, is based on the premise that declines in AOO&#160;are more likely to occur in areas with lower population densities (see Assessment Rationale for justification regarding the ratio of decline).<br/><br/>Although reliable population estimates are lacking, educated guesses can be made using simplistic assumptions (see Online Supporting Material for assumptions and country-by-country breakdown of population size). Borrowing heavily from published population estimates of the sympatric clouded leopard (<em>Neofelis </em>sp.), this assessment inferred a global population of approximately 7,000 mature Asian Golden Cat individuals (plausible range: 1,000–12,000; rounded to the nearest 1,000 to emphasize the lack of precision). Assuming a 34% decline over the past twenty years suggests the global population size in 2000 was approximately 10,000 mature individuals (1,000–18,000), resulting in a naïve calculated average additive mortality of 150 mature individuals per annum. However, these estimates should be interpreted with caution due to the simplistic assumptions and high degree of uncertainty in the estimates.",
+    "habitats": "The Asian Golden Cat is strongly associated with closed-canopy forested habitats and can be found in a variety of tropical, subtropical, subalpine, and degraded forests (Grassman <em>et al. </em>2005, Thinley <em>et al. </em>2015. Vernes <em>et al.</em> 2015, Petersen <em>et al.</em> 2021). Modern records of the species in more open-canopy forests, such as dry deciduous forests, are scarce (e.g., Gray <em>et al. </em>2014). It is unclear whether this scarcity is due to these habitats being less suitable, or if it results from heighted hunting pressures in these areas, which are often more accessible to humans compared to denser, closed-canopy forests. Less frequently, the species has been recorded in more open habitats adjacent to forests, including grasslands, alpine scrub, and rocky areas (e.g., Choudhury 2007). Asian Golden Cats have been detected across a wide range of elevations, particularly in the Eastern Himalayas, where the species has been detected at elevations ranging from less than 100 meters to approximately 4,600 meters above sea level (Penjor <em>et al. </em>2021). This closely matches the elevational range of tree and shrub cover in the region, which extend to approximately 4,000-5,000 meters above sea level depending on local conditions (Miehe <em>et al. </em>2007).&#160;Asian Golden Cats are polymorphic, with at least six different colour morphs documented (e.g., Nijhawan <em>et al.</em> 2019). The degree of polymorphism present within a population appears to vary with latitude and is seemingly greatest in the Eastern Himalayas, northern Myanmar, and southwestern China and lowest in Peninsular Malaysia and Sumatra (e.g., Patel <em>et al.</em> 2016). This latitudinal decline in polymorphism is consistent with a southward population expansion throughout the Late Pleistocene/Early Holocene and is presumably the result of local adaptation and founder effects as subtropical and tropical habitats become increasingly more homogeneous from north to south (Patel<em> et al. </em>2016, Nijhawan <em>et al.</em> 2019).<br/><br/>Little is known about the behaviour of the Asian Golden Cat. Multiple camera-trap studies from across the species’ range have found the species to be cathemeral or mostly diurnal (e.g., Lynam <em>et al.</em> 2013). Similar activity patterns were documented by a radio-telemetry study monitoring two Asian Golden Cat individuals in Thailand’s Phu Khiao Wildlife Sanctuary (Grassman <em>et al. </em>2005).<br/>Available evidence suggests the species likely possesses a highly variable and opportunistic diet of small-to-medium sized vertebrates (0-28 kg; e.g., Kamler <em>et al.</em> 2020). Prey selection presumably varies by individual and population, with habitat type, prey availability, and the presence of larger carnivores all likely mediating factors at the population level. Across all studies, small vertebrates (&lt; 2 kg) appear to be an important component of the species’ diet (Grassman <em>et al.</em> 2005, Kawanishi and Sunquist 2008, Xiong<em> et al.</em> 2017, Kamler <em>et al.</em> 2020). Depending on the population, other important prey species may include muntjacs (Muntiacus; Kamler <em>et al. </em>2020), chevrotains (Tragulus; Kawanishi and Sunquist 2008), porcupines (Hystricidae; Kamler <em>et al.</em> 2020), primates (Kawanishi and Sunquist 2008), Galliformes (Xiong <em>et al. </em>2017), and small carnivores (Lim 2002, Xiong <em>et al.</em> 2017, Kamler <em>et al.</em> 2020).<br/><br/>Published home range estimates exist for only two individuals in Thailand’s Phu Khiao Wildlife Sanctuary (Grassman <em>et al.</em> 2005). These home range estimates, belonging to one female and one male inhabiting semi-evergreen forest were reported to be 33 km<sup>2</sup> and 48 km<sup>2</sup>, respectively (Grassman <em>et al.</em> 2005). Home range sizes presumably vary by habitat and since Asian Golden Cats inhabit a variety of habitats, the representativeness of these home range estimates is uncertain. Daily distances travelled by the two Phu Khiao individuals varied significantly, particularly for the male individual which was observed moving anywhere from 0.6 km to 9.2 km in a day (Grassman<em> et al. </em>2005). These daily distances travelled are consistent with an incidental observation during a 2017 camera-trap survey in southern Thailand’s Khlong Saeng Wildlife Sanctuary, where an individually identifiable male was photographed at two distinct locations, three days, and 5.3 km apart (W. Petersen, pers. comm. 2024).",
+    "threats": "The Asian Golden Cat faces multiple threats across its range, the most significant of which are habitat loss and illegal hunting. These threats, however, are not particularly well understood beyond reasonable inferences, as the species has received little dedicated research attention. As a forest dependent species, the Asian Golden Cat is threatened by the loss and degradation of forest habitats due to human activities, including agriculture, logging, mining, and infrastructure development projects. Rates of deforestation and forest disturbance across large parts of the species’ range remain the highest in the world despite improvements in environmental governance since the 1990s (Stibig <em>et al.</em> 2014, Liu <em>et al. </em>2023). Deforestation is almost invariably accompanied by high levels of illegal hunting, either by those implementing the deforestation or by providing new access points for poachers (see discussion below). In addition, the indirect loss of functional connectivity due to habitat loss and degradation is likely impacting the viability of many individual populations. This loss of connectivity is likely to get worse in the future, particularly in Myanmar and the Eastern Himalayas where proposed infrastructure projects (i.e., hydropower, roadways, railways) are expected to become a significant issue for wildlife (e.g., Grumbine and Pandit 2013, Kaszta <em>et al.</em> 2020). Illegal hunting poses a significant threat to the Asian Golden Cat and likely represents the single greatest driver of population declines over the past three generations (Petersen <em>et al. </em>2021).<br/><br/>Asian Golden Cats appear to be highly sensitive to indiscriminate wire snaring based on several lines of evidence. This is most immediately apparent considering the species’ disappearance from industrially snared areas, as documented by long-term monitoring studies (e.g., Nakai-Nam Theun National Park; Coudrat <em>et al.</em> 2014, Coudrat 2019). Indeed, across the species’ range there have been a number of camera-trap surveys in otherwise suitable habitats, including in large, forested landscapes (1,000+ km<sup>2</sup>), reporting low numbers of detections or no detections at all (e.g., Gray <em>et al.</em> 2012, Willcox <em>et al. </em>2014, Moo <em>et al. </em>2017). A review of 145 published camera-trap surveys from forests across the Asian Golden Cat’s range found more than half (54%) did not detect the species (Petersen<em> et al. </em>2021). These negative findings were primarily concentrated in China, Viet Nam, Cambodia, and Lao PDR, countries that have experienced the most dramatic levels of trade-driven hunting and indiscriminate wire-snaring (Harrison<em> et al.</em> 2016, Gray <em>et al.</em> 2018, Tilker<em> et al.</em> 2019). However, significant population declines due to illegal hunting are not expected to be restricted to these countries. Indeed, in Myanmar, traders at illegal wildlife markets had expressed to surveyors that Asian Golden Cats were very rare in parts of the country as early as 2000, with the traders citing over-hunting as the cause (Shepherd and Nijman 2008).&#160;<br/><br/>Additional possible threats to Asian Golden Cats that are either local in nature or require further research and analysis include, but are not limited to, retaliatory killing in response to livestock depredation (e.g., McCarthy 2013), prey depletion (Wolf and Ripple 2016), and inbreeding (Saunders <em>et al. </em>1991).",
+    "measures": "The Asian Golden Cat is listed under Appendix I of CITES and formally protected by national legislation over most of its range. However, in all range countries, the implementation of conservation laws faces challenges, including limited resources and governance issues.<br/>Protected areas represent the primary means of protecting the species and its habitat. However, populations have declined even within protected areas and overlap between protected areas and areas predicted to be suitable is estimated to be low in some parts of its range (Greenspan<em> et al. </em>2020, Petersen<em> et al.</em> 2021). Expanding protected area coverage in a significant or meaningful manner is likely not feasible for the foreseeable future. Therefore, improving the effectiveness of existing protected area management is paramount to the species’ long-term survival.<br/>There has been an increase in camera-trap surveys across the species’ range since the last assessment. Most of these surveys have targeted large popular mammals, including Tiger, Snow Leopard (<em>Panthera uncia</em>), bears (<em>Ursidae</em>), and Saola (<em>Pseudoryx nghetinhensis</em>). These surveys have certainly improved our understanding of the Asian Golden Cat’s status, albeit to a limited degree. Expanding survey efforts to new areas where these ‘flagship’ species do not occur is likely to provide new insights into the Asian Golden Cat’s current distribution and population (Petersen <em>et al.</em> 2021).<br/>Given that much of the Asian Golden Cat’s habitat occurs in transboundary conservation landscapes (e.g., Greenspan<em> et al.</em> 2020, Petersen <em>et al.</em> 2021) the species should be considered in transboundary conservation planning (Farhadinia <em>et al.</em> 2021).",
+    "use_trade": "It is unclear to what extent Asian Golden Cats are specifically targeted by poachers for the illegal wildlife trade. However, they are opportunistically shot (e.g., Bal <em>et al.</em> 2003) and caught in wire snares set for other animals (e.g., https://youtu.be/MRA2MN-TQTQ). Once harvested, Asian Golden Cats are primarily exploited for their pelts and other parts, which may be used for decoration, jewellery, and traditional medicine (Duckworth <em>et al.</em> 1999, Khan 2008, Aiyadurai <em>et al</em>. 2010, Lau <em>et al. </em>2010, Pusparini <em>et al.</em> 2014, DoFPS 2015, Nijman and Shepherd 2015). Older sources have noted some cultural beliefs among local peoples in Southeast Asia (e.g., Thailand, Myanmar, Lao PDR), including beliefs that the fur and flesh of Asian Golden Cats possessed supernatural properties and protected against Tigers (e.g., Lekagul and McNeely 1977). However, it is not apparent that these beliefs have been significant enough to drive dedicated hunting of the species.",
+    "rationale": "The Asian Golden Cat is listed as Vulnerable under Criterion A2cd. Based on a combination of direct and indirect evidence of Asian Golden Cat population and/or range declines across the approximately 20-year assessment period (generation length = ca. 6–7 years [Pacifici<em> et al.</em> 2013] x 3 = 20 years, ca. 2003–2022), we applied a conservative precautionary approach to this assessment. Such evidence includes the species’ apparent disappearance across large parts of its range, including from several protected areas (e.g., Nakai – Nam Theun National Park in Lao People’s Democratic Republic [PDR]), landscapes (e.g., Cambodia’s Eastern Plains), and even countries (e.g., Viet Nam) during the assessment period—with no evidence of compensatory increases in population elsewhere. However, we acknowledge the uncertainties in the available data (both past and present) and recognize that the classification of Vulnerable, as opposed to Endangered or Near Threatened, is marginal and subject to the assumptions made herein.<br/><br/>The Asian Golden Cat is uplisted from Near Threatened to Vulnerable under Criterion A2cd based on a suspected past population decline of 34% over the past three generations. This suspected population decline is inferred from estimated declines in area of occupancy (AOO) (i.e., -68%, Petersen<em> et al. </em>2021), assuming the percent decline in mature individuals is at least half the percent decline in AOO. The assumption that the percent decline in mature individuals was less than the percent decline in AOO (i.e., a ratio between 1:2 and 1:1), is based on the premise that declines in AOO are more likely to occur in areas with lower population densities. However, without reliable range-wide population estimates, the exact ratio between declines in AOO and population is indeterminable. Depending on the ratio used, Asian Golden Cats could qualify for a range of Red List Categories under Criterion A2cd, from Near Threatened (i.e., 1:4) to Endangered (i.e., 1:1). The choice of a 1:2 ratio is conservative, as higher ratios (e.g., 1:4) are mathematically unlikely except in scenarios with highly skewed population distributions and little-to-no declines in high population density areas.<br/><br/>Illegal hunting appears to be the primary driver of declines in population size and AOO, rather than habitat loss. Multiple camera-trap surveys in otherwise suitable habitats have reported low numbers of detections or no detections at all (e.g., Gray<em> et al. </em>2012, Willcox <em>et al. </em>2014, Moo <em>et al. </em>2017). However, declines in AOO are expected to decrease in the future as the species becomes increasingly restricted to a few “safe” havens, mostly located in the Eastern Himalayas, Thailand, Malaysia, and Sumatra, provided that hunting pressures remain unmitigated elsewhere (i.e., other populations will trend towards extinction; see Geographic Range / Population / Threats). Accordingly, the projected decline in area of occupancy over the next three generations was predicted to be 18% (Petersen<em> et al.</em> 2021), thus Criterion A3 is not triggered.<br/><br/>Estimating the Asian Golden Cat’s global population size is difficult, as no robust population estimates exist. Following a series of assumptions, which rely heavily on published estimates of sympatric clouded leopard (<em>Neofelis </em>sp.) population density and several generalizations concerning the distribution and habitat use of Asian Golden Cats, this assessment inferred a global population size of ca. 7,000 mature individuals (1,000 – 12,000; see Online Supporting Material). This population size, combined with an inferred decline in population size of 9% given a projected decline in area of occupancy of 18% over the next three generations (Petersen <em>et al.</em> 2021) suggests the species is close to triggering Vulnerable under Criteria C1. However, since this decline in population size is “inferred” and not “observed, estimated, or projected”, Criterion C1 cannot be triggered (IUCN Standards and Petitions Committee 2022).",
+    "trend_justification": null,
+    "taxonomic_notes": "Phylogenetic analyses group the Asian Golden Cat with the Marbled Cat (<em>Pardofelis marmorata</em>) and the Bay Cat (<em>Catopuma badia</em>; Johnson<em> et al. </em>2006, O'Brien and Johnson 2007). Because of this phylogenetic grouping, both the Asian Golden Cat and the Bay Cat were proposed to be reclassified under<em> Pardofelis</em> (Johnson <em>et al.</em> 2006). However, a subsequent evaluation of skull morphology by Sicuro and Oliveira (2011) revealed that skull structure in Pardofelis was significantly different from that in Catopuma. In addition, Catopuma lacks the flexible ankle joints and elongated tail found in <em>Pardofelis</em>, two adaptations to arboreality. Based on these morphological differences, the IUCN SSC Cat Specialist Group retains the Asian Golden Cat and Bay Cat in <em>Catopuma</em>."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_1",
+      "description": {
+        "en": "Formal education"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_2",
+      "description": {
+        "en": "Training"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Seasonal Occurrence Unknown",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Seasonal Occurrence Unknown",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Seasonal Occurrence Unknown",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Seasonal Occurrence Unknown",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Subtropical/Tropical Heavily Degraded Former Forest"
+      },
+      "code": "14_6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Seasonal Occurrence Unknown",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Seasonal Occurrence Unknown",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical High Altitude"
+      },
+      "code": "3_7"
+    },
+    {
+      "majorImportance": null,
+      "season": "Seasonal Occurrence Unknown",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Shrubland - Mediterranean-type Shrubby Vegetation"
+      },
+      "code": "3_8"
+    },
+    {
+      "majorImportance": null,
+      "season": "Seasonal Occurrence Unknown",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Seasonal Occurrence Unknown",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical High Altitude"
+      },
+      "code": "4_7"
+    },
+    {
+      "majorImportance": null,
+      "season": "Seasonal Occurrence Unknown",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Rocky areas (eg. inland cliffs, mountain peaks)"
+      },
+      "code": "6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bhutan"
+      },
+      "code": "BT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lao People's Democratic Republic"
+      },
+      "code": "LA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nepal"
+      },
+      "code": "NP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Singapore"
+      },
+      "code": "SG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Area-based Management Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Handicrafts, jewellery, etc."
+      },
+      "code": "12"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Establishing ex-situ production *"
+      },
+      "code": "16"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": "Pelts for various",
+      "subsistence": true,
+      "description": {
+        "en": "Other (free text)"
+      },
+      "code": "17"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Unknown",
+      "score": "Medium Impact: 7",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "High Impact: 8",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects (species is not the target)"
+      },
+      "code": "5_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder plantations"
+      },
+      "code": "2_2_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry plantations"
+      },
+      "code": "2_2_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Shifting agriculture"
+      },
+      "code": "2_1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Utility & service lines"
+      },
+      "code": "4_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Renewable energy"
+      },
+      "code": "3_3"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "High Impact: 8",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Petersen, W.J., Coudrat, C.N.Z., Dhendup, T., Ghimirey, Y., Gray, T.N.E., Shariff, M., Montomery, C., Mukherjee, S., Rahman, H. & Kun, S.",
+      "value": [
+        "Shomita Mukherjee (Salim Ali Centre for Ornithology and Natural History)",
+        "Mohamad Shariff (wwf)",
+        "Yadav Ghimirey (Cat SG)",
+        "Tashi Dhendup (UWICE)",
+        "Hasan Rahman (University of Delaware)",
+        "Camille Coudrat",
+        "Thomas Gray",
+        "Shi Kun (Beijing Forestry University, China)",
+        "Clara Montomery (KWCI)",
+        "Wyatt Joseph Petersen"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "McCarthy, J., Breitenmoser, U. & Wilianto, E.",
+      "value": [
+        "Urs Breitenmoser (IUCN SSC Cat Specialist Group / KORA - Carnivore Ecology and Wildlife Management)",
+        "Jennifer McCarthy (University of Delaware)",
+        "Erwin Wilianto (SINTAS Indonesia, Arimbi Conservation Integrated Office, Bogor, West Java, Indonesia)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Akash, M., Appel, A., Chutipong, W., Couderc, V., Greenspan, E., Griffin, O., Legrand, R., Lwin, Y., Myint, M., Ngoprasert, D., Nijhawan, S., Pliosungnoen, M., Phomachanh, C., Rasphone, A., Redford, T., Sinovas, P., Steinmetz, R., Sukmasuang, R., Tilker, A. & Thaung, R.",
+      "value": [
+        "Akchousanh Rasphone (WCS)",
+        "Angie Appel (Sand Cat WG)",
+        "Wanlop Chutipong (IUCN SSC Small Carnivores Specialist Group volunteer)",
+        "Dusit Ngoprasert",
+        "Andrew Tilker",
+        "Ret Thaung",
+        "Robert Steinmetz (WWF Thailand)",
+        "Sahil Nijhawan",
+        "Pablo Sinovas",
+        "Evan Greenspan (Karen Wildlife Conservation Initiative)",
+        "Oliver Griffin (WCS Cambodia)",
+        "Muntasir Akash (University of Dhaka, Bangladesh)",
+        "Romain Legrand (Rising Phoenix)",
+        "Vincent Couderc (Comité de Coopération avec le Laos)",
+        "Ye Htet Lwin (University of Freiburg)",
+        "Margaret N. N. Myint (WWF Myanmar)",
+        "Manoon Pliosungnoen (WCS Thailand)",
+        "Chanthasone Phomachanh (Saola Foundation for Annamite Mountains Conservation)",
+        "Tim Redford (Freeland Foundation)",
+        "Ronglarp Sukmasuang (Kasetsart University)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Sicuro, F.L. and Oliveira, L.F.B. 2011. Skull morphology and functionality of extant Felidae (Mammalia: Carnivora): a phylogenetic and evolutionary perspective. <i>Zoological Journal of the Linnean Society</i> 161(2): 414–462.",
+      "year": "2011",
+      "title": "Skull morphology and functionality of extant Felidae (Mammalia: Carnivora): a phylogenetic and evolutionary perspective",
+      "author": "Sicuro, F.L. and Oliveira, L.F.B.",
+      "citation_short": "Sicuro and Oliveira 2011"
+    },
+    {
+      "citation": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C. 2013. Generation length for mammals. <i>Nature Conservation</i> 5: 87–94.",
+      "year": "2013",
+      "title": "Generation length for mammals",
+      "author": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Duckworth, J.W., Salter, R.E. and Khounboline, K. 1999. Wildlife in Lao PDR: 1999 Status Report. IUCN, Vientiane, Laos.",
+      "year": "1999",
+      "title": "Wildlife in Lao PDR: 1999 Status Report",
+      "author": "Duckworth, J.W., Salter, R.E. and Khounboline, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Johnson, W.E., Eizirik, E., Pecon-Slattery, J., Murphy, W.J., Antunes, A., Teeling, E. and O'Brien, S.J. 2006. The late Miocene radiation of modern Felidae: A genetic assessment. <i>Science</i> 311: 73-77.",
+      "year": "2006",
+      "title": "The late Miocene radiation of modern Felidae: A genetic assessment",
+      "author": "Johnson, W.E., Eizirik, E., Pecon-Slattery, J., Murphy, W.J., Antunes, A., Teeling, E. and O'Brien, S.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "O'Brien, S.J. and Johnson, W.E. 2007. The evolution of cats. <i>Scientific American</i> July: 68-75.",
+      "year": "2007",
+      "title": "The evolution of cats",
+      "author": "O'Brien, S.J. and Johnson, W.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Grassman Jr., L.I.,Tewes, M.E., Silvy, N.J. and Kreetiyutanont, K. 2005. Ecology of three sympatric felids in a mixed evergreen forest in North-central Thailand. <i>Journal of Mammalogy</i> 86: 29-38.",
+      "year": "2005",
+      "title": "Ecology of three sympatric felids in a mixed evergreen forest in North-central Thailand",
+      "author": "Grassman Jr., L.I.,Tewes, M.E., Silvy, N.J. and Kreetiyutanont, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Choudhury, A. 2007. Sighting of Asiatic golden cat in the grasslands of Assam's Manas National Park. <i>Cat News</i> 47: 29.",
+      "year": "2007",
+      "title": "Sighting of Asiatic golden cat in the grasslands of Assam's Manas National Park",
+      "author": "Choudhury, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gray, T.N.E, Ou, R., Huy, K., Pin, C. and Maxwell, A.L. 2012. The status of large mammals in eastern Cambodia: a review of camera-trapping data 1999-2007. <i>Cambodian Journal of Natural History, 2012: 42-55</i> 2012: 42-55.",
+      "year": "2012",
+      "title": "The status of large mammals in eastern Cambodia: a review of camera-trapping data 1999-2007",
+      "author": "Gray, T.N.E, Ou, R., Huy, K., Pin, C. and Maxwell, A.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bashir, T., Bhattacharya,T., Poudyal, K. and Sathyakumar, S. 2011. Notable observations on the melanistic Asiatic Gold en cat (<i>Pardofelis  temminckii</i>) of Sikkim, India. <i>NeBIO</i> 2(1): 1-4.",
+      "year": "2011",
+      "title": "Notable observations on the melanistic Asiatic Gold en cat (<i>Pardofelis  temminckii</i>) of Sikkim, India",
+      "author": "Bashir, T., Bhattacharya,T., Poudyal, K. and Sathyakumar, S. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "McCarthy, J.L. 2013. Conservation and ecology of four sympatric felid species in Bukit Barisan Selatan National Park, Sumatra, Indonesia. University of Massachusetts Amherst.",
+      "year": "2013",
+      "title": "Conservation and ecology of four sympatric felid species in Bukit Barisan Selatan National Park, Sumatra, Indonesia",
+      "author": "McCarthy, J.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Khan, M.M.H. 2008. The neglected Asiatic golden cats of Bangladesh. <i>Cat News</i> 48.",
+      "year": "2008",
+      "title": "The neglected Asiatic golden cats of Bangladesh",
+      "author": "Khan, M.M.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Willcox, D., Phuong, T.Q., Duc, H.M. and An, N.T.T. 2014. The decline of non-<i>Panthera</i> cat species in Vietnam. <i>Cat News</i> Sepcial Issue 8: 53-61.",
+      "year": "2014",
+      "title": "The decline of non-<i>Panthera</i> cat species in Vietnam",
+      "author": "Willcox, D., Phuong, T.Q., Duc, H.M. and An, N.T.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gray, T.N.E., Phan, C., Pin, C. and Prum, S. 2014. The status of jungle cat and sympatric small cats in Cambodia’s Eastern Plains Landscape. <i>Cat News Special Issue</i> 8: 19-23.",
+      "year": "2014",
+      "title": "The status of jungle cat and sympatric small cats in Cambodia’s Eastern Plains Landscape",
+      "author": "Gray, T.N.E., Phan, C., Pin, C. and Prum, S",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nijman, V. and Shepherd, C.R. 2015. Trade in tigers and other wild cats in Mong La and Tachilek, Myanmar – A tale of two border towns. <i>Biological Conservation</i> 182: 1-7.",
+      "year": "2015",
+      "title": "Trade in tigers and other wild cats in Mong La and Tachilek, Myanmar – A tale of two border towns",
+      "author": "Nijman, V. and Shepherd, C.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gumal, M., Salleh, A.B.B.M., Yasak, M.N., Horng, L.S., Lee, B.P.Y-H., Pheng, L.C., Hamzah, H., Kong, D., Magintan, D., Yung D.T.C., Zalaluddin, A.Z.B., Azmi, A.B., Khalid, N.B., Yen, T.P., Mufeng, V., Meng, F.C.F., and Ng, S. 2014. Small-medium wild cats of Endau Rompin Landscape in Johor Peninsular Malaysia. <i>Cat News</i> 8: 10-18.",
+      "year": "2014",
+      "title": "Small-medium wild cats of Endau Rompin Landscape in Johor Peninsular Malaysia",
+      "author": "Gumal, M., Salleh, A.B.B.M., Yasak, M.N., Horng, L.S., Lee, B.P.Y-H., Pheng, L.C., Hamzah, H., Kong, D., Magintan, D., Yung D.T.C., Zalaluddin, A.Z.B., Azmi, A.B., Khalid, N.B., Yen, T.P., Mufeng, V., Meng, F.C.F., and Ng, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pusparini, W., Wibisono, H.T., Reddy, G.V., Tarmizi, T. and Bharata, P. 2014. Small and medium sized cats in Gunung Leuser National Park, Sumatra, Indonesia. <i>Cat News</i> Special Issue(8): 4-9.",
+      "year": "2014",
+      "title": "Small and medium sized cats in Gunung Leuser National Park, Sumatra, Indonesia.",
+      "author": "Pusparini, W., Wibisono, H.T., Reddy, G.V., Tarmizi, T. and Bharata, P. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lynam, A.J., Jenks, K.E., Tantipisanuh, N., Chutipong, W., Ngoprasert, D., Gale, G.A., Steinmetz, R., Sukmasuang, R., Bhumpakphan, N., Grassman, L.I., Jr., Cutter, P., Kitamura, S., Reed, D.H., Baker, M.C., McShea, W., Songsasen, N. and Leimgruber, P. 2013. Terrestrial activity patterns of wild cats from camera-trapping. <i>Raffles Bulletin of Zoology</i> 61: 407-415.",
+      "year": "2013",
+      "title": "Terrestrial activity patterns of wild cats from camera-trapping",
+      "author": "Lynam, A.J., Jenks, K.E., Tantipisanuh, N., Chutipong, W., Ngoprasert, D., Gale, G.A., Steinmetz, R., Sukmasuang, R., Bhumpakphan, N., Grassman, L.I., Jr., Cutter, P., Kitamura, S., Reed, D.H., Baker, M.C., McShea, W., Songsasen, N. and Leimgruber, P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Than Zaw, Than Myint, Saw Htun, Saw Htoo Tha Po, Kyaw Thinn Latt, Myint Maung and Lynam, A. J. 2014. Status and distribution of smaller cats in Myanmar. <i>Cat News Special Issue </i> 8: 24-30.",
+      "year": "2014",
+      "title": "Status and distribution of smaller cats in Myanmar",
+      "author": "Than Zaw, Than Myint, Saw Htun, Saw Htoo Tha Po, Kyaw Thinn Latt, Myint Maung and Lynam, A. J. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kawanishi, K. and Sunquist, M.E. 2008. Food habits and activity patterns of the Asiatic golden cat (<i>Catopuma temminckii</i>) and dhole (<i>Cuon alpinus</i>) in a primary rainforest of peninsular Malaysia. <i>Mammal Study</i> 33(4): 173-177.",
+      "year": "2008",
+      "title": "Food habits and activity patterns of the Asiatic golden cat (<i>Catopuma temminckii</i>) and dhole (<i>Cuon alpinus</i>) in a primary rainforest of peninsular Malaysia",
+      "author": "Kawanishi, K. and Sunquist, M.E. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Aiyadurai, A., Singh, N.J. and Milner-Gulland, E.J. 2010. Wildlife hunting by indigenous tribes: a case study from Arunachal Pradesh, north-east India. <i>Oryx</i> 44(4): 564-572.",
+      "year": "2010",
+      "title": "Wildlife hunting by indigenous tribes: a case study from Arunachal Pradesh, north-east India",
+      "author": "Aiyadurai, A., Singh, N.J. and Milner-Gulland, E.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Harrison, R.D., Sreekar, R., Brodie, J.F., Brook, S., Luskin, M., O'Kelly, H., Rao, M., Scheffers, B. and Velho, N. 2016. Impacts of hunting on tropical forests in Southeast Asia. <i>Conservation Biology </i> 30(5): 972-981.",
+      "year": "2016",
+      "title": "Impacts of hunting on tropical forests in Southeast Asia",
+      "author": "Harrison, R.D., Sreekar, R., Brodie, J.F., Brook, S., Luskin, M., O'Kelly, H., Rao, M., Scheffers, B. and Velho, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wolf, C. and Ripple, W.J. 2016. Prey depletion as a threat to the world’s large carnivores. <i>Royal Society Open Science </i> 3(8): 160252.",
+      "year": "2016",
+      "title": "Prey depletion as a threat to the world’s large carnivores",
+      "author": "Wolf, C. and Ripple, W.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shepherd, C.R. and Nijman, V. 2008. <i>The Wild Cat Trade in Myanmar</i>. TRAFFIC Southeast Asia, Petaling Jaya, Selangor, Malaysia.",
+      "year": "2008",
+      "title": "The Wild Cat Trade in Myanmar",
+      "author": "Shepherd, C.R. and Nijman, V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "McCarthy, T., Mallon, D., Jackson, R., Zahler, P. and McCarthy, K. 2017. Panthera uncia. . <i>The IUCN Red List of Threatened Species 2017</i>: e.T22732A50664030. http://dx.doi.org/10.2305/IUCN.UK.2017-2.RLTS.T22732A50664030.en.",
+      "year": "2017",
+      "title": "<i>Panthera uncia</i>",
+      "author": "McCarthy, T., Mallon, D., Jackson, R., Zahler, P. and McCarthy, K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Gray, T. N. E., Billingsley, A., Crudge, B., Prechette, J., Grosu, R., Herranz-Munoz, V., Holden, H., Keo, O., Kong, K., Macdonal, D., Neang, T., Ou, R., Phan, C., & Sim, S. 2017. Status and conservation signifi cance of ground-dwelling mammals in the Cardamom Rainforest Landscape, southwestern Cambodia. <i>Cambodian Journal of Natural History</i> 1: 38-48.",
+      "year": "2017",
+      "title": "Status and conservation signifi cance of ground-dwelling mammals in the Cardamom Rainforest Landscape, southwestern Cambodia",
+      "author": "Gray, T. N. E., Billingsley, A., Crudge, B., Prechette, J., Grosu, R., Herranz-Munoz, V., Holden, H., Keo, O., Kong, K., Macdonal, D., Neang, T., Ou, R., Phan, C., & Sim, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gray, T. N. E., Gray, T. N. E., Hughes, A. C., Hughes, A. C., Laurance, W. F., Laurance, W. F., Long, B., Long, B., Lynam, A. J., Lynam, A. J., O’Kelly, H., O’Kelly, H., Ripple, W. J., Ripple, W. J., Seng, T., Seng, T., Scotson, L., Scotson, L., Wilkinson, N. M., & Wilkinson, N. M. 2018. The wildlife snaring crisis: an insidious and pervasive threat to biodiversity in Southeast Asia. <i>Biodiversity and Conservation</i> 27(4): 1031-1037. doi:10.1007/s10531-017-1450-5.",
+      "year": "2018",
+      "title": "The wildlife snaring crisis: an insidious and pervasive threat to biodiversity in Southeast Asia",
+      "author": "Gray, T. N. E., Gray, T. N. E., Hughes, A. C., Hughes, A. C., Laurance, W. F., Laurance, W. F., Long, B., Long, B., Lynam, A. J., Lynam, A. J., O’Kelly, H., O’Kelly, H., Ripple, W. J., Ripple, W. J., Seng, T., Seng, T., Scotson, L., Scotson, L., Wilkinson, N. M., & Wilkinson, N. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Greenspan, E., Montgomery, C., Stokes, D., Wantai, S. and Moo, S.S.B. 2020. Prioritizing areas for conservation action in Kawthoolei, Myanmar using species distribution models. <i>Journal for Nature Conservation</i> 58.",
+      "year": "2020",
+      "title": "Prioritizing areas for conservation action in Kawthoolei, Myanmar using species distribution models",
+      "author": "Greenspan, E., Montgomery, C., Stokes, D., Wantai, S. and Moo, S.S.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Jhala, Y.V., Qureshi, Q. and Nayak, A.K. 2020. Status of tigers, copredators and prey in India, 2018. National Tiger Conservation Authority, Government of India, New Delhi, and Wildlife Institute of India, Dehradun.",
+      "year": "2020",
+      "title": "Status of tigers, copredators and prey in India, 2018",
+      "author": "Jhala, Y.V., Qureshi, Q. and Nayak, A.K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kaszta, Ż., Cushman, S.A., Htun, S., Naing, H., Burnham, D. and Macdonald, D.W. 2020. Simulating the impact of Belt and Road initiative and other major developments in Myanmar on an ambassador felid, the clouded leopard, Neofelis nebulosa. <i>Landscape Ecology</i>: 1-20.",
+      "year": "2020",
+      "title": "Simulating the impact of Belt and Road initiative and other major developments in Myanmar on an ambassador felid, the clouded leopard, Neofelis nebulosa",
+      "author": "Kaszta, Ż., Cushman, S.A., Htun, S., Naing, H., Burnham, D. and Macdonald, D.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Moo, S.S.B., Froese, G.Z. and Gray, T.N. 2018. First structured camera-trap surveys in Karen State, Myanmar, reveal high diversity of globally threatened mammals. <i>Oryx</i> 52(3): 537.",
+      "year": "2018",
+      "title": "First structured camera-trap surveys in Karen State, Myanmar, reveal high diversity of globally threatened mammals",
+      "author": "Moo, S.S.B., Froese, G.Z. and Gray, T.N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mukherjee, S., Singh, P., Silva, A.P., Ri, C., Kakati, K., Borah, B., Tapi, T., Kadur, S., Choudhary, C., Srikant, S., Nadig, S., Navya, R., Bjorklund, M. and Ramakrishnan, U. 2019. 2019. Activity patterns of the small and medium felid (Mammalia: Carnivora: Felidae) guild in northeastern India. <i>Journal of Threatened Taxa </i> 11: 13432−13447.",
+      "year": "2019",
+      "title": "Activity patterns of the small and medium felid (Mammalia: Carnivora: Felidae) guild in northeastern India",
+      "author": "Mukherjee, S., Singh, P., Silva, A.P., Ri, C., Kakati, K., Borah, B., Tapi, T., Kadur, S., Choudhary, C., Srikant, S., Nadig, S., Navya, R., Bjorklund, M. and Ramakrishnan, U. 2019. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Penjor, U., MacDonald, D.W., Wangchuk, S., Tandin, T. and Tan, C.K.W. 2018. Identifying important conservation areas for the clouded leopard <i>Neofelis nebulosa</i> in a mountainous landscape: Inference from spatial modelling techniques. <i>Ecology and Evolution </i> 8(8): 4278 – 4291.",
+      "year": "2018",
+      "title": "Identifying important conservation areas for the clouded leopard <i>Neofelis nebulosa</i> in a mountainous landscape: Inference from spatial modelling techniques",
+      "author": "Penjor, U., MacDonald, D.W., Wangchuk, S., Tandin, T. and Tan, C.K.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Petersen, W.J., Steinmetz, R., Sribuarod, K. and Ngoprasert, D. 2020b. Density and movements of mainland clouded leopards (<i>Neofelis nebulosa</i>) under conditions of high and low poaching pressure. <i>Global Ecology and Conservation</i>: 1-11.",
+      "year": "2020b",
+      "title": "Density and movements of mainland clouded leopards (<i>Neofelis nebulosa</i>) under conditions of high and low poaching pressure",
+      "author": "Petersen, W.J., Steinmetz, R., Sribuarod, K. and Ngoprasert, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rasphone, A., Kéry, M., Kamler, J.F. and Macdonald, D.W. 2019. Documenting the demise of tiger and leopard, and the status of other carnivores and prey, in Lao PDR's most prized protected area: Nam Et-Phou Louey. <i>Global Ecology and Conservation</i> 20: 1-15.",
+      "year": "2019",
+      "title": "Documenting the demise of tiger and leopard, and the status of other carnivores and prey, in Lao PDR's most prized protected area: Nam Et-Phou Louey",
+      "author": "Rasphone, A., Kéry, M., Kamler, J.F. and Macdonald, D.W. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Singh, P. and Macdonald, D.W. 2017. Populations and activity patterns of clouded leopards and marbled cats in Dampa Tiger Reserve, India. <i>Journal of Mammalogy </i> 98: 1453-1462.",
+      "year": "2017",
+      "title": "Populations and activity patterns of clouded leopards and marbled cats in Dampa Tiger Reserve, India",
+      "author": "Singh, P. and Macdonald, D.W. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Joshi, B., Syiem, B.L.N., Kuotsu, R., Menon, A., Gogoi, J., Goswami, V.R. and Vasudev, D. 2019. Records of the Marbled Cat <i>Pardofelis marmorata</i> and the Asiatic Golden Cat <i>Catopuma temminckii</i> (Mammalia: Carnivora: Felidae) from the community forests surrounding the Dzukou Valley in Nagaland, India. <i>Journal of Threatened Taxa </i> 11: 14363-14367.",
+      "year": "2019",
+      "title": "Records of the Marbled Cat <i>Pardofelis marmorata</i> and the Asiatic Golden Cat <i>Catopuma temminckii</i> (Mammalia: Carnivora: Felidae) from the community forests surrounding the Dzukou Valley in Nagaland, India",
+      "author": "Joshi, B., Syiem, B.L.N., Kuotsu, R., Menon, A., Gogoi, J., Goswami, V.R. and Vasudev, D. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Loveridge, R., Cusack, J.J., Eames, J.C., Eang, S. and Willcox, D., 2018.  Loveridge, R., Cusack, J.J., Eames, J.C., Eang, S. & Willcox, D., 2018. Mammal records and conservation threats in Siem Pang Wildlife Sanctuary and Siem Pang Khang Lech Wildlife Sanctuary, Cambodia. <i>Cambodian Journal of Natural History </i> 2: 76-89.",
+      "year": "2018",
+      "title": " Loveridge, R., Cusack, J.J., Eames, J.C., Eang, S. & Willcox, D., 2018. Mammal records and conservation threats in Siem Pang Wildlife Sanctuary and Siem Pang Khang Lech Wildlife Sanctuary, Cambodia",
+      "author": "Loveridge, R., Cusack, J.J., Eames, J.C., Eang, S. and Willcox, D., ",
+      "citation_short": null
+    },
+    {
+      "citation": "Mccann, G., Pawlowski, K. and Soukhon, T. 2020. The Standard Four' in Virachey National Park, north-east Cambodia. <i>Cat News </i> 71: 9-13.",
+      "year": "2020",
+      "title": "The Standard Four' in Virachey National Park, north-east Cambodia",
+      "author": "Mccann, G., Pawlowski, K. and Soukhon, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thinley, P., Morreale, S. J., Curtis, P. D., Lassoie, J. P., Dorji, T., Leki, Phuntsho, S. and Dorji, N. 2015. Diversity, occupancy, and spatio-temporal occurrences of mammalian predators in Bhutan's Jigme Dorji National Park. <i>Bhutan Journal of Natural Resources & Development </i> 2: 19-27.",
+      "year": "2015",
+      "title": "Diversity, occupancy, and spatio-temporal occurrences of mammalian predators in Bhutan's Jigme Dorji National Park",
+      "author": "Thinley, P., Morreale, S. J., Curtis, P. D., Lassoie, J. P., Dorji, T., Leki, Phuntsho, S. and Dorji, N. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN Standards and Petitions Committee. 2022. Guidelines for Using the IUCN Red List Categories and Criteria. Version 15.1. Prepared by the Standards and Petitions Committee. IUCN. Available at: <a href=\"https://www.iucnredlist.org/documents/RedListGuidelines.pdf.\">https://www.iucnredlist.org/documents/RedListGuidelines.pdf.</a>. ",
+      "year": "2022",
+      "title": "Guidelines for Using the IUCN Red List Categories and Criteria. Version 15.1. Prepared by the Standards and Petitions Committee.",
+      "author": "IUCN Standards and Petitions Committee",
+      "citation_short": null
+    },
+    {
+      "citation": "Farhadinia, M.S., Rostro-garcía, S., Feng, L., Kamler, J.F., Spalton, A., Shevtsova, E., Khorozyan, I, Al-Duais, M., Ge, J. and Macdonald, D.W. 2021. Big cats in borderlands: challenges and implications for transboundary conservation of Asian leopards. <i>Oryx</i> 55(3): 452–460.",
+      "year": "2021",
+      "title": "Big cats in borderlands: challenges and implications for transboundary conservation of Asian leopards",
+      "author": "Farhadinia, M.S., Rostro-garcía, S., Feng, L., Kamler, J.F., Spalton, A., Shevtsova, E., Khorozyan, I, Al-Duais, M., Ge, J. and Macdonald, D.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rostro-García, S., Kamler, J.F., Clements, G.R., Lynam, A.J. and Naing, H. 2019. <i>Panthera pardus</i> ssp. <i>delacouri</i> (errata version published in 2020). <i>The IUCN Red List of Threatened Species</i> 2019(3): e.T124159083A163986056. DOI: 10.2305/IUCN.UK.2019-3.RLTS.T124159083A163986056.en.",
+      "year": "2019",
+      "title": "<i>Panthera pardus</i> ssp. <i>delacouri</i> (errata version published in 2020)",
+      "author": "Rostro-García, S., Kamler, J.F., Clements, G.R., Lynam, A.J. and Naing, H. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Radinal, Kiswayadi, D., Akbar, M., Boyhaqi, T. and Gumay, D. W. 2019. Monitoring species diversity using camera traps in Ulu Masen ecosystem, Aceh Province. <i>IOP Conference Series: Earth and Environmental Science</i> 365(2019): 012064.",
+      "year": "2019",
+      "title": "Monitoring species diversity using camera traps in Ulu Masen ecosystem, Aceh Province",
+      "author": "Radinal, Kiswayadi, D., Akbar, M., Boyhaqi, T. and Gumay, D. W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jambari, A., Sasidhran, S., Halim, H.R.A., Mohamed, K.A., Ashton-Butt, A., Lechner, A.M. and Azhar, B. 2019. Quantifying species rich- ness and composition of elusive rainforest mammals in Taman Negara National Park, Peninsular Malaysia. <i>Global Ecology and Conservation</i> 18: e00607.",
+      "year": "2019",
+      "title": "Quantifying species rich- ness and composition of elusive rainforest mammals in Taman Negara National Park, Peninsular Malaysia",
+      "author": "Jambari, A., Sasidhran, S., Halim, H.R.A., Mohamed, K.A., Ashton-Butt, A., Lechner, A.M. and Azhar, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2025. The IUCN Red List of Threatened Species. Version 2025-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 27 March 2025).",
+      "year": "2025",
+      "title": "The IUCN Red List of Threatened Species. Version 2025-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2025-1"
+    },
+    {
+      "citation": "247–292. Lekagul, B. and McNeely, J. A. 1977. <i>Mammals of Thailand</i>. Association for the conservation of wildlife, Kulusapa, Bangkok.",
+      "year": "1977",
+      "title": "Mammals of Thailand",
+      "author": "247–292. Lekagul, B. and McNeely, J. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Adyla, M.N.N., Ikhwan, Z., Zuhairi, M., Ngah, and Shukor, M.N. 2016. Diversity and activity pattern of wildlife inhabitting catchment of Hulu Terengganu Hydroelectric Dam, Terengganu, Peninsular Malaysia. AIP Conference Proceedings 1784, 060038.",
+      "year": "2016",
+      "title": "Diversity and activity pattern of wildlife inhabitting catchment of Hulu Terengganu Hydroelectric Dam, Terengganu, Peninsular Malaysia",
+      "author": "Adyla, M.N.N., Ikhwan, Z., Zuhairi, M., Ngah, and Shukor, M.N. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Allen, M.L., Sibarani, M. C., Utoyo, L., and Krofel, M. 2020. Terrestrial mammal community richness and temporal overlap between tigers and other carnivores in Bukit Barisan Selatan National Park, Sumatra. <i>Animal Biodiversity and Conservation</i>: 97–107.",
+      "year": "2020",
+      "title": "Terrestrial mammal community richness and temporal overlap between tigers and other carnivores in Bukit Barisan Selatan National Park, Sumatra",
+      "author": "Allen, M.L., Sibarani, M. C., Utoyo, L., and Krofel, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ario, A., Damanik, S., Rabbani, A., Naibaho, B. D., Hasibuan, A. R., Hasibuan, S., Hasibuan, M. A., and Harianja, A. 2020. Assessing the species diversity in non-conservation areas: A first systematically camera trapping survey in Batang Angkola Landscape, North Sumatra, Indonesia. <i>Indonesian Journal of Applied Environmental Studies</i> 1(2): 14–24.",
+      "year": "2020",
+      "title": "Assessing the species diversity in non-conservation areas: A first systematically camera trapping survey in Batang Angkola Landscape, North Sumatra, Indonesia",
+      "author": "Ario, A., Damanik, S., Rabbani, A., Naibaho, B. D., Hasibuan, A. R., Hasibuan, S., Hasibuan, M. A., and Harianja, A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Bai, D., Chen, Y., Li, J., Tao, Q., Wang, L., Piao, Y. and Shi, K., 2018. Mammal diversity in Shangyong Nature Reserve, Xishuangbanna, Yunnan Province. <i>Biodiversity Science </i> 26: 75–78.",
+      "year": "2018",
+      "title": "Mammal diversity in Shangyong Nature Reserve, Xishuangbanna, Yunnan Province",
+      "author": "Bai, D., Chen, Y., Li, J., Tao, Q., Wang, L., Piao, Y. and Shi, K., ",
+      "citation_short": null
+    },
+    {
+      "citation": "Bal, A.K., Gouda, S. and Giordano, A.J. 2023. The price of gold? A note on the illegal trade in Asiatic golden cats and other small felids between Mizoram (India) and Myanmar. <i>Biodiversity</i> 24(3): 1-3.",
+      "year": "2023",
+      "title": "The price of gold? A note on the illegal trade in Asiatic golden cats and other small felids between Mizoram (India) and Myanmar",
+      "author": "Bal, A.K., Gouda, S. and Giordano, A.J. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cao, L.N., Gray, R.J., Pham, T.V., Trinh, M.T., Nguyen, T.V., Nguyen, H.T.T., Willcox, D., Cuong, T.X., Tuan, V.C.A., Dung, L.V. and Nguyen, T.V. 2022. Confirmed evidence of marbled cat in Pu Mat National Park, Vietnam. <i>Cat News</i> 75: 25–28.",
+      "year": "2022",
+      "title": "Confirmed evidence of marbled cat in Pu Mat National Park, Vietnam",
+      "author": "Cao, L.N., Gray, R.J., Pham, T.V., Trinh, M.T., Nguyen, T.V., Nguyen, H.T.T., Willcox, D., Cuong, T.X., Tuan, V.C.A., Dung, L.V. and Nguyen, T.V. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Chakma. 2015. Assessment of Large Mammals of the Chittagong Hill Tracts of Bangladesh With Emphasis on Tiger (<i>Panthera tigris</i>). University of Dhaka.",
+      "year": "2015",
+      "title": "Assessment of Large Mammals of the Chittagong Hill Tracts of Bangladesh With Emphasis on Tiger (<i>Panthera tigris</i>)",
+      "author": "Chakma",
+      "citation_short": null
+    },
+    {
+      "citation": "Chasen. 1925. A preliminary account of the mammals of Singapore island. <i>The Singapore Naturalist</i> 5: 74–86.",
+      "year": "1925",
+      "title": "A preliminary account of the mammals of Singapore island",
+      "author": "Chasen",
+      "citation_short": null
+    },
+    {
+      "citation": "Chatterjee, P., Mondal, K., Chandra, K. and Tripathy, B. 2018. First photographic evidence of Asian golden cat <i>Catopuma temminckii</i> (Vigors and Horsfield, 1827) from Neora Valley National Park, Central Himalayas, India. <i>Rec. Zool. Surv. India </i> 118: 128–132.",
+      "year": "2018",
+      "title": "First photographic evidence of Asian golden cat <i>Catopuma temminckii</i> (Vigors and Horsfield, 1827) from Neora Valley National Park, Central Himalayas, India.",
+      "author": "Chatterjee, P., Mondal, K., Chandra, K. and Tripathy, B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Clements, G.R. 2013. The environmental and social impacts of roads in Southeast Asia. James Cook University.",
+      "year": "2013",
+      "title": "The environmental and social impacts of roads in Southeast Asia",
+      "author": "Clements, G.R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Coudrat, C.N., Nanthavong, C., Sayavong, S., Johnson, A., Johnston, J.B. and Robichaud, W.G. 2014. Non-Panthera felids in Nakai-Nam Theun National Protected Area, Lao PDR. <i>Cat News</i> 8: 45–52.",
+      "year": "2014",
+      "title": "Non-Panthera felids in Nakai-Nam Theun National Protected Area, Lao PDR.",
+      "author": "Coudrat, C.N., Nanthavong, C., Sayavong, S., Johnson, A., Johnston, J.B. and Robichaud, W.G. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Coudrat, C.N.Z. 2019. Camera-trap surveys in Nakai-Nam Theun National Park for wildlife population monitoring. Association Anoulak.",
+      "year": "2019",
+      "title": "Camera-trap surveys in Nakai-Nam Theun National Park for wildlife population monitoring",
+      "author": "Coudrat, C.N.Z. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Creative Conservation Alliance. 2016. <i>A preliminary wildlife survey in Sangu-Matamuhuri Reserve Forest, Chittagong Hill Tracts, Bangladesh</i>. Unpublished report submitted to Bangladesh Forest Department, Dhaka, Bangladesh.",
+      "year": "2016",
+      "title": "A preliminary wildlife survey in Sangu-Matamuhuri Reserve Forest, Chittagong Hill Tracts, Bangladesh",
+      "author": "Creative Conservation Alliance. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Cremonesi, G., Bisi, F., Gaffi, L., Zaw, T., Naing, H., Moe, K., Aung, Z., Mazzamuto, M. V., Gagliardi, A., Wauters, L. A., Preatoni, D. G. and Martinoli, A. 2021. Camera Trapping to Assess Status and Composition of Mammal Communities in a Biodiversity Hotspot in Myanmar. <i>Animals</i> 11(3): 880.",
+      "year": "2021",
+      "title": "Camera Trapping to Assess Status and Composition of Mammal Communities in a Biodiversity Hotspot in Myanmar",
+      "author": "Cremonesi, G., Bisi, F., Gaffi, L., Zaw, T., Naing, H., Moe, K., Aung, Z., Mazzamuto, M. V., Gagliardi, A., Wauters, L. A., Preatoni, D. G. and Martinoli, A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Davidson, G.A., Clark, D.A., Johnson, B.K., Waits, L.P. and Adams, J. R. 2014. Estimating cougar densities in northeast Oregon using conservation detection dogs: Cougar Density Estimation. <i>The Journal of Wildlife Management</i> 78(6): 1104–1114.",
+      "year": "2014",
+      "title": "Estimating cougar densities in northeast Oregon using conservation detection dogs: Cougar Density Estimation",
+      "author": "Davidson, G.A., Clark, D.A., Johnson, B.K., Waits, L.P. and Adams, J. R. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dhendup, T. 2016. Status of asiatic golden cat catopuma temminckii vigors & horsfield, 1827 (Carnivora: Felidae) in Bhutan. <i>Journal of Threatened Taxa</i> 8(4): 8698.",
+      "year": "2016",
+      "title": "Status of asiatic golden cat catopuma temminckii vigors & horsfield, 1827 (Carnivora: Felidae) in Bhutan",
+      "author": "Dhendup, T. ",
+      "citation_short": null
+    },
+    {
+      "citation": "DoFPS. 2015. <i>Wildlife Products and Red Sander Seizures in 2013 and 2014</i>. Department of Forest and Park Services, Royal Government of Bhutan.",
+      "year": "2015",
+      "title": "Wildlife Products and Red Sander Seizures in 2013 and 2014",
+      "author": "DoFPS",
+      "citation_short": null
+    },
+    {
+      "citation": "Fitria, E., Efendi, A. A., Nurarifin, I., Sugeng, Charles, J., and Rustiati, E. L. 2019. Mammals biodiversity in balik bukit and balai kencana resort, bukit barisan selatan national park. <i>Journal of Physics: Conference Series</i> 1338(1): 012022.",
+      "year": "2019",
+      "title": "Mammals biodiversity in balik bukit and balai kencana resort, bukit barisan selatan national park",
+      "author": "Fitria, E., Efendi, A. A., Nurarifin, I., Sugeng, Charles, J., and Rustiati, E. L. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Food and Agriculture Organization of the United Nations (FAO). 2020. <i>Global Forest Resources Assessment 2020: Myanmar Report</i>. Rome, Italy.",
+      "year": "2020",
+      "title": "Global Forest Resources Assessment 2020: Myanmar Report",
+      "author": "Food and Agriculture Organization of the United Nations (FAO)",
+      "citation_short": null
+    },
+    {
+      "citation": "Forestry Survey of India. 2021. <i>India State of Forest Report 2021</i>. Ministry of Environment, Forest and Climate Change, India.",
+      "year": "2021",
+      "title": "India State of Forest Report 2021",
+      "author": "Forestry Survey of India. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ghimirey, Y. and Pal, P. 2009. First photographic image of Asiatic golden cat from Nepal. <i>Cat News</i> 51: 19.",
+      "year": "2009",
+      "title": "First photographic image of Asiatic golden cat from Nepal",
+      "author": "Ghimirey, Y. and Pal, P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ghose, M., Sharma, D. and Murali, N.S., 2019. First photographic evidence of polymorphic Asiatic golden cat Catopuma temminckii Vigors & Horsfield, 1827 (Mammalia: Carnivora: Felidae) in Buxa Tiger Reserve, West Bengal, India. <i>Journal of Threatened Taxa</i> 11: 13502–13505.",
+      "year": "2019",
+      "title": "First photographic evidence of polymorphic Asiatic golden cat Catopuma temminckii Vigors & Horsfield, 1827 (Mammalia: Carnivora: Felidae) in Buxa Tiger Reserve, West Bengal, India",
+      "author": "Ghose, M., Sharma, D. and Murali, N.S., ",
+      "citation_short": null
+    },
+    {
+      "citation": "Grumbine, R.E. and Pandit, M.K. 2013. Threats from India’s Himalaya Dams. <i>Science</i>: 36-37.",
+      "year": "2013",
+      "title": "Threats from India’s Himalaya Dams.",
+      "author": "Grumbine, R.E. and Pandit, M.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Haidir, I.A., Kaszta, Z., Sousa, L.L., Lubis, M.I., Macdonald, D.W. and Linkie, M. 2021. Felids, forest and farmland: Identifying high priority conservation areas in Sumatra. <i>Landscape Ecology</i> 36(2): 475–495.",
+      "year": "2021",
+      "title": "Felids, forest and farmland: Identifying high priority conservation areas in Sumatra",
+      "author": "Haidir, I.A., Kaszta, Z., Sousa, L.L., Lubis, M.I., Macdonald, D.W. and Linkie, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Haidir, I., Macdonald, D. W. and Linkie, M. 2021. Sunda clouded leopard Neofelis diardi densities and human activities in the humid evergreen rainforests of Sumatra. <i>Oryx</i> 55(2): 189-196.",
+      "year": "2021",
+      "title": "Sunda clouded leopard Neofelis diardi densities and human activities in the humid evergreen rainforests of Sumatra",
+      "author": "Haidir, I., Macdonald, D. W. and Linkie, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "He, L., Yang, X., Teng, J., Wang, J., Li, S., Xiao, L. and Huang, J. 2023. Habitat prediction of Asiatic golden cat (Catopuma temminckii) in Baishuijiang National Nature Reserve, Gansu Province. <i>Acta Theriologica Sinica</i> 43(3): 237-247.",
+      "year": "2023",
+      "title": "Habitat prediction of Asiatic golden cat (Catopuma temminckii) in Baishuijiang National Nature Reserve, Gansu Province",
+      "author": "He, L., Yang, X., Teng, J., Wang, J., Li, S., Xiao, L. and Huang, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hewson, J., Crema, S., González-Roglich, M., Tabor, K. and Harvey, C. 2019. New 1 km resolution datasets of global and regional risks of tree cover loss. <i>Land</i> 8(1): 14.",
+      "year": "2019",
+      "title": "New 1 km resolution datasets of global and regional risks of tree cover loss",
+      "author": "Hewson, J., Crema, S., González-Roglich, M., Tabor, K. and Harvey, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hirzel, A.H., Lay, Le, Helfer, G., Randon, V. and Guisan, A.C. 2006. Evaluating the ability of habitat suitability models to predict species presences. <i>Ecol. Model.</i> 199: 142-152.",
+      "year": "2006",
+      "title": "Evaluating the ability of habitat suitability models to predict species presences",
+      "author": "Hirzel, A.H., Lay, Le, Helfer, G., Randon, V. and Guisan, A.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Huda, R., Istiadi, Y. and Priatna, D. 2020. Differences of terrestrial mammal species diversity between natural forest and edge forest areas in Batutegi Protected Forest, Lampung, Indonesia. <i>Indonesian Journal of Applied Environmental Studies</i> 1: 34–41.",
+      "year": "2020",
+      "title": "Differences of terrestrial mammal species diversity between natural forest and edge forest areas in Batutegi Protected Forest, Lampung, Indonesia",
+      "author": "Huda, R., Istiadi, Y. and Priatna, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "iNaturalist contributors, iNaturalist. 2023. iNaturalist Research-grade Observations. iNaturalist.org. Occurrence dataset. Available at: <a href=\"https://doi.org/10.15468/ab3s5x accessed via GBIF.org on 2023-03-12. https://www.gbif.org/occurrence/2265896990\">https://doi.org/10.15468/ab3s5x accessed via GBIF.org on 2023-03-12. https://www.gbif.org/occurrence/2265896990</a>. ",
+      "year": "2023",
+      "title": "iNaturalist Research-grade Observations",
+      "author": "iNaturalist contributors, iNaturalist",
+      "citation_short": null
+    },
+    {
+      "citation": "Jennings, A.P., Naim, M., Advento, A.D., Aryawan, A.A.K., Ps, S., Caliman, J.-P., Verwilghen, A. and Veron, G. 2015. Diversity and occupancy of small carnivores within oil palm plantations in central Sumatra, Indonesia. <i>Mammal Research</i> 60(2): 181-188.",
+      "year": "2015",
+      "title": "Diversity and occupancy of small carnivores within oil palm plantations in central Sumatra, Indonesia",
+      "author": "Jennings, A.P., Naim, M., Advento, A.D., Aryawan, A.A.K., Ps, S., Caliman, J.-P., Verwilghen, A. and Veron, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kamler, J. F., Inthapanya, X., Rasphone, A., Bousa, A., Vongkhamheng, C., Johnson, A. and Macdonald, D.W. 2020. Diet, prey selection, and activity of Asian golden cats and leopard cats in northern Laos. <i>Journal of Mammalogy</i> 101(5): 1267-1278.",
+      "year": "2020",
+      "title": "Diet, prey selection, and activity of Asian golden cats and leopard cats in northern Laos",
+      "author": "Kamler, J. F., Inthapanya, X., Rasphone, A., Bousa, A., Vongkhamheng, C., Johnson, A. and Macdonald, D.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kementerian Lingkungan Hidup dan Kehutanan. 2022. <i>Rekalkulasi Penutupan Lahan Indonesia Tahun 2021</i>. Direkorat Inventarisasi dan Pemantauan Sumber Daya Hutan. Direktorat Jenderal Planologi Kehutanan dan Tata Lingkungan, Kementerian Lingkungan Hidup dan Kehutanan, Jakarta.",
+      "year": "2022",
+      "title": "Rekalkulasi Penutupan Lahan Indonesia Tahun 2021",
+      "author": "Kementerian Lingkungan Hidup dan Kehutanan",
+      "citation_short": null
+    },
+    {
+      "citation": "Khalil, A.R.A. 2019. Identificaiton of Artiodactyla diversity as potential prey in forest management resort III KPH I Pesisr Barat. Universitas Lampung.",
+      "year": "2019",
+      "title": "Identificaiton of Artiodactyla diversity as potential prey in forest management resort III KPH I Pesisr Barat",
+      "author": "Khalil, A.R.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Koju, N.P., Bashyal, B., Pandey, B.P., Thami, S., Dhamala, M.K. and Shah, S.N. 2020. New record on asiatic golden cat catopuma temminckii vigors & horsfield, 1827 (Mammalia: Carnivora: felidae): photographic evidence of its westernmost distribution in gaurishankar conservation area, Nepal. <i>Journal of Threatened Taxa</i> 12(2): 15256-15261.",
+      "year": "2020",
+      "title": "New record on asiatic golden cat catopuma temminckii vigors & horsfield, 1827 (Mammalia: Carnivora: felidae): photographic evidence of its westernmost distribution in gaurishankar conservation area, Nepal",
+      "author": "Koju, N.P., Bashyal, B., Pandey, B.P., Thami, S., Dhamala, M.K. and Shah, S.N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kyaw, P.P., Macdonald, D.W., Penjor, U., Htun, S., Naing, H., Burnham, D., Kaszta, Ż. and  Cushman, S.A. 2021. Investigating carnivore guild structure: Spatial and temporal relationships amongst threatened felids in Myanmar. <i>ISPRS International Journal of Geo-Information</i> 10(12): 808.",
+      "year": "2021",
+      "title": "Investigating carnivore guild structure: Spatial and temporal relationships amongst threatened felids in Myanmar",
+      "author": "Kyaw, P.P., Macdonald, D.W., Penjor, U., Htun, S., Naing, H., Burnham, D., Kaszta, Ż. and  Cushman, S.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ladyfandela, N., Novarino, W. and Nurdin, J. 2018. Diversity Of Carnivores in Malampah Nature Reserve, West Sumatra, Indonesia. <i>Jurnal Biologi Universitas Andalas </i> 6(2): 34-42.",
+      "year": "2018",
+      "title": "Diversity Of Carnivores in Malampah Nature Reserve, West Sumatra, Indonesia",
+      "author": "Ladyfandela, N., Novarino, W. and Nurdin, J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Lalthanpuia, Dey, S., Sharma, T., Sharma, P., Deka, J., Bora, P.J. and Borah, J. 2014. Camera-trap record of felid species from Kachanjuri wildlife-corridor, Assam, India. <i>Cat News</i> 60: 28-30.",
+      "year": "2014",
+      "title": "Camera-trap record of felid species from Kachanjuri wildlife-corridor, Assam, India",
+      "author": "Lalthanpuia, Dey, S., Sharma, T., Sharma, P., Deka, J., Bora, P.J. and Borah, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lama, S.T., Ross, J.G., Bista, D., Sherpa, A.P., Regmi, G.R., Suwal, M.K., Sherpa, P., Weerman, J., Shrestha Lama, S., Thapa, M., Poudyal, L.P. and Paterson, A.M. 2019. First photographic record of marbled cat Pardofelis marmorata Martin, 1837 (Mammalia, carnivora, felidae) in Nepal. <i>Nature Conservation</i> 32: 19–34.",
+      "year": "2019",
+      "title": "First photographic record of marbled cat Pardofelis marmorata Martin, 1837 (Mammalia, carnivora, felidae) in Nepal",
+      "author": "Lama, S.T., Ross, J.G., Bista, D., Sherpa, A.P., Regmi, G.R., Suwal, M.K., Sherpa, P., Weerman, J., Shrestha Lama, S., Thapa, M., Poudyal, L.P. and Paterson, A.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lau, M.W.N., Fellowes, J.R. and Chan, B.P.L. 2010. Carnivores (Mammalia: Carnivora) in South China: a status review with notes on the commercial trade. <i>Mammal Review</i> 40: 247–292.",
+      "year": "2010",
+      "title": "Carnivores (Mammalia: Carnivora) in South China: a status review with notes on the commercial trade",
+      "author": "Lau, M.W.N., Fellowes, J.R. and Chan, B.P.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lestrelin, G., Trockenbrodt, M., Phanvilay, K., Thongmanivong, S., Vongvisouk, T., Thu Thuy, P. and Castella, J.C. 2013. <i>The context of REDD+ in the Lao People’s Democratic Republic: Drivers, agents, and institutions</i>. Center for International Forestry Research , Bogor, Indonesia.",
+      "year": "2013",
+      "title": "The context of REDD+ in the Lao People’s Democratic Republic: Drivers, agents, and institutions",
+      "author": "Lestrelin, G., Trockenbrodt, M., Phanvilay, K., Thongmanivong, S., Vongvisouk, T., Thu Thuy, P. and Castella, J.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lim, L.B. 2022. Distribution and food-habits of the golden cat (Catopuma temminckii) in Peninsular Malaysia. <i>Journal of Wildlife and Parks </i> 20: 43-48.",
+      "year": "2022",
+      "title": "Distribution and food-habits of the golden cat (Catopuma temminckii) in Peninsular Malaysia",
+      "author": "Lim, L.B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Liu, Y., Song, D., Liu, B., Xia, F., Chen, Y., Wang, Y. and Huang, Q. 2020. Overview of the Camera-trapping Platform for Felid Species in China: Data integration by a conservation NGO. <i>Biodiversity Science</i> 28(9): 1067-1074.",
+      "year": "2020",
+      "title": "Overview of the Camera-trapping Platform for Felid Species in China: Data integration by a conservation NGO",
+      "author": "Liu, Y., Song, D., Liu, B., Xia, F., Chen, Y., Wang, Y. and Huang, Q. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Liu, Z., Shen, L., Li, Z., Zhou, H., Li, Q. and Wang, X. 2023. Species associations and conservation of Giant Pandas. <i>Global Ecology and Conservation</i> 43: e02428.",
+      "year": "2023",
+      "title": "Species associations and conservation of Giant Pandas",
+      "author": "Liu, Z., Shen, L., Li, Z., Zhou, H., Li, Q. and Wang, X.",
+      "citation_short": null
+    },
+    {
+      "citation": "Liu, Z., Wang, W.J., Ballantyne, A., He. H.S., Liu, S., Ciais, P., Wimberly, M.C., Piao, S., Yu, K., Yao, Q., Liang, Y., Wu, Z., Fang, Y., Chen, A., Xu, W. and Zhu, J. 2023. Forest disturbance decreased in China from 1986 to 2020 despite regional variations. <i>Commun Earth Environ.</i> 4: 15.",
+      "year": "2023",
+      "title": "Forest disturbance decreased in China from 1986 to 2020 despite regional variations",
+      "author": "Liu, Z., Wang, W.J., Ballantyne, A., He. H.S., Liu, S., Ciais, P., Wimberly, M.C., Piao, S., Yu, K., Yao, Q., Liang, Y., Wu, Z., Fang, Y., Chen, A., Xu, W. and Zhu, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Li, X., Bleisch, W. V., Liu, X. and Jiang, X. 2021. Camera-trap surveys reveal high diversity of mammals and pheasants in Medog, Tibet. <i>Oryx</i> 55(2): 177-180.",
+      "year": "2021",
+      "title": "Camera-trap surveys reveal high diversity of mammals and pheasants in Medog, Tibet",
+      "author": "Li, X., Bleisch, W. V., Liu, X. and Jiang, X. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Longchar, S., Yhoshu, K. and Pandit, R. 2017. First photographic record of Asiatic golden cat in eastern Nagaland, India. <i>Cat News</i> 65: 38.",
+      "year": "2017",
+      "title": "First photographic record of Asiatic golden cat in eastern Nagaland, India",
+      "author": "Longchar, S., Yhoshu, K. and Pandit, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lwin, Y.H., Wang, L., Li, G., Maung, K.W., Swa, K. and Quan, R.-C. 2021. Diversity, distribution and conservation of large mammals in northern Myanmar. <i>Global Ecology and Conservation</i> 29: e01736.",
+      "year": "2021",
+      "title": "Diversity, distribution and conservation of large mammals in northern Myanmar",
+      "author": "Lwin, Y.H., Wang, L., Li, G., Maung, K.W., Swa, K. and Quan, R.-C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ma, Y., Ma, Q., He, N., Zhu, D., Zhao, K., Liu, H., Li, S., Sun, L. and Tang, L. 2020. Camera-trapping survey of mammals and birds in the Foping National Nature Reserve, China. <i>Biodiversity Science</i> 28: 226-230.",
+      "year": "2020",
+      "title": "Camera-trapping survey of mammals and birds in the Foping National Nature Reserve, China",
+      "author": "Ma, Y., Ma, Q., He, N., Zhu, D., Zhao, K., Liu, H., Li, S., Sun, L. and Tang, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Miehe, G., Miehe, S., Vogel, J., Co, S. and La, D. 2007. Highest treeline in the northern hemisphere found in southern Tibet. <i>Mountain Research and Development</i> 27(7): 169-173.",
+      "year": "2007",
+      "title": "Highest treeline in the northern hemisphere found in southern Tibet",
+      "author": "Miehe, G., Miehe, S., Vogel, J., Co, S. and La, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "MoEF, SIF, FKL, Panthera. 2024. <i>Wild cats at the edge: Conserving threatened felids in human-dominated landscapes</i>. Project Report.",
+      "year": "2024",
+      "title": "Wild cats at the edge: Conserving threatened felids in human-dominated landscapes",
+      "author": "MoEF, SIF, FKL, Panthera",
+      "citation_short": null
+    },
+    {
+      "citation": "Mohamad, S.W., Rayan, D.M., Christopher, W.C.T., Hamirul M., Mohamed, A., Lau, C.F. and Siwan, E.S. 2015. The first description of population density and habitat use of the mainland clouded leopard Neofelis nebulosa within a logged-primary forest in South East Asia. <i>Population Ecology</i> 57(3): 495-503.",
+      "year": "2015",
+      "title": "The first description of population density and habitat use of the mainland clouded leopard Neofelis nebulosa within a logged-primary forest in South East Asia",
+      "author": "Mohamad, S.W., Rayan, D.M., Christopher, W.C.T., Hamirul M., Mohamed, A., Lau, C.F. and Siwan, E.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Naing, H., Fuller, T.K., Sievert, P.R., Randhir, T.O., Po, S.H.T., Maung, M. and Myint, T. 2015. Assessing large mammal and bird richness from camera-trap records in the Hukaung Valley of Northern Myanmar. <i>Raffles Bulletin of Zoology</i> 63: 376-388.",
+      "year": "2015",
+      "title": "Assessing large mammal and bird richness from camera-trap records in the Hukaung Valley of Northern Myanmar",
+      "author": "Naing, H., Fuller, T.K., Sievert, P.R., Randhir, T.O., Po, S.H.T., Maung, M. and Myint, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Naing, H., Ross, J., Burnham, D., Htun, S. and Macdonald, D.W. 2017. Population density estimates and conservation concern for clouded leopards Neofelis nebulosa, marbled cats Pardofelis marmorata and tigers Panthera tigris in Htamanthi Wildlife Sanctuary, Sagaing, Myanmar. <i>Oryx</i> 53(4): 654-662.",
+      "year": "2017",
+      "title": "Population density estimates and conservation concern for clouded leopards Neofelis nebulosa, marbled cats Pardofelis marmorata and tigers Panthera tigris in Htamanthi Wildlife Sanctuary, Sagaing, Myanmar",
+      "author": "Naing, H., Ross, J., Burnham, D., Htun, S. and Macdonald, D.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nijhawan, S., Mitapo, I., Pulu, J., Carbone, C. and Rowcliffe, J. M. 2019. Does polymorphism make the Asiatic golden cat the most adaptable predator in the Eastern Himalayas? . <i>Ecology</i> 100(10): e02768.",
+      "year": "2019",
+      "title": "Does polymorphism make the Asiatic golden cat the most adaptable predator in the Eastern Himalayas? ",
+      "author": "Nijhawan, S., Mitapo, I., Pulu, J., Carbone, C. and Rowcliffe, J. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Patel, R.P., Förster, D.W., Kitchener, A.C., Rayan, M.D., Mohamed, S.W., Werner, L., Lenz, D., Pfestorf, H., Kramer-Schadt, S., Radchuk, V., Fickel, J. and Wilting, A. 2016. Two species of Southeast Asian cats in the genus Catopuma with diverging histories: An island endemic forest specialist and a widespread habitat generalist. <i>Royal Society Open Science</i> 3(10): 160350.",
+      "year": "2016",
+      "title": "Two species of Southeast Asian cats in the genus Catopuma with diverging histories: An island endemic forest specialist and a widespread habitat generalist",
+      "author": "Patel, R.P., Förster, D.W., Kitchener, A.C., Rayan, M.D., Mohamed, S.W., Werner, L., Lenz, D., Pfestorf, H., Kramer-Schadt, S., Radchuk, V., Fickel, J. and Wilting, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Penjor, U., Kaszta, Ż., Macdonald, D. W. and Cushman, S.A. 2021. Prioritizing areas for conservation outside the existing protected area network in Bhutan: The use of multi-species, multi-scale habitat suitability models. <i>Landscape Ecology</i> 36(5): 1281-1309.",
+      "year": "2021",
+      "title": "Prioritizing areas for conservation outside the existing protected area network in Bhutan: The use of multi-species, multi-scale habitat suitability models",
+      "author": "Penjor, U., Kaszta, Ż., Macdonald, D. W. and Cushman, S.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Petersen, W. J., Savini, T., Gray, T. N., Baker-Whatton, M., Bisi, F., Chutipong, W., Cremonesi, G., Gale, G.A., Mohamad, S.W., Rayan, D.M., Seuaturien, N., Shwe, N.M., Siripattaranukul, K., Sribuarod, K., Steinmetz, R., Sukumal, N., and Ngoprasert, D. 2021. Identifying conservation priorities for an understudied species in decline: Golden cats (Catopuma temminckii) in mainland Tropical Asia. <i>Global Ecology and Conservation</i> 30: e01762.",
+      "year": "2021",
+      "title": "Identifying conservation priorities for an understudied species in decline: Golden cats (Catopuma temminckii) in mainland Tropical Asia",
+      "author": "Petersen, W. J., Savini, T., Gray, T. N., Baker-Whatton, M., Bisi, F., Chutipong, W., Cremonesi, G., Gale, G.A., Mohamad, S.W., Rayan, D.M., Seuaturien, N., Shwe, N.M., Siripattaranukul, K., Sribuarod, K., Steinmetz, R., Sukumal, N., and Ngoprasert, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rahman, H.A., McCarthy, K.P., McCarthy, J.L. and Faisal, M.M. 2021. Application of multi-species occupancy modeling to assess mammal diversity in northeast Bangladesh. <i>Global Ecology and Conservation</i> 25: e01385.",
+      "year": "2021",
+      "title": "Application of multi-species occupancy modeling to assess mammal diversity in northeast Bangladesh",
+      "author": "Rahman, H.A., McCarthy, K.P., McCarthy, J.L. and Faisal, M.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rai, J., Yadav, K., G.C., S., Acharya, R., Thapa, K. and Yadav, G. 2019. First record of Asiatic golden cat from Tinjure-Milke-Jaljale Area, Nepal. <i>Cat News</i> 69: 31.",
+      "year": "2019",
+      "title": "First record of Asiatic golden cat from Tinjure-Milke-Jaljale Area, Nepal",
+      "author": "Rai, J., Yadav, K., G.C., S., Acharya, R., Thapa, K. and Yadav, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Razak, M., Hambali, K., Amir, A., Fauzi, N., Hassin, H., Abas, M. A., Abdul Karim, M., Sow, A. Y., Ismail, L., Shubli, N., Adanan, N., Bakar, A., Mohamad, N., Saimeh, N. I. F., Nor, M., Nafi, M. and Sulaiman, Syafiq. 2021. A camera trap record of Asiatic Golden Cat Catopuma temminckii (Vigors & Horsfeld, 1827) (Mammalia: Carnivora: Felidae) in State Land Forest, Merapoh, Pahang, Malaysia. <i>Journal of Threatened Ta</i> 13: 18651-18654.",
+      "year": "2021",
+      "title": "A camera trap record of Asiatic Golden Cat Catopuma temminckii (Vigors & Horsfeld, 1827) (Mammalia: Carnivora: Felidae) in State Land Forest, Merapoh, Pahang, Malaysia",
+      "author": "Razak, M., Hambali, K., Amir, A., Fauzi, N., Hassin, H., Abas, M. A., Abdul Karim, M., Sow, A. Y., Ismail, L., Shubli, N., Adanan, N., Bakar, A., Mohamad, N., Saimeh, N. I. F., Nor, M., Nafi, M. and Sulaiman, Syafiq",
+      "citation_short": null
+    },
+    {
+      "citation": "Sadhu, A., Jayam, P.P.C., Qureshi, Q., Shekhawat, R.S., Sharma, S. and Jhala, Y.V. 2017. Demography of a small, isolated tiger (Panthera tigris tigris) population in a semi-arid region of western India. <i>BMC Zoology</i> 2(1): 16.",
+      "year": "2017",
+      "title": "Demography of a small, isolated tiger (Panthera tigris tigris) population in a semi-arid region of western India",
+      "author": "Sadhu, A., Jayam, P.P.C., Qureshi, Q., Shekhawat, R.S., Sharma, S. and Jhala, Y.V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Saunders, D. A.; Hobbs, R. J.; Margules, C. R. 1991. Biological consequences of ecosystem fragmentation: a review. <i>Conservation Biology</i> 5: 18-32.",
+      "year": "1991",
+      "title": "Biological consequences of ecosystem fragmentation: a review",
+      "author": "Saunders, D. A.; Hobbs, R. J.; Margules, C. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shen, X., Li, S., McShea, W.J., Wang, D., Yu, J., Shi, X., Dong, W., Mi, X. and Ma, K. 2019. Effectiveness of management zoning designed for flagship species in protecting sympatric species. <i>Conservation Biology </i> 34: 158-167.",
+      "year": "2019",
+      "title": "Effectiveness of management zoning designed for flagship species in protecting sympatric species",
+      "author": "Shen, X., Li, S., McShea, W.J., Wang, D., Yu, J., Shi, X., Dong, W., Mi, X. and Ma, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "SIF. 2024. <i>Laporan Kegiatan Yayasan Sintas Indonesia 2018 - 2020</i>. Project Report.",
+      "year": "2024",
+      "title": "Laporan Kegiatan Yayasan Sintas Indonesia 2018 - 2020",
+      "author": "SIF",
+      "citation_short": null
+    },
+    {
+      "citation": "Smith, A.T., Xie, Y., Hoffmann, R.S., Lunde, D., MacKinnon, J., Wilson, D.E. and Wozencraft, W.C. 2010. <i>A guide to the mammals of China</i>. Princeton University Press.",
+      "year": "2010",
+      "title": "A guide to the mammals of China",
+      "author": "Smith, A.T., Xie, Y., Hoffmann, R.S., Lunde, D., MacKinnon, J., Wilson, D.E. and Wozencraft, W.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Stibig, H.-J., Achard, F., Carboni, S., Rasi, R. and Miettinen, J. 2014. Change in tropical forest cover of Southeast Asia from 1990 to 2010. <i>Biogeosciences</i> 11: 247-258.",
+      "year": "2014",
+      "title": "Change in tropical forest cover of Southeast Asia from 1990 to 2010",
+      "author": "Stibig, H.-J., Achard, F., Carboni, S., Rasi, R. and Miettinen, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Subrata, S.A. and Mossbrucker, A.M. 2022. Inventory of Mammals using Camera Traps: A Baseline Study for an Ecosystem Restoration Concession in the Bukit Tigapuluh Landscape, Sumatra. <i>Tropical Natural History </i> 22: 43-50.",
+      "year": "2022",
+      "title": "Inventory of Mammals using Camera Traps: A Baseline Study for an Ecosystem Restoration Concession in the Bukit Tigapuluh Landscape, Sumatra",
+      "author": "Subrata, S.A. and Mossbrucker, A.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sunarto, S., Kelly, M. J., Parakkasi, K. and Hutajulu, M. B. 2015. Cat coexistence in central S umatra: ecological characteristics, spatial and temporal overlap, and implications for management. <i>Journal of Zoology</i> 296(2): 104-115.",
+      "year": "2015",
+      "title": "Cat coexistence in central S umatra: ecological characteristics, spatial and temporal overlap, and implications for management",
+      "author": "Sunarto, S., Kelly, M. J., Parakkasi, K. and Hutajulu, M. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Suryawanshi, K. R., Khanyari, M., Sharma, K., Lkhagvajav, P. and Mishra, C. 2019. Sampling bias in snow leopard population estimation studies. <i>Population Ecology</i> 61(3): 268-276.",
+      "year": "2019",
+      "title": "Sampling bias in snow leopard population estimation studies",
+      "author": "Suryawanshi, K. R., Khanyari, M., Sharma, K., Lkhagvajav, P. and Mishra, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Suzuki, A., Kyaw, W.W.H., and Naing, K.M. 2019. The presence of Asiatic golden cat in Human-modified landscape in Ayeyarwady Region. Proceedings of the International Joint Symposium 2019: 235-239.",
+      "year": "2019",
+      "title": "The presence of Asiatic golden cat in Human-modified landscape in Ayeyarwady Region",
+      "author": "Suzuki, A., Kyaw, W.W.H., and Naing, K.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tan, C. K. W., Rocha, D. G., Clements, G. R., Brenes-Mora, E., Hedges, L., Kawanishi, K., Mohamad, S. W., Mark Rayan, D., Bolongon, G., Moore, J., Wadey, J., Campos-Arceiz, A. and Macdonald, D.W. 2017. Habitat use and predicted range for the mainland clouded leopard Neofelis nebulosa in Peninsular Malaysia. <i>Biological Conservation</i> 206: 65-74.",
+      "year": "2017",
+      "title": "Habitat use and predicted range for the mainland clouded leopard Neofelis nebulosa in Peninsular Malaysia",
+      "author": "Tan, C. K. W., Rocha, D. G., Clements, G. R., Brenes-Mora, E., Hedges, L., Kawanishi, K., Mohamad, S. W., Mark Rayan, D., Bolongon, G., Moore, J., Wadey, J., Campos-Arceiz, A. and Macdonald, D.W. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Tilker, A., Abrams, J.F., Mohamed, A., Nguyen, A., Wong, S.T., Sollmann, R., Niedballa, J., Bhagwat, T., Gray, T.N.E., Rawson, B.M., Guegan, F., Kissing, J., Wegmann, M. and Wilting, A. 2019. Habitat degradation and indiscriminate hunting differentially impact faunal communities in the Southeast Asian tropical biodiversity hotspot. <i>Communications Biology</i> 2: 396.",
+      "year": "2019",
+      "title": "Habitat degradation and indiscriminate hunting differentially impact faunal communities in the Southeast Asian tropical biodiversity hotspot",
+      "author": "Tilker, A., Abrams, J.F., Mohamed, A., Nguyen, A., Wong, S.T., Sollmann, R., Niedballa, J., Bhagwat, T., Gray, T.N.E., Rawson, B.M., Guegan, F., Kissing, J., Wegmann, M. and Wilting, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vernes, K., Sangay, T., Rajaratnam, R. and Singye, R. 2015. Social Interaction and co-occurrence of colour morphs of the Asiatic Golden Cat, Bhutan. <i>Cat News</i> 62: 18-20.",
+      "year": "2015",
+      "title": "Social Interaction and co-occurrence of colour morphs of the Asiatic Golden Cat, Bhutan",
+      "author": "Vernes, K., Sangay, T., Rajaratnam, R. and Singye, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wang, Y., Li, D., Dunzhu, P., Liu, W., Feng, L. and Jin, K. 2022. Recognition of coat pattern variation and broken tail phenomenon in the asiatic golden cat (Catopuma temminckii). <i>Animals</i> 12(11): 1420.",
+      "year": "2022",
+      "title": "Recognition of coat pattern variation and broken tail phenomenon in the asiatic golden cat (Catopuma temminckii)",
+      "author": "Wang, Y., Li, D., Dunzhu, P., Liu, W., Feng, L. and Jin, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Weiskopf, S. R., McCarthy, J. L., McCarthy, K. P., Shiklomanov, A. N., Wibisono, H. T. and Pusparini, W. 2019. The conservation value of forest fragments in the increasingly agrarian landscape of Sumatra. <i>Environmental Conservation</i> 46(4): 340-346.",
+      "year": "2019",
+      "title": "The conservation value of forest fragments in the increasingly agrarian landscape of Sumatra",
+      "author": "Weiskopf, S. R., McCarthy, J. L., McCarthy, K. P., Shiklomanov, A. N., Wibisono, H. T. and Pusparini, W. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Xiong, M., Wang, D., Bu, H., Shao, X., Zhang, D., Li, S., Wang, R., and Yao, M. 2017. Molecular dietary analysis of two sympatric felids in the Mountains of Southwest China biodiversity hotspot and conservation implications. <i>Scientific Reports</i> 7(1): 41909.",
+      "year": "2017",
+      "title": "Molecular dietary analysis of two sympatric felids in the Mountains of Southwest China biodiversity hotspot and conservation implications",
+      "author": "Xiong, M., Wang, D., Bu, H., Shao, X., Zhang, D., Li, S., Wang, R., and Yao, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zainol, N., Taher, T.M., Razak, S.N., Noh, N.A., Nazir, N.A., Shukor, A.M., Ibrahim, A. and Nor, S.M. 2021. Wildlife Crossings at Felda Aring - Tasik Kenyir Road, Malaysia. <i>Journal of Tropical Agricultural Science</i> 44(2): 401-427.",
+      "year": "2021",
+      "title": "Wildlife Crossings at Felda Aring - Tasik Kenyir Road, Malaysia",
+      "author": "Zainol, N., Taher, T.M., Razak, S.N., Noh, N.A., Nazir, N.A., Shukor, A.M., Ibrahim, A. and Nor, S.M.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Inbreeding"
+      },
+      "code": "2_3_5"
+    },
+    {
+      "description": {
+        "en": "Inbreeding"
+      },
+      "code": "2_3_5"
+    },
+    {
+      "description": {
+        "en": "Inbreeding"
+      },
+      "code": "2_3_5"
+    },
+    {
+      "description": {
+        "en": "Inbreeding"
+      },
+      "code": "2_3_5"
+    },
+    {
+      "description": {
+        "en": "Inbreeding"
+      },
+      "code": "2_3_5"
+    },
+    {
+      "description": {
+        "en": "Inbreeding"
+      },
+      "code": "2_3_5"
+    },
+    {
+      "description": {
+        "en": "Inbreeding"
+      },
+      "code": "2_3_5"
+    },
+    {
+      "description": {
+        "en": "Inbreeding"
+      },
+      "code": "2_3_5"
+    },
+    {
+      "description": {
+        "en": "Inbreeding"
+      },
+      "code": "2_3_5"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

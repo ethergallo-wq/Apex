@@ -1,0 +1,1461 @@
+{
+  "assessment_date": "2024-08-05T01:00:00.000+01:00",
+  "year_published": "2025",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 15106,
+  "criteria": "A3c",
+  "url": "https://www.iucnredlist.org/species/15106/272356023",
+  "citation": "Kovacs, K.M. 2025. Odobenus rosmarus. The IUCN Red List of Threatened Species 2025: e.T15106A272356023. Accessed on 15 May 2026.",
+  "assessment_id": 272356023,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 15106,
+    "scientific_name": "Odobenus rosmarus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 61963499,
+        "scientific_name": "Odobenus rosmarus ssp. divergens",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "CARNIVORA",
+        "family_name": "ODOBENIDAE",
+        "genus_name": "Odobenus",
+        "species_name": "rosmarus",
+        "subpopulation_name": null,
+        "infra_name": "divergens",
+        "authority": "(Illiger, 1815)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Pinniped Specialist Group (seals and walruses)",
+            "url": null,
+            "description": "Chair: Kit Kovacs (email: kit.kovacs@npolar.no)\nRed List Authority Coordinator: Simon Goldsworthy (email: simon.goldsworthy@sa.gov.au) and Alexandros Karamanlidis (email: akaramanlidis@gmail.com)"
+          }
+        ],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Pacific Walrus",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Odobenus rosmarus ssp. laptevi Chapskii, 1940",
+            "status": "ACCEPTED",
+            "genus_name": "Odobenus",
+            "species_name": "rosmarus",
+            "species_author": null,
+            "infrarank_author": "Chapskii, 1940",
+            "subpopulation_name": null,
+            "infra_type": "subspecies",
+            "infra_name": "laptevi"
+          }
+        ]
+      },
+      {
+        "sis_id": 15108,
+        "scientific_name": "Odobenus rosmarus ssp. rosmarus",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "CARNIVORA",
+        "family_name": "ODOBENIDAE",
+        "genus_name": "Odobenus",
+        "species_name": "rosmarus",
+        "subpopulation_name": null,
+        "infra_name": "rosmarus",
+        "authority": "(Linnaeus, 1758)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Pinniped Specialist Group (seals and walruses)",
+            "url": null,
+            "description": "Chair: Kit Kovacs (email: kit.kovacs@npolar.no)\nRed List Authority Coordinator: Simon Goldsworthy (email: simon.goldsworthy@sa.gov.au) and Alexandros Karamanlidis (email: akaramanlidis@gmail.com)"
+          }
+        ],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Atlantic Walrus",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CARNIVORA",
+    "family_name": "ODOBENIDAE",
+    "genus_name": "Odobenus",
+    "species_name": "rosmarus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Pinniped Specialist Group (seals and walruses)",
+        "url": null,
+        "description": "Chair: Kit Kovacs (email: kit.kovacs@npolar.no)\nRed List Authority Coordinator: Simon Goldsworthy (email: simon.goldsworthy@sa.gov.au) and Alexandros Karamanlidis (email: akaramanlidis@gmail.com)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Aaveq [Greenlandic]",
+        "language": "mis"
+      },
+      {
+        "main": false,
+        "name": "Aiviq",
+        "language": "iku"
+      },
+      {
+        "main": false,
+        "name": "Hvalross",
+        "language": "nor"
+      },
+      {
+        "main": false,
+        "name": "Morsa",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Morse",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Rostungur",
+        "language": "ice"
+      },
+      {
+        "main": false,
+        "name": "Tricheco",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Valross",
+        "language": "fin"
+      },
+      {
+        "main": false,
+        "name": "Walross",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Морж",
+        "language": "rus"
+      },
+      {
+        "main": true,
+        "name": "Walrus",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Phoca rosmarus Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Phoca",
+        "species_name": "rosmarus",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 5,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": 250,
+    "upper_depth_limit": null,
+    "population_size": "112500",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "15",
+    "congregatory": "Congregatory (and dispersive)",
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "No",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": "4838872",
+    "continuing_decline_in_area_of_occupancy": "No",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "25746932",
+    "continuing_decline_in_extent_of_occurence": "No",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "No",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "Walruses have a discontinuous circumpolar Arctic and sub-Arctic  distribution. They are primarily found in relatively shallow continental  shelf areas (Rice 1998, Lydersen 2018). The Pacific subspecies ranges  from the Bering and Chukchi Seas to the Laptev Sea in the west,  bordering on the Beaufort Sea in the east, with vagrants recorded south  into the North Pacific Ocean to south-central Alaska and Japan (Fay  1981, 1982). The Atlantic subspecies occurs from the eastern Canadian  Arctic, across the Northeast Atlantic to the Pechora Sea and into the  western parts of the Kara Sea (Stewart <em>et al.</em> 2014, Keighley <em>et al.</em> 2021). In the North Atlantic, Walruses have been recorded north to the North Pole (Lydersen <em>et al.</em> 2022), and routinely reside in areas that can have &gt; 90% ice cover during winter (Freitas <em>et al.</em>  2009). The Atlantic subspecies has been extirpated from many areas of  its historical range by excessive hunting (i.e., Gulf of St Lawrence  (McLeod <em>et al.</em> 2014), in Iceland (Keighley <em>et al.</em> 2019),  much of the coastline of West Greenland (Garde and Hansen 2021), and  areas just north of Scoresby Sound in East Greenland (Born <em>et al.</em>  1997)). Vagrant Walruses have been reported from 13 countries in  Europe, reaching south to the Bay of Biscay in France/Spain (Chiacchio  and Aae 2024). They are rare, but do also occur on occasion, in the  White Sea in Russia (<a rel=\"nofollow\" target=\"_blank\" href=\"https://tass.com/science/1032349\">https://tass.com/science/1032349</a>).",
+    "population": "Pacific walruses have a high level of genetic diversity, but low levels  of differentiation across breeding aggregations (Sonsthagen <em>et al.</em> 2012, Mills <em>et al.</em>  2024) and are often referred to as being a single panmictic population  across the North Pacific Arctic continental shelf waters and adjacent  shores, including territories in both the US and Russia (Beatty <em>et al.</em>  2020). Atlantic walruses have a more complex population structure with  seven distinct groups recognized (Garde and Hansen 2021): 1) Baffin  Bay/Lancaster Sound in the High Arctic 2) Foxe Basin and 3) Hudson  Bay-Davis Strait in the Central Arctic and 4) South and East Hudson Bay  in the Canadian Low Arctic 5) East Greenland 6) Svalbard and Frans  Joseph Land (and on the ice between the archipelagos; Andersen <em>et al.</em> 1998) and another population (or subpopulation) in the southern Barents/Kara/Pechora region in Russia (Andersen <em>et al.</em>  2017). Novaya Zemlya/Pechora Sea and Kara Sea animals likely belong to  the same population, but no genetics studies are available for animals  in the Kara Sea or Novaya Zemlya. Some Atlantic Walrus populations are  spread across international boundaries, with seasonal migrations taking  them from one country to another—populations are shared between Canada  and West Greenland (1 and 3; Dietz <em>et al.</em> 2014) and Norway and Russia (6; Wiig <em>et al.</em> 1996, Hamilton <em>et al.</em> 2021).<br/><br/>All  Walrus populations have been drastically reduced historically by  overharvesting, primarily to serve the walrus ivory trade (Barrett <em>et al.</em>  2020). Like the Pacific subspecies, Atlantic Walruses seem to have  maintained high levels of genetic diversity despite the harvests  (Lindquist <em>et al.</em> 2016). Recent population declines have also  taken place as a result of overharvesting in both subspecies. The  Pacific Walrus population was reduced by 50% from the 1980s to 2000–2010  (Garlich-Miller <em>et al.</em> 2011, Taylor <em>et al.</em> 2018) and some  Walrus populations in Greenland and in Canada have been reduced in  recent times by unsustainable subsistence hunting (Wiig <em>et al.</em>  2014, Garde and Hansen 2021). Since 1992 the Pacific Walrus harvest has  been limited to subsistence use by Alaska and Chukotka native hunters  and has occurred at comparatively low rates, which are assumed to be  sustainable. In Alaska, the harvest is self-regulated by local  Indigenous walrus-hunting communities. In Chukotkan communities, annual  quotas are set by the Russian government. Some 5,000–6,000 Pacific  walruses have been taken annually in recent decades (USFWS 2023).  Following stock delimitation studies between Canada and Greenland, and  implementation of a quote-based hunting system in Greenland in 2006, it  is though that hunting levels have become sustainable for harvested  Atlantic Walrus populations (Wiig <em>et al.</em> 2014, NAMMCO 2018).<br/><br/>The  Pacific Walrus is approximately 5x as abundant as the Atlantic Walrus,  with numbers recently estimated to be 200,000–250,000 animals (Fischbach  <em>et al.</em> 2021, Beatty <em>et al.</em> 2022,); this does not include  the Laptev population, which has never been surveyed but is assumed to  be small. It is important to note that the Beatty <em>et al.</em> (2022)  estimate for 2013–2017 (estimate 257,193, variation 171,138-366,366) is  based on genetic mark-recapture, which is a new technique that has not  been calibrated thoroughly. This estimate is approximately 2x the number  of the previous estimate by Speckman <em>et al.</em> (2011: 129,000,  55,000–507,000), although this earlier estimate was thought to  underestimate the population size. The Pacific Walrus population is  likely stable currently, at a new, slightly lower than in the past,  carrying capacity (Taylor <em>et al.</em> 2018, Beatty <em>et al.</em>  2022). New methods for interpreting satellite-based imagery are very  promising for establishing more routine monitoring of Walruses  (Fischbach and Douglas 2012, Cubaynes <em>et al.</em> 2024).<br/><br/>Extant  populations of Atlantic walrus number some 45,000+ animals in total. In  the Northwest Atlantic, in Canada and West Greenland, there are some  25,000 animals (Heide-Jørgensen <em>et al.</em> 2013, Stewart <em>et al.</em> 2014, Hammill <em>et al.</em>  2016a, b, NAMMCO 2018). In the Northeast Atlantic - the East Greenland  population is the smallest; it numbers some 279 (CI 226-345) animals  (NAMMCO 2018). The next largest is the Pechora Sea population, which is  at least 4000 animals (Lydersen <em>et al.</em> 2012, Semyonova <em>et al.</em>  2015); the west side of Novaya Zemlya has never been surveyed. Finally,  the largest population – the Svalbard-Frans Josef population has only  been surveyed in Svalbard, where the most recent estimate, conducted in  2018, was 5503 (CI 5031-6636) animals residing in the archipelago in  late summer (Kovacs <em>et al.</em> 2014, MOSJ <a rel=\"nofollow\" target=\"_blank\" href=\"https://mosj.no/en/indikator/fauna/marine-fauna/walrus\">https://mosj.no/en/indikator/fauna/marine-fauna/walrus</a>).  No systematic surveys have been conducted in Frans Josef Land, but  Gavrilo (2017) suggested that some 3,000–3,500 Walruses were counted (at  an unknown number/proportion of haul-out sites, which could represent  as many as 12,000 animals using correct factors from Lydersen <em>et al.</em>  2008 for Svalbard). Gavrilo (2017) suggests that Walruses have  recovered to near their original stock size. In Svalbard, Walruses are  increasing in number following protection being put in place in 1952 in  Norwegian waters; they have now reached circa 25% of original stock  size, but the sex ratio remains heavily skewed toward males in the  western parts of the Norwegian-Russian High Arctic population, although  females with calves are increasingly observed (Wiig <em>et al.</em> 2007, Kovacs <em>et al.</em>  2014). Walruses occur in the Kara Sea but no full estimate is available  for this area; a summer direct count was 1,062 individuals (Boltunov <em>et al.</em>  2021). The lack of historical population data limits assessment of  trends, but it is though that Atlantic Walrus numbers are significantly  below historical stock sizes in most areas (Garde and Hansen 2021).<br/><br/>Walruses  are expected to decline in the coming decades due to habitat  degradation as a result of climate change and concomitant impacts on  stressors (e.g. Jay <em>et al.</em> 2011, MacCracken 2012, MacCracken <em>et al.</em> 2017, Kovacs <em>et al.</em>  2021). Modelling has not been conducted specifically for the  3-generation IUCN assessment period (45 yrs), but a 30% decline is  within reasonable expectations for this timeframe.",
+    "habitats": "Walruses are one of the largest pinnipeds and the only one that bears tusks (Fay 1981, Lydersen 2018, Keighley <em>et al.</em>  2021). The tusks can grow to be in excess of a meter long and can weigh  5 kg in large bulls; females have thinner tusks than males. Males can  reach 3.6 m in length and weigh up to 1,500 kg, while females are  somewhat smaller, reaching lengths of about 3 m and weighing up to 1,000  kg. Newborns are 1-1.4 m long and weigh 33-85 kg. Males have  specialized integumentary nodes on their neck and shoulders that  probably function as a signal of maturity, and they might also have a  shield function during aggressive encounters (Miller and Kochnev 2021).  Although some females can ovulate at four years of age, the majority do  not give birth until they are 7-8 years old and usually produce one calf  two- four years (Fay 1982, Chivers 1999, Taylor <em>et al.</em> 2018,  Larsen Tempel and Atkinson 2020). Gestation lasts 15 months, including a  period of delayed implantation that lasts 3–3.5 months. Calves are born  in May. The period of calf dependency is long, they are often attended  by their mothers for 2+ yrs (Kovacs and Lavigne 1992, Noren <em>et al.</em>  2014). Males become sexually mature between 7–10 years of age, but are  not physically and socially mature enough to successfully compete for  breeding opportunities until they are approximately 15 years old.  Longevity is approximately 40 years (Fay 1981).<br/><br/>Walruses are  extremely social animals, and when hauled out on land or ice they are  normally found in tight groups ranging in size from a few individuals up  to hundreds or even thousands. Pacific walruses tend to form larger  herds of thousands or tens of thousands (Fay 1982, Monson <em>et al.</em> 2013, Bengtsson <em>et al.</em> 2021, Fischbach <em>et al.</em> 2022, Altukhov <em>et al.</em>  2024). Walruses seek extensive body contact with conspecifics, which  might serve to conserve heat, and likely also facilitates group defense.  When swimming at sea they are also usually found in groups, and mothers  and calves maintain close physical contact in the water (as well as  when on shore). Walruses are able to nurse their pups at sea, holding  the pup upside-down against the mother’s body (Miller and Boness 1982);  being adapted to suction feeding undoubtedly plays a role in this unique  behaviour. There is significant sexual segregation outside the breeding  season within both subspecies, with males often being found in areas  distant from females and their calves. Pacific walrus females, until  recently, remained on the sea ice even in summer, but declining ice  conditions have resulted in them now coming to shore where very large  haulouts have become the norm (Jay <em>et al.</em> 2012, MacCracken 2012, USFWS 2017). Courtship and mating occur during the winter (Fay 1982, Lowther <em>et al.</em> 2015) in areas with leads or in polynyas (Fay 1982, Fay <em>et al.</em> 1984, Jay and Hills 2005, Freitas <em>et al.</em> 2009, Speckman <em>et al.</em>  2011). Walruses are believed to be polygynous, with males forming a  type of lek and displaying vigorously, while vocalizing, adjacent to  females hauled-out on ice floes (Sjare and Stirling 1996, Sjare <em>et al.</em>  2003). Males produce bell-like sounds underwater using a pair of  elastic pharyngeal pouches in the neck that can be inflated with air to  serve as resonance chambers that make this unique sound; these pouches  also allow males to float at the surface while resting at sea. There is  intense male-male competition during mating and the tusks are used in  these encounters. The tusks are also used during interspecific  aggression against potential predators such as polar bears and killer  whales (Miller and Kochnev 2021). Walruses also use their tusks to help  get up onto ice floes. Walrus societies are complex, which is  facilitated in part by a rich vocal repertoire (Miller and Kochnev  2021). Walruses will defend members of the group against predator  attacks, even though the composition of walrus haul-out groups is quite  fluid (Stirling 1984, KMK pers. obs.).<br/><br/>Walruses have quite a narrow ecological niche (Kovacs <em>et al.</em>  2016). They depend on 1) continental shelf waters with suitable bottom  substrate to support a productive benthic community and 2) the presence  of reliable open water areas where there is food close enough to land or  sea ice for haulout (Lydersen 2018). The preferred haul out platform of  Walruses is sea ice in both the Atlantic and Pacific regions (Gilbert  1999, Jay <em>et al.</em> 2014, Beatty <em>et al.</em> 2016, Lydersen 2018).  However, Walruses routinely use coastal haul out sites in the summer  and autumn in areas where sea ice is not available (Garlich-Miller and  Jay 2000, Lydersen <em>et al.</em> 2008, Kovacs <em>et al.</em> 2014, Hamilton <em>et al.</em>  2015). Walruses are primarily benthic feeders, with most of their  diving being shallow (to ‹50 m), although maximum dive records go to 462  m (Jay <em>et al.</em> 2001, Lowther <em>et al.</em> 2015, Garde <em>et al.</em>  2018). They use their stiff but bendable whiskers, which are highly  innervated and sensitive (Kastelein and van Gaalen 1988) to search for  prey in soft substrates (Marshall and Pyenson 2019). They also use their  muzzles and their fore-flippers to clear access to prey and theyjet  water to clear away sediments (Leverman <em>et al.</em> 2003). A wide  variety of benthic invertebrates are consumed by Walruses, though a few  species of clams make up the majority of the Walrus’s diet (Fay 1982,  Sheffield and Grebmeier 2009, Skoglund <em>et al.</em> 2010, Beatty <em>et al.</em> 2016, Sonsthagen <em>et al.</em>  2020). But many species of worms, snails, soft shell crabs, amphipods,  shrimp, sea cucumbers, tunicates, and slow-moving fish can fall prey to  Walruses. Some individuals also prey on seals and seabirds (Lowry and  Fay 1984, Seymour <em>et al.</em> 2014, Giljov <em>et al.</em> 2017). Foraging trips at sea last several days in Svalbard (Lydersen <em>et al.</em> 2008, Hamilton <em>et al.</em> 2015), but shorter periods appear to be the norm for the Pacific subspecies (Udevitz <em>et al.</em>  2009, Fischbach and Jay 2016). Elemental analysis of enamel in the  teeth of Pacific Walruses suggests that animals in different areas eat  quite different things and fall into at least two feeding “stocks” (Jay <em>et al.</em> 2008).<br/>Haul-out patterns follow both diel and strongly seasonal patterns (Hamilton <em>et al.</em> 2015): the latter is in part be related to sea ice concentrations (Jay <em>et al.</em> 2017). During the winter Walruses spend 10–15 % of their time hauled-out, usually on ice in the Barents Region (Hamilton <em>et al.</em> 2015). This increases to peaks during terrestrial haul-out period in the summer months of 30% in Svalbard (Hamilton <em>et al.</em> 2015). Much of the year, males haul out for a day at a time and then spend several days at sea (Lydersen <em>et al.</em>  2008). Diving patterns change markedly during the winter mating period  (Jan-Feb), when males dive to the bottom rarely, spending much of their  time doing shallow dives, near ice edges (Lowther <em>et al.</em> 2015).  On average Walruses in Svalbard are in the water 75% of the time in late  summer, similar to other North Atlantic areas (Lydersen <em>et al.</em>  2008 and references therein). Estimates of “availability” to survey  counts in the Pacific suggest similar strong seasonal differences, with  15% of animals hauled out in spring when surveys of animals on ice took  place (Speckman <em>et al.</em> 2011) and 57% of animals haulout in late summer when they use shore-based sites (Fischbach <em>et al.</em> 2022, also see Battaile <em>et al.</em>  2017). After breeding in traditional areas, male walruses disperse  broadly in the Pacific, covering the whole of the species range (Jay <em>et al.</em>  2012). Multi-year records for individual male Walruses in Svalbard show  that individuals follow very set, but quite independent, migratory  patterns between breeding and summer haul-out areas, showing very high  site fidelity among years (Mikkelsen <em>et al.</em> 2024).&#160;<br/><br/>Walruses  are thought to be important benthic community “controllers”—sometimes  referred to as ecological engineers—though the bioturbation they  perform when foraging (Oliver <em>et al.</em> 1983, Ray <em>et al.</em> 2006).&#160;<br/><br/>The primary natural predators of Walrus are Polar Bears and Killer Whales (Killian and Stirling 1978, Fay 1981).",
+    "threats": "Walruses were hunted at industrial levels historically, resulting in the depletion of all populations (Scammon 1878, Stewart <em>et al.</em> 2013, Drew <em>et al.</em> 2016, Barrett <em>et al.</em>  2020). In the Pacific Arctic, industrial scale harvests also took place  from the 1950's up through 1991 by Soviet collectives as well as  offshore marine harvesting vessels to supply fox-food to the fur  industry (Fay <em>et al.</em> 1989, Fay <em>et al.</em> 1997, Kerttula 2000,  Demuth 2019). The size of the Pacific walrus population was thought to  have increased rapidly in the 1960s due to a release from hunting  pressure, probably reaching or exceeding the size that could be  supported by the environment between the late 1970s and early 1980s (Fay  <em>et al.</em> 1989). Density-dependent food limitation is thought to  have limited the rate of growth after some decades (given that harvested  animals were leaner in the early 1980s compared to previous decades)  via an older age of first reproduction (Fay <em>et al.</em> 1989) and lower reproductive rates (Fay <em>et al.</em>  1997). High harvest levels in the 1980s in combination with ecological  changes in the North Pacific Arctic led to a significant long-term  population decline (<em>ca</em> 50%) (Fay <em>et al.</em> 1989). Increased  reproduction and calf survival is thought to have led to recovery and a  population that is now approaching a new equilibrium (Taylor <em>et al.</em> 2018).<br/><br/>Indigenous  people of the Arctic have depended on walruses for food, hides, ivory,  and bones. Subsistence harvests of both subspecies throughout much of  the species’ range continues today, except in some few protected areas  (Norwegian and Russian Barents Region). Based on hindcasts of original  population size, walruses in the Northeast Atlantic Arctic number less  than half of the original population sizes combined (Gjertz <em>et al.</em> 1998, Weslawski <em>et al.</em>  2000, Witting and Born 2014). Harvests are currently thought to be at  sustainable levels and the only illegal harvest (poaching) is thought to  take place in the Pechora Sea at very low levels (where Walruses are  protected).<br/><br/>Levels of direct conflicts with fisheries are low;  however, trawl fisheries can disturb important benthic feeding areas  (McConnaughey <em>et al.</em> 2000, Born <em>et al.</em> 2003, Mecum 2009, Born <em>et al.</em>  2021a, COSEWIC 2021, USFWS 2023). Northward shifts in some Russian  fisheries in the Bering Sea are a current concern, particularly when the  fishing effort gets close to haulout sites (Datsky <em>et al.</em> 2022,  Buslov and Ovsyannikov 2023). IK (Indigenous knowledge) holders are  concerned about potential impacts of commercial fisheries (Gadamus and  Raymond-Yakoubian 2015).<br/>Oil and gas development and marine mining  can disrupt benthic habitats and oil spills can have serious negative  impacts on walruses via impacts on their food (Harwood <em>et al.</em>  2019). Additionally, exploration phases can produce high levels of  underwater noise that can interfere with communication and also cause  temporary of permanent hearing damage if blasts occur at close range  (Hermannsen <em>et al.</em> 2015).<br/><br/>Human disturbance at land-based  haul-out sites, low-level aircraft over-flights, transport ships, and  near-shore passage of vessels can have serious effects on Walruses when  they are hauled out, as most populations are susceptible to disturbance,  and are easily panicked into stampedes (Born <em>et al.</em> 2021a, USFWS  2016). In Svalbard, where protection has been in place since 1952,  Walruses are very robust to human visitation if approaches are done  carefully (Øren <em>et al.</em> 2018). In the Pacific, where herds size is  increasing in association with climate warming, stampedes are thought  to already be a significant source of mortality (Udevitz <em>et al.</em> 2013, Goertz <em>et al.</em> 2017).<br/><br/>Walruses  in Svalbard have dramatically variable contaminant levels from  individual to individual, that are perhaps related to their diets  (Wolkers <em>et al.</em> 2006, Scotter <em>et al.</em> 2019); while most  Walruses eat benthic bivalves, some eat seals and birds. Some animals  have high enough contaminant burdens that they might suffer immune  depression (Routti <em>et al.</em> 2019) but this is not the norm for the  Barents population or the species more generally. The Walrus’s low  trophic feeding habits means that contaminant levels are generally low  (e.g. Quakenbush <em>et al.</em> 2016). Their filter-feeding prey are at  risk from effects from harmful algal blooms (HABs), which are expected  to increase in a warming Arctic (Lefebvre <em>et al.</em> 2022). <br/><br/>Global  warming and associated reductions in the extent and seasonal period of  sea ice cover is the most serious current and future threat to Walruses  (Kovacs <em>et al.</em> 2011, 2012, 2016, 2021, Laidre <em>et al.</em> 2008, 2015, MacCracken 2012, MacCracken <em>et al.</em> 2017 - but also see Born <em>et al.</em>  2021b). Declining sea ice reduces suitable resting, pupping and  breeding habitat and limits access to offshore feeding areas. Sea ice  reductions in the North Pacific have resulted in vast herds forming on  land in summer, some in excess of 100,000 animals (Fischbach and Douglas  2021, Altukhov <em>et al.</em> 2024) that include many mothers and calves  that previously remained associated with ice year-round with resultant  high levels of mortality, particularly of calves (e.g. Udevitz <em>et al.</em>  2013). Reductions in sea ice are also likely to lead to other indirect  effects such as more commercial fishing, shipping and development in  areas previously protected by extensive ice with increased risk of  spills and discharge of pollutants, disturbance, and coastal development  (Tynan and DeMaster 1997, Huntington <em>et al.</em> 2013, 2015, Semyonova <em>et al.</em> 2015, Kovacs <em>et al.</em>  2016, NAMMCO 2018, and references above). Walrus prey is also likely to  be negatively impacted by reductions in sea ice and the associated  reduction of sympagic community fall-out (Grebmeier <em>et al.</em> 2018, Mueter <em>et al.</em> 2021). Walruses depend on rich beds of molluscs to support their individual and population food requirements (Born <em>et al.</em>  2003). Warming in association with increased acidification is likely to  have negative impacts on calcifying organisms that are prey for  Walruses (Renaud <em>et al.</em> 2015, Waldbusser <em>et al.</em> 2015). Warmer temperatures are also likely to be associated with increased risk of diseases (Burek <em>et al.</em> 2008, VanWormer <em>et al.</em> 2019, Barraclough <em>et al.</em>  2023) and perhaps also changing predator pressures when polar bears do  more terrestrial hunting. Avian influenza was documented in Walrus in  the North Atlantic in 2023 (Lydersen and Kovacs, unpubl. data) and this  virus is a concern for wildlife in Alaska (Reed <em>et al.</em> 2014).",
+    "measures": "Commercial hunting of Walruses is forbidden world-wide, but most  populations are subject to subsistence harvests by indigenous people.  Sustainable harvests are thought to have been recently achieved in  Greenland following implementation of quotas in 2006 (Wiig <em>et al.</em>  2014, NAMMCO 2018). Hunting at terrestrial haul-outs is banned in  Greenland and adult females are not supposed to be taken, though this  issue is not yet completely solved. Harvests in the Pacific and in  Canada are small compared to population sizes. In Canada Walruses are  listed as a Species of Special Concern, largely because of the threat  posed by climate change (COSEWIC 2021).<br/><br/>Walruses are in the Russian  Red Book, and they are classified as VU (Vulnerable) on the Norwegian  Red List because of overharvesting in the past and the threat posed by  habitat losses due to climate change. In the Barents Sea Region Walruses  are completely protected from harvesting in both Russian and Norway  (Boltunov <em>et al.</em> 2010, Eldegard <em>et al.</em> 2021). Many protected areas in Svalbard are relevant for Walrus conservation (Kovacs and Lydersen 2006).<br/><br/>Pacific  Walruses became federally protected from commercial harvesting in 1941  in the U.S. and they became further protected under the Marine Mammal  Protection Act in 1972. The U.S. Fish and Wildlife Service monitors  hunts, which are managed by subsistence walrus-hunting communities in  Alaska. Annual quotas are set for Pacific Walrus harvests by local  communities in the Russia Arctic (Kryukova 2019).<br/><br/>Transportation of walrus products has been regulated by CITIES import and export controls since 1975.",
+    "use_trade": "Native people of the Arctic have depended on Walrus for food, hides, ivory and bones since first contact, and subsistence harvests continue today in Canada, Greenland, Alaska, and Russia. All Walrus populations were severely depleted by episodic commercial hunting that was heaviest from the 18th through to the mid-20th centuries (Fay 1982). Since the 1970s, the Pacific Walrus has been managed under numerous international and national conservation programs that have eliminated commercial hunting and limited trade (Garlich-Miller <em>et al.</em> 2011). The Pacific Walrus continues to be an important subsistence resource for indigenous people in coastal Alaska (Robards <em>et al.</em> 2013), and harvests in recent years are likely to have been well within sustainable limits (Garlich-Miller <em>et al.</em> 2011, Udevitz <em>et al.</em> 2013). Atlantic Walruses are protected from harvest in Norway and in Russia (Boltunov <em>et al.</em> 2010, Henriksen and Hilmo 2015). Harvests are quota regulated in Canada and in Greenland, and additionally females are not supposed to be harvested in Greenland (Wiig <em>et al.</em> 2014).<br/><br/>Walrus are listed on Appendix III of the Convention on International Trade in Endangered Species of Wild Fauna and Flora which allows for control of global trade in Walrus ivory.",
+    "rationale": "Sea ice declines across the range of the walrus are occurring rapidly,  with both direct and indirect negative effects on walruses (Laidre <em>et al.</em> 2015, MacCracken <em>et al.</em> 2017, Kovacs <em>et al.</em>  2021 – and references therein). Walrus breeding and ice-resting  habitats are already markedly reduced (&gt;30%) and summer sea ice in the  Arctic is expected to disappear entirely in the next few decades (Kim <em>et al.</em>  2023). Global warming is also likely to reduce productivity of benthic  communities in shallow Arctic seas, upon which Walruses depend for food,  because of the tight coupling between sea ice community (sympagic)  production and the benthos. Increased human activity in previously  ice-covered areas is expected to increase stress on, and disturbance of  walruses at haulout sites. Increased ocean noise due to increasing  industrial development and vessel traffic is an additional concern, as  is increased disease risk. Population trends within the North Atlantic  are mixed (decreasing, increasing (from near extirpation) and unknown).  Pacific walruses are thought to be stable at a slightly lower carrying  capacity level than had been experienced during the 1990s after  cessation of the Soviet industrial harvest. Data are lacking on  abundance of Walruses for several important Russian regions in the  Atlantic and Laptev seas, making it impossible to determine current  overall trends. In the Pacific Arctic calf mortality has been high  following a shift of mothers and calves to coastal haulouts where  stampedes can occur, compared to when sea ice was previously available  for them to haul out year-round. Combined climate-change related risks  to walruses have led to the Pacific subspecies being considered for  inclusion under the Endangered Species Act of the United States.  Walruses in Canada are listed as a Species of Special Concern because of  global warming. Walruses are listed in the Red Book of Russia (largely  due to historical harvests) and they are Vulnerable on the Norwegian Red List  because of threats arising from climate change. Globally, the species  qualities for Vulnerable under IUCN criteria A3c.",
+    "trend_justification": null,
+    "taxonomic_notes": "The Walrus, <em>Odobenus rosmarus</em>, was divided into three subspecies in the  past: the Atlantic Walrus (<em>O. r. rosmarus</em>), the Pacific Walrus (<em>O. r.  divergens</em>), and the Laptev Walrus (<em>O. r. laptevi</em>) (Rice 1998). However,  the status of the Laptev Walrus has always been uncertain; animals from  that region are described as being intermediate in size between the  Pacific and Atlantic forms, with skull morphology most similar to the  Pacific subspecies (Fay 1982). Recent analyses of mitochondrial DNA, in  addition to the morphometric data, suggest that the taxon <em>O. r. laptevi</em>  should be abandoned (Lindqvist <em>et al.</em> 2009) with walruses in the  Laptev Sea being considered the westernmost group of Pacific Walrus.  Further study of subspecies status is warranted on the basis of lower  genetic diversity documented for the Laptev Sea Walruses by Shitova <em>et al.</em>  (2015 – although these authors did not directly address the subspecies  question with modern analytical tools), but currently the Society for  Marine Mammalogy Taxonomy Committee recognizes only two subspecies (<em>O.  r. rosmarus</em> and <em>O. r. divergens</em>) following genetic analyses by Cronin <em>et al.</em> (1994) and Andersen <em>et al.</em> (2017)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    }
+  ],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northwest"
+      },
+      "code": "21"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - northeast"
+      },
+      "code": "67"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northeast"
+      },
+      "code": "27"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Arctic Sea"
+      },
+      "code": "18"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - northwest"
+      },
+      "code": "61"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Muddy"
+      },
+      "code": "9_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Sandy Shoreline and/or Beaches, Sand Bars, Spits, Etc"
+      },
+      "code": "12_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy"
+      },
+      "code": "9_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Rocky Shoreline"
+      },
+      "code": "12_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy-Mud"
+      },
+      "code": "9_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Sweden"
+      },
+      "code": "SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Svalbard and Jan Mayen"
+      },
+      "code": "SJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Denmark"
+      },
+      "code": "DK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Massachusetts"
+      },
+      "code": "MAS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Alaska"
+      },
+      "code": "ASK-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Belgium"
+      },
+      "code": "BE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Finland"
+      },
+      "code": "FI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Ireland"
+      },
+      "code": "IE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Iceland"
+      },
+      "code": "IS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Netherlands"
+      },
+      "code": "NL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Maine"
+      },
+      "code": "MAI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greenland"
+      },
+      "code": "GL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Handicrafts, jewellery, etc."
+      },
+      "code": "12"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Other household goods"
+      },
+      "code": "11"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "No/Negligible Impact: 2",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Flight paths"
+      },
+      "code": "4_4"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Oil spills"
+      },
+      "code": "9_2_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Oil & gas drilling"
+      },
+      "code": "3_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "No/Negligible Impact: 2",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Shipping lanes"
+      },
+      "code": "4_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Work & other activities"
+      },
+      "code": "6_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Kovacs, K.M.",
+      "value": [
+        "Kit M. Kovacs (IUCN SSC Pinniped Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Fischbach, A.",
+      "value": [
+        "Anthony Fischbach (USGS Alaska Science Center Walrus Research Program)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C. 2013. Generation length for mammals. <i>Nature Conservation</i> 5: 87–94.",
+      "year": "2013",
+      "title": "Generation length for mammals",
+      "author": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rice, D.W. 1998. <i>Marine Mammals of the World: Systematics and Distribution</i>. Society for Marine Mammalogy, Special Publication Number 4, Lawrence, Kansas.",
+      "year": "1998",
+      "title": "Marine Mammals of the World: Systematics and Distribution",
+      "author": "Rice, D.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Laidre, K.L., Stirling, I., Lowry, L.F., Wiig, Ø., Heide-Jørgensen, M.P. and Ferguson, S.H. 2008. Quantifying the sensitivity of Arctic marine mammals to climate-induced habitat change. <i>Ecological Applications</i> 18: S97-S125.",
+      "year": "2008",
+      "title": "Quantifying the sensitivity of Arctic marine mammals to climate-induced habitat change",
+      "author": "Laidre, K.L., Stirling, I., Lowry, L.F., Wiig, Ø., Heide-Jørgensen, M.P. and Ferguson, S.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fay, F.H., Eberhardt, L.L., Kelly, B.P., Burns, J.J. and Quakenbush, L.T. 1997. Status of the Pacific walrus population, 1950-1989. <i>Marine Mammal Science</i> 13(4): 537-565.",
+      "year": "1997",
+      "title": "Status of the Pacific walrus population, 1950-1989",
+      "author": "Fay, F.H., Eberhardt, L.L., Kelly, B.P., Burns, J.J. and Quakenbush, L.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fay, F.H. 1982. Ecology and biology of the Pacific walrus, <i>Odobenus rosmarus divergens</i> Illiger. <i>North American Fauna</i> <b>74</b>:1-279.",
+      "year": "1982",
+      "title": "Ecology and biology of the Pacific walrus, <i>Odobenus rosmarus divergens</i> Illiger",
+      "author": "Fay, F.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Born, E.W. 2005. An assessment of the effects of hunting and climate on walruses in Greenland. PhD thesis, University of Oslo, Norway.",
+      "year": "2005",
+      "title": "An assessment of the effects of hunting and climate on walruses in Greenland",
+      "author": "Born, E.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Committee on the Status of Endangered Wildlife in Canada. 2006. COSEWIC assessment and update status report on the Atlantic walrus <i>Odobenus rosmarus rosmarus</i> in Canada. Ottawa, Canada Available at: <a href=\"http://www.sararegistry.gc.ca/virtual_sara/files/cosewic/sr_atlantic_walrus_e.pdf\">http://www.sararegistry.gc.ca/virtual_sara/files/cosewic/sr_atlantic_walrus_e.pdf</a>. ",
+      "year": "2006",
+      "title": "COSEWIC assessment and update status report on the Atlantic walrus <i>Odobenus rosmarus rosmarus</i> in Canada",
+      "author": "Committee on the Status of Endangered Wildlife in Canada",
+      "citation_short": null
+    },
+    {
+      "citation": "Fay, F.H. 1981. Walrus <i>Odobenus rosmarus</i> (Linneaus, 1758). In: S.H. Ridgway and R. Harrison (eds), <i>Handbook of Marine Mammals, Vol. 1: The walrus, sea lions, fur seals, and sea otter</i>, pp. 1-23. Academic Press, San Diego.",
+      "year": "1981",
+      "title": "Walrus <i>Odobenus rosmarus</i> (Linneaus, 1758)",
+      "author": "Fay, F.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kovacs, K.M. and Lydersen, C. (eds). 2006. <i>Birds and Mammals of Svalbard</i>. Polarhåndbok No. 13, Norwegian Polar Institute, Tromsø, Norway, Grafisk Nord AS, Finnsnes, Norway.",
+      "year": "2006",
+      "title": "Birds and Mammals of Svalbard",
+      "author": "Kovacs, K.M. and Lydersen, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kovacs, K.M., Aguilar, A., Aurioles, D., Burkanov, V., Campagna, C., Gales, N.J., Gelatt, T., Goldsworthy, S.D., Goodman, S.J., Hofmeyr, G.J.G., Härkönen, T., Lowry, L., Lydersen, L., Schipper, J., Sipilä, T., Southwell, C., Thompson, D. and Trillmich, F. 2012. Global threats to pinnipeds. <i>Marine Mammal Science</i> 28: 414-436.",
+      "year": "2012",
+      "title": "Global threats to pinnipeds",
+      "author": "Kovacs, K.M., Aguilar, A., Aurioles, D., Burkanov, V., Campagna, C., Gales, N.J., Gelatt, T., Goldsworthy, S.D., Goodman, S.J., Hofmeyr, G.J.G., Härkönen, T., Lowry, L., Lydersen, L., Schipper, J., Sipilä, T., Southwell, C., Thompson, D. and Trillmich, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Laidre, K.L., Stern, H., Kovacs, K.M., Lowry, L., Moore, S.E., Regehr, E.R., Ferguson, S.H., Wiig, Ø., Boveng, P., Angliss, R.P., Born, E.W., Litovka, D., Quakenbush, L., Lydersen, C., Vongraven, D. and Ugarte, F. 2015. Arctic marine mammal population status, sea ice habitat loss, and conservation recommendations for the 21st century. <i>Conservation Biology</i> 29: 724-737.",
+      "year": "2015",
+      "title": "Arctic marine mammal population status, sea ice habitat loss, and conservation recommendations for the 21st century",
+      "author": "Laidre, K.L., Stern, H., Kovacs, K.M., Lowry, L., Moore, S.E., Regehr, E.R., Ferguson, S.H., Wiig, Ø., Boveng, P., Angliss, R.P., Born, E.W., Litovka, D., Quakenbush, L., Lydersen, C., Vongraven, D. and Ugarte, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lowry, L.F. and Fay, F.H. 1984. Seal eating by walruses in the Bering and Chukchi seas. <i>Polar Biology</i> 3: 11-18.",
+      "year": "1984",
+      "title": "Seal eating by walruses in the Bering and Chukchi seas.",
+      "author": "Lowry, L.F. and Fay, F.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "MacCracken, J.G. 2012. Pacific walrus and climate change:observations and predictions. <i>Ecology and Evolution</i> 2: 2072-2090.",
+      "year": "2012",
+      "title": "Pacific walrus and climate change:observations and predictions.",
+      "author": "MacCracken, J.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Semyonova, V.S., Boltunov, A.N. and Nikiforov, V.V. 2015. Studying and preserving the Atlantic walrus in the South-East Barents Sea and adjacent areas of the Kara Sea. 2011-2014 study results.  World Wildlife Fund, Murmansk, Russia.",
+      "year": "2015",
+      "title": "Studying and preserving the Atlantic walrus in the South-East Barents Sea and adjacent areas of the Kara Sea. 2011-2014 study results",
+      "author": "Semyonova, V.S., Boltunov, A.N. and Nikiforov, V.V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sheffield, G. and Grebmeier, J.M. 2009. Pacific walrus (<i>Odobenus rosmarus divergens</i>): Differential prey digestion and diet. <i>Marine Mammal Science</i> 25: 761-777.",
+      "year": "2009",
+      "title": "Pacific walrus (<i>Odobenus rosmarus divergens</i>): Differential prey digestion and diet.",
+      "author": "Sheffield, G. and Grebmeier, J.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Garlich-Miller, J., MacCracken, J.G., Snyder, J., Meehan, R., Myers, M., Wilder, J.M., Lance, E. and Matz, A. 2011. Status Review of the Pacific Walrus, <i>Odobenus rosmarus divergens</i>. U.S. Fish and Wildlife Service, Marine Mammals Management, Anchorage, AK, USA.",
+      "year": "2011",
+      "title": "Status Review of the Pacific Walrus, <i>Odobenus rosmarus divergens</i>.",
+      "author": "Garlich-Miller, J., MacCracken, J.G., Snyder, J., Meehan, R., Myers, M., Wilder, J.M., Lance, E. and Matz, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sjare, B., Stirling, I. and Spencer, C. 2003. Structural variation in the songs of Atlantic walruses breeding in the Canadian High Arctic. <i>Aquatic Mammals</i> 29: 297-318.",
+      "year": "2003",
+      "title": "Structural variation in the songs of Atlantic walruses breeding in the Canadian High Arctic",
+      "author": "Sjare, B., Stirling, I. and Spencer, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kovacs, K.M., Lemons, P., MacCracken, J. and Lydersen, C. 2015. Walruses in a Time of Climate Change. Arctic Report Card 2015. Available at: <a href=\"www.arctic.noaa.gov/reportcard\">www.arctic.noaa.gov/reportcard</a>. ",
+      "year": "2015",
+      "title": "Walruses in a Time of Climate Change. Arctic Report Card 2015",
+      "author": "Kovacs, K.M., Lemons, P., MacCracken, J. and Lydersen, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Seymour, J., Horstmann-Dehn, L. and Wooler, M.J. 2014. Proportion of higher trophic-level prey in the diet of Pacific walruses (<i>Odobenus rosmarus divergens</i>). <i>Polar Biology</i> 37: 941-952.",
+      "year": "2014",
+      "title": "Proportion of higher trophic-level prey in the diet of Pacific walruses (<i>Odobenus rosmarus divergens</i>)",
+      "author": "Seymour, J., Horstmann-Dehn, L. and Wooler, M.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sjare, B. and Stirling, I. 1996. The breeding behavior of Atlantic walruses, <i>Odobenus rosmarus rosmarus</i>, in the Canadian High Arctic. <i>Canadian Journal of Zoology</i> 74: 897-911.",
+      "year": "1996",
+      "title": "The breeding behavior of Atlantic walruses, <i>Odobenus rosmarus rosmarus</i>, in the Canadian High Arctic",
+      "author": "Sjare, B. and Stirling, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fay, F.H. and Burns, J.J. 1988. Maximal feeding depth of walruses. <i>Arctic</i> 41: 239-240.",
+      "year": "1988",
+      "title": "Maximal feeding depth of walruses",
+      "author": "Fay, F.H. and Burns, J.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Stewart, R.E.A., Kovacs, K.M. and Acquarone, M. 2014. Walrus of the North Atlantic. <i>NAMMCO Scientific Publications</i> 9: 7-12.",
+      "year": "2014",
+      "title": "Walrus of the North Atlantic",
+      "author": "Stewart, R.E.A., Kovacs, K.M. and Acquarone, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wiig, Ø, Born, E.W. and Stewart, R.E.A. 2014. Management of Atlantic walruses (<i>Odobenus rosmarus rosmarus</i>) in the arctic Atlantic. <i>NAMMCO Scientific Publications</i> 9: 315-344.",
+      "year": "2014",
+      "title": "Management of Atlantic walruses (<i>Odobenus rosmarus rosmarus</i>) in the arctic Atlantic",
+      "author": "Wiig, Ø, Born, E.W. and Stewart, R.E.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Robards, M.D., Kitaysky, A.T. and Burns, J.J. 2013. Physical and sociocultural factors affecting walrus subsistence at three villages in the northern Bering Sea: 1952-2004. <i>Polar Geography</i> 36: 65-85.",
+      "year": "2013",
+      "title": "Physical and sociocultural factors affecting walrus subsistence at three villages in the northern Bering Sea: 1952-2004.",
+      "author": "Robards, M.D., Kitaysky, A.T. and Burns, J.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Killian, H. and Stirling, I. 1978. Observations on overwintering walruses in the eastern Canadian High Arctic. <i>Journal of Mammalogy</i> 29: 197-200.",
+      "year": "1978",
+      "title": "Observations on overwintering walruses in the eastern Canadian High Arctic",
+      "author": "Killian, H. and Stirling, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Henriksen S. and Hilmo O. (eds.). 2015. Norsk rødliste for arter 2015. Artsdatabanken, Trondheim.",
+      "year": "2015",
+      "title": "Norsk rødliste for arter 2015",
+      "author": "Henriksen S. and Hilmo O. (eds.)",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wolkers, H., van Bavel, B., Ericson, I., Skoglund, E., Kovacs, K.M. and Lydersen, C. 2006. Congener-specific accumulation and patterns of chlorinated and brominated contaminants in adult male walruses from Svalbard, Norway: indications for individual-specific prey selection. <i>Science of the Total Environment</i> 370: 70-79.",
+      "year": "2006",
+      "title": "Congener-specific accumulation and patterns of chlorinated and brominated contaminants in adult male walruses from Svalbard, Norway: indications for individual-specific prey selection",
+      "author": "Wolkers, H., van Bavel, B., Ericson, I., Skoglund, E., Kovacs, K.M. and Lydersen, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hamilton, C.D., Kovacs, K.M. and Lydersen, C. 2015. Year-round haul-out behaviour of walruses (<i>Odobenus rosmarus</i>) in the northern Barents Sea. <i>Marine Ecology Progress Series</i> 519: 251-263.",
+      "year": "2015",
+      "title": "Year-round haul-out behaviour of walruses (<i>Odobenus rosmarus</i>) in the northern Barents Sea",
+      "author": "Hamilton, C.D., Kovacs, K.M. and Lydersen, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jay, C.V., Marcot, B.G. and Douglas, D.C. 2011. Projected status of the Pacific walrus (<i>Odobenus rosmarus divergens</i>) in the twenty-first century. <i>Polar Biology</i> 34: 1065–1084.",
+      "year": "2011",
+      "title": "Projected status of the Pacific walrus (<i>Odobenus rosmarus divergens</i>) in the twenty-first century.",
+      "author": "Jay, C.V., Marcot, B.G. and Douglas, D.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "McLeod, B.A., Frasier, T.R. and Lucas, Z. 2014. Assessment of the extirpated Maritimes Walrus using morphological and ancient DNA analyses. <i>PLOSONE</i> 9(6): e99569.",
+      "year": "2014",
+      "title": "Assessment of the extirpated Maritimes Walrus using morphological and ancient DNA analyses",
+      "author": "McLeod, B.A., Frasier, T.R. and Lucas, Z.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kovacs, K.M., Moore, S., Overland, J.E. and Lydersen, C. 2011. Impacts of changing sea-ice conditions on Arctic marine mammals. <i>Marine Biodiversity</i> 41: 181-194.",
+      "year": "2011",
+      "title": "Impacts of changing sea-ice conditions on Arctic marine mammals",
+      "author": "Kovacs, K.M., Moore, S., Overland, J.E. and Lydersen, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Huntington, H.P. 2009. A preliminary assessment of threats to arctic marine mammals and their conservation in the coming decades. <i>Marine Policy</i> 33: 77-82.",
+      "year": "2009",
+      "title": "A preliminary assessment of threats to arctic marine mammals and their conservation in the coming decades",
+      "author": "Huntington, H.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Udevitz, M.S., Jay, C.V., Fischbach, A.S. and Garlich-Miller, J.L. 2009. Modeling haul-out behavior of walruses in Bering Sea-ice. <i>Canadian Journal of Zoology</i> 87: 1111-1128.",
+      "year": "2009",
+      "title": "Modeling haul-out behavior of walruses in Bering Sea-ice.",
+      "author": "Udevitz, M.S., Jay, C.V., Fischbach, A.S. and Garlich-Miller, J.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Udevitz, M.S., Taylor, R.L., Garlich-Miller, J.L., Quakenbush, L.T. and Snyder, J.A. 2013. Potential population-level effects of increased haulout-related mortality of Pacific walrus calves. <i>Polar Biology</i> 36: 291-298.",
+      "year": "2013",
+      "title": "Potential population-level effects of increased haulout-related mortality of Pacific walrus calves.",
+      "author": "Udevitz, M.S., Taylor, R.L., Garlich-Miller, J.L., Quakenbush, L.T. and Snyder, J.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Boltunov, A.E., Belikov, S.E., Gorbunov, Y.A., Menis, D.T. and Semenova, V.S. 2010. The Atlantic walrus in the southeastern Barents Sea and adjacent areas: review of present-day status. WWF-Russia and Marine Mammal Council, Russia.",
+      "year": "2010",
+      "title": "The Atlantic walrus in the southeastern Barents Sea and adjacent areas: review of present-day status",
+      "author": "Boltunov, A.E., Belikov, S.E., Gorbunov, Y.A., Menis, D.T. and Semenova, V.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Robards. M. and Garlich-Miller, K. 2013. Workshop on assessing Pacific walrus population attributes from coastal haul-outs, March 19-22, 2012.  US Fish and Wildlife Service Administrative Report, R7/MMM 13-1.",
+      "year": "2013a",
+      "title": "Workshop on assessing Pacific walrus population attributes from coastal haul-outs, March 19-22, 2012.",
+      "author": "Robards. M. and Garlich-Miller, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lindqvist, C., Bachmann, L., Andersen, L.W., Born, E.W., Arnason, U., Kovacs, K.M., Lydersen, C., Abramov, A.V. and Wiig, Ø. 2009. The Laptev Sea walrus <i>Odobenus rosmarus laptevi</i>: an enigma revisited. <i>Zoologica Scripta</i> 38: 113-127.",
+      "year": "2009",
+      "title": "The Laptev Sea walrus <i>Odobenus rosmarus laptevi</i>: an enigma revisited",
+      "author": "Lindqvist, C., Bachmann, L., Andersen, L.W., Born, E.W., Arnason, U., Kovacs, K.M., Lydersen, C., Abramov, A.V. and Wiig, Ø.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fox, A.D., Fox, G.F., Liaklev, A. and Gerhardsson, N. 2010. Predation of flightless pink-footed geese (<i>Anser brachyrhynchus</i>) by Atlantic walruses (<i>Odobenus rosmarus rosmarus</i>) in southern Edgeøya, Svalbard. <i>Polar Research</i> 29: 455-457.",
+      "year": "2010",
+      "title": "Predation of flightless pink-footed geese (<i>Anser brachyrhynchus</i>) by Atlantic walruses (<i>Odobenus rosmarus rosmarus</i>) in southern Edgeøya, Svalbard",
+      "author": "Fox, A.D., Fox, G.F., Liaklev, A. and Gerhardsson, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "U.S. Fish and Wildlife Service. 2010. Pacific Walrus (<i>Odobenus rosmarus divergens</i>): Alaska Stock. Available at: <a href=\"http://www.nmfs.noaa.gov/pr/sars/species.htm#fws\">http://www.nmfs.noaa.gov/pr/sars/species.htm#fws</a>. ",
+      "year": "2010",
+      "title": "Pacific Walrus (<i>Odobenus rosmarus divergens</i>): Alaska Stock",
+      "author": "U.S. Fish and Wildlife Service",
+      "citation_short": null
+    },
+    {
+      "citation": "Skoglund, E.G., Lydersen, C., Grahl-Nielsen, O., Haug, T. and Kovacs, K.M. 2010. Fatty acid composition of the blubber and dermis of adult male Atlantic walrus (<i>Odobenus rosmarus rosmarus</i>) in Svalbard, and their potential prey. <i>Marine Biology Research</i> 6: 239-250.",
+      "year": "2010",
+      "title": "Fatty acid composition of the blubber and dermis of adult male Atlantic walrus (<i>Odobenus rosmarus rosmarus</i>) in Svalbard, and their potential prey",
+      "author": "Skoglund, E.G., Lydersen, C., Grahl-Nielsen, O., Haug, T. and Kovacs, K.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lindqvist, C., Bachmann, L., Andersen, L.W., Born, E.W., Arason, U., Kovacs, K.M., Lydesren, C., Abramov, A.V. and Wiig, Ø. 2009. The Laptev Sea walrus <i>Odobenus rosmarus laptevi</i>: an enigma revisted. <i>Zoologica Scripta</i> 38(2): 113-127.",
+      "year": "2009",
+      "title": "The Laptev Sea walrus <i>Odobenus rosmarus laptevi</i>: an enigma revisted",
+      "author": "Lindqvist, C., Bachmann, L., Andersen, L.W., Born, E.W., Arason, U., Kovacs, K.M., Lydesren, C., Abramov, A.V. and Wiig, Ø.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2025. The IUCN Red List of Threatened Species. Version 2025-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 October 2025).",
+      "year": "2025",
+      "title": "The IUCN Red List of Threatened Species. Version 2025-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2025-2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [
+    {
+      "description": {
+        "en": "Western Bering Sea"
+      },
+      "code": "1_2_2"
+    },
+    {
+      "description": {
+        "en": "North Sea"
+      },
+      "code": "4_2_6"
+    },
+    {
+      "description": {
+        "en": "Iceland Shelf"
+      },
+      "code": "4_2_3"
+    },
+    {
+      "description": {
+        "en": "Barents Sea"
+      },
+      "code": "1_1_3"
+    },
+    {
+      "description": {
+        "en": "Hudson Bay"
+      },
+      "code": "1_1_1"
+    },
+    {
+      "description": {
+        "en": "Chukchi Sea"
+      },
+      "code": "1_1_7"
+    },
+    {
+      "description": {
+        "en": "West Greenland Shelf"
+      },
+      "code": "4_2_1"
+    },
+    {
+      "description": {
+        "en": "Norwegian Sea"
+      },
+      "code": "4_2_7"
+    },
+    {
+      "description": {
+        "en": "Laptev Sea"
+      },
+      "code": "1_1_5"
+    },
+    {
+      "description": {
+        "en": "Kara Sea"
+      },
+      "code": "1_1_4"
+    },
+    {
+      "description": {
+        "en": "Eastern Bering Sea"
+      },
+      "code": "1_2_1"
+    },
+    {
+      "description": {
+        "en": "East Siberian Sea"
+      },
+      "code": "1_1_6"
+    },
+    {
+      "description": {
+        "en": "Arctic Ocean"
+      },
+      "code": "1_1_8"
+    },
+    {
+      "description": {
+        "en": "Scotian Shelf"
+      },
+      "code": "4_1_1"
+    },
+    {
+      "description": {
+        "en": "East Greenland Shelf"
+      },
+      "code": "4_2_2"
+    },
+    {
+      "description": {
+        "en": "Newfoundland-Labrador Shelf"
+      },
+      "code": "4_1_2"
+    }
+  ],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Other"
+      },
+      "code": "2_3_8"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

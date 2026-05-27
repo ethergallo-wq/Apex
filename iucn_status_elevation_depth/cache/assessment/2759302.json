@@ -1,0 +1,402 @@
+{
+  "assessment_date": "2012-05-07T01:00:00.000+01:00",
+  "year_published": "2013",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 203046,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/203046/2759302",
+  "citation": "Wilson, L.D., Townsend, J.H. & Lamar, W. 2013. Basiliscus plumifrons. The IUCN Red List of Threatened Species 2013: e.T203046A2759302. Accessed on 15 May 2026.",
+  "assessment_id": 2759302,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 203046,
+    "scientific_name": "Basiliscus plumifrons",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "CORYTOPHANIDAE",
+    "genus_name": "Basiliscus",
+    "species_name": "plumifrons",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Cope, 1876",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Plumed Basilisk",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "Green Basilisk",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 775,
+    "lower_elevation_limit": 1,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "Range includes humid lowlands on the Atlantic versant from eastern Honduras to western Panama and on the Pacific versant in southwestern Costa Rica and adjacent Panama. In Costa Rica, this species is also found in the premontane zone of Río Reventazón valley, in the central area of the country (Savage 2002). Elevational range extends from near sea level to 775 meters (Wilson and Johnson<span style=\"font-style: italic;\"></span> 2010).",
+    "population": "It is a very common species in good habitat.",
+    "habitats": "Habitats of this diurnal, semiaquatic, semiarboreal species include stream courses with considerable stands of trees still intact in Lowland Moist and Wet Forests and into Premontane Wet Forest (Savage 2002). It is an egg-laying species.",
+    "threats": "This species is threatened by a loss of primary forest habitat resulting from the the impacts of expanding human populations.",
+    "measures": "It is found in some protected areas. There is a need to monitor the harvesting of this species for the pet trade, although at present this does not appear to be a major threat (many in the trade are captive bred).",
+    "use_trade": "It has been recorded in the pet trade.",
+    "rationale": "Listed as Least Concern in view of its wide range, large overall population, and because it is not declining fast enough to qualify for a threatened category.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"
+      },
+      "code": "5_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_8"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Motivation Unknown/Unrecorded"
+      },
+      "code": "5_3_5"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Scale Unknown/Unrecorded"
+      },
+      "code": "2_3_4"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Scale Unknown/Unrecorded"
+      },
+      "code": "2_1_4"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Wilson, L.D., Townsend, J.H. & Lamar, W.",
+      "value": [
+        "William Lamar (University of Texas at Tyler / SRLI Reptile Assessment)",
+        "Josiah Townsend (University of Florida)",
+        "Larry Wilson (Centro Zamorano de Biodiversidad (formerly Miami-Dade Community University, Florida))"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Bowles, P.",
+      "value": [
+        "Philip Bowles (IUCN SSC/CI Biodiversity Assessment Unit)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Wilson, L.D., Townsend, J.H. and Johnson, J.D. (eds). 2010. <i>Conservation of Mesoamerican Amphibians and Reptiles</i>. pp. 816. Eagle Mountain Publishing, Eagle Mountain, Utah.",
+      "year": "2010",
+      "title": "Conservation of Mesoamerican Amphibians and Reptiles",
+      "author": "Wilson, L.D., Townsend, J.H. and Johnson, J.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Savage, J.M. 2002. <i>The Amphibians and Reptiles of Costa Rica: A Herpetofauna between two Continents, between two Seas</i>. University of Chicago Press, Chicago.",
+      "year": "2002",
+      "title": "The Amphibians and Reptiles of Costa Rica: A Herpetofauna between two Continents, between two Seas",
+      "author": "Savage, J.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Köhler, G. 2003. <i>Reptiles of Central America</i>. Herpeton, Germany.",
+      "year": "2003",
+      "title": "Reptiles of Central America",
+      "author": "Köhler, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2013. IUCN Red List of Threatened Species (ver. 2013.2). Available at: <a href=\"http://www.iucnredlist.org\">http://www.iucnredlist.org</a>. (Accessed: 13 November 2013).",
+      "year": "2013",
+      "title": "IUCN Red List of Threatened Species (ver. 2013.2)",
+      "author": "IUCN",
+      "citation_short": "IUCN 2013.2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

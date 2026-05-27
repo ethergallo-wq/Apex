@@ -1,0 +1,255 @@
+{
+  "assessment_date": "2012-03-01T00:00:00.000+00:00",
+  "year_published": "2013",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 202412,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/202412/18234213",
+  "citation": "NatureServe 2013. Lepisosteus platyrhincus. The IUCN Red List of Threatened Species 2013: e.T202412A18234213. Accessed on 15 May 2026.",
+  "assessment_id": 18234213,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 202412,
+    "scientific_name": "Lepisosteus platyrhincus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "ACTINOPTERYGII",
+    "order_name": "LEPISOSTEIFORMES",
+    "family_name": "LEPISOSTEIDAE",
+    "genus_name": "Lepisosteus",
+    "species_name": "platyrhincus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "DeKay, 1842",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": true,
+        "name": "Florida Gar",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "Savannah River drainage, Georgia, to Ocklockonee River drainage, Florida and Georgia; throughout peninsular Florida; common (Page and Burr 1991).",
+    "population": "This species is represented by a large number of subpopulations and locations.<br/><br/>Total adult population size is unknown but relatively large.<br/><br/>Trend over the past 10 years or three generations is uncertain but likely relatively stable or slowly declining.",
+    "habitats": "Moderate to large, quiet lowland streams and lakes having mud-sand bottom and frequently heavy submergent aquatic vegetation (Lee et al. 1980).",
+    "threats": "Localized threats may exist, but on a range-wide scale no major threats are known.",
+    "measures": "Currently, this species is of relatively low conservation concern and does not require significant additional protection or major management, monitoring, or research action.",
+    "use_trade": null,
+    "rationale": "Listed as Least Concern in view of the large extent of occurrence, large number of subpopulations, large population size, and lack of major threats. Trend over the past 10 years or three generations is uncertain but likely relatively stable, or the species may be declining but not fast enough to qualify for any of the threatened categories under Criterion A (reduction in population size).",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    },
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": true,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [],
+  "threats": [],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "NatureServe",
+      "value": [
+        " NatureServe (Red List Partner & Red List Authority)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Smith, K. & Darwall, W.R.T.",
+      "value": [
+        "Kevin Smith (IUCN)",
+        "William Darwall (IUCN)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Hammerson, G.A. & Ormes, M.",
+      "value": [
+        "Geoffrey Hammerson (NatureServe)",
+        "Margaret Ormes (NatureServe)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Lee, D.S., Gilbert, C.R., Hocutt, C.H., Jenkins, R.E., McAllister, D.E. and Stauffer, J.R., Jr. 1980. <i>Atlas of North American freshwater fishes</i>. North Carolina State Museum of Natural History, Raleigh, North Carolina.",
+      "year": "1980",
+      "title": "Atlas of North American freshwater fishes",
+      "author": "Lee, D.S., Gilbert, C.R., Hocutt, C.H., Jenkins, R.E., McAllister, D.E. and Stauffer, J.R., Jr.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nelson, J.S., Crossman, E.J., Espinosa-Perez, H., Findley, L.T., Gilbert, C.R., Lea, R.N. and Williams, J.D. 2004. <i>Common and scientific names of fishes from the United States, Canada, and Mexico</i>. American Fisheries Society, Bethesda, Maryland.",
+      "year": "2004",
+      "title": "Common and scientific names of fishes from the United States, Canada, and Mexico",
+      "author": "Nelson, J.S., Crossman, E.J., Espinosa-Perez, H., Findley, L.T., Gilbert, C.R., Lea, R.N. and Williams, J.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Page, L.M. and Burr, B.M. 2011. <i>Peterson field guide to freshwater fishes of North America north of Mexico</i>. Houghton Mifflin Harcourt, Boston, Massachusetts.",
+      "year": "2011",
+      "title": "Peterson field guide to freshwater fishes of North America north of Mexico",
+      "author": "Page, L.M. and Burr, B.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Page, L.M. and Burr, B.M. 1991. <i>A field guide to freshwater fishes: North America north of Mexico</i>. Houghton Mifflin Company, Boston, Massachusetts.",
+      "year": "1991",
+      "title": "A field guide to freshwater fishes: North America north of Mexico",
+      "author": "Page, L.M. and Burr, B.M",
+      "citation_short": ""
+    },
+    {
+      "citation": "Robins, C.R., Bailey, R.M., Bond, C.E., Brooker, J.R., Lachner, E.A., Lea, R.N. and Scott, W.B. 1991. <i>Common and scientific names of fishes from the United States and Canada</i>. American Fisheries Society.",
+      "year": "1991",
+      "title": "Common and scientific names of fishes from the United States and Canada",
+      "author": "Robins, C.R., Bailey, R.M., Bond, C.E., Brooker, J.R., Lachner, E.A., Lea, R.N. and Scott, W.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Marcy, B.C., Jr., Fletcher, D.E., Martin, F.D., Paller, M.H. and Reichert, M.J.M. 2005. <i>Fishes of the middle Savannah River basin</i>. University of Georgia Press, Athens, Georgia.",
+      "year": "2005",
+      "title": "Fishes of the middle Savannah River basin",
+      "author": "Marcy, B.C., Jr., Fletcher, D.E., Martin, F.D., Paller, M.H. and Reichert, M.J.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wiley, E.O. 1976. The phylogeny and biogeography of fossil and recent gars (Actinopterygii: Lepisosteidae). <i>Museum of Natural History, University of Kansas Miscellaneous Publications</i> 64: 1-111.",
+      "year": "1976",
+      "title": "The phylogeny and biogeography of fossil and recent gars (Actinopterygii: Lepisosteidae)",
+      "author": "Wiley, E.O.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2013. IUCN Red List of Threatened Species (ver. 2013.1). Available at: <a href=\"http://www.iucnredlist.org\">http://www.iucnredlist.org</a>. (Accessed: 12 June 2013).",
+      "year": "2013",
+      "title": "IUCN Red List of Threatened Species (ver. 2013.1)",
+      "author": "IUCN",
+      "citation_short": "IUCN 2013.1"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [],
+  "systems": [
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

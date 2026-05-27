@@ -1,0 +1,963 @@
+{
+  "assessment_date": "2019-12-22T00:00:00.000+00:00",
+  "year_published": "2020",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 56852135,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/56852135/57157952",
+  "citation": "Moore, J. 2020. Monocentris japonica. The IUCN Red List of Threatened Species 2020: e.T56852135A57157952. Accessed on 15 May 2026.",
+  "assessment_id": 57157952,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 56852135,
+    "scientific_name": "Monocentris japonica",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "ACTINOPTERYGII",
+    "order_name": "BERYCIFORMES",
+    "family_name": "MONOCENTRIDAE",
+    "genus_name": "Monocentris",
+    "species_name": "japonica",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Houttuyn, 1782)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Pineconefish",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "Japanese Pineapple Fish",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Monocentris carinata Bloch & Schneider, 1801",
+        "status": "ACCEPTED",
+        "genus_name": "Monocentris",
+        "species_name": "carinata",
+        "species_author": "Bloch & Schneider, 1801",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Gasterosteus japonicus Houttuyn, 1782",
+        "status": "ADD",
+        "genus_name": "Gasterosteus",
+        "species_name": "japonicus",
+        "species_author": "Houttuyn, 1782",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Sciaena cataphracta Thunberg,1790",
+        "status": "ACCEPTED",
+        "genus_name": "Sciaena",
+        "species_name": "cataphracta",
+        "species_author": "Thunberg,1790",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": 200,
+    "upper_depth_limit": 20,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species is distributed in the Indo-Pacific from South Africa and Madagascar, western Mascarenes&#160;to the Red Sea, the Persian/Arabian Gulf and Sri Lanka. In the Pacific, it occurs from Korea and southern Japan,&#160;the&#160;Ogasawara Islands, Taiwan, Indonesia, the Philippines, the&#160;Arafura Sea, Australia (Shark Bay, Western Australia north and east to Sydney, New South Wales) to New Caledonia, Vanuatu and northern New Zealand (Masuda&#160;<em>et al.</em>&#160;1984,&#160;<span style=\"background-color: rgb(255, 255, 255);\">Smith 1986,&#160;</span>Paulin&#160;<em>et al.</em>&#160;1989, Russell and Houston 1989, Randall 1995, Larson&#160;<em>et al.&#160;</em>2013, J. Bishop and M. Al-Husaini pers. comm. 2014, Jawad&#160;<em>et al.&#160;</em>2014, iDigBio database accessed April 2019). Adults occupy depths between 20-200 metres, and juveniles occasionally occur shallower (Paxton 1984).",
+    "population": "Population data are limited. There are about 200 museum records of this species in the iDigBio database (accessed April 2019).",
+    "habitats": "This demersal species inhabits coral and rocky reefs (Lieske and Myers 1994). The maximum total length is 30 cm (Nagamatsu 2009), though it is more commonly found to 17 cm (Paxton 1984).",
+    "threats": "There are no known major threats.",
+    "measures": "There are no species-specific conservation measures.",
+    "use_trade": "This species is not targeted, but has been taken as bycatch in bottom trawl fisheries in parts of its range, including the East China Sea (Nagamatsu 2009, Kim <em>et al. </em>2010) and Western Australia (Newman <em>et al. </em>2000). It is also a very minor component of trade in saltwater aquaria (J. Moore pers. comm. 2019).",
+    "rationale": "This widely distributed, reef-associated species has no known major threats; therefore, it is listed as Least Concern.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [],
+  "conservation_actions": [],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southeast"
+      },
+      "code": "47"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - western central"
+      },
+      "code": "71"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - southwest"
+      },
+      "code": "81"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - northwest"
+      },
+      "code": "61"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - western"
+      },
+      "code": "51"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - eastern"
+      },
+      "code": "57"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Coral Reef"
+      },
+      "code": "9_8"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Rock and Rocky Reefs"
+      },
+      "code": "9_2"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Taiwan, Province of China"
+      },
+      "code": "TW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Macao"
+      },
+      "code": "MO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Republic of"
+      },
+      "code": "KR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Democratic People's Republic of"
+      },
+      "code": "KP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hong Kong"
+      },
+      "code": "HK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique Channel Is."
+      },
+      "code": "MCI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Yemen"
+      },
+      "code": "YE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oman"
+      },
+      "code": "OM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Seychelles"
+      },
+      "code": "SC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Réunion"
+      },
+      "code": "RE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mayotte"
+      },
+      "code": "YT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rodrigues"
+      },
+      "code": "ROD-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritius (main island)"
+      },
+      "code": "MAU-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritius"
+      },
+      "code": "MU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chagos Archipelago"
+      },
+      "code": "CGS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "British Indian Ocean Territory"
+      },
+      "code": "IO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Vanuatu"
+      },
+      "code": "VU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Southern Territories"
+      },
+      "code": "TF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Solomon Islands"
+      },
+      "code": "SB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Papua New Guinea"
+      },
+      "code": "PG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Palau"
+      },
+      "code": "PW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norfolk Island"
+      },
+      "code": "NF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "NZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Caledonia"
+      },
+      "code": "NC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Micronesia, Federated States of "
+      },
+      "code": "FM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Disputed Territory"
+      },
+      "code": "DT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Paracel Is."
+      },
+      "code": "SCS-PI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maldives"
+      },
+      "code": "MV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Philippines"
+      },
+      "code": "PH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Timor-Leste"
+      },
+      "code": "TL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Djibouti"
+      },
+      "code": "DJ"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Moore, J.",
+      "value": [
+        "Jon  Moore (Florida Atlantic University)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Linardich, C.",
+      "value": [
+        "Christi Linardich (Marine Biodiversity Unit)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Masuda, H., Amaoka, K., Araga, C., Uyeno, T. and Yoshino, T. 1984. <i>The fishes of the Japanese Archipelago</i>. Tokai University Press, Tokyo, Japan.",
+      "year": "1984",
+      "title": "The fishes of the Japanese Archipelago",
+      "author": "Masuda, H., Amaoka, K., Araga, C., Uyeno, T. and Yoshino, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Randall, J.E. 1995. <i>Coastal fishes of Oman</i>. University of Hawaii Press, Honolulu, Hawaii.",
+      "year": "1995",
+      "title": "Coastal fishes of Oman",
+      "author": "Randall, J.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lieske, E. and Myers, R. 1994. <i>Collins Pocket Guide. Coral reef fishes. Indo-Pacific and Caribbean including the Red Sea</i>. Harper-Collins, London, U.K.",
+      "year": "1994",
+      "title": "Collins Pocket Guide. Coral reef fishes. Indo-Pacific and Caribbean including the Red Sea",
+      "author": "Lieske, E. and Myers, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Paulin, C., Stewart, A., Roberts, C. and McMillan, P. 1989. <i>New Zealand fish: a complete guide</i>. Te Papa Press.",
+      "year": "1989",
+      "title": "New Zealand fish: a complete guide",
+      "author": "Paulin, C., Stewart, A., Roberts, C. and McMillan, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Russell, B.C. and Houston, W. 1989. Offshore fishes of the Arafura Sea. <i>Beagle</i> 6(1): 69-84.",
+      "year": "1989",
+      "title": "Offshore fishes of the Arafura Sea",
+      "author": "Russell, B.C. and Houston, W",
+      "citation_short": null
+    },
+    {
+      "citation": "Larson, H.K., Williams, R.S., and Hammer, H.P. 2013. An annotated checklist of the fishes of the Northern Territory, Australia. <i>Zootaxa</i> 3696(1): 1-293.",
+      "year": "2013",
+      "title": "An annotated checklist of the fishes of the Northern Territory, Australia",
+      "author": "Larson, H.K., Williams, R.S., and Hammer, H.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Paxton, R.J. 1984. Monocentridae. In: W. Fischer and G. Bianchi (eds), <i>FAO species identification sheets for fishery purposes. Western Indian Ocean (Fishing Area 51)</i>, Food and Agriculture Organization of the United Nations (FAO), Rome.",
+      "year": "1984",
+      "title": "Monocentridae",
+      "author": "Paxton, R.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 19 March 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-1"
+    },
+    {
+      "citation": "Kim, M.-S., Kim, D.-S., Kim, M.-S. and Lee, J.-G. 2010. A variation of fishes catched by the bottom trawl in the boundary zone between Busan and Tsushima. <i>Jour. Fish. Mar. Sci. Edu.</i> 22(3): 341 - 353.",
+      "year": "2010",
+      "title": "A variation of fishes catched by the bottom trawl in the boundary zone between Busan and Tsushima",
+      "author": "Kim, M.-S., Kim, D.-S., Kim, M.-S. and Lee, J.-G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jawad, L.A., Al-Mukhtar, M.A., Al-Hilali, H.I., Al-Faisal, A.J. and Al-Derawi, A.M. 2014. Occurrence of pineconefish <i>Monocentri japonica</i> (Teleostei: Monocentridae) in the marine waters of Iraq. <i>Marine Biodiversity Records</i>.",
+      "year": "2014",
+      "title": "Occurrence of pineconefish <i>Monocentri japonica</i> (Teleostei: Monocentridae) in the marine waters of Iraq",
+      "author": "Jawad, L.A., Al-Mukhtar, M.A., Al-Hilali, H.I., Al-Faisal, A.J. and Al-Derawi, A.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nagamatsu, K. 2009. By-catch discards from a bottom trawl in the East China Sea. <i>Journal of National Fisheries University</i> 58(1): 73 - 82.",
+      "year": "2009",
+      "title": "By-catch discards from a bottom trawl in the East China Sea",
+      "author": "Nagamatsu, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Newman, S.J., Evans, D. and Ashworth, R. 2000. Assessment of the outer-shelf fishery resources off the Pilbara coast of tropical Western Australia. Project No. 97/138.",
+      "year": "2000",
+      "title": "Assessment of the outer-shelf fishery resources off the Pilbara coast of tropical Western Australia. Project No. 97/138",
+      "author": "Newman, S.J., Evans, D. and Ashworth, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Smith, M.M. 1986. Family No. 128: MONOCENTRIDAE. In: Smith, M.M. and Heemstra, P.C. (eds), <i>Smiths' Sea Fishes</i>, pp. 413. Spring-Verlag Berlin Heidelberg New York London Paris Tokyo, Grahamstown.",
+      "year": "1986",
+      "title": "Family No. 128: MONOCENTRIDAE",
+      "author": "Smith, M.M.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

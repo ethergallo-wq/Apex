@@ -1,0 +1,1966 @@
+{
+  "assessment_date": "2020-07-15T01:00:00.000+01:00",
+  "year_published": "2020",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 39375,
+  "criteria": "A2bcd",
+  "url": "https://www.iucnredlist.org/species/39375/58303674",
+  "citation": "Simpfendorfer, C., Yuneni, R.R., Tanay, D., Seyha, L., Haque, A.B., Fahmi, Bin Ali, A.,  , D., Bineesh, K.K., Gautama, D.A., Maung, A., Sianipar, A., Utzurrum, J.A.T. & Vo, V.Q. 2020. Carcharhinus melanopterus. The IUCN Red List of Threatened Species 2020: e.T39375A58303674. Accessed on 15 May 2026.",
+  "assessment_id": 58303674,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 39375,
+    "scientific_name": "Carcharhinus melanopterus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "CHONDRICHTHYES",
+    "order_name": "CARCHARHINIFORMES",
+    "family_name": "CARCHARHINIDAE",
+    "genus_name": "Carcharhinus",
+    "species_name": "melanopterus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Quoy &amp; Gaimard, 1824)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Shark Specialist Group (sharks and rays)",
+        "url": "https://www.iucnssg.org",
+        "description": "Chair: Rima Jabado (email: rimajabado@hotmail.com)\nRed List Authority Coordinator: Cassie Rigby (email: crigby@westnet.com.au)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": true,
+        "name": "Blacktip Reef Shark",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Carcharias melanopterus Quoy & Gaimard, 1824",
+        "status": "ACCEPTED",
+        "genus_name": "Carcharias",
+        "species_name": "melanopterus",
+        "species_author": "Quoy & Gaimard, 1824",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Squalus  carcharias minor Forsskål, 1775",
+        "status": "ACCEPTED",
+        "genus_name": "Squalus ",
+        "species_name": "carcharias minor",
+        "species_author": "Forsskål, 1775\t",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Squalus  commersonii\t Blainville, 1816",
+        "status": "ACCEPTED",
+        "genus_name": "Squalus ",
+        "species_name": "commersonii\t",
+        "species_author": "Blainville, 1816\t",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Carcharias  commersoni (Blainville, 1816)",
+        "status": "ACCEPTED",
+        "genus_name": "Carcharias ",
+        "species_name": "commersoni",
+        "species_author": "(Blainville, 1816)\t",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Squalus  ustus Duméril, 1824",
+        "status": "ACCEPTED",
+        "genus_name": "Squalus ",
+        "species_name": "ustus",
+        "species_author": "Duméril, 1824",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Carcharias  playfairii Günther, 1870",
+        "status": "ACCEPTED",
+        "genus_name": "Carcharias ",
+        "species_name": "playfairii",
+        "species_author": "Günther, 1870",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Hypoprion  playfairii (Günther, 1870)",
+        "status": "ACCEPTED",
+        "genus_name": "Hypoprion ",
+        "species_name": "playfairii",
+        "species_author": "(Günther, 1870)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Carcharias  elegans Ehrenberg, 1871",
+        "status": "ACCEPTED",
+        "genus_name": "Carcharias ",
+        "species_name": "elegans",
+        "species_author": "Ehrenberg, 1871\t",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Carcharias  marianensis\t Engelhardt, 1912",
+        "status": "ACCEPTED",
+        "genus_name": "Carcharias ",
+        "species_name": "marianensis\t",
+        "species_author": "Engelhardt, 1912",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": 75,
+    "upper_depth_limit": 0,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": "14.5",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Not Applicable"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Unknown"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "The Blacktip Reef Shark&#160;is a common tropical Indo-West Pacific and central Pacific species occurring from Africa to Central Pacific, including most of the islands with coral reefs (Compagno 1984, Last and Stevens 2009). It is also known from reefs in the Eastern Pacific (Lopez-Garro <em>et al</em>. 2012). This shark has been reported form the Mediterranean Sea (Serena <em>et al</em>. in press), probably entering via the Suez Canal from the Red Sea, and has been recorded as far west as Tunisia (Bradai <em>et al.</em> 2012).",
+    "population": "Genetic studies support the presence of multiple subpopulations throughout its range, with structure detected between and within island groups in the Pacific (Vingnaud <em>et al</em>. 2014). How many subpopulations exist is currently unknown because of limited sampling of most locations.<br/><br/>The Blacktip Reef Shark in common in tropical and subtropical waters but there is little data available on population status and trends. Severe localized depletions in reef sharks, that include the Blacktip Reef Shark, have been recorded from the Indian Ocean (Graham <em>et al</em>. 2010). <span class=\"apple-converted-space\">Based on diving survey data, Graham&#160;<em>et al</em>. (2010) showed that the number of reef sharks in the Chagos Archipelago (Indian Ocean) declined from a mean of 4.2 sharks per dive in 1970 to 0.4 in 2006, which represents a population reduction of 94% over three generations (44 years). Species-specific data were available for the period between 1996 and 2006 and showed a decline in the Blacktip Reef Shark to a level where it was rarely encountered in 2006 (Graham&#160;<em>et al</em>. 2010). Towed-diver surveys performed in the&#160;Western Central Pacific&#160;between 2004 and 2010&#160;showed that reef shark densities are higher at remote locations with very limited or no human presence&#160;(Nadon&#160;<em>et al</em>. 2012). Based on a modelling approach, they estimated that reef sharks (including the Blacktip Reef Shark) in this region&#160;<span class=\"apple-converted-space\">have declined to 3–10% of baseline levels, with baseline considered absence of humans (Nadon&#160;<em>et al.</em><span class=\"apple-converted-space\"> 2012)<span class=\"apple-converted-space\">. Approximately 6% of all the sharks recorded during towed surveys (4,620 sharks) were the Blacktip Reef Shark, which was not present at all sites.&#160;<span class=\"apple-converted-space\">Based on this information it is suspected that reef shark populations, including the Blacktip Reef Shark, have been reduced in the Western Central Pacific, particularly in islands such as the Hawaiian Main Island, Mariana Islands, and Samoa that have high human population densities (Chin <em>et al.</em> 2011, <span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\">Nadon <em>et al.</em><span class=\"apple-converted-space\"> 2012)<span class=\"apple-converted-space\">. Given the high level of population structuring in this species, localised studies are unlikely to provide a good indication of overall population trend. In many parts of south and east Asia (e.g. Sri Lanka, Myanmar) this is the only reef shark species that remains, following the loss of species such as the Grey Reef Shark and Whitetip Reef Shark, suggesting that population declines are not as severe as reported for these other species.<span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><br/><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><br/><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\"><span class=\"apple-converted-space\">To account for differences in the trend of Blacktip Reef Shark between locations spatial variation in an index of population abundance was constructed using data from the Global Finprint project (MacNeil <em>et al</em>. 2020)&#160; that sampled in nations containing 88.6% of the coral reefs within the species’ historic range. This is the largest and most recent data set available to assess the status of this species. The analysis estimate depletion by reef by comparing local abundance indices to a level inferred to represent no depletion (median of positive values) (see Supplementary Information). Reef level depletion estimates were aggregated by jurisdiction and weighted by jurisdictional coral reef area (relative to total global coral reef area) to produce an estimate of global depletion. The coral reef area weighted population depletion of Blacktip Reef Sharks was estimated as 51.2% (standard error 43.3–59.6%) and assumed to have occurred over the past three generation lengths (44 years) (see Supplementary Information). The error estimates include both the IUCN Red List Vulnerable and Endangered categories. However, the ability of the Global Finprint data to estimate depletion for this species is limited by complex ecological patterns not accounted for in the methodology. As a result it over-estimates the level of decline at some reefs where population levels are thought to be healthy. As such, it is estimated that the Blacktip Reef Shark population has undergone a population reduction of 30–49% over the past three generation lengths (44 years).</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>",
+    "habitats": "The Blacktip Reef Shark is a coastal species that is common in shallow water on and near coral reefs, where it occurs from the surface to depths of at least 75 m. It is often associated with coral reefs, but in many locations the young  use mangrove systems early in life if they are available (Chin <em>et al.</em> 2013a). It reaches a maximum size of 180 cm total length (TL) and maturity is reached between 90 and 134 cm TL (Compagno 1984, Stevens 1984, Last and Stevens 2009, Chin <em>et al.</em> 2013b).&#160;Reproduction is viviparous with a yolk-sac placenta and small litters of 2–4 pups (Compagno 1984, Lyle 1987, Last and Stevens 2009), a biennial reproductive cycle (Stevens 1984) and a size-at-birth of 30–50 cm TL (Mourier&#160;<em>et al</em>. 2013). On the Great Barrier Reef males mature at 4.2 years and females at 8.5 years. Longevity of field sampled individuals was estimated as 15 years, but this is known to be an underestimation due to limitations in age estimation methods, and captive animals have lived for over 25 years (Chin<em> et al</em>. 2013b); using these age data the generation length is estimated to be between 12–17 years (average of 14.5 years).",
+    "threats": "The Blacktip Reef Shark is caught throughout its range in industrial and small scale longline, gillnet, trawl and handline fisheries that occur in continental shelf waters and those around oceanic islands and reefs, especially those around coral reefs. Most are taken as incidental catch in general reef fisheries targeting teleost fishes. For example, in the waters of the Great Barrier Reef it makes up 1.1% of shark catch in inshore gillnets (Harry <em>et al</em>. 2011) and 5% of sharks caught in the line fishery for reef teleosts (Heupel <em>et al. </em>2009). In Indonesia it makes up 0.3% of the elasmobranch catch landed at the port of Muncar (Winter <em>et al</em>. In press).&#160;While in Fiji, Blacktip Reef Shark makes up more than half of the sharks landed in small scale artisanal coastal fisheries (Glaus <em>et al.</em> 2015). The species is also taken in small amounts by recreational fishers in some countries. There is limited species-specific catch trend data available for most countries, however, throughout much of the species' range there are intensive coastal fisheries that are likely to exert significant pressure on the stocks. In many parts of east Africa, and south and east Asian, there are large amounts of fishing effort targeted at carcharhinid sharks in continental shelf waters, and the effort continues to increase. For example, in the waters of Indonesia effort by small-scale fisheries has tripled when taking population into account (Ramenzoni 2017); and in Myanmar the International Labour Organisation (2015) estimated the number of vessels participating in the small scale inshore fishery to be about 26,000 in 2013, and the number of locally operated larger offshore vessels numbered 2,846 in 2013, having increased nearly 30% since 2009. Only in locations where fisheries are strictly regulated (e.g. Australia) (Espinoza <em>et al</em>. 2014), where human population densities are low (Nadon <em>et al</em>. 2012), or where dive-based tourism supports protection (Sutcliffe and Barnes 2018) are there low levels of threat that enable this species to remain common.<br/><br/>This species is a common display species in public and private aquaria. It is exported live from countries such as Australia and Indonesia to aquaria worldwide.<br/><br/>The reliance of this species on coral reefs makes it susceptible to declines in habitat quality. Global climate change has already resulted in large-scale coral bleaching events with increasing frequency causing worldwide reef degradation since 1997. Almost all warm-water coral reefs are projected to suffer significant losses of area and local extinctions, even if global warming is limited to 1.5 ºC (IPCC Report, 2019). Destructive fishing practices in some nations (e.g. dynamite fishing) (McManus 1997) and declining water quality (MacNeil <em>et al</em>. 2019) have also led to the decline in coral reef habitat.",
+    "measures": "There are currently no species-specific conservation or management plans in place. There are many general management measures that contribute to conserving this species in many range states. Marine Protected Areas (MPAs) that incorporate &gt;20 km of coral reef can provide significant protections because of the limited movements observed in this species (Dwyer <em>et al</em>. 2020). MPAs are common in coral reef areas of many range states throughout its range, but only those that are sufficiently large and well enforced provide refuge (MacNeil <em>et al.</em> 2020). Shark sanctuaries, where targeted shark fishing is banned within a nations entire EEZs, provide benefits to reef sharks (MacNeil <em>et al</em>. 2020).&#160;On the Queensland east coast (including the Great Barrier Reef), shark catch (including the Blacktip Reef Shark) is managed through a limited entry license fishery with a maximum annual total allowable catch of 600 tonnes (whole weight, for all shark species combined). Further research is needed on population size and trend, and life history, and catch rates should be monitored.",
+    "use_trade": "The flesh is used fresh and dry salted for human consumption (Last and Stevens 2009). Fields <em>et al</em>. (2018) reported that this species made up 0.04% of fin trimmings sold in Hong Kong. It may also be retained for its liver oil and skin. This species is often displayed in public aquaria and is exported live from countries such as Australia and Indonesia to facilities worldwide.",
+    "rationale": "The Blacktip Reef Shark (<em>Carcharhinus melanopterus</em>) is a medium-sized (to at least 180 cm TL) coastal shark that occurs in coral reef and associated habitats in tropical waters of the Indian and Pacific Oceans from the surface down to a depth of at least 75 m. The species has relatively low biological productivity. It is caught as target and bycatch in industrial and small-scale fisheries through much of its range in gears including longline, gillnet, handline and trawls, and is often retained for its fins, flesh, skin, teeth, and liver. This species is also threatened by declines in the habitat quality of coral reefs due to climate change, destructive fishing practices, and poor water quality. Declines in population abundance have been reported in some parts of its range, while in others it appears to remain at high abundance. Based on baited remote underwater video station data from 254 reefs in 40 jurisdictions throughout its range the estimated global population reduction is 51.2% over three generation lengths (44 years), but this is likely an over-estimate because of complex spatial and ecological factors that affect the abundance of this species. Therefore, the Blacktip Reef Shark is estimated to have undergone a population reduction of 30–49% over the past three generation lengths (44 years) due to levels of exploitation  and declines in habitat quality, and it is assessed as Vulnerable A2bcd.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    }
+  ],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Origin Uncertain",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mediterranean and Black Sea"
+      },
+      "code": "37"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - northwest"
+      },
+      "code": "61"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - western"
+      },
+      "code": "51"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - eastern"
+      },
+      "code": "57"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - western central"
+      },
+      "code": "71"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - eastern central"
+      },
+      "code": "77"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Coral Reef"
+      },
+      "code": "9_8"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Seasonal Occurrence Unknown",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Seagrass (Submerged)"
+      },
+      "code": "9_9"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Sandy Shoreline and/or Beaches, Sand Bars, Spits, Etc"
+      },
+      "code": "12_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Seasonal Occurrence Unknown",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Mangrove Submerged Roots"
+      },
+      "code": "12_7"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Marshall Islands"
+      },
+      "code": "MH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northern Territory"
+      },
+      "code": "NTA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Caledonia"
+      },
+      "code": "NC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Solomon Islands"
+      },
+      "code": "SB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Philippines"
+      },
+      "code": "PH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritius"
+      },
+      "code": "MU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Djibouti"
+      },
+      "code": "DJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Seychelles"
+      },
+      "code": "SC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maldives"
+      },
+      "code": "MV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cocos I."
+      },
+      "code": "CPI-CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Queensland"
+      },
+      "code": "QLD-QU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Australia"
+      },
+      "code": "WAU-WA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hong Kong"
+      },
+      "code": "HK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oman"
+      },
+      "code": "OM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kiribati"
+      },
+      "code": "KI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Palau"
+      },
+      "code": "PW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spratly Is."
+      },
+      "code": "SCS-SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Qatar"
+      },
+      "code": "QA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Singapore"
+      },
+      "code": "SG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Micronesia, Federated States of "
+      },
+      "code": "FM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Niue"
+      },
+      "code": "NU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tuvalu"
+      },
+      "code": "TV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Timor-Leste"
+      },
+      "code": "TL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Wallis and Futuna"
+      },
+      "code": "WF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Comoros"
+      },
+      "code": "KM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Vanuatu"
+      },
+      "code": "VU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Polynesia"
+      },
+      "code": "PF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guam"
+      },
+      "code": "GU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northern Mariana Islands"
+      },
+      "code": "MP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Yemen"
+      },
+      "code": "YE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Fiji"
+      },
+      "code": "FJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tokelau"
+      },
+      "code": "TK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Disputed Territory"
+      },
+      "code": "DT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Taiwan, Province of China"
+      },
+      "code": "TW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tonga"
+      },
+      "code": "TO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Papua New Guinea"
+      },
+      "code": "PG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cook Islands"
+      },
+      "code": "CK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Arab Emirates"
+      },
+      "code": "AE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nauru"
+      },
+      "code": "NR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cocos (Keeling) Islands"
+      },
+      "code": "CC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Samoa"
+      },
+      "code": "WS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States Minor Outlying Islands"
+      },
+      "code": "UM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iraq"
+      },
+      "code": "IQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saudi Arabia"
+      },
+      "code": "SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "British Indian Ocean Territory"
+      },
+      "code": "IO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "American Samoa"
+      },
+      "code": "AS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Christmas Island"
+      },
+      "code": "CX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Réunion"
+      },
+      "code": "RE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brunei Darussalam"
+      },
+      "code": "BN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mayotte"
+      },
+      "code": "YT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Paracel Is."
+      },
+      "code": "SCS-PI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Scale Unknown/Unrecorded"
+      },
+      "code": "2_4_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other impacts"
+      },
+      "code": "11_5"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Simpfendorfer, C., Yuneni, R.R., Tanay, D., Seyha, L., Haque, A.B., Fahmi, Bin Ali, A.,  , D., Bineesh, K.K., Gautama, D.A., Maung, A., Sianipar, A., Utzurrum, J.A.T. & Vo, V.Q.",
+      "value": [
+        "Van Quang Vo (IUCN SSC Shark Specalist Group)",
+        "Ly Seyha",
+        "Alifa B. Haque",
+        "Ahmad Bin Ali (IUCN SSC Shark Specialist Group)",
+        "Colin Simpfendorfer (James Cook University)",
+        " Fahmi (Research Centre for Oceanography, Indonesian Institute of Sciences)",
+        "K.K. Bineesh",
+        "Dharmadi  ",
+        "Ranny Yuneni (WWF-Indonesia)",
+        "Jean Utzurrum (Silliman University, Philippines)",
+        "Abraham Sianipar (Conservation International)",
+        "Dennis Tanay",
+        "Dwi Ariyoga Gautama",
+        "Antt Maung"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Dulvy, N.K. & Carlson, J.",
+      "value": [
+        "Nicholas Dulvy (Simon Fraser University, Canada / IUCN SSC Shark Specialist Group)",
+        "John Carlson (NOAA)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Chin, A., Heupel, M.R., Meekan, G, Harvey, S, Heithaus, R, Chapman, D & MacNeil, A.",
+      "value": [
+        "Michelle Heupel (James Cook University, Queensland, Australia)",
+        "Aaron MacNeil (Dept. of Biology, Dalhousie University, Halifax, Nova Scotia, Canada)",
+        "Euan Harvey (Curtin University, Australia)",
+        "Mark Meekan",
+        "Michael Heithaus",
+        "Andrew Chin (James Cook University, Queensland, Australia)",
+        "Demian Chapman"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Rigby, C.L. & Dulvy, N.K.",
+      "value": [
+        "Cassandra Rigby (James Cook University, Queensland, Australia)",
+        "Nicholas Dulvy (Simon Fraser University, Canada / IUCN SSC Shark Specialist Group)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Last, P.R. and Stevens, J.D. 2009. <i>Sharks and Rays of Australia. Second Edition</i>. CSIRO Publishing, Collingwood, Australia.",
+      "year": "2009",
+      "title": "Sharks and Rays of Australia. Second Edition",
+      "author": "Last, P.R. and Stevens, J.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Compagno, L.J.V. 1984. Sharks of the World. An annotated and illustrated catalogue of shark species to date. Part II (Carcharhiniformes). FAO Fisheries Synopsis, FAO, Rome.",
+      "year": "1984",
+      "title": "Sharks of the World. An annotated and illustrated catalogue of shark species to date. Part II (Carcharhiniformes)",
+      "author": "Compagno, L.J.V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Harry, A.V., Tobin, A.J., Simpfendorfer, C.A., Welch, D.J., Mapleston, A., White, J., Williams, A.J., and Stapley, J. 2011. Evaluating catch and mitigating risk in a multispecies, tropical, inshore shark fishery within the Great Barrier Reef World Heritage Area. <i>Marine and Freshwater Research</i> 62: 710-721.",
+      "year": "2011",
+      "title": "Evaluating catch and mitigating risk in a multispecies, tropical, inshore shark fishery within the Great Barrier Reef World Heritage Area",
+      "author": "Harry, A.V., Tobin, A.J., Simpfendorfer, C.A., Welch, D.J., Mapleston, A., White, J., Williams, A.J., and Stapley, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Stevens, J.D. 1984. Life history and ecology of sharks at Aldabra Atoll, Indian Ocean. <i>Proceedings of the Royal Society, London B</i> 222: 79–106.",
+      "year": "1984",
+      "title": "Life history and ecology of sharks at Aldabra Atoll, Indian Ocean",
+      "author": "Stevens, J.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lyle, J.M. 1987. Observations of the biology of <i>Carcharhinus acutus</i> (Whitley), <i>C. melanopterus</i> (Quoy and Gaimard) and <i>C. fitzroyensis</i> (Whitley) from Northern Australia. <i>Australian Journal of Marine and Freshwater Research</i> 38: 701–710.",
+      "year": "1987",
+      "title": "Observations of the biology of <i>Carcharhinus acutus</i> (Whitley), <i>C. melanopterus</i> (Quoy and Gaimard) and <i>C. fitzroyensis</i> (Whitley) from Northern Australia",
+      "author": "Lyle, J.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bradai, M.N., Saidi, B., and Enajjar, S. 2012. Elasmobranchs of the Mediterranean and Black sea: status, ecology and biology, Bibliographic analysis .  Studies and Reviews. FAO, Rome.",
+      "year": "2012",
+      "title": "Elasmobranchs of the Mediterranean and Black sea: status, ecology and biology, Bibliographic analysis ",
+      "author": "Bradai, M.N., Saidi, B., and Enajjar, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Nadon, M.O., Baum, J.K., Williams, I.D., Mcpherson, J.M., Zgliczynski, B.J., Richards, B.L., Schroeder, R.E. and Brainard, R.E. 2012. Re-creating missing population baselines for Pacific reef sharks. <i>Conservation Biology</i> 26(3): 493-503.",
+      "year": "2012",
+      "title": "Re-creating missing population baselines for Pacific reef sharks",
+      "author": "Nadon, M.O., Baum, J.K., Williams, I.D., Mcpherson, J.M., Zgliczynski, B.J., Richards, B.L., Schroeder, R.E. and Brainard, R.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Espinoza, M., Cappo, M., Heupel, M.R., Tobin, A.J. and Simpfendorfer, C.A. 2014. Quantifying shark distribution patterns and species-habitat associations: implications of Marine Park Zoning. <i>PLOS ONE</i> 9(9): e106885.",
+      "year": "2014",
+      "title": "Quantifying shark distribution patterns and species-habitat associations: implications of Marine Park Zoning",
+      "author": "Espinoza, M., Cappo, M., Heupel, M.R., Tobin, A.J. and Simpfendorfer, C.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Graham, N.A.J., Spalding, M.D. and Sheppard, C.R.C. 2010. Reef shark declines in remote atolls highlight the need for multi-faceted conservation action. <i>Aquatic Conservation: Marine and Freshwater Ecosystems</i> 20: 543-548.",
+      "year": "2010",
+      "title": "Reef shark declines in remote atolls highlight the need for multi-faceted conservation action",
+      "author": "Graham, N.A.J., Spalding, M.D. and Sheppard, C.R.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Heupel, M.R., Williams, A., Welch, D., Ballagh, A., Mapstone, B., Carlos, G., Davies, C. and Simpfendorfer, C.A. 2009. Effects of fishing on tropical reef associated shark populations on the Great Barrier Reef. <i>Fisheries Research</i> 95: 350-361.",
+      "year": "2009",
+      "title": "Effects of fishing on tropical reef associated shark populations on the Great Barrier Reef",
+      "author": "Heupel, M.R., Williams, A., Welch, D., Ballagh, A., Mapstone, B., Carlos, G., Davies, C. and Simpfendorfer, C.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Glaus, K.B.J., Adrian-Kalchhauser, I., Burkhardt-Holm, P., White, W.T. and Brunnschweiler, J.M. 2015. Characteristics of the shark fisheries of Fiji. <i>Scientific Reports</i> 5: 17556, doi: 10.1038/srep17556.",
+      "year": "2015",
+      "title": "Characteristics of the shark fisheries of Fiji",
+      "author": "Glaus, K.B.J., Adrian-Kalchhauser, I., Burkhardt-Holm, P., White, W.T. and Brunnschweiler, J.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fields, A.T., Fischer, G.A., Shea, S.K., Zhang, H., Abercrombie, D.L., Feldheim, K.A., Babcock, E.A. and Chapman, D.D. 2018. Species composition of the international shark fin trade assessed through a retail‐market survey in Hong Kong. <i>Conservation Biology</i> 32(2): 376–389.",
+      "year": "2018",
+      "title": "Species composition of the international shark fin trade assessed through a retail‐market survey in Hong Kong",
+      "author": "Fields, A.T., Fischer, G.A., Shea, S.K., Zhang, H., Abercrombie, D.L., Feldheim, K.A., Babcock, E.A. and Chapman, D.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 December 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-3"
+    },
+    {
+      "citation": "Chin, A., Heupel, M.R., Simpfendorfer, C.A. and Tobin, A.J. 2013. Ontogenetic movements of juvenile blacktip reef sharks: evidence of dispersal and connectivity between coastal habitats and coral reefs. <i>Aquatic Conservation: Marine and Freshwater Ecosystems</i> 23: 468–474.",
+      "year": "2013",
+      "title": "Ontogenetic movements of juvenile blacktip reef sharks: evidence of dispersal and connectivity between coastal habitats and coral reefs.",
+      "author": "Chin, A., Heupel, M.R., Simpfendorfer, C.A. and Tobin, A.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chin, A., Simpfendorfer, C., Tobin, A. and Heupel, M. 2013. Validated age, growth and reproductive biology of <i>Carcharhinus melanopterus</i>, a widely distributed and exploited reef shark. <i>Marine and Freshwater Research</i> 64: 965–975.",
+      "year": "2013",
+      "title": "Validated age, growth and reproductive biology of <i>Carcharhinus melanopterus</i>, a widely distributed and exploited reef shark",
+      "author": "Chin, A., Simpfendorfer, C., Tobin, A. and Heupel, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chin, A., Tobin, A. J., Heupel, M. R. & Simpfendorfer, C. A. 2013. Population structure and residency patterns of the blacktip reef shark <i>Carcharhinus melanopterus</i> in turbid coastal environments. <i>Journal of Fish Biology</i> 82(4): 1192-1210.",
+      "year": "2013",
+      "title": "Population structure and residency patterns of the blacktip reef shark <i>Carcharhinus melanopterus</i> in turbid coastal environments",
+      "author": "Chin, A., Tobin, A. J., Heupel, M. R. & Simpfendorfer, C. A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dwyer, R.G., Krueck, N.C., Udyawer, V., Heupel, M.R., Chapman, D., Pratt, H.L., Garla, R., Simpfendorfer, C.A. 2020. Individual and population benefits of marine reserves for reef sharks. <i>Current Biology</i> 30: 480–489.",
+      "year": "2020",
+      "title": "Individual and population benefits of marine reserves for reef sharks",
+      "author": "Dwyer, R.G., Krueck, N.C., Udyawer, V., Heupel, M.R., Chapman, D., Pratt, H.L., Garla, R., Simpfendorfer, C.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "International Labour Organization. 2015. Value chain analysis and competitiveness strategy: marine capture fisheries: Myeik and Yangon, Myanmar.  International Labour Organization, ILO Liaison Officer for Myanmar. Yangon.",
+      "year": "2015",
+      "title": "Value chain analysis and competitiveness strategy: marine capture fisheries: Myeik and Yangon, Myanmar",
+      "author": "International Labour Organization",
+      "citation_short": ""
+    },
+    {
+      "citation": "IPCC. 2019. IPCC Special Report on the Ocean and Cryosphere in a Changing Climate. In: Pörtner, H.-O., Roberts, D.C., Masson-Delmotte, V., Zhai, P., Tignor, M., Poloczanska, E., Mintenbeck, K., Alegría, A., Nicolai, M., Okem, A., Petzold, J., Rama, B. and Weyer N.M. (eds). Intergovernmental Panel on Climate Change, Geneva, Switzerland.",
+      "year": "2019",
+      "title": "IPCC Special Report on the Ocean and Cryosphere in a Changing Climate",
+      "author": "IPCC",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lopez-Garro, A., Zanella, I., Golfin-Duarte, G., Perez-Montero, M. 2012. First record of the blacktip reef shark <i>Carcharhinus melanopterus</i> (Carcharhiniformes: Carcharhinidae) from the Tropical Eastern Pacific. <i>Revista De Biologia Tropical</i> 60: 275–278.",
+      "year": "2012",
+      "title": "First record of the blacktip reef shark <i>Carcharhinus melanopterus</i> (Carcharhiniformes: Carcharhinidae) from the Tropical Eastern Pacific",
+      "author": "Lopez-Garro, A., Zanella, I., Golfin-Duarte, G., Perez-Montero, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "MacNeil, M.A., Chapman, D.D., Heupel, M., Simpfendorfer, C.A., Heithaus, M., Meekan, M., Harvey, E., Goetze, J., Kiszka, J., Bond, M.E., Currey-Randall, L.M., Speed, C.W., Sherman, C.S., Rees, M.J., Udyawer, V., Flowers, K.I., Clementi, G., Valentin-Albanese, J., Gorham, T., Adam, M.S., Ali, K., Pina-Amargós, F., Angulo-Valdés, J.A., Asher, J., Barcia, L.G., Beaufort, O., Benjamin, C., Bernard, A.T.F., Berumen, M.L., Bierwagen, S., Bonnema, E., Bown, R.M.K., Bradley, D., Brooks, E., Brown, J.J., Buddo, D., Burke, P., Cáceres, C., Cardeñosa, D., Carrier, J.C., Caselle, J.E., Charloo, V., Claverie, T., Clua, E., Cochran, J.E.M., Cook, N., Cramp, J., D’Alberto, B., de Graaf, M., Dornhege, M., Estep, A., Fanovich, L., Farabough, N.F., Fernando, D., Flam, A.L., Floros, C., Fourqurean, V., Garla, R., Gastrich, K., George, L., Graham, R., Guttridge, T., Hardenstine, R.S., Heck, S., Henderson, A.C., Hertler, H., Hueter, R., Johnson, M., Jupiter, S., Kasana, D., Kessel, S.T., Kiilu, B., Kirata, T., Kuguru, B., Kyne, F., Langlois, T., Lédée, E.J.I., Lindfield, S., Luna-Acosta, A., Maggs, J., Manjaji-Matsumoto, B.M., Marshall, A., Matich, P., McCombs, E., McLean, D., Meggs, L., Moore, S., Mukherji, S., Murray, R., Kaimuddin, M., Newman, S.J., Nogués, J., Obota, C., O’Shea, O., Osuka, K., Papastamatiou, Y.P., Perera, N., Peterson, B., Ponzo, A., Prasetyo, A., Quamar, L.M.S., Quinlan, J., Ruiz-Abierno, A., Sala, E., Samoilys, M., Schärer-Umpierre, M., Schlaff, A., Simpson, N., Smith, A.N.H., Sparks, L., Tanna, A., Torres, R., Travers, M.J., van Zinnicq Bergmann, M., Vigliola, L., Ward, J., Watts, A.M., Wen, C., Whitman, E., Wirsing, A.J., Wothke, A., Zarza-Gonzâlez, E. and Cinner, J.E. 2020. Global status and conservation potential of reef sharks. <i>Nature</i> 583: 801–806.",
+      "year": "2020",
+      "title": "Global status and conservation potential of reef sharks",
+      "author": "MacNeil, M.A., Chapman, D.D., Heupel, M., Simpfendorfer, C.A., Heithaus, M., Meekan, M., Harvey, E., Goetze, J., Kiszka, J., Bond, M.E., Currey-Randall, L.M., Speed, C.W., Sherman, C.S., Rees, M.J., Udyawer, V., Flowers, K.I., Clementi, G., Valentin-Albanese, J., Gorham, T., Adam, M.S., Ali, K., Pina-Amargós, F., Angulo-Valdés, J.A., Asher, J., Barcia, L.G., Beaufort, O., Benjamin, C., Bernard, A.T.F., Berumen, M.L., Bierwagen, S., Bonnema, E., Bown, R.M.K., Bradley, D., Brooks, E., Brown, J.J., Buddo, D., Burke, P., Cáceres, C., Cardeñosa, D., Carrier, J.C., Caselle, J.E., Charloo, V., Claverie, T., Clua, E., Cochran, J.E.M., Cook, N., Cramp, J., D’Alberto, B., de Graaf, M., Dornhege, M., Estep, A., Fanovich, L., Farabough, N.F., Fernando, D., Flam, A.L., Floros, C., Fourqurean, V., Garla, R., Gastrich, K., George, L., Graham, R., Guttridge, T., Hardenstine, R.S., Heck, S., Henderson, A.C., Hertler, H., Hueter, R., Johnson, M., Jupiter, S., Kasana, D., Kessel, S.T., Kiilu, B., Kirata, T., Kuguru, B., Kyne, F., Langlois, T., Lédée, E.J.I., Lindfield, S., Luna-Acosta, A., Maggs, J., Manjaji-Matsumoto, B.M., Marshall, A., Matich, P., McCombs, E., McLean, D., Meggs, L., Moore, S., Mukherji, S., Murray, R., Kaimuddin, M., Newman, S.J., Nogués, J., Obota, C., O’Shea, O., Osuka, K., Papastamatiou, Y.P., Perera, N., Peterson, B., Ponzo, A., Prasetyo, A., Quamar, L.M.S., Quinlan, J., Ruiz-Abierno, A., Sala, E., Samoilys, M., Schärer-Umpierre, M., Schlaff, A., Simpson, N., Smith, A.N.H., Sparks, L., Tanna, A., Torres, R., Travers, M.J., van Zinnicq Bergmann, M., Vigliola, L., Ward, J., Watts, A.M., Wen, C., Whitman, E., Wirsing, A.J., Wothke, A., Zarza-Gonzâlez, E. and Cinner, J.E. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "MacNeil, M.A., Mellin, C, Matthews, S., Wollf, N.H., McClanahan, T.R., Devlin, M., Drovandi, C., Mengersen, K, Graham, N.A.J. 2019. Water quality mediates resilience on the Great Barrier Reef. <i>Nature Ecology and Evolution</i> 3: 620–627.",
+      "year": "2019",
+      "title": "Water quality mediates resilience on the Great Barrier Reef",
+      "author": "MacNeil, M.A., Mellin, C, Matthews, S., Wollf, N.H., McClanahan, T.R., Devlin, M., Drovandi, C., Mengersen, K, Graham, N.A.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "McManus, J.W. 1997. Tropical marine fisheries and the future of coral reefs: a brief review with emphasis on Southeast Asia. <i>Coral Reefs</i> 16: 121–127.",
+      "year": "1997",
+      "title": "Tropical marine fisheries and the future of coral reefs: a brief review with emphasis on Southeast Asia",
+      "author": "McManus, J.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mourier, J., Mills, S. C. & Planes, S. 2013. Population structure, spatial distribution and life-history traits of blacktip reef sharks <i>Carcharhinus melanopterus</i>. <i>Journal of Fish Biology</i> 82: 979–993.",
+      "year": "2013",
+      "title": "Population structure, spatial distribution and life-history traits of blacktip reef sharks <i>Carcharhinus melanopterus</i>",
+      "author": "Mourier, J., Mills, S. C. & Planes, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ramenzoni, V.C. 2017. Reconstructing the history and effects of mechanization in a small-scale fishery of Flores, Eastern Indonesia (1917–2014). <i>Frontiers in Marine Science</i> 4(65): doi: 10.3389/fmars.2017.00065.",
+      "year": "2017",
+      "title": "Reconstructing the history and effects of mechanization in a small-scale fishery of Flores, Eastern Indonesia (1917–2014)",
+      "author": "Ramenzoni, V.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Serena, F., Abella, A.J., Bargnesi, F., Barone, M., Colloca, F., Ferretti, F., Fiorentino, F., Jenrette, J., Moro, S. In press. Species diversity, taxonomy and distribution of Chondrichthyes in the Mediterranean and Black Sea. <i>The European Zoological Journal</i>.",
+      "year": "In press",
+      "title": "Species diversity, taxonomy and distribution of Chondrichthyes in the Mediterranean and Black Sea",
+      "author": "Serena, F., Abella, A.J., Bargnesi, F., Barone, M., Colloca, F., Ferretti, F., Fiorentino, F., Jenrette, J., Moro, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sutcliffe, S.R., Barnes, M.L. 2018. The role of shark ecotourism in conservation behaviour: Evidence from Hawaii. <i>Marine Policy</i> 97: 27–33.",
+      "year": "2018",
+      "title": "The role of shark ecotourism in conservation behaviour: Evidence from Hawaii",
+      "author": "Sutcliffe, S.R., Barnes, M.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vignaud, T.M., Mourier, J, Maynard, J.A., Leblois, R., Spaet, J.L.Y., Clua, E., Neglia, V., Planes, S. 2014. Blacktip reef sharks, <i>Carcharhinus melanopterus</i>, have high genetic structure and varying demographic histories in their Indo-Pacific range. <i>Molecular Ecology</i> 23(21): 5193–5207.",
+      "year": "2014",
+      "title": "Blacktip reef sharks, <i>Carcharhinus melanopterus</i>, have high genetic structure and varying demographic histories in their Indo-Pacific range",
+      "author": "Vignaud, T.M., Mourier, J, Maynard, J.A., Leblois, R., Spaet, J.L.Y., Clua, E., Neglia, V., Planes, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Winter, S.T., Fahmi, Rudianto, D., Laglbauer, B.J.L., Ender, I., Simpfendorfer, C.A. In press. Immature individuals dominate elasmobranch fisheries of the Bali Strait. <i>Marine and Freshwater Research</i>.",
+      "year": "In press",
+      "title": "Immature individuals dominate elasmobranch fisheries of the Bali Strait",
+      "author": "Winter, S.T., Fahmi, Rudianto, D., Laglbauer, B.J.L., Ender, I., Simpfendorfer, C.A.",
+      "citation_short": ""
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

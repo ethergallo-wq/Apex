@@ -1,0 +1,773 @@
+{
+  "assessment_date": "2022-08-11T01:00:00.000+01:00",
+  "year_published": "2022",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 22678122,
+  "criteria": "A2be+3be+4be",
+  "url": "https://www.iucnredlist.org/species/22678122/214272214",
+  "citation": "BirdLife International 2022. Apteryx australis. The IUCN Red List of Threatened Species 2022: e.T22678122A214272214. Accessed on 15 May 2026.",
+  "assessment_id": 214272214,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 22678122,
+    "scientific_name": "Apteryx australis",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AVES",
+    "order_name": "STRUTHIONIFORMES",
+    "family_name": "APTERYGIDAE",
+    "genus_name": "Apteryx",
+    "species_name": "australis",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Shaw, 1813",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Bird Red List Authority (BirdLife International)",
+        "url": "https://www.birdlife.org/",
+        "description": "Red List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Tokoeka",
+        "language": "mao"
+      },
+      {
+        "main": true,
+        "name": "Southern Brown Kiwi",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": "11-100",
+    "upper_elevation_limit": 1500,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "16500",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "11.8",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Unknown",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": "40&#160;cm. Medium-sized kiwi, flightless, no visible wings. Dark greyish-brown (Fiordland population), rufous-brown (Haast), dark brown (Stewart) feathers streaked lengthways with reddish-brown. Long ivory bill. <strong>Voice</strong> Shrill, clear ascending then descending whistle (male), lower-pitched, hoarse cry (female). <strong>Hints</strong> Loud calls at night, especially first two hours of darkness.<strong></strong><p></p>",
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": "4-10",
+    "continuing_decline_in_subpopulations": "Unknown",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Yes",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "69300",
+    "continuing_decline_in_extent_of_occurence": "Unknown",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "<p><em>Apteryx australis</em> is restricted to Fiordland and Stewart Island, with an isolated population near Haast, <strong>New Zealand</strong>. Some birds from the Haast population have been established since 2000 at a pest-free mainland sanctuary (Orokonui, Ecosanctuary near Dunedin) and on three pest-free islands (Pomona, Coal and Rarotoka). Northern Fiordland birds occur from near Milford Sound to Doubtful Sound and Lake Manapouri, including Secretary Island. Southern Fiordland birds are found from Doubtful Sound and Lake Manapouri to near the southern coast of Fiordland, including Resolution Island and several smaller islands in Dusky Sound where birds were introduced over 100 years ago (Colbourne 2005). The two Fiordland taxa overlap in a narrow zone north of Wilmot Pass (H.A. Robertson <em>in litt</em>. 2016). Stewart Island birds are found throughout the main island, though they are scarce north of Paterson Inlet and the Ruggedy Mountains (Heather and Robertson 2015). Some have been introduced to Ulva Island since 1950 and a few are present on Pearl, Bravo and Owen islands (Colbourne 2005, Heather and Robertson 2015, H.A. Robertson <em>in litt</em>. 2016).</p><p></p>",
+    "population": "The 2013 total population was estimated at 21,350 birds (Heather and Robertson 2015), down from previous estimates of 27,225 (± c.25%) birds in 1996 (Robertson 2003) and 29,800 birds in 2008 (Holzapfel <em>et al. </em>2008). The population was estimated to number 24,850 individuals in total in 2018 (southern Fiordland 3,900, northern Fiordland 8,200, Stewart Island 12,300, Haast 450) (Germano&#160;<em>et al.&#160;</em>2018), roughly equivalent to 16,500 mature individuals.",
+    "habitats": "It occurs in a variety of habitats ranging from coastal sand dunes on Stewart Island to forest, subalpine scrub and tussock grasslands in Fiordland. It feeds primarily on invertebrates but fallen fruit and leaves are also taken. It lays just one egg, usually in a burrow (Marchant and Higgins 1990, H.A.&#160;Robertson <em>in litt.</em> 1999). The incubation period is amongst the longest for any bird at between 74 and 84 days (Calder <em>et al.</em> 1978). Chicks hatch fully-feathered, and first leave the nest unaccompanied after about a week. In Fiordland and Stewart Island populations, young remain with their parents for years (up to 7) but at Haast they are independent at about 1-2 months old. It is long-lived, with mean life expectancy of adults of 27-45 years (Robertson and de Monchy 2012, Tansell <em>et al.</em> 2016, H.A. Robertson <em>in litt.</em> 2016).",
+    "threats": "The impact of introduced predators is the greatest threat and is causing rapid population declines (Robertson <em>et al.</em> 2021): Stoat Mustela erminea eat eggs and chicks up to <em>c.&#160;</em>1,000 g, feral cats&#160;<em>Felis catus&#160;</em>eat chicks and juveniles up to c.1,200 g, and dogs&#160;<em>Canis familiaris</em>, ferrets <em>M. furo</em>, and Common Brushtail Possum&#160;<em>Trichosurus vulpecula</em>&#160;kill juveniles and adults (McLennan <em>et al. </em>1996, McLennan&#160;<em>et al.&#160;</em>2004). Predation pressure is possibly lower on Stewart Island where mustelids are absent, and dogs are prohibited from most of the island (H.A.&#160;Robertson <em>in litt.</em> 1999). However, feral cats are widespread and common (H.A. Robertson <em>in litt.</em> 2012). The rate of loss of native habitat has declined markedly but this is not currently considered a driver for population reductions (Robertson <em>et al.</em> 2010). Avian diseases and pathogens are a potential threat, particularly with chicks held in captivity or in high-density crèche sites. The Haast population is at risk from stochastic events due to the small population size and isolation and suffers from low fecundity (Holzapfel <em>et al.</em> 2008).",
+    "measures": "<strong>Conservation Actions Underway</strong><br/>Monitoring is nationally coordinated, and uses call-counts, specially-trained dogs searching for banded birds, and radio-tracking (Holzapfel <em>et al. </em>2008). Intensive management involving predator control and&#160;removing and incubating eggs and returning subadults once large enough to fend off predators is taking place within the Haast population. The latter approach has been used at Haast since 1995 under the name Operation Nest Egg (ONE) (Colbourne <em>et al. </em>2005), and has succeeded in increasing the population of <em>A. australis</em> 'Haast' (Holzapfel <em>et al. </em>2008, Robertson &amp; de Monchy 2012) which is now thought to number 450 birds in total (Germano <em>et al.</em> 2018). Research has focused on the Haast, Clinton valley, Murchison Mountains and Stewart Island populations, and involves taxonomy, investigating the effects of predators and their management, ecology and the social structure of populations (Robertson and de Monchy 2012, Tansell <em>et al.&#160;</em>2016, H.A. Robertson <em>in litt.</em> 2016).<p> <strong>Conservation Actions Proposed</strong><br/>Increase the proportion of the kiwi population that is managed and control predators at a landscape scale to produce growth rates of 2% per year or greater (Germano&#160;<em>et al.</em>&#160;2018). Measure the response of kiwi to management to determine optimal landscape-scale management (Germano&#160;<em>et al.</em>&#160;2018). Survey populations in Fiordland and undertake population modelling of all taxa. Clarify the taxonomy of the species.&#160; Research reasons for low productivity in the Haast population. Evaluate the success of translocations and support the development of a structured captive breeding programme; Collar and Butchart (2013) suggest that captive breeding should be considered although conversely, is not considered useful by the Recovery Team (Holzapfel <em>et al</em>.&#160;2008). Intensively manage the Haast population and at least one other mainland population using the ONE programme with the goal of doubling the population (Holzapfel <em>et al. </em>2008). Investigate landscape-scale remote monitoring techniques for sparse populations (Holzapfel <em>et al. </em>2008).&#160; Maintain the mustelid-free status of Stewart Island and investigate the possibility of eradicating cats from the island (H.A. Robertson <em>in litt</em>. 2016). Promote legislative and policy changes to protect populations and encourage high-quality advocacy at all levels (Robertson 1998, Holzapfel <em>et al. </em>2008). Educate and inform the public and encourage community involvement in kiwi conservation (Robertson 2003, Holzapfel <em>et al. </em>2008).</p>",
+    "use_trade": null,
+    "rationale": "This species is rapidly declining as a result of predation by introduced species, with the rate of population reduction suspected to have exceeded 30% over the past three generations and to continue at this rate into the future. It is therefore assessed as Vulnerable.",
+    "trend_justification": "This species is inferred to be declining as a result of introduced predators and this trend is predicted to continue (Robertson&#160;<em>et al.</em>&#160;2021). The populations in northern and southern Fiordland are thought to be declining in the range 30-70% and 50-70% respectively (Robertson <em>et al.</em> 2021). The majority of the species is not currently receiving active conservation management and these unmanaged populations are thought to be declining by 2% per year (Germano&#160;<em>et al.</em>&#160;2018).&#160;The total number of individuals is thought to have decreased from 29,800 in 2008 to 24,850 in 2018 based on estimates in Innes <em>et al.</em> (2015) projected to 2018, and is suspected to decrease further to 21,550 by 2030 with existing levels of management (Germano&#160;<em>et al.</em>&#160;2018) which is equivalent to a c.46% decline within three generations. Recent research suggests the population on Stewart Island may be stable as previously detected declines at Mason Bay are likely to have been localised (Robertson&#160;<em>et al.&#160;</em>2021). However, given the steep ongoing declines in the southern and northern Fiordland populations, it remains plausible that the global rate of decline exceeds 30% within three generations.&#160;Only the small Haast population is increasing - this population was reported as 225 individuals in 1996 (Robertson 2003), but intensive pest control and ex-situ hatching of wild-sourced eggs and chick-rearing in predator-free crèches, and the establishment of small populations at pest-free mainland and island sites has resulted in a growth to 350 birds in 2013 (Robertson and de Monchy 2012, Heather and Robertson 2015) and 450 birds in 2018 (Germano <em>et al.</em> 2018).",
+    "taxonomic_notes": "<em>Apteryx</em><em><em> australis</em></em><em><em><em></em>, <em>A.</em> </em> mantelli</em><em> </em>and <em>A. rowi </em>(del Hoyo and Collar 2014) were previously treated as <em>A.</em><em><em> australis</em></em><em><em><em></em></em></em> and <em>A. mantelli</em> (incorporating <em>rowi</em>)  following Baker <em>et al.</em> (1995); prior to that all three taxa were lumped as <em>A. australis</em> following Sibley and Monroe (1990, 1993). Nominate subspecies further divides into two genetically well-separated populations, based respectively on Haast R (plumage distinctively rufous) and Fiordland (plumage grey-brown) (Burbidge <em>et al. </em>2003, Herbert and Daugherty 2002). Two subspecies currently recognized.<p></p>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Australasian"
+      },
+      "code": "2"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "Increase the proportion of the kiwi population that is managed and control predators at a landscape scale to produce growth rates of 2% per year or greater. Intensively manage the Haast population and at least one other mainland population using the ONE programme with the goal of doubling the population.",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": "Support the development of a structured captive breeding programme. \n",
+      "code": "3_4_1",
+      "description": {
+        "en": "Captive breeding/artificial propagation"
+      }
+    },
+    {
+      "note": "Educate and inform the public and encourage community involvement in Kiwi conservation.",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "Promote legislative and policy changes to protect populations and encourage high-quality advocacy at all levels.",
+      "code": "5_1_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": "Maintain the mustelid-free status of Stewart Island and investigate the eradication of cats from the island.",
+      "code": "2_2",
+      "description": {
+        "en": "Invasive/problematic species control"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Coastal Sand Dunes"
+      },
+      "code": "13_3"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": true,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "NZ"
+    }
+  ],
+  "researches": [
+    {
+      "note": "Investigate landscape-scale remote monitoring techniques for sparse populations.",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "Formally clarify the taxonomy of the species. Four genetically distinct taxa, that probably arose through separation by glaciers or ocean gaps during ice ages, are recognised by Weir <i>et al.</i> in press: Haast, Northern Fiordland, Southern Fiordland and Stewart Island, though the two Fiordland taxa interbreed in a narrow contact zone near Lake Manapouri.",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": "Survey populations in Fiordland and undertake population modelling of all taxa. ",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "Research reasons for low productivity in the Haast population.",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "Measure the response of kiwi to management to determine optimal landscape-scale management. Evaluate the success of translocations.",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": "Feral",
+      "virus": null,
+      "ias": "Canis familiaris",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": "Feral",
+      "virus": null,
+      "ias": "Felis catus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": "Wild",
+      "virus": null,
+      "ias": "Mustela furo",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": "Wild",
+      "virus": null,
+      "ias": "Mustela erminea",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": "Wild",
+      "virus": null,
+      "ias": "Trichosurus vulpecula",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": "Avian diseases and pathogens",
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_4_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "BirdLife International",
+      "value": [
+        " BirdLife International (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Fernando, E.",
+      "value": [
+        "Eresha Fernando (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Robertson, H.A.",
+      "value": [
+        "Hugh A. Robertson (Department of Conservation)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Vine, J.",
+      "value": [
+        "Jemma Vine (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "institutions",
+      "full": "BirdLife International",
+      "value": [
+        "BirdLife International"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "del Hoyo, J., Collar, N.J., Christie, D.A., Elliott, A. and Fishpool, L.D.C. 2014. <i>HBW and BirdLife International Illustrated Checklist of the Birds of the World. Volume 1: Non-passerines</i>. Lynx Edicions BirdLife International, Barcelona, Spain and Cambridge, UK.",
+      "year": "2014",
+      "title": "HBW and BirdLife International Illustrated Checklist of the Birds of the World. Volume 1: Non-passerines",
+      "author": "del Hoyo, J., Collar, N.J., Christie, D.A., Elliott, A. and Fishpool, L.D.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Baker, A. J.; Daugherty, C. H.; Colbourne, R.; McLennan, J. L. 1995. Flightless Brown Kiwis of New Zealand possess extremely subdivided population structure and cryptic species like small mammals. <i>Proceedings of the National Academy of Sciences of the United States of America</i> 92: 8254-8258.",
+      "year": "1995",
+      "title": "Flightless Brown Kiwis of New Zealand possess extremely subdivided population structure and cryptic species like small mammals",
+      "author": "Baker, A. J.; Daugherty, C. H.; Colbourne, R.; McLennan, J. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sibley, C.G. and Monroe, B.L. 1993. <i>A supplement to 'Distribution and Taxonomy of Birds of the World'</i>. Yale University Press, New Haven, USA.",
+      "year": "1993",
+      "title": "A supplement to 'Distribution and Taxonomy of Birds of the World'",
+      "author": "Sibley, C.G. and Monroe, B.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sibley, C.G. and Monroe, B.L. 1990. <i>Distribution and Taxonomy of Birds of the World</i>. Yale University Press, New Haven, USA.",
+      "year": "1990",
+      "title": "Distribution and Taxonomy of Birds of the World",
+      "author": "Sibley, C.G. and Monroe, B.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Heather, B. D. and Robertson, H. A. 1997. <i>The field guide to the birds of New Zealand</i>. Oxford University Press, Oxford, UK.",
+      "year": "1997",
+      "title": "The field guide to the birds of New Zealand",
+      "author": "Heather, B. D. and Robertson, H. A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Marchant, S.; Higgins, P. J. 1990. <i>Handbook of Australian, New Zealand and Antarctic birds, </i>1<i>: ratites to ducks</i>. Oxford University Press, Melbourne.",
+      "year": "1990",
+      "title": "Handbook of Australian, New Zealand and Antarctic birds, <i>1</i>: ratites to ducks",
+      "author": "Marchant, S.; Higgins, P. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Robertson, H. A. 1998. <i>Kiwi recovery plan 1996--2006</i>. Department of Conservation, Wellington.",
+      "year": "1998",
+      "title": "Kiwi recovery plan 1996--2006",
+      "author": "Robertson, H. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "McLennan, J. A.; Potter, M. A.; Robertson, H. A.; Wake, G. C.; Colbourne, R.; Dew, L.; Joyce, L.; McCann, A. J.; Miles, J.; Miller, P. J.; Reid, J. 1996. Role of predation in the decline of kiwi, <i>Apteryx</i> spp., in New Zealand. <i>New Zealand Journal of Ecology</i> 20: 27-35.",
+      "year": "1996",
+      "title": "Role of predation in the decline of kiwi, <i>Apteryx</i> spp., in New Zealand",
+      "author": "McLennan, J. A.; Potter, M. A.; Robertson, H. A.; Wake, G. C.; Colbourne, R.; Dew, L.; Joyce, L.; McCann, A. J.; Miles, J.; Miller, P. J.; Reid, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Holzapfel, S.; Robertson, H.A.; McLennan, J.A.; Sporle, W.; Hackwell, K.; Impey, M. 2008 . <i>Kiwi (Apteryx spp.) recovery plan: 2008–2018.</i> Department of Conservation,  Wellington.",
+      "year": "2008 ",
+      "title": "Kiwi (Apteryx spp.) recovery plan: 2008–2018.",
+      "author": "Holzapfel, S.; Robertson, H.A.; McLennan, J.A.; Sporle, W.; Hackwell, K.; Impey, M. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Robertson, H.A., Colbourne, R.A., Graham, P.J., Miller, P.J. and Pierce, R.J. 2010. Experimental management of Brown Kiwi Apteryx mantelli in central Northland, New Zealand. <i>Bird Conservation International</i>.",
+      "year": "2010",
+      "title": "Experimental management of Brown Kiwi Apteryx mantelli in central Northland, New Zealand.",
+      "author": "Robertson, H.A., Colbourne, R.A., Graham, P.J., Miller, P.J. and Pierce, R.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Colbourne, R. 2005. <i>Kiwi (</i>Apteryx<i> spp.) on offshore New Zealand islands: populations, translocations and identification of potential release sites</i>. New Zealand Department of Conservation, Wellington.",
+      "year": "2005",
+      "title": "Kiwi (<i>Apteryx</i> spp.) on offshore New Zealand islands: populations, translocations and identification of potential release sites",
+      "author": "Colbourne, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Robertson, H. 2003. <i>Kiwi (Apteryx spp.) recovery plan 1996-2006.</i> Department of Conservation, Wellington.",
+      "year": "2003",
+      "title": "Kiwi (Apteryx spp.) recovery plan 1996-2006.",
+      "author": "Robertson, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "McLennan, J.A., Dew, L., Miles, J., Gillingham, N. and Waiwai, R. 2004. Size matters: predation risk and juvenile growth in North Island Brown Kiwi (Apteryx mantelli). <i>New Zealand Journal of Ecology</i> 28(2): 241-250.",
+      "year": "2004",
+      "title": "Size matters: predation risk and juvenile growth in North Island Brown Kiwi (Apteryx mantelli).",
+      "author": "McLennan, J.A., Dew, L., Miles, J., Gillingham, N. and Waiwai, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Colbourne, R., Bassett, S., Billing, A., McCormack, H., McLennan, J., Nelson, A. and Robertson, H. 2005. <i>The development of Operation Nest Egg as a tool in the conservation management of kiwi.</i> Department of Conservation, Wellington.",
+      "year": "2005",
+      "title": "The development of Operation Nest Egg as a tool in the conservation management of kiwi.",
+      "author": "Colbourne, R., Bassett, S., Billing, A., McCormack, H., McLennan, J., Nelson, A. and Robertson, H. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Collar, N.J. and Butchart, S.H.M. 2013. Conservation breeding and avian diversity: chances and challenges. <i>International Zoo Yearbook</i> 48(1): 7-28.",
+      "year": "2013",
+      "title": "Conservation breeding and avian diversity: chances and challenges",
+      "author": "Collar, N.J. and Butchart, S.H.M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Calder, W.A., Parr, C.R. and Karl, D.P. 1978. Energy content of eggs of Brown Kiwi Apteryx australis-extreme in avian evolution. <i>Comparative Biochemistry and Physiology</i> 60(2): 177-179.",
+      "year": "1978",
+      "title": "Energy content of eggs of Brown Kiwi Apteryx australis-extreme in avian evolution.",
+      "author": "Calder, W.A., Parr, C.R. and Karl, D.P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Robertson, H.A., de Monchy, P.J.M. 2012. Varied success from the landscape-scale management of kiwi (Apteryx spp.) in five sanctuaries in New Zealand. . <i>Bird Conservation International</i> 22: 429-444.",
+      "year": "2012",
+      "title": "Varied success from the landscape-scale management of kiwi (Apteryx spp.) in five sanctuaries in New Zealand. ",
+      "author": "Robertson, H.A., de Monchy, P.J.M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Heather, B. D.; Robertson, H. A. 2015. <i>The field guide to the birds of New Zealand.</i> Penguin Books (NZ) Ltd., Auckland, New Zealand.",
+      "year": "2015",
+      "title": "The field guide to the birds of New Zealand.",
+      "author": "Heather, B. D.; Robertson, H. A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Weir, J., Haddrath, O., Robertson, H.A., Colbourne, R.M., Baker, A.J. In press. Explosive ice age diversification of kiwi.  . <i>Proceedings of the National Academy of Sciences of the United States of America</i> (in press).",
+      "year": "In press",
+      "title": "Explosive ice age diversification of kiwi.  ",
+      "author": "Weir, J., Haddrath, O., Robertson, H.A., Colbourne, R.M., Baker, A.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tansell, J., Edmonds, H.K., Robertson, H.A. 2016. Landscape-scale trapping of stoats (Mustela erminea) benefits tokoeka (Apteryx australis) in the Murchison Mountains, Fiordland, New Zealand. <i>Notornis</i> 63: 1-8.",
+      "year": "2016",
+      "title": "Landscape-scale trapping of stoats (Mustela erminea) benefits tokoeka (Apteryx australis) in the Murchison Mountains, Fiordland, New Zealand.",
+      "author": "Tansell, J., Edmonds, H.K., Robertson, H.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bird, J.P., Martin, R., Akçakaya, H.R., Gilroy, J., Burfield, I.J., Garnett, S.G., Symes, A., Taylor, J., Şekercioğlu, Ç.H. and Butchart, S.H.M. 2020. Generation lengths of the world’s birds and their implications for extinction risk. <i>Conservation Biology</i> 34(5): 1252-1261.",
+      "year": "2020",
+      "title": "Generation lengths of the world’s birds and their implications for extinction risk",
+      "author": "Bird, J.P., Martin, R., Akçakaya, H.R., Gilroy, J., Burfield, I.J., Garnett, S.G., Symes, A., Taylor, J., Şekercioğlu, Ç.H. and Butchart, S.H.M. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Robertson, H.A., Baird, K.A., Elliott, G.P., Rodney, A., Hitchmough, N.J., Makan, T.D., Miskelly, C.M., O'Donnell, C.F.J., Sagar, P.M., Scofield, R.P., Taylor, G.A., Michel, P. 2021. Conservation status of birds in Aotearoa New Zealand, 2021. Department of Conservation, Wellington, New Zealand.",
+      "year": "2021",
+      "title": "Conservation status of birds in Aotearoa New Zealand, 2021",
+      "author": "Robertson, H.A., Baird, K.A., Elliott, G.P., Rodney, A., Hitchmough, N.J., Makan, T.D., Miskelly, C.M., O'Donnell, C.F.J., Sagar, P.M., Scofield, R.P., Taylor, G.A., Michel, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2022. The IUCN Red List of Threatened Species. Version 2022-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 08 December 2022).",
+      "year": "2022",
+      "title": "The IUCN Red List of Threatened Species. Version 2022-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2022-2"
+    },
+    {
+      "citation": "Germano, J., Barlow, S., Castro, I., Colbourne, R., Cox, M., Gillies, C., Hackwell, K., Harawira, J., Impey, M., Reuben, A., Robertson, H., Scrimgeour, J., Sporle, W., Yong., S. 2018. Kiwi Recovery Plan 2018–2028/Mahere Whakaora Kiwi 2018–2028.  Threatened Species Recovery Plan 64. Department of Conservation, Wellington.",
+      "year": "2018",
+      "title": "Kiwi Recovery Plan 2018–2028/Mahere Whakaora Kiwi 2018–2028",
+      "author": "Germano, J., Barlow, S., Castro, I., Colbourne, R., Cox, M., Gillies, C., Hackwell, K., Harawira, J., Impey, M., Reuben, A., Robertson, H., Scrimgeour, J., Sporle, W., Yong., S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Burbidge, L., Colbourne, R.M., Roberston, H.A. and Baker, A.J. 2003. Molecular and other biological evidence supports the recognition of at least three species of Brown Kiwi. <i>Conservation Genetics</i> 4: 167-177.",
+      "year": "2003",
+      "title": "Molecular and other biological evidence supports the recognition of at least three species of Brown Kiwi",
+      "author": "Burbidge, L., Colbourne, R.M., Roberston, H.A. and Baker, A.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Herbert, J. & Daugherty, C.H. 2002. Genetic variation, systematics and management of kiwi (Apteryx spp.). Pp. 11–34 in: Overmars, F. ed. (2002). Some early 1990s Studies in Kiwi (Apteryx spp.) Genetics and Management. Science & Research Internal Report 191. Department of Conservation, Wellington, New Zealand. Available at: <a href=\"http://www.doc.govt.nz/ documents/science-and-technical/ir191a.pdf\">http://www.doc.govt.nz/ documents/science-and-technical/ir191a.pdf</a>. (Accessed: April, 2013).",
+      "year": "2002",
+      "title": "Genetic variation, systematics and management of kiwi (Apteryx spp.). Pp. 11–34 in: Overmars, F. ed. (2002). Some early 1990s Studies in Kiwi (Apteryx spp.) Genetics and Management. Science & Research Internal Report 191.",
+      "author": "Herbert, J. & Daugherty, C.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Innes, J., Eppink, F.V., Robertson, H.A. 2015. Saving a national icon: Preliminary estimation of the additional cost of achieving kiwi population stability or 2% growth. Landcare Research Manaaki Whenua.",
+      "year": "2015",
+      "title": "Saving a national icon: Preliminary estimation of the additional cost of achieving kiwi population stability or 2% growth",
+      "author": "Innes, J., Eppink, F.V., Robertson, H.A.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

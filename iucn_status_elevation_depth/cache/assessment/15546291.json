@@ -1,0 +1,2172 @@
+{
+  "assessment_date": "2013-05-23T01:00:00.000+01:00",
+  "year_published": "2015",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 198568,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/198568/15546291",
+  "citation": "Tous, P., Sidibé, A, Mbye, E., de Morais, L., Camara, Y.H., Adeofe, T.A., Monroe, T., Camara, K., Cissoko, K., Djiman, R., Sagna, A., Sylla, M. & Carpenter, K.E. 2015. Engraulis encrasicolus. The IUCN Red List of Threatened Species 2015: e.T198568A15546291. Accessed on 15 May 2026.",
+  "assessment_id": 15546291,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 198568,
+    "scientific_name": "Engraulis encrasicolus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "ACTINOPTERYGII",
+    "order_name": "CLUPEIFORMES",
+    "family_name": "ENGRAULIDAE",
+    "genus_name": "Engraulis",
+    "species_name": "encrasicolus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Anchovy",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Anchovy Paste",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Black Sea Anchovy",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Italian Sardel",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "South African Anchovy",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Southern African Anchovy",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Southern Anchovy",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Amplovo",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Anchoa",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Anchoa de Africa Austral",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Anchoa Europea",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Anchois",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Anchois Commun",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Anchois de L'Afrique Australe",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Anchois Européen",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Anchois Italien",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Bocareu",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Boquerón",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Carne A Carne",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Carne Con Carne",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Longorón",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Pasta Fermentada de Anchoas",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "European Anchovy",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Engraulis russoi Dulzetto, 1947",
+        "status": "ADD",
+        "genus_name": "Engraulis",
+        "species_name": "russoi",
+        "species_author": "Dulzetto, 1947",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulis amara Risso, 1827",
+        "status": "ADD",
+        "genus_name": "Engraulis",
+        "species_name": "amara",
+        "species_author": "Risso, 1827",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulis meletta Cuvier, 1829",
+        "status": "ADD",
+        "genus_name": "Engraulis",
+        "species_name": "meletta",
+        "species_author": "Cuvier, 1829",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulus encrasicholus (Linnaeus, 1758)",
+        "status": "ADD",
+        "genus_name": "Engraulus",
+        "species_name": "encrasicholus",
+        "species_author": "(Linnaeus, 1758)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Anchoviella guineensis Rossignol & Blache, 1961",
+        "status": "ADD",
+        "genus_name": "Anchoviella",
+        "species_name": "guineensis",
+        "species_author": "Rossignol & Blache, 1961",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulis encrassicolus (Linnaeus, 1758)",
+        "status": "ADD",
+        "genus_name": "Engraulis",
+        "species_name": "encrassicolus",
+        "species_author": "(Linnaeus, 1758)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulis argyrophanus Valenciennes, 1848",
+        "status": "ADD",
+        "genus_name": "Engraulis",
+        "species_name": "argyrophanus",
+        "species_author": "Valenciennes, 1848",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulis engrasicholus (Linnaeus, 1758)",
+        "status": "ADD",
+        "genus_name": "Engraulis",
+        "species_name": "engrasicholus",
+        "species_author": "(Linnaeus, 1758)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulis capensis Gilchrist, 1913",
+        "status": "ADD",
+        "genus_name": "Engraulis",
+        "species_name": "capensis",
+        "species_author": "Gilchrist, 1913",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulis vulgaris Nilsson, 1832",
+        "status": "ADD",
+        "genus_name": "Engraulis",
+        "species_name": "vulgaris",
+        "species_author": "Nilsson, 1832",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Anchoa guineensis (Rossignol & Blache, 1961)",
+        "status": "ADD",
+        "genus_name": "Anchoa",
+        "species_name": "guineensis",
+        "species_author": "(Rossignol & Blache, 1961)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulis encrasicholus ponticus Alesandrov, 1927",
+        "status": "ADD",
+        "genus_name": "Engraulis",
+        "species_name": "encrasicholus ponticus",
+        "species_author": "Alesandrov, 1927",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulis guineensis (Rossignol & Blache, 1961)",
+        "status": "ADD",
+        "genus_name": "Engraulis",
+        "species_name": "guineensis",
+        "species_author": "(Rossignol & Blache, 1961)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulis encrasicolus russoi Dulzetto, 1947",
+        "status": "ADD",
+        "genus_name": "Engraulis",
+        "species_name": "encrasicolus russoi",
+        "species_author": "Dulzetto, 1947",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Clupea encrasicolus Linnaeus, 1758",
+        "status": "ADD",
+        "genus_name": "Clupea",
+        "species_name": "encrasicolus",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulis russoi Dulzetto, 1947",
+        "status": "ADD",
+        "genus_name": "Engraulis",
+        "species_name": "russoi",
+        "species_author": "Dulzetto, 1947",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulis encrasicholus (Linnaeus, 1758)",
+        "status": "ADD",
+        "genus_name": "Engraulis",
+        "species_name": "encrasicholus",
+        "species_author": "(Linnaeus, 1758)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulis meletta Cuvier, 1829",
+        "status": "ADD",
+        "genus_name": "Engraulis",
+        "species_name": "meletta",
+        "species_author": "Cuvier, 1829",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulis amara Risso, 1827",
+        "status": "ADD",
+        "genus_name": "Engraulis",
+        "species_name": "amara",
+        "species_author": "Risso, 1827",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Anchoviella guineensis Rossignol & Blache, 1961",
+        "status": "ADD",
+        "genus_name": "Anchoviella",
+        "species_name": "guineensis",
+        "species_author": "Rossignol & Blache, 1961",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulus encrasicholus (Linnaeus, 1758)",
+        "status": "ADD",
+        "genus_name": "Engraulus",
+        "species_name": "encrasicholus",
+        "species_author": "(Linnaeus, 1758)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulis argyrophanus Valenciennes, 1848",
+        "status": "ADD",
+        "genus_name": "Engraulis",
+        "species_name": "argyrophanus",
+        "species_author": "Valenciennes, 1848",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulis encrassicolus (Linnaeus, 1758)",
+        "status": "ADD",
+        "genus_name": "Engraulis",
+        "species_name": "encrassicolus",
+        "species_author": "(Linnaeus, 1758)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulis capensis Gilchrist, 1913",
+        "status": "ADD",
+        "genus_name": "Engraulis",
+        "species_name": "capensis",
+        "species_author": "Gilchrist, 1913",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulis engrasicholus (Linnaeus, 1758)",
+        "status": "ADD",
+        "genus_name": "Engraulis",
+        "species_name": "engrasicholus",
+        "species_author": "(Linnaeus, 1758)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Anchoa guineensis (Rossignol & Blache, 1961)",
+        "status": "ADD",
+        "genus_name": "Anchoa",
+        "species_name": "guineensis",
+        "species_author": "(Rossignol & Blache, 1961)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulis vulgaris Nilsson, 1832",
+        "status": "ADD",
+        "genus_name": "Engraulis",
+        "species_name": "vulgaris",
+        "species_author": "Nilsson, 1832",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulis guineensis (Rossignol & Blache, 1961)",
+        "status": "ADD",
+        "genus_name": "Engraulis",
+        "species_name": "guineensis",
+        "species_author": "(Rossignol & Blache, 1961)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulis encrasicholus ponticus Alesandrov, 1927",
+        "status": "ADD",
+        "genus_name": "Engraulis",
+        "species_name": "encrasicholus ponticus",
+        "species_author": "Alesandrov, 1927",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Clupea encrasicolus Linnaeus, 1758",
+        "status": "ADD",
+        "genus_name": "Clupea",
+        "species_name": "encrasicolus",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulis encrasicolus russoi Dulzetto, 1947",
+        "status": "ADD",
+        "genus_name": "Engraulis",
+        "species_name": "encrasicolus russoi",
+        "species_author": "Dulzetto, 1947",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Engraulis encrasicholus (Linnaeus, 1758)",
+        "status": "ADD",
+        "genus_name": "Engraulis",
+        "species_name": "encrasicholus",
+        "species_author": "(Linnaeus, 1758)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": 400,
+    "upper_depth_limit": 0,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": "Full Migrant",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<strong></strong>In the east Atlantic, this species is present from Bergen, Norway to East London, South Africa (perhaps reaching Durban;<strong> </strong>Whitehead 1990). In the west Indian Ocean, it is present in Mauritius, Seychelles and upwelling areas around Somalia (Whitehead <em>et al. </em>1988). In the Eastern Central Atlantic, it is found throughout entire area, including Canary Islands and possibly Madeira. It occurs in the Azores, Mediterranean Sea, Black Sea and Azov Sea. It possibly mixes with <em>E. capensis</em> southward from the Angolan/Namibian border.",
+    "population": "In the Eastern Central Atlantic (ECA), this species is considered to be fully exploited (FAO CECAF 2011). The Working Group for Small Pelagics recommended that the effort should not exceed the present level.&#160;Reported FAO catch statistics in the ECA show gradual increase in landings over the past 60 years (1950-2010), with the exception of an extremely high catch in 1990 of more than 340,000 tonnes. However, catches in the last 10 years (2000-2010) show an estimated 40% decline from 200,000 tonnes in to approximately 120,000 tonnes (FishSTAT J). However, this decline is not considered to be significant, as overall catches are increasing.&#160;At least from Morocco to Gambia, although this species is considered fully exploited, it is not considered that catches are declining and effort is considered stable. This species is most commercially important in Morocco. This species is most abundant in Morocco and Mauritania. In Mauritania, this species is not targeted by artisanal fisheries and the industrial fisheries have size limitations.<br/><br/>In Nigeria, this species is abundant and is important in commercial fisheries, with no record of decline in catch. In Ghana, this species is one of the most popular small pelagic species, and is abundant. It is mainly exploited by the artisanal fisheries after the upwelling season (as they change from <em>Sardinella </em>species). They change their net size to catch this species. This species is also taken by the tuna bait boats (1,000-2,000 tonnes per year). In Ghana, catches for this species are fluctuating, but overall there is a decline in catch. In Benin, this is the same stock as in Ghana, and since 2003 there is also a trend of declining catch.&#160;In Guinea, this species is not frequently caught, and is reported as mixed stock as it represents less than five percent of all catches. In Gambia, this species is not important, and it is really only caught as by-catch by purse seine. In Senegal, this species is not reported separately, and it is not as commercially important.<strong><br/></strong><strong><br/></strong>This is a very common and abundant species in the Mediterranean Sea.",
+    "habitats": "This coastal, pelagic species is found mainly in shallow water (to 50 m) and to depths of about 400 m, often forming large shoals and is migratory. It is euryhaline, tolerating salinities of five to 41% and in some areas entering lagoons, estuaries or lakes, especially in the warmer months during spawning season. Spawning occurs multiple times over an extended period from April to November with peaks usually in the warmest months, the limits of the spawning season dependent on temperature and thus more restricted in northern areas. Eggs ellipsoidal to oval, floating in the upper 50 m, hatching in 24 to 65 hours. After hatching, larvae are colourless and transparent. Growth is rapid with fish reaching a length of 9-10 cm after one year. First spawning occurs at sizes greater than 12-13 cm. Maximum age of individuals from southwestern Africa was three years. Two hyaline rings are formed annually on otoliths; one being clearly visible, well formed and laid down in June-July, the other diffuse, faint, and laid down in November-December. It feeds on planktonic organisms, chiefly copepods, cirripede and mollusc larvae, and fish eggs and larvae<strong>.<br/></strong><strong><br/></strong>In the Mediterranean Sea, it occupies nearly all the water column, with the core of the population occurring in less then 50 m depth. In winter months it moves deeper in the water column (to around 200 m). Depth range in Mediterranean Sea is from sea level to 285 m and it is common over the continental shelf. A study of Lloret <em>et al.</em> (2004) provide evidence of the influence of riverine inputs and wind mixing on the productivity of small pelagic fish such as <em>Engraulis encrasicolus</em> in the Mediterranean Sea. It tends to move further north and into surface waters in summer, retreating and descending in winter. It feeds on planktonic organisms (Plounevez and Champalbert 2000). It spawns from April to November with peaks usually in the warmest months. In the central Adriatic Sea the main reproductive activities occurs between April and September (Sinovcic and Zorica 2006). In the Adriatic, age at maturity is reported as 8.2 cm (males and females; Sinovcic and Zorica 2006). In the Ligurian sea juvenile and post larvae occur in shallow waters from September to January (Tunesi <em>et al.</em> 2005). The sex ratio is 45% female (Koranteng 1993). A study on the genetic of <em>E. encrasicolus </em>in the Mediterranean Sea (Tudela <em>et al.</em> 1999) underline that in this basin there is a single subpopulation with different spawning grounds. Individuals in the eastern Mediterranean Sea (Israel) are smaller than individuals further west. Maximum size is 20 cm standard length and it is common to 12 to 15 cm.",
+    "threats": "This is a species with high commercial importance. Catches in the northern and equatorial parts of the Eastern Central Altantic are reported as <em>E. encrasicolus</em>; those for Namibia as <em>E. capensis</em>. It is caught with purse seines, lamparas (light fishing), trawls and beach seines and marketed fresh, frozen, processed, salted and dried, and canned. It is also used as bait. It is important in the Namibian pelagic fisheries for the production of fishmeal and fish oil.<br/><strong><br/></strong>In the Mediterranean Sea, it shows strong spatio-temporal variability related to environmental conditions. There is an important fishery of frys (very young individuals) in some areas in the Mediterranean Sea. Its annual landings (tons) in the Mediterranean Sea (1996-2005), obtained from the FAO FISHSTAT Fisheries Statistical Database (2007): 83,412 (1996), 102,203 (1997) 86,708 (1998), 87,149 (1999), 104,159 (2000), 110,768 (2001), 104,748 (2002), 100,738 (2003), 109,449 (2004) and 107,909 (2005). Landings figures show a sharp decline around 1990 in the Black Sea (it apparently disappeared from the Azov Sea then but has since recovered). Figures in the Mediterranean Sea show strong fluctuations. Some stocks have been assessed by FAO-G<span class=\"st\">eneral Fisheries Commission for the Mediterranean (GFCM) SAC (Scientific Advisory Committee) and <span class=\"st\">Sub-Committee on Stock Assessment (SCSA). GSA areas assessed were: GSA1, GSA3, GSA6, GSA7, GSA16, GSA17, GSA18, GSA22. In general these stocks showed a high variability and only in a few cases are showing decreasing trends in recent years.<br/><br/></span>In the Black Sea, this species showed a sharp decline in 1989-1991 due  to a combination of environmental problems and exploitation. The predatory  species&#160;<em>Mnemiopsis leidyi</em> was brought into the Black Sea from  ballast water and this species preyed upon the eggs of many native species  in the Black Sea. Landings figures have been low  since then and they are now showing a very gradual increase after&#160;<em>Boreo ovata</em>, a predator of&#160;<em>Mnemiopsis leidyi</em>&#160;(Isinibilir and Tarkan 1998), was also introduced again through ballast water.",
+    "measures": "In the Eastern Central Atlantic, for the western areas (Ghana, Togo, Benin) it is recommended that catch level should not exceed the average level of the three last years (e.g. 40,000 tonnes). In the southern area (Congo) <span class=\"st\"><span class=\"st\">it is recommended that catch level should not exceed the average level of the five last years&#160;<span class=\"st\"><span class=\"st\">(e.g. 530 tonnes; FAO CECAF 2011).<br/><br/><span class=\"st\"><span class=\"st\"><span class=\"st\">In the Black Sea and Azov Sea, there are minimum catch sizes: 6.5 cm (Georgia and Ukraine), 7 cm (Romania), 8 cm (Bulgaria) and 9 cm (Turkey). In the Black Sea, minimum catch size is 10 cm (Unsal 1989). In the Mediterranean Sea, the<span class=\"st\"> minimum catch size set by  the G<span class=\"st\">eneral Fisheries Commission for the Mediterranean (GFCM) is 9 cm. In some cases there are national efforts to control the fisheries (e.g., time and area closures).</span></span></span></span>",
+    "use_trade": "This is a species with high commercial importance. It is marketed fresh, dried, smoked, canned and frozen, and can  be used as fish meal (Frimodt 1995).",
+    "rationale": "This is a widespread and highly commercial species in the Eastern Central Atlantic, Mediterranean and Black Seas. It is a target species for purse seine fisheries. The population shows large fluctuations depending on environmental conditions. In some areas, these fluctuations are showing a declining trend (e.g., in Morocco, where there has been a declining trend since 1998); other areas show stable to increasing trends. Overall in the Mediterranean Sea the population is variable from one area to another, but at present it is not considered to be in serious decline. Nevertheless, population monitoring needs to continue and exploitation must be carefully managed. It is assessed as Least Concern.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [],
+  "conservation_actions": [],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southeast"
+      },
+      "code": "47"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northeast"
+      },
+      "code": "27"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - eastern central"
+      },
+      "code": "34"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mediterranean and Black Sea"
+      },
+      "code": "37"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - western"
+      },
+      "code": "51"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Estuaries"
+      },
+      "code": "9_10"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lebanon"
+      },
+      "code": "LB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cyprus"
+      },
+      "code": "CY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Togo"
+      },
+      "code": "TG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sierra Leone"
+      },
+      "code": "SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Seychelles"
+      },
+      "code": "SC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sweden"
+      },
+      "code": "SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Netherlands"
+      },
+      "code": "NL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Monaco"
+      },
+      "code": "MC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belgium"
+      },
+      "code": "BE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Denmark"
+      },
+      "code": "DK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gibraltar"
+      },
+      "code": "GI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ireland"
+      },
+      "code": "IE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malta"
+      },
+      "code": "MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Sahara"
+      },
+      "code": "EH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ukraine"
+      },
+      "code": "UA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Benin"
+      },
+      "code": "BJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo"
+      },
+      "code": "CG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Côte d'Ivoire"
+      },
+      "code": "CI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Equatorial Guinea"
+      },
+      "code": "GQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ghana"
+      },
+      "code": "GH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea-Bissau"
+      },
+      "code": "GW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Liberia"
+      },
+      "code": "LR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritius"
+      },
+      "code": "MU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Réunion"
+      },
+      "code": "RE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sao Tome and Principe"
+      },
+      "code": "ST"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cabo Verde"
+      },
+      "code": "CV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Southern Territories"
+      },
+      "code": "TF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canary Is."
+      },
+      "code": "CNY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Serbia"
+      },
+      "code": "RS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal (mainland)"
+      },
+      "code": "POR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guernsey"
+      },
+      "code": "GG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Finland"
+      },
+      "code": "FI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Estonia"
+      },
+      "code": "EE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jersey"
+      },
+      "code": "JE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Latvia"
+      },
+      "code": "LV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lithuania"
+      },
+      "code": "LT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Poland"
+      },
+      "code": "PL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madeira"
+      },
+      "code": "MDR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Helena, Ascension and Tristan da Cunha"
+      },
+      "code": "SH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ascension"
+      },
+      "code": "ASC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Helena (main island)"
+      },
+      "code": "STH-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jordan"
+      },
+      "code": "JO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saudi Arabia"
+      },
+      "code": "SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique Channel Is."
+      },
+      "code": "MCI-OO"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - animal"
+      },
+      "code": "2"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Mnemiopsis leidyi",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Tous, P., Sidibé, A, Mbye, E., de Morais, L., Camara, Y.H., Adeofe, T.A., Monroe, T., Camara, K., Cissoko, K., Djiman, R., Sagna, A., Sylla, M. & Carpenter, K.E.",
+      "value": [
+        "Youssouf  Hawa Camara (Direction Générale du CNSHB Guinea)",
+        "Mor Sylla (CRODT- SENEGAL)",
+        "Kadiatou Cissoko (Direction Générale du CNSHB Guinea)",
+        "Alphonse Sagna (CRODT- SENEGAL)",
+        "Kent Carpenter (IUCN SSC Global Marine Species Assessment, Old Dominion University, Virginia, US)",
+        "Aboubacar Sidibé (Ressources Aquatiques Vivantes et Environnements marins côtiers)",
+        "Thomas Munroe (Smithsonian Institute)",
+        "Philippe Tous (Coordinateur du Projet PSRA/CSRP)",
+        "Titus Ayo Adeofe (Department of Fisheries Nigeria)",
+        "Khair Dine Camara (IMROP)",
+        "Luis Tito de Morais (GIBAO and AMPHORE projects)",
+        "Ebou Mass Mbye (Department of Fisheries Gambia)",
+        "Roger Djiman (Department of Fisheries Benin)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Weller, S., Strongin, K. & Polidoro, B.",
+      "value": [
+        "Samantha Weller (Arizona State University)",
+        "Beth Polidoro (GMSA)",
+        "Kyle Strongin (Arizona State University)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Frimodt, C. 1995. <i>Multilingual illustrated guide to the world's commercial warmwater fish</i>. Osney Mead, Oxford.",
+      "year": "1995",
+      "title": "Multilingual illustrated guide to the world's commercial warmwater fish",
+      "author": "Frimodt, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dulčić, J. and Glamuzina, B. 2006. Length-weight relationships for selected fish species from three eastern Adriatic estuarine systems (Croatia). <i>Journal of Applied Ichthyology</i> 22: 254-256.",
+      "year": "2006",
+      "title": "Length-weight relationships for selected fish species from three eastern Adriatic estuarine systems (Croatia)",
+      "author": "Dulčić, J. and Glamuzina, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cicek, E., Avsar, D., Yeldan, H. and Ozutok, M. 2006. Length-weight relationships for 31 teleost fishes caught by bottom trawl net in the Babadillimani Bight (northeastern Mediterranean). <i>Journal of Applied Ichthyology</i> 22: 290-292.",
+      "year": "2006",
+      "title": "Length-weight relationships for 31 teleost fishes caught by bottom trawl net in the Babadillimani Bight (northeastern Mediterranean)",
+      "author": "Cicek, E., Avsar, D., Yeldan, H. and Ozutok, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Carpentieri, P., Colloca, F. and Ardizzone, G.D. 2005. Day-night variations in the demersal nekton assemblage on the Mediterranean shelf break. <i>Estuarine and Coastal Shelf Science</i> 63: 577-588.",
+      "year": "2005",
+      "title": "Day-night variations in the demersal nekton assemblage on the Mediterranean shelf break",
+      "author": "Carpentieri, P., Colloca, F. and Ardizzone, G.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Akin, S., Buhan, E., Winemiller, K.O. and Yilmaz, H. 2005. Fish assemblage structure of Koycegiz Lagoon-Estuary, Turkey: spatial and temporal distribution patterns in relation to environmental variation. <i>Estuarine, Coastal and Shelf Science</i> 64: 671-684.",
+      "year": "2005",
+      "title": "Fish assemblage structure of Koycegiz Lagoon-Estuary, Turkey: spatial and temporal distribution patterns in relation to environmental variation",
+      "author": "Akin, S., Buhan, E., Winemiller, K.O. and Yilmaz, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tunesi, L., Molinari, A., Agnesi, S., Di Nora, T. and Mo, G. 2005. Presence of fish juveniles in the Ligurian coastal waters: synthesis of available knowledge. <i>Biologia Marina Mediterranea</i> 12(1): 455-459.",
+      "year": "2005",
+      "title": "Presence of fish juveniles in the Ligurian coastal waters: synthesis of available knowledge",
+      "author": "Tunesi, L., Molinari, A., Agnesi, S., Di Nora, T. and Mo, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Malavasi, S., Fiorin, R., Franco, A., Franzoi, P., Granzotto, A., Riccato, F. and Mainardi, D. 2004. Fish assemblage of Venice Lagoon shallow waters: an analysis based on species, families and functional guilds. <i>Journal of Marine Systems</i> 51: 19-31.",
+      "year": "2004",
+      "title": "Fish assemblage of Venice Lagoon shallow waters: an analysis based on species, families and functional guilds",
+      "author": "Malavasi, S., Fiorin, R., Franco, A., Franzoi, P., Granzotto, A., Riccato, F. and Mainardi, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Koutrakis, E.T. and Tsikliras, A.C. 2003. Length-weight relationships of fishes from three northern Aegean estuarine systems (Greece). <i>Journal of Applied Ichthyology</i> 19: 258-260.",
+      "year": "2003",
+      "title": "Length-weight relationships of fishes from three northern Aegean estuarine systems (Greece)",
+      "author": "Koutrakis, E.T. and Tsikliras, A.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "FAO-GFCM. 2007. SCSA/SCSI/SCESS Transversal workshop on methodology to analyse disaggregated fishery data. General Fisheries Commission for the Mediterranean, Sete, France.",
+      "year": "2007",
+      "title": "SCSA/SCSI/SCESS Transversal workshop on methodology to analyse disaggregated fishery data",
+      "author": "FAO-GFCM",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gokce, G. and Metin, C. 2007. Landed and discarded catches from commercial prawn trammel net fishery. <i>Journal of Applied Ichthyology</i> 23: 543-546.",
+      "year": "2007",
+      "title": "Landed and discarded catches from commercial prawn trammel net fishery",
+      "author": "Gokce, G. and Metin, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Perez-Ruzafa, A., Quispe-Becerra, J.I., Garcia-Charton, J.A. and Marcos, C. 2004. Composition, structure and distribution of the ichthyoplankton in a Mediterranean coastal lagoon. <i>Journal of Fish Biology</i> 64: 202-218.",
+      "year": "2004",
+      "title": "Composition, structure and distribution of the ichthyoplankton in a Mediterranean coastal lagoon",
+      "author": "Perez-Ruzafa, A., Quispe-Becerra, J.I., Garcia-Charton, J.A. and Marcos, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bariche, M., Sadek, R., Al-Zein, M.S. and El-Fadel, M. 2007. Diversity of juvenile fish assemblages in the pelagic waters of Lebanon (Eastern Mediterranean). <i>Hydrobiologia</i> 580: 109-115.",
+      "year": "2007",
+      "title": "Diversity of juvenile fish assemblages in the pelagic waters of Lebanon (Eastern Mediterranean)",
+      "author": "Bariche, M., Sadek, R., Al-Zein, M.S. and El-Fadel, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tudela S., Garcia-Marin J.L. and Pla, C. 1999. Genetic structure of the European anchovy, Engraulis encrasicolus l., in the north-west Mediterranean. <i>Journal of Experimental Marine Biology and Ecology</i> 234: 95-109.",
+      "year": "1999",
+      "title": "Genetic structure of the European anchovy, Engraulis encrasicolus l., in the north-west Mediterranean",
+      "author": "Tudela S., Garcia-Marin J.L. and Pla, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dulcic, J. 1997. Growth of anchovy, <i>Engraulis encrasicolus</i>, larvae in the Northern Adriatic Sea. <i>Fisheries Research</i> 31: 189-195.",
+      "year": "1997",
+      "title": "Growth of anchovy, <i>Engraulis encrasicolus</i>, larvae in the Northern Adriatic Sea",
+      "author": "Dulcic, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bariche, M., Alwan, N. and El-Fadel, M. 2006. Structure and biological characteristics of purse seine landings off the Lebanese coast (eastern Mediterranean). <i>Fisheries Research</i> 82: 246-252.",
+      "year": "2006",
+      "title": "Structure and biological characteristics of purse seine landings off the Lebanese coast (eastern Mediterranean)",
+      "author": "Bariche, M., Alwan, N. and El-Fadel, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Verdiell-Cubedo, D., Oliva-Paterna, F.J. and Torralva, M. 2006. Length-weight relationships for 22 fish species of the Mar Menor coastal lagoon (western Mediterranean Sea). <i>Journal of Applied Ichthyology</i> 22(4): 293-294.",
+      "year": "2006",
+      "title": "Length-weight relationships for 22 fish species of the Mar Menor coastal lagoon (western Mediterranean Sea)",
+      "author": "Verdiell-Cubedo, D., Oliva-Paterna, F.J. and Torralva, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Soria, M., Bahri, T. and Gerlotto, F. 2003. Effect of external factors (environmental and survey vessel) on fish school characteristics observed by echosounder and multibeam sonar in the Mediterranean Sea. <i>Aquatic Living Resources</i> 16: 145-157.",
+      "year": "2003",
+      "title": "Effect of external factors (environmental and survey vessel) on fish school characteristics observed by echosounder and multibeam sonar in the Mediterranean Sea",
+      "author": "Soria, M., Bahri, T. and Gerlotto, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lloret, J., Palomera, I., Salat, J. and Sole, I. 2004. Impact of freshwater input and wind on landings of anchovy (<i>Engraulis encrasicolus</i>) and sardine (<i>Sardina pilchardus</i>) in shelf waters surrounding the Ebre (Ebro) River delta (north-western Mediterranean). <i>Fisheries Oceanography</i> 13(2): 102-110.",
+      "year": "2004",
+      "title": "Impact of freshwater input and wind on landings of anchovy (<i>Engraulis encrasicolus</i>) and sardine (<i>Sardina pilchardus</i>) in shelf waters surrounding the Ebre (Ebro) River delta (north-western Mediterranean)",
+      "author": "Lloret, J., Palomera, I., Salat, J. and Sole, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Khemiri, S., Gaamour, A., Meunier, F.J., and Zylberberg, L. 2007. Age and growth of <i>Engraulis encrasicolus</i> (Clupeiforme:Engraulidae) in the Tunisian waters. <i>Cahiers de Biologie Marine</i> 48: 259-269.",
+      "year": "2007",
+      "title": "Age and growth of <i>Engraulis encrasicolus</i> (Clupeiforme:Engraulidae) in the Tunisian waters",
+      "author": "Khemiri, S., Gaamour, A., Meunier, F.J., and Zylberberg, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ayaz, A., Acarli, D., Altinagac, U., Ozekinci, U., Kara, A. and Ozen, O. 2006. Ghost fishing by monofilament and multifilament gillnets in Izmir Bay, Turkey. <i>Fisheries Research</i> 79: 267-271.",
+      "year": "2006",
+      "title": "Ghost fishing by monofilament and multifilament gillnets in Izmir Bay, Turkey",
+      "author": "Ayaz, A., Acarli, D., Altinagac, U., Ozekinci, U., Kara, A. and Ozen, O.",
+      "citation_short": null
+    },
+    {
+      "citation": "Somarakis, S. 2005. Marked interannual differeces in reproductive parameters and daily egg production of anchovy in the northern Aegean Sea. <i>Belgium Journal of Zoology</i> 135(2): 247-252.",
+      "year": "2005",
+      "title": "Marked interannual differeces in reproductive parameters and daily egg production of anchovy in the northern Aegean Sea",
+      "author": "Somarakis, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sinovcic, G. and Zorica, B. 2006. Reproductive cycle and miminal length at sexual maturity of <i>Engraulis encrasicolus</i> (L.) in the Zramanja River estuary (Adriatic Sea, Croatia). <i>Estuarine, Coastal and Shelf Science</i> 69: 439-448.",
+      "year": "2006",
+      "title": "Reproductive cycle and miminal length at sexual maturity of <i>Engraulis encrasicolus</i> (L.) in the Zramanja River estuary (Adriatic Sea, Croatia)",
+      "author": "Sinovcic, G. and Zorica, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tudela, S. 1999. Morphological variability in a Mediterranean, genetically homogeneous population of the European anchovy,<i> Engraulis encrasicolus</i>. <i>Fisheries Research</i> 42: 229-243.",
+      "year": "1999",
+      "title": "Morphological variability in a Mediterranean, genetically homogeneous population of the European anchovy,<i> Engraulis encrasicolus</i>",
+      "author": "Tudela, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Agostini, V.N. and Bakun, A. 2002. \"Ocean triads\" in the Mediterranean Sea: physical mechanisms potentially structuring reproductive habitat suitability (with example application to European anchovy, <i>Engraulis encrasicolus</i>). <i>Fisheries Oceanography</i> 11(3): 129-142.",
+      "year": "2002",
+      "title": "\"Ocean triads\" in the Mediterranean Sea: physical mechanisms potentially structuring reproductive habitat suitability (with example application to European anchovy, <i>Engraulis encrasicolus</i>)",
+      "author": "Agostini, V.N. and Bakun, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pertierra, J.P., Lleonart, J. and Lo, N.C.H. 1997. Application of a stage-specific matrix model and length-cohort based analysis to assess the anchovy fishery in Catalan coastal waters (NW Mediterranean Sea). <i>Fisheries Research</i> 30: 127-137.",
+      "year": "1997",
+      "title": "Application of a stage-specific matrix model and length-cohort based analysis to assess the anchovy fishery in Catalan coastal waters (NW Mediterranean Sea)",
+      "author": "Pertierra, J.P., Lleonart, J. and Lo, N.C.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Giannoulaki, M., Machias, A., Somarakis, S. and Tsimenides, N. 2005. The spatial distribution of anchovy and sardine in the northern Aegean Sea in relation to hydrographic regimes. <i>Belgium Journal of Zoology</i> 135(2): 151-156.",
+      "year": "2005",
+      "title": "The spatial distribution of anchovy and sardine in the northern Aegean Sea in relation to hydrographic regimes",
+      "author": "Giannoulaki, M., Machias, A., Somarakis, S. and Tsimenides, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vargas-Yanez, M. and Sabates, A. 2007. Mesoscale high-frequency variability in the Alboran Sea and its influence on fish larvae distributions. <i>Journal of Marine Systems</i> 68: 421-438.",
+      "year": "2007",
+      "title": "Mesoscale high-frequency variability in the Alboran Sea and its influence on fish larvae distributions",
+      "author": "Vargas-Yanez, M. and Sabates, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Plounevez, S. and Champalbert, G. 2000. Diet, feeding behaviour and trophic activity of the anchovy (<i>Engraulis encrasicolus L.</i>) in the Gulf of Lions (Mediterranean Sea). <i>Oceanologica Acta</i> 23: 175-191.",
+      "year": "2000",
+      "title": "Diet, feeding behaviour and trophic activity of the anchovy (<i>Engraulis encrasicolus L.</i>) in the Gulf of Lions (Mediterranean Sea)",
+      "author": "Plounevez, S. and Champalbert, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Basilone, G., Guisande, C., Patti, B., Mazzola, S., Cuttitta, A., Bonanno, A. and Kallianiotis, A. 2004. Linking habitat conditions and growth in the European anchovy (<i>Engraulis encrasicolus</i>). <i>Fisheries Research</i> 68: 9-19.",
+      "year": "2004",
+      "title": "Linking habitat conditions and growth in the European anchovy (<i>Engraulis encrasicolus</i>)",
+      "author": "Basilone, G., Guisande, C., Patti, B., Mazzola, S., Cuttitta, A., Bonanno, A. and Kallianiotis, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Unsal, N. 1989. A study on age-length=weight relationship and determination of the smallest catching size of anchovy, <i>Engraulis eucrasicolus</i> (L.) in the Black Sea. Istanbul University Journal of Aquatic Products 3(1-2): 17-28.",
+      "year": "1989",
+      "title": "A study on age-length=weight relationship and determination of the smallest catching size of anchovy, <i>Engraulis eucrasicolus</i> (L.) in the Black Sea. Istanbul University Journal of Aquatic Products 3(1-2): 17-28.",
+      "author": "Unsal, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Santojanni, A., Arneri, E., Barry, C., Belardinelli, A., Cingolani, N., Giannetti, G. and Kirkwood, G. 2003. Trends of anchovy (<i>Engraulis encrasicolus</i>, L.) biomass in the northern and central Adriatic Sea. <i>Scientia Marina</i> 67(3): 327-340.",
+      "year": "2003",
+      "title": "Trends of anchovy (<i>Engraulis encrasicolus</i>, L.) biomass in the northern and central Adriatic Sea",
+      "author": "Santojanni, A., Arneri, E., Barry, C., Belardinelli, A., Cingolani, N., Giannetti, G. and Kirkwood, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sabates, A., Salat, J., Palomera, I., Emelianov, M., Fernandez De Puelles, M.L. and Olivar, M.P. 2007. Advection of anchovy (<i>Engraulis encrasicolus</i>) larvae along the Catalan continental slope (NW Mediterranean). <i>Fisheries Oceanography</i> 16(2): 130-141.",
+      "year": "2007",
+      "title": "Advection of anchovy (<i>Engraulis encrasicolus</i>) larvae along the Catalan continental slope (NW Mediterranean)",
+      "author": "Sabates, A., Salat, J., Palomera, I., Emelianov, M., Fernandez De Puelles, M.L. and Olivar, M.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Romanelli, M., Colloca, F. and Giovanardi, O. 2002. Growth and mortality of exploited <i>Sardina pilchardus</i> (Walbaum) larvae along the western coast of Italy. <i>Fisheries Research</i> 55: 205-218.",
+      "year": "2002",
+      "title": "Growth and mortality of exploited <i>Sardina pilchardus</i> (Walbaum) larvae along the western coast of Italy",
+      "author": "Romanelli, M., Colloca, F. and Giovanardi, O.",
+      "citation_short": null
+    },
+    {
+      "citation": "Isinibilir, M. and Tarkan, A.N. 2002. Distribution of the invasive Ctenophore <i>Mnemiopsis leidyi</i> (Agassiz, 1865) in the north-eastern Aegean Sea in August 1998. <i>Turkish Journal of Fisheries and Aquatic Sciences</i> 2: 129-132.",
+      "year": "2002",
+      "title": "Distribution of the invasive Ctenophore <i>Mnemiopsis leidyi</i> (Agassiz, 1865) in the north-eastern Aegean Sea in August 1998",
+      "author": "Isinibilir, M. and Tarkan, A.N.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2015. The IUCN Red List of Threatened Species. Version 2015-4. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 19 November 2015).",
+      "year": "2015",
+      "title": "The IUCN Red List of Threatened Species. Version 2015-4",
+      "author": "IUCN",
+      "citation_short": "IUCN 2015-4"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [
+    {
+      "description": {
+        "en": "Agulhas Current"
+      },
+      "code": "4_6_4"
+    },
+    {
+      "description": {
+        "en": "Somali Current"
+      },
+      "code": "4_6_3"
+    },
+    {
+      "description": {
+        "en": "Iberian Coastal"
+      },
+      "code": "4_2_10"
+    },
+    {
+      "description": {
+        "en": "Baltic Sea"
+      },
+      "code": "4_2_9"
+    },
+    {
+      "description": {
+        "en": "Celtic-Biscay"
+      },
+      "code": "4_2_8"
+    },
+    {
+      "description": {
+        "en": "North Sea"
+      },
+      "code": "4_2_6"
+    },
+    {
+      "description": {
+        "en": "Black Sea"
+      },
+      "code": "4_2_5"
+    },
+    {
+      "description": {
+        "en": "Benguela Current"
+      },
+      "code": "2_1_4"
+    },
+    {
+      "description": {
+        "en": "Guinea Current"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "description": {
+        "en": "Canary Current"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "description": {
+        "en": "Mediterranean Sea"
+      },
+      "code": "2_1_1"
+    }
+  ],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

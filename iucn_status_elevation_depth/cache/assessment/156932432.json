@@ -1,0 +1,4715 @@
+{
+  "assessment_date": "2018-05-13T01:00:00.000+01:00",
+  "year_published": "2019",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 22563,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/22563/156932432",
+  "citation": "Wells, R.S., Natoli, A. & Braulik, G.T. 2019. Tursiops truncatus (errata version published in 2019). The IUCN Red List of Threatened Species 2019: e.T22563A156932432. Accessed on 15 May 2026.",
+  "assessment_id": 156932432,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 22563,
+    "scientific_name": "Tursiops truncatus",
+    "species_taxa": [],
+    "subpopulation_taxa": [
+      {
+        "sis_id": 194300,
+        "scientific_name": "Tursiops truncatus Fiordland subpopulation",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "DELPHINIDAE",
+        "genus_name": "Tursiops",
+        "species_name": "truncatus",
+        "subpopulation_name": "Fiordland subpopulation",
+        "infra_name": null,
+        "authority": "(Montagu, 1821)",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Common Bottlenose Dolphin",
+            "language": "eng"
+          },
+          {
+            "main": true,
+            "name": "Fiordland Bottlenose Dolphin",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 181208820,
+        "scientific_name": "Tursiops truncatus Gulf of Ambracia subpopulation",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "DELPHINIDAE",
+        "genus_name": "Tursiops",
+        "species_name": "truncatus",
+        "subpopulation_name": "Gulf of Ambracia subpopulation",
+        "infra_name": null,
+        "authority": "(Montagu, 1821)",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Ambracian Bottlenose Dolphins",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Afalina",
+            "language": "tur"
+          },
+          {
+            "main": false,
+            "name": "Delfin i Madh",
+            "language": "alb"
+          },
+          {
+            "main": false,
+            "name": "Delfín Mular",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Dobri Dupin",
+            "language": "scr"
+          },
+          {
+            "main": false,
+            "name": "Grand Dauphin",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Tursiope",
+            "language": "ita"
+          },
+          {
+            "main": false,
+            "name": "Velika Pliskavka",
+            "language": "slv"
+          },
+          {
+            "main": false,
+            "name": "Ρινοδέλφινo",
+            "language": "gre"
+          },
+          {
+            "main": true,
+            "name": "Common Bottlenose Dolphin",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Delphinus truncatus Montagu, 1821",
+            "status": "ACCEPTED",
+            "genus_name": "Delphinus",
+            "species_name": "truncatus",
+            "species_author": "Montagu, 1821",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          }
+        ]
+      },
+      {
+        "sis_id": 16369383,
+        "scientific_name": "Tursiops truncatus Mediterranean subpopulation",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "DELPHINIDAE",
+        "genus_name": "Tursiops",
+        "species_name": "truncatus",
+        "subpopulation_name": "Mediterranean subpopulation",
+        "infra_name": null,
+        "authority": "(Montagu, 1821)",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Bottlenose Dolphin",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Afalina",
+            "language": "tur"
+          },
+          {
+            "main": false,
+            "name": "Dauphin Souffleur",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Delfin Geddumu Qasir",
+            "language": "mlt"
+          },
+          {
+            "main": false,
+            "name": "Delfin I Madh",
+            "language": "alb"
+          },
+          {
+            "main": false,
+            "name": "Delfin Kabir",
+            "language": "ara"
+          },
+          {
+            "main": false,
+            "name": "Delfín Mular",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Dobri dupin",
+            "language": "scr"
+          },
+          {
+            "main": false,
+            "name": "Dolphinan matzuy",
+            "language": "heb"
+          },
+          {
+            "main": false,
+            "name": "Grand Dauphin",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Souffleur",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Tursiope",
+            "language": "ita"
+          },
+          {
+            "main": false,
+            "name": "Tursiops",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Velika pliskavka",
+            "language": "slv"
+          },
+          {
+            "main": false,
+            "name": "Ρινοδέλφινο (Rinodélfino)",
+            "language": "gre"
+          },
+          {
+            "main": true,
+            "name": "Common Bottlenose Dolphin",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Delphinus truncatus Montagu, 1821",
+            "status": "ACCEPTED",
+            "genus_name": "Delphinus",
+            "species_name": "truncatus",
+            "species_author": "Montagu, 1821",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          }
+        ]
+      }
+    ],
+    "infrarank_taxa": [
+      {
+        "sis_id": 134822416,
+        "scientific_name": "Tursiops truncatus ssp. gephyreus",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "DELPHINIDAE",
+        "genus_name": "Tursiops",
+        "species_name": "truncatus",
+        "subpopulation_name": null,
+        "infra_name": "gephyreus",
+        "authority": "Lahille, 1908",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Bottlenosed Dolphin",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Bottlenose Dolphin",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Lahille’s Bottlenose Dolphin",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Lahille’s Bottlenose Dolphin",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Boto",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Boto-da-tainha",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Delfín Mular",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Delfin nariz de botella",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Golfinho-nariz-de-garrafa",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tonina",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tonina Común",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Toninha",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tursion",
+            "language": "spa"
+          },
+          {
+            "main": true,
+            "name": "Lahille’s Bottlenose Dolphin",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Tursiops gephyreus  Lahille, 1908",
+            "status": "CHANGED",
+            "genus_name": "Tursiops",
+            "species_name": "gephyreus ",
+            "species_author": "Lahille, 1908",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          }
+        ]
+      },
+      {
+        "sis_id": 133714,
+        "scientific_name": "Tursiops truncatus ssp. ponticus",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "DELPHINIDAE",
+        "genus_name": "Tursiops",
+        "species_name": "truncatus",
+        "subpopulation_name": null,
+        "infra_name": "ponticus",
+        "authority": "Barabash-Nikiforov, 1940",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Common Bottlenose Dolphin",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "afalina",
+            "language": "geo"
+          },
+          {
+            "main": false,
+            "name": "afalina",
+            "language": "tur"
+          },
+          {
+            "main": false,
+            "name": "afalinul",
+            "language": "rum"
+          },
+          {
+            "main": false,
+            "name": "delfinul cu bot gros",
+            "language": "rum"
+          },
+          {
+            "main": false,
+            "name": "дельфін-незарнак",
+            "language": "ukr"
+          },
+          {
+            "main": false,
+            "name": "черноморска афала",
+            "language": "bul"
+          },
+          {
+            "main": false,
+            "name": "черноморская афалина",
+            "language": "rus"
+          },
+          {
+            "main": false,
+            "name": "чорноморська афаліна",
+            "language": "ukr"
+          },
+          {
+            "main": true,
+            "name": "Black Sea Bottlenose Dolphin",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 134822363,
+        "scientific_name": "Tursiops truncatus ssp. truncatus",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "DELPHINIDAE",
+        "genus_name": "Tursiops",
+        "species_name": "truncatus",
+        "subpopulation_name": null,
+        "infra_name": "truncatus",
+        "authority": "(Montagu, 1821)",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Common Bottlenose Dolphin",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "ARTIODACTYLA",
+    "family_name": "DELPHINIDAE",
+    "genus_name": "Tursiops",
+    "species_name": "truncatus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Montagu, 1821)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Bottlenose Dolphin",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Afalina",
+        "language": "tur"
+      },
+      {
+        "main": false,
+        "name": "Dauphin souffleur",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Delfin Geddumu Qasir",
+        "language": "mlt"
+      },
+      {
+        "main": false,
+        "name": "Delfin I Madh",
+        "language": "alb"
+      },
+      {
+        "main": false,
+        "name": "Delfin Kabir",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Delfín Mular",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Dobri dupin",
+        "language": "scr"
+      },
+      {
+        "main": false,
+        "name": "Golfinho-roaz",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Grand dauphin",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Grosser Tümmler",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Souffleur",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Stompneusdolfyn",
+        "language": "afr"
+      },
+      {
+        "main": false,
+        "name": "Tursiope",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Velika pliskavka",
+        "language": "slv"
+      },
+      {
+        "main": false,
+        "name": "Ρινοδέλφινο (Rinodélfino)",
+        "language": "gre"
+      },
+      {
+        "main": true,
+        "name": "Common Bottlenose Dolphin",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Tursiops nuuanu Andrews, 1911",
+        "status": "ACCEPTED",
+        "genus_name": "Tursiops",
+        "species_name": "nuuanu",
+        "species_author": "Andrews, 1911",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Delphinus truncatus Montagu, 1821",
+        "status": "ACCEPTED",
+        "genus_name": "Delphinus",
+        "species_name": "truncatus",
+        "species_author": "Montagu, 1821",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Unknown",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "No",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": "No",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "No",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "Common Bottlenose Dolphins occur worldwide through tropical and temperate inshore, coastal, shelf, and oceanic waters (Leatherwood and Reeves 1990, Wells and Scott 1999, Reynolds <em>et al</em>. 2000). They range poleward of 45° in northern Europe (as far as the Faroe Islands 62°N 7°W; Bloch and Mikkelsen 2000) and southern New Zealand (Brough <em>et al</em>. 2015), and the species was recently reported as far south as 53-55<sup>o</sup>S in South America (Olavarría <em>et al</em>. 2010, Goodall <em>et al</em>. 2011). In the eastern Pacific they have been seen as far north as British Columbia (50<sup>o</sup>N) but their typical range is up to 41<sup>o</sup>N (Halpin <em>et al</em>. 2018). Common Bottlenose Dolphins are rare in the Baltic Sea (best considered extralimital there) and are vagrant to Newfoundland and Norway (Wells and Scott 1999). They occur regularly in the Red Sea (Notarbartolo di Sciara <em>et al</em>. 2018) and the Arabian Sea (Baldwin <em>et al.</em> 1999).",
+    "population": "<p></p><p>Abundance of Common Bottlenose Dolphins has been estimated for several parts of the species' range. Summing available estimates, a minimum world-wide abundance estimate would be 750,000, acknowledging that most of the range of the species has not been surveyed for abundance estimation, and some of the estimates included in the summation are out of date.<br/> <br/> Recent surveys by the U.S. National Marine Fisheries Service (Hayes <em>et al</em>. 2017) have estimated 97,964 Bottlenose Dolphins in the northern Gulf of Mexico <strong>(</strong>5,806 (coefficient of variation (CV) = 0.39) in oceanic waters beyond the shelf edge, 51,192 (CV = 0.10) on the outer continental shelf, 39,734 in coastal waters, and 1,232 in bays, sounds, and estuaries. There are approximately 110,000 Common Bottlenose Dolphins off the east coast of North America (including 77,532 (CV = 0.40) in offshore waters, 31,212 in coastal waters, and 1,209 in bays, sounds, and estuaries. For both regions, current estimates are not available for most of the bays, sounds, and estuaries (Hayes <em>et al</em>. 2017). Recent stock assessment reports for U.S. Pacific waters indicated that there are 453 (CV = 0.06) Common Bottlenose Dolphins in coastal California waters, and 1,924 (CV = 0.54) in the offshore waters of California, Oregon, and Washington (Carretta <em>et al.</em> 2017). These stock assessments include abundance estimates for individual stocks in Hawaiian waters: Kauai/Niihau, 147 (CV = 0.11), Oahu, 594 (CV = 0.54), 4-Islands, 153 (CV = 0.24), Hawaii Island, 102 (CV = 0.13), and Hawaii Pelagic, 5,590 (CV = 0.59) (Carretta <em>et al.</em> 2017). Surveys of the Eastern Tropical Pacific resulted in an estimate of 243,500 (CV = 0.29) (Wade and Gerrodette 1993), but this estimate should be considered with caution given the fact that it is more than 25 years old. No recent abundance estimates for Common Bottlenose Dolphins in Japanese waters are available (Kasuya 2017). Japanese surveys prior to 1993 resulted in estimates of 168,000 (CV = 0.26) in the Northwestern Pacific west of 180ºE, including 36,791 (CV = 0.25) in Japanese coastal waters (Miyashita 1993). In the eastern Sulu Sea, Dolar <em>et al.</em> (2006) estimated 2,628 Common Bottlenose Dolphins 1994-1995 (CV = 0.40). </p>  <p>A large-scale survey (SCANS-III) of European Atlantic waters from the Strait of Gibraltar in the south to 62°N in the north and extending west to the 200 nm limits of most European Union Member State Exclusive Economic Zones (EEZ) was conducted in 2016 (Hammond <em>et al</em>. 2017). The final surveyed area excluded offshore waters of Portugal and to the south and west of Ireland (surveyed by the Irish ObSERVE project), and included coastal waters of Norway north to Vestfjorden. In total, 27,700 (CV = 0.23) Common Bottlenose Dolphins were estimated (Hammond <em>et al.</em> 2017). As part of the ObSERVE aerial surveys of the Irish EEZ, 8,700 km of line transect aerial surveys were conducted in Beaufort sea state ≤4 in both the summer (May-June 2016) and winter (November-February) of 2016/2017. There were clear seasonal differences in habitat use and abundance of Common Bottlenose Dolphins, which showed an approximate 2.5 fold increase in density during winter (0.626 individuals/km<sup>2</sup>) compared to summer (0.257 individuals/km<sup>2</sup>). The summer abundance estimate was 87,330 (CV = 0.21) (Rogan <em>et al.</em> 2017). In Scottish waters, abundance was estimated as 195 (95% highest posterior density intervals (HPDI): 162–253) from the Moray Firth to Fife and 45 (95% HPDI: 33–66) in the Hebrides, leading to the conclusion that 200-300 Common Bottlenose Dolphins inhabit the inshore coastal waters of Scotland (Cheney <em>et al</em>. 2013). A community of 420 dolphins (95% confidence interval (CI) = 331–521) was documented in the Normano-Breton Gulf of the English Channel (Louis <em>et al</em>. 2015). Photo-identification surveys of Common Bottlenose Dolphins in the Shannon Estuary of western Ireland in 2010 resulted in an abundance estimate of 107 (CV = 0.12; 95% CI = 83 to 131)) (Berrow <em>et al</em>. 2012).</p>  <p>Total abundance for the Mediterranean Sea Common Bottlenose Dolphin subpopulation, listed as Vulnerable on the IUCN Red List, is unknown but thought to be in the low 10,000’s and decreasing (Bearzi <em>et al.</em> 2008, Bearzi and Fortuna 2006). Surveys of 86,000 km<sup>2</sup> of the northwestern Mediterranean off Spain in 2002 estimated 7,654 (CV = 0.45) Common Bottlenose Dolphins (Forcada <em>et al</em>. 2004). Based on surveys in 2000-2003 an estimated 584 (CV = 0.28) individuals occur in the Alboran Sea of Spain (Cañadas and Hammond 2006). Abundance estimates for other parts of the Mediterranean Sea include 148 (95% CI = 132 to 180) in the Amvrakikos Gulf, western Greece (Bearzi <em>et al</em>. 2008), 1,676 (95% CI = 804-3,492) in the Pelagos Sanctuary of the western Mediterranean (Lauriano <em>et al</em>. 2014), 517 (95% CI = 406-658) in the Balearic Islands (Gonzalvo <em>et al</em>. 2014), and 42 (95% CI = 42.0 to 43.1)<strong> </strong>off northeastern Tunisia (Benmessaoud <em>et al.</em> 2013). A decline in the resident Common Bottlenose Dolphin population inhabiting the Kvarnerić area of the northern Adriatic Sea, Croatia during 1995-2003 appears to have been reversed, with about 200 individuals currently using the area (Pleslić <em>et al.</em> 2013). Bottlenose dolphins near Lampedusa Island, Italy, have increased significantly since 1998 to 249 (95% CI = 162 to 449) (Pulcini <em>et al</em>. 2014). Mediterranean Bottlenose Dolphins exhibit subpopulation structure, based on behavior, toxicology, diet, and genetics (Borrell <em>et al</em>. 2005, Natoli <em>et al</em>. 2005, Bearzi <em>et al</em>. 2008).</p>  <p>The total population size of the Black Sea Bottlenose Dolphin subspecies, currently listed as Endangered, is unknown. However, there are abundance estimates for parts of the range suggesting that population size is at least several thousand individuals (Birkun 2006, 2012).</p>  <p>Off South America, 83 (95% CI = 73 to 112) Common Bottlenose Dolphins were estimated in Bahía San Antonio, Argentina in 2006-2008 (Vermuelen and Cammareri 2009). Further to the south in Patagonia, in Golfo San José and adjacent areas, Common Bottlenose Dolphin abundance has declined since the 1970s from at least 53 to 34 dolphins (CV = 0.20) and range shifts have been observed; the causes of these changes could not be conclusively determined (Coscarella <em>et al</em>. 2012). Investigations into possible short-term declines in Common Bottlenose Dolphin abundance due to bycatch in Patos Lagoon, Brazil, found the population to be stable over the period 1998-2012, with an estimate in 2012 of 78 animals (95% CI = 70-86) (Fruet <em>et al</em>. 2011, 2015). &#160;</p>  <p>Off New Zealand, the Fiordland Bottlenose Dolphin subpopulation is listed as Critically Endangered, with only 205 (95% CI: 192-219) individuals in 2008, of which 123 were mature (Currey <em>et al. </em>2009). Elsewhere in New Zealand, there are an estimated 211 Common Bottlenose Dolphins (95% CI = 195 to 232) in the Marlborough Sounds (Merriman <em>et al</em>. 2009) and 92 (95% CI = 80 to 111) near Stewart Island (Brough <em>et al</em>. 2015). Common Bottlenose Dolphins in the Bay of Islands, New Zealand showed a 7.5% annual rate of decline from 1997-1999 to 2003-2006 (Tezanos-Pinto <em>et al</em>. 2013). </p>  <p>Around the island of São Tomé, off the west coast of Africa, Common Bottlenose Dolphins were the most commonly sighted cetaceans during a total of 226 surveys between 2002 and 2006, and in 2012. In total, 140 individuals were photo-identified, and the high rate of discovery of new individuals suggested that these were part of a much larger population (Pereira <em>et al</em>. 2013). In 2011-2013, during 13,694 km of visual survey transects in continental shelf and slope waters off Northwest Africa, between Tangier and Conakry<em>, T. truncatus</em> were (after the Common Dolphin <em>Delphinus delphis</em>) the second-most frequently encountered cetaceans, accounting for 9.6% of total sightings (Djiba <em>et al.</em> 2015). In offshore waters of the Western Indian Ocean, Bottlenose Dolphins, the majority of which appeared to be <em>T. truncatus</em>, were among the most common cetaceans observed (Ballance and Pitman 1998).</p><p></p>",
+    "habitats": "<p>Common Bottlenose Dolphins are found in a wide range of habitats from coastal to pelagic waters (Wells and Scott 1999). Where distinct ecotypes are known, the inshore form frequents estuaries, bays, lagoons and other shallow coastal regions, occasionally ranging far up into rivers. The offshore form tends to be less restricted in range and movement. Some Common Bottlenose Dolphins are residents around oceanic islands (Baird 2016). In many inshore areas Common Bottlenose Dolphins maintain definable, long-term, multi-generational home ranges, but in some locations near the extremes of the species’ range they are migratory. Off the coasts of North America, they tend to inhabit waters with surface temperatures ranging from about 10°C to 32°C (Wells and Scott, 1999). Black Sea Bottlenose Dolphins are common over the shelf of this semi-enclosed basin; they sometimes occur far offshore (Birkun 2006).<br/> <br/> Common Bottlenose Dolphins are commonly associated with many other cetaceans, including large whales and other dolphin species (Wells and Scott 1999). Mixed schools with Indo-Pacific Bottlenose Dolphins have been observed, for instance, in the Taiwan Strait (J. Wang pers. comm.).<br/> <br/> Bottlenose Dolphins consume a wide variety of prey species, mostly fish and squid (Barros and Odell 1990, Barros and Wells 1998, Blanco <em>et al</em>. 2001, Santos <em>et al</em>. 2001). They sometimes eat shrimp and other crustaceans.</p>",
+    "threats": "<p>In many places Common Bottlenose Dolphins are found in coastal waters, bringing them into contact with human activities. Conservation problems are known or suspected for at least: (a) the Critically Endangered Fiordland Bottlenose Dolphin subpopulation in New Zealand (Currey <em>et al</em>. 2013), (b) the Endangered Black Sea Bottlenose Dolphin subspecies (Birkun 2012), (c) the Vulnerable Mediterranean Sea subpopulation (Bearzi <em>et al</em>. 2008, 2012), and the dolphins in (d) Sri Lanka (Leatherwood and Reeves 1989); (e) Peru, Ecuador, and Chile (Read <em>et al</em>. 1988, Van Waerebeek <em>et al</em>. 1990, Sanino <em>et al</em>. 2005, Mangel <em>et al</em>. 2010); (f) Taiwan (Wang <em>et al</em>. 1999 pers. comm.); (g) Japan (Kasuya 2017) and (h) Gulf of California, Mexico (Segura-García <em>et al.</em> 2018).&#160;</p>  <p>Dolphin catches for bait, for human consumption, or to reduce competition with fisheries have been reported worldwide (Wells and Scott 1999, 2018). In a global review of the use of cetaceans as bait in fisheries, Common Bottlenose Dolphins were among the most frequently used (Mintzer <em>et al.</em> 2018). They were reported as being used for bait in Ghana, Italy, Mexico, Nigeria, Venezuela and Spain. In Peru, some coastal artisanal fisheries from at least one port take <em>Common Bottlenose Dolphins</em> for bait, using harpoons, while about 57% of Common Bottlenose Dolphins caught in gillnets as bycatch are discarded at sea; the extent to which such takes occur elsewhere along the Peruvian coast is not known (Mangel <em>et al</em>. 2010). This species is taken opportunistically by harpoon in Sri Lanka (Ilangakoon 1997). In Taiwan, Common Bottlenose Dolphins comprised a major part of the small cetaceans taken by harpoon in the past (J. Wang, pers. comm.). Although little evidence has been collected and reported since the 1990s, illegal hunting of cetaceans still occurs in Taiwan as evidenced by periodic news reports of police confiscations of cetacean parts. Directed hunting of cetaceans, including Common Bottlenose Dolphins, for local consumption occurs in St. Vincent and the Grenadines (Caldwell and Caldwell 1975) and in West Africa (Van Waerebeek <em>et al</em>. 2008). The Common Bottlenose Dolphin is reported to be one of several species targeted by hunters in Indonesia (Mustika 2006). <br/> <br/> The only Mediterranean area with quantitative historical information is the northern Adriatic Sea, where Common Bottlenose Dolphins likely have declined by at least 50% over the past 50 years, largely as a consequence of historical killing in extermination campaigns to reduce competition for fish, followed by habitat degradation and overfishing. The extermination campaigns were conducted until the early 1960s (Bearzi <em>et al</em>. 2004, 2008, Bearzi and Fortuna 2006). For the northwestern Mediterranean, the available information suggests similar trends (Bearzi and Fortuna 2006). There continues to be substantial incidental mortality in fishing gear, and overfishing of dolphin prey, disturbance by marine traffic, and high levels of contamination by pollutants are of concern in much of the Mediterranean Sea (Bearzi <em>et al</em>. 2012).<br/> <br/> Drive hunts of small cetaceans, including Common Bottlenose Dolphins, exist in the Faroe Islands and Japan. Up to 308 are taken annually in the Faroe Islands drive hunt (dating back to 1803), often with Long-finned Pilot Whales (Reyes 1991, Bloch 1998). Drive and harpoon hunts in Japan catch Common Bottlenose Dolphins for human consumption and to remove perceived competition with commercial fisheries (Wells and Scott 1999, Kasuya 2017). Average catch from 1995–2004 was 594 per year (Kasuya 2017). Since 2000, the catch at Taiji in Japan has declined to fewer than 200 Common Bottlenose Dolphins per year, after a peak of 1,670 in 1987 (Kasuya 2017).<br/> <br/> The Endangered Black Sea subspecies was hunted extensively to obtain commercial products including oils, lubricants, food, meal, glue, and leather goods (Tomilin 1957, Buckland <em>et al</em>. 1992). An estimated 24,000 - 28,000 were taken in the Black Sea off Turkey during 1946–1983. However, the total number killed was certainly much greater (probably by tens of thousands) as these figures do not include, or only partially include, catch statistics from other Black Sea countries (Birkun 2006, 2012).<br/> <br/> The Common Bottlenose Dolphin is the most common cetacean species in captivity worldwide (Fisher and Reeves 2005). Live captures of Common Bottlenose Dolphins for public display, research, and military applications have occurred in several parts of the species' range. There is no worldwide estimate of the scale of these removals, but more than 1,500 were live-captured in United States, Mexican, and Bahamian waters through 1980 (Leatherwood and Reeves 1982, Fisher and Reeves 2005). Up to 1983 at least 198 Common Bottlenose Dolphins were reported to have been live-captured for European aquaria (Collet 1984). More recently, eight were collected illegally in the Dominican Republic in 2002 (Parsons <em>et al.</em> 2010) and live-capture efforts in Senegal in 2003 led to the death of at least five dolphins (Van Waerebeek <em>et al</em>. 2008). At least 238 Common Bottlenose Dolphins were live-captured in Cuba in 1986–2004 (Van Waerebeek <em>et al</em>. 2006), and 15 in the Solomon Islands in 2013 (Oremus <em>et al</em>. 2015). Some Common Bottlenose Dolphins captured during drive hunts in Japan are collected alive for marine parks in Japan and internationally (Butterworth <em>et al</em>. 2013). The cumulative live-capture removals of Black Sea Bottlenose Dolphins, not counting mortality during capture operations, is estimated to be from several hundred up to around 1,000 since the mid-1960s for military, academic, and display purposes, including swim-with-dolphins programs (Birkun 2002). Live-captures through 2002 took 10-20 animals annually from a small area in the Kerch Strait, Russia (Birkun 2002, 2006, 2012). According to Convention on International Trade in Endangered Species (CITES) statistics, at least 92 individuals were removed from the Black Sea region during 1990-1999 (Reeves <em>et al</em>. 2003), and Russia reportedly exported at least 66 for travelling shows from 1997-2005 (Fisher and Reeves 2005). <br/> <br/> Incidental mortality of Common Bottlenose Dolphins is known to occur throughout the species’ range in set gillnets, drift gillnets, purse seines, trawls, and longlines, and on hook-and-line gear used in commercial and recreational fisheries, but the level of mortality is poorly documented from most range states (Wells and Scott 1999, Wells <em>et al.</em> 2008). Set gillnet, purse-seine and drift gillnet fisheries off Peru continue to take an unknown but potentially large number annually (Van Waerebeek <em>et al.</em> 2017b, Alfaro-Shigueto <em>et al</em>. 2010), and some of those taken as bycatch or directly were being sold in fish markets at least through 2007, as determined by molecular evidence (Tzika <em>et al</em>. 2010). Prior to 2001, the estimated annual incidental mortality of Common Bottlenose Dolphins in the eastern tropical Pacific purse seine fishery for tuna ranged up to almost 200 per year, but during 2001-2016, the average mortality declined to 2.9 per year (Inter-American Tropical Tuna Commission data, M. Scott pers. comm.). Incidental catches in Chinese fisheries reached several hundred per year in the 1990s (Yang <em>et al</em>. 1999). Bottom trawls and sink gillnets in the mid-Atlantic region of the U.S. take on average 27 offshore Common Bottlenose Dolphins annually, pelagic longlines take 12 Common Bottlenose Dolphins on average each year (Hayes <em>et al</em>. 2017), and shrimp trawls take an unknown number each year (Greenman and McFee 2014). Common Bottlenose Dolphins were the third most frequently caught cetaceans in gillnets in Sri Lanka (Ilangakoon 1997). Taiwanese coastal and distant-water longline fisheries for tunas and sharks take Common Bottlenose Dolphins incidentally, as do a variety of Taiwanese gillnet (including driftnets and trammel nets) and purse-seine fisheries in coastal and distant (e.g., Western Tropical Pacific) waters (Wang and Yang 2002, J. Wang pers. comm.). <br/> <br/> Annual Black Sea Bottlenose Dolphin incidental mortality in bottom-set gillnets from 1946 through the 1980s was roughly estimated as being in the hundreds. The scale of this mortality almost certainly increased in the 1990s-2000s owing to the rapid expansion of illegal, unreported, and unregulated fishing (Birkun 2006, 2012). According to Öztürk (1999) at least 200 Bottlenose Dolphins may have been taken incidentally per year in Turkish fisheries in a variety of fishing nets, especially bottom-set gill nets.&#160;</p>  <p>Common Bottlenose Dolphins in coastal areas are exposed to a wide variety of threats in addition to direct and incidental takes (Vollmer and Rosel 2013). Threats that are cause for concern include: 1) the toxic effects of xenobiotic chemicals; 2) reduced prey availability caused by environmental degradation and overfishing; 3) direct and indirect disturbance and harassment (e.g., boat traffic and commercial dolphin watching and interactive programs); 4) marine construction, including demolition, dredging, and land reclamation, and 5) other forms of habitat destruction and degradation (including anthropogenic noise). Although these and other threats are technically challenging to quantify by comparison with removals, their cumulative impact is likely to result in population declines. The contribution of anthropogenic factors to an increasing number of Unusual Mortality Events involving Common Bottlenose Dolphins remains to be determined (Spradlin <em>et al</em>. 2005).</p>  <p>The Critically Endangered Fiordland (New Zealand) Bottlenose Dolphin subpopulation faces threats from boat-based tourism, increased freshwater discharge from hydroelectric power generation, and reduced prey availability from environmental degradation and overfishing (Currey <em>et al</em>. 2013). </p>  <p>Environmental contaminants likely impact health and reproductive success of the Common Bottlenose Dolphins in parts of its range. Lahvis <em>et al</em>. (1995) correlated concentrations of PCBs and DDT in the blood of inshore Bottlenose Dolphins with decline in immune system function. Males in some areas such as Florida accumulate levels of PCBs more than an order of magnitude greater than the threshold for adverse health effects identified by Kannan <em>et al</em>. (2000). A risk assessment relative to PCB burdens suggested elevated probabilities of first-born mortality at several sites in the U.S. (Schwacke <em>et al</em>. 2002, Wells <em>et al</em>. 2005). Jepson <em>et al.</em> (2016) reported that Common Bottlenose Dolphins in Europe had mean PCB concentrations that greatly exceeded all known marine mammal PCB toxicity thresholds. The spatial patterns of PBDEs and the ΣDDTs/ΣPCBs detected in Common Bottlenose Dolphin blubber have been shown to vary significantly with adjacent watersheds and land use associations in the southeastern United States (Adams <em>et al.</em> 2014). </p>  <p>The <em>Deepwater Horizon</em> oil spill in 2010 was one of the worst environmental catastrophes in the history of the United States. The oil spill adversely impacted the health, reproduction, and survival of Common Bottlenose Dolphins along much of the northern coast of the Gulf of Mexico (Schwacke <em>et al</em>. 2014, Lane <em>et al</em>. 2015). For the stock in Barataria Bay, Louisiana, where oiling was heavy, the spill resulted in an estimated 30,347 lost cetacean years (the difference between baseline and injured population size, summed over the modeled time period) (95% CI: 11,511-89,746), and models suggested the time to recovery of the population would be 39 years (95% CI: 24 to 80) (Schwacke <em>et al</em>. 2017). Similar recovery timelines were predicted for other nearby stocks. There is concern that planned large-scale diversions of fresh water from the Mississippi River into Barataria Bay may hamper the recovery of this stock.</p>  <p>&#160;Common Bottlenose Dolphins sometimes forage around fish-farm cages or take fish from gillnets (e.g., Reeves <em>et al</em>. 2001, Read <em>et al</em>. 2003), commercial trawling gear, crab traps, or recreational fishing gear (Wells and Scott 1999). This can result in incidental mortality through entanglement, hooking, and ingestion of gear (Powell and Wells 2011, Wells <em>et al</em>. 2008, Baird 2016, Stolen <em>et al.</em> 2013). Common Bottlenose Dolphins conditioned to receive food items are more likely to be injured by human interactions than unconditioned dolphins, leading to decreased survival and potentially to consequences at the population level (Donaldson <em>et al</em>. 2010, Christiansen <em>et al</em>. 2016). Developments in recreational fishing line technology include microfilament braided twine that is more damaging to dolphin tissues than simple monofilament (Barco <em>et al</em>. 2010). Dredging and demolition associated with marine construction have been demonstrated to at least temporarily displace Common Bottlenose Dolphins from their normal range (Buckstaff <em>et al.</em> 2013, Pirotta <em>et al.</em> 2013).</p>  <p>Morbillivirus has been responsible for several documented epizootic events involving deaths of hundreds to thousands of Common Bottlenose Dolphins in the western North Atlantic and Gulf of Mexico (Rowles <em>et al</em>. 2011). During an outbreak along the U.S. Atlantic coast in 1987-88, more than 740 Common Bottlenose Dolphins died between New Jersey and Florida. During 2013-2015, more than 1,800 Common Bottlenose Dolphin carcasses were recovered during a morbillivirus event along the Atlantic coast from New York to Florida (NOAA/NMFS 2015). In each of these cases, it should be noted that only a fraction of the actual mortality is generally documented as stranded carcasses, so the number of deaths from the disease are likely much higher (Williams <em>et al</em>. 2011, Wells <em>et al</em>. 2015). It is not known if anthropogenic factors increase susceptibility to the disease.</p>",
+    "measures": "<p>The Common Bottlenose Dolphin is listed in Appendix II of CITES. The subpopulation in the western Mediterranean Sea and the Black Sea subspecies (<em>T. t. ponticus</em>) are on Appendix I of the Convention on Migratory Species (CMS), while the entire species, <em>Tursiops truncates</em>, is on Appendix II.<br/> <br/> The Common Bottlenose Dolphin has been afforded special protected status under Annex II of the European Union’s Habitats Directive. Commercial hunting of Black Sea cetaceans including Bottlenose Dolphins was banned in 1966 in the former USSR, Bulgaria and Romania, and in 1983 in Turkey. The Common Bottlenose Dolphin has been protected in the United States under the Marine Mammal Protection Act since 1972.</p>",
+    "use_trade": "<p>Common Bottlenose Dolphins are hunted in some areas (St. Vincent, Sri Lanka, Japan, Indonesia, West Africa) for human consumption, and as bait in fisheries. In addition, Common Bottlenose Dolphins are sometimes removed from the wild and maintained under human care for public display, research, and training to support specific military and civilian functions at sea. They are increasingly the objects of dolphin watching (tourism) activities.</p>",
+    "rationale": "<p>The Common Bottlenose Dolphin is among the most common cetacean species globally. These dolphins are distributed worldwide in all three major ocean basins and the Mediterranean Sea. They occur in tropical and temperate inshore, coastal, shelf, and oceanic waters. The sum of available abundance estimates is around 750,000, however the vast majority of the species’ range has not been surveyed therefore actual abundance is considerably higher.</p>  <p>Coastal populations of Common Bottlenose Dolphin are often small and resident and many of them are threatened by human activities. This species is bycaught in fishing gear throughout their range but quantitative data on bycatch rates are lacking in most areas. Several populations of Common Bottlenose Dolphin are of particular conservation concern, including the Fiordland subpopulation in New Zealand which is classified as Critically Endangered (Currey <em>et al</em>. 2013) the Mediterranean subpopulation which is classified as vulnerable (Bearzi <em>et al</em>. 2012) and the Black Sea subspecies which is classified as endangered (Birkum 2012).&#160;</p>  <p>Some additional discrete resident populations face serious threats from a variety of sources that are resulting in significant population declines, and some of these (e.g., potentially the Gulf of California, Amvrakikos Gulf, or Slovenia populations) may be assessed as separate subpopulations on the Red List in the future. Despite all of this, the Common Bottlenose Dolphin is still one of the most widespread and abundant cetacean species, and to date there is no evidence that the threats are resulting in a global population decline. This species was listed as Least Concern on the Red List in 2008 and it remains Least Concern in this updated assessment.</p>",
+    "trend_justification": null,
+    "taxonomic_notes": "All Bottlenose Dolphins around the world were previously recognized as <em>Tursiops truncatus</em>, but currently, the genus is considered to be composed of two species: <em>T. truncatus</em> (Common Bottlenose Dolphin) and <em>T. aduncus</em> (the smaller Indo-Pacific Bottlenose Dolphin) (Wang <em>et al. </em>1999, 2000a,b). The Common Bottlenose Dolphin has a worldwide distribution in tropical and temperate latitudes but exhibits a strong ability to adapt to local conditions, a complex social structure and strong site fidelity which results in considerable habitat partitioning throughout its range. This, in turn, has created strong population differentiation accompanied, in some cases, by marked morphological differentiation. The taxonomy of Bottlenose Dolphins is confused due to this geographical variation, and it is very possible that additional species will be recognized in the future.<br/><br/>Three subspecies are currently recognized by the Society for Marine Mammalogy’s Committee on Taxonomy (2017) and a recent re-assessment of <em>Tursiops </em>taxonomy worldwide conducted by the International Whaling Commission confirmed their validity (IWC 2018). These subspecies are the Black Sea Bottlenose Dolphin (<em>T. t. ponticus</em>&#160;Barabash-Nikiforov, 1940) which differs morphologically and genetically from other forms including those in the nearby Mediterranean Sea (Barabash-Nikiforov 1960, Geptner <em>et al.</em> 1976, Natoli <em>et al. </em>2005, Viaud-Martinez <em>et al</em>. 2008). The Lahille Bottlenose Dolphin (<em>T. t. gephyreus</em>) (Lahille, 1908), a larger form in the coastal waters of the western South Atlantic Ocean, is morphologically and genetically different from the offshore population in eastern South America (Costa <em>et al.</em> 2015, 2016; Fruet <em>et al.</em> 2011, 2015). The third subspecies is the nominate subspecies that includes the remaining Common Bottlenose Dolphins worldwide (<em>T. t. truncatus&#160;</em>(Montagu, 1821)). In the western North Atlantic, two forms, offshore and coastal, are distinguishable on the basis of morphology and ecological markers (Mead and Potter 1995) and have fixed genetic differences (Le Duc and Curry 1997, Hoelzel <em>et al. </em>1998, Kingston <em>et al. </em>2009, Rosel<em> et al.</em> 2009, Van Waerebeek <em>et al.</em> 2017a) and according to the recent IWC review the coastal population should be recognized as at least a different subspecies."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Australasian"
+      },
+      "code": "2"
+    },
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    },
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    },
+    {
+      "description": {
+        "en": "Oceanian"
+      },
+      "code": "6"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    }
+  ],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - western central"
+      },
+      "code": "31"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - southwest"
+      },
+      "code": "41"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - southeast"
+      },
+      "code": "47"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Indian Ocean - eastern"
+      },
+      "code": "57"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Indian Ocean - western"
+      },
+      "code": "51"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mediterranean and Black Sea"
+      },
+      "code": "37"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - eastern central"
+      },
+      "code": "77"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - northeast"
+      },
+      "code": "67"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - northwest"
+      },
+      "code": "61"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - southeast"
+      },
+      "code": "87"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - southwest"
+      },
+      "code": "81"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - western central"
+      },
+      "code": "71"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - eastern central"
+      },
+      "code": "34"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - northeast"
+      },
+      "code": "27"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - northwest"
+      },
+      "code": "21"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Estuaries"
+      },
+      "code": "9_10"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Coastal Brackish/Saline Lagoons/Marine Lakes"
+      },
+      "code": "13_4"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Taiwan, Province of China"
+      },
+      "code": "TW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Macao"
+      },
+      "code": "MO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Republic of"
+      },
+      "code": "KR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Korea, Democratic People's Republic of"
+      },
+      "code": "KP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hong Kong"
+      },
+      "code": "HK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Yemen"
+      },
+      "code": "YE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "United Arab Emirates"
+      },
+      "code": "AE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saudi Arabia"
+      },
+      "code": "SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Qatar"
+      },
+      "code": "QA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oman"
+      },
+      "code": "OM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lebanon"
+      },
+      "code": "LB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Kuwait"
+      },
+      "code": "KW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Jordan"
+      },
+      "code": "JO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Iraq"
+      },
+      "code": "IQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cyprus"
+      },
+      "code": "CY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Bahrain"
+      },
+      "code": "BH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Togo"
+      },
+      "code": "TG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Sierra Leone"
+      },
+      "code": "SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Seychelles"
+      },
+      "code": "SC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sao Tome and Principe"
+      },
+      "code": "ST"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Helena, Ascension and Tristan da Cunha"
+      },
+      "code": "SH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Réunion"
+      },
+      "code": "RE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mayotte"
+      },
+      "code": "YT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Mauritius"
+      },
+      "code": "MU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Liberia"
+      },
+      "code": "LR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea-Bissau"
+      },
+      "code": "GW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ghana"
+      },
+      "code": "GH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Equatorial Guinea"
+      },
+      "code": "GQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Djibouti"
+      },
+      "code": "DJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Côte d'Ivoire"
+      },
+      "code": "CI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo"
+      },
+      "code": "CG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Comoros"
+      },
+      "code": "KM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cabo Verde"
+      },
+      "code": "CV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Benin"
+      },
+      "code": "BJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Timor-Leste"
+      },
+      "code": "TL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Singapore"
+      },
+      "code": "SG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Philippines"
+      },
+      "code": "PH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maldives"
+      },
+      "code": "MV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brunei Darussalam"
+      },
+      "code": "BN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "British Indian Ocean Territory"
+      },
+      "code": "IO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uruguay"
+      },
+      "code": "UY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Suriname"
+      },
+      "code": "SR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, U.S."
+      },
+      "code": "VI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Falkland Islands (Malvinas)"
+      },
+      "code": "FK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, British"
+      },
+      "code": "VG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Turks and Caicos Islands"
+      },
+      "code": "TC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chile"
+      },
+      "code": "CL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Trinidad and Tobago"
+      },
+      "code": "TT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sint Maarten (Dutch part)"
+      },
+      "code": "SX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Vincent and the Grenadines"
+      },
+      "code": "VC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Martin (French part)"
+      },
+      "code": "MF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Lucia"
+      },
+      "code": "LC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Kitts and Nevis"
+      },
+      "code": "KN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saba"
+      },
+      "code": "NLA-SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sint Eustatius"
+      },
+      "code": "NLA-SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bonaire, Sint Eustatius and Saba"
+      },
+      "code": "BQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bermuda"
+      },
+      "code": "BM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Barbados"
+      },
+      "code": "BB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "El Salvador"
+      },
+      "code": "SV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belize"
+      },
+      "code": "BZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bahamas"
+      },
+      "code": "BS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Aruba"
+      },
+      "code": "AW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Antigua and Barbuda"
+      },
+      "code": "AG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gibraltar"
+      },
+      "code": "GI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Faroe Islands"
+      },
+      "code": "FO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Denmark"
+      },
+      "code": "DK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bosnia and Herzegovina"
+      },
+      "code": "BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belgium"
+      },
+      "code": "BE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Newfoundland I"
+      },
+      "code": "NFL-NE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guernsey"
+      },
+      "code": "GG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ireland"
+      },
+      "code": "IE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Isle of Man"
+      },
+      "code": "IM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jersey"
+      },
+      "code": "JE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Anguilla"
+      },
+      "code": "AI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malta"
+      },
+      "code": "MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Monaco"
+      },
+      "code": "MC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Netherlands"
+      },
+      "code": "NL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Sahara"
+      },
+      "code": "EH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cayman Islands"
+      },
+      "code": "KY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cuba"
+      },
+      "code": "CU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Pierre and Miquelon"
+      },
+      "code": "PM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Curaçao"
+      },
+      "code": "CW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominica"
+      },
+      "code": "DM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominican Republic"
+      },
+      "code": "DO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Grenada"
+      },
+      "code": "GD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guadeloupe"
+      },
+      "code": "GP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Haiti"
+      },
+      "code": "HT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jamaica"
+      },
+      "code": "JM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Martinique"
+      },
+      "code": "MQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Montserrat"
+      },
+      "code": "MS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ukraine"
+      },
+      "code": "UA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "American Samoa"
+      },
+      "code": "AS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bonaire"
+      },
+      "code": "NLA-BO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Christmas Island"
+      },
+      "code": "CX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cocos (Keeling) Islands"
+      },
+      "code": "CC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cook Islands"
+      },
+      "code": "CK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Fiji"
+      },
+      "code": "FJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Polynesia"
+      },
+      "code": "PF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guam"
+      },
+      "code": "GU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kiribati"
+      },
+      "code": "KI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Puerto Rico"
+      },
+      "code": "PR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Marshall Islands"
+      },
+      "code": "MH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Micronesia, Federated States of "
+      },
+      "code": "FM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nauru"
+      },
+      "code": "NR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Caledonia"
+      },
+      "code": "NC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "NZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Niue"
+      },
+      "code": "NU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Norfolk Island"
+      },
+      "code": "NF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northern Mariana Islands"
+      },
+      "code": "MP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Palau"
+      },
+      "code": "PW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Papua New Guinea"
+      },
+      "code": "PG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pitcairn"
+      },
+      "code": "PN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Samoa"
+      },
+      "code": "WS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Solomon Islands"
+      },
+      "code": "SB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Tokelau"
+      },
+      "code": "TK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tonga"
+      },
+      "code": "TO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Tuvalu"
+      },
+      "code": "TV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Vanuatu"
+      },
+      "code": "VU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Wallis and Futuna"
+      },
+      "code": "WF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": "Bait in fisheries",
+      "subsistence": true,
+      "description": {
+        "en": "Other (free text)"
+      },
+      "code": "17"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Shipping lanes"
+      },
+      "code": "4_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_4_5"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Problematic native species/diseases"
+      },
+      "code": "8_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_3_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_2_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Wells, R.S., Natoli, A. & Braulik, G.T.",
+      "value": [
+        "Ada Natoli (UAE Dolphin Project)",
+        "Randall Wells",
+        "Gillian Braulik (IUCN SSC Cetacean Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Reeves, R. & Taylor, B.L.",
+      "value": [
+        "Barbara Taylor (independent researcher)",
+        "Randall Reeves (IUCN SSC Cetacean Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Lowry, L.",
+      "value": [
+        "Lloyd Lowry (Deceased Nov 2018. Formerely atUniversity of Alaska Fairbanks)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This errata version has been generated to remove the section about the UAE from the Taxonomic Notes which was erroneously copied into the global assessment from the national assessment. The distribution map for this species has also been updated."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Wade, P.R. and Gerrodette, T. 1993. Estimates of cetacean abundance and distribution in the eastern tropical Pacific. <i>Reports of the International Whaling Commission</i> 43: 477-493.",
+      "year": "1993",
+      "title": "Estimates of cetacean abundance and distribution in the eastern tropical Pacific",
+      "author": "Wade, P.R. and Gerrodette, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dolar, M. L. L., Perrin, W. F., Taylor, B. L., Kooyman, G. L. and Alava, M. N. R. 2006. Abundance and distributional ecology of cetaceans in the central Philippines. <i>Journal of Cetacean Research and Management</i> 8(1): 93-112.",
+      "year": "2006",
+      "title": "Abundance and distributional ecology of cetaceans in the central Philippines",
+      "author": "Dolar, M. L. L., Perrin, W. F., Taylor, B. L., Kooyman, G. L. and Alava, M. N. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Reeves, R.R., Smith, B.D., Crespo, E.A. and Notarbartolo di Sciara, G. 2003. Dolphins, Whales and Porpoises: 2002-2010 Conservation Action Plan for the World's Cetaceans. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "2003",
+      "title": "Dolphins, Whales and Porpoises: 2002-2010 Conservation Action Plan for the World's Cetaceans",
+      "author": "Reeves, R.R., Smith, B.D., Crespo, E.A. and Notarbartolo di Sciara, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Read, A. J., Van Waerebeek, K., Reyes, J. C., Mckinnon, J. S. and Lehman, L. C. 1988. The exploitation of small cetaceans in coastal Peru. <i>Biological Conservation</i> 46: 53-70.",
+      "year": "1988",
+      "title": "The exploitation of small cetaceans in coastal Peru",
+      "author": "Read, A. J., Van Waerebeek, K., Reyes, J. C., Mckinnon, J. S. and Lehman, L. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Reeves, R. R. and Notarbartolo Di Sciara, G. 2006. <i>The status and distribution of cetaceans in the Black Sea and Mediterranean Sea</i>. IUCN Centre for Mediterranean Cooperation, Malaga, Spain.",
+      "year": "2006",
+      "title": "The status and distribution of cetaceans in the Black Sea and Mediterranean Sea",
+      "author": "Reeves, R. R. and Notarbartolo Di Sciara, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Geptner, V.G., Chapsky, K.K., Arsenyev, V.A. and Sokolov, V.E. 1976. <i>Mammals of the Soviet Union. Volume 2, Part 3: Pinnipeds and Toothed Whales</i>. Vysshaya Shkola, Moscow. 718 pp (in Russian).",
+      "year": "1976",
+      "title": "Mammals of the Soviet Union.",
+      "author": "Geptner, V.G., Chapsky, K.K., Arsenyev, V.A. and Sokolov, V.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Miyashita, T. 1993. Abundance of dolphin stocks in the western North Pacific taken by the Japanese drive fishery. <i>Reports of the International Whaling Commission</i> 43: 417-437.",
+      "year": "1993",
+      "title": "Abundance of dolphin stocks in the western North Pacific taken by the Japanese drive fishery",
+      "author": "Miyashita, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yang, S. C., Liao, H. C., Pan, C. L. and Wang, J. Y. 1999. A survey of cetaceans in the waters of central-eastern Taiwan. <i>Asian Marine Biology</i> 16: 23-34.",
+      "year": "1999",
+      "title": "A survey of cetaceans in the waters of central-eastern Taiwan",
+      "author": "Yang, S. C., Liao, H. C., Pan, C. L. and Wang, J. Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Currey, R.J.C., Dawson, S.M. and Slooten, E. 2009. An approach for regional threat assessment under IUCN Red List criteria that is robust to uncertainty: The Fiordland bottlenose dolphins are critically endangered. <i>Biological Conservation</i> 142(8): 1570-1579.",
+      "year": "2009",
+      "title": "An approach for regional threat assessment under IUCN Red List criteria that is robust to uncertainty: The Fiordland bottlenose dolphins are critically endangered",
+      "author": "Currey, R.J.C., Dawson, S.M. and Slooten, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ballance, L. T. and Pitman, R. L. 1998. Cetaceans of the western tropical Indian Ocean: distribution, relative abundance, and comparisons with cetacean communities of two other tropical ecosystems. <i>Marine Mammal Science</i> 14: 429-459.",
+      "year": "1998",
+      "title": "Cetaceans of the western tropical Indian Ocean: distribution, relative abundance, and comparisons with cetacean communities of two other tropical ecosystems",
+      "author": "Ballance, L. T. and Pitman, R. L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Leatherwood, S. and Reeves, R.R. 1989. Marine mammal research and conservation in Sri Lanka 1985-1986.  UNEP Marine Mammal Technical Report. United Nations Environment Programme, Nairobi, Kenya.",
+      "year": "1989",
+      "title": "Marine mammal research and conservation in Sri Lanka 1985-1986",
+      "author": "Leatherwood, S. and Reeves, R.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mead, J.G. and Potter, C.W. 1995. Recognizing two populations of the bottlenose dolphin (<i>Tursiops truncatus</i>) off the Atlantic coast of North America: morphologic and ecologic considerations. <i>IBI Reports (International Marine Biological Research Institute, Kamogawa, Japan)</i> 5: 31–44.",
+      "year": "1995",
+      "title": "Recognizing two populations of the bottlenose dolphin (<i>Tursiops truncatus</i>) off the Atlantic coast of North America: morphologic and ecologic considerations.",
+      "author": "Mead, J.G. and Potter, C.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Reeves, R. R., Read, A. J. and Notarbartolo Di Sciara, G. 2001. Report of the workshop on interactions between dolphins and fisheries in the Mediterranean: evaluation of mitigation alternatives. ICRAM, Rome, Italy.",
+      "year": "2001",
+      "title": "Report of the workshop on interactions between dolphins and fisheries in the Mediterranean: evaluation of mitigation alternatives",
+      "author": "Reeves, R. R., Read, A. J. and Notarbartolo Di Sciara, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schwacke, L. H., Voit, E. O., Hansen, L. J., Wells, R. S., Mitchum, G. B., Hohn, A. A. and Fair, P. A. 2002. Probabilistic risk assessment of reproductive effects of polychlorinated biphenyls on bottlenose dolphins (<i>Tursiops truncatus</i>) from the southeast United States coast. <i>Environmental Toxicology and Chemistry</i> 21(12): 2752-2764.",
+      "year": "2002",
+      "title": "Probabilistic risk assessment of reproductive effects of polychlorinated biphenyls on bottlenose dolphins (<i>Tursiops truncatus</i>) from the southeast United States coast",
+      "author": "Schwacke, L. H., Voit, E. O., Hansen, L. J., Wells, R. S., Mitchum, G. B., Hohn, A. A. and Fair, P. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sanino, G. P., Van Waerebeek, K., Van, M. F. Bressem and Pastene, L. A. 2005. A preliminary note on population structure in eastern South Pacific common bottlenose dolphins, <i>Tursiops truncatus</i>. <i>Journal of Cetacean Research and Management</i> 7(1): 65-70.",
+      "year": "2005",
+      "title": "A preliminary note on population structure in eastern South Pacific common bottlenose dolphins, <i>Tursiops truncatus</i>",
+      "author": "Sanino, G. P., Van Waerebeek, K., Van, M. F. Bressem and Pastene, L. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Birkun, A. 2006. Common bottlenose dolphin (<i>Tursiops truncatus ponticus</i>): Black Sea subspecies. In: R. R. Reeves and G. Notarbartolo di Sciara (eds), <i>The status and distribution of cetaceans in the Black Sea and Mediterranean Sea</i>, pp. 74-83. IUCN Centre for Mediterranean Cooperation, Malaga, Spain.",
+      "year": "2006",
+      "title": "Common bottlenose dolphin (<i>Tursiops truncatus ponticus</i>): Black Sea subspecies",
+      "author": "Birkun, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wells, R. S., Tornero, V., Borrell, A., Aguilar, A., Rowles, T. K., Rhinehart, H. L., Hofmann, S., Jarman, W. M., Hohn, A. A. and Sweeney, J. C. 2005. Integrating life-history and reproductive success data to examine potential relationships with organochlorine compounds for bottlenose dolphins (<i>Tursiops truncatus</i>) in Sarasota Bay, Florida. <i>Science of the Total Environment</i> 349: 106-119.",
+      "year": "2005",
+      "title": "Integrating life-history and reproductive success data to examine potential relationships with organochlorine compounds for bottlenose dolphins (<i>Tursiops truncatus</i>) in Sarasota Bay, Florida",
+      "author": "Wells, R. S., Tornero, V., Borrell, A., Aguilar, A., Rowles, T. K., Rhinehart, H. L., Hofmann, S., Jarman, W. M., Hohn, A. A. and Sweeney, J. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Leatherwood, S. and Reeves, R. R. (eds). 1990. <i>The Bottlenose Dolphin</i>. pp. 1-653. Academic Press.",
+      "year": "1990",
+      "title": "The Bottlenose Dolphin",
+      "author": "Leatherwood, S. and Reeves, R. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lahvis, G. P., Wells, R. S., Kuehl, D. W., Stewart, J. L., Rhinehart, H. L. and Via, C. S. 1995. Decreased lymphocyte responses in free-ranging bottlenose dolphins (<i>Tursiops truncatus</i>) are associated with increased concentrations of PCBs and DDT in peripheral blood. <i>Environmental Health Perspectives</i> 103: 67-72.",
+      "year": "1995",
+      "title": "Decreased lymphocyte responses in free-ranging bottlenose dolphins (<i>Tursiops truncatus</i>) are associated with increased concentrations of PCBs and DDT in peripheral blood",
+      "author": "Lahvis, G. P., Wells, R. S., Kuehl, D. W., Stewart, J. L., Rhinehart, H. L. and Via, C. S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wells, R. S. and Scott, M. D. 1999. Bottlenose dolphin <i>Tursiops truncatus</i> (Montagu, 1821). In: S. H. Ridgway and R. Harrison (eds), <i>Handbook of marine mammals, Vol. 6: The second book of dolphins and the porpoises</i>, pp. 137-182. Academic Press, San Diego, CA, USA.",
+      "year": "1999",
+      "title": "Bottlenose dolphin <i>Tursiops truncatus</i> (Montagu, 1821)",
+      "author": "Wells, R. S. and Scott, M. D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kannan, K., Blankenship, A. L., Jones, P. D. and Geisy, J. P. 2000. Toxicity reference values for the toxic effects of polychlorinated biphenyls to aquatic mammals. <i>Human and Ecological Risk Assessment</i> 6: 181-201.",
+      "year": "2000",
+      "title": "Toxicity reference values for the toxic effects of polychlorinated biphenyls to aquatic mammals",
+      "author": "Kannan, K., Blankenship, A. L., Jones, P. D. and Geisy, J. P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Spradlin, T. R., Gulland, F. M. D., Wells, R. S., Ragen, T. J. and Rowles, T. K. 2005. Review of marine mammal Unusual Mortality Events in the United States: 1992-2005. 16th Biennial Conference on the Biology of Marine Mammals. San Diego, CA.",
+      "year": "2005",
+      "title": "Review of marine mammal Unusual Mortality Events in the United States: 1992-2005",
+      "author": "Spradlin, T. R., Gulland, F. M. D., Wells, R. S., Ragen, T. J. and Rowles, T. K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Borrell, A., Aguilar, A., Tornero, V., Sequeira, M., Fernandez, G. and Alis, S. 2005. Organochlorine compounds and stable isotopes indicate bottlenose dolphin subpopulation structure around the Iberian Peninsula. <i>Environment International</i> 32(4): 516-523.",
+      "year": "2005",
+      "title": "Organochlorine compounds and stable isotopes indicate bottlenose dolphin subpopulation structure around the Iberian Peninsula",
+      "author": "Borrell, A., Aguilar, A., Tornero, V., Sequeira, M., Fernandez, G. and Alis, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bearzi, G. and Fortuna, C. M. 2006. Common bottlenose dolphin <i>Tursiops truncatus</i> (Mediterranean subpopulation). In: R. R. Reeves and G. Notarbartolo di Sciara (eds), <i>The status and distribution of cetaceans in the Black Sea and Mediterranean Sea</i>, pp. 64-73. IUCN Centre for Mediterranean Cooperation, Malaga, Spain.",
+      "year": "2006",
+      "title": "Common bottlenose dolphin <i>Tursiops truncatus</i> (Mediterranean subpopulation)",
+      "author": "Bearzi, G. and Fortuna, C. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Natoli, A., Birkun, A., Aguilar, A., Lopez, A. and Hoelzel, A. R. 2005. Habitat structure and the dispersal of male and female bottlenose dolphins (<i>Tursiops truncatus</i>). <i>Proceedings of the Royal Society of London B Biological Sciences</i> 272: 1217-1226.",
+      "year": "2005",
+      "title": "Habitat structure and the dispersal of male and female bottlenose dolphins (<i>Tursiops truncatus</i>)",
+      "author": "Natoli, A., Birkun, A., Aguilar, A., Lopez, A. and Hoelzel, A. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Santos, M. B., Pierce, G. J., Reid, R. J., Patterson, A. P., Ross, H. M. and Mente, E. 2001. Stomach contents of bottlenose dolphins (<i>Tursiops truncatus</i>) in Scottish waters. <i>Journal of the Marine Biological Association and United Kingdom</i> 81: 873-878.",
+      "year": "2001",
+      "title": "Stomach contents of bottlenose dolphins (<i>Tursiops truncatus</i>) in Scottish waters",
+      "author": "Santos, M. B., Pierce, G. J., Reid, R. J., Patterson, A. P., Ross, H. M. and Mente, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Geptner V. G., Naumov, N. P., Urgenson, M. B., Sludskiy, A. A., Chirkova A. F. and Bannikov, A. G. 1976. <i>The Mammals of the Soviet Union, Vol. 2, Part 1: Carnivora</i>. Vischay Shkola, Moscow, Russia.",
+      "year": "1976",
+      "title": "The Mammals of the Soviet Union, Vol. 2, Part 1: Carnivora",
+      "author": "Geptner V. G., Naumov, N. P., Urgenson, M. B., Sludskiy, A. A., Chirkova A. F. and Bannikov, A. G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bearzi, G., Holcer, D. and Notarbartolo Di Sciara, G. 2004. The role of historical dolphin takes and habitat degradation in shaping the present status of northern Adriatic cetaceans. <i>Aquatic Conservation of Marine and Freshwater Ecosystems</i> 14: 363-379.",
+      "year": "2004",
+      "title": "The role of historical dolphin takes and habitat degradation in shaping the present status of northern Adriatic cetaceans",
+      "author": "Bearzi, G., Holcer, D. and Notarbartolo Di Sciara, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Barros, N. B. and Odell, D. K. 1990. Food habits of bottlenose dolphins in the southeastern United States. In: S. Leatherwood and R. R. Reeves (eds), <i>The bottlenose dolphin</i>, pp. 309-328. Academic Press.",
+      "year": "1990",
+      "title": "Food habits of bottlenose dolphins in the southeastern United States",
+      "author": "Barros, N. B. and Odell, D. K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bloch, D. 1998. A review of marine mammals observed, caught or stranded over the last two centuries in Faroese Waters.  Shetland Sea Mammal Report 1997.",
+      "year": "1998",
+      "title": "A review of marine mammals observed, caught or stranded over the last two centuries in Faroese Waters",
+      "author": "Bloch, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Reynolds, J. E., Wells, R. S. and Eide, S. D. 2000. <i>The bottlenose dolphin: biology and conservation</i>. University Press of Florida.",
+      "year": "2000",
+      "title": "The bottlenose dolphin: biology and conservation",
+      "author": "Reynolds, J. E., Wells, R. S. and Eide, S. D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Van Waerebeek, K., Sequeira, M., Williamson, C., Sanino, G. P., Gallego, P. and Carmo, P. 2006. Live-captures of common bottlenose dolphins <i>Tursiops truncatus</i> and unassessed bycatch in Cuban waters: evidence of sustainability found wanting. <i>Latin American Journal of Aquatic Mammals</i> 5(1): 39-48.",
+      "year": "2006",
+      "title": "Live-captures of common bottlenose dolphins <i>Tursiops truncatus</i> and unassessed bycatch in Cuban waters: evidence of sustainability found wanting",
+      "author": "Van Waerebeek, K., Sequeira, M., Williamson, C., Sanino, G. P., Gallego, P. and Carmo, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Van Waerebeek, K., Reyes, J. C., Read, A. J. and Mckinnon, J. S. 1990. Preliminary observations of bottlenose dolphins from the Pacific coast of South America. In: S. Leatherwoodand R. R. Reeves (ed.), <i>The bottlenose dolphin</i>, pp. 143-154. Academic Press.",
+      "year": "1990",
+      "title": "Preliminary observations of bottlenose dolphins from the Pacific coast of South America",
+      "author": "Van Waerebeek, K., Reyes, J. C., Read, A. J. and Mckinnon, J. S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mead, J. G. and Potter, C. W. 1995. Recognizing two populations of the bottlenose dolphin (<i>Tursiops truncatus</i>) off the Atlantic coast of North America- morphologic and ecologic considerations. <i>IBI Reports</i> 5: 31-44.",
+      "year": "1995",
+      "title": "Recognizing two populations of the bottlenose dolphin (<i>Tursiops truncatus</i>) off the Atlantic coast of North America- morphologic and ecologic considerations",
+      "author": "Mead, J. G. and Potter, C. W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Öztürk, B. 1999. <i>Black Sea Biological Diversity: Turkey</i>. United Nations Publication, New York, USA.",
+      "year": "1999",
+      "title": "Black Sea Biological Diversity: Turkey",
+      "author": "Öztürk, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Leduc, R. G. and Curry, B. E. 1997. Mitochondrial DNA sequence analysis indicates need for revision of the genus <i>Tursiops</i>. <i>Report of the International Whaling Commission</i> 47: 393.",
+      "year": "1997",
+      "title": "Mitochondrial DNA sequence analysis indicates need for revision of the genus <i>Tursiops</i>",
+      "author": "Leduc, R. G. and Curry, B. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wang, J. Y., Chou, L. S. and White, B. N. 2000. Differences in external morphology of two sympatric species of bottlenose dolphins (genus <i>Tursiops</i>) in the waters of China. <i>Journal of Mammalogy</i> 81(4): 1157-1165.",
+      "year": "2000",
+      "title": "Differences in external morphology of two sympatric species of bottlenose dolphins (genus <i>Tursiops</i>) in the waters of China",
+      "author": "Wang, J. Y., Chou, L. S. and White, B. N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Read, A. J., Waples, D. M., Urian, K. W. and Swanner, D. 2003. Fine-scale behaviour of bottlenose dolphins around gillnets. Proceedings of the Royal Society of London B Biological Sciences 270: S90-92.",
+      "year": "2003",
+      "title": "Fine-scale behaviour of bottlenose dolphins around gillnets",
+      "author": "Read, A. J., Waples, D. M., Urian, K. W. and Swanner, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fisher, S. J. and Reeves, R. R. 2005. The global trade in live cetaceans: Implications for conservation. <i>Journal of International Wildlife Law and Policy</i> 8: 315-340.",
+      "year": "2005",
+      "title": "The global trade in live cetaceans: Implications for conservation",
+      "author": "Fisher, S. J. and Reeves, R. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wang, J. Y., Chou, L. S. and White, B. N. 1999. Mitochondrial DNA analysis of sympatric morphotypes of bottlenose dolphins (genus: <i>Tursiops</i>) in Chinese waters. <i>Molecular Ecology</i> 8: 1603-1612.",
+      "year": "1999",
+      "title": "Mitochondrial DNA analysis of sympatric morphotypes of bottlenose dolphins (genus: <i>Tursiops</i>) in Chinese waters",
+      "author": "Wang, J. Y., Chou, L. S. and White, B. N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ilangakoon, A. 1997. Species composition, seasonal variation, sex ratio and body length of small cetaceans caught off west, south-west and south coast of Sri Lanka. <i>Journal of the Bombay Natural History Society</i> 94: 298-306.",
+      "year": "1997",
+      "title": "Species composition, seasonal variation, sex ratio and body length of small cetaceans caught off west, south-west and south coast of Sri Lanka",
+      "author": "Ilangakoon, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Leatherwood, S. and Reeves, R. R. 1982. Bottlenose dolphin <i>Tursiops truncatus</i> and other toothed cetaceans. In: J. A. Chapman and G. A. Feldhammer (eds), <i>Wild mammals of North America</i>, pp. 369-414. Johns Hopkins University Press, Baltimore, MD, USA.",
+      "year": "1982",
+      "title": "Bottlenose dolphin <i>Tursiops truncatus</i> and other toothed cetaceans",
+      "author": "Leatherwood, S. and Reeves, R. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bloch, D. and Mikkelsen, B. 2000. Preliminary estimates of seasonal abundance and food consumption of marine mammals in Faroese waters. NAMMCO.",
+      "year": "2000",
+      "title": "Preliminary estimates of seasonal abundance and food consumption of marine mammals in Faroese waters",
+      "author": "Bloch, D. and Mikkelsen, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Birkun Jr., A. A. 2002. Direct killing and live capture: Black Sea. In: G. N. D. Sciara (ed.), <i>Cetaceans of the Mediterranean and Black Seas: State of knowledge and conservation strategies</i>, pp. 31-38. ACCOBAMS Secretariat, Monaco.",
+      "year": "2002",
+      "title": "Direct killing and live capture: Black Sea",
+      "author": "Birkun Jr., A. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tomilin, A.G. 1957. <i>Mammals of the USSR and adjacent countries. Vol. IV. Cetaceans</i>. USSR Academy of Science Publishing House, Moskou, Russia.",
+      "year": "1957",
+      "title": "Mammals of the USSR and adjacent countries. Vol. IV. Cetaceans",
+      "author": "Tomilin, A.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Barabasch-Nikiforov, I. I. 1960. Measurements and coloration of bottlenose dolphins (<i>Tursiops truncatus</i> Montagu) as the criterion for their subspecies differentiation. <i>Nauch. Dokl. Vys. Shkoly, Biol. Sci.</i> 1: 35-42.",
+      "year": "1960",
+      "title": "Measurements and coloration of bottlenose dolphins (<i>Tursiops truncatus</i> Montagu) as the criterion for their subspecies differentiation",
+      "author": "Barabasch-Nikiforov, I. I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Canadas, A. and Hammond, P. S. 2006. Model-based abundance estimates for bottlenose dolphins off southern Spain: Implications for conservation and management. <i>Journal of Cetacean Research and Management</i> 8(1): 13-28.",
+      "year": "2006",
+      "title": "Model-based abundance estimates for bottlenose dolphins off southern Spain: Implications for conservation and management",
+      "author": "Canadas, A. and Hammond, P. S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wang, J. Y., Chou, L. S. and White, B. N. 2000. Osteological differences between two sympatric forms of bottlenose dolphins (genus <i>Tursiops</i>) in Chinese waters. <i>Journal of Zoology (London)</i> 252: 147-162.",
+      "year": "2000",
+      "title": "Osteological differences between two sympatric forms of bottlenose dolphins (genus <i>Tursiops</i>) in Chinese waters",
+      "author": "Wang, J. Y., Chou, L. S. and White, B. N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hoelzel, A. R., Potter, C. W. and Best, P. B. 1998. Genetic differentiation between parapatric 'nearshore' and 'offshore' populations of the bottlenose dolphin. <i>Proceedings of the Royal Society of London B Biological Sciences</i> 265: 1177-1183.",
+      "year": "1998",
+      "title": "Genetic differentiation between parapatric 'nearshore' and 'offshore' populations of the bottlenose dolphin",
+      "author": "Hoelzel, A. R., Potter, C. W. and Best, P. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Buckland, S. T., Smith, T. and Cattanach, K. L. 1992. Status of small cetacean populations in the Black Sea: a review of current information and suggestions for future research. <i>Reports of the International Whaling Commission</i> 42: 513-516.",
+      "year": "1992",
+      "title": "Status of small cetacean populations in the Black Sea: a review of current information and suggestions for future research",
+      "author": "Buckland, S. T., Smith, T. and Cattanach, K. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Forcada, J., Gazo, M., Aguilar, A., Gonzalvo, J. and Fernandez-Contreras, M. 2004. Bottlenose dolphin abundance in the NW Mediterranean: Addressing heterogeneity in distribution. <i>Marine Ecology Progress Series</i> 275: 275-287.",
+      "year": "2004",
+      "title": "Bottlenose dolphin abundance in the NW Mediterranean: Addressing heterogeneity in distribution",
+      "author": "Forcada, J., Gazo, M., Aguilar, A., Gonzalvo, J. and Fernandez-Contreras, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Barros, N. B. and Wells, R. S. 1998. Prey and feeding patterns of resident bottlenose dolphins (<i>Tursiops truncatus</i>) in Sarasota Bay, Florida. <i>Journal of Mammalogy</i> 79(3): 1045-1059.",
+      "year": "1998",
+      "title": "Prey and feeding patterns of resident bottlenose dolphins (<i>Tursiops truncatus</i>) in Sarasota Bay, Florida",
+      "author": "Barros, N. B. and Wells, R. S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Blanco, C., Salomon, O. and Raga, J. A. 2001. Diet of the bottlenose dolphin (<i>Tursiops truncatus</i>) in the western Mediterranean Sea. <i>Journal of the Marine Biological Association of the United Kingdom</i> 81: 1053-1058.",
+      "year": "2001",
+      "title": "Diet of the bottlenose dolphin (<i>Tursiops truncatus</i>) in the western Mediterranean Sea",
+      "author": "Blanco, C., Salomon, O. and Raga, J. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wang, J. Y. and Yang, S. C. 2002. Interactions between Taiwan's distant water tuna longline fishery and cetaceans. Toothed Whales/Longline Fisheries Interactions in the South Pacific. Apia, Western Samoa.",
+      "year": "2002",
+      "title": "Interactions between Taiwan's distant water tuna longline fishery and cetaceans",
+      "author": "Wang, J. Y. and Yang, S. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Williams R., Gero S., Bejder L., Calambokidis J., Kraus S.D., Lusseau D., Read A.J.,  and Robbins J. 2011.  Underestimating the damage: interpreting cetacean carcass recoveries in the context of the Deepwater Horizon/BP incident. <i> Conservation Letters</i> 4:  228–233.",
+      "year": "2011",
+      "title": " Underestimating the damage: interpreting cetacean carcass recoveries in the context of the Deepwater Horizon/BP incident",
+      "author": "Williams R., Gero S., Bejder L., Calambokidis J., Kraus S.D., Lusseau D., Read A.J.,  and Robbins J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Jepson, P., Deaville, R., Barber, J., Aguilar, A., Borrell, A., Murphy, S., Barry, J., Brownlow, A., Barnett, J., Berrow, S., Cunningham, A., Davison, N., ten Doeschate, M., Esteban, R., Ferreira, M., Foote, A., Genov, T., Gimenez, J., Loveridge, J., Llavona, A., Martin, V., Maxwell, D., Papachlimitzou, A., Penrose, R., Perkins, M., Smith, B., de Stephanis, R., Tregenza, N., Verborgh, P., Fernandez, A., Law, R. 2016. PCB pollution continues to impact populations of orcas and other dolphins in European waters. <i>Scientific Reports</i> 6:18573. DOI: 10.1038/srep18573.",
+      "year": "2016",
+      "title": "PCB pollution continues to impact populations of orcas and other dolphins in European waters",
+      "author": "Jepson, P., Deaville, R., Barber, J., Aguilar, A., Borrell, A., Murphy, S., Barry, J., Brownlow, A., Barnett, J., Berrow, S., Cunningham, A., Davison, N., ten Doeschate, M., Esteban, R., Ferreira, M., Foote, A., Genov, T., Gimenez, J., Loveridge, J., Llavona, A., Martin, V., Maxwell, D., Papachlimitzou, A., Penrose, R., Perkins, M., Smith, B., de Stephanis, R., Tregenza, N., Verborgh, P., Fernandez, A., Law, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Committee on Taxonomy. 2017. List of marine mammal species and subspecies. Society for Marine Mammalogy, www.marinemammalscience.org, consulted on 24 December  2017.",
+      "year": "2017",
+      "title": "List of marine mammal species and subspecies. Society for Marine Mammalogy, www.marinemammalscience.org, consulted on 24 December  2017",
+      "author": "Committee on Taxonomy",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hayes, S.A., Josephson, E., Maze-Foley, K, and Rosel, P.E. (eds). 2017. US Atlantic and Gulf of Mexico Marine Mammal Stock Assessments – 2016.  National Oceanic and Atmospheric Administration Technical Memorandum NMFS-NE-241.",
+      "year": "2017",
+      "title": "US Atlantic and Gulf of Mexico Marine Mammal Stock Assessments – 2016.  National Oceanic and Atmospheric Administration Technical Memorandum NMFS-NE-241",
+      "author": "Hayes, S.A., Josephson, E., Maze-Foley, K, and Rosel, P.E. (eds).",
+      "citation_short": ""
+    },
+    {
+      "citation": "Committee on Taxonomy. 2017. List of marine mammal species and subspecies. Available at: <a href=\"www.marinemammalscience.org\">www.marinemammalscience.org</a>. (Accessed: 31 August 2018).",
+      "year": "2017",
+      "title": "List of marine mammal species and subspecies",
+      "author": "Committee on Taxonomy",
+      "citation_short": null
+    },
+    {
+      "citation": "Hammond, P.S., Lacey, C., Gilles, A., Viquerat, S., Börjesson, P., Herr, H., Macleod, K., Ridoux, V., Santos, M.B., Scheidat, M., Teilmann, J., Vingada, J. and Øien, N. 2017. Estimates of cetacean abundance in European Atlantic waters in summer 2016 from the SCANS-III aerial and shipboard surveys. Wageningen Marine Research. https://library.wur.nl/WebQuery/wurpubs/fulltext/414756.",
+      "year": "2017",
+      "title": "Estimates of cetacean abundance in European Atlantic waters in summer 2016 from the SCANS-III aerial and shipboard surveys",
+      "author": "Hammond, P.S., Lacey, C., Gilles, A., Viquerat, S., Börjesson, P., Herr, H., Macleod, K., Ridoux, V., Santos, M.B., Scheidat, M., Teilmann, J., Vingada, J. and Øien, N. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Carretta, J.V., Forney, K.A., Oleson, E.M., Weller, D.W., Lang, A.R., Baker, J., Muto, M.M., Hanson B., Orr, A.J., Huber, H., Lowry, M.S., Barlow, J., Moore, J.E., Lynch, D., Carswell, L. and Brownell, R.L. Jr. 2017. U.S. Pacific Marine Mammal Stock Assessments: 2016.  National Oceanic and Atmospheric Administration Technical Memorandum NMFS-SWFSC-577.",
+      "year": "2017",
+      "title": "U.S. Pacific Marine Mammal Stock Assessments: 2016",
+      "author": "Carretta, J.V., Forney, K.A., Oleson, E.M., Weller, D.W., Lang, A.R., Baker, J., Muto, M.M., Hanson B., Orr, A.J., Huber, H., Lowry, M.S., Barlow, J., Moore, J.E., Lynch, D., Carswell, L. and Brownell, R.L. Jr. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kasuya, T. 2017. <i>Small Cetaceans of Japan: Exploitation and Biology</i>. CRC Press.",
+      "year": "2017",
+      "title": "Small Cetaceans of Japan: Exploitation and Biology",
+      "author": "Kasuya, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mustika, P. L. K. 2006. Marine Mammals in the Savu Sea (Indonesia); indigenous knowledge, threat analysis and management options. Bachelor of Science Thesis, James Cook University.",
+      "year": "2006",
+      "title": "Marine Mammals in the Savu Sea (Indonesia); indigenous knowledge, threat analysis and management options",
+      "author": "Mustika, P. L. K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Caldwell, D.K. and Caldwell, M.C. 1975. Dolphin and small whale fisheries of the Caribbean and West Indies: occurrence, history, and catch statistics – with special reference to the Lesser Antilles island of St. Vincent. <i>Journal of the Fisheries Research Board of Canada</i> 32: 1105-1110.",
+      "year": "1975",
+      "title": "Dolphin and small whale fisheries of the Caribbean and West Indies: occurrence, history, and catch statistics – with special reference to the Lesser Antilles island of St. Vincent",
+      "author": "Caldwell, D.K. and Caldwell, M.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Baldwin, R.M., Van Waerebeek, K. and Gallagher, M. 1999. A review of cetaceans from waters off the Arabian Peninsula. In: M. Fisher, S.A. Ghazanfur and J.A. Soalton (eds), <i>The Natural History of Oman: A Fetschrift for Michael Gallagher</i>, pp. 161-189. Backhuys Publishers.",
+      "year": "1999",
+      "title": "A review of cetaceans from waters off the Arabian Peninsula",
+      "author": "Baldwin, R.M., Van Waerebeek, K. and Gallagher, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mangel, J.C., Alfaro-Shigueto, J., Van Waerebeek, K., Cáceres, C., Bearhop, S., Witt, M.J., Godley, B.J. 2010. Small cetacean captures in Peruvian artisanal fisheries: High despite protective legislation. <i>Biological Conservation</i> 143(1): 136-143.",
+      "year": "2010",
+      "title": "Small cetacean captures in Peruvian artisanal fisheries: High despite protective legislation",
+      "author": "Mangel, J.C., Alfaro-Shigueto, J., Van Waerebeek, K., Cáceres, C., Bearhop, S., Witt, M.J., Godley, B.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tzika, A.C., D’Amico, E., Alfaro-Shigueto, J., Mangel, J.C., van Waerebeek, K. and Milinkovitch, M.C. 2010. Molecular identification of small cetacean samples from Peruvian fish markets. <i>Conservation Genetics</i> 11(6): 2207-2218.",
+      "year": "2010",
+      "title": "Molecular identification of small cetacean samples from Peruvian fish markets",
+      "author": "Tzika, A.C., D’Amico, E., Alfaro-Shigueto, J., Mangel, J.C., van Waerebeek, K. and Milinkovitch, M.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Baird, R.W. 2016. <i>The Lives of Hawai’i’s Dolphins and Whales: Natural History and Conservation</i>. University of Hawai’i Press, Honolulu, HI.",
+      "year": "2016",
+      "title": "The Lives of Hawai’i’s Dolphins and Whales: Natural History and Conservation",
+      "author": "Baird, R.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bearzi, G., Agazzi, S., Bonizzoni, S., Costa, M. and Azzellino, A. 2008. Dolphins in a bottle: abundance, residency patterns and conservation of common bottlenose dolphins Tursiops truncatus in the semi-closed eutrophic Amvrakikos Gulf, Greece. <i>Aquatic Conservation: Marine and Freshwater Ecosystems</i> 18(2): 130-146.",
+      "year": "2008",
+      "title": "Dolphins in a bottle: abundance, residency patterns and conservation of common bottlenose dolphins Tursiops truncatus in the semi-closed eutrophic Amvrakikos Gulf, Greece",
+      "author": "Bearzi, G., Agazzi, S., Bonizzoni, S., Costa, M. and Azzellino, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bearzi, G., Fortuna, C.M., Reeves, R.R. 2008. Ecology and conservation of common bottlenose dolphins Tursiops truncatus in the Mediterranean Sea. <i>Mammal Review</i> 39(2): 92-123.",
+      "year": "2008",
+      "title": "Ecology and conservation of common bottlenose dolphins Tursiops truncatus in the Mediterranean Sea",
+      "author": "Bearzi, G., Fortuna, C.M., Reeves, R.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2019. The IUCN Red List of Threatened Species. Version 2019-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 21 March 2019).",
+      "year": "2019",
+      "title": "The IUCN Red List of Threatened Species. Version 2019-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2019-1"
+    },
+    {
+      "citation": "Adams J., Speakman, T., Zolman, E., Mitchum. G., Wirth, E., Bossart, G. D. and Fair, P. A. 2014. The relationship between land use and emerging and legacy contaminants in an apex predator, the bottlenose dolphin (<i>Tursiops truncatus</i>), from two adjacent estuarine watersheds. <i>Environmental Research </i> 135: 346-353.",
+      "year": "2014",
+      "title": "The relationship between land use and emerging and legacy contaminants in an apex predator, the bottlenose dolphin (<i>Tursiops truncatus</i>), from two adjacent estuarine watersheds",
+      "author": "Adams J., Speakman, T., Zolman, E., Mitchum. G., Wirth, E., Bossart, G. D. and Fair, P. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Alfaro-Shiguetoa, J., Mangela, J.C., Pajuelob, M., Duttonc, P.H., Seminoffc, J.A., Godleya, B.J. 2010. Where small can have a large impact: Structure and characterization of small-scale fisheries in Peru. <i>Fisheries Research</i> 106: 8-17.",
+      "year": "2010",
+      "title": "Where small can have a large impact: Structure and characterization of small-scale fisheries in Peru",
+      "author": "Alfaro-Shiguetoa, J., Mangela, J.C., Pajuelob, M., Duttonc, P.H., Seminoffc, J.A., Godleya, B.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Barabash-Nikiforov, I. 1940. <i>Cetacean fauna of the Black Sea, its composition and origin</i>. Izd-vo Voronezh. Gos. Un-ta, Voronezh (in Russian).",
+      "year": "1940",
+      "title": "Cetacean fauna of the Black Sea, its composition and origin",
+      "author": "Barabash-Nikiforov, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Barabash-Nikiforov, I.I. 1960. Dimension and coloration of <i>Tursiops truncatus as a </i>criteria oftheir subspecific differentiation. <i>Nauchnye Doklady Vysshei Shkoly Biologicheskie Nauki</i> 1: 35-42.",
+      "year": "1960",
+      "title": "Dimension and coloration of <i>Tursiops truncatus as a </i>criteria oftheir subspecific differentiation",
+      "author": "Barabash-Nikiforov, I.I",
+      "citation_short": null
+    },
+    {
+      "citation": "Barco, S. G., D’Eri, L. R., Woodward, B. L., Winn, J. P. and Rotstein, D. S. 2010. Spectra® fishing twine entanglement of a bottlenose dolphin: A case study and experimental modeling. <i>Marine Pollution Bulletin</i> 60: 1477-1481.",
+      "year": "2010",
+      "title": "Spectra® fishing twine entanglement of a bottlenose dolphin: A case study and experimental modeling",
+      "author": "Barco, S. G., D’Eri, L. R., Woodward, B. L., Winn, J. P. and Rotstein, D. S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bearzi, G., Fortuna, C.  and Reeves, R. 2012. <i>Tursiops truncatus</i> (Mediterranean subpopulation). The IUCN Red List of Threatened Species 2012: e.T16369383A16369386. Available at: <a href=\"http://dx.doi.org/10.2305/IUCN.UK.2012-1.RLTS.T16369383A16369386.en\">http://dx.doi.org/10.2305/IUCN.UK.2012-1.RLTS.T16369383A16369386.en</a>. ",
+      "year": "2012",
+      "title": "<i>Tursiops truncatus</i> (Mediterranean subpopulation). The IUCN Red List of Threatened Species 2012: e.T16369383A16369386",
+      "author": "Bearzi, G., Fortuna, C.  and Reeves, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Benmessaoud, R., Chérif, M. and Bejaoui, N. 2013. Baseline data on abundance, site fidelity and association patterns of common bottlenose dolphins (<i>Tursiops truncatus</i>) off the northeastern Tunisian coast (Mediterranean Sea). <i>Journal of Cetacean Research and Management</i> 13: 211-219.",
+      "year": "2013",
+      "title": "Baseline data on abundance, site fidelity and association patterns of common bottlenose dolphins (<i>Tursiops truncatus</i>) off the northeastern Tunisian coast (Mediterranean Sea)",
+      "author": "Benmessaoud, R., Chérif, M. and Bejaoui, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Berrow, S., O'Brien, J., Groth, L., Foley, A., and Voigt, K. 2012. Abundance estimate of bottlenose dolphins (<i>Tursiops truncatus</i>) in the Lower River Shannon candidate special area of conservation, Ireland. <i>Aquatic Mammals</i> 38(2): 136-144.",
+      "year": "2012",
+      "title": "Abundance estimate of bottlenose dolphins (<i>Tursiops truncatus</i>) in the Lower River Shannon candidate special area of conservation, Ireland",
+      "author": "Berrow, S., O'Brien, J., Groth, L., Foley, A., and Voigt, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Birkun, A. 2012. <i>Tursiops truncatus</i> ssp. <i>ponticus</i>. The IUCN Red List of Threatened Species 2012: e.T133714A17771698. . Available at: <a href=\"http://dx.doi.org/10.2305/IUCN.UK.2012.RLTS.T133714A17771698.en\">http://dx.doi.org/10.2305/IUCN.UK.2012.RLTS.T133714A17771698.en</a>. ",
+      "year": "2012",
+      "title": "<i>Tursiops truncatus</i> ssp. <i>ponticus</i>. The IUCN Red List of Threatened Species 2012: e.T133714A17771698. ",
+      "author": "Birkun, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brough, T. E., Guerra, M. and Dawson, S. M. 2015. Photo-identification of bottlenose dolphins in the far south of New Zealand indicates a ‘new’, previously unstudied population. <i>New Zealand Journal of Marine and Freshwater Research</i> 49: 150-158.",
+      "year": "2015",
+      "title": "Photo-identification of bottlenose dolphins in the far south of New Zealand indicates a ‘new’, previously unstudied population",
+      "author": "Brough, T. E., Guerra, M. and Dawson, S. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Buckstaff, K. C., Wells, R. S., Gannon, J. G. and Nowacek, D. P. 2013. Responses of bottlenose dolphins (<i>Tursiops truncatus</i>) to construction and demolition of coastal marine structures. <i>Aquatic Mammals</i> 39: 174-186.",
+      "year": "2013",
+      "title": "Responses of bottlenose dolphins (<i>Tursiops truncatus</i>) to construction and demolition of coastal marine structures",
+      "author": "Buckstaff, K. C., Wells, R. S., Gannon, J. G. and Nowacek, D. P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Butterworth, A., Brakes, P., Vail, C. S. and Reiss, D. 2013. A veterinary and behavioral analysis of dolphin killing methods currently used in the “drive hunt” in Taiji, Japan. <i>Journal of Applied Animal Welfare Science</i> 16: 184-204.",
+      "year": "2013",
+      "title": "A veterinary and behavioral analysis of dolphin killing methods currently used in the “drive hunt” in Taiji, Japan",
+      "author": "Butterworth, A., Brakes, P., Vail, C. S. and Reiss, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cheney, B., Thompson, P. M., Ingram, S. N., Hammond, P. S., Stevick, P. T., Durban, J. W., Culloch, R. M., Elwen, S. H., Mandleberg, L., Janik, V. M., Quick, N. J., Islas-Villanueva, V., Robinson, K. P., Costa, M., Eisfeld, S. M., Walters, A., Phillips, C., Weir, C. R., Evans, P. G. H., Anderwald, P., Reid, R. J., Reid, L. B. and Wilson, B. 2013. Integrating multiple data sources to assess the distribution and abundance of bottlenose dolphins <i>Tursiops truncatus</i> in Scottish waters. <i>Mammal Review</i> 43: 71-88.",
+      "year": "2013",
+      "title": "Integrating multiple data sources to assess the distribution and abundance of bottlenose dolphins <i>Tursiops truncatus</i> in Scottish waters",
+      "author": "Cheney, B., Thompson, P. M., Ingram, S. N., Hammond, P. S., Stevick, P. T., Durban, J. W., Culloch, R. M., Elwen, S. H., Mandleberg, L., Janik, V. M., Quick, N. J., Islas-Villanueva, V., Robinson, K. P., Costa, M., Eisfeld, S. M., Walters, A., Phillips, C., Weir, C. R., Evans, P. G. H., Anderwald, P., Reid, R. J., Reid, L. B. and Wilson, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Christiansen, F., McHugh, K. A., Bejder, L., Siegal, E. M., Lusseau, D., McCabe, E. B., and Wells, R. S. 2016. Food provisioning increases the risk of injury in a long-lived marine top predator. <i>Royal Society Open Science</i> 3(12): 160560.",
+      "year": "2016",
+      "title": "Food provisioning increases the risk of injury in a long-lived marine top predator",
+      "author": "Christiansen, F., McHugh, K. A., Bejder, L., Siegal, E. M., Lusseau, D., McCabe, E. B., and Wells, R. S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Collet A. 1984. Live capture of cetaceans for European institutions. <i>Report of the International Whaling Commission</i> 34: 603-607.",
+      "year": "1984",
+      "title": "Live capture of cetaceans for European institutions",
+      "author": "Collet A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Coscarella, M. A., Dans, S. L., DeGrati, M., Garaffo, G. and Crespo, E. A. 2012. Bottlenose dolphins at the southern extreme of the southwestern Atlantic: local population decline? <i>Journal of the Marine Biological Association of the United Kingdom</i> 92: 1843-1849.",
+      "year": "2012",
+      "title": "Bottlenose dolphins at the southern extreme of the southwestern Atlantic: local population decline?",
+      "author": "Coscarella, M. A., Dans, S. L., DeGrati, M., Garaffo, G. and Crespo, E. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Costa, A.P.B., Fruet, P., Daura-Jorge, F., Simões-Lopes, P.C., Ott, P.H., Valiati, V.H. and Oliveira, L. 2015. Bottlenose dolphin communities from the southern Brazilian coast: Do they exchange genes or are they just neighbors? <i>Marine and Freshwater Research</i> 66: 1201-1210.",
+      "year": "2015",
+      "title": "Bottlenose dolphin communities from the southern Brazilian coast: Do they exchange genes or are they just neighbors?",
+      "author": "Costa, A.P.B., Fruet, P., Daura-Jorge, F., Simões-Lopes, P.C., Ott, P.H., Valiati, V.H. and Oliveira, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Costa, A.P., Rosel, P.E., Daura‐Jorge, F.G. and Simões‐Lopes, P.C. 2016. Offshore and coastal common bottlenose dolphins of the western South Atlantic face‐to‐face: What the skull and the spine can tell us. <i>Marine Mammal Science</i> 32: 1433-1457.",
+      "year": "2016",
+      "title": "Offshore and coastal common bottlenose dolphins of the western South Atlantic face‐to‐face: What the skull and the spine can tell us",
+      "author": "Costa, A.P., Rosel, P.E., Daura‐Jorge, F.G. and Simões‐Lopes, P.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Currey, R. J. C., Dawson, S. M. and Slooten, E. 2013. <i>Tursiops truncatus</i> (Fiordland subpopulation). The IUCN Red List of Threatened Species 2013: e.T194300A67107359. Available at: <a href=\"http://dx.doi.org/10.2305/IUCN.UK.2011-1.RLTS.T194300A67107359.en\">http://dx.doi.org/10.2305/IUCN.UK.2011-1.RLTS.T194300A67107359.en</a>. ",
+      "year": "2013",
+      "title": "<i>Tursiops truncatus</i> (Fiordland subpopulation). The IUCN Red List of Threatened Species 2013: e.T194300A67107359",
+      "author": "Currey, R. J. C., Dawson, S. M. and Slooten, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Djiba A., Bamy I.L., Samba Ould Bilal A., Van Waerebeek K. 2015. Biodiversity of cetaceans in coastal waters of Northwest Africa: new insights through platform-of-opportunity visual surveying in 2011-2013. In: L. Valdés and I. Déniz-González (eds), <i>Oceanographic and Biological Features in the Canary Current Large Marine Ecosystem</i>, pp. 283-297. IOC-UNESCO, Paris. IOC Technical Series 115. DOI: 10.13140/RG.2.1.4820.3929.",
+      "year": "2015",
+      "title": "Biodiversity of cetaceans in coastal waters of Northwest Africa: new insights through platform-of-opportunity visual surveying in 2011-2013",
+      "author": "Djiba A., Bamy I.L., Samba Ould Bilal A., Van Waerebeek K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Donaldson, R, Finn, H. and Calver, M. 2010. Illegal feeding increases risk of boat-strike and entanglement in bottlenose dolphins in Perth, Western Australia. <i>Pacific Conservation Biology</i> 16: 157-161.",
+      "year": "2010",
+      "title": "Illegal feeding increases risk of boat-strike and entanglement in bottlenose dolphins in Perth, Western Australia",
+      "author": "Donaldson, R, Finn, H. and Calver, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fruet, P.F., Daura-Jorge, F.G., Möller, L.M., Genoves, R.C. and Secchi, E.R. 2015. Abundance and demography of bottlenose dolphins inhabiting a subtropical estuary in the southwestern Atlantic Ocean. <i>Journal of Mammalogy</i> 96: 332-343.",
+      "year": "2015",
+      "title": "Abundance and demography of bottlenose dolphins inhabiting a subtropical estuary in the southwestern Atlantic Ocean",
+      "author": "Fruet, P.F., Daura-Jorge, F.G., Möller, L.M., Genoves, R.C. and Secchi, E.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fruet, P.F., Genoves, R.C., Möller, L.M., Botta, S., Secchi, E.R. 2015. Using mark-recapture and stranding data to estimate reproductive traits in female bottlenose dolphins (Tursiops truncatus) of the Southwestern Atlantic Ocean. <i>Marine Biology</i> 162(3): 661-673.",
+      "year": "2015",
+      "title": "Using mark-recapture and stranding data to estimate reproductive traits in female bottlenose dolphins (Tursiops truncatus) of the Southwestern Atlantic Ocean",
+      "author": "Fruet, P.F., Genoves, R.C., Möller, L.M., Botta, S., Secchi, E.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fruet, P.F., Secchi, E.R., Di Tullio, J.C., and Kinas, P.G. 2011. Abundance of bottlenose dolphins, <i>Tursiops truncatus</i> (Cetacea: Delphinidae), inhabiting the Patos Lagoon estuary, southern Brazil: Implications for conservation. <i>Zoologia</i> 28: 23-30.",
+      "year": "2011",
+      "title": "Abundance of bottlenose dolphins, <i>Tursiops truncatus</i> (Cetacea: Delphinidae), inhabiting the Patos Lagoon estuary, southern Brazil: Implications for conservation",
+      "author": "Fruet, P.F., Secchi, E.R., Di Tullio, J.C., and Kinas, P.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gonzalvo, J., Forcada, J., Grau, E. and Aguilar, A. 2014. Strong site-fidelity increases vulnerability of common bottlenose dolphins <i>Tursiops truncatus</i> in a mass tourism destination in the western Mediterranean Sea. <i>Marine Biology</i> 94: 1227-1235.",
+      "year": "2014",
+      "title": "Strong site-fidelity increases vulnerability of common bottlenose dolphins <i>Tursiops truncatus</i> in a mass tourism destination in the western Mediterranean Sea",
+      "author": "Gonzalvo, J., Forcada, J., Grau, E. and Aguilar, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Goodall, R. N. P, Marchesi, M. C., Pimper, L. E., Dellabianca, N., Benegas, L. G., Torres, M. A. and Riccialdelli, L. 2011. Southernmost records of bottlenose dolphins, <i>Tursiops truncatus</i>. <i>Polar Biology</i> 34: 1085-1090.",
+      "year": "2011",
+      "title": "Southernmost records of bottlenose dolphins, <i>Tursiops truncatus</i>",
+      "author": "Goodall, R. N. P, Marchesi, M. C., Pimper, L. E., Dellabianca, N., Benegas, L. G., Torres, M. A. and Riccialdelli, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Greenman, J. T. and McFee, W. E. 2014. A characterisation of common bottlenose dolphin (<i>Tursiops truncatus</i>) interactions with the commercial shrimp trawl fishery of South Carolina, USA. <i>Journal of Cetacean Research and Management</i> 14: 69-70.",
+      "year": "2014",
+      "title": "A characterisation of common bottlenose dolphin (<i>Tursiops truncatus</i>) interactions with the commercial shrimp trawl fishery of South Carolina, USA",
+      "author": "Greenman, J. T. and McFee, W. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Halpin, L.R., Towers, J.R., and Ford, J.K. 2018. First record of common bottlenose dolphin (<i>Tursiops truncatus</i>) in Canadian Pacific waters. <i>Marine Biodiversity Records</i> 11: 3.",
+      "year": "2018",
+      "title": "First record of common bottlenose dolphin (<i>Tursiops truncatus</i>) in Canadian Pacific waters",
+      "author": "Halpin, L.R., Towers, J.R., and Ford, J.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "IWC. 2018. Report of the Scientific Committee. IWC/67/Rep01 (2018). Annex M. Bled Slovenia, 24 April – 6 May 2018. International Whaling Commission (IWC), Cambridge.",
+      "year": "2018",
+      "title": "Report of the Scientific Committee. IWC/67/Rep01 (2018). Annex M. Bled Slovenia, 24 April – 6 May 2018",
+      "author": "IWC",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kingston, S.E., Adams, L.D. and Rosel, P.E. 2009. Testing mitochondrial sequences and anonymous nuclear markers for phylogeny reconstruction in a rapidly radiating group: molecular systematics of the Delphininae (Cetacea: Odontoceti: Delphinidae). <i>BMC Evolutionary Biology</i> 9: doi: 10.1186/1471-2148-9-245.",
+      "year": "2009",
+      "title": "Testing mitochondrial sequences and anonymous nuclear markers for phylogeny reconstruction in a rapidly radiating group: molecular systematics of the Delphininae (Cetacea: Odontoceti: Delphinidae)",
+      "author": "Kingston, S.E., Adams, L.D. and Rosel, P.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lane, S. M., Smith, C. R., Balmer, B. C., Barry, K. P., McDonald, T., Mitchell, J., Mori, C. S., Rosel, P. E., Rowles, T. K., Speakman, T. R., Townsend, F. I., Tumlin, M. C., Wells, R. S., Zolman, E. S. and Schwacke, L. H. 2015. Survival and reproductive outcome of bottlenose dolphins sampled in Barataria Bay, Louisiana, USA following the Deepwater Horizon oil spill. <i>Proceedings of the Royal Society B</i> 282: 20151944.",
+      "year": "2015",
+      "title": "Survival and reproductive outcome of bottlenose dolphins sampled in Barataria Bay, Louisiana, USA following the Deepwater Horizon oil spill",
+      "author": "Lane, S. M., Smith, C. R., Balmer, B. C., Barry, K. P., McDonald, T., Mitchell, J., Mori, C. S., Rosel, P. E., Rowles, T. K., Speakman, T. R., Townsend, F. I., Tumlin, M. C., Wells, R. S., Zolman, E. S. and Schwacke, L. H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lauriano, G., Pierantonio, N., Donovan, G. and Panigada, S. 2014. Abundance and distribution of <i>Tursiops truncatus</i> in the Western Mediterranean Sea: An assessment towards the Marine Strategy Framework Directive requirements. <i>Marine Environmental Research</i> 100: 88-93.",
+      "year": "2014",
+      "title": "Abundance and distribution of <i>Tursiops truncatus</i> in the Western Mediterranean Sea: An assessment towards the Marine Strategy Framework Directive requirements",
+      "author": "Lauriano, G., Pierantonio, N., Donovan, G. and Panigada, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Louis, M., Gally, F., Barbraud, C., Béesau, J., Tixier, P., Simon-Bouhet, B., Le Rest, K. and Guinet, C. 2015. Social structure and abundance of coastal bottlenose dolphins, <i>Tursiops truncatus</i>, in the Normano-Breton Gulf, English Channel. <i>Journal of Mammalogy</i> 96(3): 481-493.",
+      "year": "2015",
+      "title": "Social structure and abundance of coastal bottlenose dolphins, <i>Tursiops truncatus</i>, in the Normano-Breton Gulf, English Channel",
+      "author": "Louis, M., Gally, F., Barbraud, C., Béesau, J., Tixier, P., Simon-Bouhet, B., Le Rest, K. and Guinet, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Merriman, M. G., Markowitz, T. M., Harlin-Cognato, A. D. and Stockin, K. A. 2009. Bottlenose dolphin (<i>Tursiops truncatus</i>) abundance, site fidelity, and group dynamics in the Marlborough Sounds, New Zealand. <i>Aquatic Mammals</i> 35: 511-522.",
+      "year": "2009",
+      "title": "Bottlenose dolphin (<i>Tursiops truncatus</i>) abundance, site fidelity, and group dynamics in the Marlborough Sounds, New Zealand",
+      "author": "Merriman, M. G., Markowitz, T. M., Harlin-Cognato, A. D. and Stockin, K. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mintzer, V.J., Diniz, K., and Frazer, T.K. 2018. The use of aquatic mammals for bait in global fisheries. <i>Frontiers in Marine Science</i> 5: doi: 10.3389/fmars.2018.00191.",
+      "year": "2018",
+      "title": "The use of aquatic mammals for bait in global fisheries",
+      "author": "Mintzer, V.J., Diniz, K., and Frazer, T.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "NOAA/NMFS. 2015. 2013-2015 Bottlenose Dolphin Unusual Mortality Event in the Mid-Atlantic. Available at: <a href=\"http://www.nmfs.noaa.gov/pr/health/mmume/midatldolphins2013.html\">http://www.nmfs.noaa.gov/pr/health/mmume/midatldolphins2013.html</a>. (Accessed: 13 May 2018).",
+      "year": "2015",
+      "title": "2013-2015 Bottlenose Dolphin Unusual Mortality Event in the Mid-Atlantic",
+      "author": "NOAA/NMFS",
+      "citation_short": null
+    },
+    {
+      "citation": "Olavarría, C., Acevedo, J., Vester, H.I., Zamorano-Abramson, J., Viddi, F.A., Gibbons, J., Newcombe, E., Capella, J., Hoelzel, A.R., Flores, M., Hucke-Gaete, R., Torres-Flórez, J.P. 2010. Southernmost Distribution of Common Bottlenose Dolphins (<i>Tursiops truncatus</i>) in the Eastern South Pacific. <i>Aquatic Mammals</i> 36(3): 288-293.",
+      "year": "2010",
+      "title": "Southernmost Distribution of Common Bottlenose Dolphins (<i>Tursiops truncatus</i>) in the Eastern South Pacific",
+      "author": "Olavarría, C., Acevedo, J., Vester, H.I., Zamorano-Abramson, J., Viddi, F.A., Gibbons, J., Newcombe, E., Capella, J., Hoelzel, A.R., Flores, M., Hucke-Gaete, R., Torres-Flórez, J.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Parsons, E. C. M., Bonelly de Calventi, I., Whaley, A., Rose, N. A. and Sherwin, S. 2010. A note on illegal captures of wild bottlenose dolphins (<i>Tursiops truncatus</i>) from the coastal waters of the Dominican Republic. <i>Journal of International Wildlife Law and Policy</i> 13: 240-244.",
+      "year": "2010",
+      "title": "A note on illegal captures of wild bottlenose dolphins (<i>Tursiops truncatus</i>) from the coastal waters of the Dominican Republic",
+      "author": "Parsons, E. C. M., Bonelly de Calventi, I., Whaley, A., Rose, N. A. and Sherwin, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pereira, A., Martinho, F., Brito, C., and Carvalho, I. 2013. Bottlenose dolphin <i>Tursiops truncatus</i> at São Tomé Island (São Tomé and Príncipe) — relative abundance, site fidelity and social structure. <i>African Journal of Marine Science</i> 35: 501-510.",
+      "year": "2013",
+      "title": "Bottlenose dolphin <i>Tursiops truncatus</i> at São Tomé Island (São Tomé and Príncipe) — relative abundance, site fidelity and social structure",
+      "author": "Pereira, A., Martinho, F., Brito, C., and Carvalho, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Plesić, G., Gospić, N. R., Mackelworth, P., Wiemann, A., Holcer, D. and Fortuna, C. 2013. The abundance of common bottlenose dolphins (<i>Tursiops truncatus</i>) in the former special marine reserve of Cres-Lošinj Archipelago, Croatia. <i>Aquatic Conservation: Marine and Freshwater Ecosystems</i> 12: 125-137.",
+      "year": "2013",
+      "title": "The abundance of common bottlenose dolphins (<i>Tursiops truncatus</i>) in the former special marine reserve of Cres-Lošinj Archipelago, Croatia",
+      "author": "Plesić, G., Gospić, N. R., Mackelworth, P., Wiemann, A., Holcer, D. and Fortuna, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Powell, J.R., and Wells, R.S. 2011. Recreational fishing depredation and associated behaviors involving common bottlenose dolphins (<i>Tursiops truncatus</i>) in Sarasota Bay, Florida. <i>Marine Mammal Science</i> 27: 111-129.",
+      "year": "2011",
+      "title": "Recreational fishing depredation and associated behaviors involving common bottlenose dolphins (<i>Tursiops truncatus</i>) in Sarasota Bay, Florida",
+      "author": "Powell, J.R., and Wells, R.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pulcini, M., Pace, D. S., La Manna, G., Triossi, F and Fortuna, C. M. 2014. Distribution and abundance estimates of bottlenose dolphins (<i>Tursiops truncatus</i>) around Lampedusa Island (Sicily Channel, Italy): implications for their management. <i>Journal of the Marine Biological Association of the United Kingdom</i> 94: 1175-1184.",
+      "year": "2014",
+      "title": "Distribution and abundance estimates of bottlenose dolphins (<i>Tursiops truncatus</i>) around Lampedusa Island (Sicily Channel, Italy): implications for their management",
+      "author": "Pulcini, M., Pace, D. S., La Manna, G., Triossi, F and Fortuna, C. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rogan, E., Breen, P., Canadas, A., Mackey, M., Scheidat, M., Geelhold, S., Ó Cadhla, O. and Jessopp, M. 2017. A hazy shade of winter: contrasting seasonal occurrence of cetaceans in offshore NE Atlantic waters.  22nd Biennial Conference on the Biology of Marine Mammals, 22-27 October 2017, Halifax, Nova Scotia, Canada..",
+      "year": "2017",
+      "title": "A hazy shade of winter: contrasting seasonal occurrence of cetaceans in offshore NE Atlantic waters.  22nd Biennial Conference on the Biology of Marine Mammals, 22-27 October 2017, Halifax, Nova Scotia, Canada",
+      "author": "Rogan, E., Breen, P., Canadas, A., Mackey, M., Scheidat, M., Geelhold, S., Ó Cadhla, O. and Jessopp, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rosel, P.E., Hansen, L. and Hohn, A.A. 2009. Restricted dispersal in a continuously distributed marine species: common bottlenose dolphins <i>Tursiops truncatus</i> in coastal waters of the western North Atlantic. <i>Molecular Ecology</i> 18: 5030-5045.",
+      "year": "2009",
+      "title": "Restricted dispersal in a continuously distributed marine species: common bottlenose dolphins <i>Tursiops truncatus</i> in coastal waters of the western North Atlantic",
+      "author": "Rosel, P.E., Hansen, L. and Hohn, A.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rowles, T. K., Schwacke, L. S., Wells, R. S., Saliki, J. T., Hansen, L., Hohn, A., Townsend, F., Sayre, R. A. and Hall, A. J. 2011. Evidence of susceptibility to morbillivirus infection in cetaceans from the United States. <i>Marine Mammal Science</i> 27: 1-19.",
+      "year": "2011",
+      "title": "Evidence of susceptibility to morbillivirus infection in cetaceans from the United States",
+      "author": "Rowles, T. K., Schwacke, L. S., Wells, R. S., Saliki, J. T., Hansen, L., Hohn, A., Townsend, F., Sayre, R. A. and Hall, A. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schwacke, L. H., Smith, C. R., Townsend, F. I., Wells, R. S., Hart, L. B. Balmer, B. C., Collier, T. K., De Guise, S., Fry, M. M., Guillette, L. J., Jr., Lamb, S. V., Lane, S. M., McFee, W. E., Place, N. J., Tumlin, M. C., Ylitalo, G. M., Zolman, E. S. and Rowles, T. K. 2014. Health of common bottlenose dolphins (<i>Tursiops truncatus</i>) in the Gulf of Mexico following the Deepwater Horizon Oil Spill. <i>Environmental Science and Technology</i> 48: 93-103.",
+      "year": "2014",
+      "title": "Health of common bottlenose dolphins (<i>Tursiops truncatus</i>) in the Gulf of Mexico following the Deepwater Horizon Oil Spill",
+      "author": "Schwacke, L. H., Smith, C. R., Townsend, F. I., Wells, R. S., Hart, L. B. Balmer, B. C., Collier, T. K., De Guise, S., Fry, M. M., Guillette, L. J., Jr., Lamb, S. V., Lane, S. M., McFee, W. E., Place, N. J., Tumlin, M. C., Ylitalo, G. M., Zolman, E. S. and Rowles, T. K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schwacke, L. H., Thomas, L., Wells, R. S., McFee, W. E., Hohn, A, A., Mullin, K. D., Zolman, E. S., Quigley, B. M., Rowles, T. K. and Schwacke, J. H. 2017. Quantifying injury to common bottlenose dolphins from the Deepwater Horizon oil spill using an age-, sex- and class-structured population model. <i>Endangered Species Research</i> 33: 265-279.",
+      "year": "2017",
+      "title": "Quantifying injury to common bottlenose dolphins from the Deepwater Horizon oil spill using an age-, sex- and class-structured population model",
+      "author": "Schwacke, L. H., Thomas, L., Wells, R. S., McFee, W. E., Hohn, A, A., Mullin, K. D., Zolman, E. S., Quigley, B. M., Rowles, T. K. and Schwacke, J. H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Segura-García, I., Rojo-Arreola, L., Rocha-Olivares, A., Heckel, G., Gallo-Reynoso, J.P., and Hoelzel, R. 2018. Eco-Evolutionary processes generating diversity among bottlenose dolphin, <i>Tursiops truncatus</i>, populations off Baja California, Mexico. <i>Evolutionary Biology</i> 45: 223-236.",
+      "year": "2018",
+      "title": "Eco-Evolutionary processes generating diversity among bottlenose dolphin, <i>Tursiops truncatus</i>, populations off Baja California, Mexico",
+      "author": "Segura-García, I., Rojo-Arreola, L., Rocha-Olivares, A., Heckel, G., Gallo-Reynoso, J.P., and Hoelzel, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Stolen, M., Noke Durden, W., Mazza, T., Barros, N. and St. Leger, J. 2013. Effects of fishing gear on bottlenose dolphins (<i>Tursiops truncatus</i>) in the Indian River Lagoon system, Florida. <i>Marine Mammal Science</i> 29: 356-364.",
+      "year": "2013",
+      "title": "Effects of fishing gear on bottlenose dolphins (<i>Tursiops truncatus</i>) in the Indian River Lagoon system, Florida",
+      "author": "Stolen, M., Noke Durden, W., Mazza, T., Barros, N. and St. Leger, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tezanos-Pinto, G., Constantine, R., Brooks, L., Jackson, J. A., Mourão, F., Wells, S. and Baker, C. S. 2013. Decline in local abundance of bottlenose dolphins (<i>Tursiops truncatus</i>) in the Bay of Islands, New Zealand. <i>Marine Mammal Science</i> 26: E390-E410.",
+      "year": "2013",
+      "title": "Decline in local abundance of bottlenose dolphins (<i>Tursiops truncatus</i>) in the Bay of Islands, New Zealand",
+      "author": "Tezanos-Pinto, G., Constantine, R., Brooks, L., Jackson, J. A., Mourão, F., Wells, S. and Baker, C. S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Van Waerebeek , K., Apaza, M., Reyes, J. C., Alfaro-Shigueto, J., Santillán, L., Barreda E., Altamirano-Sierra, A., Astohuaman-Uribe, J., Ortiz-Alvarez, C. and Mangel, J. 2017b. Beach-cast small cetaceans bear evidence of continued catches and utilisation in coastal Peru, 2000-2017.  Report to the  International Whaling Commission Scientific Committee Meeting SC/67B/HIM/01. Bled, Slovenia, May 2017.",
+      "year": "2017b",
+      "title": "Beach-cast small cetaceans bear evidence of continued catches and utilisation in coastal Peru, 2000-2017",
+      "author": "Van Waerebeek , K., Apaza, M., Reyes, J. C., Alfaro-Shigueto, J., Santillán, L., Barreda E., Altamirano-Sierra, A., Astohuaman-Uribe, J., Ortiz-Alvarez, C. and Mangel, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Van Waerebeek, K., Bamy, I. L., Jiddou, A. M., Sequeira, M., Diop, M., Ofori-Danson, P. K., Tchibozo, S. and Campredon, P. 2008. Indeterminate status of West African populations of inshore common bottlenose dolphins Tursiops truncatus cautions against opportunistic live-capture schemes. Rept. to the Fondation Internationale du Banc d’Arguin. 9 pp.",
+      "year": "2008",
+      "title": "Indeterminate status of West African populations of inshore common bottlenose dolphins Tursiops truncatus cautions against opportunistic live-capture schemes. Rept. to the Fondation Internationale du Banc d’Arguin. 9 pp.",
+      "author": "Van Waerebeek, K., Bamy, I. L., Jiddou, A. M., Sequeira, M., Diop, M., Ofori-Danson, P. K., Tchibozo, S. and Campredon, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Van Waerebeek, K., Reyes, J.C., Sanino, G.P., Félix, F., Van Bressem, M.-F., Avila, I.C., Santillán, L., Montes, D., García-Godos, I., Echegaray, M. and Abad, A.V. 2017a. Common bottlenose dolphins <i>Tursiops truncatus</i> of Pacific South America, a synoptic review of population identification data.  Report to the International Whaling Commission Scientific Committee Meeting SC/67B/HIM/01. Bled, Slovenia, May 2017. International Whaling Commission (IWC), Cambridge.",
+      "year": "2017a",
+      "title": "Common bottlenose dolphins <i>Tursiops truncatus</i> of Pacific South America, a synoptic review of population identification data",
+      "author": "Van Waerebeek, K., Reyes, J.C., Sanino, G.P., Félix, F., Van Bressem, M.-F., Avila, I.C., Santillán, L., Montes, D., García-Godos, I., Echegaray, M. and Abad, A.V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vermuelen, E. and Cammareri, A. 2009. Residency patterns, abundance, and social composition of bottlenose dolphins (Tursiops truncatus) in Bahía San Antonio, Patagonia, Argentina. 2009. Residency patterns, abundance, and social composition of bottlenose dolphins (<i>Tursiops truncatus</i>) in Bahía San Antonio, Patagonia, Argentina. <i>Aquatic Mammals</i> 35: 378-385.",
+      "year": "2009",
+      "title": "Residency patterns, abundance, and social composition of bottlenose dolphins (<i>Tursiops truncatus</i>) in Bahía San Antonio, Patagonia, Argentina",
+      "author": "Vermuelen, E. and Cammareri, A. 2009. Residency patterns, abundance, and social composition of bottlenose dolphins (Tursiops truncatus) in Bahía San Antonio, Patagonia, Argentina",
+      "citation_short": null
+    },
+    {
+      "citation": "Viaud-Martinez, K.A., Brownell, R.L. Jr., Komnenou, A. and Bohanak, A.J. 2008. Genetic isolation and morphological divergence of Black Sea bottlenose dolphins. <i>Biological Conservation</i> 141: 1600-1611.",
+      "year": "2008",
+      "title": "Genetic isolation and morphological divergence of Black Sea bottlenose dolphins",
+      "author": "Viaud-Martinez, K.A., Brownell, R.L. Jr., Komnenou, A. and Bohanak, A.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vollmer, N. L. and Rosel, P. E. 2013. A review of common bottlenose dolphins (<i>Tursiops truncatus truncatus</i>) in the northern Gulf of Mexico: Population biology, potential threats, and management. <i>Southeastern Naturalist</i> 12: 1-43.",
+      "year": "2013",
+      "title": "A review of common bottlenose dolphins (<i>Tursiops truncatus truncatus</i>) in the northern Gulf of Mexico: Population biology, potential threats, and management",
+      "author": "Vollmer, N. L. and Rosel, P. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wang, J.Y., Chou, L.S. and White, B.N. 2000a. Differences in external morphology of two sympatric species of bottlenose dolphins (genus <i>Tursiops</i>) in the waters of China. <i>Journal of Mammalogy</i> 81(4): 1157-1165.",
+      "year": "2000a",
+      "title": "Differences in external morphology of two sympatric species of bottlenose dolphins (genus <i>Tursiops</i>) in the waters of China",
+      "author": "Wang, J.Y., Chou, L.S. and White, B.N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wang, J.Y., Chou, L.S. and White, B.N. 2000b. Osteological differences between two sympatric forms of bottlenose dolphins (genus <i>Tursiops</i>) in Chinese waters. <i>Journal of Zoology (London)</i> 252: 147-162.",
+      "year": "2000b",
+      "title": "Osteological differences between two sympatric forms of bottlenose dolphins (genus <i>Tursiops</i>) in Chinese waters",
+      "author": "Wang, J.Y., Chou, L.S. and White, B.N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wells, R.S., Allen, J. B., Hofmann, S., Bassos-Hull, K., Fauquier, D. A., Barros, N. B., DeLynn, R. E., Sutton, G., V. Socha, V. and Scott, M. D. 2008. Consequences of injuries on survival and reproduction of common bottlenose dolphins (<i>Tursiops truncatus</i>) along the west coast of Florida. <i>Marine Mammal Science</i> 24: 774-794.",
+      "year": "2008",
+      "title": "Consequences of injuries on survival and reproduction of common bottlenose dolphins (<i>Tursiops truncatus</i>) along the west coast of Florida",
+      "author": "Wells, R.S., Allen, J. B., Hofmann, S., Bassos-Hull, K., Fauquier, D. A., Barros, N. B., DeLynn, R. E., Sutton, G., V. Socha, V. and Scott, M. D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wells, R. S., Allen, J. B., Lovewell, G. N., Gorzelany, J., DeLynn, R. E., Fauquier, D. A. and Barros, N. B. 2015. Carcass-recovery rates for resident bottlenose dolphins in Sarasota Bay, Florida. <i>Marine Mammal Science</i> 31: 355-368.",
+      "year": "2015",
+      "title": "Carcass-recovery rates for resident bottlenose dolphins in Sarasota Bay, Florida",
+      "author": "Wells, R. S., Allen, J. B., Lovewell, G. N., Gorzelany, J., DeLynn, R. E., Fauquier, D. A. and Barros, N. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wells, R. S. and Scott, M. D. 2018. Bottlenose dolphin: common bottlenose dolphin (<i>Tursiops truncatus</i>). In: B. Würsig, J.G.M. Thewissen, and K. Kovacs (eds), <i>Encyclopedia of Marine Mammals, Third Edition</i>, pp. 118-125. Academic Press/Elsevier.",
+      "year": "2018",
+      "title": "Bottlenose dolphin: common bottlenose dolphin (<i>Tursiops truncatus</i>)",
+      "author": "Wells, R. S. and Scott, M. D.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2019. The IUCN Red List of Threatened Species. Version 2019-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 December 2019).",
+      "year": "2019",
+      "title": "The IUCN Red List of Threatened Species. Version 2019-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2019-3"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

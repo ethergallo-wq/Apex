@@ -1,0 +1,762 @@
+{
+  "assessment_date": "2019-11-01T00:00:00.000+00:00",
+  "year_published": "2020",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 181807,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/181807/135032367",
+  "citation": "Diouf, K., Akinyi, E., Azeroual, A., Bousso, T., Getahun, A. & Lalèyè, P. 2020. Tetraodon lineatus. The IUCN Red List of Threatened Species 2020: e.T181807A135032367. Accessed on 15 May 2026.",
+  "assessment_id": 135032367,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 181807,
+    "scientific_name": "Tetraodon lineatus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "ACTINOPTERYGII",
+    "order_name": "TETRAODONTIFORMES",
+    "family_name": "TETRAODONTIDAE",
+    "genus_name": "Tetraodon",
+    "species_name": "lineatus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Linnaeus, 1758",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Coral Butterfly",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Freshwater Puffer Fish",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Globe Or Puffer Fish",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Stripped Puffer",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Buliak",
+        "language": "din"
+      },
+      {
+        "main": false,
+        "name": "Fahaka Assielah",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Homar El Bahr",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Poisson Ballon",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Poisson Globe",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Tambera",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Tétrodon",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Tindi",
+        "language": "znd"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Tetraodon physa Geoffroy, 1809",
+        "status": "ACCEPTED",
+        "genus_name": "Tetraodon",
+        "species_name": "physa",
+        "species_author": "Geoffroy, 1809",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Tetraodon fahaka Rüppell, 1829",
+        "status": "ACCEPTED",
+        "genus_name": "Tetraodon",
+        "species_name": "fahaka",
+        "species_author": "Rüppell, 1829",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Tetrodon strigosus Bennett, 1834",
+        "status": "ACCEPTED",
+        "genus_name": "Tetrodon",
+        "species_name": "strigosus",
+        "species_author": "Bennett, 1834",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Tetraodon lineatus ssp. strigosus Bennett, 1834",
+        "status": "ACCEPTED",
+        "genus_name": "Tetraodon",
+        "species_name": "lineatus",
+        "species_author": null,
+        "infrarank_author": "Bennett, 1834",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "strigosus"
+      },
+      {
+        "name": "Tetraodon lineatus ssp. rudolfianus Deraniyagala, 1948",
+        "status": "ACCEPTED",
+        "genus_name": "Tetraodon",
+        "species_name": "lineatus",
+        "species_author": null,
+        "infrarank_author": "Deraniyagala, 1948",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "rudolfianus"
+      },
+      {
+        "name": "Tetrodon fahaka Hasselquist, 1762",
+        "status": "ACCEPTED",
+        "genus_name": "Tetrodon",
+        "species_name": "fahaka",
+        "species_author": "Hasselquist, 1762",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": "Unknown",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species is known from Senegal to Ethiopia, and along the entire length of the Nile.<br/><br/><strong>Eastern Africa:</strong> It is present in the upper Nile system, and Lake Turkana.<br/><br/><strong>Northern Africa:</strong> This species is known from upper Egyptian Nile.<br/><br/><strong>Northeast Africa:</strong> This species is found in Lake Nasser (also known as Lake Nubia), Sudan, as well as the Baro River, Ethiopia.<br/><br/><strong>Western Africa:</strong> This species is known from the Chad basin, Niger, Volta, Gambia, and Senegal Rivers.",
+    "population": "No information is available on the population.",
+    "habitats": "This species occurs in large rivers, open waters, macrophyte beds and vegetated fringes where it feeds on molluscs (Froese and Pauly 2003). It rises to the surface to inflate its body resembling a balloon, which gives it protection from predators by making it harder to eat (Lévêque and Paugy 2003).",
+    "threats": "Climate change and the reduction of water flow threaten this species across its range. In northern Africa, water pollution from agricultural, domestic and commercial/industrial sources poses a possible threat. In western Africa, fishing activities could lead to a possible reduction in the population in the future.",
+    "measures": "No conservation actions are known to be in place for this species. More research is needed into the population size and range, biology and ecology, harvest, habitat status and threats, as well as monitoring and potential conservation measures.",
+    "use_trade": "It is unmarketable for food. Some authors reported that its flesh may be poisonous due to the presence of tetradontoxine (Bishai and Khalil 1997). There are unknown levels of captive breeding for the aquarium trade.",
+    "rationale": "This species has a wide distribution. Although there are threats acting across the range, these are not thought to be causing declines significant enough to place the species in a threatened category or as Near Threatened. Therefore, it is listed as Least Concern.",
+    "trend_justification": null,
+    "taxonomic_notes": "Cited by Bishai and Khalil (1997) as <em>Tetrodon linneatus</em> Linnaeus, 1766"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Niger"
+      },
+      "code": "NE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mali"
+      },
+      "code": "ML"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Benin"
+      },
+      "code": "BJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Burkina Faso"
+      },
+      "code": "BF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Central African Republic"
+      },
+      "code": "CF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chad"
+      },
+      "code": "TD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ethiopia"
+      },
+      "code": "ET"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ghana"
+      },
+      "code": "GH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Dams (size unknown)"
+      },
+      "code": "7_2_11"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of ground water (unknown use)"
+      },
+      "code": "7_2_8"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Droughts"
+      },
+      "code": "11_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_3_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_2_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Diouf, K., Akinyi, E., Azeroual, A., Bousso, T., Getahun, A. & Lalèyè, P.",
+      "value": [
+        "T Bousso",
+        "Abebe Getahun (FBU Pan-Africa freshwater Biodiversity Assessment Project)",
+        "A Azeroual (FBU Pan-Africa Freshwater Biodiversity Assessment project)",
+        "Philippe Lalèyè (Université d'Abomey-Calavi, Benin)",
+        "E. Akinyi",
+        "Khady Diouf"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Palmer-Newton, A.",
+      "value": [
+        "Amy Palmer-Newton (IUCN Freshwater Biodiversity Unit)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Froese, R. and Pauly, D. (eds). 2003. <i>FishBase</i>. World Wide Web electronic publication. Search ",
+      "year": "2003",
+      "title": "FishBase (http://www.fishbase.org/search.php).",
+      "author": "Froese, R. and Pauly, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bishai, H.M. and Khalil, M.T. 1997. <i>Freshwater fishes of Egypt</i>. Publ. Nat. Biodiv. Unit 9.",
+      "year": "1997",
+      "title": "Freshwater fishes of Egypt",
+      "author": "Bishai, H.M. and Khalil, M.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 13 June 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-2"
+    },
+    {
+      "citation": "Lévêque, C. and Paugy, D. 2003. Tetraodontidae. In: C. Lévêque, D. Paugy and G.G. Teugels (eds), <i>Faune des poissons d'eaux douce et saumâtres de l'Afrique de l'Ouest</i>, Musée Royal de l'Afrique Centrale, Tervuren, Belgique, Museum National d'Histoire Naturalle, Paris, France and Institut de Recherche pour le Développement, Paris, France. 815 p.",
+      "year": "2003",
+      "title": "Tetraodontidae",
+      "author": "Lévêque, C. and Paugy, D.",
+      "citation_short": ""
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    },
+    {
+      "description": {
+        "en": "Pan-Africa"
+      },
+      "code": "10"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

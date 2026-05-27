@@ -1,0 +1,803 @@
+{
+  "assessment_date": "2014-06-19T01:00:00.000+01:00",
+  "year_published": "2015",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 55196,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/55196/3025630",
+  "citation": "IUCN SSC Amphibian Specialist Group 2015. Oophaga pumilio. The IUCN Red List of Threatened Species 2015: e.T55196A3025630. Accessed on 15 May 2026.",
+  "assessment_id": 3025630,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 55196,
+    "scientific_name": "Oophaga pumilio",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AMPHIBIA",
+    "order_name": "ANURA",
+    "family_name": "DENDROBATIDAE",
+    "genus_name": "Oophaga",
+    "species_name": "pumilio",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Schmidt, 1857)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Amphibian Specialist Group",
+        "url": "https://www.iucn-amphibians.org/",
+        "description": "Chair: Ariadne Angulo (email: aangulo@amphibians.org)\nRed List Authority Coordinator: Jennifer Luedtke (email: jluedtke@amphibians.org)\nNewsletter: http://www.amphibians.org/froglog/"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Flaming Poison-arrow Frog",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Flaming Poison Frog",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Red-and-blue Poison Frog",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Strawberry Poison-dart Frog",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "Strawberry Poison Frog",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Hylaplesia pumilio (Schmidt, 1857)",
+        "status": "ACCEPTED",
+        "genus_name": "Hylaplesia",
+        "species_name": "pumilio",
+        "species_author": "(Schmidt, 1857)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Dendrobates typographus Keferstein, 1867",
+        "status": "ACCEPTED",
+        "genus_name": "Dendrobates",
+        "species_name": "typographus",
+        "species_author": "Keferstein, 1867",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Dendrobates ignitus Cope, 1874",
+        "status": "ACCEPTED",
+        "genus_name": "Dendrobates",
+        "species_name": "ignitus",
+        "species_author": "Cope, 1874",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Hylaplesia typographa (Keferstein, 1867)",
+        "status": "ACCEPTED",
+        "genus_name": "Hylaplesia",
+        "species_name": "typographa",
+        "species_author": "(Keferstein, 1867)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Hylaplesia ignita (Cope, 1874)",
+        "status": "ACCEPTED",
+        "genus_name": "Hylaplesia",
+        "species_name": "ignita",
+        "species_author": "(Cope, 1874)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Dendrobates typographicus Oertter, 1951",
+        "status": "ACCEPTED",
+        "genus_name": "Dendrobates",
+        "species_name": "typographicus",
+        "species_author": "Oertter, 1951",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Dendrobates galindoi Trapido, 1953",
+        "status": "ACCEPTED",
+        "genus_name": "Dendrobates",
+        "species_name": "galindoi",
+        "species_author": "Trapido, 1953",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Dendrobates pumilio Schmidt, 1857",
+        "status": "A",
+        "genus_name": "Dendrobates",
+        "species_name": "pumilio",
+        "species_author": "Schmidt, 1857",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 960,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species' geographic range is the Atlantic versant, humid lowlands and premontane slopes in central northern Nicaragua from 0-960 m asl (Sunyer and Köhler 2010), south through the lowlands of Costa Rica and northwestern Panama (including many islands in Bocas del Toro), from 1-495 m asl (Savage 2002).",
+    "population": "This is a common species throughout its range. The species exhibits significant colour and pattern polymorphism especially among populations in the Bocas del Toro archipelago of Panama (Summers <em>et al</em><em>.</em>&#160;1997). Populations in forest habitat at La Selva, Costa Rica, seemed to have experienced a decline but populations are increasing in nearby cacao growth areas (Whitfield <em>et al</em>. 2007). &#160;More recently, the species was common at La Selva (Folt&#160;and Reider 2013) and surrounding secondary forests&#160;(Hilje and Mitchell Aide 2012). &#160;Elsewhere in Costa Rica the species appears to be increasing due to the increase of garden-like habitats where the species is most abundant; it is abundant at Guayacan (Kubicki, 2008) and no&#160;declines have been noted at Braulio Carrillo National Park, Costa Rica (Puschendorf <em>et al</em>. 2006).&#160;Sub-populations are suspected to occur in Braulio Carrillo National Park, Corcovado National Park, and Tortuguero National Park, Costa Rica. The species is common but decreasing on Mancarroncito Island, Nicaragua (Barquero&#160;<em>et al</em>. 2010), and in southeastern Nicaragua this species is abundant (Sunyer <em>et al.</em>&#160;2009).",
+    "habitats": "This is a diurnal and mostly terrestrial frog of humid lowland and premontane forest, cacao plantations, and abandoned forest clearings. The species has been detected in forest-palmito, forest-pasture, palmito, and pasture at one site in Costa Rica (Kurz <em>et al.</em>&#160;2014). &#160;<br/><br/>Males appear to be fiercely territorial; individual territories have been estimated at 2.5 m<sup>2</sup> (Donnelly 1989). Observations concerning mating behaviour suggest that some <em>O. pumilio</em> are at times polygynous (McVey <em>et al</em><em>.&#160;</em>1981, Donnelly 1989, Zimmermann and Zimmermann 1994). Females lay a clutch of three to nine eggs in moist leaf-litter; clutch sizes in captive specimens of six to sixteen eggs have been recorded (Limerick 1980, Silverstone 1975). There appears to be no information on the number of clutches laid annually. <em>O. pumilio</em> eggs hatch approximately seven days after oviposition, adults then carry the developed tadpoles from the forest floor to water filled bromeliads (Limerick 1980). <em>O. pumilio</em> tadpoles have a very specialized oophagous diet, feeding solely on food eggs supplied by the female (Heselhaus 1992, McVey <em>et al</em><em>.</em>&#160;1981, Zimmermann and Zimmermann 1994). There is little available information on wild larval development; Heselhaus (1992) reports that captive tadpoles fed an artificial diet \"grow slowly, taking four to six months, a third longer than with natural feeding, to reach metamorphosis\". Sexual maturity is reached at a minimum size of 19 mm (approximately 10 months).&#160;<br/><br/>There are few data on longevity; Donnelly (1989) concluded that the population at Finca La Selva, Costa Rica was mostly comprised of ‘long-lived’ adults; Zimmermann and Zimmermann (1994) gave longevity of 4 years for captive <em>O. pumilio</em>.",
+    "threats": "Habitat loss (from urbanization, agriculture and logging) and over-collection for the pet trade are the principal threats to this species. It is believed that the species is currently being unsustainably collected, and because of the apparently low fecundity of this species, the possibility exists that over-harvesting might lead to localized population declines. Distinct island forms are particularly susceptible to both over-collection, and the development of islands for tourism purposes. The great majority of reported trade over the period 1991 to 1996 was in live animals, presumably by the herpetological pet market. The largest overall exporter of <em>O. pumilio</em> between 1991 and 1996 was Nicaragua (&gt;95% of exports); the USA consistently accounted for over 80% of recorded live <em>O. pumilio</em> imports from Nicaragua during this period, and the species makes up 7% of all CITES amphibian trade (Carpenter <em>et al</em>. 2014). &#160;Chytrid fungus was not detected in Bastimentos populations in Panama (Richards <em>et al</em>. 2008), but it&#160;has been found on museum specimens of this species, as well as in captive collections in Europe (Spitzen-van der Sluijs 2011). In Costa Rica, individuals have been found to be infected with ranavirus, and chytrid fungus, as well as co-infected with both pathogens (Whitfield <em>et al</em>. 2013). A lowland population in Costa Rica was found to have high prevalence (16/40) of chytrid fungus, though there seems to be seasonal variation in <em>Bd </em>presence within populations (Whitfield <em>et al</em>. 2013). The current impact of this pathogen on <em>O. pumilio</em> is not known. At La Selva, observed declines seem to be driven by climate-driven reductions in quantity of standing leaf litter (Whitfield <em>et al</em>. 2007).",
+    "measures": "<strong><em>Conservation Actions&#160;</em></strong><strong><em><br/></em></strong>This species is listed on Appendix II of CITES and is found in several protected areas within its range. A well-studied population of <em>O. pumilio</em> is present in the Finca La Selva Biological Reserve, northeastern Costa Rica (Donnelly 1989, Limerick 1980, McVey 1981, Pröhl 1997). Within Panama the species is present in a number of protected areas including Isla Bastimentos National Marine Park within the Bocas del Toro archipelago (Summers<em> et al</em><em>.</em>&#160;1997). In Nicaragua, it is known to occur in the Reserva de la Biosfera del Sureste de Nicaragua which includes the Refugio de Vida Silvestre Los Guatuzos, and Reservas Naturales Cerro Kilambé and Cerro Musún, and Reserva Natural Privada Las Brumas (Galindo-Uribe&#160;<em>et al.&#160;</em>2014).&#160;Nicaragua has also established a CITES 2001 export quota of 3,450 specimens for this species.",
+    "use_trade": "This species is listed under CITES Appendix II. Exported from Nicaragua, Costa Rica and Panama for the pet trade and trade in this species consists of 7% of the global trade in CITES-listed amphibians with 33,000 traded internationally between 1978-2008 (Carpenter <em>et al</em>. 2014). Different localities and colour morphs are highly-sought after in collections.",
+    "rationale": "Listed as Least Concern in view of its wide distribution, tolerance of a degree of habitat modification and presumed large population.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other impacts"
+      },
+      "code": "11_5"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Motivation Unknown/Unrecorded"
+      },
+      "code": "5_3_5"
+    },
+    {
+      "scope": null,
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "No/Negligible Impact: 1",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Dams (size unknown)"
+      },
+      "code": "7_2_11"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Unknown",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Batrachochytrium dendrobatidis",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "IUCN SSC Amphibian Specialist Group",
+      "value": [
+        " IUCN SSC Amphibian Specialist Group (IUCN SSC)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Hobin, L.",
+      "value": [
+        "Louise Hobin (SSC Amphibian RLA)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Wetterau, A., Klocke, B., Gratwicke, B., Jaramillo, C., Solís, F., Chaves, G., Köhler , G., Sunyer, J., Savage, J., Cox, N.A. & Ibáñez, R.",
+      "value": [
+        "Neil Cox (Biodiversity Assessment Unit)",
+        "Gunther Köhler (IUCN SSC Iguana Specialist Group / Senckenberg Museum)",
+        "Frank  Solís",
+        "Roberto Ibáñez",
+        "César  Jaramillo (Círculo Herpetológico de Panamá/Universidad de Panamá)",
+        "Gerardo Chaves (Universidad de Costa Rica)",
+        "Javier Sunyer (Universidad Nacional Autonoma de Nicaragua-Leon)",
+        "Jay Savage",
+        "Brian Gratwicke (Smithsonian Conservation Biology Institute)",
+        "Alyssa Wetterau",
+        "Blake Klocke"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Wetterau, A.",
+      "value": [
+        "Alyssa Wetterau"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Savage, J.M. 2002. <i>The Amphibians and Reptiles of Costa Rica: A Herpetofauna between two Continents, between two Seas</i>. University of Chicago Press, Chicago.",
+      "year": "2002",
+      "title": "The Amphibians and Reptiles of Costa Rica: A Herpetofauna between two Continents, between two Seas",
+      "author": "Savage, J.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sunyer, J. and Köhler, G. 2010. Conservation status of the herpetofauna of Nicaragua. In: L.D. Wilson, J.H. Townsend and J.D. Johnson (eds), <i>Conservation of Mesoamerican Amphibians and Reptiles</i>, pp. 487-509. Eagle Mountain Publishing, Eagle Mountain, Utah.",
+      "year": "2010",
+      "title": "Conservation status of the herpetofauna of Nicaragua",
+      "author": "Sunyer, J. and Köhler, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Young, B., Sedaghatkish, G., Roca, E. and Fuenmayor, Q. 1999. <i>El Estatus de la Conservación de la Herpetofauna de Panamá: Resumen del Primer Taller Internacional sobre la Herpetofauna de Panamá</i>. The Nature Conservancy, Arlington, Virginia.",
+      "year": "1999",
+      "title": "El Estatus de la Conservación de la Herpetofauna de Panamá: Resumen del Primer Taller Internacional sobre la Herpetofauna de Panamá",
+      "author": "Young, B., Sedaghatkish, G., Roca, E. and Fuenmayor, Q.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kitasako, J.T. 1967. <i>Observations on the biology of </i>Dendrobates pumilio<i> Schmidt and </i>Dendrobates auratus<i> Girard</i>. M.S. Thesis, University of Southern California.",
+      "year": "1967",
+      "title": "Observations on the biology of <i>Dendrobates pumilio</i> Schmidt and <i>Dendrobates auratus</i> Girard",
+      "author": "Kitasako, J.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ibáñez, R., Solís, F., Jaramillo, C. and Rand, S. 2000. An overview of the herpetology of Panama. In: J.D. Johnson, R.G. Webb and O.A. Flores-Villela (eds), <i>Mesoamerican Herpetology: Systematics, Zoogeography and Conservation</i>, pp. 159-170. The University of Texas at El Paso, El Paso, Texas.",
+      "year": "2000",
+      "title": "An overview of the herpetology of Panama",
+      "author": "Ibáñez, R., Solís, F., Jaramillo, C. and Rand, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Puschendorf, R., Bolaños, F. and Chaves, G. 2006. The amphibian chytrid fungus along an altitudinal transect before the first reported declines in Costa Rica. <i>Biological Conservation</i>: 136-142.",
+      "year": "2006",
+      "title": "The amphibian chytrid fungus along an altitudinal transect before the first reported declines in Costa Rica",
+      "author": "Puschendorf, R., Bolaños, F. and Chaves, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zimmermann, E. and Zimmermann, H. 1994. Reproductive strategies, breeding, and conservation of tropical frogs: dart-poison frogs and Malagasy poison frogs. In: Murphy, J.B., Adler, K. and Collins, J.T. (eds), <i>Captive management and conservation of amphibians and reptiles</i>, pp. 255-266. Society for the Study of Amphibians and Reptiles, Ithaca (New York). Contributions to Herpetology volume 11.",
+      "year": "1994",
+      "title": "Reproductive strategies, breeding, and conservation of tropical frogs: dart-poison frogs and Malagasy poison frogs",
+      "author": "Zimmermann, E. and Zimmermann, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kurz, D. J., A. J. Nowakowski, M. W. Tingley, M. A. Donnelly, and D. S. Wilcove. 2014. Forest-land use complementarity modifies community structure of a tropical herpetofauna. <i>Biological Conservation</i> 170: 246-255.",
+      "year": "2014",
+      "title": "Forest-land use complementarity modifies community structure of a tropical herpetofauna",
+      "author": "Kurz, D. J., A. J. Nowakowski, M. W. Tingley, M. A. Donnelly, and D. S. Wilcove",
+      "citation_short": null
+    },
+    {
+      "citation": "Hilje, B., and T. Mitchell Aide. 2012. Recovery of amphibian species richness and composition in a chronosequence of secondary forests, northeastern Costa Rica. <i>Biological Conservation</i> 146: 170-176.",
+      "year": "2012",
+      "title": "Recovery of amphibian species richness and composition in a chronosequence of secondary forests, northeastern Costa Rica.",
+      "author": "Hilje, B., and T. Mitchell Aide",
+      "citation_short": null
+    },
+    {
+      "citation": "Whitfield SM, Kerby J, Gentry LR, Donnelly MA. 2012. Temporal Variation in Infection Prevalence by the Amphibian Chytrid Fungus in Three Species of Frogs at La Selva, Costa Rica. <i> Biotropica </i> 44: 779-784.",
+      "year": "2012",
+      "title": "Temporal Variation in Infection Prevalence by the Amphibian Chytrid Fungus in Three Species of Frogs at La Selva, Costa Rica.",
+      "author": "Whitfield SM, Kerby J, Gentry LR, Donnelly MA  ",
+      "citation_short": "Whitfield et al 2012"
+    },
+    {
+      "citation": "Kubicki, B. 2008. Amphibian diversity in Guayacan, Limon province, Costa Rica. <i>Brenesia </i> 69: 35-42.",
+      "year": "2008",
+      "title": "Amphibian diversity in Guayacan, Limon province, Costa Rica",
+      "author": "Kubicki, B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Carpenter, A.I., Andreone, F., Moore, R.D. and Griffiths, R.A. 2014. A review of the international trade in amphibians: the types, levels and dynamics of trade in CITES-listed species. <i>Oryx</i> 48(4): 565-574.",
+      "year": "2014",
+      "title": "A review of the international trade in amphibians: the types, levels and dynamics of trade in CITES-listed species.",
+      "author": "Carpenter, A.I., Andreone, F., Moore, R.D. and Griffiths, R.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Folt, B., and K. E. Reider. 2013. Leaf-litter herpetofaunal richness, abundance, and community assembly in mono-dominant plantations and primary forest of northeastern Costa Rica. <i>Biodiversity and Conservation</i>: 1-14.",
+      "year": "2013",
+      "title": "Leaf-litter herpetofaunal richness, abundance, and community assembly in mono-dominant plantations and primary forest of northeastern Costa Rica",
+      "author": "Folt, B., and K. E. Reider",
+      "citation_short": null
+    },
+    {
+      "citation": "Heselhaus, R. 1992. <i>Poison-arrow frogs: their natural history and care in captivity</i>. Blandford, London.",
+      "year": "1992",
+      "title": "Poison-arrow frogs: their natural history and care in captivity",
+      "author": "Heselhaus, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Barquero, M.D., M. Salazar-Saavedra, L. Sandoval, D. Brenes, F. Martanez, and A. Figueroa. 2010. Composition and species richness of herpetofauna in two isolated regions of southern Nicaragua. <i>Herpetol. Notes</i> 3: 341-352.",
+      "year": "2010",
+      "title": "Composition and species richness of herpetofauna in two isolated regions of southern Nicaragua",
+      "author": "Barquero, M.D., M. Salazar-Saavedra, L. Sandoval, D. Brenes, F. Martanez, and A. Figueroa",
+      "citation_short": null
+    },
+    {
+      "citation": "Pröhl, H. 1997. Territorial behaviour of the strawberry poison-dart frog, <i>Dendrobates pumilio</i>. <i>Amphibia-Reptilia</i>: 437-442.",
+      "year": "1997",
+      "title": "Territorial behaviour of the strawberry poison-dart frog, <i>Dendrobates pumilio</i>",
+      "author": "Pröhl, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Spitzen-van der Sluijs, Annemarieke, An Martel, Emma Wombwell, Pascale Van Rooij, Ronald Zollinger, Tonnie Woeltjes, Matthew Rendle, Freddy Haesebrouck, and Frank Pasmans. 2011.  Clinically healthy amphibians in captive collections and at pet fairs: a reservoir of Batrachochytrium dendrobatidis. <i>Amphibia-reptilia </i> 32(3): 419-423.",
+      "year": "2011",
+      "title": " Clinically healthy amphibians in captive collections and at pet fairs: a reservoir of Batrachochytrium dendrobatidis",
+      "author": "Spitzen-van der Sluijs, Annemarieke, An Martel, Emma Wombwell, Pascale Van Rooij, Ronald Zollinger, Tonnie Woeltjes, Matthew Rendle, Freddy Haesebrouck, and Frank Pasmans. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Limerick, S. 1980. Courtship behaviour and oviposition of the poison-arrow frog <i>Dendrobates pumilio</i>. <i>Herpetologica</i>: 69-71.",
+      "year": "1980",
+      "title": "Courtship behaviour and oviposition of the poison-arrow frog <i>Dendrobates pumilio</i>",
+      "author": "Limerick, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Richards, C. L., A. J. Zellmer, and L. M. Martens. 2008. Batrachochytrium dendrobatidis not detected in Oophaga pumilio on Bastimentos Island, Panama. <i>Herpetological Review</i> 39(2): 200-202.",
+      "year": "2008",
+      "title": "Batrachochytrium dendrobatidis not detected in Oophaga pumilio on Bastimentos Island, Panama",
+      "author": "Richards, C. L., A. J. Zellmer, and L. M. Martens",
+      "citation_short": null
+    },
+    {
+      "citation": "Summers, K., Bermingham, E., Weigt, L., McCafferty, S. and Dahlstrom, L. 1997. Phenotypic and genetic divergence in three species of dart-poison frogs with contrasting parental behaviour. <i>Journal of Heredity</i>: 8-13.",
+      "year": "1997",
+      "title": "Phenotypic and genetic divergence in three species of dart-poison frogs with contrasting parental behaviour",
+      "author": "Summers, K., Bermingham, E., Weigt, L., McCafferty, S. and Dahlstrom, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Galindo-Uribe D., Sunyer J., Hauswaldt J.S., Amézquita A., Pröhl H. & Vences M. 2014. Colour and pattern variation and Pleistocene phylogeographic origin of the strawberry poison frog, Oophaga pumilio, in Nicaragua. <i>Salamandra</i> 50(4): 225-235.",
+      "year": "2014",
+      "title": "Colour and pattern variation and Pleistocene phylogeographic origin of the strawberry poison frog, Oophaga pumilio, in Nicaragua",
+      "author": "Galindo-Uribe D., Sunyer J., Hauswaldt J.S., Amézquita A., Pröhl H. & Vences M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kerby J, Richards-Hrdlicka K, Storfer A, Skelly D. 2009. An examination of amphibian sensitivity to environmental contaminants: Are amphibians poor canaries? <i>Ecol Lett </i> 13: 60-67.",
+      "year": "2009",
+      "title": "An examination of amphibian sensitivity to environmental contaminants: Are amphibians poor canaries?",
+      "author": "Kerby J, Richards-Hrdlicka K, Storfer A, Skelly D  ",
+      "citation_short": "Kerby et al 2010"
+    },
+    {
+      "citation": "Whitfield, S.M., Bell, K.E., Philippi, T., Sasa, M., Bolaños, F., Chaves, G., Savage, J.M. and Donnelly, M.A. 2007. Amphibian and reptile declines over 35 years at La Selva, Costa Rica. <i>Proceedings of the National Academy of Sciences</i> doi:10.1073/pnas.0611256104.",
+      "year": "2007",
+      "title": "Amphibian and reptile declines over 35 years at La Selva, Costa Rica",
+      "author": "Whitfield, S.M., Bell, K.E., Philippi, T., Sasa, M., Bolaños, F., Chaves, G., Savage, J.M. and Donnelly, M.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sunyer J., Páiz G., Dehling D.M. and Köhler G. 2009. A collection of amphibians from Río San Juan, southeastern Nicaragua. <i>Herpetology Notes</i> 2:  189-202.",
+      "year": "2009",
+      "title": "A collection of amphibians from Río San Juan, southeastern Nicaragua",
+      "author": "Sunyer J., Páiz G., Dehling D.M. and Köhler G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Whitfield, S., E. Geerdes, I. Chacon, E. Ballestero Rodriguez, R. Jimenez, M. Donnelly and J. Kerby. 2013. Infection and co-infection by the amphibian chytrid fungus and ranavirus in wild Costa Rican frogs. <i>Diseases of Aquatic Organisms</i> 104(2): 173-178.",
+      "year": "2013",
+      "title": "Infection and co-infection by the amphibian chytrid fungus and ranavirus in wild Costa Rican frogs",
+      "author": "Whitfield, S., E. Geerdes, I. Chacon, E. Ballestero Rodriguez, R. Jimenez, M. Donnelly and J. Kerby",
+      "citation_short": null
+    },
+    {
+      "citation": "Donnelly, M.A. 1989. Reproductive phenology and age structure of <i>Dendrobates pumilio</i> in northeastern Costa Rica. <i>Journal of Herpetology</i>: 362-367.",
+      "year": "1989",
+      "title": "Reproductive phenology and age structure of <i>Dendrobates pumilio</i> in northeastern Costa Rica",
+      "author": "Donnelly, M.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Silverstone, P.A. 1975. A revision of the poison-arrow frogs of the genus <i>Dendrobates</i> Wagler. <i>Natural History Museum of Los Angeles County Science Bulletin</i> 21: 1-55.",
+      "year": "1975",
+      "title": "A revision of the poison-arrow frogs of the genus <i>Dendrobates</i> Wagler",
+      "author": "Silverstone, P.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "McVey, M.E., Zahary, R.G., Perry, D. and MacDougal, J. 1981. Territoriality and homing behaviour in the poison dart frog (<i>Dendrobates pumilio</i>). <i>Copeia</i>: 1-8.",
+      "year": "1981",
+      "title": "Territoriality and homing behaviour in the poison dart frog (<i>Dendrobates pumilio</i>)",
+      "author": "McVey, M.E., Zahary, R.G., Perry, D. and MacDougal, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2015. The IUCN Red List of Threatened Species. Version 2015-4. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 19 November 2015).",
+      "year": "2015",
+      "title": "The IUCN Red List of Threatened Species. Version 2015-4",
+      "author": "IUCN",
+      "citation_short": "IUCN 2015-4"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

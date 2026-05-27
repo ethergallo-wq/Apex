@@ -1,0 +1,1282 @@
+{
+  "assessment_date": "2016-07-09T01:00:00.000+01:00",
+  "year_published": "2018",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 9194,
+  "criteria": "A2acd",
+  "url": "https://www.iucnredlist.org/species/9194/136266699",
+  "citation": "Muller, Z., Bercovitch, F., Brand, R., Brown, D., Brown, M., Bolger, D., Carter, K., Deacon, F., Doherty, J.B., Fennessy, J., Fennessy, S., Hussein, A.A., Lee, D., Marais, A., Strauss, M., Tutchings, A. & Wube, T. 2018. Giraffa camelopardalis (amended version of 2016 assessment). The IUCN Red List of Threatened Species 2018: e.T9194A136266699. Accessed on 15 May 2026.",
+  "assessment_id": 136266699,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 9194,
+    "scientific_name": "Giraffa camelopardalis",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 88420726,
+        "scientific_name": "Giraffa camelopardalis ssp. angolensis",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "GIRAFFIDAE",
+        "genus_name": "Giraffa",
+        "species_name": "camelopardalis",
+        "subpopulation_name": null,
+        "infra_name": "angolensis",
+        "authority": "Lydekker, 1903",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Angolan Giraffe",
+            "language": "eng"
+          },
+          {
+            "main": true,
+            "name": "Angolan Giraffe",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 88420742,
+        "scientific_name": "Giraffa camelopardalis ssp. antiquorum",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "GIRAFFIDAE",
+        "genus_name": "Giraffa",
+        "species_name": "camelopardalis",
+        "subpopulation_name": null,
+        "infra_name": "antiquorum",
+        "authority": "Swainson, 1835",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Kordofan Giraffe",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 88420707,
+        "scientific_name": "Giraffa camelopardalis ssp. camelopardalis",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "GIRAFFIDAE",
+        "genus_name": "Giraffa",
+        "species_name": "camelopardalis",
+        "subpopulation_name": null,
+        "infra_name": "camelopardalis",
+        "authority": "Linnaeus, 1758",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Nubian Giraffe",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 88420833,
+        "scientific_name": "Giraffa camelopardalis ssp. giraffa",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "GIRAFFIDAE",
+        "genus_name": "Giraffa",
+        "species_name": "camelopardalis",
+        "subpopulation_name": null,
+        "infra_name": "giraffa",
+        "authority": "von Schreber, 1784",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Cape Giraffe",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Giraf",
+            "language": "afr"
+          },
+          {
+            "main": false,
+            "name": "Kameelperd",
+            "language": "afr"
+          },
+          {
+            "main": true,
+            "name": "South African Giraffe",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 136913,
+        "scientific_name": "Giraffa camelopardalis ssp. peralta",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "GIRAFFIDAE",
+        "genus_name": "Giraffa",
+        "species_name": "camelopardalis",
+        "subpopulation_name": null,
+        "infra_name": "peralta",
+        "authority": "Thomas, 1898",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": true,
+            "name": "West African Giraffe",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 88420717,
+        "scientific_name": "Giraffa camelopardalis ssp. reticulata",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "GIRAFFIDAE",
+        "genus_name": "Giraffa",
+        "species_name": "camelopardalis",
+        "subpopulation_name": null,
+        "infra_name": "reticulata",
+        "authority": "De Winton, 1899",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Reticulated Giraffe",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 174469,
+        "scientific_name": "Giraffa camelopardalis ssp. rothschildi",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "GIRAFFIDAE",
+        "genus_name": "Giraffa",
+        "species_name": "camelopardalis",
+        "subpopulation_name": null,
+        "infra_name": "rothschildi",
+        "authority": "Lydekker, 1903",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Baringo Giraffe",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Ugandan Giraffe",
+            "language": "eng"
+          },
+          {
+            "main": true,
+            "name": "Rothschild’s Giraffe",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 88421020,
+        "scientific_name": "Giraffa camelopardalis ssp. thornicrofti",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "GIRAFFIDAE",
+        "genus_name": "Giraffa",
+        "species_name": "camelopardalis",
+        "subpopulation_name": null,
+        "infra_name": "thornicrofti",
+        "authority": "Lydekker, 1911",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Thornicroft's Giraffe",
+            "language": "eng"
+          },
+          {
+            "main": true,
+            "name": "Thornicroft's Giraffe",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 88421036,
+        "scientific_name": "Giraffa camelopardalis ssp. tippelskirchi",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "GIRAFFIDAE",
+        "genus_name": "Giraffa",
+        "species_name": "camelopardalis",
+        "subpopulation_name": null,
+        "infra_name": "tippelskirchi",
+        "authority": "Matschie, 1898",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Masai Giraffe",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "ARTIODACTYLA",
+    "family_name": "GIRAFFIDAE",
+    "genus_name": "Giraffa",
+    "species_name": "camelopardalis",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Girafe",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Giraffe",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Jirafa",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Kameelperd",
+        "language": "afr"
+      },
+      {
+        "main": false,
+        "name": "Twiga",
+        "language": "swa"
+      },
+      {
+        "main": true,
+        "name": "Giraffe",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Cervus camelopardalis Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Cervus",
+        "species_name": "camelopardalis",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "68293",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "10",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Unknown"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species is the world's tallest land mammal and remains widespread across southern and eastern Africa, with smaller isolated populations in west and central Africa. Giraffes inhabit eighteen African countries and have been reintroduced to three others (Malawi, Rwanda, and Swaziland). Giraffes from South Africa have been introduced to Senegal. Giraffes appear to have gone extinct in at least seven countries (Burkina Faso, Eritrea, Guinea, Mali, Mauritania, Nigeria and Senegal). Giraffes have adapted to a variety of habitats, ranging from desert landscapes to woodland/savanna environments, but live in non-continuous, fragmented populations across sub-Saharan Africa.<br/><br/>Table 1 in the Supplementary Material summarizes the current conservation status of the nine subspecies. West African Giraffes (<em>Giraffa c. peralta</em>) are limited to an isolated population in the south-western corner of Niger and in 2008 this subspecies was categorized as Endangered on The IUCN Red List (Fennessy and Brown 2008). In Central Africa, <em>G. c. antiquorum</em> inhabit Cameroon, Central African Republic, Chad, Democratic Republic of Congo and South Sudan. East Africa is home to four subspecies of Giraffes, with three of them living in Kenya. <em>G. c. camelopardalis</em> occurs in both South Sudan and Ethiopia, although information regarding the area of occupancy of this population of Giraffes is limited. Giraffes living in north-eastern Kenya, and across the borders in south-eastern Ethiopia and south-western Somalia, are <em>G. c. reticulata</em>, those living in Uganda and introduced to central and southwest Kenya are categorized as <em>G. c. rothschildi </em>– and in 2010 this subspecies was categorized by the IUCN Red List as Endangered (Fennessy and Brenneman 2010), and those in southern Kenya, along with large tracts of Tanzania, are considered to be <em>G. c. tippelsckirchi</em>. In Southern Africa, the population living in the Luangwa Valley, Zambia, is <em>G. c. thornicrofti</em>. Angola, southern and northern Botswana, Mozambique, northeast Namibia, South Africa, and southwest Zambia are home to <em>G. c. giraffa</em>, whilst <em>G. c. angolensis</em> occurs in central Botswana and Namibia. Confusion still exists as to whether the giraffes in northern Botswana, north-eastern Namibia, south-western Zambia and north-western Zimbabwe are <em>G. c. angolensis</em> or <em>G. c. giraffa</em>, and for purposes of establishing the total population counts and trends here are lumped into <em>G. c. angolensis</em>.",
+    "population": "Historically this species has been overlooked in terms of research and conservation, but in the past five years, considerable progress has been made in compiling and producing a species-wide assessment of population size and distribution by members of the IUCN SSC Giraffe and Okapi Specialist Group (IUCN SSC GOSG).<br/><br/>The generation length calculated by Pacifici <em><em>et al.</em></em> (2013) is not based upon lifetime data from field work. They report maximum longevity of 37.4 years, despite the consensus among field biologists that Giraffes live for less than 30 years in the wild (Dagg and Foster 1982, Estes 1991, du Toit 2009, Bercovitch and Berry 2010b). They suggest a reproductive lifespan of 32.4 years, which surpasses the interval between average age at first birth in the wild (6.4 years, Bercovitch and Berry 2010b) and the oldest documented age at giving birth in the wild (24 years, Bercovitch and Berry 2010b). Given that no age-specific reproductive rates have been published for Giraffes in the wild, and that the only lifetime data to have been published indicates a maximum breeding lifespan of less than 18 years, the IUCN SSC GOSG consensus is that a generation length of 14.4 years is inaccurate and assumes a more likely generation length of 10 years. Therefore this assessment is based upon the best information available from the last 30 years (1985-2015). However, because the species resides in discrete subpopulations living in different regions of Africa that have not been the subject of a systematic survey from a single date, we have based historic estimates on the best available information for each subspecies that was obtained the closest in time to 1985 (three generations).<br/><br/>Historic and current estimates adopted a variety of methods that included both aerial and ground surveys, as well as photographic capture/re-capture, interviews and best estimates. Therefore, whilst the accuracy and quality of the data are somewhat inconsistent, the population counts contain the most reliable information currently available. The historical and current estimates of population size in all nine recognized subspecies, and the global totals are summarized in Table 1 (see the Supplementary Material). Several populations of Giraffe, resident in northern Botswana, northwest Zimbabwe, northeastern Namibia and southwestern Zambia, are potentially either <em>Giraffa c. angolensis</em>, or <em>G. c. giraffa</em>. These are provisionally lumped into <em>G. c. angolensis</em> for purposes of establishing the total population counts, pending further taxonomic research.<br/><br/>These estimates show in total that numbers were 151,702-163,452 in 1985 and 97,562 in 2015. The IUCN SSC GOSG pan-African database revealed that approximately 70%  of individuals within a population could be considered ‘mature’ for  status assessment purposes (IUCN SSC GOSG meeting, August 2015). These figures therefore represent approximately 106,191-114,416 mature individuals in 1985 and 68,293 in 2015, representing a decline of 36-40% in the number of mature individuals over the three generations. The factors causing observed population declines (levels of exploitation and decline in area of occupancy) have not ceased and may not be reversible throughout the species’ range. Some Giraffe populations are stable or increasing, while others are declining, and each population is subject to pressure from threats specific to their local country or region, but the species-level trend reveals an overall large decline in numbers across their range in Africa.<br/><br/>The populations of Giraffes are scattered and fragmented with different growth trajectories and threats. Based upon the IUCN SSC GOSG population assessments and subspecies status surveys, the number of Giraffes in Eastern Africa is generally decreasing, while populations in Southern Africa are generally increasing. The only Giraffe population in West Africa is increasing, while those in Central Africa are, in general, decreasing. The population sizes of the nine subspecies varies widely, with two of them (<em>G. c. giraffa </em>and <em>G. c. tippelskirchi</em>) accounting for close to half of Giraffes living in Africa, while the other seven subspecies live in scattered, fragmented populations, with some numbering fewer than 1,000 animals.<br/><br/>Of the nine subspecies, four are increasing (<em>G. c. angolensis, G. c. giraffa, G. c. peralta,&#160;</em><em>G. c. rothschildi</em>), four are decreasing (<em>G. c. antiquorum, G. c. camelopardalis, G. c. reticulata, G. c. tippelskirchi</em>), and one is stable (<em>G. c. thornicrofti</em>). See Table 1 in the Supplementary Material.<br/><br/>One possible indicator of a continent-wide trend in population-wide declines over time relates to Giraffe herd sizes. Late 19th and early 20th century explorers and hunters commented on the large size of Giraffe herds, often some 20-30 animals. However, on average many Giraffe herds studied today contain fewer than six individuals (Brand 2007, Bercovitch and Berry 2010a, Carter <em><em>et al.</em></em> 2013, VanderWaal <em><em>et al.</em></em> 2014). In the Seronera region of Serengeti National Park, Tanzania, from the mid-1970s to 2010 both the average herd size, and the maximum herd size, have halved, from nine to 4.3 and from 77 to 38, respectively (Strauss <em><em>et al.</em></em> 2015). However, smaller herd sizes need not reflect declines in population sizes, but could reflect more segmented and scattered groups resulting from human changes to the landscape. In general, larger herds are sighted in more open areas (Bercovitch and Berry 2010a), and over 50 animals are still sometimes recorded (M. Brown unpubl. data).<br/><br/>In Eastern Africa, <em>G. c. camelopardalis</em> has declined from an historic estimate of 20,577 individuals in 1979/1981 to the current estimate of 650 individuals (-97%, Wube <em><em>et al.</em></em> 2016). <em>Giraffa c. tippelskirchi</em> has declined from an historic estimate of 63,292 individuals to the current estimate of 35,000 individuals (-50%, Bolger <em><em>et al.</em></em> 2016). <em>Giraffa c. reticulata</em> has declined from an historic estimate of 36,000-47,750 individuals to the current estimate of 8,661 individuals (Kenya Wildlife Service in preparation, Doherty <em><em>et al.</em></em> 2016). <em>Giraffa c. rothschildi</em> has increased from an historic estimate of 1,331 individuals in the 1960s to the current estimate of 1,671 individuals within their natural range (26%, Fennessy <em><em>et al.</em></em> 2016). <em>Giraffa c. thornicrofti</em> has stabilized at close to 600 individuals since 1973 (Berry and Bercovitch 2016), following an increase from approximately 300 giraffes in the early 1970s (Bercovitch <em><em>et al.</em></em> 2015).<br/><br/>In Southern Africa, <em>G. c. angolensis</em> has increased from an historic estimate of 5,000 individuals to the current estimate of 13,031 individuals (+161%, Marais <em><em>et al.</em></em> 2016). <em>Giraffa c. giraffa</em> has increased from an historic estimate of 8,000 individuals to the current estimate of over 21,387 individuals (+167%, Deacon <em><em>et al.</em></em> 2016). The population resident in the north eastern Namibia, northern Botswana, northwestern Zambia and northwestern and central Zimbabwe are of uncertain taxonomic status and are considered as <em>Giraffa c. angolensis</em> for this report, and are estimated to have increased from approximately 10,000 historically to the current estimate of 17,551 (J. Fennessy, unpubl. data). <br/><br/>In Central Africa, <em>G. c. antiquorum</em> has decreased from an historic estimate of 3,696 individuals to the current estimate of 2,000 individuals (-46%, Fennessy and Marais 2016).<br/><br/>In West Africa <em>G. c. peralta</em> has increased from an historic estimate of at least 50 individuals to the current estimate of 400 individuals (+700%, Fennessy <em><em>et al.</em></em> 2016).",
+    "habitats": "About one million years ago, multiple ungulate species, including at least three Giraffe species, spread over the African continent along with the emerging savanna/woodland biome (Mitchell and Skinner 2003, Robinson 2011). But between 600,000 and 800,000 years ago, only a single species, <em>Giraffa camelopardalis</em>, is found in the fossil record. The adaptive radiation of Giraffes across Africa occurred during a period of environmental instability, climate change, and geological upheavals that produced distinctive lineages living in mostly disconnected areas of Africa (Bock <em><em>et al.</em></em> 2014, Fennessy <em><em>et al.</em></em> 2013, Groves and Grubb 2011, Brown <em><em>et al.</em></em> 2007, Hassanin <em><em>et al.</em></em> 2007). Continued natural, as well as human-induced, changes in habitat have yielded a suture zone in Eastern Africa, as well as possibly Northern and Southern Africa, that impedes our ability to mark specific boundaries between the various kinds of Giraffes. Hence, Giraffes evolved an ability to adapt to a variety of ecosystems and, as they did so, lineages emerged in different regions where they evolved distinctive characteristics, but whether these traits are significant enough to consider the differences as species or subspecies is unclear at the moment.<br/><br/>Giraffes are most often found in savanna/woodland habitats, but range widely throughout Africa. They are browsers that subsist on a variable diet that includes leaves, stems, flowers, and fruits. They do not need to drink on a daily basis. Across the continent, detailed records of Giraffe feeding ecology have noted that each population has a very diverse diet of up to 93 different species, but that usually a half dozen plant species comprise at least 75% of the diet. <em>Acacia</em> is fed on in high proportions wherever Giraffes are found, but during the dry season, the preferred plant species varies by location. <em>Faidherbia, Boscia, Grewia</em>, and <em>Kigelia</em> have all been identified as the most common plant species in the diet of giraffes in the dry season in different locations. Some populations have seasonal shifts in home ranges.",
+    "threats": "Four major threats to Giraffes can be identified, although the severity and presence of these threats varies by region and population: (1) habitat loss (through deforestation, land use conversion, expansion of agricultural activities and human population growth) (2) civil unrest (ethnic violence, rebel militias, paramilitary and military operations), (3) illegal hunting (poaching), and (4) ecological changes (mining activity, habitat conversion to agriculture, climate-induced processes). In Southern Africa, the main perceived threats are habitat loss and conversion of land for human development, and illegal hunting. In West Africa, the main threats are habitat loss due to increasing human populations and human-wildlife conflict. In Eastern and Central Africa the main threats are habitat loss through rapid conversion of land for farming and increasing human populations, drought, illegal hunting for meat and hide, and armed conflict throughout unstable regions.<br/><br/>Some of the highest human fertility rates in the world (&gt;4%) occur in countries where Giraffes are present. Natural habitat changes from weather irregularities result in situations generating human movement, sometimes into protected, or semi-protected, areas. Drought conditions have become more common and increase the prospects of bush fires, loss of habitat, and human population movements. Substantial human population migration also characterizes regions and areas with military operations in giraffe habitats. In some countries (e.g., Namibia, South Africa) the hunting of Giraffes is legal, but Giraffe population sizes there are increasing; in other countries (e.g., Tanzania) the poaching of Giraffes is associated with declines in Giraffe population size. Habitat fragmentation and degradation are probably the most widespread and greatest threats to African wildlife, including Giraffes, often arising as a consequence of mineral extraction and/or habitat conversion to agricultural crops.",
+    "measures": "Given that some Giraffe populations are increasing, some are decreasing, and one seems to be stable, the conservation actions most useful and appropriate for Giraffes will differ as a function of Giraffe population dynamics, ecological stability, national policies, and legislation. Giraffes are subject to various degrees of legal protection in their range states. Large populations occur in national protected areas and on private farms, but many populations also exist in unprotected and communal areas. The main threats to the conservation of Giraffe populations are habitat loss, encroachment and conversion, and poaching.<br/>&#160; <br/>Conservation measures typically include habitat management and protection through law enforcement and community based conservation initiatives. Successful protection of habitat and cessation of habitat encroachment with the use of fences and border protection can result in large herds building up within an area. The continued growth of these populations however is limited by the ability of that ecosystem to support a particular number of Giraffes due to space, water and forage availability (i.e., limited carrying capacity).<br/><br/>In Niger, conservation projects and targeted community education and awareness programs have facilitated the re-bounding of the Giraffe population from a low of 49 individuals in the absence of official protected areas. However, habitat loss and drought remain as significant threats in this area. Importantly, the government was the first and remains the only range state to have developed a National Giraffe Conservation Strategy, and through this the conservation of the species has increased nearly eightfold in twenty years.<br/><br/>Kenya is finalising a National Giraffe Conservation Strategy which seeks to identify and implement a number of conservation interventions to conserve the three Giraffe subspecies (<em>Giraffa reticulata, G. rothschildi, G. tippelskirchi</em>) in the country. Rothschild’s Giraffes are accorded full protection under the Kenyan Wildlife (Conservation and Management) Act (Chapter 376) and in the Republic of Uganda Giraffe are protected under the Game (Preservation and Control) Act of 1959 (Chapter 198) and listed under Part A of the First Schedule of the Act as animals that may not be hunted or captured.<br/><br/>Throughout Eastern and Southern Africa, an increasing number of Giraffe translocations have repopulated former habitats with Giraffes, fostering wildlife enterprises including tourism and consumptive use, and maintaining genetic diversity given small, enclosed and fragmented populations.<br/><br/>Although one of the smallest populations in Africa lives in the Luangwa Valley, Zambia, the population has been stable for a number of years, so intervention as a conservation action is probably not warranted. Instead, continued monitoring of the population, combined with efforts to limit and control mineral extraction and land conversion, would be useful.<br/><br/>In Southern Africa, private ownership of Giraffes sometimes facilitates the gene flow between populations as animals are bought, sold and traded between farms. Perhaps a more controlled and systematic pattern of Giraffe translocations would help in the conservation of Giraffes.",
+    "use_trade": "Legal hunting of Giraffes occurs in parts of southern Africa. Illegal hunting for meat takes place in several parts of the range. There is some trade in live specimens between game ranches in southern Africa.",
+    "rationale": "Giraffe (<em>Giraffa camelopardalis</em>) is assessed as Vulnerable under criterion A2 due to an observed, past (and ongoing) population decline of 36-40% over three generations (30 years, 1985-2015). The factors causing this decline (levels of exploitation and decline in area of occupancy and habitat quality) have not ceased and may not be reversible throughout the species’ range. The best available estimates indicate a total population in 1985 of 151,702-163,452 Giraffes (106,191-114,416 mature individuals), and in 2015 a total population of 97,562 Giraffes (68,293 mature individuals). Historically the species has been overlooked in terms of research and conservation, but in the past five years, considerable progress has been made in compiling and producing a species-wide assessment of population size and distribution by the members of the IUCN SSC Giraffe and Okapi Specialist Group. Some Giraffe populations are stable or increasing, while others are declining, and each population is subject to pressure by threats specific to their local country or region. The populations of Giraffes are scattered and fragmented with different growth trajectories and threats, but the species trend reveals an overall large decline in numbers across their range in Africa.",
+    "trend_justification": null,
+    "taxonomic_notes": "The IUCN SSC Giraffe and Okapi Specialist Group (GOSG) currently recognizes a single species, <em>Giraffa camelopardalis</em>. Nine subspecies of Giraffes are currently recognized (Dagg 2014), although some authorities dispute this taxonomic classification (e.g., Groves and Grubb 2011). Several subpopulations of Giraffe, resident in northern Botswana, northwest Zimbabwe, northeastern Namibia and southwestern Zambia, are potentially either <em>G. c. angolensis</em>, or <em>G. c. giraffa</em> but the continued accumulation of information indicates that a future reassessment might be in order. Until an extensive reassessment of the taxonomic status of giraffes is completed, therefore, it is premature to alter the taxonomic <em>status quo</em>. This assessment is based upon an interim consensus that a single species of giraffes is resident on the African continent."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": null,
+      "code": "6_1",
+      "description": {
+        "en": "Linked enterprises & livelihood alternatives"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Moist"
+      },
+      "code": "2_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Sudan"
+      },
+      "code": "SS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Zimbabwe"
+      },
+      "code": "ZW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Zambia"
+      },
+      "code": "ZM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": null,
+      "description": {
+        "en": "Mali"
+      },
+      "code": "ML"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Malawi"
+      },
+      "code": "MW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Ethiopia"
+      },
+      "code": "ET"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Chad"
+      },
+      "code": "TD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Central African Republic"
+      },
+      "code": "CF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Burkina Faso"
+      },
+      "code": "BF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Botswana"
+      },
+      "code": "BW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Niger"
+      },
+      "code": "NE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Rwanda"
+      },
+      "code": "RW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Eswatini"
+      },
+      "code": "SZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Uganda"
+      },
+      "code": "UG"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "War, civil unrest & military exercises"
+      },
+      "code": "6_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Muller, Z., Bercovitch, F., Brand, R., Brown, D., Brown, M., Bolger, D., Carter, K., Deacon, F., Doherty, J.B., Fennessy, J., Fennessy, S., Hussein, A.A., Lee, D., Marais, A., Strauss, M., Tutchings, A. & Wube, T.",
+      "value": [
+        "Fred Bercovitch (Primate Research Institute & Wildlife Research Center Kyoto University)",
+        "Francois Deacon (Department of Animal, Wildlife, and Grassland Sciences University of the Free State Bloemfontein, South Africa)",
+        "John Doherty (School of Biological Sciences Queen’s University Belfast)",
+        "Doug Bolger (Department of Biological Sciences Dartmouth College)",
+        "David Brown (Giraffid Specialist Group)",
+        "Stephanie Fennessy (Giraffe Conservation Foundation)",
+        "Abdullah Ali Hussein (Department of Conservation Biology National Museums of Kenya)",
+        "Derek Lee (Wild Nature Institute)",
+        "Andri Marais (Giraffe Conservation Foundation)",
+        "Megan Strauss",
+        "Andy Tutchings",
+        "Tilaye Wube (Addis Ababa University Department of Zoological Sciences College of Natural Science)",
+        "Michael Brown (Department of Biological Sciences)",
+        "Rachel Brand",
+        "Julian Fennessy (International Giraffe Working Group; IUCN SSC Giraffe and Okapi Specialist Group)",
+        "Kerryn Carter",
+        "Zoe Muller (Giraffe Research & Conservation Trust)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Mallon, D.P.",
+      "value": [
+        "David Mallon (IUCN SSC Antelope RLA)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Allen, P., Antoninova, M., Becker, M., Berry, P.S.M., Bour, P., Chase, M., Child, M.F., Fust, P., Hillman-Smith, K., Kümpel, N., Lamprey, R., McRobb, R., Monico, M., Parker, D., du Raan, R., Roulet, P.-A., Siege, L. & Suraud, J.-P.",
+      "value": [
+        "Kes Hillman-Smith",
+        "Jean-Paul Suraud",
+        "Pascal Fust",
+        "Marina Monico",
+        "Daniel Parker",
+        "Racheldu du Raan",
+        "Rachel McRobb",
+        "Ludwig Siege",
+        "Richard Lamprey",
+        "Michael Chase",
+        "Paul Bour",
+        "Phil Berry",
+        "Marketa Antoninova",
+        "Paul Allen",
+        "Pierre-Armand Roulet (Gestion Aires Protégées / Ressources Naturelles en milieu tropical 12 Avenue de la Culture, Bujumbura, Burundi)",
+        "Noelle Kümpel (Zoological Society of London (ZSL); IUCN SSC Giraffe and Okapi Specialist Group)",
+        "Matthew Becker (ALWG)",
+        "Matthew Child (South African National Biodiversity Institute (SANBI))"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This amended assessment has been published as the subspecies assessments have now been published, and their distributions have been updated. Accordingly, the species level map has also been updated."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C. 2013. Generation length for mammals. <i>Nature Conservation</i> 5: 87–94.",
+      "year": "2013",
+      "title": "Generation length for mammals",
+      "author": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "East, R. (compiler). 1999. <i>African Antelope Database 1998</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1999",
+      "title": "African Antelope Database 1998",
+      "author": "East, R. (compiler)",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hassanin, A., Ropiquet, A., Gourmand, A.-L., Chardonnet, B. and Rigoulet, J. 2007. Mitochondrial DNA variability in <i>Giraffa camelopardalis</i>: consequences for taxonomy, phylogeography and conservation of giraffes in West and central Africa. <i>Comptes Rendus Biologies</i> 330: 265-274.",
+      "year": "2007",
+      "title": "Mitochondrial DNA variability in <i>Giraffa camelopardalis</i>: consequences for taxonomy, phylogeography and conservation of giraffes in West and central Africa",
+      "author": "Hassanin, A., Ropiquet, A., Gourmand, A.-L., Chardonnet, B. and Rigoulet, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brown, D.M., Brenneman, R.A., Georgiadis, N.J., Koepfli, K.-P., Pollinger, J. P., Mila, B., Louis Jr., E., Grether, G.F., Jakobs, D.K. and Wayne, R.K. 2007. Extensive population genetic structure in the giraffe. <i>BMC Biology</i> 5: 57. DOI: 10.1186/1741-7007-5-57.",
+      "year": "2007",
+      "title": "Extensive population genetic structure in the giraffe",
+      "author": "Brown, D.M., Brenneman, R.A., Georgiadis, N.J., Koepfli, K.-P., Pollinger, J. P., Mila, B., Louis Jr., E., Grether, G.F., Jakobs, D.K. and Wayne, R.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dagg, A.I. and Foster, J.B. 1982. <i>The Giraffe: its anatomy, behavior and ecology. Second Edition</i>. R.E. Krieger Publishing Co., Malabar.",
+      "year": "1982",
+      "title": "The Giraffe: its anatomy, behavior and ecology. Second Edition",
+      "author": "Dagg, A.I. and Foster, J.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Groves, C. and Grubb, P. 2011. <i>Ungulate Taxonomy</i>. The Johns Hopkins University Press, Baltimore, USA.",
+      "year": "2011",
+      "title": "Ungulate Taxonomy",
+      "author": "Groves, C. and Grubb, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fennessy, J. and Brown, D. 2008. <i>Giraffa camelopardalis</i> ssp. <i>peralta</i>. <i>The IUCN Red List of Threatened Species</i> 2008: e.T136913A4349726. DOI: http://dx.doi.org/10.2305/IUCN.UK.2008.RLTS.T136913A4349726.en.",
+      "year": "2008",
+      "title": "<i>Giraffa camelopardalis</i> ssp. <i>peralta</i>",
+      "author": "Fennessy, J. and Brown, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Robinson, C.A. 2011. Giraffidae. In: T. Harrison (ed.), <i>Paleontology and Geology of Laetoli: human evolution in context. Vol 2: Fossil hominins and the associated fauna</i>, pp. 339-362. Springer, Berlin, Germany.",
+      "year": "2011",
+      "title": "Giraffidae",
+      "author": "Robinson, C.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fennessy, J., Bock, F., Tutchings, A., Brenneman, R. and Janke, A. 2013. Mitochondrial DNA shows that Zamnbia's South Luangwa valley giraffe (<i>Giraffa camelopardalis thornicofti</i>) are genetically isolated. <i>African Journal of Ecology</i> 51: 635-640.",
+      "year": "2013",
+      "title": "Mitochondrial DNA shows that Zamnbia's South Luangwa valley giraffe (<i>Giraffa camelopardalis thornicofti</i>) are genetically isolated",
+      "author": "Fennessy, J., Bock, F., Tutchings, A., Brenneman, R. and Janke, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fennessy, S., Fennessy, J., Muller, Z., Brown, M. and Marais, A. In prep. Rothschild's giraffe (<i>Giraffa camelopardalis rothschildi</i>) conservation status report. IUCN/SSC Giraffe and Okapi Specialist Group.",
+      "year": "In prep",
+      "title": "Rothschild's giraffe (<i>Giraffa camelopardalis rothschildi</i>) conservation status report",
+      "author": "Fennessy, S., Fennessy, J., Muller, Z., Brown, M. and Marais, A",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bercovitch, F. and Berry, P.S.M. 2010a. Ecological determinants of herd size in the Thornicroft's giraffe of Zambia. <i>African Journal of Ecology</i> 48: 962-971.",
+      "year": "2010a",
+      "title": "Ecological determinants of herd size in the Thornicroft's giraffe of Zambia",
+      "author": "Bercovitch, F. and Berry, P.S.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Berry, P.S.M. and Bercovitch, F. 2016. Population census of Thornicroft's giraffe <i>Giraffa camelopardalis thornicrofti</i> in Zambia, 1973-2003. <i>Oryx</i> 50(4): 721-723. DOI: https://doi.org/10.1017/S003060531500126X.",
+      "year": "2016",
+      "title": "Population census of Thornicroft's giraffe <i>Giraffa camelopardalis thornicrofti</i> in Zambia, 1973-2003",
+      "author": "Berry, P.S.M. and Bercovitch, F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bercovitch, F., Careter, K., Fennessy, J. and Tutchings, A. In prep. Thornicroft's giraffe (<i>Giraffa camelopardalis thornicrofti</i> Lydekker 1911) conservation status report. IUCN/SSC Giraffe and Okapi Specialist Group.",
+      "year": "In prep",
+      "title": "Thornicroft's giraffe (<i>Giraffa camelopardalis thornicrofti</i> Lydekker 1911) conservation status report",
+      "author": "Bercovitch, F., Careter, K., Fennessy, J. and Tutchings, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bock, F., Fennessy, J., Bidon, T., Tutchings, A., Marais, A., Deacon, F. and Janke, A. 2014. Mitochondrial sequences reveal a clear separation between Angolan and South African giraffe along a cryptic rift valley. <i>BMC Evolutionary Biology</i> 14: 219.",
+      "year": "2014",
+      "title": "Mitochondrial sequences reveal a clear separation between Angolan and South African giraffe along a cryptic rift valley",
+      "author": "Bock, F., Fennessy, J., Bidon, T., Tutchings, A., Marais, A., Deacon, F. and Janke, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Marais, A., Fennessy, J., Fennessy, S., Brand, R. and Carter, K.D. In prep. Angolan giraffe (<i>Giraffa camelopardalis angolensis</i> Lydekker 1903) ccnservation status report. IUCN/SSC Giraffe and Okapi Specialist Group.",
+      "year": "In prep",
+      "title": "Angolan giraffe (<i>Giraffa camelopardalis angolensis</i> Lydekker 1903) ccnservation status report",
+      "author": "Marais, A., Fennessy, J., Fennessy, S., Brand, R. and Carter, K.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Brand, R. 2007. Evolutionary ecology of giraffes (<i>Giraffa camelopardalis</i> in Etosha National Park, Namibia. PhD thesis. Newcastle University, UK.",
+      "year": "2007",
+      "title": "Evolutionary ecology of giraffes (<i>Giraffa camelopardalis</i> in Etosha National Park, Namibia. PhD thesis",
+      "author": "Brand, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Estes, R. 1991. <i>The Behavior Guide to African Mammals</i>. University of California Press, Berkely, CA.",
+      "year": "1991",
+      "title": "The Behavior Guide to African Mammals",
+      "author": "Estes, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "VanderWaal, K.L., Wang, H., McCowan, B., Fushing, H. and Isbell, L.A. 2014. Multilevel social organization and space use in reticulated giraffe (<i>Giraffa camelopardalis</i>). <i>Behavioural Ecology</i> 25: 17-26.",
+      "year": "2014",
+      "title": "Multilevel social organization and space use in reticulated giraffe (<i>Giraffa camelopardalis</i>)",
+      "author": "VanderWaal, K.L., Wang, H., McCowan, B., Fushing, H. and Isbell, L.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Du Toit, J. 2009. Giraffes and okapis. In: D.W. Macdonald (ed.), <i>The Encyclopedia of Mammals</i>, pp. 742-748. Oxford University Press, Oxford, UK.",
+      "year": "2009",
+      "title": "Giraffes and okapis",
+      "author": "Du Toit, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Berkovitch, F.B. and Berry. P.S.M. 2010b. Reproductive life history of Thornicroft's giraffe in Zambia. <i>African Journal of Ecology</i> 48: 535-538.",
+      "year": "2010b",
+      "title": "Reproductive life history of Thornicroft's giraffe in Zambia",
+      "author": "Berkovitch, F.B. and Berry. P.S.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Doherty, J.B., Abdullahi, A., Fennessy, J., Marais, A. and Wobe, T. In prep. Reticulated giraffe (<i>Giraffa camelopardalis reticulata</i> de Winton 1899_ conservation status report. IUCN/SSC Giraffe and Okapi Specialist Group.",
+      "year": "In prep",
+      "title": "Reticulated giraffe (<i>Giraffa camelopardalis reticulata</i> de Winton 1899_ conservation status report",
+      "author": "Doherty, J.B., Abdullahi, A., Fennessy, J., Marais, A. and Wobe, T. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fennessy, J. and Brown, D. 2011. <i>Giraffa camelopardalis</i>. <i>The IUCN Red List of Threatened Species</i> 2011: e.T9194A12968471. DOI: http://dx.doi.org/10.2305/IUCN.UK.2010-2.RLTS.T9194A12968471.en.",
+      "year": "2011",
+      "title": "<i>Giraffa camelopardalis</i>",
+      "author": "Fennessy, J. and Brown, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fennessy, J. and Brenneman, R. 2010. <i>Giraffa cameloardalsi</i> ssp. <i>rothschildi</i>. <i>The IUCN Red list of Threatened Species</i> 2010: e.T174469A7077893. DOI: http://dx.doi.org/10.2305/IUCN.UK.2010-2.RLTS.T174469A7077893.en.",
+      "year": "2010",
+      "title": "<i>Giraffa cameloardalsi</i> ssp. <i>rothschildi</i>",
+      "author": "Fennessy, J. and Brenneman, R. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bolger, D.T., Ogutu, J.O., Strauss, M., Lee, D.E., Fennessy, J. and Brown, D. In prep. Masai giraffe (<i>Giraffa camelopardalis tippelskirchi</i>) conservation status report. IUCN/SSC Giraffe and Okapi Specialist Group.",
+      "year": "In prep",
+      "title": "Masai giraffe (<i>Giraffa camelopardalis tippelskirchi</i>) conservation status report",
+      "author": "Bolger, D.T., Ogutu, J.O., Strauss, M., Lee, D.E., Fennessy, J. and Brown, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wube, T., Doherty, J.B., Fennessy, J. and Marais, A. In prep. Nubian giraffe (<i>Giraffa camelopardalis camelopardalis</i>) conservation status report. IUCN/SSC Giraffe and Okapi Specialist Group.",
+      "year": "In prep",
+      "title": "Nubian giraffe (<i>Giraffa camelopardalis camelopardalis</i>) conservation status report",
+      "author": "Wube, T., Doherty, J.B., Fennessy, J. and Marais, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fennessy, J, and Marais, A. In prep. Kordofan giraffe (<i>Giraffa camelopardalis antiquorum</i> Swainson 1835) conservation status report. IUCN Giraffe and Okapi Specialist Group.",
+      "year": "In prep",
+      "title": "Kordofan giraffe (<i>Giraffa camelopardalis antiquorum</i> Swainson 1835) conservation status report",
+      "author": "Fennessy, J, and Marais, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fennessy, J., Tutchings, A. and Marais, A. In prep. West African Giraffe (<i>Giraffa camelopardalis peralta</i> Thomas 1898) conservation status report. IUCN/SSC Giraffe and Okapi Specialist Group .",
+      "year": "In prep",
+      "title": "West African Giraffe (<i>Giraffa camelopardalis peralta</i> Thomas 1898) conservation status report",
+      "author": "Fennessy, J., Tutchings, A. and Marais, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Carter, K.D., Seddon, J.M., Frere, C.H., Carter, J.K. and Golidzen, A.W. 2013. Fission-fusion dynamics in wild giraffes, may be driven by kinship, spatial overlap and individual social preferences. <i>Animal Behaviour</i> 85: 385-394.",
+      "year": "2013",
+      "title": "Fission-fusion dynamics in wild giraffes, may be driven by kinship, spatial overlap and individual social preferences",
+      "author": "Carter, K.D., Seddon, J.M., Frere, C.H., Carter, J.K. and Golidzen, A.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Strauss, M.K.L., Kilewo, M., Rentsch, D. and Packer, C. 2015. Food supply and poaching limit giraffe abundance in the Serengeti. <i>Population Ecology</i> 57: 505-516.",
+      "year": "2015",
+      "title": "Food supply and poaching limit giraffe abundance in the Serengeti",
+      "author": "Strauss, M.K.L., Kilewo, M., Rentsch, D. and Packer, C. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mitchell, G. and Skinner, J.D. 2003. On the origin, evolution and phylogeny of giraffes <i>Giraffa camelopardalis</i>. <i>Transactions of the Royal Society of South Africa</i> 58: 51-73.",
+      "year": "2003",
+      "title": "On the origin, evolution and phylogeny of giraffes <i>Giraffa camelopardalis</i>",
+      "author": "Mitchell, G. and Skinner, J.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dagg, A.I. 2014. <i>Giraffe: Biology, Behaviour, and Conservation</i>. Cambridge University Press, Cambridge, UK.",
+      "year": "2014",
+      "title": "Giraffe: Biology, Behaviour, and Conservation",
+      "author": "Dagg, A.I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Deacon, F., Tutchings, A. and Bercovitch, F. In prep. South African giraffe (<i>Giraffa camelopardalis giraffa</i>) conservation status report. IUCN/SSC Giraffe and Okapi Specialist Group.",
+      "year": "In prep",
+      "title": "South African giraffe (<i>Giraffa camelopardalis giraffa</i>) conservation status report",
+      "author": "Deacon, F., Tutchings, A. and Bercovitch, F. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2018. The IUCN Red List of Threatened Species. Version 2018-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 15 November 2018).",
+      "year": "2018",
+      "title": "The IUCN Red List of Threatened Species. Version 2018-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2018-2"
+    },
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 07 December 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-3"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

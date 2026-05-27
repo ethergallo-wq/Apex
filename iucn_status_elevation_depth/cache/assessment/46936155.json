@@ -1,0 +1,3094 @@
+{
+  "assessment_date": "2021-05-10T01:00:00.000+01:00",
+  "year_published": "2022",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 170314,
+  "criteria": "A2bd",
+  "url": "https://www.iucnredlist.org/species/170314/46936155",
+  "citation": "Collette, B.B., Di Natale, A., Fox, W., Graves, J., Juan Jorda, M., Pohlot, B. & Schratwieser, J. 2022. Makaira nigricans. The IUCN Red List of Threatened Species 2022: e.T170314A46936155. Accessed on 15 May 2026.",
+  "assessment_id": 46936155,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 170314,
+    "scientific_name": "Makaira nigricans",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "ACTINOPTERYGII",
+    "order_name": "PERCIFORMES",
+    "family_name": "ISTIOPHORIDAE",
+    "genus_name": "Makaira",
+    "species_name": "nigricans",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Lacepède, 1802",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Tuna and Billfish Specialist Group",
+        "url": null,
+        "description": "Chair: Bruce Collette (email: colletteb@si.edu)\nRed List Authority Coordinator: Beth Polidoro (email: Beth.Polidoro@asu.edu)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Blue Marlin",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Aburakajiki",
+        "language": "jpn"
+      },
+      {
+        "main": false,
+        "name": "Empereur",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Empereur Bleu",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Kurokajiki",
+        "language": "jpn"
+      },
+      {
+        "main": false,
+        "name": "Marlín Azul",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Marlin Bleu",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Marlin Negro",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Merlin Rayado",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Pez Zuncho",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Picudo Blanco",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Picudo Rollizo",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Tsun",
+        "language": "jpn"
+      },
+      {
+        "main": true,
+        "name": "Blue Marlin",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Makaira ampla Poey, 1860",
+        "status": "ACCEPTED",
+        "genus_name": "Makaira",
+        "species_name": "ampla",
+        "species_author": "Poey, 1860",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Makaira bermudae Mowbray, 1931",
+        "status": "ACCEPTED",
+        "genus_name": "Makaira",
+        "species_name": "bermudae",
+        "species_author": "Mowbray, 1931",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Tetrapturus herschelii Grey, 1838",
+        "status": "ACCEPTED",
+        "genus_name": "Tetrapturus",
+        "species_name": "herschelii",
+        "species_author": "Grey, 1838",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Istiompax mazara (Jordan & Snyder, 1901)",
+        "status": "ACCEPTED",
+        "genus_name": "Istiompax",
+        "species_name": "mazara",
+        "species_author": "(Jordan & Snyder, 1901)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Makaira nigra Hirasaka & Nakamura, 1947",
+        "status": "ACCEPTED",
+        "genus_name": "Makaira",
+        "species_name": "nigra",
+        "species_author": "Hirasaka & Nakamura, 1947",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Makaira ampla ssp. mazara (Jordan & Schneider, 1901)",
+        "status": "ACCEPTED",
+        "genus_name": "Makaira",
+        "species_name": "ampla",
+        "species_author": null,
+        "infrarank_author": "(Jordan & Schneider, 1901)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "mazara"
+      },
+      {
+        "name": "Makaira ampla ssp. ampla Poey, 1860",
+        "status": "ACCEPTED",
+        "genus_name": "Makaira",
+        "species_name": "ampla",
+        "species_author": null,
+        "infrarank_author": "Poey, 1860",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "ampla"
+      },
+      {
+        "name": "Tetrapturus amplus Poey, 1860",
+        "status": "ACCEPTED",
+        "genus_name": "Tetrapturus",
+        "species_name": "amplus",
+        "species_author": "Poey, 1860",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Makaira nigricans ssp. mazara (Jordan & Snyder, 1901)",
+        "status": "ACCEPTED",
+        "genus_name": "Makaira",
+        "species_name": "nigricans",
+        "species_author": null,
+        "infrarank_author": "(Jordan & Snyder, 1901)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "mazara"
+      },
+      {
+        "name": "Makaira ensis Lacepède, 1800",
+        "status": "ACCEPTED",
+        "genus_name": "Makaira",
+        "species_name": "ensis",
+        "species_author": "Lacepède, 1800",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Makaira ensis Jordan & Evermann, 1926",
+        "status": "ACCEPTED",
+        "genus_name": "Makaira",
+        "species_name": "ensis",
+        "species_author": "Jordan & Evermann, 1926",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Makaira herschelii Gray, 1838",
+        "status": "ACCEPTED",
+        "genus_name": "Makaira",
+        "species_name": "herschelii",
+        "species_author": "Gray, 1838",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Makaira perezi de Buen, 1950",
+        "status": "ACCEPTED",
+        "genus_name": "Makaira",
+        "species_name": "perezi",
+        "species_author": "de Buen, 1950",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Histiophorus herschelii (Gray, 1838)",
+        "status": "ACCEPTED",
+        "genus_name": "Histiophorus",
+        "species_name": "herschelii",
+        "species_author": "(Gray, 1838)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Eumakaira nigra Hirasaka & Nakamura, 1947",
+        "status": "ACCEPTED",
+        "genus_name": "Eumakaira",
+        "species_name": "nigra",
+        "species_author": "Hirasaka & Nakamura, 1947",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Istiompax howardi Whitley, 1954",
+        "status": "ACCEPTED",
+        "genus_name": "Istiompax",
+        "species_name": "howardi",
+        "species_author": "Whitley, 1954",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Makaira nigricans Poey, 1860",
+        "status": "ACCEPTED",
+        "genus_name": "Makaira",
+        "species_name": "nigricans",
+        "species_author": "Poey, 1860",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Tetrapturus mazara Jordan & Snyder, 1901",
+        "status": "ACCEPTED",
+        "genus_name": "Tetrapturus",
+        "species_name": "mazara",
+        "species_author": "Jordan & Snyder, 1901",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": 1000,
+    "upper_depth_limit": 0,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "9",
+    "congregatory": null,
+    "movement_patterns": "Full Migrant",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p>Blue Marlin primarily inhabit tropical and subtropical pelagic waters of the Atlantic and Indo-Pacific oceans, with surface temperatures between 22 and 31 °C. There are a few uncertain reports of vagrant individuals in the Mediterranean Sea in the 19th century, while other incidental Mediterranean catches have been more recently reported to FAO. It is the most tropical of the billfishes (Nardo 1833, 1846; Nakamura 1985; Garibaldi and Kebe 2005). Its latitudinal range changes seasonally, expanding northwards and southwards in the warmer months and contracting towards the equator in colder months.<br/><br/>Its latitudinal range in the Atlantic, based on data from the pelagic longline fishery, extends from about 40-45°N in the North Atlantic to 40°S in the western South Atlantic, 30°S in the central South Atlantic, and 35°S in the eastern South Atlantic. In the Indo-Pacific, its latitudinal range extends to about 45°N in the western North Pacific Ocean, 35°N in the eastern North Pacific, 35<sup>o</sup>S in the western South Pacific, 25°S in the eastern South Pacific, 40-45°S in the southwestern Indian Ocean and 35°S in the southeastern Indian Ocean. In both the eastern tropical Pacific and the eastern tropical Atlantic, Blue Marlin concentrate in shallower waters than in the western part of both oceans due to hypoxia-based habitat compression over oxygen minimum zones in the eastern tropical seas (Prince <em>et al</em>. 2010). There is also evidence that low sea surface temperatures coupled with habitat compression associated with La Nina preclude Blue Marlin from trans-equatorial migrations in the eastern Pacific (Carlisle <em>et al</em>. 2017).<br/><br/>Japanese pelagic longline catch data show two main seasonal concentrations of Blue Marlin in the western Atlantic: one from January through April in the western South Atlantic, between 5 and 30°S, and the other from June through October, in the western North Atlantic, between 10 and 35°N. May, November and December appear to be transitional months. In the eastern Atlantic, where Blue Marlin are less abundant, they occur mostly off the east coast of Africa between 25°N and 25°S. In the Pacific, the monthly distribution of catches shows two main seasonal concentrations: one from December through March in the western and central South Pacific between 8<sup> </sup>and 26°S, and the other from May through October in the western and central North Pacific between 2 and 24°N. In the remaining two months (April and November) the fish tend to concentrate in the equatorial Pacific between 10°N and 10°S. Blue Marlin become less abundant toward the eastern Pacific. In the Indian Ocean, they are known to be relatively abundant around Sri Lanka and Mauritius. Off the east coast of Africa, they are apparently abundant between the equator and 13°S during the southeast monsoon period (from April to October) (Collette and Graves 2019).</p>",
+    "population": "<p>Genetic heterogeneity between the Atlantic and Indo-Pacific Blue Marlin is consistent with independent stocks, although there is one conventional tag return indicating movement from the Atlantic to the Indian Ocean (Finnerty and Block 1992; Graves and McDowell 1994; Buonaccorsi <em>et al</em>. 1999, 2001; Sorenson <em>et al</em>. 2013). Satellite tagging data has also documented a Blue Marlin tagged in the Indian Ocean that rounded Cape Agulhas and entered the Atlantic Ocean (IGFA 2012). Little is known of stock structure within ocean basins. There is no genetic evidence of stock structuring within the Atlantic Ocean (McDowell <em>et al</em>. 2007); however, satellite tagged Blue Marlin within the Gulf of Mexico exhibited limited dispersal, suggesting the possibility of a local stock (Kraus and Rooker 2011). Preliminary genetic analysis of samples of Blue Marlin from collection locations in the western Pacific and Indian oceans indicate significant heterogeneity and the existence of stock structure. However, Chen et al. (2016) investigated the population genetic structure of blue marlin inhabiting the Pacific and eastern Indian oceans based on mtDNA cytochrome b (cyt b) and control region (CR) sequence variation demonstrates that Blue Marlin in the Pacific and eastern Indian oceans constitute a single stock.<br/><br/>Catches of Blue Marlin in the Atlantic Ocean increased dramatically in the late 1950s and early 1960s with the global expansion of the Japanese longline fleet, reaching peak values of 9,000 mt in the early 1960s, and averaging 4,000–5,000 mt from the late 1980s until the early 2000 when catch limits were established (Collette and Graves 2019). Reported catches were below the quota in 2015 (1,986 mt), in 2018 (1,427 mt) and in 2019 (1,463 mt) (ICCAT 2021). Catches in the Pacific Ocean reached 20,000 mt in the early 1960s and varied without much of a trend since that time, reaching a peak of about 25,000 mt. In the Indian Ocean, catches of Blue Marlin increased from ~3,000 to 5,000 mt in the 1980s until the present level of ~9,000–13,000 mt (Collette and Graves 2019). <br/><br/>Fishing effort in the Pacific and Indian oceans is increasing as a result of longline fisheries, and in the Atlantic due to expansion of artisanal fleets. In many instances, landed istiophorid billfishes are not identified to species level, contributing to uncertainty with catch data. In addition, there is generally poor reporting from artisanal fisheries, some of which may have very large catches of Blue Marlin. In the Atlantic there has been poor compliance by several fleets to record regulatory live releases of Blue Marlin, which have affected long term catch per unit effort time series used in the assessments and the increasing use of anchored FADs by various artisanal and sport fisheries is causing greater vulnerability of these stocks (STECF 2009, ICCAT 2012; Collette and Graves, 2019). Anchored FADs in the eastern Caribbean are also becoming increasingly widespread, and most of the Blue Marlin landings from this region originate from anchored FADs (Ehrhardt and Fitchett 2016).<br/><br/>Changes in population size were estimated over three generation lengths (approximately 27 years). Two methods were used to estimate changes in individual stocks' population size. In the first method (\"method 1\"), the linear percent change in population size over the last 27 years (1987/1989–2014/2016) was calculated using 3-year averages for the endpoints. In the second method (\"method 2\") that better accounts for non-linear trends, the average annual percent change in population size over the time period for which data are available is calculated, and used to estimate the change in population size over the last three generation lengths, assuming an exponential change. To estimate the global change in Blue Marlin, individual stocks were weighted by their MSY. Based on method 1, the global decline for Blue Marlin is 33%, and based on method 2 it is 37%.<br/><br/><strong>Atlantic Ocean</strong><br/>In the Atlantic Ocean, relative biomass (SSB2016/SSBMSY) = 0.69 and relative fishing mortality (F2016/FMSY) = 1.03, which indicates that the stock is overfished and undergoing overfishing, even given several uncertainties in the stock assessment (ICCAT 2021). Reported catches in recent years were below the quota (ICCAT 2018a; 2020; 2021), while the reported catch for 2019 is 1,436 mt (ICCAT 2021). MSY is 3056 t (ICCAT, 2018a). Based on method 1, B/BMSY (ICCAT, 2018a) decreased by 39% between 1989 and 2016, and based on method 2, B/BMSY decreased by 46%. Given an MSY of 3056 t (ICCAT, 2018a), the Atlantic Ocean is estimated to represent about 9% of this species' global population.<br/><br/><strong>Pacific Ocean</strong><br/>In the Pacific, F/FMSY is 0.87 and B/BMSY is 1.25 (WCPFC 2019), which indicates that this stock is not overfished and is not undergoing overfishing. However, even though fishing mortality and biomass are still above biological reference for MSY, there have been significant estimated declines over the past 3 generation lengths. Based on method 1, SSB/SSBMSY (ISC, 2016) decreased by 48% between 1987 and 2014, and based on method 2, SSB/SSBMSY also decreased by 48%. Recent (2014) catch was 20,356 t (WCPFC 2016). Given an MSY of 19901 t (ISC, 2016), the Pacific Ocean is estimated to represent about 57% of this species' global population.<br/><br/><strong>Indian Ocean</strong><br/>In the Indian Ocean, current (2019) catch is 8,316 t, F2017/FMSY is 1.47 and B/BMSY is 0.82 (IOTC 2020), which indicates that the stock is undergoing overfishing and is also overfished. However, the 2016 assessment concluded that the stock was subject to overfishing but not overfished. Change in stock status may be attributed to increased catches between 2015-2017 as well as improved standardization of CPUE indices. However, it is important to note that there is uncertainty in the catch data available at the time of the assessment, and the CPUE series. MSY = 1,1930 t (IOTC 2018). Based on method 1, B/BMSY (IOTC 2018) decreased by 7% between 1988 and 2015, and based on method 2, B/BMSY decreased by 17%. Given an MSY of 1,1930 t (IOTC 2018), the Indian Ocean is estimated to represent about 34% of this species' global population.</p>",
+    "habitats": "Blue Marlin are epipelagic and oceanic, occurring primarily in clear (blue) surface waters with temperatures above 25 °C (Ortega-García <em>et al</em>. 2006, Dutton 2010). They are primarily daylight, sight feeders, and while the majority of their time is spent in the upper 10 m, they regularly dive into and below the thermocline, as deep as 1,000 m, presumably in search of prey (Goodyear <em>et al</em>. 2006, Dutton 2010). Blue Marlin are opportunistic feeders, consuming a wide variety of prey, particularly fishes and squids. Deep sea fishes such as Pseudoscopelus and deep-dwelling squirrel fish have been found in Blue Marlin stomachs (Nakamura 1985).<br/><br/>Blue Marlin are not usually seen close to land masses or islands, unless there is deep water (900 to 1,800 m) close to shore, such as in the waters around oceanic islands like Hawaii. Blue Marlin are typically solitary, and may form small aggregations for feeding or possibly mating (Nakamura 1985). They spend the vast majority of their time in water temperatures within 1 or 2 degrees of the sea surface temperature. Conventional tagging studies&#160;indicate that Blue Marlin are capable of long distance dispersal, including trans-oceanic, trans-equatorial, and inter-ocean movements.&#160; Blue Marlin have the longest movements inferred from conventional tagging of any of the istiophorid billfishes. Satellite tagging of Blue Marlin further indicate that their exceptionally high migratory nature, with one tagged fish travelling a linear distance of 4,779 nm in 120 days. Unlike some other species of billfishes, plots of time at large versus minimum travel distances do not suggest cyclical annual movements or seasonal site fidelity (Ortiz <em>et al</em>. 2003; IGFA 2011).&#160; In the western North Pacific, north-south migration is related to temperature and feeding activities and differ between males and females (Shimose <em>et al</em>. 2012).<br/><br/>Blue Marlin spawning probably takes place year-round in equatorial waters to 10 degrees latitude and during summer periods in both hemispheres to 30o N/S, in all oceans (Kailola <em>et al</em>. 1993). Based on the capture of gravid females or early life history stages, Blue Marlin are known to spawn in several locations within the western North Atlantic Ocean including the central and northern Caribbean Sea, the Gulf of Mexico, and even as far north as Bermuda (Luckhurst <em>et al</em>. 2006, Richardson <em>et al</em>. 2009, Rooker <em>et al</em>. 2012). Off Brazil, spawning occurs February to March from 20 to 23°S, primarily in the Abrolhos Archipelago (Amorim <em>et al</em>. 1998). Most of the individuals captured at this location have been juveniles (Amorim pers. comm. 2010). In the Pacific Ocean, concentrations of spawning fish occur around French Polynesia (Howard and Ueyanagi 1965), and gravid females, eggs, and larvae have been collected off Hawaii (Hopper 1990, Hyde et al. 2005). In the Indian Ocean larvae have been collected around the Mascarene Islands and off the south coasts of Java and Sumatra.<br/><br/>In the Pacific, size at first maturity of males is thought to range from 130 to 140 cm eye-fork length (86.8 to 87.8% of body length) (Prince <em>et al</em>. 1991, Torres-Silva <em>et al</em>. 2006). Females attain larger sizes than males; around the Bonin-Islands, fish over 200 cm eye-fork length are all females; around Taiwan Island males attain less than 120 kg weight, while females grow to over 300 kg. The overall sex ratio of the catch was approximately 1:1 during the sampling period, but blue marlin are sexually dimorphic; females are larger than males. Spawning occurred predominantly from May to September. The estimated sizes-at-maturity (EFL<sub>50</sub>) were 179.76&#160;±1.01 cm for females and 130&#160;±1 cm EFL for males. Blue marlin are multiple spawners and oocytes develop asynchronously. The proportion of mature females with ovaries containing postovulatory follicles (0.41) and hydrated oocytes (0.34) indicated that the blue marlin spawned once every 2–3 days on average. Batch fecundity (BF) for 26 females with the most advanced oocytes&#160;(≥1,000 μm), but without postovulatory follicles, ranged from 2.11 to 13.50 million eggs (6.94&#160;±0.54 million eggs) (Sun <em>et al</em>. 2009). Growth parameters, length structures, and natural mortality rates were estimated to differ between males and females, and it was suggested that growth parameters and natural mortality rates should be sex-specific when assessing sexually-dimorphic species (Sun <em>et al</em>. 2009, Su <em>et al</em>. 2013).&#160;Blue Marlin caught by pelagic longliners average approximately 200-275 cm LJFL in the Atlantic, 200-285 cm LJFL in Pacific equatorial waters, and 215-300 cm LJFL in the Indian Ocean. Blue Marlin are reported to attain sizes over 2,000 lb (906 kg) (Collette and Graves 2019). ICCAT is promoting many activities for enhancing the data collection on both the fishery and the biology of Blue Marlin in the full Atlantic area, and particularly in the Caribbean and West Africa. Ageing efforts are also in place, with an extensive sampling of hard parts and workshops for cooperative age readings and determination.<br/><br/>Research from the central western Atlantic indicates a maximum estimated age of 43 years (Hoolihan <em>et al</em>. 2019), although in the Pacific, maximum age is estimated to be 27 years (females) and 18 years (males) (Hill <em>et al</em>. 1989). Age estimation in marlins is problematic, and longevity information from the Pacific has also been applied to the Atlantic. Age at first maturity is estimated to be two years (Prince <em>et al</em>. 1991, Torres-Silva <em>et al</em>. 2006). Generation length for this species is conservatively estimated to be 9 years.<br/><br/>The heaviest sport fishing record (unofficial data, since more than one person fought the fish) is 1,805 lb (818 kg.) for a Blue Marlin caught off Waikiki, Hawaii. The official all-tackle angling record in the Pacific is a 1,376 lb. fish (624.14 kg) caught at Kona, Hawaii in May 1982,&#160; and the all-tackle angling record in the Atlantic game is a 1,402 lb. (636 kg) fish caught off Vitoria, Brazil in February 1992 (IGFA 2016).<p></p><p></p>",
+    "threats": "<p>Blue Marlin are taken in directed artisanal and sport fisheries, and also as incidental catch in pelagic longline fisheries targeting tunas and swordfish. The primary source of fishing mortality results from the pelagic longline fishery, although catches from artisanal fisheries are not well known and may represent a significant source of mortality in several coastal areas (Collette and Graves 2019). Another specific threat is the increasing use of anchored FADS by various artisanal and sport fisheries in the Atlantic (STECF 2009, FAO 2016).</p>",
+    "measures": "This is a highly migratory species, listed under Annex I of the 1982 Convention on the Law of the Sea (FAO Fisheries Department 1994). The species is managed by four different RFMOs: ICCAT, IATTC, WCPFC, and IOTC (Collette and Graves 2019).<br/><br/><strong></strong><strong>Atlantic:&#160;</strong><br/>As of the 2018 assessment in the Atlantic, Blue Marlin continues to be overfished, with overfishing occurring. Country-specific quotas were implemented in 2012. In addition, ICCAT has implemented a minimum size for recreationally caught Blue Marlin of 251 cm LJFL, and the U.S. Atlantic recreational fishery is limited to a total of 250 Blue Marlin and White Marlin combined (Collette and Graves 2019).&#160; A 2006 recommendation (Rec. 06-09) established that the amount harvested annually by pelagic longline and purse seine vessels and retained for landing should not exceed 50% of the 1996 and 1999 landing levels, whichever is greater. Moreover, in 2012, a TAC was established for 2013, 2014 and 2015 of 2,000 t (Rec. 12-04), additional catch and commerce restrictions were placed on recreational fisheries, and methods for estimating live and dead discards were requested. In 2015, the plan to rebuild blue marlin stock was further strengthened by extending for 2016, 2017 and 2018 the annual limit of 2000 t for blue marlin (Rec. 15-05). However, catches from 2013, 2014, 2016 and 2017 were above the recommended TAC. As the stock has not rebuilt, catches need to be lower than the current TAC. Again, as of the 2018 assessment in the Atlantic, Blue Marlin were overfished and overfishing was occurring. In 2019, ICCAT further reduced the TAC to 1,670 t and also required longline and purse seine vessels to release Blue Marlin that are alive at haul-back (Rec. 19-05). It is estimated that catches of 1750 t or less would provide at least a 50% chance of stock rebuilding by 2028.<br/><br/>Since 2006, there has been an increase in the number of countries reporting data on live releases. More information is also now available for some fleets regarding the potential for modifying gears to reduce the by-catch and increase marlin survival.&#160; Information on the rates of live releases for those fleets is also provided. However, more information is needed on the proportion of fish being released alive for all fleets, to determine the effectiveness of ICCAT recommendations relating to the live release of marlins.<br/><br/>The significant increase in the contribution from non-industrial fisheries to the total blue marlin harvest and the only partial accounting of the landings from these fisheries in the ICCAT database is a concern, particularly for future assessments. Such data limitation is detrimental to any analysis of the current regulations.  The use of circle hooks by pelagic longline fleets is currently mandated or encouraged by four ICCAT Contracting Parties (Brazil, Canada, Mexico and the United States). According to recent research, billfish mortality was reduced in some longline fisheries as a result of the use of non-offset circle hooks. In the meanwhile, the catch rates of several of the target species stayed constant or exceeded the catch rates observed with the use of conventional J hooks or offset circle hooks (ICCAT 2018a). In the United States, the Billfish Conservation Act of 2012 prohibits the commercial harvest, sale and importation of blue marlin in the continental United States. Hawaii may still harvest and sell blue marlin, but it may not be exported to other countries or shipped to the continental United States.<br/><br/><strong></strong><strong>Indian:&#160;</strong><br/>Current catches exceed the limit given in Resolution 18/05. Mechanisms should be provided to ensure the catch limits are not exceeded in the future (IOTC 2018). In order to achieve the IOTC objectives of ending overfishing and reversing the overfished condition of the stock by 2027, management advice suggests reducing the catch to 7,800 mt.<br/><br/><strong></strong><strong>Pacific:&#160;</strong><br/>Several nations have restricted pelagic longlining in coastal regions to prevent gear conflicts with recreational anglers (Collette and Graves 2019). No management advice has been provided since 2016 therefore the recommendation in 2019 was that previous advice be maintained. Advice in 2016 was the recommendation by the ISC that fishing mortality remain at or below current levels (2012–2014) as the stock is nearly fully exploited (WCPFC, 2019). In the United States, the Billfish Conservation Act of 2012 prohibits the commercial harvest, sale and importation of blue marlin in the continental United States. Hawaii may still harvest and sell blue marlin, but it may not be exported to other countries or shipped to the continental United States.",
+    "use_trade": "Blue Marlin is caught as a sportfish, and also in directed artisanal fisheries and as incidental catch in pelagic longline fisheries targeting tunas and swordfish (Collette and Graves 2019).",
+    "rationale": "See the Supplementary Information for a glossary of abbreviations and acronyms used throughout this assessment.<br/><br/>Blue Marlin (<em>Makaira nigricans</em>) are distributed circumglobally, where they are taken in directed artisanal and sport fisheries, as well as in incidental catch in pelagic longline fisheries targeting tunas and swordfish. Except for the Pacific stock, this species is undergoing overfishing and is overfished in both the Indian and Atlantic Oceans. Based on stock-size weighted declines in B/BMSY or SSB/SSBMSY across its range, Blue Marlin has declined between 33% and 37% over the past three generation lengths, or 27 years (1987/1989–2014/2016). This species is therefore listed as Vulnerable under criterion A2.",
+    "trend_justification": null,
+    "taxonomic_notes": "<p>Blue Marlin (<span style=\"font-style: italic;\">Makaira nigricans</span>) of the Indo-Pacific and the Atlantic are conspecific (Buonaccorsi <span style=\"font-style: italic;\">et al</span>. 1999, 2001; Collette <span style=\"font-style: italic;\">et al</span>. 2006). The Indo-Pacific Blue Marlin previously was known as <span style=\"font-style: italic;\">Makaira mazara</span> (Jordan &amp; Snyder, 1901).<br/></p>"
+  },
+  "biogeographical_realms": [],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    }
+  ],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northwest"
+      },
+      "code": "21"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Mediterranean and Black Sea"
+      },
+      "code": "37"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southwest"
+      },
+      "code": "41"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - eastern"
+      },
+      "code": "57"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - eastern central"
+      },
+      "code": "77"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - southwest"
+      },
+      "code": "81"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - northwest"
+      },
+      "code": "61"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - northeast"
+      },
+      "code": "67"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - southeast"
+      },
+      "code": "87"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - eastern central"
+      },
+      "code": "34"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - western central"
+      },
+      "code": "71"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northeast"
+      },
+      "code": "27"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - southeast"
+      },
+      "code": "47"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - western"
+      },
+      "code": "51"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - western central"
+      },
+      "code": "31"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Helena, Ascension and Tristan da Cunha"
+      },
+      "code": "SH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritius"
+      },
+      "code": "MU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Republic of"
+      },
+      "code": "KR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cuba"
+      },
+      "code": "CU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cabo Verde"
+      },
+      "code": "CV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States Minor Outlying Islands"
+      },
+      "code": "UM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Seychelles"
+      },
+      "code": "SC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bermuda"
+      },
+      "code": "BM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Christmas Island"
+      },
+      "code": "CX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, U.S."
+      },
+      "code": "VI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kiribati"
+      },
+      "code": "KI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Wallis and Futuna"
+      },
+      "code": "WF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Haiti"
+      },
+      "code": "HT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Kitts and Nevis"
+      },
+      "code": "KN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guam"
+      },
+      "code": "GU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Réunion"
+      },
+      "code": "RE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oman"
+      },
+      "code": "OM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pitcairn"
+      },
+      "code": "PN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Philippines"
+      },
+      "code": "PH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Fiji"
+      },
+      "code": "FJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Micronesia, Federated States of "
+      },
+      "code": "FM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hong Kong"
+      },
+      "code": "HK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Azores"
+      },
+      "code": "AZO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madeira"
+      },
+      "code": "MDR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "El Salvador"
+      },
+      "code": "SV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Vincent and the Grenadines"
+      },
+      "code": "VC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belize"
+      },
+      "code": "BZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominican Republic"
+      },
+      "code": "DO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chile"
+      },
+      "code": "CL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tonga"
+      },
+      "code": "TO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cook Islands"
+      },
+      "code": "CK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bahamas"
+      },
+      "code": "BS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Caledonia"
+      },
+      "code": "NC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Martin (French part)"
+      },
+      "code": "MF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Anguilla"
+      },
+      "code": "AI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tokelau"
+      },
+      "code": "TK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominica"
+      },
+      "code": "DM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Solomon Islands"
+      },
+      "code": "SB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Marshall Islands"
+      },
+      "code": "MH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jamaica"
+      },
+      "code": "JM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, British"
+      },
+      "code": "VG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guadeloupe"
+      },
+      "code": "GP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea-Bissau"
+      },
+      "code": "GW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Equatorial Guinea"
+      },
+      "code": "GQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "American Samoa"
+      },
+      "code": "AS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Samoa"
+      },
+      "code": "WS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Grenada"
+      },
+      "code": "GD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tuvalu"
+      },
+      "code": "TV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sierra Leone"
+      },
+      "code": "SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Taiwan, Province of China"
+      },
+      "code": "TW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Trinidad and Tobago"
+      },
+      "code": "TT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Palau"
+      },
+      "code": "PW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Niue"
+      },
+      "code": "NU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Lucia"
+      },
+      "code": "LC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo"
+      },
+      "code": "CG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Antigua and Barbuda"
+      },
+      "code": "AG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "NZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Côte d'Ivoire"
+      },
+      "code": "CI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Puerto Rico"
+      },
+      "code": "PR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Comoros"
+      },
+      "code": "KM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norfolk Island"
+      },
+      "code": "NF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montserrat"
+      },
+      "code": "MS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northern Mariana Islands"
+      },
+      "code": "MP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ghana"
+      },
+      "code": "GH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Papua New Guinea"
+      },
+      "code": "PG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Polynesia"
+      },
+      "code": "PF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Barbados"
+      },
+      "code": "BB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Vanuatu"
+      },
+      "code": "VU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maldives"
+      },
+      "code": "MV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canary Is."
+      },
+      "code": "CNY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sao Tome and Principe"
+      },
+      "code": "ST"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Turks and Caicos Islands"
+      },
+      "code": "TC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sint Maarten (Dutch part)"
+      },
+      "code": "SX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Barthélemy"
+      },
+      "code": "BL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bonaire, Sint Eustatius and Saba"
+      },
+      "code": "BQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Medium Impact: 7",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Medium Impact: 7",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_4_4"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Collette, B.B., Di Natale, A., Fox, W., Graves, J., Juan Jorda, M., Pohlot, B. & Schratwieser, J.",
+      "value": [
+        "Maria Jose Juan Jorda (Recursos Marinos y Pesquerias, Spain)",
+        "Antonio Di Natale (AQUASTUDIO Research Institute, Italy)",
+        "Bruce Collette (Smithsonian, USA)",
+        "Jason Schratwieser (IGFA)",
+        "Bruce Pohlot (IGFA)",
+        "John Graves (VIMS)",
+        "William Fox (World Wildlife Fund, USA)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Polidoro, B., Kemppinen, K., Hinton, M., Pollard, D.A. & Sun, C.-L.",
+      "value": [
+        "Chi-Lu Sun (National Taiwan University)",
+        "Michael Hinton (IATTC)",
+        "Krista Kemppinen (Arizona State Univeristy)",
+        "Beth Polidoro (GMSA)",
+        "David Pollard (NSW Fisheries, Australia)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Shiffman, D., Serra, R., Uozumi, Y., Teixeira Lessa, R.P., Schaefer, K., Restrepo, V., Nelson, R., Miyabe, N., Viera Hazin, F.H., Fredou, F.L., de Oliveira Leite Jr., N., Carpenter, K.E., Boustany, A., Acero, A., Amorim, A.F., Canales Ramirez, C., Cardenas, G., Die, D., Guzman-Mora, A.G., Minte Vera, C., Montano Cruz, R., Oxenford, H., Salas, E., Sun, C.-L., Pires Ferreira Travassos, P.E., Yanez, E. & Hinton, M.",
+      "value": [
+        "Eleuterio Yanez (Global Marine Species Assessments)",
+        "David Shiffman (Arizona State University)",
+        "Alberto Ferreira Amorim (IUCN SSC Shark Specialist Group)",
+        "David Die (University of Miami)",
+        "Michael Hinton (IATTC)",
+        "Victor  Restrepo (ISSF)",
+        "Flavia Lucena Fredou (UFRPE)",
+        "Rosangela Paula Teixeira Lessa (UFRPE)",
+        "Paulo Eurico Pires Ferreira Travassos (UFRPE)",
+        "Fabio Hissa Viera Hazin (UFRPE)",
+        "Andre Boustany (Duke University)",
+        "Hazel Oxenford (CERMES, University of the West Indies)",
+        "Nilamon de Oliveira Leite Jr. (ICMBio)",
+        "Carolina Minte Vera (Guest)",
+        "Ana Gloria Guzman-Mora (University of Costa Rica)",
+        "Eva Salas (University of Costa Rica)",
+        "Gladys Cardenas (IMARPE)",
+        "Ramon Montano Cruz (Ecuadorian Fisheries)",
+        "Arturo Acero (Globak Marine Species Assessments)",
+        "Cristian Canales Ramirez (Chilean Fisheries)",
+        "Rodolfo Serra (Chilean Fisheries)",
+        "Kurt Schaefer (IATTC)",
+        "Chi-Lu Sun (National Taiwan University)",
+        "Naozumi Miyabe (National Research Institute of Far Seas Fisheries, Japan)",
+        "Yuji Uozumi (National Research Institute of Far Seas Fisheries, Japan)",
+        "Russell Nelson (The Billfish Foundation, USA)",
+        "Kent Carpenter (IUCN SSC Global Marine Species Assessment, Old Dominion University, Virginia, US)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Kailola, P.J., Williams, M.J., Stewart, P.C., Reichelt, R.E., McNee, A. and Grieve, C. 1993. <i>Australian fisheries resources</i>. Bureau of Resource Sciences, Canberra, Australia.",
+      "year": "1993",
+      "title": "Australian fisheries resources",
+      "author": "Kailola, P.J., Williams, M.J., Stewart, P.C., Reichelt, R.E., McNee, A. and Grieve, C",
+      "citation_short": null
+    },
+    {
+      "citation": "Collette, B.B., Carpenter, K.E., Polidoro, B.A., Juan-Jorda, M.J., Boustany, A., Die, D.J., Elfes, C., Fox, W., Graves, J., Harrison, L., McManus, R., Minte-Vera, C., Nelson, R., Restrepo, V., Schratwieser, J., Sun, C-L, Brick Peres, M., Canales, C., Cardenas, G., Chang, S.-K., Chiang, W-C, de Oliveira Leite, N., Harwell, H., Lessa, R., Fredou, F.L., Oxenford, H.A., Serra, R., Shao, K.-T., Sumalia, R., Wang, S-P, Watson, R. and Yanez, E. 2011. High value and long life: Double jeopardy for tunas and billfishes. <i>Science</i> 333: 291-292.",
+      "year": "2011",
+      "title": "High value and long life: Double jeopardy for tunas and billfishes",
+      "author": "Collette, B.B., Carpenter, K.E., Polidoro, B.A., Juan-Jorda, M.J., Boustany, A., Die, D.J., Elfes, C., Fox, W., Graves, J., Harrison, L., McManus, R., Minte-Vera, C., Nelson, R., Restrepo, V., Schratwieser, J., Sun, C-L, Brick Peres, M., Canales, C., Cardenas, G., Chang, S.-K., Chiang, W-C, de Oliveira Leite, N., Harwell, H., Lessa, R., Fredou, F.L., Oxenford, H.A., Serra, R., Shao, K.-T., Sumalia, R., Wang, S-P, Watson, R. and Yanez, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IGFA. 2014. <i>World Record Game Fishes</i>. International Game Fish Association, Dania Beach, Florida.",
+      "year": "2014",
+      "title": "World Record Game Fishes",
+      "author": "IGFA",
+      "citation_short": ""
+    },
+    {
+      "citation": "Garcia, S. 1994. <i>World review of highly migratory species and straddling stocks</i>. Rome.",
+      "year": "1994",
+      "title": "World review of highly migratory species and straddling stocks",
+      "author": "Garcia, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Collette, B.B. 2010. Reproduction and Development in Epipelagic Fishes. In: Cole, K.S. (ed.), <i>Reproduction and sexuality in marine fishes: patterns and processes</i>, pp. 21-63. University of California Press, Berkeley.",
+      "year": "2010",
+      "title": "Reproduction and Development in Epipelagic Fishes",
+      "author": "Collette, B.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "STECF. 2009. Review of Scientific Advice for 2010 Part 2. Scientific, Technical and Economic Committee for Fisheries, Vigo, Spain.",
+      "year": "2009",
+      "title": "Review of Scientific Advice for 2010 Part 2",
+      "author": "STECF",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nakamura, I. 1985. <i>Billfishes of the world. An annotated and illustrated catalogue of marlins, sailfishes, spearfishes and swordfishes known to date.</i> FAO Fish. Synop.",
+      "year": "1985",
+      "title": "Billfishes of the world. An annotated and illustrated catalogue of marlins, sailfishes, spearfishes and swordfishes known to date.",
+      "author": "Nakamura, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Serafy, J.E., Kerstetter, D.W. and Rice, P.H. 2009. Can circle hook use benefit billfishes? <i>Fish Fish.</i> 10: 132-142.",
+      "year": "2009",
+      "title": "Can circle hook use benefit billfishes?",
+      "author": "Serafy, J.E., Kerstetter, D.W. and Rice, P.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "de Sylva, D.P. and P.R. Breder. 1997. Reproduction, gonad histology, and spawning cycles of North Atlantic billfishes (Istiophoridae). <i>Bull. Mar. Sci.</i> 60(3): 668-697.",
+      "year": "1997",
+      "title": "Reproduction, gonad histology, and spawning cycles of North Atlantic billfishes (Istiophoridae).",
+      "author": "de Sylva, D.P. and P.R. Breder",
+      "citation_short": null
+    },
+    {
+      "citation": "IOTC. 2009. Report of the Eleventh Session on the IOTC Working Party on Tropical Tunas. In: IOTC (ed.). Mombasa, Kenya 15-23 October 2009.",
+      "year": "2009",
+      "title": "Report of the Eleventh Session on the IOTC Working Party on Tropical Tunas",
+      "author": "IOTC",
+      "citation_short": null
+    },
+    {
+      "citation": "Kitchell, JF, Kaplan, IC,  Cox, SP, Martell, SJD, Essington, TE,  Boggs, CH,  Walters, CJ. 2004. Ecological and Economic Components of Alternative Fishing Methods to Reduce By-Catch of Marlin in a Tropical Pelagic Ecosystem. <i>Bull Mar Sci</i> 74: 609-619.",
+      "year": "2004",
+      "title": "Ecological and Economic Components of Alternative Fishing Methods to Reduce By-Catch of Marlin in a Tropical Pelagic Ecosystem.",
+      "author": "Kitchell, JF, Kaplan, IC,  Cox, SP, Martell, SJD, Essington, TE,  Boggs, CH,  Walters, CJ",
+      "citation_short": null
+    },
+    {
+      "citation": "Collette, B.B.,  McDowell, J.R. and Graves, J.E. 2006. Phylogeny of recent billfishes (Xiphioidei). <i>Bulletin of Marine Science</i> 79(3): 455-468.",
+      "year": "2006",
+      "title": "Phylogeny of recent billfishes (Xiphioidei)",
+      "author": "Collette, B.B.,  McDowell, J.R. and Graves, J.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pine, W.E. III, Martell, S.J.D., Jensen, O.P., Walters, C.J.and Kitchell, J.F. 2008. Catch-and-release and size limit regulations for blue, white, and striped marlin: the role of postrelease survival in effective policy design. <i>Can. J. Fish. Aquat. Sci.</i> 65: 975-988.",
+      "year": "2008",
+      "title": "Catch-and-release and size limit regulations for blue, white, and striped marlin: the role of postrelease survival in effective policy design.",
+      "author": "Pine, W.E. III, Martell, S.J.D., Jensen, O.P., Walters, C.J.and Kitchell, J.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kitchell JF, Martell SJD, Walters CJ, Jensen OP, Kaplan IC, Watters J, Essington TE, Boggs CH. 2006. Billfishes in an ecosystem context. <i>Bulletin of Marine Science</i> 79(3): 669-682.",
+      "year": "2006",
+      "title": "Billfishes in an ecosystem context.",
+      "author": "Kitchell JF, Martell SJD, Walters CJ, Jensen OP, Kaplan IC, Watters J, Essington TE, Boggs CH",
+      "citation_short": null
+    },
+    {
+      "citation": "Uozumi, Y. 1999. Review of Problems on Stock Assessment of Marlins Laying Stress on the Coverage of landing and Catch and Effort Information in the Pacific Ocean. In: 12th SCTB Meeting (ed.). Tahiti.",
+      "year": "1999",
+      "title": "Review of Problems on Stock Assessment of Marlins Laying Stress on the Coverage of landing and Catch and Effort Information in the Pacific Ocean",
+      "author": "Uozumi, Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "González-Armas R, Klett-Traulsen A, Hernández-Herrera A. 2006. Evidence of billfish reproduction in the southern Gulf of California, Mexico. <i>Bulletin of Marine Science</i> 70(3): 705-717.",
+      "year": "2006",
+      "title": "Evidence of billfish reproduction in the southern Gulf of California, Mexico",
+      "author": "González-Armas R, Klett-Traulsen A, Hernández-Herrera A",
+      "citation_short": null
+    },
+    {
+      "citation": "Wang S-P, Sun C-L, Yeh S-Z, Chiang W-C, Su N-J, Chang Y-J, Liu C-H. 2006. Length distributions, weight-length relationships, and sex ratios at lengths for the billfishes in Taiwan waters. <i>Bulletin of Marine Science</i> 79(3): 865-869.",
+      "year": "2006",
+      "title": "Length distributions, weight-length relationships, and sex ratios at lengths for the billfishes in Taiwan waters.",
+      "author": "Wang S-P, Sun C-L, Yeh S-Z, Chiang W-C, Su N-J, Chang Y-J, Liu C-H",
+      "citation_short": null
+    },
+    {
+      "citation": "Erdman, D.S. 1977. Spawning patterns of fish from the Northeastern Caribbean. In: Stewart, HB (ed.), <i>Cooperative Investigations of the Caribbean and Adjacent Regions II</i>, pp. 145-169. FAO Fisheries Report No. 200.",
+      "year": "1977",
+      "title": "Spawning patterns of fish from the Northeastern Caribbean",
+      "author": "Erdman, D.S",
+      "citation_short": ""
+    },
+    {
+      "citation": "Shomura RS, Williams F, 1975. Proceedings of the International Billfish Symposium Kailua-Kona, Hawaii, 9-12 August 1972. Part 3.  In: NOAA Technical Report NMFS (ed.), Species synopses.",
+      "year": "1975",
+      "title": "Proceedings of the International Billfish Symposium Kailua-Kona, Hawaii, 9-12 August 1972. Part 3.",
+      "author": "Shomura RS, Williams F,",
+      "citation_short": null
+    },
+    {
+      "citation": "ICCAT. 2002. Report of the 2001 Billfish species group session (Madrid, Spain, October 1 to 7, 2001). <i>Col. Vol. Sci. Pap. ICCAT</i> 54(3): 649-754.",
+      "year": "2002",
+      "title": "Report of the 2001 Billfish species group session (Madrid, Spain, October 1 to 7, 2001).",
+      "author": "ICCAT",
+      "citation_short": null
+    },
+    {
+      "citation": "Amorim, A.F., Arfelli, C.A., Antero-Silva, J.N., Fagundes, L., Costa, F.E.S., Assumpcao, R., 1998. Blue marline (<i>Makaira nigricans</i>) and white marlin (<i>Tetrapturus albidus</i>) caught off the Brazilian coast. <i>Col. Vol. Sci. Pap. ICCAT</i> 47: 163-184.",
+      "year": "1998",
+      "title": "Blue marline (<i>Makaira nigricans</i>) and white marlin (<i>Tetrapturus albidus</i>) caught off the Brazilian coast.",
+      "author": "Amorim, A.F., Arfelli, C.A., Antero-Silva, J.N., Fagundes, L., Costa, F.E.S., Assumpcao, R.,",
+      "citation_short": null
+    },
+    {
+      "citation": "Howard, J.K. and S. Ueyanagi. 1965. Distribution and relative abundance of billfishes (Istiophoridae) of the Indian Ocean. <i>Stud. Trop. Oceanogr.</i> 2: 1-134.",
+      "year": "1965",
+      "title": "Distribution and relative abundance of billfishes (Istiophoridae) of the Indian Ocean.",
+      "author": "Howard, J.K. and S. Ueyanagi",
+      "citation_short": null
+    },
+    {
+      "citation": "Cox, S.P., Martell, S.J.D, Walters, C.J., Essington, T.E.,  Kitchell, JF, Boggs, C, and Kaplan, I. 2002. Reconstructing ecosystem dynamics in the central Pacific Ocean, 1952–1998. I. Estimating population biomass and recruitment of tunas and billfishes. <i>Can. J. Fish. Aquat. Sci.</i> 59: 1724-1735.",
+      "year": "2002",
+      "title": "Reconstructing ecosystem dynamics in the central Pacific Ocean, 1952–1998. I. Estimating population biomass and recruitment of tunas and billfishes",
+      "author": "Cox, S.P., Martell, S.J.D, Walters, C.J., Essington, T.E.,  Kitchell, JF, Boggs, C, and Kaplan, I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Restrepo V, Prince ED, Scott GB, Uozumi Y. 2003. ICCAT stock assessments of Atlantic billfish. <i>Australian Journal of Marine and Freshwater Research</i> 54(361-367).",
+      "year": "2003",
+      "title": "ICCAT stock assessments of Atlantic billfish.",
+      "author": "Restrepo V, Prince ED, Scott GB, Uozumi Y",
+      "citation_short": null
+    },
+    {
+      "citation": "Soro, Y., N’Da, K. and  Diaha, N’G. C. 2009. Le marlin bleu Makaira nigricans se reproduit-il dans le golfe de Guinee? Une reponse par l’etude des aspects macroscopiques et microscopiques des gonades. <i>Cybium</i> 33: 133-144.",
+      "year": "2009",
+      "title": "Le marlin bleu Makaira nigricans se reproduit-il dans le golfe de Guinee? Une reponse par l’etude des aspects macroscopiques et microscopiques des gonades.",
+      "author": "Soro, Y., N’Da, K. and  Diaha, N’G. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hill, K.T., Cailliet, G.M., Hill, K.T. 1989. A comparative analysis of growth zones in four calcified structures of Pacific blue marlin, <i>Makaira nigricans</i>. <i>Fishery Bulletin</i> 87: 829-843.",
+      "year": "1989",
+      "title": "A comparative analysis of growth zones in four calcified structures of Pacific blue marlin, <i>Makaira nigricans</i>.",
+      "author": "Hill, K.T., Cailliet, G.M., Hill, K.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Erdman, D.S. 1968. Spawning cycle, sex ratio and weights of blue marlin off Puerto Rico and the Virgin Islands. <i>Trans. Amer. Fish. Soc.</i> 97: 131-137.",
+      "year": "1968",
+      "title": "Spawning cycle, sex ratio and weights of blue marlin off Puerto Rico and the Virgin Islands.",
+      "author": "Erdman, D.S",
+      "citation_short": null
+    },
+    {
+      "citation": "Shimose T, Shono H, Yokawa K, Saito H, Tachihara K. 2006. Food and feeding habits of blue marlin, Makaira nigricans, around Vonaguni Island, southwestern Japan. <i>Bull. Mar. Sci.</i> 79(3): 761-775.",
+      "year": "2006",
+      "title": "Food and feeding habits of blue marlin, Makaira nigricans, around Vonaguni Island, southwestern Japan.",
+      "author": "Shimose T, Shono H, Yokawa K, Saito H, Tachihara K",
+      "citation_short": null
+    },
+    {
+      "citation": "Torres-Silva, C.M., Travassos, P.E., Hazin, F.H., Pinheiro, P. 2006. Preliminary results on reproductive biology of blue marlin, <i>Makaira nigricans</i> (Lacepede, 1803) in the tropical western Atlantic Ocean. <i>Col. Vol. Sci. Pap. ICCAT SCRS/2006/104</i>.",
+      "year": "2006",
+      "title": "Preliminary results on reproductive biology of blue marlin, <i>Makaira nigricans</i> (Lacepede, 1803) in the tropical western Atlantic Ocean.",
+      "author": "Torres-Silva, C.M., Travassos, P.E., Hazin, F.H., Pinheiro, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mather, F.J. III,  Jones, A.C. and Beardsley, G.L. Jr. 1972. Migration and distribution of white marlin and blue marlin in the Atlantic Ocean. <i>Fish. Bull.</i> 70: 283-298.",
+      "year": "1972",
+      "title": "Migration and distribution of white marlin and blue marlin in the Atlantic Ocean.",
+      "author": "Mather, F.J. III,  Jones, A.C. and Beardsley, G.L. Jr.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ortiz, M., Price, E.D., Serafy, J.E., Holts, D.B., Dary, K.B, Pepperell, J.G., Lowry, M.B., Holdsworth, J.C. 2003. Global overview of the major constitutent-based billfish tagging programs and their results since 1954. <i>Mar. Freshwater Res.</i> 54: 489-507.",
+      "year": "2003",
+      "title": "Global overview of the major constitutent-based billfish tagging programs and their results since 1954.",
+      "author": "Ortiz, M., Price, E.D., Serafy, J.E., Holts, D.B., Dary, K.B, Pepperell, J.G., Lowry, M.B., Holdsworth, J.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Prince, E.D., Luo, J., Goodyear, C.P.,  Hoolihan, J.P., Snodgrass, D., Orbeson, E.S., Serafy, J.E., Ortiz, M. and Schirripa, M. 2010. Ocean scale hypoxia-based habitat compression of Atlantic istiophorid billfishes. <i>Fish. Oceanogr.</i> 19: 448-462.",
+      "year": "2010",
+      "title": "Ocean scale hypoxia-based habitat compression of Atlantic istiophorid billfishes",
+      "author": "Prince, E.D., Luo, J., Goodyear, C.P.,  Hoolihan, J.P., Snodgrass, D., Orbeson, E.S., Serafy, J.E., Ortiz, M. and Schirripa, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "ICCAT. 2007. Report of the 2006 ICCAT Billfish Stock Assessment. Madrid.",
+      "year": "2007",
+      "title": "Report of the 2006 ICCAT Billfish Stock Assessment",
+      "author": "ICCAT",
+      "citation_short": null
+    },
+    {
+      "citation": "Prince, E.D., Lee, D.W., Zweifel, J.R., Brother, E.B. 1991. Estimating age and growth of young Atlantic blue marlin <i> Makaira nigricans</i> from otolith microstructure. <i>Fishery Bulletin</i> 89(3): 441-459.",
+      "year": "1991",
+      "title": "Estimating age and growth of young Atlantic blue marlin <i> Makaira nigricans</i> from otolith microstructure.",
+      "author": "Prince, E.D., Lee, D.W., Zweifel, J.R., Brother, E.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Buonaccorsi, V.P., McDowell, J.R. and Graves, J.E. 2001. econciling patterns of inter-ocean molecular variance from four classes of molecular markers in blue marlin (Makaira nigricans). <i>Molec. Ecol.</i> 10: 1170-1196.",
+      "year": "2001",
+      "title": "econciling patterns of inter-ocean molecular variance from four classes of molecular markers in blue marlin (Makaira nigricans).",
+      "author": "Buonaccorsi, V.P., McDowell, J.R. and Graves, J.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Buonaccorsi, V.P., Reece, K.S., Morgan, L.W. and Graves, J.E. 1999. Geographic distribution of molecular variance within the blue marlin (Makaira nigricans): a hierarchical analysis of allozyme, single-copy nuclear DNA, and mitochondrial and nuclear DNA markers. <i>Evolution</i> 53: 568-579.",
+      "year": "1999",
+      "title": "Geographic distribution of molecular variance within the blue marlin (Makaira nigricans): a hierarchical analysis of allozyme, single-copy nuclear DNA, and mitochondrial and nuclear DNA markers.",
+      "author": "Buonaccorsi, V.P., Reece, K.S., Morgan, L.W. and Graves, J.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rivas LR. 1975. Synopsis of biological data on blue marlin, Makaira nigricans Lacepède, 1802. In: NOAA Technical Report NMFS (ed.).",
+      "year": "1975",
+      "title": "Synopsis of biological data on blue marlin, Makaira nigricans Lacepède, 1802",
+      "author": "Rivas LR",
+      "citation_short": null
+    },
+    {
+      "citation": "Kerstetter, D.W. and Graves, J.E. 2006. Effects of circle versus J-style hooks on target and non-target species in a pelagic longline ﬁshery. <i>Fisheries Research</i> 80(2-3): 239-250.",
+      "year": "2006",
+      "title": "Effects of circle versus J-style hooks on target and non-target species in a pelagic longline ﬁshery",
+      "author": "Kerstetter, D.W. and Graves, J.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Collette, B.B. and Graves, J. 2019. <i>Tunas and Billfishes of the World</i>. Johns Hopkins University Press, Baltimore, Maryland.",
+      "year": "2019",
+      "title": "Tunas and Billfishes of the World",
+      "author": "Collette, B.B. and Graves, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "ICCAT. 2020. Report for Biennial period 2018-2019. Part II (2019). Vol. 2, SCRS. Madrid.",
+      "year": "2020",
+      "title": "Report for Biennial period 2018-2019. Part II (2019). Vol. 2, SCRS",
+      "author": "ICCAT",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2022. The IUCN Red List of Threatened Species. Version 2022-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 21 July 2022).",
+      "year": "2022",
+      "title": "The IUCN Red List of Threatened Species. Version 2022-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2022-1"
+    },
+    {
+      "citation": "ICCAT. 2021. Report of the Intersessional Meeting of the Billfishes Species Group (<i>Online, 8-12 March 2021).",
+      "year": "2021",
+      "title": "Report of the Intersessional Meeting of the Billfishes Species Group (<i>Online, 8-12 March 2021)",
+      "author": "ICCAT",
+      "citation_short": null
+    },
+    {
+      "citation": "Nardo, G.D. 1833. De <i>Scheponopodo</i> novo piscium genere et de <i>Guebucu Margravii</i> specie illi cognata etc. Mem. letta al Congresso dei naturalisti e medici in Vienna (1832). <i>Isis (Oken)</i> 26: 415-419.",
+      "year": "1833",
+      "title": "De <i>Scheponopodo</i> novo piscium genere et de <i>Guebucu Margravii</i> specie illi cognata etc. Mem. letta al Congresso dei naturalisti e medici in Vienna (1832)",
+      "author": "Nardo, G.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nardo, G.D. 1846. Prima nota sulla identità dei due generi <i>Tetrapturus</i> e <i>Histiophorus</i> e su qualche particolarità anatomica di essi. <i>Ottava Riunione degli Scienziati Italiani</i>, pp. 461-463. Tip. Ferrando, Genova.",
+      "year": "1846",
+      "title": "Prima nota sulla identità dei due generi <i>Tetrapturus</i> e <i>Histiophorus</i> e su qualche particolarità anatomica di essi",
+      "author": "Nardo, G.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Carlisle, A.B., Kochevar, R.E., Arostegui, M.C., Ganong, J.E., Castleton, M., Schratwieser, J. and Block, B.A. 2017. Influence of temperature and oxygen on the distribution of blue marlin (<i>Makaira nigricans</i>) in the Central Pacific. <i>Fisheries Oceanography</i> 26(1): 34-48.",
+      "year": "2017",
+      "title": "Influence of temperature and oxygen on the distribution of blue marlin (<i>Makaira nigricans</i>) in the Central Pacific",
+      "author": "Carlisle, A.B., Kochevar, R.E., Arostegui, M.C., Ganong, J.E., Castleton, M., Schratwieser, J. and Block, B.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Chen, H., Chang, C.H., Sun, C.L., Shao, K.T., Yeh, S.Z. and DiNardo, G. Population Structure of Blue Marlin, <i>Makaira nigricans</i>, in the Pacific and Eastern Indian Oceans. <i>Zoological Studies</i> 55(33).",
+      "year": null,
+      "title": "Population Structure of Blue Marlin, <i>Makaira nigricans</i>, in the Pacific and Eastern Indian Oceans",
+      "author": "Chen, H., Chang, C.H., Sun, C.L., Shao, K.T., Yeh, S.Z. and DiNardo, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dutton, D.J. 2010. Habitat utilization and dive characterization of Blue Marlin (<i>Makaira nigricans</i>) and White Marlin (<i>Kajikia albida</i>) in the Western Atlantic Ocean. MS thesis. College of William & Mary.",
+      "year": "2010",
+      "title": "Habitat utilization and dive characterization of Blue Marlin (<i>Makaira nigricans</i>) and White Marlin (<i>Kajikia albida</i>) in the Western Atlantic Ocean. MS thesis",
+      "author": "Dutton, D.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ehrhardt, N. and Fitchett, M. 2016. Status of Billfish Resources and Billfish Fisheries in the Western Central Atlantic. <i>FAO Fisheries and Aquaculture Circular</i>.",
+      "year": "2016",
+      "title": "Status of Billfish Resources and Billfish Fisheries in the Western Central Atlantic",
+      "author": "Ehrhardt, N. and Fitchett, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Finnerty, J.R. and Block, B.A. 1992. Direct sequencing of mitochondrial DNA detects highly divergent haplotypes in Blue Marlin (<i>Makaira nigricans</i>). <i>Molecular Marine Biology Biotechnology</i> 1: 206-214.",
+      "year": "1992",
+      "title": "Direct sequencing of mitochondrial DNA detects highly divergent haplotypes in Blue Marlin (<i>Makaira nigricans</i>)",
+      "author": "Finnerty, J.R. and Block, B.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Garibaldi, L. and Kebe, P. 2005. Discrepancies between the FAO and ICCAT databases for tuna catches in the Mediterranean. <i>Coll. Vol. Sci. Pap., ICCAT</i> 58(2): 644-661.",
+      "year": "2005",
+      "title": "Discrepancies between the FAO and ICCAT databases for tuna catches in the Mediterranean",
+      "author": "Garibaldi, L. and Kebe, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Goodyear, C.P., Luo, J., Prince, E.D. and Serafy, J.E. 2006. Temperature-depth habitat at utilization of Blue Marlin monitored with PSAT tags in the context of simulation modeling of pelagic longline CPUE. <i>ICCAT Collective Volume of Scientific Papers</i> 59(1): 224-237.",
+      "year": "2006",
+      "title": "Temperature-depth habitat at utilization of Blue Marlin monitored with PSAT tags in the context of simulation modeling of pelagic longline CPUE",
+      "author": "Goodyear, C.P., Luo, J., Prince, E.D. and Serafy, J.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hopper, C.N. 1990. Patterns of Pacific blue marlin reproduction in Hawaiian waters. In: Planning the future of billfishes, research and management in the 90s and beyond. 2nd International Billfish Symposium, Kailua-Kona, Hawaii, 1-5 August 1988. <i>Marine Recreational Fisheries</i> 13(2): 29–39.",
+      "year": "1990",
+      "title": "Patterns of Pacific blue marlin reproduction in Hawaiian waters. In: Planning the future of billfishes, research and management in the 90s and beyond. 2nd International Billfish Symposium, Kailua-Kona, Hawaii, 1-5 August 1988",
+      "author": "Hopper, C.N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hyde, J.R., Lynn, E., Humphreys Jr., R., Musyl, M., West, A. P. and Vetter, R. 2005. Shipboard identification of fish eggs and larvae by multiplex PCR, and description of fertilized eggs of Blue Marlin, Shortbill Spearfish, and Wahoo. <i>Marine Ecology Progress Series</i> 286: 269–277.",
+      "year": "2005",
+      "title": "Shipboard identification of fish eggs and larvae by multiplex PCR, and description of fertilized eggs of Blue Marlin, Shortbill Spearfish, and Wahoo",
+      "author": "Hyde, J.R., Lynn, E., Humphreys Jr., R., Musyl, M., West, A. P. and Vetter, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "ICCAT. 2018a. Report of the 2018 ICCAT Blue marlin stock assessment meeting, executive summary.",
+      "year": "2018a",
+      "title": "Report of the 2018 ICCAT Blue marlin stock assessment meeting, executive summary",
+      "author": "ICCAT",
+      "citation_short": ""
+    },
+    {
+      "citation": "ICCAT. 2018b. Report of the 2018 ICCAT Blue marlin stock assessment meeting.",
+      "year": "2018b",
+      "title": "Report of the 2018 ICCAT Blue marlin stock assessment meeting",
+      "author": "ICCAT",
+      "citation_short": null
+    },
+    {
+      "citation": "ICCAT. 2019. 2019 SCRS Report on blue marlin.",
+      "year": "2019",
+      "title": "2019 SCRS Report on blue marlin",
+      "author": "ICCAT",
+      "citation_short": null
+    },
+    {
+      "citation": "IGFA. 2011. Report on the San Juan, Puerto Rico 2011 IGFA Great Marlin Race Event.",
+      "year": "2011",
+      "title": "Report on the San Juan, Puerto Rico 2011 IGFA Great Marlin Race Event",
+      "author": "IGFA",
+      "citation_short": null
+    },
+    {
+      "citation": "IGFA. 2012. Report on the Richards Bay, South Africa 2012 IGFA Great Marlin Race Event.",
+      "year": "2012",
+      "title": "Report on the Richards Bay, South Africa 2012 IGFA Great Marlin Race Event",
+      "author": "IGFA",
+      "citation_short": null
+    },
+    {
+      "citation": "IOTC. 2018a. Status of the Indian Ocean blue marlin resource, executive summary.",
+      "year": "2018a",
+      "title": "Status of the Indian Ocean blue marlin resource, executive summary",
+      "author": "IOTC",
+      "citation_short": null
+    },
+    {
+      "citation": "IOTC. 2020. Appendix 14. Executive Summary: Blue Marlin (2020).",
+      "year": "2020",
+      "title": "Appendix 14. Executive Summary: Blue Marlin (2020)",
+      "author": "IOTC",
+      "citation_short": null
+    },
+    {
+      "citation": "ISC. 2016. Stock assessment update for blue marlin (<i>Makaira nigricans</i>) in the Pacific Ocean through 2014. Report of the Billfish Working Group, Sixteenth Meeting of the International Scientific Committee on Tuna and Tuna-like Species in the North Pacific Ocean, 13-18 July 2016. Sapporo, Hokkaido, Japan.",
+      "year": "2016",
+      "title": "Stock assessment update for blue marlin (<i>Makaira nigricans</i>) in the Pacific Ocean through 2014. Report of the Billfish Working Group, Sixteenth Meeting of the International Scientific Committee on Tuna and Tuna-like Species in the North Pacific Ocean, 13-18 July 2016",
+      "author": "ISC",
+      "citation_short": null
+    },
+    {
+      "citation": "Luckhurst, B.E., Prince, E.D., Llopiz, J.K., Snodgrass, D. and Brothers, E.B. 2006. Evidence of Blue Marlin (<i>Makaira nigricans</i>) spawning in Bermuda waters and elevated mercury levels in large specimens. <i>Bulletin of Marine Science</i> 79(3): 691-704.",
+      "year": "2006",
+      "title": "Evidence of Blue Marlin (<i>Makaira nigricans</i>) spawning in Bermuda waters and elevated mercury levels in large specimens",
+      "author": "Luckhurst, B.E., Prince, E.D., Llopiz, J.K., Snodgrass, D. and Brothers, E.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "McDowell, J.R., Carlsson, J.E.L. and Graves, J.E. 2007. Genetic analysis of Blue Marlin (<i>Makaira nigricans</i>) stock structure in the Atlantic Ocean. <i>Gulf and Caribbean Research</i> 19: 75-82.",
+      "year": "2007",
+      "title": "Genetic analysis of Blue Marlin (<i>Makaira nigricans</i>) stock structure in the Atlantic Ocean",
+      "author": "McDowell, J.R., Carlsson, J.E.L. and Graves, J.E. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ortega-García, S., Klett-Traulsen, A. and Rodríguez-Sánchez, R. 2006. Some biological aspects of Blue Marlin (<i>Makaira nigricans</i>) in the recreational fishery at Cabo San Lucas, Baja California Sur, Mexico. <i>Bulletin of Marine Science</i> 79(3): 739-746.",
+      "year": "2006",
+      "title": "Some biological aspects of Blue Marlin (<i>Makaira nigricans</i>) in the recreational fishery at Cabo San Lucas, Baja California Sur, Mexico",
+      "author": "Ortega-García, S., Klett-Traulsen, A. and Rodríguez-Sánchez, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Richardson, D.E., Cowen, R.K., Prince, E.D. and Sponaugle, S. 2009. Importance of the Straits of Florida spawning ground to Atlantic Sailfish (<i>Istiophorus platypterus</i>) and Blue Marlin (<i>Makaira nigricans</i>). <i>Fishery Oceanography</i> 18: 402–418.",
+      "year": "2009",
+      "title": "Importance of the Straits of Florida spawning ground to Atlantic Sailfish (<i>Istiophorus platypterus</i>) and Blue Marlin (<i>Makaira nigricans</i>)",
+      "author": "Richardson, D.E., Cowen, R.K., Prince, E.D. and Sponaugle, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rooker, J.R., Simms, J.R., Wells, R.J.D., Holt, S.A., Holt, G.J., Graves, J.E. and Furey, N.B. 2012. Distributions and habitat associations of billfish and swordfish larvae across mesoscale features in the Gulf of Mexico. <i>PLoS ONE</i> 7(4).",
+      "year": "2012",
+      "title": "Distributions and habitat associations of billfish and swordfish larvae across mesoscale features in the Gulf of Mexico",
+      "author": "Rooker, J.R., Simms, J.R., Wells, R.J.D., Holt, S.A., Holt, G.J., Graves, J.E. and Furey, N.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Shimose, T., Yokawa, K. and Tachihara, K. 2013. Higher catch rates around the full moon for Blue Marlin, <i>Makaira nigricans</i>, in a diurnal trolling fishery. <i>Bulletin of Marine Science</i> 89(3): 759-765.",
+      "year": "2013",
+      "title": "Higher catch rates around the full moon for Blue Marlin, <i>Makaira nigricans</i>, in a diurnal trolling fishery",
+      "author": "Shimose, T., Yokawa, K. and Tachihara, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shimose, T., Yokawa, K., Saito, H. and Tachihara, K. 2012. Sexual differences in the migration pattern of Blue Marlin, <i>Makaira nigricans</i>, related to spawning and feeding activities in the western and central North Pacific Ocean. <i>Bulletin of Marine Science</i> 88(2): 231-250.",
+      "year": "2012",
+      "title": "Sexual differences in the migration pattern of Blue Marlin, <i>Makaira nigricans</i>, related to spawning and feeding activities in the western and central North Pacific Ocean",
+      "author": "Shimose, T., Yokawa, K., Saito, H. and Tachihara, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sorenson, L., McDowell, J.R., Knott, T. and Graves, J.E. 2013. Assignment test methods using hypervariable markers for Blue Marlin (<i>Makaira nigricans</i>) stock identification. <i>Conservation Genetics Resources</i> 5: 293-297.",
+      "year": "2013",
+      "title": "Assignment test methods using hypervariable markers for Blue Marlin (<i>Makaira nigricans</i>) stock identification",
+      "author": "Sorenson, L., McDowell, J.R., Knott, T. and Graves, J.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sun, C.L., Chang, Y.J., Tszeng, C.C., Yeh, S.Z. and Su, N.J. 2009. Reproductive biology of blue marlin (<i>Makaira nigricans</i>) in the western Pacific Ocean. <i>Fisheries Bulletin</i> 107(4): 420-432.",
+      "year": "2009",
+      "title": "Reproductive biology of blue marlin (<i>Makaira nigricans</i>) in the western Pacific Ocean",
+      "author": "Sun, C.L., Chang, Y.J., Tszeng, C.C., Yeh, S.Z. and Su, N.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Su, N.J., Sun, C.L., Punt, A.E., Yeh, S.Z., Chiang, W.C., Chang, Y.J. and Chang, H.Y. 2013. Effects of sexual dimorphism on population parameters and exploitation ratios of blue marlin (<i>Makaira nigricans</i>) in the northwest Pacific Ocean. <i>Aquatic Living Resources</i> 26(1): 19-24.",
+      "year": "2013",
+      "title": "Effects of sexual dimorphism on population parameters and exploitation ratios of blue marlin (<i>Makaira nigricans</i>) in the northwest Pacific Ocean",
+      "author": "Su, N.J., Sun, C.L., Punt, A.E., Yeh, S.Z., Chiang, W.C., Chang, Y.J. and Chang, H.Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "WCPFC. 2016. Report of the 16th Meeting of the International Scientific Committee for Tuna and Tuna-like Species in the North Pacific Ocean. WCPFC-SC12-2016/ GN-IP-02.",
+      "year": "2016",
+      "title": "Report of the 16th Meeting of the International Scientific Committee for Tuna and Tuna-like Species in the North Pacific Ocean. WCPFC-SC12-2016/ GN-IP-02",
+      "author": "WCPFC",
+      "citation_short": null
+    },
+    {
+      "citation": "WCPFC. 2019. Pacific Blue Marlin: stock status and management advice.",
+      "year": "2019",
+      "title": "Pacific Blue Marlin: stock status and management advice",
+      "author": "WCPFC",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [
+    {
+      "description": {
+        "en": "Gulf of Mexico"
+      },
+      "code": "3_1_2"
+    },
+    {
+      "description": {
+        "en": "Guinea Current"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "description": {
+        "en": "Humboldt Current"
+      },
+      "code": "4_5_3"
+    },
+    {
+      "description": {
+        "en": "Benguela Current"
+      },
+      "code": "2_1_4"
+    },
+    {
+      "description": {
+        "en": "California Current"
+      },
+      "code": "4_5_2"
+    },
+    {
+      "description": {
+        "en": "Pacific Central American Coastal"
+      },
+      "code": "4_5_8"
+    },
+    {
+      "description": {
+        "en": "North Brazil Shelf"
+      },
+      "code": "4_3_3"
+    },
+    {
+      "description": {
+        "en": "Somali Current"
+      },
+      "code": "4_6_3"
+    },
+    {
+      "description": {
+        "en": "Insular Pacific Hawaiian"
+      },
+      "code": "3_2_1"
+    },
+    {
+      "description": {
+        "en": "Patagonian Shelf"
+      },
+      "code": "4_3_2"
+    },
+    {
+      "description": {
+        "en": "East Brazil Shelf"
+      },
+      "code": "4_3_1"
+    },
+    {
+      "description": {
+        "en": "Sea of Japan"
+      },
+      "code": "4_5_5"
+    },
+    {
+      "description": {
+        "en": "Gulf of Thailand"
+      },
+      "code": "4_5_13"
+    },
+    {
+      "description": {
+        "en": "West-Central Australian Shelf"
+      },
+      "code": "4_4_1"
+    },
+    {
+      "description": {
+        "en": "Canary Current"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "description": {
+        "en": "Southwest Australian Shelf"
+      },
+      "code": "4_4_7"
+    },
+    {
+      "description": {
+        "en": "East-Central Australian Shelf"
+      },
+      "code": "4_4_5"
+    },
+    {
+      "description": {
+        "en": "Arabian Sea"
+      },
+      "code": "4_6_2"
+    },
+    {
+      "description": {
+        "en": "Caribbean Sea"
+      },
+      "code": "3_1_1"
+    },
+    {
+      "description": {
+        "en": "Kuroshio Current"
+      },
+      "code": "2_2_1"
+    },
+    {
+      "description": {
+        "en": "Northeast Australian Shelf"
+      },
+      "code": "4_4_3"
+    },
+    {
+      "description": {
+        "en": "Bay of Bengal"
+      },
+      "code": "4_6_1"
+    },
+    {
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "4_5_6"
+    },
+    {
+      "description": {
+        "en": "Iberian Coastal"
+      },
+      "code": "4_2_10"
+    },
+    {
+      "description": {
+        "en": "Northwest Australian Shelf"
+      },
+      "code": "4_4_2"
+    },
+    {
+      "description": {
+        "en": "South Brazil Shelf"
+      },
+      "code": "4_3_4"
+    },
+    {
+      "description": {
+        "en": "Agulhas Current"
+      },
+      "code": "4_6_4"
+    },
+    {
+      "description": {
+        "en": "Scotian Shelf"
+      },
+      "code": "4_1_1"
+    },
+    {
+      "description": {
+        "en": "Yellow Sea"
+      },
+      "code": "4_5_10"
+    },
+    {
+      "description": {
+        "en": "SE US Continental Shelf"
+      },
+      "code": "4_1_4"
+    },
+    {
+      "description": {
+        "en": "East China Sea"
+      },
+      "code": "4_5_11"
+    },
+    {
+      "description": {
+        "en": "Gulf of California"
+      },
+      "code": "4_5_1"
+    },
+    {
+      "description": {
+        "en": "NE US Continental Shelf"
+      },
+      "code": "4_1_3"
+    },
+    {
+      "description": {
+        "en": "Southeast Australian Shelf"
+      },
+      "code": "4_4_6"
+    },
+    {
+      "description": {
+        "en": "South China Sea"
+      },
+      "code": "4_5_12"
+    }
+  ],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

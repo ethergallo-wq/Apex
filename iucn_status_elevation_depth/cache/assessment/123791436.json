@@ -1,0 +1,2651 @@
+{
+  "assessment_date": "2016-08-05T01:00:00.000+01:00",
+  "year_published": "2017",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 15953,
+  "criteria": "A2cd",
+  "url": "https://www.iucnredlist.org/species/15953/123791436",
+  "citation": "Quigley, H., Foster, R., Petracca, L., Payan, E., Salom, R. & Harmsen, B. 2017. Panthera onca (errata version published in 2018). The IUCN Red List of Threatened Species 2017: e.T15953A123791436. Accessed on 15 May 2026.",
+  "assessment_id": 123791436,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 15953,
+    "scientific_name": "Panthera onca",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CARNIVORA",
+    "family_name": "FELIDAE",
+    "genus_name": "Panthera",
+    "species_name": "onca",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Cat Specialist Group (wild cats)",
+        "url": "http://www.catsg.org/",
+        "description": "Chair: Christine Breitenmoser (email: ch.breitenmoser@kora.ch) and Urs Max Breitenmoser (email: urs.breitenmoser@vetsuisse.unibe.ch)\nRed List Authority Coordinator: Tabea Lanz (email: t.lanz@kora.ch)\nNewsletter: http://www.catsg.org/index.php?id=7"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Onca",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Otorongo",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Tigre",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Tigre Americano",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Tigre mariposo",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Tigre Real",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Yaguar",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Yaguareté",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "Jaguar",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Felis onca Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Felis",
+        "species_name": "onca",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Near Threatened"
+    },
+    "code": "NT"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 3000,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "Yes",
+    "population_continuing_decline": null,
+    "generational_length": "6.84",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "The Jaguar is the largest cat of the Americas, and the only living representative of the genus <em>Panthera </em>in the New World (Nowell and Jackson 1996). Historically it ranged from the southwestern US (where there are still some vagrants close to the Mexican border) through the Amazon basin to the Rio Negro in Argentina (McCain and Childs 2008, Di Bitetti <em><em><em><em><em>et al.</em></em></em></em></em> 2016). Its extent of occurrence (EOO) (updated with the collaboration of 44 experts—see the lists of Assessors and Contributors and the Assessment Rationale section for a thorough description) is estimated at 9.02 million km², with its stronghold the rainforest of the Amazon basin, which comprises 57% of its total EOO. The Jaguar has been virtually eliminated from much of the drier northern parts of its range—Arizona and New Mexico in the United States, and extreme northern Sonora state in Mexico—( Johnson and Van Pelt 2016), as well as northern Brazil, the pampas scrub grasslands of Argentina and throughout Uruguay (de Azevedo <em><em><em><em><em>et al.</em></em></em></em></em> 2016, Di Bitetti <em><em><em><em><em>et al.</em></em></em></em></em> 2016, Pereira-Garbero and Sappa 2016). In 2002, Jaguars were estimated to occupy only about 46% of its historic range (Sanderson <em><em><em><em><em>et al.</em></em></em></em></em> 2002). With our improved knowledge of Jaguar range (see the Assessment Rationale and Figure 1 in the Supplementary Material), this percentage is set at 51% currently.<br/><br/>Sanderson <em><em><em><em><em>et al.</em></em></em></em></em> (2002) defined the most important areas for conservation of viable Jaguar populations (Jaguar Conservation Units or JCUs). These 51 areas cover 44.49 million km², or 49% of Jaguar range according to present calculations.",
+    "population": "<u><strong>Historic assessment of Jaguar viability </strong></u><br/><strong>High chance of survival:</strong> Sanderson <em><em><em><em>et al.</em></em></em></em> (2002) estimated that populations in 70% of the Jaguar range (over 6 million km²) had a high probability for survival. Most of that area consists of the Amazon Basin rainforest, and adjoining areas of the Pantanal and Gran Chaco (Torres <em><em><em><em>et al.</em></em></em></em> 2007). Other areas considered by Sanderson <em><em><em><em>et al.</em></em></em></em> (2002) to have a high probability for long-term Jaguar persistence included tropical moist lowland forest in Mesoamerica (the Selva Maya of Guatemala, Mexico and Belize) and a narrow strip of the Choco-Darien of Panama and Colombia to northern Honduras.<br/><br/><strong>Medium chance of survival: </strong>Sanderson <em><em><em><em>et al.</em></em></em></em> (2002) estimated that Jaguar populations in 18% of the Jaguar range (1.6 million km²) had a medium probability of long-term survival. These areas are generally adjacent to the areas considered to have a high-probability probability of survival and include a large portion of the northern Cerrado, most of the Venezuelan and Colombian llanos, and the northern part of Colombia on the Caribbean coast. In Central America and Mexico, they include the highlands of Costa Rica and Panama, southern Mexico, and the two eastern mountain ranges of Mexico, Sierra de Taumalipas and the Sierra Madre Oriental.<br/><br/><strong>Low chance of survival:</strong> Sanderson <em><em><em><em>et al.</em></em></em></em> (2002) classified the remainder of Jaguar range (12%) as having a low probability for Jaguar survival, and of most urgent conservation concern. These areas include the Atlantic Tropical Forest and Cerrado of Brazil; parts of the Chaco in northern Argentina; the Gran Sabana of northern Brazil, Venezuela and Guyana; parts of the coastal dry forest in Venezuela; and the remaining range in Central America and Mexico.<br/><br/><strong><u>Current assessment of Jaguar populations</u></strong><br/><strong>Mexico</strong>: Jaguar densities in Mexico have been estimated from 0.75 to 6 adults per 100 km² (Ceballos <em><em><em><em>et al.</em></em></em></em> 2011, Chávez <em><em><em><em>et al.</em></em></em></em> 2016). The Jaguar population in the Selva Maya in the Yucatan Peninsula in Mexico was estimated in 2000 individuals (Ceballos <em><em><em><em>et al.</em></em></em></em> in press, Rodriguez-Soto <em><em><em><em>et al.</em></em></em></em> 2013). In the Greater Lacadona Ecosystem in southern Mexico, Jaguar density was estimated at 1.7-4.6/100 km², with an estimated population of 62 to 168 Jaguars within the protected areas of this region (de la Torre and Medellín 2011). Overall, Mexico’s national Jaguar census estimated at 4,000-5,000 individuals in 2011 (Ceballos <em><em><em><em>et al.</em></em></em></em> in press). The northern and central areas of Mexico are however becoming increasingly isolated with Jaguars disappearing where they were previously still detected (Grigione <em><em><em><em>et al.</em></em></em></em> 2009, Rosas-Rosas and Bender 2012).<br/><br/><strong>Central America</strong>: Estimates of Jaguar density from Mesoamerica from 27 studies conducted from 2000 to 2010 range from 0.74 to 11.2 /100 km², however most of the studies did not cover the minimum area to ensure unbiased density estimates (Maffei <em><em><em><em>et al.</em></em></em></em> 2011). Nevertheless, across these sites density estimates were higher in tropical moist forest than in tropical montane forest or deciduous forest, and higher in national parks compared to those from other multiple use areas (Maffei <em><em><em><em>et al.</em></em></em></em> 2011). Densities in the Belizean Selva Maya rainforest were estimated at 7.5-8.8/100 km² (Silver <em><em><em><em>et al.</em></em></em></em> 2004). Jaguar density estimates in the protected lowland moist tropical forest of the Cockscomb Basin Wildlife Sanctuary in Belize range from 3.5 (+/- SE = 0.7) to 11.0 (+/- 3.1)/100 km² (Harmsen <em><em><em><em>et al.</em></em></em></em> 2010). Jaguar density was found to decline across the human-influenced landscape, a mosaic of unprotected forest, savannah, agriculture and settlements with distance from the protected forest (Foster 2008). The Talamanca Mountains of Costa Rica and Panama support a Jaguar population, but the probability of long-term persistence is medium to low (Gonzalez-Maya <em><em><em><em>et al.</em></em></em></em> 2007). Similarly the Jaguar populations located in protected areas in Guatemala, Honduras and Nicaragua are under a great pressure from deforestation and hunting (Petracca <em><em><em><em>et al.</em></em></em></em> 2014).<br/><br/><strong>South America</strong>: Jaguar density in the Brazilian Pantanal has been estimated as 6.6-6.7 /100 km², or 10.3-11.7/100 km² depending on the method used (telemetry versus camera traps, respectively, Soislao and Cavalcanti (2006). In the Bolivian Amazon, Jaguar density was estimated at 2.8/100 km² (Madidi National Park Silver <em><em><em><em>et al.</em></em></em></em> 2004), and in the Colombian Amazon, Jaguar density was estimated at 4.5/100 km² and 2.5/100 km² (Amacayacu National Park and unprotected areas respectively; Payan 2008). Estimates of Jaguar density are 2/100 km² in the savannas of the Brazilian Cerrado, 3.5/100 km² in the semiarid scrub of the Caatinga, and 2.2/100 km² in the Atlantic Forest (Silveira 2004), and 2.2-5 per 100 km² in the Bolivian Gran Chaco (Maffei <em><em><em><em>et al.</em></em></em></em> 2004). The Atlantic Forest subpopulation in Brazil has been estimated at 200+/- 80 adults (Leite <em><em><em><em>et al.</em></em></em></em> 2002). Jaguar populations in the Chaco region of northern Argentina and Brazil, and the Brazilian Caatinga, are low-density and highly threatened by livestock ranching and persecution (Altrichter <em><em><em><em>et al.</em></em></em></em> 2006, T. de Oliveira pers. comm. 2008).<br/><br/><u><strong>Historic methodological biases</strong></u><br/>Unfortunately, many of these reported density estimates have inadequate sample sizes of area or capture and recaptures. Careful reviews have shown that these estimates tend to be biased positively rather than negatively (Foster and Harmsen 2012, Maffei <em><em><em><em>et al.</em></em></em></em> 2011, Tobler and Powell 2013). This means that many of the older publications from before 2010 tended to overestimate densities at an unknown quantity. It also means that previous assessments have been overly optimistic about Jaguar status throughout their range.<br/><br/><u><strong>Subpopulation status</strong></u><br/>De la Torre <em><em><em><em>et al.</em></em></em></em> (2017) identified 34 Jaguar subpopulations where there is little likelihood of demographic or genetic exchange, and assessed each against Red List criteria. Overall, 97% met the criteria for Critically Endangered (25 subpopulations) or Endangered (eight subpopulations) (see Figure 3a-e in the Supplementary Material). The large Amazonia subpopulation, estimated to hold 89% of the total species population (57,000 out of 64,000), was assessed as Least Concern.",
+    "habitats": "The Jaguar has a stocky, heavy body with short massive limbs associated with reduced cursorial behaviour and dense forest habitat, and robust canines and large head allowing a more powerful bite than other large cats (Seymour 1989, Sunquist and Sunquist 2002). Mean body weight varies by up to 100% across their range, those living further from the equator tend to be larger (Iriarte <em><em><em>et al.</em></em></em> 1990). This extreme variation in size may reflect variation in the availability of large prey in different habitats: the largest Jaguars occur in open flood plains areas, the Llanos in Venezuela and the Pantanal in Brazil, and take the largest prey, and the smallest Jaguars inhabit the dense forest areas of Central America and Amazonia and take smaller prey (Hoogesteijn and Mondolfi 1996, Oliveira 2002).<br/><strong><br/><u>Habitat</u></strong><br/>Jaguar habitat is typically characterized by dense forest cover (mainly primary and secondary forest), the presence of water bodies and a sufficient prey base (Swank and Teer 1989, Sanderson <em><em><em>et al.</em></em></em> 2002). However, they are found in range of habitats from rainforest to seasonally flooded swamp areas, pampas grassland, thorn scrub woodland, and dry deciduous forest (Nowell and Jackson 1996, Sunquist and Sunquist 2002). Jaguars mainly inhabit tropical lowland forest, followed by dry tropical forest, xeric habitats and finally arable lowland pastures (Sanderson <em><em><em>et al.</em></em></em> 2002). Although Jaguars have been reported from elevations as high as 3000 m (Brown and Lopez Gonzalez 2001), they typically avoid montane forest, and have not been found in the high plateau of central Mexico or above 2700 m in the Andes (Ceballos <em><em><em>et al.</em></em></em>, 2011). The species is more strongly associated with water in comparison to any of the other Panthera cats (Nowell and Jackson 1996, Sunquist and Sunquist 2002), indicated by their higher densities within tropical moist forests than in tropical montane forest or deciduous forest (Maffei <em><em><em>et al.</em></em></em> 2011). Even within drier areas they are only found around the main water courses. This characteristic quickly brings them into conflict with expansion of high intensity agriculture, having the same requirements of nearby water sources for irrigation.<br/><br/><u><strong>Home range</strong></u><br/>Jaguar home ranges vary in size across their geographic range, often according to the season and availability of resources (e.g. Crawshaw and Quigley 1991, Núñez <em><em><em>et al.</em></em></em> 2002, Scognamillo <em><em><em>et al.</em></em></em> 2003, Cavalcanti and Gese 2009). Generally males range further than females.<br/><br/>In the dry tropical deciduous forest of Chamela-Cuixmala Biosphere Reserve, Mexico, female home range size ranged from 25 km² (dry season) to 60 km² (wet season) (95% MCP, radio telemetry; Nunez et al 2002). In the semi-deciduous and seasonally flooded forest of Calakmul Biosphere Reserve, Mexico, male home range size ranged from 33 to 41 km² for males and 32 to 59 km² for females (95% MCP, radio telemetry; Ceballos <em>et al</em>. 2002).<br/><br/>In the tropical broadleaf moist lowland secondary forest of Belize, male home range size ranged from 28 to 40 km² (radio telemetry; Rabinowitz and Nottingham 1986). In the mosaic landscape (secondary broadleaf forest, savannah and agriculture) of Central Belize, male home ranges ranged from 103 to 194 km² in the dry season and 179 to 386 in the wet season, and from 86 to 99 km² for a single female in the dry and wet seasons respectively (95% MCP, GPS collars, Figueroa 2013).<br/><br/>In the llanos of Venezuela, home range size ranged from 93 to 100 km² (males, dry season) and ranged from 51 to 80 km² for females in the wet season and dry season respectively (95% MCP, radio telemetry; Scognamillo <em>et al</em>. 2003).<br/><br/>There are numerous studies of home ranges from the seasonally inundated landscape of the Brazilian Pantanal: females 25 to 38 km² (radio telemetry; Schaller and Crawshaw 1980), females 5km² and males 20 km² for males in the wet season, and 70 and 79km², respectively, in the dry season (95% MCP, radio telemetry; Crawshaw and Quigley 1991), female 38km² and male 67km² (95% fixed kernel, radio telemetry; Azevedo and Murray 2007), 57 to 176 km² (95% MCP, GPS collars; Soisalo and Cavalcanti 2006), and females 34 to 101 km² in the wet season, and 42 to 89 km² in the dry season, and males 79 to 149 km² in the wet season, and 58 to 263 km² in the dry season (90% adaptive kernel estimator, GPS collars, Cavalcanti and Gese (2009).<br/><br/>In the semi-deciduous rainforest of the Brazilian Atlantic forests, male home range size ranged from 87 to 139 km², and from 44 to 133 km² for females (95% MCP, radio telemetry; Crawshaw <em><em><em>et al.</em></em></em> 2004, Cullen <em><em><em>et al.</em></em></em> 2005). It can be seen in the above review that the more recent studies using GPS technology show considerably larger range sizes compared to older VHF studies, this is especially indicative for recent GPS studies from areas where previously VHF studies were carried out. The differences are ranging from ~4-6 times larger. It is therefore reasonable to assume that these older ranges are considerably underrepresenting Jaguar home ranges. Densities based on these ranges are therefore equally overestimated.<br/><strong><br/><u>Diet</u></strong><br/>Jaguars are opportunistic hunters. Over 85 prey species (wild and livestock/domestic), including mammals, reptiles and birds, have been recorded in their diet across their geographic range (Seymour 1989).<br/><br/>Jaguars take a wide variety of prey species but large-sized ungulates are preferred when available (Nowell and Jackson 1996). The intake of large prey likely helps Jaguars save energy, since it is estimated that 50% of kills are larger prey on which they will feed for up to 4 days (Schaller and Crawshaw 1980, Nunez <em><em><em>et al.</em></em></em> 2000, Scognamillo <em><em><em>et al.</em></em></em> 2002). Nevertheless, Jaguar diet is highly variable, depending on prey availability, ease of capture, and a variety of additional factors (Rabinowitz and Nottingham 1986, Seymour 1989). In some areas cattle (<em>Bos</em> sp.) comprise an important item in their diet (Polisar <em><em><em>et al.</em></em></em> 2003, Palmeira <em><em><em>et al.</em></em></em> 2008, Cavalcanti and Gese 2010). The decline of wild prey below a minimum threshold increases livestock depredation by big cats (Khorozyan <em>et al</em>. 2015), which in turn may lead to retaliatory killings of felids by livestock owners. High frequency of smaller prey species is frequently reported in Jaguar diet, e.g. armadillo (Rabinowitz and Nottingham 1986, Novack <em><em><em>et al.</em></em></em> 2005, Foster <em><em><em>et al.</em></em></em> 2010b). The species has therefore gained a reputation of being able to persist in relatively disturbed areas with incomplete prey assemblages (Rabinowitz and Nottingham 1986). However, most diet studies rely on scat analysis. Palomares <em><em><em>et al.</em></em></em> (2012) showed that the high majority of these scats are from males. Diet studies are therefore highly biased towards male diets. As males do not contribute anything to the rearing of young, as single individuals, they are able to sustain themselves better at a varied diet of small species. Mothers with cubs will likely require the larger ungulates but this important component of the populations is extremely poorly represented in diet studies of scats.<br/><br/><u><strong>Reproduction</strong></u><br/>There are few studies on the reproductive ecology of Jaguars in the wild. Males and females may come together for breeding opportunities at any time of the year (e.g. Cavalcanti and Gese 2009). The female is in oestrus 6-17 day period, and gestation lasts 91-101 days (in captivity), after which the female gives birth to up to four cubs, usually two, which will stay with her for up to 24 months (Mondolfi and Hoogesijn 1982, Seymour 1989, Kitchener 1991, Sunquist and Sunquist 2002). Cubs are fully dependent on their mother’s milk for the first 10-11 weeks, and continue to suckle until 5-6 months old (Sunquist and Sunquist 2002). Cycling could resume 2-3 weeks following lactational anestrus (Soares <em><em><em>et al.</em></em></em> 2006). However, inter-birth intervals documented in the wild are approximately two years (Quigley and Crawshaw 2002, Carrillo <em><em><em>et al.</em></em></em> 2009). By 15-18 months, Jaguars travel and hunt independently within their mother’s range, although they may still come together at kill sites (Quigley and Crawshaw 2002, Sunquist and Sunquist 2002). Jaguars are usually independent by the age of 24 months, however the age of dispersal or the social circumstances associated with it are poorly known (Sunquist and Sunquist 2002). Dispersal does not appear to be linked with the onset of sexual maturity, estimated at 24-30 months for females and 36-48 months for males (Sunquist and Sunquist 2002). Few data are available on dispersal distances however telemetry studies in the Brazilian Pantanal suggest that males disperse further than females (Quigley and Crawshaw 1992, Quigley and Crawshaw 2002). Dispersal through human-dominated landscapes may increase the likelihood of conflict with humans, particularly in areas where the habitat is highly fragmented (e.g. Sáenz and Carrillo 2002). The maximum age of last reproduction of a female recorded in the wild is 13 years (Brown and Lopez-Gonzalez 2001).<br/><br/>IUCN Red List Criteria define three generations as the relevant time span for trend assessment. Lion Generation Length (GL) is based on the formulation of Pacifici <em><em><em>et al.</em></em></em> (2013). Values for age at first reproduction and longevity were agreed to by experts at the 2012 National Action Plan workshop for Jaguars in Brazil, and can be used for generation length calculations as:<br/><br/>GL = R<sub>span</sub>*z +AFR<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Where AFR = Age of first reproduction = 3.5 yrs<br/>R<sub>span</sub> = 15 (the age when 95% of females are no longer reproductive) - AFR = 11.5 yrs<br/><br/>Z = 0.29 (a constant “depending on survivorship and relative fecundity of young vs. old individuals in the population” (IUCN 2014), calculated as the slope of the linear regression between GL and Rspan for 221 mammalian species (Pacifici <em><em><em>et al.</em></em></em> 2013)<br/>Thus, GL = 11.5*0.29 +3.5 = 6.84 yrs for Jaguars.",
+    "threats": "Jaguar populations are threatened by habitat loss and fragmentation (Medellín <em><em>et al.</em></em> 2002, Paviolo <em><em>et al.</em></em> 2008, Foster <em><em>et al.</em></em> 2010a, Bernal-Escobar <em><em>et al.</em></em> 2015, Medellín <em><em>et al.</em></em> 2016, Ceballos <em><em>et al.</em></em> in press, Nijhawan <em><em>et al.</em></em> in press), killing for trophies/illegal trade in body parts, pro-active or retaliatory killings associated with livestock depredation (Zimmermann <em><em>et al.</em></em> 2005, Hoogesteijn and Hoogesteijn 2008, Quigley <em><em>et al.</em></em> 2015), and competition for wild meat with human hunters (Jorgenson and Redford 1993, Foster <em><em>et al.</em></em> 2016).<br/><br/>Deforestation rates in Latin America are the highest in the world together with tropical Africa (FAO forest update, D’Annunzio <em><em>et al.</em></em> 2015). Industrial agriculture, along with subsistence agriculture, is the most significant driver of deforestation in tropical and subtropical countries, accounting for 80% of deforestation from 2000-2010. The current contribution of agriculture to deforestation varies by region, with industrial agriculture being responsible for 30% of deforestation in Africa and Asia, but close to 70% in Latin America. The most significant agricultural drivers of deforestation include soy, palm oil, and cattle ranching, all highly prevalent throughout Latin America (http://globalforestatlas.yale.edu/land-use/industrial-agriculture). The produce is mainly used for export as raw products for developing countries, not to feed local populations. Fragmentation and displacement frequently leads to lowering of densities of Jaguars and prey in leftover forest patches due to easier access and Jaguars feeding on the replaced livestock. Jaguar-livestock conflict is a serious threat to Jaguar survival and reported throughout their range (Hoogesteijn and Hoogesteijn 2011, Quigley <em><em>et al.</em></em> 2015, de la Torre <em><em>et al.</em></em> 2016).<br/><br/>Latin America is characterized by relatively low population densities with high population growth (http://www.worldometers.info/world-population/). This means that the increased agricultural expansion will likely not be used to feed the expanding population of Latin America. Increased pressure on wildlife as a food source will increase. Even in low population countries like Belize, 75% of the yearly wildlife offtake can be attributed to humans, while Jaguars only account for 25% (Foster <em><em>et al.</em></em> 2016). Increases in human population within these thinly populated countries means, increased fragmentation for agriculture, industry and urbanization necessary for sustaining the increased number of people, making the wildlife easier accessible for hunting. The greater need for food and potential increase in wealth for a proportion of the population means increased commercialization and increased prizes for wildlife game species, which are all Jaguar prey species.<br/><br/>Habitat loss is reducing and isolating Jaguar populations range wide (Medellín <em><em>et al.</em></em> 2002, Altrichter <em><em>et al.</em></em> 2006, Paviolo <em><em>et al.</em></em> 2008, Petracca <em><em>et al.</em></em> 2014, Medellín <em><em>et al.</em></em> 2016, de la Torre <em><em>et al.</em></em> 2017). Jaguars have lost about 49% of their historic geographic range (Medellín <em><em>et al.</em></em> 2002, Rabinowitz and Zeller 2010, Medellín <em>et al.</em> 2016; current assessment). The white-lipped peccary (Tayassu pecari) an important Jaguar prey (e.g. Foster <em><em>et al.</em></em> 2010b), has been extirpated from 21% of its historical range during the past century and changed from NT to VU under the latest IUCN assessment (Altrichter <em><em>et al.</em></em> 2012, Keuroghlian <em><em>et al.</em></em> 2013). Jaguars have become extinct in El Salvador, Uruguay, and the United States (where there are still periodic individuals present as presumed dispersers from Mexico) (TSJRT 2012, Campbell 2015). There are documented population declines and habitat loss for most of the range countries (Ceballos <em><em>et al.</em></em> 2011, Costa <em><em>et al.</em></em> 2005, Payán <em><em>et al.</em></em> 2013b, Wallace <em><em>et al.</em></em> 2013, Espinosa <em><em>et al.</em></em> 2016, García-Anleu <em><em>et al.</em></em> 2016, González-Maya <em><em>et al.</em></em> 2016, Hoogesteijn <em><em>et al.</em></em> 2016, Maffei <em><em>et al.</em></em> 2016, Mora <em><em>et al.</em></em> 2016, Moreno <em><em>et al.</em></em> 2016, Payán <em><em>et al.</em></em> 2016, Olsoy <em><em>et al.</em></em> 2016, Chávez <em><em>et al.</em></em> 2016, de Azevedo <em><em>et al.</em></em> 2016, Di Bitetti <em><em>et al.</em></em> 2016, Díaz-Santos <em><em>et al.</em></em> 2016). Connectivity among Jaguar populations is being lost at local and regional scales. For example, the connectivity of Jaguar habitat between Honduras and Guatemala is almost gone; similar losses have been documented across the Chaco, Iguazu and Atlantic Forest, and between Tamaulipas and Veracruz (Haag <em><em>et al.</em></em> 2010, Rabinowitz and Zeller 2010, Medellín <em><em>et al.</em></em> 2016, Ceballos <em><em>et al.</em></em> 2011, Chávez <em><em>et al.</em></em> 2016). Isolated populations have fewer individuals and are more prone to local extinctions (Ceballos <em><em>et al.</em></em> in press). Many Jaguar populations require connectivity between core sites to survive in the long term and these connectivity corridors are most of the time outside protected areas, and therefore vulnerable to human impacts (Rabinowitz and Zeller 2010, Bernal-Escobar <em><em>et al.</em></em> 2015). Even in nominally protected areas, Jaguars often suffer from human impacts such as illegal hunting (Quigley and Crawshaw Jr 1992, Medellín <em><em>et al.</em></em> 2002, Sollmann <em><em>et al.</em></em> 2008, Ceballos <em><em>et al.</em></em> 2011, Payán <em><em>et al.</em></em> 2013a, Petracca <em><em>et al.</em></em> 2014).<br/><br/>The vulnerability of the Jaguar to persecution is demonstrated by its disappearance by the mid-1800 from Uruguay (Pereira-Garbero and Sappa 2016), El Salvador and by the mid-1900's from the south-western US (Johnson and Van Pelt 2016). Disappearance from these countries catches the current trends in a nutshell. These countries were the first areas to show rapid population increase with large scale land conversion. Retaliatory killing of the remaining exposed Jaguars led to their extinction. These processes are now taking place on a continental scale and therefore there are few areas within Jaguar range that can be considered safe. With limited technological expansion in the region, the main source of income will be industrial agriculture. With every (local) economic crisis, it means that the last Jaguar strongholds will be eroded further. Commercial hunting and trapping of Jaguars for their pelts has declined drastically since the mid-1970s, when anti-fur campaigns and CITES controls progressively shut down international markets (Nowell and Jackson 1996). However, there is still demand for Jaguar paws, teeth and other products, especially in local markets where canines are still considered interesting jewellery. On top of this, Jaguars are starting to be considered a replacement for tiger bone for traditional medicine purposes by the increasing Asian community in Latin America.",
+    "measures": "Included on CITES Appendix I. The Jaguar is fully protected at the national level across most of its range, with hunting prohibited in Argentina, Brazil, Colombia, Costa Rica, French Guiana, Honduras, Mexico, Nicaragua, Panama, Paraguay, Suriname, United States, and Venezuela, and hunting restrictions in place in Guatemala and Peru (Nowell and Jackson 1996). Specific conservation plans for the species have been developed in Mexico, Panama, Honduras, and Brazil. <br/><br/>With habitat fragmentation a major threat, and taxonomic research suggesting little significant differences among Jaguar populations, an ambitious program has been launched to conserve a continuous north to south habitat corridor through the species range (Rabinowitz and Zeller 2010).<br/><br/>Addressing livestock management and animals that prey on livestock is a high priority for conservation efforts in many Jaguar range countries due to the impact of retaliatory killing of Jaguars and other predators.<br/><br/><strong><u>Jaguar Conservation Actions</u><br/></strong>The following is a list of actions that a variety of Jaguar range countries have put in place to enhance Jaguar conservation. <br/><ol><li>Respond to reports of livestock depredation, and provide advice and assistance to improve livestock management practices, thereby reducing depredation and associated retaliatory killings of Jaguars; </li><li>Understand and address the hunting of Jaguar prey for sport, commercial and subsistence uses, and raise awareness about the laws governing the hunting of wildlife and the need for adopting sustainable hunting practices;</li><li>Monitor and safe-guarding Jaguar core populations, Jaguar Conservation Units, or JCUs (see Rabinowitz and Zeller 2010);</li><li>Maintain national and regional population connectivity through the identification of corridors for Jaguar movement between JCUs and applying conservation actions in those corridors through the engagement of corridor stakeholders as in the development of a Conservation Action Plan for the Central Belize Corridor (Kay <em>et al.</em> 2015);</li><li>Develop national, regional and local monitoring programs for Jaguars and their prey.</li></ol>",
+    "use_trade": "Commercial hunting and trapping of Jaguars for their pelts has declined drastically since the mid-1970s, when anti-fur campaigns and CITES controls progressively shut down international markets (Nowell and Jackson 1996). However, there is still demand for Jaguar paws, teeth and other products, especially in local markets where canines are still considered interesting jewellery. On top of this, Jaguars are starting to be considered a replacement for tiger bone for traditional medicine purposes by the increasing Asian community in Latin America.",
+    "rationale": "Classify as Near Threatened, due to a suspected 20-25% decline over the past three generations (21 years) in area of occupancy, extent of occurrence, and habitat quality, along with actual or potential levels of exploitation. Given the inherent difficulty of assessing this species, the normally low density with which it occupies the landscape and the effects that small population and habitat degradations can have on the species, our minimum assessment of population decrease could be a significant underestimate.<br/><br/>Since the previous Red List assessment in 2008, the threats to Jaguars have continued or intensified. The first expert mapping of Jaguar range took place in 2002 (Sanderson <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2002), and the resulting map was used for the 2008 Red List assessment. Today, more is known about Jaguar distribution and abundance, allowing us to retrospectively classify areas as Jaguar range in 2015 that were previously identified as non-range or gaps in knowledge (Supplementary Material Figure 1). The 2015 mapping exercise also reflects updates to range recommended by Jaguar experts, with sufficient evidence (i.e., tracks, camera-trap photos, sightings of live or dead animals) to warrant inclusion/exclusion of range. The updated range indicates increasing fragmentation of Jaguar populations, particularly in eastern and southeastern Brazil, northern Venezuela and the Maya Forest (Selva Maya) of Mexico and Guatemala. Comparing 2015 Jaguar range to the extent of “known” range from the 2002 exercise, thereby controlling for the difference in knowledge extent, there is a 20.0% decline in Jaguar range over the past fourteen years (2002-2015), from 8.77 million km² to 7.02 million km² (Figure 2 in the Supplementary Material). With a more robust range map from which to begin the next assessment, the species will likely qualify for VU in the near future.<br/><br/>With a generation length of 6.84 years, we suspect at least a 20-25% loss in mature individuals over the past 21 years (three generations) because there are documented population declines together with habitat loss for most of the range countries (Ceballos <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2011, Costa <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2005, Payán <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2013b, Wallace <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2013, Espinosa <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2016, García-Anleu <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2016, González-Maya <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2016, Hoogesteijn <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2016, Maffei <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2016, Mora <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2016, Moreno <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2016, Payán <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2016, Chávez <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2016, Olsoy <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2016, de Azevedo <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2016, Di Bitetti <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2016, Díaz-Santos <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2016, Paviolo <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2016, Jedrzejewski <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2016). Connectivity among Jaguar populations is being lost at local and regional scales (de la Torre <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2017a, Olsoy <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2016); isolated populations have fewer individuals and are more prone to local extinctions (Ceballos <em><em><em><em><em><em>et al.</em></em></em></em></em></em> in press). Jaguar-livestock conflict is a serious threat to Jaguar survival and reported throughout their range (Hoogesteijn and Hoogesteijn 2011, Quigley <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2015, de la Torre <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2016). Even in nominally protected areas, Jaguars often suffer from human impacts such as illegal hunting (Quigley and Crawshaw Jr 1992, Medellín <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2002, Sollmann <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2008, Ceballos <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2011, Payán <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2013a, Petracca <em><em><em><em><em><em>et al.</em></em></em></em></em></em> 2014).",
+    "trend_justification": null,
+    "taxonomic_notes": "The status of the subspecies is unclear. Although eight subspecies have been recognized (Seymour 1989), morphological and genetic analyses do not support the existence of discrete subspecies (Larson 1997, Eizirik <em>et al.</em> 2001, Ruiz-Garcia <em>et al.</em> 2006). While not elevating the regional differences to the subspecies level, Eizirk <em>et al.</em> (2001) found evidence for four incompletely isolated phylogeographic groups: Mexico and Guatemala, southern Central America, northern South America, and South America south of the Amazon River. Similarly, Ruiz-Garcia <em>et al.</em> (2006) found that the Andes Mountains incompletely isolates Jaguar populations in Colombia."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "5_1_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": "",
+      "code": "6_3",
+      "description": {
+        "en": "Market forces"
+      }
+    },
+    {
+      "note": "",
+      "code": "6_4",
+      "description": {
+        "en": "Conservation payments"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_2",
+      "description": {
+        "en": "Policies and regulations"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "6_5",
+      "description": {
+        "en": "Non-monetary values"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Mangrove Vegetation Above High Tide Level"
+      },
+      "code": "1_7"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Subtropical/Tropical Heavily Degraded Former Forest"
+      },
+      "code": "14_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": "No",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_8"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Moist"
+      },
+      "code": "2_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Shrub Dominated Wetlands"
+      },
+      "code": "5_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Shrubland - Mediterranean-type Shrubby Vegetation"
+      },
+      "code": "3_8"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_6"
+    },
+    {
+      "majorImportance": "No",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical High Altitude"
+      },
+      "code": "3_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"
+      },
+      "code": "5_2"
+    },
+    {
+      "majorImportance": "No",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Seasonally Wet/Flooded"
+      },
+      "code": "4_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical High Altitude"
+      },
+      "code": "4_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Swamp"
+      },
+      "code": "1_8"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Suriname"
+      },
+      "code": "SR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Paraguay"
+      },
+      "code": "PY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "El Salvador"
+      },
+      "code": "SV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bolivia, Plurinational States of"
+      },
+      "code": "BO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Uruguay"
+      },
+      "code": "UY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Belize"
+      },
+      "code": "BZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Area-based Management Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Other household goods"
+      },
+      "code": "11"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Herbicides and pesticides"
+      },
+      "code": "9_3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Oil & gas drilling"
+      },
+      "code": "3_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Sewage"
+      },
+      "code": "9_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder plantations"
+      },
+      "code": "2_2_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Run-off"
+      },
+      "code": "9_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_3_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry plantations"
+      },
+      "code": "2_2_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Oil spills"
+      },
+      "code": "9_2_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Motivation Unknown/Unrecorded"
+      },
+      "code": "5_3_5"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Supression in fire frequency/intensity"
+      },
+      "code": "7_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Shifting agriculture"
+      },
+      "code": "2_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Work & other activities"
+      },
+      "code": "6_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Increase in fire frequency/intensity"
+      },
+      "code": "7_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects (species is not the target)"
+      },
+      "code": "5_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other ecosystem modifications"
+      },
+      "code": "7_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Utility & service lines"
+      },
+      "code": "4_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Dams (size unknown)"
+      },
+      "code": "7_2_11"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Large dams"
+      },
+      "code": "7_2_10"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects (species is not the target)"
+      },
+      "code": "5_2_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Seepage from mining"
+      },
+      "code": "9_2_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_3_4"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Quigley, H., Foster, R., Petracca, L., Payan, E., Salom, R. & Harmsen, B.",
+      "value": [
+        "Rebecca Foster (Panthera)",
+        "Roberto Salom (Panthera)",
+        "Lisanne Petracca (Panthera)",
+        "Howard Quigley (Panthera)",
+        "Esteban Payan (Panthera)",
+        "Bart Harmsen (University of Belize, Environmental Research Institute)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Nowell, K., Schipper, J., Breitenmoser-Würsten, C., Ceballos, G., González-Maya, J.F., Medellín, R., De La Torre, A., Hunter, L., Lanz, T. & Breitenmoser, U.",
+      "value": [
+        "Kristin Nowell (IUCN SSC Cat Specialist Group)",
+        "Christine Breitenmoser-Würsten (IUCN SSC Cat Specialist Group / KORA - Carnivore Ecology and Wildlife Management)",
+        "Tabea Lanz (KORA (Carnivore Ecology and Wildlife Management), Thunstrasse 31, Switzerland)",
+        "Gerardo Ceballos (Instituto de Ecologia, UNAM)",
+        "Antonio De La Torre (Instituto de Ecologia, UNAM)",
+        "Luke Hunter (Panthera)",
+        "José González-Maya (IUCN SSC Small Carnivore Specialist Group)",
+        "Jan Schipper (IUCN SSC Small Carnivore Specialist Group)",
+        "Rodrigo Medellín (Institute of Ecology, Autonomous University of Mexico, Mexico City)",
+        "Urs Breitenmoser (IUCN SSC Cat Specialist Group / KORA - Carnivore Ecology and Wildlife Management)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Amit, R., Bustamante, A., Calderón, A.P., Campos, C., Carvalho Jr, E., Castañeda, F., Paula, R.C., de Oliveira, T., De Thoisy, B., Di Bitetti, M., Díaz-Santos, F., Espinosa, S., Ferraz, K.M.P.M.B., Garcia, R., Giordano, A., Hernández, S., Hidalgo-Mihart, M.G., Hoogesteijn, R., Jedrzejewski, W., Lopez-Gonzalez, C.A., Maffei, L., Mcnab, R., Mena, J.L., Morato, R., Moreno, R., Nuñez, R., Olmos, M, Pacheco, V., Paemelaere, E., Paviolo, A., Polisar, J., Rosa-Rosa, O., Samudio Jr, R.S., Tortato, F., Wallace, R., de Angelo, C., Zapata-Ríos, G. & Zúñiga, A.",
+      "value": [
+        "Roan B. Mcnab (wcs)",
+        "Ricardo Moreno (Cat SG)",
+        "Evi Paemelaere (Parthern)",
+        "Claudia Campos (Pro-Carnivoros, Brazil)",
+        "Rogerio Cunha de Paula (CENAP, Brazil)",
+        "Carlos de Angelo (catsg)",
+        "John Polisar (wcs)",
+        "Octovio Rosa-Rosa (catsg)",
+        "Rafael Samudio Jr (SOMASPA, Panama)",
+        "Fernando Tortato (panthera)",
+        "Victor Pacheco",
+        "Galo Zapata-Ríos (WCS Ecuador)",
+        "Ana Calderón",
+        "Elildo Carvalho Jr",
+        "Fabricio Díaz-Santos",
+        "Katia Ferraz",
+        "Rony Garcia",
+        "Mircea Hidalgo-Mihart",
+        "José Mena",
+        "Rodrigo Nuñez",
+        "Melva Olmos",
+        "Alfonso Zúñiga",
+        "Ronaldo Morato (CENAP, Brazil)",
+        "Tadeu de Oliveira (Instituto Pró-Carnívoros)",
+        "Augustin Paviolo (CONICET)",
+        "Carlos Lopez-Gonzalez (Universidad Autonoma de Queretaro, Biologia)",
+        "Robert Wallace (Conservation Programme Andes-Amazon, Frankfurt Zoological Society, Peru)",
+        "Rafael Hoogesteijn (Panthera)",
+        "Ronit Amit (Gente y Fauna)",
+        "Aida Bustamante (Yaguara)",
+        "Franklin Castañeda (Panthera)",
+        "Benoit De Thoisy (IUCN SSC Cat Specalist Group)",
+        "Mario Di Bitetti (Consejo Nacional investigación)",
+        "Santiago Espinosa (Catholic University in Ecuador)",
+        "Anthony Giordano (Chaco Jaguar Conservation Project)",
+        "Sandra Hernández (Panthera)",
+        "Wlodzimierz Jedrzejewski (Cat SG)",
+        "Leonardo Maffei (wcs)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "The original version of this assessment was published with an older version of the distribution map. This errata assessment uses the updated distribution map."
+    }
+  ],
+  "references": [
+    {
+      "citation": "IUCN. 2018. The IUCN Red List of Threatened Species. Version 2018-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 28 June 2018).",
+      "year": "2018",
+      "title": "The IUCN Red List of Threatened Species. Version 2018-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2018-1"
+    },
+    {
+      "citation": "Nowell, K. and Jackson, P. 1996. <i>Wild Cats. Status Survey and Conservation Action Plan</i>. IUCN/SSC Cat Specialist Group, Gland, Switzerland and Cambridge, UK.",
+      "year": "1996",
+      "title": "Wild Cats. Status Survey and Conservation Action Plan",
+      "author": "Nowell, K. and Jackson, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sunquist, M. and Sunquist, F. 2002. <i>Wild Cats of the World</i>. University of Chicago Press.",
+      "year": "2002",
+      "title": "Wild Cats of the World",
+      "author": "Sunquist, M. and Sunquist, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Torres, N.M., Filho, J.A.F.D., De Marco Jr., P., Jacomo, A.T.A. and Silveira, L. 2007. Jaguar distribution and conservation status in Brazil. In: J. Hughes and R. Mercer (eds), <i>Felid Biology and Conservaiton Conference 17-20 September: Absracts</i>, pp. 109. WildCRU, Oxford, UK.",
+      "year": "2007",
+      "title": "Jaguar distribution and conservation status in Brazil",
+      "author": "Torres, N.M., Filho, J.A.F.D., De Marco Jr., P., Jacomo, A.T.A. and Silveira, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wildlife Conservation Society. 2008. All about jaguars: Threats. New York, USA Available at: <a href=\"http://savethejaguar.com/jag-index/jag-allabout/jag-aboutthreats\">http://savethejaguar.com/jag-index/jag-allabout/jag-aboutthreats</a>. ",
+      "year": "2008",
+      "title": "All about jaguars: Threats",
+      "author": "Wildlife Conservation Society",
+      "citation_short": null
+    },
+    {
+      "citation": "Silveira L. 2004. Ecologia com parada da onça-pintada (<i>Panthera onca</i>) e onça-parda (<i>Puma concolor</i>) no cerrado e pantanal. Ph.D. Thesis, Universidade de Brasília.",
+      "year": "2004",
+      "title": "Ecologia com parada da onça-pintada (<i>Panthera onca</i>) e onça-parda (<i>Puma concolor</i>) no cerrado e pantanal",
+      "author": "Silveira L",
+      "citation_short": null
+    },
+    {
+      "citation": "Ruiz-Garcia, M., Payán, E., Murillo, A. and Alvarez, D. 2006. DNA microsatellite characterisation of the jaguar (<i>Panthera onca</i>) in Colombia. <i>Genes and Genetic Systems</i> 81: 115-127.",
+      "year": "2006",
+      "title": "DNA microsatellite characterisation of the jaguar (<i>Panthera onca</i>) in Colombia",
+      "author": "Ruiz-Garcia, M., Payán, E., Murillo, A. and Alvarez, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Payan, E. 2008. Jaguars, ocelots and prey ecology across sites with different hunting pressure in Colombian Amazonia. Ph.D. Thesis, University College London and Institue of Zoology, Zoological Society of London.",
+      "year": "2008",
+      "title": "Jaguars, ocelots and prey ecology across sites with different hunting pressure in Colombian Amazonia",
+      "author": "Payan, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Soisalo, M.K. and Cavalcanti, S.M.C. 2006. Estimating the density of a jaguar population in the Brazilian Pantanal using camera-traps and capture-recapture sampling in combination with GPS radio-telemetry. <i>Biological Conservation</i> 129: 487-496.",
+      "year": "2006",
+      "title": "Estimating the density of a jaguar population in the Brazilian Pantanal using camera-traps and capture-recapture sampling in combination with GPS radio-telemetry",
+      "author": "Soisalo, M.K. and Cavalcanti, S.M.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Altrichter, M., Boaglio, G. and Perovic, P. 2006. The decline of jaguars Panthera onca in the Argentine Chaco. <i>Oryx</i> 40: 302-309.",
+      "year": "2006",
+      "title": "The decline of jaguars Panthera onca in the Argentine Chaco",
+      "author": "Altrichter, M., Boaglio, G. and Perovic, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Maffei, L., Cuellar, E. and Noss, A. 2004. One thousand jaguars (<i>Panthera onca</i>) in Bolivia's Chaco? Camera trapping in the Kaa-Iya National Park. <i>Journal of Zoology (London)</i> 262: 295-304.",
+      "year": "2004",
+      "title": "One thousand jaguars (<i>Panthera onca</i>) in Bolivia's Chaco? Camera trapping in the Kaa-Iya National Park",
+      "author": "Maffei, L., Cuellar, E. and Noss, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Seymour, K.L. 1989. <i>Panthera onca</i>. <i>Mammalian Species</i> 340: 1-9.",
+      "year": "1989",
+      "title": "<i>Panthera onca</i>",
+      "author": "Seymour, K.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Brown, D.E. and Lopez-Gonzales, C.A. 2001. <i>Borderland jaguars: Tigres de la Frontera</i>. University of Utah Press, Salt Lake City, USA.",
+      "year": "2001",
+      "title": "Borderland jaguars: Tigres de la Frontera",
+      "author": "Brown, D.E. and Lopez-Gonzales, C.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Silver, S.C., Ostro, L.E.T., Marsh, L.K., Maffei, L., Noss, A.J., Kelly, M.J., Wallace, R.B., Gomez, H. and Ayala, G. 2004. The use of camera traps for estimating jaguar <i>Panthera onca</i> abundance and density using capture/recapture analysis. <i>Oryx</i> 38: 148-154.",
+      "year": "2004",
+      "title": "The use of camera traps for estimating jaguar <i>Panthera onca</i> abundance and density using capture/recapture analysis",
+      "author": "Silver, S.C., Ostro, L.E.T., Marsh, L.K., Maffei, L., Noss, A.J., Kelly, M.J., Wallace, R.B., Gomez, H. and Ayala, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sanderson, E.W., Redford, K.H., Chetkiewicz, C.B., Medellin, R.A., Rabinowitz, A.R., Robinson, J.G. and Taber, A.B. 2002. Planning to save a species: the jaguar as a model. <i>Conservation Biology</i> 16(1): 58.",
+      "year": "2002",
+      "title": "Planning to save a species: the jaguar as a model",
+      "author": "Sanderson, E.W., Redford, K.H., Chetkiewicz, C.B., Medellin, R.A., Rabinowitz, A.R., Robinson, J.G. and Taber, A.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Eizirik, E., Bonatto, S.L., Salzano, F.M., Johnson, F.M., O'Brien, S.J., CrawshawJr., P.G., Vie, J.-C. and Brousset, D.M. 2001. Phylogeography, population history and conservation genetics of jaguars (<i>Panthera onca</i>, Mammalia, Felidae). <i>Molecular Ecology</i> 10: 65-79.",
+      "year": "2001",
+      "title": "Phylogeography, population history and conservation genetics of jaguars (<i>Panthera onca</i>, Mammalia, Felidae)",
+      "author": "Eizirik, E., Bonatto, S.L., Salzano, F.M., Johnson, F.M., O'Brien, S.J., CrawshawJr., P.G., Vie, J.-C. and Brousset, D.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Larson, S.E. 1997. Taxonomic re-evaluation of the Jaguar. <i>Zoo Biology</i> 16: 107-120.",
+      "year": "1997",
+      "title": "Taxonomic re-evaluation of the Jaguar",
+      "author": "Larson, S.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Altrichter, M., Taber, A., Beck, H., Reyna-Hurtado, R., Lizarraga, L.,  Keuroghlian, A. and Sanderson, E.W. 2012. A report of range-wide declines for a key Neotropical ecosystem architect, the White-lipped Peccary. <i>Oryx</i> 46(1): 87-98.",
+      "year": "2012",
+      "title": "A report of range-wide declines for a key Neotropical ecosystem architect, the White-lipped Peccary",
+      "author": "Altrichter, M., Taber, A., Beck, H., Reyna-Hurtado, R., Lizarraga, L.,  Keuroghlian, A. and Sanderson, E.W. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cavalcanti, S.M.C. and Gese, E.M. 2010. Kill rates and predation patterns of jaguars (<i>Panthera onca</i>) preying on livestock and native prey in the southern Pantanal, Brazil. <i>Journal of Mammalogy</i> 91: 722-736.",
+      "year": "2010",
+      "title": "Kill rates and predation patterns of jaguars (<i>Panthera onca</i>) preying on livestock and native prey in the southern Pantanal, Brazil",
+      "author": "Cavalcanti, S.M.C. and Gese, E.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Petracca, L.S., Hernández-Potosme, S., Obando-Sampson, L., Salom-Pérez, R., Quigley, H. and Robinson, H.S. 2014. Agricultural encroachment and lack of enforcement threaten connectivity of range-wide jaguar (<i>Panthera onca</i>) corridor. <i>Journal for nature conservation</i> 22(5): 436-444.",
+      "year": "2014",
+      "title": "Agricultural encroachment and lack of enforcement threaten connectivity of range-wide jaguar (<i>Panthera onca</i>) corridor",
+      "author": "Petracca, L.S., Hernández-Potosme, S., Obando-Sampson, L., Salom-Pérez, R., Quigley, H. and Robinson, H.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chávez, C., Zarza, H., de la Torre, J.A., Medellín, R.A. and Ceballos, G. 2016. Distribución y estado de conservación del Jaguar en México. In: R.A. Medellín, J.A. de la Torre, H. Zarza, C. Chávez and G. Ceballos (eds), <i>El Jaguar en el Siglo XXI: La Perspectiva Continental</i>, Fondo de Cultura Económica, Universidad Nacional Autónoma de México, Ciudad de México.",
+      "year": "2016",
+      "title": "Distribución y estado de conservación del Jaguar en México",
+      "author": "Chávez, C., Zarza, H., de la Torre, J.A., Medellín, R.A. and Ceballos, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Azevedo, F.C.C. and Murray, D.L. 2007. Spatial organization and food habits of Jaguars (<i>Panthera onca</i>) in a floodplain forest. <i>Biological Conservation</i> 137: 391-402.",
+      "year": "2007",
+      "title": "Spatial organization and food habits of Jaguars (<i>Panthera onca</i>) in a floodplain forest",
+      "author": "Azevedo, F.C.C. and Murray, D.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Novack, A.J., Main, M.B., Sunquist, M.E. and Labisky, R.F. 2005. Foraging ecology of Jaguar and puma in hunted and non-hunted sites within the Maya Biosphere Reserve, Guatemala. <i>Journal of Zoology</i> 267: 167-178.",
+      "year": "2005",
+      "title": "Foraging ecology of Jaguar and puma in hunted and non-hunted sites within the Maya Biosphere Reserve, Guatemala",
+      "author": "Novack, A.J., Main, M.B., Sunquist, M.E. and Labisky, R.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kitchener, A. 1991. <i>The Natural History of the Wild Cats</i>. A and C Black, London.",
+      "year": "1991",
+      "title": "The Natural History of the Wild Cats",
+      "author": "Kitchener, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "de la Torre, J.A., Gonzalez-Maya, J.F., Zarza, H., Ceballos, G., and Medellín, R.A. 2017b. The Jaguar’s spots are darker than they appear: assessing the global Conservation status of the Jaguar <i>Panthera onca</i>. <i>Oryx </i> 51: 1-16.",
+      "year": "2017b",
+      "title": "The Jaguar’s spots are darker than they appear: assessing the global Conservation status of the Jaguar <i>Panthera onca</i>",
+      "author": "de la Torre, J.A., Gonzalez-Maya, J.F., Zarza, H., Ceballos, G., and Medellín, R.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Scognamillo D., Maxit I.E., Sunquist M. and Polisar, J. 2003. Coexistence of Jaguar (<i>Panthera onca</i>) and puma (<i>Puma concolor</i>) in a mosaic landscape in the Venezuelan Ilanos. <i>Journal of Zoology, London</i> 259: 269-279.",
+      "year": "2003",
+      "title": "Coexistence of Jaguar (<i>Panthera onca</i>) and puma (<i>Puma concolor</i>) in a mosaic landscape in the Venezuelan Ilanos",
+      "author": "Scognamillo D., Maxit I.E., Sunquist M. and Polisar, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jonhson, T. and Van Pelt, B. 2016. Jaguares en el Borde: Evaluación y Perspectivas Conservació del Jaguar Continental. In: R.A. Medellín, J.A. de la Torre, H. Zarza, C. Chávez and G. Ceballos (eds), <i>El Jaguar en el Siglo XXI: La Perspectiva Continental</i>, Fondo de Cultura Económica, Universidad Nacional Autónoma de México, Mexico.",
+      "year": "2016",
+      "title": "Jaguares en el Borde: Evaluación y Perspectivas Conservació del Jaguar Continental",
+      "author": "Jonhson, T. and Van Pelt, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Haag, T., Santos, A.S., Sana, D.A., Morato, R.G., Cullen Jr, L., Crawshaw Jr, P.G., De Angelo, C., Di Bitetti, M.S., Salzano, F.M. and Eizirik, E. 2010. The effect of habitat fragmentation on the genetic structure of a top predator: loss of diversity and high differentiation among remnant populations of Atlantic Forest Jaguars (<i>Panthera onca</i>). <i>Molecular Ecology</i> 19(22): 4906-4921.",
+      "year": "2010",
+      "title": "The effect of habitat fragmentation on the genetic structure of a top predator: loss of diversity and high differentiation among remnant populations of Atlantic Forest Jaguars (<i>Panthera onca</i>)",
+      "author": "Haag, T., Santos, A.S., Sana, D.A., Morato, R.G., Cullen Jr, L., Crawshaw Jr, P.G., De Angelo, C., Di Bitetti, M.S., Salzano, F.M. and Eizirik, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Caso, A., Lopez-Gonzalez, C., Payan, E., Eizirik, E., de Oliveira, T., Leite-Pitman, R., Kelly, M. and Valderrama, C. 2008. <i>Panthera onca</i>. Available at: <a href=\"http://dx.doi.org/10.2305/IUCN.UK.2008.RLTS.T15953A5327466.en\">http://dx.doi.org/10.2305/IUCN.UK.2008.RLTS.T15953A5327466.en</a>. (Accessed: 28 Nov 2015).",
+      "year": "2008",
+      "title": "<i>Panthera onca</i>",
+      "author": "Caso, A., Lopez-Gonzalez, C., Payan, E., Eizirik, E., de Oliveira, T., Leite-Pitman, R., Kelly, M. and Valderrama, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sollmann, R., Torres, N.M. and Silveira, L. 2008. Jaguar conservation in Brazil: the role of protected areas. <i>Cat News </i> 2: 15-20.",
+      "year": "2008",
+      "title": "Jaguar conservation in Brazil: the role of protected areas",
+      "author": "Sollmann, R., Torres, N.M. and Silveira, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Petracca, L.S., Ramírez-Bravo, O.E. and Hernández-Santín, L. 2014. Occupancy estimation of Jaguar <i>Panthera onca</i> to assess the value of east-central Mexico as a Jaguar corridor. <i>Oryx</i> 48: 133-140.",
+      "year": "2014",
+      "title": "Occupancy estimation of Jaguar <i>Panthera onca</i> to assess the value of east-central Mexico as a Jaguar corridor",
+      "author": "Petracca, L.S., Ramírez-Bravo, O.E. and Hernández-Santín, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Quigley, H., Hoogesteijn, R., Hoogesteijn, A., Foster, R., Payan, E., Corrales, D., Salom-Perez, R. and Urbina, Y. 2015. Observations and preliminary testing of Jaguar depredation reduction techniques in and between core Jaguar populations. <i>PARKS </i> 21.1: 63-72.",
+      "year": "2015",
+      "title": "Observations and preliminary testing of Jaguar depredation reduction techniques in and between core Jaguar populations",
+      "author": "Quigley, H., Hoogesteijn, R., Hoogesteijn, A., Foster, R., Payan, E., Corrales, D., Salom-Perez, R. and Urbina, Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Di Bitetti, M.S., De Angelo, C., Quiroga, V., Altrichter, M., Paviolo, A., Cuyckens, G.A.E. and Perovic, P.G. 2016. Estado de conservación del Jaguar en Argentina. In: R.A. Medellín, J.A. de la Torre, C. Chávez, H. Zarza and G. Ceballos (eds), <i>El Jaguar en el Siglo XXI: La Perspectiva Continental</i>, Fondo de Cultura Económica, Universidad Nacional Autónoma de México, Ciudad de Mé.",
+      "year": "2016",
+      "title": "Estado de conservación del Jaguar en Argentina",
+      "author": "Di Bitetti, M.S., De Angelo, C., Quiroga, V., Altrichter, M., Paviolo, A., Cuyckens, G.A.E. and Perovic, P.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Carrillo, E., Saenz, J. and Fuller, T. 2009. Interbirth interval of a free-ranging Jaguar. <i>Mammalian Biology-Zeitschrift für Säugetierkunde</i> 74(4): 319-320.",
+      "year": "2009",
+      "title": "Interbirth interval of a free-ranging Jaguar",
+      "author": "Carrillo, E., Saenz, J. and Fuller, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Núñez, R., Miller, B. and Lindzey, F. 2000. Food habits of Jaguars and pumas in Jalisco, Mexico. <i>J. of Zool. London </i> 252: 373-379.",
+      "year": "2000",
+      "title": "Food habits of Jaguars and pumas in Jalisco, Mexico",
+      "author": "Núñez, R., Miller, B. and Lindzey, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pereira-Garbero, R. and Sappa, A. 2016. Historia del Jaguar en Uruguay y la Banda Oriental. In: R.A. Medellín, J.A. de la Torre, H. Zarza, C. Chávez and G. Ceballos (eds), <i>El Jaguar en el Siglo XXI: La Perspectiva Continental</i>, Fondo de Cultura Económica, Universidad Nacional Autónoma de México, México D.F., Mexico.",
+      "year": "2016",
+      "title": "Historia del Jaguar en Uruguay y la Banda Oriental",
+      "author": "Pereira-Garbero, R. and Sappa, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Belize Wildlife Protection Act. 2000. Chapter 220 Revised Edition 2000. Law Revision Commissioner, Belize.",
+      "year": "2000",
+      "title": "Chapter 220 Revised Edition 2000",
+      "author": "Belize Wildlife Protection Act",
+      "citation_short": null
+    },
+    {
+      "citation": "Cullen, L. Jr, Abreu, K.C., Sana, D. Nava. A.F.D. 2005. Jaguars as landscape detectives for the upper Paraná River corridor, Brazil. <i>Natureza and Conservação</i> 3(1): 43-58.",
+      "year": "2005",
+      "title": "Jaguars as landscape detectives for the upper Paraná River corridor, Brazil",
+      "author": "Cullen, L. Jr, Abreu, K.C., Sana, D. Nava. A.F.D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Leite, M.R.P., Boulhosa, R.L.P., Galvao, F. and Cullen Jr., L. 2002. Conservacion del jaguar en las areas protegidas del Bosque Atlantico de la costa de Brasil. In: R. A. Medellin, C. B. Chetkiewicz, A. R. Rabinowitz, K. H. Redford, J. G. Robinson, E. W. Sanderson and A. B. Taber (eds), <i>El jaugar en el nuevo milenio</i>, pp. 25-42. Universidad Nacional Autonoma de Mexico / Wildlife Conservation Society, Mexico D. F.",
+      "year": "2002",
+      "title": "Conservacion del jaguar en las areas protegidas del Bosque Atlantico de la costa de Brasil",
+      "author": "Leite, M.R.P., Boulhosa, R.L.P., Galvao, F. and Cullen Jr., L. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Wallace, R., Lopez-Strauss, H., Mercado, N. and Porcel, Z. 2013. Diversity, distribution and conservation of Bolivian carnivores. In: Ruiz-Garcia, M. and Shostell, J. (eds), <i>Molecular Population Genetics, Evolutionary Biology and Biological Conservation of the Neotropical Carnivores</i>, pp. 659-709. Nova Science , New York.",
+      "year": "2013",
+      "title": "Diversity, distribution and conservation of Bolivian carnivores",
+      "author": "Wallace, R., Lopez-Strauss, H., Mercado, N. and Porcel, Z.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rodríguez-Soto, C., Monroy-Vilchis, O. and Zarco-González, M.M. 2013. Corridors for Jaguar (<i>Panthera onca</i>) in Mexico: conservation strategies. <i>Journal for Nature Conservation </i> 21: 86-101.",
+      "year": "2013",
+      "title": "Corridors for Jaguar (<i>Panthera onca</i>) in Mexico: conservation strategies",
+      "author": "Rodríguez-Soto, C., Monroy-Vilchis, O. and Zarco-González, M.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Quigley, H.B. and Crawshaw Jr, P.G. 1992. A conservation plan for the Jaguar <i>Panthera onca</i> in the Pantanal region of Brazil. <i>Biological Conservation</i> 61: 149-157.",
+      "year": "1992",
+      "title": "A conservation plan for the Jaguar <i>Panthera onca</i> in the Pantanal region of Brazil",
+      "author": "Quigley, H.B. and Crawshaw Jr, P.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Crawshaw, P.G. Jr, .Mähler, J.K., Indrusiak, C., Cavalcanti, S.M.C., Leite-Pitman, M., R.P. and Silvius. K.M. 2004. Ecology and Conservation of the Jaguar (<i>Panthera onca</i>) in Iguaçu National Park, Brazil. In: K.M. Silvius, R.E. Bodmer and J. M. V. Fragoso (eds), <i>People in Nature: Wildlife Conservation in South and Central America</i>, pp. 271-285. Columbia University Press, NY.",
+      "year": "2004",
+      "title": "Ecology and Conservation of the Jaguar (<i>Panthera onca</i>) in Iguaçu National Park, Brazil",
+      "author": "Crawshaw, P.G. Jr, .Mähler, J.K., Indrusiak, C., Cavalcanti, S.M.C., Leite-Pitman, M., R.P. and Silvius. K.M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Tobler, M.W. and Powell, G.V.N. 2013. Estimating Jaguar densities with camera traps: Problems with current design and recommendations for future studies. <i>Biological Conservation</i> 159: 109-118.",
+      "year": "2013",
+      "title": "Estimating Jaguar densities with camera traps: Problems with current design and recommendations for future studies",
+      "author": "Tobler, M.W. and Powell, G.V.N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Crawshaw, P.G. Jr. and Quigley, H.B. 1991. Jaguar spacing, activity and habitat use in a seasonally flooded environment in Brazil. <i>Journal of Zoology, London</i> 223: 357-370.",
+      "year": "1991",
+      "title": "Jaguar spacing, activity and habitat use in a seasonally flooded environment in Brazil",
+      "author": "Crawshaw, P.G. Jr. and Quigley, H.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ceballos, G., González-Maya, J.F., Zarza, H. and Chávez, C. In press. Ecology and conservation of Jaguars in Mexico: state of knowledge and future challenges. In: A. Aguirre and R. Sukumar (eds), <i>Tropical Conservation: a view from the south on local and global priorities</i>, Oxford University Press, UK (in press).",
+      "year": "In press",
+      "title": "Ecology and conservation of Jaguars in Mexico: state of knowledge and future challenges",
+      "author": "Ceballos, G., González-Maya, J.F., Zarza, H. and Chávez, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Foster R.J., Harmsen, B.J., Valdes, B., Pomilla, C. and Doncaster, C.P. 2010b. Food habits of sympatric jaguars and pumas across a gradient of human disturbance. <i>Journal of Zoology</i> 280: 309-318.",
+      "year": "2010b",
+      "title": "Food habits of sympatric jaguars and pumas across a gradient of human disturbance",
+      "author": "Foster R.J., Harmsen, B.J., Valdes, B., Pomilla, C. and Doncaster, C.P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Quigley, H.B. and Crawshaw, P.G. 2002. Reproducción, crecimiento y dispersión del Jaguar en la región de Pantanal, Brasil. In: R.A. Medellín, C. Equihua, C. L.B. Chetkiewizc, P.G. Crawshaw, A. Rabinowitz, K.H. Redford, J.G. Robinson, E.W. Sanderson, and A.B. Taber (eds), <i>El Jaguar en el nuevo milenio</i>, pp. 289-302. Universidad Nacional Autónoma de México y Wildlife Conservation Society, México D.F.",
+      "year": "2002",
+      "title": "Reproducción, crecimiento y dispersión del Jaguar en la región de Pantanal, Brasil",
+      "author": "Quigley, H.B. and Crawshaw, P.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Espinosa, S., Albuja, L., Tirira, D.G., Zapata-Río, G., Araguillin, E., Ultreras, V. and Andrew, N. 2016. Análisis del estado de conservación del Jaguar en el Ecuador. In: R.A. Medellín, J.A. de la Torre, C. Chávez, H. Zarza and G. Ceballos (eds), <i>El Jaguar en el Siglo XXI: La Perspectiva Continental</i>, Fondo de Cultura Económica, Universidad Nacional Autónoma de México, Ciudad de México.",
+      "year": "2016",
+      "title": "Análisis del estado de conservación del Jaguar en el Ecuador",
+      "author": "Espinosa, S., Albuja, L., Tirira, D.G., Zapata-Río, G., Araguillin, E., Ultreras, V. and Andrew, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Grigione, M., Menke, K., López-González, C., List, R., Banda, A., Carrera, J., Carrera, R., Giordano, A., Morrison, J. and Sternberg, M. 2009. Identifying potential conservation areas for felids in the USA and Mexico: integrating reliable knowledge across an international border. <i>Oryx</i> 43: 78-86.",
+      "year": "2009",
+      "title": "Identifying potential conservation areas for felids in the USA and Mexico: integrating reliable knowledge across an international border",
+      "author": "Grigione, M., Menke, K., López-González, C., List, R., Banda, A., Carrera, J., Carrera, R., Giordano, A., Morrison, J. and Sternberg, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Foster, R.J., Harmsen, B.J., Macdonald, D.W., Collins, J., Urbina, Y., Garcia, R. and Doncaster, C.P. 2016. Wild meat: a shared resource amongst people and predators. <i>Oryx</i> 5(1): 63-75.",
+      "year": "2016",
+      "title": "Wild meat: a shared resource amongst people and predators",
+      "author": "Foster, R.J., Harmsen, B.J., Macdonald, D.W., Collins, J., Urbina, Y., Garcia, R. and Doncaster, C.P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "D’Annunzio, R., Lindquist, E.J. and MacDicken, K.G. 2015. Global forest land-use change from 1990-2010: an update to the a global remote sensing survey of forests.",
+      "year": "2015",
+      "title": "Global forest land-use change from 1990-2010: an update to the a global remote sensing survey of forests",
+      "author": "D’Annunzio, R., Lindquist, E.J. and MacDicken, K.G. ",
+      "citation_short": null
+    },
+    {
+      "citation": "TSJRT. 2012. <i>Recovery outline for the Jaguar (</i>Panthera onca<i>).</i>.",
+      "year": "2012",
+      "title": "Recovery outline for the Jaguar (<i>Panthera onca</i>).",
+      "author": "TSJRT",
+      "citation_short": null
+    },
+    {
+      "citation": "Payán, E., Castaño-Uribe, C., Gonzalez-Maya, J. F., Valderrama, C., Ruiz-Garcia, M. and Soto, C. 2013b. Distribución y estado de conservación del Jaguar en Colombia. In: Payán, E. and Castaño-Uribe, C (eds), <i>Grandes Felinos de Colombia</i>, pp. 23-36. Panthera Colombia, Fundación Herencia Ambiental Caribe, Conservación Internacional Colombia y Cat Specialist Group UICN/SSC, Bogotá.",
+      "year": "2013b",
+      "title": "Distribución y estado de conservación del Jaguar en Colombia",
+      "author": "Payán, E., Castaño-Uribe, C., Gonzalez-Maya, J. F., Valderrama, C., Ruiz-Garcia, M. and Soto, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Figueroa, O. 2013. The ecology and conservation of Jaguars (<i>Panthera onca</i>) in Central Belize: Conservation status, diet, movement patterns and habitat use. PhD Thesis, University of Florida, USA.",
+      "year": "2013",
+      "title": "The ecology and conservation of Jaguars (<i>Panthera onca</i>) in Central Belize: Conservation status, diet, movement patterns and habitat use",
+      "author": "Figueroa, O. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Payán, E., Carbone, C., Homewood, K., Paemelaere, E., Quigley, H. B. and Durant, S. 2013a. Where will Jaguars roam? the importance of survival in unprotected lands. In: Ruiz-Garcia, M. and Shostell, J. (eds), <i>Molecular Population genetics, Phylogenetics, Evolutionary Biology and Conservation of the Neotropical Carnivores</i>, pp. 603-628. Nova Science, New York.",
+      "year": "2013a",
+      "title": "Where will Jaguars roam? the importance of survival in unprotected lands",
+      "author": "Payán, E., Carbone, C., Homewood, K., Paemelaere, E., Quigley, H. B. and Durant, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ceballos, G., Chávez, C., Rivera, A., Manterola, C. and Wall, B. 2002. Tamáno poblacional y conservación del Jaguar en la reserve de la bioserfa Calakmul, Campeche, México. In: R. A. Medellín, C. Equihua, C. L. B. Chetkiewicz, P. G. Crawshaw, A. Rabinowitz, K. H. Redford, J. G. Robinson, E. W. Sanderson, and A. Taber (eds), <i>El Jaguar en el Nuevo Mileno</i>, pp. 403-417 . Fondo de Cultura Economica, Universidad Nacional Autonoma de Mexico, Wildlife Conservation Society.",
+      "year": "2002",
+      "title": "Tamáno poblacional y conservación del Jaguar en la reserve de la bioserfa Calakmul, Campeche, México",
+      "author": "Ceballos, G., Chávez, C., Rivera, A., Manterola, C. and Wall, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Paviolo, A., De Angelo, C.D., Di Blanco, Y.E. and Di Bitetti, M.S. 2008. Jaguar <i>Panthera onca</i> population decline in the Upper Paraná Atlantic Forest of Argentina and Brazil. <i>Oryx</i> 42: 554-561.",
+      "year": "2008",
+      "title": "Jaguar <i>Panthera onca</i> population decline in the Upper Paraná Atlantic Forest of Argentina and Brazil",
+      "author": "Paviolo, A., De Angelo, C.D., Di Blanco, Y.E. and Di Bitetti, M.S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ruiz-Garcia, M. and Payán, E. 2013. Craniometric variation in Jaguar subspecies (<i>Panthera onca</i>) from Colombia. In: Ruiz-Garcia, M. and Shostell, J. (eds), <i>Molecular Population Genetics, Phylogenetics, Evolutionary Biology and Conservation of the Neotropical Carnivores</i>, pp. 465-484. Nova Science, New York.",
+      "year": "2013",
+      "title": "Craniometric variation in Jaguar subspecies (<i>Panthera onca</i>) from Colombia",
+      "author": "Ruiz-Garcia, M. and Payán, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hoogesteijn, A., Hoogesteijn, R., Boede, E.O., Gonzalez-Fernandez, A., Isasi-Catala, E., Yerena, E. and Torres, D. 2016. Situacion de las poblaciones del Jaguar en Venezuela, estudio retrospectivo. In: Medellin, R., Chavez, C., de la Torre, A., Zarza, H. and Ceballos, G. (eds), <i>El Jaguar en el Siglo XXI: La Perspectiva continental</i>, Mexico: Fondo de Cultura Economica.",
+      "year": "2016",
+      "title": "Situacion de las poblaciones del Jaguar en Venezuela, estudio retrospectivo",
+      "author": "Hoogesteijn, A., Hoogesteijn, R., Boede, E.O., Gonzalez-Fernandez, A., Isasi-Catala, E., Yerena, E. and Torres, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "McCain, E.B. and Childs, J.L. 2008. Evidence of Resident Jaguars (<i>Panthera onca</i>) in the Southwestern United States and the Implications for Conservation. <i>Journal of Mammalogy</i>: 1-10.",
+      "year": "2008",
+      "title": "Evidence of Resident Jaguars (<i>Panthera onca</i>) in the Southwestern United States and the Implications for Conservation",
+      "author": "McCain, E.B. and Childs, J.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Swank, W.G. and Teer, J.G. 1989. Status of the Jaguar. <i>Oryx</i> 23: 14-21.",
+      "year": "1989",
+      "title": "Status of the Jaguar",
+      "author": "Swank, W.G. and Teer, J.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Keuroghlian, A., Desbiez, A., Reyna-Hurtado, R., Altrichter, M., Beck, H., Taber, A. and Fragoso, J.M.V. 2013. <i>Tayassu pecari</i>. The IUCN Red List of Threatened Species 2013. Available at: <a href=\"http://dx.doi.org/10.2305/IUCN.UK.2013-1.RLTS.T41778A44051115.en\">http://dx.doi.org/10.2305/IUCN.UK.2013-1.RLTS.T41778A44051115.en</a>. (Accessed: 25 Nov 2015).",
+      "year": "2013",
+      "title": "<i>Tayassu pecari</i>. The IUCN Red List of Threatened Species 2013",
+      "author": "Keuroghlian, A., Desbiez, A., Reyna-Hurtado, R., Altrichter, M., Beck, H., Taber, A. and Fragoso, J.M.V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Díaz-Santos, F., Polisar, J., Maffei, L. and Santos-Díaz, F.G. 2016. Avances en el conocimiento de los Jaguares en Nicaragua. In: R.A. Medellín, J.A. de la Torre, C. Chávez, H. Zarza and G. Ceballos (eds), <i>El Jaguar en el Siglo XXI:La Perspectiva Continenta</i>, Fondo de Cultura Económica, Universidad Nacional Autónoma de México, Ciudad de México.",
+      "year": "2016",
+      "title": "Avances en el conocimiento de los Jaguares en Nicaragua",
+      "author": "Díaz-Santos, F., Polisar, J., Maffei, L. and Santos-Díaz, F.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kay, E., Dickerson, A., Urbina, Y., Lizama, D., Correa, E., Cruz, F., Garcia, R., Thompson, R., Williams, L., Quintana, R., Young, J., Andrewin-Bohn, J., Cawich, V., Joseph, R., Humes, S,. Mai, A. 2015. Central Belize Corridor: Conservation Action Plan 2015-2018.",
+      "year": "2015",
+      "title": "Central Belize Corridor: Conservation Action Plan 2015-2018",
+      "author": "Kay, E., Dickerson, A., Urbina, Y., Lizama, D., Correa, E., Cruz, F., Garcia, R., Thompson, R., Williams, L., Quintana, R., Young, J., Andrewin-Bohn, J., Cawich, V., Joseph, R., Humes, S,. Mai, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Medellín, R.A., Chetkiewicz, C., Rabinowitz, A., Redford, K. H., Robin- son, J.G., Sanderson, E. and Taber, A. (eds). 2002. <i>Jaguares en el nuevo milenio: una evaluación de su estado, detección de prioridades y recomendaciones para la conservación de los Jaguares en América</i>. Universidad Nacional Autónoma de México / Wildlife Conservation Society, México.",
+      "year": "2002",
+      "title": "Jaguares en el nuevo milenio: una evaluación de su estado, detección de prioridades y recomendaciones para la conservación de los Jaguares en América",
+      "author": "Medellín, R.A., Chetkiewicz, C., Rabinowitz, A., Redford, K. H., Robin- son, J.G., Sanderson, E. and Taber, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schaller, G.B. and Crawshaw, P.G. 1980. Movement patterns of Jaguar. <i>Biotrópica </i> 12: 161-166.",
+      "year": "1980",
+      "title": "Movement patterns of Jaguar",
+      "author": "Schaller, G.B. and Crawshaw, P.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hoogesteijn, R. and Hoogesteijn, A. 2008. Conflicts between cattle ranching and large predators in Venezuela: could use of water buffalo facilitate felid conservation? <i>Oryx </i> 42: 132.",
+      "year": "2008",
+      "title": "Conflicts between cattle ranching and large predators in Venezuela: could use of water buffalo facilitate felid conservation?",
+      "author": "Hoogesteijn, R. and Hoogesteijn, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rosas-Rosas, O.C. and Bender, L.C. 2012. Population status of Jaguars (<i>Panthera onca</i>) and pumas (<i>Puma concolor</i>) in northeastern Sonora, Mexico. <i>Acta Zoológica Mexicana</i> 28: 86-101.",
+      "year": "2012",
+      "title": "Population status of Jaguars (<i>Panthera onca</i>) and pumas (<i>Puma concolor</i>) in northeastern Sonora, Mexico",
+      "author": "Rosas-Rosas, O.C. and Bender, L.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Harmsen, B.J., Foster, R.J., Silver, S.C., Ostro, L.E.T. and Doncaster, C.P. 2010. The ecology of Jaguars in the Cockscomb Basin Wildlife Sanctuary, Belize. In: D.W. Macdonald and A. Loveridge (eds), <i>The Biology and Conservation of Wild Felids</i>, Oxford University Press.",
+      "year": "2010",
+      "title": "The ecology of Jaguars in the Cockscomb Basin Wildlife Sanctuary, Belize",
+      "author": "Harmsen, B.J., Foster, R.J., Silver, S.C., Ostro, L.E.T. and Doncaster, C.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mondolfi, E. and Hoogesteijn, R. 1982. Notes on the biology and status of Jaguar in Venzuela. In: S. D. Miller and D. D. Everett (eds), <i>Cats of the World: Biology, Conservation and Management</i>, pp. 85-123. National Wildlife Federation, Washington DC.",
+      "year": "1982",
+      "title": "Notes on the biology and status of Jaguar in Venzuela",
+      "author": "Mondolfi, E. and Hoogesteijn, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Soares, T.N., Telles, M.P.C., Resende, L.V., Silveira, L., Jácomo, A.T.A., Morato, R.G., Diniz-Filho, J.A.F., Eizirik, E. Brondani, R.P.V. and Brondani, C. 2006. Paternity testing and behavioural ecology: A case study of Jaguars (<i>Panthera onca</i>) in Emas National Park, Central Brazil. <i>Genteics and Molecular Biology</i> 29(4): 735-740.",
+      "year": "2006",
+      "title": "Paternity testing and behavioural ecology: A case study of Jaguars (<i>Panthera onca</i>) in Emas National Park, Central Brazil",
+      "author": "Soares, T.N., Telles, M.P.C., Resende, L.V., Silveira, L., Jácomo, A.T.A., Morato, R.G., Diniz-Filho, J.A.F., Eizirik, E. Brondani, R.P.V. and Brondani, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Moreno, R., Bustamante, A., Méndez-Carvajal, P. and Moreno, J. 2016. Jaguares (<i>Panthera onca</i>) en Panamá, Estado Actual y Conservación. In: R.A. Medellín, J.A. de la Torre, C. Chávez, H. Zarza and G. Ceballos (eds), <i>El Jaguar en el Siglo XXI:La Perspectiva Continental</i>, Fondo de Cultura Económica, Universidad Nacional Autónoma de México, Ciudad de México.",
+      "year": "2016",
+      "title": "Jaguares (<i>Panthera onca</i>) en Panamá, Estado Actual y Conservación",
+      "author": "Moreno, R., Bustamante, A., Méndez-Carvajal, P. and Moreno, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "González-Maya, J.F., Bustamante, A., Moreno, R., Salom-Pérez, R., Tavares, R. and Schipper, J. 2016. Estado de conservación y prioridades para el Jaguar en Costa Rica. In: R.A. Medellín, J.A. de la Torre, C. Chávez, H. Zarza and G. Ceballos (eds), <i>El Jaguar en el Siglo XXI:La Perspectiva Continental</i>, pp. Ciudad de México. Fondo de Cultura Económica, Universidad Nacional Autónoma de México.",
+      "year": "2016",
+      "title": "Estado de conservación y prioridades para el Jaguar en Costa Rica",
+      "author": "González-Maya, J.F., Bustamante, A., Moreno, R., Salom-Pérez, R., Tavares, R. and Schipper, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rabinowitz, A. and Zeller, K.A. 2010. A range-wide model of landscape connectivity and conservation for the Jaguar, <i>Panthera onca</i>. <i>Biological Conservation</i> 143: 939-945.",
+      "year": "2010",
+      "title": "A range-wide model of landscape connectivity and conservation for the Jaguar, <i>Panthera onca</i>",
+      "author": "Rabinowitz, A. and Zeller, K.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "de la Torre, J.A., Ceballos, G., Chavez, C., Zarza, H., and Medellín, R.A. 2016. Prioridades y recomendaciones. In: Medellín, R., de la Torre, J.A., Zarza, H., Chavez, C., and Ceballos, G. (eds), <i>El Jaguar en el Siglo XXI: La Perspectiva Continental</i>, pp. 495-505. Universidad Nacional Autónoma de México.",
+      "year": "2016",
+      "title": "Prioridades y recomendaciones",
+      "author": "de la Torre, J.A., Ceballos, G., Chavez, C., Zarza, H., and Medellín, R.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ministerio del Ambiente. 2015. Guía de inventario de la fauna silvestre. Ministerio del Ambiente, Dirección General de Evaluación Valoración y Financiamiento del Patrimonio Natural, Lima, Perú.",
+      "year": "2015",
+      "title": "Guía de inventario de la fauna silvestre",
+      "author": "Ministerio del Ambiente",
+      "citation_short": null
+    },
+    {
+      "citation": "Costa, L.P., Leite, Y.L.R., Mendes, S.L. and Ditchfield, A.D. 2005. Mammal conservation in Brazil. <i>Conservation Biology</i> 19: 672-679.",
+      "year": "2005",
+      "title": "Mammal conservation in Brazil",
+      "author": "Costa, L.P., Leite, Y.L.R., Mendes, S.L. and Ditchfield, A.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "U.S. Fish and Wildlife Service. in press. Recovery plan for the Jaguar, <i>Panthera onca</i>. U.S. Federal Register. (in press).",
+      "year": "in press",
+      "title": "Recovery plan for the Jaguar, <i>Panthera onca</i>",
+      "author": "U.S. Fish and Wildlife Service",
+      "citation_short": null
+    },
+    {
+      "citation": "Zimmermann, A., Walpole, M. and Leader-Williams, N. 2005. Cattle ranchers’ attitudes to conflicts with Jaguars in the Pantanal of Brazil. <i>Oryx</i> 39: 1-7.",
+      "year": "2005",
+      "title": "Cattle ranchers’ attitudes to conflicts with Jaguars in the Pantanal of Brazil",
+      "author": "Zimmermann, A., Walpole, M. and Leader-Williams, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Foster, R.J. 2008. The ecology of Jaguars in a human-influenced landscape. PhD Thesis, University of Southampton, UK.",
+      "year": "2008",
+      "title": "The ecology of Jaguars in a human-influenced landscape",
+      "author": "Foster, R.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jedrzejewski, W., Boede, E.O., Abarca, M., Sanchez-Mercado, A., Ferrer-Peris, J.R., Lampo, M., Velasquez, G., Carreno, R., Viloria, A.L., Hoogesteijn, R., Robinson, H.S., Stachowicz, I., Cerda, H., del Mar Weisz, M. Barros, T.R., Rivas, G.A., Borges, G., Molinari, J., Lew, D., Takiff, H., and Schmidt, K. 2016. Predicting carnivore distribution and extirpation rate base on human impacts and productivity factors; assessment of the state of Jaguar in Venezuela. <i>Biological Conservation</i>: 132-142.",
+      "year": "2016",
+      "title": "Predicting carnivore distribution and extirpation rate base on human impacts and productivity factors; assessment of the state of Jaguar in Venezuela",
+      "author": "Jedrzejewski, W., Boede, E.O., Abarca, M., Sanchez-Mercado, A., Ferrer-Peris, J.R., Lampo, M., Velasquez, G., Carreno, R., Viloria, A.L., Hoogesteijn, R., Robinson, H.S., Stachowicz, I., Cerda, H., del Mar Weisz, M. Barros, T.R., Rivas, G.A., Borges, G., Molinari, J., Lew, D., Takiff, H., and Schmidt, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "de la Torre, J.A. and Medellín, R.A. 2011. Jaguars <i>Panthera onca</i> in the Greater Lacandona Ecosystem, Chiapas, Mexico: population estimates and future prospects. <i>Oryx</i> 45: 546-553.",
+      "year": "2011",
+      "title": "Jaguars <i>Panthera onca</i> in the Greater Lacandona Ecosystem, Chiapas, Mexico: population estimates and future prospects",
+      "author": "de la Torre, J.A. and Medellín, R.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ceballos, G., Chávez, C., List, R., Zarza, H. and Medellín, R. 2011. Jaguar Conservation and Managment in México: Case Studies and Perspectives. Alianza Wwf-Telcel / Universidad Nacional Autónoma de México, México.",
+      "year": "2011",
+      "title": "Jaguar Conservation and Managment in México: Case Studies and Perspectives",
+      "author": "Ceballos, G., Chávez, C., List, R., Zarza, H. and Medellín, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Paviolo, A., De Angelo, C., Ferraz, K., Morato, R.G., Martinez Pardo, J., Srbek-Araujo, A.C., de Mello Beisiegel, B., Lima, F., Sana, D., de Silva, M.X., Valazquez, M.C., Cullen, L., Crawshaw Jr., P., Jorge, M.L., Galetti, P.M., Di Bitetti, M.S., Cunha de Paula, R., Eizirik, E., Mitchell Aida, T., Cruz, P., Perilli, M.L., Souza, A.S., Quiroga, V., Nakano, E., Ramirez Pinto, F. Fernandez, S., Costa, S., Moraes Jr., E., and Azevedo, F. 2016. A biodiversity hotspot losing its top predator: the challenge of Jaguar conservation in the Atlantic Forest of South America. Scientific Rep.",
+      "year": "2016",
+      "title": "A biodiversity hotspot losing its top predator: the challenge of Jaguar conservation in the Atlantic Forest of South America",
+      "author": "Paviolo, A., De Angelo, C., Ferraz, K., Morato, R.G., Martinez Pardo, J., Srbek-Araujo, A.C., de Mello Beisiegel, B., Lima, F., Sana, D., de Silva, M.X., Valazquez, M.C., Cullen, L., Crawshaw Jr., P., Jorge, M.L., Galetti, P.M., Di Bitetti, M.S., Cunha de Paula, R., Eizirik, E., Mitchell Aida, T., Cruz, P., Perilli, M.L., Souza, A.S., Quiroga, V., Nakano, E., Ramirez Pinto, F. Fernandez, S., Costa, S., Moraes Jr., E., and Azevedo, F. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Palmeira, F.B., Crawshaw, P.G., Haddad, C.M., Ferraz, K.M.P., and Verdade, L.M. Cattle depredation by puma (<i>Puma concolor</i>) and Jaguar (<i>Panthera onca</i>) in central-western Brazil. <i>Biological Conservation</i> 141: 118-125.",
+      "year": null,
+      "title": "Cattle depredation by puma (<i>Puma concolor</i>) and Jaguar (<i>Panthera onca</i>) in central-western Brazil",
+      "author": "Palmeira, F.B., Crawshaw, P.G., Haddad, C.M., Ferraz, K.M.P., and Verdade, L.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Olsoy, P.J., Zeller, K.A., Hicke, J.A., Quigley, H.B., Rabinowitz, A.R., and Thornton, D.H. 2016. ). Quantifying the effects of deforestation and fragmentation on a range-wide Conservation plan for Jaguars. <i>Biological Conservation</i> 203: 8-16.",
+      "year": "2016",
+      "title": "). Quantifying the effects of deforestation and fragmentation on a range-wide Conservation plan for Jaguars",
+      "author": "Olsoy, P.J., Zeller, K.A., Hicke, J.A., Quigley, H.B., Rabinowitz, A.R., and Thornton, D.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Polisar, J., Maxit, I., Scognamillo, D., Farrell, L., Sunquist, M.E., and Eisenberg, J.F. 2003. Jaguars, pumas, their prey base, and cattle ranching: ecological interpretations of a management problem. Biological conservation. <i>109</i> 2(297-310).",
+      "year": "2003",
+      "title": "Jaguars, pumas, their prey base, and cattle ranching: ecological interpretations of a management problem. Biological conservation",
+      "author": "Polisar, J., Maxit, I., Scognamillo, D., Farrell, L., Sunquist, M.E., and Eisenberg, J.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cavalcanti, S.M. and Gese, E.M. 2009. Spatial ecology and social interactions of Jaguars (<i>Panthera onca</i>) in the southern Pantanal, Brazil. <i>Journal of Mammalogy</i> 90(4): 935-945.",
+      "year": "2009",
+      "title": "Spatial ecology and social interactions of Jaguars (<i>Panthera onca</i>) in the southern Pantanal, Brazil",
+      "author": "Cavalcanti, S.M. and Gese, E.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "de la Torre, J.A., Nuñez, J.M. and Medellín, R. 2017a. Habitat availability and connectivity for Jaguars in the southern Mayan Forest: Conservation priorities for a fragmented landscape. <i>Biological Conservation </i> 206: 270-282.",
+      "year": "2017a",
+      "title": "Habitat availability and connectivity for Jaguars in the southern Mayan Forest: Conservation priorities for a fragmented landscape",
+      "author": "de la Torre, J.A., Nuñez, J.M. and Medellín, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Foster, R.J. and Harmsen, B.J. 2012. A Critique of Density Estimation From Camera-Trap Data. <i>Journal of Wildlife management</i> 76: 224-236.",
+      "year": "2012",
+      "title": "A Critique of Density Estimation From Camera-Trap Data",
+      "author": "Foster, R.J. and Harmsen, B.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hoogesteijn, R. and Hoogesteijn, A. 2011. <i>Estrategias anti-depredación para fincas ganaderas en Latinoamérica: una guía</i>. Campo Grande: Panthera.",
+      "year": "2011",
+      "title": "Estrategias anti-depredación para fincas ganaderas en Latinoamérica: una guía",
+      "author": "Hoogesteijn, R. and Hoogesteijn, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "García-Anleu, R., McNab, R.B., Polisar, J., Ramos, V.H., Moreira, J., Ponce-Santizo, G., et al. 2016. Estatus del Jaguar en Guatemala, informe del año 2013. In: R.A. Medellín, J.A. de la Torre, C. Chávez, H. Zarza and G. Ceballos (eds), <i>El Jaguar en el Siglo XXI: La Perspectiva Continental</i>, Fondo de Cultura Económica, Universidad Nacional Autónoma de México, Ciudad de México.",
+      "year": "2016",
+      "title": "Estatus del Jaguar en Guatemala, informe del año 2013",
+      "author": "García-Anleu, R., McNab, R.B., Polisar, J., Ramos, V.H., Moreira, J., Ponce-Santizo, G., et al.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rabinowitz, A.R. and Nottingham, B.G. 1986. Ecology and behavior of the Jaguar (<i>Panthera onca</i>) in Belize, Central America. <i>J. of Zool. London</i> 210: 149-159.",
+      "year": "1986",
+      "title": "Ecology and behavior of the Jaguar (<i>Panthera onca</i>) in Belize, Central America",
+      "author": "Rabinowitz, A.R. and Nottingham, B.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Medellín, R.A., de la Torre, J.A., Chávez, C., Zarza, H. and Ceballos, G. 2016. <i>El Jaguar en el Siglo XXI: La Perspectica Continental</i>. Fondo de Cultura Económica, Universidad Nacional Autónoma de México, Ciudad de México.",
+      "year": "2016",
+      "title": "El Jaguar en el Siglo XXI: La Perspectica Continental",
+      "author": "Medellín, R.A., de la Torre, J.A., Chávez, C., Zarza, H. and Ceballos, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "de Azevedo, F.C.C., Gomes de Oliveira, T., de Paula, C.R., Bueno de Campos, C., Moraes Jr., E.A., Cavalcanti, S.M.C., et al. 2016. Estatus del Jaguar (<i>Panthera onca</i>) en Brasil. In: R.A. Medellín, J.A. de la Torre, H. Zarza, C. Chávez and G. Ceballos (eds), <i>El Jaguar en el Siglo XXI: La Perspectiva Continental</i>, Fondo de Cultura Económica, Universidad Nacional Autónoma de México, México.",
+      "year": "2016",
+      "title": "Estatus del Jaguar (<i>Panthera onca</i>) en Brasil",
+      "author": "de Azevedo, F.C.C., Gomes de Oliveira, T., de Paula, C.R., Bueno de Campos, C., Moraes Jr., E.A., Cavalcanti, S.M.C., et al. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Palomares, F., Roques, S., Chávez, C., Silveira, L., Keller, C., Sollmann, R. et al. 2012. High proportion of male faeces in Jaguar populations. <i>PLoS ONE</i> 7(12): e52923.",
+      "year": "2012",
+      "title": "High proportion of male faeces in Jaguar populations",
+      "author": "Palomares, F., Roques, S., Chávez, C., Silveira, L., Keller, C., Sollmann, R. et al.",
+      "citation_short": null
+    },
+    {
+      "citation": "Foster, R.J., Harmsen, B.J. and Doncaster, C.P. 2010a. Habitat use by sympatric jaguars and pumas across a gradient of human disturbance in Belize. <i>Biotropica</i> 42: 724-731.",
+      "year": "2010a",
+      "title": "Habitat use by sympatric jaguars and pumas across a gradient of human disturbance in Belize",
+      "author": "Foster, R.J., Harmsen, B.J. and Doncaster, C.P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Campbell, M. 2015. The Factors for the Extinction of Jaguars and Cougars in El Salvador. <i>J Biodivers Biopros Dev</i> 3.",
+      "year": "2015",
+      "title": "The Factors for the Extinction of Jaguars and Cougars in El Salvador",
+      "author": "Campbell, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jorgenson, J.P. and Redford, K.H. 1993. Humans and big cats as predators in the neotropics. In: Dunstone, N. and Gorman, M. L. (eds), <i>Mammals as Predators</i>, Clarendon Press, Oxford.",
+      "year": "1993",
+      "title": "Humans and big cats as predators in the neotropics",
+      "author": "Jorgenson, J.P. and Redford, K.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Maffei, L., Polisar, J., Garcia, R., Moreira, J. and Noss, A.J. 2011. Perspectives from ten years of Jaguar (<i>Panthera onca</i>) camera trapping in Mesoamerica. <i>Mesoamericana</i> 15: 49-59.",
+      "year": "2011",
+      "title": "Perspectives from ten years of Jaguar (<i>Panthera onca</i>) camera trapping in Mesoamerica",
+      "author": "Maffei, L., Polisar, J., Garcia, R., Moreira, J. and Noss, A.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Scognamillo, D., Maxit, I.E., Sunquist, M. and Farrell, L. 2002. Ecología del Jaguar y el problema de la depredación de ganado en un hato de los Llanos venezolanos. In: R.A. Medellín, C. Equihua, C. L.B. Chetkiewizc, P.G. Crawshaw, A. Rabinowitz, K.H. Redford, J.G. Robinson, E.W. Sanderson, y A.B. Taber (ed.), <i>El Jaguar en el nuevo milenio</i>, pp. 139-150. Universidad Nacional Autónoma de México y Wildlife Conservation Society, México DF.",
+      "year": "2002",
+      "title": "Ecología del Jaguar y el problema de la depredación de ganado en un hato de los Llanos venezolanos",
+      "author": "Scognamillo, D., Maxit, I.E., Sunquist, M. and Farrell, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Payán, E., Soto, C., Ruiz-García, M., Nijhawan, S., González-Maya, J.F., Valderrama, C. and Castaño-Uribe, C. 2106. Unidades de conservación, conectividad y calidad del hábitat de Jaguar en Colombia. In: R.A. Medellín, J.A. de la Torre, H. Zarza, C. Chávez and G. Ceballos (eds), <i>In El Jaguar en el Siglo XXI: La Perspectiva Continental</i>, Fondo de Cultura Económica, Universidad Nacional Autónoma de México, México D.F., Mexico.",
+      "year": "2106",
+      "title": "Unidades de conservación, conectividad y calidad del hábitat de Jaguar en Colombia",
+      "author": "Payán, E., Soto, C., Ruiz-García, M., Nijhawan, S., González-Maya, J.F., Valderrama, C. and Castaño-Uribe, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bernal-Escobar, A., Payán, E. and Cordovez, J.M. 2015. Sex dependent spatially explicit stochastic dispersal modeling as a framework for the study of Jaguar conservation and management in South America. <i>Ecol. Model.</i> 299: 40-50.",
+      "year": "2015",
+      "title": "Sex dependent spatially explicit stochastic dispersal modeling as a framework for the study of Jaguar conservation and management in South America",
+      "author": "Bernal-Escobar, A., Payán, E. and Cordovez, J.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Núñez, R., Miller, B. and Lindzey, F. 2002. Ecología del Jaguar en la reserva de la bioserfa Chamela-Cuixmala, Jalisco, México. In: R. A. Medellín, C. Equihua, C. L. B. Chetkiewicz, P. G. Crawshaw, A. Rabinowitz, K. H. Redford, J. G. Robinson, E. W. Sanderson, and A. Taber (eds), <i>El Jaguar en el Nuevo Mileno</i>, Fondo de Cultura Economica, Universidad Nacional Autonoma de Mexico, Wildlife Conservation Society.",
+      "year": "2002",
+      "title": "Ecología del Jaguar en la reserva de la bioserfa Chamela-Cuixmala, Jalisco, México",
+      "author": "Núñez, R., Miller, B. and Lindzey, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nijhawan, S., Cunha de Paula, R. and Beisiegel, B. 2016. Conservation units, priority areas and dispersal corridors for Jaguars in Brazil. In: Paula, R., Cavalcanti, S. and Desbiez, A. (eds), <i>Action plan for Jaguar conservation in Brazil</i>, ICMBio, Brasilia.",
+      "year": "2016",
+      "title": "Conservation units, priority areas and dispersal corridors for Jaguars in Brazil",
+      "author": "Nijhawan, S., Cunha de Paula, R. and Beisiegel, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mora, J.M., Polisar, J., Portillo, H. and Franklin, C. 2016. Estado del Jaguar en Honduras. In: R.A. Medellín, J.A. de la Torre, C. Chávez, H. Zarza and G. Ceballos (eds), <i>El Jaguar en el Siglo XXI:La Perspectica Continental </i>, Fondo de Cultura Económica, Universidad Nacional Autónoma de México, Ciudad de México.",
+      "year": "2016",
+      "title": "Estado del Jaguar en Honduras",
+      "author": "Mora, J.M., Polisar, J., Portillo, H. and Franklin, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Maffei, L., Rumiz, D., Arispe, R., Cuéllar, E. and Noss, A. 2016. Situación del Jaguar en Bolivia. In: eds R.A. Medellín, J.A. de la Torre, H. Zarza, C. Chávez and G. Ceballos (eds), <i>El Jaguar en el Siglo XXI: La Perspectiva Continental</i>, Fondo de Cultura Económica, Universidad Nacional Autónoma de México, México.",
+      "year": "2016",
+      "title": "Situación del Jaguar en Bolivia",
+      "author": "Maffei, L., Rumiz, D., Arispe, R., Cuéllar, E. and Noss, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2017. The IUCN Red List of Threatened Species. Version 2017-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 5 December 2017).",
+      "year": "2017",
+      "title": "The IUCN Red List of Threatened Species. Version 2017-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2017-3"
+    },
+    {
+      "citation": "González-Maya, J., Finegan, B., Schipper, J. and Casanoves, F. 2007. <i>Densidad absoluta y conservación del jaguar y sus presas en la Región Talamanca Pacífico, Costa Rica</i>. The Nature Conservancy, San José, Costa Rica.",
+      "year": "2007",
+      "title": "Densidad absoluta y conservación del jaguar y sus presas en la Región Talamanca Pacífico, Costa Rica",
+      "author": "González-Maya, J., Finegan, B., Schipper, J. and Casanoves, F.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

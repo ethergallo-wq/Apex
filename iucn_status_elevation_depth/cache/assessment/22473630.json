@@ -1,0 +1,693 @@
+{
+  "assessment_date": "2019-10-21T01:00:00.000+01:00",
+  "year_published": "2021",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 22473612,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/22473612/22473630",
+  "citation": "Beraduccii, J., Msuya, C.A., Howell, K. & Ngalason, W. 2021. Varanus albigularis. The IUCN Red List of Threatened Species 2021: e.T22473612A22473630. Accessed on 15 May 2026.",
+  "assessment_id": 22473630,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 22473612,
+    "scientific_name": "Varanus albigularis",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 110230558,
+        "scientific_name": "Varanus albigularis ssp. albigularis",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "REPTILIA",
+        "order_name": "SQUAMATA",
+        "family_name": "VARANIDAE",
+        "genus_name": "Varanus",
+        "species_name": "albigularis",
+        "subpopulation_name": null,
+        "infra_name": "albigularis",
+        "authority": "(Daudin, 1802)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Monitor Lizard Specialist Group",
+            "url": "https://www.iucn.org/commissions/ssc-groups/amphibians-reptiles/monitor-lizard",
+            "description": "Co-Chairs: Mark Auliya (email: mark.auliya@ufz.de) and André Koch (email: andrepascalkoch@web.de)\nRed List Authority Coordinator: Michael Cota (email: herpetologe@gmail.com)"
+          }
+        ],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Rock Monitor",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "VARANIDAE",
+    "genus_name": "Varanus",
+    "species_name": "albigularis",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Daudin, 1802)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Monitor Lizard Specialist Group",
+        "url": "https://www.iucn.org/commissions/ssc-groups/amphibians-reptiles/monitor-lizard",
+        "description": "Co-Chairs: Mark Auliya (email: mark.auliya@ufz.de) and André Koch (email: andrepascalkoch@web.de)\nRed List Authority Coordinator: Michael Cota (email: herpetologe@gmail.com)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Angola monitor",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Rock Monitor",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Kapwaran",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Umbulu",
+        "language": "zul"
+      },
+      {
+        "main": false,
+        "name": "Weißkehlwaran",
+        "language": "ger"
+      },
+      {
+        "main": true,
+        "name": "White-throated Monitor",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Tupinambis albigularis Daudin, 1802",
+        "status": "ACCEPTED",
+        "genus_name": "Tupinambis",
+        "species_name": "albigularis",
+        "species_author": "Daudin, 1802",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Varanus  exanthematicus ssp. albigularis  (Daudin, 1802)",
+        "status": "ACCEPTED",
+        "genus_name": "Varanus ",
+        "species_name": "exanthematicus",
+        "species_author": null,
+        "infrarank_author": "(Daudin, 1802)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "albigularis "
+      },
+      {
+        "name": "Varanus  exanthematicus ssp. angolensis  (Schmidt, 1933)",
+        "status": "ACCEPTED",
+        "genus_name": "Varanus ",
+        "species_name": "exanthematicus",
+        "species_author": null,
+        "infrarank_author": "(Schmidt, 1933)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "angolensis "
+      },
+      {
+        "name": "Varanus  exanthematicus ssp. microstictus  (Boettger, 1893)",
+        "status": "ACCEPTED",
+        "genus_name": "Varanus ",
+        "species_name": "exanthematicus",
+        "species_author": null,
+        "infrarank_author": "(Boettger, 1893)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "microstictus "
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 2000,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species is distributed from Djibouti and Somalia through much of East Africa (where it is widespread in Tanzania and Kenya, but is known from only the Amudat-Moroto area in Uganda and is not known to occur in Rwanda or Burundi - Spawls <em>et al.</em> 2002), to Botswana, Namibia, Mozambique and South Africa (Spawls <em>et al</em>. 2002, Largen and Spawls 2010, Ineich 2001). In Ethiopia and Kenya its distribution reaches the border with South Sudan, but it appears not to occur in this country or in Sudan (Phillips 2004). Bayless (2002) report an isolated specimen-based record far north of the main distribution in Bahig, in the Matruh District of northern Egypt.&#160;In South Africa it is absent from the western parts of the Western Cape and the central and western portions of the Northern Cape, although there is some evidence of recent range extension in the Northern Cape (Alexander and Marais 2007). It is also largely absent from Highveld Grassland in the central parts of South Africa. Some records from Lesotho (Ambrose 2006) and Eastern Cape (Visser 1984) require confirmation. It ranges from sea level to around 2,000 m asl (Spawls <em>et al</em>. 2002, Largen and Spawls 2010).",
+    "population": "This species can be abundant in some areas, particularly where refuge sites exist (Spawls<em> et al</em>. 2002). It is rare in Djibouti (Ineich 2001), close to the northern limit of its range. It is widespread and abundant in South Africa (Alexander and Marais 2007).",
+    "habitats": "This diurnal and mostly terrestrial species inhabits dry and moist savanna, coastal thicket, woodland and semi-desert (Spawls <em>et al</em>. 2002). It uses a variety of shelter sites, including rock fissures, hollow trees, abandoned termite hills, mammal burrows and abandoned beehives (Spawls <em>et al.</em> 2002). Clutches of 8 to 51 eggs are laid by the female (Spawls <em>et al</em>. 2002).",
+    "threats": "There do not appear to be any major threats to this widespread monitor species. Although it is harvested to some degree exploitation is thought unlikely to threaten most species of monitor lizard, which tend to be abundant (Pernetta 2009 and refs therein). The white-throated monitor is not among the more heavily-traded species, comprising approximately 2% of the global documented trade in varanids between 1975 and 2005, and its range does not include any of the African countries considered major exporters of reptile species (Pernetta 2009).",
+    "measures": "In view of its wide range the species is presumed to occur in a number of protected areas. An assessment of the impacts of harvesting for traditional medicine in South Africa may be beneficial<span style=\"\">. In the South African regional Red List assessment the species' conservation status is Least Concern.&#160; The species is included in CITES Appendix II.</span>",
+    "use_trade": "This species is found in the international pet trade. It does not appear to be exploited for its skin.&#160;Between 1975 and 2005, CITES documented the export of 26,079 live White-throated Monitors from 14 countries (Pernetta 2009); although <em>Varanus albigularis</em> is not known from this many countries.<span style=\"\"> Mozambique is one of the major exporting countries of wild specimens (CITES trade database). The skin and fat of this species is used in the 'muti' trade in South Africa (Alexander and Marais 2007).</span>",
+    "rationale": "Listed as Least Concern on the basis that, while any threats to this species are poorly-known, it is widespread and there is no evidence of substantial declines. Harvesting pressures on this species are thought to be low, and so it is probably not at immediate risk from international trade.",
+    "trend_justification": null,
+    "taxonomic_notes": "The status of <em>Varanus ocellatus</em> is uncertain; it has been variously treated as a synonym of either<em> V. albigularis</em> or <em>V. exanthematicus</em> (Bennett 2004). This account follows Bennett (2004) in considering this form a synonym of <em>V. exanthematicus</em> with a distribution in Sudan (presumably South Sudan given the distribution for <em>V. exanthematicus</em> provided by this author). Specimens from Djibouti, Somalia and Ethiopia previously attributed to <em>V. ocellatus </em>are now understood to represent <em>V. albigularis</em> (Ineich 2001, Largen and Spawls 2006). A phylogeographic study comparing populations throughout the range of <em>V. albigularis </em>would be informative, including clarification of the status of forms previously recognized as subspecies but <span style=\"\">rejected by Broadley and Howell (1991), and the currently recognized subspecies <em>V. a. angolensis</em>. Currently three subspecies are recognized: V<em style=\"\">aranus a. albigularis</em> (southern Africa, north to Angola, Zambia, Mozambique), <em style=\"\">V. albigularis angolensis </em>(Angola, Namibia, Zambia, DR Congo), <em style=\"\">V. albigularis microstictus</em> (northeastern Africa, Ethiopia to northern and central Mozambique) (Auliya and Koch 2020).</span>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ethiopia"
+      },
+      "code": "ET"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Djibouti"
+      },
+      "code": "DJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Botswana"
+      },
+      "code": "BW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malawi"
+      },
+      "code": "MW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Zimbabwe"
+      },
+      "code": "ZW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Zambia"
+      },
+      "code": "ZM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uganda"
+      },
+      "code": "UG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lesotho"
+      },
+      "code": "LS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eswatini"
+      },
+      "code": "SZ"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    }
+  ],
+  "threats": [],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Beraduccii, J., Msuya, C.A., Howell, K. & Ngalason, W.",
+      "value": [
+        "Kim Howell",
+        "Charles Msuya (University of Dar es Salaam)",
+        "Joe Beraduccii",
+        "Wilirk Ngalason"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Auliya, M.",
+      "value": [
+        "Mark Auliya (Helmholtz-Zentrum für Umweltforschung (UFZ), Germany)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Cox, N.A.",
+      "value": [
+        "Neil Cox (Biodiversity Assessment Unit)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Broadley, D.G. and Howell, K.M. 1991. A check list of the reptiles of Tanzania, with synoptic keys. <i>Syntarsus</i> 1: 1-70.",
+      "year": "1991",
+      "title": "A check list of the reptiles of Tanzania, with synoptic keys",
+      "author": "Broadley, D.G. and Howell, K.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Largen, M.J. and Spawls, S. 2006. Lizards of Ethiopia (Reptilia Sauria): an annotated checklist, bibliography, gazetteer and identification key. <i>Tropical Zoology</i> 19: 21-109.",
+      "year": "2006",
+      "title": "Lizards of Ethiopia (Reptilia Sauria): an annotated checklist, bibliography, gazetteer and identification key",
+      "author": "Largen, M.J. and Spawls, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Spawls, S., Howell, K.M., Drewes, R.C. and Ashe, J. 2002. <i>A Field Guide to the Reptiles of East Africa</i>. Academic Press, Elsevier Science, San Diego, San Francisco, New York, Boston, London.",
+      "year": "2002",
+      "title": "A Field Guide to the Reptiles of East Africa",
+      "author": "Spawls, S., Howell, K.M., Drewes, R.C. and Ashe, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ineich, I. 2001. Reptiles et amphibians de la République de Djibouti. Museum Nationale d'Histoire Naturelle, Paris.",
+      "year": "2001",
+      "title": "Reptiles et amphibians de la République de Djibouti",
+      "author": "Ineich, I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pernetta, A.P. 2009. Monitoring the trade: Using the CITES database to examine the global trade in live monitor lizards (<i>Varanus</i> spp.). <i>Biawak</i> 3(2): 37-45.",
+      "year": "2009",
+      "title": "Monitoring the trade: Using the CITES database to examine the global trade in live monitor lizards (<i>Varanus</i> spp.)",
+      "author": "Pernetta, A.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bennett, D. 2004. <i>Varanus exanthematicus</i>. In: Pianka, E.R. and King, D. (eds), <i>Varanoid lizards of the world</i>, pp. 95-103. Indiana University Press, Bloomington, USA.",
+      "year": "2004",
+      "title": "<i>Varanus exanthematicus</i>",
+      "author": "Bennett, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ambrose, D. 2006. <i>Lesotho Annotated Bibliography Section 166: Reptiles Including Annotated Checklist</i>. Mamhlongo Productions, Roma, Lesotho.",
+      "year": "2006",
+      "title": "Lesotho Annotated Bibliography Section 166: Reptiles Including Annotated Checklist",
+      "author": "Ambrose, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Spawls, S., Howell, K., Drewes, R. and Ashe, J. 2002. <i>A Field Guide to the Reptiles of East Africa</i>. Academic Press, London and San Diego.",
+      "year": "2002",
+      "title": "A Field Guide to the Reptiles of East Africa",
+      "author": "Spawls, S., Howell, K., Drewes, R. and Ashe, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Alexander, G.J. and Marais, J. 2007. <i>A Guide to Reptiles of Southern Africa</i>. Struik Publishers, Cape Town.",
+      "year": "2007",
+      "title": "A Guide to Reptiles of Southern Africa",
+      "author": "Alexander, G.J. and Marais, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2021. The IUCN Red List of Threatened Species. Version 2021-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 04 September 2021).",
+      "year": "2021",
+      "title": "The IUCN Red List of Threatened Species. Version 2021-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2021-2"
+    },
+    {
+      "citation": "Auliya, M. and Koch, A. 2020. <i>Visual Identification Guide to the Monitor Lizard Species of the World (Genus </i>Varanus<i>) - Guidance for the Identification of Monitor Lizards with current Distribution Data as well as short Explanations on Reproductive Characteristics and Captive Breeding as Support for Authorities of Species Protection Enforcement. BfN-Skripten 552</i>. BfN [German Federal Agency for Nature Conservation], Bonn.",
+      "year": "2020",
+      "title": "Visual Identification Guide to the Monitor Lizard Species of the World (Genus <i>Varanus</i>) - Guidance for the Identification of Monitor Lizards with current Distribution Data as well as short Explanations on Reproductive Characteristics and Captive Breeding as Support for Authorities of Species Protection Enforcement. BfN-Skripten 552",
+      "author": "Auliya, M. and Koch, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bayless, M.K. 2002. Monitor lizards: a pan-African check-list of their zoogeography (Sauria: Varanidae: Polydaedalus). <i>Journal of Biogeography</i> 29: 1643-1701.",
+      "year": "2002",
+      "title": "Monitor lizards: a pan-African check-list of their zoogeography (Sauria: Varanidae: Polydaedalus)",
+      "author": "Bayless, M.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Phillips, J. 2004. <i>Varanus albigularis</i>. In: Pianka, E.R. and King, D. (eds), <i>Varanoid Lizards of the World</i>, pp. 91-94. Indiana University Press, Bloomington, USA.",
+      "year": "2004",
+      "title": "<i>Varanus albigularis</i>",
+      "author": "Phillips, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Visser, J. 1984. Akkedisse van Suider-Afrika 31. Gepantserde Akkedisse: Net dinamiet sal diè kêrel laat roer. <i>Landbouweekblad</i>: 72-73, 75.",
+      "year": "1984",
+      "title": "Akkedisse van Suider-Afrika 31. Gepantserde Akkedisse: Net dinamiet sal diè kêrel laat roer.",
+      "author": "Visser, J.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

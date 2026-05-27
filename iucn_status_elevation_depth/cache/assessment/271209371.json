@@ -1,0 +1,1837 @@
+{
+  "assessment_date": "2024-06-11T01:00:00.000+01:00",
+  "year_published": "2025",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 18725,
+  "criteria": "A4acd",
+  "url": "https://www.iucnredlist.org/species/18725/271209371",
+  "citation": "Ahmed, T., Murugavel, B., Sharma, B., Ul Husan, A. & Salim, M. 2025. Pteropus medius (amended version of 2024 assessment). The IUCN Red List of Threatened Species 2025: e.T18725A271209371. Accessed on 15 May 2026.",
+  "assessment_id": 271209371,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 18725,
+    "scientific_name": "Pteropus medius",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CHIROPTERA",
+    "family_name": "PTEROPODIDAE",
+    "genus_name": "Pteropus",
+    "species_name": "medius",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Temminck, 1825",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Bat Specialist Group",
+        "url": "http://www.iucnbsg.org/",
+        "description": "Co-Chairs: Tigga Kingston (email: tigga.kingston@ttu.edu) and Rodrigo A. Medellin (email: medellin@miranda.ecologia.unam.mx)\nBat Red List Authority Coordinator (Old World): Dave Waldien (email: dwaldien@gmail.com)\nBat Red List Authority Coordinator (New World): Sergio Solari (email: sergiotys@gmail.com)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Indian Flying-fox",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Chamgadar",
+        "language": "hin"
+      },
+      {
+        "main": false,
+        "name": "Chamgadar",
+        "language": "urd"
+      },
+      {
+        "main": false,
+        "name": "Champa Badur",
+        "language": "ben"
+      },
+      {
+        "main": false,
+        "name": "Kadavaaval",
+        "language": "mal"
+      },
+      {
+        "main": false,
+        "name": "Narimuga Vouval",
+        "language": "tam"
+      },
+      {
+        "main": false,
+        "name": "Pazhamthinni Vaouval",
+        "language": "tam"
+      },
+      {
+        "main": false,
+        "name": "Zorro Volador de la India",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "Indian Flying Fox",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Pteropus assamensis McClelland, 1839",
+        "status": "undefined",
+        "genus_name": "Pteropus",
+        "species_name": "assamensis",
+        "species_author": "McClelland, 1839",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Pteropus giganteus (Brünnich, 1782)",
+        "status": "ACCEPTED",
+        "genus_name": "Pteropus",
+        "species_name": "giganteus",
+        "species_author": "(Brünnich, 1782)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Pteropus ariel G.M. Allen, 1908",
+        "status": "undefined",
+        "genus_name": "Pteropus",
+        "species_name": "ariel",
+        "species_author": "G.M. Allen, 1908",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Pteropus kelaarti J.E. Gray, 1871",
+        "status": "undefined",
+        "genus_name": "Pteropus",
+        "species_name": "kelaarti",
+        "species_author": "J.E. Gray, 1871",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Pteropus edwardsi I. Geoffroy, 1828",
+        "status": "New",
+        "genus_name": "Pteropus",
+        "species_name": "edwardsi",
+        "species_author": "I. Geoffroy, 1828",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Pteropus leucocephalus Hodgson, 1835",
+        "status": "New",
+        "genus_name": "Pteropus",
+        "species_name": "leucocephalus",
+        "species_author": "Hodgson, 1835",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Pteropus ruvicollis Ogilby, 1840 [misspelt <i>rubricollis</i> or <i>rubicollis</i>]",
+        "status": "New",
+        "genus_name": "Pteropus",
+        "species_name": "ruvicollis",
+        "species_author": "Ogilby, 1840 [misspelt <i>rubricollis</i> or <i>rubicollis</i>]",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Vespertilio gigantea  Brunnich, 1782",
+        "status": "ACCEPTED",
+        "genus_name": "Vespertilio",
+        "species_name": "gigantea ",
+        "species_author": "Brunnich, 1782",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Near Threatened"
+    },
+    "code": "NT"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 2000,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "11.7",
+    "congregatory": "Congregatory (year-round)",
+    "movement_patterns": "Full Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "No"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "No",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": ">2,000",
+    "continuing_decline_in_area_of_occupancy": "No",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": ">20,000",
+    "continuing_decline_in_extent_of_occurence": "No",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "No",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "The Indian Flying Fox is an Old-World fruit bat species with a broad geographic distribution across South Asia and extending to the eastern edge of Myanmar (McEvoy <em>et al.</em> 2021). This species thrives in diverse habitats from coastal lowlands to the Himalayan mountainous range across countries including Pakistan, India, Sri Lanka, Maldives, Nepal and Bangladesh, and has a limited presence near the Indian border in Bhutan (Molur <em>et al</em>. 2002). A historic occurrence in China is highly improbable and not considered further in this assessment.<br/><br/>The majority of the species’ distribution is found in India, Bangladesh and Pakistan. In India, the species is known from almost all the states and are particularly common in the southern and eastern states such as Tamil Nadu, Andhra Pradesh, and Odisha. They are also found in the western states of Maharashtra and Gujarat, as well as in the northeastern states of Assam and West Bengal (Dookia and Tak 2004, Dey <em>et al</em>. 2013, Kumar <em>et al</em>. 2016). In Pakistan, it has undergone a significant range expansion into the northern low-lying regions nestled within Pakistan's mountainous terrain attributed to climate change and increased temperatures. It is now mostly present in the central and northern regions of country, including in the provinces of Punjab, Sindh and Khyber Pakhtunkhwa and their distribution follows the broader Indus River and surrounding tributaries region (Mahmood-ul-Hassan <em>et al</em>. 2009, Gulraiz <em>et al</em>. 2015, Salim 2018). The distribution of Indian Flying Foxes has been recorded at an elevation of 1,420 m in Lower Dir, KPK, Pakistan (Khan <em>et al</em>. 2020).<br/><br/>The species has a wide distribution across nearly all divisions of Bangladesh, including Barisal, Dhaka, Mymensingh, Rajshahi, Rangpur, and Sylhet. Its range extends from Saint Martin's Island to various forest types such as deciduous, mixed-evergreen, tropical broadleaf, and mangrove forests, with the latter being the largest mangrove forest in the world (Ul Hasan and Kingston 2022). In Sri Lanka, they are found throughout the island, with the highest densities in the lowland rainforests of the southwestern and southern regions (Kryštufek 2009). The Indian Flying Fox is found in the Terai region and some parts of the western and central regions of Nepal (Neupane <em>et al</em>. 2016, Manandhar <em>et al</em>. 2018). The presence of the Indian Flying Fox in Bhutan is currently unconfirmed and are in want of substantial evidence, but the migration of this species to Bhutan is highly likely during the lean period. In the Maldives, this species is distributed in Addu Atol, north and south Male, Mulaku, and Dhidhoofinolhu Island (Accharya <em>et al</em>. 2012, Aul <em>et al</em>. 2014). In Myanmar the Indian flying foxes are found mainly in the western, eastern and southern regions of the country, particularly in the states of Rakhine, Chin, Bago, Pegu and Toungoo and Shan (Molur <em>et al</em>. 2002).<br/><br/>The range expansion in Pakistan has led to a significant increase in the global distribution of the Indian Flying Fox, and the number of locations where these bats are found. Despite this broader distribution, the elevation ranges from sea level to 1,300 m asl (Thapa <em style=\"font-family: Georgia, serif; font-size: 12pt;\">et al</em>. 2023).",
+    "population": "Although information on the species’ population size and trend is limited, there is a suspected past, ongoing, and projected future decline of 25–29% over three (3) generations (2012 to 2037; generation length = 11.7 years; Pacifici <em>et al</em>. 2013). The decline is due to past and continuing habitat loss, hunting, electrocution, and increasing frequency of extreme weather events that can severely impact colonies over broad areas. The population in lowland areas of Nepal have experienced up to a 90% decline (Neupane <em>et al</em>. 2016, Katuwal <em>et al.</em> 2019). Myanmar and southern parts of Pakistan (Mahmood-ul-Hassan <em>et al</em>. 2009) and northeastern parts of India (Ali 2010) has also reported significant decline. Insights into specific subpopulations is limited, but given the species’ vast range, it is suspected that there are regional subpopulations established through migratory routes. There are no data to suggest extreme fluctuations in the species population or number of mature individuals (McEvoy <em>et al</em>. 2021, Murugavel <em>et al</em>. 2023).",
+    "habitats": "The species is found in a variety of habitats, including forests, mangroves, and agricultural areas, and it is considered to be adaptable to a wide range of environments such as megacities, close to agricultural lands, near rivers and water bodies, and wildlife sanctuaries (Aul <em>et al</em>. 2014, Chavan and Deshbhratar 2019, Mishra<em> et al</em>. 2020). Overall, the roost habitat of Indian Flying Foxes is declining due to human activities and environmental factors. Conservation efforts to protect and restore their habitat are crucial to help stabilize or increase their population numbers.<br/><br/> They roost in the open on tree branches in large numbers. Most of their roosts are permanent roosts but occasionally they are known to use temporary roosts for few days (McEvoy <em>et al</em>. 2021, Murugavel <em>et al</em>. 2023). Their roosts are often near waterbodies such as ponds (Hahn <em>et al</em>. 2014). In India, they roost in a range of tree species including but not restricted to <em>Anacadrium occidentale,</em> <em>Albizia lebbek, Azadirachta indica, Bambusa arundinacea, Bassia latifolia, Borassus flabellifer, Cocus nucifera, Ceiba speciosa,</em> <em>Dellonix regia</em> (<em>Eucalyptus globulus,</em> <em>Ficus benghalensis, Ficus religiosa, Ficus microcorpa, Lannea coromandelica, Madhuca longifolia, Polyalthia longifolia, Pongamia pinnata, Syzygium cumini, Tamarindus indica, </em>and <em>Terminalia arjuna </em>(Pandian and Suresh 2021). In Pakistan they roost in <em>Broussonetia papyrifera, Eucalyptus camaldulensis,</em> <em>Grevillea robusta, Hevea brasiliensis, Morus nigra, Morus alba, Melia azedarach, Populus nigra, Platanus orientalis, </em>and <em>Pinus raxburghii </em>(Mahmood-Ul-Hassan <em>et al</em>. 2010, Khan <em>et al</em>. 2020). In Nepal they prefer <em>Bombax ceiba</em>, <em>Celtis australis</em>, <em>Dendrocalamus strictus</em>, <em>Populus ciliata</em>, <em>Pinus roxburghii</em>, <em>Grevillea robusta</em>, <em>Eucalyptus</em> spp., <em>Lindera</em> spp., <em>Persea</em> spp., and other species (Neupane <em>et al</em>. 2016, Manandhar <em>et al</em>. 2018). In Sri Lanka they roost in <em>Terminalia arjuna</em>, <em>Hevea brasiliensis</em>, <em>Pterocarpus marsupium</em>, and <em>Bambusa vulgaris</em>. In Bangladesh, this species has been recorded from eucalyptus, bamboo, acacia (<em>Albizia</em> spp.), and <em>Shorea robusta</em> (Hahn <em>et al.</em> 2014).<br/><br/> The species is primarily frugivorous and nectarivorous, but occasionally feeds on leaves (Krishnarathi and Isaac 2016). It forages and visits sites in urban cities, natural vegetation, and plantations. Diet includes both wild and commercial fruits and flowers, including flowers from families such as&#160;<em>Anacardiaceae, Apiaceae, Asteraceae, Betulaceae, Brassicaceae, Chenopodeaceae, Fagaceae, Liliaceae, Malvaceae, Myrtaceae, Oleaceae, Pinaceae, Poaceae, Proteaceae, Rhamnaceae </em>(Tiwari <em>et al</em>. 2019) and fruits from families<em> Arecaceae, Anacardiaceae, Annonaceae, Bombacaceae, Caricaceae, Combertaceae, Curcurbitaceae, Fabaceae, Moraceae, Myrtaceae, Rhamnaceae, Rubiaceae, Sapotaceae, Solanaceae, </em>and<em> Meliacease</em> (Ashwin and Jayakumar 2019). Major fruits consumed include but not restricted to <em>Mangifera indica, Ficus racemosa, Syzygium jambos, Psidium guajava, Tamarindus indica</em> (Aung and Htay 2019). They feed on flowers including <em>Bombax ceiba, Eucalyptus camaldulensis, Grevillea robusta, Mangifera indica,</em> <em>Pinus roxburghii</em>, and other species (Tiwari <em>et al</em>. 2019). They are also known to feed on the leaves of <em>Albizzia lebbek, Cocus nucifera, Ficus virens, </em>and <em>Tamarindus indica</em> (Aung and Htay 2019). They play an important role in seed dispersal and pollination, making them associated with key ecosystem services.<br/><br/>The species’ breeding typically occurs between September and November, with mostly single young born between February and April. Recent observations have indicated that the species may have two mating seasons, one in winter and the other in summer. The first mating season was observed between December and January, while the second occurred during June and July (Mathur <em>et al</em>. 2011, Noureen <em>et al</em>. 2014). The species is known to have a lifespan of up to 15 years in the wild and 31 years in captivity (Nowak and Walker 1999).<br/><br/> Indian Flying Foxes are known to travel long distances in search of suitable roosting sites, and they often return to the same trees year after year (McEvoy <em>et al</em>. 2021, Murugavel <em>et al</em>. 2023). This species exhibits a central-place foraging pattern, and bats can travel from 4 to 40 km per night and usually return to the roost every night after foraging (Murugavel <em>et al</em>. 2023). However, some individuals are known to take multi-night trips before returning to the communal roost (McEvoy <em>et al</em>. 2021).<br/>  <br/> The roosting numbers of these fruit bats also exhibit high seasonal fluctuation, as they respond to extreme temperatures by moving to northern areas during the summer to avoid the intense heat. Extreme heat events have led to the deaths of Indian Flying Foxes in many parts of their geographic range (Dey <em>et al</em>. 2015, Ahmed <em>et al</em> 2019, Roy&#160;<em>et al</em>. 2020). Climate change-induced extreme heat events have caused the realised niche of this species to shrink continuously, resulting in the population's distribution expanding from the hot southern regions to include the milder central and northern regions of Pakistan (Mahmood-ul-Hassan <em>et al</em>. 2009). This shift is likely an adaptive response to avoid rising temperatures and extreme heat events.",
+    "threats": "One of the greatest threats to the Indian Flying Foxes is habitat loss and fragmentation. As human populations grow and expand, more and more of the bats' natural habitat is being converted for agriculture, urbanisation, and other human activities. This loss of habitat removes roost sites and can limit the bats' access to food and roosting sites, as well as isolate populations from one another, making it difficult for them to breed and maintain genetic diversity (Frick <em>et al</em>. 2020).<br/> <br/> Another major threat to Indian Flying Foxes is hunting and persecution by humans. These bats are often viewed as pests, as they can cause damage to crop and fruit orchards. As a result, they are often killed or subjected to other forms of persecution by humans, including capture and culling. In addition, there is a significant demand for Indian Flying Foxes in the traditional medicine and bushmeat trades, which puts additional pressure on their populations (Mildenstein <em>et al</em>. 2016, Frick <em>et al</em>. 2020, Murugan <em>et al</em>. 2020).<br/><br/> Further, extreme heat events are increasing in frequency and magnitude due to climate change and pose a significant threat that has led to the deaths of Indian flying foxes in many parts of their geographic range (Dey <em>et al</em>. 2015). These climate connected events are also causing weather patterns to become more unpredictable. As a result, Indian Flying Foxes are facing significant challenges in adapting to their changing environment (Dey <em>et al</em>. 2015, Roy <em>et al</em>. 2020).<br/><br/> Finally, Indian Flying Foxes are also known to be at risk of electrocution throughout their entire geographic range due to exposed high-voltage power lines such as in India (Rajasthan and Andaman Island) (Islands 2013, Chouhan and Shrivastava 2019), south and southwestern Sri Lanka (Tella <em>et al</em>. 2020). The primary cause of electrocution comes from their roosting habits as they often roost in large colonies in tall trees, and when departing a roost, they can accidentally collide with power lines or other electrical equipment, resulting in injury or death (Tella <em>et al.</em> 2020, Murugavel <em>et al</em>. 2023).",
+    "measures": "Species-specific conservation efforts for the Indian flying fox are limited, though the species is found in a number of protected areas throughout its range including the Point Calimere Wildlife Sanctuary in Tamil Nadu, Palamau Tiger Reserve, and Hazaribagh Wildlife Sanctuary in Jharkhand, Kawal Wildlife Sanctuary in Andhra Pradesh, Molem National Park in Goa, Kanha National Park in Madhya Pradesh, Chilka (Nalaban) Wildlife Sanctuary in Orissa, and Indravati National Park in Chattisgarh in India (Molur <em>et al.</em> 2002). This is also a species that is known to be conserved using spiritual practices in India. Often referred as the Sacred flying fox of India, many local communities associate the roosting trees and the bats with a deity and conserve them (Marimuthu 1988, Tangavelou <em>et al</em>. 2013, Balamurugan <em>et al</em>. 2021, Murugavel 2023). In Pakistan, these bats inhabit the Changa Manga, a protected area once known as the world's largest man-made forest. Unfortunately, this region has recently experienced extensive illegal deforestation, threatening its biodiversity.<br/><br/> The Indian Flying Fox is one of the most persecuted bat species due to its perceived threat to fruit crops (Singaravelan <em>et al</em>. 2009, Attaullah <em>et al</em>. 2022). This species is classified as \"Vermin\" under Schedule V of the Wildlife Protection Acts of both Pakistan and India, enacted in 1972. Such a classification effectively removes any legal protection for the species, labelling them as \"pests\" and thereby encouraging measures aimed at their eradication. However, there has been a notable change in India where, through the Wildlife (Protection) Amendment Act of 2022, the species' status was elevated to Schedule II. This upgrade signifies a substantial move towards the conservation of this species within Indian borders. This is also a species that is known to be conserved using spiritual practices in India. Often referred as the 'sacred flying fox of India', many local communities associate the roosting trees and the bats with a deity and conserve them (Marimuthu 1988, Tangavelou <em>et al</em>. 2013).<br/><br/> While these bats can be found in protected areas such as national parks and wildlife sanctuaries, more conservation actions are necessary to safeguard their habitat especially in urban areas where they are largely distributed. Despite conservation practices and efforts in the wildlife sanctuaries and rural habitats, these bats face constant conflict with humans in urban habitats. Protecting and managing the natural habitats of the species is crucial, which involves preserving forests and other natural surroundings that serve as sources of food and roosting sites. Promoting community level conservation efforts are also essential to encourage local practices of bat conservation and for long-term protection of the species. Moreover, safeguarding mangroves and other coastal habitats is also vital, as these areas provide significant feeding and roosting sites for Indian Flying Foxes.<br/> <br/> Law enforcement and reduction of hunting can be achieved through law enforcement and public education and awareness programs. These programs can help create public awareness of zoonoses risk associated with Indian Flying Fox meat and traditional medicine, and also educate local communities about the importance of the species for sustainable ecosystem (Voigt and Kingston 2016).<br/><br/> The frequency and duration of extreme temperatures caused by climate change are predicted to escalate by the end of the 21st century. Failure to take prompt action to combat this imminent climate change may lead to conservation challenge with disastrous ramifications for the survival of Indian Flying Foxes (Welbergen <em>et al.</em> 2008).<br/> <br/> To minimize the danger of electrocution for Indian Flying Foxes, numerous preservation measures can be implemented. One of the most efficient approaches is to equip power lines and other electrical devices with bat flight diverters or similar devices that make it harder for the animals to touch the equipment. It is crucial to base the design and deployment of power line bat diverters on the bats' vision rather than human vision (Martin 2022).<br/><br/> Monitoring and research on the population trends and habitat use of Indian Flying Foxes can provide important information for conservation efforts. This will help to understand their distribution, population trends, and habitat needs, allowing conservation efforts to be targeted more effectively. Involving local communities in conservation efforts can be a powerful tool for protecting Indian Flying Foxes. Community-based conservation initiatives can help to build local support for conservation efforts and can also provide an opportunity for local people to benefit from conservation activities (Voigt and Kingston 2016, Ahmed <em>et al</em>. 2023).",
+    "use_trade": "While the extent of hunting of Indian Flying Foxes is unclear, there is no evidence of international trade. It appears that the species is occasionally hunted at their foraging and roosting sites by tribal communities for local consumption and trade throughout its distributional range. However, there are reports of frequent consumption of bushmeat from Idukki District, Kerala, in southern India (Murugan <em>et al</em>. 2020) and by some tribal groups in Bangladesh and Nepal (Mickleburgh <em>et al</em>. 2009, Acharya <em>et al</em>. 2012, Openshaw <em>et al</em>. 2017). It is also hunted for use as a traditional medicinal cure for asthma, paralysis, fever, and pain. While hair and bodily fluids are most often used in traditional medicine (Tackett <em>et al</em>. 2022).<br/><br/> Conservation actions such as law enforcement, public education, and awareness programs may help to mitigate these threats and conserve Indian Flying Foxes’ populations (Ahmed <em>et al</em>. 2023). The Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES) lists Indian Flying Fox under Appendix II (CITES 2023), which means that international trade of this species is regulated and monitored by the government of the countries where it is found (Hemley 1994).",
+    "rationale": "The Indian Flying Fox (<em>Pteropus medius</em>) is assessed as Near Threatened due to a suspected past and projected future population reduction of 25–29% over three (3) generations (2012 to 2037; generation length = 11.7 years; Pacifici <em>et al</em>. 2013) approaching criterion A4acd. The significant reduction in the species’ population is due to past, ongoing, and increasing&#160;persecution stemming from the species' tendency to feed on orchards, in addition to the widespread hunting for bushmeat and traditional medicine.&#160;Direct mortality also comes from electrocution across much of the species’ range. Further, the species' habitat is significantly reduced and degraded as roost sites have been lost to urbanization and expansion of agricultural areas. The threats are continuing and are likely to worsen, especially those associated with extreme heat events from climate change, hunting, and persecution due to human-bat conflicts.",
+    "trend_justification": null,
+    "taxonomic_notes": "This taxon belongs to the <em>vampyrus</em> species group, but was previously included as <em>Pteropus vampyrus</em> (Linnaeus 1758) (Kloss and Andersen 1916, Lekagul and McNeely 1977, Nowak and Walker 1999), <em>P. giganteus</em> (Brünnich 1782), and <em>P. intermedius</em> Andersen, 1908 (Ellerman and Morrison-Scott 1951, Corbet and Hill 1992)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "6_2",
+      "description": {
+        "en": "Substitution"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "6_1",
+      "description": {
+        "en": "Linked enterprises & livelihood alternatives"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_2",
+      "description": {
+        "en": "Policies and regulations"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_3",
+      "description": {
+        "en": "Private sector standards & codes"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Passage",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": null,
+      "season": "Passage",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Passage",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Passage",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Subtropical/Tropical Heavily Degraded Former Forest"
+      },
+      "code": "14_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Mangrove Vegetation Above High Tide Level"
+      },
+      "code": "1_7"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": "No",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident",
+        "Breeding Season",
+        "Non-Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "No",
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Bhutan"
+      },
+      "code": "BT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "No",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident",
+        "Breeding Season",
+        "Non-Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "No",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident",
+        "Breeding Season",
+        "Non-Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Maldives"
+      },
+      "code": "MV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "No",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident",
+        "Breeding Season",
+        "Non-Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "No",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident",
+        "Breeding Season",
+        "Non-Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Nepal"
+      },
+      "code": "NP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "No",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident",
+        "Breeding Season",
+        "Non-Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "No",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident",
+        "Breeding Season",
+        "Non-Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Area-based Management Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Harvest & Trade Management Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Utility & service lines"
+      },
+      "code": "4_2"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Storms & flooding"
+      },
+      "code": "11_4"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Nomadic grazing"
+      },
+      "code": "2_3_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Shifting agriculture"
+      },
+      "code": "2_1_1"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Medium Impact: 7",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Temperature extremes"
+      },
+      "code": "11_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder plantations"
+      },
+      "code": "2_2_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Oil & gas drilling"
+      },
+      "code": "3_1"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry plantations"
+      },
+      "code": "2_2_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Ahmed, T., Murugavel, B., Sharma, B., Ul Husan, A. & Salim, M.",
+      "value": [
+        "Touseef Ahmed (Texas Tech University, Lubbock, Texas)",
+        "Baheerathan Murugavel (Indian Institute of Science Education and Research Mohali, Punjab, India)",
+        "Basanta Sharma (Kansas State University, Manhattan, Kansas)",
+        "Ashraf Ul Husan (Texas Tech University, Lubbock, Texas)",
+        "Mohammad Salim (Department of Forestry and Wildlife Management, Haripur, Pakistan)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Waldien, D.L. & Battistoni, A.",
+      "value": [
+        "Alessia Battistoni (Global Mammal Assessment)",
+        "David Waldien (Christopher Newport University)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Tsang, S.M., Molur, S., Srinivasulu, C., Bates, P. & Francis, C.",
+      "value": [
+        "Sanjay Molur (ZOO (Eastern Himalayas))",
+        "Chelmala Srinivasulu (Osmania University, Hyderabad, India / GRA Western Ghats Workshop)",
+        "P Bates",
+        "Susan Tsang (Department of Biology, City College of New York Department of Mammalogy, American Museum of Natural History)",
+        "C Francis"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This amended assessment has been created to correct the spelling of the assessor's name from \"Ul-Husan\" to \"Ul Husan\"."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C. 2013. Generation length for mammals. <i>Nature Conservation</i> 5: 87–94.",
+      "year": "2013",
+      "title": "Generation length for mammals",
+      "author": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Corbet, G.B. and Hill, J.E. 1992. <i>Mammals of the Indo-Malayan Region: a Systematic Review</i>. Oxford University Press, Oxford, UK.",
+      "year": "1992",
+      "title": "Mammals of the Indo-Malayan Region: a Systematic Review",
+      "author": "Corbet, G.B. and Hill, J.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nowak, R.M. 1999. <i>Walker's Mammals of the World</i>. The Johns Hopkins University Press, Baltimore, USA and London, UK.",
+      "year": "1999",
+      "title": "Walker's Mammals of the World",
+      "author": "Nowak, R.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Simmons, N.B. 2005. Order Chiroptera. In: D.E. Wilson and D.M. Reeder (eds), <i>Mammal Species of the World</i>, pp. 312-529. The Johns Hopkins University Press, Baltimore, MD, USA.",
+      "year": "2005",
+      "title": "Order Chiroptera",
+      "author": "Simmons, N.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Molur, S., Marimuthu, G., Srinivasulu, C., Mistry, S. Hutson, A. M., Bates, P. J. J., Walker, S., Padmapriya, K. and Binupriya, A. R. 2002. Status of South Asian Chiroptera: Conservation Assessment and Management Plan (C.A.M.P.) Workshop Report. Zoo Outreach Organization/CBSG-South Asia, Coimbatore, India.",
+      "year": "2002",
+      "title": "Status of South Asian Chiroptera: Conservation Assessment and Management Plan (C.A.M.P.) Workshop Report",
+      "author": "Molur, S., Marimuthu, G., Srinivasulu, C., Mistry, S. Hutson, A. M., Bates, P. J. J., Walker, S., Padmapriya, K. and Binupriya, A. R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bates, P.J.J. and Harrison, D.L. 1997. <i>Bats of the Indian Subcontinent</i>. Harrison Zoological Museum, Sevenoaks, England, UK.",
+      "year": "1997",
+      "title": "Bats of the Indian Subcontinent",
+      "author": "Bates, P.J.J. and Harrison, D.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Srinivasulu, C., Srinivasulu, B. and Sinha, Y. P. 2012. <i>Bats (Mammalia: Chiroptera) of South Asia: Biogeography, diversity, taxonomy and distribution</i>. Springer New York Heidelberg Dordrecht London.",
+      "year": "2012",
+      "title": "Bats (Mammalia: Chiroptera) of South Asia: Biogeography, diversity, taxonomy and distribution",
+      "author": "Srinivasulu, C., Srinivasulu, B. and Sinha, Y. P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ellerman, J.R. and Morrison-Scott, T.C.S. 1951. <i>Checklist of Palaearctic and Indian Mammals 1758 to 1946</i>. British Museum (Natural History), London, UK.",
+      "year": "1951",
+      "title": "Checklist of Palaearctic and Indian Mammals 1758 to 1946",
+      "author": "Ellerman, J.R. and Morrison-Scott, T.C.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lekagul, B. and McNeely, J.A. 1977. <i>Mammals of Thailand</i>. Association for the Conservation of Wildlife, Bangkok, Thailand.",
+      "year": "1977",
+      "title": "Mammals of Thailand",
+      "author": "Lekagul, B. and McNeely, J.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Horácek I., Hanák, V. and Gaisler, J. 2000. Bats of the Palearctic Region: a taxonomic and biogeographic review. In: B. W. Woloszyn (ed.), Proceedings of the VIIIth European Bat Research Symposium 1. Approaches to Biogeography and Ecology of Bats: 11-157. Krakow, Poland.",
+      "year": "2000",
+      "title": "Bats of the Palearctic Region: a taxonomic and biogeographic review",
+      "author": "Horácek I., Hanák, V. and Gaisler, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Welbergen, J. A., Klose, S. M., Markus, N. and Eby, P. 2008. Climate change and the effects of temperature extremes on Australian flying-foxes. <i>Proceedings of the Royal Society of London B Biological Sciences</i> 275: 419-425.",
+      "year": "2008",
+      "title": "Climate change and the effects of temperature extremes on Australian flying-foxes",
+      "author": "Welbergen, J. A., Klose, S. M., Markus, N. and Eby, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kloss, C. B. 1916. On a collection of mammals from the coast and islands of South-East Siam. <i>Proceedings of the Zoological Society of London</i> 1916: 27-75.",
+      "year": "1916",
+      "title": "On a collection of mammals from the coast and islands of South-East Siam",
+      "author": "Kloss, C. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ryley, K. V. 1916. Bombay Natural History Mammal Society's Survey of India, Report No. 11. Coorg. <i>Journal of Bombay Natural History Society</i> 22: 486-513.",
+      "year": "1916",
+      "title": "Bombay Natural History Mammal Society's Survey of India, Report No. 11. Coorg",
+      "author": "Ryley, K. V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Venkatesan, A. 2007. Status of Indian Flying Fox <i>Pteropus giganteus</i> in Bengaluru. <i>Bat Net Newsletter</i> 8(1-2): 13-15.",
+      "year": "2007",
+      "title": "Status of Indian Flying Fox <i>Pteropus giganteus</i> in Bengaluru",
+      "author": "Venkatesan, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hill, J. E. 1975. Systematic section.  In: J. E. Hill and J. A. McNeely (eds), The bats and bat’s parasite of Thailand. Report FE-516-1. US Army Res.\nDev. Group, Far East.",
+      "year": "1975",
+      "title": "Systematic section",
+      "author": "Hill, J. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Aul, B., Bates, P.J.J., Harrison, D.L. and Marimuthu, G. 2014. Diversity, distribution and status of bats on the Andaman and Nicobar Islands, India. <i>Oryx </i> 48(02): 204-214.",
+      "year": "2014",
+      "title": "Diversity, distribution and status of bats on the Andaman and Nicobar Islands, India",
+      "author": "Aul, B., Bates, P.J.J., Harrison, D.L. and Marimuthu, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mildenstein, T., Tanshi, I. and Racey, P.A. 2016. Exploitation of bats for bushmeat and medicine. In: Voigt and T. Kingston (eds), <i>Bats in the Anthropocene: Conservation of Bats in a Changing World</i>, pp. 325-375. Springer International Publishing.",
+      "year": "2016",
+      "title": "Exploitation of bats for bushmeat and medicine",
+      "author": "Mildenstein, T., Tanshi, I. and Racey, P.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hemley, G. 1994. <i>International wildlife trade: A CITES sourcebook</i>.",
+      "year": "1994",
+      "title": "International wildlife trade: A CITES sourcebook",
+      "author": "Hemley, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ali, A. 2010. Population trend and conservation status of Indian flying fox Pteropus giganteus Brunnich, 1782 (Chiroptera, Pteropodidae) in Western Assam. <i>The Ecoscan</i> 4: 11-12.",
+      "year": "2010",
+      "title": "Population trend and conservation status of Indian flying fox Pteropus giganteus Brunnich, 1782 (Chiroptera, Pteropodidae) in Western Assam",
+      "author": "Ali, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Aung, M.M. and Htay, T.T. 2019. Dietary analysis of the Indian flying fox Pteropus giganteus (Brunnich, 1782) (Chiroptera: Pteropodidae) in Myanmar through the analysis of faecal and chewed remnants. <i>Journal of Threatened Taxa</i> 11: 13977-13983.",
+      "year": "2019",
+      "title": "Dietary analysis of the Indian flying fox Pteropus giganteus (Brunnich, 1782) (Chiroptera: Pteropodidae) in Myanmar through the analysis of faecal and chewed remnants",
+      "author": "Aung, M.M. and Htay, T.T. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Dey, S., Roy, U., and Chattopadhyay, S. 2013. Distribution and abundance of three populations of Indian flying fox (Pteropus giganteus) from Purulia District of West Bengal, India. <i>Taprobanica </i> 5: 60-66.",
+      "year": "2013",
+      "title": "Distribution and abundance of three populations of Indian flying fox (Pteropus giganteus) from Purulia District of West Bengal, India",
+      "author": "Dey, S., Roy, U., and Chattopadhyay, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dey, S. Roy, U., and Chattopadhyay, S. 2015. Effect of heat wave on the Indian flying fox Pteropus giganteus (Mammalia: Chiroptera: Pteropodidae) population from Purulia District of West Bengal, India. <i>Journal of Threatened Taxa</i> 7: 7029-7033.",
+      "year": "2015",
+      "title": "Effect of heat wave on the Indian flying fox Pteropus giganteus (Mammalia: Chiroptera: Pteropodidae) population from Purulia District of West Bengal, India",
+      "author": "Dey, S. Roy, U., and Chattopadhyay, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gulraiz, T.L., Javid, A., Mahmood-Ul-Hassan, M., Maqbool, A., Ashraf, S., Hussain, M., and Daud, S. 2015. Roost characteristics and habitat preferences of Indian flying fox (Pteropus giganteus) in urban areas of Lahore, Pakistan. <i>Turkish Journal of Zoology </i> 39: 388-394.",
+      "year": "2015",
+      "title": "Roost characteristics and habitat preferences of Indian flying fox (Pteropus giganteus) in urban areas of Lahore, Pakistan",
+      "author": "Gulraiz, T.L., Javid, A., Mahmood-Ul-Hassan, M., Maqbool, A., Ashraf, S., Hussain, M., and Daud, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Hahn, M.B., Epstein, J.H., Gurley, E.S., Islam, M.S., Luby, S.P., Daszak, P., and Patz, J.A. 2014. Roosting behavior and habitat selection of Pteropus giganteus reveal potential links to Nipah virus epidemiology. <i>Journal of Applied Ecology</i> 51: 376-387.",
+      "year": "2014",
+      "title": "Roosting behavior and habitat selection of Pteropus giganteus reveal potential links to Nipah virus epidemiology",
+      "author": "Hahn, M.B., Epstein, J.H., Gurley, E.S., Islam, M.S., Luby, S.P., Daszak, P., and Patz, J.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kryštufek, B. 2009. On the Indian flying fox (Pteropus giganteus) colony in Peradeniya Botanical Gardens, Sri Lanka. <i>Hystrix</i> 20: 29-35.",
+      "year": "2009",
+      "title": "On the Indian flying fox (Pteropus giganteus) colony in Peradeniya Botanical Gardens, Sri Lanka",
+      "author": "Kryštufek, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mahmood-ul-Hassan, M., Gulraiz, T.L., Rana, S.A., and Javid, A. 2010. The diet of Indian flying-foxes (Pteropus giganteus) in urban habitats of Pakistan. <i>Acta Chiropterologica</i> 12: 341-347.",
+      "year": "2010",
+      "title": "The diet of Indian flying-foxes (Pteropus giganteus) in urban habitats of Pakistan",
+      "author": "Mahmood-ul-Hassan, M., Gulraiz, T.L., Rana, S.A., and Javid, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Neupane, K.R., Basnet, K., Katuwal, H.B. 2016. Plight of Indian flying fox (Pteropus giganteus) in lowlands of eastern Nepal. <i>World Journal of Zoology </i> 11: 81-85.",
+      "year": "2016",
+      "title": "Plight of Indian flying fox (Pteropus giganteus) in lowlands of eastern Nepal",
+      "author": "Neupane, K.R., Basnet, K., Katuwal, H.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Win, S.S., and Mya, K.M. 2015. The diet of the Indian flying fox Pteropus giganteus (Brunnich 1782) (Chiroptera: Pteropodidae) in Myanmar – conflicts with local people? <i>Journal of Threatened Taxa</i> 7: 7568-7572.",
+      "year": "2015",
+      "title": "The diet of the Indian flying fox Pteropus giganteus (Brunnich 1782) (Chiroptera: Pteropodidae) in Myanmar – conflicts with local people?",
+      "author": "Win, S.S., and Mya, K.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Singaravelan, N., Marimuthu, G. and Racey, P. 2009. Do fruit bats deserve to be listed as vermin in the Indian Wildlife (Protection) & Amended Acts? A critical review. <i>Oryx</i> 43: 608-613.",
+      "year": "2009",
+      "title": "Do fruit bats deserve to be listed as vermin in the Indian Wildlife (Protection) & Amended Acts? A critical review.",
+      "author": "Singaravelan, N., Marimuthu, G. and Racey, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mickleburgh, S., Waylen, K., and Racey, P. 2009. Bats as bushmeat: a global review. . <i> Oryx</i> 43: 217–234.",
+      "year": "2009",
+      "title": "Bats as bushmeat: a global review. ",
+      "author": "Mickleburgh, S., Waylen, K., and Racey, P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2024. The IUCN Red List of Threatened Species. Version 2024-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 28 October 2024).",
+      "year": "2024",
+      "title": "The IUCN Red List of Threatened Species. Version 2024-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2024-2"
+    },
+    {
+      "citation": "Accharya, P.R., Adhikari, H., Dahal, S., Thapa, A. and Thapa, S. 2012. <i>Bats of Nepal. A Field Guide</i>. Small Mammals Conservation and Research Foundation.",
+      "year": "2012",
+      "title": "Bats of Nepal. A Field Guide",
+      "author": "Accharya, P.R., Adhikari, H., Dahal, S., Thapa, A. and Thapa, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ahmed, T., Amjad, O.B., Ahmed, H., Ahmed, S., Ansari, J.A., Ricketson, R. and Tahir, M.F. 2023. A cross-sectional survey on fruit bat-human interaction in Pakistan; one health perspective. <i>One Health Outlook</i> 5: 1-10.",
+      "year": "2023",
+      "title": "A cross-sectional survey on fruit bat-human interaction in Pakistan; one health perspective",
+      "author": "Ahmed, T., Amjad, O.B., Ahmed, H., Ahmed, S., Ansari, J.A., Ricketson, R. and Tahir, M.F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ahmed, T., Asghar, M.W. and Mushtaq, M.H. 2019. A short report on epidemiological investigation of dog bite cases in association with temperature rise as a part of climate change. <i>Advancements in Life Sciences</i> 6(3): 106-109.",
+      "year": "2019",
+      "title": "A short report on epidemiological investigation of dog bite cases in association with temperature rise as a part of climate change",
+      "author": "Ahmed, T., Asghar, M.W. and Mushtaq, M.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ashwin, C.P. and Jayakumar, S. 2019. Diet of Indian Flying Fox <i>Pteropus giganteus</i> (Brünnich, 1782) in selected districts of Kerala and Tamil Nadu, India. <i>Journal of Scientific Transactions in Environment and Technovation</i> 13: 31-36.",
+      "year": "2019",
+      "title": "Diet of Indian Flying Fox <i>Pteropus giganteus</i> (Brünnich, 1782) in selected districts of Kerala and Tamil Nadu, India",
+      "author": "Ashwin, C.P. and Jayakumar, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Attaullah, A.S., Javid, A., Imran, M., Khan, T.M., Phelps, K. and Olival, K.J. 2022. Knowledge, perceptions, and attitudes by residents in Punjab and Khyber Pakhtunkhwa, Pakistan in connection with bats. <i>Journal of Ethnobiology and Ethnomedicine</i> 18(1): 43.",
+      "year": "2022",
+      "title": "Knowledge, perceptions, and attitudes by residents in Punjab and Khyber Pakhtunkhwa, Pakistan in connection with bats",
+      "author": "Attaullah, A.S., Javid, A., Imran, M., Khan, T.M., Phelps, K. and Olival, K.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Balamurugan, S., Sophia, E., Swamidoss, D.P. and Isaac, S.S. 2021. Conservation of the Indian Flying Fox at Murappanadu Sacred Grove in Tamil Nadu. <i>Zoo's Print</i> 36: 19-21.",
+      "year": "2021",
+      "title": "Conservation of the Indian Flying Fox at Murappanadu Sacred Grove in Tamil Nadu",
+      "author": "Balamurugan, S., Sophia, E., Swamidoss, D.P. and Isaac, S.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chavan, U. and Deshbhratar, S. 2019. Roost affinity and local migration of Indian flying foxes, <i>Pteropus giganteus</i>, in the riparian habitat of river Savitri, Mahad, Maharashtra. <i>International Journal of Advance and Innovative Research</i> 6(1): 113-117.",
+      "year": "2019",
+      "title": "Roost affinity and local migration of Indian flying foxes, <i>Pteropus giganteus</i>, in the riparian habitat of river Savitri, Mahad, Maharashtra",
+      "author": "Chavan, U. and Deshbhratar, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chouhan, R. and Shrivastava, S. 2019. Observation on electrocution of Indian flying fox (<i>Pteropus giganteus</i>) in Ramganjmandi, Kota,(Rajasthan) and their conservation strategies. <i>International Journal of Research in Engineering, Science and Management</i> 2: 648-649.",
+      "year": "2019",
+      "title": "Observation on electrocution of Indian flying fox (<i>Pteropus giganteus</i>) in Ramganjmandi, Kota,(Rajasthan) and their conservation strategies",
+      "author": "Chouhan, R. and Shrivastava, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "CITES. 2023. Convention on International Trade in Endangered Species of Wild Fauna and Flora. Available at: <a href=\"https://www.cites.org/eng/app/appendices.php\">https://www.cites.org/eng/app/appendices.php</a>. ",
+      "year": "2023",
+      "title": "Convention on International Trade in Endangered Species of Wild Fauna and Flora.",
+      "author": "CITES",
+      "citation_short": null
+    },
+    {
+      "citation": "Dookia, S. and Tak, J.R. 2004. Status and distribution of Indian flying fox (<i>Pteropus giganteu</i>s) in Thar Desert of Rajasthan. <i>Newsletter of the Chiroptera Conservation and Information Network of South Asia CCINSA and the IUCN SSC Chiroptera Specialist Group of South Asia (CSGSA)</i> 5(1): 8.",
+      "year": "2004",
+      "title": "Status and distribution of Indian flying fox (<i>Pteropus giganteu</i>s) in Thar Desert of Rajasthan",
+      "author": "Dookia, S. and Tak, J.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Frick, W.F., Kingston, T. and Flanders, J. 2020. A review of the major threats and challenges to global bat conservation. <i>Annals of the New York Academy of Sciences</i> 1469: 5-25.",
+      "year": "2020",
+      "title": "A review of the major threats and challenges to global bat conservation",
+      "author": "Frick, W.F., Kingston, T. and Flanders, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Katuwal, H.B., Kushwaha, S. and Quan, R.-C. 2019. Indian flying fox <i>Pteropus giganteus</i> is declining in lowland Nepal: Need of conservation actions. <i>Journal of Bat Research and Conservation</i> 12(1): 60-63.",
+      "year": "2019",
+      "title": "Indian flying fox <i>Pteropus giganteus</i> is declining in lowland Nepal: Need of conservation actions",
+      "author": "Katuwal, H.B., Kushwaha, S. and Quan, R.-C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Khan, W., Nisa, N., Khan, A., Rahbar, B., Mehmood, S., Ahmed, S., Kamal, M., Shah, M., Rasool, A. and Pahanwar, W. 2020. Roosting ecology and morphometric analysis of <i>Pteropus medius</i> (Indian flying fox) in Lower Dir, district, Pakistan. <i>Brazilian Journal of Biology</i> 81: 77-82.",
+      "year": "2020",
+      "title": "Roosting ecology and morphometric analysis of <i>Pteropus medius</i> (Indian flying fox) in Lower Dir, district, Pakistan",
+      "author": "Khan, W., Nisa, N., Khan, A., Rahbar, B., Mehmood, S., Ahmed, S., Kamal, M., Shah, M., Rasool, A. and Pahanwar, W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Krishnarathi, A. and Isaac, S.S. 2016. Food and feeding ecology of bat preferred plant species and their mutualistic interactions in Tirunelveli District. <i>Malaya Journal of Biosciences</i> 3: 81-90.",
+      "year": "2016",
+      "title": "Food and feeding ecology of bat preferred plant species and their mutualistic interactions in Tirunelveli District",
+      "author": "Krishnarathi, A. and Isaac, S.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kumar, M., Priya, Y.S., Mathur, V. and Elangovan, V. 2016. Distribution and conservation issues of Indian flying fox, <i>Pteropus giganteus</i> in Uttar Pradesh. <i>Uttar Pradesh.State Biodiversity Board</i>: 133-139.",
+      "year": "2016",
+      "title": "Distribution and conservation issues of Indian flying fox, <i>Pteropus giganteus</i> in Uttar Pradesh",
+      "author": "Kumar, M., Priya, Y.S., Mathur, V. and Elangovan, V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Manandhar, S., Thapa, S., Shrestha, T.K., Jyakhwo, R., Wright, W. and Aryal, A. 2018. Population status and diurnal behaviour of the Indian flying fox <i>Pteropus giganteus</i> (Brünnich, 1782) in Kathmandu Valley, Nepal. Proceedings of the Zoological Society: 363-375.",
+      "year": "2018",
+      "title": "Population status and diurnal behaviour of the Indian flying fox <i>Pteropus giganteus</i> (Brünnich, 1782) in Kathmandu Valley, Nepal",
+      "author": "Manandhar, S., Thapa, S., Shrestha, T.K., Jyakhwo, R., Wright, W. and Aryal, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Marimuthu, G. 1988. The sacred flying fox of India. <i>Bats</i> 6: 10-11.",
+      "year": "1988",
+      "title": "The sacred flying fox of India",
+      "author": "Marimuthu, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Martin, G.R. 2022. Vision-based design and deployment criteria for power line bird diverters. <i>Birds</i> 3: 410-422.",
+      "year": "2022",
+      "title": "Vision-based design and deployment criteria for power line bird diverters",
+      "author": "Martin, G.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mathur, V., Priya, Y.S., Kumar, H. and Elangovan, V. 2011. Reproductive behavior and population dynamics of Indian flying fox (<i>Pteropus giganteus</i>). Proceedings of second seminar on small mammals conservation issues: 31.",
+      "year": "2011",
+      "title": "Reproductive behavior and population dynamics of Indian flying fox (<i>Pteropus giganteus</i>)",
+      "author": "Mathur, V., Priya, Y.S., Kumar, H. and Elangovan, V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "McEvoy, J.F., Kishbaugh, J.C., Valitutto, M.T., Aung, O., Tun, K.Y.N., Win, Y.T., Maw, M.T., Thein, W.Z., Win, H.H. and Chit, A.M. 2021. Movements of Indian Flying Fox in Myanmar as a guide to human-bat interface sites. <i>EcoHealth </i> 18: 204-216.",
+      "year": "2021",
+      "title": "Movements of Indian Flying Fox in Myanmar as a guide to human-bat interface sites",
+      "author": "McEvoy, J.F., Kishbaugh, J.C., Valitutto, M.T., Aung, O., Tun, K.Y.N., Win, Y.T., Maw, M.T., Thein, W.Z., Win, H.H. and Chit, A.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mishra, R., Dookia, S. and Bhattacharya, P. 2020. Avenue plantations as biodiversity havens: a case study of population status of the Indian flying fox, <i>Pteropus giganteus</i> Brunnich, 1782 and implications for its conservation in the urban megacity, Delhi, India. Proceedings of the Zoological Society: 127-136.",
+      "year": "2020",
+      "title": "Avenue plantations as biodiversity havens: a case study of population status of the Indian flying fox, <i>Pteropus giganteus</i> Brunnich, 1782 and implications for its conservation in the urban megacity, Delhi, India",
+      "author": "Mishra, R., Dookia, S. and Bhattacharya, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Murugan, C.M., Bhavan, P.S., Mahandran, V. and Nathan, P.T. 2020. Hunting bats for bushmeat despite Nipah concerns in Idukki, Kerala, India. <i>Ecotropica</i> 22: 1-6.",
+      "year": "2020",
+      "title": "Hunting bats for bushmeat despite Nipah concerns in Idukki, Kerala, India",
+      "author": "Murugan, C.M., Bhavan, P.S., Mahandran, V. and Nathan, P.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Murugavel, B. 2023. The sacred Indian flying foxes: A story of a spiritual ecology model for conservation  from southern India. <i>Bat News</i> 132: 22-23.",
+      "year": "2023",
+      "title": "The sacred Indian flying foxes: A story of a spiritual ecology model for conservation  from southern India",
+      "author": "Murugavel, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Murugavel, B., Kandula, S., Somanathan, H. and Kelber, A. 2023. Home ranges, directionality and the influence of moon phases on the movement ecology of Indian flying fox males in southern India. <i>Biology Open</i> 12: 1-10.",
+      "year": "2023",
+      "title": "Home ranges, directionality and the influence of moon phases on the movement ecology of Indian flying fox males in southern India",
+      "author": "Murugavel, B., Kandula, S., Somanathan, H. and Kelber, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Noureen, S., Nadeem, M.S., Beg, M.A. and Anwar, M. 2014. Seasonal variation in the reproductive tract of the Indian flying fox, <i>Pteropus giganteus</i> (Brünnich, 1782). <i>Animal Biology</i> 64(343-364).",
+      "year": "2014",
+      "title": "Seasonal variation in the reproductive tract of the Indian flying fox, <i>Pteropus giganteus</i> (Brünnich, 1782)",
+      "author": "Noureen, S., Nadeem, M.S., Beg, M.A. and Anwar, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Openshaw, J.J., Hegde, S., Sazzad, H.M., Khan, S.U., Hossain, M.J., Epstein, J.H., Daszak, P., Gurley, E.S. and Luby, S.P. 2017. Bat hunting and bat–human interactions in Bangladeshi villages: Implications for zoonotic disease transmission and bat conservation. <i>Transboundry Emerging Diseases</i> 64: 1287-1293.",
+      "year": "2017",
+      "title": "Bat hunting and bat–human interactions in Bangladeshi villages: Implications for zoonotic disease transmission and bat conservation",
+      "author": "Openshaw, J.J., Hegde, S., Sazzad, H.M., Khan, S.U., Hossain, M.J., Epstein, J.H., Daszak, P., Gurley, E.S. and Luby, S.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pandian, M. and Suresh, S. 2021. Roosting habits and habitats of the Indian Flying Fox <i>Pteropus medius</i> Temminck, 1825 in the northern districts of Tamil Nadu, India. <i>Journal of Threatened Taxa</i> 13: 19675-19688.",
+      "year": "2021",
+      "title": "Roosting habits and habitats of the Indian Flying Fox <i>Pteropus medius</i> Temminck, 1825 in the northern districts of Tamil Nadu, India",
+      "author": "Pandian, M. and Suresh, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rajeshkumar S., Raghunathan, C. and Venkataraman, K. 2013. Observation on electrocution of Flying Fox (<i>Pteropus giganteus</i>) in Andaman Islands and their conservation strategies. <i>Journal of the Andaman Science Association</i> 18: 213-215.",
+      "year": "2013",
+      "title": "Observation on electrocution of Flying Fox (<i>Pteropus giganteus</i>) in Andaman Islands and their conservation strategies",
+      "author": "Rajeshkumar S., Raghunathan, C. and Venkataraman, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Roy, K., Saha, G.K. and Mazumdar, S. 2020. Seasonal influence on the diurnal roosting behaviour of free-ranging Indian flying fox <i>Pteropus giganteus</i> in an urban landscape, India. <i>Biologia </i> 75: 1955-1961.",
+      "year": "2020",
+      "title": "Seasonal influence on the diurnal roosting behaviour of free-ranging Indian flying fox <i>Pteropus giganteus</i> in an urban landscape, India",
+      "author": "Roy, K., Saha, G.K. and Mazumdar, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Salim, M. 2018. Bats in northern mountain region of Khyber Pakhtunkhwa, Pakistan. In: H. Mikkola (ed.), <i>Bats</i>, InTech.Open, London, UK. DOI: 10.5772/intechopen.74868.",
+      "year": "2018",
+      "title": "Bats in northern mountain region of Khyber Pakhtunkhwa, Pakistan",
+      "author": "Salim, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tackett, E.S., Kingston, T., Sadeghmoghaddam, N. and Rutrough, A.L. 2022. Global medicinal use of bats: A systematic literature and social media review. <i>Diversity</i> 14(3): 179.",
+      "year": "2022",
+      "title": "Global medicinal use of bats: A systematic literature and social media review",
+      "author": "Tackett, E.S., Kingston, T., Sadeghmoghaddam, N. and Rutrough, A.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tangavelou, A.C., Rani, P.J. and Karthikeyan, S. 2013. Conservation of Sacred Indian flying fox (Bat) at sacred landscape of Pudukottai district, Tamil Nadu, India. <i>Asian Journal of Conservation Biology</i> 2: 178-180.",
+      "year": "2013",
+      "title": "Conservation of Sacred Indian flying fox (Bat) at sacred landscape of Pudukottai district, Tamil Nadu, India",
+      "author": "Tangavelou, A.C., Rani, P.J. and Karthikeyan, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tella, J.L., Hernández-Brito, D., Blanco, G. and Hiraldo, F. 2020. Urban sprawl, food subsidies and power lines: An ecological trap for large frugivorous bats in Sri Lanka? <i>Diversity</i> 12: 94.",
+      "year": "2020",
+      "title": "Urban sprawl, food subsidies and power lines: An ecological trap for large frugivorous bats in Sri Lanka?",
+      "author": "Tella, J.L., Hernández-Brito, D., Blanco, G. and Hiraldo, F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Thapa, S., Dahal, D.R., Baral, S., Pandey, K., Thapa, T.B., Racey, P.A., Yu, W. and Wu, Y. 2023. Current and future predicted distribution range of Indian Flying Fox <i>Pteropus medius</i> Temmink, 1825 in Nepal. <i>PREPRINT (Version 1) available at Research Square </i>: DOI: 10.21203/rs.3.rs-3376212/v1.",
+      "year": "2023",
+      "title": "Current and future predicted distribution range of Indian Flying Fox <i>Pteropus medius</i> Temmink, 1825 in Nepal",
+      "author": "Thapa, S., Dahal, D.R., Baral, S., Pandey, K., Thapa, T.B., Racey, P.A., Yu, W. and Wu, Y.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tiwari, N., Koju, N.P., Acharya, P.R. and Dhamala, M.K. 2019. Diet composition of Indian flying fox (<i>Pteropus giganteus</i>) in Kathmandu Valley. <i>Nepal Journal of Environmental Science</i> 7: 25-30.",
+      "year": "2019",
+      "title": "Diet composition of Indian flying fox (<i>Pteropus giganteus</i>) in Kathmandu Valley",
+      "author": "Tiwari, N., Koju, N.P., Acharya, P.R. and Dhamala, M.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ul Hasan, M.A. and Kingston, T. 2022. Bats of Bangladesh—A systematic review of the diversity and distribution with recommendations for future research. <i>Diversity</i> 14: 1042.",
+      "year": "2022",
+      "title": "Bats of Bangladesh—A systematic review of the diversity and distribution with recommendations for future research",
+      "author": "Ul Hasan, M.A. and Kingston, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Voigt, C.C. and Kingston, T. (eds). 2016. <i>Bats in the Anthropocene: Conservation of bats in a changing world</i>. Springer Cham.",
+      "year": "2016",
+      "title": "Bats in the Anthropocene: Conservation of bats in a changing world",
+      "author": "Voigt, C.C. and Kingston, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2025. The IUCN Red List of Threatened Species. Version 2025-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 27 March 2025).",
+      "year": "2025",
+      "title": "The IUCN Red List of Threatened Species. Version 2025-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2025-1"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

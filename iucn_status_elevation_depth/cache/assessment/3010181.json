@@ -1,0 +1,1982 @@
+{
+  "assessment_date": "2017-04-30T01:00:00.000+01:00",
+  "year_published": "2019",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 45433088,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/45433088/3010181",
+  "citation": "Isberg, S., Combrink, X., Lippai, C. & Balaguera-Reina, S.A. 2019. Crocodylus niloticus. The IUCN Red List of Threatened Species 2019: e.T45433088A3010181. Accessed on 15 May 2026.",
+  "assessment_id": 3010181,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 45433088,
+    "scientific_name": "Crocodylus niloticus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "CROCODYLIA",
+    "family_name": "CROCODYLIDAE",
+    "genus_name": "Crocodylus",
+    "species_name": "niloticus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Laurenti, 1768",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Crocodile Specialist Group (crocodiles, alligators and caimans)",
+        "url": "http://www.iucncsg.org/",
+        "description": "Chair: Grahame Webb (email: gwebb@wmi.com.au)\nRed List Authority Coordinator: Sally Isberg (email: )\nNewsletter: http://www.iucncsg.org/pages/Publications.html"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Cocodilo del Nilo",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Crocodil du Nil",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Crocodilo",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Denkyem",
+        "language": "twi"
+      },
+      {
+        "main": false,
+        "name": "Garwe",
+        "language": "sna"
+      },
+      {
+        "main": false,
+        "name": "Ggoonya",
+        "language": "mis"
+      },
+      {
+        "main": false,
+        "name": "Ingona",
+        "language": "kin"
+      },
+      {
+        "main": false,
+        "name": "Kwena",
+        "language": "tsn"
+      },
+      {
+        "main": false,
+        "name": "Mamba",
+        "language": "swa"
+      },
+      {
+        "main": false,
+        "name": "Ngwenya",
+        "language": "swa"
+      },
+      {
+        "main": false,
+        "name": "Temsah",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Toumsa",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Voay",
+        "language": "mlg"
+      },
+      {
+        "main": true,
+        "name": "Nile Crocodile",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 1500,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "50000-70000",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "No",
+    "generational_length": "25",
+    "congregatory": "Congregatory (and dispersive)",
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Percentage of population protected by PAs",
+            "value": "40 - 70"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Unknown"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": "50-500",
+    "continuing_decline_in_subpopulations": "No",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": "4000",
+    "estimated_area_of_occupancy": "6273",
+    "continuing_decline_in_area_of_occupancy": "No",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "18995035",
+    "continuing_decline_in_extent_of_occurence": "No",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "No",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "<p>The Nile Crocodile&#160;is found in a wide diversity of water bodies (rivers, lakes, swamps, and coastal estuaries) in 26&#160;countries in eastern, central and southern Africa. Populations are also reported from desert oasis pools and subterranean streams in caves. The species, in its current restricted sense, is reported from Angola, Botswana, Burundi, Cameroon, Congo, Democratic Republic of Congo, Egypt, Eritrea, Ethiopia, Equatorial Guinea, Gabon, Kenya, Madagascar, Malawi, Mozambique, Namibia, Rwanda, Somalia, South Africa, South Sudan, Sudan, Swaziland, Tanzania, Uganda, Zambia and Zimbabwe.</p>",
+    "population": "<p>Nile Crocodile populations were depleted throughout much of their range due to hunting between the 1940s and the 1960s (in some countries as late as the 1970s). However, protection afforded by national legislation and international trade conventions (CITES) has resulted in recovery in many parts of the species’ range (Fergusson 2010). In general though, crocodile densities exhibit a significant negative correlation with human densities and it is likely that the status of crocodiles throughout Africa is closely linked with human densities and development patterns (Aust 2009). In addition, crocodile densities were found to be positively correlated with IUCN protected areas and it is likely that the future status of national populations will be linked to the extent and management of nationally protected habitat (Aust 2009).<br/><br/>Overall, Nile Crocodiles are not threatened with extinction, although there are increasing threats to populations existing outside protected areas, and in some instances within formally protected areas (Combrink 2011, Ferreira and Pienaar 2011, Calverley and Downs 2014, Behangana 2017). In some areas, human-crocodile conflict (HCC) has become a major problem and retaliation killings are a threat. Consequently, the management of HCC has now become the major focus of programs in several countries, replacing the previous emphasis on sustainable use through ranching and trophy hunting. Several countries have significant export quotas for wild harvested skins and these are mostly derived from programs nominally aimed at alleviating HCC (Fergusson 2010). A search of CrocBITE (the crocodilian attack database) for <em>Crocodylus niloticus </em>attacks only reveals a subset of actual HCC occurrence, remembering that not all attacks are reported (CrocBITE 2013, IUCN-SSC CSG 2017). However, fatal attacks from <em>C. niloticus </em>are the most numerous of all crocodilian species, even saltwater crocodiles (<em>C. porosus</em>), and pose a real threat to some conservation and management strategies and programs. Pooley (2015, 2016) has begun to piece together innovative ways to understand HCC by exploring the historical, cultural, social and ecological dynamics between crocodiles and humans at a sub-regional level.<br/><br/>The Nile Crocodile is one of the most commercially utilized crocodilians, the skin being acknowledged as one of the “classics” (Fergusson 2010). The Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES) does not yet recognise <em>C. suchus</em>, and reports annual trade exports of over 250,000 skins from the <em>C. niloticus </em>range states (CITES Trade Database 2017, Caldwell 2017). The majority of these are from Zimbabwe (50%), South Africa (30%) and Zambia (14%). The formal crocodile skin industry is now well established and market forces together with ongoing trade controls have largely negated illegal international trade in crocodile skins, which is thought to be insignificant. In the 1980s, the CITES Nile Crocodile Project played an important role in developing sustainable yield programs, emphasizing ranching as the preferred means of obtaining conservation benefits from crocodile utilization (MacGregor 2002).<br/><br/>Population status in each of the range states is presented separately where available.<br/><br/><strong>Angola</strong>: Almost nothing about the distribution and densities of <em>C. niloticus</em> in Angola has been documented. Shacks and Bourquin (2013) conducted spotlight counts on a section of the Cuito and Cuando rivers in April 2013. From this limited work, it appears that healthy populations exist. Human-crocodile conflict is reported to be intense with crocodiles killed whenever possible. One community member reported that crocodile eggs, when found, were eaten by people. Large tracts of riverside vegetation are cleared for the plantation of casava, maize and sorghum and is very intensive along the southern Cuito system. This is likely to increase dramatically once the new tar road is complete and people start moving to the more developed riverside villages (Shacks and Bourquin 2013).<br/><br/><strong>Botswana</strong>: Records estimate that up to 48,000 wild individuals were hunted 1957-1968, but the standing population at any one time is unknown (Pooley 1982). A 2004/05 survey of the Okavango Panhandle by Bishop <em>et al. </em>(2009) estimated 663 adults whilst Bourquin and Leslie (2011) estimated 649 adults of which 364 were females. The most recent survey reported an adjusted estimate of 549 adults, showing a relatively stable adult population of 25-30% of the total population (Bourquin and Shacks 2016a,b). However, Bourquin and Shacks (2016a, b) reported a drastic decline in the sub-adult population from 18% in 2008 to only 4% in 2016. This is possibly due to an observed decline in fish numbers, potentially from unsustainable fishing activities, given the heavy reliance of sub-adult <em>C. niloticus</em> on fish in their diet (Bourquin and Shacks 2016a). As there are no observed mortalities, it is presumed that these sub-adults may have moved out of the Panhandle. The total Botswana adult <em>C. niloticus </em>numbers are estimated to be greater than 4,000 (Isberg <em>et al</em>. 2016).<br/><br/><strong>Cameroon, Gabon and Central African Republic</strong>: Declining <em>C. niloticus </em>populations have been reduced to the extent that they do not contribute significantly to the global population (Isberg <em>et al</em>. 2016). Recent surveys in Gabon estimate there are less than 500 adult <em>C. niloticus </em>with a limited coastal distribution (M. Shirley pers. comm. 2018). Historically, Behra (1987) reported more than 20,000 skins per year exported collectively from these countries prior to them joining CITES (1980-89), with severe population depletion in the mid-1980s.<br/><br/><strong>Egypt</strong>: Since the 1950s, <em>C. niloticus </em>were virtually eradicated from the Nile River in Egypt but the construction of the Aswan Dam and formation of Lake Nasser in the 1960s allowed population recovery, with a current estimate of 15,000 to 20,000 individuals of which 20% are adults (CITES 2010, Shirley <em>et al</em>. 2012, i.e. 3,000-4,000). The re-establishment of this population was reflected in the transfer of the Egyptian population of <em>C. niloticus </em>from Appendix I to Appendix II of CITES in 2010, although with a zero export quota pending a sustainable management program.<br/><br/><strong>Ethiopia</strong>: Historically, <em>C. niloticus </em>was abundant in Ethiopia but heavy hunting for skins from the mid-1950s resulted in more than 47 000 <em>C. niloticus</em> skins legally exported from 1965 to 1972. Several thousand of these were taken from the Rift Valley lakes. Legal hunting plus illegal killings near the border with Sudan have severely reduced the populations in Ethiopia (Pooley 1982, Gebre 2000). In 1972, commercial hunting of <em>C. niloticus</em> was prohibited in Ethiopia and <em>C. niloticus</em> was listed as a game animal which could only be hunted under permit (Whitaker and Whitaker 2007).<br/><br/>Although crocodiles occur elsewhere in Ethiopia, Lake Chamo has the largest and most important population. Anecdotal accounts note that crocodile abundance and nesting site availability have decreased since 2008 due to increased fishing pressure and more riparian lifestyles of local people (Shirley <em>et al</em>. 2014). Prior to this, Whitaker (2007) estimated up to 2,000 individuals inhabited the Lake with an estimated 350-500 breeding females producing 15,000-20,000 eggs annually. Shirley <em>et al</em>. (2014) counted a total of 1,443 individuals of all sizes, but did not include a section (Crocodile Market) with a high concentration of large crocodiles (Crocodile Market). To account for this, Shirley <em>et al. </em>(2014) used a correction factor and estimated the adult population (2+ meters) in Lake Chamo was 300+ <em>C. niloticus</em>. Ethiopia has a wild egg harvest limit of 3,000 eggs per annum, but only exported six skins in 2015 (Caldwell 2017).<br/><br/>Recently, a small number (n=5) of crocodile tissue samples from the Awash basin (± 145 km northeast of Lake Chamo), including the entire length of the Awash River, revealed that the crocodiles were <em>C. suchus</em> (Siege and Koch 2017). The lines of demarcation for these two species (<em>C. niloticus </em>and <em>C. </em>suchus) in Ethiopia are still being determined.<br/><br/><strong>Kenya</strong>: There are healthy adult crocodile populations in all rivers (including feeder rivers) and lakes that are in National Parks and Reserves and protected by Kenya Wildlife Services (D. Haller pers. comm. 2016). These include the Mara, Sabaki/Galana, Tsavo, Meru, Ewaso Ng’iro and Turkwel Rivers as well as the north of Lake Turkana including Lake Sibilio National Park, Central Island and the Omo Delta. However, open areas which are, or have been, populated by people have seen a dramatic decline in crocodile populations over the last 10 years. For example, the Tana River, which is the longest river in Kenya, had a very large crocodile population but over the last 10 years has seen a rapid decline due to human intolerance. Despite this, there is still a conservative estimate of 1,500 adult crocodiles in the Tana River, despite anthropogenic effects continuing to pose a threat to both crocodile habitats and populations (D. Haller pers. comm. 2016). Three farms collect eggs on the Tana River, with approximately 15,000 eggs in the 2015/16 season (average nest size 32 eggs; D. Haller pers. comm. 2016), indicating a healthy adult population. Daniel Haller (pers. comm. 2016) estimates that the adult wild <em>C. niloticus</em> population in Kenya is greater than 4,000.<br/><br/><strong>Madagascar</strong>: The Nile crocodile is widely distributed throughout the country, particularly in the river and lake systems bordering the northwestern and western sides of the high plateau, and the northeast of the country (CITES 1997). Survey data confirm that wild <em>C. niloticus</em> population densities are low throughout the rivers and lakes of Madagascar, even in the areas where <em>C. niloticus</em> were previously relatively abundant. This is the result of continued unregulated hunting of crocodiles of all sizes, in contravention of Madagascar’s obligations under CITES, given its transfer from Appendix I to II was primarily for ranching with a modest problem animal quota in 1997. An extensive artisanal hunting and manufacturing industry has always existed and is largely unregulated. Management capacity and resources were unable to control either harvests or trade, which were blatantly illegal. A ban on exports was imposed by CITES Standing Committee (2010-2014). Madagascar’s wild crocodile population is severely depleted, and the time and space it needs to recover are not being provided. National parks may play a key role as refuge areas, if sufficient crocodiles and nesting habitats remain, and hunting can be controlled (Ottley <em>et al</em>. 2008).<br/><br/>For 12 nesting areas, sufficient data are available from 1996 to 2003 to quantify trends in nesting effort. Each of the 12 nesting areas has shown reduced nesting, ranging from -33% in the Bemarivo and Marotondro Rivers, -52% in the Maningoza River and -55% in the Sambao River. The estimated mean decrease in nesting (-45%) is thought to reflect trends across Madagascar as a whole, and equates to a mean rate of decrease of around -10% per annum in nesting adults. Blatantly illegal hunting and trade is the main reason for these declines, which have increased since 2000. Since the trade ban was lifted, some evidence indicates excessive uncontrolled harvesting has continued, with management capacity severely constrained and unlikely to improve without serious assistance and intervention. The population seems destined to decline further, with or without international trade.<br/><br/><strong>Malawi</strong>: Along a 38 km stretch of the southern boundary to the eastern shore of Lake Malombe in the Liwonde National Park, 676 crocodiles &gt;1 m were counted equating to 17.8 crocodiles/km (Leroux and Reid 2016). Outside of protected areas, hunting of <em>C. niloticus </em>is allowed under trial tourist hunting concessions. The revenue generated for the Malawi Government from hunting license fees and trophy fees ($ 150 per crocodile: 2011-2013) for eight <em>C. niloticus</em> hunters hunting 16 crocodiles, exclusive of the cost of CITES permits, veterinary health certificates and trophy export fees totaling $ 9 796 in 2012 (Macpherson 2013).<br/><br/><strong>Mozambique:</strong> The last survey conducted in the lower Zambezi was in 2009 with a total population estimate of 400-500 individuals. Of these 25% were estimated to be adults (112 adults; Fergusson 2009). Between 2006 and 2015, an average of 20,000 and 10,000 live hatchlings were exported to South Africa and Zimbabwe respectively, for ranching (CITES Trade Database 2017, Caldwell 2017). A helicopter survey of the Maputo Special Reserve counted 29 individuals in both 2015 and 2016 (Neubert pers. comm. 2017).<br/><br/><strong>Namibia</strong>: Population survey data for Namibia are limited, with the most comprehensive survey carried out in the eastern river systems (Brown <em>et al</em>. 2004). They estimated 66 adults in a portion of the Okavango River (just northwest of the bridge on the Trans-Caprivi highway south to the Botswana), 1928 adults in the Kwandu-Linyanti-Lake Liambezi-Chobe system and 214 in the Namibian portion of the Zambezi River. A more recent survey by Du Preez <em>et al</em>. (2014) along the length of the Okavango River from Angola to Botswana estimated 204-486 adult crocodiles. This represents a 3.1-7.4-fold increase in adult numbers in less than one generation. Lyet <em>et al. </em>(2016) conducted a survey in the more remote Kunene River (352km; western Namibia) and estimated an adult <em>C. niloticus </em>population of 567 individuals. Versfeld (2016) surveyed the protected and uninhabited Lower Kunene River and estimated 806 individuals.<br/><br/>Namibia’s crocodile population was transferred from Appendix I to Appendix II in 2004 (CITES 2004) and reported exporting 274 wild skins of the 1,458 total skins in 2014 (Caldwell 2017).<br/><br/>Rwanda - Akagera National Park (ANP) consist of a large number of lake systems including the Akagera River which flows along its eastern boundary. Biennial <em>C. niloticus</em> helicopter surveys commenced in August 2015 with 198 individuals counted (Gruner pers. comm. to Xander Combrink 2018). In August 2017, 500 crocodiles were counted, but more waterbodies may have been included. Gillnet mortalities and snaring are the main threats to the population. The population for the Park is likely to exceed 1,000 non-hatchings, but more surveys are required before nesting activities and the population size structure throughout ANP numerous lakes and river systems can be quantified.<br/><br/><strong>South Africa</strong>: Populations of wild <em>C. niloticus </em>are now confined to the north-eastern corner of South Africa following extirpation from the Eastern Cape since 1903 (Jacobsen 1988). Currently the four largest and possibly secure populations remaining in South Africa today are Kruger National Park (KNP), the Limpopo River outside KNP, the Lake St Lucia estuarine system and the Phongolo Nature Reserve (inlet section where the Phongolo River flows into the Pongolapoort Dam, enclaved and protected by the nature reserve). Numerous other small populations also exist. Overall in South Africa, there is a conservative estimate of greater than 8,000 <em>C. niloticus</em> &gt;1m in total length, of which more than 4,000 are considered to be adults&#160;(Isberg <em>et al</em>. 2016).<br/><br/>Within KNP, a large number of crocodile mortalities, thought to be caused by pansteatitis after consuming rancid fish, has reduced the <em>C. niloticus </em>population in the Olifants River from 760 to 480 individuals (D. Govender pers. comm. 2016). The most recent survey of the Olifants River (October, 2017; Department of Economic Development, Environment &amp; Tourism, LEDET) counted 3,326 individuals and reported that the crocodile population was relatively stable, with minor fluctuations in the upper reaches possibly due to the changes in water level in the Flag Boshielo Dam (Lippai 2018). The Letaba River crocodile population has recovered slightly since a decline noted in 2015 but remains low (Lippai 2018) and&#160;may be ‘threatened’ locally.<br/><br/>Outside of KNP in the Limpopo Province, a crocodile census in November 2016 on the Limpopo River and its tributaries conducted by the Limpopo Provincial Government (LEDET) noted 85.1% increase in crocodile numbers compared to 2003. 1,233 adults were counted constituting 80.1% of the population (Egan <em>et al. </em>2016)<em>. </em>The survey report concludes that crocodile numbers are increasing in the Limpopo system, with crocodile migration into seasonal waters during the rainy season (Lippai 2018). Again within the Limpopo Province, the Olifants River has seen a recent stabilisation in overall numbers (2012 = 445, 2015 = 450 and 2017 = 440). This represents a 53.3% increase since the surveys by Jacobsen (1984) between 1979 and 1981 (= 287 crocodiles) with the largest breeding aggregation associated with the Flag Boshielo Dam. Despite the increases in these rivers, the Letaba River population has decreased by &gt;75% since 2012 (2012 = 200; 2017 &lt; 50; V. Egan, pers. comm. 2018). A further 436 individuals were counted in five smaller populations within Limpopo Province in 2017 and showed a 20–50% decline since the survey in the preceding year most likely because water levels within the dam were low and the animals were suspected to have burrowed.<br/><br/>The Lake St Lucia estuarine system, situated within the iSimangaliso Wetland Park World Heritage Site, contains the largest <em>C. niloticus</em> population within a single waterbody in South Africa and hosts the largest estuarine <em>C. niloticus</em> population in Africa. Furthermore, it is the most southern viable breeding population throughout its range (Leslie and Spotila 2001). In 1972, Tony Pooley counted 356 individuals after releasing 486 individuals between 1967 and 1976. In 1993, 975 crocodiles were counted and until 2008, the population appeared stable (941 individuals), but in a 2017 survey only 564 individuals were counted. <br/><br/>Within the Phongolo Nature Reserve, Summers (2015) recorded 432 crocodiles in Pongolapoort Dam of which 41% were adults. Champion and Downs (2017) recorded 30 nest in 2009, but all nests flooded in January 2010. Summers (2015) recorded 38 nests in 2014 with a density of 4.9 nests/km.</p><p>Calverley and Downs (2017) reported that the number of nests located in Ndumo Game Reserve has remained comparable (~11 nests/year) between 1964-1993 despite significant increases in population number from approximately 300 to 850 crocodiles. A 2017 aerial survey recorded 516 individuals (C. Hanekom, pers. comm., 2018). The Lake Sibaya population was estimated to be between 164 and 374 adult crocodiles in 1970, but declined to 64 adults in 1985 and 7 in 2009 (95-98% reduction; Combrink <em>et al. </em>2011) despite being a provincial protected area. For these reasons, <em>C. niloticus </em>has recently been regionally defined as vulnerable with an estimated &gt;30% decline (Harvey and Marais 2014). Although <em>C. niloticus </em>in South Africa is on Appendix II of CITES pursuant to Resolution Conf. 11.16 (Rev. CoP15) for “Ranching”, no wild harvest of eggs occurs (Leslie and Spotila 2001) but a proportion of the skins exported from South Africa are from ranched hatchlings derived from Mozambique (Caldwell 2017).<br/><br/><strong>Tanzania</strong>: No recent population estimates are available for Tanzania. A 2012 survey reported that the Selous Game Reserve still has “one of the most impressive Nile crocodile populations in Africa” (Mwita and Games 2012). Although the crocodile density in the Selous Game Reserve fluctuates considerably, it was noted that some rivers (Rufiji, Ulanga and Ruaha) showed an increase in crocodile densities, whilst the Kilombero River showed a decline. An overall significant increase in crocodile numbers within the Rufiji Lakes was also noted, although this was not consistent with a decrease noted in the Mzizima River. Outside of the Selous Game Reserve, there are also inconsistencies. Densities within the Ruaha National Park , Rubondo Island, Malagarassi River and Ruvuma River have increased from the previous survey in 2008 (Mafole <em>et al</em>. 2008). However, no crocodiles were seen in the previously concentrated Rungwa River and Lake Rukwa, potentially due to disturbance from fishing activities (Tanzanian Crocodile Survey 2012). Tanzania wildlife authorities are planning to carry out land and aerial surveys in the southern National Parks and Game Reserves in July/August 2018.<br/><br/><strong>Uganda</strong>: The first aerial survey of the Murchison Falls National Park in 1967 counted 700 crocodiles (Cott 1969) whilst two years later, only 505 crocodiles were counted (Parker and Watson 1970). There was a steep decline through the 1970s with an average of 171 individuals counted in aerial surveys. The most recent survey (2013/14) reported 218 individual crocodiles (Behangana <em>et al.</em> 2017) suggesting the population has stabilised over the last 40 years. 41% of these 2013/14 survey were medium to large crocodiles, which is equivalent to approximately 89 adults (Behangana <em>et al.</em> 2017). Since 1991, there has been wild egg collection in the area (Thorbjarnarson and Shirley 2009) and Behangana <em>et al</em>. (2017) suggested the number of nests harvested should be re-evaluated to allow the <em>C. niloticus </em>population to recover.<br/><br/><strong>Zambia</strong>: Nile Crocodiles are still found, often in large numbers, in most of the major rivers (Zambezi, Kafue, Luangwa, Kabompo, Lunsemfwa, Chambeshi, Lunga, Lufupa and Lufubu Rivers), lakes (Tanganyika, Bangweulu, Mweru, Mweru-wa-Ntipa, Kariba and Lusiwasi) as well as Itezhi-Tezhi Dam (W. Thomas pers. comm. 2017; P. Reilly pers. comm. 2018). Spotlight surveys from the 270 km stretch of the lower/middle Zambezi River, between Kariba and Cahora Bassa dam, occurred in 2006 and 2009 and reported adjusted crocodile numbers of 1,984 and 2,257 crocodiles, respectively (approximately 397 and 451 adults, respectively). This was a statistically significant increase estimated at 5% population growth per annum (Wallace <em>et al.</em> 2013).<br/><br/>Rivers located near or within National Parks (Wallace <em>et al.</em> 2013, W. Thomas pers. comm. 2017) and communal&#160; lands (P. Reilly pers. comm. 2018) host the largest numbers of crocodiles. Nyirenda’s (2015) survey in 2007 along the lower Zambezi River noted crocodile densities of 20.62 crocodiles/km river in National Parks compared to 7.45 crocodiles/km river in non-protected river areas. This trend reflects anthropogenic disturbances and retaliation killings of <em>C. niloticus</em> for attacks on humans (injuries and deaths) and damage caused to fish nets. Innovative conservation measures benefiting local communities sharing crocodile habitats, and bearing the costs of living with crocodiles, is one approach to linking crocodile conservation with consummate benefits (Nyirenda 2015). Locating crocodile producers in communal lands is an approach which could be implemented. Overall, the Zambian <em>C. niloticus </em>population is thought to be increasing, with an estimated 2,000-4,000 adults (Isberg <em>et al</em>. 2016).<br/><br/><strong>Zimbabwe</strong>: Listed in Appendix II of CITES (Res. Conf. 11.16), the most recent report by the Crocodile Farmers’ Association of Zimbabwe (CFAZ) stated that 1,594 nests (60,328 eggs) were collected in 2015 from 4 areas throughout Zimbabwe (CFAZ 2015). Compared to the previous year, egg collection was noted to have increased in Park Estates but had decreased from Communal and Forestry Lands. Egg destruction and crocodile persecution are considered the reasons behind the decreased collection on Communal Land, despite reducing the revenue from egg royalties. In 2014, 80.4% of eggs were collected from Lake Kariba. Since 1997, the level of collections from the other areas (Kazungula, Upper and Lower Zambezi) has declined and, supported by anecdotal evidence, was cause for conservation concern (Crocodile Farmers Association of Zimbabwe 2015). Aerial surveys were carried out on three river systems within the Gonarezhou National Park, in the south-east of Zimbabwe, and concluded that the number of <em>C. niloticus </em>had increased, but that this was due to significant increases in the Runde River alone (Zisadze-Gandiwa <em>et al</em>. 2012). The lack of population increase (or stability) in the Mwenezi and Save Rivers was mainly attributed to habitat loss through siltation and retaliation killings (Zisadze-Gandiwa <em>et al</em>. 2012). The authors recommended that egg harvests from these two River systems should be halted and the CFAZ report (2015) confirms that no eggs have been collected from this area since 2010. Surveys conducted in 2016 estimated the combined Zambezi River and Lake Kariba adult population to be 8,205-15,333 (Games <em>et al. </em>2016) and from the greater Gonarezhou National Park (including upstream zones of the Save, Runde, Tokwe, Chiredzi, Mutirikwe and Mwenezi Rivers) to be 1307 adults (Childes <em>et al. </em>2016). The authors found a direct correlation between human activities (e.g. fishing, herding livestock, washing, etc.) and the complete absence of crocodiles (zero), which highlights the conservation consequences of human crocodile conflict.<br/><br/>No recent population data exists for the range States of Burundi, Congo, Democratic Republic of Congo, Equatorial Guinea, Eritrea, Somalia, South Sudan, Sudan and Swaziland.<br/><br/>Nile Crocodile populations have been depleted throughout much of their range. Remnant populations of Nile crocodiles exist in eastern Mauritania and northern Chad (Smet 1999, Shine <em>et al. </em>2001). Taken as a whole, the global population of <em>C. niloticus </em>remains abundant and widespread, and is considered stable. The numerous depleted populations still in steep decline are a major concern, despite the security of the global population as a whole.<br/><br/>Outside its’ natural range, <em>C. niloticus </em>have been wild-caught and genetically confirmed in southern Florida, USA most likely as either released pets or zoological escapees (Rochford <em>et al.</em> 2016). Rochford <em>et al. </em>(2016) raise concerns about the potential risk of human-crocodile conflicts as well as the potential for hybridization with the indigenous <em>C. acutus </em>population. Neither risk has so far been realised.</p><p></p>",
+    "habitats": "<p>The first modern monograph on the ecology of a crocodilian was by Cott (1961) on Nile Crocodiles (<em>Crocodylus niloticus)</em>. Since then, a large number of studies on <em>C. niloticus </em>have been published on topics such as diet, thermoregulation, reproduction, social behaviour, habitat preference, and population dynamics (Fergusson 2010), making <em>C. niloticus </em>one of the most biologically well-studied crocodilians.<br/><br/>As with all crocodilians, size among <em>C. niloticus </em>is sexually dimorphic with the larger males reaching total lengths of up to 6 m in exceptional cases (Fergusson 2010). The size at which females become sexually mature is variable. Cott (1961) reported the smallest sexually mature female from northern Zambia was 238 cm total length (TL) and southern Zambia 259 cm TL. Pitman shot 855 confirmed nesting <em>C. niloticus</em> females (1940 - 1949) and found only 2% smaller than 244 cm TL, with the smallest nesting females (n = 4) 237.7 cm TL (Cott 1961). The smallest live nesting female ever recorded by Pitman over a 15 year period (n = 1500 examined) was 219 cm TL (Cott 1961). Graham (1968) found the onset of maturity in Lake Rudolf (Turkana) crocodiles even smaller, from 180 cm onwards. The largest mature female shot by Pitman was 4.62 m (Graham 1968). Nile crocodiles &#160;lay 35-50 eggs, although this varies considerably among populations. The nesting season varies with geographic areas but can be generally described as a dry season activity in the north, tending to an early wet season activity in the south. Female <em>C. niloticus </em>excavate hole nests in sandy banks, up to 50 cm deep, a few meters from the water’s edge and actively guard the nest during incubation. A high percentage of eggs are still lost to predation from monitor lizards (<em>Varanus niloticus; </em>Combrink <em>et al. </em>2016,<em> </em>Calverley and Downs 2017), marsh mongoose (<em>Atilax paludinosus</em>; Combrink <em>et al. </em>2016), hyenas and humans when the females leave to thermoregulate (cooling in the water) or feed. Those eggs that do survive hatch after 75-95 days, with females opening the nest and guarding the young for 6-8 weeks after hatching (Fergusson 2010, Combrink <em>et al. </em>2016).<br/><br/>Being a widely distributed species, <em>C. niloticus</em> are found in a wide variety of habitat types, including large lakes, rivers, and freshwater swamps (Fergusson 2010). In some areas, they extend into brackish water environments (Pooley 1982, Pauwels <em>et al. </em>2004) and sometimes occupy highly saline water. In the St Lucia estuarine system of South Africa, two adult males were recorded with satellite telemetry utilising areas of the estuarine lake for months at time, with mean salinity levels of 51.9 ± 2.5 psu, although there were nearby freshwater seepages (Combrink 2014). Habitat utilization differs between juveniles, sub-adults and adults with juveniles entering a dispersal phase at approximately 1.2 m length (Hutton 1989). Modha (1967) described some aspects of the social behaviour, including the establishment of breeding hierarchies. Combrink <em>et al. </em>(2017) reported that gravid females selected winter basking/breeding areas close to nest-sites with a significantly smaller home range (0.85 ha) than non-gravid females (108.4 ha), providing further evidence of maternal commitment. The highest reported nest fidelity recorded with satellite telemetry during incubation was 99.7% over 96 days (Combrink <em>et al.</em> 2017). Nile crocodiles display an ontogenetic shift in diet consuming insects and small aquatic invertebrates when young moving to predominantly vertebrate prey as they become larger (Cott 1961, Wallace and Leslie 2008, Lyet <em>et al. </em>2016). This can also include humans, particularly when anthropogenic activities occur within crocodile habitats (<span class=\"datalabel1\">Sideleau 2016).</p>",
+    "threats": "<p></p><p><span class=\"datalabel1\"><strong>Traditional harvesting</strong> – In Kenya, the indigenous Pokomo people have eaten crocodile meat and eggs, but the increasing Pokomo population is placing additional pressure on <em>Crocodylus niloticus </em><span class=\"datalabel1\">numbers (D. Haller pers. comm. 2016). Uncontrolled use of crocodiles for traditional medicine such as blood, fat, brains and other organs is posing&#160; pressures on some <em>C. niloticus</em> populations (Combrink <em>et al. </em><span class=\"datalabel1\">2011).<br/><br/><strong>Human-crocodile conflict </strong>– <em>Crocodylus niloticus </em><span class=\"datalabel1\">is a large predator and the recovery of <em>C. niloticus </em><span class=\"datalabel1\">numbers in close proximity to an increasing human population often results in fatal conflicts. 2015 statistics compiled within CrocBITE (2013, Sideleau 2016) report 58 fatal and 29 non-fatal <em>C. niloticus </em><span class=\"datalabel1\">attacks. However, reporting of attacks, both fatal and non-fatal, is poor across the range states of <em>C. niloticus, </em><span class=\"datalabel1\">so these numbers are conservative. It has been estimated that over 250 human fatalities occur each year in Kenya alone (D. Haller pers. comm. 2016). Retaliation killings of crocodiles are common across range states.<br/><br/><strong>Land use</strong> – <em>Crocodylus niloticus </em><span class=\"datalabel1\">attack cattle as they drink at the water’s edge. In retaliation, Kenyan pastoralists have started to kill crocodiles using pesticide-laced meat in order to preserve their cattle herd (D. Haller pers. comm. 2016). Furthermore, fishermen trap crocodiles with hooks, nets and laced bait and use the crocodile meat as baits for their fish traps, although considerable effort has been made by the Kenya Wildlife Service and the private sector (Nile Crocodiles Ltd) since 2014 to stop this practice (D. Haller pers. comm. 2016). Similar land use pressures are occurring in Botswana (Shacks 2018), Madagascar (CITES 2016), Namibia (Lyet <em>et al. </em><span class=\"datalabel1\">2016), South Africa (Combrink <em>et al. </em><span class=\"datalabel1\">2011, Calverley and Downs 2017) and Zimbabwe (Childes <em>et al. </em>2016)<span class=\"datalabel1\">. Larger anthropogenic interference also alters population processes. For example, the Pongolapoort Dam in Ndumo Game Reserve, completed in 1972, allows artificial control of water flow rates and subsequent flooding. One consequence is that during flood events, the natural watercourse is diverted away from historical nesting grounds (Calverley and Downs 2017).</span><br/><br/><strong>Food</strong> – unregulated or illegal overfishing in many range states is depleting fish stocks, which could have detrimental effects on <em>C. niloticus </em><span class=\"datalabel1\">populations.<span lang=\"EN-US\"></span></span></span></span></span></p><p><span class=\"datalabel1\"><strong>Pollution </strong>– Ashton (2010) reported increased nutrient and sediment profiles of the water column of the Olifants River, South Africa due to upstream mining, industrial and agricultural activities, and urbanisation. These have caused isolated large-scale fish mortality incidents. Histopathological investigation of dead crocodiles were found to have fed on these dead fish and succumbed to pansteatitis. Additional mining leases have been granted in the upper Olifants River and unless environmental protection mechanisms are implemented, the aquatic health may continue to decline (Ashton 2010). Similar pollution concerns are being raised in the South East Lowveld region in Zimbabwe, where rivers flow through large sugar plantations and fish health is starting to decline due to contamination with agricultural chemicals and fertilisers (S. Childes pers. comm. 2017). Lead uptake by the ingestion of fishing sinkers has also been reported (Warner <em>et al. </em><span class=\"datalabel1\">2016).<br/><br/><strong>Invasive weeds </strong>– In 2001, Leslie and Spotila reported that the invasive Triffid/Siam Weed, <em>Chromolaena odorata</em><span class=\"datalabel1\">, is found in Lake St. Lucia within the iSimangaliso (previously Greater St. Lucia) Wetland Park in South Africa. The weed could be detrimental in a number of ways. First, Leslie and Spotila (2001) noted that many females were trying to dig holes to lay their eggs but could not dig through the fibrous root mats. Second, if the roots could be avoided, <em>Chromolaena odorata</em><span class=\"datalabel1\"> shaded the nests reducing their average temperature by 5-6<sup>o</sup>C cooler relative to sun-exposed nests. Like all crocodilians, sex ratios of <em>C. niloticus </em><span class=\"datalabel1\">are determined by incubation temperature (Hutton 1987) and nests shaded by <em>Chromolaena odorata </em><span class=\"datalabel1\">are below the pivotal (1:1 male:female) ratio leading to a female-biased sex ratio (Leslie and Spotila 2001). Furthermore, as in other crocodilian species, hatchlings resulting from less than ideal incubation conditions can have a higher frequency of abnormalities (Webb <em>et al</em><span class=\"datalabel1\">. 1983, Fergusson 1987), in addition to influences on post-hatching body size (Webb <em>et al</em><span class=\"datalabel1\">., 1987; Allsteadt and Lang, 1995), residual yolk mass (Webb <em>et al</em><span class=\"datalabel1\">. 1987, Allsteadt and Lang 1995), growth (Hutton 1987, Webb and Cooper-Preston 1989) and thermoregulatory behaviour (Lang 1987). The worst case scenario is complete embryonic developmental failure (death) due to sub-optimal temperatures (Webb and Smith 1984). Ezemvelo KZN Wildlife, the provincial conservation agency, have a programme to annually eradicate <em>C. odorata</em><span class=\"datalabel1\"> from known <em>C. niloticus</em><span class=\"datalabel1\"> nesting areas along the Mphathe Stream a few months prior to crocodile nesting. It was found that females do return to cleared sites for oviposition (X. Combrink, pers. comm. 2018).</span><br/><br/><strong>Habitat destruction </strong>– The habitat of Nile Crocodiles is being modified in numerous ways. For example, the Lake Flag Boshielo dam wall (South Africa) was raised by five meters in 2005 and the resultant rise in water level flooded the existing basking sites of the resident <em>C. niloticus </em><span class=\"datalabel1\">population; within four years the population had decreased from 135 individuals to 98, which was also reflected in the adult population (Ashton 2010). A similar situation was reported by Calverley and Downs (2017) in the Ndumo Game Reserve (South Africa) after the construction of Pongolapoort Dam, which artificially controls water flow rates and subsequent flooding that has diverted the natural watercourse away from historical nesting grounds. In contrast, the construction of the Aswan Dam, Egypt have led to population expansions of Nile crocodiles there (M. Ezat pers. comm. 2016). Another example of habitat destruction is in Kenya and Madagascar where people are moving towards the river to cut out small plots to live and grow crops, leading not only reduced crocodile (nesting) habitat but exacerbating human-crocodile conflicts (D. Haller pers. comm. 2016, CITES 2016). Other habitat loss includes siltation of rivers due to anthropogenic factors such as clearing, burning and subsequent erosion (Zisadze-Gandiwa <em>et al</em><span class=\"datalabel1\">. 2012, CITES 2016).</span></span></span></span></span></span></p><p></p>",
+    "measures": "<p></p><strong>High priority</strong><strong><br/></strong><strong></strong>1. Population survey data is urgently needed for most countries to quantify regional status and determine objectively whether management activities, be they restricted to protection or involving sustainable use, are achieving their conservation goals. Such assessments and survey data provide an evidence-base for developing conservation and management programs in some nations.<br/><br/>2. Innovative approaches to raise awareness of the intrinsic and non-consumptive value of crocodiles and their management, as perceived by national authorities, are needed to prioritize crocodile conservation particularly in light of the value given to more charismatic species such as elephant, large primates and the big cats.<br/><br/>3. Study of human-crocodile conflict impacts, mitigation and “problem crocodile” management programs is central to <em>Crocodylus niloticus</em> conservation in most countries. Conﬂict between rural communities and crocodiles is the primary concern in the management of the wild crocodile population in many African countries. The problems are poorly understood for many reasons, including the lack of systematic recording of incidents and their context, with CrocBITE (2013) providing a valuable pioneering role. Technologies to reduce the probability of crocodile attacks exist (<a href=\"www.iucncsg.org\">www.iucncsg.org</a>) but are limited in scope and livelihood context. In countries such as Madagascar, where mitigation nominally involves the removal of crocodiles and the commercial use of their skins, the efficacy of the program and impact on the depleted wild populations needs to be assessed objectively.<br/>4. Impact of anthropogenic contaminants, with particular attention to the South African population. Much of the South African population appears to be at risk from contamination, with large-scale die-offs documented in prominent conservation areas (e.g. Loskop Dam Nature Reserve and Kruger National Park) since 2005. Populations in St. Lucia may not be secure, with agriculture, industry (sugarcane) and human settlements in the catchment on the increase.<br/>5. Further delineation between the ranges of <em>C. niloticus</em> and <em>C. suchus</em> is required to ensure the action plans are specific for each species. <strong><br/></strong><br/><strong></strong><strong></strong><strong>Moderate priority</strong><br/><br/>6. Allocation/demarcation of locally protected areas. Shacks (2006) looked at nest site habitat suitability versus available habitat in the Okavango Delta, Botswana. These data were then overlaid to produce a map with priority areas for nesting that led to the establishment of a nesting sanctuary for <em>C. niloticus</em>. This process could be repeated in other national contexts.<br/>7. Facilitation of management programs for countries planning or implementing sustainable utilization. A number of African nations lack the appropriate policy environment, management capability and technical expertise to plan and/or implement use programs, added to the often complex social, economic and biological variables involved. Another tier lies in a commitment to adaptive rather than strictly prescriptive management, Population surveys, monitoring, data assessment, technique training, reporting and incentives are needed to foster and sustain these programs. Hutton (1990) outlined some priority areas that need to be addressed for the development of sustainable use programs in the African context:<br/><br/>a.&#160; Pre-feasibility studies (e.g. harvest potential);b.&#160; Policy and legislation to provide a management framework;<br/>c.&#160; Feasibility studies (identiﬁcation of potential production sites, evaluation and quantiﬁcation of factors inherent in sustainable use programs);<br/>d.&#160; International requirements for trade (CITES submissions, documentation and tagging of hides);<br/>e.&#160; Population census and monitoring (technical support and training);<br/>f.&#160; Technical support for developing ranching/farming programs; and,<br/>g.&#160; Marketing.<br/><p></p>",
+    "use_trade": "<p>Trade in <em>Crocodylus niloticus </em>is subject to the conditions for Appendix I of CITES except for the populations of Botswana, Egypt, Ethiopia, Kenya, Madagascar, Malawi, Mozambique, Namibia, South Africa, Uganda, the United Republic of Tanzania, Zambia and Zimbabwe, which are included in Appendix II (Caldwell 2017). Raw, salted skins are the most internationally traded product with more than 250,000 skins currently traded per annum (Caldwell 2017), although there is also a sizable trade in tanned leather goods, trophies, skulls and meat. A more comprehensive breakdown of the skin trade per country is given within Caldwell (2017). Although on Appendix II pursuant to the ‘ranching’ Resolution [Res. Conf. 11.16 (Rev. CoP15)], the trade from South Africa of <em>C. niloticus </em>products is mostly from captive-breeding, with some ranched specimens from Mozambique. Namibia has a trophy hunting quota of 25 adult crocodiles per year and a maximum of 1600 ranched and trophy crocodile skins per year (Lyet <em>et al. </em>2016). Zimbabwe egg harvests have remained static around 50-70,000 eggs per annum since 1997 (Games <em>et al. </em>2016) and collectively with captive bred stock, average 86,000 skin exported annually over the last ten years (Caldwell 2017).<br/><br/>Indigenous people continue to harvest <em>C. niloticus</em> for their eggs and meat in some areas, probably at unsustainable levels <span class=\"datalabel1\">(D. Haller pers. comm. 2016). Crocodile fat is used in traditional medicines in some countries, including Madagascar, for the treatment of asthma (CITES 2016). There is a trade in crocodile penises within Egypt and the Sudan (M. Shirley per. Comm. 208). <br/><br/>Ecotourism also uses <em>C. niloticus </em>as an iconic drawcard (e.g. Lyet <em>et al.</em> 2016).&#160;<span lang=\"EN-US\"></span></p><p></p>",
+    "rationale": "<p>Since the last <em>Crocodilus niloticus</em> assessment in 1996, genetic analysis confirmed two lineages of African <em>Crocodylus</em>, namely <em>C. niloticus </em>and <em>C. suchus</em> (Schmitz <em>et al</em>. 2003, Hekkala <em>et al. </em>2011, Shirley <em>et al</em>. 2015). This assessment takes account of this recent information and only considers the range of <em>C. niloticus</em> (see the distirbution map and the Geographic Range section: 26 countries in southern and eastern Africa). This range represents the majority of habitat and populations on which previous continent-wide assessments of the Nile Crocodile were based. Despite some evidence of localised population declines (Ottley <em>et al.</em> 2008, Fergusson 2010, Bourquin and Leslie 2011, Combrink <em>et al. </em>2011, Ferreira and Pienaar 2011, Calverley and Downs 2014,&#160;Marais 2014, Behangana <em>et al.</em> 2017), <em>C. niloticus</em> (<em>sensu</em> <em>novo</em>) generally remains widespread and as the population has not significantly changed, the assessment LC remains the same. West African populations constituting <em>C. suchus</em> are likely depleted and less numerous and will be assessed separately.</p>",
+    "trend_justification": null,
+    "taxonomic_notes": "The African Nile Crocodile is now recognized as two distinct species: one occupying eastern Africa, the Nile valley and southern Africa and retaining the name <em>Crocodylus niloticus</em> Laurenti, 1768; and the other occupying west and central Africa, including the Congo, Niger and Ogoue drainages and assigned to the existing name <em>Crocodylus suchus </em>Geoffroy, 1807 (Schmitz <em>et al</em>. 2003, Hekkala <em>et al</em>. 2011).&#160; Red List assessments now treat these two taxa independently."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_2",
+      "description": {
+        "en": "Training"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": "",
+      "code": "6_1",
+      "description": {
+        "en": "Linked enterprises & livelihood alternatives"
+      }
+    },
+    {
+      "note": "",
+      "code": "6_3",
+      "description": {
+        "en": "Market forces"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Breeding Season",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"
+      },
+      "code": "5_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Karst and Other Subterranean Hydrological Systems (inland)"
+      },
+      "code": "5_18"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Inland Deltas"
+      },
+      "code": "5_13"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Estuaries"
+      },
+      "code": "9_10"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Sandy Shoreline and/or Beaches, Sand Bars, Spits, Etc"
+      },
+      "code": "12_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Aquatic - Water Storage Areas (over 8ha)"
+      },
+      "code": "15_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Aquatic - Ponds (below 8ha)"
+      },
+      "code": "15_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Coastal Brackish/Saline Lagoons/Marine Lakes"
+      },
+      "code": "13_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Mangrove Submerged Roots"
+      },
+      "code": "12_7"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rwanda"
+      },
+      "code": "RW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Equatorial Guinea"
+      },
+      "code": "GQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ethiopia"
+      },
+      "code": "ET"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo"
+      },
+      "code": "CG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Zimbabwe"
+      },
+      "code": "ZW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Zambia"
+      },
+      "code": "ZM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eswatini"
+      },
+      "code": "SZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Burundi"
+      },
+      "code": "BI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Botswana"
+      },
+      "code": "BW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malawi"
+      },
+      "code": "MW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uganda"
+      },
+      "code": "UG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Sudan"
+      },
+      "code": "SS"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Harvest & Trade Management Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Establishing ex-situ production *"
+      },
+      "code": "16"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Handicrafts, jewellery, etc."
+      },
+      "code": "12"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_4_5"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other ecosystem modifications"
+      },
+      "code": "7_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Large dams"
+      },
+      "code": "7_2_10"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Chromolaena odorata",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Herbicides and pesticides"
+      },
+      "code": "9_3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Nutrient loads"
+      },
+      "code": "9_3_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_2_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Isberg, S., Combrink, X., Lippai, C. & Balaguera-Reina, S.A.",
+      "value": [
+        "Sally Isberg (Centre for Crocodile Research, Noonamah,  Australia)",
+        "Christine Lippai (IUCN-SSC Crocodile Specialist Group)",
+        "Xander Combrink",
+        "Sergio Balaguera-Reina (Texas Tech University, Lubbock, Texas)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Childes, S., Ross, J.P., Shirley, M.H. & Webb, G.J.W.",
+      "value": [
+        "Perran Ross (IUCN SSC Crocodile Specialist Group)",
+        "Grahame Webb (IUCN SSC Crocodile Specialist Group)",
+        "Matthew Shirley (Florida International University)",
+        "Sue Childes"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Britton, A., Childes, S., Ezat, M., Fergusson, R, Games, I., Haller, D., Leslie, A., Pooley, S., Rilley, P., Shacks, V., Shirley, M.H., Sideleau, B., Thomas, W. & Versfeld, W.",
+      "value": [
+        "Matthew Shirley (Florida International University)",
+        "Adam Britton (Big Gekko Inc. Darwin Au)",
+        "Paul Rilley",
+        "William Versfeld",
+        "W. Thomas",
+        "Brandon Sideleau",
+        "Vince Shacks",
+        "Simon Pooley",
+        "Danny Haller",
+        "Ian Games",
+        "M. Ezat",
+        "Alison Leslie (University of Stellenbosch)",
+        "Sue Childes",
+        "Richard Fergusson (Crocodile Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Isberg, S.",
+      "value": [
+        "Sally Isberg (Centre for Crocodile Research, Noonamah,  Australia)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Hekkala, E., Shirley, M.H., Amato, G., Austin, J.D., Charter, S., Thorbjarnarson, J., Vliet, K.A., Houck, M.L., DeSalle, R. and Blum, M.J. 2011. An ancient icon reveals new mysteries: mummy DNA resurrects a cryptic species within the Nile crocodile. <i>Molecular Ecology</i> 20(20): 4199-4215. doi: 10.1111/j.1365-294X.2011.05245.x.",
+      "year": "2011",
+      "title": "An ancient icon reveals new mysteries: mummy DNA resurrects a cryptic species within the Nile crocodile",
+      "author": "Hekkala, E., Shirley, M.H., Amato, G., Austin, J.D., Charter, S., Thorbjarnarson, J., Vliet, K.A., Houck, M.L., DeSalle, R. and Blum, M.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Schmitz, A., Mausfeld, P., Hekkala, E., Shine, T., Nickel, H., Amato, G. and Bohme, W. 2003. Molecular evidence for species level divergence in African Nile Crocodiles <i>Crocodylus niloticus</i>. <i>Comptes Rendus Palevol.</i> 2(8): 703-712.",
+      "year": "2003",
+      "title": "Molecular evidence for species level divergence in African Nile Crocodiles <i>Crocodylus niloticus</i>",
+      "author": "Schmitz, A., Mausfeld, P., Hekkala, E., Shine, T., Nickel, H., Amato, G. and Bohme, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pooley, A.C. 1982. The status of African crocodiles in 1980. The 5th Working Meeting of the IUCN-SSC Crocodile Specialist Group: Pp. 174-228 in Crocodiles. IUCN: Gland.",
+      "year": "1982",
+      "title": "The status of African crocodiles in 1980",
+      "author": "Pooley, A.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pauwels, O.S.G., Branch, W.R. and Burger, M. 2004. Reptiles of Loango National Park, Ogoue-Maritime Province, south-western Gabon. <i>Hamadryad</i> 29(1): 115-127.",
+      "year": "2004",
+      "title": "Reptiles of Loango National Park, Ogoue-Maritime Province, south-western Gabon",
+      "author": "Pauwels, O.S.G., Branch, W.R. and Burger, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "CITES Trade Database. 2017. Available at: <a href=\"https://trade.cites.org/\">https://trade.cites.org/</a> (Accessed: 30th April, 2017).",
+      "year": "2017",
+      "title": "",
+      "author": "CITES Trade Database",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2019. The IUCN Red List of Threatened Species. Version 2019-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 21 March 2019).",
+      "year": "2019",
+      "title": "The IUCN Red List of Threatened Species. Version 2019-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2019-1"
+    },
+    {
+      "citation": "Caldwell, J. 2017. World trade in crocodilian skins 2013-2015.  UNEP-WCMC, Cambridge.",
+      "year": "2017",
+      "title": "World trade in crocodilian skins 2013-2015.",
+      "author": "Caldwell, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Allsteadt, J. and Lang, J.W. 1995. Sexual dimorphism in the genital morphology of young American alligators. <i>Herpetologica</i> 51(3): 314-325.",
+      "year": "1995",
+      "title": "Sexual dimorphism in the genital morphology of young American alligators",
+      "author": "Allsteadt, J. and Lang, J.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ashton, P.J. 2010. The demise of the Nile crocodile (<i>Crocodylus niloticus</i>) as a keystone species for aquatic ecosystem conservation in South Africa: The case of the Olifants River. <i>Aquatic Conservation: Marine and Freshwater Ecosystems</i> 20: 489-493.",
+      "year": "2010",
+      "title": "The demise of the Nile crocodile (<i>Crocodylus niloticus</i>) as a keystone species for aquatic ecosystem conservation in South Africa: The case of the Olifants River",
+      "author": "Ashton, P.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Aust, P.W. 2009. The ecology, conservation and management of Nile crocodiles <i>Crocodylus niloticus</i> in a human dominated landscape. Imperial College.",
+      "year": "2009",
+      "title": "The ecology, conservation and management of Nile crocodiles <i>Crocodylus niloticus</i> in a human dominated landscape",
+      "author": "Aust, P.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Behangana, M., Lukwago, W., Dendi, D., Luiselli, L. and Ochanda, D. 2017. Population surveys of Nile crocodiles (<i>Crocodylus niloticus</i>) in the Murchison Falls National Park, Victoria Nile, Uganda. <i>European Journal of Ecology</i> 3(2): 67-76.",
+      "year": "2017",
+      "title": "Population surveys of Nile crocodiles (<i>Crocodylus niloticus</i>) in the Murchison Falls National Park, Victoria Nile, Uganda",
+      "author": "Behangana, M., Lukwago, W., Dendi, D., Luiselli, L. and Ochanda, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Behra, O. 1987. Etude de repartition des populations de crocodiles du Congo, du Gabon et de la R.C.A.  Rapport au Ministere de l'Environment. Paris, France.",
+      "year": "1987",
+      "title": "Etude de repartition des populations de crocodiles du Congo, du Gabon et de la R.C.A.",
+      "author": "Behra, O.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bishop, J.M., Leslie, A.J., Bourquin, S.L. and O'Ryan, C. 2009. Reduced effective population size in an overexploited population of the Nile crocodile (<i>Crocodylus niloticus</i>). <i>Biological Conservation</i> 142(10): 2335-2341.",
+      "year": "2009",
+      "title": "Reduced effective population size in an overexploited population of the Nile crocodile (<i>Crocodylus niloticus</i>)",
+      "author": "Bishop, J.M., Leslie, A.J., Bourquin, S.L. and O'Ryan, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bourquin, S.L. and Leslie, A.J. 2011. Estimating demographics of the Nile crocodile (<i>Crocodylus niloticus</i> Laurenti) in the panhandle region of the Okavango Delta, Botswana. <i>African Journal of Ecology</i> 50(1): 1-8.",
+      "year": "2011",
+      "title": "Estimating demographics of the Nile crocodile (<i>Crocodylus niloticus</i> Laurenti) in the panhandle region of the Okavango Delta, Botswana",
+      "author": "Bourquin, S.L. and Leslie, A.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bourquin, S.L. and Shacks, V.A. 2016a. Population trends in a previously exploited Nile crocodile population in the Okavango panhandle, Botswana. <i>Crocodile Specialist Group Newsletter </i> 35(4): 5-6.",
+      "year": "2016a",
+      "title": "Population trends in a previously exploited Nile crocodile population in the Okavango panhandle, Botswana.",
+      "author": "Bourquin, S.L. and Shacks, V.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bourquin, S.L. and Shacks, V.A. 2016b. Progress Report 17 – Okavango Crocodile Monitoring Programme. Maun, Ngamiland.",
+      "year": "2016b",
+      "title": "Progress Report 17 – Okavango Crocodile Monitoring Programme",
+      "author": "Bourquin, S.L. and Shacks, V.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Brown, C., Stander, R., Meyer-Rust, R. and Mayes, S. 2004. Results of a Crocodile <i>Crocodylus niloticus</i> survey in the river systems of northeast Namibia during August 2004. <i>Crocodile Specialist Group Newsletter</i> 23(3): 18-21.",
+      "year": "2004",
+      "title": "Results of a Crocodile <i>Crocodylus niloticus</i> survey in the river systems of northeast Namibia during August 2004",
+      "author": "Brown, C., Stander, R., Meyer-Rust, R. and Mayes, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Calverley, P.M. and Downs, C.T. 2014. Population status of Nile Crocodiles in Ndumo Game Reserve, KwaZulu-Natal, South Africa (1971-2012). <i>Herpetologica</i> 70(4): 417-425.",
+      "year": "2014",
+      "title": "Population status of Nile Crocodiles in Ndumo Game Reserve, KwaZulu-Natal, South Africa (1971-2012)",
+      "author": "Calverley, P.M. and Downs, C.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Calverley, P.M. and Downs, C.T. 2017. The past and present nesting ecology of Nile crocodiles in Ndumo Game Reserve, South Africa: Reason for concern? <i>Journal of Herpetology</i> 51(1): 19-26.",
+      "year": "2017",
+      "title": "The past and present nesting ecology of Nile crocodiles in Ndumo Game Reserve, South Africa: Reason for concern? ",
+      "author": "Calverley, P.M. and Downs, C.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Champion, G. and Downs, C.T. 2017. Status of the Nile crocodile population in Pongolapoort Dam after river impoundment. <i>African Zoology</i> 52(1): 55-63.",
+      "year": "2017",
+      "title": "Status of the Nile crocodile population in Pongolapoort Dam after river impoundment",
+      "author": "Champion, G. and Downs, C.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Childes, S.L., Nyaguse, G. and Hendriksen, M. 2016. South East Lowveld Crocodile Aerial Survey, 2016. Unpublished report.  Zimbabwe Parks and Wildlife Management Authority and Crocodile Farmers Association of Zimbabwe, Harare.",
+      "year": "2016",
+      "title": "South East Lowveld Crocodile Aerial Survey, 2016. Unpublished report",
+      "author": "Childes, S.L., Nyaguse, G. and Hendriksen, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "CITES. 1997. Maintenance of the Malagasy population in Appendix II (Madagascar).. Tenth meeting of the Conference of Parties. Harare, Zimbabwe. 9-20 June 1997.",
+      "year": "1997",
+      "title": "Maintenance of the Malagasy population in Appendix II (Madagascar)",
+      "author": "CITES",
+      "citation_short": null
+    },
+    {
+      "citation": "CITES. 2004. Transfer of the population of <i>Crocodylus niloticus</i> of Namibia from Appendix I to Appendix II. Thirteenth meeting of the Conference of Parties. Bangkok, Thailand. 2-14 October 2004. Available from https://cites.org/eng/cop/13/prop/E13-P25.pdf.",
+      "year": "2004",
+      "title": "Transfer of the population of <i>Crocodylus niloticus</i> of Namibia from Appendix I to Appendix II.",
+      "author": "CITES",
+      "citation_short": ""
+    },
+    {
+      "citation": "CITES. 2010. Transfer of the Egyptian population of <i>Crocodylus niloticus</i> from Appendix I to Appendix II in conformity with the preventative measures of ranching (Res. Conf. 11.16) included in Annex 4 (2d) of the conference resolution 9.24 (Rev. CoP14).. Fifteenth meeting of the Conference of Parties. Doha, Qatar. 13-24 March 2010.",
+      "year": "2010",
+      "title": "Transfer of the Egyptian population of <i>Crocodylus niloticus</i> from Appendix I to Appendix II in conformity with the preventative measures of ranching (Res. Conf. 11.16) included in Annex 4 (2d) of the conference resolution 9.24 (Rev. CoP14)",
+      "author": "CITES",
+      "citation_short": ""
+    },
+    {
+      "citation": "CITES. 2016. Maintain the Malagasy population of <i>Crocodylus niloticus</i> in Appendix II. Seventeenth meeting of the Conference of Parties. Johannesburg, South Africa. 24 September - 5 October 2016. Available from https://cites.org/sites/default/files/eng/cop/17/prop/060216/E-CoP17-Prop-23.pdf.",
+      "year": "2016",
+      "title": "Maintain the Malagasy population of <i>Crocodylus niloticus</i> in Appendix II",
+      "author": "CITES",
+      "citation_short": null
+    },
+    {
+      "citation": "CITES Secretariat. 2013. Madagascar Crocodile Project Final Report. Report prepared by General Directorate for Forests, Ministry of Environment and Forests of Madagascar (CITES Management Authority). CITES: Geneva, Switzerland.",
+      "year": "2013",
+      "title": "Madagascar Crocodile Project Final Report. Report prepared by General Directorate for Forests, Ministry of Environment and Forests of Madagascar (CITES Management Authority). CITES: Geneva, Switzerland.",
+      "author": "CITES Secretariat ",
+      "citation_short": null
+    },
+    {
+      "citation": "Combrink, A.S. 2014. Spatial and reproductive ecology and population status of the Nile Crocodile (<i>Crocodylus niloticus</i>) in the Lake St Lucia estuarine system, South Africa. PhD thesis, University of KwaZulu-Natal. Pietermaritzburg.",
+      "year": "2014",
+      "title": "Spatial and reproductive ecology and population status of the Nile Crocodile (<i>Crocodylus niloticus</i>) in the Lake St Lucia estuarine system, South Africa",
+      "author": "Combrink, A.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Combrink, X., Korrubel, J.L., Kyle, R., Taylor, R. and Ross, P. 2011. Evidence of a Declining Nile Crocodile (<i>Crocodylus niloticus</i>) Population at Lake Sibaya, South Africa. <i>South African Journal of Wildlife Research</i> 41(2): 145-157.",
+      "year": "2011",
+      "title": "Evidence of a Declining Nile Crocodile (<i>Crocodylus niloticus</i>) Population at Lake Sibaya, South Africa",
+      "author": "Combrink, X., Korrubel, J.L., Kyle, R., Taylor, R. and Ross, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Combrink, X., Warner, J.K. and Downs, C.T. 2016. Nest predation and maternal care in the Nile crocodile (<i>Crocodylus niloticus</i>) at Lake St. Lucia, South Africa. <i>Behavioural Processes</i> 133: 31-36.",
+      "year": "2016",
+      "title": "Nest predation and maternal care in the Nile crocodile (<i>Crocodylus niloticus</i>) at Lake St. Lucia, South Africa.",
+      "author": "Combrink, X., Warner, J.K. and Downs, C.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Combrink, X., Warner, J.K. and Downs, C.T. 2017. Nest-site selection, nesting behaviour and spatial ecology of female Nile crocodiles (<i>Crocodylus niloticus</i>) in South Africa. <i>Behavioural Processes</i> 135: 101-112.",
+      "year": "2017",
+      "title": "Nest-site selection, nesting behaviour and spatial ecology of female Nile crocodiles (<i>Crocodylus niloticus</i>) in South Africa.",
+      "author": "Combrink, X., Warner, J.K. and Downs, C.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cott, H.B. 1961. Scientiﬁc results of an enquiry into the ecology and economic status of the Nile crocodile (<i>Crocodylus niloticus</i>) in Uganda and Northern Rhodesia. <i>Transactions of the Zoological Society of London</i> 29: 211-356.",
+      "year": "1961",
+      "title": "Scientiﬁc results of an enquiry into the ecology and economic status of the Nile crocodile (<i>Crocodylus niloticus</i>) in Uganda and Northern Rhodesia",
+      "author": "Cott, H.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cott, H.B. 1969. Further observations on the status and biology of the Nile crocodile below Murchison Falls. Report to Uganda National Parks.  Report to the Uganda National Parks, Kampala, Uganda.",
+      "year": "1969",
+      "title": "Further observations on the status and biology of the Nile crocodile below Murchison Falls. Report to Uganda National Parks",
+      "author": "Cott, H.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "CrocBITE. 2013. The worldwide crocodilian attack database. Big Gecko, Darwin. http://www.crocodile-attack.info. (Accessed: 15 August, 2017).",
+      "year": "2013",
+      "title": "The worldwide crocodilian attack database. Big Gecko, Darwin. http://www.crocodile-attack.info",
+      "author": "CrocBITE",
+      "citation_short": ""
+    },
+    {
+      "citation": "Crocodile Farmers Association of Zimbabwe. 2015. The performance of crocodile farming in Zimbabwe. Report submitted at the 40th Annual Meeting between CFAZ and the Parks and Wildlife Management Authority.",
+      "year": "2015",
+      "title": "The performance of crocodile farming in Zimbabwe. Report submitted at the 40th Annual Meeting between CFAZ and the Parks and Wildlife Management Authority.",
+      "author": "Crocodile Farmers Association of Zimbabwe",
+      "citation_short": null
+    },
+    {
+      "citation": "Detouf-Boulade, A. 2006. Reproductive cycle and sexual size dimorphism of the Nile crocodile (<i>Crocodylus niloticus</i>) in the Okavango Delta, Botswana. University of Stellenbosch, South Africa.",
+      "year": "2006",
+      "title": "Reproductive cycle and sexual size dimorphism of the Nile crocodile (<i>Crocodylus niloticus</i>) in the Okavango Delta, Botswana",
+      "author": "Detouf-Boulade, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Du Preez, P, Beytell, P.C., Louw, C. and Lyet, A. 2014. Aerial survey of the Nile crocodile population in the Okavango River from Angola boundary to Botswana boundary October 2013.  Report to the Directorate Scientific Services, Ministry of Environment and Tourism, Namibia.",
+      "year": "2014",
+      "title": "Aerial survey of the Nile crocodile population in the Okavango River from Angola boundary to Botswana boundary October 2013",
+      "author": "Du Preez, P, Beytell, P.C., Louw, C. and Lyet, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Egan, V., Rodgers, S. and Nelwamondo, P. 2016. Crocodile/Hippo census - October 2017: Olifants-Letaba sub-catchment. LEDET. Unpublished internal report.",
+      "year": "2016",
+      "title": "Crocodile/Hippo census - October 2017: Olifants-Letaba sub-catchment. LEDET. Unpublished internal report",
+      "author": "Egan, V., Rodgers, S. and Nelwamondo, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ferguson, M.J.W. 1987. Reproductive biology and embryology of the crocodilians. In: Gans, C., Billet, F.S. and Maderson, P.F.A. (eds), <i>Biology of the Reptilia</i>, pp. 329-491. John Wiley, New York.",
+      "year": "1987",
+      "title": "Reproductive biology and embryology of the crocodilians",
+      "author": "Ferguson, M.J.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fergusson, R.A. 2007. Survey of crocodile populations and crocodile human conﬂict on lake Bangweulu, Zambia. WWF SARPO Miombo Eco-region Conservation Programme.",
+      "year": "2007",
+      "title": "Survey of crocodile populations and crocodile human conﬂict on lake Bangweulu, Zambia",
+      "author": "Fergusson, R.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fergusson, R.A. 2009. Assessment of Nile crocodile populations -Lower Zambezi River for Chueza Community Crocodile Project. Report for WWF-Mozambique.",
+      "year": "2009",
+      "title": "Assessment of Nile crocodile populations -Lower Zambezi River for Chueza Community Crocodile Project",
+      "author": "Fergusson, R.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fergusson, R.A. 2010. Nile Crocodile <i>Crocodylus niloticus</i>. In: S.C. Manolis and C. Stevenson (eds), <i>Crocodiles, status survey and conservation action plan</i>, pp. 84-89. Crocodile Specialist Group: Darwin.",
+      "year": "2010",
+      "title": "Nile Crocodile <i>Crocodylus niloticus</i>",
+      "author": "Fergusson, R.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fergusson, R.A. and Pentolfe, N.W. 2007. Preliminary aerial survey of crocodile populations in Zambeze Valley and Manica Province, Mozambique. Direcção Nacional de Terras e Florestas, Cahora Bassa Safaris, Lopes Ndelana Tembe, Maputo.",
+      "year": "2007",
+      "title": "Preliminary aerial survey of crocodile populations in Zambeze Valley and Manica Province, Mozambique",
+      "author": "Fergusson, R.A. and Pentolfe, N.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ferreira, S.M. and Pienaar, D. 2011. Degradation of the crocodile population in the Olifants River Gorge of Kruger National Park, South Africa. <i>Aquatic Conservation:  Marine and Freshwater Ecosystems</i> 21: 155-164.",
+      "year": "2011",
+      "title": "Degradation of the crocodile population in the Olifants River Gorge of Kruger National Park, South Africa",
+      "author": "Ferreira, S.M. and Pienaar, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Games, I., Childes, S.L., Nyaguse, G., Mudongwe, A., Hendriksen, M. and Worsley, K.E. 2016. Zambezi River and Lake Kariba Crocodile Survey, 2016. Unpublished report.  Zimbabwe Parks and Wildlife Management Authority and Crocodile Farmers Association of Zimbabwe, Harare.",
+      "year": "2016",
+      "title": "Zambezi River and Lake Kariba Crocodile Survey, 2016. Unpublished report.",
+      "author": "Games, I., Childes, S.L., Nyaguse, G., Mudongwe, A., Hendriksen, M. and Worsley, K.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Graham, A. 1968. The Lake Rudolf crocodile (<i>Crocodylus niloticus</i> Laurenti) population. MSc thesis, University of East Africa, Nairobi.",
+      "year": "1968",
+      "title": "The Lake Rudolf crocodile (<i>Crocodylus niloticus</i> Laurenti) population",
+      "author": "Graham, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Harvey, J. and Marais, J. 2014. Family Crocodylidae. In: Bates, M.F., Branch, W.R., Bauer, A.M., Burger, M., Marais, J., Alexander, G.J. and de Villiers, M.S. (eds), <i>Suricata 1: Atlas and Red List of the Reptiles of South Africa, Lesotho and Swaziland</i>, National Biodiversity Institute, Pretoria.",
+      "year": "2014",
+      "title": "Family Crocodylidae",
+      "author": "Harvey, J. and Marais, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hutton, J. 1989. Movements, home range, dispersal and the separation of size classes in Nile Crocodiles. <i>American Zoologist</i> 29: 1033-1049.",
+      "year": "1989",
+      "title": "Movements, home range, dispersal and the separation of size classes in Nile Crocodiles",
+      "author": "Hutton, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hutton, J. 1990. CITES Secretariat Mission to Assist the Government of Guyana with the Utilisation of Caiman Resources through Farming, Ranching and Cropping.  Unpublished report to CITES.",
+      "year": "1990",
+      "title": "CITES Secretariat Mission to Assist the Government of Guyana with the Utilisation of Caiman Resources through Farming, Ranching and Cropping.",
+      "author": "Hutton, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hutton, J.M. 1987. Incubation temperatures, sex ratios and sex determination in a population of Nile crocodiles (<i>Crocodylus niloticus</i>). <i> Journal of Zoology (London)</i> 211: 143-155.",
+      "year": "1987",
+      "title": "Incubation temperatures, sex ratios and sex determination in a population of Nile crocodiles (<i>Crocodylus niloticus</i>)",
+      "author": "Hutton, J.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Isberg, S.R., McLeod, R. and Ross, P. 2016. <i>Crocodylus niloticus</i> Red List workshop report. Report to the Steering Committee of the 24th Working Meeting of the IUCN-SSC Crocodile Specialist Group, Skukuza, South Africa 23-26th May, 2016.",
+      "year": "2016",
+      "title": "<i>Crocodylus niloticus</i> Red List workshop report. Report to the Steering Committee of the 24th Working Meeting of the IUCN-SSC Crocodile Specialist Group, Skukuza, South Africa 23-26th May, 2016",
+      "author": "Isberg, S.R., McLeod, R. and Ross, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN-SSC CSG (IUCN Crocodile Specialist Group). 2017. Crocodilian Attacks. http://www.iucncsg.org/pages/Crocodilian-Attacks.html. (Accessed: 15 August, 2017).",
+      "year": "2017",
+      "title": "Crocodilian Attacks. http://www.iucncsg.org/pages/Crocodilian-Attacks.html",
+      "author": "IUCN-SSC CSG (IUCN Crocodile Specialist Group)",
+      "citation_short": ""
+    },
+    {
+      "citation": "Jacobsen, N. H. G. 1988. Species account: Nile crocodile (<i>Crocodylus niloticus</i>). In: W. R. Branch (ed.), <i>South African Red Data Book - Reptiles and Amphibians</i>, pp. 83-85. South African National Scientific Programmes Report No. 151. CSIR, Pretoria.",
+      "year": "1988",
+      "title": "Species account: Nile crocodile (<i>Crocodylus niloticus</i>)",
+      "author": "Jacobsen, N. H. G. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lang, J.W. 1987. Crocodile thermal selection. In: G.J.W. Webb, S.C. Manolis and P.J. Whitehead (eds), <i>Wildlife Management: Crocodiles and Alligators</i>, pp. 301-317. Surrey Beatty and Sons, Sydney.",
+      "year": "1987",
+      "title": "Crocodile thermal selection",
+      "author": "Lang, J.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Leroux, P. and Reid, C. 2016. Liwonde National Park aerial census dry season August 2016. Unpublished internal report. .",
+      "year": "2016",
+      "title": "Liwonde National Park aerial census dry season August 2016. Unpublished internal report. ",
+      "author": "Leroux, P. and Reid, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Leslie, A.J. and Spotila, J.R. 2001. Alien plant threatens Nile crocodile (<i>Crocodylus niloticus</i>) breeding in Lake St. Lucia, South Africa. <i>Biological Conservation</i> 98: 347-355.",
+      "year": "2001",
+      "title": "Alien plant threatens Nile crocodile (<i>Crocodylus niloticus</i>) breeding in Lake St. Lucia, South Africa.",
+      "author": "Leslie, A.J. and Spotila, J.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lippai, C.L. 2018. East and Southern Africa. Report to the Crocodile Specialist Group Steering Committee. 25th Working Meeting of the IUCN-SSC Crocodile Specialist Group. Universidad Nacional del Litoral, Santa Fe, Argentina.",
+      "year": "2018",
+      "title": "East and Southern Africa. Report to the Crocodile Specialist Group Steering Committee",
+      "author": "Lippai, C.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lyet, A., Slabbert, R., Versfeld, W.F., Leslie, A.J., Beytell, P.C. and Du preez, P. 2016. Using a binomial mixture model and aerial counts for an accurate estimate of Nile crocodile abundance and population size in the Kunene River, Namibia. <i>African Journal of Wildlife Research</i> 46(2): 71-86.",
+      "year": "2016",
+      "title": "Using a binomial mixture model and aerial counts for an accurate estimate of Nile crocodile abundance and population size in the Kunene River, Namibia",
+      "author": "Lyet, A., Slabbert, R., Versfeld, W.F., Leslie, A.J., Beytell, P.C. and Du Preez, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "MacGregor, J. 2002. International trade in crocodilian skins: review and analysis of the trade and industry dynamics for market-based conservation. The 16th Working Meeting of the IUCNSSC Crocodile Specialist Group: Pp. 12-18 in Crocodiles. IUCN: Gland.",
+      "year": "2002",
+      "title": "International trade in crocodilian skins: review and analysis of the trade and industry dynamics for market-based conservation",
+      "author": "MacGregor, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Macpherson, D. 2013. Report on the fourth consecutive year of trial tourist hunting in Malawi. Kanongo Estate, Malawi. Unpublished report. 4 pp.",
+      "year": "2013",
+      "title": "Report on the fourth consecutive year of trial tourist hunting in Malawi. Kanongo Estate, Malawi. Unpublished report. 4 pp.",
+      "author": "Macpherson, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mafole, S., Fergusson, R.A. and Games, I. 2008. Tanzanian Crocodile Survey August 2008. Tanzanian National Parks, Directorate of Wildlife, Dar es Salaam.",
+      "year": "2008",
+      "title": "Tanzanian Crocodile Survey August 2008",
+      "author": "Mafole, S., Fergusson, R.A. and Games, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Marais, J. 2014. <i>Crocodylus niloticus</i> (Laurenti, 1768). In: Bates, M.F., Branch, W.R., Bauer, A.M., Burger, M., Marais, J., Alexander, G.J. and de Villiers, M.S. (eds), <i>Atlas and Red List of the Reptiles of South Africa, Lesotho and Swaziland.</i>, pp. 87-88. South African National Biodiversity Institute. Pretoria, South Africa.",
+      "year": "2014",
+      "title": "<i>Crocodylus niloticus</i> (Laurenti, 1768)",
+      "author": "Marais, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Modha, M.L. 1967. The ecology of the Nile crocodile (<i>Crocodylus niloticus</i> Laurenti) on Central Island, Lake Rudolf. <i>E. Afr. Wildl. J</i> 5: 74-95.",
+      "year": "1967",
+      "title": "The ecology of the Nile crocodile (<i>Crocodylus niloticus</i> Laurenti) on Central Island, Lake Rudolf.",
+      "author": "Modha, M.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mwita, M. and Games, I. 2012. Tanzanian Crocodile Survey. Report to the Director of Wildlife, Tanzania. .",
+      "year": "2012",
+      "title": "Tanzanian Crocodile Survey. Report to the Director of Wildlife, Tanzania. ",
+      "author": "Mwita, M. and Games, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nyirenda, V.R. 2015. Spatial variability of Nile crocodiles (<i>Crocodylus niloticus</i>) in the lower Zambezi River reaches. <i>Herpetological Conservation and Biology</i> 10(3): 874-882.",
+      "year": "2015",
+      "title": "Spatial variability of Nile crocodiles (<i>Crocodylus niloticus</i>) in the lower Zambezi River reaches",
+      "author": "Nyirenda, V.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ottley, B., Lippai, C. and Rakotondrazafy, A.M.A. 2008. Surveys of Wild Crocodile Populations in Madagascar. Final Report to GTZ.",
+      "year": "2008",
+      "title": "Surveys of Wild Crocodile Populations in Madagascar",
+      "author": "Ottley, B., Lippai, C. and Rakotondrazafy, A.M.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Parker, I.S.C. and Watson, R.M. 1970. Crocodile Distribution and Status in the Major Waters of Western and Central Uganda in 1969. <i>East African Wildlife Journal</i> S: 85-103.",
+      "year": "1970",
+      "title": "Crocodile Distribution and Status in the Major Waters of Western and Central Uganda in 1969",
+      "author": "Parker, I.S.C. and Watson, R.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pooley, S. 2015. Using predator attack data to save lives, human and crocodilian. <i>Oryx: The International Journal of Conservation</i> 49: 581-583.",
+      "year": "2015",
+      "title": "Using predator attack data to save lives, human and crocodilian",
+      "author": "Pooley, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pooley, S. 2016. A Cultural herpetology of Nile crocodiles in Africa. <i>Conservation and Society</i> 14(4): 391-405.",
+      "year": "2016",
+      "title": "A Cultural herpetology of Nile crocodiles in Africa",
+      "author": "Pooley, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rochford, M.R., Krysko, K.L., Mazzotti, F.J., Shirley, M.H., Parry, M.W., Wasilewski, J.A., Beauchamp, J.S., Gillette, C.R., Metzger III, E.F., Squires, M.A. and Somma, L.A. 2016. Molecular analysis confirming the introduction of Nile crocodiles, <i>Crocodylus niloticus</i> Laurenti 1768 (Crocodylidae), in southern Florida, with an assessment of potential for establishment, spread and impacts. <i>Herpetological Conservation and Biology</i> 11: 80-89.",
+      "year": "2016",
+      "title": "Molecular analysis confirming the introduction of Nile crocodiles, <i>Crocodylus niloticus</i> Laurenti 1768 (Crocodylidae), in southern Florida, with an assessment of potential for establishment, spread and impacts.",
+      "author": "Rochford, M.R., Krysko, K.L., Mazzotti, F.J., Shirley, M.H., Parry, M.W., Wasilewski, J.A., Beauchamp, J.S., Gillette, C.R., Metzger III, E.F., Squires, M.A. and Somma, L.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shacks, V. 2006. Habitat vulnerability for the Nile crocodile in the Okavango Delta, Botswana. MA Thesis. University of Stellenbosch, South Africa.",
+      "year": "2006",
+      "title": "Habitat vulnerability for the Nile crocodile in the Okavango Delta, Botswana. MA Thesis",
+      "author": "Shacks, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shacks V.A. and Bourquin S.L. 2013. Nile crocodile (<i>Crocodylus niloticus</i>) observations on the lower Cuito and Cuando rivers of Angola.  Field Report No: 10. Southern African Regional Environmental Programme.",
+      "year": "2013",
+      "title": "Nile crocodile (<i>Crocodylus niloticus</i>) observations on the lower Cuito and Cuando rivers of Angola.",
+      "author": "Shacks V.A. and Bourquin S.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shine, T., Bohme, W., Nickel, H., Thies, D.F. and Wilms, T. 2001. Rediscovery of relict populations of the Nile crocodile <i>Crocodylus niloticus</i> in south-eastern Mauritania, with observations on their natural history. <i>Oryx</i> 35: 260-262.",
+      "year": "2001",
+      "title": "Rediscovery of relict populations of the Nile crocodile <i>Crocodylus niloticus</i> in south-eastern Mauritania, with observations on their natural history",
+      "author": "Shine, T., Bohme, W., Nickel, H., Thies, D.F. and Wilms, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shirley, M.H., Dorazio, R., Abassery, E., El Hady, A.A., Mekki, M.S. and Asran.H.H. 2012. A sampling design and model for estimating abundance of Nile crocodiles while accounting for heterogeneity of detectability of multiple observers. <i>Journal of Wildlife Management</i> 76(5): 966 – 975.",
+      "year": "2012",
+      "title": "A sampling design and model for estimating abundance of Nile crocodiles while accounting for heterogeneity of detectability of multiple observers",
+      "author": "Shirley, M.H., Dorazio, R., Abassery, E., El Hady, A.A., Mekki, M.S. and Asran.H.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shirley, M.H., Siege, L. and Ademasu, M. 2014. Crocodile Management in Ethiopia. A report presented to the Ethiopian Wildlife Conservation Authority on behalf of the IUCN-SSC Crocodile Specialist Group. . Available at: <a href=\"https://www.iucncsg.org/365_docs/attachments/protarea/CSG_-c439aa7c.pdf\">https://www.iucncsg.org/365_docs/attachments/protarea/CSG_-c439aa7c.pdf</a>. (Accessed: 26th April, 2017).",
+      "year": "2014",
+      "title": "Crocodile Management in Ethiopia. A report presented to the Ethiopian Wildlife Conservation Authority on behalf of the IUCN-SSC Crocodile Specialist Group. ",
+      "author": "Shirley, M.H., Siege, L. and Ademasu, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Shirley, M.H., Villanova, V.L., Vliet, K.A. and Austin, J.D. 2015. Genetic barcoding facilitates captive and wild management of three cryptic African crocodile species complexes. <i>Animal Conservation </i> 18: 322-330.",
+      "year": "2015",
+      "title": "Genetic barcoding facilitates captive and wild management of three cryptic African crocodile species complexes",
+      "author": "Shirley, M.H., Villanova, V.L., Vliet, K.A. and Austin, J.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sideleau, B. 2016. Summary of worldwide crocodilian attacks for 2015. <i>Crocodile Specialist Group Newsletter</i> 35(1): 4-6.",
+      "year": "2016",
+      "title": "Summary of worldwide crocodilian attacks for 2015",
+      "author": "Sideleau, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Siege, L. and Koch, C. 2017. Systematic status of crocodiles in the Awash River catchment. <i>Crocodile Specialist Group Newsletter </i> 36(4): 24-26.",
+      "year": "2017",
+      "title": "Systematic status of crocodiles in the Awash River catchment",
+      "author": "Siege, L. and Koch, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Smet, K. 1999. Status of the Nile crocodile in the Sahara desert. <i>Hydrobiologia</i> 391: 81-86.",
+      "year": "1999",
+      "title": "Status of the Nile crocodile in the Sahara desert",
+      "author": "Smet, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Summers, M.K. 2015. Aspects of Nile crocodile (<i>Crocodylus niloticus</i>) population ecology and behaviour in Pongolapoort Dam, KwaZulu-Natal. MSc thesis. University of KwaZulu-Natal. Pietermaritzburg.",
+      "year": "2015",
+      "title": "Aspects of Nile crocodile (<i>Crocodylus niloticus</i>) population ecology and behaviour in Pongolapoort Dam, KwaZulu-Natal. MSc thesis",
+      "author": "Summers, M.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thomas, G. 2006. Human-crocodile conﬂict in the Okavango Delta, Botswana. University of Stellenbosch, South Africa.",
+      "year": "2006",
+      "title": "Human-crocodile conﬂict in the Okavango Delta, Botswana",
+      "author": "Thomas, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thorbjarnarson, J. and Shirley, M.H. 2009. Observations on Nile Crocodiles (<i>Crocodylus niloticus</i>) and their Management in Murchison Falls National Park.  A Report to the Wildlife Conservation Society and the Uganda Wildlife Authority, Kampala, Uganda.",
+      "year": "2009",
+      "title": "Observations on Nile Crocodiles (<i>Crocodylus niloticus</i>) and their Management in Murchison Falls National Park.",
+      "author": "Thorbjarnarson, J. and Shirley, M.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Versfeld, W.F. 2016. Nile crocodile (<i>Crocodylus niloticus</i>) genetic diversity and population structure, within the lower Kunene and Okavango Rivers of northern Namibia. MSc thesis, Faculty of Natural Science, Stellenbosch University.",
+      "year": "2016",
+      "title": "Nile crocodile (<i>Crocodylus niloticus</i>) genetic diversity and population structure, within the lower Kunene and Okavango Rivers of northern Namibia",
+      "author": "Versfeld, W.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wallace, K.M., and Leslie, A. J. 2008. Diet of the Nile Crocodile (<i>Crocodylus niloticus</i>) in the Okavango Delta, Botswana. <i>Journal of Herpetology</i> 42: 361-368.",
+      "year": "2008",
+      "title": "Diet of the Nile Crocodile (<i>Crocodylus niloticus</i>) in the Okavango Delta, Botswana",
+      "author": "Wallace, K.M., and Leslie, A. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wallace, K.M., Leslie, A.J., Coulson, T. and Wallace, A.S. 2013. Population size and structure of the Nile crocodile <i>Crocodylus niloticus</i> in the lower Zambezi valley. <i>Oryx</i> 47(3): 457-465.",
+      "year": "2013",
+      "title": "Population size and structure of the Nile crocodile <i>Crocodylus niloticus</i> in the lower Zambezi valley",
+      "author": "Wallace, K.M., Leslie, A.J., Coulson, T. and Wallace, A.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Warner, J.K., Combrink, X., Myburgh, J.G. and Downs, C.T. 2016. Blood lead concentrations in free-ranging Nile crocodiles (<i>Crocodylus niloticus</i>) from South Africa. <i>Ecotoxicology</i> 25(5): 950-958.",
+      "year": "2016",
+      "title": "Blood lead concentrations in free-ranging Nile crocodiles (<i>Crocodylus niloticus</i>) from South Africa",
+      "author": "Warner, J.K., Combrink, X., Myburgh, J.G. and Downs, C.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Webb, G.J.W. and Cooper-Preston, H. 1989. Effects of incubation temperature on crocodiles and the evolution of reptilian oviparity. <i>American Zoologist</i> 29: 953-971.",
+      "year": "1989",
+      "title": "Effects of incubation temperature on crocodiles and the evolution of reptilian oviparity",
+      "author": "Webb, G.J.W. and Cooper-Preston, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Webb, G.J.W. and Smith, A.M.A. 1984. Sex ratio and survivorship in the Australian freshwater crocodile, <i>Crocodylus johnstoni</i>. In: Ferguson, M.W.J. (ed.), <i>The Structure, Development and Evolution of Reptiles</i>, Academic Press, London.",
+      "year": "1984",
+      "title": "Sex ratio and survivorship in the Australian freshwater crocodile, <i>Crocodylus johnstoni</i>.",
+      "author": "Webb, G.J.W. and Smith, A.M.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Webb, G.J.W., Beal, A.M., Manolis, S.C. and Dempsey, K.E. 1987. The effects of incubation temperature on sex determination and embryonic development rate in <i>Crocodylus johnstoni</i> and <i>C. porosus </i>. In: G.J.W. Webb, S.C. Manolis and P.J. Whitehead (eds), <i>Wildlife Management: Crocodiles and Alligators</i>, Surrey Beatty and Sons, Sydney.",
+      "year": "1987",
+      "title": "The effects of incubation temperature on sex determination and embryonic development rate in <i>Crocodylus johnstoni</i> and <i>C. porosus </i>.",
+      "author": "Webb, G.J.W., Beal, A.M., Manolis, S.C. and Dempsey, K.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Webb, G.J.W., Buckworth, R. and Manolis, S.C. 1983. An examination of <i>Crocodylus porosus</i> nests in two northern Australian fresh water swamps, with an analysis of embryo mortality. <i>Australian Wildlife Research</i> 10: 571-605.",
+      "year": "1983",
+      "title": "An examination of <i>Crocodylus porosus</i> nests in two northern Australian fresh water swamps, with an analysis of embryo mortality.",
+      "author": "Webb, G.J.W., Buckworth, R. and Manolis, S.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Whitaker, R. 2007. Sustainable Use of the Lake Chamo Nile Crocodile Population. Addis Ababa, Ethiopia.",
+      "year": "2007",
+      "title": "Sustainable Use of the Lake Chamo Nile Crocodile Population. Addis Ababa, Ethiopia",
+      "author": "Whitaker, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zisadza-Gandiwa, P., Gandiwa, E., Jakarasi, J., van der Westhuizen, H. and Muvengwi, J. 2012. Abundance, distribution and population trends of Nile crocodile (<i>Crocodylus niloticus</i>) in Gonarezhou National Park, Zimbabwe. <i>Water SA</i> 39: 165-169.",
+      "year": "2012",
+      "title": "Abundance, distribution and population trends of Nile crocodile (<i>Crocodylus niloticus</i>) in Gonarezhou National Park, Zimbabwe",
+      "author": "Zisadza-Gandiwa, P., Gandiwa, E., Jakarasi, J., van der Westhuizen, H. and Muvengwi, J.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Skewed sex ratios"
+      },
+      "code": "2_3_6"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    },
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

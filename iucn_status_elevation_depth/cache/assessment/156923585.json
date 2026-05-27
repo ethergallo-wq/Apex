@@ -1,0 +1,2493 @@
+{
+  "assessment_date": "2018-03-16T00:00:00.000+00:00",
+  "year_published": "2018",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 2477,
+  "criteria": "A1abd",
+  "url": "https://www.iucnredlist.org/species/2477/156923585",
+  "citation": "Cooke, J.G. 2018. Balaenoptera musculus (errata version published in 2019). The IUCN Red List of Threatened Species 2018: e.T2477A156923585. Accessed on 15 May 2026.",
+  "assessment_id": 156923585,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 2477,
+    "scientific_name": "Balaenoptera musculus",
+    "species_taxa": [],
+    "subpopulation_taxa": [
+      {
+        "sis_id": 2483,
+        "scientific_name": "Balaenoptera musculus musculus North Atlantic stock",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "BALAENOPTERIDAE",
+        "genus_name": "Balaenoptera",
+        "species_name": "musculus",
+        "subpopulation_name": "North Atlantic stock",
+        "infra_name": "musculus",
+        "authority": null,
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Blue Whale",
+            "language": "eng"
+          },
+          {
+            "main": true,
+            "name": "North Atlantic Blue Whale",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 2482,
+        "scientific_name": "Balaenoptera musculus musculus North Pacific stock",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "BALAENOPTERIDAE",
+        "genus_name": "Balaenoptera",
+        "species_name": "musculus",
+        "subpopulation_name": "North Pacific stock",
+        "infra_name": "musculus",
+        "authority": null,
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Blue Whale",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "infrarank_taxa": [
+      {
+        "sis_id": 2479,
+        "scientific_name": "Balaenoptera musculus ssp. brevicauda",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "BALAENOPTERIDAE",
+        "genus_name": "Balaenoptera",
+        "species_name": "musculus",
+        "subpopulation_name": null,
+        "infra_name": "brevicauda",
+        "authority": "Ichihara, 1966",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Pygmy Blue Whale",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 134811081,
+        "scientific_name": "Balaenoptera musculus ssp. indica",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "BALAENOPTERIDAE",
+        "genus_name": "Balaenoptera",
+        "species_name": "musculus",
+        "subpopulation_name": null,
+        "infra_name": "indica",
+        "authority": "Blyth, 1859",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Northern Indian Ocean Blue Whale",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 41713,
+        "scientific_name": "Balaenoptera musculus ssp. intermedia",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "BALAENOPTERIDAE",
+        "genus_name": "Balaenoptera",
+        "species_name": "musculus",
+        "subpopulation_name": null,
+        "infra_name": "intermedia",
+        "authority": "Burmeister, 1871",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Antarctic Blue Whale",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 132712,
+        "scientific_name": "Balaenoptera musculus ssp. musculus",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "BALAENOPTERIDAE",
+        "genus_name": "Balaenoptera",
+        "species_name": "musculus",
+        "subpopulation_name": null,
+        "infra_name": "musculus",
+        "authority": "(Linnaeus, 1758)",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Blue Whale",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 134811092,
+        "scientific_name": "Balaenoptera musculus ssp. nov. 'Chilean Blue Whale'",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "BALAENOPTERIDAE",
+        "genus_name": "Balaenoptera",
+        "species_name": "musculus",
+        "subpopulation_name": null,
+        "infra_name": "nov. 'Chilean Blue Whale'",
+        "authority": null,
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Chilean Blue Whale",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "ARTIODACTYLA",
+    "family_name": "BALAENOPTERIDAE",
+    "genus_name": "Balaenoptera",
+    "species_name": "musculus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Baleia-azul",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Baleine bleue",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Ballena Azul",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Blåhval",
+        "language": "nor"
+      },
+      {
+        "main": false,
+        "name": "Blåhval",
+        "language": "dan"
+      },
+      {
+        "main": false,
+        "name": "Blåkval",
+        "language": "nor"
+      },
+      {
+        "main": false,
+        "name": "Blauwal",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Blauwe vinvis",
+        "language": "dut"
+      },
+      {
+        "main": false,
+        "name": "Royður",
+        "language": "fao"
+      },
+      {
+        "main": false,
+        "name": "Royður",
+        "language": "fao"
+      },
+      {
+        "main": false,
+        "name": "Steypireyður",
+        "language": "ice"
+      },
+      {
+        "main": true,
+        "name": "Blue Whale",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Balaena musculus Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Balaena",
+        "species_name": "musculus",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Increasing"
+    },
+    "code": "0"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Endangered"
+    },
+    "code": "EN"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "5000-15000",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "No",
+    "generational_length": "30.8",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": "Unknown",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p>The Blue Whale is a cosmopolitan species, found in all oceans but absent from some regional seas such as the Mediterranean, Okhotsk, and Bering seas. Until the 1960s, evidence of Blue Whale distribution came primarily from commercial catches, subsequently from whaling vessels sightings, then in the 1980s and 1990s from dedicated sighting surveys and platforms of opportunity, and since the 2000s also from acoustic detections, especially of males.<br/><br/><strong><em>North Atlantic</em><em><br/> </em></strong>In the North Atlantic the summer distribution of Blue Whales extends in the west from the Scotian Shelf to the Davis Strait (Canada/Greenland) and into the Gulf of Saint Lawrence (Sears and Calambokidis 2002, Waring <em>et al</em>. 2010). Blue whales occur in the Denmark Strait, around Iceland and north to the ice edge, and in the northeast to and around Svalbard (Norway), but not far into the Barents Sea. Historically, Blue Whales were commonly caught along the coasts of northern and western Norway, the Faeroes, and to the north and west of Scotland and Ireland. Small numbers were caught off northwestern Spain&#160;and near the Strait of Gibraltar, but the species does not occur in the Mediterranean (Reeves and Notarbartolo di Sciara 2006).<br/><br/>The winter distribution is poorly known but Blue Whales may have been dispersed over much of the tropical and subtropical North Atlantic (Reeves <em>et al</em>. 2004). There have been winter sightings off the coast of Mauritania (Baines and Reichelt 2014).&#160; Blue Whales are regularly observed around the Azores in spring and at least some migrate northward from there (Silva <em>et al</em>. 2013). Blue Whales have been tracked from the Gulf of Saint Lawrence to the New England Seamounts and to the coasts of North and South Carolina (34°N) in winter (Lesage <em>et al</em>. 2017). There are virtually no records from the Gulf of Mexico or the Caribbean.<br/><br/>Photo-identification data show that there are two largely separate populations in the North Atlantic: the northwest Atlantic population occurs in summer in the Gulf of Saint Lawrence, on the Scotian Shelf, and around Newfoundland and west of Greenland. The northeast Atlantic population occurs in summer east of Greenland, around Iceland, Jan Mayen and Svalbard, and west of Ireland; in spring it occurs around the Azores and in winter off northwest Africa. About 500 individuals have been identified to date in each of the two populations, but so far only one crossover (from the Gulf of Saint Lawrence to the Azores) has been documented through photographic matching (Sears <em>et al</em>. 2015.<em><br/><br/><strong>North Pacific</strong></em><strong><br/></strong><em></em>Blue Whales occur in summer north of 35°N in the western North Pacific, and north of 40°N in the central North Pacific and Gulf of Alaska, but not in the Bering or Okhotsk Seas. In the eastern North Pacific, they occur year-round off Baja California, Mexico, and the California coast (Calambokidis and Barlow 2004). Analysis of song types suggest that Blue Whales in the eastern North Pacific are a separate population from those in the central and western North Pacific, but that whales from the eastern population mingle with whales from the western population in the Gulf of Alaska in summer (Monnahan <em>et al</em>. 2014). While some Blue Whales remain off California in winter, some of the Californian Blue Whales, including females with or without calves, migrate into the Gulf of California in winter (Sears <em>et al</em>. 2013). Some North Pacific Blue Whales migrate in winter to the Costa Rica dome (Mate <em>et al</em>. 1999)&#160; and perhaps further south into Peruvian waters (Le Duc <em>et al</em>. 2017).<em><br/><br/><strong>Eastern tropical Pacific (ETP) and eastern South Pacific</strong></em><br/>Blue Whales are present year-round on the Costa Rica Dome but it is unclear whether any animals are resident there, or whether it is sequentially occupied by whales wintering from the northeastern and southeastern Pacific (Reilly and Thayer 1990).<br/><br/>Sightings recorded by whalers taking other species show that Blue Whales were quite abundant during 1976-82 in the waters west of northern Peru (exact locations not given), especially in January-March, but with much reduced presence during the severe El Niño event of 1982-83 (Valdivia <em>et al</em>. 1984, Donovan 1984). Their presence in November-December from the coast out to well beyond the Galápagos Islands was also shown by sightings from Japanese scouting vessels during 1979-82 (Miyashita <em>et al</em>. 1996). Their presence in the waters of Ecuador and Peru was shown by tuna vessel surveys during October-March 1975-88 (Reilly and Thayer 1990) and later by dedicated cetacean surveys in July-December during 1986-2003 (Hamilton <em>et al</em>. 2009).<br/><br/>Blue Whales have been hunted in the past from several locations on the Chilean coast from 20°S to 42°S in all seasons (Allison 2017). Current areas of regular summer abundance include Chañaral (29°S) and Chiloé Island (42°-44°S) (Hucke-Gaete <em>et al</em>. 2004, Vernazzani <em>et al</em>. 2012). A summer survey in December-January 1997/98 of offshore waters 12-200 nm from the coast between 18°S and 38°S showed presence from 20°S southward, with most sightings between 27°S and 33°S (Williams <em>et al</em>. 2011).<br/><br/>Based on morphology, genetics and migration, Branch <em>et al</em>. (2007a) proposed that Chilean Blue Whales are a separate subspecies from <em>B. m. intermedia </em>and <em>B. m. brevicauda</em>. However, while Chilean Blue Whales are clearly distinct from the other Southern Hemisphere subspecies, the division between Chilean and North Pacific Blue Whales is not yet clear. LeDuc <em>et al</em>. (2017) found that most Blue Whales biopsy sampled during July-November on the Costa Rica Dome were genetically closer to whales sampled in the North Pacific, while most Blue Whales biopsy sampled in the same months off Ecuador and the Galápagos were genetically closer to whales sampled in Chilean waters, but there was a high degree of uncertainty in individual assignments to the two groups. There is movement between the two grounds, with individual whales matched or tracked between California and the Costa Rica Dome, between the Costa Rica Dome and the Galápagos, and between the Galápagos and southern Chile (IWC 2017a, Huecke-Gate <em>et al</em>. 2016). In Chilean waters, the seasonal distribution of acoustic detections suggests a migration to northerly tropical latitudes in winter, but calls typical of Chilean Blue Whales were also recorded year-round in the ETP (Buchan <em>et al</em>. 2015). Calls typical of Antarctic Blue Whales are detected in the ETP during the austral winter (Stafford <em>et al</em>. 1999, IWC 2017a). Clearly more research is needed to clarify the seasonal presence and distribution of the different groups of Blue Whales in the ETP, as the area is used by North Pacific, Chilean, and Antarctic Blue Whales, and there may also be resident individuals.<br/><br/>Calls typical of Antarctic Blue Whales have also been detected from January to June near Chiloé Island, but appeared to be from individuals making only brief visits to the area (Buchan <em>et al</em>. 2018).<em><br/><br/><strong>Southern Indian Ocean and southwestern Pacific</strong></em><br/><br/>Pygmy Blue Whales (<em>B. m. brevicauda</em>) occur north of 52°S, with very few or no individuals south of this latitude (Branch <em>et al</em>. 2007a, 2009). They occur off northwestern Madagascar (Cerchio <em>et al</em>. 2016), on the Madagascar plateau (Best <em>et al</em>. 2003), in the offshore waters of Kenya (Barber <em>et al</em>. 2016) around and north of the Seychelles (Mikhalev 2000), across the pelagic southern Indian Ocean, and off South Australia and Western Australia, where they form part of a more or less continuous distribution from Tasmania to Indonesia. The Blue Whales observed around New Zealand also appear to be Pygmy Blue whales, based on genetics (Sremba <em>et al</em>. 2015) and morphology (Olson <em>et al</em>. 2015). Blue Whales appear to be rare or absent in the central South Pacific between the New Zealand and Chilean areas of occurrence (Branch <em>et al</em>. 2007b).<br/><br/>Based on acoustic detections, Antarctic Blue Whales (<em>B. m. intermedia</em>) occur in the tropical and subtropical Indian Ocean only in winter and spring, while Pygmy Blue Whales occur year-round but with a tendency to move southward in the austral summer (Samaran <em>et al</em>. 2013). Other data are also broadly consistent with a lower-latitude distribution in the austral winter and a more southerly distribution in summer (Zemsky and Sazhinov 1982, cited by Best <em>et al</em>. 2003): Pygmy Blue Whales were present at the Seychelles in November but not April (Mikhalev 2000), and off Kenya in September and October but not during November to January (Barber <em>et al</em>. 2016). Foetuses found in the Pygmy Blue Whales taken by Soviet whalers near the Seychelles and in the southern Indian Ocean indicated that calves are born in the austral winter (Mikhalev 2000).<em><br/><br/><strong>Northern Indian Ocean</strong></em><strong> </strong><br/>Blue Whales are found year-round in the northern Indian Ocean, especially around Sri Lanka, and seasonally around the Maldive Islands and in the Gulf of Aden (Alling <em>et al</em>. 1991, Mikhaelev 2000, Stafford <em>et al</em>. 2011, Anderson <em>et al</em>. 2012). They occur virtually year-round off southern Sri Lanka but are most abundant during December to May and least abundant during July to September (Randage <em>et al</em>. 2014). Analyses of fetuses in Blue Whales taken by Soviet fleets in the Northern Indian Ocean (Mikhalev 2000) revealed no clear seasonality of reproduction, being consistent either with year-round reproduction or perhaps a bimodal pattern.<br/><br/>Anderson <em>et al</em>. (2012) considered that there is some east-west migration within the northern Indian Ocean, with peak occurrence in the western Arabian Sea in May-October, followed by dispersal eastward after the end of the southwest monsoon, past Sri Lanka and into the Bay of Bengal, with peak abundance northeast of Sri Lanka occurring in February and March. However, Samaran <em>et al</em>. (2013) found that call types detected off Sri Lanka were also heard in the southern Indian Ocean in December and January, at least as far south as 43°S, which suggests that some Blue Whales may migrate between Sri Lanka and the temperate southern Indian Ocean.<br/><br/>Although Blue Whales in the northern Indian Ocean are tentatively considered to be the distinct subspecies <em>B. m. indica</em>, their distinction from <em>B. m. brevicauda</em> is unclear. Mikhalev (2000) found the maximum body length, body length at maturity, and ovulation rate of Arabian Sea Blue Whales to be similar to Pygmy Blue Whales in the Southern Indian Ocean.<br/></p><strong><em>Antarctic and Southern Ocean</em></strong><br/>The Antarctic form <em>B. m. intermedia</em>, occurs throughout the Antarctic in summer, from the Antarctic Polar Front up to and into the sea ice, and in the subantarctic South Atlantic including the South Georgia area (Branch <em>et al</em>. 2007b). The winter distribution is not well known, but at least some and possibly most of the population migrates to lower latitudes in winter. Evidence for this comes from past catches of Antarctic-sized Blue Whales off Angola, Namibia, and South Africa in winter only (Branch <em>et al</em>. 2007b) and more recently from acoustics: call types characteristic of Antarctic Blue Whales have been recorded in the austral winter just north of the equator in the mid-Atlantic (Samaran <em>et al</em>. 2017),&#160; in the southeastern Atlantic on the west coast of South Africa (Bell 2016 ), in the tropical Indian Ocean and southwest Pacific Ocean (Balcazar <em>et al</em>. 2017), and near the Galápagos Islands (Stafford <em>et al</em>. 2004). However, there is also at least some winter presence in high latitudes (Ŝirović <em>et al</em>. 2009, Thomisch <em>et al</em>. 2016) and perhaps some summer presence in mid-latitudes of the Indian Ocean (Samaran <em>et al</em>. 2013) and southeastern Pacific (Buchan <em>et al</em>. 2018).",
+    "population": "<p><strong><em>North Atlantic</em></strong><br/>Nearly 11,000 Blue Whales were specifically recorded as taken in the North Atlantic since the start of modern whaling in northern Norway in the 1860s, but an additional 13,000 unspecified large whales were recorded as caught in the late 19th and early 20th centuries (Allison 2017), of which perhaps 30% could have been Blue Whales based on specified catches in the same areas in the same and following years. In addition, whaling in the earlier years (pre-1916) is thought to have involved substantial struck-and-lost rates (IWC 2010, 2017b) such that the total number of Blue Whales killed in the North Atlantic was probably in the range 15-20,000.<br/><br/>Catches started off the coast of Finnmark, northern Norway, where it is likely that over 3,000 Blue Whales were taken before whaling was banned from mainland Norway in 1905. Operations spread to Svalbard, where over 1,000 Blue Whales were taken, and to Iceland where probably over 5,000 were taken before whaling was banned for about 20 years starting in 1916 due to noticeably declining abundance. Over 2,000 Blue Whales were taken off Newfoundland, about 500 in the Gulf of St Lawrence and nearly 1,000 around the Faeroes, Scotland, and Ireland. Very few Blue Whales were caught off Spain and Portugal. After the main period of whaling, low-level catches throughout the range probably impeded recovery until catches all but ceased around 1960. The last recorded directed catches  were six Blue  Whales taken off Spain in 1978,  three by pirate whaling vessels, and three  by catchers boats working for land stations (Allison  2017).<br/><br/>Post-whaling abundance estimates for the central and eastern North Atlantic (Iceland, Denmark Strait, southeastern Greenland, Jan Mayen, Faeroes and the British Isles and the Norwegian and Barents Seas) rose from 298 (coefficient of variation (CV) 0.25) in 1987 to 1,012 (CV 0.23) in 2001 (Pike <em>et al</em>. 2009). The increasing trend is consistent with a previous trend detected in sighting rates from Icelandic whaling vessels during 1969-88 (Sigurjónsson and Gunnlaugsson 1990). The Blue Whales in these surveys were most abundant west of Iceland, but with a shift to the northeast of Iceland in recent years (Víkingsson <em>et al</em>. 2015) and around Jan Mayen and Svalbard. Blue Whales are now very rare along the coast of Norway despite large catches there in the past. Further surveys of this area were conducted in 2007 and 2014-16 but the data have not yet been analysed to produce updated estimates of Blue Whale abundance (NAMMCO 2017).<br/><br/>Too few Blue Whales were observed in a survey of the Canadian Atlantic in 2007 to estimate abundance (Lawson and Gosselin 2009) and none were seen in US waters in 2011 surveys (Palka 2012).<br/><br/>Only one Blue Whale was seen (west of Cap Finisterre) during the summer 2016 SCANS III surveys which covered UK waters, the North Sea, English Channel, Bay of Biscay, and the Atlantic waters of France and Spain (Hammond <em>et al.</em> 2017). By comparison, over 1,000 Fin Whales (<em>Balaenoptera physalus</em>) were seen. These results suggest a Blue Whale summer abundance in the area only in the tens. A separate survey of waters south-west of Ireland in 2013 (Baines <em>et al.</em> 2017) recorded16 Blue Whales (including resightings), and the data suggest that about 10-20 individuals were present. A Blue Whale seen in southeastern Biscaya in 2016 was the first live sighting off Spain since the last catches in the 1970s (Covelo <em>et al.</em> 2017). <br/><br/>About 500 individual Blue Whales were photo-identified in the Gulf of Saint Lawrence during 1979-2015 (Sears <em>et al.</em> 2015). In view of the long time period, many of the animals in the catalogue are likely no longer alive. The Northeast Atlantic photo-id catalogue contained over 500 individuals by 2015, including 125 collected off Iceland during 1995-2005 and 335 in the Azores during 2002-15. The catalogues have not yet yielded estimates of abundance.<br/><br/><strong><em>North Pacific</em></strong><br/>About 9,000 Blue Whales were recorded as caught in the North Pacific, in addition to over 7,000 unspecified whales, some of which would have been Blue Whales (Allison 2017). The Blue Whale was protected by the International Whaling Commission (IWC) from 1966, but a further 760 Blue Whales were taken illegally by USSR fleets until 1972 (Doroshenko 2000, Ivashchenko <em>et al</em>. 2017)<br/><br/>The best estimate of abundance for the eastern North Pacific population, from&#160;photographic capture-recapture with an allowance for heterogeneity, is 1,647 (CV 0.07) (Calambokidis and Barlow 2013). Using the estimated catch history, including the assignment of a portion of the past catches in the Gulf of Alaska to the eastern North Pacific population, Monnahan <em>et al. </em>(2015) concluded that the eastern North Pacific population had recovered to near its pre-whaling abundance, estimated to be 1,750-2,500 whales. The population seems to have been roughly stable since the early 1990s (Carretta <em>et al.</em> 2017).<br/><br/>The international POWER (Pacific Ocean Whale and Environment) surveys covered the North Pacific east of 170°E and north of 40°N up to the Aleutian chain and the Alaska coast during 2010-12 (IWC 2018a). A total of 16 Blue Whales were seen. No abundance estimate has been calculated but the survey results suggest an abundance in the range 500-1,500, but which possibly includes some of the animals that are included in the above mark-recapture estimate. Only one Blue Whale was seen during the 2013-16 POWER surveys which covered the area between 20°N and 40°N. No Blue Whales were sighted in surveys of coastal British Columbia waters during 2004-08 (Best <em>et al.</em> 2015).<br/><br/>In the northwestern Pacific, Hakamada and Matsuoka (2016) estimated the late summer abundance in 2008 west of 170°E and north of 35°N at about 1,000 whales (CV ~0.5). The survey did not include the waters within the Russian Exclusive Economic Zone along the Kuril chain and Kamchatka, where Blue Whales also occur in summer (Miyashita 2006).<br/><br/>Blue Whales remain rare or absent in the Bering and Okhotsk Seas (Miyashita <em>et al.</em> 1996, Miyashita 2006, Friday et al. 2013), and very few historical catches are recorded from these areas.<br/><br/>Although over 2,000 Blue Whales were taken by coastal whaling in Japan until the 1960s, no Blue Whales were seen around Japan and in the North Pacific west of 155°E in extensive scouting vessel surveys during 1964-90 (Miyashita <em>et al.</em> 1996).&#160; Blue Whales were seen from 145°E eastward in surveys conducted during 1994-2015, but not near the coast of Japan (Matsuoka <em>et al.</em> 2016). <em><br/><br/><strong>Eastern South Pacific and eastern equatorial Pacific</strong></em><br/>A total of 5,276 Blue Whales were reported as caught in the eastern South Pacific including equatorial waters in the 20<sup>th</sup> century (Allison 2017). Allowing for some Blue Whales among the unspecified catches and for some level of struck and lost animals, and a lack of catch records for some whaling operations, the likely total kill is in the range 6,000-7,000. However, about 1,000 animals which were taken in equatorial waters during the austral summer/northern winter may have consisted partly of animals from the North Pacific populations. Furthermore, in the first half of the 20<sup>th</sup> century, Antarctic Blue Whales were much more abundant than today, hence a significant portion of early catches off Peru and Chile, especially in the austral winter, may have been of Antarctic Blue Whales.<br/><br/>For the first 60 years of modern whaling, catches of Blue Whales off Chile and Peru averaged only 60 per year but catches increased from 1964 for meat exports, and 964 whales were taken during 1964-67, between 19°-39°S. Following a recommendation by the Comisión Permanente del Pacífico Sur (the international body responsible for regulating whaling in the southeastern Pacific at the time) (CPSS 1966) catching of Blue Whales were suspended in Peru after the 1966 season and in Chile after the 1966/67 season. Clarke <em>et al</em>. (1978) cited the high catches off Peru and Chile at a time when the Antarctic Blue Whale stock was reduced to less than 1,000, as evidence that the Chilean and Peruvian whales were not from the Antarctic population, an observation that was later confirmed (see <em>Geographic Range</em> above). Sighting rates of Blue Whales from Peruvian and Chilean whaling vessels apparently remained reasonably high after catches of this species ceased (Valdivia <em>et al</em>. 1984, Maturana 1982), but the high catches of the mid-1960s would probably have been unsustainable if they had been allowed to continue.<br/><br/>A survey conducted under the IDCR (International Decade of Cetacean Research) programme in November-December 1982 between 10°S and 10°N from the coasts of Peru and Ecuador out to 110°W resulted in 16 Blue Whale sightings, all within 100 nm of the coast (Donovan 1984), but the survey coincided with the onset of an especially severe El Niño event.<br/><br/>A survey conducted under the international SOWER (Southern Ocean Whale and Environmental Research) programme during December-January 1997/98 covered the area between 12-200nm off the Chile coast between 18°S and 38°S and resulted in an abundance estimate of 303 Blue Whales (95% confidence interval (CI) = 176-625) for this area (Williams <em>et al.</em> 2011). Most Blue Whale sightings were between 27°S-33°S.&#160; A mark-recapture estimate using photo-id data collected around Chiloé Island (42°S) during 2004-11 yielded an estimate of 450 whales (CV 0.17) in 2008 with no significant trend (Cooke and Jackson 2017) but it is unclear what population this estimate pertains to because it includes both resident and transient individuals. Only one match was found between the 23 “individuals” (actually: left or right sides) identified on the SOWER cruise and the 563 “individuals” identified around Chiloé Island&#160;(IWC 2017a), which suggests that the whales either belong to distinct groups or to quite a large common population. Likewise, only one match was found between the Chiloé whales and the Blue Whales individually identified off Chañaral (29°S) (Galletti Vernazzani <em>et al</em>. 2017). The overall abundance and trend of Chilean Blue Whales is currently uncertain. Williams <em>et al</em>. (2011 revised 2017) show possible population trajectories from the early 20<sup>th</sup> century to the present<span class=\"MsoCommentReference\">. <em><br/><br/><strong>Southern Indian Ocean and Southwest Pacific</strong></em><strong><br/> </strong>No comprehensive estimate of the population of Pygmy Blue Whales is available. From a survey in December 1996, Best <em>et al.</em> (2003) estimated the abundance of Pygmy Blue Whales in a survey area south of Madagascar to be 424 (confidence limits about 190-930) and suggested, based on the distribution of past catches, that the total population in the southwestern Indian Ocean was about three times that in the survey area. The Western Australia population has been estimated&#160;at 662-1,559 based on acoustic recordings during 2000-2006 (McCauley and Jenner 2010), and 712-1,754 based on photo-identification during 2000-2005 (Jenner <em>et al.</em> 2008). However, these estimates do not cover the full range of the species in the southeastern Indian Ocean, and updated estimates based on photo-identification and genetic recapture are in preparation (IWC 2017a). A total of 31 distinct blue whales were identified in New Zealand waters during 2004-2014 (Olson <em>et al</em>. 2015) and a population estimate is currently in preparation. The catch of over 9,500 Pygmy Blue Whales in the southern Indian Ocean in the period 1960-72 (Allison 2017) suggests that the initial population was at least this size, and hence that the current population is still depleted, but not as severely as that of the Antarctic Blue Whale.<em><br/><br/><strong>Northern Indian Ocean</strong></em><br/>Mikhalev (2000) documented 1,294 Pygmy Blue Whales caught illegally by Soviet fleets in the northern and equatorial Indian Ocean during 1963-66, mainly in the Gulf of Aden, north of the Seychelles, off the Maldive Islands and Laccdive Islands, and west of southern India and Sri Lanka. Priyadarshana <em>et al</em>. (2016) estimated a population size of 270 whales (CV 0.09) in a 7,500 km² area off southern Sri Lanka, which probably does not cover the full extent of this area of occurrence. No other abundance estimates in the Northern Indian Ocean are available.<em><br/><br/><strong>Antarctic</strong></em><br/>Catch records did not distinguish between subspecies until biologists accompanying Japanese and Russian whaling fleets started recording them separately from the 1960s (Ichihara 1966, Doroshenko 2000). Branch <em>et al.</em> (2009) concluded that virtually all of the Blue Whales taken south of 52°S in the southern Indian Ocean sector were Antarctic Blue Whales. The catch history of the various subspecies can be approximately reconstructed by assuming that Blue Whales not specified to subspecies taken south of 52°S or in the South Atlantic were <em>B. m. intermedia</em>, that Blue Whales taken off the west coast of South America were Chilean Blue Whales, and that Blue Whales not specified to subspecies taken in the northern Indian Ocean or in the Indian Ocean or the western South Pacific north of 52°S in the austral summer were Pygmy Blue Whales (understood here to include both <em>B. m. brevicauda</em> and <em>B. m. indica</em>). This leaves just a few hundred early catches in the southern Indian Ocean of doubtful identity.<em> </em>Allowing for some of the unspecified (to species) catch to have been Blue Whales, and for some struck and lost whales in the early years, the estimated total historical kill is about 350,000 Antarctic Blue Whales and 14,000 Pygmy Blue Whales (<em>B .m. brevicauda</em> and/or <em>B. m. indica</em>). These figures include the approximately 9,400 Blue Whales taken illegally by Soviet fleets in the 1960s and early 1970s that were not reported at the time (Ivashchenko <em>et al.</em> 2011), of which about 80% were Pygmy Blue Whales based on the above criteria.<br/><br/>The most recent circumpolar estimate of abundance for Antarctic Blue Whales agreed by the IWC Scientific Committee is 2,280 (CV 0.36) in 1998, based on sightings south of 60°S in summer, with an estimated annual increase rate of 8.1% (95% CI 1.6%-14.9%) (Branch 2007). A recalculation of the increase rate using more years of data is in progress (IWC 2017a).<br/><br/>An estimate from Japanese surveys covering just half of the Antarctic (35°E to 145°W) south of 60° S is 1,223 (CV 0.35) in 2008, with an estimated annual increase rate reported as 8.3% (95% CI 3.9% - 12.5%) (Matsuoka and Hakamada 2014). However, the annual increase rate implied by the presented data is 6.6% with a wide confidence interval (95% CI 0.0%-13.2%).<br/><br/>Photo-identification of Antarctic Blue Whales during 1991-2016 yielded 441 distinct individuals of which 14 were re-sighted in different years (Olson <em>et al.</em> 2016).&#160; The number of inter-annual re-sightings is too small for reliable estimation of abundance and trends, but is broadly consistent with the above circumpolar abundance estimate.</p><p><br/><strong><em>Assessment</em></strong><br/>The IWC Scientific Committee in 2008 accepted a stock assessment of Antarctic Blue Whales by T. Branch (IWC 2009). However, the assessment is redone here because the Committee's assessment did not use an age-structured model and thus could not estimate the numbers of mature individuals that are required for the IUCN Red List assessment. The historical catch data have also been revised since then (Allison 2017).<br/><br/>The age at first reproduction is not well-known for Blue Whales in general, but Sears <em>et al.</em> (2013) found a youngest age of 11 years for first known calvings of female Blue Whales in the eastern North Pacific. This agrees with the estimate of 11 years  by Taylor <em>et al.</em> (2007) from inter-specific comparisons. The generation time was estimated by Taylor <em>et al.</em> to be 30.8 years, which corresponds to a 3-generation period from 1926-2018 for application of the A criterion for the Red List.<br/><br/>Plausible rates of natural increase, taking into account the age at maturity and reproductive rates have been estimated to be 4.1% per year (Branch 2008a) for Antarctic Blue Whales and 2% per year for Pygmy Blue Whales, which appear to have a lower reproductive rate (Branch 2008b). Taylor <em>et al.</em> (2007) inferred an intrinsic increase rate of 5% for Blue Whales and estimated the proportion mature to be 72% for a stable population or 48% for a population increasing at the intrinsic rate.    </p><p>For Antarctic Blue Whales, a 5% intrinsic increase rate with logistic density-dependence, and&#160;assuming a 5 year mean age at recruitment, as for Fin Whales, an annual natural survival rate of 0.975 (Ramp <em>et al.</em> 2006, Taylor <em>et al.</em> 2007), and a total population size of 2,280 whales in 1998, would imply a mature population size in 1926 of 125,000 or a total population size of 189,000, declining to a minimum of less than 1,000 in the late 1960s, and increasing to about 3,000 mature or 6,500 total by 2018 (see Supplementary Information).<br/><br/>As discussed above, there are no complete estimates of recent or current abundance for the other regions, but plausible total numbers would be 1,000-3,000 in the North Atlantic, 3,000-5,000 in the North Pacific, and possibly 1,000-3,000 in the eastern South Pacific. The number of Pygmy Blue whales is very uncertain but may be in the range 2,000-5,000. Taken together with a range of 5,000-8,000 in the Antarctic, the global population size in 2018 is plausibly in the range 10,000-25,000 total or 5,000-15,000 mature, compared with a 1926 global population of at least 140,000 mature. The current mature population would therefore be between 3 and 11% of the 1926 level. This overlaps the boundary (90% decline or 10% remaining) between the Endangered and Critically Endangered categories under criterion A1.<br/><br/>There is evidence of increasing abundance, at least up to around the year 2000, in the Antarctic and North Atlantic, and at least stability in the North Pacific. There is as yet no evidence of trend in the abundance of Pygmy Blue Whales or of Chilean Blue Whales, but it is likely that the global population of Blue Whales has increased in recent decades.</p>",
+    "habitats": "<p>Blue Whales feed almost exclusively on euphausiids (krill), with a variety of species being taken by different Blue Whale populations, such as <em>Euphausia superba</em> in the Antarctic, <em>Nyctiphanes australis</em> off southern Australia (Gill 2002), <em>Euphausia recurva</em> off Western Australia (J. Bannister pers. comm. 2007), <em>Nyctiphanes simplex</em> off the Galápagos (Palacios 1999), <em>Euphausia pacifica</em> and <em>Thysanoessa</em> spp. in the North Pacific (Fiedler <em>et al.</em> 1998), and <em>Meganyctiphanes norvegica </em>and <em>Thysanoessa </em>spp. in the North Atlantic (Visser <em>et al.</em> 2011, McQuinn <em>et al.</em> 2016). They feed both at the surface and at depths of up to 300 m (Sears and Calambokidis 2002, Calambokidis <em>et al.</em> 2007).<br/><br/>The migration patterns of Blue Whales are not well understood, but appear to be diverse. Although there is evidence of migratory behaviour in most of the populations studied, both wintering and summering areas appear to be occupied at some level throughout the year. Some individuals may reside year-round in habitats of year-round high productivity, while others undertake long migrations from tropical waters to high-latitude feeding grounds, but possibly stopping to feed in areas of high productivity on route, while yet others may undertake more limited migrations (Branch <em>et al.</em> 2007b, Gill <em>et al.</em> 2011, de Vos <em>et al.</em> 2014, Silva <em>et al.</em> 2013, Torres 2013, Lesage <em>et al.</em> 2017).</p>",
+    "threats": "<p>The main threat to Blue Whales in the past was direct exploitation, which only became possible on a regular basis in the modern era using deck-mounted harpoon cannons. Modern Blue Whale hunting started in the North Atlantic in 1868 and spread to other regions after the northeastern Atlantic population had been severely reduced, and whaling was temporarily banned in Norway from 1905 and in Iceland from 1915 (Tønnessen and Johnsen 1982). The Antarctic and North Atlantic populations were each probably depleted to the low hundreds by the time whaling ceased in the 1960-1970s, but have increased since. Blue Whales have been legally protected worldwide since 1966, although they continued to be caught illegally by former USSR fleets until 1972. The last recorded deliberate catches were off Spain in 1978 (Allison 2017).<br/><br/>Blue Whales in a calving ground off southern Sri Lanka appears to be especially subject to ship strikes, as indicated by both direct observations of strikes and strandings that exhibit blunt trauma (Ilangakoon 2012, de Vos <em>et al</em>. 2016) and observations of living animals that appear to have injuries that prevent normal swimming (IWC 2018b). The large volume of ship traffic around the southern coast of Sri Lanka makes it one of the busiest ocean-going shipping lanes in the world, but Priyadasharnha <em>et al.</em> (2016)&#160;showed that the expected frequency of ship strikes on Blue Whales would be greatly reduced by moving the lanes slightly further offshore.<br/><br/>Nine deaths of Blue Whales plus some serious injuries were attributed to ship strikes on the west coast of North America during 2007-13 (Carretta <em>et al</em>. 2017). Of 21 carcasses of Blue Whales found off California during 1988-2007, eight were found to have been killed by ship strike (Berman-Kowalewski <em>et al.</em> 2010).&#160;This suggests that ship strikes represent a substantial addition to natural mortality (Rockwood <em>et al.</em> 2017).&#160;Monnahan <em>et al</em>. (2015), on the other hand, argued that ship strikes have only a small effect on this population.&#160;As of 2018 this issue had not been resolved.<br/><br/>Of the Blue Whales in the Gulf of Saint Lawrence photo-identification catalogue, 16% appear to have scars or wounds resulting from ship strikes (Sears and Calambokidis 2002).<br/><br/>McKenna <em>et al.</em> (2015) concluded from tracking data that Blue Whales do not demonstrate effective avoidance behaviour when ships are near.&#160;However, Priyardashana <em>et al.</em> (2016) showed, based on densities of whales and shipping, that the expected frequency of ship strikes off southern Sri Lanka would be an order of magnitude higher than current estimates if the Blue Whales took no evasive action.<br/><br/>Incidental catches of Blue Whales in fisheries appear to be rare. The only reported cases this century were one in the northeastern Pacific in 2015 and one in the Gulf of Saint Lawrence in 2002. Blue whales in cold waters often have marks or scars caused by contact with ice, which can make it harder to identify scars caused by contact with fishing gear.<br/><br/>The main food of Antarctic Blue Whales, <em>Euphausia superba</em> and <em>E. crystallorophias</em><em>,</em> are predicted to decline during the 21<sup>st</sup> century due both to reduced ocean productivity associated with warming (Piñones and Fedorov 2016) and to increasing ocean acidity that limits their shell-building (Kawaguchi <em>et al.</em> 2013).&#160; Comparable changes are likely in other oceans.</p>",
+    "measures": "<p>Blue Whales have been protected from commercial hunting by the International Whaling Commission since 1966, although illegal catches by USSR fleets continued until 1972. No Blue Whales have been reported as having been caught deliberately since 1978. The species is on Appendix I of both the Conservation on International Trade in Wild Species of Fauna and Flora (CITES) and the Convention on the Conservation of Migratory Species of Wild Animals (CMS).</p>",
+    "use_trade": "The Blue Whale was the subject of major commercial hunting in the past, which ceased in the 1970s.",
+    "rationale": "<p></p><p>  </p><p></p><p>The cause of the population reduction of Blue Whales, <em>Baleanoptera musculus</em>, (commercial whaling) is reversible, understood, and is not currently operating. For this reason, the species is assessed under criterion A1, not under A2, A3 or A4. Assuming a 31-year generation time, the 3-generation window for criterion A is the period 1926-2018. The global mature population size in 1926 was probably around 140,000. The current global mature population size is uncertain but likely to be in the range 5,000-15,000. This corresponds to a reduction of 89%-97%, which overlaps the boundary of Critically Endangered and Endangered with respect to past reduction under the A1 criterion (90% reduction over three generations). Given the evidence of increase in those regions where the species was most depleted (Antarctic and North Atlantic), Endangered (A1abd) seems the most appropriate category at this time, taking into account both the current population level and the likely global trend. The dominant contribution to the reduction in the global population was the massive reduction of the formerly very large Antarctic population. The Antarctic subspecies (<em>B. m. intermedia</em>)&#160;is included in this assessment, but is also separately listed as Critically Endangered.</p>  <p></p>  <p></p>",
+    "trend_justification": null,
+    "taxonomic_notes": "<p>The Committee on Taxonomy of the Society for Marine Mammalogy (Committee on Taxonomy 2016) provisionally lists the following subspecies: <em>Balaenoptera musculus</em> <em>musculus </em>(Linnaeus 1758) - Northern Blue Whale (found in the North Atlantic and the North Pacific); <em>B. m. intermedia</em> (Burmeister 1871) - Antarctic Blue Whale; <em>B. m. indica</em> (Blyth 1859) - Northern Indian Ocean Blue Whale; <em>B. m. brevicauda</em> (Ichihara 1966) - Pygmy Blue Whale; and<em>&#160;B. m</em>. un-named subspecies - Chilean Blue Whale.<br/><br/>The nominate subspecies&#160;<em>B. m. musculus</em>&#160;refers at least to the North Atlantic Blue Whale which was the basis for the first description of the species by Linnaeus. Animals in the North Pacific are similar in size and morphology to North Atlantic Blue Whales and are also regarded as&#160;<em>B. m. musculus</em>, pending a genetic comparison of these populations. The Antarctic form&#160;<em>B. m. intermedia</em> is distinguished by its large body size and Antarctic distribution in summer. The Pygmy Blue Whale&#160;<em>B. m. brevicauda</em> has a number of morphological characteristics that distinguish it from <em>B. m. intermedia</em>&#160;and&#160;<em>B. m. musculus.</em> It occurs in the Indian Ocean, excluding the Antarctic, from Africa and Madagascar across to Indonesia and Australia, and in the southwestern Pacific, including Tasmania and New Zealand. Blue Whales in the northern Indian Ocean have been tentatively assigned the name&#160;<em>B. m. indica</em>, but a clear distinction between <em>B. m. indica</em> and <em>B. m. brevicauda</em> has not yet been established.<br/><br/>Blue Whales in the southeastern Pacific are intermediate in size between <em>B. m. intermedia</em> and <em>B. m. brevicauda</em> (Branch <em>et al</em>. 2007a) and are genetically differentiated from both groups (LeDuc <em>et al</em>. 2017). They are provisionally designated as an unnamed subspecies with the common name Chilean Blue Whales. Chilean Blue Whales are genetically most similar to Blue Whales in the northeast Pacific (LeDuc <em>et al</em>. 2017); investigations into the genetic and morphological distinction between these two groups are ongoing. The respective winter ranges of Blue Whales from the eastern South Pacific (Chilean Blue whales) and from the eastern North Pacific may overlap&#160;in the eastern equatorial Pacific but their breeding seasons are probably six months out of phase (LeDuc<em> et al</em>. 2017).</p>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Antarctic"
+      },
+      "code": "1"
+    },
+    {
+      "description": {
+        "en": "Australasian"
+      },
+      "code": "2"
+    },
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    },
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    },
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    },
+    {
+      "description": {
+        "en": "Oceanian"
+      },
+      "code": "6"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Indian Ocean - Antarctic"
+      },
+      "code": "58"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - western central"
+      },
+      "code": "31"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - southwest"
+      },
+      "code": "41"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - southeast"
+      },
+      "code": "47"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - northwest"
+      },
+      "code": "21"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - northeast"
+      },
+      "code": "27"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Arctic Sea"
+      },
+      "code": "18"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Indian Ocean - eastern"
+      },
+      "code": "57"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Indian Ocean - western"
+      },
+      "code": "51"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - Antarctic"
+      },
+      "code": "88"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - eastern central"
+      },
+      "code": "77"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - northeast"
+      },
+      "code": "67"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - northwest"
+      },
+      "code": "61"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - southeast"
+      },
+      "code": "87"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - southwest"
+      },
+      "code": "81"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - western central"
+      },
+      "code": "71"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - Antarctic"
+      },
+      "code": "48"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - eastern central"
+      },
+      "code": "34"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Mesopelagic (200-1000m)"
+      },
+      "code": "10_2"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Taiwan, Province of China"
+      },
+      "code": "TW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Korea, Republic of"
+      },
+      "code": "KR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Korea, Democratic People's Republic of"
+      },
+      "code": "KP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Yemen"
+      },
+      "code": "YE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Oman"
+      },
+      "code": "OM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Iraq"
+      },
+      "code": "IQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Seychelles"
+      },
+      "code": "SC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Réunion"
+      },
+      "code": "RE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mauritius"
+      },
+      "code": "MU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Djibouti"
+      },
+      "code": "DJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Comoros"
+      },
+      "code": "KM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cabo Verde"
+      },
+      "code": "CV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Timor-Leste"
+      },
+      "code": "TL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Philippines"
+      },
+      "code": "PH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Maldives"
+      },
+      "code": "MV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Uruguay"
+      },
+      "code": "UY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Falkland Islands (Malvinas)"
+      },
+      "code": "FK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Western Sahara"
+      },
+      "code": "EH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bermuda"
+      },
+      "code": "BM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "El Salvador"
+      },
+      "code": "SV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Svalbard and Jan Mayen"
+      },
+      "code": "SJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Canary Is."
+      },
+      "code": "CNY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "South Georgia and the South Sandwich Islands"
+      },
+      "code": "GS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Faroe Islands"
+      },
+      "code": "FO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Gibraltar"
+      },
+      "code": "GI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Greenland"
+      },
+      "code": "GL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Iceland"
+      },
+      "code": "IS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Ireland"
+      },
+      "code": "IE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Azores"
+      },
+      "code": "AZO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Madeira"
+      },
+      "code": "MDR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Saint Pierre and Miquelon"
+      },
+      "code": "PM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Kamchatka"
+      },
+      "code": "KAM-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Kuril Is."
+      },
+      "code": "KUR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cocos (Keeling) Islands"
+      },
+      "code": "CC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cook Islands"
+      },
+      "code": "CK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Fiji"
+      },
+      "code": "FJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Kiribati"
+      },
+      "code": "KI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Nauru"
+      },
+      "code": "NR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "New Caledonia"
+      },
+      "code": "NC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "NZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Norfolk Island"
+      },
+      "code": "NF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Palau"
+      },
+      "code": "PW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Papua New Guinea"
+      },
+      "code": "PG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Solomon Islands"
+      },
+      "code": "SB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Tuvalu"
+      },
+      "code": "TV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "French Southern Territories"
+      },
+      "code": "TF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Vanuatu"
+      },
+      "code": "VU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Chile"
+      },
+      "code": "CL"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": "Very Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Cooke, J.G.",
+      "value": [
+        "Justin Cooke (IUCN SSC Cetacean Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Brownell Jr., R.L., Jackson, J. & Reeves, R.",
+      "value": [
+        "Robert Brownell Jr.",
+        "Randall Reeves (IUCN SSC Cetacean Specialist Group)",
+        "Jennifer Jackson"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Astudillo-Scalia, Y.",
+      "value": [
+        "Yaiyr Astudillo-Scalia (Arizona State University)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Lowry, L.",
+      "value": [
+        "Lloyd Lowry (Deceased Nov 2018. Formerely atUniversity of Alaska Fairbanks)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This errata version has been generated to remove the section about the UAE from the Taxonomic Notes which was erroneously copied into the global assessment from the national assessment."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Taylor, B.L., Chivers, S.J., Larese, J. and Perrin, W.F. 2007. Generation length and percent mature estimates for IUCN assessments of Cetaceans. NOAA Southwest Fisheries Science Center, La Jolla, California. Administrative Report LJ-07-01.",
+      "year": "2007",
+      "title": "Generation length and percent mature estimates for IUCN assessments of Cetaceans",
+      "author": "Taylor, B.L., Chivers, S.J., Larese, J. and Perrin, W.F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Reeves, R. R. and Notarbartolo Di Sciara, G. 2006. <i>The status and distribution of cetaceans in the Black Sea and Mediterranean Sea</i>. IUCN Centre for Mediterranean Cooperation, Malaga, Spain.",
+      "year": "2006",
+      "title": "The status and distribution of cetaceans in the Black Sea and Mediterranean Sea",
+      "author": "Reeves, R. R. and Notarbartolo Di Sciara, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Anderson, R. C. 2005. Observations of cetaceans in the Maldives, 1990-2002. <i>Journal of Cetacean Research and Management</i> 7(2): 119-135.",
+      "year": "2005",
+      "title": "Observations of cetaceans in the Maldives, 1990-2002",
+      "author": "Anderson, R. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sigurjónsson, J. and Gunnlaugsson, T. 1990. Recent trends in abundance of blue (<i>Balaenoptera musculus</i>) and humpback whales (<i>Megaptera novaeangliae</i>) off West and Southwest Iceland, with a note on occurrence of other cetacean species. <i>Report of the International Whaling Commission</i> 40: 537-551.",
+      "year": "1990",
+      "title": "Recent trends in abundance of blue (<i>Balaenoptera musculus</i>) and humpback whales (<i>Megaptera novaeangliae</i>) off West and Southwest Iceland, with a note on occurrence of other cetacean species",
+      "author": "Sigurjónsson, J. and Gunnlaugsson, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Miyashita, T., Kato, H. and Kasuya, T. 1996. <i>Worldwide Map of Cetacean Distribution Based on Japanese Sighting Data</i>. National Research Institute of Far Seas Fisheries.",
+      "year": "1996",
+      "title": "Worldwide Map of Cetacean Distribution Based on Japanese Sighting Data",
+      "author": "Miyashita, T., Kato, H. and Kasuya, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Best, P. B., Rademeyer, R. A., Burton, C., Ljungblad, D., Sekiguchi, K., Shimada, H., Thiele, D., Reeb, D. and Butterworth, D. S. 2003. The abundance of blue whales on the Madagascar Plateau, December 1996. <i>Journal of Cetacean Research and Management</i> 5(3): 253-260.",
+      "year": "2003",
+      "title": "The abundance of blue whales on the Madagascar Plateau, December 1996",
+      "author": "Best, P. B., Rademeyer, R. A., Burton, C., Ljungblad, D., Sekiguchi, K., Shimada, H., Thiele, D., Reeb, D. and Butterworth, D. S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Reilly, S. B. and Thayer, V. G. 1990. Blue whale (<i>Balaenoptera musculus</i>) distribution in the eastern tropical Pacific. <i>Marine Mammal Science</i> 6(4): 265- 277.",
+      "year": "1990",
+      "title": "Blue whale (<i>Balaenoptera musculus</i>) distribution in the eastern tropical Pacific",
+      "author": "Reilly, S. B. and Thayer, V. G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Doroshenko, N. V. 2000. Soviet Whaling for blue, gray, bowhead and right whales in the North Pacific Ocean, 1961-1979. <i>Soviet Whaling Data (1949-1979)</i>, pp. 96-103. Center for Russian Environmental Policy, Moscow, Russia.",
+      "year": "2000",
+      "title": "Soviet Whaling for blue, gray, bowhead and right whales in the North Pacific Ocean, 1961-1979",
+      "author": "Doroshenko, N. V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Reeves, R. R., Smith, T. D., Josephson, E. A., Clapham, P. J. and Woolmer, G. 2004. Historical observations of humpback and blue whales in the North Atlantic Ocean: Clues to migratory routes and possible additional feeding grounds. <i>Marine Mammal Science</i> 20(4): 774-786.",
+      "year": "2004",
+      "title": "Historical observations of humpback and blue whales in the North Atlantic Ocean: Clues to migratory routes and possible additional feeding grounds",
+      "author": "Reeves, R. R., Smith, T. D., Josephson, E. A., Clapham, P. J. and Woolmer, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Alling, A., Dorsey, E. M. and Gordon, J. C. D. 1991. Blue whales (<i>Balaenoptera musculus</i>) off the northeast coast of Sri Lanka: distribution, feeding and individual identification. <i>UNEP Marine Mammal Technical Report</i> 3: 247-258.",
+      "year": "1991",
+      "title": "Blue whales (<i>Balaenoptera musculus</i>) off the northeast coast of Sri Lanka: distribution, feeding and individual identification",
+      "author": "Alling, A., Dorsey, E. M. and Gordon, J. C. D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Donovan, G. P. 1984. Blue whales off Peru, December 1982, with special reference to pygmy blue whales. <i>Reports of the International Whaling Commission</i> 34: 473-476.",
+      "year": "1984",
+      "title": "Blue whales off Peru, December 1982, with special reference to pygmy blue whales",
+      "author": "Donovan, G. P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ramp, C., Bérubé, M., Hagen, W. and Sears, R. 2006. Survival of adult blue whales <i>Balaenoptera musculus</i> in the Gulf of St. Lawrence, Canada. <i>Marine Ecological Progress Report</i> 319: 287-295.",
+      "year": "2006",
+      "title": "Survival of adult blue whales <i>Balaenoptera musculus</i> in the Gulf of St. Lawrence, Canada",
+      "author": "Ramp, C., Bérubé, M., Hagen, W. and Sears, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ichihara, T. 1966. The pygmy blue whale, <i>Balaenoptera musculus brevicauda</i>, a new subspecies from the Antarctic. In: K. S. Norris (ed.), <i>Whales, dolphins, and porpoises</i>, pp. 79-113. University of California Press.",
+      "year": "1966",
+      "title": "The pygmy blue whale, <i>Balaenoptera musculus brevicauda</i>, a new subspecies from the Antarctic",
+      "author": "Ichihara, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Palacios, D. M. 1999. Blue whale (<i>Balaenoptera musculus</i>) occurrence off the Galapagos Islands, 1978-1995. <i>Journal of Cetacean Research and Management</i> 1(1): 41-51.",
+      "year": "1999",
+      "title": "Blue whale (<i>Balaenoptera musculus</i>) occurrence off the Galapagos Islands, 1978-1995",
+      "author": "Palacios, D. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Calambokidis, J. and Barlow, J. 2004. Abundance of blue and humpback whales in the eastern North Pacific estimated by capture-recapture and line-transect methods. <i>Marine Mammal Science</i> 20(1): 63-85.",
+      "year": "2004",
+      "title": "Abundance of blue and humpback whales in the eastern North Pacific estimated by capture-recapture and line-transect methods",
+      "author": "Calambokidis, J. and Barlow, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mate, B. R., Lagerquist, B. A. and Calambokidis, J. 1999. Movements of North Pacific blue whales during the feeding season off southern California and their southern fall migration. <i>Marine Mammal Science</i> 15(4): 1246-1257.",
+      "year": "1999",
+      "title": "Movements of North Pacific blue whales during the feeding season off southern California and their southern fall migration",
+      "author": "Mate, B. R., Lagerquist, B. A. and Calambokidis, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tønnessen, J. N. and Johnsen, A. O. 1982. <i>The history of modern whaling. Berkeley, California: University of California Press.</i>.",
+      "year": "1982",
+      "title": "The history of modern whaling. Berkeley, California: University of California Press.",
+      "author": "Tønnessen, J. N. and Johnsen, A. O.",
+      "citation_short": null
+    },
+    {
+      "citation": "Allison C. 2017. <i>International Whaling Commission Catch Data Base v. 6.1</i>.",
+      "year": "2017",
+      "title": "International Whaling Commission Catch Data Base v. 6.1",
+      "author": "Allison C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hakamada T. and Matsuoka K. 2016. The number of blue, fin, humpback and North Pacific right whales in the western North Pacific in the JARPNII offshore survey area.  International Whaling Commission Scientific Committee Document SC/F16/JR13.",
+      "year": "2016",
+      "title": "The number of blue, fin, humpback and North Pacific right whales in the western North Pacific in the JARPNII offshore survey area.",
+      "author": "Hakamada T. and Matsuoka K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ivashchenko, Y.V., Clapham, P.J. and Brownell, R.L. Jr. 2017. New data on Soviet catches of blue (<i>Balaenoptera musculus</i>) and right whales (<i>Eubalaena japonica</i>) in the North Pacific. <i>Journal of Cetacean Research and Management</i> 17: 15–22.",
+      "year": "2017",
+      "title": "New data on Soviet catches of blue (<i>Balaenoptera musculus</i>) and right whales (<i>Eubalaena japonica</i>) in the North Pacific",
+      "author": "Ivashchenko, Y.V., Clapham, P.J. and Brownell, R.L. Jr.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Committee on Taxonomy. 2017. List of marine mammal species and subspecies. Society for Marine Mammalogy, www.marinemammalscience.org, consulted on 24 December  2017.",
+      "year": "2017",
+      "title": "List of marine mammal species and subspecies. Society for Marine Mammalogy, www.marinemammalscience.org, consulted on 24 December  2017",
+      "author": "Committee on Taxonomy",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kawaguchi, S., Ishida, A., King, R., Raymond, B., Waller, N., Constable, A., Nicol, S., Wakita, M. and Ishimatsu, A. 2013. Risk maps for Antarctic krill under projected Southern Ocean acidification. <i>Nature Climate Change</i> 3: 843-847.",
+      "year": "2013",
+      "title": "Risk maps for Antarctic krill under projected Southern Ocean acidification",
+      "author": "Kawaguchi, S., Ishida, A., King, R., Raymond, B., Waller, N., Constable, A., Nicol, S., Wakita, M. and Ishimatsu, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2018. The IUCN Red List of Threatened Species. Version 2018-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 15 November 2018).",
+      "year": "2018",
+      "title": "The IUCN Red List of Threatened Species. Version 2018-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2018-2"
+    },
+    {
+      "citation": "Vernazzani B.G., Carlosn C.A., Cabrera E. & Brownell R.L. Jr. 2012. Chilean blue whales off Isla Grande de Chiloé, 2004-2010: distribution, site-fidelity and behaviour. <i>J. Cetacean Res. Manage.</i> 12(3): 353–360.",
+      "year": "2012",
+      "title": "Chilean blue whales off Isla Grande de Chiloé, 2004-2010: distribution, site-fidelity and behaviour",
+      "author": "Vernazzani B.G., Carlosn C.A., Cabrera E. & Brownell R.L. Jr",
+      "citation_short": null
+    },
+    {
+      "citation": "Rockwood RC, Calambokidis J, Jahncke J. 2017. High mortality of blue, humpback and fin whales from modeling of vessel collisions on the U. S. West Coast suggests population impacts and insufficient protection. <i>PLoS ONE</i> 12(8):  e0183052. doi: 10.1371/j ournal.pone .0183052.",
+      "year": "2017",
+      "title": "High mortality of blue, humpback and fin whales from modeling of vessel collisions on the U. S. West Coast suggests population impacts and insufficient protection.",
+      "author": "Rockwood RC, Calambokidis J, Jahncke J",
+      "citation_short": null
+    },
+    {
+      "citation": "Torres, L.G. 2013. Evidence for an unrecognised blue whale foraging ground in New Zealand. <i>New Zealand Journal of Marine and Freshwater Research</i> 47(2): 235-248.",
+      "year": "2013",
+      "title": "Evidence for an unrecognised blue whale foraging ground in New Zealand",
+      "author": "Torres, L.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "International Whaling Commission. 2010. Report of the 2nd Intersessional Workshop on the North Atlantic Fin Whale Implementation. <i>Journal of Cetacean Research and Management</i> 11(Suppl. 2): 587-627.",
+      "year": "2010",
+      "title": "Report of the 2nd Intersessional Workshop on the North Atlantic Fin Whale Implementation",
+      "author": "International Whaling Commission",
+      "citation_short": ""
+    },
+    {
+      "citation": "Branch, T.A., Palacios, D.M., Stafford, K.M., Allison, C., Bannister, J.L., Burton, C.L.K., Gill, P.C., Jenner, K.C.S., Jenner, M.-N.M., Maughan, B., Miyashita, T., Morrice, M.G., Sturrock, V.J., Anderson, R.C., Baker, A.N., Best, P.B., Borsa, P., Childerhouse, S., Findlay, K.P., Ilangakoon, A.D., Jörgensen, M., Kahn, B., Mikhalev, Y.A., Oman Whale and Dolphin Research Group, Thiele, D., Tormosov, D., Van Waerebeek, K. and Warneke, R.M. 2007b. Past and present distribution, densities and movements of blue whales in the Southern Hemisphere and northern Indian Ocean. <i>Mammal Review</i> 37(2): 116–175.",
+      "year": "2007b",
+      "title": "Past and present distribution, densities and movements of blue whales in the Southern Hemisphere and northern Indian Ocean",
+      "author": "Branch, T.A., Palacios, D.M., Stafford, K.M., Allison, C., Bannister, J.L., Burton, C.L.K., Gill, P.C., Jenner, K.C.S., Jenner, M.-N.M., Maughan, B., Miyashita, T., Morrice, M.G., Sturrock, V.J., Anderson, R.C., Baker, A.N., Best, P.B., Borsa, P., Childerhouse, S., Findlay, K.P., Ilangakoon, A.D., Jörgensen, M., Kahn, B., Mikhalev, Y.A., Oman Whale and Dolphin Research Group, Thiele, D., Tormosov, D., Van Waerebeek, K. and Warneke, R.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hughes M. 2018. Data extracted from National Progress Reports.  Report of the subcommittee on human-induced mortality, Appendix 3. <i>J. Cetacean Res. Manage</i> 19(suppl.): 253-256.",
+      "year": "2018",
+      "title": "Data extracted from National Progress Reports.  Report of the subcommittee on human-induced mortality, Appendix 3",
+      "author": "Hughes M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bell, E.M. (compiler). 2016. Annual Report of the Southern Ocean Research Partnership (IWC-SORP) 2014/15. <i>International Whaling Commission Scientific Committee</i> Doc. SC/66b/SH08.Rev.2.",
+      "year": "2016",
+      "title": "Annual Report of the Southern Ocean Research Partnership (IWC-SORP) 2014/15",
+      "author": "Bell, E.M. (compiler)",
+      "citation_short": null
+    },
+    {
+      "citation": "Valdivia J., Landa A. and Ramirez P. 1984. Peru Progress Report on Cetaceans Research. <i>Rep. int. Whal. Commn</i> 34: 223-228.",
+      "year": "1984",
+      "title": "Peru Progress Report on Cetaceans Research",
+      "author": "Valdivia J., Landa A. and Ramirez P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Williams, R., Hedley, S. L., Branch, T. A., Bravington, M. B. and Zerbini, A. N. 2011 (rev. 2017). Chilean Blue Whales as a Case Study to Illustrate Methods to Estimate Abundance and Evaluate Conservation Status of Rare Species. <i>Conservation Biology</i> 25(3): 526-535 (Erratum doi:10.1111/cobi.12880).",
+      "year": "2011 (rev. 2017)",
+      "title": "Chilean Blue Whales as a Case Study to Illustrate Methods to Estimate Abundance and Evaluate Conservation Status of Rare Species.",
+      "author": "Williams, R., Hedley, S. L., Branch, T. A., Bravington, M. B. and Zerbini, A. N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Best B.D., Fox C.H., Williams R., Halpin P.N. and Paquet P.C. 2015. Updated marine mammal distribution and abundance estimates in British Columbia . <i>Journal of Cetacean Research and Management</i> 15: 9-26.",
+      "year": "2015",
+      "title": "Updated marine mammal distribution and abundance estimates in British Columbia ",
+      "author": "Best B.D., Fox C.H., Williams R., Halpin P.N. and Paquet P.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "International Whaling Commission. 2009. Report of the Sub-Committee on Other Southern Hemisphere Whale Stocks. <i>J. Cetacean Res. Manage.</i> 11(Suppl.): 220-247.",
+      "year": "2009",
+      "title": "Report of the Sub-Committee on Other Southern Hemisphere Whale Stocks",
+      "author": "International Whaling Commission",
+      "citation_short": null
+    },
+    {
+      "citation": "Hucke-Gaete R, Osman LP, Moreno CA, Findlay KP, Ljungblad DK. 2004. Discovery of a blue whale feeding and nursing ground in southern Chile. <i>Proc R Soc B. </i> 271: 170-173.",
+      "year": "2004",
+      "title": "Discovery of a blue whale feeding and nursing ground in southern Chile",
+      "author": "Hucke-Gaete R, Osman LP, Moreno CA, Findlay KP, Ljungblad DK.",
+      "citation_short": null
+    },
+    {
+      "citation": "International Whaling Commission. 2017b. The Catch Series. <i>J. Cetacean Res. Manage.</i> 19(Suppl.): 152-160.",
+      "year": "2017b",
+      "title": "The Catch Series",
+      "author": "International Whaling Commission",
+      "citation_short": null
+    },
+    {
+      "citation": "Branch, T. A., Mikhalev, Y. A. and Kato, H. 2009. Separating pygmy and Antarctic blue whales using long-forgotten ovarian data. <i>Marine Mammal Science</i> 25(4): 833–854. doi:10.1111/j.1748-7692.2009.00292.x.",
+      "year": "2009",
+      "title": "Separating pygmy and Antarctic blue whales using long-forgotten ovarian data",
+      "author": "Branch, T. A., Mikhalev, Y. A. and Kato, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mikhalev, Yu. A. 2000. Whaling in the Arabian Sea by the whaling fleets Slava and Sovetskaya Ukraina. <i>Soviet Whaling Data (1949-1979)</i>, pp. 141-180. Center for Russian Environmental Policy, Moscow, Russia.",
+      "year": "2000",
+      "title": "Whaling in the Arabian Sea by the whaling fleets Slava and Sovetskaya Ukraina",
+      "author": "Mikhalev, Yu. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Calambokidis, J. and J. Barlow. 2013. Updated abundance estimates of blue and humpback whales off the US west coast incorporating photo-identifications from 2010 and 2011. In: Document PSRG-2013-13 presented to the Pacific Scientific Review Group, April 2013 (ed.).",
+      "year": "2013",
+      "title": "Updated abundance estimates of blue and humpback whales off the US west coast incorporating photo-identifications from 2010 and 2011",
+      "author": "Calambokidis, J. and J. Barlow.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lawson, J.W. and J.-F. Gosselin. 2009. Distribution and preliminary abundance estimates for cetaceans seen during Canada’s Marine Megafauna Survey - A component of the 2007 TNASS.  Can. Sci. Advisory Sec. Res.Doc. 2009/031. 33 pp..",
+      "year": "2009",
+      "title": "Distribution and preliminary abundance estimates for cetaceans seen during Canada’s Marine Megafauna Survey - A component of the 2007 TNASS",
+      "author": "Lawson, J.W. and J.-F. Gosselin",
+      "citation_short": null
+    },
+    {
+      "citation": "De Vos A., Brownell R.L. Jr., Tershy B. and Croll D. 2016. Anthropogenic threats and conservation needs of Blue Whales <i>Balaenoptera musculus indica</i> around Sri Lanka. <i>Journal of Marine Biology</i> 16(8420846): dx.doi.org/10.1155/2016/8420846.",
+      "year": "2016",
+      "title": "Anthropogenic threats and conservation needs of Blue Whales <i>Balaenoptera musculus indica</i> around Sri Lanka",
+      "author": "De Vos A., Brownell R.L. Jr., Tershy B. and Croll D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "International Whaling Commission. 2018a. Report of the Planning Meeting for the 2017 IWC-POWER Cruise in the North Pacific with initial discussion for the 2018 and 2019 cruises, 15-17 September 2016, Tokyo, Japan. <i>J. Cetacean Res. Manage.</i> 19(suppl.): 491-506.",
+      "year": "2018a",
+      "title": "Report of the Planning Meeting for the 2017 IWC-POWER Cruise in the North Pacific with initial discussion for the 2018 and 2019 cruises, 15-17 September 2016, Tokyo, Japan",
+      "author": "International Whaling Commission",
+      "citation_short": ""
+    },
+    {
+      "citation": "Clarke R.,  Aguayo C. & Basulto S. 1978. Whale observation and whale marking off the coast of Chile in 1964. <i>Scientific Reports of the Whales Research Institute, Tokyo</i> 30: 117–177.  icrwhale.org/ScientificReport.html.",
+      "year": "1978",
+      "title": "Whale observation and whale marking off the coast of Chile in 1964",
+      "author": "Clarke R.,  Aguayo C. & Basulto S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Palka, D.L. 2012. Cetacean abundance estimates in US northwestern Atlantic Ocean waters from summer 2011 line transect survey.  NOAA, Northeast Fisheries Science Center Reference Document 12-29.",
+      "year": "2012",
+      "title": "Cetacean abundance estimates in US northwestern Atlantic Ocean waters from summer 2011 line transect survey",
+      "author": "Palka, D.L. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "McKenna, M. F., Calambokidis, J., Oleson, E. M., Laist, D. W. and Goldbogen, J. A. 2015. Simultaneous tracking of blue whales and large ships demonstrates limited behavioral responses for avoiding collision. <i>Endang Species Res</i> 27: 219–232.",
+      "year": "2015",
+      "title": "Simultaneous tracking of blue whales and large ships demonstrates limited behavioral responses for avoiding collision",
+      "author": "McKenna, M. F., Calambokidis, J., Oleson, E. M., Laist, D. W. and Goldbogen, J. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Berman-Kowalewski M., Gulland F.M.D., Wilkin S., Calambokidis J., Mate B., Cordaro J., Rotstein D., St. Leger J., Cllins P., Fahy K. & Dove S. 2010. Association Between Blue Whale (<i>Balaenoptera musculus</i>) Mortality and Ship Strikes Along the California Coast. <i>Aquatic Mammals</i> 36(1): 59-66. doi: 10.1578/AM.36.1.2010.59.",
+      "year": "2010",
+      "title": "Association Between Blue Whale (<i>Balaenoptera musculus</i>) Mortality and Ship Strikes Along the California Coast",
+      "author": "Berman-Kowalewski M., Gulland F.M.D., Wilkin S., Calambokidis J., Mate B., Cordaro J., Rotstein D., St. Leger J., Cllins P., Fahy K. & Dove S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sears, R. and Calambokidis J. 2002. Updated COSEWIC status report on the Blue Whale <i>Balaenoptera  musculus</i>  in Canada.  Committee on the Status of Endangered Wildlife in Canada, Ottawa, 1-32pp. registrelep-sararegistry.gc.ca/virtual_sara/files/cosewic/sr_blue_whale_e.pdf.",
+      "year": "2002",
+      "title": "Updated COSEWIC status report on the Blue Whale <i>Balaenoptera  musculus</i>  in Canada",
+      "author": "Sears, R. and Calambokidis J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Covelo P., Ocio G. & Hidalgo J. 2017. First record of a live blue whale (<i>Balaenoptera musculus</i>) in the Iberian Peninsula after three decades. <i>Galemys</i> 29: 34-37.",
+      "year": "2017",
+      "title": "First record of a live blue whale (<i>Balaenoptera musculus</i>) in the Iberian Peninsula after three decades",
+      "author": "Covelo P., Ocio G. & Hidalgo J.",
+      "citation_short": null
+    },
+    {
+      "citation": "McCauley, R.D. and Jenner, C. 2010. Migratory patterns and estimated population size of pygmy blue whales (<i>Balaenoptera musculus brevicauda</i>) traversing the Western Australian coast based on passive acoustics. <i>IWC Scientific Committee Paper</i> SC/62/SH26.",
+      "year": "2010",
+      "title": "Migratory patterns and estimated population size of pygmy blue whales (<i>Balaenoptera musculus brevicauda</i>) traversing the Western Australian coast based on passive acoustics",
+      "author": "McCauley, R.D. and Jenner, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Anderson C., Branch T.A.,  Alagiyawadu A., Baldwin R. and Marsac F. 2012. Seasonal distribution, movements and taxonomic status of blue whales (Balaenoptera musculus) in the northern Indian Ocean. <i>Journal of Cetacean Research and Management </i> 12(2): 203-218.",
+      "year": "2012",
+      "title": "Seasonal distribution, movements and taxonomic status of blue whales (Balaenoptera musculus) in the northern Indian Ocean",
+      "author": "Anderson C., Branch T.A.,  Alagiyawadu A., Baldwin R. and Marsac F. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "McQuinn, I.H., Gosselin, J.-F., Bourassa, M.-N., Mosnier, A., St-Pierre, J.-F., Plourde, S., Lesage, V., Raymond, A. 2016. The spatial association of blue whales (<i>Balaenoptera musculus</i>) with krill patches (<i>Thysanoessa</i> spp. and <i>Meganyctiphanes norvegica</i>) in the estuary and northwestern Gulf of St. Lawrence.  DFO Can. Sci. Advis. Sec. Res. Doc. 2016/104. iv + 19 p..",
+      "year": "2016",
+      "title": "The spatial association of blue whales (<i>Balaenoptera musculus</i>) with krill patches (<i>Thysanoessa</i> spp. and <i>Meganyctiphanes norvegica</i>) in the estuary and northwestern Gulf of St. Lawrence",
+      "author": "McQuinn, I.H., Gosselin, J.-F., Bourassa, M.-N., Mosnier, A., St-Pierre, J.-F., Plourde, S., Lesage, V., Raymond, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Visser F., Hartman K.L., Pierce G.J., Valavanis V.D. and Huisman J. 2011. Timing of migratory baleen whales at the Azores in relation to the North Atlantic spring bloom. <i>Marine Ecology Progress Series</i> 440: 267-279.",
+      "year": "2011",
+      "title": "Timing of migratory baleen whales at the Azores in relation to the North Atlantic spring bloom",
+      "author": "Visser F., Hartman K.L., Pierce G.J., Valavanis V.D. and Huisman J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Branch T.A. 2007. Abundance of Antarctic blue whales south of 60°S from three complete circumpolar sets of surveys. <i>Journal of Cetacean Research and Management</i> 9(3): 253–262.",
+      "year": "2007",
+      "title": "Abundance of Antarctic blue whales south of 60°S from three complete circumpolar sets of surveys",
+      "author": "Branch T.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Piñones A., and A. V. Fedorov. 2016. Projected changes of Antarctic krill habitat by the end of the 21st century. <i>Geophys. Res. Lett.</i> 43  : doi:10.1002/2016GL069656.",
+      "year": "2016",
+      "title": "Projected changes of Antarctic krill habitat by the end of the 21st century",
+      "author": "Piñones A., and A. V. Fedorov",
+      "citation_short": null
+    },
+    {
+      "citation": "Gill, P. C., Morrice, M. G., Page, B., Pirzl, R., Levings, A. H. and Coyne, M. 2011. Blue whale habitat selection and within-season distribution in a regional upwelling system off southern Australia. <i>Mar Ecol Prog Ser</i> 421: 243–263.",
+      "year": "2011",
+      "title": "Blue whale habitat selection and within-season distribution in a regional upwelling system off southern Australia",
+      "author": "Gill, P. C., Morrice, M. G., Page, B., Pirzl, R., Levings, A. H. and Coyne, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hammond, P.S., Lacey, C., Gilles, A., Viquerat, S., Börjesson, P., Herr, H., Macleod, K., Ridoux, V., Santos, M.B., Scheidat, M., Teilmann, J., Vingada, J. and Øien, N. 2017. Estimates of cetacean abundance in European Atlantic waters in summer 2016 from the SCANS-III aerial and shipboard surveys. Wageningen Marine Research. https://library.wur.nl/WebQuery/wurpubs/fulltext/414756.",
+      "year": "2017",
+      "title": "Estimates of cetacean abundance in European Atlantic waters in summer 2016 from the SCANS-III aerial and shipboard surveys",
+      "author": "Hammond, P.S., Lacey, C., Gilles, A., Viquerat, S., Börjesson, P., Herr, H., Macleod, K., Ridoux, V., Santos, M.B., Scheidat, M., Teilmann, J., Vingada, J. and Øien, N. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "International Whaling Commission. 2018b. Report of the Working Group on Non-Deliberate Human-Induced Mortality of Cetaceans. <i>J. Cetacean Res. Manage.</i> 19(suppl.): 235-256.",
+      "year": "2018b",
+      "title": "Report of the Working Group on Non-Deliberate Human-Induced Mortality of Cetaceans",
+      "author": "International Whaling Commission",
+      "citation_short": ""
+    },
+    {
+      "citation": "Olson P.A., Ensor P., Olavarria C., Bott N., Constantine R., Weir J., Childerhouse S., van der Linde M., Schmitt N., Miller B.S. and Double M.C. 2015. New Zealand Blue Whales: Residency, Morphology,and Feeding Behavior of a Little - Known Population. <i>Pacific Science</i> 69(4): 477–485.",
+      "year": "2015",
+      "title": "New Zealand Blue Whales: Residency, Morphology,and Feeding Behavior of a Little - Known Population",
+      "author": "Olson P.A., Ensor P., Olavarria C., Bott N., Constantine R., Weir J., Childerhouse S., van der Linde M., Schmitt N., Miller B.S. and Double M.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Waring GT, Josephson E, Maze-Foley K, Rosel, PE (eds.). 2011. U.S. Atlantic and Gulf of Mexico Marine Mammal Stock Assessments -- 2010 .  NOAA Tech Memo NMFS NE 219; 595 p. www.nefsc.noaa.gov/publications/tm/tm219/.",
+      "year": "2011",
+      "title": "U.S. Atlantic and Gulf of Mexico Marine Mammal Stock Assessments -- 2010 ",
+      "author": "Waring GT, Josephson E, Maze-Foley K, Rosel, PE (eds.)",
+      "citation_short": ""
+    },
+    {
+      "citation": "Baines M.E. and Reichelt M. 2014. Upwellings, canyons and whales: an important winter habitat for balaenopterid whales off Mauritania, northwest Africa. <i>J. Cetacean Res. Manage. </i> 14: 57–67.",
+      "year": "2014",
+      "title": "Upwellings, canyons and whales: an important winter habitat for balaenopterid whales off Mauritania, northwest Africa",
+      "author": "Baines M.E. and Reichelt M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Baines M., Reichelt M. & Griffin D. 2017. An autumn aggregation of fin (<i>Balaenoptera physalus</i>) and blue whales (<i>B. musculus</i>) in the Porcupine Seabight, southwest of Ireland. <i>Deep Sea Research Part II: Topical Studies in Oceanography</i> 141: 168-177.",
+      "year": "2017",
+      "title": "An autumn aggregation of fin (<i>Balaenoptera physalus</i>) and blue whales (<i>B. musculus</i>) in the Porcupine Seabight, southwest of Ireland",
+      "author": "Baines M., Reichelt M. & Griffin D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Branch T.A., Palacios D.P. and Monnahan C.C. 2016. Overview of North Pacific blue whale distribution, and the need for an assessment of the western and central Pacific. <i> International Whaling Commission Scientific Committee</i> Doc. SC/66b/IA15.",
+      "year": "2016",
+      "title": "Overview of North Pacific blue whale distribution, and the need for an assessment of the western and central Pacific",
+      "author": "Branch T.A., Palacios D.P. and Monnahan C.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fiedler PC, Reilly SB, Hewitt RP, Demer D, Philbrick VA, Smith S, et al. 1998. Blue whale habitat and prey in the California Channel Islands. <i>Deep Sea Res Part II Top Stud Oceanogr.</i> 45: 1781–1801.",
+      "year": "1998",
+      "title": "Blue whale habitat and prey in the California Channel Islands",
+      "author": "Fiedler PC, Reilly SB, Hewitt RP, Demer D, Philbrick VA, Smith S, et al. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Stafford K.M.,  Bohnenstiehl D.R., Tolstoy M., Chapp E., Mellinger D.K. and Moore S.E. 2004. Antarctic-type blue whale calls recorded at low latitudes in theIndian and eastern Pacific Oceans. <i>Deep-Sea Research I</i> 51: 1337–1346.",
+      "year": "2004",
+      "title": "Antarctic-type blue whale calls recorded at low latitudes in theIndian and eastern Pacific Oceans",
+      "author": "Stafford K.M.,  Bohnenstiehl D.R., Tolstoy M., Chapp E., Mellinger D.K. and Moore S.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Matsuoka, K. and Hakamada, T. 2014. Estimates of abundance and abundance trend of the blue, fin and southern right whales in the Antarctic Areas IIIE-VIW, south of 60oS, based on JARPA and JARPAII sighting data (1989/90-2008/09). International Whaling Commission Scientific Committee doc. SC/F14/J05.",
+      "year": "2014",
+      "title": "Estimates of abundance and abundance trend of the blue, fin and southern right whales in the Antarctic Areas IIIE-VIW, south of 60oS, based on JARPA and JARPAII sighting data (1989/90-2008/09)",
+      "author": "Matsuoka, K. and Hakamada, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Monnahan, C.C., Branch, T.A., Stafford, K.M., Ivashchenko, Y.V. and Oleson, E.M. 2014. Estimating historical eastern north Pacific Blue Whale catches using spatial calling patterns. <i>PLoS ONE</i> 9(6):  e98974. doi: 10.1371/journal.pone.0098974.",
+      "year": "2014",
+      "title": "Estimating historical eastern north Pacific Blue Whale catches using spatial calling patterns",
+      "author": "Monnahan, C.C., Branch, T.A., Stafford, K.M., Ivashchenko, Y.V. and Oleson, E.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Stafford, K.M., Chapp, E., Bohnenstiel, D.R. and Tolstoy, M. 2011. Seasonal detection of three types of “pygmy” blue whale calls in the Indian Ocean. <i>Marine Mammal Science</i> 27(4): 828–840.",
+      "year": "2011",
+      "title": "Seasonal detection of three types of “pygmy” blue whale calls in the Indian Ocean",
+      "author": "Stafford, K.M., Chapp, E., Bohnenstiel, D.R. and Tolstoy, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Víkingsson, G.A., Pike, D.G., Valdimarsson, H., Schleimer, A., Gunnlaugsson, T., Silva, T., Elvarsson, BÞ., Mikkelsen, B., Øien, N., Desportes, G., Bogason, V. and Hammond, P.S. 2015. Distribution, abundance, and feeding ecology of baleen whales in Icelandic waters: have recent environmental changes had an effect? <i>Front. Ecol. Evol.</i> 3: 6. doi: 10.3389/fevo.2015.00006.",
+      "year": "2015",
+      "title": "Distribution, abundance, and feeding ecology of baleen whales in Icelandic waters: have recent environmental changes had an effect?",
+      "author": "Víkingsson, G.A., Pike, D.G., Valdimarsson, H., Schleimer, A., Gunnlaugsson, T., Silva, T., Elvarsson, BÞ., Mikkelsen, B., Øien, N., Desportes, G., Bogason, V. and Hammond, P.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ivashchenko, Y.V., Clapham, P.J. and Brownell Jr., R.L. 2011. Soviet illegal whaling: the devil and the details. <i>Marine Fisheries Review </i> 73: 1-19.",
+      "year": "2011",
+      "title": "Soviet illegal whaling: the devil and the details",
+      "author": "Ivashchenko, Y.V., Clapham, P.J. and Brownell Jr., R.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sears R, Ramp C, Douglas AB, Calambokidis J. 2013. Reproductive parameters of eastern North Pacific Blue Whales <i>Balaenoptera musculus</i>. <i>Endang. Species Res.</i> 22: 23-31 doi: 10.3354/esr00532.",
+      "year": "2013",
+      "title": "Reproductive parameters of eastern North Pacific Blue Whales <i>Balaenoptera musculus</i>",
+      "author": "Sears R, Ramp C, Douglas AB, Calambokidis J",
+      "citation_short": null
+    },
+    {
+      "citation": "NAMMCO. 2017. Report of the 24th Scientific Committee meeting. NAMMCO, Tromsø, Norway. Available at https://nammco.no/wp-content/uploads/2017/01/24th-scientific-committee-meeting-report.pdf.",
+      "year": "2017",
+      "title": "Report of the 24th Scientific Committee meeting. NAMMCO, Tromsø, Norway. Available at https://nammco.no/wp-content/uploads/2017/01/24th-scientific-committee-meeting-report.pdf",
+      "author": "NAMMCO",
+      "citation_short": ""
+    },
+    {
+      "citation": "Silva, M.A., Prieto, R., Jonsen, I., Baumgartner, M.F. and Santos, R.S. 2013. North Atlantic Blue and Fin Whales Suspend Their Spring Migration to Forage in Middle Latitudes: Building up Energy Reserves for the Journey? <i> PLOS One</i> 8(10): e76507.",
+      "year": "2013",
+      "title": "North Atlantic Blue and Fin Whales Suspend Their Spring Migration to Forage in Middle Latitudes: Building up Energy Reserves for the Journey?",
+      "author": "Silva, M.A., Prieto, R., Jonsen, I., Baumgartner, M.F. and Santos, R.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "LeDuc, R.G., Archer, F.I., Lang, A.R., Martien, K.K., Hancock-Hauser, B., Torres-Florez, J.P., Hucke-Gaete, R., Rosenbaum, H.C., Van Waerebeek, K., Brownell, J.R. and Taylor, B.L. 2017. Genetic variation in blue whales in the eastern Pacific: implication for taxonomy and use of common wintering grounds. <i>Molecular Ecology</i> 26: 740-751.",
+      "year": "2017",
+      "title": "Genetic variation in blue whales in the eastern Pacific: implication for taxonomy and use of common wintering grounds",
+      "author": "LeDuc, R.G., Archer, F.I., Lang, A.R., Martien, K.K., Hancock-Hauser, B., Torres-Florez, J.P., Hucke-Gaete, R., Rosenbaum, H.C., Van Waerebeek, K., Brownell, J.R. and Taylor, B.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Matsuoka, K., Hakamada, T. and Miyashita, T. 2016. Distribution of blue (<i>Balaenoptera musculus</i>), fin (<i>B. physalus</i>),humpback (<i>Megaptera novaeangliae</i>) and north pacific right (<i>Eubalaena japonica</i>) whales in the western North Pacific based on JARPN and JARPN II surveys (1994 to 2014). International Whaling Commission Scientific Committee doc. SC/F16/JR/9.",
+      "year": "2016",
+      "title": "Distribution of blue (<i>Balaenoptera musculus</i>), fin (<i>B. physalus</i>),humpback (<i>Megaptera novaeangliae</i>) and north pacific right (<i>Eubalaena japonica</i>) whales in the western North Pacific based on JARPN and JARPN II surveys (1994 to 2014)",
+      "author": "Matsuoka, K., Hakamada, T. and Miyashita, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Comisión Permanente del Pacífico Sur (CPPS). 1966. IXa Reunión Ordinaria de la Comisión Permanente del Pacífico Sur, de Paracas, Perú, 10-14 Enero 1966.  cpps-int.org.",
+      "year": "1966",
+      "title": "IXa Reunión Ordinaria de la Comisión Permanente del Pacífico Sur, de Paracas, Perú, 10-14 Enero 1966",
+      "author": "Comisión Permanente del Pacífico Sur (CPPS)",
+      "citation_short": null
+    },
+    {
+      "citation": "Ilangakoon A.D. 2012. Exploring anthropogenic activities that threaten endangered blue whales (Balaenoptera musculus) off Sri Lanka. <i>Journal of Marine Animals and Their Ecology</i> 5(1): 3-7.",
+      "year": "2012",
+      "title": "Exploring anthropogenic activities that threaten endangered blue whales (Balaenoptera musculus) off Sri Lanka",
+      "author": "Ilangakoon A.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Friday, N.A., Waite, J.M., Zerbini, A.N., Moore, S.E. and Clapham, P.J. 2013. Cetacean distribution and abundance in relation to oceanographic domains on the eastern Bering Sea shelf, June and July of 2002, 2008 and 2010. <i>Deep Sea Research II</i> 94: 244-256.",
+      "year": "2013",
+      "title": "Cetacean distribution and abundance in relation to oceanographic domains on the eastern Bering Sea shelf, June and July of 2002, 2008 and 2010",
+      "author": "Friday, N.A., Waite, J.M., Zerbini, A.N., Moore, S.E. and Clapham, P.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Buchan, S. J., Stafford, K. M. and Hucke-Gaete, R. 2015. Seasonal occurrence of southeast Pacific blue whale songs in southern Chile and the eastern tropical Pacific. <i>Marine Mammal Science</i> 31: 440–458. doi:10.1111/mms.12173.",
+      "year": "2015",
+      "title": "Seasonal occurrence of southeast Pacific blue whale songs in southern Chile and the eastern tropical Pacific",
+      "author": "Buchan, S. J., Stafford, K. M. and Hucke-Gaete, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "International Whaling Commission. 2017a. Report of the Sub-Committee on Other Southern Hemisphere Whale Stocks. <i>Journal of Cetacean Research and Management</i> 18(Suppl.): 230-257.",
+      "year": "2017a",
+      "title": "Report of the Sub-Committee on Other Southern Hemisphere Whale Stocks",
+      "author": "International Whaling Commission",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sears R., Ramp C., Santos R., Silva M.A.,Steiner L., & Vikingson G.A. 2015. Comparison of the Northwest Atlantic-NWA and Northeast Atlantic-NEA Blue whale (<i>Balaenoptera musculus</i>) photo-identification catalogs. <i>www.rorqual.com</i>.",
+      "year": "2015",
+      "title": "Comparison of the Northwest Atlantic-NWA and Northeast Atlantic-NEA Blue whale (<i>Balaenoptera musculus</i>) photo-identification catalogs",
+      "author": "Sears R., Ramp C., Santos R., Silva M.A.,Steiner L., & Vikingson G.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Samaran, F., Stafford, K.M., Branch, T.A., Gedamke, J., Royer, J.Y., Dziak, R.P. and Guinet, C. 2013. Seasonal and geographic variation of southern Blue Whale subspecies in the Indian Ocean. <i>PLOS One</i> 8(8): e71561.",
+      "year": "2013",
+      "title": "Seasonal and geographic variation of southern Blue Whale subspecies in the Indian Ocean",
+      "author": "Samaran, F., Stafford, K.M., Branch, T.A., Gedamke, J., Royer, J.Y., Dziak, R.P. and Guinet, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Stafford, K.M., Nieukirk, S.L. and Fox, C.G. 1999. Low-frequency whale sounds recorded on hydrophones moored in the eastern tropical Pacific. <i>Journal of the Acoustical Society of America</i> 106: 3687–3698.",
+      "year": "1999",
+      "title": "Low-frequency whale sounds recorded on hydrophones moored in the eastern tropical Pacific",
+      "author": "Stafford, K.M., Nieukirk, S.L. and Fox, C.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Calambokidis J., Schorr G.S., Steiger G.H., Francis J., Bakhtiari M., Marshall G., Oleson E. M.; Gendron D., Robertson K. 2007. Insights into the Underwater Diving, Feeding, and Calling Behavior of Blue Whales from a Suction-Cup-Attached Video-Imaging Tag (Crittercam). <i>Marine Technology Society Journal</i> 41(4): 19-29. doi: 10.4031/002533207787441980.",
+      "year": "2007",
+      "title": "Insights into the Underwater Diving, Feeding, and Calling Behavior of Blue Whales from a Suction-Cup-Attached Video-Imaging Tag (Crittercam)",
+      "author": "Calambokidis J., Schorr G.S., Steiger G.H., Francis J., Bakhtiari M., Marshall G., Oleson E. M.; Gendron D., Robertson K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Branch, T.A. 2008b. Biological parameters for pygmy blue whales. Paper SC/60/SH6 presented to the IWC Scientific Committee.",
+      "year": "2008b",
+      "title": "Biological parameters for pygmy blue whales",
+      "author": "Branch, T.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Miyashita, T. 2006. Cruise report of the sighting survey in the waters east of the Kuril Islands and the Kamchatka Peninsula in 2005. International Whaling Commission Scientific Committee doc. SC/58/NPM5. iwc.int\\sc58docs.",
+      "year": "2006",
+      "title": "Cruise report of the sighting survey in the waters east of the Kuril Islands and the Kamchatka Peninsula in 2005",
+      "author": "Miyashita, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Samaran F., Berne A., Leroy E., Marcia M., Royer J.-Y. & Stafford K. 2017. Antarctic blue whales (<i>Balaenoptera musculus intermedia</i>) recorded north of the equator in the Atlantic Ocean. International Whaling Commission Scientific Committee doc. SC/67a/SH10.",
+      "year": "2017",
+      "title": "Antarctic blue whales (<i>Balaenoptera musculus intermedia</i>) recorded north of the equator in the Atlantic Ocean",
+      "author": "Samaran F., Berne A., Leroy E., Marcia M., Royer J.-Y. & Stafford K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jenner, C., Jenner, M. and Burton, C. 2008. Mark recapture analysis of Pygmy blue whales from the Perth Canyon, Western Australia 2000–2005. <i>IWC Scientific Committee</i> Doc. SC/60/SH16.",
+      "year": "2008",
+      "title": "Mark recapture analysis of Pygmy blue whales from the Perth Canyon, Western Australia 2000–2005",
+      "author": "Jenner, C., Jenner, M. and Burton, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pike, D.G., Vıkingsson, G.A., Gunnlaugsson, T. and Øien, N. 2009. A note on the distribution and abundance of blue whales (<i>Balaenoptera musculus</i>) in the central and northeast North Atlantic. <i>NAMMCO Scientific Publications</i>  7: 19–29.",
+      "year": "2009",
+      "title": "A note on the distribution and abundance of blue whales (<i>Balaenoptera musculus</i>) in the central and northeast North Atlantic",
+      "author": "Pike, D.G., Vıkingsson, G.A., Gunnlaugsson, T. and Øien, N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Thomisch K, Boebel O, Clark CW, Hagen W, Spiesecke S, Zitterbart DP, Van Opzeeland I. 2016. Spatio-temporal patterns in acoustic presence and distribution of Antarctic blue whales <i>Balaenoptera musculus intermedia</i> in the Weddell Sea. <i>Endang. Species Res.</i> 30: 239-253. doi: 10.3354/esr00739.",
+      "year": "2016",
+      "title": "Spatio-temporal patterns in acoustic presence and distribution of Antarctic blue whales <i>Balaenoptera musculus intermedia</i> in the Weddell Sea",
+      "author": "Thomisch K, Boebel O, Clark CW, Hagen W, Spiesecke S, Zitterbart DP, Van Opzeeland I",
+      "citation_short": null
+    },
+    {
+      "citation": "Torres-Florez, J.P., Hucke-Gaete, R., LeDuc, R., Lang, A., Taylor, B., Pimper, L.E., <i>et al</i>. 2014. Blue whale population structure along the eastern South Pacific Ocean: evidence of more than one population. <i>Mol. Ecol.</i> 23: 5998-6010.",
+      "year": "2014",
+      "title": "Blue whale population structure along the eastern South Pacific Ocean: evidence of more than one population",
+      "author": "Torres-Florez, J.P., Hucke-Gaete, R., LeDuc, R., Lang, A., Taylor, B., Pimper, L.E., <i>et al</i>.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Buchan, S. J., Hucke-Gaete, R., Stafford, K. M. and Clark, C. W. 2018. Occasional acoustic presence of Antarctic blue whales on a feeding ground in southern Chile. <i>Marine Mammal Science</i> 34(1): 220–228 doi:10.1111/mms.12441.",
+      "year": "2018",
+      "title": "Occasional acoustic presence of Antarctic blue whales on a feeding ground in southern Chile",
+      "author": "Buchan, S. J., Hucke-Gaete, R., Stafford, K. M. and Clark, C. W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Monnahan, C.C., Branch, T.A. and Punt, A.E. 2015. Do ship strikes threaten the recovery of endangered eastern North Pacific blue whales? <i>Marine Mammal Science</i> 31(1): 279-297.",
+      "year": "2015",
+      "title": "Do ship strikes threaten the recovery of endangered eastern North Pacific blue whales?",
+      "author": "Monnahan, C.C., Branch, T.A. and Punt, A.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hamilton, T.A., J.V. Redfern, J. Barlow, L.T. Balance, T. Gerrodette, R.S. Holt, K.A. Forney, and B.L. Taylor. 2009. Atlas of cetacean sightings for Southwest Fisheries Science Center Cetacean and Ecosystem Surveys: 1986 – 2005.  U.S. Dep. of Commerce, NOAA Technical Memorandum, NOAA-TM-NMFSSWFSC-440. 70 p.",
+      "year": "2009",
+      "title": "Atlas of cetacean sightings for Southwest Fisheries Science Center Cetacean and Ecosystem Surveys: 1986 – 2005",
+      "author": "Hamilton, T.A., J.V. Redfern, J. Barlow, L.T. Balance, T. Gerrodette, R.S. Holt, K.A. Forney, and B.L. Taylor",
+      "citation_short": ""
+    },
+    {
+      "citation": "Olson, P.A., Double, M.C., Matsuoka, K. and Pastene, L.A. 2016. Photo-identification of Antarctic blue whales 1991 to 2016. <i> International Whaling Commission Scientific Committee</i>  Doc. SC/66b/SH11.",
+      "year": "2016",
+      "title": "Photo-identification of Antarctic blue whales 1991 to 2016",
+      "author": "Olson, P.A., Double, M.C., Matsuoka, K. and Pastene, L.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lesage V, Gavrilchuk K, Andrews RD, Sears R. 2017. Foraging areas, migratory movements and winter destinations of blue whales from the western North Atlantic. <i>Endang. Species Res.</i> 34: 27-43. doi: 10.3354/esr00838.",
+      "year": "2017",
+      "title": "Foraging areas, migratory movements and winter destinations of blue whales from the western North Atlantic",
+      "author": "Lesage V, Gavrilchuk K, Andrews RD, Sears R",
+      "citation_short": null
+    },
+    {
+      "citation": "Branch, T.A. 2008a. Biologically plausible rates of increase for Antarctic blue whales. International Whaling Commission Scientific Committee doc. SC/60/SH8.",
+      "year": "2008a",
+      "title": "Biologically plausible rates of increase for Antarctic blue whales",
+      "author": "Branch, T.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ŝirović A., Hildebrand J.A. and Wiggins S.M.  2009. Blue and fin whale acoustic presence around Antarctica during 2003 and 2004. <i>Marine Mammal Science</i> 25(1): 125–136.",
+      "year": " 2009",
+      "title": "Blue and fin whale acoustic presence around Antarctica during 2003 and 2004",
+      "author": "Ŝirović A., Hildebrand J.A. and Wiggins S.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cerchio, S., Andrianantenaina, B., D’echon, T.G. and D’echon, A.G. 2016. Evidence for the Presence of ”Pygmy” Blue Whales (Balaenoptera musculus brevicauda) in the Mozambique Channel off the Northwest Coast of Madagascar. <i>International Whaling Commission Scientific Committee</i> Doc. SC/66b/SH33.",
+      "year": "2016",
+      "title": "Evidence for the Presence of ”Pygmy” Blue Whales (Balaenoptera musculus brevicauda) in the Mozambique Channel off the Northwest Coast of Madagascar.",
+      "author": "Cerchio, S., Andrianantenaina, B., D’echon, T.G. and D’echon, A.G. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Balcazar N.E., Klinck H., Nieukirk S.L., Mellinger D.K., Klinck K., Dziak R.P., Rogers T.L. 2017. Using calls as an indicator for Antarctic blue whale occurrence and distribution across the southwest Pacific and southeast Indian Oceans. <i>Marine Mammals Science</i> 33(1): 172-186.",
+      "year": "2017",
+      "title": "Using calls as an indicator for Antarctic blue whale occurrence and distribution across the southwest Pacific and southeast Indian Oceans",
+      "author": "Balcazar N.E., Klinck H., Nieukirk S.L., Mellinger D.K., Klinck K., Dziak R.P., Rogers T.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Maturana R. 1982. Chile Progress Report on Cetacean Research. <i>Reports of the International Whaling Commission</i> 32: 171.",
+      "year": "1982",
+      "title": "Chile Progress Report on Cetacean Research",
+      "author": "Maturana R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Galletti Vernazzani B, Jackson JA, Cabrera E, Carlson CA, Brownell RL, Jr. 2017. Estimates of Abundance and Trend of Chilean Blue Whales off Isla de Chiloé, Chile. . <i>PLoS ONE</i> 12(1): e0168646. doi:10.1371/journal.pone.0168646.",
+      "year": "2017",
+      "title": "Estimates of Abundance and Trend of Chilean Blue Whales off Isla de Chiloé, Chile. ",
+      "author": "Galletti Vernazzani B, Jackson JA, Cabrera E, Carlson CA, Brownell RL, Jr.",
+      "citation_short": null
+    },
+    {
+      "citation": "Carretta, J.V., Forney, K.A., Oleson, E.M., Weller, D.W., Lang, A.R., Baker, J., Muto, M.M., Hanson B., Orr, A.J., Huber, H., Lowry, M.S., Barlow, J., Moore, J.E., Lynch, D., Carswell, L. and Brownell, R.L. Jr. 2017. U.S. Pacific Marine Mammal Stock Assessments: 2016.  National Oceanic and Atmospheric Administration Technical Memorandum NMFS-SWFSC-577.",
+      "year": "2017",
+      "title": "U.S. Pacific Marine Mammal Stock Assessments: 2016",
+      "author": "Carretta, J.V., Forney, K.A., Oleson, E.M., Weller, D.W., Lang, A.R., Baker, J., Muto, M.M., Hanson B., Orr, A.J., Huber, H., Lowry, M.S., Barlow, J., Moore, J.E., Lynch, D., Carswell, L. and Brownell, R.L. Jr. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cooke J. and Jackson J.  2017. Reanalysis of Chiloé Island blue whale mark recapture data 2006‐2011. <i>Journal of Cetacean Research and Management </i> 18(Suppl.): 263.",
+      "year": " 2017",
+      "title": "Reanalysis of Chiloé Island blue whale mark recapture data 2006‐2011",
+      "author": "Cooke J. and Jackson J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Branch, T. A., Abubaker, E. M. N., Mkango, S. & Butterworth, D. S. 2007b. Separating southern blue whale subspecies based on length frequencies of sexually mature females. <i>Marine Mammal Science</i> 23(4): 803–833. doi:10.1111/j.1748-7692.2007.00137.x.",
+      "year": "2007b",
+      "title": "Separating southern blue whale subspecies based on length frequencies of sexually mature females",
+      "author": "Branch, T. A., Abubaker, E. M. N., Mkango, S. & Butterworth, D. S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Priyadarshana T., Randage S.M., Alling A., Calderan S., Gordon J., Leaper R. & Porter L. 2016. Distribution patterns of blue whale (<i>Balaenoptera musculus</i>) and shipping off southern Sri Lanka. <i>Regional Studies in Marine Science</i> 3: 181-188. doi: 10.1016/j.rsma.2015.08.002.",
+      "year": "2016",
+      "title": "Distribution patterns of blue whale (<i>Balaenoptera musculus</i>) and shipping off southern Sri Lanka",
+      "author": "Priyadarshana T., Randage S.M., Alling A., Calderan S., Gordon J., Leaper R. & Porter L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sremba, A., Steel, D., Torres, L., Constantine, R., Bott, N. and Baker, C.S. 2015. Genetic identity of blue whales in the surrounding waters of New Zealand. International Whaling Commission Scientific Committee doc. SC/66a/SH19.",
+      "year": "2015",
+      "title": "Genetic identity of blue whales in the surrounding waters of New Zealand.",
+      "author": "Sremba, A., Steel, D., Torres, L., Constantine, R., Bott, N. and Baker, C.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hucke-Gaete R., Viddi F., Bedrinana-Romano L. & ZerbiniI, A. 2016. Satellite tracking of blue whales (<i>Balaenoptera musculus</i>) from Patagonia (Chile) to Galapagos (Ecuador): novel insights into migratory pathways along the Eastern Southn Pacific. International Whaling Commission Scientific Committee doc. SC/66b/SH16.",
+      "year": "2016",
+      "title": "Satellite tracking of blue whales (<i>Balaenoptera musculus</i>) from Patagonia (Chile) to Galapagos (Ecuador): novel insights into migratory pathways along the Eastern Southn Pacific",
+      "author": "Hucke-Gaete R., Viddi F., Bedrinana-Romano L. & ZerbiniI, A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Barber, R.,Sikora, I. and Nimak-Wood, M. 2016. Blue whales <i>Balaenoptera musculus</i> in offshore waters of Kenya. <i>African Journal of Marine Science</i> 38(2): 279-284.  doi: 10.2989/1814232X.2016.1182590.",
+      "year": "2016",
+      "title": "Blue whales <i>Balaenoptera musculus</i> in offshore waters of Kenya",
+      "author": "Barber, R.,Sikora, I. and Nimak-Wood, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2019. The IUCN Red List of Threatened Species. Version 2019-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 December 2019).",
+      "year": "2019",
+      "title": "The IUCN Red List of Threatened Species. Version 2019-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2019-3"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

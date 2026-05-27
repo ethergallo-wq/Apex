@@ -1,0 +1,886 @@
+{
+  "assessment_date": "2015-07-22T01:00:00.000+01:00",
+  "year_published": "2015",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 41588,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/41588/46173447",
+  "citation": "Wacher, T., Bauman, K. & Cuzin, F. 2015. Vulpes zerda. The IUCN Red List of Threatened Species 2015: e.T41588A46173447. Accessed on 15 May 2026.",
+  "assessment_id": 46173447,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 41588,
+    "scientific_name": "Vulpes zerda",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CARNIVORA",
+    "family_name": "CANIDAE",
+    "genus_name": "Vulpes",
+    "species_name": "zerda",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Zimmermann, 1780)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Canid Specialist Group (foxes, jackals and wild dogs)",
+        "url": "http://www.canids.org/",
+        "description": "Chair: Claudio Sillero-Zubiri (email: canids@zoology.oxford.ac.uk)\nRed List Authority Coordinator: Michael Hoffmann (email: mike.hoffmann@zsl.org)\nNewsletter: http://www.canids.org/c-b-c"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Aqorchi",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Arhorchi",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Fenek",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Fennec",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Wüstenfuchs",
+        "language": "ger"
+      },
+      {
+        "main": true,
+        "name": "Fennec Fox",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Fennecus zerda (Zimmermann, 1780)",
+        "status": "S",
+        "genus_name": "Fennecus",
+        "species_name": "zerda",
+        "species_author": "(Zimmermann, 1780)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Not Applicable"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species is widespread in the sandy deserts and semi-deserts of northern Africa, ranging from Western Sahara and Mauritania to northern Sinai (Asa <em>et al</em>. 2004, Asa and Cuzin 2013); it may occur south to around 14°N (Dragesco-Joffé 1993, Granjon <em>et al</em>. 1995). The species' expected range has been modelled from combined topographical-climatic and habitat variables (Brito <em>et al</em>. 2009). The occurrence of this species in the Arabian Peninsula (not mapped here) is unclear because of confusion with locally used names, and with the pale and large-eared young of the Arabian subspecies of Ruppell’s Fox, <em>V. rueppellii sabaea</em>&#160;(T. Wacher pers. obs). In these circumstances, records dependent on tracks (e.g., Thesiger 1949) are doubtful. There is a specimen from Kuwait in the Natural History Museum in London (Harrison and Bates 1991), though it is uncertain if this individual was collected from the wild. Another specimen was recorded from southern Iraq (Al-Robaae 1982), a short distance to the north. Mallon and Budd (2011) reported the results of interviews by Salah Behbehani that local communities in Kuwait had observed a species known under the local name ‘hosni fennec’, and that people used to catch them for the tails which were hung in their cars; they also referred to reported sightings and photographs (not yet published or reviewed) of the species from northwest Saudi Arabia, close to the documented range in Sinai, but in habitat more typical of Blanford’s Fox <em>V. cana</em>. References to sightings of Fennec Fox in the United Arab Emirates were based on an animal in the Al Ain zoo (Al-Robbae 1982), which was, in fact, a Rüppell's Fox (Gasperetti <em>et al</em>. 1985).",
+    "population": "They are common throughout the Sahara (Harrison and Bates 1991). The only documented regression concerns northern Moroccan Sahara, where the species disappeared during the 1960s from four localities, which were restricted sandy areas close to permanent human settlements (Asa and Cuzin 2013). Otherwise,&#160;the population is assumed to be adequate based on the observations that the Fennec is still commonly trapped and sold commercially in North Africa and was regularly encountered during field work in desert areas of Chad and Niger during 2010 and 2015. In southern Morocco, they are commonly seen in all sandy areas away from permanent human settlements (Asa and Cuzin 2013).&#160;In extensive opportunistic camera trapping studies across central Chad, Fennecs were the most frequently recorded species, present at 32 out of 94 widespread camera trapping locations north of 14.5°N ,with none recorded at 30 localities south of this line (M. Hassan, T. Wacher and J. Newby pers. comm. 2015)",
+    "habitats": "Fennec Foxes subsist in arid desert environments and are capable of inhabiting the remotest sand seas. Stable sand dunes are believed to be ideal habitat (Dorst and Dandelot 1970, Coetzee 1977), although they also live in very sparsely vegetated sand dunes near the Atlantic coast (F. Cuzin pers. obs.). Annual rainfall is less than 100 mm per year on the northern fringe of their distribution. On the southern fringe, it may be found up to the Sahelian areas that receive as much as 300 mm rainfall per year. In the Sahara, Fennecs occur in vast treeless sand seas with sparse vegetation often dominated by <em>Aristida </em>spp. and <em>Cyperus </em>spp., with shrubs such as <em>Ephedra alata</em>&#160;or (in the central Sahara) <em>Cornulaca monacantha</em>. Typically they are the only canid in large sand dune habitats. In small sand dunes or fixed vegetated dunes, Fennecs typically occur in areas dominated by <em>Panicum turgidum</em>&#160;or <em>Zygophyllum</em> spp., and sometimes by trees like <em>Acacia </em>spp. and <em>Capparis decidua</em> (Asa and Cuzin 2013) and they may share these habitats with Rueppell’s Fox and Golden Jackal <em>Canis aureus</em>.&#160;Studies at Termit in Niger suggested that although sympatric with other canids, they appeared tolerant of a wide range of habitats, including, but not limited to, drier and higher temperature zones than other species (Burruss 2014); ability to burrow in sandier substrates than other canids may also provide Fennecs with a competitive advantage in dune systems (Cuzin and Lenain 2004).",
+    "threats": "Currently there are no major range-wide threats to the species. However, human activity is rising rapidly in many parts of the Sahara. Construction of new roads, bettering of non-asphalted roads and new human settlements increase the disturbance and risk to some populations. Ongoing seismic surveys, exploratory drilling and oil field developments, coupled with increasing development of commercial transport and migration routes across recently remote parts of the region, create further pressure. The impact of major oil field development on local populations has not been assessed. Direct impacts include increased risk of ‘roadkills’ and risk to naïve desert living Fennecs, which can show lack of fear and curiosity when approached by vehicles. Locally, in North Africa, the main threat appears to be trapping for exhibition or sale to tourists. Though restricted to marginal areas, new permanent human settlements such as those in southern Morocco have resulted in the disappearance of foxes in these areas (F. Cuzin pers. obs.).",
+    "measures": "<strong>Legal protection</strong><br/>It is listed in CITES – Appendix II. It is legally protected in Morocco (including Western Sahara), Algeria, Tunisia and Egypt.&#160;<br/><br/><strong>Presence in protected areas</strong><br/>It occurs in a number of protected areas throughout the range, including Khnifiss and Irikki National Parks in Morocco,&#160;Ahaggar and Tasili n’Ajjer National Parks in Algeria, Banc d’Arguin and Diawling National Parks in Mauritania, Djebil and Sanghar National Parks in Tunisia, Zellaf N. R. in Libya, and Bir El Abd Conservation Area in Egypt (Asa <em>et al</em>. 2004, Asa and Cuzin 2013, T. Wacher pers. obs., F. Cuzin pers. obs.).&#160;Also significant numbers are found in Termit and Tin Toumma National Natural Reserve in Niger and Ouadi Rimé-Ouadi Achim Game Reserve in Chad.<br/><strong><br/></strong><strong>Presence in captivity&#160;</strong><br/>The <em>ex situ</em> Fennec Fox population is stable with individuals in accredited institutions of the Association of Zoos and Aquariums (AZA; North America), the European Zoos and Aquarium Association (EAZA; Europe) and the Zoo and Aquarium Association (ZAA; Australia, New Zealand &amp; South Pacific). As of June 2014, there were 156 individuals in 42 AZA institutions (Knobbe 2014), and 130 in 50 EAZA institutions (Mekarska 2014), both in actively managed programmes. Although there is no studbook or formal species management programme for Fennecs in Australian zoos, there are 16 individuals living in five zoos managed by the ZAA, all of which descend from the AZA or EAZA populations. Fennecs are kept in private collections within the Middle East and are also bred privately in the United States where they are sometimes kept as pets, but these records are not available.&#160;<br/><br/>Since 2001, Fennec Fox populations have been managed in zoos for the purposes of captive breeding, research and education (Bauman <em>et al</em>. 2004, Bauman 2010, Van der Meer 2011). Captive populations are managed using genetic and demographic goals so that they are as self sustaining as possible. Research projects with Fennec Fox are varied; some are specific to the species itself since there is a dearth of data and Fennec Fox husbandry has been challenging, whereas other projects utilize the Fennec as a model for other foxes (Bauman <em>et al</em>. 2010). Basic work on nutrition (Dempsey <em>et al</em>. 2009) and disease (K. Ross, K. Bauman, A. Moresco, D. Agnew and C. Asa pers. comm. 2015) and husbandry (Mekarska 2006) has been completed. Genetic work, assessing the relatedness within the AZA and EAZA populations, using mtDNA haplotypes (blood) and microsatellites (blood and hair), also have been recently completed (J.A. Ivy, K. Bauman and C. Lynch, pers. comm. 2015, A. Mekarska pers. comm. 2015). In-depth studies of reproduction in Fennecs (Asa and Valdespino 1998,&#160;Asa and Valdespino&#160;2003, Asa <em>et al</em>. 2014, Valdespino <em>et al</em>. 2002) continue, along with new initiatives to documenting circadian rhythms using remote activity monitors, validation of a glucocorticoid assay, and the development of personality assessment tools. Many of these projects were recommended action items from the 2010 International Fox Husbandry Workshop. These projects have contributed greatly to our knowledge of Fennec Fox, but also help develop and validate techniques for use in other species such as the Darwin’s Fox, where there is interest in potentially setting up captive breeding facilities within Chile (K. Bauman, pers. obs.). Finally, in AZA, one-third of the Fennec Fox population are dedicated to educational roles. Fennec Foxes are charismatic and one of the few carnivore species available for this purpose. Zoo-based education programmes for Fennecs are varied, but include: 1) discussions about canid biology and ecology, 2) discussions about the differences between wolves, dogs and foxes, and 3) talking about desert adaptations and ecosystems.&#160;<br/><br/>There is tremendous opportunity for future work with Fennecs to be integrated along a continuum of <em>in situ</em> and <em>ex situ</em> strategies under the emerging One Plan approach, a method of metapopulation management developed by International Union for the Conservation of Nature (IUCN)’s Conservation Breeding Specialist Group (Byers <em>et al</em>. 2013). This would facilitate discussion on all the various strategies and tools that could be utilized by&#160;<em>in situ</em>&#160;and&#160;<em>ex situ&#160;</em>managers, and provide opportunities for joint decisions and complimentary actions, thus making species-based conservation more effective and efficient.<strong><br/></strong><strong><br/></strong><strong>Gaps in knowledge</strong><br/>While studies of captive Fennec Fox have gone some way towards improving our knowledge of this little-known species, there is still a paucity of data regarding their basic ecology and behaviour in the wild. Thus, in 2009 the Saint Louis Zoo (USA) initiated a carnivore project in Niger to study Fennec Fox, Pale Fox <em>Vulpes pallida</em>&#160;and Ruppell’s Fox <em>Vulpes rueppellii</em>, as well as several other sympatric carnivores. Zoos from AZA and EAZA worked with the IUCN Canid Specialist Group, University of Oxford WildCRU, and the Sahara Conservation Fund on this first ever Fennec Fox field project; an excellent example of how zoos can directly fund and contribute to <em>in situ</em> efforts. &#160;Nonetheless, much remains unknown of the basic ecology and behaviour in the wild of Fennecs. The study in Niger was an important first step, yet further work is needed, and research on habitat use and population dynamics in the wild is overdue. No data are available regarding the impact from the increasing human presence within the Fennec range, and this should at minimum be monitored, but ideally future ecological studies should be designed such that data are collected from disturbed and non-disturbed sites to provide more information about human impacts.&#160;<br/><br/>A new study initiated in southern Morocco (formerly Western Sahara) in 2015, mainly targeted at <em>Felis margarita</em>, but investigating the whole guild of small carnivores (including the Fennec Fox) should contribute to further understanding of habitat use by Fennec Fox, movement patterns and interactions with other small carnivores (F. Cuzin pers. obs.).&#160;The recent deployment of a pilot long term camera trap study in north-western Saudi Arabia, coupled with follow up museum visits to establish the background of the two implicated museum specimens, should help resolve uncertainty about the status of Fennec in Arabian peninsula area (T. Wacher pers. obs.).",
+    "use_trade": "In Morocco and Tunisia, and presumably elsewhere, young foxes are sometimes captured for sale to tourists and for photographic exhibition; adults are sometimes taken for their fur (Asa and Cuzin 2013, B. d'Amicis pers. comm. 2015).",
+    "rationale": "This species is listed as Least Concern as the species is relatively widespread in the sandy deserts and semi-deserts of northern Africa to northern Sinai, and there currently are no known major range-wide threats believed to be resulting in a population decline that would warrant listing in a threatened category.",
+    "trend_justification": null,
+    "taxonomic_notes": "This species has been included in the genus <em>Fennecus</em> (e.g., Coetzee 1977), but is here retained in <em>Vulpes </em>following Wozencraft (2005)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Desert - Hot"
+      },
+      "code": "8_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Coastal Sand Dunes"
+      },
+      "code": "13_3"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Niger"
+      },
+      "code": "NE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mali"
+      },
+      "code": "ML"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chad"
+      },
+      "code": "TD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Sahara"
+      },
+      "code": "EH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt (African part)"
+      },
+      "code": "EGY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sinai"
+      },
+      "code": "SIN-OO"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Oil & gas drilling"
+      },
+      "code": "3_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Wacher, T., Bauman, K. & Cuzin, F.",
+      "value": [
+        "Fabrice Cuzin (IUCN SSC Canid Specialist Group)",
+        "Tim Wacher (Zoological Society of London)",
+        "Karen Bauman (St Louis Zoo)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Hoffmann, M. & Sillero-Zubiri, C.",
+      "value": [
+        "Michael Hoffmann (Zoological Society of London / IUCN SSC Canid Specialist Group)",
+        "Claudio Sillero-Zubiri (IUCN SSC Canid Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Asa, C., De Smet, K., Djeidi, T., Thresher, S. & Valdespino, C.",
+      "value": [
+        "Koenraad De Smet",
+        "Cheryl Asa",
+        "Carolina Valdespino",
+        "Tarek Djeidi",
+        "Sarah Thresher (IUCN SSC Canid Specialist Group - Volunteer)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Hoffmann, M.",
+      "value": [
+        "Michael Hoffmann (Zoological Society of London / IUCN SSC Canid Specialist Group)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Wozencraft, W.C. 2005. Order Carnivora. In: D.E. Wilson and D.M. Reeder (eds), <i>Mammal Species of the World: A Taxonomic and Geographic Reference. Third Edition</i>, pp. 532-628. Johns Hopkins University Press, Baltimore.",
+      "year": "2005",
+      "title": "Order Carnivora",
+      "author": "Wozencraft, W.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 1990. <i>IUCN Red List of Threatened Animals</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1990",
+      "title": "IUCN Red List of Threatened Animals",
+      "author": "IUCN",
+      "citation_short": "IUCN 1990"
+    },
+    {
+      "citation": "Baillie, J. and Groombridge, B. (comps and eds). 1996. <i>1996 IUCN Red List of Threatened Animals</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1996",
+      "title": "1996 IUCN Red List of Threatened Animals",
+      "author": "Baillie, J. and Groombridge, B.",
+      "citation_short": "Baillie and Groombridge 1996"
+    },
+    {
+      "citation": "Groombridge, B. (ed.). 1994. <i>IUCN Red List of Threatened Animals</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1994",
+      "title": "IUCN Red List of Threatened Animals",
+      "author": "Groombridge, B.",
+      "citation_short": "Groombridge 1994"
+    },
+    {
+      "citation": "Harrison, D.L. and Bates, P.J.J. 1991. <i>The Mammals of Arabia</i>. Harrison Zoological Museum, Sevenoaks, UK.",
+      "year": "1991",
+      "title": "The Mammals of Arabia",
+      "author": "Harrison, D.L. and Bates, P.J.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Saleh, M. A. and Basuony, M. 1998. A contribution to the mammalogy of the Sinai Peninsula. <i>Mammalia</i> 62: 557–575.",
+      "year": "1998",
+      "title": "A contribution to the mammalogy of the Sinai Peninsula",
+      "author": "Saleh, M. A. and Basuony, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Coetzee, C.G. 1977. Order Carnivora. Part 8. In: J. Meester and H.W. Setzer (eds), <i>The Mammals of Africa: An Identification Manual</i>, pp. 1-42. Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "1977",
+      "title": "Order Carnivora. Part 8",
+      "author": "Coetzee, C.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dragesco-Joffé, A. 1993. <i>La Vie sauvage au Sahara</i>. Delachaux et Niestlé, Lausanne, Switzerland.",
+      "year": "1993",
+      "title": "La Vie sauvage au Sahara",
+      "author": "Dragesco-Joffé, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gasperetti, J., Harrison, D.L. and Büttiker, W. 1985. The carnivora of Saudi Arabia. In: W. Büttiker and F. Krupp (eds), <i>Fauna of Saudi Arabia</i>, pp. 397-461. Pro Entomologica c/o Natural History Museum Basel, Basel, Switzerland.",
+      "year": "1985",
+      "title": "The carnivora of Saudi Arabia",
+      "author": "Gasperetti, J., Harrison, D.L. and Büttiker, W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Thesiger, W. 1949. A further journey across the empty quarter. <i>Geographical Journal</i> 113: 21-46.",
+      "year": "1949",
+      "title": "A further journey across the empty quarter",
+      "author": "Thesiger, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Granjon, L., Cosson, J.-F., Cuisin, J., Tranier, M. and Colas, F. 1995. Les mammifères du littoral mauritanien. 2. Biogéographie et écologie. <i>Actes du Colloque Environnement et littoral mauritanien</i>, pp. 73-81. Nouakchott, Mauritania.",
+      "year": "1995",
+      "title": "Les mammifères du littoral mauritanien. 2. Biogéographie et écologie",
+      "author": "Granjon, L., Cosson, J.-F., Cuisin, J., Tranier, M. and Colas, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Noll-Banholzer, U. 1979. Water balance and kidney structure in the fennec. <i>Comparative Biochemistry and Physiology</i> 62: 593-597.",
+      "year": "1979",
+      "title": "Water balance and kidney structure in the fennec",
+      "author": "Noll-Banholzer, U.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dorst, J. and Dandelot, P. 1970. <i>A field guide to the large mammals of Africa</i>. Collins, London, UK.",
+      "year": "1970",
+      "title": "A field guide to the large mammals of Africa",
+      "author": "Dorst, J. and Dandelot, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Al-Robaae, K. 1982. Northeast extension of the geographic distribution of fennec fox <i>Fennecus zerda</i> (Zimmermann) in the Arabian Peninsula. <i>Bulletin Basrah Natural History Museum</i> 5: 61-64.",
+      "year": "1982",
+      "title": "Northeast extension of the geographic distribution of fennec fox <i>Fennecus zerda</i> (Zimmermann) in the Arabian Peninsula",
+      "author": "Al-Robaae, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cuzin, F. 1996. Répartition actuelle et statut des grands mammifères sauvages du Maroc (Primates, Carnivores, Artiodactyles). <i>Mammalia</i> 60: 101-124.",
+      "year": "1996",
+      "title": "Répartition actuelle et statut des grands mammifères sauvages du Maroc (Primates, Carnivores, Artiodactyles)",
+      "author": "Cuzin, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brito, J.C., Acosta, A.L., Álvares, F. and Cuzin, F. 2009. Biogeography and conservation of taxa from remote regions: An application of ecological-niche based models and GIS to North-African canids. <i>Biological Conservation</i> 142: 3020-3029.",
+      "year": "2009",
+      "title": "Biogeography and conservation of taxa from remote regions: An application of ecological-niche based models and GIS to North-African canids",
+      "author": "Brito, J.C., Acosta, A.L., Álvares, F. and Cuzin, F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Asa, C.S., Bauman, K.L., Devery, S., Zordan, M., Camilo, G.R., Boutelle, S. and Moresco, A. 2014. Factors Associated With Uterine Endometrial Hyperplasia and Pyometra in Wild Canids: Implications for Fertility. <i>Zoo Biology</i> 33: 8-19.",
+      "year": "2014",
+      "title": "Factors Associated With Uterine Endometrial Hyperplasia and Pyometra in Wild Canids: Implications for Fertility",
+      "author": "Asa, C.S., Bauman, K.L., Devery, S., Zordan, M., Camilo, G.R., Boutelle, S. and Moresco, A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Valdespino, C., Asa, C.S. and Bauman, J.E. 2002. Ovarian cycles, copulation and pregnancy in the fennec fox (<i>Vulpes zerda</i>). <i>Journal of Mammalogy</i> 83: 99-109.",
+      "year": "2002",
+      "title": "Ovarian cycles, copulation and pregnancy in the fennec fox (<i>Vulpes zerda</i>)",
+      "author": "Valdespino, C., Asa, C.S. and Bauman, J.E.   ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bauman, K.L., Asa, C.S., Grisham, J. and Verberkmoes, W. 2004. Captive breeding: Canids in captivity and captive breeding. In: C. Sillero-Zubiri, M. Hoffmann and D.W. Macdonald (eds), <i>Canids: Foxes, Wolves, Jackals and Dogs. Status Survey and Conservation Action Plan</i>, pp. 280-288. IUCN, Gland, Switzerland.",
+      "year": "2004",
+      "title": "Captive breeding: Canids in captivity and captive breeding",
+      "author": "Bauman, K.L., Asa, C.S., Grisham, J. and Verberkmoes, W",
+      "citation_short": ""
+    },
+    {
+      "citation": "Burruss, N.D. 2014. The environmental constraints of rüppell’s (<i>Vulpes. rueppellii</i>), pale (<i>V. pallida</i>), and fennec foxes (<i>V. zerda</i>), and golden jackals (<i>Canis aureus</i>) within the Termit & Tin Toumma Nature and Cultural Reserve and an analysis of pale fox food habits. MSc Thesis, Las Cruces: New Mexico State University.",
+      "year": "2014",
+      "title": "The environmental constraints of rüppell’s (<i>Vulpes. rueppellii</i>), pale (<i>V. pallida</i>), and fennec foxes (<i>V. zerda</i>), and golden jackals (<i>Canis aureus</i>) within the Termit & Tin Toumma Nature and Cultural Reserve and an analysis of pale fox food habits",
+      "author": "Burruss, N.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bauman, K. L., Mekarska, A., Grisham, J. and Lynch, C. 2010. Small canid husbandry challenges: reviewing problems, with recommendations for improving captive canid programmes. <i>International Zoo Yearbook</i> 44: 87-101.",
+      "year": "2010",
+      "title": "Small canid husbandry challenges: reviewing problems, with recommendations for improving captive canid programmes",
+      "author": "Bauman, K. L., Mekarska, A., Grisham, J. and Lynch, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Asa, C.S. and Valdespino, C. 1998. Canid reproductive biology: Integration of proximate mechanisms and ultimate causes. <i>American Zoologist </i> 38: 251-259.",
+      "year": "1998",
+      "title": "Canid reproductive biology: Integration of proximate mechanisms and ultimate causes",
+      "author": "Asa, C.S. and Valdespino, C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Cuzin, F. and Lenain, D.M. 2004. Rüppell’s Fox <i>Vulpes rueppellii</i> (Schinz, 1825). In: C. Sillero-Zubiri, M. Hoffmann and D.W. Macdonald (eds), <i>Canids: Foxes, Wolves, Jackals and Dogs. Status Survey and Conservation Action Plan</i>, pp. 201-205. IUCN, Gland.",
+      "year": "2004",
+      "title": "Rüppell’s Fox <i>Vulpes rueppellii</i> (Schinz, 1825)",
+      "author": "Cuzin, F. and Lenain, D.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mekarska, A. 2006. Methods of fennecs keeping in European zoos. <i>Proceedings of the 3rd international conference on zoo research: animals, zoos and conservation</i>, pp. 41–44. Poznan Zoo, Poznan, Poland.",
+      "year": "2006",
+      "title": "Methods of fennecs keeping in European zoos",
+      "author": "Mekarska, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Asa, C.S. and Cuzin, F. 2013. <i>Vulpes zerda</i> Fennec Fox. In: Kingdon, J. S. and Hoffmann, M. (eds), <i>Mammals of Africa. Volume 5. Carnivores, Pangolins, Equids and Rhinoceroses.</i>, pp. 74-77. Bloomsbury, London.",
+      "year": "2013",
+      "title": "<i>Vulpes zerda</i> Fennec Fox",
+      "author": "Asa, C.S. and Cuzin, F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Byers, O., Lees, C., Wilcken, J. and Schwitzer, C. 2013. The One Plan Approach: The Philosophy and Implementation of CBSG’s Approach to Integrated Species Conservation Planning. <i>World Association of Zoos and Aquariums (WAZA) Magazine</i> 14: 2-5.",
+      "year": "2013",
+      "title": "The One Plan Approach: The Philosophy and Implementation of CBSG’s Approach to Integrated Species Conservation Planning",
+      "author": "Byers, O., Lees, C., Wilcken, J. and Schwitzer, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mallon, D. and Budd, K. 2011. Regional Red List Status of Carnivores in the Arabian Peninsula. IUCN and Environment and Protected Areas Authority, Cambridge, UK; Gland, Switzerland; and Sharjah, UAE.",
+      "year": "2011",
+      "title": "Regional Red List Status of Carnivores in the Arabian Peninsula.",
+      "author": "Mallon, D. and Budd, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Van der Meer, R. 2011. <i>European Association of Zoos and Aquariums (EAZA) Canid and Hyaenid Taxon Advisory Group Regional Collection Plan 2th Edition, 2011.</i>  Zoo Amersfoort, Amersfoort, Netherlands.",
+      "year": "2011",
+      "title": "European Association of Zoos and Aquariums (EAZA) Canid and Hyaenid Taxon Advisory Group Regional Collection Plan 2th Edition, 2011.",
+      "author": "Van der Meer, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Asa, C.S., and Valdespino, C. 2003. A review of small canid reproduction. In: L. Carbyn and M. Sovada (eds), <i>Swift Foxes</i>, pp. 117-123. Canadian Plains Research Center, University of Regina, Saskatchewan, Canada.",
+      "year": "2003",
+      "title": "A review of small canid reproduction",
+      "author": "Asa, C.S., and Valdespino, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Knobbe, C. 2014. <i>Fennec Fox, </i>Vulpes zerda<i/>, Association of Zoos and Aquariums (AZA) Regional Studbook</i>. Saint Louis Zoo, Saint Louis, Missouri, U.S.A.",
+      "year": "2014",
+      "title": "Fennec Fox, <i>Vulpes zerda<i/>, Association of Zoos and Aquariums (AZA) Regional Studbook",
+      "author": "Knobbe, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bauman, K. 2010. Association of Zoos and Aquariums (AZA) Canid and Hyaenid Taxon Advisory Group Regional Collection Plan. 5th edition. Saint Louis Zoo, Saint Louis, Missouri, USA.",
+      "year": "2010",
+      "title": "Association of Zoos and Aquariums (AZA) Canid and Hyaenid Taxon Advisory Group Regional Collection Plan. 5th edition",
+      "author": "Bauman, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Asa, C. S., Valdespino, C. and Cuzin, F. 2004. Fennec Fox <i>Vulpes zerda</i> (Zimmermann, 1780). In: C. Sillero-Zubiri, M. Hoffmann and D. W. Macdonald (eds), <i>Canids: Foxes, Wolves, Jackals and Dogs. Status Survey and Conservation Action Plan</i>, pp. 205–209. IUCN/SSC Canid Specialist Group, IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "2004",
+      "title": "Fennec Fox <i>Vulpes zerda</i> (Zimmermann, 1780).",
+      "author": "Asa, C. S., Valdespino, C. and Cuzin, F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dempsey, J.L., Hanna, S.J., Asa, C.S. and Bauman, K.L. 2009. Nutrition and behavior of fennec foxes (<i>Vulpes zerda</i>). In: Hess, L, and Antinoff, N. (eds), <i>Veterinary Clinics of North America: Exotic Animal Practice; Nutrition and Behavior of Uncommon Species</i>, pp. 299-312.",
+      "year": "2009",
+      "title": "Nutrition and behavior of fennec foxes (<i>Vulpes zerda</i>)",
+      "author": "Dempsey, J.L., Hanna, S.J., Asa, C.S. and Bauman, K.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mekarska, A. 2014. <i>Fennec Fox, </i>Vulpes zerda<i>, European Association of Zoos and Aquariums (EAZA) Regional Studbook</i>.  Krakow Zoo,  Krakow, Poland.",
+      "year": "2014",
+      "title": "Fennec Fox, <i>Vulpes zerda</i>, European Association of Zoos and Aquariums (EAZA) Regional Studbook",
+      "author": "Mekarska, A. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2015. The IUCN Red List of Threatened Species. Version 2015-4. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 19 November 2015).",
+      "year": "2015",
+      "title": "The IUCN Red List of Threatened Species. Version 2015-4",
+      "author": "IUCN",
+      "citation_short": "IUCN 2015-4"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

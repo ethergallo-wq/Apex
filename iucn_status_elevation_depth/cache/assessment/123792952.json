@@ -1,0 +1,1816 @@
+{
+  "assessment_date": "2016-02-02T00:00:00.000+00:00",
+  "year_published": "2017",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 22066,
+  "criteria": "A3c+4c",
+  "url": "https://www.iucnredlist.org/species/22066/123792952",
+  "citation": "Velez-Liendo, X. & García-Rangel, S. 2017. Tremarctos ornatus (errata version published in 2018). The IUCN Red List of Threatened Species 2017: e.T22066A123792952. Accessed on 15 May 2026.",
+  "assessment_id": 123792952,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 22066,
+    "scientific_name": "Tremarctos ornatus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CARNIVORA",
+    "family_name": "URSIDAE",
+    "genus_name": "Tremarctos",
+    "species_name": "ornatus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(F.G. Cuvier, 1825)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Bear Specialist Group",
+        "url": "http://www.bearbiology.com/index.php?id=bsgmain",
+        "description": "Co-Chairs: David L. Garshelis (email: dave.garshelis@dnr.state.mn.us) and Michael Proctor (email: mproctor@netidea.com)\nRed List Authority Coordinator: Bruce McLellan (email: bruce.mclellan@gov.bc.ca)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Spectacled Bear",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Oso de Anteojos",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Oso Frontino",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Oso Real",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Ours à lunettes",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Ours Andin",
+        "language": "fre"
+      },
+      {
+        "main": true,
+        "name": "Andean Bear",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Ursus ornatus F. G. Cuvier, 1825",
+        "status": "ACCEPTED",
+        "genus_name": "Ursus",
+        "species_name": "ornatus",
+        "species_author": "F. G. Cuvier, 1825",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 4750,
+    "lower_elevation_limit": 200,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "2500-10000",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Unknown",
+    "generational_length": "10",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p>The Andean Bear is the only extant bear species in South America and is endemic to the Tropical Andes (Kattan <em>et al</em>. 2004; Ríos-Uzeda <em>et al</em>. 2006, 2007; Viteri 2007; Viteri and Waits 2009; García-Rangel 2012). The distribution of this species is long (<em>ca</em> 4,600 km) and narrow (<em>ca</em> 200-650 km) in the mountains from Venezuela to Bolivia (Peyton <em>et al.</em> 1998, Yerena 1998, Peyton 1999, Rodríguez <em>et al</em>. 2003, Kattan <em>et al</em>. 2004). From North to South, Andean bears are found in Sierra de Perijá and Cordillera de Mérida in Venezuela; the Occidental, Central, and Oriental Andean mountain ranges of Colombia; both Eastern and Western slopes of the Ecuadorian Andes; across the three Peruvian Andean mountain ranges, including a portion of the North Pacific coastal desert; and in the Eastern slope of the Tropical Andes in Bolivia (García-Rangel 2012). The possible presence of the bear in Panama was reported by Hershkovitz (1957), but recent surveys in the area did not find evidence to support this claim (Goldstein <em>et al.</em> 2008). Recently, presence of Andean bears in Northern Argentina has been confirmed by Cosse <em>et al</em>. (2014) through genetics. However, given that these presence points are up to 300 km south (straight line) of the known most-southerly population in Bolivia, they may represent vagrant individuals rather than resident populations.</p>",
+    "population": "<p>Expert knowledge, data extrapolations, genetic analysis, mark-recapture, radio tracking and sign surveys, as well as ecological modelling have been used to estimate population sizes and densities of Andean Bears (Peyton 1984, 1999; Yerena 1994; Peyton <em>et al</em>. 1998; Cuesta and Suárez 2001; Ruiz-García 2003; Kattan <em>et al</em>. 2004; Viteri 2007; Ríos-Uzeda <em>et al</em>. 2007; Velez-Liendo 2010; Garshelis 2011; García-Rangel 2012). Wild populations are believed to be on decline due to habitat loss and fragmentation, and illegal killing (Rodríguez <em>et al</em>. 2003, Kattan <em>et al</em>. 2004, Yerena <em>et al</em>. 2007, Sánchez-Mercado <em>et al</em>. 2008, Velez-Liendo <em>et al</em>. 2009, Velez-Liendo and Paisley 2010, García-Rangel 2012). National assessments applying different approaches estimated 1,100-1,600 bears in Venezuela (Ruiz-García 2003), 3,000-6,000 in Colombia (Ruiz-García 2003), 1,200-2,000 in Ecuador (Cuesta and Suárez 2001, Viteri 2007), ~5,000 bears in Peru (Peyton 1999), and ~3,000 bears in Bolivia (Velez-Liendo 2010). These rather crude countrywide estimates, yielding a range-wide estimate of 13,000-18,000 bears (5-7 bears/100 km² over its 260,000 km² range), are reasonably consistent with three empirically-derived mark-recapture (re-sight) density estimates of 3-8 bears/100 km² (Viteri 2007, Ríos-Uzeda <em>et al</em>. 2007, S. Molina, pers. comm). It should be cautioned, however, that all abundance and density estimates for this species have known biases, so consistency among the estimates is not verification of their accuracy (Garshelis 2011).</p><p><span lang=\"EN-US\"></p>",
+    "habitats": "<p>Andean Bear altitudinal range extends from 200 to 4,750 m above sea level, with an area of occupancy covering approximately 260,000 km²<sup> </sup>along the Tropical Andes. The lower limit is on the Western Peruvian range; the upper limit is within Carrasco National Park in Bolivia (Peyton 1980, 1984, 1999; Goldstein 1990, Rodríguez-Rodríguez and Cadena 1991, Rodríguez <em>et al</em>. 2003, Sánchez-Mercado 2008, Figueroa and Stucchi 2009, Velez-Liendo 2010, García-Rangel 2012, Appleton <em>et al</em>. 2013).<br/> <br/> The species inhabits a great variety of ecosystems along the Tropical Andes including Tropical dry forests, Tropical moist lowland and montane forests; Tropical dry and moist shrublands, and Tropical high altitude shrubland and grasslands (García-Rangel 2012). Seasonal shifts in habitat use due to changes in food availability have been reported (Peyton 1980, Rodríguez-Rodríguez and Cadena 1991, Velez-Liendo 1999, Paisley 2001, Cuesta <em>et al.</em> 2003, Troya <em>et al</em>. 2004, Ríos-Uzeda <em>et al</em>. 2006, Figueroa and Stucchi 2009). Andean bears are mostly found in Tropical moist forests and Tropical high-altitude grasslands (Peyton 1980, 1987a, 1987b, 1999; Velez-Liendo 1999, Cuesta <em>et al</em>. 2003, Ríos-Uzeda <em>et al</em>. 2006, Sánchez-Mercado 2008), but it remains unclear whether bears can live entirely in high-altitude grasslands and paramo without access to forested areas (Paisley and Garshelis 2006). In the north coast of Peru, Andean bears inhabit a Tropical dry shrubland (Peyton 1999, Figueroa and Stucchi 2009, García-Rangel 2012, Appleton <em>et al</em>. 2013).<br/> <br/> Andean bears are omnivorous and have a suite of physical adaptations for this life style (McLellan and Reiner 1994, Sacco and Van Valkenburgh 2004, Christiansen and Wroe 2007, Christiansen 2008). Anatomical skull and dentition adaptations to grind (Christiansen 2008) and a pseudo-thumb (Salesa <em>et al</em>. 2006) to aid in consuming a diet of fibrous, hard vegetative matter. Andean bears also opportunistically prey on mammals, including rabbits and mountain tapirs (Castellanos 2011a), but most notably free-ranging domestic cattle (Goldstein 1990, 2002; Rodríguez-Rodríguez and Cadena 1991; Peyton 1999; Cuesta and Suárez 2001; Sacco and Van Valkenburgh 2004; Goldstein <em>et al.</em> 2006; Christiansen and Wroe 2007; Christiansen 2008; Torres 2008; Figueroa and Stucchi 2009; García-Rangel 2012). Bromeliads and palm trees constitute the most common food items in the diet of Andean Bears across the majority of their range (Peyton 1980, Goldstein 1990, Rodríguez-Rodríguez and Cadena 1991, Goldstein and Salas 1993, Troya <em>et al</em>. 2004, Rivadeneria-Canedo 2008, Figueroa and Stucchi 2009, Ríos-Uzeda <em>et al</em>. 2009, García-Rangel 2012). On a seasonal basis, fruits are key food sources for the species as they provide carbohydrates, protein and fat necessary to balance their diet (Peyton 1980, 1984, Goldstein 1990, Rodríguez-Rodríguez and Cadena 1991, Rivadeneira-Canedo 2001, Troya <em>et al</em>. 2004, Kattan <em>et al</em>. 2004, Figueroa and Stucchi 2009, Ríos-Uzeda <em>et al</em>. 2009).<br/> <br/> Andean Bears are excellent climbers and commonly build tree platforms where they rest, feed on fruits and carcasses, as well as guard feeding areas (Peyton 1980, 1984; Goldstein 1990, 1991, 2002; Torres 2008, García-Rangel 2012). Activity patterns are mainly diurnal, but they vary seasonally and between geographic areas (Paisley 2001, Paisley and Garshelis 2006, Castellanos 2011b). As food is available all year-round in most parts of their range, Andean bears do not hibernate (Peyton 1999, Garshelis 2009). Information on reproduction is limited for Andean Bears and has mainly come from captive individuals (Bloxam 1977, Rosenthal 1988, Claro-Hergueta <em>et al</em>. 2007, Spady <em>et al</em>. 2007, García-Rangel 2012, Enciso and Guimarães 2013).<br/> <br/> The species is polyestrous, a facultative seasonal breeder and experiences delayed implantation (Claro-Hergueta <em>et al</em>. 2007, Spady <em>et al</em>. 2007). In captivity, females show three to four oestrous cycles during a single breeding season with no seasonal ovarian activity (Enciso and Guimarães 2013). Mating has been recorded in the wild at various times of year but peaking between March and October (Peyton 1980, Peyton <em>et al</em>. 1998). Litter size varies from one to four, with twins being most common, and may be related to female weight and hence food abundance (Saporiti 1949, Bloxam 1977, Peyton 1980, Claro-Hergueta <em>et al</em>. 2007, García-Rangel 2012). Field observations in Bolivia (Velez-Liendo 1999) suggested that births occur two to three months before the peak of the fruit season, perhaps to allow mothers to leave the den with their cubs when fruits are abundant (Peyton 1980, Peyton <em>et al</em>. 1998, Velez-Liendo 1999, Velez-Liendo and Paisley 2010). In captivity, time of birth varies with latitude but births usually occur from February to September (Garshelis 2004, Claro-Hergueta <em>et al</em>. 2007).</p>",
+    "threats": "<p>                   </p><p><strong>Habitat Loss</strong><br/> The Tropical Andes has been home to human communities, including the great Inca Empire, for thousands of years and, as a consequence, 90% of Andean ecosystems have been transformed in some way (Young 1998, 2009; Vina and Cavelier 1999; Ataroff and Rada 2000; Myers <em>et al</em>. 2000; Kattan <em>et al</em>. 2004; Armenteras <em>et al</em>. 2011). The expansion of the agricultural frontier, together with inadequate agricultural practices and land/agrarian reforms, have been the main drivers of the loss of natural ecosystems (Peyton <em>et al</em>. 1998, Yerena 1998, Young 1998, Vina and Cavelier 1999, Ataroff and Rada 2000, Armenteras <em>et al</em>. 2011, Portillo-Quintero <em>et al</em>. 2012). Mining and oil exploitation are becoming an increasing menace not only to bears, but to local communities due to land expropriation, loss of habitat connectivity, and contamination of water and soil (Young and León 1999, Bury 2002, Bebbington <em>et al</em>. 2008, Bebbington 2009). Conversion of land to coca crops and the drug trade, together with guerrilla groups in some parts of the Andes, favours a lawless land-use system that also impacts the quality of Andean Bear habitats and the bear's probability of long-term survival (Rodríguez <em>et al</em>. 2003, Yerena <em>et al</em>. 2007, Dávalos <em>et al.</em> 2011, García-Rangel 2012).<br/> <br/> <strong>Illegal Killing</strong><br/> Illegal killing is an important, but underestimated threat for Andean Bears. Based on a review of the literature, an average of about 180 bears are known to be killed per year across its range—it is suspected that the real number is much higher, and is likely increasing. For example, recent assessments in northern Ecuador showed unprecedented numbers of cattle killed by bears (at least 320 during the period 2009-2014; Zukowski and Ormsby 2016), as more people are turning to dairy cow farming as a livelihood (Jampel 2016). Bears are killed for retaliation against crop or livestock depredations (or protection against future depredations), for cultural or medical beliefs, and for commercial trade (Orejuela and Jorgenson 1999, Peyton 1999, Rumiz and Salazar 1999, Rodríguez <em>et al</em>. 2003, Yerena <em>et al</em>. 2007, Figueroa 2008, Figueroa and Stucchi 2009, Lameda 2011, E.D. Rodríguez pers. comm. 2014, M.P. Viteri pers. comm. 2014). Since the number of bears killed is likely underestimated by a wide margin, the effects of such killing on bear populations is hard to assess, but rates of killing are high in some areas. Sanchez-Mercado <em>et al.</em> (2008, 2014) estimated that up to 36% of the bear’s distribution in the Cordillera de Merida in Venezuela was within an “ecological trap”, due to human threats. These authors estimated that the effects of this threat combined with habitat fragmentation could be fostering an extinction probability higher than 50% over the next 50 years across this mountain range. Bears are killed during opportunistic encounters, while sport hunting, or as retaliation after damaging crops, particularly maize, or killing livestock (Goldstein 1991, 2002; Peyton 1999, Poveda 1999, Morales Vargas 2003, Goldstein <em>et al</em>. 2006, Sánchez-Mercado <em>et al</em>. 2008, Torres 2008).<br/> <br/> <strong>Climate Change</strong><br/> Global projections of effects of climate change show a general tendency towards upslope displacement of the mountain biome, suggesting that the Tropical Andes is among the most vulnerable region to climate change (Malcom <em>et al</em>. 2006, Urrutia and Vuille 2009, Beaumont <em>et al</em>. 2011). However, the heterogeneity of this hotspot shows a more complex response (Tovar <em>et al</em>. 2013) affecting phenological patterns and increasing species vulnerability with predictions of species loss ranging from 20-50% due to range contractions for many taxa (Cuesta-Camacho <em>et al</em>. 2008, Lawler <em>et al</em>. 2009, Aguirre <em>et al</em>. 2011, Graham <em>et al.</em> 2011, Hoffmann and Sgrò 2011, Chen <em>et al.</em> 2011, Velásquez-Tibatá <em>et al.</em> 2013, Richardson <em>et al.</em> 2013, Pacifici <em>et al.</em> 2015).</p><p> It is likely that all ecosystems associated with Andean Bears will exhibit reductions in their extension. With an increment of +0.74 C in the last century, and a projected increase of 4.3 +/- 0.7 C by 2100 (IPCC 2013), extensive changes in habitat are expected: the Tropical high altitude grasslands is the most fragile ecosystem, with an estimated loss of 30% (Tovar <em>et al.</em> 2013) due to the lack of upslope area for migration. Projected reduction in annual rainfall (IPCC 2013) is likely to affect species highly dependent on humidity such as epiphytic bromeliads (Colwell <em>et al</em>. 2008, Svenning and Condit, 2008, Tewsksbury <em>et al.</em> 2008). Tropical dry and moist shrublands are likely to lose 24% of their area (Tovar <em>et al</em>. 2013), mainly due to a significant variation in the number of dry months (IPCC 2013), while a loss of 18% in area was estimated for Tropical moist lowland and montane forests and Tropical dry forests due to upslope displacements. Furthermore, the extensive (and intensive) land use by human activities in Paramo grasslands, are likely to encroach even further, affecting not only the biodiversity associated to this ecosystem, but also the ecosystem services this biome provides to the region.<br/> <br/> Changes in climate regimes must therefore be considered as a growing threat for Andean Bears, as they are likely to alter habitat quality as well as land-use patterns, and increase the probability of human–bear encounters and conflict (Karanth and Chellam 2009, Aguirre <em>et al.</em> 2011, Hoffmann and Sgrò 2011, Chen <em>et al</em>. 2011, Sheridan and Bickford 2011, Mysterud 2013, Ripple <em>et al.</em> 2014). Even more, the areas considered to be most vulnerable to climate change across the Andes are those considered important for Andean bears including: Yanachaga Chemillen National Park (NP) (Peru), Manu NP (Peru), Madidi NP (Bolivia), Apolobamba ANMI (Bolivia), Carrasco NP (Bolivia) and Amboro NP (Bolivia) (Hoffman <em>et al.</em> 2011).</p>",
+    "measures": "<p>                   </p><p>The Andean Bear has been listed as Vulnerable by the IUCN since 1982 and has been included in CITES Appendix I since 1975. A total of 58 protected areas have been established across the Andean Bear distribution, but threats remain within their boundaries with most of these areas being no more than “Paper Parks” lacking adequate budget and staff (Hardner 2008; Sánchez-Mercado <em>et al</em>. 2008; Monsalve Dam <em>et al</em>. 2010; García-Rangel 2011, 2012). Although efforts to establish, maintain and connect old and new protected areas along the bear’s range have been carried out (e.g., Vilcabamba-Amboro corridor between Peru and Bolivia and the interconnected system of protected areas in the Venezuela Andes), large portions of the bear’s habitat are still unprotected and poaching has not been controlled (Yerena 1994, 1998;Yerena <em>et al</em>. 2003, Kattan <em>et al</em>. 2004, Surkin <em>et al</em>. 2010, Yerena and García-Rangel 2010, Hoffman <em>et al</em>. 2011, Sánchez-Mercado <em>et al</em>. 2014). Recently (2007-2014), a number of important steps towards Andean Bear conservation have been undertaken across its distribution including: (1) promotion of Andean Bear conservation by local education programmes and research projects carried out by conservation groups, NGOs, zoological parks, universities, research institutes and government agencies in Bolivia, Peru and Venezuela (Figueroa and Stucchi 2009, Albarracín 2010, García-Rangel 2012). (2) The publication of national action plans for Venezuela, Colombia and Ecuador (Sánchez-Mercado 2008, Castellanos <em>et al</em>. 2010, Monsalve Dam <em>et al</em>. 2010), and a national assessment for Bolivia (Velez-Liendo, <em>et al</em>. 2009). Unfortunately priority actions highlighted by some of these programs have not been undertaken. Such is the case for the three key areas identified for connectivity conservation within the Venezuelan Action Plan (Yerena <em>et al</em>. 2007).<br/> <br/> Knowledge regarding the species ecology has improved, with information about home range sizes, movement patterns and population sizes for some locations in Peru, Ecuador and Colombia (Rodríguez <em>et al</em>. 2003, Monsalve Dam <em>et al</em>. 2010, Sánchez-Mercado <em>et al</em>. 2010, García-Rangel 2012). Nevertheless, in order to develop robust conservation actions, further efforts regarding population sizes and limiting factors are required. Current and future research need to focus on populations, habitat and connectivity, human dimensions, and climate change effects on both the ecology of the species and human-bear conflict               (Rodríguez <em>et al.</em> 2003, Jorgenson and Sandoval 2005, Yerena <em>et al.</em> 2007, Monsalve Dam <em>et al.</em> 2010, Velez-Liendo and Paisley 2010, García-Rangel 2012).&#160;Finally, it is important to encourage conservation initiatives to focus on a more holistic and creative approach where the needs of the species and the people inhabiting the Andes mountain range are jointly considered (García-Rangel 2012).</p>",
+    "use_trade": "<p>Some bears are killed for cultural and medical purposes. The extent of commercial trade is unknown but likely limited.</p>",
+    "rationale": "<p><span lang=\"EN-US\">A landscape assessment of habitat suitability and connectivity carried out for this assessment identified ~30% of habitat as unsuitable to sustain viable Andean Bear populations. Key patches for sustainable populations of Andean Bears were defined as areas larger than 400 km² and within 15 km of the nearest patch (Verboom <span lang=\"EN-US\"><em>et al</em>.<span lang=\"EN-US\"> 2001, Velez-Liendo 2014). At the national level, Venezuela showed the greatest projected loss of key patches (70%), with only two of these key patches available to sustain its bear population. Peru, Colombia and Ecuador are projected to lose 31%, 29% and 27% respectively, and Bolivia 19%. Causes of this loss of key patch habitat is associated with human development activities that have not ceased, and in some areas may increase by allowing oil exploration and exploitation within some protected areas. Expansion of the agricultural frontier, inadequate agricultural practices and land/agrarian reforms; mining and oil exploitation, conversion of land to coca crops and the drug trade, have been the main drivers of the loss and degradation of Andean bear habitat (Ataroff and Rada 2000, Palminteri <span lang=\"EN-US\"><em>et al</em>.<span lang=\"EN-US\"> 2001, Armenteras <span lang=\"EN-US\"><em>et al</em>.<span lang=\"EN-US\"> 2003, 2011; Rodríguez <span lang=\"EN-US\"><em>et al</em>.<span lang=\"EN-US\"> 2003, Kattan <em>et al</em>. 2004, Yerena <span lang=\"EN-US\"><em>et al</em><span lang=\"EN-US\">. 2007, Velez-Liendo 2010, Dávalos <span lang=\"EN-US\"><em>et al</em>.<span lang=\"EN-US\"> 2011, García-Rangel 2012, Portillo-Quintero <em>et al</em>. 2012, Sánchez-Mercado <span lang=\"EN-US\"><em>et al</em>.<span lang=\"EN-US\"> 2014). Three main data sources were used to map these human intrusions on Andean Bear habitat: disturbed areas (roads, settlements, agriculture fields, etc.) from Josse <span lang=\"EN-US\"><em>et al</em>.<span lang=\"EN-US\"> (2009), forest cover loss derived from satellite imagery for the period 2000-2013 (Hansen <span lang=\"EN-US\"><em>et al</em>.<span lang=\"EN-US\"> 2013) and 8 years (2000-2008) of fire activities from MODIS Rapid Response System data sets (<a href=\"http://modis-fire.umd.edu/index.php\">http://modis-fire.umd.edu/index.php</a>) (Velez-Liendo 2010;<span lang=\"EN-US\"> <span lang=\"EN-US\">note: data and imagery were from LANCE FIRMS operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS) with funding provided by NASA/HQ<span lang=\"EN-US\"><span lang=\"EN-US\">).<br/> <br/> Furthermore, as a consequence of habitat loss, human-bear conflicts are likely to increase resulting in reduced tolerance and escalating bear kills (Goldstein <span lang=\"EN-US\"><em>et al</em>.<span lang=\"EN-US\"> 2006; Sánchez-Mercado <span lang=\"EN-US\"><em>et al</em>.<span lang=\"EN-US\"> 2008, 2014; García-Rangel 2012; Zukowsky and Ormsby 2016). Thus, even where a habitat patch is of sufficient size to maintain a bear population, human-caused mortality is likely to reduce bear density.<br/> <br/> Climate change projections for 2010-2039 by Tovar <em>et al</em>. (2013) indicate that all ecosystems inhabited by Andean Bears will exhibit a degree of loss: 30% loss for Tropical high altitude grasslands, 24% for Tropical dry and moist shrublands, and 18% for Tropical moist lowland and montane forests. Based on the current state of the Andean Bear’s habitat, the fact that many threats causing reduction and degradation of Andean Bear ecosystems have not ceased, and projected patterns of biodiversity shift caused by climate change, the species is vulnerable to widespread future decline.</span></span></span></span></span></span></span></span></span></span></span></span></span></p><p>Andean Bear species’ experts in the Bear Specialist Group considered all of these threats and provided estimates of rates of decline.&#160; Experts estimated rates of decline of &gt;30% for each of the five range countries in the next 30 years and also in a 30-year time window overlapping the present (2000–2030). This qualifies the species for Vulnerable, under criteria A3 and A4. There is also a reasonable likelihood that the global population consists of &lt;10,000 mature adults (given a total population of &lt;20,000 bears), a condition under criteria C1, but since the rate of future population decline is only suspected based on rates of habitat loss or alteration, the nature of the evidence is insufficient (i.e., not directly estimated) to categorize the species under C1.<br/></p><p><span lang=\"EN-US\"></span></p>",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "5_1_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_2",
+      "description": {
+        "en": "Policies and regulations"
+      }
+    },
+    {
+      "note": "",
+      "code": "6_1",
+      "description": {
+        "en": "Linked enterprises & livelihood alternatives"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_3",
+      "description": {
+        "en": "Private sector standards & codes"
+      }
+    },
+    {
+      "note": "",
+      "code": "6_4",
+      "description": {
+        "en": "Conservation payments"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "6_5",
+      "description": {
+        "en": "Non-monetary values"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_2",
+      "description": {
+        "en": "Training"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_1",
+      "description": {
+        "en": "Formal education"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical High Altitude"
+      },
+      "code": "3_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical High Altitude"
+      },
+      "code": "4_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bolivia, Plurinational States of"
+      },
+      "code": "BO"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Harvest & Trade Management Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "High Impact: 9",
+      "severity": "Very Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Droughts"
+      },
+      "code": "11_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Storms & flooding"
+      },
+      "code": "11_4"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Shifting agriculture"
+      },
+      "code": "2_1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Oil & gas drilling"
+      },
+      "code": "3_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Temperature extremes"
+      },
+      "code": "11_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Nomadic grazing"
+      },
+      "code": "2_3_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Velez-Liendo, X. & García-Rangel, S.",
+      "value": [
+        "Ximena Velez-Liendo (WildCRU, University of Oxford/Chester Zoo)",
+        "Shaenandhoa García-Rangel (Simón Bolívar University, Venezuela)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Garshelis, D.L. & McLellan, B.N.",
+      "value": [
+        "Bruce McLellan (IUCN SSC Bear RLA)",
+        "David Garshelis (Minnesota Department of Natural Resources)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Viteri Espinel, M., Wallace, R.B., Rumiz, D.I., Pacheco, L., Lameda, I., Goldstein, I., Bracho, A.E., Zug, R., Amanzo, J., Castellanos, A., Marquez, R., Restrepo, H. & Hidalgo-Hermoso, E.",
+      "value": [
+        "Luis Pacheco (Instituto de Ecologia, La Paz)",
+        "Damián I. Rumiz (Museo de Historia Natural Noel Kempff Mercado)",
+        "Robert B. Wallace (IUCN SSC Specialist Group member - several groups)",
+        "Armando Castellanos (Andean Bear Foundation)",
+        "Ezequiel Hidalgo-Hermoso",
+        "María Paulina Viteri Espinel (Laboratory for Conservation and Ecological Genetics, University of Idaho)",
+        "Jessica Amanzo (Spectacled Bear Conservation Society, Peru)",
+        "Becky Zug (Carnivore Coexistence Lab. Nelson Institute, Wisconsin US)",
+        "Robert Marquez (WCS-Colombia)",
+        "Andres Eloy Bracho (Servicion Nacional de Aprendizaje, Colombia)",
+        "Hector Restrepo",
+        "Isaac Goldstein (WCS-Colombia)",
+        "Imaru Lameda (Bararida Zoo, Venezuela)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "The original version of this assessment was published with an older version of the distribution map. This errata assessment uses the updated distribution map."
+    }
+  ],
+  "references": [
+    {
+      "citation": "IUCN. 2018. The IUCN Red List of Threatened Species. Version 2018-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 28 June 2018).",
+      "year": "2018",
+      "title": "The IUCN Red List of Threatened Species. Version 2018-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2018-1"
+    },
+    {
+      "citation": "Hansen, M.C., Potapov, P.V., Moore, R., Hancher, M., Turubanova, S.A., Tyukavina, A., Thau, D., Stehman, S.V., Goetz, S.J., Loveland, T.R., Kommareddy, A., Egorov, A., Chini, L., Justice, C.O. and Townshend, J.R.G. 2013. High-Resolution Global Maps of 21st-Century Forest Cover Change. Available at: <a href=\"http://www.earthenginepartners.appspot.com/science-2013-global-forest\">http://www.earthenginepartners.appspot.com/science-2013-global-forest</a>. (Accessed: 2014).",
+      "year": "2013",
+      "title": "High-Resolution Global Maps of 21st-Century Forest Cover Change",
+      "author": "Hansen, M.C., Potapov, P.V., Moore, R., Hancher, M., Turubanova, S.A., Tyukavina, A., Thau, D., Stehman, S.V., Goetz, S.J., Loveland, T.R., Kommareddy, A., Egorov, A., Chini, L., Justice, C.O. and Townshend, J.R.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pacifici, M., Foden, W.B., Visconti, P., Watson, J.E.M., Butchart, S.H.M., Kovacs, K.M., Scheffers, B.R., Hole, D.G., Martin, T.G., Akçakaya, H.R., Corlett, R.T., Huntley, B., Bickford, D., Carr, J.A., Hoffmann, A.A., Midgley, G.F., Pearce-Kelly, P., Pearson, R.G., Williams, S.E., Willis, S.G., Young, B. and Rondinini, R. 2015. Assessing species vulnerability to climate change. <i>Nature Climate Change</i> 5(March 2015): 215-225.",
+      "year": "2015",
+      "title": "Assessing species vulnerability to climate change",
+      "author": "Pacifici, M., Foden, W.B., Visconti, P., Watson, J.E.M., Butchart, S.H.M., Kovacs, K.M., Scheffers, B.R., Hole, D.G., Martin, T.G., Akçakaya, H.R., Corlett, R.T., Huntley, B., Bickford, D., Carr, J.A., Hoffmann, A.A., Midgley, G.F., Pearce-Kelly, P., Pearson, R.G., Williams, S.E., Willis, S.G., Young, B. and Rondinini, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Peyton, B. 1999. Spectacled bear conservation action plan. In: C. Servheen, S. Herrero and B. Peyton (eds), <i>Bears. Status survey and conservation action plan</i>, pp. 157-164. IUCN/SSC Bear and Polar Bear Specialist Groups, Gland, Switzerland and Cambridge, UK.",
+      "year": "1999",
+      "title": "Spectacled bear conservation action plan",
+      "author": "Peyton, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sacco, T. and Van Valkenburgh, B. 2004. Ecomorphological indicators of feeding behaviour in the bears (Carnivora: Ursidae). <i>Journal of Zoology (London)</i> 263: 41-54.",
+      "year": "2004",
+      "title": "Ecomorphological indicators of feeding behaviour in the bears (Carnivora: Ursidae)",
+      "author": "Sacco, T. and Van Valkenburgh, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yerena, E., Padron, J., Vera, R., Martinez, Z. and Bigio, D. 2003. Building consensus on biological corridors in the Venezuela Andes. <i>Mountain Research and Development</i> 23: 215-218.",
+      "year": "2003",
+      "title": "Building consensus on biological corridors in the Venezuela Andes",
+      "author": "Yerena, E., Padron, J., Vera, R., Martinez, Z. and Bigio, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Suarez, L. 1988. Seasonal distribution and food habits of the spectacled bears <i>Tremarctos ornatus</i> in the highlands of Ecuador. <i>Studies on Neotropical Fauna and Environment</i> 23: 133-136.",
+      "year": "1988",
+      "title": "Seasonal distribution and food habits of the spectacled bears <i>Tremarctos ornatus</i> in the highlands of Ecuador",
+      "author": "Suarez, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rios-Uzeda, B., Gomez, H. and Wallace, R. B. 2007. First density estimation of spectacled bear (<i>Tremarctos ornatos</i>) using camera trapping methodologies. <i>Ursus</i> 18: 124-128.",
+      "year": "2007",
+      "title": "First density estimation of spectacled bear (<i>Tremarctos ornatos</i>) using camera trapping methodologies",
+      "author": "Rios-Uzeda, B., Gomez, H. and Wallace, R. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vargas, R. and Azurduy, C. 2006. Nuevos registros de distribución del oso Andino (<i>Tremarctos ornatus</i>) en el departamento de Tarija, el registro más austral en Bolivia. <i>Mastozoología Neotropical</i> 13(1): 137-142.",
+      "year": "2006",
+      "title": "Nuevos registros de distribución del oso Andino (<i>Tremarctos ornatus</i>) en el departamento de Tarija, el registro más austral en Bolivia",
+      "author": "Vargas, R. and Azurduy, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Peyton, B. 1987a. Criteria for assessing habitat quality of the spectacled bear in Machu Picchu, Peru. <i>International Conference on Bear Research and Management</i> 7: 135-143.",
+      "year": "1987a",
+      "title": "Criteria for assessing habitat quality of the spectacled bear in Machu Picchu, Peru",
+      "author": "Peyton, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Garshelis, D. L. 2004. Variation in ursid life histories: Is there an outlier? In: D. Lindburg and K. Baragona (eds), <i>Giant pandas. Biology and conservation.</i>, pp. 53-73. University of California Press, Berkeley, California, USA.",
+      "year": "2004",
+      "title": "Variation in ursid life histories: Is there an outlier?",
+      "author": "Garshelis, D. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Paisley, S. and Garshelis, D. L. 2006. Activity patterns and time budgets of Andean bears (<i>Tremarctos ornatus</i>) in the Apolobamba Range of Bolivia. <i>Journal of Zoology (London)</i> 268: 25-34.",
+      "year": "2006",
+      "title": "Activity patterns and time budgets of Andean bears (<i>Tremarctos ornatus</i>) in the Apolobamba Range of Bolivia",
+      "author": "Paisley, S. and Garshelis, D. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Goldstein I., Guerrero, V. and Moreno, R. 2007. Are there Andean bears in Panama? Poster presentation. <i>Abstracts from the 18th International Conference on Bear Research and Management</i>, pp. 169. Monterrey, Mexico.",
+      "year": "2007",
+      "title": "Are there Andean bears in Panama? Poster presentation",
+      "author": "Goldstein I., Guerrero, V. and Moreno, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Young, K and Leon, B. 1999. Peru’s humid eastern montane forests: an overview of their physical settings, biological diversity, human use, and conservation needs. Center for research on the cultural and biological diversity of Andean rainforests (DIVA), Denmark.",
+      "year": "1999",
+      "title": "Peru’s humid eastern montane forests: an overview of their physical settings, biological diversity, human use, and conservation needs",
+      "author": "Young, K and Leon, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cuesta, F., Peralvo, M. F. and Manen, F. T., van. 2003. Andean bear habitat use in the Oyacachi River Basin, Ecuador. <i>Ursus</i> 14(2): 198-209.",
+      "year": "2003",
+      "title": "Andean bear habitat use in the Oyacachi River Basin, Ecuador",
+      "author": "Cuesta, F., Peralvo, M. F. and Manen, F. T., van.",
+      "citation_short": null
+    },
+    {
+      "citation": "Peyton, B., Yerena, E., Rumiz, D., Jorgenson, J. and Orejuela, J. 1998. Status of wild bears and policies for their management. <i>Ursus</i> 10: 87-100.",
+      "year": "1998",
+      "title": "Status of wild bears and policies for their management",
+      "author": "Peyton, B., Yerena, E., Rumiz, D., Jorgenson, J. and Orejuela, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rumiz, D. I. and Salazar, J. 1999. Status and management of the Spectacled bear in Bolivia. In: C. Servheen, S. Herrero, and B. Peyton (eds), <i>Bears. Status survey and conservation action plan</i>, pp. 164-168. IUCN/SSC Bear and Polar Bear Specialist Groups, Gland, Switzerland and Cambridge, UK.",
+      "year": "1999",
+      "title": "Status and management of the Spectacled bear in Bolivia",
+      "author": "Rumiz, D. I. and Salazar, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Orejuela, J. and Jorgenson, J. 1999. Status and management of the Spectacled bear in Colombia. In: C. Servheen, S. Herrero and B. Peyton (eds), <i>Bears. Status survey and conservation action plan</i>, pp. 168-179. IUCN/SSC Bear and Polar Bear Specialist Groups, Gland Switzerland and Cambridge, UK.",
+      "year": "1999",
+      "title": "Status and management of the Spectacled bear in Colombia",
+      "author": "Orejuela, J. and Jorgenson, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Suarez, L. 1985. Hábitos alimentarios y distribución estacional del oso de anteojos <i>Tremarctos ornatus</i>, en el Páramo Suroriental del Volcan Antisana, Ecuador. Thesis, Pontificia Universidad Católica del Ecuador.",
+      "year": "1985",
+      "title": "Hábitos alimentarios y distribución estacional del oso de anteojos <i>Tremarctos ornatus</i>, en el Páramo Suroriental del Volcan Antisana, Ecuador",
+      "author": "Suarez, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ríos-Uzeda, B., Gómez, H. and Wallace, R. 2005. Habitat preferences of the Andean Bear (<i>Tremarctos ornatus</i>) in the Bolivian Andes. <i>Journal of Zoology (London)</i> 268: 271-278.",
+      "year": "2005",
+      "title": "Habitat preferences of the Andean Bear (<i>Tremarctos ornatus</i>) in the Bolivian Andes",
+      "author": "Ríos-Uzeda, B., Gómez, H. and Wallace, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Suarez, L. 1999. Status and management of the Spectacled bear in Ecuador. In: C. Servheen, S. Herrero and B. Peyton (eds), <i>Bears. Status survey and conservation action plan</i>, pp. 179-182. IUCN/SSC Bear and Polar Bear Specialist Groups, Gland, Switzerland and Cambridge, UK.",
+      "year": "1999",
+      "title": "Status and management of the Spectacled bear in Ecuador",
+      "author": "Suarez, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rodríguez, D., Cuesta, F., Goldstein, I., Bracho, A. E., Naranjo, L. G. and Hernandez, O. L. 2003. <i>Ecoregional strategy for the conservation of the spectacled bear (</i>Tremarctos ornatus<i>) in the northern Andes</i>. WWF Colombia, Fundación Wii, EcoCiencia, Wildlife Conservation Society, and Red Tremarctos.",
+      "year": "2003",
+      "title": "Ecoregional strategy for the conservation of the spectacled bear (<i>Tremarctos ornatus</i>) in the northern Andes",
+      "author": "Rodríguez, D., Cuesta, F., Goldstein, I., Bracho, A. E., Naranjo, L. G. and Hernandez, O. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Velez, X. 1999. Caracterización y uso de hábitat por el oso Andino en la cuenca alta del Río San Jacinto, Cochabamba. Thesis, Universidad de San Simón.",
+      "year": "1999",
+      "title": "Caracterización y uso de hábitat por el oso Andino en la cuenca alta del Río San Jacinto, Cochabamba",
+      "author": "Velez, X.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ruiz Garcia, M. 2003. Molecular population genetic analysis of the spectacled bear (<i>Tremarctos ornatus</i>) in the northern Andean area. <i>Hereditas</i> 138: 81-93.",
+      "year": "2003",
+      "title": "Molecular population genetic analysis of the spectacled bear (<i>Tremarctos ornatus</i>) in the northern Andean area",
+      "author": "Ruiz Garcia, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kattan, G., Hernandez, O. L., Goldstein, I., Rojas, V., Murillo, O., Gomez, C., Restrepo, H. and Cuesta, F. 2004. Range fragmentation in the spectacled bear <i>Tremarctos ornatus</i> in the northern Andes. <i>Oryx</i> 38: 155-163.",
+      "year": "2004",
+      "title": "Range fragmentation in the spectacled bear <i>Tremarctos ornatus</i> in the northern Andes",
+      "author": "Kattan, G., Hernandez, O. L., Goldstein, I., Rojas, V., Murillo, O., Gomez, C., Restrepo, H. and Cuesta, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jorgenson, J. P. and Sandovala, S. 2005. Andean bear management needs and interactions with humans in Colombia. <i>Ursus</i> 16: 108-116.",
+      "year": "2005",
+      "title": "Andean bear management needs and interactions with humans in Colombia",
+      "author": "Jorgenson, J. P. and Sandovala, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Goldstein, I., Paisley, S., Wallace, R., Jorgenson, J., Cuesta, F. and Castellanos, A. 2006. Bear-cattle conflicts: a review. <i>Ursus</i> 17: 8-15.",
+      "year": "2006",
+      "title": "Bear-cattle conflicts: a review",
+      "author": "Goldstein, I., Paisley, S., Wallace, R., Jorgenson, J., Cuesta, F. and Castellanos, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Peyton, B. 1987b. Habitat components of the spectacled bear in Machu Picchu, Peru. <i>International Conference on Bear Research and Management</i> 7: 127-133.",
+      "year": "1987b",
+      "title": "Habitat components of the spectacled bear in Machu Picchu, Peru",
+      "author": "Peyton, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Paisley, S. 2001. Andean bears and people in Apolobamba, Bolivia: culture, conflict and conservation. University of Kent.",
+      "year": "2001",
+      "title": "Andean bears and people in Apolobamba, Bolivia: culture, conflict and conservation",
+      "author": "Paisley, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Peyton, B. 1980. Ecology, distribution, and food habits of spectacled bears, <i>Tremarctos ornatus</i>, in Peru. <i>Journal of Mammalogy</i> 61: 639-652.",
+      "year": "1980",
+      "title": "Ecology, distribution, and food habits of spectacled bears, <i>Tremarctos ornatus</i>, in Peru",
+      "author": "Peyton, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Morales, A. 2003. Evaluación de daños causados por vertebrados silvestres en maizales de Pajan, K’Apna y Wayrapata. Universidad Mayor de San Andrés.",
+      "year": "2003",
+      "title": "Evaluación de daños causados por vertebrados silvestres en maizales de Pajan, K’Apna y Wayrapata",
+      "author": "Morales, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Goldstein, I. 1991. Spectacled bear predation and feeding behavior on livestock in Venezuela. <i>Studies on Neotropical Fauna and Environment</i> 26: 231-235.",
+      "year": "1991",
+      "title": "Spectacled bear predation and feeding behavior on livestock in Venezuela",
+      "author": "Goldstein, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hershkovitz, P.  1957.  On the possible occurrence of the spectacled bear, <i>Tremarctos ornatus</i> (F. Cuvier, 1825), in Panama.  <i>Saugetierk. Mitt.</i> 5: 122-123",
+      "year": "1957",
+      "title": "On the possible occurrence of the spectacled bear, Tremarctos ornatus (F. Cuvier, 1825), in Panama.",
+      "author": "Hershkovitz, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Myers, N., Mittermeier, R.A., Mittermeier, C.G., Fonseca, G.A.B. and Kent, J. 2000. Biodiversity hotspots for conservation priorities. <i>Nature</i> 403:853-858.",
+      "year": "2000",
+      "title": "Biodiversity hotspots for conservation priorities.",
+      "author": "Myers, N., Mittermeier, R.A., Mittermeier, C.G., Fonseca, G.A.B. and Kent, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "IPCC. 2013. Summary for Policymakers. <i>Climate Change 2013: The Physical Science Basis. Contribution of Working Group I to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change</i>, Intergovernmental Panel on Climate Change. Cambridge University Press, New York.",
+      "year": "2013",
+      "title": "Summary for Policymakers",
+      "author": "IPCC",
+      "citation_short": ""
+    },
+    {
+      "citation": "Josse, C., Cuesta, F., Navarro, G., Barrena, V., Cabrera, E., Chacón-Moreno, E., Ferreira, W., Peralvo, M., Saito, J. and Tovar, A. 2009. Ecosistemas de los Andes del Norte y Centro. Bolivia, Colombia, Ecuador, Perú y Venezuela. Secretaría General de la Comunidad Andina, Programa Regional ECOBONA-Intercooperation, CONDESAN-Proyecto Páramo Andino, Programa BioAndes, EcoCiencia, NatureServe, IAvH, LTA-UNALM, ICAE-ULA, CDC-UNALM, RUMBOL SRL, Lima.",
+      "year": "2009",
+      "title": "Ecosistemas de los Andes del Norte y Centro. Bolivia, Colombia, Ecuador, Perú y Venezuela",
+      "author": "Josse, C., Cuesta, F., Navarro, G., Barrena, V., Cabrera, E., Chacón-Moreno, E., Ferreira, W., Peralvo, M., Saito, J. and Tovar, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Armenteras, D., Gast, F. and Villareal, H. 2003. Andean forest fragmentation and the representativeness of protected natural areas in the eastern Andes, Colombia. <i>Biological Conservation</i> 113: 245-256.",
+      "year": "2003",
+      "title": "Andean forest fragmentation and the representativeness of protected natural areas in the eastern Andes, Colombia",
+      "author": "Armenteras, D., Gast, F. and Villareal, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Castellanos, A. 2011a. Do Andean Bears Attack Mountain Tapirs? <i>International Bear News</i> 20(4): 41-42.",
+      "year": "2011a",
+      "title": "Do Andean Bears Attack Mountain Tapirs?",
+      "author": "Castellanos, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Enciso, M.A. and Guimarães, M.A.B.V. 2013. Knowing the reproductive endocrinology in the female Andean bear through non-invasive methods. <i>International Bear News</i> 22: 33-34.",
+      "year": "2013",
+      "title": "Knowing the reproductive endocrinology in the female Andean bear through non-invasive methods",
+      "author": "Enciso, M.A. and Guimarães, M.A.B.V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ríos-Uzeda, B., Gómez, H. and Wallace, R. 2006. Habitat preferences of the Andean bear (Tremarctos ornatus) in the Bolivian Andes. <i>Journal of Zoology</i> 268: 271-278.",
+      "year": "2006",
+      "title": "Habitat preferences of the Andean bear (Tremarctos ornatus) in the Bolivian Andes",
+      "author": "Ríos-Uzeda, B., Gómez, H. and Wallace, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Goldstein, I. 2002. Andean bear-cattle interactions and tree nest use in Bolivia and Venezuela. <i>Ursus</i> 13: 369-372.",
+      "year": "2002",
+      "title": "Andean bear-cattle interactions and tree nest use in Bolivia and Venezuela",
+      "author": "Goldstein, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Velásquez-Tibatá, J., Salaman, P. and Graham, C.H. 2012. Effects of climate change on species distribution, community structure, and conservation of birds in protected areas in Colombia. <i>Regional Environmental Change</i> 13(2): 235-248.",
+      "year": "2012",
+      "title": "Effects of climate change on species distribution, community structure, and conservation of birds in protected areas in Colombia",
+      "author": "Velásquez-Tibatá, J., Salaman, P. and Graham, C.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zukowski, B. and Ormsby, A. 2016. Andean bear livestock depredation and community perceptions in northern Ecuador. <i>Human Dimensions of Wildlife</i> 21: 111-126.",
+      "year": "2016",
+      "title": "Andean bear livestock depredation and community perceptions in northern Ecuador.",
+      "author": "Zukowski, B. and Ormsby, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vina, A., and Cavelier, J. 1999. Deforestation rates (1938–1988) of tropical lowland forests on the Andean foothills of Colombia. <i>Biotropica</i> 31: 31-36.",
+      "year": "1999",
+      "title": "Deforestation rates (1938–1988) of tropical lowland forests on the Andean foothills of Colombia",
+      "author": "Vina, A., and Cavelier, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bury, J.T. 2002. Livelihoods, mining and peasant protests in the Peruvian Andes. Journal of Latin American Geography. 1: 1-19.",
+      "year": "2002",
+      "title": "Livelihoods, mining and peasant protests in the Peruvian Andes. Journal of Latin American Geography",
+      "author": "Bury, J.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Goldstein, I. and Salas, L. 1993. Foraging pattern on Puya sp. (Bromeliaceae) by Tremarctos ornatus (Ursidae) at Páramo El Tambor, Venezuela. <i>Ecotrópicos</i> 6: 24-29.",
+      "year": "1993",
+      "title": "Foraging pattern on Puya sp. (Bromeliaceae) by Tremarctos ornatus (Ursidae) at Páramo El Tambor, Venezuela",
+      "author": "Goldstein, I. and Salas, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Surkin, J., Flores, M., Ledezma, J.C., Mariaca, M.R., Meneses, E., Pardo, N., Pastor, C., Paz, C. and Wong, G. 2010. Integrating protected areas and landscapes: Lessons from the Vilcabamba-Amboró conservation corridor (Bolivia-Perú). In: G. L. Worboys, W. Francis, and M. Lockwood (eds), <i>Connectivity Conservation Management: A Global Guide</i>, pp. 199–211. Earthscan, London, UK.",
+      "year": "2010",
+      "title": "Integrating protected areas and landscapes: Lessons from the Vilcabamba-Amboró conservation corridor (Bolivia-Perú)",
+      "author": "Surkin, J., Flores, M., Ledezma, J.C., Mariaca, M.R., Meneses, E., Pardo, N., Pastor, C., Paz, C. and Wong, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Viteri, M. P., and Waits, L.P. 2009. Identifying polymorphic microsatellite loci for Andean bear research. <i>Ursus</i> 20: 102-108.",
+      "year": "2009",
+      "title": "Identifying polymorphic microsatellite loci for Andean bear research",
+      "author": "Viteri, M. P., and Waits, L.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "García-Rangel, S. 2012. On Andean bear (<i>Tremarctos ornatus</i>) natural history and conservation. <i>Mammal Review</i> 42: 85-119.",
+      "year": "2012",
+      "title": "On Andean bear (<i>Tremarctos ornatus</i>) natural history and conservation",
+      "author": "García-Rangel, S",
+      "citation_short": null
+    },
+    {
+      "citation": "Portillo-Quintero, C., Larreal, J., Gonzalez, I., Sanchez, A. and Valbuena, C. 2012. Forest Cover and deforestation patterns in the northern Andes (Lake Maracaibo Basin): a synoptic assessment using MODIS and Landsat imagery. <i>Applied Geography</i> 35: 152-163.",
+      "year": "2012",
+      "title": "Forest Cover and deforestation patterns in the northern Andes (Lake Maracaibo Basin): a synoptic assessment using MODIS and Landsat imagery",
+      "author": "Portillo-Quintero, C., Larreal, J., Gonzalez, I., Sanchez, A. and Valbuena, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "García-Rangel, S. 2011. Ecology and conservation of the Andean bear in Venezuela. University of Cambridge.",
+      "year": "2011",
+      "title": "Ecology and conservation of the Andean bear in Venezuela",
+      "author": "García-Rangel, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Svenning, J.C., and Condit, R. 2008. Ecology. Biodiversity in a warmer world. <i>Science</i> 322: 206-207.",
+      "year": "2008",
+      "title": "Ecology. Biodiversity in a warmer world",
+      "author": "Svenning, J.C., and Condit, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yerena, E. 1994. Corredores ecológicos en los Andes de Venezuela. Fundación Polar, Caracas, Venezuela.",
+      "year": "1994",
+      "title": "Corredores ecológicos en los Andes de Venezuela",
+      "author": "Yerena, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cuesta, F. and Suárez, L. 2001. <i>Oso de anteojos (</i>Tremarctos ornatus<i>)</i>. SIMBIO/EcoCiencia/Ministerio del Ambiente/UICN, Quito, Ecuador.",
+      "year": "2001",
+      "title": "Oso de anteojos (<i>Tremarctos ornatus</i>)",
+      "author": "Cuesta, F. and Suárez, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Velez-Liendo, X., Ríos-Uzeda, B. and V. Albarracin, V. 2009. Ursidae. In: L. Aguirre, R. Aguayo, J. Balderrama, C. Cortéz, T. Tarifa, and P. Van Damme (eds), <i>Libro Rojo de la Fauna Silvestre de Vertebrados de Bolivia. Ministerio de Desarrollo Rural</i>, pp. 531-533. Agropecuario y Medio Ambiente, La Paz, Bolivia.",
+      "year": "2009",
+      "title": "Ursidae",
+      "author": "Velez-Liendo, X., Ríos-Uzeda, B. and V. Albarracin, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hoffman, D., Oetting, I., Arnillas, C.A., and Ulloa, R. 2011. Cambio climático y áreas protegidas en los Andes Tropicales. In: S. K. Herzog, R. Martínez, P. M. Jørgensen, and H. Tiessen (eds), <i>Climate change and biodiversity in the Tropical Andes. Inter-American Institute for Global Change Research (IAI)</i>, pp. 426. Säo José dos Campos, and Scientific Committee on Problems of the Environment (SCOPE), Paris, France.",
+      "year": "2011",
+      "title": "Cambio climático y áreas protegidas en los Andes Tropicales",
+      "author": "Hoffman, D., Oetting, I., Arnillas, C.A., and Ulloa, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Colwell, R.K., Brehm, G., Cardelús, C.L., Gilman, A.C. and Longino, J.T. 2008. Global warming, elevational range shifts, and lowland biotic attrition in the wet tropics. <i>Science</i> 322: 258-261.",
+      "year": "2008",
+      "title": "Global warming, elevational range shifts, and lowland biotic attrition in the wet tropics",
+      "author": "Colwell, R.K., Brehm, G., Cardelús, C.L., Gilman, A.C. and Longino, J.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Palminteri, S., Powell, G. and L. Naranjo, L. 2001. Visión de la biodiversidad de los Andes del Norte. World Wildlife Fund (WWF), Santiago de Cali, Colombia.",
+      "year": "2001",
+      "title": "Visión de la biodiversidad de los Andes del Norte",
+      "author": "Palminteri, S., Powell, G. and L. Naranjo, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Verboom, J., Foppen, R., Chardon, P., Opdam, P. and Luttikhuizen, P. 2001. Introducing the key patch approach for habitat networks with persistent populations: an example for marshland birds. <i>Biological Conservation</i> 100: 89-101.",
+      "year": "2001",
+      "title": "Introducing the key patch approach for habitat networks with persistent populations: an example for marshland birds",
+      "author": "Verboom, J., Foppen, R., Chardon, P., Opdam, P. and Luttikhuizen, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Urrutia R, and Vuille, M. 2009. Climate change projections for the tropical Andes using a regional climate model: Temperature and precipitation simulations for the end of the 21st century. <i>Journal of Geophysical Research</i> 14(D2).",
+      "year": "2009",
+      "title": "Climate change projections for the tropical Andes using a regional climate model: Temperature and precipitation simulations for the end of the 21st century",
+      "author": "Urrutia R, and Vuille, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Castellanos, A. 2011b. Andean bear home ranges in the Intag region, Ecuador. <i>Ursus</i> 22: 65-73.",
+      "year": "2011b",
+      "title": "Andean bear home ranges in the Intag region, Ecuador",
+      "author": "Castellanos, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Garshelis, D.L. 2009. Family Ursidae. In: D. E. Wilson and R. A. Mittermeier (eds), <i>Handbook of the mammals of the world: Volume 1. Carnivores</i>, pp. 448-497. Lynx Edicions, Barcelona, Spain.",
+      "year": "2009",
+      "title": "Family Ursidae",
+      "author": "Garshelis, D.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Chen, I.-C., Hill, J.K., Ohlemüller, R., Roy, D.B. and Thomas, C.D. 2011. Rapid range shifts of species associated with high levels of climate warming. <i>Science</i> 333: 1024-1026.",
+      "year": "2011",
+      "title": "Rapid range shifts of species associated with high levels of climate warming",
+      "author": "Chen, I.-C., Hill, J.K., Ohlemüller, R., Roy, D.B. and Thomas, C.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Yerena, E., Monsalve Dam, D., Torres, D., Sánchez, A., García-Rangel, S., Bracho, A., Martínez, Z. and Gómez, I. 2007. Plan de Acción para la Conservación del Oso Andino (Tremarctos ornatus) en Venezuela (2006-2016). Fundación AndígenA, FUDENA, Universidad Simón Bolívar, Mérida, Venezuela, Mérida, Venezuela.",
+      "year": "2007",
+      "title": "Plan de Acción para la Conservación del Oso Andino (Tremarctos ornatus) en Venezuela (2006-2016)",
+      "author": "Yerena, E., Monsalve Dam, D., Torres, D., Sánchez, A., García-Rangel, S., Bracho, A., Martínez, Z. and Gómez, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jampel, C. 2016. Cattle-based livelihoods, changes in the taskscape, and human–bear conflict in the Ecuadorian Andes. <i>Geoforum</i> 69: 84-93.",
+      "year": "2016",
+      "title": "Cattle-based livelihoods, changes in the taskscape, and human–bear conflict in the Ecuadorian Andes",
+      "author": "Jampel, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Troya, V., Cuesta, F. and Peralvo, M. 2004. Food habits of Andean bears in the Oyacachi River Basin, Ecuador. <i>Ursus</i> 15: 57-60.",
+      "year": "2004",
+      "title": "Food habits of Andean bears in the Oyacachi River Basin, Ecuador",
+      "author": "Troya, V., Cuesta, F. and Peralvo, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cuesta-Camacho, F., Peralvo, M. and A. Ganzenmüller, A. 2008. <i>Posibles efectos del calentamiento global sobre el nicho climático de algunas especies en los Andes Tropicales</i>. Grupo de Trabajo en Páramos del Ecuador/EcoCiencia, Quito, Ecuador.",
+      "year": "2008",
+      "title": "Posibles efectos del calentamiento global sobre el nicho climático de algunas especies en los Andes Tropicales",
+      "author": "Cuesta-Camacho, F., Peralvo, M. and A. Ganzenmüller, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Saporiti, E. 1949. Contribución al conocimiento de la biología del oso de lentes. <i>Anales de la Sociedad Científica Argentina</i> 147: 3-12.",
+      "year": "1949",
+      "title": "Contribución al conocimiento de la biología del oso de lentes",
+      "author": "Saporiti, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Young, K. R. 1998. Deforestation in landscapes with humid forests in the Central Andes. Patterns and processes. In: K. S. Zimmerer and K. R. Young (eds), <i>Nature’s Geography: New Lessons for Conservation in Developing Countries</i>, pp. 75-99. University of Wisconsin Press, Madison, USA, Madison, USA.",
+      "year": "1998",
+      "title": "Deforestation in landscapes with humid forests in the Central Andes. Patterns and processes",
+      "author": "Young, K. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Velez-Liendo, X. 2010. Conservation of Andean bears (Tremarctos ornatus) in a fragmented landscape – habitat models, potential distribution and patch connectivity. University of Antwerp, Antwerp, Belgium.",
+      "year": "2010",
+      "title": "Conservation of Andean bears (Tremarctos ornatus) in a fragmented landscape – habitat models, potential distribution and patch connectivity",
+      "author": "Velez-Liendo, X.",
+      "citation_short": null
+    },
+    {
+      "citation": "Velez-Liendo, X., and Paisley, S. 2010. Distribución, ecología y conservación de los mamíferos grandes y medianos de Bolivia. <i>Ursidae</i>, pp. 519-534. Centro de Ecología Difusión Simón I, Patiño, Santa Cruz de la Sierra, Bolivia.",
+      "year": "2010",
+      "title": "Distribución, ecología y conservación de los mamíferos grandes y medianos de Bolivia",
+      "author": "Velez-Liendo, X., and Paisley, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Goldstein, I., Guerrero, V. and Moreno, R. 2008. Are there Andean bears in Panamá? <i>Ursus</i> 19: 185-189.",
+      "year": "2008",
+      "title": "Are there Andean bears in Panamá?",
+      "author": "Goldstein, I., Guerrero, V. and Moreno, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yerena, E. 1998. Protected areas for the Andean bear in South America. <i>Ursus</i> 10: 101-106.",
+      "year": "1998",
+      "title": "Protected areas for the Andean bear in South America",
+      "author": "Yerena, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rivadeneria-Canedo, C. 2008. Estudio del oso andino (Tremarctos ornatus) como dispersor legítimo de semillas y elementos de su dieta en la región de Apolobamba-Bolivia. <i>Ecología en Bolivia</i> 43: 29-39.",
+      "year": "2008",
+      "title": "Estudio del oso andino (Tremarctos ornatus) como dispersor legítimo de semillas y elementos de su dieta en la región de Apolobamba-Bolivia",
+      "author": "Rivadeneria-Canedo, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "McLellan, B., and Reiner, D. 1994. A review of bear evolution. <i>International Conference on Bear Research and Management</i> 9: 85-96.",
+      "year": "1994",
+      "title": "A review of bear evolution",
+      "author": "McLellan, B., and Reiner, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ríos-Uzeda, B., Villalpando, G., Palabral, O. and Álvarez, O. 2009. Dieta de oso andino en la región alta de Apolobamba y Madidi en el norte de La Paz, Bolivia. <i>Ecología en Bolivia</i> 44: 50-55.",
+      "year": "2009",
+      "title": "Dieta de oso andino en la región alta de Apolobamba y Madidi en el norte de La Paz, Bolivia",
+      "author": "Ríos-Uzeda, B., Villalpando, G., Palabral, O. and Álvarez, O.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lameda Camacaro, I. 2011. Etnozoología del oso andino (Tremarctos ornatus) en el noroeste de Argentina y la Cordillera Andina de Venezuela. Universidad Nacional de Salta, Salta, Argentina.",
+      "year": "2011",
+      "title": "Etnozoología del oso andino (Tremarctos ornatus) en el noroeste de Argentina y la Cordillera Andina de Venezuela",
+      "author": "Lameda Camacaro, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sánchez-Mercado, A., Yerena, E., Monsalve Dam, D., García-Rangel, S. and Torres, D. 2010. Efectividad de las iniciativas de educación ambiental para la conservación del oso andino (Tremarctos ornatus) en la cordillera andina.In: R. De Oliveira-Miranda, J. Lessman, A. Rodríguez-Ferraro, and F. Rojas-Suárez (eds), pp. 137–146. Ciencia y conservación de especies amenazadas en Venezuela: Conservación basada en evidencias e intervenciones estratégicas, Provita, Caracas, Venezuela.",
+      "year": "2010",
+      "title": "Efectividad de las iniciativas de educación ambiental para la conservación del oso andino (Tremarctos ornatus) en la cordillera andina",
+      "author": "Sánchez-Mercado, A., Yerena, E., Monsalve Dam, D., García-Rangel, S. and Torres, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sánchez-Mercado, A. 2008. Efecto de la estructura espacial en la persistencia de poblaciones fragmentadas: El oso andino (Tremarctos ornatus) en Venezuela como caso de estudio. Centro de Estudios Avanzados, Instituto Venezolano de Investigaciones Científicas, Caracas, Venezuela.",
+      "year": "2008",
+      "title": "Efecto de la estructura espacial en la persistencia de poblaciones fragmentadas: El oso andino (Tremarctos ornatus) en Venezuela como caso de estudio",
+      "author": "Sánchez-Mercado, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lawler, J. J., Shafer, S.L., White, D., Kareiva, P., Maurer, E.P., Blaustein, A.R., and P. J. Bartlein, P.J. 2009. Projected climate-induced faunal change in the Western Hemisphere. <i>Ecology</i> 90: 588-597.",
+      "year": "2009",
+      "title": "Projected climate-induced faunal change in the Western Hemisphere",
+      "author": "Lawler, J. J., Shafer, S.L., White, D., Kareiva, P., Maurer, E.P., Blaustein, A.R., and P. J. Bartlein, P.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Monsalve Dam, D., Sánchez-Mercado, A., Yerena, E., García-Rangel, S., and Torres, D. 2010. Efectividad de las áreas protegidas para la conservación del oso andino, Tremarctos ornatus, en los Andes suramericanos. In: R. De Oliveira-Miranda, J. Lessman, A. Rodríguez-Ferraro, and F. Rojas-Suárez (eds), <i>Ciencia y conservación de especies amenazadas en Venezuela: Conservación basada en evidencias e intervenciones estratégicas</i>, pp. 127-136. Provita, Caracas, Venezuela.",
+      "year": "2010",
+      "title": "Efectividad de las áreas protegidas para la conservación del oso andino, Tremarctos ornatus, en los Andes suramericanos",
+      "author": "Monsalve Dam, D., Sánchez-Mercado, A., Yerena, E., García-Rangel, S., and Torres, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Goldstein, I. 1990. Distribución y hábitos alimentarios del oso frontino, Tremarctos ornatus en Venezuela. Universidad Simón Bolívar, Caracas, Venezuela.",
+      "year": "1990",
+      "title": "Distribución y hábitos alimentarios del oso frontino, Tremarctos ornatus en Venezuela",
+      "author": "Goldstein, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sánchez-Mercado, A., Ferrer-Paris, J.R., Yerena, E., García-Rangel, S. and Rodríguez-Clark, K.M. 2008. Factors affecting poaching risk to Vulnerable Andean bears Tremarctos ornatus in the Cordillera de Mérida, Venezuela: space, parks and people. <i>Oryx</i> 42: 437–447.",
+      "year": "2008",
+      "title": "Factors affecting poaching risk to Vulnerable Andean bears Tremarctos ornatus in the Cordillera de Mérida, Venezuela: space, parks and people",
+      "author": "Sánchez-Mercado, A., Ferrer-Paris, J.R., Yerena, E., García-Rangel, S. and Rodríguez-Clark, K.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Poveda, J. 1999. Interacciones ganado - oso andino Tremarctos ornatus (F. Cuvier, 1825) en límites de cinco municipios con el Parque Nacional Natural Chingaza: Una aproximación cartográfica. Pontificia Universidad Javeriana, Bogotá, Colombia.",
+      "year": "1999",
+      "title": "Interacciones ganado - oso andino Tremarctos ornatus (F. Cuvier, 1825) en límites de cinco municipios con el Parque Nacional Natural Chingaza: Una aproximación cartográfica",
+      "author": "Poveda, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Peyton, B. 1984. Spectacled bear habitat use in the Historical Sanctuary of Machu Picchu, Peru. University of Montana, Missoula, USA.",
+      "year": "1984",
+      "title": "Spectacled bear habitat use in the Historical Sanctuary of Machu Picchu, Peru",
+      "author": "Peyton, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Figueroa, J. and Stucchi, M. 2008. <i>El oso andino: Alcances sobre su historia natural, 1st edition</i>. Asociación para la Investigación y la Conservación de la Biodiversidad-AICB, Lima, Perú.",
+      "year": "2008",
+      "title": "El oso andino: Alcances sobre su historia natural, 1st edition",
+      "author": "Figueroa, J. and Stucchi, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Young, K. and León, B. 1999. Peru´s humid Eastern montane forests: An overview of their physical settings, biological diversity, human use and settlement, and conservation needs. Technical Report. DIVA.",
+      "year": "1999",
+      "title": "Peru´s humid Eastern montane forests: An overview of their physical settings, biological diversity, human use and settlement, and conservation needs",
+      "author": "Young, K. and León, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hardner, J. 2008. The problem of financing protected areas in the Andes-Amazon region. Conference on Economics and Conservation in the Tropics: A Strategic Dialogue. Citeseer.",
+      "year": "2008",
+      "title": "The problem of financing protected areas in the Andes-Amazon region. Conference on Economics and Conservation in the Tropics: A Strategic Dialogue. Citeseer",
+      "author": "Hardner, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yerena, E., and García-Rangel, S. 2010. The implementation of an interconnected system of protected areas in the Venezuelan Andes. In: G. L. Worboys, W. Francis, and M. Lockwood (eds), <i>Connectivity Conservation Management: A Global Guide</i>, pp. 233-244. Earthscan, London.",
+      "year": "2010",
+      "title": "The implementation of an interconnected system of protected areas in the Venezuelan Andes",
+      "author": "Yerena, E., and García-Rangel, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Salesa, M., Siliceo, G., Antón, M., Abella, J., Montoya, P., and Morales, J. 2006. Anatomy of the “false thumb” of Tremarctos ornatus (Carnivora, Ursidae, Tremarctinae): Phylogenetic and functional implications. <i>Estudios Geológicos</i> 62: 389–394.",
+      "year": "2006",
+      "title": "Anatomy of the “false thumb” of Tremarctos ornatus (Carnivora, Ursidae, Tremarctinae): Phylogenetic and functional implications",
+      "author": "Salesa, M., Siliceo, G., Antón, M., Abella, J., Montoya, P., and Morales, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "FAO. 2011. State of the world's forests. Food and Agriculture Organization of the United Nations Rome.",
+      "year": "2011",
+      "title": "State of the world's forests",
+      "author": "FAO",
+      "citation_short": null
+    },
+    {
+      "citation": "Bebbington, A., Humphreys, D., Bury, J., Lingan, J., Muñoz, J.P. and Scurrah, M. 2008. Mining and social movements: struggles over livelihood and rural territorial development in the Andes. <i>World Development</i> 36: 2888-2905.",
+      "year": "2008",
+      "title": "Mining and social movements: struggles over livelihood and rural territorial development in the Andes",
+      "author": "Bebbington, A., Humphreys, D., Bury, J., Lingan, J., Muñoz, J.P. and Scurrah, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Christiansen, P. 2008. Feeding ecology and morphology of the upper canines in bears (Carnivora: Ursidae). <i>Journal of Morphology</i> 269: 896-908.",
+      "year": "2008",
+      "title": "Feeding ecology and morphology of the upper canines in bears (Carnivora: Ursidae)",
+      "author": "Christiansen, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ataroff, M. and Rada, F. 2000. Deforestation impact on water dynamics in a Venezuelan Andean cloud forest. <i>Ambio</i> 29: 440-444.",
+      "year": "2000",
+      "title": "Deforestation impact on water dynamics in a Venezuelan Andean cloud forest",
+      "author": "Ataroff, M. and Rada, F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bloxam, Q. 1977. Breeding the spectacled bear <i>Tremarctos ornatus</i> at Jersey Zoo. <i>International Zoo Yearbook</i> 17: 158-161.",
+      "year": "1977",
+      "title": "Breeding the spectacled bear <i>Tremarctos ornatus</i> at Jersey Zoo",
+      "author": "Bloxam, Q.",
+      "citation_short": null
+    },
+    {
+      "citation": "Goldstein, I. 1991. Are spectacled bear’s tree nest feeding platforms or resting places? <i>Mammalia</i> 55: 433-434.",
+      "year": "1991",
+      "title": "Are spectacled bear’s tree nest feeding platforms or resting places?",
+      "author": "Goldstein, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Garshelis, D.L. 2011. Andean bear density and abundance estimates — How reliable and useful are they? <i>Ursus</i> 22: 47-64.",
+      "year": "2011",
+      "title": "Andean bear density and abundance estimates — How reliable and useful are they?",
+      "author": "Garshelis, D.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Karanth, K.U., and Chellam, R. 2009. Carnivore conservation at the crossroads. <i>Oryx</i> 43: 1-2.",
+      "year": "2009",
+      "title": "Carnivore conservation at the crossroads",
+      "author": "Karanth, K.U., and Chellam, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Torres, D. 2008. Caracterización de conflictos socio-espaciales entre la ganadería y los grandes mamíferos en el sector cuenca del río Nuestra Señora. Parque Nacional Sierra Nevada, Venezuela. Universidad de Los Andes, Mérida, Venezuela.",
+      "year": "2008",
+      "title": "Caracterización de conflictos socio-espaciales entre la ganadería y los grandes mamíferos en el sector cuenca del río Nuestra Señora. Parque Nacional Sierra Nevada, Venezuela",
+      "author": "Torres, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Claro-Hergueta, F., Göltenboth, R., Kitchener, A., Kolter, L., Law, G., Linke, K., Matern, B., Reid, A. and Smith, J.U. 2007. <i>EAZA Ursid Husbandry Guidelines, 2nd edition</i>. Kölner Zoo, Germany.",
+      "year": "2007",
+      "title": "EAZA Ursid Husbandry Guidelines, 2nd edition",
+      "author": "Claro-Hergueta, F., Göltenboth, R., Kitchener, A., Kolter, L., Law, G., Linke, K., Matern, B., Reid, A. and Smith, J.U.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mysterud, A. 2013. Ungulate migration, plant phenology, and large carnivores: The times they are a-changin’. <i>Ecology</i> 94: 1257-1261.",
+      "year": "2013",
+      "title": "Ungulate migration, plant phenology, and large carnivores: The times they are a-changin’",
+      "author": "Mysterud, A",
+      "citation_short": null
+    },
+    {
+      "citation": "Viteri, M.P. 2007. Conservation genetics of Andean bears (Tremarctos ornatus) in Northeastern Ecuador: Molecular tools, genetic diversity and population size. University of Idaho, Moscow, Idaho, USA.",
+      "year": "2007",
+      "title": "Conservation genetics of Andean bears (Tremarctos ornatus) in Northeastern Ecuador: Molecular tools, genetic diversity and population size",
+      "author": "Viteri, M.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Aguirre, L.F.,  Anderson, E.P., Brehm, G., Herzog, S.K., Jørgensen, P.M., Kattan, G.H., Maldonado, M., MartInez, R., Mena, J.L., Pabón, J.D., Seimon, A. and Toledo, C. 2011. Phenology and interspecific ecological interactions of Andean biota in the face of climate change. In: S.K. Herzog, R. Martínez, P.M. Jørgensen, and H. Tiessen (eds), <i>Climate change and biodiversity in the Tropical Andes. Inter-American Institute for Global Change Research (IAI)</i>, pp. 426. Säo José dos Campos, and Scientific Committee on Problems of the Environment (SCOPE), Paris, France.",
+      "year": "2011",
+      "title": "Phenology and interspecific ecological interactions of Andean biota in the face of climate change",
+      "author": "Aguirre, L.F.,  Anderson, E.P., Brehm, G., Herzog, S.K., Jørgensen, P.M., Kattan, G.H., Maldonado, M., MartInez, R., Mena, J.L., Pabón, J.D., Seimon, A. and Toledo, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Spady, T., Lindburg, D., and Durrant, B. 2007. Evolution of reproductive seasonality in bears. <i>Mammal Review</i> 37: 21–53.",
+      "year": "2007",
+      "title": "Evolution of reproductive seasonality in bears",
+      "author": "Spady, T., Lindburg, D., and Durrant, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tovar C, Arnillas C.A., Cuesta F., and Buytaert, W. 2013. Diverging Responses of Tropical Andean Biomes under Future Climate Conditions. <i>PloS ONE</i> 8(5).",
+      "year": "2013",
+      "title": "Diverging Responses of Tropical Andean Biomes under Future Climate Conditions",
+      "author": "Tovar C, Arnillas C.A., Cuesta F., and Buytaert, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sánchez-Mercado, A., Ferrer-Paris, J.R., García-Rangel, S., Yerena, E., Robertson, B.A., and Rodríguez-Clark, K.M. 2014. Combining threat and occurrence models to predict potential ecological traps for Andean bears in the Cordillera de Mérida, Venezuela. <i>Animal Conservation</i>.",
+      "year": "2014",
+      "title": "Combining threat and occurrence models to predict potential ecological traps for Andean bears in the Cordillera de Mérida, Venezuela",
+      "author": "Sánchez-Mercado, A., Ferrer-Paris, J.R., García-Rangel, S., Yerena, E., Robertson, B.A., and Rodríguez-Clark, K.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bebbington, A. 2009. The new extraction: rewriting the political ecology of the Andes. NACLA. <i>Report on the Americas</i> 42: 12-20.",
+      "year": "2009",
+      "title": "The new extraction: rewriting the political ecology of the Andes. NACLA",
+      "author": "Bebbington, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Figueroa, J. 2008. <i>Cacería del oso andino en el Perú</i>. Centro Iberoamericano de la Biodiversidad, Universidad de Alicante, Alicante, España.",
+      "year": "2008",
+      "title": "Cacería del oso andino en el Perú",
+      "author": "Figueroa, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Richardson, A. D., Keenan, T. F., Migliavacca, M., Ryu, Y., Sonnentag, O. and Toomey, M. 2013. Climate change, phenology, and phenological control of vegetation feedbacks to the climate system. <i>Agricultural and Forest Meteorology</i> 169: 156-173.",
+      "year": "2013",
+      "title": "Climate change, phenology, and phenological control of vegetation feedbacks to the climate system",
+      "author": "Richardson, A. D., Keenan, T. F., Migliavacca, M., Ryu, Y., Sonnentag, O. and Toomey, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tewksbury, J.J., Huey, R.B. and Deutsch, C.A. 2008. Putting the heat on tropical animals. <i>Science</i> 230: 1296 -1297.",
+      "year": "2008",
+      "title": "Putting the heat on tropical animals",
+      "author": "Tewksbury, J.J., Huey, R.B. and Deutsch, C.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Albarracín, V. 2010. Experiences of environmental education for the conservation of the Andean bear (<i>Tremarctos ornatus</i>) in the indigenous community, Lambate South Yungas, La Paz, Bolivia. <i>International Bear News</i> 9(4): 22-23.",
+      "year": "2010",
+      "title": "Experiences of environmental education for the conservation of the Andean bear (<i>Tremarctos ornatus</i>) in the indigenous community, Lambate South Yungas, La Paz, Bolivia",
+      "author": "Albarracín, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Castellanos, A., Cevallos, J., Laguna, A. and Achig, L. 2010. Estrategia nacional de conservación del Oso Andino. Imprenta Anyma, Quito, Ecuador.",
+      "year": "2010",
+      "title": "Estrategia nacional de conservación del Oso Andino",
+      "author": "Castellanos, A., Cevallos, J., Laguna, A. and Achig, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Beaumont, L.J., Pitman, A., Perkins, S., Zimmermann, N.E., Yoccoz, N.G. and Thuiller, W. 2011. Impacts of climate change on the world's most exceptional ecoregions. <i>Proceedings of the National Academy of Sciences</i> 108(6): 2306-2311.",
+      "year": "2011",
+      "title": "Impacts of climate change on the world's most exceptional ecoregions",
+      "author": "Beaumont, L.J., Pitman, A., Perkins, S., Zimmermann, N.E., Yoccoz, N.G. and Thuiller, W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cosse, M., Del Moral Sachetti, J.F., Mannise, N. and Acosta, M. 2014. Genetic evidence confirms presence of Andean bears in Argentina. <i>Ursus</i> 25: 163-171.",
+      "year": "2014",
+      "title": "Genetic evidence confirms presence of Andean bears in Argentina",
+      "author": "Cosse, M., Del Moral Sachetti, J.F., Mannise, N. and Acosta, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Appleton, R., Tobler, M. and Van Horn, R. 2013. A Comparison of Andean Bear (<i>Tremarctos ornatus</i>) densities using camera traps at waterholes and bear trails in the tropical dry forest of Northwestern Peru. <i>International Association for Bear Research and Management, Provo, USA</i>: 38.",
+      "year": "2013",
+      "title": "A Comparison of Andean Bear (<i>Tremarctos ornatus</i>) densities using camera traps at waterholes and bear trails in the tropical dry forest of Northwestern Peru",
+      "author": "Appleton, R., Tobler, M. and Van Horn, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Velez–Liendo, X., Adriaensen, F. and Matthysen, E. 2014. Landscape assessment of habitat suitability and connectivity for Andean bears in the Bolivian Tropical Andes. <i>Ursus</i> 25(2): 172-187.",
+      "year": "2014",
+      "title": "Landscape assessment of habitat suitability and connectivity for Andean bears in the Bolivian Tropical Andes",
+      "author": "Velez–Liendo, X., Adriaensen, F. and Matthysen, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ripple, W. J., J. A. Estes, R. L. Beschta, C. C. Wilmers, E. G. Ritchie, M. Hebblewhite, J. Berger, B. Elmhagen, M. Letnic, M. P. Nelson, O. J. Schmitz, D. W. Smith, A. D. Wallach, and A. J. Wirsing. 2014. Status and ecological effects of the world’s largest carnivores. <i>Science</i> 343(6167).",
+      "year": "2014",
+      "title": "Status and ecological effects of the world’s largest carnivores",
+      "author": "Ripple, W. J., J. A. Estes, R. L. Beschta, C. C. Wilmers, E. G. Ritchie, M. Hebblewhite, J. Berger, B. Elmhagen, M. Letnic, M. P. Nelson, O. J. Schmitz, D. W. Smith, A. D. Wallach, and A. J. Wirsing",
+      "citation_short": null
+    },
+    {
+      "citation": "Christiansen, P. and Wroe, S. 2007. Bite forces and evolutionary adaptations to feeding ecology in carnivores. <i>Ecology</i> 88: 347-358.",
+      "year": "2007",
+      "title": "Bite forces and evolutionary adaptations to feeding ecology in carnivores",
+      "author": "Christiansen, P. and Wroe, S. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rodríguez-Rodríguez, E., and Cadena, A. 1991. Evaluación y uso del hábitat natural del oso andino Tremarctos ornatus (F. Cuveir, 1825) y un diagnóstico del estado actual de la subpoblación del Parque Nacional Natural de Las Orquídeas, Antioquia-Colombia. Bogotá, Colombia, Facultad de Ciencias, Departamento de Biología, Universidad Nacional de Colombia, Bogotá, Colombia.",
+      "year": "1991",
+      "title": "Evaluación y uso del hábitat natural del oso andino Tremarctos ornatus (F. Cuveir, 1825) y un diagnóstico del estado actual de la subpoblación del Parque Nacional Natural de Las Orquídeas, Antioquia-Colombia",
+      "author": "Rodríguez-Rodríguez, E., and Cadena, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rosenthal, M. 1988. Spectacled bears - An overview of management practices. In: M. Rosenthal (ed.), <i>Proceedings of the First International Symposium on the Spectacled bear</i>, pp. 287-300. Lincoln Park Zoo, Chicago, Chicago.",
+      "year": "1988",
+      "title": "Spectacled bears - An overview of management practices",
+      "author": "Rosenthal, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ríos-Uzeda, B., Gómez, H. and Wallace, R. 2007. A preliminary density estimate for Andean bear using camera-trapping methods. <i>Ursus</i> 18: 124-128.",
+      "year": "2007",
+      "title": "A preliminary density estimate for Andean bear using camera-trapping methods",
+      "author": "Ríos-Uzeda, B., Gómez, H. and Wallace, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sheridan, J.A., and Bickford, D. 2011. Shrinking body size as an ecological response to climate change. <i>Nature Climate Change</i> 1: 401–406.",
+      "year": "2011",
+      "title": "Shrinking body size as an ecological response to climate change",
+      "author": "Sheridan, J.A., and Bickford, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Malcolm, J. R.; Liu, C.; Neilson, R. P.; Hansen, L.; Hannah, L. 2006. Global warming and extinctions of endemic species from biodiversity hotspots. <i>Conservation Biology</i> 20: 538-548.",
+      "year": "2006",
+      "title": "Global warming and extinctions of endemic species from biodiversity hotspots",
+      "author": "Malcolm, J. R.; Liu, C.; Neilson, R. P.; Hansen, L.; Hannah, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hoffmann, A.A., and Sgrò, C.M. 2011. Climate change and evolutionary adaptation. <i>Nature</i> 470: 479-485.",
+      "year": "2011",
+      "title": "Climate change and evolutionary adaptation",
+      "author": "Hoffmann, A.A., and Sgrò, C.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dávalos, L.M., Bejarano, A.C., Hall, M.A., Correa, H.L., Corthals, A. and Espejo, O.J. 2011. Forests and drugs: Coca-driven deforestation in tropical biodiversity hotspots. <i>Environmental Science & Technology</i> 45: 1219-1227.",
+      "year": "2011",
+      "title": "Forests and drugs: Coca-driven deforestation in tropical biodiversity hotspots",
+      "author": "Dávalos, L.M., Bejarano, A.C., Hall, M.A., Correa, H.L., Corthals, A. and Espejo, O.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Armenteras, D., Rodríguez, N., Retana, J. and Morales, M. 2011. Understanding deforestation in montane and lowland forests of the Colombian Andes. <i>Regional Environmental Change</i> 11: 693-705.",
+      "year": "2011",
+      "title": "Understanding deforestation in montane and lowland forests of the Colombian Andes",
+      "author": "Armenteras, D., Rodríguez, N., Retana, J. and Morales, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Graham, C.H.,Loiselle, B.A., Velásquez-Tibatá, J. and Cuesta, F. 2011. Modelos de distribución de especies y el desafio de pronosticar distribuciones futuras. In: S. K. Herzog, R. Martínez, P. M. Jørgensen, and H. Tiessen (eds), <i>Climate change and biodiversity in the Tropical Andes. Inter-American Institute for Global Change Research (IAI)</i>, pp. 426. Säo José dos Campos, and Scientific Committee on Problems of the Environment (SCOPE), Paris, France.",
+      "year": "2011",
+      "title": "Modelos de distribución de especies y el desafio de pronosticar distribuciones futuras",
+      "author": "Graham, C.H.,Loiselle, B.A., Velásquez-Tibatá, J. and Cuesta, F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2017. The IUCN Red List of Threatened Species. Version 2017-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 5 December 2017).",
+      "year": "2017",
+      "title": "The IUCN Red List of Threatened Species. Version 2017-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2017-3"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

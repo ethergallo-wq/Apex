@@ -1,0 +1,764 @@
+{
+  "assessment_date": "2025-06-17T01:00:00.000+01:00",
+  "year_published": "2025",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 22679503,
+  "criteria": "A2bcd+3bcd+4bcd",
+  "url": "https://www.iucnredlist.org/species/22679503/277362011",
+  "citation": "BirdLife International 2025. Centrocercus urophasianus. The IUCN Red List of Threatened Species 2025: e.T22679503A277362011. Accessed on 15 May 2026.",
+  "assessment_id": 277362011,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 22679503,
+    "scientific_name": "Centrocercus urophasianus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AVES",
+    "order_name": "GALLIFORMES",
+    "family_name": "PHASIANIDAE",
+    "genus_name": "Centrocercus",
+    "species_name": "urophasianus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Bonaparte, 1827)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Bird Red List Authority (BirdLife International)",
+        "url": "https://www.birdlife.org/",
+        "description": "Red List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Greater Sage Grouse",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Greater Sage-Grouse",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Sage Grouse",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "Sage Grouse",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": "11-100",
+    "upper_elevation_limit": 2900,
+    "lower_elevation_limit": 900,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "289000-550000,350000",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "6.2",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": "4",
+    "continuing_decline_in_subpopulations": "Unknown",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Yes",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "1580000",
+    "continuing_decline_in_extent_of_occurence": "Yes",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "This species is restricted to the sagebrush shrublands of the interior northwest of North America, now almost confined to the <strong>USA </strong>with few remaining in Alberta and Saskatchewan in <strong>Canada</strong>. In the US the largest populations remain in Wyoming, Idaho, Montana and Nevada, with fewer in Oregon, Utah, North and South Dakota and Colorado. Isolated populations are found in Washington, Jackson’s Hole in central Wyoming and along the border of California and Nevada. The species has become extirpated from British Columbia.&#160;<br/>Based on the modelling of long-term lek-count data the population has been declining at a rapid rate for several decades and further local extirpations are being prevented through intensive conservation action.<p></p>",
+    "population": "An estimate of the total minimum population size was derived from male lek counts in 2015, when 85,674 males were counted on 3,559 known leks (WAFWA 2015). Mark-resight approaches suggest lek count maxima represent <em>c. </em>58% of males attending a lek (including yearling males: 68% were adults), implying 148,998 males were associated with known leks across the whole range in 2015 (WAFWA 2015). The study then used a weighted average of 1.85 females to males to extrapolate a total of 424,645 individuals (WAFWA 2015). Using 0.68 for the proportion of adult birds, a minimum population size in 2015 was 288,759, rounded here to 289,000 mature individuals. This value doesn’t account for unknown leks: in Colorado it was thought 80% of males were known. While the proportion of unknown leks varies with the population size in each state, if we assume that this value applies across the range then a precautionary population size would be around 350,000. An upper bound is highly uncertain, but it seems unlikely that known males are less than half the population size, and a tentative upper value of 550,000 mature individuals is inferred here.<p></p>",
+    "habitats": "It is closely associated with sagebrush <em>Artemesia</em> habitats during the breeding and non-breeding seasons, although some populations do undergo seasonal movements (del Hoyo <em>et al. </em>1994, Schroeder <em>et al.</em> 1999)<strong><sup></sup></strong>. It is a lekking species. It may act as an umbrella to other sage-brush specialists when conserved. <br/>The interaction between the spread of invasive grasses and increased fire frequency causes ongoing loss and degradation of the sagebrush habitat on which the species depends. There are further impacts recorded from the expansion of conifer forest, human development and over-abundant grazers (Remington <em>et al. </em>2021). Despite a concerted and large-scale multi-stakeholder response to address sagebrush loss, these threats continue to affect the range. An ongoing decline in the area, extent and in the quality of the species’ habitat is inferred.<p></p>",
+    "threats": "The long-standing population declines are due in general to the loss and degradation of sagebrush habitat, which has been driven by conversion for agriculture, energy infrastructure development, road building and other residential and industrial development (Walker&#160;<em>et al.&#160;</em>2007, USFWS-DOI 2010, USFWS 2013, Remington&#160;<em>et al.&#160;</em>2021). Immense areas of its habitat have been cleared or degraded due to cultivation (for wheat, potatoes and other crops), burning and overgrazing, and the species has been extirpated from various parts of its former range (British Columbia, Nebraska, Kansas, Oklahoma, New Mexico and Arizona) (Schroeder <em>et al.</em> 1999)<strong><sup></sup></strong>. Continuing development of natural gas resources is causing reduced lek attendance and overall population (Holloran and Anderson 2005)<strong><sup></sup></strong>.&#160;<br/>Separate broad-scale factors driving loss of habitat are those that encourage the expansion of conifers and invasive grasses (e.g. cheatgrass), notably increased fire frequency and intensity (Davies <em>et al.</em> 2011, USFWS 2013, Doherty<em> et al. </em>2021, Remington<em> et al.</em> 2021, Coates <em>et al. </em>2024), but also improper grazing regimes (USFWS 2013).<br/>Levels of hunting of the species are tightly regulated, but may still limit potential population growth with larger populations found to respond positively to hunting closures (Dinkins <em>et al. </em>2021). Detecting the impacts of even low levels of hunting is challenging, and they may not be clear from current monitoring focused on lek attendance (Dinkins <em>et al. </em>2021).<br/>Coyote&#160;<em>Canis latrans</em>&#160;control is likely to have a detrimental impact on sage grouse owing to the loss of beneficial indirect interactions (Mezquida&#160;<em>et al</em>. 2006)<strong><sup></sup></strong>.<br/>In 2003, about 25% of the radio-marked sage-grouse in the Powder River Basin died from West Nile virus. That number dropped to 10% in 2004 and 2% in 2005 in response to cool summer temperatures, but the long-term impacts require further study (Walker <em>et al.</em> 2007b).&#160;<p></p>",
+    "measures": "<strong>Conservation Actions Underway</strong><br/>The species occurs within a number of protected areas and has been the focus of extensive ecological study. Management recommendations have been made to minimise the impacts of natural gas exploitation in sagebrush habitat (Holloran and Anderson 2005)<strong><sup></sup></strong> and the Western Governor's Association are developing a strategy to minimise the impacts of development on sage grouse populations. A total of 63 Sage Grouse Local Working Groups have been established within its range, bringing stakeholders together to plan and implement local level conservation actions. <p></p><strong>Conservation Actions Proposed</strong><br/>Adopt best practice methods when developing gas fields. Continue to monitor population trends. Manage the sage-brush ecosystem in a way that is beneficial to other habitat specialists and restores natural food-webs. <p></p>",
+    "use_trade": "High levels of market hunting in the early 20th Century are thought to have limited and reduced populations (Schroeder <em>et al</em>. 1999). Hunting is still permitted in&#160;Montana, Wyoming, Colorado, Utah, Idaho, Nevada, and Oregon, but is restricted to 5-10% of recorded population size and supplies funding for conservation efforts through hunting permit charges (Dinkins <em>et al. </em>2021). Very low levels of hunting appear to be compatible with the persistence of populations where carefully monitored, however impacts may not be readily detectable and could still represent a contributing factor in declines:&#160;larger populations appear to respond positively to hunting closures, suggesting there is a role of hunting in limiting population growth but this was not consistently true for small populations (Dinkins <em>et al. </em>2021).",
+    "rationale": "This species is listed as Vulnerable owing to a long-standing, continuing rapid decline in its population that has seen the range contract and the species approach extirpation in Canada. It is intrinsically connected to sagebrush habitat, and declines are primarily due to sagebrush loss and degradation for agriculture and development, but encroaching conifers and fire-adapted invasive grasses have accelerated sagebrush degradation through increasing fire frequency and intensity. Ongoing conservation efforts are crucial to prevent the further acceleration of decline rates.<p></p>",
+    "trend_justification": "Range-wide monitoring data collected at leks since 1960 have been consolidated into a single dataset (O’Donnell <em>et al.</em> 2021) and analysed using a state-space model to derive the most likely rates of population change&#160;subsequently updated with new data (Coates <em>et al.</em> 2023, Prochazka <em>et al.</em> 2024). This trend analysis, using data from across the whole extent of the species’ distribution, modelled that the population has declined by a consistent rate of 2.9-3.0 % per year for three different timeframes based on population nadirs, implying declines of 41.1, 64.5 and 78.4 % relative to population sizes 19, 35 and 55 years earlier respectively (Prochazka <em>et al.</em> 2024). A consistent and rapid rate of population reduction is evident, at a rate equivalent to 37.9-42.4 % over three generations. While this is the best available index for tracking population change, lek count data cannot provide an estimated rate of continuing decline as the degree to which the data match true population size and trend is uncertain (Walsh <em>et al.</em> 2004, 2010, Shyvers <em>et al. </em>2020), despite refinements of the analysis (Coates <em>et al. </em>2023, Prochazka <em>et al.</em> 2024).<br/>Separately,&#160;Audubon Christmas Bird Count (CBC) data covering about a quarter of the wintering range shows an annual rate of decline between 8.4% (0.9-15.9 %) over the past 19 years, with the probability of decline greater than 30 % over this time of 0.96 (T. Meehan <em>in litt. </em>2025).<br/>Notwithstanding localised success in preventing extirpation through direct conservation action, there seems little evidence that this long-term trend is about to be reversed given the high probabilities of extinction assigned to leks across the range (Prochazka <em>et al.</em> 2024), and accordingly this rapid reduction is projected to continue. These long-standing declines are due in general to the loss and degradation of sagebrush habitat, which have been driven by conversion for agriculture, energy infrastructure development, road building and other residential and industrial development (Walker <em>et al.</em> 2007a, USFWS-DOI 2010, USFWS 2013, Remington <em>et al.</em> 2021). Separately broader scale factors driving loss of habitat are those that encourage the expansion of conifers and invasive grasses, notably increased fire frequency and intensity (Davies <em>et al. </em>2011, USFWS 2013, Doherty <em>et al.</em> 2021, Remington <em>et al.</em> 2021, Coates <em>et al.</em> 2024), but also improper grazing regimes (USFWS 2013).",
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "Adopt best practice methods when developing gas fields. \n</P>",
+      "code": "5_3",
+      "description": {
+        "en": "Private sector standards & codes"
+      }
+    },
+    {
+      "note": "Manage the sage-brush ecosystem in a way that is beneficial to other habitat specialists and restores natural food-webs.\n</P>",
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    }
+  ],
+  "researches": [
+    {
+      "note": "Continue to monitor population trends. \n</P>",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_3_4"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Supression in fire frequency/intensity"
+      },
+      "code": "7_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Bos taurus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": "West Nile Virus (WNV)",
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_5_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Oil & gas drilling"
+      },
+      "code": "3_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "BirdLife International",
+      "value": [
+        " BirdLife International (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Berryman, A.",
+      "value": [
+        "Alex Berryman (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Butcher, G., Gardiner, L., Holloran, M., Meehan, T., Rosenberg, K. & Wells, J.",
+      "value": [
+        "Jeff Wells (Partners in Flight)",
+        "Greg Butcher (National Audubon Society)",
+        "Ken Rosenberg (Cornell Lab of Ornithology)",
+        "Matt Holloran (National Audubon Society)",
+        "Tim Meehan",
+        "Laura Gardiner"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Martin, R.",
+      "value": [
+        "Rob Martin (BirdLife)"
+      ]
+    },
+    {
+      "credit_type_name": "institutions",
+      "full": "BirdLife International",
+      "value": [
+        "BirdLife International"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "del Hoyo, J.; Elliott, A.; Sargatal, J. 1994. <i>Handbook of the Birds of the World, vol. 2: New World Vultures to Guineafowl</i>. Lynx Edicions, Barcelona, Spain.",
+      "year": "1994",
+      "title": "Handbook of the Birds of the World, vol. 2: New World Vultures to Guineafowl",
+      "author": "del Hoyo, J.; Elliott, A.; Sargatal, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rich, T.D., Beardmore, C.J., Berlanga, H., Blancher, P.J., Bradstreet, M.S.W., Butcher, G.S., Demarest, D.W., Dunn, E.H., Hunter, W.C., Inigo-Elias, E.E., Martell, A.M., Panjabi, A.O., Pashley, D.N., Rosenberg, K.V., Rustay, C.M., Wendt, J.S. and Will, T.C. 2004. <i>Partners in flight: North American landbird conservation plan</i>. Cornell Lab of Ornithology, Ithaca, NY.",
+      "year": "2004",
+      "title": "Partners in flight: North American landbird conservation plan",
+      "author": "Rich, T.D., Beardmore, C.J., Berlanga, H., Blancher, P.J., Bradstreet, M.S.W., Butcher, G.S., Demarest, D.W., Dunn, E.H., Hunter, W.C., Inigo-Elias, E.E., Martell, A.M., Panjabi, A.O., Pashley, D.N., Rosenberg, K.V., Rustay, C.M., Wendt, J.S. and Will, T.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Schroeder, M. A.; Young, J. R.; Braun, C. E. 1999. Sage Grouse <i>Centrocercus urophasianus</i>. In: Poole, A.; Gill, F. (ed.), <i>The birds of North America No. 425</i>, pp. 1-28. The Academy of Natural Sciences, Philadelphia and the American Ornithologists' Union, Philadelphia and Washington, DC.",
+      "year": "1999",
+      "title": "Sage Grouse <i>Centrocercus urophasianus</i>",
+      "author": "Schroeder, M. A.; Young, J. R.; Braun, C. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mezquida, E. T.; Slater, S. J.; Benkman, C. W. 2006. Sage-grouse and indirect interactions: potential implications of coyote control on Sage-grouse populations. <i>Condor</i> 108(4): 747-759.",
+      "year": "2006",
+      "title": "Sage-grouse and indirect interactions: potential implications of coyote control on Sage-grouse populations",
+      "author": "Mezquida, E. T.; Slater, S. J.; Benkman, C. W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Holloran, M.; Anderson, S. H. 2005. Greater Sage-grouse response to natural gas field development in western Wyoming. <i>Grouse News</i>: 17-20.",
+      "year": "2005",
+      "title": "Greater Sage-grouse response to natural gas field development in western Wyoming",
+      "author": "Holloran, M.; Anderson, S. H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bird, J.P., Martin, R., Akçakaya, H.R., Gilroy, J., Burfield, I.J., Garnett, S.G., Symes, A., Taylor, J., Şekercioğlu, Ç.H. and Butchart, S.H.M. 2020. Generation lengths of the world’s birds and their implications for extinction risk. <i>Conservation Biology</i> 34(5): 1252-1261.",
+      "year": "2020",
+      "title": "Generation lengths of the world’s birds and their implications for extinction risk",
+      "author": "Bird, J.P., Martin, R., Akçakaya, H.R., Gilroy, J., Burfield, I.J., Garnett, S.G., Symes, A., Taylor, J., Şekercioğlu, Ç.H. and Butchart, S.H.M. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2025. The IUCN Red List of Threatened Species. Version 2025-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 October 2025).",
+      "year": "2025",
+      "title": "The IUCN Red List of Threatened Species. Version 2025-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2025-2"
+    },
+    {
+      "citation": "Coates, P.S., Milligan, M.C., Prochazka, B.G., Brussee, B.E., O’Neil, S.T., Lundblad, C.G., Webster, S.C., Weise, C.L., Mathews, S.R., Chenaille, M.P., Aldridge, C.L., O’Donnell, M.S., Espinosa, S.P., Sturgill, A.C., Doherty, K.E., Tull, J.C., Miller, K., Wiechman, L.A., Abele, S., Boone, J., Stone, H. and Casazza, M.L. 2024. Status of greater sage-grouse in the Bi-State Distinct Population Segment—An evaluation of population trends, habitat selection, and efficacy of conservation actions: U.S. Geological Survey Open-File Report 2024–1030, 74 p. U.S. Geological Survey. Available at: <a href=\"https://doi.org/10.3133/ofr20241030.\">https://doi.org/10.3133/ofr20241030.</a>. (Accessed: 27th March, 2025).",
+      "year": "2024",
+      "title": "Status of greater sage-grouse in the Bi-State Distinct Population Segment—An evaluation of population trends, habitat selection, and efficacy of conservation actions: U.S. Geological Survey Open-File Report 2024–1030, 74 p.",
+      "author": "Coates, P.S., Milligan, M.C., Prochazka, B.G., Brussee, B.E., O’Neil, S.T., Lundblad, C.G., Webster, S.C., Weise, C.L., Mathews, S.R., Chenaille, M.P., Aldridge, C.L., O’Donnell, M.S., Espinosa, S.P., Sturgill, A.C., Doherty, K.E., Tull, J.C., Miller, K., Wiechman, L.A., Abele, S., Boone, J., Stone, H. and Casazza, M.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Coates, P.S., Prochazka, B.G., Aldridge, C.L., O'Donnell, M.S., Edmunds, D.R., Monroe, A.P., Hanser, S.E., Wiechman, L.A. and Chenaille, M.P. 2023. Range-wide population trend analysis for greater sage-grouse (Centrocercus urophasianus)—Updated 1960–2022: U.S. Geological Survey Data Report 1175, 17 p. U.S. Geological Survey. Available at: <a href=\"https://doi.org/10.3133/dr1175.\">https://doi.org/10.3133/dr1175.</a>. (Accessed: 27th March, 2025).",
+      "year": "2023",
+      "title": "Range-wide population trend analysis for greater sage-grouse (Centrocercus urophasianus)—Updated 1960–2022: U.S. Geological Survey Data Report 1175, 17 p.",
+      "author": "Coates, P.S., Prochazka, B.G., Aldridge, C.L., O'Donnell, M.S., Edmunds, D.R., Monroe, A.P., Hanser, S.E., Wiechman, L.A. and Chenaille, M.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Davies, K.W., Boyd, C.S., Beck, J.L., Bates, J.D., Svejcar, T.J. and Greg M.A. 2011. Saving the sagebrush sea: an ecosystem conservation plan for big sagebrush plant communities. <i>Biological Conservation </i> 144(11): 2573-2584.",
+      "year": "2011",
+      "title": "Saving the sagebrush sea: an ecosystem conservation plan for big sagebrush plant communities",
+      "author": "Davies, K.W., Boyd, C.S., Beck, J.L., Bates, J.D., Svejcar, T.J. and Greg M.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dinkins, J.B., Lawson, K.J. and Beck, J.L. 2021. Influence of environmental change, harvest exposure, and human disturbance on population trends of greater sage-grouse. <i>Plos one</i> 16(9): e0257198.",
+      "year": "2021",
+      "title": "Influence of environmental change, harvest exposure, and human disturbance on population trends of greater sage-grouse",
+      "author": "Dinkins, J.B., Lawson, K.J. and Beck, J.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Doherty, K.E., Boyd, C.S., Kerby, J.D., Sitz, A.L., Foster, L.J., Cahill, M.C., Johnson, D.D. and Sparklin, B.D. 2021. Threat‐Based State and Transition Models Predict Sage‐Grouse Occurrence while Promoting Landscape Conservation. <i>Wildlife Society Bulletin</i> 45(3): 473-487.",
+      "year": "2021",
+      "title": "Threat‐Based State and Transition Models Predict Sage‐Grouse Occurrence while Promoting Landscape Conservation",
+      "author": "Doherty, K.E., Boyd, C.S., Kerby, J.D., Sitz, A.L., Foster, L.J., Cahill, M.C., Johnson, D.D. and Sparklin, B.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Environment and Climate Change Canada. 2017. Recovery Strategy for the Greater Sage-Grouse phaios subspecies (Centrocercus urophasianus phaios) in Canada [Proposed].  Species at Risk Act Recovery Strategy Series. Environment and Climate Change Canada, Ottawa.",
+      "year": "2017",
+      "title": "Recovery Strategy for the Greater Sage-Grouse phaios subspecies (Centrocercus urophasianus phaios) in Canada [Proposed]",
+      "author": "Environment and Climate Change Canada",
+      "citation_short": null
+    },
+    {
+      "citation": "Environment and Climate Change Canada and Birds Canada. 2024. The State of Canada’s Birds – Greater Sage-grouse. Birds Canada. Available at: <a href=\"https://doi.org/10.71842/9vff-dh45\">https://doi.org/10.71842/9vff-dh45</a>. ",
+      "year": "2024",
+      "title": "The State of Canada’s Birds – Greater Sage-grouse",
+      "author": "Environment and Climate Change Canada and Birds Canada",
+      "citation_short": null
+    },
+    {
+      "citation": "Environment Canada. 2014. Amended Recovery Strategy for the Greater Sage-Grouse (Centrocercus urophasianus urophasianus) in Canada.  Species at Risk Act Recovery Strategy Series. Environment Canada, Ottawa.",
+      "year": "2014",
+      "title": "Amended Recovery Strategy for the Greater Sage-Grouse (Centrocercus urophasianus urophasianus) in Canada.",
+      "author": "Environment Canada",
+      "citation_short": null
+    },
+    {
+      "citation": "O'Donnell, M.S., Edmunds, D.R., Aldridge, C.L., Heinrichs, J.A., Monroe, A.P., Coates, P.S., Prochazka, B.G., Hanser, S.E. and Wiechman, L.A. 2022. Defining fine-scaled population structure among continuously distributed populations. <i>Methods in Ecology and Evolution</i> 13(10): 2222-2235.",
+      "year": "2022",
+      "title": "Defining fine-scaled population structure among continuously distributed populations",
+      "author": "O'Donnell, M.S., Edmunds, D.R., Aldridge, C.L., Heinrichs, J.A., Monroe, A.P., Coates, P.S., Prochazka, B.G., Hanser, S.E. and Wiechman, L.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "O'Donnell, M.S., Edmunds, D.R., Aldridge, C.L., Heinrichs, J.A., Monroe, A.P., Coates, P.S., Prochazka, B.G., Hanser, S.E., Wiechman, L.A., Christiansen, T.J., Cook, A.A., Espinosa, S.P., Foster, L.J., Griffin, K.A., Kolar, J.L., Miller, K.S., Moser, A.M., Remington, T.E., Runia, T.J., Schreiber, L.A., Schroeder, M.A., Stiver, S.J., Whitford, N.A., Wightman, C.S. 2021. Synthesizing and analyzing long-term monitoring data: A greater sage-grouse case study. <i>Ecological Informatics</i> 63: e101327.",
+      "year": "2021",
+      "title": "Synthesizing and analyzing long-term monitoring data: A greater sage-grouse case study",
+      "author": "O'Donnell, M.S., Edmunds, D.R., Aldridge, C.L., Heinrichs, J.A., Monroe, A.P., Coates, P.S., Prochazka, B.G., Hanser, S.E., Wiechman, L.A., Christiansen, T.J., Cook, A.A., Espinosa, S.P., Foster, L.J., Griffin, K.A., Kolar, J.L., Miller, K.S., Moser, A.M., Remington, T.E., Runia, T.J., Schreiber, L.A., Schroeder, M.A., Stiver, S.J., Whitford, N.A., Wightman, C.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Oyler-McCance, S.J., Taylor, S.E. and Quinn, T.W. 2005. A multilocus population genetic survey of the greater sage-grouse across their range. <i>Molecular Ecology</i> 14: 1293–1310.",
+      "year": "2005",
+      "title": "A multilocus population genetic survey of the greater sage-grouse across their range",
+      "author": "Oyler-McCance, S.J., Taylor, S.E. and Quinn, T.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Prochazka, B.G., Coates, P.S., Aldridge, C.L., O'Donnell, M.S., Edmunds, D.R., Monroe, A.P., Hanser, S.E., Wiechman, L.A., and Chenaille, M.P. 2024. Range-wide population trend analysis for greater sage-grouse (Centrocercus urophasianus)—Updated 1960–2023 (ver. 1.1, April 2024): U.S. Geological Survey Data Report 1190, 18 p. U.S. Geological Survey. Available at: <a href=\"https://doi.org/10.3133/dr1190\">https://doi.org/10.3133/dr1190</a>. (Accessed: March 27, 2025).",
+      "year": "2024",
+      "title": "Range-wide population trend analysis for greater sage-grouse (Centrocercus urophasianus)—Updated 1960–2023 (ver. 1.1, April 2024): U.S. Geological Survey Data Report 1190, 18 p.",
+      "author": "Prochazka, B.G., Coates, P.S., Aldridge, C.L., O'Donnell, M.S., Edmunds, D.R., Monroe, A.P., Hanser, S.E., Wiechman, L.A., and Chenaille, M.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Remington, T.E., Deibert, P.A., Hanser, S.E., Davis, D.M., Robb, L.A., and Welty, J.L. 2021. Sagebrush conservation strategy—Challenges to sagebrush conservation (p. 327). U.S. Geological Survey Open-File Report 2020-1125. U.S. Geological Survey. Available at: <a href=\"https://doi.org/10.3133/ofr20201125.\">https://doi.org/10.3133/ofr20201125.</a>. (Accessed: March 27th, 2025).",
+      "year": "2021",
+      "title": "Sagebrush conservation strategy—Challenges to sagebrush conservation (p. 327). U.S. Geological Survey Open-File Report 2020-1125.",
+      "author": "Remington, T.E., Deibert, P.A., Hanser, S.E., Davis, D.M., Robb, L.A., and Welty, J.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schulwitz, S., Bedrosian, B. and Johnson, J.A. 2014.  Low neutral genetic diversity in isolated greater sage-grouse (Centrocercus urophasianus) populations in northwest Wyoming. <i>The Condor </i> 116: 560–573.",
+      "year": "2014",
+      "title": " Low neutral genetic diversity in isolated greater sage-grouse (Centrocercus urophasianus) populations in northwest Wyoming",
+      "author": "Schulwitz, S., Bedrosian, B. and Johnson, J.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shyvers, J.E., Walker, B.L., Oyler‐McCance, S.J., Fike, J.A. and Noon, B.R. 2020. Genetic mark‐recapture analysis of winter faecal pellets allows estimation of population size in Sage Grouse Centrocercus urophasianus. <i>Ibis</i> 162(3): 749-765.",
+      "year": "2020",
+      "title": "Genetic mark‐recapture analysis of winter faecal pellets allows estimation of population size in Sage Grouse Centrocercus urophasianus",
+      "author": "Shyvers, J.E., Walker, B.L., Oyler‐McCance, S.J., Fike, J.A. and Noon, B.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "U.S. Fish and Wildlife Service. 2013. Greater Sage-grouse (Centrocercus urophasianus) Conservation Objectives: Final Report. U.S. Fish and Wildlife Service, Denver, CO.",
+      "year": "2013",
+      "title": "Greater Sage-grouse (Centrocercus urophasianus) Conservation Objectives: Final Report.",
+      "author": "U.S. Fish and Wildlife Service",
+      "citation_short": null
+    },
+    {
+      "citation": "U.S. Fish and Wildlife Service-Department of the Interior. 2010. 12-month findings for petitions to list the Greater Sage-Grouse (Centrocercus urophasianus) as threatened or endangered. <i>Federal Register </i> 75: 13910–14014.",
+      "year": "2010",
+      "title": "12-month findings for petitions to list the Greater Sage-Grouse (Centrocercus urophasianus) as threatened or endangered",
+      "author": "U.S. Fish and Wildlife Service-Department of the Interior",
+      "citation_short": null
+    },
+    {
+      "citation": "Walker, B.L., Naugle, D.E. and Doherty, K.E. 2007a. Greater sage‐grouse population response to energy development and habitat loss. <i>The Journal of Wildlife Management</i> 71(8): 2644-2654.",
+      "year": "2007a",
+      "title": "Greater sage‐grouse population response to energy development and habitat loss",
+      "author": "Walker, B.L., Naugle, D.E. and Doherty, K.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Walker, B.L., Naugle, D.E., Doherty, K.E. and Cornish, T.E. 2007b. West Nile virus and greater sage-grouse: estimating infection rate in a wild bird population. <i>Avian Diseases</i> 51(3): 691-696.",
+      "year": "2007b",
+      "title": "West Nile virus and greater sage-grouse: estimating infection rate in a wild bird population",
+      "author": "Walker, B.L., Naugle, D.E., Doherty, K.E. and Cornish, T.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Walsh, D.P., Stiver, J.R., White, G.C., Remington, T.E. and Apa, A.D. 2010. Population estimation techniques for lekking species. <i>Journal of Wildlife Management</i> 74: 1607–1613.",
+      "year": "2010",
+      "title": "Population estimation techniques for lekking species",
+      "author": "Walsh, D.P., Stiver, J.R., White, G.C., Remington, T.E. and Apa, A.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Walsh, D.P., White, G.C., Remington, T.E. and Bowden, D.C. 2004. Evaluation of the lek-count index for Greater Sage-grouse. <i>Wildlife Society Bulletin</i> 32: 56–68.",
+      "year": "2004",
+      "title": "Evaluation of the lek-count index for Greater Sage-grouse",
+      "author": "Walsh, D.P., White, G.C., Remington, T.E. and Bowden, D.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Western Association of Fish and Wildlife Agencies (WAFWA). 2015. Greater Sage-grouse Population Trends: An Analysis Of Lek Count Databases. 1965-2015. Available at: <a href=\"https://wafwa.org/wpdm-package/greater-sage-grouse-population-trends-an-analysis-of-lek-count-databases-1965-2015/\">https://wafwa.org/wpdm-package/greater-sage-grouse-population-trends-an-analysis-of-lek-count-databases-1965-2015/</a>. (Accessed: 27th March, 2025).",
+      "year": "2015",
+      "title": "Greater Sage-grouse Population Trends: An Analysis Of Lek Count Databases. 1965-2015",
+      "author": "Western Association of Fish and Wildlife Agencies (WAFWA)",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

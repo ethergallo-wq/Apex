@@ -1,0 +1,2361 @@
+{
+  "assessment_date": "2019-09-18T01:00:00.000+01:00",
+  "year_published": "2020",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 7140,
+  "criteria": "A2c",
+  "url": "https://www.iucnredlist.org/species/7140/45818198",
+  "citation": "Williams, C., Tiwari, S.K., Goswami, V.R., de Silva, S., Kumar, A., Baskaran, N., Yoganand, K. & Menon, V. 2020. Elephas maximus. The IUCN Red List of Threatened Species 2020: e.T7140A45818198. Accessed on 15 May 2026.",
+  "assessment_id": 45818198,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 7140,
+    "scientific_name": "Elephas maximus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 237597413,
+        "scientific_name": "Elephas maximus ssp. borneensis",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "PROBOSCIDEA",
+        "family_name": "ELEPHANTIDAE",
+        "genus_name": "Elephas",
+        "species_name": "maximus",
+        "subpopulation_name": null,
+        "infra_name": "borneensis",
+        "authority": "Deraniyagala, 1950",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Asian Elephant Specialist Group",
+            "url": "http://www.asesg.org/",
+            "description": "Chair: Vivek Menon  (email: vivek@wti.org.in)\nRed List Authority Coordinator: Christy Williams (email: acwill69@yahoo.com)\nNewsletter: http://www.asesg.org/gajah.htm"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Borneo Elephant",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Borneo Pygmy Elephant",
+            "language": "eng"
+          },
+          {
+            "main": true,
+            "name": "Bornean Elephant",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 199856,
+        "scientific_name": "Elephas maximus ssp. sumatranus",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "PROBOSCIDEA",
+        "family_name": "ELEPHANTIDAE",
+        "genus_name": "Elephas",
+        "species_name": "maximus",
+        "subpopulation_name": null,
+        "infra_name": "sumatranus",
+        "authority": "Temminck, 1847",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Asian Elephant Specialist Group",
+            "url": "http://www.asesg.org/",
+            "description": "Chair: Vivek Menon  (email: vivek@wti.org.in)\nRed List Authority Coordinator: Christy Williams (email: acwill69@yahoo.com)\nNewsletter: http://www.asesg.org/gajah.htm"
+          }
+        ],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Sumatran Elephant",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "PROBOSCIDEA",
+    "family_name": "ELEPHANTIDAE",
+    "genus_name": "Elephas",
+    "species_name": "maximus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Linnaeus, 1758",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Asian Elephant Specialist Group",
+        "url": "http://www.asesg.org/",
+        "description": "Chair: Vivek Menon  (email: vivek@wti.org.in)\nRed List Authority Coordinator: Christy Williams (email: acwill69@yahoo.com)\nNewsletter: http://www.asesg.org/gajah.htm"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Indian Elephant",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Elefante Asiático",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Eléphant d'Asie",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Eléphant d'Inde",
+        "language": "fre"
+      },
+      {
+        "main": true,
+        "name": "Asian Elephant",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Endangered"
+    },
+    "code": "EN"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 3000,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "Yes",
+    "population_continuing_decline": "Yes",
+    "generational_length": "22-25",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Percentage of population protected by PAs",
+            "value": "21-30"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Yes",
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "11317030",
+    "continuing_decline_in_extent_of_occurence": "Yes",
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "Asian Elephants formerly ranged from West Asia along the Iranian coast into the Indian subcontinent, eastwards into South-east Asia including Sumatra, Java, and Borneo, and into China at least as far as the Yangtze-Kiang. This former range covered over 9 million km² (Sukumar 2003). Asian Elephants are now extinct in West Asia, Java, and most of China. The western populations (<em>Elephas maximus asurus</em>) were probably extinct by 100 BC, and the main Chinese populations (sometimes referred to as <em>E. m. rubridens</em>) disappeared sometime after the 14th century BC. Even within its surviving range in South and South-east Asia, the species has been in retreat for hundreds if not thousands of years, and generally survives only in highly fragmented populations (Olivier 1978, Sukumar 2003, Blake and Hedges 2004).<br/><br/>Asian Elephants still occur in isolated populations in 13 range states, with a very approximate total range area of 486,800 km² (Sukumar 2003, but see Blake and Hedges 2004; note that this range area is a different parameter than the extent of occurrence calculation used for Red List assessments). The species occurs in Bangladesh, Bhutan, India, Nepal, and Sri Lanka in South Asia and Cambodia, China, Indonesia (Kalimantan and Sumatra) Lao PDR, Malaysia (Peninsular Malaysia and Sabah), Myanmar, Thailand, and Viet Nam in South-east Asia. Feral populations occur on some of the Andaman Islands (India).<br/><br/>The elephants of Borneo were believed to be feral descendants of elephants introduced in the 14<sup>th</sup>–19<sup>th</sup> centuries (Shoshani and Eisenberg 1982, Cranbrook <em>et al</em>. 2008); however, recent genetic evidence suggests they are indigenous to the island (Fernando <em>et al</em>. 2003, Sharma&#160;<em>et al</em>. 2018). <br/><br/>The species was once found throughout Sri Lanka, but today elephants are restricted mostly to the lowlands in the dry zone where they are still fairly widespread in north, south, east, north-western, north-central and south-eastern Sri Lanka; with the exceptions of small remnant populations in the Peak Wilderness Area and Sinharaja Area, elephants are absent from the wet zone of the country. The species continues to lose range to development activities throughout the island. <br/><br/>Once widespread in India, the species is now restricted to four general areas: northeastern India, central India, northwestern India, and southern India. In northeastern India, the elephant range extends from the eastern border of Nepal in northern West Bengal through western Assam along the Himalaya foothills as far as the Mishmi Hills in Arunachal Pradesh. From here it extends into eastern Arunachal Pradesh, the plains of upper Assam, and the foothills of Nagaland. Moving westwards from there, the elephant range spans parts of the lower Brahmaputra plains and the Karbi Plateau to extend into the Garo Hills of Meghalaya through the Khasi Hills. Elsewhere in the south in Tripura, Mizoram, Manipur, and the Barak valley districts of Assam, isolated herds have known to occur (Choudhury 1999). In central India, highly fragmented elephant populations are found in the states of Odisha, Jharkhand, Chhattisgarh and the southern part of West Bengal. Elephants have now started migrating to neighbouring Madhya Pradesh from Chhattisgarh. In north-western India, the species occurs in six fragmented populations at the foot of the Himalayas in Uttarakhand and Uttar Pradesh, ranging from Katerniaghat Wildlife Sanctuary in Bahraich Forest Division in the east, to the Yamuna River in the west. The elephants in southern India range over forested hilly tracts of the Western Ghats and the adjacent Eastern Ghats in the states of Karnataka, Kerala and Tamil Nadu, and, more recently, in small areas of Andhra Pradesh, Maharashtra and Goa. Their distribution has shrunk within the Ghats owing to increase in human population and resultant development activities and agriculture. At present, elephants are found in five major landscapes in southern India: Uttara Kannada and crestline of the Western Ghats, mainly in the forests of Dandeli that includes a few elephants that move into Maharashtra and Goa; the Malnad plateau, in particular the Bhadra Wildlife Sanctuary, to the east of the Western Ghats; the Brahmagiri–Nilgiri–Wyanad–Mysore landscape, with the Nagarahole, Bandipur, Wyanad and Mudumalai complex of reserves harbouring one of the highest elephant densities, followed by significant numbers in the Biligirirangans and the hilly tract along the Cauvery river of the Eastern Ghats, a small population of elephants that dispersed from here in the 1980s now ranges as scattered groups over isolated hills to the east in Andhra Pradesh and Tamil Nadu; Anamalai–Nelliyampathy–High Ranges landscape with Anamalai, Parambikulam, Malayattur and Vazahchal Forest Divisions that includes small isolated elephants in Idukki Sanctuary and Kothamangalam Forest Division; Periyar–Agasthyamalai landscape with Periyar, Ranni, and Srivilliputhur as the most important elephant habitats including elephants isolated to the south of Shencottah pass in the Agasthyamalai hills (Baskaran<em> et. al.</em>&#160;2011, Baskaran 2013, Madhusudan <em>et. al.&#160;</em>2015).In Nepal, elephants were once widespread in the lowland Terai, but are now restricted to a few protected areas along the border with India: Royal Chitwan National Park, Parsa Wildlife Reserve, Royal Bardia National Park, and Royal Suklaphanta Wildlife Reserve, and their environs. There is some movement of animals between these protected areas and between Bardia National Park and the adjacent parts of India.&#160;Wild elephants in Nepal occur in four isolated populations – eastern population in Koshi Tappu Wildlife Reserve and Jhapa district; central population in Chitwan National Park and Parsa National Park; western population in Bardia National Park and adjoining municipalities; and far-western population in Suklaphanta National Park and adjoining municipalities (Pradhan <em>et. al.</em>&#160;2011). The north Bengal population of elephants in northeastern India range quite some distance into eastern Nepal but is now hindered due to fencing along the Mechi river.In Bhutan, all the existing elephant populations are found along the southern belt of Bhutan along the border with India. They are reported from Samtse, Chhukha, Dagana, Phipsoo Wildlife Sanctuary, Royal Manas National Park, Sarang, Samdrupjongkhar and Jomotshangkha Wildlife Sanctuary (NCD 2018, 2019). In the past, elephants made seasonal migrations from Bhutan to the grasslands of India during the wetter summer months of May to October, returning to their winter range in Bhutan from November. Now these movements are restricted as a result of loss of habitat on the Indian side and fragmentation of habitat on the Bhutan side.<br/><br/>In Bangladesh, the species was once widespread, but today it is largely restricted to areas that are relatively less accessible to humans, mainly Chittagong and the Chittagong Hill Tracts and Cox Bazar. In addition, some animals periodically visit the New Samanbag area of Maulvi Bazar District under the Sylhet Forest Division in the north-east of the country, coming from the neighbouring Indian states of Tripura, Meghalaya, and Assam (Ministry of Environment and Forest 2018). The elephant habitat in Cox Bazar has been severely impacted by the rehabilitation of Rohingya refugees from Rakhaine area of Myanmar in the last few years.&#160;<br/>The Asian Elephant has a wide, but highly fragmented, distribution in Myanmar. The largest elephant ranges (those supporting &gt;100 individuals) are in the Northern Forest Complex, Sagaing Division (Homalin and Phaungpyin Townships), Rakhine State (Mayyu, Gwa, Thaboung, Pathein and Naguputaw Townships), Bago Yoma, and Tanintharyi Division (Lenya-Mandaing-Manolon area)&#160;<span class=\"msoIns\">(<span class=\"msoIns\">Leimgruber <em>et al.</em> 2011, MECAP 2018).&#160;In Thailand, the species is distributed in 69 Protected Areas and occurs mainly in the mountains along the border with Myanmar, with smaller fragmented populations occurring in the peninsula in the south (in several forest complexes, south to the border with Malaysia); in the northeast (in the Dong Phaya Yen-Khao Yai forest complex, including Khao Yai National Park, and the Phu Khieo-Nam Nao forest complex); and in the east (in a forest complex composing the Khao Ang Runai Wildlife Sanctuary, Khao Soi Dao Wildlife Sanctuary, Khao Khitchakut National Park, and Khao Cha Mao National Park).<br/><br/>In Cambodia, elephants are primarily found in the mountains of the south-west and in Mondulkiri and Ratanakiri provinces&#160;(Pollard <em>et al.</em>&#160;2008, Gray <em>et al.</em>&#160;2014,&#160;<span class=\"msoIns\">Maltby and Bourchier 2011<span class=\"msoIns\">). Recent surveys in Keo Sema District (Mondulkiri Province) suggest that important numbers may remain in that area (WCS unpubl. data). Elsewhere, Asian Elephants persist in Cambodia in only small, scattered populations (Duckworth and Hedges 1998).In the Lao People’s Democratic Republic, elephants remain widely but very patchily distributed in very small numbers in forested areas, both in the highlands and lowlands. Two important and likely viable populations are known, one in Xaygnabouly Province west of the Mekong in Nam Pouy NP and one on the Nakai Plateau, where prime elephant habitat has now been submerged under the Nakai Nam Theun Dam. Other potentially important elephant populations occur in Phou Phanang and Phou Khao Khoay in Vientiane Province; Phou Xang He in Savannakhet Province; Dong Ampham and Dong Khanthung, including Xe Pian, close to Cambodian border; and Nam Et, Nam Xam, Phou Dendin, and Nam Ha in the north, close to the Viet Namese and Chinese borders&#160;<span class=\"msoIns\">(<span class=\"msoIns\">Khounboline 2011).<span lang=\"EN-IN\">In Vietnam, only a small population persists now. <span lang=\"EN-IN\">Elephants are currently distributed in three main regions, namely the Nghe An and adjoining areas (Son La and Ha Tinh ) in northern Vietnam, Quang Nam area in central Vietnam and Dak Lak Province and adjoining areas (Dak Nong, Dong Nai and Binh Phuroc ) in southern Vietnam (Figure 1). Within each region, the population is further fragmented into several isolated small groups of elephants (Varma<em> et al. </em>2007, Vidya <em>et al. </em>2007, Thi Ly 2011). These elephant populations remain highly threatened.In China, Asian Elephants once ranged widely over much of southern China, including the Fujiang, Guangdong, and Guangxi Provinces (Smith and MacKinnon 2008). The species was extirpated in southern Fujiang and northern Guangdong during the 12th century, but evidence indicates persistence in Guanxi into the 17th century (Smith and MacKinnon, in press). All that now remains of this once widespread elephant population in China is the remnant in Yunnan where the species survives in three administrative units: Xishuangbanna, Simao, and Lincang&#160;(Zhang<em> et al.</em> 2015).<span lang=\"EN-IN\">In Peninsular Malaysia, the species is still widely distributed in the interior of the country in the following States: Pahang (which probably has the largest population), Perak, Johor, Kelantan, Terengganu, Kedah, and Negeri Sembilan (where very few animals <span lang=\"EN-IN\"><span class=\"msoIns\">remains). Taman Negara National Park has the largest elephant population (<span lang=\"EN-IN\"><span class=\"msoIns\">Department of Wildlife and National Parks Peninsular Malaysia 2013).&#160;<span lang=\"EN-IN\">On Borneo, elephants only occur in the lowlands of the northeastern part of the island in the Malaysian State of Sabah and adjacent parts of Kalimantan (Indonesia). In Sabah, they occur in forested areas in the south, centre, and east of the State in the following Districts: Kinabatangan, Sandakan, Beluran, Lahad Datu, Tawau, and Pensiangan. In Kalimantan, elephants occur only in the Upper Sembakung River in Tindung District. <span lang=\"EN-US\">The five managed elephant Ranges in Sabah include: Lower Kinabatangan, North Kinabatangan (<span lang=\"EN-IN\">Deramakot, Tangkulap, Segaliud Lokan)<span lang=\"EN-US\">, Central Sabah (<span lang=\"EN-IN\">Ulu Segama, Danum Valley, Gunung Rara and Kalabakan)<span lang=\"EN-US\">, Tabin and Ulu Kalumpang <span lang=\"EN-IN\">&#160;(<span lang=\"EN-IN\">Sabah Wildlife Department 2011, Alfred <em>et al. </em>2011).In Sumatra (Indonesia), the elephant was once widespread, but now survives only in highly fragmented populations. In the mid-1980s, 44 discrete elephant populations (numbering in total about 2800 to 4800 elephants) were known to exist in Sumatra’s eight provinces scattered from Aceh in the north to Lampung in the south (Blouch and Haryanto 1984, Blouch and Simbolon 1985). However, by 2003, only three of Lampung’s 12 populations were extant (Hedges<em> et al.</em>&#160;2005). A 2009 survey of nine forest blocks in Riau that had counted elephant herds only two years earlier revealed that six herds had gone extinct (Desai and Samsuardi 2009). Over 69% of potential Sumatran elephant habitat has been lost within just one generation (the last 25 years), and much of the remaining forest cover is in blocks smaller than 250 km<sup>2</sup>, which are too small to contain viable elephant populations (Gopala<em> et al.</em>&#160;2011). Nevertheless, the island is thought to hold some of the most significant populations outside of India. For example, in Lampung Province’s two national parks, Bukit Barisan Selatan and Way Kambas, produced population estimates of 498 (95% CI=[373, 666]) and 180 (95% CI=[144, 225]) elephants, respectively were obtained (Hedges <em>et al.</em>&#160;2005). Bukit Barisan Selatan NP is, therefore, a critically important area for Asian Elephant conservation. The challenge now is to protect these populations from further habitat loss and poaching.</span></span></span></span></span></span></span></span></span></span>",
+    "population": "As of 2018, population size estimates collated across all range countries, suggest a global Asian Elephant abundance of 48,323–51,680 individuals in the wild (Menon and Tiwari 2019). Of these, doubtful estimates, comprising those that are based on interviews and expert opinion rather than population estimation or counts, are thought to account for 4,189–6,999 elephants. The likely estimates for each range country are as follows: Bangladesh 289–437; Bhutan 605–761; Cambodia 400–600; China 300; India 29,964; Indonesia 1,784–1,804; Lao PDR 500–600; Malaysia (Peninsular) 1,223–1,677; Malaysia (Sabah) 2040; Myanmar 2,000–4,000; Nepal 109–145; Sri Lanka 5879; Thailand 3,126–3,341; and Viet Nam 104–132. However, Blake and Hedges (2004) and Hedges (2006) argue that the oft-repeated global population ‘estimate’ of about 40,000 to 50,000 Asian Elephants is no more than a crude guess, which has been accepted unchanged for a quarter of a century. They argue that with few exceptions all we really know about the status of Asian Elephants is the location of some (probably most) populations, with in some cases a crude idea of relative abundance; and for some large parts of the species' range we do not even know where the populations are, or indeed if they are still extant. These differences of opinion are due in part to the difficulty in counting elephants in dense&#160;vegetation in difficult terrain, different survey techniques being used in different places, and a too-widely held belief that population monitoring is unimportant. This highlights the urgent need to adopt more reliable population estimation methods across larger parts of the Asian Elephant range, as is being increasingly recognized (e.g., Rangarajan <em>et al.</em> 2010, Jathanna&#160;<em>et al.</em>&#160;2015). Such methods, including capture–recapture and distance sampling, have been successfully applied to Asian Elephant population estimation in some key habitats (e.g., Goswami&#160;<em>et al.</em>&#160;2007, de Silva&#160;<em>et al.</em>&#160;2011a, Hedges&#160;<em>et al.</em>&#160;2013, Jathanna&#160;<em>et al.</em>&#160;2015, Goswami&#160;<em>et al.</em>&#160;2019). Nevertheless, whatever the error margins, it appears almost certain that over 60% of the remaining wild Asian Elephants occur in India. <br/><br/>The overall population trend of the Asian Elephant has been downwards,&#160;<span class=\"msoIns\">as inferred from the reduction in habitat,&#160;probably for centuries. This remains the case in most parts of its range, but especially in most of the countries of South-east Asia (Vietnam, Indonesia, Lao PDR) where habitat loss and fragmentation has resulted in the disappearance of elephants over much of the ranges in the above three places. In Sri Lanka, the population has increased. Within India, it is plausible that a sizeable proportion of the large population in the Western Ghats located in the south of the country, has been stable over the last two decades, likely due to effective conservation efforts. However, elephant population distribution seems to have declined in NE India, mirroring more the SE Asian situation of declines.",
+    "habitats": "The Asian Elephant is one of the last few mega-herbivores (i.e. plant-eating mammals that reach an adult body weight in excess of 1,000 kg) still extant on earth (Owen-Smith, 1988). Being hindgut fermenters with relatively poor digestive efficiency (Dumonceaux 2006), elephants must consume large quantities of food per day to meet energy requirements. They are generalists and feed on a variety of plants, which vary depending upon the habitat and season. Sukumar (1992) observed that in southern India, the portion of the diet consisting of browse shifted from around 70% in the dry season, to 45% in the wet season. However, in an adjoining area, Baskaran <em>et al.</em> (2010) found that browse formed only 15% of the diet in dry deciduous forest and 47% of the diet in the thorn forest in the dry season, while the annual diet was dominated by grass (84%). Baskaran (2002) also recorded that elephants fed on 82 species of plants (59 woody plant species and 23 grass species). In Sri Lanka, elephants may feed on more than 60 species of plants belonging to 30 families (McKay 1973). On the other hand, elephants appear to preferentially feed on monocots (Campos-Arceiz and Blake 2011), with Bornean elephants especially favoring species of Poaceae (English <em>et al.</em> 2014). Elephants may spend up to 14–19 hrs a day feeding, during which they may consume up to 150 kg of wet weight (Vancuylenberg 1977).<br/><br/>Asian Elephants inhabit grassland, tropical evergreen forest, semi-evergreen forest, moist deciduous forest, dry deciduous forested and dry thorn forest, in addition to cultivated and secondary forests or scrublands. They are seen from sea level to over 3,000 m asl in the Eastern Himalaya (Choudhury 1999). However, it is unclear which, if any, of these habitat types represent optimal suitable habitat for elephant as many landscapes have been subject to human modification. Elephant densities can range from &gt; 3/km<sup>2</sup>&#160;in parts of India, Sri Lanka, and Borneo, to fewer than &lt;1/km<sup>2</sup> in much of mainland Southeast Asia (Alfred&#160;<em>et al.</em>&#160;2010; de Silva, Ranjeewa and Weerakoon 2011; Fernando and Pastorini 2011; Jathanna&#160;<em>et al.</em>&#160;2015). Recorded densities appear lower in heavily forested environments compared to those that are more grass-dominated, but it is difficult to distinguish whether this is due to resource limitations or more recent declines from hunting pressure and overall habitat loss. Elephants can range over large areas and as a consequence, elephants disperse seeds over longer distances than most other herbivores and thus are responsible for structuring and maintaining plant diversity within ecosystems (Campos-Arceiz&#160;<em>et al.</em>&#160;2008 Campos-Arceiz and Blake 2011). Home range sizes likely depend not only on availability of forage, but also of water, needed for drinking, bathing and wallowing. More recently home ranges are being influenced by the level of disturbance and other development activities (e.g. roads, fences, canals etc.) the elephants are encountering. Asian Elephants especially rely on the evaporation of water from the skin for cooling (Dunkin&#160;<em>et al.</em>&#160;2013).<br/><br/>Given their large area requirements, elephants are regarded as “umbrella species” because their conservation will also protect a large number of other species occupying the same area. They may also be considered “flagship species” because of their iconic or cultural value and “keystone species” because of their important ecological role and impact on the environment.<br/><br/>The lifespan of Asian Elephants is 60 to 70 years, and males reach sexual maturity at between 10–15 years of age; while females are capable of giving birth as early as 11, most do so in the wild between the ages of 13–16 (Shoshani and Eisenberg 1982, de Silva&#160;<em>et al.</em>&#160;2013). Because of the lengthy gestation and parturition periods elephants have a minimum inter-birth-interval of approximately four-five years (Sukumar 2003), but in areas where there is a high density, intervals may extend to six years or more (Sukumar 1992, Williams 2007, de Silva&#160;<em>et al.</em>&#160;2013). Calf survival can be influenced by social buffering, particularly from grandmothers (Lahdenpera <em>et al</em>. 2016), which makes Asian elephants one of the unique social species. Older females tend to have longer birth intervals, thus aging populations may experience negative feedback on population growth. Therefore, even though individual animals may be long-lived, populations are vulnerable to gradual demographic collapse if mortality rates in younger age classes become too high (de Silva and Leimgruber 2019).<br/><br/>Asian Elephant society is organised into well-defined, matrilineal communities or clans comprising adult females, as well as sub-adult and juvenile males and females (de Silva <em>et al</em>. 2011b, Nandini <em>et al</em>. 2018). All the members of the clan do not necessarily associate for extended periods as it is a society with high fission-fusion dynamics, with groups of elephants seen usually being a part of a larger community/clan (de Silva <em>et al</em>. 2011b, Nandini <em>et al</em>. 2018). Subadult males disperse from their natal clans, and adult males (bulls) are primarily solitary but form loose social bonds with other males and only temporarily associate with female groups (Desai and Johnsingh 1995, Vidya and Sukumar&#160;2005). Females or subsets of them within a clan are genetically related to one another (Vidya and Sukumar 2005, Nandini 2016). <br/><br/>Asian Elephants move over long distances in search of food and shelter. Both females and males have well-defined home ranges and show fidelity to their established home ranges (Baskaran&#160;<em>et al.</em>&#160;1995, Fernando&#160;<em>et al.</em>&#160;2008, Baskaran&#160;<em>et al.</em>&#160;2018). Home range sizes in India have been estimated to be between 550 and 700 km² for female clans in tropical deciduous forests of south India (Baskaran <em>et al.</em> 1995) and between 188 and 407 km² for different males and female clans in north India (Williams&#160;<em>et al.&#160;</em>2008). In Sri Lanka home range sizes have been estimated to be between 34 and 400 km² in a study of males and female groups by Fernando&#160;<em>et al.</em>&#160;(2008) and in another study of two female groups, it was estimated to be 217 and 326 km² (Marasinghe&#160;<em>et al.&#160;</em>2015). In Sumatra, a study by&#160;Moßbrucker&#160;<em>et al.</em>&#160;(2016) showed that home range sizes of males and female groups ranged between 210 and 997 km for elephants in Jambi Province. In Borneo, a study by Raymond&#160;<em>et al.</em><sup>²</sup>(2012) showed that home ranges of males and female groups ranged from 291 to 778 km² for three elephants which had reasonable monitoring periods (&gt;200 days). Evans&#160;<em>et al.</em>&#160;(2020) however indicated a mean home range of 149.27 (±108.70) km². The linear extent of home ranges can vary from 10 to 150 km or more depending on the size of the home range. This would indicate that transboundary populations can range deep into the different Range States. Overlapping and large home ranges would essentially straddle vast areas across national boundaries. Movement within home ranges has been shown to be influenced by seasonal changes in resources (Fernando 2015, Baskaran&#160;<em>et al.</em>&#160;2018) or behavioural changes due to disturbance (Williams&#160;<em>et al.</em>&#160;2008). Those seasonal movements, that are influenced by availability of food, water and climate, are both cyclic and predictable. However, in Rajaji NP in north India, Williams <em>et al</em>. (2008) showed that females with very young calves traded safety for food by choosing habitats with less food, but also less disturbance. Elephants also preferred gentle terrain over steeper slopes when given a choice as shown by Raymond <em>et al</em>. (2012). This indicates that elephants found in very hilly terrain maybe a by product of more productive plains habitat being converted to agriculture. A recent study from the resource-rich, well-protected ecosystem of Kaziranga NP in NE India, suggests that female-led herds move about their activity centres considerably more than adult males (Goswami&#160;<em>et al.</em>&#160;2019). In such productive habitats, spatio-temporal &#160;segregation of herds is likely to be favored as it can ease intra-specific competition and allow an ‘ecological release’ from strict matriarchal hierarchies, resulting in fission-fusion social dynamics (de Silva&#160;<em>et al.</em>&#160;2011b,&#160;de Silva&#160;<em>et al.&#160;</em>2016). Larger gatherings of elephants tend to occur in South Asia during dry seasons, particularly near large water bodies (de Silva&#160;<em>et al.</em>&#160;2011b, Nandini&#160;<em>et al.</em>&#160;2018). This is possibly a more recent phenomenon owing to land-use changes and resource constraints. It is also concurrently possible that movement patterns of adult males are more localized in a given season, but they show larger shifts in activity centres than herds with change in season and associated resource availability (Goswami&#160;<em>et al.&#160;</em>2019). Musth in males appears to be a roving strategy among older males (Keerthipriya&#160;<em>et al.</em>&#160;2020), which show much larger home ranges in musth than when not in musth (Fernando&#160;<em>et al.</em>&#160;2008).<br/><br/>A characteristic strategy of male Asian Elephants is the dispersal of males when they attain puberty (Sukumar 1989, Desai and Johnsingh 1995). Male Asian Elephants have been found to show locational dispersal to a location different from their natal home range, as opposed to social dispersal away from the natal clan but remaining in the same home range (Vidya and Sukumar 2005, Vidya&#160;<em>et al.</em>&#160;2005, Ahlering&#160;<em>et al.</em>&#160;2011). It is possible that such dispersal may help in avoiding inbreeding and is critical for gene flow between different locations.",
+    "threats": "The challenges confronting elephant conservation in most elephant Range States are habitat loss and fragmentation, human–elephant conflict, and poaching and illegal trade of elephants (Leimgruber <em>et al.</em> 2003; Sukumar 2003, 2006; Sukumar&#160;<em>et al.</em>&#160;2016; Hedges 2006; Menon&#160;<em>et al.</em>&#160;2017; AERSM 2017). As elephant habitats decrease and get more fragmented, the interaction between humans and elephants increase, leading to intense conflicts between people and elephants, causing fatalities on both sides besides damage to human property (Sukumar 1990, Nath and Sukumar 1998, Williams&#160;<em>et al.&#160;</em>2001, Madhusudan 2003, Kumar&#160;<em>et al.</em>&#160;2004). The elephant populations of Vietnam, Sumatra and Myanmar are under great threat; only 100–130 elephants thought to be left in the wild in Vietnam, with the likely numbers even lower. Apart from ivory, the trade of other body parts of elephants, especially skin trade has increased in the last few years further threatening the elephant populations, especially in Myanmar. The trade could result in indiscriminate killing of elephants of both sexes, thereby further endangering the fragile elephant population in the region. The skin is being used to make beads that are worn as bracelets and necklaces sold as good-luck charms. This seems to be a product that is not in traditional Chinese medicine and has been invented in the last few years. However, human–elephant conflict remains the number one cause of mortality for Asian Elephants in the wild and has become a major threat for the conservation of the species across its range of distribution, and needs to be urgently managed to prevent retaliation and wiping out of elephant populations in the wild.<br/><u><br/></u><strong><u>Habitat loss and fragmentation</u></strong><br/>Forests in tropical countries have undergone notable change due to human pressures in the last century that may have resulted in extinction of several species (Myers 1987) and restricted faunal species to islands of forests following fragmentation (Laurance and Bierregaard 1997). Fragmentation of elephant habitats has resulted in reduction of available undisturbed spaces (Leimgruber&#160;<em>et al.</em>&#160;2003), thereby leading to compression of elephant herds in Protected Areas (PAs), causing escalation of human–elephant conflict in the adjoining human-dominated landscapes (Sukumar 1990, Desai 1991, Williams&#160;<em>et al.&#160;</em>2001, Goswami&#160;<em>et al.</em>&#160;2015). Elephants in Asia inhabit regions that also have large human populations, growing at a rate of 0.5–1.5% per annum (Cincotta&#160;<em>et al.</em>&#160;2000), and this has associated impacts on elephant habitats through deforestation and various developmental pressures (e.g. Miettinen&#160;<em>et al.</em>&#160;2011). The spread of human settlements, plantations, industry, farming, mining and linear infrastructures (roads, railway lines, irrigation canals, power lines, pipelines) have squeezed extant elephant populations into ever-decreasing pockets of forests and have blocked traditional migratory routes (Santiapillai and Jackson 1990; Leimgruber<em>et al.&#160;</em>2003; Sukumar 1989, 2003, 2006; Hedges 2006; Menon&#160;<em>et al.</em>&#160;2005, 2017). In the context of such drastic natural habitat modifications, the continued existence of Asian Elephants depends on the retention of PAs as core habitats, restoring highly degraded habitats, and establishing and maintaining connectivity between forested habitats (Menon&#160;<em>et al.</em>&#160;2005, 2017; Goswami&#160;<em>et al.</em>&#160;2014a). The Asian Elephant is a habitat generalist species that occupies natural and human-modified areas, and the ability of the species to adapt their ecology and behaviour in response to anthropogenic change will also determine their persistence in human-dominated landscapes (Goswami&#160;<em>et al.</em>&#160;2014b, Kumar&#160;<em>et al.</em>&#160;2018, Krishnan&#160;<em>et al.&#160;</em>2019). Across Asia, degradation and increased conversion of forest habitats to agricultural lands and plantations (Jha&#160;<em>et al.</em>&#160;2000, Estes&#160;<em>et al.</em>&#160;2012, Gopala&#160;<em>et al.</em>&#160;2011, Abram&#160;<em>et al.</em>&#160;2014, Goossens&#160;<em>et al.</em>&#160;2016, Leimgruber&#160;<em>et al.</em>&#160;2016) has drastically reduced available habitats and compromises its ability to sustain elephant populations in the natural forest habitats (Nyhus&#160;<em>et al.</em>&#160;2000;&#160;Sukumar 2003;&#160;Blake and Hedges 2004;&#160;Hedges&#160;<em>et al.</em>&#160;2005;&#160;Goswami&#160;<em>et al.</em>&#160;2014a, 2014b; Williams&#160;<em>et al.</em>&#160;2002;&#160;Williams and Johnsingh 2004). Thus, there is a need to expand focus of conservation efforts beyond Protected Areas as a sizeable proportion of Asian Elephant populations exist in human-use landscapes adjoining forest habitats, determining their survival in altered landscapes (Madhusudan&#160;<em>et al.&#160;</em>2015, Menon&#160;<em>et al.&#160;</em>2017, Fernando&#160;<em>et al.</em>&#160;2019). Even where there is significant, natural habitats left, Madhusudan (2004) and Prasada&#160;<em>et al.</em>&#160;(2011) showed that alien invasive species and livestock grazing are now reported to be significant threats to natural food plants across much of the Asian Elephant range.<br/><br/>Linear intrusions such as railway lines, power transmission lines, and highways cutting through elephant habitats also affect the species at large by fragmenting the habitat (Raman 2011). Elephant death on certain stretches of railway tracks has been a serious concern for elephant conservation (Rangarajan&#160;<em>et al.</em>&#160;2010, Singh&#160;<em>et al.</em>&#160;2001, Menon&#160;<em>et al.</em>&#160;2003, Sarma&#160;<em>et al.</em>&#160;2006). In India alone, about 310 elephants have died due to train hits between 1987 and June 2019 of which more than two-thirds of the deaths have been reported from Assam and West Bengal (Singh&#160;<em>et al.</em>&#160;2001, Menon&#160;<em>et al.</em>&#160;2003, Sarma&#160;<em>et al.</em>&#160;2006, Roy&#160;<em>et al.</em>&#160;2009). In Sri Lanka, about 14 elephants have died due to train hits in 2018 (till Oct 2018) and seven elephant deaths reported by train hits in 2017. With elephants living in forested habitat islands surrounded by human dominated landscapes, a major challenge is maintaining the long-term viability of elephant populations. A solution lies in the establishment of connectivity between elephant habitats to ensure that there is both space for ranging for these large mammals and to maintain a larger population for longer term viability. Rapid human developmental activities in a quest for higher economic growth in developing countries across Asia has resulted in loss of physical and functional corridors between populations&#160; and is becoming a serious concern for Asian Elephants (Doerr&#160;<em>et al.</em>&#160;2011, Sukumar&#160;<em>et al.&#160;</em>2016, Menon&#160;<em>et al.</em>&#160;2017).&#160; Johnsingh and Williams (2001) warned about this and also highlighted where there have been success stories in securing the corridors in India and recommended that this is replicated across Asia. A serious attention to protection of existing elephant corridors is the need of the hour for elephant conservation. Given that mitigation of human–elephant conflict can involve the use of various kinds of barriers, there can be a trade-off between the management of conflict and the need to maintain connectivity for the species; it is imperative that mitigation measures do not compromise elephant movement in areas critical for Asian Elephant population connectivity (Goswami and Vasudev 2017).<u><br/><br/></u><strong><u>Human–elephant conflict</u><br/></strong>Human–elephant conflict, a direct result of habitat conversion and fragmentation, now threatens the survival of elephants across range states in Asia. Across Asia, in landscapes where people and elephants share spaces, negative interactions intensify into incidents of conflict, leading to loss of lives on both protagonists, besides causing damages to crops and property (Madhusudan 2003, Kumar&#160;<em>et al.</em>&#160;2004, Fernando&#160;<em>et al.</em>&#160;2005, Hedges and Gunaryadi 2010, Goswami&#160;<em>et al.&#160;</em>2015, Sukumar <em>et.al.</em> 2016). In Asia, people and elephants are increasingly coming into conflict as elephant habitats are either being converted to cultivated lands and plantations (Sukumar 1989, Santiapillai and Jackson 1990) or modified for construction of dams, power generation stations and mines, and fragmented by roads, canals, powerlines etc. (Johnsingh&#160;<em>et al.</em>&#160;1990, Singh&#160;<em>et al.</em>&#160;2002). High pressures on elephant habitats due to increased human densities, especially in the Western Ghats of India and Sri Lanka, gives an astounding dimension to human–elephant conflict (Cincotta&#160;<em>et al.</em>&#160;2000). This would further compress elephant populations in their natural habitats and push them into surrounding agriculture crops and human habitations leading to intense human–elephant conflict (Sukumar, 1990, Thouless, 1994, Nyhus&#160;<em>et al.</em>&#160;2000). Climate change impacts that lead to variability in rainfall, and thereby resource availability, can increase the proclivity with which elephants raid crops and thus come into conflict with people (Goswami&#160;<em>et al.</em>&#160;2015). Decreased threshold levels of human tolerance towards elephants and increased negative interactions have, and can continue to, affect human–elephant coexistence in modified landscapes (Gureja&#160;<em>et al.</em>&#160;2002, Goswami&#160;<em>et al.</em>&#160;2014b, Calabrese&#160;<em>et al.</em>&#160;2017, Fernando&#160;<em>et al.</em>&#160;2019). Conflicts between people and elephants result in the loss of more than 600 humans and 450 elephant lives every year in Asia; 80-85% of these reported from India and Sri Lanka alone.&#160; It is also known that record of elephant deaths to HEC is not formally recorded outside of South Asia and in a few sites in SE Asia. Therefore the number of elephants dying due to conflict might be an underestimate.<br/><br/>Retaliatory killings of elephants due to conflict are effected through poisoning, electrocution, gun shots, Hakka-patas mostly intentional actions, but sometimes accidental (Fernando&#160;<em>et al.</em>&#160;2011, Palei&#160;<em>et al.</em>&#160;2014). In several intense conflict areas, elephants are poisoned intentionally by farmers in defence of crops. Between 1997 and 2016–17, there have been 107 reported poisoning cases of elephants and 879 cases of elephant electrocution across India (MoEFCC). However the retaliatory killing of elephants are probably not reported or recorded from large parts of the Asian Elephant range, especially SE Asia, and thus the magnitude of the problem is poorly understood. Like most other conflict-related deaths, elephant mortalities due to poisoning and electrocution are on the rise owing to intense negative interactions at the human–elephant interface. Increasing trend in retaliatory killing of elephants has been a serious concern for elephant conservation in highly populated countries such as India and Sri Lanka (Fernando&#160;<em>et al.</em>&#160;2011, Gubbi&#160;<em>et al.</em>&#160;2014). Thus, decreased threshold levels of human tolerance towards elephants and increased negative interactions have affected human–elephant coexistence in modified landscapes (Gureja&#160;<em>et al.</em>&#160;2002, Calabrese&#160;<em>et al.</em>&#160;2017, Fernando&#160;<em>et al.</em>&#160;2019). Human-elephant conflict in many places in South Asia is now a governance issue, especially in sites where humans are being killed as a result, rather than strictly a conservation issue.<br/><u><br/></u><u><strong>Poaching and trade of body parts</strong><br/></u>Poaching is a major threat to elephants in Asia, although reliable estimates of the number of elephants killed and the quantities of ivory and other body parts collected and traded are scarce (Sukumar&#160;<em>et al.</em>&#160;1998, Milliken, 2005). Although it was traditionally believed that poaching is a relatively minor threat to Asian Elephant because some males and all females lack tusks (Dawson and Blackburn 1991, Sukumar 1989) but in reality Asian Elephants are poached not only for ivory but for a variety of other products (including meat and skin), and poaching is acknowledged as a threat to the long-term survival of some Asian Elephant populations (e.g. Kemf and Santiapillai 2000; Menon 2002; Elephant Family 2018, 2019). The emerging trade of skin for making beads, pendants, powder etc. in Myanmar and parts of Cambodia may severely threaten elephant populations in Southeast Asia which already have low densities of elephants. There has been a significant increase in skin trade across Southeast Asia, with China even providing licenses for sale of pharmaceutical products containing elephant skin, besides its aesthetic/ornamental use (Elephant Family 2018). Estimates show that numbers of elephants poached for skin has drastically increased over the past decade; for instance, in Myanmar, four elephants were poached for skin in 2010, which rose to 61 by 2016 (Lynn 2017; Elephant Family 2018, 2019). In 2016–17, one elephant was being killed per week for the skin trade (WWF Myanmar, pers comm). With better social media connectivity, illegal trade is becoming much more apparent through online platforms. Live trade of elephant calves also pose a threat to their wild populations, especially in Myanmar, from where elephants are traded to Thailand for tourism purposes (Elephant Family 2018). Similarly, capture of elephant calves from the wild and their subsequent live trade, particularly from NE India to other parts of the country, poses an additional threat to wild elephants in source habitats (Rangarajan&#160;<em>et al.</em>&#160;2010).",
+    "measures": "The key conservation priorities for the Asian Elephant are:<ol><li>conservation of the elephant's habitat and maintaining habitat connectivity by securing corridors;</li><li>the management of human-elephant conflict as part of an integrated, landscape-scale land-use policy;</li><li>better protection to the species through improved legislation and law enforcement, improved and enhanced field patrolling, and regulating/curbing trade in ivory, live elephants and other elephant products.&#160;</li></ol>Monitoring of conservation interventions is also needed to assess the success or failure of the interventions so that adjustments can be made as necessary (i.e. adaptive management). Reliable estimation of population size and trends will be needed as part of this monitoring and adaptive management approach. This species is listed on CITES Appendix I.",
+    "use_trade": "The Asian Elephant is hunted for ivory, food, skin, leather and other products. Live animals are also removed from the wild and used in forestry operations and for ceremonial purposes. Very few tuskers are left in the wild in Asia barring a few sites in S. Asia, Sumatra and Borneo and poaching could further threaten the tusker numbers. However, in Myanmar, elephants are now being hunted for their skin. Dried elephant skin is being made into beads for good-luck bracelets and necklaces, dry skin powder mixed with herbs is also used as alleged treatments for dry skin and stomach ailments&#160;(Elephant Family 2018, 2019).",
+    "rationale": "<p><span lang=\"EN-IN\">The Asian Elephant is listed as Endangered (EN) because of a population size reduction inferred to be at least 50% over the last three generations, based on a reduction in its area of occupancy and the quality of its habitat. As per an assessment in the early 2000s, nearly half of the Asian Elephant’s range, spanning 873,000 km² across 13 countries in the continent, comprised habitats that are fragmented and strongly impacted by anthropogenic pressures (Leimgruber <em>et al.</em>&#160;2003). Although efforts to map the current range-wide distribution of the species are afoot, evaluations of elephant presence in some range countries suggest a declining trend: elephant distribution is estimated to have reduced by ca. 20% in Sri Lanka between 1960 and now (Fernando <em>et al.</em>&#160;2019); in the Yunan Province of China, it is estimated to be one-third of what it was in 1975 (Liu <em>et al</em>.&#160;2017); in Myanmar, it is estimated to have decreased by 5% between 1992 and 2006 (Songer <em>et al.</em>&#160;2016); and in the southern Western Ghats of India, the estimated decline in elephant distribution is <em>ca</em> 11% in 30 years, between 1979 and 2009 (Pillay <em>et al.&#160;</em>2011).<br/><br/>While populations of Asian Elephants in South Asia are believed to have been relatively stable in the recent past, numbers have plummeted in Vietnam, Laos, Malaysia, Myanmar and Indonesian Sumatra (Menon and Tiwari 2019). In light of growing anthropogenic threats across elephant habitats, population declines are a distinct possibility. However, the lack of reliable population estimates across most of the Asian elephant range presents a considerable challenge to detecting such declines. Nevertheless<span lang=\"EN-IN\">, <span lang=\"EN-IN\">from what is known about trends in habitat loss/degradation and other threats including poaching, an overall population decline of at least 50% since 1945 over the last three generations (estimated to be 75 years, based on a generation time estimated to be 25 years) seems realistic. The Sumatran subspecies is listed as Critically Endangered (CR).</span></p>",
+    "trend_justification": null,
+    "taxonomic_notes": "While subspecies taxonomy of <em>Elephas maximus</em> has varied among authors, the most recent treatment (Shoshani and Eisenberg 1982) recognizes three subspecies: <em>E. m. indicus</em> on the Asian mainland, <em>E. m. maximus</em> on Sri Lanka, and <em>E. m. sumatranus</em> on the Indonesian island of Sumatra. Borneo's elephants have traditionally been included in <em>E. m. indicus</em> (Shoshani and Eisenberg 1982) or <em>E. m. sumatranus</em> (Medway 1977; but see Fernando <em>et al</em>. 2003 and Cranbrook <em>et al</em>. 2008 for discussion of whether the elephants of Borneo are indigenous to the island). These subspecies designations were based primarily on body size and minor differences in coloration, plus the fact that <em>E. m. sumatranus</em> has relatively larger ears and an extra pair of ribs (Shoshani and Eisenberg 1982). The Sri Lankan subspecies designation was weakly supported by analysis of allozyme loci (Nozawa and Shotake 1990), but not by analysis of mitochondrial DNA (mtDNA) sequences (Hartl <em>et al</em>. 1996, Fernando <em>et al</em>. 2000, Fleischer <em>et al</em>. 2001,&#160;<span class=\"msoIns\">Vidya <em>et al.</em> 2009</span>). However, current patterns of mtDNA variation suggest that the Sumatran subspecies is monophyletic (Fleischer <em>et al</em>. 2001), and consequently this taxon could be defined as an evolutionarily significant unit (ESU). This suggests that Sumatran elephants should be managed separately from other Asian Elephants in captivity, and is also an argument for according particularly high priority to the conservation of Sumatran elephants in the wild.&#160;Borneo's elephants have traditionally been included within <em>Elephas maximus indicus</em> (Shoshani and Eisenberg 1982) or <em>Elephas maximus sumatranus</em> (Medway 1977). However, elephants in Borneo are morphologically, and behaviourally distinct from the elephants of mainland Asia (Cranbrook <em>et al.</em>&#160;2008). Mitochondrial DNA haplotypes (mtDNA) analysis (Fernando <em>et al</em>. 2003, Sharma <em>et al.&#160;</em>2018) also confirms this and indicates that Borneo's elephants are genetically distinct from any South and Southeast Asian population and may have been isolated for over 300,000 years.&#160;<span class=\"msoIns\">However, </span><span class=\"msoIns\">Sharma <em>et al. </em>2018 suggests that</span><span class=\"msoIns\"> the best-fitting scenario involves an end-of-Pleistocene bottleneck, probably between 11,000–18,000 years ago, roughly coinciding with the end of the Last Glacial Maximum (LGM).&#160;</span>These studies may necessitate the formation of a separate subspecies <em>Elephas maximus borneensis</em>.&#160;&#160;Two other proposed subspecies <em>E. m. asurus</em> and <em>E. m. rubridens</em> are extinct. A definitive subspecific classification awaits a detailed range-wide morphometric and genetic study."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_2",
+      "description": {
+        "en": "Training"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Subtropical/Tropical Heavily Degraded Former Forest"
+      },
+      "code": "14_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Seasonally Wet/Flooded"
+      },
+      "code": "4_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sabah"
+      },
+      "code": "BOR-SB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kalimantan"
+      },
+      "code": "BOR-KA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Peninsular Malaysia"
+      },
+      "code": "MLY-PM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bhutan"
+      },
+      "code": "BT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sumatera"
+      },
+      "code": "SUM-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lao People's Democratic Republic"
+      },
+      "code": "LA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nepal"
+      },
+      "code": "NP"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Handicrafts, jewellery, etc."
+      },
+      "code": "12"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Very Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "High Impact: 8",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Motivation Unknown/Unrecorded"
+      },
+      "code": "5_3_5"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry plantations"
+      },
+      "code": "2_2_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Shifting agriculture"
+      },
+      "code": "2_1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "High Impact: 8",
+      "severity": "Very Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects (species is not the target)"
+      },
+      "code": "5_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Increase in fire frequency/intensity"
+      },
+      "code": "7_1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_2_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "High Impact: 8",
+      "severity": "Very Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Large dams"
+      },
+      "code": "7_2_10"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small dams"
+      },
+      "code": "7_2_9"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Problematic native species/diseases"
+      },
+      "code": "8_2"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other ecosystem modifications"
+      },
+      "code": "7_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Williams, C., Tiwari, S.K., Goswami, V.R., de Silva, S., Kumar, A., Baskaran, N., Yoganand, K. & Menon, V.",
+      "value": [
+        "Vivek Menon (Wildlife Trust of India and Chair, IUCN SSC Asian Elephant Specialist Group)",
+        "Christy Williams",
+        "Sandeep Tiwari (IUCN SSC Asian Elephant Specialist Group)",
+        "Varun Goswami (Conservation Initiatives, India)",
+        "Shermin de Silva (Trunks & Leaves Inc)",
+        "A Kumar (Nature Conservation Foundation, India)",
+        "N Baskaran (A.V.C. College, Tamil Nadu, Ind)",
+        "K Yoganand (WWF Lao PDR)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Vidya, T.N.C. & Goossens, B.",
+      "value": [
+        "Benoit Goossens (Danau Girang Field Centre, Sabah, Malaysia)",
+        "T.N.C. Vidya (Evolutionary and Organismal Biology Unit, Jawaharlal Nehru Centre for Advanced Scientific Research, Bengaluru, India)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Williams, C. & Tiwari, S.K.",
+      "value": [
+        "Christy Williams",
+        "Sandeep Tiwari (IUCN SSC Asian Elephant Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "institutions",
+      "full": "IUCN SSC Asian Elephant Specialist Group",
+      "value": [
+        "IUCN SSC Asian Elephant Specialist Group"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C. 2013. Generation length for mammals. <i>Nature Conservation</i> 5: 87–94.",
+      "year": "2013",
+      "title": "Generation length for mammals",
+      "author": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Jha, C.S., Dutt, C.B.S. and Bawa, K.S. 2000. Deforestation and land use changes in Western Ghats, India. <i>Current Science</i> 79(2): 231-238.",
+      "year": "2000",
+      "title": "Deforestation and land use changes in Western Ghats, India",
+      "author": "Jha, C.S., Dutt, C.B.S. and Bawa, K.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Miettinen, J., Shi, C. and Liew, S.C. 2011. Deforestation rates in insular Southeast Asia between 2000 and 2010. <i>Global Change Biology</i> 17(7): 2261-2270. DOI:10.111/j.1365-2486.2011.02398.x.",
+      "year": "2011",
+      "title": "Deforestation rates in insular Southeast Asia between 2000 and 2010",
+      "author": "Miettinen, J., Shi, C. and Liew, S.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Medway, L. 1977. <i>Mammals of Borneo: Field keys and an annotated checklist</i>. Monographs of the Malaysian Branch of the Royal Asiatic Society, Kuala Lumpur, Malaysia.",
+      "year": "1977",
+      "title": "Mammals of Borneo: Field keys and an annotated checklist",
+      "author": "Medway, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Duckworth, J.W. and Hedges, S. 1998. <i>Tracking Tigers: A review of the Status of Tiger, Asian Elephant, Gaur, and Banteng in Vietnam, Lao, Cambodia, and Yunnan (China), with Recommendations for Future Conservation Action</i>. Wildlife Conservation Research Unit, University of Oxford, UK.",
+      "year": "1998",
+      "title": "Tracking Tigers: A review of the Status of Tiger, Asian Elephant, Gaur, and Banteng in Vietnam, Lao, Cambodia, and Yunnan (China), with Recommendations for Future Conservation Action",
+      "author": "Duckworth, J.W. and Hedges, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fernando, P., Vidya, T. N. C., Payne, J., Stuewe, M., Davison, G., Alfred, R. J., Andau, P., Bosi, E., Kilbourn, A. and Melnick, D. J. 2003. DNA analysis indicates that Asian elephants are native to Borneo and Are therefore a high priority for conservation. <i>PLoS Biology</i> 1(1): 110-115.",
+      "year": "2003",
+      "title": "DNA analysis indicates that Asian elephants are native to Borneo and Are therefore a high priority for conservation",
+      "author": "Fernando, P., Vidya, T. N. C., Payne, J., Stuewe, M., Davison, G., Alfred, R. J., Andau, P., Bosi, E., Kilbourn, A. and Melnick, D. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hedges, S., Tyson, M. J., Sitompul, A. F., Kinnaird, M. F., Gunaryadi, D. and Aslan. 2005. Distribution, status, and conservation needs of Asian elephants (<i>Elephas maximus</i>) in Lampung Province, Sumatra, Indonesia. <i>Biological Conservation</i> 124: 35–48.",
+      "year": "2005",
+      "title": "Distribution, status, and conservation needs of Asian elephants (<i>Elephas maximus</i>) in Lampung Province, Sumatra, Indonesia",
+      "author": "Hedges, S., Tyson, M. J., Sitompul, A. F., Kinnaird, M. F., Gunaryadi, D. and Aslan",
+      "citation_short": null
+    },
+    {
+      "citation": "Blouch, R. A. and Haryanto. 1984. Elephants in southern Sumatra. Unpublished report, IUCN/WWF Project 3033, Bogor, Indonesia.",
+      "year": "1984",
+      "title": "Elephants in southern Sumatra",
+      "author": "Blouch, R. A. and Haryanto",
+      "citation_short": null
+    },
+    {
+      "citation": "Hartl, G. B., Kurt, F., Tiedemann, R., Gmeiner, C., Nadlinger, K., Mar, K. U. and Rübel, A. 1996. Population genetics and systematics of Asian elephant (<i>Elephas maximus</i>): a study based on sequence variation at the cyt b gene of PCR-amplified mitochondrial DNA from hair bulbs. <i>Zeitschrift für Säugetierkunde</i> 6: 285-294.",
+      "year": "1996",
+      "title": "Population genetics and systematics of Asian elephant (<i>Elephas maximus</i>): a study based on sequence variation at the cyt b gene of PCR-amplified mitochondrial DNA from hair bulbs",
+      "author": "Hartl, G. B., Kurt, F., Tiedemann, R., Gmeiner, C., Nadlinger, K., Mar, K. U. and Rübel, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cranbrook, Earl of, Payne, J. and Leh, C. M. U. 2008. Origin of the elephants <i>Elephas maximus</i> L. of Borneo. <i>Sarawak Museum Journal</i>.",
+      "year": "2008",
+      "title": "Origin of the elephants <i>Elephas maximus</i> L. of Borneo",
+      "author": "Cranbrook, Earl of, Payne, J. and Leh, C. M. U.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fleischer, R. C., Perry, E. A., Muralidharan, K., Stevens, E. E. and Wemmer, C. M. 2001. Phylogeography of the Asian elephant (<i>Elephas maximus</i>) based on mitochondrial DNA. <i>Evolution</i> 55: 1882–1892.",
+      "year": "2001",
+      "title": "Phylogeography of the Asian elephant (<i>Elephas maximus</i>) based on mitochondrial DNA",
+      "author": "Fleischer, R. C., Perry, E. A., Muralidharan, K., Stevens, E. E. and Wemmer, C. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shoshani, J. and Eisenberg, J. F. 1982. <i>Elephas maximus</i>. <i>Mammalian Species</i> 182: 1–8.",
+      "year": "1982",
+      "title": "<i>Elephas maximus</i>",
+      "author": "Shoshani, J. and Eisenberg, J. F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Desai, A. and Samsuardi. 2009. Status of elephant habitat and population in Riau. In: WWF (ed.). Pekanbaru, Indonesia.",
+      "year": "2009",
+      "title": "Status of elephant habitat and population in Riau",
+      "author": "Desai, A. and Samsuardi",
+      "citation_short": null
+    },
+    {
+      "citation": "Fernando, P., Pfrender, M. E., Encalada, S. E. and Lande, R. 2000. Mitochondrial DNA variation, phylogeography and population structure of the Asian elephant. <i>Heredity</i> 84: 362–372.",
+      "year": "2000",
+      "title": "Mitochondrial DNA variation, phylogeography and population structure of the Asian elephant",
+      "author": "Fernando, P., Pfrender, M. E., Encalada, S. E. and Lande, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nozawa, K. and Shotake, T. 1990. Genetic differentiation among local populations of Asian elephant. <i>Zeitschrift fur Zoologische Systematik und Evolutionsforschung</i> 28: 40–47.",
+      "year": "1990",
+      "title": "Genetic differentiation among local populations of Asian elephant",
+      "author": "Nozawa, K. and Shotake, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Madhusudan, M.D. 2004. Recovery of wild large herbivores following livestock decline in a tropical Indian wildlife reserve. <i>Journal of Applied Ecology</i> 41: 858–869.",
+      "year": "2004",
+      "title": "Recovery of wild large herbivores following livestock decline in a tropical Indian wildlife reserve",
+      "author": "Madhusudan, M.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kemf, E. and Santiapillai, C. 2000. Asian Elephants in the Wild.  A WWF Species Status Report. WWF-International, Gland, Switzerland.",
+      "year": "2000",
+      "title": "Asian Elephants in the Wild",
+      "author": "Kemf, E. and Santiapillai, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fernando, P., Wickramanayake, E., Weerakoon, D., Jayasinghe, L. K. A., Gunawardene, M. and Janaka, H. K. 2005. Perceptions and patterns in human–elephant conflict in old and new settlements in Sri Lanka: insights for mitigation and management. <i>Biodiversity and Conservation</i> 14: 2465–2481.",
+      "year": "2005",
+      "title": "Perceptions and patterns in human–elephant conflict in old and new settlements in Sri Lanka: insights for mitigation and management",
+      "author": "Fernando, P., Wickramanayake, E., Weerakoon, D., Jayasinghe, L. K. A., Gunawardene, M. and Janaka, H. K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sukumar, R. 1992. <i>The Asian Elephant: Ecology and Management. Second edition</i>. Cambridge University Press, Cambridge, UK.",
+      "year": "1992",
+      "title": "The Asian Elephant: Ecology and Management. Second edition",
+      "author": "Sukumar, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Martin, E. and Stiles, D. 2002. The South and South East Asian Ivory Markets. Save the Elephants, Nairobi, Kenya, and London, UK.",
+      "year": "2002",
+      "title": "The South and South East Asian Ivory Markets",
+      "author": "Martin, E. and Stiles, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sukumar, R., Ramakrishnan, U. and Santosh, J. A. 1998. Impact of poaching on an Asian elephant population in Periyar, southern India: a model of demography and tusk harvest. <i>Animal Conservation</i> 1: 281–291.",
+      "year": "1998",
+      "title": "Impact of poaching on an Asian elephant population in Periyar, southern India: a model of demography and tusk harvest",
+      "author": "Sukumar, R., Ramakrishnan, U. and Santosh, J. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vancuylenberg, B. W. B. 1977. Feeding behaviour of the Asiatic elephant in south-east Sri Lanka in relation to conservation. <i>Biological Conservation</i> 12: 33–54.",
+      "year": "1977",
+      "title": "Feeding behaviour of the Asiatic elephant in south-east Sri Lanka in relation to conservation",
+      "author": "Vancuylenberg, B. W. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Baskaran, N., Balasubramaniam, M., Swaminathan, S. and Desai, A. A. 1995. Home range of elephants in the Nilgiri Biosphere Reserve, South India. In: J. C. Daniel and H. S. Datye (eds), <i>A Week with Elephants</i>, pp. 296–313. Bombay Natural History Society and Oxford University Press, Bombay and New Delhi.",
+      "year": "1995",
+      "title": "Home range of elephants in the Nilgiri Biosphere Reserve, South India",
+      "author": "Baskaran, N., Balasubramaniam, M., Swaminathan, S. and Desai, A. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Santiapillai, C. and Jackson, P. 1990. <i>The Asian Elephant: An Action Plan for its Conservation</i>. IUCN, Gland, Switzerland.",
+      "year": "1990",
+      "title": "The Asian Elephant: An Action Plan for its Conservation",
+      "author": "Santiapillai, C. and Jackson, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Chandran, P. M. 1990. Population dynamics of elephants in Periyar Tiger Reserve. In: C. K. Karunakaran (ed.), <i>Proceedings of the Symposium on Ecology, Behaviour and Management of Elephants in Kerala</i>, pp. 51-56. Kerala Forest Department, Trivandrum, India.",
+      "year": "1990",
+      "title": "Population dynamics of elephants in Periyar Tiger Reserve",
+      "author": "Chandran, P. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dawson, S. and Blackburn, T. M. 1991. Asian elephant threatened. <i>Nature</i> 352: 274.",
+      "year": "1991",
+      "title": "Asian elephant threatened",
+      "author": "Dawson, S. and Blackburn, T. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Menon, V., Sukumar, R. and Kumar, A. 1997. <i>A God in Distress: Threats of Poaching and the Ivory Trade to the Asian Elephant in India</i>. Wildlife Protection Society of India, New Delhi, India.",
+      "year": "1997",
+      "title": "A God in Distress: Threats of Poaching and the Ivory Trade to the Asian Elephant in India",
+      "author": "Menon, V., Sukumar, R. and Kumar, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Smith, A. T. and MacKinnon, J. 2008. Order Proboscidea. In: A. T. Smith and Y. Xie (eds), <i>The Mammals of China</i>, pp. 544 pp.. Princeton University Press, Princeton and Oxford.",
+      "year": "2008",
+      "title": "Order Proboscidea",
+      "author": "Smith, A. T. and MacKinnon, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Leimgruber, P., Gagnon, J. B., Wemmer, C. M., Kelly, D. S., Songer, M. A. and Selig, E. R. 2003. Fragmentation of Asia’s remaining wildlands: implications for Asian elephant conservation. <i>Animal Conservation</i> 6: 347–359.",
+      "year": "2003",
+      "title": "Fragmentation of Asia’s remaining wildlands: implications for Asian elephant conservation",
+      "author": "Leimgruber, P., Gagnon, J. B., Wemmer, C. M., Kelly, D. S., Songer, M. A. and Selig, E. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Olivier, R. 1978. Distribution and status of the Asian elephant. <i>Oryx</i> 14: 379–424.",
+      "year": "1978",
+      "title": "Distribution and status of the Asian elephant",
+      "author": "Olivier, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sukumar, R. 2003. <i>The Living Elephants: Evolutionary Ecology, Behavior, and Conservation</i>. Oxford University Press, Oxford, UK.",
+      "year": "2003",
+      "title": "The Living Elephants: Evolutionary Ecology, Behavior, and Conservation",
+      "author": "Sukumar, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "McKay, G. M. 1973. Behaviour and ecology of the Asiatic elephant in southeastern Ceylon. <i>Smithsonian Contributions to Zoology</i> 125: 1–113.",
+      "year": "1973",
+      "title": "Behaviour and ecology of the Asiatic elephant in southeastern Ceylon",
+      "author": "McKay, G. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Williams, A. C. 2002. PhD thesis. Rajkot University.",
+      "year": "2002",
+      "title": "PhD thesis",
+      "author": "Williams, A. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hedges, S. 2006. Conservation. In: M. E. Fowler and S. K. Mikota (eds), <i>Biology, Medicine and Surgery of Elephants</i>, pp. 475-490. Blackwell Publishing, Oxford, UK.",
+      "year": "2006",
+      "title": "Conservation",
+      "author": "Hedges, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Baskaran, N. 2002. Ranging and resource utilization of Asian Elephants (<i>Elephas maximus</i>) in Nilgiri Biosphere Reserve. PhD thesis, Bhartidasan University.",
+      "year": "2002",
+      "title": "Ranging and resource utilization of Asian Elephants (<i>Elephas maximus</i>) in Nilgiri Biosphere Reserve",
+      "author": "Baskaran, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "World Wide Fund for Nature (WWF). 2002. <i>Saving a Future for Asia’s Wild Rhinos and Elephants. WWF’s Asian Rhino and Elephant Action Strategy</i>. WWF-International, Gland, Switzerland.",
+      "year": "2002",
+      "title": "Saving a Future for Asia’s Wild Rhinos and Elephants. WWF’s Asian Rhino and Elephant Action Strategy",
+      "author": "World Wide Fund for Nature (WWF)",
+      "citation_short": null
+    },
+    {
+      "citation": "Hedges, S., Tyson, M. J., Sitompul, A. F. and Hammatt, H. 2006. Why inter-country loans will not help Sumatra’s elephants. <i>Zoo Biology</i> 25: 235–246.",
+      "year": "2006",
+      "title": "Why inter-country loans will not help Sumatra’s elephants",
+      "author": "Hedges, S., Tyson, M. J., Sitompul, A. F. and Hammatt, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Blake, S. and Hedges, S. 2004. Sinking the flagship: the case of forest elephants in Asia and Africa. <i>Conservation Biology</i> 18: 1191–1202.",
+      "year": "2004",
+      "title": "Sinking the flagship: the case of forest elephants in Asia and Africa",
+      "author": "Blake, S. and Hedges, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Blouch, R. A. and Simbolon, K. 1985. Elephants in northern Sumatra. Unpublished report, IUCN/WWF Project 3033, Bogor, Indonesia.",
+      "year": "1985",
+      "title": "Elephants in northern Sumatra",
+      "author": "Blouch, R. A. and Simbolon, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Milliken, T. 2005. Urgent need for ASEAN to improve elephant ivory trade monitoring performance. Available at: <a href=\"<http://www.traffic.org/news/elephant_ivory.html>. Downloaded on 22 July 2005.\"><http://www.traffic.org/news/elephant_ivory.html>. Downloaded on 22 July 2005.</a>. ",
+      "year": "2005",
+      "title": "Urgent need for ASEAN to improve elephant ivory trade monitoring performance",
+      "author": "Milliken, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Choudhury, A. U. 1999. Status and Conservation of the Asian elephant <i>Elephas maximus</i> in north-eastern India. <i>Mammal Review</i> 29: 141-173.",
+      "year": "1999",
+      "title": "Status and Conservation of the Asian elephant <i>Elephas maximus</i> in north-eastern India",
+      "author": "Choudhury, A. U.",
+      "citation_short": null
+    },
+    {
+      "citation": "Menon, V. 2002. <i>Tusker: the Story of the Asian Elephant</i>. Penguin Books, New Delhi, India.",
+      "year": "2002",
+      "title": "Tusker: the Story of the Asian Elephant",
+      "author": "Menon, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Owen-Smith, N. 1988. <i>Megaherbivores: the Influence of Very Large Body Size on Ecology</i>. Cambridge University Press, Cambridge, UK.",
+      "year": "1988",
+      "title": "Megaherbivores: the Influence of Very Large Body Size on Ecology",
+      "author": "Owen-Smith, N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pillay, R., Johnsingh, A.J.T., Raghunath, R. and Madhusudan, M.D. 2011. Patterns of spatiotemporal change in large mammal distribution and abundance in the southern Western Ghats, India. <i>Biological Conservation</i> 144: 1567–1576.",
+      "year": "2011",
+      "title": "Patterns of spatiotemporal change in large mammal distribution and abundance in the southern Western Ghats, India",
+      "author": "Pillay, R., Johnsingh, A.J.T., Raghunath, R. and Madhusudan, M.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 December 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-3"
+    },
+    {
+      "citation": "Abram, N.K., Meijaard, E., Ancrenaz, M., Runting, R.K., Wells, J.A., Gaveau, D., Pellier, A.S. and Mengersen, K. 2014. Spatially explicit perceptions of ecosystem services and land cover change in forested regions of Borneo. <i>Ecosystem Servvices</i> 7: 116-127.",
+      "year": "2014",
+      "title": "Spatially explicit perceptions of ecosystem services and land cover change in forested regions of Borneo",
+      "author": "Abram, N.K., Meijaard, E., Ancrenaz, M., Runting, R.K., Wells, J.A., Gaveau, D., Pellier, A.S. and Mengersen, K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "AERSM. 2017. Asian elephant range states meeting final report 2017. Ministry of Environment and Forestry, Government of Indonesia.",
+      "year": "2017",
+      "title": "Asian elephant range states meeting final report 2017",
+      "author": "AERSM ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ahlering, M.A., Hedges, S., Johnson, A., Tyson, M., Schuttler, S.G. and Eggert, L.S. 2011. Genetic diversity, social structure, and conservation value of the elephants of the Nakai Plateau, Lao PDR, based on non-invasive sampling. <i>Conservation Genetics</i> 12: 413-422.",
+      "year": "2011",
+      "title": "Genetic diversity, social structure, and conservation value of the elephants of the Nakai Plateau, Lao PDR, based on non-invasive sampling",
+      "author": "Ahlering, M.A., Hedges, S., Johnson, A., Tyson, M., Schuttler, S.G. and Eggert, L.S.  ",
+      "citation_short": null
+    },
+    {
+      "citation": "Alfred, R., Ahmad, A. H., Payne, J., William, C., and Ambu, L. 2010. Density and population estimation of the Bornean elephant (<i>Elephas maximus borneensis</i>) in Sabah. <i>OnLine Journal of Biological Sciences</i> 10: 92-102.",
+      "year": "2010",
+      "title": "Density and population estimation of the Bornean elephant (<i>Elephas maximus borneensis</i>) in Sabah",
+      "author": "Alfred, R., Ahmad, A. H., Payne, J., William, C., and Ambu, L. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Alfred, R., Ambu, L., Nathan, S.K.S.S., and Goossens, B. 2011. Current Status of Asian Elephants in Borneo. <i>Gajah </i> 35: 29-35.",
+      "year": "2011",
+      "title": "Current Status of Asian Elephants in Borneo",
+      "author": "Alfred, R., Ambu, L., Nathan, S.K.S.S., and Goossens, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Alfred, R., Payne, J., Williams, C., Ambu, L. N., How, P. M., and Goossens, B. 2012.  Home Range and Ranging Behaviour of Bornean Elephant (<i>Elephas maximus borneensis</i>) Females. <i>PLoS ONE</i> 7(2): e31400.",
+      "year": "2012",
+      "title": " Home Range and Ranging Behaviour of Bornean Elephant (<i>Elephas maximus borneensis</i>) Females",
+      "author": "Alfred, R., Payne, J., Williams, C., Ambu, L. N., How, P. M., and Goossens, B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Baskaran, N. 2013. An overview of Asian Elephants in the Western Ghats, southern India: implications for the conservation of Western Ghats ecology. <i>Journal of Threatened Taxa</i> 5(14): 4854-4870.",
+      "year": "2013",
+      "title": "An overview of Asian Elephants in the Western Ghats, southern India: implications for the conservation of Western Ghats ecology",
+      "author": "Baskaran, N. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Baskaran, N., Balasubramanian, M., Swaminathan, S., and Desai, A.A. 2010. Feeding ecology of Asian Elephant (<i>Elephas maximus</i> Linn.) in tropical forests of Nilgiri Biosphere Reserve, Southern India. <i>Journal of Bombay Natural History Society</i> 107(1): 3-13.",
+      "year": "2010",
+      "title": "Feeding ecology of Asian Elephant (<i>Elephas maximus</i> Linn.) in tropical forests of Nilgiri Biosphere Reserve, Southern India",
+      "author": "Baskaran, N., Balasubramanian, M., Swaminathan, S., and Desai, A.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Baskaran, N., Kanakasabai, R. and Desai, A.A. 2018. Ranging and spacing behaviour of Asian elephant (<i>Elephas maximus</i> Linnaeus) in the tropical forests of Southern India. In: Sivaperuman, C. and Venkataraman, K. (eds), <i>Indian Hotspots</i>, pp. 295-315. Springer Singapore, Singapore.",
+      "year": "2018",
+      "title": "Ranging and spacing behaviour of Asian elephant (<i>Elephas maximus</i> Linnaeus) in the tropical forests of Southern India",
+      "author": "Baskaran, N., Kanakasabai, R. and Desai, A.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Calabrese, A., Calabrese, J. M., Songer, M., Wegmann, M., Hedges, S., Rose, R., and Leimgruber, P. 2017. Conservation status of Asian elephants: the influence of habitat and governance. <i>Biodiversity and Conservation</i> 26: 2067-2081.",
+      "year": "2017",
+      "title": "Conservation status of Asian elephants: the influence of habitat and governance",
+      "author": "Calabrese, A., Calabrese, J. M., Songer, M., Wegmann, M., Hedges, S., Rose, R., and Leimgruber, P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Campos-Arceiz, A. and Blake, S. 2011. Megagardeners of the forest - the role of elephants in seed dispersal. <i>Acta Oecologica</i> 37(6): 542–553.",
+      "year": "2011",
+      "title": "Megagardeners of the forest - the role of elephants in seed dispersal",
+      "author": "Campos-Arceiz, A. and Blake, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Campos-Arceiz, A., Larrinaga, A. R., Weerasinghe, U. R., Takatsuki, S., Pastorini, J., Leimgruber, P., … Santamaría, L. 2008. Behavior rather than diet mediates seasonal differences in seed dispersal by Asian elephants. <i>Ecology </i> 89: 2684-2691.",
+      "year": "2008",
+      "title": "Behavior rather than diet mediates seasonal differences in seed dispersal by Asian elephants",
+      "author": "Campos-Arceiz, A., Larrinaga, A. R., Weerasinghe, U. R., Takatsuki, S., Pastorini, J., Leimgruber, P., … Santamaría, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cincotta, R. P., Wisnewski, J. and Engelman, R. 2000. Human population in the biodiversity hotspots. <i>Nature</i> 404: 990-992.",
+      "year": "2000",
+      "title": "Human population in the biodiversity hotspots",
+      "author": "Cincotta, R. P., Wisnewski, J. and Engelman, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Department of Wildlife and National Parks Peninsular Malaysia. 2013. <i>National Elephant Conservation Action Plan: Blueprint to Save Malaysian Elephants</i>. Department of Wildlife andNational Parks Peninsular Malaysia, Kuala Lump ur, Malaysia.",
+      "year": "2013",
+      "title": "National Elephant Conservation Action Plan: Blueprint to Save Malaysian Elephants",
+      "author": "Department of Wildlife and National Parks Peninsular Malaysia ",
+      "citation_short": null
+    },
+    {
+      "citation": "Desai, A.A. 1991. The home range of elephants and its implications for management of the Mudumalai Wildlife Sanctuary, Tamilnadu. . <i>Journal of Bombay Natural History Society</i> 88: 145-156.",
+      "year": "1991",
+      "title": "The home range of elephants and its implications for management of the Mudumalai Wildlife Sanctuary, Tamilnadu. ",
+      "author": "Desai, A.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "de Silva, S. and Leimgruber, P. 2019. Demographic tipping points as early indicators of vulnerability for slow-breeding megafaunal populations. <i>Frontiers in Ecology and Evolution</i> 7: 1-13.",
+      "year": "2019",
+      "title": "Demographic tipping points as early indicators of vulnerability for slow-breeding megafaunal populations",
+      "author": "de Silva, S. and Leimgruber, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "de Silva, S., Ranjeewa, A. D. G., and Kryazhimskiy, S. 2011b. The dynamics of social networks among female Asian elephants. <i>BMC Ecology </i> 11: 17.",
+      "year": "2011b",
+      "title": "The dynamics of social networks among female Asian elephants",
+      "author": "de Silva, S., Ranjeewa, A. D. G., and Kryazhimskiy, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "de Silva, S., Ranjeewa, A. D. G., and Weerakoon, D. 2011a. Demography of Asian elephants (<i>Elephas maximus</i>) at Uda Walawe National Park, Sri Lanka based on identified individuals. <i>Biological Conservation </i> 144: 1742-1752.",
+      "year": "2011a",
+      "title": "Demography of Asian elephants (<i>Elephas maximus</i>) at Uda Walawe National Park, Sri Lanka based on identified individuals",
+      "author": "de Silva, S., Ranjeewa, A. D. G., and Weerakoon, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "de Silva, S., Schmid, V. and Wittemeyer, G. 2016. Fission–fusion processes weaken dominancenetworks of female Asian elephants in aproductive habitat. <i>Behavioral Ecology </i> 28: 243-252.",
+      "year": "2016",
+      "title": "Fission–fusion processes weaken dominancenetworks of female Asian elephants in aproductive habitat",
+      "author": "de Silva, S., Schmid, V. and Wittemeyer, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "de Silva, S., Webber, C. E., Weerathunga, U. S., Pushpakumara, T. V., Weerakoon, D. D. K., Wittemyer, G. 2013. Demographic variables for wild Asian elephants using longitudinal observations. <i>PloS One</i> 8: e82788.",
+      "year": "2013",
+      "title": "Demographic variables for wild Asian elephants using longitudinal observations",
+      "author": "de Silva, S., Webber, C. E., Weerathunga, U. S., Pushpakumara, T. V., Weerakoon, D. D. K., Wittemyer, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Doerr, V.A.J., Barrett, T. and Doerr, E.D. 2011. Connectivity, dispersal behaviour and conservation under climate change: a response to Hodgson et al. <i>Journal ofApplied Ecology</i> 48: 143-147.",
+      "year": "2011",
+      "title": "Connectivity, dispersal behaviour and conservation under climate change: a response to Hodgson et al",
+      "author": "Doerr, V.A.J., Barrett, T. and Doerr, E.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dumonceaux, G.A. 2006. Digestive System. In: M.E.F. and S.K. Mikota (eds), <i>Biology, Medicine, and Surgery of Elephants</i>, pp. 299-307. Blackwell Publishers, Ames, Iowa.",
+      "year": "2006",
+      "title": "Digestive System",
+      "author": "Dumonceaux, G.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dunkin, R. C., Wilson, D., Way, N., Johnson, K., and Williams, T. M. 2013. Climate influences thermal balance and water use in African and Asian elephants: physiology can predict drivers of elephant distributi. <i>Journal of Experimental Biology</i> 2016: 2939–29.",
+      "year": "2013",
+      "title": "Climate influences thermal balance and water use in African and Asian elephants: physiology can predict drivers of elephant distributi",
+      "author": "Dunkin, R. C., Wilson, D., Way, N., Johnson, K., and Williams, T. M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Elephant Family. 2018. <i>SKINNED- the growing appetites for Asian elephants</i>.",
+      "year": "2018",
+      "title": "SKINNED- the growing appetites for Asian elephants",
+      "author": "Elephant Family",
+      "citation_short": null
+    },
+    {
+      "citation": "Elephant Family. 2019. <i>Skin for Sale – The Continuing Appetite for Asian Elephants: Crime, Enforcement, Policy</i>. London, U.K.",
+      "year": "2019",
+      "title": "Skin for Sale – The Continuing Appetite for Asian Elephants: Crime, Enforcement, Policy",
+      "author": "Elephant Family",
+      "citation_short": null
+    },
+    {
+      "citation": "English, M., Gillespie, G., Ancrenaz, M., Ismail, S., Goossens, B., Nathan, S., and Linklater, W. 2014. Plant selection and avoidance by the Bornean elephant (<i>Elephas maximus borneensis</i>) in tropical forest: does plant recovery rate after herbivory influence food choices? <i>Journal of Tropical Ecology </i> 30: 371-379.",
+      "year": "2014",
+      "title": "Plant selection and avoidance by the Bornean elephant (<i>Elephas maximus borneensis</i>) in tropical forest: does plant recovery rate after herbivory influence food choices?",
+      "author": "English, M., Gillespie, G., Ancrenaz, M., Ismail, S., Goossens, B., Nathan, S., and Linklater, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Evans L.J., Goossens, B., Davies, A.B., Reynolds, G. and Asner, G.P. 2020. Natural and anthropogenic drivers of Bornean elephant movement strategie. <i>Global Ecology and Conservation</i> 22: e00906.",
+      "year": "2020",
+      "title": "Natural and anthropogenic drivers of Bornean elephant movement strategie",
+      "author": "Evans L.J., Goossens, B., Davies, A.B., Reynolds, G. and Asner, G.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fernando, P. and Pastorini, J. 2011. Range-wide status of Asian elephants. <i>Gajah</i> 35: 15-20.",
+      "year": "2011",
+      "title": "Range-wide status of Asian elephants",
+      "author": "Fernando, P. and Pastorini, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fernando, P., de silva, M.K.C., Jayasinghe, L.K.A., Janaka, H.K. and Pastorini, J. 2019. First country-wide survey of the Endangered Asian elephant: towards better conservation and management in Sri Lanka. <i>Oryx </i>: 1-10.",
+      "year": "2019",
+      "title": "First country-wide survey of the Endangered Asian elephant: towards better conservation and management in Sri Lanka",
+      "author": "Fernando, P., de silva, M.K.C., Jayasinghe, L.K.A., Janaka, H.K. and Pastorini, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fernando, P., Jayewardene, J., Prasad, T., Hendavitharana W. and Pastorini, J. 2011. Current Status of Asian Elephants in Sri Lanka. <i>Gajah </i> 35: 93-103.",
+      "year": "2011",
+      "title": "Current Status of Asian Elephants in Sri Lanka",
+      "author": "Fernando, P., Jayewardene, J., Prasad, T., Hendavitharana W. and Pastorini, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fernando, P., Wikramanayake, E. D., Janaka, H. K., Jayasinghe, L. K. A., Gunawardena, M., Kotagama, S. W., Weerakoon, D. and Pastorini, J. 2008. Ranging behavior of the Asian elephant in Sri Lanka. <i>Mammalian Biology</i> 73(1): 2-13.",
+      "year": "2008",
+      "title": "Ranging behavior of the Asian elephant in Sri Lanka",
+      "author": "Fernando, P., Wikramanayake, E. D., Janaka, H. K., Jayasinghe, L. K. A., Gunawardena, M., Kotagama, S. W., Weerakoon, D. and Pastorini, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Goossens, B., Sharma, R., Othman, N., Kun-Rodrigues C., Sakong, R., Ancrenaz, M., Ambu, L. N., Jue, N. K., O'Neill, R. J., Bruford, M. W. and Chikhi, L. 2016. Habitat fragmentation and genetic diversity in natural populations of the Bornean elephant: Implications for conservation. <i>Biological Conservation</i> 196: 80-92.",
+      "year": "2016",
+      "title": "Habitat fragmentation and genetic diversity in natural populations of the Bornean elephant: Implications for conservation",
+      "author": "Goossens, B., Sharma, R., Othman, N., Kun-Rodrigues C., Sakong, R., Ancrenaz, M., Ambu, L. N., Jue, N. K., O'Neill, R. J., Bruford, M. W. and Chikhi, L. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Gopala, A., Hadian, O., Sunarto,  Sitompul, A., Williams, A., Leimgruber, P., Chambliss, S.E. and Gunaryadi, D. 2011. <i>Elephas maximus ssp. sumatranus</i>. Available at: <a href=\" http:// dx.doi.org/10.2305 /IUCN.UK.2011- .RLTS.T199856A9129626.en\"> http:// dx.doi.org/10.2305 /IUCN.UK.2011- .RLTS.T199856A9129626.en</a>. (Accessed: Downloaded on 10 October 2018).",
+      "year": "2011",
+      "title": "<i>Elephas maximus ssp. sumatranus</i>",
+      "author": "Gopala, A., Hadian, O., Sunarto,  Sitompul, A., Williams, A., Leimgruber, P., Chambliss, S.E. and Gunaryadi, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Goswami, V. R. and Vasudev, D. 2017. Triage of conservation needs: the juxtaposition of conflict mitigation and connectivity considerations in heterogeneous, human-dominated landscapes. <i>Frontiers in Ecology and Evolution</i> 4: 144.",
+      "year": "2017",
+      "title": "Triage of conservation needs: the juxtaposition of conflict mitigation and connectivity considerations in heterogeneous, human-dominated landscapes",
+      "author": "Goswami, V. R. and Vasudev, D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Goswami, V.R., Madhusudan, M.D. and Karanth, K.U. 2007. Application of photographic capture–recapture modelling to estimate demographic parameters for male Asian elephants. <i>Animal Conservation</i> 10: 391-399.",
+      "year": "2007",
+      "title": "Application of photographic capture–recapture modelling to estimate demographic parameters for male Asian elephants",
+      "author": "Goswami, V.R., Madhusudan, M.D. and Karanth, K.U.",
+      "citation_short": null
+    },
+    {
+      "citation": "Goswami, V.R., Medhi, K., Nichols, J.D. and Oli, M.K. 2015. Mechanistic understanding of human–wildlife conflict through a novel application of dynamic occupancy models. <i>Conservation Biology</i> 29: 1100-1110.",
+      "year": "2015",
+      "title": "Mechanistic understanding of human–wildlife conflict through a novel application of dynamic occupancy models",
+      "author": "Goswami, V.R., Medhi, K., Nichols, J.D. and Oli, M.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Goswami, V. R., Sridhara, S., Medhi, K., Williams, A. C., Chellam, R., Nichols, J. D. and Oli, M. K. 2014a. Community-managed forests and wildlife-friendly agriculture play a subsidiary but not substitutive role to protected areas for the endangered Asian elephant. <i>Biological Conservation</i> 177: 74-81.",
+      "year": "2014a",
+      "title": "Community-managed forests and wildlife-friendly agriculture play a subsidiary but not substitutive role to protected areas for the endangered Asian elephant",
+      "author": "Goswami, V. R., Sridhara, S., Medhi, K., Williams, A. C., Chellam, R., Nichols, J. D. and Oli, M. K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Goswami, V.R., Vasudev, D.and Oli, M.K. 2014b. The importance of conflict-induced mortality for conservation planning in areas of human–elephant co-occurrence. <i>Biological Conservation</i> 176: 191-198.",
+      "year": "2014b",
+      "title": "The importance of conflict-induced mortality for conservation planning in areas of human–elephant co-occurrence",
+      "author": "Goswami, V.R., Vasudev, D.and Oli, M.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Goswami, V.R., Yadava, M.K., Vasudev, D., Prasad, P.K., Sharma, P. and Jathanna, D. 2019. Towards a reliable assessment of Asian elephant population parameters: the application of photographic spatial capture–recapture sampling in a priority floodplain ecosystem. <i>Scientific Reports</i> 9: 8578.",
+      "year": "2019",
+      "title": "Towards a reliable assessment of Asian elephant population parameters: the application of photographic spatial capture–recapture sampling in a priority floodplain ecosystem",
+      "author": "Goswami, V.R., Yadava, M.K., Vasudev, D., Prasad, P.K., Sharma, P. and Jathanna, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gray, T.N., Vidya, T.N.C., Potdar, S., Bharti, D.K. and Sovanna, P. 2014. Population size estimation of an Asian elephant populationin eastern Cambodia through non-invasive mark-recapture sampling. <i>Conservation Genetics</i> 15: 803-810.",
+      "year": "2014",
+      "title": "Population size estimation of an Asian elephant populationin eastern Cambodia through non-invasive mark-recapture sampling",
+      "author": "Gray, T.N., Vidya, T.N.C., Potdar, S., Bharti, D.K. and Sovanna, P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Gubbi, S., Swaminath, M. H., Poornesha, H. C., Bhat, R., and Raghunath, R. 2014. An elephantine challenge: Human–elephant conflict distribution in the largest Asian elephant population, southern India. <i>Biodiversity and Conservation</i> 23: 633-647.",
+      "year": "2014",
+      "title": "An elephantine challenge: Human–elephant conflict distribution in the largest Asian elephant population, southern India",
+      "author": "Gubbi, S., Swaminath, M. H., Poornesha, H. C., Bhat, R., and Raghunath, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gureja, N., Menon,V., Sarkar, P. and Kyarong, S. 2002.  'Ganesha to Bin Laden’ : Human Elephant conflict in Sonitpur District of Assam, Wildlife Trust of India, New Delhi.",
+      "year": "2002",
+      "title": " 'Ganesha to Bin Laden’ : Human Elephant conflict in Sonitpur District of Assam, Wildlife Trust of India, New Delhi.",
+      "author": "Gureja, N., Menon,V., Sarkar, P. and Kyarong, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Harich, F.K., Trydte, A.C., Ogutu, J.O., Roberts, J.E., Savini, C., Bauer, J.M. and Savini, T. 2016. Seed dispersal potential of Asian elephants. <i>Acta Oecologia </i> 77: 144-151.",
+      "year": "2016",
+      "title": "Seed dispersal potential of Asian elephants",
+      "author": "Harich, F.K., Trydte, A.C., Ogutu, J.O., Roberts, J.E., Savini, C., Bauer, J.M. and Savini, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hedges, S. and Gunaryadi, D. 2010. Reducing human–elephant conflict: do chillies help deter elephants from entering crop fields? <i>Oryx </i> 44: 139-146.",
+      "year": "2010",
+      "title": "Reducing human–elephant conflict: do chillies help deter elephants from entering crop fields?",
+      "author": "Hedges, S. and Gunaryadi, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hedges, S., Fisher, K. and Rose, R. 2008. Range-wide Mapping Workshop for Asian Elephants (<i>Elephas maximus</i>).  Report to USFWS. Cambodia.",
+      "year": "2008",
+      "title": "Range-wide Mapping Workshop for Asian Elephants (<i>Elephas maximus</i>)",
+      "author": " Hedges, S., Fisher, K. and Rose, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hedges, S., Johnson, A., Ahlering, M., Tyson, M. J. and Eggert, L.S. 2013. Accuracy, precision, and cost-effectiveness of conventional dung density and fecal DNA based survey methods to estimate Asian elephant (<i>Elephas maximus</i>) population size and structure. <i>Biological Conservation </i> 159: 101-108.",
+      "year": "2013",
+      "title": "Accuracy, precision, and cost-effectiveness of conventional dung density and fecal DNA based survey methods to estimate Asian elephant (<i>Elephas maximus</i>) population size and structure",
+      "author": "Hedges, S., Johnson, A., Ahlering, M., Tyson, M. J. and Eggert, L.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jathanna, D., Karanth, K.U., Kumar, N. S., Goswami, V.R., Vasudev, D., and Karanth, K.K. 2015. Reliable monitoring of elephant populations in the forests of India: Analytical and practical considerations. <i>Biological Conservation</i> 187: 212-220.",
+      "year": "2015",
+      "title": "Reliable monitoring of elephant populations in the forests of India: Analytical and practical considerations",
+      "author": "Jathanna, D., Karanth, K.U., Kumar, N. S., Goswami, V.R., Vasudev, D., and Karanth, K.K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Johnsingh, A.J.T. and Williams, A.C. 2001. Threatened elephant corridors in India: lessons for Asia. <i>Oryx </i> 33: 210-214.",
+      "year": "2001",
+      "title": "Threatened elephant corridors in India: lessons for Asia",
+      "author": "Johnsingh, A.J.T. and Williams, A.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Johnsingh, A.J.T., Prasad, S.N. and Goyal, S. P. 1990. Conservation of the Chilla-Motichur corridor for elephant movement in Rajaji - Corbett National Parks area, lndia. <i>Biological Conservation</i> 51: 125-138.",
+      "year": "1990",
+      "title": "Conservation of the Chilla-Motichur corridor for elephant movement in Rajaji - Corbett National Parks area, lndia",
+      "author": "Johnsingh, A.J.T., Prasad, S.N. and Goyal, S. P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Keerthipriya, P., Nandini, S., Gautam, Hansraj, Revathe, T. and Vidya, T.N.C. 2020. Musth and its effects on male–male and male–female associations in Asian elephants. <i>Journal of Mammalogy</i> 101: 259-270.",
+      "year": "2020",
+      "title": "Musth and its effects on male–male and male–female associations in Asian elephants",
+      "author": "Keerthipriya, P., Nandini, S., Gautam, Hansraj, Revathe, T. and Vidya, T.N.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Khounboline, K. 2011. Current Status of Asian Elephants in Lao PDR. <i>Gajah </i> 35: 62-66.",
+      "year": "2011",
+      "title": "Current Status of Asian Elephants in Lao PDR",
+      "author": "Khounboline, K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Krishnan, V., Kumar, M. A., Raghunathan, G., and Vijayakrishnan, S. 2019. Distribution and habitat use by Asian elephants (<i>Elephas maximus</i>) in a coffee-dominated landscape of southern India. <i>Tropical Conservation Science</i> 12: 1940082918822599.",
+      "year": "2019",
+      "title": "Distribution and habitat use by Asian elephants (<i>Elephas maximus</i>) in a coffee-dominated landscape of southern India",
+      "author": "Krishnan, V., Kumar, M. A., Raghunathan, G., and Vijayakrishnan, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kumar, M. A., Mudappa, D., Raman, T. R. S. and Madhusudan, M. D. 2004. The elephant hills: conservation of wild Asian elephants in a landscape of fragmented rainforests and plantations in the Anamalais, India.  NCF Technical Report No. 10. Mysore: Nature Conservation Foundation.",
+      "year": "2004",
+      "title": "The elephant hills: conservation of wild Asian elephants in a landscape of fragmented rainforests and plantations in the Anamalais, India",
+      "author": "Kumar, M. A., Mudappa, D., Raman, T. R. S. and Madhusudan, M. D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kumar, M.A., Vijayakrishnan, S. and Singh, M. 2018. Whose habitat it is anyway? Role of natural and anthropogenic habitats in conservation of charismatic species. <i>Tropical Conservation Science</i> 11: 1-5.",
+      "year": "2018",
+      "title": "Whose habitat it is anyway? Role of natural and anthropogenic habitats in conservation of charismatic species",
+      "author": "Kumar, M.A., Vijayakrishnan, S. and Singh, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kumar, M.A., Vijayakrishnan, S. and Singh, M. 2018. Whose habitat it is anyway? Role of natural and anthropogenic habitats in conservation of charismatic species. <i>Tropical Conservation Scienc</i> 11: 1-5.",
+      "year": "2018",
+      "title": "Whose habitat it is anyway? Role of natural and anthropogenic habitats in conservation of charismatic species",
+      "author": "Kumar, M.A., Vijayakrishnan, S. and Singh, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lahdenperä, M., Mar, K. U., and Lummaa, V. 2016. Nearby grandmother enhances calf survival and reproduction in Asian elephants. <i>Scientific reports</i> 6: 27213.",
+      "year": "2016",
+      "title": "Nearby grandmother enhances calf survival and reproduction in Asian elephants",
+      "author": "Lahdenperä, M., Mar, K. U., and Lummaa, V. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Laurance, W.F. and Bierregaard, R.O. 1997. <i>Tropical forest remnants: ecology, management and conservation of fragmented communities</i>. Chicago University Press, Chicago, and London.",
+      "year": "1997",
+      "title": "Tropical forest remnants: ecology, management and conservation of fragmented communities",
+      "author": "Laurance, W.F. and Bierregaard, R.O.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Leimgruber, P., Hess, A., Horning, N., Khaing, T., Thein, Z.M., Aung, K.M., Aung, K.H., Phyo, P., Tun, Y.L., Oo, A.H., Neil, A., Thu, W.M., LaJeuness, K., Connette G., Huang, Q. and Songer, M. 2016. Forest cover changes in Myanmar from 2002-2014: causes, consequences, and conservation. <i>Conservation Asia 2016</i>, University of Singapore, Singapore.",
+      "year": "2016",
+      "title": "Forest cover changes in Myanmar from 2002-2014: causes, consequences, and conservation",
+      "author": "Leimgruber, P., Hess, A., Horning, N., Khaing, T., Thein, Z.M., Aung, K.M., Aung, K.H., Phyo, P., Tun, Y.L., Oo, A.H., Neil, A., Thu, W.M., LaJeuness, K., Connette G., Huang, Q. and Songer, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Leimgruber, P., Oo, Z.M., Aung, M., Kelly, D.S., Wemmer, C., Senior, B. and Songer, M. 2011. Current Status of Asian Elephants in Myanmar. <i>Gajah </i> 35: 76-86.",
+      "year": "2011",
+      "title": "Current Status of Asian Elephants in Myanmar",
+      "author": "Leimgruber, P., Oo, Z.M., Aung, M., Kelly, D.S., Wemmer, C., Senior, B. and Songer, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Liu, P., Wen, H., Harich, F. K., He, C., Wang, L., Guo, X., Zhao, J., Luo, A., Yang, H., Sun, X., Yu, Y., Zheng, S., Guo, J., Li, L.,and Zhang, L. 2017. Conflict between conservation and development: cash forest encroachment in Asian elephant distributions. <i>Scientific Reports</i> 7: 6404.",
+      "year": "2017",
+      "title": "Conflict between conservation and development: cash forest encroachment in Asian elephant distributions",
+      "author": "Liu, P., Wen, H., Harich, F. K., He, C., Wang, L., Guo, X., Zhao, J., Luo, A., Yang, H., Sun, X., Yu, Y., Zheng, S., Guo, J., Li, L.,and Zhang, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Madhusudan, M.D. 2003. Uneasy neighbours: human resource use and large mammal conservation in the tropical forests of Karnataka, India. PhD thesis. Manipal Academy of Higher Education, India.",
+      "year": "2003",
+      "title": "Uneasy neighbours: human resource use and large mammal conservation in the tropical forests of Karnataka, India. PhD thesis",
+      "author": "Madhusudan, M.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Madhusudan, M. D., Sharma, N., Raghunath, R., Baskaran, N., Bipin, C. M., Gubbi, S., Johnsingh, A.J.T., Kulkarni, J., Kumara, N. H., Mehta, P., Pillay, R. and Sukumar, R. 2015. Distribution, relative abundance, and conservation status of Asian elephants in Karnataka, southern India. <i>Biological Conservation </i> 187: 34-40.",
+      "year": "2015",
+      "title": "Distribution, relative abundance, and conservation status of Asian elephants in Karnataka, southern India",
+      "author": "Madhusudan, M. D., Sharma, N., Raghunath, R., Baskaran, N., Bipin, C. M., Gubbi, S., Johnsingh, A.J.T., Kulkarni, J., Kumara, N. H., Mehta, P., Pillay, R. and Sukumar, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Maltby, M. and Bourchier, G. 2011. Current Status of Asian Elephants in Cambodia. <i>Gajah </i> 35: 36-42.",
+      "year": "2011",
+      "title": "Current Status of Asian Elephants in Cambodia",
+      "author": "Maltby, M. and Bourchier, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Marasinghe, M.S.L.R.P., Dayawansa, N.D.K. and. De Silva, R.P. 2015. Area Suitability Prediction for Conserving Elephants: An Application of Likelihood Ratio Prediction Model. <i>Tropical Agricultural Research</i> 25: 345-357.",
+      "year": "2015",
+      "title": "Area Suitability Prediction for Conserving Elephants: An Application of Likelihood Ratio Prediction Model",
+      "author": "Marasinghe, M.S.L.R.P., Dayawansa, N.D.K. and. De Silva, R.P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "McConkey, K.R., Nathalang, A., Brockelman, W.Y., Saralamba, C., Santon, J., Matmoon, U., and Srinoppawan, K. 2018. Different megafauna vary in their seed dispersal effectiveness of the megafaunal fruit <i>Platymitra macrocarpa</i> (Annonaceae). <i>PLoS ONE </i> 13: e0198960.",
+      "year": "2018",
+      "title": "Different megafauna vary in their seed dispersal effectiveness of the megafaunal fruit <i>Platymitra macrocarpa</i> (Annonaceae)",
+      "author": "McConkey, K.R., Nathalang, A., Brockelman, W.Y., Saralamba, C., Santon, J., Matmoon, U., and Srinoppawan, K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "MECAP. 2018. <i>Myanmar Elephant Conservation Action Plan (MECAP): 2018-2027</i>.",
+      "year": "2018",
+      "title": "Myanmar Elephant Conservation Action Plan (MECAP): 2018-2027",
+      "author": "MECAP ",
+      "citation_short": null
+    },
+    {
+      "citation": "Menon, V. and Tiwari, S.K. 2019. Population status of Asian elephants <i>Elephas maximus</i> and key threats. <i>International Zoo Yearboo</i> 53: 1-14.",
+      "year": "2019",
+      "title": "Population status of Asian elephants <i>Elephas maximus</i> and key threats",
+      "author": "Menon, V. and Tiwari, S.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Menon, V., Easa, P.S. and Johnsingh, A.J.T. 2003. <i>Securing Chilla – Motichur Corridor – A Status Report</i>. Wildlife Trust of India, New Delhi.",
+      "year": "2003",
+      "title": "Securing Chilla – Motichur Corridor – A Status Report",
+      "author": "Menon, V., Easa, P.S. and Johnsingh, A.J.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Menon, V., Tiwari, S.K., Easa, P.S. and Sukumar, R. 2005. <i>Right of Passage: Elephant corridors of India (1st edition)</i>. Wildlife Trust of India, New Delhi.",
+      "year": "2005",
+      "title": "Right of Passage: Elephant corridors of India (1st edition)",
+      "author": "Menon, V., Tiwari, S.K., Easa, P.S. and Sukumar, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Menon, V., Tiwari, S.K., Ramkumar, K., Kyarong, Sunil., Ganguly, Upasana and Sukumar, R. 2017. <i>Right of Passage: Elephant corridors of India 2nd edition</i>. Wildlife Trust of India, New Delhi.",
+      "year": "2017",
+      "title": "Right of Passage: Elephant corridors of India 2nd edition",
+      "author": "Menon, V., Tiwari, S.K., Ramkumar, K., Kyarong, Sunil., Ganguly, Upasana and Sukumar, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ministry of Environment and Forests. 2018. Bangladesh elephant conservation action plan (2018–2027). Bangladesh Forest Department, Ministry of Environment and Forests, Government of the People’s Republic of Bangladesh, Dhaka.",
+      "year": "2018",
+      "title": "Bangladesh elephant conservation action plan (2018–2027)",
+      "author": "Ministry of Environment and Forests",
+      "citation_short": null
+    },
+    {
+      "citation": "Moßbrucker, A.M., Fleming, C.H., Imron, M.A. and Pudyatmoko, S. 2016. AKDEC home range size and habitat selection of Sumatran elephants. <i>Wildlife Research </i> 43: 566-575.",
+      "year": "2016",
+      "title": "AKDEC home range size and habitat selection of Sumatran elephants",
+      "author": "Moßbrucker, A.M., Fleming, C.H., Imron, M.A. and Pudyatmoko, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Myers, N. 1987. Tackling Mass Extinction of Species: A Great Creative Challenge. .  Albright Lecture in Conservation. University of California, Berkeley, California.",
+      "year": "1987",
+      "title": "Tackling Mass Extinction of Species: A Great Creative Challenge. ",
+      "author": "Myers, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nandini, S. 2016. ocial Structure, GeneticRelatedness, and Dominance Relationships in Female Asian Elephants in Nagaraholeand Bandipur National Parks, Southern India. PhD thesis. Jawaharlal Nehru Centre for Advanced Scientific Research.",
+      "year": "2016",
+      "title": "ocial Structure, GeneticRelatedness, and Dominance Relationships in Female Asian Elephants in Nagaraholeand Bandipur National Parks, Southern India. PhD thesis",
+      "author": "Nandini, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nandini, S., Keerthipriya, P. and Vidya, T.N.C. 2017. Seasonal variation in female Asian elephant social structure in Nagarahole-Bandipur, southern India. <i>Animal Behaviour</i> 134: 135-145.",
+      "year": "2017",
+      "title": "Seasonal variation in female Asian elephant social structure in Nagarahole-Bandipur, southern India",
+      "author": "Nandini, S., Keerthipriya, P. and Vidya, T.N.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nandini, S., Keerthipriya, P. and Vidya, T.N.C. 2018. Group size differences may mask underlying similarities in social structure: A comparison of female elephant societies. <i>Behavioral Ecology</i> 29: 145-159.",
+      "year": "2018",
+      "title": "Group size differences may mask underlying similarities in social structure: A comparison of female elephant societies",
+      "author": "Nandini, S., Keerthipriya, P. and Vidya, T.N.C",
+      "citation_short": null
+    },
+    {
+      "citation": "Nath, C. and Sukumar, R. 1998. <i>Elephant-human Conflict in Kodagu, Southern India: Distribution Patterns, People’s Perceptions and Mitigation Methods</i>. Asian Elephant Conservation Centre, Bangalore.",
+      "year": "1998",
+      "title": "Elephant-human Conflict in Kodagu, Southern India: Distribution Patterns, People’s Perceptions and Mitigation Methods",
+      "author": "Nath, C. and Sukumar, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "NCD. 2018. National elephant survey report. Nature Conservation Division, Department of Forests and Park Services, Ministry of Agriculture and Forests, Thimphu.",
+      "year": "2018",
+      "title": "National elephant survey report",
+      "author": "NCD ",
+      "citation_short": null
+    },
+    {
+      "citation": "NCD. 2019. Elephant Action Plan for Bhutan (2018-2028). Nature conservation Division, Department of Forests and Park Services, Ministry of Agriculture and Forests, Thimpu, Bhutan.",
+      "year": "2019",
+      "title": "Elephant Action Plan for Bhutan (2018-2028)",
+      "author": "NCD ",
+      "citation_short": null
+    },
+    {
+      "citation": "Nyhus, P. J., Tilson, R. and Sumianto. 2000. Crop-raiding elephants and conservation implications at Way Kambas National Park, Sumatra, Indonesia. <i>Oryx</i> 34: 262-274.",
+      "year": "2000",
+      "title": "Crop-raiding elephants and conservation implications at Way Kambas National Park, Sumatra, Indonesia",
+      "author": "Nyhus, P. J., Tilson, R. and Sumianto",
+      "citation_short": null
+    },
+    {
+      "citation": "Pollard, E., Eggert, L., Cheur, C., Hedges, S. 2008. The status and conservation of Asian elephant in the seima biodiversity conservation area. Wildlife Conservation Society Cambodia Program, Phnom Penh, Cambodia.",
+      "year": "2008",
+      "title": "The status and conservation of Asian elephant in the seima biodiversity conservation area",
+      "author": "Pollard, E., Eggert, L., Cheur, C., Hedges, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pradhan, N.M.B, William, A.C and Dhakal, M. 2011. Current status of Asian elephants in Nepal. <i>Gajah</i> 35: 87-92.",
+      "year": "2011",
+      "title": "Current status of Asian elephants in Nepal",
+      "author": "Pradhan, N.M.B, William, A.C and Dhakal, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Prasad, A.E. 2011. Landscape-scale relationships between the exotic invasive shrub <i>Lantana camara</i> and native plants in a tropical deciduous forest in southern India. <i>Journal of Tropical Ecology</i> 28: 55-64.",
+      "year": "2011",
+      "title": "Landscape-scale relationships between the exotic invasive shrub <i>Lantana camara</i> and native plants in a tropical deciduous forest in southern India",
+      "author": "Prasad, A.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Raman, T.R.S. 2011. Framing ecologically sound policy on linear intrusions affecting wildlife habitats. Background paper for the National Board for Wildlife. <i>Standing Committee of the National Board for Wildlife during its 21st meeting on 20 January 2011</i>.",
+      "year": "2011",
+      "title": "Framing ecologically sound policy on linear intrusions affecting wildlife habitats. Background paper for the National Board for Wildlife",
+      "author": "Raman, T.R.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rangarajan, M., Desai, A., Sukumar, R., Easa, P.S., Menon, V., Vincent, S., Ganguly, S., Talukdar, B.K., Singh, B., Mudappa, D., Chowdhary, S. and Prasad, A.N. 2010. Gajah: Securing the future for elephants in India. Report of the Elephant Task Force. Ministry of Environment and Forests, India, New Delhi.",
+      "year": "2010",
+      "title": "Gajah: Securing the future for elephants in India. Report of the Elephant Task Force",
+      "author": "Rangarajan, M., Desai, A., Sukumar, R., Easa, P.S., Menon, V., Vincent, S., Ganguly, S., Talukdar, B.K., Singh, B., Mudappa, D., Chowdhary, S. and Prasad, A.N. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Roy, M., Baskaran, N. and Sukumar, R. 2009. The death of jumbos on railway tracks in northern West Bengal. <i>Gajah </i> 31: 26-39.",
+      "year": "2009",
+      "title": "The death of jumbos on railway tracks in northern West Bengal",
+      "author": "Roy, M., Baskaran, N. and Sukumar, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sabah Wildlife Department. 2011. <i>Elephant Action Plan</i>. Kota Kinabalu, Sabah, Malaysia.",
+      "year": "2011",
+      "title": "Elephant Action Plan",
+      "author": "Sabah Wildlife Department ",
+      "citation_short": null
+    },
+    {
+      "citation": "Sarma, U.K., Easa, P.S. and Menon, V. 2006. Deadly tracks: a scientific approach to understanding and mitigating elephant mortality due to train hits in Assam. <i>Wildlife Trust of India, New Delhi</i>.",
+      "year": "2006",
+      "title": "Deadly tracks: a scientific approach to understanding and mitigating elephant mortality due to train hits in Assam",
+      "author": "Sarma, U.K., Easa, P.S. and Menon, V. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Sekar, N. and Sukumar, R. 2015. In the elephant’s seed shadow: the prospects of domestic bovids as replacement dispersers of three tropical Asian trees. <i>Ecology</i> 96: 2093-2105.",
+      "year": "2015",
+      "title": "In the elephant’s seed shadow: the prospects of domestic bovids as replacement dispersers of three tropical Asian trees",
+      "author": "Sekar, N. and Sukumar, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sharma, R., Goossens, B., Heller, R., Rasteiro, R., Othman, N., Bruford, M.W. and Chikhi, L. 2018. Genetic analyses favour an ancient and natural origin of elephants on Borneo. <i>Scientific Reports</i> 8: 880.",
+      "year": "2018",
+      "title": "Genetic analyses favour an ancient and natural origin of elephants on Borneo",
+      "author": "Sharma, R., Goossens, B., Heller, R., Rasteiro, R., Othman, N., Bruford, M.W. and Chikhi, L. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Singh, A.K., Kumar, A., Menon, V. and Mookerjee, A. 2001. Elephant mortality in train accidents- A scientific approach to understanding and mitigating this problem in Rajaji National Park. Wildlife Trust of India, New Delhi.",
+      "year": "2001",
+      "title": "Elephant mortality in train accidents- A scientific approach to understanding and mitigating this problem in Rajaji National Park",
+      "author": "Singh, A.K., Kumar, A., Menon, V. and Mookerjee, A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Singh, A.K, Singh, R.R. and Chowdhury, S. 2002. Human elephant conflicts in changed landscapes of southwest Bengal, India. <i>Indian Forester</i> 128: 1119-1132.",
+      "year": "2002",
+      "title": "Human elephant conflicts in changed landscapes of southwest Bengal, India",
+      "author": "Singh, A.K, Singh, R.R. and Chowdhury, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Songer, M., Aung, M., Allendorf, T. D., Calabrese, J. M. and Leimgruber, P. 2016. Drivers of change in Myanmar’s wild elephant distribution. <i>Tropical Conservation Science</i> Oct–Dec: 1-10.",
+      "year": "2016",
+      "title": "Drivers of change in Myanmar’s wild elephant distribution",
+      "author": "Songer, M., Aung, M., Allendorf, T. D., Calabrese, J. M. and Leimgruber, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sukumar, R. 1990. Ecology of the Asian Elephant in Southern India. II. feeding habits and crop raiding patterns. <i>J. Trop. Ecology</i> 6: 33-53.",
+      "year": "1990",
+      "title": "Ecology of the Asian Elephant in Southern India. II. feeding habits and crop raiding patterns",
+      "author": "Sukumar, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sukumar, R. 2006. A brief review of the status, distribution and biology of wild Asian elephants <i>Elephas maximus</i>. <i>International Zoo Yearbook</i> 40: 1-8.",
+      "year": "2006",
+      "title": "A brief review of the status, distribution and biology of wild Asian elephants <i>Elephas maximus</i>",
+      "author": "Sukumar, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sukumar, R., Varma, S., Tiwari, S. Kr., and Menon, V. 2016. Sustainable landscapes and corridors to conserve Asian elephants in India. In: A. Alonso Aguirre and R. Sukumar (eds), <i>Tropical Conservation: Perspectives on Local and Global Priorities</i>, pp. 29-39. Oxford University press.",
+      "year": "2016",
+      "title": "Sustainable landscapes and corridors to conserve Asian elephants in India",
+      "author": "Sukumar, R., Varma, S., Tiwari, S. Kr., and Menon, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thi Ly, C. 2011. Current Status of Asian Elephants in Vietnam. <i>Gajah </i> 35: 104-109.",
+      "year": "2011",
+      "title": "Current Status of Asian Elephants in Vietnam",
+      "author": "Thi Ly, C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Thouless, C.R. 1994. Conflicts between humans and elephants on private land in northern Kenya. <i>Oryx </i> 28: 119-127.",
+      "year": "1994",
+      "title": "Conflicts between humans and elephants on private land in northern Kenya",
+      "author": "Thouless, C.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Varma, S., Dang, N. X., Van Thanh, T. and Sukumar, R. 2007. The status and conservation of the Asian elephant (<i>Elephas maximus</i>) in Cat Tien National Park, Vietnam. <i>Oryx</i> 42(1): 92-99.",
+      "year": "2007",
+      "title": "The status and conservation of the Asian elephant (<i>Elephas maximus</i>) in Cat Tien National Park, Vietnam",
+      "author": "Varma, S., Dang, N. X., Van Thanh, T. and Sukumar, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vidya, T.N.C. and Sukumar, R. 2005. Social organization of the Asian elephant (<i>Elephas maximus</i>) in southern India inferred from microsatellite DNA. <i>Journal of Ethology</i> 23(2): 205-210.",
+      "year": "2005",
+      "title": "Social organization of the Asian elephant (<i>Elephas maximus</i>) in southern India inferred from microsatellite DNA",
+      "author": "Vidya, T.N.C. and Sukumar, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vidya, T.N.C., Fernando, P., Melnick, D.J. and Sukumar, R. 2005. Population genetic structure and conservation of Asian elephants (<i>Elephas maximus</i>) across India. <i>Animal Conservation</i> 8(4): 377-388.",
+      "year": "2005",
+      "title": "Population genetic structure and conservation of Asian elephants (<i>Elephas maximus</i>) across India",
+      "author": "Vidya, T.N.C., Fernando, P., Melnick, D.J. and Sukumar, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vidya, T.N.C., Sukumar, R. and Melnick, D.J. 2009. Range-wide mtDNA phylogeography yields insights into the origins of Asian elephants. <i>Proceedings of the Royal Society B: Biological Sciences</i> 276: 893-902.",
+      "year": "2009",
+      "title": "Range-wide mtDNA phylogeography yields insights into the origins of Asian elephants",
+      "author": "Vidya, T.N.C., Sukumar, R. and Melnick, D.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vidya, T.N.C., Varma, S., Dang, N.X., Van Thanh, T. and Sukumar, R. 2007. Minimum population size, genetic diversity, and social structure of the Asian elephant in Cat Tien National Park and its adjoining areas, Vietnam, based on molecular genetic analyses. <i>Conservation Genetics</i> 8: 1471-1478.",
+      "year": "2007",
+      "title": "Minimum population size, genetic diversity, and social structure of the Asian elephant in Cat Tien National Park and its adjoining areas, Vietnam, based on molecular genetic analyses",
+      "author": "Vidya, T.N.C., Varma, S., Dang, N.X., Van Thanh, T. and Sukumar, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Williams, A.C. and Johnsingh, A.J.T. 2004. Elephant-human conflict on community lands, north east India. <i>Journal of the Bombay Natural History Society</i> 101: 227-234.",
+      "year": "2004",
+      "title": "Elephant-human conflict on community lands, north east India",
+      "author": "Williams, A.C. and Johnsingh, A.J.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Williams, A.C., Johnsingh, A.J.T. and Krausman, P. R. 2001. Elephant-human conflicts in Rajaji National Park, northwestern India. <i>Wildlife Society Bulletin</i> 29: 1097-1104.",
+      "year": "2001",
+      "title": "Elephant-human conflicts in Rajaji National Park, northwestern India",
+      "author": "Williams, A.C., Johnsingh, A.J.T. and Krausman, P. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Williams, A.C., Johnsingh, A.J.T. and Krausman, P.R. 2007. Elephant demography and viability of the Rajaji National Park elephant population. <i>Journal of the Bombay Natural History Society</i> 104: 147-154.",
+      "year": "2007",
+      "title": "Elephant demography and viability of the Rajaji National Park elephant population",
+      "author": "Williams, A.C., Johnsingh, A.J.T. and Krausman, P.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Williams, A.C., Johnsingh, A.J.T. and Krausman, P.R. 2008. Ranging and habitat use by elephants in Rajaji National Park, India. <i>Journal of the Bombay Natural History Society</i> 105: 24-33.",
+      "year": "2008",
+      "title": "Ranging and habitat use by elephants in Rajaji National Park, India",
+      "author": "Williams, A.C., Johnsingh, A.J.T. and Krausman, P.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zhang, L., Dong, L., Lin, L., Feng, L., Yan, F., Wang, L., ... and Luo, A. 2015. Asian Elephants in China:Estimating Population Size and Evaluating Habitat Suitability. <i>PLoS ONE</i> 10(5): e0124834.",
+      "year": "2015",
+      "title": "Asian Elephants in China:Estimating Population Size and Evaluating Habitat Suitability",
+      "author": "Zhang, L., Dong, L., Lin, L., Feng, L., Yan, F., Wang, L., ... and Luo, A. ",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}
