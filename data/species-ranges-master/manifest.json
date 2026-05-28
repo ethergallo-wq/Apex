@@ -1,0 +1,91 @@
+{
+  "name": "marinefish simplified species ranges",
+  "source_dir": "/Users/andreagalliazzo/Downloads/MARINEFISH",
+  "source_format": "ESRI Shapefile split into MARINEFISH_PART1..9",
+  "crs": "WGS84 / EPSG:4326",
+  "generated_db": "data/species-ranges-master/marinefish.sqlite",
+  "deploy_dir": "public/data/species-ranges",
+  "deploy_policy": "Only Animaldex species ranges are exported to public/. All other simplified species remain in the local master SQLite for future use.",
+  "simplification": {
+    "tolerance_deg": 0.05,
+    "coord_precision_deg": 5,
+    "algorithm": "radial pre-simplification + Ramer-Douglas-Peucker"
+  },
+  "source_records_processed": 15505,
+  "source_records_skipped_empty": 54,
+  "master_species_count": 14356,
+  "master_geojson_gz_bytes": 191982408,
+  "master_avg_geojson_gz_kb": 13.1,
+  "master_max_geojson_gz_kb": 334.3,
+  "master_sqlite_size_bytes": 203866112,
+  "deploy_index_entries_after_export": 750,
+  "deploy_geojson_gz_bytes_after_prune": 26869901,
+  "deploy_orphan_files_after_prune": 0,
+  "animaldex_fish_unique_names": 162,
+  "animaldex_fish_unique_names_covered_after_export": 150,
+  "animaldex_fish_records": 164,
+  "animaldex_fish_covered_after_export": 152,
+  "animaldex_fish_missing_after_export": 12,
+  "missing_after_export": [
+    {
+      "no": "910",
+      "sci": "Amia Calva",
+      "com": "Pesce Testa Di Serpente Nordamericano"
+    },
+    {
+      "no": "916",
+      "sci": "Arapaima Gigas",
+      "com": "Arapaima Gigante"
+    },
+    {
+      "no": "942",
+      "sci": "Trichogaster Lalius",
+      "com": "Gurami Nano"
+    },
+    {
+      "no": "946",
+      "sci": "Cromileptes Altivelis",
+      "com": "Cernia Pavone"
+    },
+    {
+      "no": "950",
+      "sci": "Danio Rerio",
+      "com": "Danio Zebrato"
+    },
+    {
+      "no": "959",
+      "sci": "Epinephelus Marginatus",
+      "com": "Cernia Bruna"
+    },
+    {
+      "no": "964",
+      "sci": "Gadus Morhua",
+      "com": "Merluzzo Atlantico"
+    },
+    {
+      "no": "978",
+      "sci": "Latimeria Chalumnae",
+      "com": "Celacanto"
+    },
+    {
+      "no": "984",
+      "sci": "Macropinna Microstoma",
+      "com": "Pesce Dagli Occhi A Botte"
+    },
+    {
+      "no": "1005",
+      "sci": "Ostracion Cubicus",
+      "com": "Pesce Scatola Giallo"
+    },
+    {
+      "no": "1026",
+      "sci": "Psychrolutes Marcidus",
+      "com": "Blobfish"
+    },
+    {
+      "no": "1064",
+      "sci": "Stegostoma Fasciatum",
+      "com": "Squalo Zebra"
+    }
+  ]
+}
