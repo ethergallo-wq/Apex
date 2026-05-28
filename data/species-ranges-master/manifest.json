@@ -18,14 +18,21 @@
   "master_avg_geojson_gz_kb": 13.1,
   "master_max_geojson_gz_kb": 334.3,
   "master_sqlite_size_bytes": 203866112,
-  "deploy_index_entries_after_export": 750,
-  "deploy_geojson_gz_bytes_after_prune": 26869901,
+  "deploy_index_entries_after_export": 766,
+  "deploy_geojson_gz_bytes_after_prune": 27257357,
   "deploy_orphan_files_after_prune": 0,
+  "curated_aliases_applied": 16,
+  "alias_table": "data/species-ranges-master/range_aliases.json",
+  "animaldex_records_total": 1080,
+  "animaldex_records_covered_after_aliases": 769,
+  "animaldex_records_coverage_pct_after_aliases": 71.2,
+  "animaldex_unique_scientific_names_total": 1076,
+  "animaldex_unique_scientific_names_covered_after_aliases": 766,
   "animaldex_fish_unique_names": 162,
-  "animaldex_fish_unique_names_covered_after_export": 150,
+  "animaldex_fish_unique_names_covered_after_export": 152,
   "animaldex_fish_records": 164,
-  "animaldex_fish_covered_after_export": 152,
-  "animaldex_fish_missing_after_export": 12,
+  "animaldex_fish_covered_after_export": 154,
+  "animaldex_fish_missing_after_export": 10,
   "missing_after_export": [
     {
       "no": "910",
@@ -73,19 +80,9 @@
       "com": "Pesce Dagli Occhi A Botte"
     },
     {
-      "no": "1005",
-      "sci": "Ostracion Cubicus",
-      "com": "Pesce Scatola Giallo"
-    },
-    {
       "no": "1026",
       "sci": "Psychrolutes Marcidus",
       "com": "Blobfish"
-    },
-    {
-      "no": "1064",
-      "sci": "Stegostoma Fasciatum",
-      "com": "Squalo Zebra"
     }
   ]
 }

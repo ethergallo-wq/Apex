@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "policy": "Curated aliases used only to connect Animaldex scientific names to an existing range source when the names denote the same taxon or a controlled spelling/genus variant. Domestic-to-wild relatives and broad same-genus guesses are intentionally excluded.",
+  "sources": {
+    "historical": "/Users/andreagalliazzo/Desktop/Apex/Distribuzione Animali Apex/species_app.sqlite",
+    "marinefish": "data/species-ranges-master/marinefish.sqlite"
+  },
+  "aliases": [
+    {
+      "animaldex_sci": "Ranoidea Caerulea",
+      "source_sci": "Litoria caerulea",
+      "source_db": "historical",
+      "basis": "genus/taxonomy variant for White's tree frog",
+      "confidence": "high"
+    },
+    {
+      "animaldex_sci": "Zaglossus Bruijni",
+      "source_sci": "Zaglossus bruijnii",
+      "source_db": "historical",
+      "basis": "orthographic correction of species epithet",
+      "confidence": "high"
+    },
+    {
+      "animaldex_sci": "Felis Manul",
+      "source_sci": "Otocolobus manul",
+      "source_db": "historical",
+      "basis": "genus/taxonomy variant; GBIF lists Felis manul with Otocolobus manul",
+      "confidence": "high"
+    },
+    {
+      "animaldex_sci": "Uncia Uncia",
+      "source_sci": "Panthera uncia",
+      "source_db": "historical",
+      "basis": "genus/taxonomy variant for snow leopard",
+      "confidence": "high"
+    },
+    {
+      "animaldex_sci": "Coloeus Monedula",
+      "source_sci": "Corvus monedula",
+      "source_db": "historical",
+      "basis": "genus/taxonomy variant for western jackdaw",
+      "confidence": "high"
+    },
+    {
+      "animaldex_sci": "Chroicocephalus Ridibundus",
+      "source_sci": "Larus ridibundus",
+      "source_db": "historical",
+      "basis": "genus/taxonomy variant for black-headed gull",
+      "confidence": "high"
+    },
+    {
+      "animaldex_sci": "Puma Yagouaroundi",
+      "source_sci": "Herpailurus yagouaroundi",
+      "source_db": "historical",
+      "basis": "genus/taxonomy variant; GBIF links Puma yagouaroundi with Herpailurus yagouaroundi",
+      "confidence": "high"
+    },
+    {
+      "animaldex_sci": "Hyaena Brunnea",
+      "source_sci": "Parahyaena brunnea",
+      "source_db": "historical",
+      "basis": "genus/taxonomy variant for brown hyena",
+      "confidence": "high"
+    },
+    {
+      "animaldex_sci": "Leopardus Jacobitus",
+      "source_sci": "Leopardus jacobita",
+      "source_db": "historical",
+      "basis": "orthographic correction of species epithet",
+      "confidence": "high"
+    },
+    {
+      "animaldex_sci": "Tapirella Bairdii",
+      "source_sci": "Tapirus bairdii",
+      "source_db": "historical",
+      "basis": "genus/taxonomy variant for Baird's tapir",
+      "confidence": "high"
+    },
+    {
+      "animaldex_sci": "Erythrura Gouldiae",
+      "source_sci": "Chloebia gouldiae",
+      "source_db": "historical",
+      "basis": "genus/taxonomy variant for Gouldian finch",
+      "confidence": "high"
+    },
+    {
+      "animaldex_sci": "Diphyllodes Respublica",
+      "source_sci": "Cicinnurus respublica",
+      "source_db": "historical",
+      "basis": "genus/taxonomy variant for Wilson's bird-of-paradise",
+      "confidence": "high"
+    },
+    {
+      "animaldex_sci": "Hexaprotodon Liberiensis",
+      "source_sci": "Choeropsis liberiensis",
+      "source_db": "historical",
+      "basis": "genus/taxonomy variant for pygmy hippopotamus",
+      "confidence": "high"
+    },
+    {
+      "animaldex_sci": "Acrocodia Indica",
+      "source_sci": "Tapirus indicus",
+      "source_db": "historical",
+      "basis": "genus/taxonomy variant for Malayan tapir",
+      "confidence": "high"
+    },
+    {
+      "animaldex_sci": "Stegostoma Fasciatum",
+      "source_sci": "Stegostoma tigrinum",
+      "source_db": "marinefish",
+      "basis": "taxonomy variant; GBIF and IUCN-linked records list Stegostoma fasciatum under Stegostoma tigrinum",
+      "confidence": "high"
+    },
+    {
+      "animaldex_sci": "Ostracion Cubicus",
+      "source_sci": "Ostracion cubicum",
+      "source_db": "marinefish",
+      "basis": "orthographic/taxonomic variant in the marine range source for yellow boxfish",
+      "confidence": "high"
+    }
+  ],
+  "excluded_candidates": [
+    {
+      "animaldex_sci": "Camelus Dromedarius",
+      "candidate_source_sci": "Camelus ferus",
+      "reason": "domestic dromedary is not a synonym of wild Bactrian camel"
+    },
+    {
+      "animaldex_sci": "Capra Hircus",
+      "candidate_source_sci": "Capra aegagrus",
+      "reason": "domestic goat and wild goat/progenitor ranges are not equivalent"
+    },
+    {
+      "animaldex_sci": "Bos Taurus",
+      "candidate_source_sci": "Bos gaurus",
+      "reason": "domestic cattle and gaur are different taxa"
+    },
+    {
+      "animaldex_sci": "Psychrolutes Marcidus",
+      "candidate_source_sci": "Psychrolutes macrocephalus",
+      "reason": "same genus but not the same species"
+    },
+    {
+      "animaldex_sci": "Arapaima Gigas",
+      "candidate_source_sci": "Arapaima leptosoma",
+      "reason": "same genus but not the same species"
+    }
+  ]
+}
