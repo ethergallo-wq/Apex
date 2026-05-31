@@ -12,6 +12,15 @@ body,
   overflow: hidden;
 }
 
+@supports (height: 100dvh) {
+  html,
+  body,
+  #root {
+    min-height: 100dvh;
+    height: 100dvh;
+  }
+}
+
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
@@ -55,6 +64,7 @@ video {
   box-sizing: border-box;
   margin-inline: auto;
   isolation: isolate;
+  min-height: var(--animaldex-app-height, 100dvh);
 }
 
 @supports (width: 100dvw) {

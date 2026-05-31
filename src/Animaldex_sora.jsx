@@ -3207,24 +3207,33 @@ function useAppViewportHeight() {
   const [h, setH] = useState('100dvh');
   useEffect(() => {
     if (typeof window === 'undefined') return;
+    let frame = 0;
     const apply = () => {
       const vv = window.visualViewport;
-      const next = Math.max(320, Math.round(vv?.height || window.innerHeight || document.documentElement.clientHeight || 800));
+      const measured = Math.max(
+        Math.round(vv?.height || 0),
+        Math.round(window.innerHeight || 0),
+        Math.round(document.documentElement.clientHeight || 0)
+      );
+      const next = Math.max(320, measured || 800);
       const px = `${next}px`;
       document.documentElement.style.setProperty('--animaldex-app-height', px);
       document.body.style.minHeight = px;
       setH(px);
     };
+    const scheduleApply = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(apply);
+    };
     apply();
-    window.addEventListener('resize', apply);
-    window.addEventListener('orientationchange', apply);
-    window.visualViewport?.addEventListener('resize', apply);
-    window.visualViewport?.addEventListener('scroll', apply);
+    window.addEventListener('resize', scheduleApply);
+    window.addEventListener('orientationchange', scheduleApply);
+    window.visualViewport?.addEventListener('resize', scheduleApply);
     return () => {
-      window.removeEventListener('resize', apply);
-      window.removeEventListener('orientationchange', apply);
-      window.visualViewport?.removeEventListener('resize', apply);
-      window.visualViewport?.removeEventListener('scroll', apply);
+      cancelAnimationFrame(frame);
+      window.removeEventListener('resize', scheduleApply);
+      window.removeEventListener('orientationchange', scheduleApply);
+      window.visualViewport?.removeEventListener('resize', scheduleApply);
     };
   }, []);
   return h;
@@ -3739,7 +3748,7 @@ function rarityBorderColor(rarity) {
   return '#9D6845';
 }
 
-function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false, detailMode=false }) {
+const AnimalImg = React.memo(function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false, detailMode=false }) {
   const c = CLS[a.cls] || CLS.Mammalia;
   const [imgErr, setImgErr] = useState(false);
   const [mysteryErr, setMysteryErr] = useState(false);
@@ -3754,10 +3763,10 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false, d
     return (
       <div style={{ width:'100%', height:size, position:'relative', overflow:'hidden', background:'transparent', display:'flex', alignItems:'center', justifyContent:'center', padding:gridMode ? 6 : Math.round(size * .08), boxSizing:'border-box' }}>
         {localImageUrl && !mysteryErr ? (
-          <img src={localImageUrl} alt={label} onError={()=>setMysteryErr(true)}
+          <img src={localImageUrl} alt={label} loading={gridMode ? 'lazy' : 'eager'} decoding="async" onError={()=>setMysteryErr(true)}
             style={{ width:'100%', height:'100%', objectFit:'contain', opacity:.88, filter:'brightness(0) saturate(0)', WebkitFilter:'brightness(0) saturate(0)' }} />
         ) : !mysteryErr && iconSrc ? (
-          <img src={iconSrc} alt={label} onError={()=>setMysteryErr(true)}
+          <img src={iconSrc} alt={label} loading={gridMode ? 'lazy' : 'eager'} decoding="async" onError={()=>setMysteryErr(true)}
             style={{ width:'100%', height:'100%', objectFit:'contain', opacity:.72, filter:'brightness(0) saturate(0)', WebkitFilter:'brightness(0) saturate(0)' }} />
         ) : (
           <div style={{ width:54, height:54, borderRadius:'50%', background:'rgba(255,255,255,.08)', border:'1px solid rgba(255,255,255,.14)', color:'rgba(255,255,255,.34)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:30, fontWeight:900 }}>?</div>
@@ -3773,7 +3782,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false, d
     const imageBg = 'transparent';
     return (
       <div style={{ width:'100%', height:size, background:imageBg, display:'flex', alignItems:detailMode?'flex-end':'center', justifyContent:'center', overflow:'hidden', padding:pad, boxSizing:'border-box' }}>
-        <img src={localImageUrl} alt={a.sci} onError={()=>setImgErr(true)}
+        <img src={localImageUrl} alt={a.sci} loading={gridMode ? 'lazy' : 'eager'} decoding="async" onError={()=>setImgErr(true)}
           style={{ width:'100%', height:'100%', objectFit:'contain',
             transform: `scale(${imgScale})`,
             transformOrigin:detailMode?'center bottom':'center',
@@ -3786,12 +3795,12 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false, d
   return (
     <div style={{ width:'100%', height:size, background:'transparent', display:'flex', alignItems:'center', justifyContent:'center', fontSize }}>{c.icon}</div>
   );
-}
+});
 
 
 
 
-function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) {
+const AnimalCard = React.memo(function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) {
   const status = normalizeAnimalStatus(a.status);
   const mystery = isMysteryStatus(status);
   const imageVisible = !mystery;
@@ -3823,6 +3832,8 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
         outline:tutorialHighlight ? '1px solid rgba(255,255,255,.55)' : 'none',
         zIndex:tutorialHighlight ? 180 : 1,
         opacity:tutorialDim ? .38 : 1,
+        contentVisibility:'auto',
+        containIntrinsicSize:`${cardH}px ${cardH}px`,
         background: imageVisible
           ? 'linear-gradient(180deg, #191B20 0%, #14161A 58%, #0F1013 100%)'
           : 'linear-gradient(180deg, rgba(255,255,255,.035), rgba(0,0,0,.30)), #14161A',
@@ -3876,7 +3887,7 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
         }}>{displayName}</span></div>
     </div>
   );
-}
+});
 
 
 function Sheet({ title, onClose, children, tall }) {
@@ -5854,14 +5865,12 @@ function SpeciesRangeMap({ animal, fallbackCountryMap, accentColor, forceFallbac
   );
 }
 function ComparatorDistributionMap({ left, right, colorLeft, colorRight }) {
-  const { data, error } = useCountryGeoJson();
   const leftCodes = useMemo(() => new Set(getAnimalCountryCodes(left).map(c => String(c).toUpperCase())), [left?.id]);
   const rightCodes = useMemo(() => new Set(getAnimalCountryCodes(right).map(c => String(c).toUpperCase())), [right?.id]);
   const hasAny = leftCodes.size || rightCodes.size;
-  const activeCodes = new Set([...leftCodes, ...rightCodes]);
-  const features = data?.features || [];
-  const activeFeatures = features.filter(f => activeCodes.has(getCountryFeatureIso2(f)));
-  const fitBounds = mergeLngLatBounds(activeFeatures.map(f => geometryLngLatBounds(f.geometry)));
+  const overlapCount = left && right ? [...leftCodes].filter(c => rightCodes.has(c)).length : 0;
+  const totalUnique = new Set([...leftCodes, ...rightCodes]).size;
+  const overlapPct = totalUnique ? Math.round((overlapCount / totalUnique) * 100) : 0;
   if (!left && !right) return null;
   return (
     <div style={{ borderRadius:22, background:'linear-gradient(135deg,rgba(12,18,22,.96),rgba(20,20,22,.96))', border:'1px solid rgba(255,255,255,.08)', padding:14, margin:'0 0 14px', overflow:'hidden' }}>
@@ -5875,34 +5884,29 @@ function ComparatorDistributionMap({ left, right, colorLeft, colorRight }) {
           {right && <span style={{ width:12, height:12, borderRadius:999, background:colorRight, display:'block' }} />}
         </div>
       </div>
-      <div style={{ height:220, borderRadius:16, overflow:'hidden', background:'radial-gradient(circle at 50% 20%, rgba(91,190,248,.16), transparent 40%), linear-gradient(135deg,#07131F,#111113)', border:'1px solid rgba(255,255,255,.08)' }}>
-        {!data && !error ? (
-          <div style={{ height:'100%', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.58)', fontSize:11, fontWeight:900 }}>Caricamento mappa...</div>
-        ) : !hasAny ? (
-          <div style={{ height:'100%', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.58)', fontSize:11, fontWeight:900, textAlign:'center', padding:18 }}>Distribuzione non disponibile per questi animali.</div>
+      <div style={{ minHeight:132, borderRadius:16, overflow:'hidden', background:'radial-gradient(circle at 50% 20%, rgba(240,168,64,.12), transparent 44%), linear-gradient(135deg,#07131F,#111113)', border:'1px solid rgba(255,255,255,.08)', padding:14, display:'grid', alignContent:'center', gap:12 }}>
+        {!hasAny ? (
+          <div style={{ color:'rgba(255,255,255,.58)', fontSize:11, fontWeight:900, textAlign:'center', padding:18 }}>Distribuzione non disponibile per questi animali.</div>
         ) : (
-          <MapLibreGeoJsonMap
-            data={data}
-            activeFeatureIds={[...activeCodes]}
-            getFeatureId={getCountryFeatureIso2}
-            height={220}
-            title=""
-            label=""
-            accent="#F0A840"
-            fitBounds={fitBounds}
-            compareLeftIds={[...leftCodes]}
-            compareRightIds={[...rightCodes]}
-            compareLeftColor={colorLeft}
-            compareRightColor={colorRight}
-            compareOverlapColor="#F0A840"
-            showFeatureBoundaries={false}
-          />
+          <>
+            <div style={{ position:'relative', height:54, borderRadius:999, background:'rgba(255,255,255,.055)', overflow:'hidden', border:'1px solid rgba(255,255,255,.08)' }}>
+              <div style={{ position:'absolute', left:0, top:0, bottom:0, width:leftCodes.size || rightCodes.size ? `${Math.min(100, Math.max(8, (leftCodes.size / Math.max(1, totalUnique)) * 100))}%` : 0, background:`linear-gradient(90deg,${colorLeft}AA,${colorLeft}44)` }} />
+              <div style={{ position:'absolute', right:0, top:0, bottom:0, width:leftCodes.size || rightCodes.size ? `${Math.min(100, Math.max(8, (rightCodes.size / Math.max(1, totalUnique)) * 100))}%` : 0, background:`linear-gradient(270deg,${colorRight}AA,${colorRight}44)` }} />
+              <div style={{ position:'absolute', left:'50%', top:8, bottom:8, transform:'translateX(-50%)', width:`${Math.max(8, Math.min(72, overlapPct))}%`, borderRadius:999, background:'linear-gradient(135deg,#F0A840,#F5F1EA)', boxShadow:'0 0 24px rgba(240,168,64,.34)', opacity:left && right ? 1 : .28 }} />
+              <div style={{ position:'absolute', inset:0, display:'flex', alignItems:'center', justifyContent:'center', color:'white', fontSize:12, fontWeight:1000, textShadow:'0 1px 8px rgba(0,0,0,.55)' }}>{left && right ? `${overlapCount} paesi in comune` : `${totalUnique} paesi`}</div>
+            </div>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(3,minmax(0,1fr))', gap:8 }}>
+              <div style={{ borderRadius:14, background:'rgba(255,255,255,.055)', padding:10, minWidth:0 }}><div style={{ color:colorLeft, fontSize:18, fontWeight:1000 }}>{leftCodes.size}</div><div style={{ color:'rgba(255,255,255,.52)', fontSize:10, fontWeight:850 }}>A</div></div>
+              <div style={{ borderRadius:14, background:'rgba(240,168,64,.10)', padding:10, minWidth:0 }}><div style={{ color:'#F0A840', fontSize:18, fontWeight:1000 }}>{overlapCount}</div><div style={{ color:'rgba(255,255,255,.52)', fontSize:10, fontWeight:850 }}>Overlap</div></div>
+              <div style={{ borderRadius:14, background:'rgba(255,255,255,.055)', padding:10, minWidth:0 }}><div style={{ color:colorRight, fontSize:18, fontWeight:1000 }}>{rightCodes.size}</div><div style={{ color:'rgba(255,255,255,.52)', fontSize:10, fontWeight:850 }}>B</div></div>
+            </div>
+          </>
         )}
       </div>
       <div style={{ display:'flex', gap:10, flexWrap:'wrap', marginTop:10, color:'rgba(255,255,255,.70)', fontSize:11, fontWeight:850 }}>
         {left && <span><b style={{ color:colorLeft }}>{left.com}</b>: {leftCodes.size || 0} paesi</span>}
         {right && <span><b style={{ color:colorRight }}>{right.com}</b>: {rightCodes.size || 0} paesi</span>}
-        {left && right && <span><b style={{ color:'#F0A840' }}>Overlap</b>: {[...leftCodes].filter(c => rightCodes.has(c)).length}</span>}
+        {left && right && <span><b style={{ color:'#F0A840' }}>Overlap</b>: {overlapCount}</span>}
       </div>
     </div>
   );
@@ -6816,20 +6820,20 @@ function AuthScreen({ onAuthReady }) {
   };
 
   return (
-    <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", display:'flex', alignItems:'center', justifyContent:'center', padding:22, boxSizing:'border-box' }}>
-      <form onSubmit={submit} style={{ width:'100%', background:'linear-gradient(180deg,#222226,#161618)', border:'1px solid rgba(255,255,255,.10)', borderRadius:28, padding:24, boxShadow:'0 28px 80px rgba(0,0,0,.45)' }}>
-        <div style={{ color:'#90D84A', fontSize:13, fontWeight:900, textTransform:'uppercase', letterSpacing:.9 }}>Apex</div>
+    <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'radial-gradient(circle at 78% 4%, rgba(240,168,64,.28), transparent 34%), radial-gradient(circle at 8% 28%, rgba(184,77,58,.34), transparent 42%), linear-gradient(180deg,#2A1208 0%,#17110E 54%,#111113 100%)', color:'white', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", display:'flex', alignItems:'center', justifyContent:'center', padding:'calc(env(safe-area-inset-top, 0px) + 22px) 22px calc(env(safe-area-inset-bottom, 0px) + 22px)', boxSizing:'border-box' }}>
+      <form onSubmit={submit} style={{ width:'100%', background:'linear-gradient(180deg,rgba(41,29,22,.94),rgba(18,17,18,.96))', border:'1px solid rgba(240,168,64,.20)', borderRadius:28, padding:24, boxShadow:'0 28px 80px rgba(0,0,0,.48), inset 0 1px 0 rgba(255,255,255,.06)', backdropFilter:'blur(16px)' }}>
+        <div style={{ color:'#F0A840', fontSize:13, fontWeight:900, textTransform:'uppercase', letterSpacing:.9 }}>Apex</div>
         <h1 style={{ margin:'8px 0 6px', fontSize:30, lineHeight:1.05 }}>Accedi</h1>
-        <p style={{ margin:'0 0 18px', color:'rgba(255,255,255,.58)', fontSize:13, lineHeight:1.45 }}>Login richiesto per sincronizzare animali, destinazioni, status e badge con Supabase.</p>
-        <input type="email" required value={email} onChange={e=>setEmail(e.target.value)} placeholder="Email" style={{ width:'100%', height:46, borderRadius:14, border:'1px solid rgba(255,255,255,.12)', background:'#2B2B30', color:'white', padding:'0 14px', fontSize:14, boxSizing:'border-box', marginBottom:10 }} />
-        <input type="password" required value={password} onChange={e=>setPassword(e.target.value)} placeholder="Password" style={{ width:'100%', height:46, borderRadius:14, border:'1px solid rgba(255,255,255,.12)', background:'#2B2B30', color:'white', padding:'0 14px', fontSize:14, boxSizing:'border-box', marginBottom:14 }} />
-        <button disabled={loading} type="submit" style={{ width:'100%', height:48, borderRadius:15, border:'none', background:'#90D84A', color:'#101410', fontWeight:900, fontSize:15, cursor:loading?'default':'pointer', opacity:loading ? .7 : 1 }}>{loading ? 'Attendi...' : mode === 'signup' ? 'Crea account' : 'Login'}</button>
-        <button disabled={loading} type="button" onClick={loginWithGoogle} style={{ width:'100%', height:46, marginTop:10, borderRadius:14, border:'1px solid rgba(255,255,255,.14)', background:'#FFFFFF', color:'#151515', fontWeight:900, fontSize:14, cursor:loading?'default':'pointer', display:'flex', alignItems:'center', justifyContent:'center', gap:10 }}>
+        <p style={{ margin:'0 0 18px', color:'rgba(255,245,232,.64)', fontSize:13, lineHeight:1.45 }}>Sincronizza animali, destinazioni, status e badge nel tuo dex.</p>
+        <input type="email" required value={email} onChange={e=>setEmail(e.target.value)} placeholder="Email" style={{ width:'100%', height:46, borderRadius:14, border:'1px solid rgba(240,168,64,.20)', background:'rgba(20,16,14,.78)', color:'white', padding:'0 14px', fontSize:14, boxSizing:'border-box', marginBottom:10, outlineColor:'#F0A840' }} />
+        <input type="password" required value={password} onChange={e=>setPassword(e.target.value)} placeholder="Password" style={{ width:'100%', height:46, borderRadius:14, border:'1px solid rgba(240,168,64,.20)', background:'rgba(20,16,14,.78)', color:'white', padding:'0 14px', fontSize:14, boxSizing:'border-box', marginBottom:14, outlineColor:'#F0A840' }} />
+        <button disabled={loading} type="submit" style={{ width:'100%', height:48, borderRadius:15, border:'none', background:'linear-gradient(135deg,#B84D3A,#F0A840)', color:'white', fontWeight:900, fontSize:15, cursor:loading?'default':'pointer', opacity:loading ? .7 : 1, boxShadow:'0 12px 28px rgba(184,77,58,.34)' }}>{loading ? 'Attendi...' : mode === 'signup' ? 'Crea account' : 'Login'}</button>
+        <button disabled={loading} type="button" onClick={loginWithGoogle} style={{ width:'100%', height:46, marginTop:10, borderRadius:14, border:'1px solid rgba(240,168,64,.22)', background:'rgba(255,245,232,.96)', color:'#211512', fontWeight:900, fontSize:14, cursor:loading?'default':'pointer', display:'flex', alignItems:'center', justifyContent:'center', gap:10 }}>
           <span style={{ width:20, height:20, borderRadius:'50%', background:'linear-gradient(135deg,#4285F4 0 25%,#34A853 25% 50%,#FBBC05 50% 75%,#EA4335 75% 100%)', display:'inline-block' }} />
           Continua con Google
         </button>
-        <button type="button" onClick={()=>setMode(mode==='signup'?'login':'signup')} style={{ width:'100%', height:42, marginTop:10, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'transparent', color:'rgba(255,255,255,.78)', fontWeight:800, cursor:'pointer' }}>{mode === 'signup' ? 'Ho già un account' : 'Crea nuovo account'}</button>
-        {message && <SwipeDismissNotice onDismiss={()=>setMessage('')} style={{ marginTop:14, color:message.toLowerCase().includes('erro')?'#FF7777':'#BFEFA4', fontSize:12, lineHeight:1.4 }}>{message}</SwipeDismissNotice>}
+        <button type="button" onClick={()=>setMode(mode==='signup'?'login':'signup')} style={{ width:'100%', height:42, marginTop:10, borderRadius:13, border:'1px solid rgba(240,168,64,.18)', background:'rgba(255,255,255,.035)', color:'rgba(255,245,232,.84)', fontWeight:800, cursor:'pointer' }}>{mode === 'signup' ? 'Ho già un account' : 'Crea nuovo account'}</button>
+        {message && <SwipeDismissNotice onDismiss={()=>setMessage('')} style={{ marginTop:14, color:message.toLowerCase().includes('erro')?'#FF9387':'#F0C449', fontSize:12, lineHeight:1.4 }}>{message}</SwipeDismissNotice>}
       </form>
     </div>
   );
@@ -10731,6 +10735,31 @@ function ComparatorPage({ onBack, animals = [], statusMap = {}, visitedCountries
   );
 }
 
+const SECTION_INTRO_SEEN_KEY = 'apex_section_intros_seen_v2';
+function getSeenSectionIntros() {
+  try {
+    const next = new Set(JSON.parse(window.localStorage.getItem(SECTION_INTRO_SEEN_KEY) || '[]'));
+    ['regions', 'badges', 'abilities', 'compare', 'profile', 'gallery', 'lifeweb', 'quickSeen', 'friends', 'taxonomy'].forEach(section => {
+      if (window.localStorage.getItem(`apex_section_intro_${section}`)) next.add(section);
+    });
+    return next;
+  } catch {
+    return new Set();
+  }
+}
+function hasSeenSectionIntro(section) {
+  return getSeenSectionIntros().has(section);
+}
+function markSectionIntroSeen(section) {
+  if (!section) return;
+  try {
+    const seen = getSeenSectionIntros();
+    seen.add(section);
+    window.localStorage.setItem(SECTION_INTRO_SEEN_KEY, JSON.stringify(Array.from(seen)));
+    window.localStorage.setItem(`apex_section_intro_${section}`, '1');
+  } catch {}
+}
+
 
 // ── Root ──────────────────────────────────────────────────────────────
 
@@ -10793,7 +10822,18 @@ export default function App() {
     if (!meta.parentNode) document.head.appendChild(meta);
     const style=document.createElement('style');
     style.textContent = RARITY_CSS + `
-@keyframes ecosystemStress { 0%,100%{ transform:translate(0,0); } 25%{ transform:translate(1.5px,-1px); } 50%{ transform:translate(-1.3px,1px); } 75%{ transform:translate(1px,1.2px); } }`;
+@keyframes ecosystemStress { 0%,100%{ transform:translate(0,0); } 25%{ transform:translate(1.5px,-1px); } 50%{ transform:translate(-1.3px,1px); } 75%{ transform:translate(1px,1.2px); } }
+@media (max-width: 560px), (display-mode: standalone) {
+  .animaldex-page-dive {
+    animation: none !important;
+    transform: none !important;
+    will-change: auto !important;
+    filter: none !important;
+  }
+  .animaldex-app-frame {
+    min-height: var(--animaldex-app-height, 100dvh);
+  }
+}`;
     document.head.appendChild(style);
     return () => { try { document.head.removeChild(l); document.head.removeChild(style); } catch {} };
   },[]);
@@ -10823,6 +10863,23 @@ export default function App() {
       listener?.subscription?.unsubscribe?.();
     };
   },[]);
+
+  const hydrateCachedProgress = (activeUser = user) => {
+    if (!activeUser?.id) return;
+    const localStatusMap = getLocalUserStatusMap(activeUser.id);
+    const localBadgeIds = Array.from(getAwardUnlockSet()).map(normalizeBadgeId).filter(Boolean);
+    const localDestinations = normalizeIsoList(getVisitedCountries());
+    const fallbackProfile = buildFallbackProfile(activeUser, true);
+
+    setUserProfile(prev => prev || fallbackProfile);
+    if (Object.keys(localStatusMap).length) {
+      setStatusMap(prev => mergeStatusMapsByRank(localStatusMap, prev));
+      setAnimalsData(prev => applyCachedUserStatuses(prev, activeUser.id));
+    }
+    if (localDestinations.length) setVisitedCountries(localDestinations);
+    if (localBadgeIds.length) setEarnedBadgeIds(prev => Array.from(new Set([...prev.map(normalizeBadgeId), ...localBadgeIds])));
+    setProgressHydrated(true);
+  };
 
   const reloadSupabaseData = async (activeUser = user) => {
     if (!activeUser?.id) return;
@@ -10909,7 +10966,10 @@ export default function App() {
     awardsHydratedRef.current = false;
     setProgressHydrated(false);
     setAwardQueue([]);
-    if (user?.id) reloadSupabaseData(user);
+    if (user?.id) {
+      hydrateCachedProgress(user);
+      reloadSupabaseData(user);
+    }
   },[user?.id]);
 
   useEffect(() => {
@@ -11150,11 +11210,8 @@ export default function App() {
     if (!enabledSections.has(section)) return;
     if (tutorialStep) return;
     setActiveSectionGuide(null);
-    try {
-      const key = `apex_section_intro_${section}`;
-      if (window.localStorage.getItem(key)) return;
-      window.localStorage.setItem(key, '1');
-    } catch {}
+    if (hasSeenSectionIntro(section)) return;
+    markSectionIntroSeen(section);
     setSectionIntro(section);
   }
 
@@ -11455,7 +11512,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
     <div id="animaldex-app-root" className="animaldex-app-frame" data-theme={theme} style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column', overflow:'hidden', background:theme==='light'?LIGHT_APP_BG:'#1C1C1E', position:'relative' }}>
 	      <div key={page} className="animaldex-page-dive" style={{ height:'100%', minHeight:0, overflow:'hidden' }}>{renderPage()}</div>
 	      {tutorialStep && <OperationalTutorialOverlay step={tutorialStep} animal={getCurrentTutorialAnimal()} onNext={handleTutorialNext} onPrev={handleTutorialPrev} onFinish={completeOperationalTutorial} onSkip={completeOperationalTutorial} />}
-	      {sectionIntro && !tutorialStep && <SectionIntroModal section={sectionIntro} onClose={()=>{ const guided = sectionIntro; setSectionIntro(null); if (guided === 'badges' || guided === 'abilities') setActiveSectionGuide(guided); }} />}
+	      {sectionIntro && !tutorialStep && <SectionIntroModal section={sectionIntro} onClose={()=>{ const guided = sectionIntro; markSectionIntroSeen(guided); setSectionIntro(null); if (guided === 'badges' || guided === 'abilities') setActiveSectionGuide(guided); }} />}
 	      {dataError && user && <SwipeDismissNotice onDismiss={()=>setDataError('')} style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:250, borderRadius:14, padding:'10px 12px', background:'rgba(255,59,48,.92)', color:'white', fontSize:11, fontWeight:800, boxShadow:'0 10px 30px rgba(0,0,0,.35)' }}>{dataError}</SwipeDismissNotice>}
       {activeAwardToast && <AwardToast award={activeAwardToast} onOpen={openAwardFromToast} onDismiss={()=>setAwardQueue(prev => prev.slice(1))} />}
       {photoTarget && <PhotoRecognitionModal animal={photoTarget} animals={animalsData} user={user} onClose={()=>setPhotoTarget(null)} onConfirm={confirmPhotoRecognition} />}
