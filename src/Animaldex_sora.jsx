@@ -1081,16 +1081,30 @@ async function persistEarnedBadges(userId, badgeIds = []) {
   const cleanIds = Array.from(new Set((badgeIds || []).map(normalizeBadgeId).filter(Boolean)));
   if (!userId || !cleanIds.length) return [];
 
+  const { data: validBadgeRows, error: validBadgeError } = await supabase
+    .from('badges')
+    .select('id')
+    .in('id', cleanIds);
+
+  if (validBadgeError) {
+    console.warn('[Apex] Validazione badge Supabase non disponibile, salvo solo in locale:', validBadgeError);
+    return cleanIds;
+  }
+
+  const validIds = new Set((validBadgeRows || []).map(row => normalizeBadgeId(row.id)).filter(Boolean));
+  const idsToPersist = cleanIds.filter(id => validIds.has(id));
+  if (!idsToPersist.length) return cleanIds;
+
   const { data: existingRows, error: existingError } = await supabase
     .from('user_badges')
     .select('badge_id')
     .eq('user_id', userId)
-    .in('badge_id', cleanIds);
+    .in('badge_id', idsToPersist);
 
   if (existingError) throw existingError;
 
   const existing = new Set((existingRows || []).map(row => normalizeBadgeId(row.badge_id)));
-  const missing = cleanIds.filter(id => !existing.has(id));
+  const missing = idsToPersist.filter(id => !existing.has(id));
   if (!missing.length) return cleanIds;
 
   const now = new Date().toISOString();
@@ -4269,8 +4283,8 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
     { key:'tax', label:'Tassonomia', tone:'#E8C040', selected:fTax ? [fTax.value] : [], open:()=>{ setSheet('tax'); setShowMenu(false); setActiveFilter(null); }, hint:'Albero tassonomico' },
   ];
   const activeFilterDef = filterDefs.find(f => f.key === activeFilter);
-  const buttonSize = isPhone ? 44 : 46;
-  const gridIconSize = isPhone ? 23 : 24;
+  const buttonSize = isPhone ? 42 : 46;
+  const gridIconSize = isPhone ? 22 : 24;
   const gridControlStyle = {
     width:buttonSize,
     height:buttonSize,
@@ -4290,7 +4304,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
 
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 80% -8%, rgba(240,168,64,.34), transparent 34%), radial-gradient(circle at 10% 28%, rgba(184,77,58,.24), transparent 38%), radial-gradient(circle at 92% 72%, rgba(200,121,85,.20), transparent 36%), linear-gradient(180deg,#2A1208 0%,#1B100B 44%,#100B09 100%)', position:'relative', overflow:'hidden' }}>
-      <div data-animaldex-bar="true" data-animaldex-grid-top="true" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isPhone?'calc(env(safe-area-inset-top, 0px) + 6px) 20px 8px':'calc(env(safe-area-inset-top, 0px) + 9px) 12px 10px', minHeight:isPhone?'calc(env(safe-area-inset-top, 0px) + 62px)':'calc(env(safe-area-inset-top, 0px) + 56px)', marginTop:0, borderTop:'none', borderBottom:'none', background:ANIMALDEX_ORANGE_GRADIENT, borderRadius:'0 0 18px 18px', boxShadow:'0 8px 20px rgba(184,77,58,.18)', flexShrink:0, position:'relative', zIndex:2, overflow:'hidden' }}>
+      <div data-animaldex-bar="true" data-animaldex-grid-top="true" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isPhone?'calc(env(safe-area-inset-top, 0px) + 2px) 14px 6px':'calc(env(safe-area-inset-top, 0px) + 9px) 12px 10px', minHeight:isPhone?'calc(env(safe-area-inset-top, 0px) + 52px)':'calc(env(safe-area-inset-top, 0px) + 56px)', marginTop:0, borderTop:'none', borderBottom:'none', background:ANIMALDEX_ORANGE_GRADIENT, borderRadius:'0 0 16px 16px', boxShadow:'0 8px 20px rgba(184,77,58,.18)', flexShrink:0, position:'relative', zIndex:2, overflow:'hidden' }}>
         {onBackToOrigin ? (
           <button onClick={onBackToOrigin} aria-label="Torna alla scheda" style={gridControlStyle}>
             <svg width={gridIconSize} height={gridIconSize} viewBox="0 0 24 24" fill="none" style={{ display:'block' }}><path d="M15 5L8 12l7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -4300,8 +4314,8 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
             <svg width={gridIconSize} height={gridIconSize} viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ display:'block' }}><path d="M3.5 10.5L12 3.25l8.5 7.25" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round"/><path d="M6.5 9.75V20h11V9.75" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round"/><path d="M9.5 20v-6h5v6" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </button>
         )}
-        <span style={{ color:'white', fontSize:isPhone?20:18, fontWeight:1000, flex:1, textAlign:'center', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{preset?.title || 'Apex'}</span>
-        <button onClick={()=>setShowInfoModalGrid(!showInfoModalGrid)} style={{ ...gridControlStyle, background:'linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.075))', fontSize:isPhone?22:18, fontWeight:1000, lineHeight:1 }}>i</button>
+        <span style={{ color:'white', fontSize:isPhone?19:18, fontWeight:1000, flex:1, textAlign:'center', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{preset?.title || 'Apex'}</span>
+        <button onClick={()=>setShowInfoModalGrid(!showInfoModalGrid)} style={{ ...gridControlStyle, background:'linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.075))', fontSize:isPhone?21:18, fontWeight:1000, lineHeight:1 }}>i</button>
       </div>
 
       {/* Filtri applicati nascosti: l'area libera viene usata dai filtri rapidi. */}
@@ -4325,18 +4339,18 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
         <div style={{ height:6 }}/>
       </div>
 
-      <div data-animaldex-bottom-bar="true" data-animaldex-grid-bottom="true" style={{ background:ANIMALDEX_ORANGE_GRADIENT, borderTop:'none', padding:isPhone?'7px 20px calc(8px + env(safe-area-inset-bottom))':'7px 12px 6px', flexShrink:0, position:'relative', zIndex:2 }}>
+      <div data-animaldex-bottom-bar="true" data-animaldex-grid-bottom="true" style={{ background:ANIMALDEX_ORANGE_GRADIENT, borderTop:'none', padding:isPhone?'6px 14px calc(8px + env(safe-area-inset-bottom, 0px))':'7px 12px 6px', marginBottom:isPhone?'calc(-1 * env(safe-area-inset-bottom, 0px))':0, flexShrink:0, position:'relative', zIndex:2 }}>
         <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:9 }}>
           <button data-tour="grid-search" onClick={()=>setShowSearchBar(!showSearchBar)} aria-label="Cerca" style={{ ...gridControlStyle, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
-            <svg width={isPhone?25:21} height={isPhone?25:21} viewBox="0 0 20 20" fill="none" style={{ display:'block' }}><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.9" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round"/></svg>
+            <svg width={isPhone?24:21} height={isPhone?24:21} viewBox="0 0 20 20" fill="none" style={{ display:'block' }}><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.9" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round"/></svg>
           </button>
           <div style={{ flex:1, textAlign:'center', color:'rgba(255,255,255,.84)', fontSize:isPhone?16:11, fontWeight:1000, letterSpacing:'.1px', minWidth:0 }}>{`${list.length} risultati`}</div>
           <div style={{ display:'flex', alignItems:'center', gap:isNarrow?7:10, flexShrink:0 }}>
             <button onClick={()=>{setSheet('sort');setShowMenu(false);}} aria-label="Ordina" style={{ ...gridControlStyle, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
-              <svg width={isPhone?25:22} height={isPhone?25:22} viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ display:'block' }}><path d="M8 5v14M8 19l-3-3M8 19l3-3M16 19V5M16 5l-3 3M16 5l3 3" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              <svg width={isPhone?24:22} height={isPhone?24:22} viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ display:'block' }}><path d="M8 5v14M8 19l-3-3M8 19l3-3M16 19V5M16 5l-3 3M16 5l3 3" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </button>
             <button data-tour="grid-filters" onClick={()=>{ setShowMenu(v=>!v); setActiveFilter(null); }} aria-label="Filtra" style={{ ...gridControlStyle, background:showMenu?'rgba(0,0,0,.28)':'rgba(0,0,0,.12)', border:`1px solid ${showMenu?'rgba(255,255,255,.24)':'rgba(255,255,255,.12)'}`, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
-              <svg width={isPhone?26:23} height={isPhone?26:23} viewBox="0 0 24 24" fill="none" style={{ display:'block' }}><path d="M4 7h16M7 12h13M10 17h10" stroke="currentColor" strokeWidth="2.35" strokeLinecap="round"/></svg>
+              <svg width={isPhone?25:23} height={isPhone?25:23} viewBox="0 0 24 24" fill="none" style={{ display:'block' }}><path d="M4 7h16M7 12h13M10 17h10" stroke="currentColor" strokeWidth="2.35" strokeLinecap="round"/></svg>
             </button>
           </div>
         </div>
@@ -10669,13 +10683,13 @@ function ComparatorPage({ onBack, animals = [], statusMap = {}, visitedCountries
   const normalized = useMemo(() => (animals || ANIMALS || []).map(a => ({ ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) })), [animals, statusMap, visitedCountries]);
   const revealedDefaults = useMemo(() => normalized.filter(a => !isMysteryStatus(a.status)).slice(0, 12), [normalized]);
   const firstDefault = initialAnimal ? normalized.find(a=>a.id===initialAnimal.id) || initialAnimal : (revealedDefaults[0] || normalized[0] || null);
-  const secondDefault = firstDefault ? (revealedDefaults.find(a => String(a.id) !== String(firstDefault.id)) || normalized.find(a => String(a.id) !== String(firstDefault.id)) || null) : (revealedDefaults[1] || normalized[1] || null);
+  const secondDefault = initialAnimal ? null : (firstDefault ? (revealedDefaults.find(a => String(a.id) !== String(firstDefault.id)) || normalized.find(a => String(a.id) !== String(firstDefault.id)) || null) : (revealedDefaults[1] || normalized[1] || null));
   const [left,setLeft] = useState(firstDefault || null);
   const [right,setRight] = useState(secondDefault || null);
   const [selectedMetricKeys,setSelectedMetricKeys] = useState(DEFAULT_COMPARATOR_METRIC_KEYS);
   useEffect(()=>{
     const nextLeft = initialAnimal ? (normalized.find(a=>a.id===initialAnimal.id) || initialAnimal) : (revealedDefaults[0] || normalized[0] || null);
-    const nextRight = nextLeft ? (revealedDefaults.find(a => String(a.id) !== String(nextLeft.id)) || normalized.find(a => String(a.id) !== String(nextLeft.id)) || null) : (revealedDefaults[1] || normalized[1] || null);
+    const nextRight = initialAnimal ? null : (nextLeft ? (revealedDefaults.find(a => String(a.id) !== String(nextLeft.id)) || normalized.find(a => String(a.id) !== String(nextLeft.id)) || null) : (revealedDefaults[1] || normalized[1] || null));
     setLeft(nextLeft);
     setRight(nextRight);
   }, [initialAnimal?.id, normalized.length, revealedDefaults.length]);
@@ -11646,7 +11660,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   const renderPage = () => {
 	    if (page === 'menu') return <MainMenu theme={theme} onOpen={openPage} onBack={()=>setPage('grid')} onLogout={handleLogout} tutorialFocus={tutorialStep==='home'?'grid':null} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onOpenGridStatus={openGridWithStatus} onOpenRegions={()=>openPage('regions')} onQuickSeen={()=>{ setPage('quickSeen'); maybeShowSectionIntro('quickSeen'); }} onOpenPhoto={openPhotoRecognition} onOpenBadge={(badgeId)=>{setToastOpenBadgeId(normalizeBadgeId(badgeId)); setPage('badges'); maybeShowSectionIntro('badges');}} />;
     if (page === 'quickSeen') return <QuickSeenPage theme={theme} onBack={()=>setPage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onStatusChange={handleStatusChange} onSelect={setSel} user={user} userProfile={userProfile} />;
-    if (page === 'compare') return <SimpleComparatorPage theme={theme} onBack={()=>returnFromFeaturePage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={comparatorInitialAnimal} />;
+    if (page === 'compare') return <ComparatorPage theme={theme} onBack={()=>returnFromFeaturePage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={comparatorInitialAnimal} />;
     if (page === 'friends') return <FriendsPage theme={theme} onBack={()=>setPage('menu')} user={user} userProfile={userProfile} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
     if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={handleLogout} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} onOpenFriends={()=>openPage('friends')} />;
 	    if (page === 'badges') return <BadgesPage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={activeSectionGuide==='badges'} onTutorialBadgeOpen={()=>setActiveSectionGuide(null)} />;
