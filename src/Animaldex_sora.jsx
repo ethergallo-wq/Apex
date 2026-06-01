@@ -1347,6 +1347,57 @@ async function fetchSocialProfilesViaRest(userId, q, selectCols='user_id,usernam
   }
 }
 
+async function fetchSocialProfilesViaRpcRest(q) {
+  const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || '';
+  const anonKey = process.env.REACT_APP_SUPABASE_ANON_KEY || '';
+  if (!supabaseUrl || !anonKey || typeof fetch === 'undefined') {
+    throw createSocialSearchError('Configurazione Supabase non disponibile per la ricerca.', 'SEARCH_CONFIG_MISSING', { step:'rpc-rest-config' });
+  }
+  const sessionResult = await withTimeout(
+    supabase.auth.getSession(),
+    3500,
+    { data:null, error:{ code:'SESSION_TIMEOUT', message:'Session timeout' } },
+    'social rpc getSession'
+  );
+  const accessToken = sessionResult?.data?.session?.access_token;
+  if (!accessToken) {
+    throw createSocialSearchError('Sessione non pronta. Esci e rientra, poi riprova.', 'NO_AUTH_SESSION', { step:'rpc-rest-session' });
+  }
+
+  const endpoint = new URL('/rest/v1/rpc/search_social_profiles', supabaseUrl);
+  const response = await runTimedFetch(
+    endpoint.toString(),
+    {
+      method:'POST',
+      headers:{
+        apikey:anonKey,
+        Authorization:`Bearer ${accessToken}`,
+        Accept:'application/json',
+        'Content-Type':'application/json',
+      },
+      body:JSON.stringify({ p_query:q, p_limit:12 }),
+    },
+    8000,
+    'rest rpc search_social_profiles'
+  );
+  if (!response) {
+    throw createSocialSearchError('La ricerca utenti sta impiegando troppo tempo. Riprova tra poco.', 'SEARCH_TIMEOUT', { step:'rpc-rest-timeout' });
+  }
+  const bodyText = await response.text();
+  if (!response.ok) {
+    throw createSocialSearchError('Ricerca amici non riuscita. Controlla i permessi Supabase social.', 'SEARCH_RPC_REST_ERROR', {
+      step:'rpc-rest-http',
+      status:response.status,
+      hint:bodyText.slice(0, 90),
+    });
+  }
+  try {
+    return bodyText ? JSON.parse(bodyText) : [];
+  } catch {
+    throw createSocialSearchError('Risposta ricerca non leggibile.', 'SEARCH_RPC_REST_PARSE', { step:'rpc-rest-parse' });
+  }
+}
+
 async function searchSocialProfiles(userId, query) {
   const q = sanitizeSocialSearchQuery(query);
   if (!q || q.length < 3) return [];
@@ -1369,6 +1420,24 @@ async function searchSocialProfiles(userId, query) {
         return String(a.username || '').localeCompare(String(b.username || ''), 'it');
       })
       .slice(0, 12);
+  };
+  const runRpcSearch = async () => {
+    const { data, error } = await runTimedSupabaseRequest(
+      supabase.rpc('search_social_profiles', { p_query:q, p_limit:12 }),
+      9000,
+      { data:null, error:{ message:'search_social_profiles timeout', code:'TIMEOUT' } },
+      'rpc search_social_profiles'
+    );
+    if (error?.code === 'TIMEOUT') {
+      throw createSocialSearchError('La ricerca utenti sta impiegando troppo tempo. Riprova tra poco.', 'SEARCH_TIMEOUT', { step:'rpc-timeout' });
+    }
+    if (error) {
+      throw createSocialSearchError(error.message || 'Ricerca amici non riuscita.', error.code || 'SEARCH_RPC_ERROR', {
+        step:'rpc-error',
+        hint:String(error.details || error.hint || '').slice(0, 90),
+      });
+    }
+    return sortProfiles(data || []);
   };
   const runProfileTableSearch = async (selectCols='user_id, username, nickname, avatar_url, featured_badge_id, profile_background_image') => {
     const make = () => {
@@ -1402,6 +1471,20 @@ async function searchSocialProfiles(userId, query) {
     const rows = await fetchSocialProfilesViaRest(userId, q, selectCols);
     return sortProfiles(rows || []);
   };
+  const runRpcRestFallback = async () => {
+    const rows = await fetchSocialProfilesViaRpcRest(q);
+    return sortProfiles(rows || []);
+  };
+  try {
+    return await runRpcSearch();
+  } catch (rpcErr) {
+    console.warn('[Apex] RPC ricerca amici fallback REST RPC:', rpcErr);
+    try {
+      return await runRpcRestFallback();
+    } catch (rpcRestErr) {
+      console.warn('[Apex] REST RPC ricerca amici fallback tabella:', rpcRestErr);
+    }
+  }
   try {
     return await runProfileTableSearch();
   } catch (err) {
