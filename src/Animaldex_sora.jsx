@@ -1883,9 +1883,12 @@ const RARITY_CSS = `
 }
 #animaldex-app-root [data-animaldex-grid-top="true"] {
   border-radius: 0 0 18px 18px !important;
+  margin: 0 !important;
 }
 #animaldex-app-root [data-animaldex-grid-bottom="true"] {
   border-radius: 18px 18px 0 0 !important;
+  margin: 0 !important;
+  box-shadow: 0 -8px 24px rgba(0,0,0,.16) !important;
 }
 #animaldex-app-root [data-animaldex-card="true"],
 #animaldex-app-root [data-animaldex-modal="true"] {
@@ -4266,16 +4269,16 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
     { key:'tax', label:'Tassonomia', tone:'#E8C040', selected:fTax ? [fTax.value] : [], open:()=>{ setSheet('tax'); setShowMenu(false); setActiveFilter(null); }, hint:'Albero tassonomico' },
   ];
   const activeFilterDef = filterDefs.find(f => f.key === activeFilter);
-  const buttonSize = isPhone ? 54 : 46;
-  const gridIconSize = isPhone ? 30 : 24;
+  const buttonSize = isPhone ? 44 : 46;
+  const gridIconSize = isPhone ? 23 : 24;
   const gridControlStyle = {
     width:buttonSize,
     height:buttonSize,
     minWidth:buttonSize,
     minHeight:buttonSize,
-    borderRadius:isPhone ? 19 : 14,
-    background:'rgba(0,0,0,.14)',
-    border:'1px solid rgba(255,255,255,.14)',
+    borderRadius:isPhone ? 15 : 14,
+    background:'rgba(0,0,0,.12)',
+    border:'1px solid rgba(255,255,255,.12)',
     color:'#FFF',
     cursor:'pointer',
     display:'flex',
@@ -4287,7 +4290,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
 
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 80% -8%, rgba(240,168,64,.34), transparent 34%), radial-gradient(circle at 10% 28%, rgba(184,77,58,.24), transparent 38%), radial-gradient(circle at 92% 72%, rgba(200,121,85,.20), transparent 36%), linear-gradient(180deg,#2A1208 0%,#1B100B 44%,#100B09 100%)', position:'relative', overflow:'hidden' }}>
-      <div data-animaldex-bar="true" data-animaldex-grid-top="true" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isPhone?'calc(env(safe-area-inset-top, 0px) + 8px) 18px 10px':'calc(env(safe-area-inset-top, 0px) + 9px) 12px 10px', minHeight:isPhone?'calc(env(safe-area-inset-top, 0px) + 76px)':'calc(env(safe-area-inset-top, 0px) + 56px)', marginTop:0, borderTop:'none', borderBottom:'none', background:ANIMALDEX_ORANGE_GRADIENT, borderRadius:'0 0 18px 18px', boxShadow:'0 10px 24px rgba(184,77,58,.20)', flexShrink:0, position:'relative', zIndex:2, overflow:'hidden' }}>
+      <div data-animaldex-bar="true" data-animaldex-grid-top="true" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isPhone?'calc(env(safe-area-inset-top, 0px) + 6px) 20px 8px':'calc(env(safe-area-inset-top, 0px) + 9px) 12px 10px', minHeight:isPhone?'calc(env(safe-area-inset-top, 0px) + 62px)':'calc(env(safe-area-inset-top, 0px) + 56px)', marginTop:0, borderTop:'none', borderBottom:'none', background:ANIMALDEX_ORANGE_GRADIENT, borderRadius:'0 0 18px 18px', boxShadow:'0 8px 20px rgba(184,77,58,.18)', flexShrink:0, position:'relative', zIndex:2, overflow:'hidden' }}>
         {onBackToOrigin ? (
           <button onClick={onBackToOrigin} aria-label="Torna alla scheda" style={gridControlStyle}>
             <svg width={gridIconSize} height={gridIconSize} viewBox="0 0 24 24" fill="none" style={{ display:'block' }}><path d="M15 5L8 12l7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -4297,8 +4300,8 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
             <svg width={gridIconSize} height={gridIconSize} viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ display:'block' }}><path d="M3.5 10.5L12 3.25l8.5 7.25" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round"/><path d="M6.5 9.75V20h11V9.75" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round"/><path d="M9.5 20v-6h5v6" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </button>
         )}
-        <span style={{ color:'white', fontSize:isPhone?22:18, fontWeight:900, flex:1, textAlign:'center', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{preset?.title || 'Apex'}</span>
-        <button onClick={()=>setShowInfoModalGrid(!showInfoModalGrid)} style={{ ...gridControlStyle, background:'linear-gradient(180deg,rgba(255,255,255,.20),rgba(255,255,255,.08))', fontSize:isPhone?25:18, fontWeight:1000, lineHeight:1 }}>i</button>
+        <span style={{ color:'white', fontSize:isPhone?20:18, fontWeight:1000, flex:1, textAlign:'center', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{preset?.title || 'Apex'}</span>
+        <button onClick={()=>setShowInfoModalGrid(!showInfoModalGrid)} style={{ ...gridControlStyle, background:'linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.075))', fontSize:isPhone?22:18, fontWeight:1000, lineHeight:1 }}>i</button>
       </div>
 
       {/* Filtri applicati nascosti: l'area libera viene usata dai filtri rapidi. */}
@@ -4322,18 +4325,18 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
         <div style={{ height:6 }}/>
       </div>
 
-      <div data-animaldex-bottom-bar="true" data-animaldex-grid-bottom="true" style={{ background:ANIMALDEX_ORANGE_GRADIENT, borderTop:'none', padding:isPhone?'8px 18px calc(10px + env(safe-area-inset-bottom))':'7px 12px 6px', flexShrink:0, position:'relative', zIndex:2 }}>
-        <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10 }}>
+      <div data-animaldex-bottom-bar="true" data-animaldex-grid-bottom="true" style={{ background:ANIMALDEX_ORANGE_GRADIENT, borderTop:'none', padding:isPhone?'7px 20px calc(8px + env(safe-area-inset-bottom))':'7px 12px 6px', flexShrink:0, position:'relative', zIndex:2 }}>
+        <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:9 }}>
           <button data-tour="grid-search" onClick={()=>setShowSearchBar(!showSearchBar)} aria-label="Cerca" style={{ ...gridControlStyle, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
-            <svg width={isPhone?29:21} height={isPhone?29:21} viewBox="0 0 20 20" fill="none" style={{ display:'block' }}><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.9" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round"/></svg>
+            <svg width={isPhone?25:21} height={isPhone?25:21} viewBox="0 0 20 20" fill="none" style={{ display:'block' }}><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.9" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round"/></svg>
           </button>
-          <div style={{ flex:1, textAlign:'center', color:'rgba(255,255,255,.82)', fontSize:isPhone?18:11, fontWeight:1000, letterSpacing:'.1px', minWidth:0 }}>{`${list.length} risultati`}</div>
-          <div style={{ display:'flex', alignItems:'center', gap:isNarrow?8:10, flexShrink:0 }}>
+          <div style={{ flex:1, textAlign:'center', color:'rgba(255,255,255,.84)', fontSize:isPhone?16:11, fontWeight:1000, letterSpacing:'.1px', minWidth:0 }}>{`${list.length} risultati`}</div>
+          <div style={{ display:'flex', alignItems:'center', gap:isNarrow?7:10, flexShrink:0 }}>
             <button onClick={()=>{setSheet('sort');setShowMenu(false);}} aria-label="Ordina" style={{ ...gridControlStyle, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
-              <svg width={isPhone?30:22} height={isPhone?30:22} viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ display:'block' }}><path d="M8 5v14M8 19l-3-3M8 19l3-3M16 19V5M16 5l-3 3M16 5l3 3" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              <svg width={isPhone?25:22} height={isPhone?25:22} viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ display:'block' }}><path d="M8 5v14M8 19l-3-3M8 19l3-3M16 19V5M16 5l-3 3M16 5l3 3" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </button>
-            <button data-tour="grid-filters" onClick={()=>{ setShowMenu(v=>!v); setActiveFilter(null); }} aria-label="Filtra" style={{ ...gridControlStyle, background:showMenu?'rgba(0,0,0,.30)':'rgba(0,0,0,.14)', border:`1px solid ${showMenu?'rgba(255,255,255,.26)':'rgba(255,255,255,.14)'}`, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
-              <svg width={isPhone?31:23} height={isPhone?31:23} viewBox="0 0 24 24" fill="none" style={{ display:'block' }}><path d="M4 7h16M7 12h13M10 17h10" stroke="currentColor" strokeWidth="2.45" strokeLinecap="round"/></svg>
+            <button data-tour="grid-filters" onClick={()=>{ setShowMenu(v=>!v); setActiveFilter(null); }} aria-label="Filtra" style={{ ...gridControlStyle, background:showMenu?'rgba(0,0,0,.28)':'rgba(0,0,0,.12)', border:`1px solid ${showMenu?'rgba(255,255,255,.24)':'rgba(255,255,255,.12)'}`, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
+              <svg width={isPhone?26:23} height={isPhone?26:23} viewBox="0 0 24 24" fill="none" style={{ display:'block' }}><path d="M4 7h16M7 12h13M10 17h10" stroke="currentColor" strokeWidth="2.35" strokeLinecap="round"/></svg>
             </button>
           </div>
         </div>
@@ -10827,7 +10830,7 @@ function SimpleComparatorPage({ onBack, animals = [], statusMap = {}, visitedCou
         <div style={{ display:'flex', flexWrap:'wrap', gap:7, marginTop:12 }}>
           <span style={{ borderRadius:999, padding:'6px 9px', background:hexToRgba(accent,.15), color:accent, fontSize:11, fontWeight:950 }}>{animal.cons || 'IUCN n/d'}</span>
           <span style={{ borderRadius:999, padding:'6px 9px', background:isLightTheme?'rgba(0,0,0,.05)':'rgba(255,255,255,.07)', color:pageText, fontSize:11, fontWeight:950 }}>{CLS[animal.cls]?.label || animal.cls || 'Classe'}</span>
-          {abilities.map(id => <span key={id} style={{ borderRadius:999, padding:'6px 9px', background:isLightTheme?'rgba(0,0,0,.05)':'rgba(255,255,255,.07)', color:subText, fontSize:10.5, fontWeight:850 }}>{ABILITY_META[id]?.label || id}</span>)}
+          {abilities.map(id => <span key={id} style={{ borderRadius:999, padding:'6px 9px', background:isLightTheme?'rgba(0,0,0,.05)':'rgba(255,255,255,.07)', color:subText, fontSize:10.5, fontWeight:850 }}>{CATEGORY_META[id]?.label || id}</span>)}
         </div>
       </div>
     );
