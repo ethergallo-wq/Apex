@@ -4438,6 +4438,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
           </div>
         </div>
       </div>
+      {isPhone && <div aria-hidden="true" style={{ position:'fixed', left:'50%', transform:'translateX(-50%)', bottom:0, width:'min(480px, 100vw)', height:'calc(42px + env(safe-area-inset-bottom, 0px))', background:ANIMALDEX_ORANGE_GRADIENT, zIndex:1, pointerEvents:'none' }} />}
 
       {showMenu && (
         <div style={{ position:'absolute', left:0, right:0, bottom:isPhone?'calc(env(safe-area-inset-bottom, 0px) + 54px)':(isNarrow?52:58), zIndex:45, padding:'0 10px 8px', pointerEvents:'none' }}>
@@ -10869,11 +10870,12 @@ function SimpleComparatorPage({ onBack, animals = [], statusMap = {}, visitedCou
     return normalized.find(a => !isMysteryStatus(a.status)) || normalized[0] || null;
   }, [initialAnimal?.id, normalized]);
   const secondDefault = useMemo(() => {
+    if (initialAnimal?.id) return null;
     if (!firstDefault) return normalized[1] || null;
     return normalized.find(a => String(a.id) !== String(firstDefault.id) && !isMysteryStatus(a.status))
       || normalized.find(a => String(a.id) !== String(firstDefault.id))
       || null;
-  }, [firstDefault, normalized]);
+  }, [initialAnimal?.id, firstDefault, normalized]);
   const [leftId,setLeftId] = useState(firstDefault?.id ? String(firstDefault.id) : '');
   const [rightId,setRightId] = useState(secondDefault?.id ? String(secondDefault.id) : '');
   useEffect(() => {
@@ -10883,6 +10885,19 @@ function SimpleComparatorPage({ onBack, animals = [], statusMap = {}, visitedCou
   const left = useMemo(() => normalized.find(a => String(a.id) === String(leftId)) || null, [normalized, leftId]);
   const right = useMemo(() => normalized.find(a => String(a.id) === String(rightId)) || null, [normalized, rightId]);
   const options = normalized.filter(a => !isMysteryStatus(a.status) || String(a.id) === leftId || String(a.id) === rightId);
+  const [selectedMetricKeys,setSelectedMetricKeys] = useState(DEFAULT_COMPARATOR_METRIC_KEYS);
+  const bench = useMemo(() => getComparatorBenchmarks(normalized), [normalized]);
+  const leftMetrics = left ? getComparatorMetrics(left, bench, selectedMetricKeys) : null;
+  const rightMetrics = right ? getComparatorMetrics(right, bench, selectedMetricKeys) : null;
+  const [zoomAnimal,setZoomAnimal] = useState(null);
+  const toggleMetric = (key) => {
+    setSelectedMetricKeys(prev => {
+      const current = prev || DEFAULT_COMPARATOR_METRIC_KEYS;
+      if (current.includes(key)) return current.length <= 3 ? current : current.filter(item => item !== key);
+      if (current.length >= 8) return current;
+      return [...current, key];
+    });
+  };
   const safeNumber = (value, suffix='') => {
     const n = Number(value);
     return Number.isFinite(n) && n > 0 ? `${n}${suffix}` : 'n/d';
@@ -10898,14 +10913,6 @@ function SimpleComparatorPage({ onBack, animals = [], statusMap = {}, visitedCou
     if (key === 'class') return CLS[animal.cls]?.label || animal.cls || 'n/d';
     return 'n/d';
   };
-  const Selector = ({ label, value, onChange, accent }) => (
-    <label style={{ display:'grid', gap:7 }}>
-      <span style={{ color:accent, fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>{label}</span>
-      <select value={value} onChange={e=>onChange(e.target.value)} style={{ width:'100%', height:50, borderRadius:16, border:`1px solid ${hexToRgba(accent,.44)}`, background:isLightTheme?'rgba(255,255,255,.92)':'rgba(18,18,22,.96)', color:pageText, padding:'0 14px', fontSize:16, fontWeight:900, outline:'none', fontFamily:'inherit' }}>
-        {options.map(a => <option key={a.id} value={String(a.id)}>{a.com}</option>)}
-      </select>
-    </label>
-  );
   const AnimalPanel = ({ animal, accent, side }) => {
     if (!animal) {
       return <div style={{ borderRadius:22, background:panelBg, border:`1px dashed ${panelBorder}`, padding:18, color:subText, fontWeight:850, textAlign:'center' }}>Scegli un animale</div>;
@@ -10950,9 +10957,30 @@ function SimpleComparatorPage({ onBack, animals = [], statusMap = {}, visitedCou
           <div style={{ color:pageText, fontSize:25, fontWeight:1000, lineHeight:1.05, marginTop:4 }}>Paragona animali</div>
           <div style={{ color:subText, fontSize:12.5, lineHeight:1.5, marginTop:8 }}>Scegli due specie e confronta subito dimensioni, peso, abilità e distribuzione.</div>
         </div>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginBottom:12 }}>
-          <Selector label="Animale A" value={leftId} onChange={setLeftId} accent={COMPARE_LEFT_COLOR} />
-          <Selector label="Animale B" value={rightId} onChange={setRightId} accent={COMPARE_RIGHT_COLOR} />
+        <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:10, marginBottom:12 }}>
+          <ComparatorSelector label="Animale A" value={left} animals={options} onChange={(animal)=>setLeftId(animal?.id ? String(animal.id) : '')} accent={COMPARE_LEFT_COLOR} gradient={COMPARE_LEFT_GRADIENT} compact onZoom={setZoomAnimal} />
+          <ComparatorSelector label="Animale B" value={right} animals={options} onChange={(animal)=>setRightId(animal?.id ? String(animal.id) : '')} accent={COMPARE_RIGHT_COLOR} gradient={COMPARE_RIGHT_GRADIENT} compact onZoom={setZoomAnimal} />
+        </div>
+        <div style={{ borderRadius:20, border:`1px solid ${panelBorder}`, background:panelBg, padding:12, marginBottom:12 }}>
+          <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, marginBottom:9 }}>
+            <div style={{ color:pageText, fontSize:13, fontWeight:1000 }}>Variabili radar</div>
+            <div style={{ color:subText, fontSize:11, fontWeight:900 }}>{selectedMetricKeys.length} / 8</div>
+          </div>
+          <div style={{ display:'flex', gap:7, overflowX:'auto', paddingBottom:2, WebkitOverflowScrolling:'touch' }}>
+            {COMPARATOR_METRICS.map(metric => {
+              const active = selectedMetricKeys.includes(metric.key);
+              const disabled = !active && selectedMetricKeys.length >= 8;
+              return <button key={metric.key} disabled={disabled} onClick={()=>toggleMetric(metric.key)} style={{ flex:'0 0 auto', height:34, borderRadius:13, border:`1px solid ${active?'rgba(240,168,64,.72)':panelBorder}`, background:active?'linear-gradient(135deg,rgba(184,77,58,.82),rgba(240,168,64,.78))':(isLightTheme?'rgba(0,0,0,.045)':'rgba(255,255,255,.045)'), color:active?'white':pageText, padding:'0 10px', fontSize:11, fontWeight:950, fontFamily:'inherit', opacity:disabled ? .55 : 1, cursor:disabled?'not-allowed':'pointer' }}>{metric.label}</button>;
+            })}
+          </div>
+        </div>
+        <ComparatorErrorBoundary>
+          <ComparatorRadar left={leftMetrics} right={rightMetrics} colorLeft={COMPARE_LEFT_COLOR} colorRight={COMPARE_RIGHT_COLOR} />
+        </ComparatorErrorBoundary>
+        <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:14, margin:'12px 0 14px' }}>
+          <div style={{ display:'flex', alignItems:'center', gap:6, color:subText, fontSize:11, fontWeight:850 }}><span style={{ width:14, height:4, borderRadius:4, background:COMPARE_LEFT_COLOR, display:'inline-block' }} />{left?.com || 'Animale A'}</div>
+          <div style={{ color:isLightTheme?'rgba(0,0,0,.28)':'rgba(255,255,255,.26)', fontSize:13, fontWeight:950 }}>VS</div>
+          <div style={{ display:'flex', alignItems:'center', gap:6, color:subText, fontSize:11, fontWeight:850 }}><span style={{ width:14, height:4, borderRadius:4, background:COMPARE_RIGHT_COLOR, display:'inline-block' }} />{right?.com || 'Animale B'}</div>
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:12, marginBottom:12 }}>
           <AnimalPanel animal={left} accent={COMPARE_LEFT_COLOR} side="Animale A" />
@@ -10968,6 +10996,7 @@ function SimpleComparatorPage({ onBack, animals = [], statusMap = {}, visitedCou
           ))}
         </div>
       </div>
+      {zoomAnimal && <ImageLightbox src={zoomAnimal.image_url} alt={zoomAnimal.com} accentColor={(CLS[zoomAnimal.cls]||CLS.Mammalia).accent} bgColor={(CLS[zoomAnimal.cls]||CLS.Mammalia).img} animal={zoomAnimal} onClose={()=>setZoomAnimal(null)} />}
     </div>
   );
 }
@@ -11743,7 +11772,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   const renderPage = () => {
 	    if (page === 'menu') return <MainMenu theme={theme} onOpen={openPage} onBack={()=>setPage('grid')} onLogout={handleLogout} tutorialFocus={tutorialStep==='home'?'grid':null} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onOpenGridStatus={openGridWithStatus} onOpenRegions={()=>openPage('regions')} onQuickSeen={()=>{ setPage('quickSeen'); maybeShowSectionIntro('quickSeen'); }} onOpenPhoto={openPhotoRecognition} onOpenBadge={(badgeId)=>{setToastOpenBadgeId(normalizeBadgeId(badgeId)); setPage('badges'); maybeShowSectionIntro('badges');}} />;
     if (page === 'quickSeen') return <QuickSeenPage theme={theme} onBack={()=>setPage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onStatusChange={handleStatusChange} onSelect={setSel} user={user} userProfile={userProfile} />;
-    if (page === 'compare') return <ComparatorPage theme={theme} onBack={()=>returnFromFeaturePage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={comparatorInitialAnimal} />;
+    if (page === 'compare') return <SimpleComparatorPage theme={theme} onBack={()=>returnFromFeaturePage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={comparatorInitialAnimal} />;
     if (page === 'friends') return <FriendsPage theme={theme} onBack={()=>setPage('menu')} user={user} userProfile={userProfile} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
     if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={handleLogout} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} onOpenFriends={()=>openPage('friends')} />;
 	    if (page === 'badges') return <BadgesPage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={activeSectionGuide==='badges'} onTutorialBadgeOpen={()=>setActiveSectionGuide(null)} />;
