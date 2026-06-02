@@ -2180,6 +2180,32 @@ const BIOREGION_IDS_BY_ISO = BIOREGION_V4_ECOREGIONS.reduce((acc, eco) => {
   return acc;
 }, {});
 
+function getTerritoryUnlockIdsForCountries(countries = []) {
+  const visited = new Set(normalizeIsoList(countries));
+  const unlocked = new Set();
+  if (!visited.size) return unlocked;
+  const includesVisitedIso = item => toArraySafe(item?.iso).some(code => visited.has(String(code).toUpperCase()));
+  BIOREGION_V4_CONTINENTS.forEach(cont => {
+    let continentUnlocked = includesVisitedIso(cont);
+    (cont.regions || []).forEach(reg => {
+      let regionUnlocked = includesVisitedIso(reg);
+      (reg.ecoregions || []).forEach(eco => {
+        if (includesVisitedIso(eco)) {
+          unlocked.add(eco.id);
+          regionUnlocked = true;
+          continentUnlocked = true;
+        }
+      });
+      if (regionUnlocked) unlocked.add(reg.id);
+    });
+    if (continentUnlocked) unlocked.add(cont.id);
+  });
+  MARINE_REALMS.forEach(realm => {
+    if (includesVisitedIso(realm)) unlocked.add(realm.id);
+  });
+  return unlocked;
+}
+
 const GEO_FILTER_OPTIONS = [
   { value:'realm-group:terrestrial', label:'Dominio terrestre', c:'#6CE5C7', bg:'rgba(108,229,199,.14)', iso: BIOREGION_V4_CONTINENTS.flatMap(c=>c.iso || []), bioregionIds:BIOREGION_V4_ECOREGIONS.map(e=>e.id), matchLabels:['terrestrial','reami terrestri','ecoregioni terrestri'] },
   { value:'realm-group:marine', label:'Dominio marino', c:'#4FB3FF', bg:'rgba(79,179,255,.14)', iso: [], bioregionIds:MARINE_REALMS.map(r=>r.id), matchLabels:['marine','reami marini'] },
@@ -6323,7 +6349,7 @@ function BioregionVectorMap({ highlightIds = [], focusIds = [], highlightIsoCode
     </>
   );
 }
-function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D84A', fallbackColors, locked=false, onUnlock, onOpen, openLabel='Apri', secondaryOpenLabel='', onSecondaryOpen, mapIds=[], mapDisabled=false, onMapFocus }) {
+function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D84A', fallbackColors, locked=false, onOpen, openLabel='Apri', secondaryOpenLabel='', onSecondaryOpen, mapIds=[], mapDisabled=false, onMapFocus }) {
   const [flipped, setFlipped] = useState(false);
   const isMarine = item?.realmType === 'marine' || item?.kind === 'marine';
   const ids = mapIds?.length ? mapIds : (item?.bioregionIds || (item?.bioregionId ? [item.bioregionId] : []));
@@ -6356,7 +6382,7 @@ function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D
               {subtitle && <div style={{ color:'rgba(255,255,255,.62)', fontSize:11.5, marginTop:4, lineHeight:1.25 }}>{subtitle}</div>}
             </div>
             {locked
-              ? <button data-sound="map" onClick={e=>{e.stopPropagation();onUnlock?.();}} style={{ height:36, padding:'0 11px', borderRadius:12, border:'none', background:accent, color:'#071017', fontWeight:950, cursor:'pointer', flexShrink:0 }}>Sblocca</button>
+              ? <div style={{ minHeight:34, display:'flex', alignItems:'center', justifyContent:'center', padding:'0 10px', borderRadius:12, background:'rgba(0,0,0,.42)', border:'1px solid rgba(255,255,255,.12)', color:'rgba(255,255,255,.72)', fontSize:10.5, fontWeight:950, flexShrink:0 }}>Bloccato</div>
               : (!mapDisabled && <button data-sound="map" onClick={e=>{e.stopPropagation(); if (onMapFocus) onMapFocus(item, ids); else setFlipped(true);}} style={{ height:36, padding:'0 13px', borderRadius:12, border:'none', background:'#244A70', color:'white', fontWeight:950, cursor:'pointer', flexShrink:0 }}>Map</button>)}
           </div>
         </div>
@@ -9816,10 +9842,6 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   const [planetDomainFocus, setPlanetDomainFocus] = useState('terrestrial');
   const breadcrumbScrollRef = useRef(null);
   const mainRegionMapRef = useRef(null);
-  const [unlockMap, setUnlockMap] = useState(() => {
-    try { return JSON.parse(window.localStorage.getItem('animaldex_region_unlocks_v4') || '{}'); } catch { return {}; }
-  });
-  useEffect(()=>{ try { window.localStorage.setItem('animaldex_region_unlocks_v4', JSON.stringify(unlockMap)); } catch {} }, [unlockMap]);
   useEffect(()=>{
     if (initialView && typeof initialView === 'object') {
       setSelectedContinentId(initialView.continentId || null);
@@ -9849,6 +9871,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   const effectiveRegionId = selectedRegionId || selectedEcoPath?.region?.id || null;
   const region = continent?.regions.find(r => r.id === effectiveRegionId) || null;
   const visitedSet = new Set(normalizeIsoList(visitedCountries));
+  const territoryUnlockSet = useMemo(() => getTerritoryUnlockIdsForCountries(visitedCountries), [visitedCountries]);
   const scratchCountries = getAllScratchCountries().filter(code => {
     const q = countrySearch.trim().toLowerCase();
     if (!q) return true;
@@ -9914,7 +9937,6 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     setSelectedTerritory({ ...territory, filterValue, kind, label:territory.label });
     setView('animals');
   };
-  const unlock = (id) => setUnlockMap(prev => ({ ...prev, [id]: true }));
   const goBreadcrumb = (targetView) => {
     if (targetView === 'planet') { setSelectedContinentId(null); setSelectedRegionId(null); setSelectedEcoregion(null); setView('planet'); return; }
     if (targetView === 'terrestrial') { setSelectedRegionId(null); setSelectedEcoregion(null); setView('terrestrial'); return; }
@@ -10233,20 +10255,21 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
           </>
         )}
 
-        {view === 'terrestrial' && BIOREGION_V4_CONTINENTS.map(cont => (
-          <TerritoryCard key={cont.id} item={cont} title={cont.label} subtitle={`${cont.regions.length} regioni`} image={cont.image} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>openContinent(cont)} onMapFocus={focusTerritoryMap} mapIds={cont.bioregionIds} />
-        ))}
+        {view === 'terrestrial' && BIOREGION_V4_CONTINENTS.map(cont => {
+          const locked = !territoryUnlockSet.has(cont.id);
+          return <TerritoryCard key={cont.id} item={cont} title={cont.label} subtitle={`${cont.regions.length} regioni`} image={cont.image} icon="" accent="#6CE5C7" locked={locked} openLabel="Apri" onOpen={()=>openContinent(cont)} onMapFocus={focusTerritoryMap} mapIds={cont.bioregionIds} />;
+        })}
 
         {view === 'marine' && MARINE_REALMS.map(m => {
-          const locked = !unlockMap[m.id];
-          return <TerritoryCard key={m.id} item={m} title={m.label} subtitle={m.name_en || 'Dominio marino'} image={m.image} icon="" accent="#4FB3FF" locked={locked} onUnlock={()=>unlock(m.id)} openLabel="Vedi animali" onOpen={()=>openTerritoryAnimals(m, `marine:${m.id}`, 'marine')} onMapFocus={focusTerritoryMap} mapIds={[m.id]} />;
+          const locked = !territoryUnlockSet.has(m.id);
+          return <TerritoryCard key={m.id} item={m} title={m.label} subtitle={m.name_en || 'Dominio marino'} image={m.image} icon="" accent="#4FB3FF" locked={locked} openLabel="Vedi animali" onOpen={()=>openTerritoryAnimals(m, `marine:${m.id}`, 'marine')} onMapFocus={focusTerritoryMap} mapIds={[m.id]} />;
         })}
 
         {view==='regions' && continent && (
           <>
             {showRegionBoxes && continent.regions.map(reg => {
-              const locked = !unlockMap[reg.id];
-              return <TerritoryCard key={reg.id} item={reg} title={reg.label} subtitle={`${reg.ecoregions.length} subregioni`} image={reg.image} icon="" accent="#20B2AA" locked={locked} onUnlock={()=>unlock(reg.id)} openLabel="Apri" onOpen={()=>openRegion(reg)} onMapFocus={focusTerritoryMap} mapIds={reg.bioregionIds} />;
+              const locked = !territoryUnlockSet.has(reg.id);
+              return <TerritoryCard key={reg.id} item={reg} title={reg.label} subtitle={`${reg.ecoregions.length} subregioni`} image={reg.image} icon="" accent="#20B2AA" locked={locked} openLabel="Apri" onOpen={()=>openRegion(reg)} onMapFocus={focusTerritoryMap} mapIds={reg.bioregionIds} />;
             })}
           </>
         )}
@@ -10254,8 +10277,8 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
         {view==='ecoregions' && region && (
           <>
             {showRegionBoxes && region.ecoregions.map(eco => {
-              const locked = !unlockMap[eco.id];
-              return <TerritoryCard key={eco.id} item={eco} title={eco.label} subtitle={`${eco.iso?.length || 0} codici ISO · ${eco.name_en || 'subregione'}`} image={eco.image} icon="" accent="#90D84A" locked={locked} onUnlock={()=>unlock(eco.id)} openLabel="Apri" onOpen={()=>openEcoregion(eco)} onMapFocus={focusTerritoryMap} mapIds={[eco.id]} />;
+              const locked = !territoryUnlockSet.has(eco.id);
+              return <TerritoryCard key={eco.id} item={eco} title={eco.label} subtitle={`${eco.iso?.length || 0} codici ISO · ${eco.name_en || 'subregione'}`} image={eco.image} icon="" accent="#90D84A" locked={locked} openLabel="Apri" onOpen={()=>openEcoregion(eco)} onMapFocus={focusTerritoryMap} mapIds={[eco.id]} />;
             })}
           </>
         )}
@@ -11151,6 +11174,99 @@ function SimpleComparatorPage({ onBack, animals = [], statusMap = {}, visitedCou
   );
 }
 
+function StableComparatorPage({ onBack, animals = [], statusMap = {}, visitedCountries = [], initialAnimal = null, theme='dark' }) {
+  const isLightTheme = theme === 'light';
+  const pageBg = isLightTheme ? LIGHT_APP_BG : '#111113';
+  const pageText = isLightTheme ? '#171717' : '#FFFFFF';
+  const subText = isLightTheme ? 'rgba(0,0,0,.60)' : 'rgba(255,255,255,.62)';
+  const panelBg = isLightTheme ? 'rgba(255,255,255,.74)' : 'rgba(255,255,255,.055)';
+  const panelBorder = isLightTheme ? 'rgba(0,0,0,.10)' : 'rgba(255,255,255,.10)';
+  const normalized = useMemo(() => {
+    const source = (animals?.length ? animals : ANIMALS) || [];
+    return source
+      .filter(Boolean)
+      .map(a => ({ ...a, status:getResolvedAnimalStatus(a, statusMap, visitedCountries) }))
+      .sort((a,b) => String(a.com || '').localeCompare(String(b.com || ''), 'it'));
+  }, [animals, statusMap, visitedCountries]);
+  const visibleOptions = useMemo(() => {
+    const revealed = normalized.filter(a => !isMysteryStatus(a.status));
+    return revealed.length ? revealed : normalized;
+  }, [normalized]);
+  const initialLeftId = initialAnimal?.id ? String(initialAnimal.id) : String(visibleOptions[0]?.id || '');
+  const initialRightId = visibleOptions.find(a => String(a.id) !== initialLeftId)?.id || '';
+  const [leftId,setLeftId] = useState(initialLeftId);
+  const [rightId,setRightId] = useState(String(initialRightId));
+  useEffect(() => {
+    setLeftId(initialLeftId);
+    setRightId(String(initialRightId || ''));
+  }, [initialLeftId, initialRightId]);
+  const left = visibleOptions.find(a => String(a.id) === String(leftId)) || null;
+  const right = visibleOptions.find(a => String(a.id) === String(rightId)) || null;
+  const bench = useMemo(() => getComparatorBenchmarks(normalized), [normalized]);
+  const leftMetrics = left ? getComparatorMetrics(left, bench, DEFAULT_COMPARATOR_METRIC_KEYS) : null;
+  const rightMetrics = right ? getComparatorMetrics(right, bench, DEFAULT_COMPARATOR_METRIC_KEYS) : null;
+  const selectStyle = {
+    width:'100%',
+    height:50,
+    borderRadius:16,
+    border:`1px solid ${panelBorder}`,
+    background:isLightTheme?'#FFFFFF':'#1B1C20',
+    color:pageText,
+    padding:'0 12px',
+    fontFamily:'inherit',
+    fontSize:14,
+    fontWeight:850,
+    outline:'none',
+  };
+  const row = (label, aValue, bValue) => (
+    <div key={label} style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:8, alignItems:'center', padding:'12px 13px', borderTop:`1px solid ${panelBorder}` }}>
+      <div style={{ color:subText, fontSize:11.5, fontWeight:950, textTransform:'uppercase' }}>{label}</div>
+      <div style={{ color:COMPARE_LEFT_COLOR, fontSize:13, fontWeight:1000, textAlign:'center', minWidth:0 }}>{aValue}</div>
+      <div style={{ color:COMPARE_RIGHT_COLOR, fontSize:13, fontWeight:1000, textAlign:'right', minWidth:0 }}>{bValue}</div>
+    </div>
+  );
+  const value = (animal, key) => {
+    if (!animal) return 'n/d';
+    if (key === 'weight') return formatComparatorMassG(getComparatorMassG(animal));
+    if (key === 'length') return `${Math.round(getComparatorLengthCm(animal))} cm`;
+    if (key === 'speed') return Number(animal?.stats?.velocita || 0) > 0 ? `${animal.stats.velocita} km/h` : 'n/d';
+    if (key === 'bite') return Number(animal?.stats?.morso || 0) > 0 ? `${animal.stats.morso} PSI` : 'n/d';
+    if (key === 'countries') return `${getCountriesCount(animal)} paesi`;
+    if (key === 'class') return CLS[animal.cls]?.label || animal.cls || 'n/d';
+    return 'n/d';
+  };
+  return (
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:pageBg, overflow:'hidden' }}>
+      <PageHeader title="Comparatore" onBack={onBack} theme={theme} />
+      <div style={{ flex:1, overflowY:'auto', WebkitOverflowScrolling:'touch', padding:'14px 14px calc(30px + env(safe-area-inset-bottom, 0px))', boxSizing:'border-box' }}>
+        <div style={{ borderRadius:24, border:`1px solid ${panelBorder}`, background:panelBg, padding:16, marginBottom:12 }}>
+          <div style={{ color:'#C85D44', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.9 }}>Analisi comparativa</div>
+          <div style={{ color:pageText, fontSize:25, fontWeight:1000, lineHeight:1.05, marginTop:4 }}>Paragona animali</div>
+          <div style={{ color:subText, fontSize:12.5, lineHeight:1.5, marginTop:8 }}>Versione stabile: seleziona due specie e confronta valori essenziali.</div>
+        </div>
+        <div style={{ display:'grid', gap:10, marginBottom:12 }}>
+          <select aria-label="Animale A" value={leftId} onChange={e=>setLeftId(e.target.value)} style={selectStyle}>
+            {visibleOptions.map(a => <option key={a.id} value={String(a.id)}>{a.com || a.sci || `Animale ${a.id}`}</option>)}
+          </select>
+          <select aria-label="Animale B" value={rightId} onChange={e=>setRightId(e.target.value)} style={selectStyle}>
+            <option value="">Scegli animale B</option>
+            {visibleOptions.map(a => <option key={a.id} value={String(a.id)}>{a.com || a.sci || `Animale ${a.id}`}</option>)}
+          </select>
+        </div>
+        <ComparatorMetricBars left={leftMetrics} right={rightMetrics} colorLeft={COMPARE_LEFT_COLOR} colorRight={COMPARE_RIGHT_COLOR} theme={theme} />
+        <div style={{ borderRadius:24, border:`1px solid ${panelBorder}`, background:panelBg, overflow:'hidden' }}>
+          {row('Peso', value(left, 'weight'), value(right, 'weight'))}
+          {row('Dimensioni', value(left, 'length'), value(right, 'length'))}
+          {row('Velocità', value(left, 'speed'), value(right, 'speed'))}
+          {row('Morso', value(left, 'bite'), value(right, 'bite'))}
+          {row('Distribuzione', value(left, 'countries'), value(right, 'countries'))}
+          {row('Classe', value(left, 'class'), value(right, 'class'))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 const SECTION_INTRO_SEEN_KEY = 'apex_section_intros_seen_v2';
 const SECTION_INTRO_SEEN_SESSION_KEY = 'apex_section_intros_seen_session_v2';
 let sectionIntroSeenMemory = new Set();
@@ -11963,7 +12079,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
     if (page === 'quickSeen') return <QuickSeenPage theme={theme} onBack={()=>setPage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onStatusChange={handleStatusChange} onSelect={setSel} user={user} userProfile={userProfile} />;
     if (page === 'compare') return (
       <FeaturePageErrorBoundary theme={theme} title="Comparatore" onBack={()=>returnFromFeaturePage('menu')} resetKey={`compare-${theme}-${animalsData?.length || 0}-${comparatorInitialAnimal?.id || ''}`}>
-        <SimpleComparatorPage theme={theme} onBack={()=>returnFromFeaturePage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={comparatorInitialAnimal} />
+        <StableComparatorPage theme={theme} onBack={()=>returnFromFeaturePage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={comparatorInitialAnimal} />
       </FeaturePageErrorBoundary>
     );
     if (page === 'friends') return <FriendsPage theme={theme} onBack={()=>setPage('menu')} user={user} userProfile={userProfile} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
