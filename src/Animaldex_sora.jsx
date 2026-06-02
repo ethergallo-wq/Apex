@@ -3765,7 +3765,6 @@ function DistMap({ hab, accentColor, countriesPresent, bioregionIds=[], animal }
         <SpeciesRangeMap
           animal={animal}
           accentColor={accentColor}
-          forceFallback
           fallbackCountryMap={<CountryPresenceMap countryCodes={countryCodes} selectedCountry={activeCountry} onSelectCountry={setSelectedCountry} accent={accentColor} height={280} title="Mappa paesi di presenza" pointMode={animal?.cls === 'Aves'} globeOverview />}
         />
       ) : (
@@ -5921,7 +5920,7 @@ function useSpeciesRange(animal) {
   useEffect(() => {
     let alive = true;
     if (!sci) { setState({ meta:null, data:null, loading:false, error:null }); return; }
-    setState(prev => ({ ...prev, loading:true, error:null }));
+    setState({ meta:null, data:null, loading:true, error:null });
     if (!SPECIES_RANGE_INDEX_PROMISE) {
       SPECIES_RANGE_INDEX_PROMISE = fetch(SPECIES_RANGE_INDEX_URL)
         .then(res => {
@@ -5954,6 +5953,13 @@ function SpeciesRangeMap({ animal, fallbackCountryMap, accentColor, forceFallbac
   const bounds = meta?.bbox || mergeLngLatBounds(features.map(f => geometryLngLatBounds(f.geometry)));
   const rangeTone = meta?.marine ? 'marine' : 'terrestrial';
   const rangeAccent = meta?.marine ? '#FF9F1C' : '#FF4FB8';
+  if (!forceFallback && loading && !data) {
+    return (
+      <div style={{ height:280, display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.58)', fontSize:11, fontWeight:900, background:'#07131F' }}>
+        Caricamento distribuzione...
+      </div>
+    );
+  }
   if (forceFallback || !data || !features.length) {
     return fallbackCountryMap || (
       <div style={{ height:280, display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.52)', fontSize:11, fontWeight:900 }}>
