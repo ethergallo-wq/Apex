@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useMemo, useRef, useCallback } from "react";
-import { ANIMALS as LOCAL_ANIMALS } from './animals-data';
 import { supabase } from './supabaseClient';
 
-let ANIMALS = LOCAL_ANIMALS;
+let LOCAL_ANIMALS = [];
+let ANIMALS = [];
+let LOCAL_ANIMAL_BY_ID = {};
+let localAnimalsLoadPromise = null;
 
 // ── Config ────────────────────────────────────────────────────────────
 const CLS = {
@@ -626,8 +628,26 @@ function normalizeLocalAnimal(a) {
   };
 }
 
+function hydrateLocalAnimalIndexes(list = []) {
+  LOCAL_ANIMALS = Array.isArray(list) ? list : [];
+  ANIMALS = LOCAL_ANIMALS;
+  LOCAL_ANIMAL_BY_ID = Object.fromEntries(LOCAL_ANIMALS.map(a => [a.id, normalizeLocalAnimal(a)]));
+  return LOCAL_ANIMALS;
+}
 
-const LOCAL_ANIMAL_BY_ID = Object.fromEntries(LOCAL_ANIMALS.map(a => [a.id, normalizeLocalAnimal(a)]));
+async function loadLocalAnimalsData() {
+  if (LOCAL_ANIMALS.length) return LOCAL_ANIMALS;
+  if (!localAnimalsLoadPromise) {
+    localAnimalsLoadPromise = import('./animals-data')
+      .then(module => hydrateLocalAnimalIndexes(module.ANIMALS || []))
+      .catch(err => {
+        localAnimalsLoadPromise = null;
+        throw err;
+      });
+  }
+  return localAnimalsLoadPromise;
+}
+
 function mergeRemoteWithLocalBioregions(remoteList = []) {
   return (remoteList || []).map(remote => {
     const local = LOCAL_ANIMAL_BY_ID[remote.id];
@@ -11051,6 +11071,7 @@ export default function App() {
   const [tutorialStep,setTutorialStep]=useState(null);
   const [tutorialAnimalId,setTutorialAnimalId]=useState(null);
   const [tutorialStamp,setTutorialStamp]=useState(false);
+  const [localAnimalsReady,setLocalAnimalsReady]=useState(() => LOCAL_ANIMALS.length > 0);
   const [animalsData,setAnimalsData]=useState(() => LOCAL_ANIMALS.map(normalizeLocalAnimal));
   ANIMALS = animalsData;
   const [sel,setSel]=useState(null);
@@ -11114,6 +11135,25 @@ export default function App() {
     document.head.appendChild(style);
     return () => { try { document.head.removeChild(l); document.head.removeChild(style); } catch {} };
   },[]);
+
+  useEffect(() => {
+    let alive = true;
+    loadLocalAnimalsData()
+      .then(list => {
+        if (!alive) return;
+        const normalized = list.map(normalizeLocalAnimal);
+        setAnimalsData(prev => prev?.length ? prev : normalized);
+        setLocalAnimalsReady(true);
+      })
+      .catch(err => {
+        console.warn('[Apex] Dataset animali locale non caricato:', err);
+        if (alive) {
+          setDataError('Dataset animali non caricato');
+          setLocalAnimalsReady(true);
+        }
+      });
+    return () => { alive = false; };
+  }, []);
 
   useEffect(()=>{
     applyAnimaldexThemeToDocument(theme);
@@ -11243,14 +11283,16 @@ export default function App() {
     awardsHydratedRef.current = false;
     setProgressHydrated(false);
     setAwardQueue([]);
+    if (!localAnimalsReady) return;
     if (user?.id) {
       hydrateCachedProgress(user);
       reloadSupabaseData(user);
     }
-  },[user?.id]);
+  },[user?.id, localAnimalsReady]);
 
   useEffect(() => {
     if (authLoading) return;
+    if (!localAnimalsReady) return;
     if (user?.id) return;
     const localStatusMap = getLocalUserStatusMap('guest');
     if (!Object.keys(localStatusMap).length) {
@@ -11263,7 +11305,7 @@ export default function App() {
       return nextStatus ? { ...a, status:nextStatus, userStatus:appStatusToSupabase(nextStatus) } : a;
     }));
     setProgressHydrated(true);
-  }, [authLoading, user?.id]);
+  }, [authLoading, user?.id, localAnimalsReady]);
 
   useEffect(() => {
     if (!userProfile?.onboarding_completed) return;
@@ -11743,6 +11785,14 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   }
 
   if (!user) return <AuthScreen onAuthReady={()=>supabase.auth.getSession().then(({data})=>{setSession(data.session||null);setUser(data.session?.user||null);})} />;
+
+  if (!localAnimalsReady) {
+    return (
+      <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
+        <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800 }}>Caricamento specie...</div>
+      </div>
+    );
+  }
 
   if (!userProfile && dataLoading) {
     return (
