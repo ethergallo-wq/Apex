@@ -6061,6 +6061,11 @@ class ComparatorErrorBoundary extends React.Component {
   static getDerivedStateFromError() {
     return { hasError:true };
   }
+  componentDidUpdate(prevProps) {
+    if (this.state.hasError && prevProps.resetKey !== this.props.resetKey) {
+      this.setState({ hasError:false });
+    }
+  }
   componentDidCatch(error) {
     console.warn('[Apex] Comparator section:', error);
   }
@@ -6069,6 +6074,48 @@ class ComparatorErrorBoundary extends React.Component {
     return (
       <div style={{ borderRadius:22, background:'rgba(255,255,255,.055)', border:'1px solid rgba(240,168,64,.22)', padding:16, color:'rgba(255,255,255,.76)', fontSize:12.5, lineHeight:1.45, margin:'0 0 14px' }}>
         Questa sezione del confronto non è disponibile per questi dati. Puoi comunque scegliere gli animali e usare il radar.
+      </div>
+    );
+  }
+}
+
+class FeaturePageErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError:false };
+  }
+  static getDerivedStateFromError() {
+    return { hasError:true };
+  }
+  componentDidUpdate(prevProps) {
+    if (this.state.hasError && prevProps.resetKey !== this.props.resetKey) {
+      this.setState({ hasError:false });
+    }
+  }
+  componentDidCatch(error) {
+    console.warn(`[Apex] ${this.props.title || 'Feature'} fallback:`, error);
+  }
+  render() {
+    if (!this.state.hasError) return this.props.children;
+    const isLight = this.props.theme === 'light';
+    const bg = isLight ? LIGHT_APP_BG : '#111113';
+    const text = isLight ? '#171717' : '#FFFFFF';
+    const muted = isLight ? 'rgba(0,0,0,.62)' : 'rgba(255,255,255,.64)';
+    const panel = isLight ? 'rgba(255,255,255,.76)' : 'rgba(255,255,255,.055)';
+    const border = isLight ? 'rgba(0,0,0,.10)' : 'rgba(255,255,255,.10)';
+    return (
+      <div style={{ height:'100%', display:'flex', flexDirection:'column', background:bg, overflow:'hidden' }}>
+        <PageHeader title={this.props.title || 'Apex'} onBack={this.props.onBack} theme={this.props.theme} />
+        <div style={{ flex:1, display:'flex', alignItems:'center', justifyContent:'center', padding:18, boxSizing:'border-box' }}>
+          <div style={{ width:'100%', borderRadius:24, border:`1px solid ${border}`, background:panel, padding:18, textAlign:'center', boxShadow:'0 18px 48px rgba(0,0,0,.18)' }}>
+            <div style={{ color:text, fontSize:21, fontWeight:1000, marginBottom:8 }}>Sezione in ripristino</div>
+            <div style={{ color:muted, fontSize:13, lineHeight:1.45, marginBottom:16 }}>Il confronto ha incontrato dati incompleti. Puoi riprovare senza chiudere Apex.</div>
+            <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
+              <button data-sound="back" onClick={this.props.onBack} style={{ minHeight:46, borderRadius:16, border:`1px solid ${border}`, background:isLight?'rgba(0,0,0,.05)':'rgba(255,255,255,.07)', color:text, fontFamily:'inherit', fontWeight:1000, cursor:'pointer' }}>Indietro</button>
+              <button data-sound="compare" onClick={()=>this.setState({ hasError:false })} style={{ minHeight:46, borderRadius:16, border:'1px solid rgba(255,255,255,.14)', background:ANIMALDEX_ORANGE_GRADIENT, color:'white', fontFamily:'inherit', fontWeight:1000, cursor:'pointer' }}>Riprova</button>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
@@ -10700,17 +10747,23 @@ function radarLabelLines(label='') {
 }
 function ComparatorRadar({ left, right, colorLeft, colorRight }) {
   const width = 430, height = 410, cx = width/2, cy = 206, r = 120;
-  const axes = left?.radar || right?.radar || COMPARATOR_METRICS.map(m=>({ ...m, value:0 }));
+  const fallbackAxes = COMPARATOR_METRICS.slice(0, DEFAULT_COMPARATOR_METRIC_KEYS.length).map(m=>({ ...m, value:0 }));
+  const axes = left?.radar?.length ? left.radar : right?.radar?.length ? right.radar : fallbackAxes;
+  const axisCount = Math.max(1, axes.length);
+  const metricForAxis = (data, axis, index) => {
+    if (!data?.radar?.length) return null;
+    return data.radar.find(metric => metric.key === axis.key) || data.radar[index] || null;
+  };
   const labelPoint = (idx) => {
-    const angle = -Math.PI/2 + idx*(2*Math.PI/Math.max(1, axes.length));
+    const angle = -Math.PI/2 + idx*(2*Math.PI/axisCount);
     const rr = r + 52;
     const x = cx + Math.cos(angle) * rr;
     const y = cy + Math.sin(angle) * rr;
     const anchor = Math.abs(Math.cos(angle)) < .18 ? 'middle' : Math.cos(angle) > 0 ? 'start' : 'end';
     return { x:Math.max(42, Math.min(width - 42, x)), y:Math.max(28, Math.min(height - 28, y)), anchor };
   };
-  const pt = (idx,value)=>{ const angle=-Math.PI/2 + idx*(2*Math.PI/axes.length); const rr=r*(Number(value||0)/100); return [cx+Math.cos(angle)*rr, cy+Math.sin(angle)*rr]; };
-  const poly = (data)=> data ? data.radar.map((m,i)=>pt(i,m.value).join(',')).join(' ') : '';
+  const pt = (idx,value)=>{ const angle=-Math.PI/2 + idx*(2*Math.PI/axisCount); const rr=r*(Number(value||0)/100); return [cx+Math.cos(angle)*rr, cy+Math.sin(angle)*rr]; };
+  const poly = (data)=> data?.radar?.length ? axes.map((axis,i)=>pt(i, metricForAxis(data, axis, i)?.value || 0).join(',')).join(' ') : '';
   const grid = [20,40,60,80,100].map(v=> axes.map((_,i)=>pt(i,v).join(',')).join(' '));
   return (
     <div style={{ borderRadius:24, background:'radial-gradient(circle at 50% 48%,rgba(168,70,55,.14),rgba(0,0,0,.36) 58%,rgba(0,0,0,.76))', border:'1px solid rgba(255,255,255,.08)', padding:8, overflow:'hidden', boxShadow:'inset 0 1px 0 rgba(255,255,255,.04)' }}>
@@ -10719,8 +10772,8 @@ function ComparatorRadar({ left, right, colorLeft, colorRight }) {
         {axes.map((m,i)=>{ const [x,y]=pt(i,100); return <line key={m.key} x1={cx} y1={cy} x2={x} y2={y} stroke="rgba(255,255,255,.20)" strokeWidth="1" />; })}
         {right && <polygon points={poly(right)} fill={`${colorRight}33`} stroke={colorRight} strokeWidth="4" />}
         {left && <polygon points={poly(left)} fill={`${colorLeft}33`} stroke={colorLeft} strokeWidth="4" />}
-        {[left,right].filter(Boolean).map((data,di)=>data.radar.map((m,i)=>{ const [x,y]=pt(i,m.value); const col=di===0?colorLeft:colorRight; return <circle key={`${di}-${m.key}`} cx={x} cy={y} r="4.8" fill={col} stroke="rgba(255,255,255,.65)" strokeWidth="1.2" />; }))}
-        {axes.map((m,i)=>{ const slot=labelPoint(i); const lv=left?.radar?.[i]; const rv=right?.radar?.[i]; const lines=radarLabelLines(m.label); return <g key={m.key}>
+        {[left,right].filter(Boolean).map((data,di)=>axes.map((axis,i)=>{ const metric=metricForAxis(data, axis, i); const [x,y]=pt(i, metric?.value || 0); const col=di===0?colorLeft:colorRight; return <circle key={`${di}-${axis.key}`} cx={x} cy={y} r="4.8" fill={col} stroke="rgba(255,255,255,.65)" strokeWidth="1.2" />; }))}
+        {axes.map((m,i)=>{ const slot=labelPoint(i); const lv=metricForAxis(left, m, i); const rv=metricForAxis(right, m, i); const lines=radarLabelLines(m.label); return <g key={m.key}>
           <text x={slot.x} y={slot.y} fill="white" fontSize={axes.length > 6 ? 12 : 15} fontWeight="900" textAnchor={slot.anchor}>{lines[0]}</text>
           {lines[1] && <text x={slot.x} y={slot.y+14} fill="white" fontSize="10.5" fontWeight="850" opacity=".82" textAnchor={slot.anchor}>{lines[1]}</text>}
           <text x={slot.x} y={slot.y+(lines[1]?29:18)} fill={colorLeft} fontSize="10" fontWeight="900" textAnchor={slot.anchor}>{lv?formatComparatorRaw(lv):''}</text>
@@ -11828,7 +11881,11 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   const renderPage = () => {
 	    if (page === 'menu') return <MainMenu theme={theme} onOpen={openPage} onBack={()=>setPage('grid')} onLogout={handleLogout} tutorialFocus={tutorialStep==='home'?'grid':null} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onOpenGridStatus={openGridWithStatus} onOpenRegions={()=>openPage('regions')} onQuickSeen={()=>{ setPage('quickSeen'); maybeShowSectionIntro('quickSeen'); }} onOpenPhoto={openPhotoRecognition} onOpenBadge={(badgeId)=>{setToastOpenBadgeId(normalizeBadgeId(badgeId)); setPage('badges'); maybeShowSectionIntro('badges');}} />;
     if (page === 'quickSeen') return <QuickSeenPage theme={theme} onBack={()=>setPage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onStatusChange={handleStatusChange} onSelect={setSel} user={user} userProfile={userProfile} />;
-    if (page === 'compare') return <SimpleComparatorPage theme={theme} onBack={()=>returnFromFeaturePage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={comparatorInitialAnimal} />;
+    if (page === 'compare') return (
+      <FeaturePageErrorBoundary theme={theme} title="Comparatore" onBack={()=>returnFromFeaturePage('menu')} resetKey={`compare-${theme}-${animalsData?.length || 0}-${comparatorInitialAnimal?.id || ''}`}>
+        <SimpleComparatorPage theme={theme} onBack={()=>returnFromFeaturePage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={comparatorInitialAnimal} />
+      </FeaturePageErrorBoundary>
+    );
     if (page === 'friends') return <FriendsPage theme={theme} onBack={()=>setPage('menu')} user={user} userProfile={userProfile} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
     if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={handleLogout} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} onOpenFriends={()=>openPage('friends')} />;
 	    if (page === 'badges') return <BadgesPage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={activeSectionGuide==='badges'} onTutorialBadgeOpen={()=>setActiveSectionGuide(null)} />;
