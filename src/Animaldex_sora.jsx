@@ -4387,6 +4387,8 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
   const activeFilterDef = filterDefs.find(f => f.key === activeFilter);
   const buttonSize = isPhone ? 42 : 46;
   const gridIconSize = isPhone ? 22 : 24;
+  const bottomButtonSize = isPhone ? 36 : 40;
+  const bottomIconSize = isPhone ? 20 : 21;
   const gridControlStyle = {
     width:buttonSize,
     height:buttonSize,
@@ -4402,6 +4404,14 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
     justifyContent:'center',
     flex:'0 0 auto',
     padding:0,
+  };
+  const bottomControlStyle = {
+    ...gridControlStyle,
+    width:bottomButtonSize,
+    height:bottomButtonSize,
+    minWidth:bottomButtonSize,
+    minHeight:bottomButtonSize,
+    borderRadius:isPhone ? 13 : 14,
   };
 
   return (
@@ -4441,26 +4451,26 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
         <div style={{ height:6 }}/>
       </div>
 
-      <div data-animaldex-bottom-bar="true" data-animaldex-grid-bottom="true" style={{ background:ANIMALDEX_ORANGE_GRADIENT, borderTop:'none', padding:isPhone?'6px 14px calc(8px + env(safe-area-inset-bottom, 0px))':'7px 12px 6px', marginBottom:isPhone?'calc(-1 * env(safe-area-inset-bottom, 0px))':0, flexShrink:0, position:'relative', zIndex:2 }}>
-        <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:9 }}>
-          <button data-tour="grid-search" onClick={()=>setShowSearchBar(!showSearchBar)} aria-label="Cerca" style={{ ...gridControlStyle, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
-            <svg width={isPhone?24:21} height={isPhone?24:21} viewBox="0 0 20 20" fill="none" style={{ display:'block' }}><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.9" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round"/></svg>
+      <div data-animaldex-bottom-bar="true" data-animaldex-grid-bottom="true" style={{ background:ANIMALDEX_ORANGE_GRADIENT, borderTop:'none', padding:isPhone?'4px 14px calc(5px + env(safe-area-inset-bottom, 0px))':'5px 12px 5px', marginBottom:isPhone?'calc(-1 * env(safe-area-inset-bottom, 0px))':0, flexShrink:0, position:'relative', zIndex:3 }}>
+        <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:8 }}>
+          <button data-tour="grid-search" onClick={()=>setShowSearchBar(!showSearchBar)} aria-label="Cerca" style={{ ...bottomControlStyle, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
+            <svg width={bottomIconSize} height={bottomIconSize} viewBox="0 0 20 20" fill="none" style={{ display:'block' }}><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.9" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round"/></svg>
           </button>
-          <div style={{ flex:1, textAlign:'center', color:'rgba(255,255,255,.84)', fontSize:isPhone?16:11, fontWeight:1000, letterSpacing:'.1px', minWidth:0 }}>{`${list.length} risultati`}</div>
-          <div style={{ display:'flex', alignItems:'center', gap:isNarrow?7:10, flexShrink:0 }}>
-            <button onClick={()=>{setSheet('sort');setShowMenu(false);}} aria-label="Ordina" style={{ ...gridControlStyle, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
-              <svg width={isPhone?24:22} height={isPhone?24:22} viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ display:'block' }}><path d="M8 5v14M8 19l-3-3M8 19l3-3M16 19V5M16 5l-3 3M16 5l3 3" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          <div style={{ flex:1, textAlign:'center', color:'rgba(255,255,255,.84)', fontSize:isPhone?13:11, fontWeight:1000, letterSpacing:'.1px', minWidth:0 }}>{`${list.length} risultati`}</div>
+          <div style={{ display:'flex', alignItems:'center', gap:isNarrow?6:8, flexShrink:0 }}>
+            <button onClick={()=>{setSheet('sort');setShowMenu(false);}} aria-label="Ordina" style={{ ...bottomControlStyle, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
+              <svg width={bottomIconSize} height={bottomIconSize} viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ display:'block' }}><path d="M8 5v14M8 19l-3-3M8 19l3-3M16 19V5M16 5l-3 3M16 5l3 3" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </button>
-            <button data-tour="grid-filters" onClick={()=>{ setShowMenu(v=>!v); setActiveFilter(null); }} aria-label="Filtra" style={{ ...gridControlStyle, background:showMenu?'rgba(0,0,0,.28)':'rgba(0,0,0,.12)', border:`1px solid ${showMenu?'rgba(255,255,255,.24)':'rgba(255,255,255,.12)'}`, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
-              <svg width={isPhone?25:23} height={isPhone?25:23} viewBox="0 0 24 24" fill="none" style={{ display:'block' }}><path d="M4 7h16M7 12h13M10 17h10" stroke="currentColor" strokeWidth="2.35" strokeLinecap="round"/></svg>
+            <button data-tour="grid-filters" onClick={()=>{ setShowMenu(v=>!v); setActiveFilter(null); }} aria-label="Filtra" style={{ ...bottomControlStyle, background:showMenu?'rgba(0,0,0,.28)':'rgba(0,0,0,.12)', border:`1px solid ${showMenu?'rgba(255,255,255,.24)':'rgba(255,255,255,.12)'}`, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
+              <svg width={bottomIconSize + 1} height={bottomIconSize + 1} viewBox="0 0 24 24" fill="none" style={{ display:'block' }}><path d="M4 7h16M7 12h13M10 17h10" stroke="currentColor" strokeWidth="2.35" strokeLinecap="round"/></svg>
             </button>
           </div>
         </div>
       </div>
-      {isPhone && <div aria-hidden="true" style={{ position:'fixed', left:'50%', transform:'translateX(-50%)', bottom:0, width:'min(480px, 100vw)', height:'calc(42px + env(safe-area-inset-bottom, 0px))', background:ANIMALDEX_ORANGE_GRADIENT, zIndex:1, pointerEvents:'none' }} />}
+      {isPhone && <div aria-hidden="true" style={{ position:'fixed', left:'50%', transform:'translateX(-50%)', bottom:-1, width:'min(480px, 100vw)', height:'calc(22px + env(safe-area-inset-bottom, 0px))', background:ANIMALDEX_ORANGE_GRADIENT, zIndex:2, pointerEvents:'none' }} />}
 
       {showMenu && (
-        <div style={{ position:'absolute', left:0, right:0, bottom:isPhone?'calc(env(safe-area-inset-bottom, 0px) + 54px)':(isNarrow?52:58), zIndex:45, padding:'0 10px 8px', pointerEvents:'none' }}>
+        <div style={{ position:'absolute', left:0, right:0, bottom:isPhone?'calc(env(safe-area-inset-bottom, 0px) + 46px)':(isNarrow?48:54), zIndex:45, padding:'0 10px 8px', pointerEvents:'none' }}>
           <div data-animaldex-bottom-bar="true" style={{ pointerEvents:'auto', background:isLightTheme?'rgba(251,247,239,.96)':'linear-gradient(180deg, rgba(35,28,24,.98), rgba(15,16,18,.98))', border:`1px solid ${isLightTheme?'rgba(0,0,0,.12)':'rgba(240,168,64,.18)'}`, boxShadow:'0 -18px 54px rgba(0,0,0,.46)', padding:isNarrow?10:12, maxHeight:'min(54dvh, 360px)', overflow:'hidden', animation:'animaldexFilterSheetUp .22s cubic-bezier(.2,.82,.2,1) both' }}>
             <div style={{ width:44, height:4, borderRadius:999, background:isLightTheme?'rgba(0,0,0,.18)':'rgba(255,255,255,.20)', margin:'0 auto 10px' }} />
             {!activeFilterDef ? (
@@ -10783,6 +10793,56 @@ function ComparatorRadar({ left, right, colorLeft, colorRight }) {
     </div>
   );
 }
+
+function ComparatorMetricBars({ left, right, colorLeft, colorRight, theme='dark' }) {
+  const isLight = theme === 'light';
+  const text = isLight ? '#171717' : '#FFFFFF';
+  const muted = isLight ? 'rgba(0,0,0,.56)' : 'rgba(255,255,255,.58)';
+  const panel = isLight ? 'rgba(255,255,255,.72)' : 'rgba(255,255,255,.05)';
+  const border = isLight ? 'rgba(0,0,0,.10)' : 'rgba(255,255,255,.08)';
+  const axes = left?.radar?.length ? left.radar : right?.radar?.length ? right.radar : [];
+  const getMetric = (data, axis, index) => data?.radar?.find(metric => metric.key === axis.key) || data?.radar?.[index] || null;
+  if (!axes.length) {
+    return (
+      <div style={{ borderRadius:22, border:`1px solid ${border}`, background:panel, padding:16, color:muted, fontSize:12.5, textAlign:'center', marginBottom:12 }}>
+        Scegli due animali per iniziare il confronto.
+      </div>
+    );
+  }
+  return (
+    <div style={{ borderRadius:24, border:`1px solid ${border}`, background:panel, padding:14, marginBottom:12, overflow:'hidden' }}>
+      <div style={{ display:'flex', alignItems:'baseline', justifyContent:'space-between', gap:10, marginBottom:12 }}>
+        <div style={{ color:text, fontSize:14, fontWeight:1000 }}>Confronto metriche</div>
+        <div style={{ color:muted, fontSize:10.5, fontWeight:900 }}>{axes.length} valori</div>
+      </div>
+      <div style={{ display:'grid', gap:11 }}>
+        {axes.map((axis, index) => {
+          const leftMetric = getMetric(left, axis, index);
+          const rightMetric = getMetric(right, axis, index);
+          const leftValue = Math.max(0, Math.min(100, Number(leftMetric?.value || 0)));
+          const rightValue = Math.max(0, Math.min(100, Number(rightMetric?.value || 0)));
+          return (
+            <div key={axis.key || index} style={{ minWidth:0 }}>
+              <div style={{ display:'grid', gridTemplateColumns:'1fr auto auto', alignItems:'center', gap:8, marginBottom:6 }}>
+                <div style={{ color:text, fontSize:11.5, fontWeight:950, minWidth:0, overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap' }}>{axis.label}</div>
+                <div style={{ color:colorLeft, fontSize:10.5, fontWeight:950 }}>{leftMetric ? formatComparatorRaw(leftMetric) : 'n/d'}</div>
+                <div style={{ color:colorRight, fontSize:10.5, fontWeight:950 }}>{rightMetric ? formatComparatorRaw(rightMetric) : 'n/d'}</div>
+              </div>
+              <div style={{ display:'grid', gap:5 }}>
+                <div style={{ height:8, borderRadius:999, background:isLight?'rgba(0,0,0,.07)':'rgba(255,255,255,.08)', overflow:'hidden' }}>
+                  <div style={{ width:`${leftValue}%`, height:'100%', borderRadius:999, background:colorLeft, transition:'width .22s ease' }} />
+                </div>
+                <div style={{ height:8, borderRadius:999, background:isLight?'rgba(0,0,0,.07)':'rgba(255,255,255,.08)', overflow:'hidden' }}>
+                  <div style={{ width:`${rightValue}%`, height:'100%', borderRadius:999, background:colorRight, transition:'width .22s ease' }} />
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
 function ComparatorSelector({ label, value, animals, onChange, accent, gradient, onZoom, compact=false }) {
   const [open,setOpen] = useState(false);
   const [q,setQ] = useState('');
@@ -10905,7 +10965,7 @@ function ComparatorPage({ onBack, animals = [], statusMap = {}, visitedCountries
           </div>
         </div>
         <ComparatorErrorBoundary>
-          <ComparatorRadar left={leftMetrics} right={rightMetrics} colorLeft={colorLeft} colorRight={colorRight} />
+          <ComparatorMetricBars left={leftMetrics} right={rightMetrics} colorLeft={colorLeft} colorRight={colorRight} theme={theme} />
         </ComparatorErrorBoundary>
         <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:14, margin:'12px 0 16px' }}>
           <div style={{ display:'flex', alignItems:'center', gap:6, color:'rgba(255,255,255,.76)', fontSize:11, fontWeight:850 }}><span style={{ width:14, height:4, borderRadius:4, background:colorLeft, display:'inline-block' }} />{left?.com || 'Animale A'}</div>
@@ -11054,7 +11114,7 @@ function SimpleComparatorPage({ onBack, animals = [], statusMap = {}, visitedCou
           </div>
         </div>
         <ComparatorErrorBoundary>
-          <ComparatorRadar left={leftMetrics} right={rightMetrics} colorLeft={COMPARE_LEFT_COLOR} colorRight={COMPARE_RIGHT_COLOR} />
+          <ComparatorMetricBars left={leftMetrics} right={rightMetrics} colorLeft={COMPARE_LEFT_COLOR} colorRight={COMPARE_RIGHT_COLOR} theme={theme} />
         </ComparatorErrorBoundary>
         <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:14, margin:'12px 0 14px' }}>
           <div style={{ display:'flex', alignItems:'center', gap:6, color:subText, fontSize:11, fontWeight:850 }}><span style={{ width:14, height:4, borderRadius:4, background:COMPARE_LEFT_COLOR, display:'inline-block' }} />{left?.com || 'Animale A'}</div>
@@ -11150,6 +11210,7 @@ export default function App() {
   const [awardQueue,setAwardQueue]=useState([]);
   const [earnedBadgeIds,setEarnedBadgeIds]=useState([]);
   const [progressHydrated,setProgressHydrated]=useState(false);
+  const [awardToastReady,setAwardToastReady]=useState(false);
   const [theme,setTheme]=useState(getInitialAnimaldexTheme);
   const [visitedCountries,setVisitedCountries]=useState(() => normalizeIsoList(getVisitedCountries()));
   const awardsHydratedRef = useRef(false);
@@ -11335,12 +11396,14 @@ export default function App() {
     } finally {
       setDataLoading(false);
       setProgressHydrated(true);
+      setTimeout(() => setAwardToastReady(true), 0);
     }
   };
 
   useEffect(()=>{
     awardsHydratedRef.current = false;
     setProgressHydrated(false);
+    setAwardToastReady(false);
     setAwardQueue([]);
     if (!localAnimalsReady) return;
     if (user?.id) {
@@ -11356,6 +11419,7 @@ export default function App() {
     const localStatusMap = getLocalUserStatusMap('guest');
     if (!Object.keys(localStatusMap).length) {
       setProgressHydrated(true);
+      setTimeout(() => setAwardToastReady(true), 0);
       return;
     }
     setStatusMap(localStatusMap);
@@ -11364,6 +11428,7 @@ export default function App() {
       return nextStatus ? { ...a, status:nextStatus, userStatus:appStatusToSupabase(nextStatus) } : a;
     }));
     setProgressHydrated(true);
+    setTimeout(() => setAwardToastReady(true), 0);
   }, [authLoading, user?.id, localAnimalsReady]);
 
   useEffect(() => {
@@ -11391,7 +11456,7 @@ export default function App() {
     const initialHydration = !awardsHydratedRef.current;
     awardsHydratedRef.current = true;
 
-    if (!initialHydration && fresh.length) {
+    if (awardToastReady && !initialHydration && fresh.length) {
       setAwardQueue(prev => [...prev, ...fresh]);
       if (user?.id) fresh.forEach(award => createSocialBadgeEvent(user.id, award).catch(err => console.warn('[Apex] Evento badge non salvato:', err)));
       if (user?.id) fresh.forEach(award => trackUserEvent(user, 'badge_earned', { badge_id:award.badgeId, badge_name:award.name, badge_macro:award.macro, source_screen:'badges' }, userProfile));
@@ -11413,7 +11478,7 @@ export default function App() {
     } else {
       persistAwardUnlocks(merged);
     }
-  }, [unlockedAwards, earnedBadgeIds, progressHydrated, user?.id]);
+  }, [unlockedAwards, earnedBadgeIds, progressHydrated, awardToastReady, user?.id]);
 
   useEffect(() => {
     if (!activeAwardToast) return;
