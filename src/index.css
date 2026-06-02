@@ -16,8 +16,8 @@ body,
   html,
   body,
   #root {
-    min-height: 100dvh;
-    height: 100dvh;
+    min-height: var(--animaldex-app-height, 100dvh);
+    height: var(--animaldex-app-height, 100dvh);
   }
 }
 

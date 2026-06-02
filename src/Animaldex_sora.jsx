@@ -83,6 +83,18 @@ function applyAnimaldexThemeToDocument(theme) {
   document.body.style.background = normalized === 'light' ? LIGHT_APP_BG : '#1C1C1E';
   try { window.localStorage.setItem(ANIMALDEX_THEME_KEY, normalized); } catch {}
 }
+function applyAnimaldexPageChrome(theme, page) {
+  if (typeof document === 'undefined') return;
+  const isGrid = page === 'grid';
+  const normalized = theme === 'light' ? 'light' : 'dark';
+  const bg = isGrid ? ANIMALDEX_ORANGE_SOLID : (normalized === 'light' ? LIGHT_APP_BG : '#1C1C1E');
+  document.documentElement.dataset.animaldexPage = isGrid ? 'grid' : 'app';
+  document.body.dataset.animaldexPage = isGrid ? 'grid' : 'app';
+  document.documentElement.style.background = bg;
+  document.body.style.background = bg;
+  const root = document.getElementById('root');
+  if (root) root.style.background = bg;
+}
 const lightText = (theme, dark='white') => theme === 'light' ? '#171717' : dark;
 const lightMuted = (theme, dark='rgba(255,255,255,.62)') => theme === 'light' ? 'rgba(0,0,0,.60)' : dark;
 const lightSurface = (theme, dark='#1C1C1E') => theme === 'light' ? LIGHT_CARD_BG : dark;
@@ -3336,7 +3348,8 @@ function useAppViewportHeight() {
         Math.round(document.documentElement.clientHeight || 0)
       );
       const next = Math.max(320, measured || 800);
-      const px = `${next}px`;
+      const standalone = window.matchMedia?.('(display-mode: standalone)')?.matches || window.navigator?.standalone === true;
+      const px = standalone ? `calc(${next}px + env(safe-area-inset-bottom, 0px))` : `${next}px`;
       document.documentElement.style.setProperty('--animaldex-app-height', px);
       document.body.style.minHeight = px;
       setH(px);
@@ -4467,8 +4480,6 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
           </div>
         </div>
       </div>
-      {isPhone && <div aria-hidden="true" style={{ position:'fixed', left:'50%', transform:'translateX(-50%)', bottom:-1, width:'min(480px, 100vw)', height:'calc(22px + env(safe-area-inset-bottom, 0px))', background:ANIMALDEX_ORANGE_GRADIENT, zIndex:2, pointerEvents:'none' }} />}
-
       {showMenu && (
         <div style={{ position:'absolute', left:0, right:0, bottom:isPhone?'calc(env(safe-area-inset-bottom, 0px) + 46px)':(isNarrow?48:54), zIndex:45, padding:'0 10px 8px', pointerEvents:'none' }}>
           <div data-animaldex-bottom-bar="true" style={{ pointerEvents:'auto', background:isLightTheme?'rgba(251,247,239,.96)':'linear-gradient(180deg, rgba(35,28,24,.98), rgba(15,16,18,.98))', border:`1px solid ${isLightTheme?'rgba(0,0,0,.12)':'rgba(240,168,64,.18)'}`, boxShadow:'0 -18px 54px rgba(0,0,0,.46)', padding:isNarrow?10:12, maxHeight:'min(54dvh, 360px)', overflow:'hidden', animation:'animaldexFilterSheetUp .22s cubic-bezier(.2,.82,.2,1) both' }}>
@@ -11278,6 +11289,10 @@ export default function App() {
   useEffect(()=>{
     applyAnimaldexThemeToDocument(theme);
   }, [theme]);
+
+  useEffect(()=>{
+    applyAnimaldexPageChrome(theme, page);
+  }, [theme, page]);
 
   useEffect(()=>{
     let mounted = true;
