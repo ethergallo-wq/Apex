@@ -6605,6 +6605,205 @@ function SectionIntroModal({ section, onClose }) {
   );
 }
 
+const INSTALL_GUIDE_DISMISSED_KEY = 'apex_install_guide_dismissed_v1';
+
+function isRunningAsInstalledApp() {
+  if (typeof window === 'undefined') return false;
+  const standaloneMedia = typeof window.matchMedia === 'function' && window.matchMedia('(display-mode: standalone)').matches;
+  const iosStandalone = typeof window.navigator !== 'undefined' && window.navigator.standalone === true;
+  return Boolean(standaloneMedia || iosStandalone);
+}
+
+function detectInstallGuideProfile() {
+  if (typeof navigator === 'undefined') {
+    return {
+      key: 'desktop',
+      title: 'Installa Apex',
+      intro: 'Apex funziona meglio quando lo apri dalla schermata Home: avvio rapido, schermo pieno e meno distrazioni del browser.',
+      bullets: [
+        'Apri il menu del browser o l’icona di installazione nella barra.',
+        'Scegli Installa app o Aggiungi alla schermata Home.',
+        'Riapri Apex dalla nuova icona per giocare a schermo pieno.',
+      ],
+      primaryLabel: 'Ho capito',
+      canUseNativePrompt: true,
+    };
+  }
+  const ua = navigator.userAgent || '';
+  const platform = navigator.platform || '';
+  const isiOS = /iPad|iPhone|iPod/i.test(ua) || (platform === 'MacIntel' && Number(navigator.maxTouchPoints || 0) > 1);
+  const isAndroid = /Android/i.test(ua);
+  const isCriOS = /CriOS/i.test(ua);
+  const isFxiOS = /FxiOS/i.test(ua);
+  const isEdgiOS = /EdgiOS/i.test(ua);
+  const isSafari = isiOS && /Safari/i.test(ua) && !isCriOS && !isFxiOS && !isEdgiOS;
+  const isChromium = /Chrome|Chromium|Edg|OPR|CriOS/i.test(ua);
+
+  if (isiOS && isSafari) {
+    return {
+      key: 'ios-safari',
+      title: 'Aggiungi Apex alla Home',
+      intro: 'Su iPhone Apex diventa più stabile e pulita se la apri come app dalla schermata Home.',
+      bullets: [
+        'Tocca Condividi nella barra di Safari.',
+        'Scorri le azioni e scegli Aggiungi alla schermata Home.',
+        'Conferma con Aggiungi, poi apri Apex dalla nuova icona.',
+      ],
+      primaryLabel: 'Ho capito',
+      canUseNativePrompt: false,
+    };
+  }
+
+  if (isiOS) {
+    return {
+      key: 'ios-other',
+      title: 'Installa da Safari',
+      intro: 'iOS permette l’aggiunta alla Home solo da Safari. Ti basta aprire questo link in Safari una volta.',
+      bullets: [
+        'Apri il menu del browser e scegli Apri in Safari, oppure copia il link.',
+        'In Safari tocca Condividi.',
+        'Scegli Aggiungi alla schermata Home e conferma.',
+      ],
+      primaryLabel: 'Ho capito',
+      canUseNativePrompt: false,
+    };
+  }
+
+  if (isAndroid) {
+    return {
+      key: 'android',
+      title: 'Installa Apex sul telefono',
+      intro: 'Da Android puoi installare Apex come web app: parte più velocemente e resta dentro un’interfaccia più ordinata.',
+      bullets: [
+        'Tocca il menu del browser con i tre puntini.',
+        'Scegli Installa app o Aggiungi alla schermata Home.',
+        'Apri Apex dalla nuova icona per continuare il Dex.',
+      ],
+      primaryLabel: 'Installa se disponibile',
+      canUseNativePrompt: isChromium,
+    };
+  }
+
+  return {
+    key: 'desktop',
+    title: 'Installa Apex',
+    intro: 'Puoi tenere Apex come app separata dal browser. Su smartphone l’esperienza è ancora più naturale.',
+    bullets: [
+      'Nel browser cerca l’icona Installa nella barra indirizzi o nel menu.',
+      'Conferma l’installazione dell’app.',
+      'Per il gioco quotidiano, aggiungila anche alla Home del telefono.',
+    ],
+    primaryLabel: 'Installa se disponibile',
+    canUseNativePrompt: isChromium,
+  };
+}
+
+function InstallGuidePreview({ profileKey }) {
+  const isAndroid = profileKey === 'android';
+  const isDesktop = profileKey === 'desktop';
+  const isOtherIos = profileKey === 'ios-other';
+  const toolbarLabel = isAndroid ? 'Chrome' : isDesktop ? 'Browser' : isOtherIos ? 'Safari' : 'Safari';
+  const actionLabel = isAndroid ? 'Installa app' : isDesktop ? 'Installa Apex' : 'Aggiungi alla Home';
+  const actionIcon = isAndroid ? '⋮' : isDesktop ? '+' : '↑';
+
+  return (
+    <div aria-hidden="true" style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginTop:14 }}>
+      <div style={{ minHeight:132, borderRadius:22, border:'1px solid rgba(255,255,255,.12)', background:'linear-gradient(180deg,#24252A,#111215)', padding:10, boxShadow:'inset 0 1px 0 rgba(255,255,255,.06)' }}>
+        <div style={{ height:20, borderRadius:9, background:'rgba(255,255,255,.08)', display:'flex', alignItems:'center', justifyContent:'space-between', padding:'0 7px', color:'rgba(255,255,255,.62)', fontSize:8, fontWeight:1000 }}>
+          <span>{toolbarLabel}</span>
+          <span style={{ color:'#F0CFA5', fontSize:14, lineHeight:1 }}>{actionIcon}</span>
+        </div>
+        <div style={{ marginTop:12, borderRadius:16, background:'linear-gradient(135deg,#C85A3F,#F0A840)', height:52, display:'flex', alignItems:'center', justifyContent:'center', color:'white', fontSize:17, fontWeight:1000 }}>Apex</div>
+        <div style={{ marginTop:10, height:9, width:'76%', borderRadius:99, background:'rgba(255,255,255,.16)' }} />
+        <div style={{ marginTop:7, height:9, width:'56%', borderRadius:99, background:'rgba(255,255,255,.10)' }} />
+      </div>
+
+      <div style={{ minHeight:132, borderRadius:22, border:'1px solid rgba(240,168,64,.32)', background:'linear-gradient(180deg,rgba(240,168,64,.14),rgba(255,255,255,.04))', padding:10, boxShadow:'0 12px 34px rgba(0,0,0,.25)' }}>
+        <div style={{ height:88, borderRadius:18, background:'rgba(0,0,0,.22)', border:'1px solid rgba(255,255,255,.10)', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:8 }}>
+          <div style={{ width:42, height:42, borderRadius:14, background:'linear-gradient(135deg,#B84D3A,#F0A840)', display:'flex', alignItems:'center', justifyContent:'center', color:'white', fontWeight:1000, fontSize:21 }}>A</div>
+          <div style={{ color:'white', fontSize:10.5, fontWeight:1000 }}>{actionLabel}</div>
+        </div>
+        <div style={{ marginTop:9, height:11, borderRadius:99, background:'rgba(240,207,165,.24)' }} />
+      </div>
+    </div>
+  );
+}
+
+function InstallPromptBanner() {
+  const [profile] = useState(() => detectInstallGuideProfile());
+  const [online, setOnline] = useState(() => typeof navigator === 'undefined' ? true : navigator.onLine !== false);
+  const [dismissed, setDismissed] = useState(() => {
+    try { return typeof localStorage !== 'undefined' && localStorage.getItem(INSTALL_GUIDE_DISMISSED_KEY) === '1'; }
+    catch { return false; }
+  });
+  const [deferredPrompt, setDeferredPrompt] = useState(null);
+
+  useEffect(() => {
+    const handleOnline = () => setOnline(true);
+    const handleOffline = () => setOnline(false);
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+    return () => {
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleBeforeInstallPrompt = (event) => {
+      event.preventDefault?.();
+      setDeferredPrompt(event);
+    };
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    return () => window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+  }, []);
+
+  const close = () => {
+    try { localStorage.setItem(INSTALL_GUIDE_DISMISSED_KEY, '1'); } catch {}
+    setDismissed(true);
+  };
+
+  const installOrClose = async () => {
+    if (profile.canUseNativePrompt && deferredPrompt?.prompt) {
+      try {
+        await deferredPrompt.prompt();
+        await deferredPrompt.userChoice;
+      } catch {}
+      setDeferredPrompt(null);
+    }
+    close();
+  };
+
+  if (dismissed || !online || isRunningAsInstalledApp()) return null;
+
+  return (
+    <div style={{ position:'absolute', inset:0, zIndex:390, pointerEvents:'none', display:'flex', alignItems:'flex-end', justifyContent:'center', padding:'0 14px calc(env(safe-area-inset-bottom, 0px) + 14px)' }}>
+      <div style={{ width:'100%', maxWidth:440, pointerEvents:'auto', borderRadius:28, background:'linear-gradient(180deg,rgba(31,31,35,.98),rgba(13,13,15,.99))', border:'1px solid rgba(240,168,64,.28)', boxShadow:'0 26px 80px rgba(0,0,0,.58), inset 0 1px 0 rgba(255,255,255,.06)', padding:16, color:'white' }}>
+        <div style={{ display:'flex', gap:12, alignItems:'flex-start' }}>
+          <div style={{ width:48, height:48, borderRadius:18, background:'linear-gradient(135deg,#B84D3A,#F0A840)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:24, fontWeight:1000, flexShrink:0 }}>A</div>
+          <div style={{ flex:1, minWidth:0 }}>
+            <div style={{ color:'#F0A840', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Prima apertura online</div>
+            <div style={{ marginTop:3, fontSize:21, lineHeight:1.1, fontWeight:1000 }}>{profile.title}</div>
+            <div style={{ marginTop:8, color:'rgba(255,245,232,.72)', fontSize:12.5, lineHeight:1.42 }}>{profile.intro}</div>
+          </div>
+          <button type="button" aria-label="Chiudi guida installazione" onClick={close} style={{ width:38, height:38, borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.055)', color:'rgba(255,255,255,.72)', fontSize:24, lineHeight:1, cursor:'pointer', flexShrink:0 }}>×</button>
+        </div>
+
+        <InstallGuidePreview profileKey={profile.key} />
+
+        <ul style={{ margin:'14px 0 0', padding:'0 0 0 19px', color:'rgba(255,245,232,.82)', fontSize:12.5, lineHeight:1.45 }}>
+          {profile.bullets.map((bullet) => <li key={bullet} style={{ marginBottom:6 }}>{bullet}</li>)}
+        </ul>
+
+        <div style={{ display:'flex', gap:10, marginTop:14 }}>
+          <button type="button" onClick={close} style={{ flex:1, height:46, borderRadius:15, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.05)', color:'rgba(255,245,232,.78)', fontWeight:950, fontFamily:'inherit', cursor:'pointer' }}>Più tardi</button>
+          <button type="button" onClick={installOrClose} style={{ flex:1.25, height:46, borderRadius:15, border:'none', background:'linear-gradient(135deg,#B84D3A,#F0A840)', color:'white', fontWeight:1000, fontFamily:'inherit', cursor:'pointer', boxShadow:'0 14px 32px rgba(184,77,58,.32)' }}>{profile.primaryLabel}</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 
 function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, onFinish }) {
   const OCHRE = '#A84637';
@@ -7056,7 +7255,7 @@ function AuthScreen({ onAuthReady }) {
   };
 
   return (
-    <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'radial-gradient(circle at 78% 4%, rgba(240,168,64,.28), transparent 34%), radial-gradient(circle at 8% 28%, rgba(184,77,58,.34), transparent 42%), linear-gradient(180deg,#2A1208 0%,#17110E 54%,#111113 100%)', color:'white', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", display:'flex', alignItems:'center', justifyContent:'center', padding:'calc(env(safe-area-inset-top, 0px) + 22px) 22px calc(env(safe-area-inset-bottom, 0px) + 22px)', boxSizing:'border-box' }}>
+    <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'radial-gradient(circle at 78% 4%, rgba(240,168,64,.28), transparent 34%), radial-gradient(circle at 8% 28%, rgba(184,77,58,.34), transparent 42%), linear-gradient(180deg,#2A1208 0%,#17110E 54%,#111113 100%)', color:'white', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", display:'flex', alignItems:'center', justifyContent:'center', padding:'calc(env(safe-area-inset-top, 0px) + 22px) 22px calc(env(safe-area-inset-bottom, 0px) + 22px)', boxSizing:'border-box', position:'relative', overflow:'hidden' }}>
       <form onSubmit={submit} style={{ width:'100%', background:'linear-gradient(180deg,rgba(41,29,22,.94),rgba(18,17,18,.96))', border:'1px solid rgba(240,168,64,.20)', borderRadius:28, padding:24, boxShadow:'0 28px 80px rgba(0,0,0,.48), inset 0 1px 0 rgba(255,255,255,.06)', backdropFilter:'blur(16px)' }}>
         <div style={{ color:'#F0A840', fontSize:13, fontWeight:900, textTransform:'uppercase', letterSpacing:.9 }}>Apex</div>
         <h1 style={{ margin:'8px 0 6px', fontSize:30, lineHeight:1.05 }}>Accedi</h1>
@@ -7071,6 +7270,7 @@ function AuthScreen({ onAuthReady }) {
         <button type="button" onClick={()=>setMode(mode==='signup'?'login':'signup')} style={{ width:'100%', height:42, marginTop:10, borderRadius:13, border:'1px solid rgba(240,168,64,.18)', background:'rgba(255,255,255,.035)', color:'rgba(255,245,232,.84)', fontWeight:800, cursor:'pointer' }}>{mode === 'signup' ? 'Ho già un account' : 'Crea nuovo account'}</button>
         {message && <SwipeDismissNotice onDismiss={()=>setMessage('')} style={{ marginTop:14, color:message.toLowerCase().includes('erro')?'#FF9387':'#F0C449', fontSize:12, lineHeight:1.4 }}>{message}</SwipeDismissNotice>}
       </form>
+      <InstallPromptBanner />
     </div>
   );
 }
@@ -12070,6 +12270,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
     return (
       <div {...APP_FRAME_PROPS} style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', overflow:'hidden', background:'#111113', position:'relative' }}>
         <OnboardingFlow user={user} animals={animalsData} initialNickname={userProfile.nickname || userProfile.username} onComplete={handleCompleteOnboarding} onFinish={finishOnboarding} />
+        <InstallPromptBanner />
       </div>
     );
   }
@@ -12099,6 +12300,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
 	      <div key={page} className="animaldex-page-dive" style={{ height:'100%', minHeight:0, overflow:'hidden' }}>{renderPage()}</div>
 	      {tutorialStep && <OperationalTutorialOverlay step={tutorialStep} animal={getCurrentTutorialAnimal()} onNext={handleTutorialNext} onPrev={handleTutorialPrev} onFinish={completeOperationalTutorial} onSkip={completeOperationalTutorial} />}
 	      {sectionIntro && !tutorialStep && <SectionIntroModal section={sectionIntro} onClose={()=>{ const guided = sectionIntro; markSectionIntroSeen(guided); setSectionIntro(null); if (guided === 'badges' || guided === 'abilities') setActiveSectionGuide(guided); }} />}
+      <InstallPromptBanner />
 	      {dataError && user && <SwipeDismissNotice onDismiss={()=>setDataError('')} style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:250, borderRadius:14, padding:'10px 12px', background:'rgba(255,59,48,.92)', color:'white', fontSize:11, fontWeight:800, boxShadow:'0 10px 30px rgba(0,0,0,.35)' }}>{dataError}</SwipeDismissNotice>}
       {activeAwardToast && <AwardToast award={activeAwardToast} onOpen={openAwardFromToast} onDismiss={()=>setAwardQueue(prev => prev.slice(1))} />}
       {photoTarget && <PhotoRecognitionModal animal={photoTarget} animals={animalsData} user={user} onClose={()=>setPhotoTarget(null)} onConfirm={confirmPhotoRecognition} />}
