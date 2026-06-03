@@ -6702,28 +6702,63 @@ function InstallGuidePreview({ profileKey }) {
   const isAndroid = profileKey === 'android';
   const isDesktop = profileKey === 'desktop';
   const isOtherIos = profileKey === 'ios-other';
-  const toolbarLabel = isAndroid ? 'Chrome' : isDesktop ? 'Browser' : isOtherIos ? 'Safari' : 'Safari';
-  const actionLabel = isAndroid ? 'Installa app' : isDesktop ? 'Installa Apex' : 'Aggiungi alla Home';
-  const actionIcon = isAndroid ? '⋮' : isDesktop ? '+' : '↑';
+  const browserLabel = isAndroid ? 'Chrome' : isDesktop ? 'Browser' : isOtherIos ? 'Safari' : 'Safari';
+  const steps = isAndroid
+    ? [
+        { label:'Menu', control:'⋮', caption:'Apri il menu' },
+        { label:'Installa app', control:'Installa app', caption:'Tocca installa' },
+        { label:'Home', control:'Apex', caption:'Apri dalla Home' },
+      ]
+    : isDesktop
+      ? [
+          { label:'Barra', control:'+', caption:'Cerca installa' },
+          { label:'Installa Apex', control:'Installa', caption:'Conferma' },
+          { label:'App', control:'Apex', caption:'Apri separata' },
+        ]
+      : [
+          { label:isOtherIos ? 'Safari' : 'Condividi', control:'↑', caption:isOtherIos ? 'Apri in Safari' : 'Tocca Condividi' },
+          { label:'Aggiungi alla Home', control:'Aggiungi', caption:'Scegli l’azione' },
+          { label:'Home', control:'Apex', caption:'Apri dalla Home' },
+        ];
 
   return (
-    <div aria-hidden="true" style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginTop:14 }}>
-      <div style={{ minHeight:132, borderRadius:22, border:'1px solid rgba(255,255,255,.12)', background:'linear-gradient(180deg,#24252A,#111215)', padding:10, boxShadow:'inset 0 1px 0 rgba(255,255,255,.06)' }}>
-        <div style={{ height:20, borderRadius:9, background:'rgba(255,255,255,.08)', display:'flex', alignItems:'center', justifyContent:'space-between', padding:'0 7px', color:'rgba(255,255,255,.62)', fontSize:8, fontWeight:1000 }}>
-          <span>{toolbarLabel}</span>
-          <span style={{ color:'#F0CFA5', fontSize:14, lineHeight:1 }}>{actionIcon}</span>
+    <div aria-hidden="true" style={{ marginTop:14 }}>
+      <style>{`
+        @keyframes apexInstallFocus {
+          0%, 25% { opacity: .28; transform: scale(.98); }
+          33%, 58% { opacity: 1; transform: scale(1); }
+          66%, 100% { opacity: .28; transform: scale(.98); }
+        }
+        @keyframes apexInstallTap {
+          0%, 23% { opacity: 0; transform: translate3d(18px, 18px, 0) scale(.82); }
+          32%, 48% { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+          55%, 100% { opacity: 0; transform: translate3d(-8px, -8px, 0) scale(.9); }
+        }
+        @keyframes apexInstallGlow {
+          0%, 100% { box-shadow: 0 0 0 0 rgba(240,168,64,.0); }
+          42%, 56% { box-shadow: 0 0 0 5px rgba(240,168,64,.18), 0 0 24px rgba(240,168,64,.30); }
+        }
+      `}</style>
+      <div style={{ borderRadius:24, border:'1px solid rgba(255,255,255,.12)', background:'linear-gradient(180deg,#24252A,#111215)', padding:10, boxShadow:'inset 0 1px 0 rgba(255,255,255,.06)' }}>
+        <div style={{ height:22, borderRadius:10, background:'rgba(255,255,255,.08)', display:'flex', alignItems:'center', justifyContent:'space-between', padding:'0 8px', color:'rgba(255,255,255,.68)', fontSize:8.5, fontWeight:1000 }}>
+          <span>{browserLabel}</span>
+          <span style={{ width:78, height:8, borderRadius:99, background:'rgba(255,255,255,.14)' }} />
+          <span style={{ color:'#F0CFA5', fontSize:14, lineHeight:1 }}>{isAndroid ? '⋮' : '+'}</span>
         </div>
-        <div style={{ marginTop:12, borderRadius:16, background:'linear-gradient(135deg,#C85A3F,#F0A840)', height:52, display:'flex', alignItems:'center', justifyContent:'center', color:'white', fontSize:17, fontWeight:1000 }}>Apex</div>
-        <div style={{ marginTop:10, height:9, width:'76%', borderRadius:99, background:'rgba(255,255,255,.16)' }} />
-        <div style={{ marginTop:7, height:9, width:'56%', borderRadius:99, background:'rgba(255,255,255,.10)' }} />
-      </div>
 
-      <div style={{ minHeight:132, borderRadius:22, border:'1px solid rgba(240,168,64,.32)', background:'linear-gradient(180deg,rgba(240,168,64,.14),rgba(255,255,255,.04))', padding:10, boxShadow:'0 12px 34px rgba(0,0,0,.25)' }}>
-        <div style={{ height:88, borderRadius:18, background:'rgba(0,0,0,.22)', border:'1px solid rgba(255,255,255,.10)', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:8 }}>
-          <div style={{ width:42, height:42, borderRadius:14, background:'linear-gradient(135deg,#B84D3A,#F0A840)', display:'flex', alignItems:'center', justifyContent:'center', color:'white', fontWeight:1000, fontSize:21 }}>A</div>
-          <div style={{ color:'white', fontSize:10.5, fontWeight:1000 }}>{actionLabel}</div>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(3, 1fr)', gap:8, marginTop:10 }}>
+          {steps.map((step, index) => (
+            <div key={step.label} style={{ position:'relative', minHeight:118, borderRadius:18, background:index === 2 ? 'linear-gradient(180deg,rgba(240,168,64,.18),rgba(255,255,255,.05))' : 'rgba(255,255,255,.045)', border:index === 2 ? '1px solid rgba(240,168,64,.30)' : '1px solid rgba(255,255,255,.09)', padding:8, overflow:'hidden', animation:`apexInstallFocus 4.8s ease-in-out ${index * 1.6}s infinite` }}>
+              <div style={{ height:9, width:index === 0 ? '68%' : '82%', borderRadius:99, background:'rgba(255,255,255,.16)', marginBottom:7 }} />
+              <div style={{ height:8, width:'52%', borderRadius:99, background:'rgba(255,255,255,.10)', marginBottom:12 }} />
+              <div style={{ minHeight:44, borderRadius:index === 2 ? 14 : 13, background:index === 2 ? 'linear-gradient(135deg,#B84D3A,#F0A840)' : 'rgba(0,0,0,.30)', border:'1px solid rgba(255,255,255,.11)', display:'flex', alignItems:'center', justifyContent:'center', color:'white', fontSize:index === 1 && String(step.control).length > 8 ? 9.5 : 17, fontWeight:1000, textAlign:'center', padding:'0 5px', animation:`apexInstallGlow 4.8s ease-in-out ${index * 1.6}s infinite` }}>
+                {step.control}
+              </div>
+              <div style={{ marginTop:9, color:'#F0CFA5', fontSize:8.8, fontWeight:1000, lineHeight:1.12 }}>{step.caption}</div>
+              <div style={{ position:'absolute', right:7, bottom:7, width:17, height:17, borderRadius:'50%', background:'rgba(255,255,255,.94)', color:'#211512', display:'flex', alignItems:'center', justifyContent:'center', fontSize:10, fontWeight:1000, animation:`apexInstallTap 4.8s ease-in-out ${index * 1.6}s infinite` }}>•</div>
+            </div>
+          ))}
         </div>
-        <div style={{ marginTop:9, height:11, borderRadius:99, background:'rgba(240,207,165,.24)' }} />
       </div>
     </div>
   );
