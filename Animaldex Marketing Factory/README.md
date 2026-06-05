@@ -10,7 +10,7 @@ Use this setup for the first submission:
 Products: Login Kit, Content Posting API
 Scopes: user.info.basic, video.upload
 Direct Post: OFF
-Redirect URI: https://apexdex.app/api/tiktok/callback
+Redirect URI: https://apex-content-studio.vercel.app/api/tiktok/callback
 Terms: https://apexdex.app/terms
 Privacy: https://apexdex.app/privacy
 ```
@@ -61,4 +61,36 @@ Do not show client secret, access tokens, refresh tokens, or private credentials
 
 ## Operational note
 
-For TikTok review, `https://apexdex.app/api/tiktok/callback` must be served by the app that handles the OAuth callback. If Apex Content Studio is deployed separately, point the TikTok redirect URI to that deployed domain or route `apexdex.app/api/tiktok/callback` to this server.
+For TikTok review, the redirect URI must be served by the app that handles the OAuth callback. With a separate Apex Content Studio deployment, use the Content Studio Vercel domain for the callback and keep the legal pages on `apexdex.app`.
+
+## Separate Vercel deployment
+
+Recommended project name:
+
+```text
+apex-content-studio
+```
+
+After deployment, use the generated Vercel URL as the TikTok Login Kit redirect base:
+
+```text
+https://apex-content-studio.vercel.app/api/tiktok/callback
+```
+
+Set these production environment variables in Vercel:
+
+```text
+TIKTOK_CLIENT_KEY
+TIKTOK_CLIENT_SECRET
+TIKTOK_REDIRECT_URI=https://apex-content-studio.vercel.app/api/tiktok/callback
+TIKTOK_SCOPES=user.info.basic,video.upload
+APP_BASE_URL=https://apex-content-studio.vercel.app
+```
+
+Then use these values in TikTok Developer Portal:
+
+```text
+Redirect URI: https://apex-content-studio.vercel.app/api/tiktok/callback
+Terms: https://apexdex.app/terms
+Privacy: https://apexdex.app/privacy
+```

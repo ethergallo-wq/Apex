@@ -39,7 +39,7 @@ video.upload
 ## Redirect and legal URLs
 
 ```text
-Redirect URI: https://apexdex.app/api/tiktok/callback
+Redirect URI: https://apex-content-studio.vercel.app/api/tiktok/callback
 Terms: https://apexdex.app/terms
 Privacy: https://apexdex.app/privacy
 ```

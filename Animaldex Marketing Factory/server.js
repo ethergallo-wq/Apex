@@ -20,7 +20,11 @@ const config = {
   appBaseUrl: process.env.APP_BASE_URL || `http://${HOST}:${PORT}`,
 };
 
-const sessions = new Map();
+const SESSION_COOKIE = "apex_session";
+const TIKTOK_VERIFICATION_FILES = {
+  "tiktokWGaGE2HF72mAdOO7t80FcrkBYC24Woou.txt":
+    "tiktok-developers-site-verification=WGaGE2HF72mAdOO7t80FcrkBYC24Woou",
+};
 
 const demoPost = {
   title: "Questo animale sembra inventato. Invece esiste davvero.",
@@ -45,15 +49,9 @@ function loadEnv() {
   }
 }
 
-function getSession(req, res) {
+function getSession(req) {
   const cookies = parseCookies(req.headers.cookie || "");
-  let id = cookies.session_id;
-  if (!id || !sessions.has(id)) {
-    id = crypto.randomBytes(24).toString("hex");
-    sessions.set(id, {});
-    res.setHeader("Set-Cookie", `session_id=${id}; Path=/; HttpOnly; SameSite=Lax`);
-  }
-  return sessions.get(id);
+  return decodeSession(cookies[SESSION_COOKIE]) || {};
 }
 
 function parseCookies(cookieHeader) {
@@ -70,18 +68,95 @@ function parseCookies(cookieHeader) {
 }
 
 function sendHtml(res, html, status = 200) {
+  commitPendingSession(res);
   res.writeHead(status, { "Content-Type": "text/html; charset=utf-8" });
   res.end(html);
 }
 
 function sendJson(res, payload, status = 200) {
+  commitPendingSession(res);
   res.writeHead(status, { "Content-Type": "application/json; charset=utf-8" });
   res.end(JSON.stringify(payload, null, 2));
 }
 
 function redirect(res, location) {
+  commitPendingSession(res);
   res.writeHead(302, { Location: location });
   res.end();
+}
+
+function sendTikTokVerificationFile(res, pathname) {
+  const fileName = path.basename(pathname);
+  if (!/^tiktok[A-Za-z0-9_-]+\.txt$/.test(fileName)) return false;
+
+  if (TIKTOK_VERIFICATION_FILES[fileName]) {
+    res.writeHead(200, {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Cache-Control": "public, max-age=300",
+    });
+    res.end(TIKTOK_VERIFICATION_FILES[fileName]);
+    return true;
+  }
+
+  const filePath = path.join(__dirname, fileName);
+  if (!fs.existsSync(filePath)) return false;
+
+  res.writeHead(200, {
+    "Content-Type": "text/plain; charset=utf-8",
+    "Cache-Control": "public, max-age=300",
+  });
+  res.end(fs.readFileSync(filePath, "utf8"));
+  return true;
+}
+
+function commitPendingSession(res) {
+  if (typeof res.commitSession === "function") res.commitSession();
+}
+
+function commitSession(res, session) {
+  const secure = config.appBaseUrl.startsWith("https://") ? "; Secure" : "";
+  const value = encodeSession(session);
+  res.setHeader(
+    "Set-Cookie",
+    `${SESSION_COOKIE}=${value}; Path=/; HttpOnly; SameSite=Lax; Max-Age=604800${secure}`
+  );
+}
+
+function encodeSession(session) {
+  const iv = crypto.randomBytes(12);
+  const cipher = crypto.createCipheriv("aes-256-gcm", sessionKey(), iv);
+  const encrypted = Buffer.concat([
+    cipher.update(JSON.stringify(session), "utf8"),
+    cipher.final(),
+  ]);
+  const tag = cipher.getAuthTag();
+  return Buffer.concat([iv, tag, encrypted]).toString("base64url");
+}
+
+function decodeSession(value) {
+  if (!value) return null;
+  try {
+    const packed = Buffer.from(value, "base64url");
+    const iv = packed.subarray(0, 12);
+    const tag = packed.subarray(12, 28);
+    const encrypted = packed.subarray(28);
+    const decipher = crypto.createDecipheriv("aes-256-gcm", sessionKey(), iv);
+    decipher.setAuthTag(tag);
+    const decrypted = Buffer.concat([
+      decipher.update(encrypted),
+      decipher.final(),
+    ]).toString("utf8");
+    return JSON.parse(decrypted);
+  } catch {
+    return null;
+  }
+}
+
+function sessionKey() {
+  return crypto
+    .createHash("sha256")
+    .update(config.clientSecret || "apex-content-studio-local-session")
+    .digest();
 }
 
 async function readBody(req) {
@@ -646,10 +721,15 @@ function escapeAttr(value) {
   return escapeHtml(value);
 }
 
-const server = http.createServer(async (req, res) => {
+async function appHandler(req, res) {
   try {
-    const session = getSession(req, res);
     const url = new URL(req.url, config.appBaseUrl);
+    if (req.method === "GET" && sendTikTokVerificationFile(res, url.pathname)) {
+      return;
+    }
+
+    const session = getSession(req);
+    res.commitSession = () => commitSession(res, session);
 
     if (req.method === "GET" && url.pathname === "/") {
       sendHtml(res, homePage(session));
@@ -700,8 +780,13 @@ const server = http.createServer(async (req, res) => {
     console.error(error);
     sendHtml(res, "Apex Content Studio encountered an error. No credentials or tokens are shown in the browser.", 500);
   }
-});
+}
 
-server.listen(PORT, HOST, () => {
-  console.log(`Apex Content Studio running at http://${HOST}:${PORT}`);
-});
+export default appHandler;
+
+if (!process.env.VERCEL) {
+  const server = http.createServer(appHandler);
+  server.listen(PORT, HOST, () => {
+    console.log(`Apex Content Studio running at http://${HOST}:${PORT}`);
+  });
+}
