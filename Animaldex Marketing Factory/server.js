@@ -24,6 +24,8 @@ const SESSION_COOKIE = "apex_session";
 const TIKTOK_VERIFICATION_FILES = {
   "tiktokWGaGE2HF72mAdOO7t80FcrkBYC24Woou.txt":
     "tiktok-developers-site-verification=WGaGE2HF72mAdOO7t80FcrkBYC24Woou",
+  "tiktokGS0T1SdaaDxwUh0kMwQhcvg4My8Eh7ru.txt":
+    "tiktok-developers-site-verification=GS0T1SdaaDxwUh0kMwQhcvg4My8Eh7ru",
 };
 
 const demoPost = {
