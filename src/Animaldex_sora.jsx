@@ -5,6 +5,35 @@ let LOCAL_ANIMALS = [];
 let ANIMALS = [];
 let LOCAL_ANIMAL_BY_ID = {};
 let localAnimalsLoadPromise = null;
+let googleIdentityScriptPromise = null;
+
+const GOOGLE_CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID;
+const GOOGLE_IDENTITY_SCRIPT_SRC = 'https://accounts.google.com/gsi/client';
+
+function loadGoogleIdentityScript() {
+  if (typeof window === 'undefined') return Promise.reject(new Error('Google login disponibile solo nel browser.'));
+  if (window.google?.accounts?.id) return Promise.resolve(window.google);
+  if (googleIdentityScriptPromise) return googleIdentityScriptPromise;
+
+  googleIdentityScriptPromise = new Promise((resolve, reject) => {
+    const existing = document.querySelector(`script[src="${GOOGLE_IDENTITY_SCRIPT_SRC}"]`);
+    if (existing) {
+      existing.addEventListener('load', () => resolve(window.google), { once:true });
+      existing.addEventListener('error', () => reject(new Error('Impossibile caricare Google Login.')), { once:true });
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.src = GOOGLE_IDENTITY_SCRIPT_SRC;
+    script.async = true;
+    script.defer = true;
+    script.onload = () => resolve(window.google);
+    script.onerror = () => reject(new Error('Impossibile caricare Google Login.'));
+    document.head.appendChild(script);
+  });
+
+  return googleIdentityScriptPromise;
+}
 
 // ── Config ────────────────────────────────────────────────────────────
 const CLS = {
@@ -7253,23 +7282,64 @@ function AuthScreen({ onAuthReady }) {
   const [mode,setMode]=useState('login');
   const [loading,setLoading]=useState(false);
   const [message,setMessage]=useState('');
+  const googleButtonRef=useRef(null);
 
-  const loginWithGoogle = async () => {
+  const handleGoogleCredential = useCallback(async (credentialResponse) => {
     setLoading(true);
     setMessage('');
     try {
-      const { error } = await supabase.auth.signInWithOAuth({
+      if (!credentialResponse?.credential) {
+        throw new Error('Google non ha restituito un token valido.');
+      }
+      const { error } = await supabase.auth.signInWithIdToken({
         provider: 'google',
-        options: {
-          redirectTo: window.location.origin,
-        },
+        token: credentialResponse.credential,
       });
       if (error) throw error;
+      setMessage('Accesso Google effettuato.');
+      onAuthReady?.();
     } catch (err) {
       setMessage(err?.message || 'Errore login Google.');
+    } finally {
       setLoading(false);
     }
-  };
+  }, [onAuthReady]);
+
+  useEffect(() => {
+    if (!googleButtonRef.current) return;
+    if (!GOOGLE_CLIENT_ID) {
+      setMessage('Client ID Google mancante. Aggiungi REACT_APP_GOOGLE_CLIENT_ID in .env.local.');
+      return;
+    }
+
+    let cancelled = false;
+    loadGoogleIdentityScript()
+      .then((google) => {
+        if (cancelled || !google?.accounts?.id || !googleButtonRef.current) return;
+        google.accounts.id.initialize({
+          client_id: GOOGLE_CLIENT_ID,
+          callback: handleGoogleCredential,
+          ux_mode: 'popup',
+        });
+        googleButtonRef.current.innerHTML = '';
+        google.accounts.id.renderButton(googleButtonRef.current, {
+          theme: 'outline',
+          size: 'large',
+          type: 'standard',
+          shape: 'rectangular',
+          text: 'continue_with',
+          logo_alignment: 'left',
+          width: Math.min(420, googleButtonRef.current.offsetWidth || 420),
+        });
+      })
+      .catch((err) => {
+        if (!cancelled) setMessage(err?.message || 'Errore caricamento login Google.');
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [handleGoogleCredential]);
 
   const submit = async (e) => {
     e.preventDefault();
@@ -7298,10 +7368,7 @@ function AuthScreen({ onAuthReady }) {
         <input type="email" required value={email} onChange={e=>setEmail(e.target.value)} placeholder="Email" style={{ width:'100%', height:46, borderRadius:14, border:'1px solid rgba(240,168,64,.20)', background:'rgba(20,16,14,.78)', color:'white', padding:'0 14px', fontSize:14, boxSizing:'border-box', marginBottom:10, outlineColor:'#F0A840' }} />
         <input type="password" required value={password} onChange={e=>setPassword(e.target.value)} placeholder="Password" style={{ width:'100%', height:46, borderRadius:14, border:'1px solid rgba(240,168,64,.20)', background:'rgba(20,16,14,.78)', color:'white', padding:'0 14px', fontSize:14, boxSizing:'border-box', marginBottom:14, outlineColor:'#F0A840' }} />
         <button disabled={loading} type="submit" style={{ width:'100%', height:48, borderRadius:15, border:'none', background:'linear-gradient(135deg,#B84D3A,#F0A840)', color:'white', fontWeight:900, fontSize:15, cursor:loading?'default':'pointer', opacity:loading ? .7 : 1, boxShadow:'0 12px 28px rgba(184,77,58,.34)' }}>{loading ? 'Attendi...' : mode === 'signup' ? 'Crea account' : 'Login'}</button>
-        <button disabled={loading} type="button" onClick={loginWithGoogle} style={{ width:'100%', height:46, marginTop:10, borderRadius:14, border:'1px solid rgba(240,168,64,.22)', background:'rgba(255,245,232,.96)', color:'#211512', fontWeight:900, fontSize:14, cursor:loading?'default':'pointer', display:'flex', alignItems:'center', justifyContent:'center', gap:10 }}>
-          <span style={{ width:20, height:20, borderRadius:'50%', background:'linear-gradient(135deg,#4285F4 0 25%,#34A853 25% 50%,#FBBC05 50% 75%,#EA4335 75% 100%)', display:'inline-block' }} />
-          Continua con Google
-        </button>
+        <div ref={googleButtonRef} style={{ width:'100%', minHeight:44, marginTop:10, display:'flex', alignItems:'center', justifyContent:'center', opacity:loading ? .65 : 1, pointerEvents:loading ? 'none' : 'auto' }} />
         <button type="button" onClick={()=>setMode(mode==='signup'?'login':'signup')} style={{ width:'100%', height:42, marginTop:10, borderRadius:13, border:'1px solid rgba(240,168,64,.18)', background:'rgba(255,255,255,.035)', color:'rgba(255,245,232,.84)', fontWeight:800, cursor:'pointer' }}>{mode === 'signup' ? 'Ho già un account' : 'Crea nuovo account'}</button>
         {message && <SwipeDismissNotice onDismiss={()=>setMessage('')} style={{ marginTop:14, color:message.toLowerCase().includes('erro')?'#FF9387':'#F0C449', fontSize:12, lineHeight:1.4 }}>{message}</SwipeDismissNotice>}
       </form>
