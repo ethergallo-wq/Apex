@@ -7326,7 +7326,7 @@ function AuthScreen({ onAuthReady }) {
           theme: 'outline',
           size: 'large',
           type: 'standard',
-          shape: 'rectangular',
+          shape: 'pill',
           text: 'continue_with',
           logo_alignment: 'left',
           width: Math.min(420, googleButtonRef.current.offsetWidth || 420),
@@ -7368,7 +7368,7 @@ function AuthScreen({ onAuthReady }) {
         <input type="email" required value={email} onChange={e=>setEmail(e.target.value)} placeholder="Email" style={{ width:'100%', height:46, borderRadius:14, border:'1px solid rgba(240,168,64,.20)', background:'rgba(20,16,14,.78)', color:'white', padding:'0 14px', fontSize:14, boxSizing:'border-box', marginBottom:10, outlineColor:'#F0A840' }} />
         <input type="password" required value={password} onChange={e=>setPassword(e.target.value)} placeholder="Password" style={{ width:'100%', height:46, borderRadius:14, border:'1px solid rgba(240,168,64,.20)', background:'rgba(20,16,14,.78)', color:'white', padding:'0 14px', fontSize:14, boxSizing:'border-box', marginBottom:14, outlineColor:'#F0A840' }} />
         <button disabled={loading} type="submit" style={{ width:'100%', height:48, borderRadius:15, border:'none', background:'linear-gradient(135deg,#B84D3A,#F0A840)', color:'white', fontWeight:900, fontSize:15, cursor:loading?'default':'pointer', opacity:loading ? .7 : 1, boxShadow:'0 12px 28px rgba(184,77,58,.34)' }}>{loading ? 'Attendi...' : mode === 'signup' ? 'Crea account' : 'Login'}</button>
-        <div ref={googleButtonRef} style={{ width:'100%', minHeight:44, marginTop:10, display:'flex', alignItems:'center', justifyContent:'center', opacity:loading ? .65 : 1, pointerEvents:loading ? 'none' : 'auto' }} />
+        <div ref={googleButtonRef} style={{ width:'100%', height:46, marginTop:10, borderRadius:14, overflow:'hidden', display:'flex', alignItems:'center', justifyContent:'center', background:'rgba(255,245,232,.96)', opacity:loading ? .65 : 1, pointerEvents:loading ? 'none' : 'auto' }} />
         <button type="button" onClick={()=>setMode(mode==='signup'?'login':'signup')} style={{ width:'100%', height:42, marginTop:10, borderRadius:13, border:'1px solid rgba(240,168,64,.18)', background:'rgba(255,255,255,.035)', color:'rgba(255,245,232,.84)', fontWeight:800, cursor:'pointer' }}>{mode === 'signup' ? 'Ho già un account' : 'Crea nuovo account'}</button>
         {message && <SwipeDismissNotice onDismiss={()=>setMessage('')} style={{ marginTop:14, color:message.toLowerCase().includes('erro')?'#FF9387':'#F0C449', fontSize:12, lineHeight:1.4 }}>{message}</SwipeDismissNotice>}
       </form>
