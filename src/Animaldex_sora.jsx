@@ -95,6 +95,7 @@ const LIGHT_CARD_BG = '#FBF7EF';
 const ANIMALDEX_ORANGE_GRADIENT = 'linear-gradient(135deg,#B84D3A,#D06A45)';
 const ANIMALDEX_ORANGE_SOLID = '#B84D3A';
 const APP_FRAME_PROPS = { className:'animaldex-app-frame' };
+const APP_SAFE_TOP = 'env(safe-area-inset-top, 0px)';
 function getInitialAnimaldexTheme() {
   if (typeof window === 'undefined') return 'dark';
   try {
@@ -4819,7 +4820,7 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose, an
           </div>
         )}
         <button onClick={handleClose} style={{
-          position:'absolute', top:16, right:16,
+          position:'absolute', top:`calc(${APP_SAFE_TOP} + 16px)`, right:16,
           background:'rgba(0,0,0,.25)', border:'none',
           color:'white', fontSize:20, width:40, height:40,
           borderRadius:'50%', cursor:'pointer', display:'flex',
@@ -5049,7 +5050,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
   };
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', overflow:'hidden', background:isLightTheme ? LIGHT_APP_BG : 'linear-gradient(180deg,#101216 0%,#17191D 44%,#1A1A1C 100%)' }}>
-      <div data-animaldex-bar="true" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'13px 16px 11px', flexShrink:0, background:isLightTheme?LIGHT_HEADER_BG:'rgba(0,0,0,.12)' }}>
+      <div data-animaldex-bar="true" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:`calc(${APP_SAFE_TOP} + 13px) 16px 11px`, minHeight:`calc(${APP_SAFE_TOP} + 60px)`, boxSizing:'border-box', flexShrink:0, background:isLightTheme?LIGHT_HEADER_BG:'rgba(0,0,0,.12)' }}>
         <button onClick={onBack} style={{ background:isLightTheme?'rgba(0,0,0,.04)':'rgba(255,255,255,.055)', border:isLightTheme?'1px solid rgba(0,0,0,.08)':'1px solid rgba(255,255,255,.08)', color:c.accent, fontSize:15, fontWeight:700, cursor:'pointer', padding:'0 12px', height:36, display:'flex', alignItems:'center', justifyContent:'center' }}>‹ Apex</button>
         <span aria-hidden style={{ flex:1 }} />
         <button onClick={()=>setShowInfoModal(!showInfoModal)} style={{ background:isLightTheme?'rgba(0,0,0,.04)':'rgba(255,255,255,.055)', border:isLightTheme?'1px solid rgba(0,0,0,.08)':'1px solid rgba(255,255,255,.08)', color:isLightTheme?'rgba(0,0,0,.62)':'rgba(255,255,255,.8)', fontSize:20, cursor:'pointer', padding:'4px 8px', width:36, height:36, display:'flex', alignItems:'center', justifyContent:'center', borderRadius:18 }}>ⓘ</button>
