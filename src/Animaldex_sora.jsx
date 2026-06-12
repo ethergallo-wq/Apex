@@ -1224,7 +1224,7 @@ function sanitizeSocialSearchQuery(query) {
   return String(query || '')
     .trim()
     .replace(/^@+/, '')
-    .replace(/[%_,()]/g, '')
+    .replace(/[%(),"'\\*]/g, '')
     .replace(/\s+/g, ' ')
     .slice(0, 40);
 }
@@ -1537,31 +1537,37 @@ async function searchSocialProfiles(userId, query) {
     const rows = await fetchSocialProfilesViaRpcRest(q);
     return sortProfiles(rows || []);
   };
+  const runTableFallbacks = async () => {
+    try {
+      return await runProfileTableSearch();
+    } catch (err) {
+      const msg = String(err?.message || err?.code || '');
+      if (!/column|schema cache|PGRST|does not exist|Could not find/i.test(msg)) {
+        console.warn('[Apex] SDK ricerca amici fallback REST:', err);
+        return await runRestFallback();
+      }
+      try {
+        return await runProfileTableSearch('user_id, username, nickname');
+      } catch (fallbackErr) {
+        console.warn('[Apex] Ricerca amici fallback REST compatibile:', fallbackErr);
+        return runRestFallback('user_id,username,nickname');
+      }
+    }
+  };
   try {
-    return await runRpcSearch();
+    const rpcRows = await runRpcSearch();
+    if (rpcRows.length) return rpcRows;
+    return await runTableFallbacks();
   } catch (rpcErr) {
     console.warn('[Apex] RPC ricerca amici fallback REST RPC:', rpcErr);
     try {
-      return await runRpcRestFallback();
+      const rpcRestRows = await runRpcRestFallback();
+      if (rpcRestRows.length) return rpcRestRows;
     } catch (rpcRestErr) {
       console.warn('[Apex] REST RPC ricerca amici fallback tabella:', rpcRestErr);
     }
   }
-  try {
-    return await runProfileTableSearch();
-  } catch (err) {
-    const msg = String(err?.message || err?.code || '');
-    if (!/column|schema cache|PGRST|does not exist|Could not find/i.test(msg)) {
-      console.warn('[Apex] SDK ricerca amici fallback REST:', err);
-      return await runRestFallback();
-    }
-    try {
-      return await runProfileTableSearch('user_id, username, nickname');
-    } catch (fallbackErr) {
-      console.warn('[Apex] Ricerca amici fallback REST compatibile:', fallbackErr);
-      return runRestFallback('user_id,username,nickname');
-    }
-  }
+  return await runTableFallbacks();
 }
 
 async function requestFriendship(userId, friendId) {

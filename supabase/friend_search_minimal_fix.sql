@@ -158,7 +158,7 @@ security definer
 set search_path = public
 as $search_impl$
   with clean as (
-    select lower(left(regexp_replace(regexp_replace(trim(coalesce(p_query, '')), '^@+', ''), '[%_,()]', '', 'g'), 40)) as q
+    select lower(left(regexp_replace(regexp_replace(trim(coalesce(p_query, '')), '^@+', ''), '[%,()]', '', 'g'), 40)) as q
   ),
   searchable as (
     select
