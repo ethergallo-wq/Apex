@@ -4520,7 +4520,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
         <div style={{ height:6 }}/>
       </div>
 
-      <div data-animaldex-bottom-bar="true" data-animaldex-grid-bottom="true" style={{ background:ANIMALDEX_ORANGE_GRADIENT, borderTop:'none', padding:isPhone?'4px 14px calc(5px + env(safe-area-inset-bottom, 0px))':'5px 12px 5px', marginBottom:isPhone?'calc(-1 * env(safe-area-inset-bottom, 0px))':0, flexShrink:0, position:'relative', zIndex:3 }}>
+      <div data-animaldex-bottom-bar="true" data-animaldex-grid-bottom="true" style={{ background:ANIMALDEX_ORANGE_GRADIENT, borderTop:'none', padding:isPhone?'9px 14px calc(13px + env(safe-area-inset-bottom, 0px))':'7px 12px 7px', marginBottom:0, flexShrink:0, position:'relative', zIndex:3 }}>
         <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:8 }}>
           <button data-tour="grid-search" onClick={()=>setShowSearchBar(!showSearchBar)} aria-label="Cerca" style={{ ...bottomControlStyle, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
             <svg width={bottomIconSize} height={bottomIconSize} viewBox="0 0 20 20" fill="none" style={{ display:'block' }}><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.9" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round"/></svg>
@@ -4537,7 +4537,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
         </div>
       </div>
       {showMenu && (
-        <div style={{ position:'absolute', left:0, right:0, bottom:isPhone?'calc(env(safe-area-inset-bottom, 0px) + 46px)':(isNarrow?48:54), zIndex:45, padding:'0 10px 8px', pointerEvents:'none' }}>
+        <div style={{ position:'absolute', left:0, right:0, bottom:isPhone?'calc(env(safe-area-inset-bottom, 0px) + 62px)':(isNarrow?54:60), zIndex:45, padding:'0 10px 8px', pointerEvents:'none' }}>
           <div data-animaldex-bottom-bar="true" style={{ pointerEvents:'auto', background:isLightTheme?'rgba(251,247,239,.96)':'linear-gradient(180deg, rgba(35,28,24,.98), rgba(15,16,18,.98))', border:`1px solid ${isLightTheme?'rgba(0,0,0,.12)':'rgba(240,168,64,.18)'}`, boxShadow:'0 -18px 54px rgba(0,0,0,.46)', padding:isNarrow?10:12, maxHeight:'min(54dvh, 360px)', overflow:'hidden', animation:'animaldexFilterSheetUp .22s cubic-bezier(.2,.82,.2,1) both' }}>
             <div style={{ width:44, height:4, borderRadius:999, background:isLightTheme?'rgba(0,0,0,.18)':'rgba(255,255,255,.20)', margin:'0 auto 10px' }} />
             {!activeFilterDef ? (
@@ -4609,10 +4609,10 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
       {showInfoModalGrid && (
         <div style={{ position:'fixed', inset:0, background:'rgba(0,0,0,.8)', display:'flex', alignItems:'center', justifyContent:'center', zIndex:100, padding:16 }}>
           <div style={{ background:'#1A1A1C', borderRadius:20, padding:28, maxHeight:'90vh', overflowY:'auto', maxWidth:520, width:'100%', border:'2px solid #A84637' }}>
-            <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:24 }}><h2 style={{ margin:0, color:'#A84637', fontSize:22, fontWeight:900 }}>📚 Legenda Completa</h2><button onClick={()=>setShowInfoModalGrid(false)} style={{ background:'none', border:'none', color:'#A84637', fontSize:24, cursor:'pointer', padding:0 }}>×</button></div>
-            <div style={{ marginBottom:24 }}><h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>🛡 Stato Conservazione (IUCN)</h3><div style={{ display:'flex', flexDirection:'column', gap:8 }}>{[{k:'LC',full:'Least Concern',desc:'Specie non in pericolo'},{k:'NT',full:'Near Threatened',desc:'Prossima a essere minacciata'},{k:'VU',full:'Vulnerable',desc:'A rischio di estinzione'},{k:'EN',full:'Endangered',desc:'Fortemente minacciata'},{k:'CR',full:'Critically Endangered',desc:'Gravissimamente minacciata'},{k:'EW',full:'Extinct in the Wild',desc:'Estinta in natura'},{k:'EX',full:'Extinct',desc:'Completamente estinta'},{k:'DD',full:'Data Deficient',desc:'Dati insufficienti'}].map(({k,full,desc})=>{const co=CONS[k]||CONS.DD;return <div key={k} style={{display:'flex',gap:10,alignItems:'flex-start'}}><div style={{background:co.bg,color:co.c,padding:'6px 12px',borderRadius:8,fontSize:12,fontWeight:700,whiteSpace:'nowrap',flexShrink:0}}>{k}</div><div style={{flex:1}}><div style={{color:'white',fontSize:12,fontWeight:700}}>{full}</div><div style={{color:'rgba(255,255,255,.55)',fontSize:11,marginTop:2}}>{desc}</div></div></div>;})}</div></div>
-            <div style={{ marginBottom:24 }}><h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>★ Rarità Animale</h3><div style={{ display:'flex', flexDirection:'column', gap:8 }}><RarityLegendRows /></div></div>
-            <div style={{ marginBottom:24 }}><h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>📷 Status Animale</h3><div style={{ display:'flex', flexDirection:'column', gap:8 }}><StatusLegendRows /></div></div>
+            <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:24 }}><h2 style={{ margin:0, color:'#A84637', fontSize:22, fontWeight:900 }}>Legenda completa</h2><button onClick={()=>setShowInfoModalGrid(false)} style={{ background:'none', border:'none', color:'#A84637', fontSize:24, cursor:'pointer', padding:0 }}>×</button></div>
+            <div style={{ marginBottom:24 }}><h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>Stato conservazione (IUCN)</h3><div style={{ display:'flex', flexDirection:'column', gap:8 }}>{[{k:'LC',full:'Least Concern',desc:'Specie non in pericolo'},{k:'NT',full:'Near Threatened',desc:'Prossima a essere minacciata'},{k:'VU',full:'Vulnerable',desc:'A rischio di estinzione'},{k:'EN',full:'Endangered',desc:'Fortemente minacciata'},{k:'CR',full:'Critically Endangered',desc:'Gravissimamente minacciata'},{k:'EW',full:'Extinct in the Wild',desc:'Estinta in natura'},{k:'EX',full:'Extinct',desc:'Completamente estinta'},{k:'DD',full:'Data Deficient',desc:'Dati insufficienti'}].map(({k,full,desc})=>{const co=CONS[k]||CONS.DD;return <div key={k} style={{display:'flex',gap:10,alignItems:'flex-start'}}><div style={{background:co.bg,color:co.c,padding:'6px 12px',borderRadius:8,fontSize:12,fontWeight:700,whiteSpace:'nowrap',flexShrink:0}}>{k}</div><div style={{flex:1}}><div style={{color:'white',fontSize:12,fontWeight:700}}>{full}</div><div style={{color:'rgba(255,255,255,.55)',fontSize:11,marginTop:2}}>{desc}</div></div></div>;})}</div></div>
+            <div style={{ marginBottom:24 }}><h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>Rarità animale</h3><div style={{ display:'flex', flexDirection:'column', gap:8 }}><RarityLegendRows /></div></div>
+            <div style={{ marginBottom:24 }}><h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>Status animale</h3><div style={{ display:'flex', flexDirection:'column', gap:8 }}><StatusLegendRows /></div></div>
           </div>
         </div>
       )}
@@ -4661,7 +4661,7 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose, an
   const [srcIdx, setSrcIdx] = useState(0);
   const currentSrc = candidates[srcIdx] || src;
   const [hardFail, setHardFail] = useState(false);
-  const pinchRef = useRef({ active:false, startDist:0, startZoom:1 });
+  const pinchRef = useRef({ active:false, startDist:0, startZoom:1, startCenter:{ x:0, y:0 }, baseX:0, baseY:0 });
   const panRef = useRef({ active:false, startX:0, startY:0, baseX:0, baseY:0 });
 
   useEffect(() => { requestAnimationFrame(() => requestAnimationFrame(() => setVisible(true))); }, []);
@@ -4681,11 +4681,24 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose, an
     const dy = touches[0].clientY - touches[1].clientY;
     return Math.sqrt(dx*dx + dy*dy);
   };
+  const touchCenter = (touches) => ({
+    x:(touches[0].clientX + touches[1].clientX) / 2,
+    y:(touches[0].clientY + touches[1].clientY) / 2,
+  });
+  const clampOffset = (nextOffset, nextZoom) => {
+    if (nextZoom <= 1.01) return { x:0, y:0 };
+    const limitX = Math.max(160, vw * (nextZoom - 1) * .55);
+    const limitY = Math.max(180, vh * (nextZoom - 1) * .55);
+    return {
+      x:Math.max(-limitX, Math.min(limitX, nextOffset.x)),
+      y:Math.max(-limitY, Math.min(limitY, nextOffset.y)),
+    };
+  };
 
   const handleTouchStart = (e) => {
     if (e.touches?.length === 2) {
       e.preventDefault();
-      pinchRef.current = { active:true, startDist:distance(e.touches), startZoom:zoom };
+      pinchRef.current = { active:true, startDist:distance(e.touches), startZoom:zoom, startCenter:touchCenter(e.touches), baseX:offset.x, baseY:offset.y };
       panRef.current.active = false;
     } else if (e.touches?.length === 1 && zoom > 1) {
       e.preventDefault();
@@ -4698,18 +4711,21 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose, an
       e.preventDefault();
       const d = distance(e.touches);
       if (pinchRef.current.startDist > 0) {
-        const next = Math.max(1, Math.min(4, pinchRef.current.startZoom * (d / pinchRef.current.startDist)));
+        const next = Math.max(1, Math.min(5, pinchRef.current.startZoom * (d / pinchRef.current.startDist)));
+        const center = touchCenter(e.touches);
         setZoom(next);
-        if (next <= 1.01) setOffset({ x:0, y:0 });
+        setOffset(clampOffset({
+          x:pinchRef.current.baseX + center.x - pinchRef.current.startCenter.x,
+          y:pinchRef.current.baseY + center.y - pinchRef.current.startCenter.y,
+        }, next));
       }
     } else if (panRef.current.active && e.touches?.length === 1 && zoom > 1) {
       e.preventDefault();
       const t = e.touches[0];
-      const limit = 180 * zoom;
-      setOffset({
-        x:Math.max(-limit, Math.min(limit, panRef.current.baseX + t.clientX - panRef.current.startX)),
-        y:Math.max(-limit, Math.min(limit, panRef.current.baseY + t.clientY - panRef.current.startY)),
-      });
+      setOffset(clampOffset({
+        x:panRef.current.baseX + t.clientX - panRef.current.startX,
+        y:panRef.current.baseY + t.clientY - panRef.current.startY,
+      }, zoom));
     }
   };
   const handleTouchEnd = () => {
@@ -4722,7 +4738,9 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose, an
       e.preventDefault?.();
       setZoom(z => {
         const next = z > 1 ? 1 : 2.25;
-        if (next === 1) setOffset({ x:0, y:0 });
+        const touch = e.changedTouches?.[0];
+        if (next === 1 || !touch) setOffset({ x:0, y:0 });
+        else setOffset(clampOffset({ x:(vw / 2 - touch.clientX) * .65, y:(vh / 2 - touch.clientY) * .65 }, next));
         return next;
       });
     }
@@ -4736,15 +4754,14 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose, an
   };
   const movePointerPan = (e) => {
     if (!panRef.current.active || zoom <= 1 || e.pointerType === 'touch') return;
-    const limit = 180 * zoom;
-    setOffset({
-      x:Math.max(-limit, Math.min(limit, panRef.current.baseX + e.clientX - panRef.current.startX)),
-      y:Math.max(-limit, Math.min(limit, panRef.current.baseY + e.clientY - panRef.current.startY)),
-    });
+    setOffset(clampOffset({
+      x:panRef.current.baseX + e.clientX - panRef.current.startX,
+      y:panRef.current.baseY + e.clientY - panRef.current.startY,
+    }, zoom));
   };
   const endPointerPan = () => { panRef.current.active = false; };
 
-  const neutralZoomBg = 'radial-gradient(circle at 50% 44%, rgba(255,255,255,.055), rgba(18,18,20,.98) 58%, #08080A 100%)';
+  const neutralZoomBg = '#050506';
   const boxStyle = visible ? {
     position:'fixed', left:0, top:0, width:'100vw', height:'var(--animaldex-app-height, 100dvh)',
     background: neutralZoomBg,
@@ -4768,7 +4785,7 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose, an
     <>
       <div onClick={handleClose} style={{
         position:'fixed', inset:0, zIndex:299,
-        background: visible ? 'rgba(0,0,0,.7)' : 'rgba(0,0,0,0)',
+        background: visible ? '#050506' : 'rgba(0,0,0,0)',
         transition:'background .35s ease',
       }}/>
       <div
