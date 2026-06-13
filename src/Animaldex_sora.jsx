@@ -296,7 +296,15 @@ const XP_BY_RARITY = {
 const QUICK_SEEN_DAILY_LIMIT = 20;
 
 function getAnimalCountryCodes(animal) {
-  return toArraySafe(animal?.distribution?.countries_present || animal?.geo?.iso?.primary || animal?.geo?.iso || animal?.iso || []);
+  const geoIso = animal?.geo?.iso;
+  const geoIsoValues = geoIso && typeof geoIso === 'object'
+    ? [...toArraySafe(geoIso.primary), ...toArraySafe(geoIso.iucn), ...toArraySafe(geoIso.observed), ...toArraySafe(geoIso.geoson_range)]
+    : toArraySafe(geoIso);
+  return normalizeIsoList([
+    ...toArraySafe(animal?.distribution?.countries_present),
+    ...geoIsoValues,
+    ...toArraySafe(animal?.iso),
+  ]);
 }
 function isAnimalInVisitedCountries(animal, visitedCountries = []) {
   const visited = new Set((visitedCountries || []).map(c => String(c).toUpperCase()));
@@ -605,7 +613,16 @@ function normalizeSupabaseAnimal(row, userAnimal) {
   const rawGeo = raw?.geo && typeof raw.geo === 'object' ? raw.geo : {};
   const rawGeoFromRow = geoRow?.raw_geo && typeof geoRow.raw_geo === 'object' ? geoRow.raw_geo : {};
   const geo = { ...rawGeo, ...rawGeoFromRow, ...(geoRow || {}) };
-  const countries = toArraySafe(geo?.iso?.primary || geo?.iso || raw?.distribution?.countries_present || raw?.countries_present || raw?.iso);
+  const geoIso = geo?.iso;
+  const geoIsoValues = geoIso && typeof geoIso === 'object'
+    ? [...toArraySafe(geoIso.primary), ...toArraySafe(geoIso.iucn), ...toArraySafe(geoIso.observed), ...toArraySafe(geoIso.geoson_range)]
+    : toArraySafe(geoIso);
+  const countries = normalizeIsoList([
+    ...geoIsoValues,
+    ...toArraySafe(raw?.distribution?.countries_present),
+    ...toArraySafe(raw?.countries_present),
+    ...toArraySafe(raw?.iso),
+  ]);
   const categories = toArraySafe(getRawValue(raw, ['categories', 'category_ids', 'badges', 'abilities'], []));
   const status = supabaseStatusToApp(userAnimal?.unlock_status || 'locked');
 
@@ -697,6 +714,9 @@ function mergeRemoteWithLocalBioregions(remoteList = []) {
     const remoteIds = getAnimalBioregionIdsV4(remote);
     const hasStats = remote.stats && Object.keys(remote.stats || {}).length > 0;
     const hasCats = remote.categories && remote.categories.length > 0;
+    const remoteCountries = getAnimalCountryCodes(remote);
+    const localCountries = getAnimalCountryCodes(local);
+    const bestCountries = localCountries.length > remoteCountries.length ? localCountries : normalizeIsoList([...remoteCountries, ...localCountries]);
     const enrichedRemote = {
       ...remote,
       foodweb: remote.foodweb || local.foodweb || null,
@@ -707,7 +727,11 @@ function mergeRemoteWithLocalBioregions(remoteList = []) {
       stats: hasStats ? remote.stats : (local.stats || {}),
       categories: hasCats ? remote.categories : (local.categories || []),
       cat_curiosities: Object.keys(remote.cat_curiosities || {}).length ? remote.cat_curiosities : (local.cat_curiosities || {}),
-      distribution: remote.distribution?.countries_present?.length ? remote.distribution : local.distribution,
+      distribution: {
+        ...(local.distribution || {}),
+        ...(remote.distribution || {}),
+        countries_present: bestCountries,
+      },
     };
     if (remoteIds.length) return enrichedRemote;
     return {
@@ -1143,30 +1167,16 @@ async function persistEarnedBadges(userId, badgeIds = []) {
   const cleanIds = Array.from(new Set((badgeIds || []).map(normalizeBadgeId).filter(Boolean)));
   if (!userId || !cleanIds.length) return [];
 
-  const { data: validBadgeRows, error: validBadgeError } = await supabase
-    .from('badges')
-    .select('id')
-    .in('id', cleanIds);
-
-  if (validBadgeError) {
-    console.warn('[Apex] Validazione badge Supabase non disponibile, salvo solo in locale:', validBadgeError);
-    return cleanIds;
-  }
-
-  const validIds = new Set((validBadgeRows || []).map(row => normalizeBadgeId(row.id)).filter(Boolean));
-  const idsToPersist = cleanIds.filter(id => validIds.has(id));
-  if (!idsToPersist.length) return cleanIds;
-
   const { data: existingRows, error: existingError } = await supabase
     .from('user_badges')
     .select('badge_id')
     .eq('user_id', userId)
-    .in('badge_id', idsToPersist);
+    .in('badge_id', cleanIds);
 
   if (existingError) throw existingError;
 
   const existing = new Set((existingRows || []).map(row => normalizeBadgeId(row.badge_id)));
-  const missing = idsToPersist.filter(id => !existing.has(id));
+  const missing = cleanIds.filter(id => !existing.has(id));
   if (!missing.length) return cleanIds;
 
   const now = new Date().toISOString();
@@ -1200,6 +1210,18 @@ async function persistUserDestination(userId, iso, tripTags = []) {
   // 23505 = duplicate key. Se hai una unique(user_id, iso, visited_at) o simile,
   // non blocchiamo la RPC: la destinazione risulta già registrata.
   if (error && error.code !== '23505') throw error;
+  return true;
+}
+
+async function removeUserDestination(userId, iso) {
+  const cleanIso = String(iso || '').toUpperCase().trim();
+  if (!userId || !cleanIso) return false;
+  const { error } = await supabase
+    .from('user_destinations')
+    .delete()
+    .eq('user_id', userId)
+    .eq('iso', cleanIso);
+  if (error) throw error;
   return true;
 }
 
@@ -1825,6 +1847,31 @@ const SCALE = { Min:0.7, Base:1, Max:1.3 };
 
 // ── Rarity CSS injection ──────────────────────────────────────────────
 const RARITY_CSS = `
+html, body, #root {
+  height: 100%;
+  overflow: hidden;
+}
+
+#animaldex-app-root [data-animaldex-bar="true"] {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 40;
+  flex-shrink: 0;
+}
+
+#animaldex-app-root [data-animaldex-bottom-bar="true"] {
+  position: sticky !important;
+  bottom: 0 !important;
+  z-index: 40;
+  flex-shrink: 0;
+}
+
+#animaldex-app-root .animaldex-scroll-area {
+  min-height: 0;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* ── Tab slide transitions ── */
 @keyframes tabFromRight {
   from { transform: translateX(56px); opacity: 0; }
@@ -4976,6 +5023,60 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm 
   );
 }
 
+function CountryVisitPromptModal({ animal, visitedCountries = [], onClose, onConfirm }) {
+  const [search, setSearch] = useState('');
+  const [selected, setSelected] = useState([]);
+  const countryCodes = useMemo(() => {
+    const visited = new Set(normalizeIsoList(visitedCountries));
+    return getAnimalCountryCodes(animal)
+      .filter(code => !visited.has(code))
+      .sort((a,b)=>getCountryDisplayName(a).localeCompare(getCountryDisplayName(b), 'it'));
+  }, [animal?.id, JSON.stringify(visitedCountries || [])]);
+  const filtered = countryCodes.filter(code => {
+    const q = search.trim().toLowerCase();
+    if (!q) return true;
+    return code.toLowerCase().includes(q) || getCountryDisplayName(code).toLowerCase().includes(q);
+  });
+  const toggle = (code) => {
+    const iso = String(code || '').toUpperCase();
+    setSelected(prev => prev.includes(iso) ? prev.filter(item => item !== iso) : [...prev, iso]);
+  };
+  if (!animal || !countryCodes.length) return null;
+  return (
+    <div onClick={onClose} style={{ position:'fixed', inset:0, zIndex:270, background:'rgba(0,0,0,.78)', display:'flex', alignItems:'flex-end', justifyContent:'center', padding:'calc(env(safe-area-inset-top, 0px) + 12px) 12px calc(env(safe-area-inset-bottom, 0px) + 12px)' }}>
+      <div onClick={e=>e.stopPropagation()} data-animaldex-modal="true" style={{ width:'100%', maxWidth:460, maxHeight:'min(82dvh, 680px)', overflow:'hidden', borderRadius:28, background:'linear-gradient(180deg,#202126,#111113)', border:'1px solid rgba(144,216,74,.24)', boxShadow:'0 30px 80px rgba(0,0,0,.62)', color:'white', display:'flex', flexDirection:'column' }}>
+        <div style={{ padding:18, borderBottom:'1px solid rgba(255,255,255,.08)', flexShrink:0 }}>
+          <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', gap:12 }}>
+            <div style={{ minWidth:0 }}>
+              <div style={{ color:'#90D84A', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Paesi compatibili</div>
+              <div style={{ fontSize:22, fontWeight:1000, lineHeight:1.08, marginTop:5 }}>Hai visitato qualcuna di queste nazioni?</div>
+              <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.45, marginTop:8 }}>{animal.com || animal.sci} risulta presente in questi paesi, ma nessuno è ancora nella tua scratch map.</div>
+            </div>
+            <button onClick={onClose} aria-label="Chiudi" style={{ width:38, height:38, borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.07)', color:'white', fontSize:22, flexShrink:0 }}>×</button>
+          </div>
+          <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Cerca nazione o ISO..." style={{ marginTop:14, width:'100%', height:44, borderRadius:16, background:'#252527', color:'white', border:'1px solid rgba(255,255,255,.12)', padding:'0 13px', fontSize:14, boxSizing:'border-box', outline:'none' }} />
+        </div>
+        <div style={{ flex:1, minHeight:0, overflowY:'auto', WebkitOverflowScrolling:'touch', display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, padding:14 }}>
+          {filtered.map(code => {
+            const active = selected.includes(code);
+            return (
+              <button key={code} onClick={()=>toggle(code)} style={{ minHeight:50, borderRadius:17, border:`1px solid ${active?'rgba(144,216,74,.72)':'rgba(255,255,255,.09)'}`, background:active?'rgba(144,216,74,.18)':'rgba(255,255,255,.045)', color:active?'#D8FFC4':'white', display:'flex', alignItems:'center', gap:8, padding:'8px 10px', cursor:'pointer', textAlign:'left', fontFamily:'inherit' }}>
+                <span style={{ fontSize:22 }}>{getFlagEmoji(code)}</span>
+                <span style={{ flex:1, minWidth:0, fontSize:11.5, fontWeight:950, lineHeight:1.15 }}>{getCountryDisplayName(code)}</span>
+                <span style={{ color:active?'#90D84A':'rgba(255,255,255,.24)', fontWeight:1000 }}>{active?'✓':'+'}</span>
+              </button>
+            );
+          })}
+        </div>
+        <div style={{ display:'grid', gridTemplateColumns:'1fr 1.5fr', gap:8, padding:'10px 14px 16px', borderTop:'1px solid rgba(255,255,255,.08)', flexShrink:0 }}>
+          <button onClick={onClose} style={{ minHeight:46, borderRadius:16, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'rgba(255,255,255,.72)', fontWeight:1000, fontFamily:'inherit' }}>Non ora</button>
+          <button disabled={!selected.length} onClick={()=>onConfirm?.(selected)} style={{ minHeight:46, borderRadius:16, border:'none', background:selected.length?'#90D84A':'#3A3A3C', color:selected.length?'#111':'rgba(255,255,255,.38)', fontWeight:1000, fontFamily:'inherit' }}>{selected.length ? `Aggiungi ${selected.length}` : 'Seleziona paesi'}</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 
 function FullscreenMetricModal({ open, title, subtitle='', onClose, children }) {
   if (!open) return null;
@@ -5090,7 +5191,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
     ['fam', a.fam],
   ].map(([key,p],i,arr)=>(
     <span key={i} style={{ display:'flex', alignItems:'center', gap:3 }}>
-      <button onClick={()=>key === 'cls' ? onJumpToClass?.(a.cls, a) : onOpenTaxonomyFilter?.({ key, value:p, animal:a })} style={{ color:i===2 ? c.accent : 'rgba(255,255,255,.42)', fontSize:11, fontWeight:i===2?700:500, fontStyle:i===2?'normal':'italic', background:'transparent', border:'none', padding:0, cursor:'pointer', textDecoration:'underline', textDecorationThickness:i===2 ? 1.5 : 1, textUnderlineOffset:2 }}>{p}</button>
+      <button onClick={()=>onOpenTaxonomyFilter?.({ key, value:p, animal:a })} style={{ color:i===2 ? c.accent : 'rgba(255,255,255,.42)', fontSize:11, fontWeight:i===2?700:500, fontStyle:i===2?'normal':'italic', background:'transparent', border:'none', padding:0, cursor:'pointer', textDecoration:'underline', textDecorationThickness:i===2 ? 1.5 : 1, textUnderlineOffset:2 }}>{p}</button>
       {i<arr.length-1&&<span style={{ color:'rgba(255,255,255,.18)', fontSize:11 }}>›</span>}
     </span>
   ))}
@@ -5220,11 +5321,19 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
               {/* Tassonomia */}
               {statMode==='tassonomia'&&(
                 <div data-animaldex-card="true" style={{ background:'rgba(0,0,0,.35)', borderRadius:24, padding:'4px 16px 16px', height:'100%', boxSizing:'border-box', display:'flex', flexDirection:'column', justifyContent:'space-between' }}>
-                  {[['Regno',a.kin],['Phylum',a.phy],['Classe',a.cls],['Ordine',a.ord],['Famiglia',a.fam],['Genere',a.gen],['Specie',a.sci]].map(([l,v])=>(
-                    <div key={l} style={{ display:'flex', justifyContent:'space-between', padding:'10px 0', borderBottom:'1px solid rgba(255,255,255,.06)' }}>
+                  {[
+                    ['Regno','kin',a.kin],
+                    ['Phylum','phy',a.phy],
+                    ['Classe','cls',a.cls],
+                    ['Ordine','ord',a.ord],
+                    ['Famiglia','fam',a.fam],
+                    ['Genere','gen',a.gen],
+                    ['Specie',null,a.sci],
+                  ].map(([l,key,v])=>(
+                    <button key={l} disabled={!key || !v} onClick={()=>key && v && onOpenTaxonomyFilter?.({ key, value:v, animal:a })} style={{ display:'flex', justifyContent:'space-between', alignItems:'center', gap:10, padding:'10px 0', border:'none', borderBottom:'1px solid rgba(255,255,255,.06)', background:'transparent', fontFamily:'inherit', cursor:key && v ? 'pointer' : 'default', textAlign:'left' }}>
                       <span style={{ color:'rgba(255,255,255,.35)', fontSize:12 }}>{l}</span>
-                      <span style={{ color:l==='Specie'||l==='Genere'?c.accent:'white', fontSize:12, fontWeight:600, fontStyle:l==='Specie'||l==='Genere'?'italic':undefined }}>{v}</span>
-                    </div>
+                      <span style={{ color:l==='Specie'||l==='Genere'?c.accent:'white', fontSize:12, fontWeight:700, fontStyle:l==='Specie'||l==='Genere'?'italic':undefined, textDecoration:key?'underline':'none', textUnderlineOffset:3, maxWidth:'62%', overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap' }}>{v}</span>
+                    </button>
                   ))}
                 </div>
               )}
@@ -7917,6 +8026,16 @@ function lifeRuleMatches(rule, animal) {
 function lifeNodeMatchesAnimal(node, animal) {
   return !!((node?.match && lifeRuleMatches(node.match, animal)) || (node?.matchAny || []).some(rule => lifeRuleMatches(rule, animal)));
 }
+function lifeNodeToTaxFilter(node) {
+  if (!node) return null;
+  const rankToKey = { kingdom:'kin', phylum:'phy', class:'cls', order:'ord', family:'fam', genus:'genus' };
+  const direct = node.match && Object.keys(node.match).length === 1 ? Object.entries(node.match)[0] : null;
+  if (direct) return { key:direct[0], value:direct[1] };
+  const key = rankToKey[node.rank];
+  if (!key || node.kind === 'animal') return null;
+  const appKey = key === 'genus' ? 'gen' : key;
+  return { key:appKey, value:node.label };
+}
 function getLifeAnimals(node, animals=[]) {
   const byId = new Map();
   const add = (animal) => byId.set(String(animal?.id || animal?.sci || animal?.com), animal);
@@ -8097,7 +8216,7 @@ function buildLifeFlow(selected, animals, expandedGeneratedId = null, focusAnima
   });
   return { nodes, edges, columns, selectedPath, selectedNode:nodes.find(node => node.id === selected.id), focusDepth, colGap, rowGap, nodeW, nodeH };
 }
-function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onAnimalPanel, onOpenAnimal }) {
+function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onAnimalPanel, onOpenAnimal, onOpenTaxonomyFilter }) {
   const wrapRef = useRef(null);
   const dragRef = useRef(null);
   const pointersRef = useRef(new Map());
@@ -8415,6 +8534,11 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
               <div style={{ borderRadius:16, background:'rgba(255,255,255,.055)', padding:12 }}><div style={{ color:detailNode.node.color, fontSize:20, fontWeight:1000 }}>{detailNode.stats.completion}%</div><div style={{ color:'rgba(255,255,255,.55)', fontSize:11, fontWeight:850 }}>catturate</div></div>
             </div>
             {!!detailNode.stats.samples?.length && <div style={{ display:'flex', gap:8, overflowX:'auto', marginTop:14, paddingBottom:3 }}>{detailNode.stats.samples.map(a => <button key={a.id || a.sci} onClick={()=>onOpenAnimal?.(a)} style={{ flex:'0 0 84px', minHeight:92, borderRadius:15, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.055)', color:'white', padding:7, fontFamily:'inherit' }}><AnimalImg a={a} size={52} fontSize={20} overrideStatus={normalizeAnimalStatus(a.status)} /><div style={{ fontSize:9.5, fontWeight:900, lineHeight:1.1, marginTop:5 }}>{clampWholeWords(a.com || a.sci, 18)}</div></button>)}</div>}
+            {(() => {
+              const filter = lifeNodeToTaxFilter(detailNode.node);
+              if (!filter?.key || !filter?.value) return null;
+              return <button onClick={()=>{ setDetailNode(null); onOpenTaxonomyFilter?.({ ...filter, animal:null }); }} style={{ marginTop:14, width:'100%', minHeight:46, borderRadius:16, border:'none', background:'#244A70', color:'white', fontWeight:1000, fontFamily:'inherit', cursor:'pointer' }}>Vedi animali di questo nodo</button>;
+            })()}
           </div>
         </div>
       )}
@@ -8468,7 +8592,15 @@ const LIFE_RANK_LABELS = {
   editorial:'Cluster',
 };
 function LifePathRail({ path, onOpen, isLight }) {
-  return <div style={{ height:34, display:'flex', alignItems:'center', gap:7, overflowX:'auto', overflowY:'hidden', WebkitOverflowScrolling:'touch', scrollbarWidth:'none', paddingRight:2 }}>
+  const railRef = useRef(null);
+  useEffect(() => {
+    const rail = railRef.current;
+    if (!rail) return;
+    requestAnimationFrame(() => {
+      rail.scrollTo({ left:rail.scrollWidth - rail.clientWidth, behavior:'smooth' });
+    });
+  }, [path.map(node => node.id).join('|')]);
+  return <div ref={railRef} style={{ height:34, display:'flex', alignItems:'center', gap:7, overflowX:'auto', overflowY:'hidden', WebkitOverflowScrolling:'touch', scrollbarWidth:'none', paddingRight:2 }}>
     {path.map((node, index) => {
       const active = index === path.length - 1;
       return (
@@ -8531,7 +8663,7 @@ class TaxonomyErrorBoundary extends React.Component {
     );
   }
 }
-function TaxonomyExplorer({ animals=ANIMALS, statusMap={}, visitedCountries=[], initialAnimal=null, onBack, onOpenAnimal, theme='dark' }) {
+function TaxonomyExplorer({ animals=ANIMALS, statusMap={}, visitedCountries=[], initialAnimal=null, onBack, onOpenAnimal, onOpenTaxonomyFilter, theme='dark' }) {
   const [selectedId, setSelectedId] = useState(() => findLifeFocusNodeForAnimal(initialAnimal)?.id || 'animalia');
   const [infoOpen, setInfoOpen] = useState(false);
   const [panelNodeId, setPanelNodeId] = useState(null);
@@ -8561,7 +8693,7 @@ function TaxonomyExplorer({ animals=ANIMALS, statusMap={}, visitedCountries=[], 
         </div>
       </div>
       <div style={{ position:'absolute', inset:'calc(env(safe-area-inset-top, 0px) + 104px) 0 0 0' }}>
-        <LifeTreeCanvas selectedNode={selectedNode} animals={animalsWithStatus} focusAnimalId={initialAnimal?.id || null} onOpen={openNode} onAnimalPanel={openPanel} onOpenAnimal={onOpenAnimal} />
+        <LifeTreeCanvas selectedNode={selectedNode} animals={animalsWithStatus} focusAnimalId={initialAnimal?.id || null} onOpen={openNode} onAnimalPanel={openPanel} onOpenAnimal={onOpenAnimal} onOpenTaxonomyFilter={onOpenTaxonomyFilter} />
       </div>
       {panelNode && <LifeAnimalPanel node={panelNode} animals={animalsWithStatus} onClose={()=>setPanelNodeId(null)} onOpenAnimal={onOpenAnimal} theme={theme} />}
       {infoOpen && <LifeInfoModal onClose={()=>setInfoOpen(false)} theme={theme} />}
@@ -10144,7 +10276,7 @@ function HabitatCard({ row, onOpen, onOpenGrid }) {
   );
 }
 
-function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedCountriesChange, initialView, onSelect, onOpenCountry, onOpenRegion, onAddDestination, destinationsLoading=false, onOpenHabitatGrid, theme='dark' }) {
+function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedCountriesChange, onRemoveDestination, initialView, onSelect, onOpenCountry, onOpenRegion, onAddDestination, destinationsLoading=false, onOpenHabitatGrid, theme='dark' }) {
   const normalizeInitialView = (v) => {
     if (v && typeof v === 'object') return normalizeInitialView(v.view);
     if (v === 'countries') return 'countries';
@@ -10224,6 +10356,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   const removeVisitedCountry = (code) => {
     const list = normalizeIsoList(visitedCountries.filter(c=>c!==code));
     onVisitedCountriesChange?.(list);
+    onRemoveDestination?.(code);
     if (selectedCountry === code) setSelectedCountry(null);
   };
   const allAnimalsWithStatus = ANIMALS.map(a => ({ ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) }));
@@ -11660,6 +11793,7 @@ export default function App() {
   const [sectionIntro,setSectionIntro]=useState(null);
   const [activeSectionGuide,setActiveSectionGuide]=useState(null);
   const [destinationsLoading,setDestinationsLoading]=useState(false);
+  const [countryVisitPrompt,setCountryVisitPrompt]=useState(null);
   const [awardQueue,setAwardQueue]=useState([]);
   const [earnedBadgeIds,setEarnedBadgeIds]=useState([]);
   const [progressHydrated,setProgressHydrated]=useState(false);
@@ -11952,9 +12086,15 @@ export default function App() {
     const nextStatus = normalizeAnimalStatus(status);
     const previousStatus = normalizeAnimalStatus(statusMap[id]);
     const currentAnimal = animalsData.find(a => a.id === id);
+    const nextCountryCodes = getAnimalCountryCodes(currentAnimal);
+    const visitedSet = new Set(normalizeIsoList(visitedCountries));
+    const hasVisitedMatch = nextCountryCodes.some(code => visitedSet.has(code));
     setStatusMap(prev => ({ ...prev, [id]: nextStatus }));
     setAnimalsData(prev => prev.map(a => a.id === id ? { ...a, status: nextStatus, userStatus: appStatusToSupabase(nextStatus) } : a));
     saveLocalUserAnimalStatus(localUserId, id, nextStatus);
+    if ((nextStatus === 'avvistato' || nextStatus === 'catturato') && nextCountryCodes.length && !hasVisitedMatch) {
+      setCountryVisitPrompt(currentAnimal || { id });
+    }
     if (!user?.id) return;
     try {
       await saveUserAnimalStatus(user.id, currentAnimal || { id }, nextStatus);
@@ -11974,9 +12114,11 @@ export default function App() {
   const handleAddDestination = async (iso, tripTags = []) => {
     if (!user?.id || !iso) return;
     const cleanIso = String(iso).toUpperCase();
-    const nextVisited = Array.from(new Set([...visitedCountries, cleanIso])).sort();
-    setVisitedCountries(nextVisited);
-    saveVisitedCountries(nextVisited);
+    setVisitedCountries(prev => {
+      const nextVisited = normalizeIsoList([...(prev || []), cleanIso]);
+      saveVisitedCountries(nextVisited);
+      return nextVisited;
+    });
     setDestinationsLoading(true);
     setDataError('');
     try {
@@ -11994,6 +12136,37 @@ export default function App() {
       setDataError(err?.message || 'Errore aggiunta paese');
     } finally {
       setDestinationsLoading(false);
+    }
+  };
+
+  const handleVisitedCountriesChange = (nextList = []) => {
+    const clean = normalizeIsoList(nextList);
+    setVisitedCountries(clean);
+    saveVisitedCountries(clean);
+  };
+
+  const handleRemoveDestination = async (iso) => {
+    const cleanIso = String(iso || '').toUpperCase();
+    if (!cleanIso) return;
+    const nextVisited = normalizeIsoList(visitedCountries.filter(code => String(code).toUpperCase() !== cleanIso));
+    setVisitedCountries(nextVisited);
+    saveVisitedCountries(nextVisited);
+    if (!user?.id) return;
+    try {
+      await withTimeout(removeUserDestination(user.id, cleanIso), 4500, false, 'removeUserDestination');
+      await trackUserEvent(user, 'country_removed', { country_iso:cleanIso, source_screen:'regions' }, userProfile);
+    } catch (err) {
+      console.warn('[Apex] Rimozione destinazione fallita:', err);
+      setDataError(err?.message || 'Errore rimozione paese');
+    }
+  };
+
+  const confirmPromptCountries = async (codes = []) => {
+    const cleanCodes = normalizeIsoList(codes);
+    if (!cleanCodes.length) { setCountryVisitPrompt(null); return; }
+    setCountryVisitPrompt(null);
+    for (const iso of cleanCodes) {
+      await handleAddDestination(iso, []);
     }
   };
 
@@ -12018,6 +12191,11 @@ export default function App() {
       if (error) throw error;
 
       const badgeIds = (data?.badge_ids || data?.badges || []).map(normalizeBadgeId);
+      const cleanCountries = normalizeIsoList(countries || []);
+      if (cleanCountries.length) {
+        setVisitedCountries(cleanCountries);
+        saveVisitedCountries(cleanCountries);
+      }
       await persistOnboardingQuestionnaire(user, demographics || {});
       await trackUserEvent(user, 'onboarding_completed', {
         source_screen:'onboarding',
@@ -12035,7 +12213,11 @@ export default function App() {
       return data || {};
     } catch (err) {
       console.warn('[Apex] RPC onboarding fallita, uso fallback frontend:', err);
-      const cleanCountries = (countries || []).map(c => String(c).toUpperCase()).filter(Boolean);
+      const cleanCountries = normalizeIsoList(countries || []);
+      if (cleanCountries.length) {
+        setVisitedCountries(cleanCountries);
+        saveVisitedCountries(cleanCountries);
+      }
       for (const iso of cleanCountries) {
         await withTimeout(persistUserDestination(user.id, iso, tripTags || []), 3500, false, 'persistUserDestination');
         const { error: rpcError } = await withTimeout(supabase.rpc('unlock_animals_for_destination', {
@@ -12319,7 +12501,7 @@ const jumpToClassFromDetail = (cls, animal) => {
 const openTaxonomyFilterFromDetail = ({ key, value, animal }) => {
   const labels = { kin:'Regno', phy:'Phylum', cls:'Classe', ord:'Ordine', fam:'Famiglia', gen:'Genere' };
   if (!key || !value) return;
-  setGridReturnTarget({ page:'detail', animal });
+  setGridReturnTarget(animal ? { page:'detail', animal } : { page:'taxonomy' });
   setSel(null);
   setGridPreset({
     id: Date.now(),
@@ -12416,10 +12598,10 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
     if (page === 'friends') return <FriendsPage theme={theme} onBack={()=>setPage('menu')} user={user} userProfile={userProfile} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
     if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={handleLogout} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} onOpenFriends={()=>openPage('friends')} />;
 	    if (page === 'badges') return <BadgesPage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={activeSectionGuide==='badges'} onTutorialBadgeOpen={()=>setActiveSectionGuide(null)} />;
-    if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={setVisitedCountries} initialView={regionsInitialView} onSelect={setSel} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} />{renderDetailOverlay()}</div>;
+    if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={handleVisitedCountriesChange} onRemoveDestination={handleRemoveDestination} initialView={regionsInitialView} onSelect={setSel} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} />{renderDetailOverlay()}</div>;
     if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage theme={theme} onBack={()=>setPage('profile')} statusMap={statusMap} onSelect={setSel} />{renderDetailOverlay()}</div>;
     if (page === 'lifeweb') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><StandaloneLifeWebPage theme={theme} statusMap={statusMap} visitedCountries={visitedCountries} onBack={()=>returnFromFeaturePage('grid')} animals={animalsData} initialAnimal={lifeWebInitialAnimal} onOpenAnimal={setSel} />{renderDetailOverlay()}</div>;
-    if (page === 'taxonomy') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><TaxonomyErrorBoundary theme={theme} onBack={()=>setPage('menu')} resetKey={`${theme}-${animalsData?.length || 0}-${taxonomyInitialAnimal?.id || ''}`}><TaxonomyExplorer theme={theme} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={taxonomyInitialAnimal} onBack={()=>setPage('menu')} onOpenAnimal={setSel} /></TaxonomyErrorBoundary>{renderDetailOverlay()}</div>;
+    if (page === 'taxonomy') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><TaxonomyErrorBoundary theme={theme} onBack={()=>setPage('menu')} resetKey={`${theme}-${animalsData?.length || 0}-${taxonomyInitialAnimal?.id || ''}`}><TaxonomyExplorer theme={theme} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={taxonomyInitialAnimal} onBack={()=>setPage('menu')} onOpenAnimal={setSel} onOpenTaxonomyFilter={openTaxonomyFilterFromDetail} /></TaxonomyErrorBoundary>{renderDetailOverlay()}</div>;
     if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} onStartInitialOnboarding={startInitialOnboardingFromSettings} onStartOperationalTutorial={startOperationalTutorialFromSettings} theme={theme} onThemeChange={setTheme} />;
     if (page === 'abilities') return <AbilitiesPage theme={theme} onBack={()=>setPage('menu')} onOpenAbility={openGridWithCategory} tutorialActive={activeSectionGuide==='abilities'} onTutorialAbilityOpen={()=>setActiveSectionGuide(null)} />;
     return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><Grid theme={theme} onSelect={setSel} statusMap={statusMap} visitedCountries={visitedCountries} onHome={()=>openPage('menu')} onOpenRegions={()=>openPage('regions')} preset={gridPreset} onBackToOrigin={gridReturnTarget ? returnFromFilteredGrid : null} tutorialActive={tutorialStep==='grid-open'} tutorialStep={tutorialStep} tutorialAnimalId={tutorialAnimalId} onTutorialAnimalSelect={handleTutorialAnimalSelect} />{renderDetailOverlay()}</div>;
@@ -12434,6 +12616,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
 	      {dataError && user && <SwipeDismissNotice onDismiss={()=>setDataError('')} style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:250, borderRadius:14, padding:'10px 12px', background:'rgba(255,59,48,.92)', color:'white', fontSize:11, fontWeight:800, boxShadow:'0 10px 30px rgba(0,0,0,.35)' }}>{dataError}</SwipeDismissNotice>}
       {activeAwardToast && <AwardToast award={activeAwardToast} onOpen={openAwardFromToast} onDismiss={()=>setAwardQueue(prev => prev.slice(1))} />}
       {photoTarget && <PhotoRecognitionModal animal={photoTarget} animals={animalsData} user={user} onClose={()=>setPhotoTarget(null)} onConfirm={confirmPhotoRecognition} />}
+      {countryVisitPrompt && <CountryVisitPromptModal animal={countryVisitPrompt} visitedCountries={visitedCountries} onClose={()=>setCountryVisitPrompt(null)} onConfirm={confirmPromptCountries} />}
     </div>
   );
 }
