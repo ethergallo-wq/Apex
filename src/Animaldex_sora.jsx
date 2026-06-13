@@ -3057,7 +3057,7 @@ function RarityBadge({ rarity='Comune', compact=false, small=false, full=false, 
       ...style,
     }}>
       {r === 'Non comune' && <span aria-hidden className="rarity-silver-sheen" style={{ position:'absolute', inset:'-8% -38%', width:'46%', background:'linear-gradient(115deg, transparent 8%, rgba(255,255,255,.20) 44%, rgba(255,255,255,.06) 56%, transparent 78%)', opacity:.48, mixBlendMode:'screen', pointerEvents:'none' }} />}
-      {r === 'Raro' && <span aria-hidden className="rarity-rare-gems" style={{ position:'absolute', inset:'-38% 0', background:'radial-gradient(circle at 18% 28%, rgba(255,255,255,.95) 0 1.4px, transparent 2.3px), radial-gradient(circle at 78% 24%, rgba(255,255,255,.82) 0 1.2px, transparent 2.2px), radial-gradient(circle at 68% 72%, rgba(255,244,164,.86) 0 1.3px, transparent 2.4px), radial-gradient(circle at 34% 74%, rgba(255,255,255,.70) 0 1px, transparent 2px), radial-gradient(circle at 52% 48%, rgba(255,232,126,.62) 0 1px, transparent 2.1px)', pointerEvents:'none', mixBlendMode:'screen' }} />}
+      {r === 'Raro' && <span aria-hidden style={{ position:'absolute', inset:'-38% 0', background:'radial-gradient(circle at 18% 28%, rgba(255,255,255,.95) 0 1.4px, transparent 2.3px), radial-gradient(circle at 78% 24%, rgba(255,255,255,.82) 0 1.2px, transparent 2.2px), radial-gradient(circle at 68% 72%, rgba(255,244,164,.86) 0 1.3px, transparent 2.4px), radial-gradient(circle at 34% 74%, rgba(255,255,255,.70) 0 1px, transparent 2px), radial-gradient(circle at 52% 48%, rgba(255,232,126,.62) 0 1px, transparent 2.1px)', pointerEvents:'none', mixBlendMode:'screen' }} />}
       {r === 'Leggendario' && <span aria-hidden className="rarity-legendary-water" style={{ position:'absolute', inset:'-50% -42%', background:'radial-gradient(ellipse at 22% 38%, rgba(118,220,255,.28), transparent 34%), radial-gradient(ellipse at 74% 64%, rgba(255,255,255,.20), transparent 32%), radial-gradient(circle at 50% 50%, rgba(244,217,255,.16), transparent 18%), linear-gradient(100deg, transparent 0%, rgba(87,214,255,.18) 24%, transparent 46%, rgba(255,255,255,.16) 64%, transparent 100%)', backgroundSize:'180% 180%, 160% 160%, 120% 120%, 240% 100%', filter:'blur(.45px)', mixBlendMode:'screen', pointerEvents:'none' }} />}
       <span style={{ position:'relative', zIndex:2, color:cfg.text, fontSize:full?13.5:small?11.5:12.5, fontWeight:1000, letterSpacing:.2, textShadow:'0 1px 4px rgba(0,0,0,.50)', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{label}</span>
     </div>
@@ -4490,7 +4490,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
   };
 
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 80% -8%, rgba(240,168,64,.34), transparent 34%), radial-gradient(circle at 10% 28%, rgba(184,77,58,.24), transparent 38%), radial-gradient(circle at 92% 72%, rgba(200,121,85,.20), transparent 36%), linear-gradient(180deg,#2A1208 0%,#1B100B 44%,#100B09 100%)', position:'relative', overflow:'hidden' }}>
+    <div style={{ height:'100%', minHeight:0, maxHeight:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 80% -8%, rgba(240,168,64,.34), transparent 34%), radial-gradient(circle at 10% 28%, rgba(184,77,58,.24), transparent 38%), radial-gradient(circle at 92% 72%, rgba(200,121,85,.20), transparent 36%), linear-gradient(180deg,#2A1208 0%,#1B100B 44%,#100B09 100%)', position:'relative', overflow:'hidden', overscrollBehavior:'none' }}>
       <div data-animaldex-bar="true" data-animaldex-grid-top="true" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isPhone?'calc(env(safe-area-inset-top, 0px) + 2px) 14px 6px':'calc(env(safe-area-inset-top, 0px) + 9px) 12px 10px', minHeight:isPhone?'calc(env(safe-area-inset-top, 0px) + 52px)':'calc(env(safe-area-inset-top, 0px) + 56px)', marginTop:0, borderTop:'none', borderBottom:'none', background:ANIMALDEX_ORANGE_GRADIENT, borderRadius:'0 0 16px 16px', boxShadow:'0 8px 20px rgba(184,77,58,.18)', flexShrink:0, position:'relative', zIndex:2, overflow:'hidden' }}>
         {onBackToOrigin ? (
           <button onClick={onBackToOrigin} aria-label="Torna alla scheda" style={gridControlStyle}>
@@ -4507,7 +4507,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
 
       {/* Filtri applicati nascosti: l'area libera viene usata dai filtri rapidi. */}
 
-      <div style={{ flex:1, overflowY:'auto', padding:isPhone?'28px 14px 16px':'36px 12px 18px', marginTop:isPhone?-18:-24, marginBottom:isPhone?-12:-18, background:isLightTheme?'transparent':'linear-gradient(180deg,rgba(240,168,64,.09),rgba(184,77,58,.08) 38%,rgba(16,11,9,.18))', position:'relative', zIndex:1 }}>
+      <div style={{ flex:1, minHeight:0, overflowY:'auto', WebkitOverflowScrolling:'touch', overscrollBehavior:'contain', padding:isPhone?'12px 14px 18px':'16px 12px 20px', marginTop:0, marginBottom:0, background:isLightTheme?'transparent':'linear-gradient(180deg,rgba(240,168,64,.09),rgba(184,77,58,.08) 38%,rgba(16,11,9,.18))', position:'relative', zIndex:1 }}>
         {list.length===0 ? (() => {
           const statusOnly = new Set(fStatus);
           const isMysteryTab = statusOnly.size === 1 && statusOnly.has('misterioso');
@@ -4536,7 +4536,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
             <button onClick={()=>{setSheet('sort');setShowMenu(false);}} aria-label="Ordina" style={{ ...bottomControlStyle, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
               <svg width={bottomIconSize} height={bottomIconSize} viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ display:'block' }}><path d="M8 5v14M8 19l-3-3M8 19l3-3M16 19V5M16 5l-3 3M16 5l3 3" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </button>
-            <button data-tour="grid-filters" onClick={()=>{ setShowMenu(v=>!v); setActiveFilter(null); }} aria-label="Filtra" style={{ ...bottomControlStyle, background:showMenu?'rgba(0,0,0,.28)':'rgba(0,0,0,.12)', border:`1px solid ${showMenu?'rgba(255,255,255,.24)':'rgba(255,255,255,.12)'}`, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
+            <button data-tour="grid-filters" onClick={()=>{ setShowMenu(v=>!v); setActiveFilter(null); }} aria-label="Filtra" style={{ ...bottomControlStyle, background:showMenu?'rgba(0,0,0,.28)':'rgba(0,0,0,.12)', border:`${showMenu?'2.5px':'1px'} solid ${showMenu?'#FFFFFF':'rgba(255,255,255,.12)'}`, boxSizing:'border-box', boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
               <svg width={bottomIconSize + 1} height={bottomIconSize + 1} viewBox="0 0 24 24" fill="none" style={{ display:'block' }}><path d="M4 7h16M7 12h13M10 17h10" stroke="currentColor" strokeWidth="2.35" strokeLinecap="round"/></svg>
             </button>
           </div>
@@ -4559,7 +4559,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
                   {filterDefs.map(def => {
                     const activeCount = Array.isArray(def.selected) ? def.selected.length : (def.selected ? 1 : 0);
                     return (
-                      <button key={def.key} onClick={()=>def.open ? def.open() : setActiveFilter(def.key)} style={{ width:isNarrow?116:126, height:54, borderRadius:17, border:`1px solid ${activeCount ? 'rgba(240,168,64,.58)' : (isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.09)')}`, background:activeCount ? 'linear-gradient(135deg, rgba(240,168,64,.20), rgba(255,255,255,.055))' : (isLightTheme?'rgba(0,0,0,.035)':'rgba(255,255,255,.045)'), color:pageText, padding:'9px 10px', textAlign:'left', fontFamily:'inherit', cursor:'pointer', flex:'0 0 auto', boxShadow:activeCount ? '0 8px 20px rgba(240,168,64,.12)' : 'none', display:'flex', flexDirection:'column', justifyContent:'center' }}>
+                      <button key={def.key} onClick={()=>def.open ? def.open() : setActiveFilter(def.key)} style={{ width:isNarrow?116:126, height:54, borderRadius:17, border:`${activeCount ? '2.5px' : '1px'} solid ${activeCount ? '#FFFFFF' : (isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.09)')}`, background:activeCount ? 'linear-gradient(135deg, rgba(240,168,64,.20), rgba(255,255,255,.055))' : (isLightTheme?'rgba(0,0,0,.035)':'rgba(255,255,255,.045)'), color:pageText, padding:'9px 10px', textAlign:'left', fontFamily:'inherit', cursor:'pointer', flex:'0 0 auto', boxSizing:'border-box', boxShadow:activeCount ? '0 0 0 1px rgba(255,255,255,.18), 0 8px 20px rgba(240,168,64,.12)' : 'none', display:'flex', flexDirection:'column', justifyContent:'center' }}>
                         <div style={{ color:activeCount ? '#F0A840' : (isLightTheme?'rgba(0,0,0,.72)':'rgba(255,255,255,.78)'), fontSize:activeCount?10:11.5, fontWeight:1000, lineHeight:1.08, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{def.label}</div>
                         {activeCount > 0 && <div style={{ color:isLightTheme?'rgba(0,0,0,.54)':'rgba(255,255,255,.58)', fontSize:9.5, fontWeight:950, marginTop:3 }}>{activeCount} attivi</div>}
                       </button>
@@ -4592,7 +4592,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
                     const semanticBorder = isSemanticValue ? hexToRgba(tone, selected ? .76 : .42) : null;
                     const semanticColor = isSemanticValue ? tone : null;
                     return (
-                      <button key={opt.value} onClick={()=>toggleFilterValue(activeFilterDef.setter, opt.value)} style={{ minHeight:activeFilterDef.layout === 'quarters' ? 58 : 48, borderRadius:16, border:`1px solid ${semanticBorder || (selected ? hexToRgba(tone,.72) : (isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.08)'))}`, background:bg, color:semanticColor || (selected ? (isLightTheme?'#171717':'white') : (isLightTheme?'rgba(0,0,0,.70)':'rgba(255,255,255,.72)')), fontSize:activeFilterDef.layout === 'quarters' ? (isNarrow?9.2:10) : 11.5, fontWeight:1000, lineHeight:1.08, fontFamily:'inherit', cursor:'pointer', padding:activeFilterDef.layout === 'quarters' ? '7px 4px' : '8px 10px', textAlign:'center', boxShadow:selected ? `0 8px 18px ${hexToRgba(tone,.14)}` : 'none', overflow:'hidden' }}>
+                      <button key={opt.value} onClick={()=>toggleFilterValue(activeFilterDef.setter, opt.value)} style={{ minHeight:activeFilterDef.layout === 'quarters' ? 58 : 48, borderRadius:16, border:`${selected ? '2.5px' : '1px'} solid ${selected ? '#FFFFFF' : (semanticBorder || (isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.08)'))}`, background:bg, color:semanticColor || (selected ? (isLightTheme?'#171717':'white') : (isLightTheme?'rgba(0,0,0,.70)':'rgba(255,255,255,.72)')), fontSize:activeFilterDef.layout === 'quarters' ? (isNarrow?9.2:10) : 11.5, fontWeight:1000, lineHeight:1.08, fontFamily:'inherit', cursor:'pointer', padding:activeFilterDef.layout === 'quarters' ? '7px 4px' : '8px 10px', textAlign:'center', boxSizing:'border-box', boxShadow:selected ? `0 0 0 1px rgba(255,255,255,.18), 0 8px 18px ${hexToRgba(tone,.14)}` : 'none', overflow:'hidden' }}>
                         {isRarity && <span style={{ display:'block', width:8, height:8, borderRadius:999, background:tone, margin:'0 auto 5px', opacity:selected ? .9 : .52 }} />}
                         <span style={{ display:'block', overflow:'hidden', textOverflow:'ellipsis' }}>{displayLabel}</span>
                       </button>
@@ -11702,7 +11702,11 @@ export default function App() {
     filter: none !important;
   }
   .animaldex-app-frame {
+    height: var(--animaldex-app-height, 100dvh);
+    max-height: var(--animaldex-app-height, 100dvh);
     min-height: var(--animaldex-app-height, 100dvh);
+    overflow: hidden;
+    overscroll-behavior: none;
   }
 }`;
     document.head.appendChild(style);

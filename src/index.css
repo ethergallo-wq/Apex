@@ -64,7 +64,11 @@ video {
   box-sizing: border-box;
   margin-inline: auto;
   isolation: isolate;
+  height: var(--animaldex-app-height, 100dvh);
+  max-height: var(--animaldex-app-height, 100dvh);
   min-height: var(--animaldex-app-height, 100dvh);
+  overflow: hidden;
+  overscroll-behavior: none;
 }
 
 @supports (width: 100dvw) {
