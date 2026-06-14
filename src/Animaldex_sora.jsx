@@ -1153,6 +1153,39 @@ async function syncLocalStatusMapToSupabase(userId, statusMap = {}) {
   return true;
 }
 
+async function unlockAnimalsForDestinationClient(userId, iso, animals = []) {
+  const cleanIso = String(iso || '').toUpperCase().trim();
+  if (!userId || !cleanIso) return 0;
+  const now = new Date().toISOString();
+  const animalIds = Array.from(new Set((animals || [])
+    .filter(animal => getAnimalCountryCodes(animal).includes(cleanIso))
+    .map(animal => Number(animal?.id))
+    .filter(Number.isFinite)));
+  if (!animalIds.length) return 0;
+  const { data: existingRows, error: existingError } = await supabase
+    .from('user_animals')
+    .select('animal_id, unlock_status')
+    .eq('user_id', userId)
+    .in('animal_id', animalIds);
+  if (existingError) throw existingError;
+  const existingStatus = new Map((existingRows || []).map(row => [Number(row.animal_id), String(row.unlock_status || 'locked')]));
+  const rows = animalIds
+    .filter(animalId => !existingStatus.has(animalId) || existingStatus.get(animalId) === 'locked')
+    .map(animalId => ({
+      user_id:userId,
+      animal_id:animalId,
+      unlock_status:'unlocked',
+      unlocked_at:now,
+      updated_at:now,
+    }));
+  if (!rows.length) return 0;
+  const { error } = await supabase
+    .from('user_animals')
+    .upsert(rows, { onConflict:'user_id,animal_id' });
+  if (error) throw error;
+  return rows.length;
+}
+
 async function fetchUserBadgeIds(userId) {
   const { data, error } = await supabase
     .from('user_badges')
@@ -4535,10 +4568,12 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
     minHeight:bottomButtonSize,
     borderRadius:isPhone ? 13 : 14,
   };
+  const gridTopChromeHeight = isPhone ? 'calc(env(safe-area-inset-top, 0px) + 78px)' : 'calc(env(safe-area-inset-top, 0px) + 76px)';
+  const gridBottomChromeHeight = isPhone ? 'calc(env(safe-area-inset-bottom, 0px) + 78px)' : '56px';
 
   return (
-    <div style={{ height:'100%', minHeight:0, maxHeight:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 80% -8%, rgba(240,168,64,.34), transparent 34%), radial-gradient(circle at 10% 28%, rgba(184,77,58,.24), transparent 38%), radial-gradient(circle at 92% 72%, rgba(200,121,85,.20), transparent 36%), linear-gradient(180deg,#2A1208 0%,#1B100B 44%,#100B09 100%)', position:'relative', overflow:'hidden', overscrollBehavior:'none' }}>
-      <div data-animaldex-bar="true" data-animaldex-grid-top="true" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isPhone?'calc(env(safe-area-inset-top, 0px) + 2px) 14px 6px':'calc(env(safe-area-inset-top, 0px) + 9px) 12px 10px', minHeight:isPhone?'calc(env(safe-area-inset-top, 0px) + 52px)':'calc(env(safe-area-inset-top, 0px) + 56px)', marginTop:0, borderTop:'none', borderBottom:'none', background:ANIMALDEX_ORANGE_GRADIENT, borderRadius:'0 0 16px 16px', boxShadow:'0 8px 20px rgba(184,77,58,.18)', flexShrink:0, position:'relative', zIndex:2, overflow:'hidden' }}>
+    <div style={{ height:'100%', minHeight:0, maxHeight:'100%', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 80% -8%, rgba(240,168,64,.34), transparent 34%), radial-gradient(circle at 10% 28%, rgba(184,77,58,.24), transparent 38%), radial-gradient(circle at 92% 72%, rgba(200,121,85,.20), transparent 36%), linear-gradient(180deg,#2A1208 0%,#1B100B 44%,#100B09 100%)', position:'relative', overflow:'hidden', overscrollBehavior:'none' }}>
+      <div data-animaldex-bar="true" data-animaldex-grid-top="true" style={{ position:'absolute', top:0, left:0, right:0, height:gridTopChromeHeight, display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isPhone?'calc(env(safe-area-inset-top, 0px) + 10px) 14px 8px':'calc(env(safe-area-inset-top, 0px) + 10px) 12px 10px', boxSizing:'border-box', marginTop:0, borderTop:'none', borderBottom:'none', background:ANIMALDEX_ORANGE_GRADIENT, borderRadius:'0 0 16px 16px', boxShadow:'0 8px 20px rgba(184,77,58,.18)', zIndex:30, overflow:'hidden', transform:'translateZ(0)' }}>
         {onBackToOrigin ? (
           <button onClick={onBackToOrigin} aria-label="Torna alla scheda" style={gridControlStyle}>
             <svg width={gridIconSize} height={gridIconSize} viewBox="0 0 24 24" fill="none" style={{ display:'block' }}><path d="M15 5L8 12l7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -4554,7 +4589,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
 
       {/* Filtri applicati nascosti: l'area libera viene usata dai filtri rapidi. */}
 
-      <div style={{ flex:1, minHeight:0, overflowY:'auto', WebkitOverflowScrolling:'touch', overscrollBehavior:'contain', padding:isPhone?'12px 14px 18px':'16px 12px 20px', marginTop:0, marginBottom:0, background:isLightTheme?'transparent':'linear-gradient(180deg,rgba(240,168,64,.09),rgba(184,77,58,.08) 38%,rgba(16,11,9,.18))', position:'relative', zIndex:1 }}>
+      <div style={{ position:'absolute', top:gridTopChromeHeight, bottom:gridBottomChromeHeight, left:0, right:0, minHeight:0, overflowY:'auto', WebkitOverflowScrolling:'touch', overscrollBehavior:'contain', padding:isPhone?'12px 14px 18px':'16px 12px 20px', marginTop:0, marginBottom:0, background:isLightTheme?'transparent':'linear-gradient(180deg,rgba(240,168,64,.09),rgba(184,77,58,.08) 38%,rgba(16,11,9,.18))', zIndex:1 }}>
         {list.length===0 ? (() => {
           const statusOnly = new Set(fStatus);
           const isMysteryTab = statusOnly.size === 1 && statusOnly.has('misterioso');
@@ -4573,7 +4608,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
         <div style={{ height:6 }}/>
       </div>
 
-      <div data-animaldex-bottom-bar="true" data-animaldex-grid-bottom="true" style={{ background:ANIMALDEX_ORANGE_GRADIENT, borderTop:'none', padding:isPhone?'9px 14px calc(13px + env(safe-area-inset-bottom, 0px))':'7px 12px 7px', marginBottom:0, flexShrink:0, position:'relative', zIndex:3 }}>
+      <div data-animaldex-bottom-bar="true" data-animaldex-grid-bottom="true" style={{ position:'absolute', left:0, right:0, bottom:0, minHeight:gridBottomChromeHeight, boxSizing:'border-box', background:ANIMALDEX_ORANGE_GRADIENT, borderTop:'none', padding:isPhone?'9px 14px calc(13px + env(safe-area-inset-bottom, 0px))':'7px 12px 7px', marginBottom:0, zIndex:30, transform:'translateZ(0)' }}>
         <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:8 }}>
           <button data-tour="grid-search" onClick={()=>setShowSearchBar(!showSearchBar)} aria-label="Cerca" style={{ ...bottomControlStyle, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
             <svg width={bottomIconSize} height={bottomIconSize} viewBox="0 0 20 20" fill="none" style={{ display:'block' }}><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.9" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round"/></svg>
@@ -11025,6 +11060,17 @@ const COMPARE_LEFT_COLOR = '#5BB8F5';
 const COMPARE_RIGHT_COLOR = '#F0A840';
 const COMPARE_LEFT_GRADIENT = 'linear-gradient(135deg,#5BB8F5,#245B9B)';
 const COMPARE_RIGHT_GRADIENT = 'linear-gradient(135deg,#F0A840,#A84637)';
+function comparatorText(value, fallback = '') {
+  if (value == null) return fallback;
+  if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') return String(value);
+  return fallback;
+}
+function getComparatorAnimalLabel(animal) {
+  return comparatorText(animal?.com) || comparatorText(animal?.sci) || comparatorText(animal?.com_en) || (animal?.id != null ? `Animale ${animal.id}` : 'Animale');
+}
+function getComparatorAnimalScientificName(animal) {
+  return comparatorText(animal?.sci) || comparatorText(animal?.com_en) || '';
+}
 function ComparatorInfoModal({ onClose }) {
   return (
     <div onClick={onClose} style={{ position:'fixed', inset:0, background:'rgba(0,0,0,.78)', zIndex:240, display:'flex', alignItems:'center', justifyContent:'center', padding:18 }}>
@@ -11493,7 +11539,7 @@ function SimpleComparatorPage({ onBack, animals = [], statusMap = {}, visitedCou
   const normalized = useMemo(() => {
     const source = (animals && animals.length ? animals : ANIMALS) || [];
     return source
-      .filter(Boolean)
+      .filter(a => a && a.id !== undefined && a.id !== null)
       .map(a => ({ ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) }))
       .sort(compareAnimalsRevealedFirst);
   }, [animals, statusMap, visitedCountries]);
@@ -11643,9 +11689,9 @@ function StableComparatorPage({ onBack, animals = [], statusMap = {}, visitedCou
   const normalized = useMemo(() => {
     const source = (animals?.length ? animals : ANIMALS) || [];
     return source
-      .filter(Boolean)
-      .map(a => ({ ...a, status:getResolvedAnimalStatus(a, statusMap, visitedCountries) }))
-      .sort((a,b) => String(a.com || '').localeCompare(String(b.com || ''), 'it'));
+      .filter(a => a && a.id !== undefined && a.id !== null)
+      .map(a => ({ ...a, com:getComparatorAnimalLabel(a), sci:getComparatorAnimalScientificName(a), status:getResolvedAnimalStatus(a, statusMap, visitedCountries) }))
+      .sort((a,b) => getComparatorAnimalLabel(a).localeCompare(getComparatorAnimalLabel(b), 'it'));
   }, [animals, statusMap, visitedCountries]);
   const visibleOptions = useMemo(() => {
     const revealed = normalized.filter(a => !isMysteryStatus(a.status));
@@ -11694,6 +11740,19 @@ function StableComparatorPage({ onBack, animals = [], statusMap = {}, visitedCou
     if (key === 'class') return CLS[animal.cls]?.label || animal.cls || 'n/d';
     return 'n/d';
   };
+  if (!visibleOptions.length) {
+    return (
+      <div style={{ height:'100%', display:'flex', flexDirection:'column', background:pageBg, overflow:'hidden' }}>
+        <PageHeader title="Comparatore" onBack={onBack} theme={theme} />
+        <div style={{ flex:1, display:'flex', alignItems:'center', justifyContent:'center', padding:22, textAlign:'center' }}>
+          <div style={{ borderRadius:24, border:`1px solid ${panelBorder}`, background:panelBg, padding:18, color:subText, fontSize:13, lineHeight:1.45 }}>
+            <div style={{ color:pageText, fontSize:20, fontWeight:1000, marginBottom:8 }}>Nessun animale confrontabile</div>
+            Aggiungi o sblocca almeno un animale per usare il confronto.
+          </div>
+        </div>
+      </div>
+    );
+  }
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:pageBg, overflow:'hidden' }}>
       <PageHeader title="Comparatore" onBack={onBack} theme={theme} />
@@ -11705,11 +11764,11 @@ function StableComparatorPage({ onBack, animals = [], statusMap = {}, visitedCou
         </div>
         <div style={{ display:'grid', gap:10, marginBottom:12 }}>
           <select aria-label="Animale A" value={leftId} onChange={e=>setLeftId(e.target.value)} style={selectStyle}>
-            {visibleOptions.map(a => <option key={a.id} value={String(a.id)}>{a.com || a.sci || `Animale ${a.id}`}</option>)}
+            {visibleOptions.map(a => <option key={a.id} value={String(a.id)}>{getComparatorAnimalLabel(a)}</option>)}
           </select>
           <select aria-label="Animale B" value={rightId} onChange={e=>setRightId(e.target.value)} style={selectStyle}>
             <option value="">Scegli animale B</option>
-            {visibleOptions.map(a => <option key={a.id} value={String(a.id)}>{a.com || a.sci || `Animale ${a.id}`}</option>)}
+            {visibleOptions.map(a => <option key={a.id} value={String(a.id)}>{getComparatorAnimalLabel(a)}</option>)}
           </select>
         </div>
         <ComparatorMetricBars left={leftMetrics} right={rightMetrics} colorLeft={COMPARE_LEFT_COLOR} colorRight={COMPARE_RIGHT_COLOR} theme={theme} />
@@ -11801,6 +11860,7 @@ export default function App() {
   const [theme,setTheme]=useState(getInitialAnimaldexTheme);
   const [visitedCountries,setVisitedCountries]=useState(() => normalizeIsoList(getVisitedCountries()));
   const awardsHydratedRef = useRef(false);
+  const awardInteractionRef = useRef(false);
   const unlockedAwards = useMemo(() => computeUnlockedAwards(statusMap, visitedCountries), [statusMap, visitedCountries]);
   const activeAwardToast = awardQueue[0] || null;
   useAnimaldexSound(true);
@@ -12051,10 +12111,13 @@ export default function App() {
     const initialHydration = !awardsHydratedRef.current;
     awardsHydratedRef.current = true;
 
-    if (awardToastReady && !initialHydration && fresh.length) {
+    if (awardToastReady && !initialHydration && awardInteractionRef.current && fresh.length) {
       setAwardQueue(prev => [...prev, ...fresh]);
       if (user?.id) fresh.forEach(award => createSocialBadgeEvent(user.id, award).catch(err => console.warn('[Apex] Evento badge non salvato:', err)));
       if (user?.id) fresh.forEach(award => trackUserEvent(user, 'badge_earned', { badge_id:award.badgeId, badge_name:award.name, badge_macro:award.macro, source_screen:'badges' }, userProfile));
+      awardInteractionRef.current = false;
+    } else if (awardToastReady && !initialHydration && awardInteractionRef.current && !fresh.length) {
+      awardInteractionRef.current = false;
     }
 
     const earnedClean = (earnedBadgeIds || []).map(normalizeBadgeId).filter(Boolean);
@@ -12092,6 +12155,7 @@ export default function App() {
     setStatusMap(prev => ({ ...prev, [id]: nextStatus }));
     setAnimalsData(prev => prev.map(a => a.id === id ? { ...a, status: nextStatus, userStatus: appStatusToSupabase(nextStatus) } : a));
     saveLocalUserAnimalStatus(localUserId, id, nextStatus);
+    awardInteractionRef.current = true;
     if ((nextStatus === 'avvistato' || nextStatus === 'catturato') && nextCountryCodes.length && !hasVisitedMatch) {
       setCountryVisitPrompt(currentAnimal || { id });
     }
@@ -12114,6 +12178,7 @@ export default function App() {
   const handleAddDestination = async (iso, tripTags = []) => {
     if (!user?.id || !iso) return;
     const cleanIso = String(iso).toUpperCase();
+    awardInteractionRef.current = true;
     setVisitedCountries(prev => {
       const nextVisited = normalizeIsoList([...(prev || []), cleanIso]);
       saveVisitedCountries(nextVisited);
@@ -12128,7 +12193,8 @@ export default function App() {
         p_iso: cleanIso,
         p_trip_tags: tripTags || [],
       }), 7000, { error:null }, 'unlock_animals_for_destination');
-      if (rpcError) throw rpcError;
+      if (rpcError) console.warn('[Apex] RPC unlock destinazione non disponibile, uso fallback client:', rpcError);
+      await unlockAnimalsForDestinationClient(user.id, cleanIso, animalsData);
       await trackUserEvent(user, 'country_added', { country_iso:cleanIso, trip_tags:tripTags || [], source_screen:'regions' }, userProfile);
       reloadSupabaseData(user).catch(err => console.warn('[Apex] reload destinazione non bloccante:', err));
     } catch (err) {

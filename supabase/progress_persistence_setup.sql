@@ -179,14 +179,58 @@ create or replace function public.unlock_animals_for_destination(
   p_trip_tags text[] default '{}'
 )
 returns integer
-language sql
+language plpgsql
 security invoker
 set search_path = public
 as $$
-  select case
-    when (select auth.uid()) = p_user_id and nullif(trim(p_iso), '') is not null then 0
-    else 0
-  end;
+declare
+  clean_iso text := upper(nullif(trim(p_iso), ''));
+  unlocked_count integer := 0;
+begin
+  if (select auth.uid()) is distinct from p_user_id or clean_iso is null then
+    return 0;
+  end if;
+
+  insert into public.user_destinations (user_id, iso, trip_tags, visited_at, created_at)
+  values (p_user_id, clean_iso, coalesce(p_trip_tags, '{}'), current_date, now())
+  on conflict (user_id, iso) do update
+    set trip_tags = excluded.trip_tags,
+        visited_at = excluded.visited_at;
+
+  with matched_animals as (
+    select distinct a.id::bigint as animal_id
+    from public.animals a
+    left join public.animal_geo ag on ag.animal_id = a.id
+    cross join lateral (
+      select jsonb_path_query_array(
+        coalesce(a.raw::jsonb, '{}'::jsonb) || jsonb_build_object('geo', coalesce(ag.raw_geo::jsonb, '{}'::jsonb)),
+        '$.** ? (@.type() == "string")'
+      ) as values_json
+    ) all_values
+    where exists (
+      select 1
+      from jsonb_array_elements_text(all_values.values_json) value
+      where upper(value) = clean_iso
+    )
+  ),
+  upserted as (
+    insert into public.user_animals (user_id, animal_id, unlock_status, unlocked_at, updated_at)
+    select p_user_id, animal_id, 'unlocked', now(), now()
+    from matched_animals
+    on conflict (user_id, animal_id) do update
+      set unlock_status = case
+            when public.user_animals.unlock_status = 'locked' then 'unlocked'
+            else public.user_animals.unlock_status
+          end,
+          unlocked_at = coalesce(public.user_animals.unlocked_at, excluded.unlocked_at),
+          updated_at = now()
+    where public.user_animals.unlock_status = 'locked'
+    returning animal_id
+  )
+  select count(*) into unlocked_count from upserted;
+
+  return coalesce(unlocked_count, 0);
+end;
 $$;
 
 grant execute on function public.unlock_animals_for_destination(uuid, text, text[]) to authenticated;
