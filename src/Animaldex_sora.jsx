@@ -2127,10 +2127,18 @@ html, body, #root {
   box-shadow: 0 -10px 28px rgba(0,0,0,.18);
 }
 #animaldex-app-root [data-animaldex-grid-top="true"] {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
   border-radius: 0 0 18px 18px !important;
   margin: 0 !important;
 }
 #animaldex-app-root [data-animaldex-grid-bottom="true"] {
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
   border-radius: 18px 18px 0 0 !important;
   margin: 0 !important;
   box-shadow: 0 -8px 24px rgba(0,0,0,.16) !important;
@@ -11071,6 +11079,10 @@ function getComparatorAnimalLabel(animal) {
 function getComparatorAnimalScientificName(animal) {
   return comparatorText(animal?.sci) || comparatorText(animal?.com_en) || '';
 }
+function getComparatorClassLabel(animal) {
+  const classKey = comparatorText(animal?.cls);
+  return comparatorText(CLS[classKey]?.label) || classKey || 'n/d';
+}
 function ComparatorInfoModal({ onClose }) {
   return (
     <div onClick={onClose} style={{ position:'fixed', inset:0, background:'rgba(0,0,0,.78)', zIndex:240, display:'flex', alignItems:'center', justifyContent:'center', padding:18 }}>
@@ -11588,14 +11600,15 @@ function SimpleComparatorPage({ onBack, animals = [], statusMap = {}, visitedCou
     if (key === 'bite') return safeNumber(animal?.stats?.morso, ' PSI');
     if (key === 'countries') return `${getCountriesCount(animal)} paesi`;
     if (key === 'risk') return `${vulnerabilityScore(animal)} / 100`;
-    if (key === 'class') return CLS[animal.cls]?.label || animal.cls || 'n/d';
+    if (key === 'class') return getComparatorClassLabel(animal);
     return 'n/d';
   };
   const AnimalPanel = ({ animal, accent, side }) => {
     if (!animal) {
       return <div style={{ borderRadius:22, background:panelBg, border:`1px dashed ${panelBorder}`, padding:18, color:subText, fontWeight:850, textAlign:'center' }}>Scegli un animale</div>;
     }
-    const cls = CLS[animal.cls] || CLS.Mammalia;
+    const classKey = comparatorText(animal.cls);
+    const cls = CLS[classKey] || CLS.Mammalia;
     const abilities = toArraySafe(animal.categories).slice(0, 4);
     return (
       <div style={{ borderRadius:24, border:`1px solid ${hexToRgba(accent,.42)}`, background:isLightTheme?'rgba(255,255,255,.72)':'linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.035))', padding:14, boxShadow:`0 16px 38px ${hexToRgba(accent,.10)}` }}>
@@ -11611,7 +11624,7 @@ function SimpleComparatorPage({ onBack, animals = [], statusMap = {}, visitedCou
         </div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:7, marginTop:12 }}>
           <span style={{ borderRadius:999, padding:'6px 9px', background:hexToRgba(accent,.15), color:accent, fontSize:11, fontWeight:950 }}>{animal.cons || 'IUCN n/d'}</span>
-          <span style={{ borderRadius:999, padding:'6px 9px', background:isLightTheme?'rgba(0,0,0,.05)':'rgba(255,255,255,.07)', color:pageText, fontSize:11, fontWeight:950 }}>{CLS[animal.cls]?.label || animal.cls || 'Classe'}</span>
+          <span style={{ borderRadius:999, padding:'6px 9px', background:isLightTheme?'rgba(0,0,0,.05)':'rgba(255,255,255,.07)', color:pageText, fontSize:11, fontWeight:950 }}>{getComparatorClassLabel(animal)}</span>
           {abilities.map(id => <span key={id} style={{ borderRadius:999, padding:'6px 9px', background:isLightTheme?'rgba(0,0,0,.05)':'rgba(255,255,255,.07)', color:subText, fontSize:10.5, fontWeight:850 }}>{CATEGORY_META[id]?.label || id}</span>)}
         </div>
       </div>
@@ -11656,9 +11669,9 @@ function SimpleComparatorPage({ onBack, animals = [], statusMap = {}, visitedCou
           <ComparatorMetricBars left={leftMetrics} right={rightMetrics} colorLeft={COMPARE_LEFT_COLOR} colorRight={COMPARE_RIGHT_COLOR} theme={theme} />
         </ComparatorErrorBoundary>
         <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:14, margin:'12px 0 14px' }}>
-          <div style={{ display:'flex', alignItems:'center', gap:6, color:subText, fontSize:11, fontWeight:850 }}><span style={{ width:14, height:4, borderRadius:4, background:COMPARE_LEFT_COLOR, display:'inline-block' }} />{left?.com || 'Animale A'}</div>
+          <div style={{ display:'flex', alignItems:'center', gap:6, color:subText, fontSize:11, fontWeight:850 }}><span style={{ width:14, height:4, borderRadius:4, background:COMPARE_LEFT_COLOR, display:'inline-block' }} />{left ? getComparatorAnimalLabel(left) : 'Animale A'}</div>
           <div style={{ color:isLightTheme?'rgba(0,0,0,.28)':'rgba(255,255,255,.26)', fontSize:13, fontWeight:950 }}>VS</div>
-          <div style={{ display:'flex', alignItems:'center', gap:6, color:subText, fontSize:11, fontWeight:850 }}><span style={{ width:14, height:4, borderRadius:4, background:COMPARE_RIGHT_COLOR, display:'inline-block' }} />{right?.com || 'Animale B'}</div>
+          <div style={{ display:'flex', alignItems:'center', gap:6, color:subText, fontSize:11, fontWeight:850 }}><span style={{ width:14, height:4, borderRadius:4, background:COMPARE_RIGHT_COLOR, display:'inline-block' }} />{right ? getComparatorAnimalLabel(right) : 'Animale B'}</div>
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:12, marginBottom:12 }}>
           <AnimalPanel animal={left} accent={COMPARE_LEFT_COLOR} side="Animale A" />
@@ -11726,8 +11739,8 @@ function StableComparatorPage({ onBack, animals = [], statusMap = {}, visitedCou
   const row = (label, aValue, bValue) => (
     <div key={label} style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:8, alignItems:'center', padding:'12px 13px', borderTop:`1px solid ${panelBorder}` }}>
       <div style={{ color:subText, fontSize:11.5, fontWeight:950, textTransform:'uppercase' }}>{label}</div>
-      <div style={{ color:COMPARE_LEFT_COLOR, fontSize:13, fontWeight:1000, textAlign:'center', minWidth:0 }}>{aValue}</div>
-      <div style={{ color:COMPARE_RIGHT_COLOR, fontSize:13, fontWeight:1000, textAlign:'right', minWidth:0 }}>{bValue}</div>
+      <div style={{ color:COMPARE_LEFT_COLOR, fontSize:13, fontWeight:1000, textAlign:'center', minWidth:0 }}>{comparatorText(aValue, 'n/d')}</div>
+      <div style={{ color:COMPARE_RIGHT_COLOR, fontSize:13, fontWeight:1000, textAlign:'right', minWidth:0 }}>{comparatorText(bValue, 'n/d')}</div>
     </div>
   );
   const value = (animal, key) => {
@@ -11737,7 +11750,7 @@ function StableComparatorPage({ onBack, animals = [], statusMap = {}, visitedCou
     if (key === 'speed') return Number(animal?.stats?.velocita || 0) > 0 ? `${animal.stats.velocita} km/h` : 'n/d';
     if (key === 'bite') return Number(animal?.stats?.morso || 0) > 0 ? `${animal.stats.morso} PSI` : 'n/d';
     if (key === 'countries') return `${getCountriesCount(animal)} paesi`;
-    if (key === 'class') return CLS[animal.cls]?.label || animal.cls || 'n/d';
+    if (key === 'class') return getComparatorClassLabel(animal);
     return 'n/d';
   };
   if (!visibleOptions.length) {
@@ -11771,7 +11784,9 @@ function StableComparatorPage({ onBack, animals = [], statusMap = {}, visitedCou
             {visibleOptions.map(a => <option key={a.id} value={String(a.id)}>{getComparatorAnimalLabel(a)}</option>)}
           </select>
         </div>
-        <ComparatorMetricBars left={leftMetrics} right={rightMetrics} colorLeft={COMPARE_LEFT_COLOR} colorRight={COMPARE_RIGHT_COLOR} theme={theme} />
+        <ComparatorErrorBoundary>
+          <ComparatorMetricBars left={leftMetrics} right={rightMetrics} colorLeft={COMPARE_LEFT_COLOR} colorRight={COMPARE_RIGHT_COLOR} theme={theme} />
+        </ComparatorErrorBoundary>
         <div style={{ borderRadius:24, border:`1px solid ${panelBorder}`, background:panelBg, overflow:'hidden' }}>
           {row('Peso', value(left, 'weight'), value(right, 'weight'))}
           {row('Dimensioni', value(left, 'length'), value(right, 'length'))}
