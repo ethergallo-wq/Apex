@@ -4455,40 +4455,42 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
   }, [preset?.id]);
 
   const hasExplicitPreset = !!preset?.id;
-  const list = ANIMALS
-    .map(a => ({ ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) }))
-    .filter(a => {
-      const q = search.toLowerCase().trim();
-      const status = normalizeAnimalStatus(a.status);
-      const wantsMystery = fStatus.includes('misterioso');
-      if (!hasExplicitPreset && !wantsMystery && !['ricercato','avvistato','catturato'].includes(status)) return false;
-      if (q && !getAnimalSearchText(a).includes(q)) return false;
-      if (clsF && a.cls !== clsF) return false;
-      if (fRarity.length   && !fRarity.includes(a.rarity)) return false;
-      if (fCons.length     && !fCons.includes(a.cons)) return false;
-      if (fStatus.length   && !fStatus.includes(status)) return false;
-      if (fTrophic.length  && !fTrophic.includes(String(a.trophic))) return false;
-      if (fGeography.length && !matchGeographySelection(a, fGeography)) return false;
-      if (fCategory.length && !(a.categories || []).some(cat => fCategory.includes(cat))) return false;
-      if (fConfidence.length && !fConfidence.includes(a.confidence || a.geo?.confidence)) return false;
-      if (fMapProfile.length && !fMapProfile.includes(a.map_profile || a.geo?.map_profile)) return false;
-      if (fBioRegion.length && !toArraySafe(a.bio_regions || a.geo?.bio_regions).some(v => fBioRegion.includes(v))) return false;
-      if (fGameRegion.length && !toArraySafe(a.game_regions || a.geo?.game_regions).some(v => fGameRegion.includes(v))) return false;
-      if (fHabitat.length && !toArraySafe(a.habitats || a.habitat || a.geo?.habitats).some(v => fHabitat.includes(v))) return false;
-      if (fTax && a[TAX_KEY_MAP[fTax.key]] !== fTax.value) return false;
-      if (typeof preset?.customFilter === 'function' && !preset.customFilter(a)) return false;
-      return true;
-    })
-    .sort((a,b) => {
-      if (typeof preset?.customSort === 'function') return preset.customSort(a, b);
-      const noA = Number(a.no || a.id || 0), noB = Number(b.no || b.id || 0);
-      if (sortBy === 'name_asc') return String(a.com).localeCompare(String(b.com), 'it');
-      if (sortBy === 'name_desc') return String(b.com).localeCompare(String(a.com), 'it');
-      if (sortBy === 'rarity') return (RARITY[b.rarity]?.s || 0) - (RARITY[a.rarity]?.s || 0) || noA - noB;
-      if (sortBy === 'status') return ANIMAL_STATUS_ORDER.indexOf(a.status) - ANIMAL_STATUS_ORDER.indexOf(b.status) || noA - noB;
-      if (sortBy === 'class') return String(a.cls).localeCompare(String(b.cls), 'it') || noA - noB;
-      return noA - noB;
-    });
+  const list = useMemo(() => {
+    const q = search.toLowerCase().trim();
+    return ANIMALS
+      .map(a => ({ ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) }))
+      .filter(a => {
+        const status = normalizeAnimalStatus(a.status);
+        const wantsMystery = fStatus.includes('misterioso');
+        if (!hasExplicitPreset && !wantsMystery && !['ricercato','avvistato','catturato'].includes(status)) return false;
+        if (q && !getAnimalSearchText(a).includes(q)) return false;
+        if (clsF && a.cls !== clsF) return false;
+        if (fRarity.length   && !fRarity.includes(a.rarity)) return false;
+        if (fCons.length     && !fCons.includes(a.cons)) return false;
+        if (fStatus.length   && !fStatus.includes(status)) return false;
+        if (fTrophic.length  && !fTrophic.includes(String(a.trophic))) return false;
+        if (fGeography.length && !matchGeographySelection(a, fGeography)) return false;
+        if (fCategory.length && !(a.categories || []).some(cat => fCategory.includes(cat))) return false;
+        if (fConfidence.length && !fConfidence.includes(a.confidence || a.geo?.confidence)) return false;
+        if (fMapProfile.length && !fMapProfile.includes(a.map_profile || a.geo?.map_profile)) return false;
+        if (fBioRegion.length && !toArraySafe(a.bio_regions || a.geo?.bio_regions).some(v => fBioRegion.includes(v))) return false;
+        if (fGameRegion.length && !toArraySafe(a.game_regions || a.geo?.game_regions).some(v => fGameRegion.includes(v))) return false;
+        if (fHabitat.length && !toArraySafe(a.habitats || a.habitat || a.geo?.habitats).some(v => fHabitat.includes(v))) return false;
+        if (fTax && a[TAX_KEY_MAP[fTax.key]] !== fTax.value) return false;
+        if (typeof preset?.customFilter === 'function' && !preset.customFilter(a)) return false;
+        return true;
+      })
+      .sort((a,b) => {
+        if (typeof preset?.customSort === 'function') return preset.customSort(a, b);
+        const noA = Number(a.no || a.id || 0), noB = Number(b.no || b.id || 0);
+        if (sortBy === 'name_asc') return String(a.com).localeCompare(String(b.com), 'it');
+        if (sortBy === 'name_desc') return String(b.com).localeCompare(String(a.com), 'it');
+        if (sortBy === 'rarity') return (RARITY[b.rarity]?.s || 0) - (RARITY[a.rarity]?.s || 0) || noA - noB;
+        if (sortBy === 'status') return ANIMAL_STATUS_ORDER.indexOf(a.status) - ANIMAL_STATUS_ORDER.indexOf(b.status) || noA - noB;
+        if (sortBy === 'class') return String(a.cls).localeCompare(String(b.cls), 'it') || noA - noB;
+        return noA - noB;
+      });
+  }, [search, statusMap, visitedCountries, hasExplicitPreset, fStatus, clsF, fRarity, fCons, fTrophic, fGeography, fCategory, fConfidence, fMapProfile, fBioRegion, fGameRegion, fHabitat, fTax, preset, sortBy]);
 
   const anyExtra = fRarity.length||fCons.length||fStatus.length||fTrophic.length||fGeography.length||fCategory.length||fConfidence.length||fMapProfile.length||fBioRegion.length||fGameRegion.length||fHabitat.length||fTax||sortBy!=='no';
   const handleCardClick = (animal) => {
@@ -12183,7 +12185,10 @@ export default function App() {
       if (isSocialCaptureEventWorthy(currentAnimal, nextStatus, previousStatus)) {
         await createSocialCaptureEvent(user.id, currentAnimal).catch(err => console.warn('[Apex] Evento social non salvato:', err));
       }
-      await reloadSupabaseData(user);
+      reloadSupabaseData(user).catch(err => {
+        console.warn('[Apex] Refresh Supabase post-status non bloccante fallito:', err);
+        setDataError(err?.message || 'Errore refresh dati Supabase');
+      });
     } catch (err) {
       console.warn('[Apex] Salvataggio user_animals fallito:', err);
       setDataError(err?.message || 'Errore salvataggio status animale');
