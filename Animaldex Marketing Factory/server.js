@@ -251,6 +251,34 @@ function pageLayout({ title, session, body }) {
       gap: 20px;
       align-items: start;
     }
+    .section { margin-top: 22px; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+    }
+    .card h3 { margin: 0 0 8px; font-size: 17px; }
+    .list {
+      margin: 12px 0 0;
+      padding-left: 20px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .eyebrow {
+      color: #8f3f28;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin: 0 0 8px;
+    }
     .panel {
       background: var(--panel);
       border: 1px solid var(--line);
@@ -350,6 +378,7 @@ function pageLayout({ title, session, body }) {
     .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
     @media (max-width: 780px) {
       .grid { grid-template-columns: 1fr; }
+      .cards { grid-template-columns: 1fr; }
       .top { align-items: flex-start; flex-direction: column; padding: 14px 0; }
       nav { justify-content: flex-start; }
     }
@@ -386,23 +415,68 @@ function homePage(session) {
     body: `
       <section class="grid">
         <div>
-          <h1>Create animal discovery posts, then send only after human approval.</h1>
-          <p>Apex Content Studio helps prepare educational animal content for TikTok. A user connects their TikTok account, reviews the caption and destination setting, then explicitly confirms before anything is sent to TikTok as a draft/inbox upload.</p>
+          <p class="eyebrow">Official Website</p>
+          <h1>Apex Content Studio</h1>
+          <p>Apex Content Studio is a web-based content operations tool for Apex educational animal discovery media. The service helps an authorized creator prepare short-form post concepts, review copy, edit captions, confirm account identity, and submit approved content to TikTok as creator-controlled drafts.</p>
+          <p>The website is operated for Apex content workflows and is not a public social network, marketplace, or automated publishing service. Every TikTok submission requires a human review and explicit approval before upload.</p>
           <div class="actions">
             <a class="button" href="/connect">Connect TikTok</a>
             <a class="button secondary" href="/compose">Review demo post</a>
+            <a class="button secondary" href="/terms">Terms</a>
+            <a class="button secondary" href="/privacy">Privacy</a>
           </div>
         </div>
         <aside class="panel">
-          <h2>Review-ready flow</h2>
+          <h2>Service summary</h2>
           <span class="status">${session.accessToken ? "TikTok connected" : "TikTok not connected"}</span>
-          <div class="steps">
-            <div class="step"><span class="num">1</span><span>User logs in with TikTok and authorizes the app.</span></div>
-            <div class="step"><span class="num">2</span><span>User reviews Apex content, preview, caption, and destination.</span></div>
-            <div class="step"><span class="num">3</span><span>User confirms the post manually before upload.</span></div>
-            <div class="step"><span class="num">4</span><span>The app sends the approved content to TikTok as a draft/inbox upload using the Content Posting API.</span></div>
-          </div>
+          <p>Apex Content Studio supports internal preparation and review of educational animal discovery content before it is submitted to TikTok.</p>
+          <ul class="list">
+            <li>Human-reviewed content preparation</li>
+            <li>Editable captions and content previews</li>
+            <li>TikTok account confirmation with Login Kit</li>
+            <li>Draft/inbox upload through Content Posting API</li>
+          </ul>
         </aside>
+      </section>
+      <section class="section panel">
+        <p class="eyebrow">How the service works</p>
+        <h2>Creator-controlled review workflow</h2>
+        <div class="steps">
+          <div class="step"><span class="num">1</span><span>An authorized user opens Apex Content Studio and connects a TikTok account with TikTok Login Kit.</span></div>
+          <div class="step"><span class="num">2</span><span>The service displays the connected account, a content preview, editable title and caption fields, and a draft/inbox destination setting.</span></div>
+          <div class="step"><span class="num">3</span><span>The user reviews the material and confirms approval with a checkbox. The app does not send content without this confirmation.</span></div>
+          <div class="step"><span class="num">4</span><span>Approved content is submitted to TikTok as a draft/inbox upload for the creator to finish in TikTok. Direct Post is off.</span></div>
+        </div>
+      </section>
+      <section class="section">
+        <p class="eyebrow">Website and services</p>
+        <h2>What Apex Content Studio provides</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Content Review</h3>
+            <p>Review screens for Apex educational animal discovery content, including title, caption, and preview information before upload.</p>
+          </div>
+          <div class="card">
+            <h3>TikTok Integration</h3>
+            <p>Login Kit is used to identify the connected TikTok account. Content Posting API is used only for user-approved draft/inbox uploads.</p>
+          </div>
+          <div class="card">
+            <h3>User Control</h3>
+            <p>The creator chooses whether to approve the upload. The app does not request Direct Post and does not publish automatically to a profile.</p>
+          </div>
+        </div>
+      </section>
+      <section class="section grid">
+        <div class="panel">
+          <h2>TikTok permissions used</h2>
+          <p><strong>user.info.basic</strong> is used to display the connected TikTok account in the review screen.</p>
+          <p><strong>video.upload</strong> is used to submit approved content as a TikTok draft/inbox upload. The creator remains responsible for final review in TikTok.</p>
+        </div>
+        <div class="panel">
+          <h2>Contact</h2>
+          <p>For support, terms, privacy, or data requests, contact the Apex team.</p>
+          <p><strong>Support:</strong> support@apexdex.app<br /><strong>Privacy:</strong> privacy@apexdex.app</p>
+        </div>
       </section>
     `,
   });
@@ -509,23 +583,59 @@ function termsPage(session) {
     body: `
       <section class="panel">
         <h1>Terms of Service</h1>
-        <p>Last updated: June 5, 2026</p>
-        <p>Apex Content Studio is a content management tool used to prepare, review, and submit educational animal discovery content as TikTok draft/inbox uploads.</p>
+        <p>Last updated: June 15, 2026</p>
+        <p>These Terms of Service govern access to and use of Apex Content Studio, a web-based content operations service operated by Andrea Galliazzo, P'le Tripoli, 20146 Milano, Italy ("Apex", "we", "us", or "our"). Apex Content Studio is used to prepare, review, and submit Apex educational animal discovery content to TikTok as creator-controlled draft/inbox uploads.</p>
 
-        <h2>Use of the service</h2>
-        <p>Users are responsible for reviewing all content before approving publication. The service is intended for Apex-owned or authorized content only.</p>
+        <h2>1. Acceptance of these Terms</h2>
+        <p>By accessing or using Apex Content Studio, you agree to these Terms. If you do not agree, you must not use the service. These Terms apply together with our Privacy Policy and any product-specific instructions displayed in the service.</p>
+
+        <h2>2. Eligibility and authorized use</h2>
+        <p>Apex Content Studio is intended only for Apex internal users, contractors, and collaborators who are authorized to manage Apex content workflows. It is not a public social network, marketplace, or consumer publishing platform. You may use the service only if you have permission to do so and only in compliance with these Terms, applicable laws, TikTok rules, and any internal Apex content guidelines.</p>
+
+        <h2>3. Service description</h2>
+        <p>The service provides a review interface for educational animal discovery content. Authorized users can connect a TikTok account, view the connected account, review a content preview, edit captions and related metadata, select a draft/inbox destination setting, and manually approve content before submission.</p>
 
         <h2>TikTok integration</h2>
-        <p>When a user connects a TikTok account, Apex Content Studio may use TikTok Login Kit and the TikTok Content Posting API to send content that the user has manually approved as a draft/inbox upload. Direct Post is not enabled for the first review submission.</p>
+        <p>When you connect a TikTok account, Apex Content Studio uses TikTok Login Kit to confirm the connected account and may use TikTok's Content Posting API with the video.upload permission to submit approved content as a draft/inbox upload. Direct Post is not enabled. The service does not publish content automatically to a TikTok profile.</p>
 
-        <h2>Content responsibility</h2>
-        <p>Users must ensure that all submitted content follows applicable laws, platform rules, copyright requirements, and TikTok community guidelines.</p>
+        <h2>4. User approval and content responsibility</h2>
+        <p>You are responsible for reviewing all content, captions, media, claims, and metadata before approval. You must ensure that content is accurate, appropriate, authorized, and compliant with applicable laws, copyright rules, privacy rights, publicity rights, TikTok policies, and community guidelines.</p>
 
-        <h2>Changes</h2>
-        <p>These terms may be updated as the product evolves. Continued use of the service means acceptance of the updated terms.</p>
+        <h2>5. Content rights and limited license</h2>
+        <p>Apex Content Studio, its interface, workflows, text, design, code, and service materials are owned by Apex or its licensors. You may not copy, reverse engineer, resell, or misuse the service except as expressly permitted. If you provide or approve content through the service, you represent that you have the rights and permissions required to use that content. You grant Apex a limited, non-exclusive, worldwide license to host, process, display, review, format, and submit the content solely as needed to operate Apex Content Studio and the TikTok integration.</p>
 
-        <h2>Contact</h2>
-        <p>For questions about these terms, contact the Apex team through the official Apex support channel.</p>
+        <h2>6. Prohibited conduct</h2>
+        <p>You may not use the service to submit unlawful, infringing, deceptive, harmful, hateful, harassing, sexually exploitative, violent, or otherwise prohibited content. You may not attempt to bypass approval flows, compromise security, scrape the service, interfere with TikTok systems, or use the integration in a way that violates TikTok terms or developer policies.</p>
+
+        <h2>7. Third-party services</h2>
+        <p>The service integrates with TikTok. Your use of TikTok is governed by TikTok's own terms, privacy policy, developer policies, and platform rules. Apex is not responsible for TikTok availability, review decisions, account actions, API limitations, or changes to TikTok services.</p>
+
+        <h2>8. Account access and disconnection</h2>
+        <p>You may revoke Apex Content Studio's TikTok access through TikTok account settings where available. If you no longer have authorization to use the service, you must stop using it and contact Apex support if access needs to be removed.</p>
+
+        <h2>9. Service availability</h2>
+        <p>Apex Content Studio is provided as a web-based operational tool and depends on third-party infrastructure, including Vercel and TikTok services. We aim to maintain a reliable service, but we do not guarantee uninterrupted availability, error-free operation, or compatibility with all devices, browsers, networks, or future TikTok API changes.</p>
+
+        <h2>10. Changes to the service</h2>
+        <p>We may update, suspend, limit, or discontinue any part of the service at any time, including workflows, scopes, documentation, review screens, or TikTok integration behavior, especially where required by law, security needs, or TikTok platform changes.</p>
+
+        <h2>11. Disclaimers</h2>
+        <p>The service is provided on an "as is" and "as available" basis. To the fullest extent permitted by law, Apex disclaims warranties of merchantability, fitness for a particular purpose, non-infringement, uninterrupted availability, and error-free operation.</p>
+
+        <h2>12. Limitation of liability</h2>
+        <p>To the fullest extent permitted by law, Apex will not be liable for indirect, incidental, consequential, special, exemplary, or punitive damages, or for loss of profits, data, goodwill, content reach, account status, platform access, or business opportunities arising from use of or inability to use the service.</p>
+
+        <h2>13. Indemnification</h2>
+        <p>You agree to defend, indemnify, and hold harmless Apex from claims, damages, losses, liabilities, costs, and expenses arising from your misuse of the service, your violation of these Terms, your violation of third-party rights, or content you submit, approve, or attempt to upload through the service.</p>
+
+        <h2>14. Governing law and venue</h2>
+        <p>These Terms are governed by the laws of Italy, without regard to conflict-of-law rules. Any dispute arising from or relating to these Terms or the service will be submitted to the competent courts of Milan, Italy, unless mandatory consumer or data protection laws require otherwise.</p>
+
+        <h2>15. Changes to these Terms</h2>
+        <p>We may update these Terms from time to time. Continued use of the service after updates means acceptance of the updated Terms.</p>
+
+        <h2>16. Contact</h2>
+        <p>For questions about these Terms, contact support@apexdex.app.</p>
       </section>
     `,
   });
@@ -538,26 +648,58 @@ function privacyPage(session) {
     body: `
       <section class="panel">
         <h1>Privacy Policy</h1>
-        <p>Last updated: June 5, 2026</p>
-        <p>Apex Content Studio is designed to collect only the information needed to connect a TikTok account and submit user-approved draft/inbox uploads.</p>
+        <p>Last updated: June 15, 2026</p>
+        <p>This Privacy Policy explains how Apex Content Studio, operated by Andrea Galliazzo, P'le Tripoli, 20146 Milano, Italy ("Apex", "we", "us", or "our"), collects, uses, shares, and protects information when an authorized user accesses the website, connects a TikTok account, reviews content, and submits approved content as a TikTok draft/inbox upload.</p>
 
-        <h2>Information we collect</h2>
-        <p>When a user connects TikTok, the service may receive basic TikTok account information and authorization tokens provided through TikTok Login Kit. The service may also process post text, media URLs, selected privacy settings, and approval status.</p>
+        <h2>Summary of key points</h2>
+        <p>Apex Content Studio is an internal/authorized creator workflow. We collect only information needed to operate the website, connect TikTok, display the connected account, support manual review, and submit approved draft/inbox uploads. We do not sell personal data, do not use marketing cookies, and do not enable automatic Direct Post publishing.</p>
 
-        <h2>How information is used</h2>
-        <p>Information is used to identify the connected TikTok account, prepare reviewed content, and send manually approved draft/inbox uploads through TikTok's Content Posting API.</p>
+        <h2>1. Information we collect</h2>
+        <p>We collect information you provide or authorize through the service, including review text, captions, post titles, media URLs, selected destination settings, approval status, and support communications. When you connect TikTok, we may receive basic TikTok account information such as open ID, display name, and avatar URL through TikTok Login Kit.</p>
+        <p>The service may also process OAuth access tokens, refresh tokens, OAuth state values, and session identifiers provided by or related to TikTok so the requested integration can function. These tokens are used to operate the TikTok connection and are not shown in the user interface.</p>
 
-        <h2>Data sharing</h2>
-        <p>Approved content and required account authorization data may be shared with TikTok only as needed to provide the publishing integration. We do not sell personal data.</p>
+        <h2>2. Information collected automatically</h2>
+        <p>We may collect limited technical information such as IP address, browser type, device information, pages visited, request timestamps, error logs, deployment logs, and cookie/session identifiers. This information is used for security, debugging, service operation, performance monitoring, and abuse prevention.</p>
 
-        <h2>Data retention</h2>
-        <p>Authorization data and content records are retained only as needed to operate the service, troubleshoot publishing, or comply with legal and platform requirements.</p>
+        <h2>3. How we use information</h2>
+        <p>We use information to provide and operate Apex Content Studio, identify the connected TikTok account, display the account in the review screen, prepare content previews, process user edits, record manual approval, submit approved draft/inbox uploads through TikTok's Content Posting API, troubleshoot errors, secure the service, respond to support requests, and comply with legal or platform obligations.</p>
 
-        <h2>User control</h2>
-        <p>Users can disconnect TikTok access from their TikTok account settings or by contacting the Apex team.</p>
+        <h2>4. Legal bases for processing</h2>
+        <p>Where the GDPR, UK GDPR, or similar privacy laws apply, we rely on appropriate legal bases, including performance of a service or pre-contractual steps, legitimate interests in operating and securing an authorized content workflow, consent where required for TikTok authorization or similar actions, and compliance with legal obligations. You may withdraw consent where processing is based on consent, without affecting processing that occurred before withdrawal.</p>
 
-        <h2>Contact</h2>
-        <p>For privacy questions, contact the Apex team through the official Apex support channel.</p>
+        <h2>5. How we share information</h2>
+        <p>We share information with TikTok only as needed to provide the TikTok Login Kit and Content Posting API integration. This may include authorization data, connected account identifiers, approved content, captions, media URLs, and related upload metadata. We may also share information with infrastructure and hosting providers that help operate the service, or when required by law, security needs, or platform compliance. We do not sell personal information.</p>
+        <p>Current service providers include Vercel for hosting, deployment, infrastructure, and runtime logs, and TikTok for account authorization and content upload functionality. At this stage, Apex Content Studio does not use a persistent application database, email marketing provider, analytics provider, or advertising cookies.</p>
+
+        <h2>6. Cookies and session data</h2>
+        <p>Apex Content Studio uses cookies or similar session storage to maintain login state, OAuth state, security checks, and connected-account workflow continuity. These cookies are necessary for the service to operate and are not used for third-party advertising, behavioral profiling, or marketing analytics.</p>
+
+        <h2>7. Data retention</h2>
+        <p>We retain information only for as long as reasonably necessary to provide the connected-account workflow, maintain security, troubleshoot upload issues, comply with legal obligations, and satisfy TikTok platform requirements. OAuth/session data is retained only while needed for the connected account workflow. Logs may be retained for security, debugging, abuse prevention, and operational reliability, and are deleted or anonymized when no longer needed.</p>
+
+        <h2>8. User choices and control</h2>
+        <p>You can revoke TikTok access through TikTok account settings where available. You may contact privacy@apexdex.app to request access, correction, deletion, or disconnection assistance, subject to identity verification, legal requirements, and operational limitations.</p>
+
+        <h2>9. Privacy rights</h2>
+        <p>Depending on your location, you may have rights to request access, correction, deletion, restriction, portability, objection to processing, or withdrawal of consent. If you are in the European Economic Area, the United Kingdom, or Switzerland, you may also have the right to lodge a complaint with your local data protection authority. We will respond to requests in accordance with applicable law.</p>
+
+        <h2>10. Security</h2>
+        <p>We use reasonable administrative, technical, and organizational safeguards designed to protect information handled by the service. No internet service can be guaranteed to be completely secure, and users should avoid submitting credentials or sensitive personal data in content fields.</p>
+
+        <h2>11. International processing</h2>
+        <p>Information may be processed in Italy, the European Economic Area, the United States, and other locations where Apex, Vercel, TikTok, or related infrastructure operate. Where required, we rely on appropriate transfer mechanisms, safeguards, or provider commitments designed to protect personal information in accordance with applicable law.</p>
+
+        <h2>12. Do Not Track</h2>
+        <p>Some browsers offer a Do Not Track signal. Because there is no uniform industry standard for responding to these signals, Apex Content Studio does not currently respond to Do Not Track signals. The service does not use third-party advertising cookies.</p>
+
+        <h2>13. Children's privacy</h2>
+        <p>Apex Content Studio is intended for authorized users managing Apex content workflows and is not directed to children. We do not knowingly collect personal information from children through this service.</p>
+
+        <h2>14. Changes to this policy</h2>
+        <p>We may update this Privacy Policy as the service changes or as legal, operational, or platform requirements evolve. The updated date above indicates the latest revision.</p>
+
+        <h2>15. Contact</h2>
+        <p>For privacy questions or data requests, contact privacy@apexdex.app. For general support, contact support@apexdex.app.</p>
       </section>
     `,
   });

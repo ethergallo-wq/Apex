@@ -10,9 +10,10 @@ Use this setup for the first submission:
 Products: Login Kit, Content Posting API
 Scopes: user.info.basic, video.upload
 Direct Post: OFF
+Website URL: https://apex-content-studio.vercel.app/
 Redirect URI: https://apex-content-studio.vercel.app/api/tiktok/callback
-Terms: https://apexdex.app/terms
-Privacy: https://apexdex.app/privacy
+Terms: https://apex-content-studio.vercel.app/terms
+Privacy: https://apex-content-studio.vercel.app/privacy
 ```
 
 Apex Content Studio does not request `video.publish` for the first review. It uses `video.upload` so approved content is sent as a draft/inbox upload for the creator to finish in TikTok.
@@ -90,7 +91,8 @@ APP_BASE_URL=https://apex-content-studio.vercel.app
 Then use these values in TikTok Developer Portal:
 
 ```text
+Website URL: https://apex-content-studio.vercel.app/
 Redirect URI: https://apex-content-studio.vercel.app/api/tiktok/callback
-Terms: https://apexdex.app/terms
-Privacy: https://apexdex.app/privacy
+Terms: https://apex-content-studio.vercel.app/terms
+Privacy: https://apex-content-studio.vercel.app/privacy
 ```
