@@ -4458,30 +4458,31 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
   const hasExplicitPreset = !!preset?.id;
   const list = useMemo(() => {
     const q = search.toLowerCase().trim();
-    return animalsFilterSource
-      .map(a => ({ ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) }))
-      .filter(a => {
-        const status = normalizeAnimalStatus(a.status);
-        const wantsMystery = fStatus.includes('misterioso');
-        if (!hasExplicitPreset && !wantsMystery && !['ricercato','avvistato','catturato'].includes(status)) return false;
-        if (q && !getAnimalSearchText(a).includes(q)) return false;
-        if (clsF && a.cls !== clsF) return false;
-        if (fRarity.length   && !fRarity.includes(a.rarity)) return false;
-        if (fCons.length     && !fCons.includes(a.cons)) return false;
-        if (fStatus.length   && !fStatus.includes(status)) return false;
-        if (fTrophic.length  && !fTrophic.includes(String(a.trophic))) return false;
-        if (fGeography.length && !matchGeographySelection(a, fGeography)) return false;
-        if (fCategory.length && !(a.categories || []).some(cat => fCategory.includes(cat))) return false;
-        if (fConfidence.length && !fConfidence.includes(a.confidence || a.geo?.confidence)) return false;
-        if (fMapProfile.length && !fMapProfile.includes(a.map_profile || a.geo?.map_profile)) return false;
-        if (fBioRegion.length && !toArraySafe(a.bio_regions || a.geo?.bio_regions).some(v => fBioRegion.includes(v))) return false;
-        if (fGameRegion.length && !toArraySafe(a.game_regions || a.geo?.game_regions).some(v => fGameRegion.includes(v))) return false;
-        if (fHabitat.length && !toArraySafe(a.habitats || a.habitat || a.geo?.habitats).some(v => fHabitat.includes(v))) return false;
-        if (fTax && a[TAX_KEY_MAP[fTax.key]] !== fTax.value) return false;
-        if (typeof preset?.customFilter === 'function' && !preset.customFilter(a)) return false;
-        return true;
-      })
-      .sort((a,b) => {
+    const wantsMystery = fStatus.includes('misterioso');
+    const next = [];
+    for (const sourceAnimal of animalsFilterSource) {
+      const status = getResolvedAnimalStatus(sourceAnimal, statusMap, visitedCountries);
+      if (!hasExplicitPreset && !wantsMystery && !['ricercato','avvistato','catturato'].includes(status)) continue;
+      if (q && !getAnimalSearchText(sourceAnimal).includes(q)) continue;
+      if (clsF && sourceAnimal.cls !== clsF) continue;
+      if (fRarity.length   && !fRarity.includes(sourceAnimal.rarity)) continue;
+      if (fCons.length     && !fCons.includes(sourceAnimal.cons)) continue;
+      if (fStatus.length   && !fStatus.includes(status)) continue;
+      if (fTrophic.length  && !fTrophic.includes(String(sourceAnimal.trophic))) continue;
+      if (fGeography.length && !matchGeographySelection(sourceAnimal, fGeography)) continue;
+      if (fCategory.length && !(sourceAnimal.categories || []).some(cat => fCategory.includes(cat))) continue;
+      if (fConfidence.length && !fConfidence.includes(sourceAnimal.confidence || sourceAnimal.geo?.confidence)) continue;
+      if (fMapProfile.length && !fMapProfile.includes(sourceAnimal.map_profile || sourceAnimal.geo?.map_profile)) continue;
+      if (fBioRegion.length && !toArraySafe(sourceAnimal.bio_regions || sourceAnimal.geo?.bio_regions).some(v => fBioRegion.includes(v))) continue;
+      if (fGameRegion.length && !toArraySafe(sourceAnimal.game_regions || sourceAnimal.geo?.game_regions).some(v => fGameRegion.includes(v))) continue;
+      if (fHabitat.length && !toArraySafe(sourceAnimal.habitats || sourceAnimal.habitat || sourceAnimal.geo?.habitats).some(v => fHabitat.includes(v))) continue;
+      if (fTax && sourceAnimal[TAX_KEY_MAP[fTax.key]] !== fTax.value) continue;
+
+      const animal = normalizeAnimalStatus(sourceAnimal.status) === status ? sourceAnimal : { ...sourceAnimal, status };
+      if (typeof preset?.customFilter === 'function' && !preset.customFilter(animal)) continue;
+      next.push(animal);
+    }
+    return next.sort((a,b) => {
         if (typeof preset?.customSort === 'function') return preset.customSort(a, b);
         const noA = Number(a.no || a.id || 0), noB = Number(b.no || b.id || 0);
         if (sortBy === 'name_asc') return String(a.com).localeCompare(String(b.com), 'it');
