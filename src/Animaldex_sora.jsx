@@ -4432,6 +4432,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
   const isPhone = viewportWidth <= 560;
   const isLightTheme = theme === 'light';
   const pageText = isLightTheme ? '#171717' : 'white';
+  const animalsFilterSource = ANIMALS;
 
   useEffect(() => {
     if (!preset?.id) return;
@@ -4457,7 +4458,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
   const hasExplicitPreset = !!preset?.id;
   const list = useMemo(() => {
     const q = search.toLowerCase().trim();
-    return ANIMALS
+    return animalsFilterSource
       .map(a => ({ ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) }))
       .filter(a => {
         const status = normalizeAnimalStatus(a.status);
@@ -4490,34 +4491,34 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
         if (sortBy === 'class') return String(a.cls).localeCompare(String(b.cls), 'it') || noA - noB;
         return noA - noB;
       });
-  }, [search, statusMap, visitedCountries, hasExplicitPreset, fStatus, clsF, fRarity, fCons, fTrophic, fGeography, fCategory, fConfidence, fMapProfile, fBioRegion, fGameRegion, fHabitat, fTax, preset, sortBy]);
+  }, [animalsFilterSource, search, statusMap, visitedCountries, hasExplicitPreset, fStatus, clsF, fRarity, fCons, fTrophic, fGeography, fCategory, fConfidence, fMapProfile, fBioRegion, fGameRegion, fHabitat, fTax, preset, sortBy]);
 
   const anyExtra = fRarity.length||fCons.length||fStatus.length||fTrophic.length||fGeography.length||fCategory.length||fConfidence.length||fMapProfile.length||fBioRegion.length||fGameRegion.length||fHabitat.length||fTax||sortBy!=='no';
-  const handleCardClick = (animal) => {
+  const handleCardClick = useCallback((animal) => {
     if (tutorialActive && tutorialAnimalId && animal.id !== tutorialAnimalId) return;
     onSelect?.(animal);
     if (tutorialActive && animal.id === tutorialAnimalId) onTutorialAnimalSelect?.(animal);
-  };
-  const rarityOpts = Object.entries(RARITY).map(([k,v])=>({ value:k, label:k, c:v.c, bg:v.bg }));
-  const consOpts   = Object.entries(CONS).map(([k,v])=>({ value:k, label:`${k} · ${v.full}`, c:v.c, bg:v.bg }));
-  const statusOpts = ANIMAL_STATUS_ORDER.map(k => ({ value:k, label:ANIMAL_STATUS[k].label, c:ANIMAL_STATUS[k].c, bg:STATUS_FILTER_GRADIENTS[k] || ANIMAL_STATUS[k].bg }));
-  const trophicOpts = Object.entries(TROPHIC).map(([k,v])=>({ value:String(k), label:v.label, c:v.c, bg:v.bg }));
-  const geographyOpts = [...GEO_FILTER_OPTIONS, ...getAllScratchCountries().map(code=>({ value:code, label:getCountryDisplayName(code), c:'#20B2AA', bg:'rgba(32,178,170,.15)' }))];
-  const categoryOpts = Object.entries(CATEGORY_META).map(([id,meta])=>({ value:id, label:meta.label, c:meta.color, bg:`${meta.color}22` }));
-  const uniqueOpt = (values, color='#7AC7FF') => Array.from(new Set(values.flatMap(v => toArraySafe(v)).filter(Boolean))).sort().map(v=>({ value:v, label:prettyFilterLabel(v), c:color, bg:`${color}22` }));
-  const confidenceOpts = ['high','medium','low'].map(v=>({ value:v, label:`confidence ${v}`, c:v==='high'?'#90D84A':v==='medium'?'#F0C449':'#F06060', bg:'rgba(255,255,255,.10)' }));
-  const mapProfileOpts = uniqueOpt(ANIMALS.map(a=>a.map_profile || a.geo?.map_profile), '#5BBEF8');
-  const bioRegionOpts = uniqueOpt(ANIMALS.map(a=>a.bio_regions || a.geo?.bio_regions), '#6CE5C7');
-  const gameRegionOpts = uniqueOpt(ANIMALS.map(a=>a.game_regions || a.geo?.game_regions), '#B860F8');
-  const habitatOpts = uniqueOpt(ANIMALS.map(a=>a.habitats || a.habitat || a.geo?.habitats), '#F0A840');
-  const sortOpts = [
+  }, [tutorialActive, tutorialAnimalId, onSelect, onTutorialAnimalSelect]);
+  const rarityOpts = useMemo(() => Object.entries(RARITY).map(([k,v])=>({ value:k, label:k, c:v.c, bg:v.bg })), []);
+  const consOpts = useMemo(() => Object.entries(CONS).map(([k,v])=>({ value:k, label:`${k} · ${v.full}`, c:v.c, bg:v.bg })), []);
+  const statusOpts = useMemo(() => ANIMAL_STATUS_ORDER.map(k => ({ value:k, label:ANIMAL_STATUS[k].label, c:ANIMAL_STATUS[k].c, bg:STATUS_FILTER_GRADIENTS[k] || ANIMAL_STATUS[k].bg })), []);
+  const trophicOpts = useMemo(() => Object.entries(TROPHIC).map(([k,v])=>({ value:String(k), label:v.label, c:v.c, bg:v.bg })), []);
+  const geographyOpts = useMemo(() => [...GEO_FILTER_OPTIONS, ...getAllScratchCountries().map(code=>({ value:code, label:getCountryDisplayName(code), c:'#20B2AA', bg:'rgba(32,178,170,.15)' }))], []);
+  const categoryOpts = useMemo(() => Object.entries(CATEGORY_META).map(([id,meta])=>({ value:id, label:meta.label, c:meta.color, bg:`${meta.color}22` })), []);
+  const uniqueOpt = useCallback((values, color='#7AC7FF') => Array.from(new Set(values.flatMap(v => toArraySafe(v)).filter(Boolean))).sort().map(v=>({ value:v, label:prettyFilterLabel(v), c:color, bg:`${color}22` })), []);
+  const confidenceOpts = useMemo(() => ['high','medium','low'].map(v=>({ value:v, label:`confidence ${v}`, c:v==='high'?'#90D84A':v==='medium'?'#F0C449':'#F06060', bg:'rgba(255,255,255,.10)' })), []);
+  const mapProfileOpts = useMemo(() => uniqueOpt(animalsFilterSource.map(a=>a.map_profile || a.geo?.map_profile), '#5BBEF8'), [animalsFilterSource, uniqueOpt]);
+  const bioRegionOpts = useMemo(() => uniqueOpt(animalsFilterSource.map(a=>a.bio_regions || a.geo?.bio_regions), '#6CE5C7'), [animalsFilterSource, uniqueOpt]);
+  const gameRegionOpts = useMemo(() => uniqueOpt(animalsFilterSource.map(a=>a.game_regions || a.geo?.game_regions), '#B860F8'), [animalsFilterSource, uniqueOpt]);
+  const habitatOpts = useMemo(() => uniqueOpt(animalsFilterSource.map(a=>a.habitats || a.habitat || a.geo?.habitats), '#F0A840'), [animalsFilterSource, uniqueOpt]);
+  const sortOpts = useMemo(() => [
     { value:'no', label:'Numero ID', c:'#90D84A', bg:'rgba(144,216,74,.16)' },
     { value:'name_asc', label:'Nome A → Z', c:'#5BBEF8', bg:'rgba(91,190,248,.16)' },
     { value:'name_desc', label:'Nome Z → A', c:'#5BBEF8', bg:'rgba(91,190,248,.16)' },
     { value:'rarity', label:'Rarità più alta', c:'#F0C449', bg:'rgba(240,196,73,.16)' },
     { value:'status', label:'Status', c:'#FFFFFF', bg:'rgba(255,255,255,.12)' },
     { value:'class', label:'Classe', c:'#90D84A', bg:'rgba(144,216,74,.16)' },
-  ];
+  ], []);
   const resetFilters = () => {
     setSearch('');
     setClsF(null);
