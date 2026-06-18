@@ -427,6 +427,17 @@ function mergeStatusMapsByRank(...maps) {
 function getAnimalImageUrl(animal) {
   return animal?.image_url || (LOCAL_ANIMALS.find(x => Number(x.id) === Number(animal?.id) || x.sci === animal?.sci)?.image_url || '');
 }
+function getAnimalGridImageUrl(animal) {
+  const imageUrl = getAnimalImageUrl(animal);
+  if (!imageUrl || /^(https?:|data:|blob:)/i.test(imageUrl)) return imageUrl;
+
+  const cleanUrl = String(imageUrl).split('#')[0].split('?')[0];
+  const filename = cleanUrl.split('/').pop();
+  if (!filename) return imageUrl;
+
+  const basename = filename.replace(/\.[^.]+$/, '');
+  return `/animals/thumbs/${basename}.webp`;
+}
 
 function useImagePixelBounds(src) {
   const [bounds, setBounds] = useState(null);
@@ -4040,7 +4051,7 @@ const AnimalImg = React.memo(function AnimalImg({ a, size=102, fontSize=52, over
 
   if (mystery) {
     const iconSrc = CLASS_ICONS[a.cls] || CLASS_ICONS.Mammalia;
-    const localImageUrl = getAnimalImageUrl(a);
+    const localImageUrl = gridMode ? getAnimalGridImageUrl(a) : getAnimalImageUrl(a);
     const label = CLS[a.cls]?.label || a.cls || 'Animale';
     return (
       <div style={{ width:'100%', height:size, position:'relative', overflow:'hidden', background:'transparent', display:'flex', alignItems:'center', justifyContent:'center', padding:gridMode ? 6 : Math.round(size * .08), boxSizing:'border-box' }}>
@@ -4057,7 +4068,7 @@ const AnimalImg = React.memo(function AnimalImg({ a, size=102, fontSize=52, over
     );
   }
 
-  const localImageUrl = getAnimalImageUrl(a);
+  const localImageUrl = gridMode ? getAnimalGridImageUrl(a) : getAnimalImageUrl(a);
   if (localImageUrl && !imgErr) {
     const pad = gridMode ? 0 : Math.round(size * (detailMode ? 0.07 : 0.12));
     const imgScale = detailMode ? 1.18 : gridMode ? GRID_IMAGE_SCALE : 1.2;
