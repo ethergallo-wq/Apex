@@ -4433,9 +4433,6 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
   const isLightTheme = theme === 'light';
   const pageText = isLightTheme ? '#171717' : 'white';
   const animalsFilterSource = ANIMALS;
-  const gridInitialRenderCount = isPhone ? 72 : 96;
-  const gridRenderBatchSize = isPhone ? 48 : 72;
-  const [visibleCount, setVisibleCount] = useState(gridInitialRenderCount);
 
   useEffect(() => {
     if (!preset?.id) return;
@@ -4496,24 +4493,8 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
         return noA - noB;
       });
   }, [animalsFilterSource, search, statusMap, visitedCountries, hasExplicitPreset, fStatus, clsF, fRarity, fCons, fTrophic, fGeography, fCategory, fConfidence, fMapProfile, fBioRegion, fGameRegion, fHabitat, fTax, preset, sortBy]);
-  const tutorialAnimalIndex = useMemo(() => tutorialAnimalId ? list.findIndex(animal => animal.id === tutorialAnimalId) : -1, [list, tutorialAnimalId]);
-  const effectiveVisibleCount = tutorialAnimalIndex >= visibleCount ? tutorialAnimalIndex + 1 : visibleCount;
-  const visibleList = useMemo(() => list.slice(0, effectiveVisibleCount), [list, effectiveVisibleCount]);
-  const hasMoreGridItems = effectiveVisibleCount < list.length;
-
-  useEffect(() => {
-    setVisibleCount(gridInitialRenderCount);
-  }, [list, gridInitialRenderCount]);
 
   const anyExtra = fRarity.length||fCons.length||fStatus.length||fTrophic.length||fGeography.length||fCategory.length||fConfidence.length||fMapProfile.length||fBioRegion.length||fGameRegion.length||fHabitat.length||fTax||sortBy!=='no';
-  const loadMoreGridItems = useCallback(() => {
-    setVisibleCount(current => Math.min(list.length, current + gridRenderBatchSize));
-  }, [list.length, gridRenderBatchSize]);
-  const handleGridScroll = useCallback((event) => {
-    if (!hasMoreGridItems) return;
-    const el = event.currentTarget;
-    if (el.scrollHeight - el.scrollTop - el.clientHeight < 420) loadMoreGridItems();
-  }, [hasMoreGridItems, loadMoreGridItems]);
   const handleCardClick = useCallback((animal) => {
     if (tutorialActive && tutorialAnimalId && animal.id !== tutorialAnimalId) return;
     onSelect?.(animal);
@@ -4620,7 +4601,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
 
       {/* Filtri applicati nascosti: l'area libera viene usata dai filtri rapidi. */}
 
-      <div onScroll={handleGridScroll} style={{ position:'absolute', top:gridTopChromeHeight, bottom:gridBottomChromeHeight, left:0, right:0, minHeight:0, overflowY:'auto', WebkitOverflowScrolling:'touch', overscrollBehavior:'contain', padding:isPhone?'12px 14px 18px':'16px 12px 20px', marginTop:0, marginBottom:0, background:isLightTheme?'transparent':'linear-gradient(180deg,rgba(240,168,64,.09),rgba(184,77,58,.08) 38%,rgba(16,11,9,.18))', zIndex:1 }}>
+      <div style={{ position:'absolute', top:gridTopChromeHeight, bottom:gridBottomChromeHeight, left:0, right:0, minHeight:0, overflowY:'auto', WebkitOverflowScrolling:'touch', overscrollBehavior:'contain', padding:isPhone?'12px 14px 18px':'16px 12px 20px', marginTop:0, marginBottom:0, background:isLightTheme?'transparent':'linear-gradient(180deg,rgba(240,168,64,.09),rgba(184,77,58,.08) 38%,rgba(16,11,9,.18))', zIndex:1 }}>
         {list.length===0 ? (() => {
           const statusOnly = new Set(fStatus);
           const isMysteryTab = statusOnly.size === 1 && statusOnly.has('misterioso');
@@ -4635,10 +4616,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
                 ? 'Qui compaiono solo gli animali fotografati e registrati nel tuo Apex.'
                 : 'Aggiungi un paese visitato per vedere i primi animali ricercati.';
           return <div style={{ color:isLightTheme?'rgba(0,0,0,.58)':'rgba(255,255,255,.56)', textAlign:'center', padding:34, fontSize:14 }}><div style={{ fontWeight:950, color:isLightTheme?'#171717':'white', marginBottom:8 }}>{title}</div><div>{body}</div>{!isSeenTab && !isCapturedTab && !isMysteryTab && <button onClick={()=>onOpenRegions?.()} style={{ marginTop:16, height:44, padding:'0 16px', borderRadius:14, border:'none', background:'linear-gradient(180deg,rgba(184,77,58,.96),rgba(142,58,46,.98))', color:'white', fontWeight:950 }}>Aggiungi paese</button>}</div>;
-        })() : <>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(3,minmax(0,1fr))', gap:isPhone?8:10 }}>{visibleList.map(a=><AnimalCard key={a.id} a={a} onClick={handleCardClick} tutorialHighlight={tutorialActive && a.id === tutorialAnimalId} tutorialDim={tutorialActive && tutorialAnimalId && a.id !== tutorialAnimalId}/>)}</div>
-          {hasMoreGridItems && <button onClick={loadMoreGridItems} style={{ width:'100%', height:44, marginTop:12, borderRadius:16, border:'1px solid rgba(255,255,255,.12)', background:isLightTheme?'rgba(0,0,0,.045)':'rgba(255,255,255,.055)', color:isLightTheme?'rgba(0,0,0,.72)':'rgba(255,255,255,.74)', fontSize:12, fontWeight:1000, fontFamily:'inherit', cursor:'pointer' }}>Carica altri</button>}
-        </>}
+        })() : <div style={{ display:'grid', gridTemplateColumns:'repeat(3,minmax(0,1fr))', gap:isPhone?8:10 }}>{list.map(a=><AnimalCard key={a.id} a={a} onClick={handleCardClick} tutorialHighlight={tutorialActive && a.id === tutorialAnimalId} tutorialDim={tutorialActive && tutorialAnimalId && a.id !== tutorialAnimalId}/>)}</div>}
         <div style={{ height:6 }}/>
       </div>
 
