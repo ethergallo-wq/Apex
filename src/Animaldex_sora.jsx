@@ -11076,6 +11076,12 @@ function comparatorText(value, fallback = '') {
   if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') return String(value);
   return fallback;
 }
+function normalizeComparatorText(value) {
+  return comparatorText(value)
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
+}
 function getComparatorAnimalLabel(animal) {
   return comparatorText(animal?.com) || comparatorText(animal?.sci) || comparatorText(animal?.com_en) || (animal?.id != null ? `Animale ${animal.id}` : 'Animale');
 }
@@ -11236,7 +11242,7 @@ const COMPARATOR_METRICS = [
 ];
 const DEFAULT_COMPARATOR_METRIC_KEYS = ['vulnerabilita','dimensioni','velocita','peso','adattabilita'];
 function rarityScore(a) {
-  const text = normalizeText(`${a?.rarity || ''} ${a?.rarity_it || ''}`);
+  const text = normalizeComparatorText(`${a?.rarity || ''} ${a?.rarity_it || ''}`);
   if (/leggend|legend/.test(text)) return 100;
   if (/mitic|myth|epic|epic/.test(text)) return 88;
   if (/rar|rare/.test(text)) return 70;
