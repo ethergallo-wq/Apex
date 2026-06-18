@@ -6011,9 +6011,9 @@ function MapLibreGeoJsonMap({
       });
       mapRef.current = map;
       if (interactive && showControls) map.addControl(new maplibregl.NavigationControl({ showCompass:false }), 'bottom-right');
-      try { map.setProjection?.({ type:'globe' }); } catch (err) { console.warn('[Apex] Globe projection:', err); }
       map.on('load', () => {
         if (cancelled) return;
+        try { map.setProjection?.({ type:'globe' }); } catch (err) { console.warn('[Apex] Globe projection:', err); }
         loadedRef.current = true;
         map.addSource('animaldex-polygons', { type:'geojson', data:mapData });
         map.addSource('animaldex-points', { type:'geojson', data:markerData });
