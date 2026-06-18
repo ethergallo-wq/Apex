@@ -96,6 +96,15 @@ const ANIMALDEX_ORANGE_GRADIENT = 'linear-gradient(135deg,#B84D3A,#D06A45)';
 const ANIMALDEX_ORANGE_SOLID = '#B84D3A';
 const APP_FRAME_PROPS = { className:'animaldex-app-frame' };
 const APP_SAFE_TOP = 'env(safe-area-inset-top, 0px)';
+const APEX_DEBUG_LOGS = process.env.REACT_APP_APEX_DEBUG_LOGS === '1';
+function apexDebugLog(...args) {
+  if (!APEX_DEBUG_LOGS) return;
+  try { console.log(...args); } catch {}
+}
+function apexDebugWarn(...args) {
+  if (!APEX_DEBUG_LOGS) return;
+  try { console.warn(...args); } catch {}
+}
 function getInitialAnimaldexTheme() {
   if (typeof window === 'undefined') return 'dark';
   try {
@@ -541,7 +550,7 @@ function getQuickSeenCandidates(animals, statusMap, visitedCountries) {
     .slice(0, QUICK_SEEN_DAILY_LIMIT * 3);
 }
 function track(eventName, payload = {}) {
-  try { console.log('[track]', eventName, payload); } catch {}
+  apexDebugLog('[track]', eventName, payload);
 }
 
 function getAnimaldexSessionId() {
@@ -870,7 +879,7 @@ function withTimeout(promiseLike, ms, fallbackValue, label='timeout') {
     safePromise.finally(() => clearTimeout(timer)),
     new Promise(resolve => {
       timer = setTimeout(() => {
-        console.warn(`[Apex] ${label} dopo ${ms}ms`);
+        apexDebugWarn(`[Apex] ${label} dopo ${ms}ms`);
         resolve(fallbackValue);
       }, ms);
     })
@@ -909,7 +918,7 @@ async function runTimedSupabaseRequest(builder, ms, fallbackValue, label='supaba
       request,
       new Promise(resolve => {
         timer = setTimeout(() => {
-          console.warn(`[Apex] ${label} dopo ${ms}ms`);
+          apexDebugWarn(`[Apex] ${label} dopo ${ms}ms`);
           controller.abort();
           resolve(timeoutFallback);
         }, ms);
@@ -936,7 +945,7 @@ async function runTimedFetch(url, options = {}, ms = 8000, label='fetch') {
       fetch(url, { ...options, signal:controller.signal }),
       new Promise(resolve => {
         timer = setTimeout(() => {
-          console.warn(`[Apex] ${label} dopo ${ms}ms`);
+          apexDebugWarn(`[Apex] ${label} dopo ${ms}ms`);
           controller.abort();
           resolve(null);
         }, ms);
@@ -2073,9 +2082,9 @@ html, body, #root {
   100% { transform: translateY(0); opacity:1; }
 }
 .animaldex-page-dive {
-  animation: animaldexDiveIn .28s cubic-bezier(.18,.86,.24,1) both;
+  animation: none;
   transform-origin:center center;
-  will-change:transform, opacity, border-radius;
+  will-change:auto;
 }
 
 
@@ -7619,31 +7628,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
     if (homeLaunchTimerRef.current) window.clearTimeout(homeLaunchTimerRef.current);
   }, []);
   const beginHomeLaunch = (event, config, action) => {
-    if (homeLaunch) return;
-    const source = event?.currentTarget;
-    const sourceRect = source?.getBoundingClientRect?.();
-    if (!sourceRect) { action?.(); return; }
-    const appRect = document.getElementById('animaldex-app-root')?.getBoundingClientRect?.()
-      || source.closest?.('.animaldex-app-frame')?.getBoundingClientRect?.()
-      || { left:0, top:0, width:window.innerWidth, height:window.innerHeight };
-    const relativeSourceRect = {
-      left:Math.max(0, sourceRect.left - appRect.left),
-      top:Math.max(0, sourceRect.top - appRect.top),
-      width:sourceRect.width,
-      height:sourceRect.height,
-    };
-    const targetRect = { left:0, top:0, width:appRect.width || window.innerWidth, height:appRect.height || window.innerHeight };
-    homeLaunchActionRef.current = action;
-    setHomeLaunch({ ...config, sourceRect:relativeSourceRect, appRect:targetRect, expanded:false });
-    window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => setHomeLaunch(prev => prev ? { ...prev, expanded:true } : prev));
-    });
-    homeLaunchTimerRef.current = window.setTimeout(() => {
-      const run = homeLaunchActionRef.current;
-      homeLaunchActionRef.current = null;
-      setHomeLaunch(null);
-      run?.();
-    }, 470);
+    action?.();
   };
   const renderHomeLaunchPreview = () => {
     if (!homeLaunch?.screen) return null;
@@ -12397,13 +12382,7 @@ export default function App() {
   };
 
   function maybeShowSectionIntro(section) {
-    const enabledSections = new Set(['regions', 'badges', 'abilities', 'compare', 'profile', 'gallery', 'lifeweb', 'quickSeen', 'friends', 'taxonomy']);
-    if (!enabledSections.has(section)) return;
-    if (tutorialStep) return;
     setActiveSectionGuide(null);
-    if (hasSeenSectionIntro(section)) return;
-    markSectionIntroSeen(section);
-    setSectionIntro(section);
   }
 
   const getCurrentTutorialAnimal = () => {
