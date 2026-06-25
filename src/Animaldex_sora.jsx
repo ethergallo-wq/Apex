@@ -4981,15 +4981,83 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose, an
 // ── Detail ────────────────────────────────────────────────────────────
 const TAB_ORDER = ['abilita','statistiche','tassonomia'];
 
+const AI_IMAGE_TYPES = new Set(['image/jpeg', 'image/jpg', 'image/png', 'image/webp', 'image/gif']);
+const AI_IMAGE_MAX_EDGE = 1280;
+const AI_IMAGE_JPEG_QUALITY = 0.82;
+
+function readFileAsDataUrl(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result || ''));
+    reader.onerror = () => reject(new Error('Impossibile leggere la foto.'));
+    reader.readAsDataURL(file);
+  });
+}
+
+function loadImageForResize(dataUrl) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = () => reject(new Error('Formato immagine non supportato per l’analisi.'));
+    img.src = dataUrl;
+  });
+}
+
+async function buildIdentificationImageDataUrl(file) {
+  const mime = String(file?.type || '').toLowerCase();
+  if (mime && !AI_IMAGE_TYPES.has(mime)) throw new Error('Formato immagine non supportato. Usa JPG, PNG o WebP.');
+  const dataUrl = await readFileAsDataUrl(file);
+  if (!dataUrl.startsWith('data:image/')) throw new Error('Il file selezionato non sembra una foto.');
+  if ((file?.size || 0) <= 1_600_000 && dataUrl.length <= 2_200_000) return dataUrl;
+
+  const img = await loadImageForResize(dataUrl);
+  const scale = Math.min(1, AI_IMAGE_MAX_EDGE / Math.max(img.naturalWidth || img.width, img.naturalHeight || img.height, 1));
+  const canvas = document.createElement('canvas');
+  canvas.width = Math.max(1, Math.round((img.naturalWidth || img.width) * scale));
+  canvas.height = Math.max(1, Math.round((img.naturalHeight || img.height) * scale));
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+  return canvas.toDataURL('image/jpeg', AI_IMAGE_JPEG_QUALITY);
+}
+
+function normalizeAnimalLookupName(value = '') {
+  return String(value || '').trim().toLowerCase().replace(/\s+/g, ' ');
+}
+
+function hydrateAiAlternatives(result = {}, animals = [], expectedAnimal = null) {
+  const byId = new Map((animals || []).map(a => [String(a.id), a]));
+  const byName = new Map();
+  for (const a of animals || []) {
+    [a.sci, a.com, a.com_en].filter(Boolean).forEach(name => byName.set(normalizeAnimalLookupName(name), a));
+  }
+  if (expectedAnimal?.id) byId.set(String(expectedAnimal.id), expectedAnimal);
+  return (result.alternatives || []).map((alt, index) => {
+    const id = alt.matched_animal_id ?? alt.animal_id ?? alt.id;
+    const animalMatch = id != null
+      ? byId.get(String(id))
+      : byName.get(normalizeAnimalLookupName(alt.scientific_name)) || byName.get(normalizeAnimalLookupName(alt.common_name));
+    const probability = Math.max(0, Math.min(100, Number(alt.probability || alt.confidence || 0)));
+    return {
+      ...alt,
+      key: `${id ?? alt.scientific_name ?? alt.common_name ?? 'alt'}-${index}`,
+      animal: animalMatch || null,
+      probability,
+      confidence: probability / 100,
+    };
+  }).slice(0, 5);
+}
+
 function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm }) {
   const [file, setFile] = useState(null);
   const [preview, setPreview] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [matches, setMatches] = useState([]);
+  const [aiResult, setAiResult] = useState(null);
   const [gps, setGps] = useState(null);
   const [uploadedPhoto, setUploadedPhoto] = useState({ publicUrl:'', storagePath:'' });
-  const expectedHabitats = getAnimalHabitatIds(animal || {});
+  const targetAnimal = animal?.id ? animal : null;
+  const expectedHabitats = getAnimalHabitatIds(targetAnimal || {});
   useEffect(() => {
     if (!navigator?.geolocation) return;
     navigator.geolocation.getCurrentPosition(
@@ -5006,14 +5074,15 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm 
   }, [file]);
   const runIdentification = async () => {
     if (!file) { setError('Scatta o carica prima una foto.'); return; }
-    setLoading(true); setError(''); setMatches([]);
+    setLoading(true); setError(''); setMatches([]); setAiResult(null);
     setUploadedPhoto({ publicUrl:'', storagePath:'' });
     let publicUrl = '';
     let storagePath = '';
     try {
+      const imageDataUrl = await buildIdentificationImageDataUrl(file);
       if (user?.id && supabase?.storage) {
         const cleanName = String(file.name || 'photo.jpg').replace(/[^a-z0-9._-]/gi,'_');
-        const path = `${user.id}/${animal?.id || 'unknown'}/${Date.now()}-${cleanName}`;
+        const path = `${user.id}/${targetAnimal?.id || 'unknown'}/${Date.now()}-${cleanName}`;
         const { error:uploadError } = await supabase.storage.from('animal-photos').upload(path, file, { upsert:false, contentType:file.type || 'image/jpeg' });
         if (!uploadError) {
           storagePath = path;
@@ -5024,30 +5093,24 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm 
       }
       const payload = {
         image_url: publicUrl,
-        expected_animal_id: animal?.id,
-        expected_sci: animal?.sci,
+        image_data_url: imageDataUrl,
+        expected_animal_id: targetAnimal?.id || null,
+        expected_sci: targetAnimal?.sci || '',
         gps,
         expected_habitat_ids: expectedHabitats,
         candidates: (animals || []).slice(0,1200).map(a => ({ id:a.id, sci:a.sci, com:a.com, com_en:a.com_en, cls:a.cls, countries:a?.distribution?.countries_present || a?.geo?.iso?.primary || [], habitat_ids:getAnimalHabitatIds(a) }))
       };
-      let aiMatches = [];
-      try {
-        const { data, error:fnError } = await supabase.functions.invoke('identify-animal', { body:payload });
-        if (!fnError && data?.matches?.length) aiMatches = data.matches;
-      } catch (fnErr) {
-        console.warn('[Apex] identify-animal non disponibile:', fnErr);
-      }
-      if (!aiMatches.length) {
-        // Fallback sicuro: non riconosce davvero l'immagine, propone conferma manuale con controlli habitat/GPS.
-        const expected = animal ? [{ animal_id:animal.id, confidence:0.72, basis:'fallback/manual-confirmation', geo_match:!!gps, habitat_match:expectedHabitats.length>0 }] : [];
-        const sameHabitat = expectedHabitats.length ? (animals || []).filter(a => a.id !== animal?.id && getAnimalHabitatIds(a).some(id => expectedHabitats.includes(id))).slice(0,2).map((a,i)=>({ animal_id:a.id, confidence:0.52 - i*.05, basis:'habitat-similar', geo_match:false, habitat_match:true })) : [];
-        aiMatches = [...expected, ...sameHabitat];
-      }
-      const hydrated = aiMatches.map(m => {
-        const a = (animals || []).find(x => Number(x.id) === Number(m.animal_id || m.id)) || (Number(m.animal_id || m.id) === Number(animal?.id) ? animal : null);
-        return a ? { ...m, animal:a } : null;
-      }).filter(Boolean).slice(0,3);
+      const response = await fetch('/api/identify-animal', {
+        method:'POST',
+        headers:{ 'Content-Type':'application/json' },
+        body:JSON.stringify(payload),
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(data?.error || 'Riconoscimento AI non riuscito.');
+      const hydrated = hydrateAiAlternatives(data, animals, targetAnimal);
+      setAiResult(data);
       setMatches(hydrated);
+      if (data?.identification_status !== 'unusable' && !hydrated.length) setError('L’AI ha risposto, ma non ha trovato alternative collegabili o leggibili.');
     } catch (err) {
       console.warn('[Apex] photo recognition:', err);
       setError(err?.message || 'Riconoscimento non riuscito.');
@@ -5057,13 +5120,19 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm 
   };
   const confirmMatch = (match) => {
     if (!match?.animal) return;
-    onConfirm?.(match.animal, { confidence:match.confidence, gps, file, image_url:uploadedPhoto.publicUrl || preview, public_url:uploadedPhoto.publicUrl || '', storage_path:uploadedPhoto.storagePath || '' });
+    onConfirm?.(match.animal, { confidence:match.confidence, gps, file, image_url:uploadedPhoto.publicUrl || preview, public_url:uploadedPhoto.publicUrl || '', storage_path:uploadedPhoto.storagePath || '', ai_status:aiResult?.identification_status || '', ai_summary:aiResult?.summary || '' });
   };
+  const confirmTargetWithoutAi = () => {
+    if (!targetAnimal) return;
+    onConfirm?.(targetAnimal, { gps, file, image_url:uploadedPhoto.publicUrl || preview, public_url:uploadedPhoto.publicUrl || '', storage_path:uploadedPhoto.storagePath || '', confidence:1, ai_status:'manual' });
+  };
+  const aiTone = aiResult?.identification_status === 'certain' ? '#90D84A' : aiResult?.identification_status === 'unusable' ? '#F0B24E' : '#9DD3FF';
+  const aiTitle = aiResult?.identification_status === 'certain' ? 'Identificazione certa' : aiResult?.identification_status === 'unusable' ? 'Foto non utilizzabile' : aiResult ? 'Alternative più probabili' : '';
   return (
     <div onClick={onClose} style={{ position:'fixed', inset:0, zIndex:260, background:'rgba(0,0,0,.82)', display:'flex', alignItems:'center', justifyContent:'center', padding:16 }}>
       <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxWidth:460, maxHeight:'92%', overflowY:'auto', borderRadius:28, background:'linear-gradient(180deg,#222226,#111113)', border:'1px solid rgba(255,255,255,.10)', boxShadow:'0 30px 80px rgba(0,0,0,.65)', padding:18 }}>
         <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:12 }}>
-          <div><div style={{ color:'#C85D44', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Cattura Dex</div><div style={{ color:'white', fontSize:22, fontWeight:1000 }}>Registra nel Dex</div></div>
+          <div><div style={{ color:'#C85D44', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Cattura Dex</div><div style={{ color:'white', fontSize:22, fontWeight:1000 }}>{targetAnimal ? 'Verifica foto' : 'Identifica animale'}</div></div>
           <button onClick={onClose} style={{ width:36, height:36, borderRadius:12, border:'none', background:'rgba(255,255,255,.08)', color:'white', fontSize:20 }}>×</button>
         </div>
         <label style={{ display:'block', border:'1px dashed rgba(255,255,255,.22)', borderRadius:20, padding:14, background:'rgba(255,255,255,.04)', cursor:'pointer', textAlign:'center' }}>
@@ -5075,14 +5144,28 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm 
           <div style={{ borderRadius:14, background:'rgba(255,255,255,.055)', padding:12 }}><div style={{ color:'white', fontSize:12, fontWeight:900 }}>Habitat</div><div style={{ color:expectedHabitats.length?'#90D84A':'#F0B24E', fontSize:11, marginTop:4 }}>{expectedHabitats.length ? `${expectedHabitats.length} habitat attesi` : 'non mappato'}</div></div>
         </div>
         {error && <div style={{ marginTop:12, borderRadius:14, background:'rgba(168,70,55,.18)', border:'1px solid rgba(168,70,55,.45)', color:'#FFC8BE', padding:12, fontSize:12, fontWeight:800 }}>{error}</div>}
-        <button disabled={loading || !file} onClick={()=>animal ? onConfirm?.(animal,{ gps, file, image_url:preview, confidence:1 }) : runIdentification()} style={{ marginTop:14, width:'100%', height:50, borderRadius:16, border:'none', background:(loading || !file)?'#444':'linear-gradient(135deg,#A84637,#C45A3E)', color:'white', fontWeight:1000, fontSize:14 }}>{loading ? 'Registrazione…' : 'Conferma cattura nel Dex'}</button>
-        {!!matches.length && <div style={{ marginTop:16 }}>
-          <div style={{ color:'rgba(255,255,255,.62)', fontSize:12, fontWeight:900, marginBottom:8 }}>Risultati verificati</div>
-          {matches.map(m => <button key={m.animal.id} onClick={()=>confirmMatch(m)} style={{ width:'100%', minHeight:62, borderRadius:16, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.055)', color:'white', display:'flex', alignItems:'center', gap:12, padding:10, marginBottom:8, cursor:'pointer', fontFamily:'inherit', textAlign:'left' }}>
-            <AnimalImg a={m.animal} size={44} fontSize={22} overrideStatus="catturato" />
-            <div style={{ flex:1, minWidth:0 }}><div style={{ fontWeight:1000, fontSize:13 }}>{m.animal.com}</div><div style={{ color:'rgba(255,255,255,.52)', fontSize:11 }}>{Math.round((m.confidence || 0) * 100)}% · GPS {m.geo_match?'ok':'manuale'} · habitat {m.habitat_match?'ok':'da verificare'}</div></div>
-            <div style={{ color:'#90D84A', fontWeight:1000, fontSize:12 }}>Conferma</div>
-          </button>)}
+        <button disabled={loading || !file} onClick={runIdentification} style={{ marginTop:14, width:'100%', height:50, borderRadius:16, border:'none', background:(loading || !file)?'#444':'linear-gradient(135deg,#A84637,#C45A3E)', color:'white', fontWeight:1000, fontSize:14 }}>{loading ? 'Analisi in corso…' : 'Analizza con AI'}</button>
+        {targetAnimal && file && !loading && <button onClick={confirmTargetWithoutAi} style={{ marginTop:8, width:'100%', height:42, borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.055)', color:'rgba(255,255,255,.72)', fontWeight:900, fontSize:12 }}>Conferma manualmente come {targetAnimal.com || targetAnimal.sci}</button>}
+        {aiResult && <div style={{ marginTop:16, borderRadius:18, background:'rgba(255,255,255,.055)', border:`1px solid ${hexToRgba(aiTone,.35)}`, padding:13 }}>
+          <div style={{ color:aiTone, fontSize:12, fontWeight:1000, textTransform:'uppercase', letterSpacing:.7 }}>{aiTitle}</div>
+          <div style={{ color:'rgba(255,255,255,.76)', fontSize:12, lineHeight:1.42, marginTop:6 }}>{aiResult.identification_status === 'unusable' ? (aiResult.unusable_reason || aiResult.summary) : aiResult.summary}</div>
+          {aiResult.image_quality && <div style={{ color:'rgba(255,255,255,.42)', fontSize:10.5, marginTop:6 }}>Qualità foto: {aiResult.image_quality}</div>}
+        </div>}
+        {!!matches.length && <div style={{ marginTop:12 }}>
+          {matches.map(m => {
+            const name = m.animal?.com || m.common_name || 'Animale non identificato nel Dex';
+            const sci = m.animal?.sci || m.scientific_name || '';
+            const pct = Math.round(m.probability || 0);
+            return <button key={m.key} disabled={!m.animal} onClick={()=>confirmMatch(m)} style={{ width:'100%', minHeight:72, borderRadius:16, border:'1px solid rgba(255,255,255,.10)', background:m.animal?'rgba(255,255,255,.055)':'rgba(255,255,255,.035)', color:'white', display:'flex', alignItems:'center', gap:12, padding:10, marginBottom:8, cursor:m.animal?'pointer':'default', fontFamily:'inherit', textAlign:'left', opacity:m.animal?1:.78 }}>
+              {m.animal ? <AnimalImg a={m.animal} size={46} fontSize={22} overrideStatus="catturato" /> : <div style={{ width:46, height:46, borderRadius:14, background:'rgba(255,255,255,.07)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:20 }}>?</div>}
+              <div style={{ flex:1, minWidth:0 }}>
+                <div style={{ display:'flex', alignItems:'center', gap:8, minWidth:0 }}><div style={{ fontWeight:1000, fontSize:13, overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap' }}>{name}</div><div style={{ color:'#90D84A', fontWeight:1000, fontSize:12, flexShrink:0 }}>{pct}%</div></div>
+                <div style={{ marginTop:6, height:5, borderRadius:99, background:'rgba(255,255,255,.10)', overflow:'hidden' }}><div style={{ width:`${pct}%`, height:'100%', borderRadius:99, background:ANIMALDEX_ORANGE_GRADIENT }} /></div>
+                <div style={{ color:'rgba(255,255,255,.52)', fontSize:11, marginTop:5, lineHeight:1.25 }}>{sci}{m.reasoning ? ` · ${m.reasoning}` : ''}</div>
+              </div>
+              <div style={{ color:m.animal?'#90D84A':'rgba(255,255,255,.38)', fontWeight:1000, fontSize:12 }}>{m.animal ? 'Conferma' : 'Fuori Dex'}</div>
+            </button>;
+          })}
         </div>}
         <div style={{ color:'rgba(255,255,255,.42)', fontSize:10.5, lineHeight:1.4, marginTop:12 }}>“Catturato” significa registrato nel tuo Apex. Nessun animale viene catturato fisicamente.</div>
       </div>
@@ -12512,7 +12595,7 @@ const openPage = (nextPage) => {
 const openPhotoRecognition = (animal=null) => {
   const enrichedAnimal = animal ? { ...animal, status: getResolvedAnimalStatus(animal, statusMap, visitedCountries) } : null;
   trackUserEvent(user, 'photo_recognition_started', { animal_id:enrichedAnimal?.id || null, animal_name:enrichedAnimal?.com || null, source_screen:'camera' }, userProfile);
-  setPhotoTarget(enrichedAnimal);
+  setPhotoTarget(enrichedAnimal || { mode:'identify' });
 };
 const confirmPhotoRecognition = async (animal, meta={}) => {
   if (!animal?.id) return;
@@ -12699,7 +12782,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
       <InstallPromptBanner />
 	      {dataError && user && <SwipeDismissNotice onDismiss={()=>setDataError('')} style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:250, borderRadius:14, padding:'10px 12px', background:'rgba(255,59,48,.92)', color:'white', fontSize:11, fontWeight:800, boxShadow:'0 10px 30px rgba(0,0,0,.35)' }}>{dataError}</SwipeDismissNotice>}
       {activeAwardToast && <AwardToast award={activeAwardToast} onOpen={openAwardFromToast} onDismiss={()=>setAwardQueue(prev => prev.slice(1))} />}
-      {photoTarget && <PhotoRecognitionModal animal={photoTarget} animals={animalsData} user={user} onClose={()=>setPhotoTarget(null)} onConfirm={confirmPhotoRecognition} />}
+      {photoTarget && <PhotoRecognitionModal animal={photoTarget?.id ? photoTarget : null} animals={animalsData} user={user} onClose={()=>setPhotoTarget(null)} onConfirm={confirmPhotoRecognition} />}
       {countryVisitPrompt && <CountryVisitPromptModal animal={countryVisitPrompt} visitedCountries={visitedCountries} onClose={()=>setCountryVisitPrompt(null)} onConfirm={confirmPromptCountries} />}
     </div>
   );
