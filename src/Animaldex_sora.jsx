@@ -7667,8 +7667,6 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
   const [socialPreview, setSocialPreview] = useState(() => buildSocialFallback(user, userProfile, progress));
   const [navOpen, setNavOpen] = useState(false);
   const [quickActionsOpen, setQuickActionsOpen] = useState(false);
-  const [territoryLaunch, setTerritoryLaunch] = useState(false);
-  const territoryLaunchTimerRef = useRef(null);
   const [homeLaunch, setHomeLaunch] = useState(null);
   const homeLaunchActionRef = useRef(null);
   const homeLaunchTimerRef = useRef(null);
@@ -7707,7 +7705,6 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
   const featuredBadgeColor = featuredBadge ? (BADGE_LEVEL_COLORS[featuredBadge.level] || '#F0A840') : '#D8D2C4';
   const featuredBadgeName = featuredBadge?.name || 'Scegli badge';
   useEffect(() => () => {
-    if (territoryLaunchTimerRef.current) window.clearTimeout(territoryLaunchTimerRef.current);
     if (homeLaunchTimerRef.current) window.clearTimeout(homeLaunchTimerRef.current);
   }, []);
   const beginHomeLaunch = (event, config, action) => {
@@ -7868,10 +7865,8 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
         </button>
 
         <div style={{ marginBottom:14 }}>
-          <button onClick={openTerritoriesFromHome} style={{ position:'relative', width:'100%', height:homeBoxHeight, border:`1px solid ${isLightTheme?'rgba(0,0,0,.10)':'rgba(108,229,199,.24)'}`, borderRadius:24, background:'linear-gradient(90deg, rgba(5,11,13,.82), rgba(5,11,13,.42) 58%, rgba(5,11,13,.18))', color:'#F5F1EA', fontFamily:'inherit', textAlign:'left', padding:'20px 98px 20px 18px', cursor:'pointer', boxShadow:isLightTheme?'0 16px 34px rgba(0,0,0,.09)':'inset 0 1px 0 rgba(255,255,255,.06), 0 16px 34px rgba(0,0,0,.22)', overflow:'hidden', transform:territoryLaunch?'scale(1.045)':'scale(1)', transition:'transform .26s cubic-bezier(.2,.8,.2,1), border-color .26s ease, box-shadow .26s ease', transformOrigin:'center center' }}>
-            <div style={{ position:'absolute', inset:territoryLaunch?'-20% -10% -14% 4%':'0', pointerEvents:'none', opacity:.86, transform:territoryLaunch?'scale(1.28) translateX(-5%)':'scale(1)', transition:'inset .26s cubic-bezier(.2,.8,.2,1), transform .26s cubic-bezier(.2,.8,.2,1)' }}>
-              <MapLibreGeoJsonMap data={featureCollection([])} activeFeatureIds={[]} height={territoryLaunch ? 214 : 152} fitBounds={[-180,-70,180,80]} showFeatureBoundaries={false} showControls={false} interactive={false} autoSpin autoSpinSpeed={0.00038} fitDuration={0} />
-            </div>
+          <button onClick={openTerritoriesFromHome} style={{ position:'relative', width:'100%', height:homeBoxHeight, border:`1px solid ${isLightTheme?'rgba(0,0,0,.10)':'rgba(108,229,199,.24)'}`, borderRadius:24, background:'linear-gradient(90deg, rgba(5,11,13,.82), rgba(5,11,13,.42) 58%, rgba(5,11,13,.18))', color:'#F5F1EA', fontFamily:'inherit', textAlign:'left', padding:'20px 98px 20px 18px', cursor:'pointer', boxShadow:isLightTheme?'0 16px 34px rgba(0,0,0,.09)':'inset 0 1px 0 rgba(255,255,255,.06), 0 16px 34px rgba(0,0,0,.22)', overflow:'hidden' }}>
+            <div style={{ position:'absolute', inset:0, pointerEvents:'none', opacity:.92, background:'radial-gradient(circle at 84% 45%, rgba(144,216,74,.24) 0 21%, transparent 22%), radial-gradient(circle at 78% 42%, rgba(79,179,255,.28) 0 30%, transparent 31%), radial-gradient(circle at 88% 56%, rgba(240,168,64,.16) 0 13%, transparent 14%), linear-gradient(115deg, transparent 0 48%, rgba(108,229,199,.16) 54%, transparent 68%)' }} />
             <div style={{ position:'absolute', inset:0, pointerEvents:'none', opacity:.48, backgroundImage:'radial-gradient(circle at 12% 18%, rgba(255,255,255,.95) 0 1px, transparent 1.6px), radial-gradient(circle at 72% 22%, rgba(255,255,255,.75) 0 1px, transparent 1.8px), radial-gradient(circle at 44% 76%, rgba(255,255,255,.55) 0 1px, transparent 1.5px), linear-gradient(115deg, transparent 0 38%, rgba(196,220,255,.16) 45%, rgba(255,255,255,.08) 52%, transparent 62%)', backgroundSize:'82px 82px, 120px 120px, 96px 96px, 100% 100%' }} />
             <div style={{ position:'absolute', inset:0, pointerEvents:'none', background:'linear-gradient(90deg, rgba(5,11,13,.92), rgba(5,11,13,.48) 58%, rgba(5,11,13,.18))' }} />
             <div style={{ position:'relative', zIndex:1 }}>
