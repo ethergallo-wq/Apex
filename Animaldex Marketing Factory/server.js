@@ -28,7 +28,7 @@ const TIKTOK_VERIFICATION_FILES = {
     "tiktok-developers-site-verification=GS0T1SdaaDxwUh0kMwQhcvg4My8Eh7ru",
 };
 
-const demoPost = {
+const reviewPost = {
   title: "Questo animale sembra inventato. Invece esiste davvero.",
   caption:
     "La natura ha gia creato creature da collezione. Che rarita gli daresti? #Apex #animali #natura #wildlife #curiosita",
@@ -389,7 +389,7 @@ function pageLayout({ title, session, body }) {
     <div class="wrap top">
       <div class="brand">
         <strong>Apex Content Studio</strong>
-        <span>Manual draft upload flow for TikTok</span>
+        <span>Official web service for TikTok draft upload review</span>
       </div>
       <nav>
         <a href="/">Overview</a>
@@ -430,7 +430,7 @@ function homePage(session) {
         <aside class="panel">
           <h2>Service summary</h2>
           <span class="status">${session.accessToken ? "TikTok connected" : "TikTok not connected"}</span>
-          <p>Apex Content Studio supports internal preparation and review of educational animal discovery content before it is submitted to TikTok.</p>
+          <p>Apex Content Studio supports creator-led preparation and review of educational animal discovery content before it is submitted to TikTok.</p>
           <ul class="list">
             <li>Human-reviewed content preparation</li>
             <li>Editable captions and content previews</li>
@@ -452,7 +452,7 @@ function homePage(session) {
       <section class="section panel">
         <p class="eyebrow">Authorized workflow</p>
         <h2>TikTok connection for approved users</h2>
-        <p>The TikTok connection screens are available only to demonstrate or operate the authorized Apex review workflow. They are not the homepage of the public website and are not required for visitors who only need information about the service, legal terms, privacy practices, or contact details.</p>
+        <p>The TikTok connection screens are available for the authorized Apex review workflow. They are not the homepage of the public website and are not required for visitors who only need information about the service, legal terms, privacy practices, or contact details.</p>
         <div class="actions">
           <a class="button secondary" href="/connect">Open TikTok connection</a>
           <a class="button secondary" href="/compose">Open review workflow</a>
@@ -501,7 +501,7 @@ function aboutPage(session) {
         <p class="eyebrow">About</p>
         <h1>About Apex Content Studio</h1>
         <p>Apex Content Studio is the official web service used by Apex to prepare and review educational animal discovery content before it is submitted to TikTok as a creator-controlled draft/inbox upload.</p>
-        <p>The service is operated by Andrea Galliazzo in Milan, Italy, and is designed for internal Apex use and authorized collaborators. It is not a public publishing network and it does not automatically publish content to TikTok profiles.</p>
+        <p>The service is operated by Andrea Galliazzo in Milan, Italy, and is designed for Apex content operations and authorized collaborators. It is not a public publishing network and it does not automatically publish content to TikTok profiles.</p>
         <h2>Purpose</h2>
         <p>The purpose of Apex Content Studio is to make the review process clear and auditable: an authorized user connects TikTok, checks the connected account, reviews a content preview, edits the caption, selects a draft destination setting, and confirms approval before upload.</p>
         <h2>Public information</h2>
@@ -611,20 +611,20 @@ function composePage(session) {
           ${accountBlock}
 
           <label for="title">Post title</label>
-          <input id="title" name="title" maxlength="150" value="${escapeAttr(demoPost.title)}" />
+          <input id="title" name="title" maxlength="150" value="${escapeAttr(reviewPost.title)}" />
 
           <label for="caption">Caption</label>
-          <textarea id="caption" name="caption" maxlength="2200">${escapeHtml(demoPost.caption)}</textarea>
+          <textarea id="caption" name="caption" maxlength="2200">${escapeHtml(reviewPost.caption)}</textarea>
 
           <label for="privacy">Draft/inbox destination setting</label>
           <select id="privacy" name="privacy">
-            <option value="SELF_ONLY">Only me / private test</option>
+            <option value="SELF_ONLY">Only me</option>
             <option value="MUTUAL_FOLLOW_FRIENDS">Friends review</option>
             <option value="PUBLIC_TO_EVERYONE">Creator can review public-ready content</option>
           </select>
 
-          <label for="videoUrl">Public MP4 URL for draft/inbox upload test</label>
-          <input id="videoUrl" name="videoUrl" placeholder="https://example.com/apex-demo.mp4" value="${escapeAttr(demoPost.videoUrl)}" />
+          <label for="videoUrl">Public MP4 URL for draft/inbox upload</label>
+          <input id="videoUrl" name="videoUrl" placeholder="https://example.com/apex-video.mp4" value="${escapeAttr(reviewPost.videoUrl)}" />
 
           <label>
             <input name="approved" value="yes" type="checkbox" style="width:auto; margin-right:8px;" />
@@ -639,11 +639,11 @@ function composePage(session) {
         <aside class="panel">
           <h2>Current TikTok status</h2>
           <span class="status">${session.accessToken ? "TikTok connected" : "TikTok not connected"}</span>
-          <p>Direct Post is intentionally off for the first review. Apex requests only user.info.basic and video.upload, then sends approved content as a draft/inbox upload for the creator to finish in TikTok.</p>
+          <p>Direct Post is not enabled. Apex requests only user.info.basic and video.upload, then sends approved content as a draft/inbox upload for the creator to finish in TikTok.</p>
           <div class="preview-card">
             <strong>Content preview</strong>
-            <p>${escapeHtml(demoPost.title)}</p>
-            <p>${escapeHtml(demoPost.caption)}</p>
+            <p>${escapeHtml(reviewPost.title)}</p>
+            <p>${escapeHtml(reviewPost.caption)}</p>
             <p class="tiny">No client secret, access token, or refresh token is shown in this interface.</p>
           </div>
         </aside>
@@ -666,7 +666,7 @@ function termsPage(session) {
         <p>By accessing or using Apex Content Studio, you agree to these Terms. If you do not agree, you must not use the service. These Terms apply together with our Privacy Policy and any product-specific instructions displayed in the service.</p>
 
         <h2>2. Eligibility and authorized use</h2>
-        <p>Apex Content Studio is intended only for Apex internal users, contractors, and collaborators who are authorized to manage Apex content workflows. It is not a public social network, marketplace, or consumer publishing platform. You may use the service only if you have permission to do so and only in compliance with these Terms, applicable laws, TikTok rules, and any internal Apex content guidelines.</p>
+        <p>Apex Content Studio is intended for Apex team members, contractors, and collaborators who are authorized to manage Apex content workflows. It is not a public social network, marketplace, or consumer publishing platform. You may use the service only if you have permission to do so and only in compliance with these Terms, applicable laws, TikTok rules, and Apex content guidelines.</p>
 
         <h2>3. Service description</h2>
         <p>The service provides a review interface for educational animal discovery content. Authorized users can connect a TikTok account, view the connected account, review a content preview, edit captions and related metadata, select a draft/inbox destination setting, and manually approve content before submission.</p>
@@ -728,7 +728,7 @@ function privacyPage(session) {
         <p>This Privacy Policy explains how Apex Content Studio, operated by Andrea Galliazzo, P'le Tripoli, 20146 Milano, Italy ("Apex", "we", "us", or "our"), collects, uses, shares, and protects information when an authorized user accesses the website, connects a TikTok account, reviews content, and submits approved content as a TikTok draft/inbox upload.</p>
 
         <h2>Summary of key points</h2>
-        <p>Apex Content Studio is an internal/authorized creator workflow. We collect only information needed to operate the website, connect TikTok, display the connected account, support manual review, and submit approved draft/inbox uploads. We do not sell personal data, do not use marketing cookies, and do not enable automatic Direct Post publishing.</p>
+        <p>Apex Content Studio is an authorized creator workflow. We collect only information needed to operate the website, connect TikTok, display the connected account, support manual review, and submit approved draft/inbox uploads. We do not sell personal data, do not use marketing cookies, and do not enable automatic Direct Post publishing.</p>
 
         <h2>1. Information we collect</h2>
         <p>We collect information you provide or authorize through the service, including review text, captions, post titles, media URLs, selected destination settings, approval status, and support communications. When you connect TikTok, we may receive basic TikTok account information such as open ID, display name, and avatar URL through TikTok Login Kit.</p>
@@ -879,9 +879,9 @@ async function publishPost(req, res, session) {
     sendHtml(
       res,
       pageLayout({
-        title: "Demo result",
+        title: "Approval result",
         session,
-        body: `<div class="panel"><h1>Manual approval captured</h1><p>This demo confirms the review step. Add a public MP4 URL to test the TikTok Content Posting API upload initialization call.</p><pre>${escapeHtml(
+        body: `<div class="panel"><h1>Manual approval captured</h1><p>The review step is complete. Add a public MP4 URL to run the TikTok Content Posting API upload initialization call.</p><pre>${escapeHtml(
           JSON.stringify({ title, caption, privacy, approved, uploadMode: "draft/inbox" }, null, 2)
         )}</pre><a class="button" href="/compose">Back</a></div>`,
       })

@@ -1,10 +1,10 @@
 # Apex Content Studio
 
-Mini app for the first TikTok Developer Review submission.
+Apex Content Studio is the official web service used by Apex to prepare, review, and submit educational animal discovery content to TikTok as creator-controlled draft/inbox uploads.
 
 ## Review configuration
 
-Use this setup for the first submission:
+Use this setup for TikTok Developer review:
 
 ```text
 Products: Login Kit, Content Posting API
@@ -16,7 +16,7 @@ Terms: https://apex-content-studio.vercel.app/terms
 Privacy: https://apex-content-studio.vercel.app/privacy
 ```
 
-Apex Content Studio does not request `video.publish` for the first review. It uses `video.upload` so approved content is sent as a draft/inbox upload for the creator to finish in TikTok.
+Apex Content Studio does not request `video.publish`. It uses `video.upload` so approved content is sent as a draft/inbox upload for the creator to finish in TikTok.
 
 ## Local setup
 
@@ -45,9 +45,9 @@ Open:
 http://127.0.0.1:3000
 ```
 
-## Demo checklist
+## Review video checklist
 
-Record a short demo that shows:
+Record a short review video that shows:
 
 1. Account TikTok connected through Login Kit.
 2. Content preview.
@@ -62,9 +62,9 @@ Do not show client secret, access tokens, refresh tokens, or private credentials
 
 ## Operational note
 
-For TikTok review, the redirect URI must be served by the app that handles the OAuth callback. With a separate Apex Content Studio deployment, use the Content Studio Vercel domain for the callback and keep the legal pages on `apexdex.app`.
+For TikTok review, the Website URL, Redirect URI, Terms URL, Privacy URL, and the website shown in the review video should use the same Apex Content Studio Vercel domain.
 
-## Separate Vercel deployment
+## Vercel deployment
 
 Recommended project name:
 

@@ -3,23 +3,23 @@
 ## App description
 
 ```text
-A content tool that helps Apex create, review, and submit educational animal discovery posts to TikTok.
+A web content studio for creating, reviewing, and submitting educational animal discovery posts to TikTok.
 ```
 
 ## Product and scope explanation
 
 ```text
-Apex Content Studio uses Login Kit so an authorized Apex user can connect their TikTok account before sending content. The app requests user.info.basic only to confirm which TikTok account is connected.
+Apex Content Studio uses Login Kit so an authorized Apex user can connect a TikTok account before submitting content. The app requests user.info.basic only to confirm and display which TikTok account is connected in the review screen.
 
-Apex Content Studio uses the Content Posting API with video.upload to send approved Apex educational animal content to TikTok as a draft/inbox upload. The app shows a manual review screen before upload: the user can review the content preview, edit the caption, choose the draft/inbox destination setting, and must check an explicit approval checkbox before the app sends the content to TikTok.
+Apex Content Studio uses the Content Posting API with video.upload to send approved Apex educational animal content to TikTok as a draft/inbox upload. The website shows a manual review workflow before upload: the user can review the content preview, edit the title and caption, choose the draft/inbox destination setting, and must check an explicit approval checkbox before the service sends anything to TikTok.
 
-Direct Post is OFF for this first submission. The app does not request video.publish and does not publish content automatically. The integration is intended for Apex-owned educational content about animal discovery, rarity, geography, and wildlife facts.
+Direct Post is OFF. Apex Content Studio does not request video.publish and does not publish content automatically. The integration is used for Apex educational content about animal discovery, rarity, geography, and wildlife facts.
 ```
 
-## Demo video narration
+## Review video narration
 
 ```text
-In this demo, I open Apex Content Studio, connect a TikTok account using Login Kit, review an Apex educational animal post, edit the caption and destination setting, confirm manual approval, and send the approved post to TikTok as a draft/inbox upload through the Content Posting API.
+In this video, I open Apex Content Studio on the verified website domain, connect a TikTok account using Login Kit, review an Apex educational animal post, edit the caption and destination setting, confirm manual approval, and send the approved post to TikTok as a draft/inbox upload through the Content Posting API.
 ```
 
 ## Requested products
