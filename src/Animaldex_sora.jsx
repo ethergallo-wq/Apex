@@ -362,8 +362,8 @@ function getNearlyCompletedBadges(statusMap, visitedCountries, earnedBadgeIds) {
     .sort((a,b)=>b.progress-a.progress)
     .slice(0,3);
 }
-function buildSimpleProgressState({ animals = ANIMALS, statusMap = {}, visitedCountries = [], earnedBadgeIds = [] }) {
-  const animalsWithStatus = (animals || []).map(a => ({ ...a, status:getResolvedAnimalStatus(a, statusMap, visitedCountries) }));
+function buildSimpleProgressState({ animals = ANIMALS, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], animalsWithStatus: resolvedAnimals = null }) {
+  const animalsWithStatus = resolvedAnimals || (animals || []).map(a => ({ ...a, status:getResolvedAnimalStatus(a, statusMap, visitedCountries) }));
   const searched = animalsWithStatus.filter(a => a.status === 'ricercato');
   const seen = animalsWithStatus.filter(a => a.status === 'avvistato');
   const captured = animalsWithStatus.filter(a => a.status === 'catturato');
@@ -743,6 +743,9 @@ function hydrateLocalAnimalIndexes(list = []) {
   LOCAL_ANIMAL_BY_ID = Object.fromEntries(normalized.map(a => [a.id, a]));
   rebuildAnimalGridFilterOptions(normalized);
   invalidateComparatorBenchmarksCache();
+  const warmComparatorBenchmarks = () => getCachedComparatorBenchmarks(normalized);
+  if (typeof requestIdleCallback === 'function') requestIdleCallback(warmComparatorBenchmarks, { timeout: 800 });
+  else setTimeout(warmComparatorBenchmarks, 0);
   return LOCAL_ANIMALS;
 }
 
@@ -4534,25 +4537,6 @@ function Grid({ onSelect, animals: animalsProp, statusMap = {}, visitedCountries
   const isLightTheme = theme === 'light';
   const pageText = isLightTheme ? '#171717' : 'white';
   const animalsFilterSource = animalsProp?.length ? animalsProp : ANIMALS;
-  const gridScrollRef = useRef(null);
-  const gridRowHeight = isPhone ? 152 : 144;
-  const gridCols = 3;
-  const [gridVisibleRange, setGridVisibleRange] = useState({ start:0, end:39 });
-  const syncGridVisibleRange = useCallback(() => {
-    const el = gridScrollRef.current;
-    if (!el) return;
-    const total = Number(el.dataset.itemCount || 0);
-    const scrollTop = el.scrollTop;
-    const viewH = el.clientHeight || 640;
-    const startRow = Math.max(0, Math.floor(scrollTop / gridRowHeight) - 1);
-    const endRow = Math.ceil((scrollTop + viewH) / gridRowHeight) + 2;
-    const start = startRow * gridCols;
-    const end = Math.min(total, endRow * gridCols);
-    setGridVisibleRange(prev => (prev.start === start && prev.end === end ? prev : { start, end }));
-  }, [gridRowHeight]);
-  useEffect(() => {
-    syncGridVisibleRange();
-  }, [syncGridVisibleRange]);
 
   useEffect(() => {
     if (!preset?.id) return;
@@ -4615,13 +4599,6 @@ function Grid({ onSelect, animals: animalsProp, statusMap = {}, visitedCountries
         return noA - noB;
       });
   }, [animalsFilterSource, search, statusMap, visitedCountries, hasExplicitPreset, fStatus, clsF, fRarity, fCons, fTrophic, fGeography, fCategory, fConfidence, fMapProfile, fBioRegion, fGameRegion, fHabitat, fTax, preset, sortBy]);
-
-  const gridSliceStart = Math.max(0, Math.min(gridVisibleRange.start, list.length));
-  const gridSliceEnd = Math.min(list.length, Math.max(gridSliceStart + gridCols, gridVisibleRange.end));
-  useEffect(() => {
-    setGridVisibleRange({ start:0, end:39 });
-    if (gridScrollRef.current) gridScrollRef.current.scrollTop = 0;
-  }, [list.length, preset?.id, search, clsF, sortBy, fStatus.join('|')]);
 
   const anyExtra = fRarity.length||fCons.length||fStatus.length||fTrophic.length||fGeography.length||fCategory.length||fConfidence.length||fMapProfile.length||fBioRegion.length||fGameRegion.length||fHabitat.length||fTax||sortBy!=='no';
   const handleCardClick = useCallback((animal) => {
@@ -4730,7 +4707,7 @@ function Grid({ onSelect, animals: animalsProp, statusMap = {}, visitedCountries
 
       {/* Filtri applicati nascosti: l'area libera viene usata dai filtri rapidi. */}
 
-      <div ref={gridScrollRef} data-item-count={list.length} onScroll={syncGridVisibleRange} style={{ position:'absolute', top:gridTopChromeHeight, bottom:gridBottomChromeHeight, left:0, right:0, minHeight:0, overflowY:'auto', WebkitOverflowScrolling:'touch', overscrollBehavior:'contain', padding:isPhone?'12px 14px 18px':'16px 12px 20px', marginTop:0, marginBottom:0, background:isLightTheme?'transparent':'linear-gradient(180deg,rgba(240,168,64,.09),rgba(184,77,58,.08) 38%,rgba(16,11,9,.18))', zIndex:1 }}>
+      <div data-item-count={list.length} style={{ position:'absolute', top:gridTopChromeHeight, bottom:gridBottomChromeHeight, left:0, right:0, minHeight:0, overflowY:'auto', WebkitOverflowScrolling:'touch', overscrollBehavior:'contain', padding:isPhone?'12px 14px 18px':'16px 12px 20px', marginTop:0, marginBottom:0, background:isLightTheme?'transparent':'linear-gradient(180deg,rgba(240,168,64,.09),rgba(184,77,58,.08) 38%,rgba(16,11,9,.18))', zIndex:1 }}>
         {list.length===0 ? (() => {
           const statusOnly = new Set(fStatus);
           const isMysteryTab = statusOnly.size === 1 && statusOnly.has('misterioso');
@@ -4745,21 +4722,11 @@ function Grid({ onSelect, animals: animalsProp, statusMap = {}, visitedCountries
                 ? 'Qui compaiono solo gli animali fotografati e registrati nel tuo Apex.'
                 : 'Aggiungi un paese visitato per vedere i primi animali ricercati.';
           return <div style={{ color:isLightTheme?'rgba(0,0,0,.58)':'rgba(255,255,255,.56)', textAlign:'center', padding:34, fontSize:14 }}><div style={{ fontWeight:950, color:isLightTheme?'#171717':'white', marginBottom:8 }}>{title}</div><div>{body}</div>{!isSeenTab && !isCapturedTab && !isMysteryTab && <button onClick={()=>onOpenRegions?.()} style={{ marginTop:16, height:44, padding:'0 16px', borderRadius:14, border:'none', background:'linear-gradient(180deg,rgba(184,77,58,.96),rgba(142,58,46,.98))', color:'white', fontWeight:950 }}>Aggiungi paese</button>}</div>;
-        })() : (() => {
-          const totalRows = Math.ceil(list.length / gridCols);
-          const startRow = Math.floor(gridSliceStart / gridCols);
-          const endRow = Math.ceil(gridSliceEnd / gridCols);
-          const paddingTop = startRow * gridRowHeight;
-          const paddingBottom = Math.max(0, (totalRows - endRow) * gridRowHeight);
-          const visible = list.slice(gridSliceStart, gridSliceEnd);
-          return (
-            <div style={{ paddingTop, paddingBottom }}>
-              <div style={{ display:'grid', gridTemplateColumns:'repeat(3,minmax(0,1fr))', gap:isPhone?8:10 }}>
-                {visible.map(a=><AnimalCard key={a.id} a={a} onClick={handleCardClick} isPhone={isPhone} tutorialHighlight={tutorialActive && a.id === tutorialAnimalId} tutorialDim={tutorialActive && tutorialAnimalId && a.id !== tutorialAnimalId}/>)}
-              </div>
-            </div>
-          );
-        })()}
+        })() : (
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(3,minmax(0,1fr))', gap:isPhone?8:10 }}>
+            {list.map(a=><AnimalCard key={a.id} a={a} onClick={handleCardClick} isPhone={isPhone} tutorialHighlight={tutorialActive && a.id === tutorialAnimalId} tutorialDim={tutorialActive && tutorialAnimalId && a.id !== tutorialAnimalId}/>)}
+          </div>
+        )}
         <div style={{ height:6 }}/>
       </div>
 
@@ -7793,8 +7760,8 @@ function AuthScreen({ onAuthReady }) {
 
 const TRIP_TAGS = ['city','nature','coast','diving','snorkeling','boat','desert','mountain'];
 
-function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], userProfile, user, onOpenGridStatus, onOpenRegions, onQuickSeen, onOpenPhoto, onOpenBadge, theme='dark' }) {
-  const progress = buildSimpleProgressState({ animals:ANIMALS, statusMap, visitedCountries, earnedBadgeIds });
+function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], userProfile, user, onOpenGridStatus, onOpenRegions, onQuickSeen, onOpenPhoto, onOpenBadge, theme='dark', menuProgress=null }) {
+  const progress = menuProgress || buildSimpleProgressState({ animals:ANIMALS, statusMap, visitedCountries, earnedBadgeIds });
   const [socialPreview, setSocialPreview] = useState(() => buildSocialFallback(user, userProfile, progress));
   const [navOpen, setNavOpen] = useState(false);
   const [quickActionsOpen, setQuickActionsOpen] = useState(false);
@@ -7831,7 +7798,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
   const xpPct = Math.max(0, Math.min(100, ((progress.xp - currLevelXP) / Math.max(1, nextLevelXP - currLevelXP)) * 100));
   const animalsWithStatus = progress.animalsWithStatus;
   const searchedAnimalsCount = animalsWithStatus.filter(a => a.status === 'ricercato').length;
-  const awardMetrics = computeAwardMetrics(statusMap, visitedCountries);
+  const awardMetrics = useMemo(() => computeAwardMetrics(statusMap, visitedCountries), [statusMap, visitedCountries]);
   const featuredBadge = earnedAwards.find(rule => normalizeBadgeId(rule.badgeId) === normalizeBadgeId(featuredBadgeId)) || earnedAwards[0] || null;
   const featuredBadgeColor = featuredBadge ? (BADGE_LEVEL_COLORS[featuredBadge.level] || '#F0A840') : '#D8D2C4';
   const featuredBadgeName = featuredBadge?.name || 'Scegli badge';
@@ -11688,26 +11655,47 @@ function CompareInfoCard({ animal, metrics, accent, sideLabel, gradient, onZoom 
   );
 }
 function ComparatorPage({ onBack, animals = [], statusMap = {}, visitedCountries = [], initialAnimal = null, theme='dark' }) {
-  const normalized = useMemo(() => (animals || ANIMALS || []).map(a => ({ ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) })), [animals, statusMap, visitedCountries]);
   const selectorAnimals = useMemo(() => {
-    const revealed = normalized.filter(a => !isMysteryStatus(a.status));
-    return revealed.length ? revealed : normalized;
-  }, [normalized]);
+    const source = (animals || []).length ? animals : ANIMALS;
+    const revealed = source.filter(a => !isMysteryStatus(normalizeAnimalStatus(a.status ?? getResolvedAnimalStatus(a, statusMap, visitedCountries))));
+    return revealed.length ? revealed : source.slice(0, 120);
+  }, [animals, statusMap, visitedCountries]);
   const revealedDefaults = useMemo(() => selectorAnimals.slice(0, 12), [selectorAnimals]);
-  const firstDefault = initialAnimal ? (normalized.find(a=>String(a.id)===String(initialAnimal.id)) || initialAnimal) : (revealedDefaults[0] || selectorAnimals[0] || null);
-  const secondDefault = initialAnimal ? null : (firstDefault ? (revealedDefaults.find(a => String(a.id) !== String(firstDefault.id)) || selectorAnimals.find(a => String(a.id) !== String(firstDefault.id)) || null) : (revealedDefaults[1] || selectorAnimals[1] || null));
-  const [left,setLeft] = useState(firstDefault || null);
-  const [right,setRight] = useState(secondDefault || null);
+  const pickDefaultPair = useCallback(() => {
+    const nextLeft = initialAnimal
+      ? (selectorAnimals.find(a => String(a.id) === String(initialAnimal.id)) || initialAnimal)
+      : (revealedDefaults[0] || selectorAnimals[0] || null);
+    const nextRight = initialAnimal
+      ? null
+      : (nextLeft
+        ? (revealedDefaults.find(a => String(a.id) !== String(nextLeft.id)) || selectorAnimals.find(a => String(a.id) !== String(nextLeft.id)) || null)
+        : (revealedDefaults[1] || selectorAnimals[1] || null));
+    return { nextLeft, nextRight };
+  }, [initialAnimal, revealedDefaults, selectorAnimals]);
+  const initialPair = useMemo(() => pickDefaultPair(), [pickDefaultPair]);
+  const [left,setLeft] = useState(initialPair.nextLeft || null);
+  const [right,setRight] = useState(initialPair.nextRight || null);
   const [selectedMetricKeys,setSelectedMetricKeys] = useState(DEFAULT_COMPARATOR_METRIC_KEYS);
-  useEffect(()=>{
-    const nextLeft = initialAnimal ? (normalized.find(a=>String(a.id)===String(initialAnimal.id)) || initialAnimal) : (revealedDefaults[0] || selectorAnimals[0] || null);
-    const nextRight = initialAnimal ? null : (nextLeft ? (revealedDefaults.find(a => String(a.id) !== String(nextLeft.id)) || selectorAnimals.find(a => String(a.id) !== String(nextLeft.id)) || null) : (revealedDefaults[1] || selectorAnimals[1] || null));
+  const [bench,setBench] = useState(() => comparatorBenchmarksCache.value);
+  useEffect(() => {
+    const { nextLeft, nextRight } = pickDefaultPair();
     setLeft(nextLeft);
     setRight(nextRight);
-  }, [initialAnimal?.id, normalized.length, revealedDefaults.length, selectorAnimals.length]);
-  const bench = useMemo(() => getCachedComparatorBenchmarks(normalized), [normalized]);
-  const leftMetrics = left ? getComparatorMetrics(left, bench, selectedMetricKeys) : null;
-  const rightMetrics = right ? getComparatorMetrics(right, bench, selectedMetricKeys) : null;
+  }, [initialAnimal?.id, pickDefaultPair]);
+  useEffect(() => {
+    if (bench) return undefined;
+    let alive = true;
+    const compute = () => {
+      const source = (animals || []).length ? animals : ANIMALS;
+      const next = getCachedComparatorBenchmarks(source);
+      if (alive) setBench(next);
+    };
+    if (typeof requestIdleCallback === 'function') requestIdleCallback(compute, { timeout: 250 });
+    else setTimeout(compute, 0);
+    return () => { alive = false; };
+  }, [animals?.length, bench]);
+  const leftMetrics = left && bench ? getComparatorMetrics(left, bench, selectedMetricKeys) : null;
+  const rightMetrics = right && bench ? getComparatorMetrics(right, bench, selectedMetricKeys) : null;
   const colorLeft = COMPARE_LEFT_COLOR;
   const colorRight = COMPARE_RIGHT_COLOR;
   const [showInfo,setShowInfo]=useState(false);
@@ -11735,6 +11723,7 @@ function ComparatorPage({ onBack, animals = [], statusMap = {}, visitedCountries
           </div>
           <div style={{ color:'rgba(255,255,255,.56)', fontSize:12, lineHeight:1.55, marginTop:8 }}>Il radar mostra i valori reali accanto a ogni voce; il pentagono li normalizza solo per rendere il confronto immediato.</div>
         </div>
+        {!bench && <div style={{ marginBottom:12, borderRadius:18, border:'1px solid rgba(255,255,255,.08)', background:'rgba(255,255,255,.04)', padding:'10px 14px', color:'rgba(255,255,255,.62)', fontSize:12, fontWeight:850 }}>Preparazione statistiche…</div>}
         <div style={{ display:'grid', gridTemplateColumns:isMobile?'1fr':'1fr 1fr', gap:10, marginBottom:12, minWidth:0 }}>
           <ComparatorSelector label="Sinistra" value={left} animals={selectorAnimals} onChange={setLeft} accent={colorLeft} gradient={COMPARE_LEFT_GRADIENT} compact={isMobile} onZoom={setZoomAnimal} />
           <ComparatorSelector label="Destra" value={right} animals={selectorAnimals} onChange={setRight} accent={colorRight} gradient={COMPARE_RIGHT_GRADIENT} compact={isMobile} onZoom={setZoomAnimal} />
@@ -12100,6 +12089,7 @@ export default function App() {
   }, [animalsData]);
   const [sel,setSel]=useState(null);
   const [,startDetailTransition]=useTransition();
+  const [,startNavTransition]=useTransition();
   const selectAnimal = useCallback((animal) => {
     startDetailTransition(() => setSel(animal));
   }, []);
@@ -12129,6 +12119,10 @@ export default function App() {
       status: getResolvedAnimalStatus(a, statusMap, visitedCountries),
     })),
     [animalsData, statusMap, visitedCountries]
+  );
+  const menuProgress = useMemo(
+    () => buildSimpleProgressState({ animalsWithStatus, visitedCountries, earnedBadgeIds, statusMap }),
+    [animalsWithStatus, visitedCountries, earnedBadgeIds, statusMap]
   );
   const awardsHydratedRef = useRef(false);
   const awardInteractionRef = useRef(false);
@@ -12748,6 +12742,7 @@ export default function App() {
 
 const enriched = sel ? getEnrichedAnimal({ ...sel, status: getResolvedAnimalStatus(sel, statusMap, visitedCountries) }) : null;
 const openPage = (nextPage) => {
+  const apply = () => {
   setSel(null);
   setPhotoTarget(null);
   setGridReturnTarget(null);
@@ -12766,11 +12761,16 @@ const openPage = (nextPage) => {
 	  }
 	  setPage(nextPage || 'menu');
 	  maybeShowSectionIntro(nextPage);
+  };
+  if (nextPage === 'menu' || nextPage === 'compare') startNavTransition(apply);
+  else apply();
 	};
 	const openComparator = (animal=null) => {
 	  const enrichedAnimal = animal ? getEnrichedAnimal({ ...animal, status: getResolvedAnimalStatus(animal, statusMap, visitedCountries) }) : null;
-	  setFeatureReturnAnimal(enrichedAnimal); setSel(null); setGridReturnTarget(null); setComparatorInitialAnimal(enrichedAnimal); setPage('compare');
-	  maybeShowSectionIntro('compare');
+	  startNavTransition(() => {
+	    setFeatureReturnAnimal(enrichedAnimal); setSel(null); setGridReturnTarget(null); setComparatorInitialAnimal(enrichedAnimal); setPage('compare');
+	    maybeShowSectionIntro('compare');
+	  });
 	};
 	const openLifeWeb = (animal=null) => {
 	  const enrichedAnimal = animal ? getEnrichedAnimal({ ...animal, status: getResolvedAnimalStatus(animal, statusMap, visitedCountries) }) : null;
@@ -12940,11 +12940,11 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   }
 
   const renderPage = () => {
-	    if (page === 'menu') return <MainMenu theme={theme} onOpen={openPage} onBack={()=>setPage('grid')} onLogout={handleLogout} tutorialFocus={tutorialStep==='home'?'grid':null} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onOpenGridStatus={openGridWithStatus} onOpenRegions={()=>openPage('regions')} onQuickSeen={()=>{ setPage('quickSeen'); maybeShowSectionIntro('quickSeen'); }} onOpenPhoto={openPhotoRecognition} onOpenBadge={(badgeId)=>{setToastOpenBadgeId(normalizeBadgeId(badgeId)); setPage('badges'); maybeShowSectionIntro('badges');}} />;
+	    if (page === 'menu') return <MainMenu theme={theme} menuProgress={menuProgress} onOpen={openPage} onBack={()=>setPage('grid')} onLogout={handleLogout} tutorialFocus={tutorialStep==='home'?'grid':null} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onOpenGridStatus={openGridWithStatus} onOpenRegions={()=>openPage('regions')} onQuickSeen={()=>{ setPage('quickSeen'); maybeShowSectionIntro('quickSeen'); }} onOpenPhoto={openPhotoRecognition} onOpenBadge={(badgeId)=>{setToastOpenBadgeId(normalizeBadgeId(badgeId)); setPage('badges'); maybeShowSectionIntro('badges');}} />;
     if (page === 'quickSeen') return <QuickSeenPage theme={theme} onBack={()=>setPage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onStatusChange={handleStatusChange} onSelect={selectAnimal} user={user} userProfile={userProfile} />;
     if (page === 'compare') return (
       <FeaturePageErrorBoundary theme={theme} title="Comparatore" onBack={()=>returnFromFeaturePage('menu')} resetKey={`compare-${theme}-${animalsData?.length || 0}-${comparatorInitialAnimal?.id || ''}`}>
-        <ComparatorPage theme={theme} onBack={()=>returnFromFeaturePage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={comparatorInitialAnimal} />
+        <ComparatorPage theme={theme} onBack={()=>returnFromFeaturePage('menu')} animals={animalsWithStatus} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={comparatorInitialAnimal} />
       </FeaturePageErrorBoundary>
     );
     if (page === 'friends') return <FriendsPage theme={theme} onBack={()=>setPage('menu')} user={user} userProfile={userProfile} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
