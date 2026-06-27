@@ -4,7 +4,9 @@ import { supabase } from './supabaseClient';
 let LOCAL_ANIMALS = [];
 let ANIMALS = [];
 let LOCAL_ANIMAL_BY_ID = {};
+let LOCAL_ANIMAL_FULL_BY_ID = {};
 let localAnimalsLoadPromise = null;
+let fullAnimalsLoadPromise = null;
 let googleIdentityScriptPromise = null;
 
 const GOOGLE_CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID;
@@ -747,14 +749,60 @@ function hydrateLocalAnimalIndexes(list = []) {
 async function loadLocalAnimalsData() {
   if (LOCAL_ANIMALS.length) return LOCAL_ANIMALS;
   if (!localAnimalsLoadPromise) {
-    localAnimalsLoadPromise = import('./animals-data')
+    localAnimalsLoadPromise = import('./animals-data-grid')
       .then(module => hydrateLocalAnimalIndexes(module.ANIMALS || []))
+      .catch(err => {
+        console.warn('[Apex] Dataset grid non disponibile, uso dataset completo:', err);
+        return import('./animals-data').then(module => hydrateLocalAnimalIndexes(module.ANIMALS || []));
+      })
       .catch(err => {
         localAnimalsLoadPromise = null;
         throw err;
       });
   }
   return localAnimalsLoadPromise;
+}
+
+function hydrateFullAnimalIndexes(fullList = []) {
+  LOCAL_ANIMAL_FULL_BY_ID = Object.fromEntries((fullList || []).map(a => [a.id, a]));
+  LOCAL_ANIMALS = (fullList || []).map(full => {
+    const prev = LOCAL_ANIMAL_BY_ID[full.id];
+    return normalizeLocalAnimal({
+      ...full,
+      status: prev?.status ?? full.status,
+      userStatus: prev?.userStatus ?? appStatusToSupabase(prev?.status ?? full.status),
+    });
+  });
+  ANIMALS = LOCAL_ANIMALS;
+  LOCAL_ANIMAL_BY_ID = Object.fromEntries(LOCAL_ANIMALS.map(a => [a.id, a]));
+  rebuildAnimalGridFilterOptions(LOCAL_ANIMALS);
+  invalidateComparatorBenchmarksCache();
+  return LOCAL_ANIMALS;
+}
+
+function queueFullAnimalsHydration() {
+  if (fullAnimalsLoadPromise) return fullAnimalsLoadPromise;
+  if (Object.keys(LOCAL_ANIMAL_FULL_BY_ID).length) return Promise.resolve(LOCAL_ANIMALS);
+  fullAnimalsLoadPromise = import('./animals-data')
+    .then(module => hydrateFullAnimalIndexes(module.ANIMALS || []))
+    .catch(err => {
+      console.warn('[Apex] Dataset completo non caricato:', err);
+      fullAnimalsLoadPromise = null;
+      return LOCAL_ANIMALS;
+    });
+  return fullAnimalsLoadPromise;
+}
+
+function getEnrichedAnimal(animal) {
+  if (!animal?.id) return animal;
+  const full = LOCAL_ANIMAL_FULL_BY_ID[animal.id];
+  if (!full) return animal;
+  return normalizeLocalAnimal({
+    ...full,
+    ...animal,
+    status: animal.status ?? full.status,
+    userStatus: animal.userStatus ?? full.userStatus,
+  });
 }
 
 function mergeRemoteWithLocalBioregions(remoteList = []) {
@@ -5833,28 +5881,36 @@ function getCountryFeatureName(feature) {
 let BIOREGION_GEOJSON_CACHE = null;
 let BIOREGION_GEOJSON_PROMISE = null;
 const BIOREGION_GEOJSON_URLS = ['/geo/bioregions-v4-terrestrial-marine-kepler.geojson','/geo/bioregions-v4-terrestrial-marine-kepler.geojson.geojson','/geo/bioregions-v4-terrestrial-marine-kepler_paesi_med-atlantic-split.geojson','/bioregions-v4-terrestrial-marine-kepler.geojson','/bioregions-v4-terrestrial-marine-kepler.geojson.geojson','/bioregions-v4-terrestrial-marine-kepler_paesi_med-atlantic-split.geojson'];
+function prefetchBioregionGeoJson() {
+  if (BIOREGION_GEOJSON_CACHE || BIOREGION_GEOJSON_PROMISE) return BIOREGION_GEOJSON_PROMISE;
+  BIOREGION_GEOJSON_PROMISE = (async () => {
+    let lastErr;
+    for (const url of BIOREGION_GEOJSON_URLS) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const json = await res.json();
+        BIOREGION_GEOJSON_CACHE = json;
+        return json;
+      } catch (err) { lastErr = err; }
+    }
+    throw lastErr;
+  })().catch(err => {
+    console.warn('[Apex] bioregion geojson prefetch:', err);
+    BIOREGION_GEOJSON_PROMISE = null;
+    return null;
+  });
+  return BIOREGION_GEOJSON_PROMISE;
+}
 function useBioregionGeoJson() {
   const [data, setData] = useState(BIOREGION_GEOJSON_CACHE);
   const [error, setError] = useState(false);
   useEffect(() => {
     let alive = true;
     if (BIOREGION_GEOJSON_CACHE) { setData(BIOREGION_GEOJSON_CACHE); return; }
-    if (!BIOREGION_GEOJSON_PROMISE) {
-      BIOREGION_GEOJSON_PROMISE = (async () => {
-        let lastErr;
-        for (const url of BIOREGION_GEOJSON_URLS) {
-          try {
-            const res = await fetch(url);
-            if (!res.ok) throw new Error(`HTTP ${res.status}`);
-            const json = await res.json();
-            BIOREGION_GEOJSON_CACHE = json;
-            return json;
-          } catch (err) { lastErr = err; }
-        }
-        throw lastErr;
-      })();
-    }
-    BIOREGION_GEOJSON_PROMISE.then(json => { if (alive) setData(json); }).catch(err => { console.warn('[Apex] bioregion geojson:', err); if (alive) setError(true); });
+    prefetchBioregionGeoJson()?.then(json => {
+      if (alive && json) setData(json);
+    }).catch(() => { if (alive) setError(true); });
     return () => { alive = false; };
   }, []);
   return { data, error };
@@ -7845,13 +7901,14 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
     return null;
   };
   const openTerritoriesFromHome = (event) => {
+    prefetchBioregionGeoJson();
     beginHomeLaunch(event, {
       label:'Esplorazione',
       title:'Territori',
       subtitle:'Esplora il mondo e i suoi animali',
       color:'#90D84A',
       background:'linear-gradient(90deg, rgba(5,11,13,.62), rgba(5,11,13,.30) 58%, rgba(5,11,13,.18))',
-      content:'map',
+      content:'globe',
       screen:'regions',
     }, () => (onOpenRegions || (() => onOpen('regions')))());
   };
@@ -7997,9 +8054,10 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
                   {renderHomeLaunchPreview()}
                 </div>
               )}
-              {homeLaunch.content === 'map' && (
-                <div style={{ position:'absolute', inset:homeLaunch.expanded ? '-6% -8%' : '0', opacity:homeLaunch.expanded ? .95 : .72, transition:'inset .44s cubic-bezier(.16,.86,.18,1), opacity .34s ease' }}>
-                  <MapLibreGeoJsonMap data={featureCollection([])} activeFeatureIds={[]} height={Math.max(180, r.height)} fitBounds={[-180,-70,180,80]} showFeatureBoundaries={false} showControls={false} interactive={false} autoSpin autoSpinSpeed={0.00038} fitDuration={0} />
+              {homeLaunch.content === 'globe' && (
+                <div style={{ position:'absolute', inset:homeLaunch.expanded ? '-6% -8%' : '0', opacity:homeLaunch.expanded ? .95 : .72, transition:'inset .44s cubic-bezier(.16,.86,.18,1), opacity .34s ease', background:'radial-gradient(circle at 58% 42%, rgba(91,190,248,.28), rgba(7,19,31,.92) 58%, rgba(4,10,14,.98))', overflow:'hidden' }}>
+                  <div style={{ position:'absolute', inset:'-8%', borderRadius:'50%', background:'radial-gradient(circle at 35% 30%, rgba(144,216,74,.24), rgba(20,60,48,.18) 34%, transparent 62%)', transform:'rotate(-12deg)' }} />
+                  <div style={{ position:'absolute', inset:0, opacity:.55, backgroundImage:'radial-gradient(circle at 12% 18%, rgba(255,255,255,.95) 0 1px, transparent 1.6px), radial-gradient(circle at 72% 22%, rgba(255,255,255,.75) 0 1px, transparent 1.8px), radial-gradient(circle at 44% 76%, rgba(255,255,255,.55) 0 1px, transparent 1.5px)', backgroundSize:'82px 82px, 120px 120px, 96px 96px' }} />
                 </div>
               )}
               <div style={{ position:'absolute', inset:0, background:'linear-gradient(90deg, rgba(5,7,8,.78), rgba(5,7,8,.34) 58%, rgba(5,7,8,.12))', opacity:homeLaunch.screen && homeLaunch.screen !== 'regions' ? (homeLaunch.expanded ? 0 : 1) : 1, transition:'opacity .18s ease' }} />
@@ -12124,10 +12182,23 @@ export default function App() {
     let alive = true;
     loadLocalAnimalsData()
       .then(list => {
-        if (!alive) return;
+        if (!alive) return null;
         const normalized = list.map(normalizeLocalAnimal);
         setAnimalsData(prev => prev?.length ? prev : normalized);
         setLocalAnimalsReady(true);
+        return queueFullAnimalsHydration();
+      })
+      .then(fullList => {
+        if (!alive || !fullList?.length) return;
+        setAnimalsData(prev => {
+          const statusById = Object.fromEntries(prev.map(a => [a.id, a.status]));
+          const userStatusById = Object.fromEntries(prev.map(a => [a.id, a.userStatus]));
+          return fullList.map(a => ({
+            ...a,
+            status: normalizeAnimalStatus(statusById[a.id] ?? a.status),
+            userStatus: userStatusById[a.id] ?? a.userStatus,
+          }));
+        });
       })
       .catch(err => {
         console.warn('[Apex] Dataset animali locale non caricato:', err);
@@ -12675,7 +12746,7 @@ export default function App() {
     }));
   };
 
-const enriched = sel ? { ...sel, status: getResolvedAnimalStatus(sel, statusMap, visitedCountries) } : null;
+const enriched = sel ? getEnrichedAnimal({ ...sel, status: getResolvedAnimalStatus(sel, statusMap, visitedCountries) }) : null;
 const openPage = (nextPage) => {
   setSel(null);
   setPhotoTarget(null);
@@ -12685,6 +12756,7 @@ const openPage = (nextPage) => {
   if (nextPage !== 'compare') setComparatorInitialAnimal(null);
   if (nextPage !== 'lifeweb') setLifeWebInitialAnimal(null);
   setFeatureReturnAnimal(null);
+  if (nextPage === 'regions') prefetchBioregionGeoJson();
 	  if (nextPage === 'grid') {
 	    if (tutorialStep === 'home') setGridPreset({ id: Date.now(), type:'tutorial', search:'piccione', statuses:['ricercato'], title:'Apex' });
 	    else setGridPreset({ id: Date.now(), type:'status', statuses:['avvistato','catturato'], title:'Apex' });
@@ -12696,12 +12768,12 @@ const openPage = (nextPage) => {
 	  maybeShowSectionIntro(nextPage);
 	};
 	const openComparator = (animal=null) => {
-	  const enrichedAnimal = animal ? { ...animal, status: getResolvedAnimalStatus(animal, statusMap, visitedCountries) } : null;
+	  const enrichedAnimal = animal ? getEnrichedAnimal({ ...animal, status: getResolvedAnimalStatus(animal, statusMap, visitedCountries) }) : null;
 	  setFeatureReturnAnimal(enrichedAnimal); setSel(null); setGridReturnTarget(null); setComparatorInitialAnimal(enrichedAnimal); setPage('compare');
 	  maybeShowSectionIntro('compare');
 	};
 	const openLifeWeb = (animal=null) => {
-	  const enrichedAnimal = animal ? { ...animal, status: getResolvedAnimalStatus(animal, statusMap, visitedCountries) } : null;
+	  const enrichedAnimal = animal ? getEnrichedAnimal({ ...animal, status: getResolvedAnimalStatus(animal, statusMap, visitedCountries) }) : null;
 	  setFeatureReturnAnimal(enrichedAnimal); setSel(null); setGridReturnTarget(null); setTaxonomyInitialAnimal(enrichedAnimal); setPage('taxonomy');
 	  maybeShowSectionIntro('taxonomy');
 	};
