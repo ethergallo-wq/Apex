@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useRef, useCallback, useTransition } from "react";
+import React, { useState, useEffect, useMemo, useRef, useCallback, useTransition, useDeferredValue } from "react";
 import { supabase } from './supabaseClient';
 
 let LOCAL_ANIMALS = [];
@@ -743,9 +743,16 @@ function hydrateLocalAnimalIndexes(list = []) {
   LOCAL_ANIMAL_BY_ID = Object.fromEntries(normalized.map(a => [a.id, a]));
   rebuildAnimalGridFilterOptions(normalized);
   invalidateComparatorBenchmarksCache();
+  invalidateLifeAnimalsCache();
   const warmComparatorBenchmarks = () => getCachedComparatorBenchmarks(normalized);
-  if (typeof requestIdleCallback === 'function') requestIdleCallback(warmComparatorBenchmarks, { timeout: 800 });
-  else setTimeout(warmComparatorBenchmarks, 0);
+  const warmLifeIndex = () => ensureLifeAnimalsIndex(normalized);
+  if (typeof requestIdleCallback === 'function') {
+    requestIdleCallback(warmComparatorBenchmarks, { timeout: 800 });
+    requestIdleCallback(warmLifeIndex, { timeout: 2200 });
+  } else {
+    setTimeout(warmComparatorBenchmarks, 0);
+    setTimeout(warmLifeIndex, 250);
+  }
   return LOCAL_ANIMALS;
 }
 
@@ -780,6 +787,10 @@ function hydrateFullAnimalIndexes(fullList = []) {
   LOCAL_ANIMAL_BY_ID = Object.fromEntries(LOCAL_ANIMALS.map(a => [a.id, a]));
   rebuildAnimalGridFilterOptions(LOCAL_ANIMALS);
   invalidateComparatorBenchmarksCache();
+  invalidateLifeAnimalsCache();
+  const warmLifeIndex = () => ensureLifeAnimalsIndex(LOCAL_ANIMALS);
+  if (typeof requestIdleCallback === 'function') requestIdleCallback(warmLifeIndex, { timeout: 1200 });
+  else setTimeout(warmLifeIndex, 0);
   return LOCAL_ANIMALS;
 }
 
@@ -8257,13 +8268,62 @@ function lifeNodeToTaxFilter(node) {
   const appKey = key === 'genus' ? 'gen' : key;
   return { key:appKey, value:node.label };
 }
+let lifeAnimalsCacheKey = '';
+let lifeAnimalsCache = new Map();
+let lifeAnimalsIndexKey = '';
+let lifeAnimalsIndex = null;
+function invalidateLifeAnimalsCache() {
+  lifeAnimalsCacheKey = '';
+  lifeAnimalsCache = new Map();
+  lifeAnimalsIndexKey = '';
+  lifeAnimalsIndex = null;
+}
+function ensureLifeAnimalsIndex(animals = []) {
+  const key = String((animals || []).length);
+  if (lifeAnimalsIndexKey === key && lifeAnimalsIndex) return lifeAnimalsIndex;
+  const index = new Map();
+  const walk = (node) => {
+    const byId = new Map();
+    const add = (animal) => {
+      if (animal) byId.set(String(animal?.id || animal?.sci || animal?.com), animal);
+    };
+    if (node?.animal) add(node.animal);
+    if (node?.match || node?.matchAny) {
+      (animals || []).forEach(a => { if (lifeNodeMatchesAnimal(node, a)) add(a); });
+    }
+    (node?.children || []).forEach(child => {
+      walk(child);
+      (index.get(child.id) || []).forEach(add);
+    });
+    const rows = Array.from(byId.values());
+    if (node?.id) index.set(node.id, rows);
+    return rows;
+  };
+  walk(LIFE_TREE);
+  lifeAnimalsIndexKey = key;
+  lifeAnimalsIndex = index;
+  lifeAnimalsCacheKey = key;
+  lifeAnimalsCache = index;
+  return index;
+}
 function getLifeAnimals(node, animals=[]) {
+  if (!node?.generated) {
+    const index = ensureLifeAnimalsIndex(animals);
+    if (node?.id && index.has(node.id)) return index.get(node.id);
+    return [];
+  }
+  const cacheKey = String((animals || []).length);
+  if (lifeAnimalsCacheKey !== cacheKey) ensureLifeAnimalsIndex(animals);
+  const cacheId = node?.id;
+  if (cacheId && lifeAnimalsCache.has(cacheId)) return lifeAnimalsCache.get(cacheId);
   const byId = new Map();
   const add = (animal) => byId.set(String(animal?.id || animal?.sci || animal?.com), animal);
   if (node?.animal) add(node.animal);
   if (node?.match || node?.matchAny) animals.filter(a => lifeNodeMatchesAnimal(node, a)).forEach(add);
   (node?.children || []).forEach(child => getLifeAnimals(child, animals).forEach(add));
-  return Array.from(byId.values());
+  const rows = Array.from(byId.values());
+  if (cacheId) lifeAnimalsCache.set(cacheId, rows);
+  return rows;
 }
 function getLifeStats(node, animals=[]) {
   const rows = getLifeAnimals(node, animals);
@@ -8451,7 +8511,25 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
   const [expandedGeneratedId, setExpandedGeneratedId] = useState(null);
   const [detailNode, setDetailNode] = useState(null);
   const [resetVersion, setResetVersion] = useState(0);
-  const flow = useMemo(() => buildLifeFlow(selectedNode, animals, expandedGeneratedId, focusAnimalId), [selectedNode, animals, expandedGeneratedId, focusAnimalId]);
+  const deferredAnimals = useDeferredValue(animals);
+  const [lifeFlow, setLifeFlow] = useState(null);
+  const emptyLifeFlow = { nodes:[], edges:[], columns:[], selectedPath:[], selectedNode:null, focusDepth:0, colGap:324, rowGap:138, nodeW:252, nodeH:132 };
+  const flow = lifeFlow || emptyLifeFlow;
+  useEffect(() => {
+    let alive = true;
+    let idleId = null;
+    const compute = () => {
+      const next = buildLifeFlow(selectedNode, deferredAnimals, expandedGeneratedId, focusAnimalId);
+      if (alive) setLifeFlow(next);
+    };
+    if (typeof requestIdleCallback === 'function') idleId = requestIdleCallback(compute, { timeout: 160 });
+    else idleId = setTimeout(compute, 0);
+    return () => {
+      alive = false;
+      if (typeof cancelIdleCallback === 'function' && idleId) cancelIdleCallback(idleId);
+      else if (idleId) clearTimeout(idleId);
+    };
+  }, [selectedNode.id, deferredAnimals, expandedGeneratedId, focusAnimalId]);
   useEffect(() => {
     setExpandedGeneratedId(null);
     userMovedViewRef.current = false;
@@ -8488,14 +8566,14 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
     return { x:14 - leftEdge * nextK, y:targetY - selectedRow.y * nextK, k:nextK };
   };
   useEffect(() => {
-    if (!flow.nodes.length || !size.w || !size.h || userMovedViewRef.current) return;
-    setView(getInitialLifeView(flow));
-  }, [flow, size.w, size.h, selectedNode.id]);
+    if (!lifeFlow?.nodes.length || !size.w || !size.h || userMovedViewRef.current) return;
+    setView(getInitialLifeView(lifeFlow));
+  }, [lifeFlow, size.w, size.h, selectedNode.id]);
   useEffect(() => {
-    if (!flow.nodes.length || resetVersion === 0 || appliedResetRef.current === resetVersion) return;
+    if (!lifeFlow?.nodes.length || resetVersion === 0 || appliedResetRef.current === resetVersion) return;
     appliedResetRef.current = resetVersion;
-    setView(getInitialLifeView(flow));
-  }, [resetVersion, flow, size.w, size.h]);
+    setView(getInitialLifeView(lifeFlow));
+  }, [resetVersion, lifeFlow, size.w, size.h]);
   const centerOnNode = (node, keepZoom = true) => {
     if (!node) return;
     setView(prev => {
@@ -8641,6 +8719,9 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
     <div ref={wrapRef} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag} onTouchStart={startTouch} onTouchMove={moveTouch} onTouchEnd={endTouch} onTouchCancel={endTouch} style={{ position:'relative', width:'100%', height:'100%', overflow:'hidden', touchAction:'none', background:'radial-gradient(circle at 50% 0%, rgba(217,184,111,.12), transparent 26%), radial-gradient(circle at 18% 28%, rgba(63,183,166,.12), transparent 30%), linear-gradient(180deg,rgba(18,30,26,.72),rgba(4,7,8,.98) 46%,#030506)' }}>
       <div style={{ position:'absolute', inset:0, opacity:.28, backgroundImage:'linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px)', backgroundSize:'34px 34px', maskImage:'linear-gradient(180deg,rgba(0,0,0,.9),rgba(0,0,0,.34) 55%,rgba(0,0,0,.78))' }} />
       <div style={{ position:'absolute', left:18, right:18, top:18, zIndex:8, pointerEvents:'none', color:'rgba(255,255,255,.50)', fontSize:10, fontWeight:900, letterSpacing:.4, textTransform:'uppercase' }}>Trascina il pannello · usa ⌖ per centrare il nodo vicino</div>
+      {!lifeFlow && (
+        <div style={{ position:'absolute', inset:0, zIndex:11, display:'grid', placeItems:'center', color:'rgba(255,255,255,.58)', fontSize:13, fontWeight:900, pointerEvents:'none' }}>Caricamento albero…</div>
+      )}
       <div style={{ position:'absolute', right:12, bottom:12, zIndex:20, display:'grid', gap:8 }}>
         <button data-life-control="true" onClick={handleManualCenter} aria-label="Centra nodo vicino" style={lifeZoomButtonStyle}>⌖</button>
         <button data-life-control="true" onClick={()=>zoomBy(1.16)} style={lifeZoomButtonStyle}>+</button>
@@ -8891,7 +8972,15 @@ function TaxonomyExplorer({ animals=ANIMALS, statusMap={}, visitedCountries=[], 
   const isLight = theme === 'light';
   const selectedNode = getLifeNodeById(selectedId) || LIFE_TREE;
   const panelNode = panelNodeId ? getLifeNodeById(panelNodeId) : null;
-  const animalsWithStatus = useMemo(() => (animals || []).map(a => ({ ...a, status:getResolvedAnimalStatus(a, statusMap, visitedCountries) })), [animals, statusMap, visitedCountries]);
+  const animalsWithStatus = useMemo(() => {
+    const source = animals?.length ? animals : ANIMALS;
+    if (source.length && source.every(a => a.status != null)) return source;
+    return source.map(a => (
+      a.status != null
+        ? a
+        : { ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) }
+    ));
+  }, [animals, statusMap, visitedCountries]);
   const path = getLifeNodePath(selectedNode.id);
   const openNode = useCallback((id) => { setPanelNodeId(null); setSelectedId(id); }, []);
   const openPanel = useCallback((id) => setPanelNodeId(id), []);
@@ -10497,7 +10586,7 @@ function HabitatCard({ row, onOpen, onOpenGrid }) {
   );
 }
 
-function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedCountriesChange, onRemoveDestination, initialView, onSelect, onOpenCountry, onOpenRegion, onAddDestination, destinationsLoading=false, onOpenHabitatGrid, theme='dark' }) {
+function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedCountriesChange, onRemoveDestination, initialView, onSelect, onOpenCountry, onOpenRegion, onAddDestination, destinationsLoading=false, onOpenHabitatGrid, theme='dark', animalsWithStatus: animalsWithStatusProp = null }) {
   const normalizeInitialView = (v) => {
     if (v && typeof v === 'object') return normalizeInitialView(v.view);
     if (v === 'countries') return 'countries';
@@ -10514,13 +10603,23 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   const [countrySearch, setCountrySearch] = useState('');
   const [selectedDestinationIso, setSelectedDestinationIso] = useState('');
   const [selectedDestinationIsos, setSelectedDestinationIsos] = useState([]);
-  const [regionMapExpanded, setRegionMapExpanded] = useState(true);
+  const [regionMapExpanded, setRegionMapExpanded] = useState(() => typeof window !== 'undefined' ? window.innerWidth > 560 : true);
+  const [mapReady, setMapReady] = useState(false);
   const [mapFocusIds, setMapFocusIds] = useState([]);
   const [mapSelectedId, setMapSelectedId] = useState(null);
   const [selectedMarineRealmId, setSelectedMarineRealmId] = useState(null);
   const [planetDomainFocus, setPlanetDomainFocus] = useState('terrestrial');
   const breadcrumbScrollRef = useRef(null);
   const mainRegionMapRef = useRef(null);
+  const isPhoneRegions = typeof window !== 'undefined' && window.innerWidth <= 560;
+  useEffect(() => {
+    let alive = true;
+    const mount = () => { if (alive) setMapReady(true); };
+    const delay = isPhoneRegions ? 1400 : 700;
+    if (typeof requestIdleCallback === 'function') requestIdleCallback(mount, { timeout: delay });
+    else setTimeout(mount, isPhoneRegions ? 320 : 120);
+    return () => { alive = false; };
+  }, [isPhoneRegions]);
   useEffect(()=>{
     if (initialView && typeof initialView === 'object') {
       setSelectedContinentId(initialView.continentId || null);
@@ -10580,11 +10679,21 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     onRemoveDestination?.(code);
     if (selectedCountry === code) setSelectedCountry(null);
   };
-  const allAnimalsWithStatus = ANIMALS.map(a => ({ ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) }));
-  const isLightTheme = theme === 'light';
-  const territoryAnimals = selectedTerritory ? allAnimalsWithStatus.filter(a => matchGeographySelection(a, [selectedTerritory.filterValue])) : [];
+  const needsAnimalIndex = view === 'animals' || view === 'lifeweb' || !!selectedTerritory;
+  const allAnimalsWithStatus = useMemo(() => {
+    if (!needsAnimalIndex) return animalsWithStatusProp?.length ? animalsWithStatusProp : [];
+    if (animalsWithStatusProp?.length) return animalsWithStatusProp;
+    return ANIMALS.map(a => ({ ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) }));
+  }, [needsAnimalIndex, animalsWithStatusProp, statusMap, visitedCountries]);
+  const territoryAnimals = useMemo(
+    () => (selectedTerritory ? allAnimalsWithStatus.filter(a => matchGeographySelection(a, [selectedTerritory.filterValue])) : []),
+    [allAnimalsWithStatus, selectedTerritory]
+  );
   const selectedSubregionTerritory = selectedEcoregion ? { ...selectedEcoregion, filterValue:`ecoregion:${selectedEcoregion.id}`, kind:'subregion', label:selectedEcoregion.label } : null;
-  const habitatRows = selectedSubregionTerritory ? getHabitatsForTerritory(selectedSubregionTerritory, allAnimalsWithStatus) : [];
+  const habitatRows = useMemo(
+    () => (selectedSubregionTerritory ? getHabitatsForTerritory(selectedSubregionTerritory, allAnimalsWithStatus) : []),
+    [selectedSubregionTerritory, allAnimalsWithStatus]
+  );
   const title = (() => {
     if (view === 'planet') return 'Pianeta Terra';
     if (view === 'countries') return 'Paesi visitati';
@@ -10894,7 +11003,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
               </div>
             )}
             {view !== 'planet' && <MapCollapseToggle />}
-            {showRegionMap && (
+            {showRegionMap && mapReady && (
               <div ref={mainRegionMapRef} style={{ margin:'0 -14px 14px', position:'relative', zIndex:1, background:isLightTheme?'linear-gradient(180deg,#F3EFE6 0%,rgba(243,239,230,.94) 82%,rgba(243,239,230,0) 100%)':'linear-gradient(180deg,#050505 0%,rgba(5,5,5,.94) 82%,rgba(5,5,5,0) 100%)', paddingBottom:8 }}>
                 <BioregionVectorMap
                   highlightIds={territoryMapHighlightIds}
@@ -10911,12 +11020,15 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
                   showFeatureBoundaries={!territoryMapIsPlanet}
                   levelGroups={territoryMapLevelGroups}
                   layerOpacityScale={.6}
-                  autoSpin={territoryMapIsPlanet || (view === 'terrestrial' && !mapFocusIds.length) || (territoryMapIsMarine && !selectedMarineRealmId)}
+                  autoSpin={!isPhoneRegions && (territoryMapIsPlanet || (view === 'terrestrial' && !mapFocusIds.length) || (territoryMapIsMarine && !selectedMarineRealmId))}
                   cameraId={territoryMapCameraId}
                   hideInactiveFill={territoryMapIsPlanet || (!territoryMapIsMarine && view !== 'terrestrial')}
                   fitDuration={520}
                 />
               </div>
+            )}
+            {showRegionMap && !mapReady && (
+              <div style={{ margin:'0 -14px 14px', height:view === 'habitats' ? 280 : 310, borderRadius:16, background:'linear-gradient(135deg,#1B1513,#2B1713)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.50)', fontSize:11, fontWeight:800 }}>Caricamento mappa…</div>
             )}
           </>
         )}
@@ -12085,6 +12197,7 @@ export default function App() {
   useEffect(() => {
     ANIMALS = animalsData;
     invalidateComparatorBenchmarksCache();
+  invalidateLifeAnimalsCache();
     if (animalsData?.length) rebuildAnimalGridFilterOptions(animalsData);
   }, [animalsData]);
   const [sel,setSel]=useState(null);
@@ -12762,7 +12875,7 @@ const openPage = (nextPage) => {
 	  setPage(nextPage || 'menu');
 	  maybeShowSectionIntro(nextPage);
   };
-  if (nextPage === 'menu' || nextPage === 'compare') startNavTransition(apply);
+  if (nextPage === 'menu' || nextPage === 'compare' || nextPage === 'regions' || nextPage === 'taxonomy') startNavTransition(apply);
   else apply();
 	};
 	const openComparator = (animal=null) => {
@@ -12950,10 +13063,10 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
     if (page === 'friends') return <FriendsPage theme={theme} onBack={()=>setPage('menu')} user={user} userProfile={userProfile} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
     if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={handleLogout} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} onOpenFriends={()=>openPage('friends')} />;
 	    if (page === 'badges') return <BadgesPage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={activeSectionGuide==='badges'} onTutorialBadgeOpen={()=>setActiveSectionGuide(null)} />;
-    if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={handleVisitedCountriesChange} onRemoveDestination={handleRemoveDestination} initialView={regionsInitialView} onSelect={selectAnimal} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} />{renderDetailOverlay()}</div>;
+    if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage theme={theme} animalsWithStatus={animalsWithStatus} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={handleVisitedCountriesChange} onRemoveDestination={handleRemoveDestination} initialView={regionsInitialView} onSelect={selectAnimal} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} />{renderDetailOverlay()}</div>;
     if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage theme={theme} onBack={()=>setPage('profile')} statusMap={statusMap} onSelect={selectAnimal} />{renderDetailOverlay()}</div>;
     if (page === 'lifeweb') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><StandaloneLifeWebPage theme={theme} statusMap={statusMap} visitedCountries={visitedCountries} onBack={()=>returnFromFeaturePage('grid')} animals={animalsData} initialAnimal={lifeWebInitialAnimal} onOpenAnimal={selectAnimal} />{renderDetailOverlay()}</div>;
-    if (page === 'taxonomy') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><TaxonomyErrorBoundary theme={theme} onBack={()=>setPage('menu')} resetKey={`${theme}-${animalsData?.length || 0}-${taxonomyInitialAnimal?.id || ''}`}><TaxonomyExplorer theme={theme} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={taxonomyInitialAnimal} onBack={()=>setPage('menu')} onOpenAnimal={selectAnimal} onOpenTaxonomyFilter={openTaxonomyFilterFromDetail} /></TaxonomyErrorBoundary>{renderDetailOverlay()}</div>;
+    if (page === 'taxonomy') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><TaxonomyErrorBoundary theme={theme} onBack={()=>setPage('menu')} resetKey={`${theme}-${animalsWithStatus?.length || 0}-${taxonomyInitialAnimal?.id || ''}`}><TaxonomyExplorer theme={theme} animals={animalsWithStatus} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={taxonomyInitialAnimal} onBack={()=>setPage('menu')} onOpenAnimal={selectAnimal} onOpenTaxonomyFilter={openTaxonomyFilterFromDetail} /></TaxonomyErrorBoundary>{renderDetailOverlay()}</div>;
     if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} onStartInitialOnboarding={startInitialOnboardingFromSettings} onStartOperationalTutorial={startOperationalTutorialFromSettings} theme={theme} onThemeChange={setTheme} />;
     if (page === 'abilities') return <AbilitiesPage theme={theme} onBack={()=>setPage('menu')} onOpenAbility={openGridWithCategory} tutorialActive={activeSectionGuide==='abilities'} onTutorialAbilityOpen={()=>setActiveSectionGuide(null)} />;
     return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><Grid theme={theme} animals={animalsWithStatus} onSelect={selectAnimal} statusMap={statusMap} visitedCountries={visitedCountries} onHome={()=>openPage('menu')} onOpenRegions={()=>openPage('regions')} preset={gridPreset} onBackToOrigin={gridReturnTarget ? returnFromFilteredGrid : null} tutorialActive={tutorialStep==='grid-open'} tutorialStep={tutorialStep} tutorialAnimalId={tutorialAnimalId} onTutorialAnimalSelect={handleTutorialAnimalSelect} />{renderDetailOverlay()}</div>;
