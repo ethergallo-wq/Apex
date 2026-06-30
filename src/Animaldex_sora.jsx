@@ -1481,6 +1481,169 @@ const FRIEND_REACTIONS = [
   { key:'gem', emoji:'💎', label:'Rarissimo' },
 ];
 
+function getSupabaseRestConfig() {
+  const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || '';
+  const anonKey = process.env.REACT_APP_SUPABASE_ANON_KEY || '';
+  return { supabaseUrl, anonKey, ready:!!(supabaseUrl && anonKey && typeof fetch !== 'undefined') };
+}
+
+function createSocialActionError(message, code, meta = {}) {
+  const err = new Error(message);
+  err.code = code;
+  err.socialDebug = { ref:getSupabaseProjectRef(), ...meta };
+  return err;
+}
+
+async function parseRestJsonResponse(response, label = 'rest') {
+  const bodyText = await response.text();
+  if (!response.ok) {
+    let hint = bodyText.slice(0, 120);
+    try {
+      const parsed = JSON.parse(bodyText);
+      hint = parsed?.message || parsed?.hint || parsed?.code || hint;
+    } catch {}
+    throw createSocialActionError('Operazione social non riuscita.', 'SOCIAL_REST_HTTP', {
+      step:`${label}-http`,
+      status:response.status,
+      hint,
+    });
+  }
+  if (!bodyText) return null;
+  try { return JSON.parse(bodyText); } catch {
+    throw createSocialActionError('Risposta social non leggibile.', 'SOCIAL_REST_PARSE', { step:`${label}-parse` });
+  }
+}
+
+async function restSelectRows(table, queryParams = {}, accessToken = '', ms = 6000, label = table) {
+  const { supabaseUrl, anonKey, ready } = getSupabaseRestConfig();
+  if (!ready) return null;
+  const token = await getSupabaseAccessToken(6000, accessToken);
+  if (!token) return null;
+  const endpoint = new URL(`/rest/v1/${table}`, supabaseUrl);
+  Object.entries(queryParams).forEach(([key, value]) => endpoint.searchParams.set(key, value));
+  const response = await runTimedFetch(endpoint.toString(), {
+    headers:{ apikey:anonKey, Authorization:`Bearer ${token}`, Accept:'application/json' },
+  }, ms, `rest ${label}`);
+  if (!response) return null;
+  try {
+    return await parseRestJsonResponse(response, label);
+  } catch (err) {
+    console.warn(`[Apex] REST ${label}:`, err);
+    return null;
+  }
+}
+
+async function restMutateRows(table, method, queryParams = {}, body = null, accessToken = '', ms = 6500, label = table) {
+  const { supabaseUrl, anonKey, ready } = getSupabaseRestConfig();
+  if (!ready) throw createSocialActionError('Configurazione Supabase non disponibile.', 'SOCIAL_CONFIG_MISSING', { step:`${label}-config` });
+  const token = await getSupabaseAccessToken(6000, accessToken);
+  if (!token) throw createSocialActionError('Sessione non pronta. Esci e rientra, poi riprova.', 'NO_AUTH_SESSION', { step:`${label}-session` });
+  const endpoint = new URL(`/rest/v1/${table}`, supabaseUrl);
+  Object.entries(queryParams).forEach(([key, value]) => endpoint.searchParams.set(key, value));
+  const headers = {
+    apikey:anonKey,
+    Authorization:`Bearer ${token}`,
+    Accept:'application/json',
+    Prefer:'return=representation',
+  };
+  if (body != null) headers['Content-Type'] = 'application/json';
+  const response = await runTimedFetch(endpoint.toString(), {
+    method,
+    headers,
+    body:body != null ? JSON.stringify(body) : undefined,
+  }, ms, `rest ${method} ${label}`);
+  if (!response) throw createSocialActionError('Operazione social in timeout. Riprova tra poco.', 'SOCIAL_TIMEOUT', { step:`${label}-timeout` });
+  const parsed = await parseRestJsonResponse(response, label);
+  if (Array.isArray(parsed)) return parsed[0] || null;
+  return parsed;
+}
+
+async function fetchFriendshipsViaRest(userId, accessToken = '', ms = 6000) {
+  if (!userId) return null;
+  return restSelectRows('friendships', {
+    select:'*',
+    or:`(requester_id.eq.${userId},addressee_id.eq.${userId})`,
+    order:'updated_at.desc',
+  }, accessToken, ms, 'friendships');
+}
+
+async function fetchSocialNotificationsViaRest(userId, accessToken = '', ms = 6000) {
+  if (!userId) return null;
+  return restSelectRows('social_notifications', {
+    select:'*',
+    user_id:`eq.${userId}`,
+    order:'created_at.desc',
+    limit:'40',
+  }, accessToken, ms, 'social_notifications');
+}
+
+async function fetchUserProfilesViaRest(userIds = [], accessToken = '', ms = 6000) {
+  const ids = Array.from(new Set((userIds || []).filter(Boolean)));
+  if (!ids.length) return [];
+  const rows = await restSelectRows('user_profiles', {
+    select:'user_id,username,nickname,avatar_url,featured_badge_id,profile_background_image',
+    user_id:`in.(${ids.join(',')})`,
+  }, accessToken, ms, 'user_profiles');
+  return rows || [];
+}
+
+async function insertFriendshipViaRest(userId, friendId, accessToken = '') {
+  try {
+    return await restMutateRows('friendships', 'POST', {}, {
+      requester_id:userId,
+      addressee_id:friendId,
+      status:'pending',
+    }, accessToken, 6500, 'friendships-insert');
+  } catch (err) {
+    const hint = String(err?.socialDebug?.hint || err?.message || '');
+    if (/23505|duplicate|unique/i.test(hint)) return { duplicate:true };
+    throw err;
+  }
+}
+
+async function updateFriendshipViaRest(friendshipId, payload, accessToken = '') {
+  return restMutateRows('friendships', 'PATCH', { id:`eq.${friendshipId}` }, payload, accessToken, 6500, 'friendships-update');
+}
+
+async function deleteFriendshipViaRest(friendshipId, accessToken = '') {
+  await restMutateRows('friendships', 'DELETE', { id:`eq.${friendshipId}` }, null, accessToken, 6500, 'friendships-delete');
+  return true;
+}
+
+async function insertSocialNotificationViaRest(payload, accessToken = '') {
+  try {
+    await restMutateRows('social_notifications', 'POST', {}, payload, accessToken, 5000, 'social_notifications-insert');
+    return true;
+  } catch (err) {
+    console.warn('[Apex] Notifica social non inviata:', err);
+    return false;
+  }
+}
+
+async function markSocialNotificationsReadViaRest(userId, accessToken = '', filterType = '') {
+  if (!userId) return false;
+  const now = new Date().toISOString();
+  const queryParams = { user_id:`eq.${userId}`, read_at:'is.null' };
+  if (filterType) queryParams.notification_type = `eq.${filterType}`;
+  try {
+    await restMutateRows('social_notifications', 'PATCH', queryParams, { read_at:now }, accessToken, 5000, 'social_notifications-read');
+    return true;
+  } catch (err) {
+    console.warn('[Apex] Lettura notifiche non riuscita:', err);
+    return false;
+  }
+}
+
+function countPendingFriendRequests(notifications = [], requestsIn = []) {
+  const unreadFriendRequests = (notifications || []).filter(n => n.notification_type === 'friend_request' && !n.read_at).length;
+  return Math.max((requestsIn || []).length, unreadFriendRequests);
+}
+
+function SocialCountBadge({ count = 0, style = {} }) {
+  if (!count) return null;
+  return <span style={{ minWidth:22, height:22, padding:'0 6px', borderRadius:999, background:'#B84D3A', color:'white', fontSize:11, fontWeight:1000, display:'inline-flex', alignItems:'center', justifyContent:'center', boxShadow:'0 4px 12px rgba(184,77,58,.34)', ...style }}>{count > 99 ? '99+' : count}</span>;
+}
+
 function buildSocialFallback(user, profile, progress = {}) {
   return {
     friends: [],
@@ -1490,6 +1653,7 @@ function buildSocialFallback(user, profile, progress = {}) {
     events: [],
     notifications: [],
     unreadCount:0,
+    pendingFriendRequestCount:0,
     socialReady:false,
   };
 }
@@ -1531,41 +1695,66 @@ function decorateFriendStats(profile, animalRows = [], badgeRows = []) {
   };
 }
 
-async function fetchSocialSnapshot(userId, currentProfile, progress) {
+async function fetchSocialSnapshot(userId, currentProfile, progress, accessToken = '') {
   if (!userId) return buildSocialFallback(null, currentProfile, progress);
   try {
-    const { data: friendships, error } = await supabase
-      .from('friendships')
-      .select('*')
-      .or(`requester_id.eq.${userId},addressee_id.eq.${userId}`)
-      .order('updated_at', { ascending:false });
-    if (error) throw error;
+    let rows = await fetchFriendshipsViaRest(userId, accessToken, 6500);
+    if (!rows) {
+      const { data: friendships, error } = await runTimedSupabaseRequest(
+        supabase.from('friendships').select('*').or(`requester_id.eq.${userId},addressee_id.eq.${userId}`).order('updated_at', { ascending:false }),
+        6500,
+        { data:[], error:null },
+        'friendships sdk'
+      );
+      if (error) throw error;
+      rows = friendships || [];
+    }
 
-    const rows = friendships || [];
-    const otherIds = Array.from(new Set(rows.map(r => r.requester_id === userId ? r.addressee_id : r.requester_id).filter(Boolean)));
-    const { data: profiles, error: profileError } = otherIds.length
-      ? await supabase.from('user_profiles').select('*').in('user_id', otherIds)
-      : { data:[], error:null };
-    if (profileError) throw profileError;
+    const otherIds = Array.from(new Set((rows || []).map(r => r.requester_id === userId ? r.addressee_id : r.requester_id).filter(Boolean)));
+    let profiles = otherIds.length ? await fetchUserProfilesViaRest(otherIds, accessToken, 6000) : [];
+    if (otherIds.length && !profiles?.length) {
+      const { data: profileRows, error: profileError } = await runTimedSupabaseRequest(
+        supabase.from('user_profiles').select('*').in('user_id', otherIds),
+        6000,
+        { data:[], error:null },
+        'user_profiles sdk'
+      );
+      if (profileError) throw profileError;
+      profiles = profileRows || [];
+    }
     const byId = Object.fromEntries((profiles || []).map(p => [p.user_id, normalizeSocialProfile(p)]));
     const decorate = (row) => {
       const otherId = row.requester_id === userId ? row.addressee_id : row.requester_id;
       return { ...row, profile:byId[otherId] || normalizeSocialProfile({ user_id:otherId, username:'Esploratore' }) };
     };
-    const accepted = rows.filter(r => r.status === 'accepted').map(decorate);
-    const incoming = rows.filter(r => r.status === 'pending' && r.addressee_id === userId).map(decorate);
-    const outgoing = rows.filter(r => r.status === 'pending' && r.requester_id === userId).map(decorate);
+    const accepted = (rows || []).filter(r => r.status === 'accepted').map(decorate);
+    const incoming = (rows || []).filter(r => r.status === 'pending' && r.addressee_id === userId).map(decorate);
+    const outgoing = (rows || []).filter(r => r.status === 'pending' && r.requester_id === userId).map(decorate);
     const friendIds = accepted.map(r => r.profile.user_id).filter(Boolean);
     const socialIds = Array.from(new Set([userId, ...friendIds]));
-    const [{ data: animalRows }, { data: badgeRows }, { data: events }, { data: notifications }] = await Promise.all([
-      socialIds.length ? supabase.from('user_animals').select('user_id, unlock_status').in('user_id', socialIds) : { data:[] },
-      socialIds.length ? supabase.from('user_badges').select('user_id, badge_id').in('user_id', socialIds) : { data:[] },
-      socialIds.length ? supabase.from('social_events').select('*').in('user_id', socialIds).order('created_at', { ascending:false }).limit(30) : { data:[] },
-      supabase.from('social_notifications').select('*').eq('user_id', userId).order('created_at', { ascending:false }).limit(40),
+    let notifications = await fetchSocialNotificationsViaRest(userId, accessToken, 6000);
+    const [{ data: animalRows }, { data: badgeRows }, { data: events }] = await Promise.all([
+      socialIds.length ? runTimedSupabaseRequest(supabase.from('user_animals').select('user_id, unlock_status').in('user_id', socialIds), 6000, { data:[] }, 'user_animals social') : { data:[] },
+      socialIds.length ? runTimedSupabaseRequest(supabase.from('user_badges').select('user_id, badge_id').in('user_id', socialIds), 6000, { data:[] }, 'user_badges social') : { data:[] },
+      socialIds.length ? runTimedSupabaseRequest(supabase.from('social_events').select('*').in('user_id', socialIds).order('created_at', { ascending:false }).limit(30), 6000, { data:[] }, 'social_events') : { data:[] },
     ]);
+    if (!notifications) {
+      const { data: notificationRows } = await runTimedSupabaseRequest(
+        supabase.from('social_notifications').select('*').eq('user_id', userId).order('created_at', { ascending:false }).limit(40),
+        6000,
+        { data:[] },
+        'social_notifications sdk'
+      );
+      notifications = notificationRows || [];
+    }
     const eventIds = (events || []).map(e => e.id).filter(Boolean);
     const { data: reactions } = eventIds.length
-      ? await supabase.from('social_event_reactions').select('event_id, user_id, reaction_key, created_at').in('event_id', eventIds).order('created_at', { ascending:false }).limit(160)
+      ? await runTimedSupabaseRequest(
+        supabase.from('social_event_reactions').select('event_id, user_id, reaction_key, created_at').in('event_id', eventIds).order('created_at', { ascending:false }).limit(160),
+        6000,
+        { data:[] },
+        'social_event_reactions'
+      )
       : { data:[] };
     const animalsByUser = (animalRows || []).reduce((acc, row) => { (acc[row.user_id] ||= []).push(row); return acc; }, {});
     const badgesByUser = (badgeRows || []).reduce((acc, row) => { (acc[row.user_id] ||= []).push(row); return acc; }, {});
@@ -1584,6 +1773,7 @@ async function fetchSocialSnapshot(userId, currentProfile, progress) {
         reactions:reactionByEvent[e.id] || [],
       }));
     const unreadCount = (notifications || []).filter(n => !n.read_at).length;
+    const pendingFriendRequestCount = countPendingFriendRequests(notifications, incoming);
     return {
       friends,
       requestsIn: incoming,
@@ -1592,6 +1782,7 @@ async function fetchSocialSnapshot(userId, currentProfile, progress) {
       events:visibleEvents,
       notifications:notifications || [],
       unreadCount,
+      pendingFriendRequestCount,
       socialReady:true,
     };
   } catch (err) {
@@ -1747,45 +1938,85 @@ async function searchSocialProfiles(userId, query, options = {}) {
   return [];
 }
 
-async function requestFriendship(userId, friendId) {
+async function requestFriendship(userId, friendId, accessToken = '') {
   if (!userId || !friendId || userId === friendId) return false;
-  const { data, error } = await supabase.from('friendships').insert({
-    requester_id:userId,
-    addressee_id:friendId,
-    status:'pending',
-  }).select('id').maybeSingle();
-  if (error && error.code !== '23505') throw error;
-  if (data?.id) {
-    await supabase.from('social_notifications').insert({
+  let friendshipRow = null;
+  try {
+    friendshipRow = await insertFriendshipViaRest(userId, friendId, accessToken);
+  } catch (err) {
+    if (err?.code === 'NO_AUTH_SESSION') throw err;
+    console.warn('[Apex] REST invio richiesta amicizia:', err);
+  }
+  if (friendshipRow?.duplicate) return true;
+  if (!friendshipRow?.id) {
+    const { data, error } = await runTimedSupabaseRequest(
+      supabase.from('friendships').insert({ requester_id:userId, addressee_id:friendId, status:'pending' }).select('id').maybeSingle(),
+      6500,
+      { data:null, error:{ message:'timeout', code:'TIMEOUT' } },
+      'friendships insert sdk'
+    );
+    if (error && error.code !== '23505' && error.code !== 'TIMEOUT') throw error;
+    friendshipRow = data || friendshipRow;
+  }
+  if (friendshipRow?.id) {
+    await insertSocialNotificationViaRest({
       user_id:friendId,
       actor_id:userId,
       notification_type:'friend_request',
-      friendship_id:data.id,
-    }).catch(() => {});
+      friendship_id:friendshipRow.id,
+    }, accessToken);
   }
   return true;
 }
 
-async function updateFriendshipStatus(friendshipId, status, userId) {
+async function updateFriendshipStatus(friendshipId, status, userId, accessToken = '') {
   const payload = { status, updated_at:new Date().toISOString() };
   if (status === 'accepted') payload.accepted_at = new Date().toISOString();
-  const { data, error } = await supabase.from('friendships').update(payload).eq('id', friendshipId).select('*').maybeSingle();
-  if (error) throw error;
+  let data = null;
+  try {
+    data = await updateFriendshipViaRest(friendshipId, payload, accessToken);
+  } catch (err) {
+    if (err?.code === 'NO_AUTH_SESSION') throw err;
+    console.warn('[Apex] REST accettazione amicizia:', err);
+  }
+  if (!data?.id) {
+    const sdkResult = await runTimedSupabaseRequest(
+      supabase.from('friendships').update(payload).eq('id', friendshipId).select('*').maybeSingle(),
+      6500,
+      { data:null, error:{ message:'timeout', code:'TIMEOUT' } },
+      'friendships update sdk'
+    );
+    if (sdkResult.error && sdkResult.error.code !== 'TIMEOUT') throw sdkResult.error;
+    data = sdkResult.data;
+  }
   const otherId = data?.requester_id === userId ? data?.addressee_id : data?.requester_id;
   if (status === 'accepted' && otherId) {
-    await supabase.from('social_notifications').insert({
+    await insertSocialNotificationViaRest({
       user_id:otherId,
       actor_id:userId,
       notification_type:'friend_accepted',
       friendship_id:friendshipId,
-    }).catch(() => {});
+    }, accessToken);
+    await markSocialNotificationsReadViaRest(userId, accessToken, 'friend_request');
   }
   return true;
 }
 
-async function deleteFriendship(friendshipId) {
-  const { error } = await supabase.from('friendships').delete().eq('id', friendshipId);
-  if (error) throw error;
+async function deleteFriendship(friendshipId, accessToken = '') {
+  try {
+    await deleteFriendshipViaRest(friendshipId, accessToken);
+    return true;
+  } catch (err) {
+    if (err?.code === 'NO_AUTH_SESSION') throw err;
+    console.warn('[Apex] REST rimozione amicizia:', err);
+  }
+  const { error } = await runTimedSupabaseRequest(
+    supabase.from('friendships').delete().eq('id', friendshipId),
+    6500,
+    { error:{ message:'timeout', code:'TIMEOUT' } },
+    'friendships delete sdk'
+  );
+  if (error && error.code !== 'TIMEOUT') throw error;
   return true;
 }
 
@@ -1878,14 +2109,14 @@ async function reactToSocialEvent(userId, event, reactionKey) {
   return true;
 }
 
-async function markSocialNotificationsRead(userId) {
+async function markSocialNotificationsRead(userId, accessToken = '', filterType = '') {
   if (!userId) return false;
-  const { error } = await supabase
-    .from('social_notifications')
-    .update({ read_at:new Date().toISOString() })
-    .eq('user_id', userId)
-    .is('read_at', null);
-  if (error) throw error;
+  const ok = await markSocialNotificationsReadViaRest(userId, accessToken, filterType);
+  if (ok) return true;
+  let query = supabase.from('social_notifications').update({ read_at:new Date().toISOString() }).eq('user_id', userId).is('read_at', null);
+  if (filterType) query = query.eq('notification_type', filterType);
+  const { error } = await runTimedSupabaseRequest(query, 5000, { error:{ message:'timeout', code:'TIMEOUT' } }, 'social_notifications read sdk');
+  if (error && error.code !== 'TIMEOUT') throw error;
   return true;
 }
 
@@ -7785,9 +8016,10 @@ function AuthScreen({ onAuthReady }) {
 
 const TRIP_TAGS = ['city','nature','coast','diving','snorkeling','boat','desert','mountain'];
 
-function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], userProfile, user, onOpenGridStatus, onOpenRegions, onQuickSeen, onOpenPhoto, onOpenBadge, theme='dark', menuProgress=null }) {
+function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], userProfile, user, socialSnapshot = null, onOpenFriends, onOpenGridStatus, onOpenRegions, onQuickSeen, onOpenPhoto, onOpenBadge, theme='dark', menuProgress=null }) {
   const progress = menuProgress || buildSimpleProgressState({ animals:ANIMALS, statusMap, visitedCountries, earnedBadgeIds });
-  const [socialPreview, setSocialPreview] = useState(() => buildSocialFallback(user, userProfile, progress));
+  const social = socialSnapshot || buildSocialFallback(user, userProfile, progress);
+  const pendingFriendRequests = social.pendingFriendRequestCount || social.requestsIn?.length || 0;
   const [navOpen, setNavOpen] = useState(false);
   const [quickActionsOpen, setQuickActionsOpen] = useState(false);
   const [homeLaunch, setHomeLaunch] = useState(null);
@@ -7804,14 +8036,10 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
   const [profileBgPickerOpen, setProfileBgPickerOpen] = useState(false);
   const [badgePickerOpen, setBadgePickerOpen] = useState(false);
   const [profileBgImage, setProfileBgImage] = useState(() => getProfileBackgroundImage(userIdKey));
-  useEffect(() => {
-    let alive = true;
-    if (!user?.id) return;
-    fetchSocialSnapshot(user.id, userProfile, progress).then(next => {
-      if (alive) setSocialPreview(next);
-    }).catch(() => {});
-    return () => { alive = false; };
-  }, [user?.id, userProfile?.user_id, progress.seenCount, progress.capturedCount, earnedBadgeIds?.length]);
+  const openFriendsFromHome = (tab = 'feed') => {
+    if (typeof onOpenFriends === 'function') onOpenFriends(tab, 'menu');
+    else onOpen('friends');
+  };
   const isLightTheme = theme === 'light';
   const pageText = isLightTheme ? '#171717' : 'white';
   const mutedText = isLightTheme ? 'rgba(0,0,0,.58)' : 'rgba(255,255,255,.62)';
@@ -7969,6 +8197,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
 
       <div style={{ flex:1, overflowY:'auto', padding:'16px 16px 30px' }}>
         <div role="button" tabIndex={0} onClick={(e)=>beginHomeLaunch(e, { label:'Profilo', title:displayName, subtitle:`Liv. ${progress.level} · ${progress.xp} XP`, color:featuredBadgeColor, background:isLightTheme?`linear-gradient(90deg, rgba(251,247,239,.82), rgba(251,247,239,.42)), url("${profileBgImage}")`:`linear-gradient(90deg, rgba(12,14,18,.72), rgba(17,19,23,.28)), url("${profileBgImage}")`, screen:'profile' }, ()=>onOpen('profile'))} onKeyDown={(e)=>{ if (e.key === 'Enter' || e.key === ' ') onOpen('profile'); }} style={{ ...boxBase, position:'relative', height:homeBoxHeight, padding:16, background:isLightTheme?`linear-gradient(90deg, rgba(251,247,239,.84), rgba(251,247,239,.50) 56%, rgba(251,247,239,.20)), url("${profileBgImage}")`:`linear-gradient(90deg, rgba(12,14,18,.76), rgba(17,19,23,.48) 56%, rgba(17,19,23,.18)), url("${profileBgImage}")`, backgroundSize:'cover', backgroundPosition:'center', marginBottom:14, overflow:'hidden' }}>
+          {!!pendingFriendRequests && <div style={{ position:'absolute', top:12, right:12, zIndex:3 }}><SocialCountBadge count={pendingFriendRequests} /></div>}
           <div style={{ position:'absolute', inset:0, pointerEvents:'none', background:'radial-gradient(circle at 80% 16%, rgba(216,210,196,.16), transparent 36%)' }} />
           <div style={{ position:'relative', zIndex:1, display:'flex', alignItems:'center', gap:14, height:'100%' }}>
             <div style={{ flex:1, minWidth:0 }}>
@@ -8029,7 +8258,8 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           </div>
         </div>}
 
-        <button onClick={(e)=>beginHomeLaunch(e, { label:'Social', title:'Allenatori', subtitle:'Feed, richieste e leaderboard amici', color:'#F0A840', background:'linear-gradient(90deg, rgba(12,10,9,.50), rgba(25,16,10,.24) 58%, rgba(12,10,9,.50)), url("/backgrounds/background_amici.png")', screen:'friends' }, ()=>onOpen('friends'))} style={{ width:'100%', border:'1px solid rgba(240,168,64,.30)', borderRadius:22, background:'linear-gradient(90deg, rgba(12,10,9,.62), rgba(25,16,10,.38) 58%, rgba(12,10,9,.60)), url("/backgrounds/background_amici.png")', backgroundSize:'cover', backgroundPosition:'center', color:'white', textAlign:'left', padding:16, fontFamily:'inherit', cursor:'pointer', boxShadow:'0 14px 34px rgba(0,0,0,.20)', marginBottom:14 }}>
+        <button onClick={(e)=>beginHomeLaunch(e, { label:'Social', title:'Allenatori', subtitle:'Feed, richieste e leaderboard amici', color:'#F0A840', background:'linear-gradient(90deg, rgba(12,10,9,.50), rgba(25,16,10,.24) 58%, rgba(12,10,9,.50)), url("/backgrounds/background_amici.png")', screen:'friends' }, ()=>openFriendsFromHome('feed'))} style={{ width:'100%', border:'1px solid rgba(240,168,64,.30)', borderRadius:22, background:'linear-gradient(90deg, rgba(12,10,9,.62), rgba(25,16,10,.38) 58%, rgba(12,10,9,.60)), url("/backgrounds/background_amici.png")', backgroundSize:'cover', backgroundPosition:'center', color:'white', textAlign:'left', padding:16, fontFamily:'inherit', cursor:'pointer', boxShadow:'0 14px 34px rgba(0,0,0,.20)', marginBottom:14, position:'relative' }}>
+          {!!pendingFriendRequests && <div style={{ position:'absolute', top:12, right:12 }}><SocialCountBadge count={pendingFriendRequests} /></div>}
           <div style={{ color:'#F0A840', fontSize:10.5, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Social</div>
           <div style={{ fontSize:22, fontWeight:1000, marginTop:5 }}>Allenatori</div>
           <div style={{ color:'rgba(255,255,255,.68)', fontSize:12.5, lineHeight:1.4, marginTop:6 }}>Scopri i progressi dei tuoi amici</div>
@@ -8147,7 +8377,8 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           <div style={{ display:'grid', gap:9 }}>
             {drawerItems.map(item => <button key={item.id} onClick={()=>{ setNavOpen(false); onOpen(item.id); }} style={{ minHeight:58, border:`1px solid ${lightPanelBorder}`, borderRadius:17, background:lightPanel, color:pageText, cursor:'pointer', padding:'0 13px', display:'flex', alignItems:'center', gap:11, textAlign:'left', fontFamily:'inherit' }}>
               <span style={{ width:38, height:38, borderRadius:14, background:isLightTheme?'rgba(0,0,0,.06)':'rgba(255,255,255,.10)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:20 }}>{item.icon}</span>
-              <span style={{ fontSize:14, fontWeight:950 }}>{item.label}</span>
+              <span style={{ fontSize:14, fontWeight:950, flex:1 }}>{item.label}</span>
+              {item.id === 'profile' && <SocialCountBadge count={pendingFriendRequests} />}
             </button>)}
           </div>
           <button onClick={()=>{ setNavOpen(false); onLogout?.(); }} style={{ width:'100%', height:50, marginTop:18, borderRadius:17, border:'1px solid rgba(184,77,58,.35)', background:'rgba(184,77,58,.10)', color:'#D06A45', fontWeight:1000, fontFamily:'inherit' }}>Esci</button>
@@ -9121,7 +9352,7 @@ function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCount
   );
 }
 
-function FriendsPage({ onBack, user, userProfile, accessToken = '', statusMap = {}, visitedCountries = [], earnedBadgeIds = [], theme='dark' }) {
+function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab = 'feed', onSocialChange, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], theme='dark' }) {
   const isLightTheme = theme === 'light';
   const progress = buildSimpleProgressState({ animals:ANIMALS, statusMap, visitedCountries, earnedBadgeIds });
   const [snapshot, setSnapshot] = useState(() => buildSocialFallback(user, userProfile, progress));
@@ -9132,16 +9363,21 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', statusMap = 
   const [searchError, setSearchError] = useState('');
   const [searchDebug, setSearchDebug] = useState('');
   const [message, setMessage] = useState('');
-  const [tab, setTab] = useState('feed');
+  const [tab, setTab] = useState(initialTab || 'feed');
   const [selectedFriend, setSelectedFriend] = useState(null);
+  const [requestingUserId, setRequestingUserId] = useState('');
+  const [actionUserId, setActionUserId] = useState('');
   const searchAbortRef = useRef(null);
+
+  useEffect(() => { setTab(initialTab || 'feed'); }, [initialTab]);
 
   const load = async () => {
     const fallback = buildSocialFallback(user, userProfile, progress);
     setLoading(true);
     try {
-      const next = await withTimeout(fetchSocialSnapshot(user?.id, userProfile, progress), 9000, fallback, 'fetchSocialSnapshot');
+      const next = await withTimeout(fetchSocialSnapshot(user?.id, userProfile, progress, accessToken), 9000, fallback, 'fetchSocialSnapshot');
       setSnapshot(next || fallback);
+      onSocialChange?.(next || fallback);
     } catch (err) {
       console.warn('[Apex] Caricamento amici non riuscito:', err);
       setSnapshot(fallback);
@@ -9149,11 +9385,12 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', statusMap = 
       setLoading(false);
     }
   };
-  useEffect(() => { load(); }, [user?.id, progress.seenCount, progress.capturedCount, earnedBadgeIds?.length]);
+  useEffect(() => { load(); }, [user?.id, progress.seenCount, progress.capturedCount, earnedBadgeIds?.length, accessToken]);
 
   const friendIdSet = useMemo(() => new Set((snapshot.friends || []).map(f => f.user_id).filter(Boolean)), [snapshot.friends]);
   const pendingInIdSet = useMemo(() => new Set((snapshot.requestsIn || []).map(r => r.profile?.user_id).filter(Boolean)), [snapshot.requestsIn]);
   const pendingOutIdSet = useMemo(() => new Set((snapshot.requestsOut || []).map(r => r.profile?.user_id).filter(Boolean)), [snapshot.requestsOut]);
+  const incomingByUserId = useMemo(() => Object.fromEntries((snapshot.requestsIn || []).map(r => [r.profile?.user_id, r]).filter(([id]) => id)), [snapshot.requestsIn]);
 
   const getSearchRelationLabel = (profileId) => {
     if (friendIdSet.has(profileId)) return 'Amico';
@@ -9209,24 +9446,49 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', statusMap = 
   }, [query, user?.id, accessToken]);
 
   const sendRequest = async (profile) => {
+    if (!profile?.user_id || requestingUserId) return;
     setMessage('');
+    setRequestingUserId(profile.user_id);
     try {
-      await requestFriendship(user.id, profile.user_id);
-      setMessage(`Richiesta inviata a ${profile.nickname}.`);
+      await requestFriendship(user.id, profile.user_id, accessToken);
+      setMessage(`Richiesta inviata a ${profile.nickname || profile.username}.`);
       setQuery('');
       setResults([]);
-      load();
+      await load();
     } catch (err) {
-      setMessage('Non riesco ancora a inviare: applica lo script Supabase amicizie.');
+      setMessage(err?.code === 'NO_AUTH_SESSION' ? err.message : 'Non riesco a inviare la richiesta. Riprova tra poco.');
+    } finally {
+      setRequestingUserId('');
     }
   };
   const accept = async (row) => {
-    await updateFriendshipStatus(row.id, 'accepted', user?.id).catch(()=>setMessage('Accettazione non riuscita: controlla Supabase.'));
-    load();
+    if (!row?.id || actionUserId) return;
+    setActionUserId(row.profile?.user_id || row.id);
+    setMessage('');
+    try {
+      await updateFriendshipStatus(row.id, 'accepted', user?.id, accessToken);
+      setMessage(`${row.profile?.nickname || 'Amico'} aggiunto.`);
+      await load();
+    } catch {
+      setMessage('Accettazione non riuscita. Riprova tra poco.');
+    } finally {
+      setActionUserId('');
+    }
   };
   const decline = async (row) => {
-    await deleteFriendship(row.id).catch(()=>setMessage('Operazione non riuscita: controlla Supabase.'));
-    load();
+    if (!row?.id || actionUserId) return;
+    setActionUserId(row.profile?.user_id || row.id);
+    setMessage('');
+    try {
+      await deleteFriendship(row.id, accessToken);
+      await markSocialNotificationsRead(user?.id, accessToken, 'friend_request');
+      setMessage('Richiesta rifiutata.');
+      await load();
+    } catch {
+      setMessage('Operazione non riuscita. Riprova tra poco.');
+    } finally {
+      setActionUserId('');
+    }
   };
   const react = async (event, reaction) => {
     setMessage('');
@@ -9236,7 +9498,7 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', statusMap = 
     }).catch(() => setMessage('Reazione non riuscita: controlla Supabase.'));
   };
   const removeFriend = async (friend) => {
-    await deleteFriendship(friend.friendship_id).then(() => {
+    await deleteFriendship(friend.friendship_id, accessToken).then(() => {
       setSelectedFriend(null);
       setMessage(`${friend.nickname} rimosso dagli amici.`);
       load();
@@ -9255,7 +9517,7 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', statusMap = 
     }).catch(() => setMessage('Segnalazione non riuscita.'));
   };
   const markRead = async () => {
-    await markSocialNotificationsRead(user?.id).catch(() => {});
+    await markSocialNotificationsRead(user?.id, accessToken, 'friend_request').catch(() => {});
     load();
   };
   const FriendAvatar = ({ p }) => {
@@ -9286,7 +9548,8 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', statusMap = 
               <div style={{ color:'#FFD4A3', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Compagni di esplorazione</div>
               <div style={{ fontSize:26, fontWeight:1000, marginTop:5 }}>Catture, badge e reazioni</div>
             </div>
-            {!!snapshot.unreadCount && <button onClick={markRead} style={{ minWidth:36, height:36, borderRadius:14, border:'1px solid rgba(255,255,255,.18)', background:'#B84D3A', color:'white', fontWeight:1000 }}>{snapshot.unreadCount}</button>}
+            {!!snapshot.pendingFriendRequestCount && <button onClick={()=>{ setTab('feed'); markRead(); }} title="Richieste amicizia" style={{ minWidth:36, height:36, borderRadius:14, border:'1px solid rgba(255,255,255,.18)', background:'#B84D3A', color:'white', fontWeight:1000, cursor:'pointer' }}>{snapshot.pendingFriendRequestCount}</button>}
+            {!snapshot.pendingFriendRequestCount && !!snapshot.unreadCount && <button onClick={markRead} title="Notifiche social" style={{ minWidth:36, height:36, borderRadius:14, border:'1px solid rgba(255,255,255,.18)', background:'rgba(255,255,255,.12)', color:'white', fontWeight:1000, cursor:'pointer' }}>{snapshot.unreadCount}</button>}
           </div>
           <div style={{ color:'rgba(255,255,255,.72)', fontSize:12.5, lineHeight:1.5, marginTop:8 }}>Aggiungi amici per username, confronta i progressi e reagisci alle catture rare.</div>
         </div>
@@ -9315,11 +9578,20 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', statusMap = 
             {results.map(p => {
               const relation = getSearchRelationLabel(p.user_id);
               const canAdd = relation === 'Aggiungi';
-              return <button key={p.user_id} disabled={!canAdd} onClick={()=>canAdd && sendRequest(p)} style={{ display:'flex', alignItems:'center', gap:10, minHeight:64, borderRadius:16, border:`1px solid ${panelBorder}`, background:isLightTheme?'rgba(255,255,255,.72)':'rgba(255,255,255,.055)', color:mainText, padding:10, textAlign:'left', fontFamily:'inherit', opacity:canAdd ? 1 : .72 }}>
+              const isPendingOut = relation === 'In attesa';
+              const incoming = incomingByUserId[p.user_id] || null;
+              const isBusy = requestingUserId === p.user_id || actionUserId === p.user_id;
+              return <div key={p.user_id} style={{ display:'flex', alignItems:'center', gap:10, minHeight:64, borderRadius:16, border:`1px solid ${panelBorder}`, background:isLightTheme?'rgba(255,255,255,.72)':'rgba(255,255,255,.055)', color:mainText, padding:10 }}>
                 <FriendAvatar p={p} />
                 <div style={{ flex:1, minWidth:0 }}><div style={{ fontSize:14, fontWeight:1000 }}>{p.nickname}</div><div style={{ color:subText, fontSize:11 }}>{p.username}</div></div>
-                <span style={{ color:canAdd ? '#F0A840' : subText, fontSize:12, fontWeight:1000 }}>{relation}</span>
-              </button>;
+                {canAdd && <button type="button" disabled={!!requestingUserId} onClick={()=>sendRequest(p)} style={{ minHeight:38, borderRadius:13, border:'none', background:requestingUserId === p.user_id ? 'rgba(240,168,64,.35)' : '#F0A840', color:'#17100A', padding:'0 14px', fontWeight:1000, fontFamily:'inherit', cursor:requestingUserId ? 'wait' : 'pointer', opacity:requestingUserId && requestingUserId !== p.user_id ? .55 : 1 }}>{requestingUserId === p.user_id ? 'Invio...' : 'Aggiungi'}</button>}
+                {isPendingOut && <span style={{ color:subText, fontSize:12, fontWeight:1000 }}>In attesa</span>}
+                {relation === 'Amico' && <span style={{ color:'#90D84A', fontSize:12, fontWeight:1000 }}>Amico</span>}
+                {incoming && <div style={{ display:'flex', gap:6 }}>
+                  <button type="button" disabled={!!actionUserId} onClick={()=>decline(incoming)} style={{ width:38, height:38, borderRadius:13, border:`1px solid ${panelBorder}`, background:'rgba(255,255,255,.05)', color:mainText, fontWeight:1000, cursor:'pointer' }}>×</button>
+                  <button type="button" disabled={!!actionUserId} onClick={()=>accept(incoming)} style={{ height:38, borderRadius:13, border:'none', background:isBusy ? 'rgba(240,168,64,.35)' : '#F0A840', color:'#17100A', padding:'0 12px', fontWeight:1000, cursor:'pointer' }}>{actionUserId === p.user_id ? '...' : 'Accetta'}</button>
+                </div>}
+              </div>;
             })}
           </div>}
           {!results.length && query.trim().length >= 3 && !searching && !searchError && <div style={{ color:subText, textAlign:'center', padding:16, fontSize:12 }}>Nessun profilo trovato.</div>}
@@ -9429,7 +9701,7 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', statusMap = 
   );
 }
 
-function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], animalsWithStatus: animalsWithStatusProp = null, onOpenGridStatus, onOpenBadges, onOpenRegions, onOpenGallery, onOpenFriends, userProfile, user, onLogout, theme='dark' }) {
+function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], animalsWithStatus: animalsWithStatusProp = null, pendingFriendRequestCount = 0, onOpenGridStatus, onOpenBadges, onOpenRegions, onOpenGallery, onOpenFriends, userProfile, user, onLogout, theme='dark' }) {
   const fileInputRef = useRef(null);
   const userIdKey = user?.id || 'local';
   const isLightTheme = theme === 'light';
@@ -9558,7 +9830,8 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
         <button onClick={onOpenBadges} style={{ marginTop:16, width:'100%', minHeight:112, borderRadius:18, border:`1px solid ${hexToRgba(featuredBadgeColor,.42)}`, background:`linear-gradient(90deg,${hexToRgba(featuredBadgeColor,.16)},rgba(10,10,12,.38) 56%,rgba(10,10,12,.58)), url("/backgrounds/background_badges.png")`, backgroundSize:'cover', backgroundPosition:'center', color:mainText, padding:16, textAlign:'left', fontFamily:'inherit', display:'flex', alignItems:'center', gap:14, boxShadow:'inset 0 0 34px rgba(0,0,0,.18)' }}>
           <span><span style={{ display:'block', color:featuredBadgeColor, fontSize:11, fontWeight:1000, textTransform:'uppercase' }}>{earnedAwards.length} badge ottenuti</span><span style={{ display:'block', color:mainText, fontSize:21, fontWeight:1000, marginTop:4 }}>Bacheca badge</span></span>
         </button>
-        <button onClick={onOpenFriends} style={{ marginTop:16, width:'100%', border:'1px solid rgba(240,168,64,.30)', borderRadius:22, background:'linear-gradient(90deg, rgba(12,10,9,.62), rgba(25,16,10,.38) 58%, rgba(12,10,9,.60)), url("/backgrounds/background_amici.png")', backgroundSize:'cover', backgroundPosition:'center', color:'white', textAlign:'left', padding:16, fontFamily:'inherit', cursor:'pointer', boxShadow:'0 14px 34px rgba(0,0,0,.20)', marginBottom:14 }}>
+        <button onClick={()=>onOpenFriends?.('feed')} style={{ marginTop:16, width:'100%', border:'1px solid rgba(240,168,64,.30)', borderRadius:22, background:'linear-gradient(90deg, rgba(12,10,9,.62), rgba(25,16,10,.38) 58%, rgba(12,10,9,.60)), url("/backgrounds/background_amici.png")', backgroundSize:'cover', backgroundPosition:'center', color:'white', textAlign:'left', padding:16, fontFamily:'inherit', cursor:'pointer', boxShadow:'0 14px 34px rgba(0,0,0,.20)', marginBottom:14, position:'relative' }}>
+          {!!pendingFriendRequestCount && <div style={{ position:'absolute', top:12, right:12 }}><SocialCountBadge count={pendingFriendRequestCount} /></div>}
           <div style={{ color:'#F0A840', fontSize:10.5, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Social</div>
           <div style={{ fontSize:22, fontWeight:1000, marginTop:5 }}>Allenatori</div>
           <div style={{ color:'rgba(255,255,255,.68)', fontSize:12.5, lineHeight:1.4, marginTop:6 }}>Scopri i progressi dei tuoi amici</div>
@@ -12256,6 +12529,8 @@ export default function App() {
   const [taxonomyInitialAnimal,setTaxonomyInitialAnimal]=useState(null);
   const [featureReturnAnimal,setFeatureReturnAnimal]=useState(null);
   const [sectionReturnPage,setSectionReturnPage]=useState('menu');
+  const [friendsInitialTab,setFriendsInitialTab]=useState('feed');
+  const [socialSnapshot,setSocialSnapshot]=useState(() => buildSocialFallback(null, null, {}));
   const [photoTarget,setPhotoTarget]=useState(null);
   const [sectionIntro,setSectionIntro]=useState(null);
   const [activeSectionGuide,setActiveSectionGuide]=useState(null);
@@ -12278,6 +12553,15 @@ export default function App() {
     () => buildSimpleProgressState({ animalsWithStatus, visitedCountries, earnedBadgeIds, statusMap }),
     [animalsWithStatus, visitedCountries, earnedBadgeIds, statusMap]
   );
+  const refreshSocialSnapshot = useCallback(async () => {
+    if (!user?.id) return;
+    const next = await fetchSocialSnapshot(user.id, userProfile, menuProgress, session?.access_token || '');
+    setSocialSnapshot(next || buildSocialFallback(user, userProfile, menuProgress));
+  }, [user?.id, userProfile, menuProgress, session?.access_token]);
+  useEffect(() => {
+    refreshSocialSnapshot();
+  }, [refreshSocialSnapshot]);
+  const pendingFriendRequestCount = socialSnapshot?.pendingFriendRequestCount || socialSnapshot?.requestsIn?.length || 0;
   const awardsHydratedRef = useRef(false);
   const awardInteractionRef = useRef(false);
   const unlockedAwards = useMemo(() => computeUnlockedAwards(statusMap, visitedCountries), [statusMap, visitedCountries]);
@@ -12929,6 +13213,10 @@ const openPage = (nextPage, returnPage = 'menu') => {
   if (nextPage === 'menu' || nextPage === 'compare' || nextPage === 'regions' || nextPage === 'taxonomy' || nextPage === 'profile') startNavTransition(apply);
   else apply();
 	};
+const openFriends = (tab = 'feed', returnPage = 'menu') => {
+  setFriendsInitialTab(tab || 'feed');
+  openPage('friends', returnPage);
+};
 	const openComparator = (animal=null) => {
 	  const enrichedAnimal = animal ? getEnrichedAnimal({ ...animal, status: getResolvedAnimalStatus(animal, statusMap, visitedCountries) }) : null;
 	  startNavTransition(() => {
@@ -13109,15 +13397,15 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   }
 
   const renderPage = () => {
-	    if (page === 'menu') return <MainMenu theme={theme} menuProgress={menuProgress} onOpen={openPage} onBack={()=>setPage('grid')} onLogout={handleLogout} tutorialFocus={tutorialStep==='home'?'grid':null} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onOpenGridStatus={openGridWithStatus} onOpenRegions={()=>openPage('regions', 'menu')} onQuickSeen={()=>{ setPage('quickSeen'); maybeShowSectionIntro('quickSeen'); }} onOpenPhoto={openPhotoRecognition} onOpenBadge={(badgeId)=>{setToastOpenBadgeId(normalizeBadgeId(badgeId)); setSectionReturnPage('menu'); setPage('badges'); maybeShowSectionIntro('badges');}} />;
+	    if (page === 'menu') return <MainMenu theme={theme} menuProgress={menuProgress} socialSnapshot={socialSnapshot} onOpenFriends={openFriends} onOpen={openPage} onBack={()=>setPage('grid')} onLogout={handleLogout} tutorialFocus={tutorialStep==='home'?'grid':null} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onOpenGridStatus={openGridWithStatus} onOpenRegions={()=>openPage('regions', 'menu')} onQuickSeen={()=>{ setPage('quickSeen'); maybeShowSectionIntro('quickSeen'); }} onOpenPhoto={openPhotoRecognition} onOpenBadge={(badgeId)=>{setToastOpenBadgeId(normalizeBadgeId(badgeId)); setSectionReturnPage('menu'); setPage('badges'); maybeShowSectionIntro('badges');}} />;
     if (page === 'quickSeen') return <QuickSeenPage theme={theme} onBack={()=>setPage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onStatusChange={handleStatusChange} onSelect={selectAnimal} user={user} userProfile={userProfile} />;
     if (page === 'compare') return (
       <FeaturePageErrorBoundary theme={theme} title="Comparatore" onBack={()=>returnFromFeaturePage('menu')} resetKey={`compare-${theme}-${animalsData?.length || 0}-${comparatorInitialAnimal?.id || ''}`}>
         <ComparatorPage theme={theme} onBack={()=>returnFromFeaturePage('menu')} animals={animalsWithStatus} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={comparatorInitialAnimal} />
       </FeaturePageErrorBoundary>
     );
-    if (page === 'friends') return <FriendsPage theme={theme} accessToken={session?.access_token || ''} onBack={()=>returnFromSection('menu')} user={user} userProfile={userProfile} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
-    if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} animalsWithStatus={animalsWithStatus} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={handleLogout} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges', 'profile')} onOpenRegions={()=>openPage('regions', 'profile')} onOpenGallery={()=>openPage('gallery', 'profile')} onOpenFriends={()=>openPage('friends', 'profile')} />;
+    if (page === 'friends') return <FriendsPage theme={theme} accessToken={session?.access_token || ''} initialTab={friendsInitialTab} onSocialChange={setSocialSnapshot} onBack={()=>returnFromSection('menu')} user={user} userProfile={userProfile} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
+    if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} pendingFriendRequestCount={pendingFriendRequestCount} animalsWithStatus={animalsWithStatus} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={handleLogout} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges', 'profile')} onOpenRegions={()=>openPage('regions', 'profile')} onOpenGallery={()=>openPage('gallery', 'profile')} onOpenFriends={openFriends} />;
 	    if (page === 'badges') return <BadgesPage theme={theme} onBack={()=>returnFromSection('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={activeSectionGuide==='badges'} onTutorialBadgeOpen={()=>setActiveSectionGuide(null)} />;
     if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><FeaturePageErrorBoundary theme={theme} title="Territori" onBack={()=>returnFromSection('menu')} resetKey={`regions-${theme}-${visitedCountries?.length || 0}-${regionsInitialView || 'planet'}`}><RegionsPage theme={theme} animalsWithStatus={animalsWithStatus} onBack={()=>returnFromSection('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={handleVisitedCountriesChange} onRemoveDestination={handleRemoveDestination} initialView={regionsInitialView} onSelect={selectAnimal} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} /></FeaturePageErrorBoundary>{renderDetailOverlay()}</div>;
     if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage theme={theme} onBack={()=>returnFromSection('profile')} statusMap={statusMap} onSelect={selectAnimal} />{renderDetailOverlay()}</div>;
