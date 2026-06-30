@@ -990,24 +990,77 @@ function getSupabaseProjectRef() {
 let cachedSupabaseAccessToken = '';
 let cachedSupabaseAccessTokenExpiresAt = 0;
 
-async function getSupabaseAccessToken(maxWaitMs = 2500) {
+function syncSupabaseAccessTokenCache(session) {
+  const token = session?.access_token || '';
+  if (!token) {
+    cachedSupabaseAccessToken = '';
+    cachedSupabaseAccessTokenExpiresAt = 0;
+    return '';
+  }
+  cachedSupabaseAccessToken = token;
+  cachedSupabaseAccessTokenExpiresAt = session?.expires_at ? session.expires_at * 1000 : Date.now() + 3600000;
+  return token;
+}
+
+function clearSupabaseAccessTokenCache() {
+  cachedSupabaseAccessToken = '';
+  cachedSupabaseAccessTokenExpiresAt = 0;
+}
+
+function readSupabaseAccessTokenFromStorage() {
+  if (typeof window === 'undefined') return '';
+  try {
+    const ref = getSupabaseProjectRef();
+    const keys = [
+      `sb-${ref}-auth-token`,
+      ...Object.keys(window.localStorage || {}).filter(key => key.includes(ref) && key.includes('auth-token')),
+    ];
+    for (const key of keys) {
+      const raw = window.localStorage.getItem(key);
+      if (!raw) continue;
+      const parsed = JSON.parse(raw);
+      const token = parsed?.access_token || parsed?.currentSession?.access_token || '';
+      if (token) return token;
+    }
+  } catch {}
+  return '';
+}
+
+async function getSupabaseAccessToken(maxWaitMs = 6000, preferredToken = '') {
+  const preferred = String(preferredToken || '').trim();
+  if (preferred) return syncSupabaseAccessTokenCache({ access_token:preferred, expires_at:Math.floor(Date.now() / 1000) + 3600 });
+
   const now = Date.now();
   if (cachedSupabaseAccessToken && cachedSupabaseAccessTokenExpiresAt > now + 30000) {
     return cachedSupabaseAccessToken;
   }
+
+  const storedToken = readSupabaseAccessTokenFromStorage();
+  if (storedToken) {
+    cachedSupabaseAccessToken = storedToken;
+    cachedSupabaseAccessTokenExpiresAt = now + 3600000;
+    return storedToken;
+  }
+
   const sessionResult = await withTimeout(
     supabase.auth.getSession(),
     maxWaitMs,
-    null,
+    { data:{ session:null }, error:null },
     'getSession'
   );
-  const session = sessionResult?.data?.session;
-  const token = session?.access_token || '';
-  if (token) {
-    cachedSupabaseAccessToken = token;
-    cachedSupabaseAccessTokenExpiresAt = session?.expires_at ? session.expires_at * 1000 : now + 3600000;
-  }
-  return token;
+  let token = sessionResult?.data?.session?.access_token || '';
+  if (token) return syncSupabaseAccessTokenCache(sessionResult.data.session);
+
+  const refreshResult = await withTimeout(
+    supabase.auth.refreshSession(),
+    Math.max(2500, Math.floor(maxWaitMs * 0.7)),
+    { data:{ session:null }, error:null },
+    'refreshSession'
+  );
+  token = refreshResult?.data?.session?.access_token || '';
+  if (token) return syncSupabaseAccessTokenCache(refreshResult.data.session);
+
+  return readSupabaseAccessTokenFromStorage();
 }
 
 function createSocialSearchError(message, code, meta = {}) {
@@ -1549,14 +1602,14 @@ async function fetchSocialSnapshot(userId, currentProfile, progress) {
 
 const SOCIAL_SEARCH_BUDGET_MS = 14000;
 
-async function fetchSocialProfilesViaRestTable(userId, q, ms = 6000) {
+async function fetchSocialProfilesViaRestTable(userId, q, ms = 6000, accessToken = '') {
   const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || '';
   const anonKey = process.env.REACT_APP_SUPABASE_ANON_KEY || '';
   if (!supabaseUrl || !anonKey || typeof fetch === 'undefined') {
     throw createSocialSearchError('Configurazione Supabase non disponibile per la ricerca.', 'SEARCH_CONFIG_MISSING', { step:'rest-table-config' });
   }
-  const accessToken = await getSupabaseAccessToken(2000);
-  if (!accessToken) {
+  const token = await getSupabaseAccessToken(6000, accessToken);
+  if (!token) {
     throw createSocialSearchError('Sessione non pronta. Esci e rientra, poi riprova.', 'NO_AUTH_SESSION', { step:'rest-table-session' });
   }
   const safeTerm = String(q || '').replace(/[*"'\\]/g, '').trim();
@@ -1571,7 +1624,7 @@ async function fetchSocialProfilesViaRestTable(userId, q, ms = 6000) {
     {
       headers:{
         apikey:anonKey,
-        Authorization:`Bearer ${accessToken}`,
+        Authorization:`Bearer ${token}`,
         Accept:'application/json',
       },
     },
@@ -1617,14 +1670,14 @@ function sortSocialSearchProfiles(rows = [], q, userId) {
     .slice(0, 12);
 }
 
-async function fetchSocialProfilesViaRpcRest(q, ms = 5000) {
+async function fetchSocialProfilesViaRpcRest(q, ms = 5000, accessToken = '') {
   const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || '';
   const anonKey = process.env.REACT_APP_SUPABASE_ANON_KEY || '';
   if (!supabaseUrl || !anonKey || typeof fetch === 'undefined') {
     throw createSocialSearchError('Configurazione Supabase non disponibile per la ricerca.', 'SEARCH_CONFIG_MISSING', { step:'rpc-rest-config' });
   }
-  const accessToken = await getSupabaseAccessToken(2000);
-  if (!accessToken) {
+  const token = await getSupabaseAccessToken(6000, accessToken);
+  if (!token) {
     throw createSocialSearchError('Sessione non pronta. Esci e rientra, poi riprova.', 'NO_AUTH_SESSION', { step:'rpc-rest-session' });
   }
   const endpoint = new URL('/rest/v1/rpc/search_social_profiles', supabaseUrl);
@@ -1634,7 +1687,7 @@ async function fetchSocialProfilesViaRpcRest(q, ms = 5000) {
       method:'POST',
       headers:{
         apikey:anonKey,
-        Authorization:`Bearer ${accessToken}`,
+        Authorization:`Bearer ${token}`,
         Accept:'application/json',
         'Content-Type':'application/json',
       },
@@ -1665,11 +1718,12 @@ async function searchSocialProfiles(userId, query, options = {}) {
   const q = sanitizeSocialSearchQuery(query);
   if (!q || q.length < 3) return [];
   const budgetMs = options.timeoutMs || SOCIAL_SEARCH_BUDGET_MS;
+  const accessToken = options.accessToken || '';
   const sortProfiles = (rows = []) => sortSocialSearchProfiles(rows, q, userId);
   const errors = [];
 
   try {
-    const rpcRows = await fetchSocialProfilesViaRpcRest(q, budgetMs);
+    const rpcRows = await fetchSocialProfilesViaRpcRest(q, budgetMs, accessToken);
     const sorted = sortProfiles(rpcRows || []);
     if (sorted.length) return sorted;
   } catch (err) {
@@ -1679,7 +1733,7 @@ async function searchSocialProfiles(userId, query, options = {}) {
   }
 
   try {
-    const tableRows = await fetchSocialProfilesViaRestTable(userId, q, Math.max(5000, Math.floor(budgetMs * 0.65)));
+    const tableRows = await fetchSocialProfilesViaRestTable(userId, q, Math.max(5000, Math.floor(budgetMs * 0.65)), accessToken);
     return sortProfiles(tableRows || []);
   } catch (err) {
     errors.push(err);
@@ -9067,7 +9121,7 @@ function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCount
   );
 }
 
-function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], theme='dark' }) {
+function FriendsPage({ onBack, user, userProfile, accessToken = '', statusMap = {}, visitedCountries = [], earnedBadgeIds = [], theme='dark' }) {
   const isLightTheme = theme === 'light';
   const progress = buildSimpleProgressState({ animals:ANIMALS, statusMap, visitedCountries, earnedBadgeIds });
   const [snapshot, setSnapshot] = useState(() => buildSocialFallback(user, userProfile, progress));
@@ -9128,7 +9182,7 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
       setSearchError('');
       setSearchDebug('');
       try {
-        const rows = await searchSocialProfiles(user?.id, q, { signal:controller?.signal });
+        const rows = await searchSocialProfiles(user?.id, q, { signal:controller?.signal, accessToken });
         if (!alive || controller?.signal?.aborted) return;
         setResults(rows);
       } catch (err) {
@@ -9152,7 +9206,7 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
       }
     }, 320);
     return () => { alive = false; clearTimeout(t); searchAbortRef.current?.abort?.(); };
-  }, [query, user?.id]);
+  }, [query, user?.id, accessToken]);
 
   const sendRequest = async (profile) => {
     setMessage('');
@@ -12316,11 +12370,13 @@ export default function App() {
     let mounted = true;
     supabase.auth.getSession().then(({ data }) => {
       if (!mounted) return;
+      syncSupabaseAccessTokenCache(data.session || null);
       setSession(data.session || null);
       setUser(data.session?.user || null);
       setAuthLoading(false);
     });
     const { data: listener } = supabase.auth.onAuthStateChange(async (_event, nextSession) => {
+      syncSupabaseAccessTokenCache(nextSession || null);
       setSession(nextSession || null);
       setUser(nextSession?.user || null);
       setAuthLoading(false);
@@ -12938,21 +12994,20 @@ const openGridWithGeography = (geoValue, label, returnView='countries') => {
 };
 const handleLogout = async () => {
   setDataError('');
-  setAuthLoading(true);
+  clearSupabaseAccessTokenCache();
+  setSession(null);
+  setUser(null);
+  setUserProfile(null);
+  setSel(null);
+  setPage('grid');
+  setGridPreset(null);
+  setGridReturnTarget(null);
+  setAwardQueue([]);
+  setAuthLoading(false);
   try {
-    await supabase.auth.signOut({ scope:'local' });
+    await withTimeout(supabase.auth.signOut({ scope:'local' }), 4500, null, 'signOut');
   } catch (err) {
     console.warn('[Apex] logout non bloccante:', err);
-  } finally {
-    setSession(null);
-    setUser(null);
-    setUserProfile(null);
-    setSel(null);
-    setPage('grid');
-    setGridPreset(null);
-    setGridReturnTarget(null);
-    setAwardQueue([]);
-    setAuthLoading(false);
   }
 };
 const jumpToClassFromDetail = (cls, animal) => {
@@ -13061,7 +13116,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
         <ComparatorPage theme={theme} onBack={()=>returnFromFeaturePage('menu')} animals={animalsWithStatus} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={comparatorInitialAnimal} />
       </FeaturePageErrorBoundary>
     );
-    if (page === 'friends') return <FriendsPage theme={theme} onBack={()=>returnFromSection('menu')} user={user} userProfile={userProfile} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
+    if (page === 'friends') return <FriendsPage theme={theme} accessToken={session?.access_token || ''} onBack={()=>returnFromSection('menu')} user={user} userProfile={userProfile} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
     if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} animalsWithStatus={animalsWithStatus} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={handleLogout} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges', 'profile')} onOpenRegions={()=>openPage('regions', 'profile')} onOpenGallery={()=>openPage('gallery', 'profile')} onOpenFriends={()=>openPage('friends', 'profile')} />;
 	    if (page === 'badges') return <BadgesPage theme={theme} onBack={()=>returnFromSection('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={activeSectionGuide==='badges'} onTutorialBadgeOpen={()=>setActiveSectionGuide(null)} />;
     if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><FeaturePageErrorBoundary theme={theme} title="Territori" onBack={()=>returnFromSection('menu')} resetKey={`regions-${theme}-${visitedCountries?.length || 0}-${regionsInitialView || 'planet'}`}><RegionsPage theme={theme} animalsWithStatus={animalsWithStatus} onBack={()=>returnFromSection('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={handleVisitedCountriesChange} onRemoveDestination={handleRemoveDestination} initialView={regionsInitialView} onSelect={selectAnimal} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} /></FeaturePageErrorBoundary>{renderDetailOverlay()}</div>;
