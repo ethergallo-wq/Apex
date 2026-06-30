@@ -987,6 +987,29 @@ function getSupabaseProjectRef() {
   }
 }
 
+let cachedSupabaseAccessToken = '';
+let cachedSupabaseAccessTokenExpiresAt = 0;
+
+async function getSupabaseAccessToken(maxWaitMs = 2500) {
+  const now = Date.now();
+  if (cachedSupabaseAccessToken && cachedSupabaseAccessTokenExpiresAt > now + 30000) {
+    return cachedSupabaseAccessToken;
+  }
+  const sessionResult = await withTimeout(
+    supabase.auth.getSession(),
+    maxWaitMs,
+    null,
+    'getSession'
+  );
+  const session = sessionResult?.data?.session;
+  const token = session?.access_token || '';
+  if (token) {
+    cachedSupabaseAccessToken = token;
+    cachedSupabaseAccessTokenExpiresAt = session?.expires_at ? session.expires_at * 1000 : now + 3600000;
+  }
+  return token;
+}
+
 function createSocialSearchError(message, code, meta = {}) {
   const err = new Error(message);
   err.code = code;
@@ -1481,13 +1504,16 @@ async function fetchSocialSnapshot(userId, currentProfile, progress) {
     const outgoing = rows.filter(r => r.status === 'pending' && r.requester_id === userId).map(decorate);
     const friendIds = accepted.map(r => r.profile.user_id).filter(Boolean);
     const socialIds = Array.from(new Set([userId, ...friendIds]));
-    const [{ data: animalRows }, { data: badgeRows }, { data: events }, { data: reactions }, { data: notifications }] = await Promise.all([
+    const [{ data: animalRows }, { data: badgeRows }, { data: events }, { data: notifications }] = await Promise.all([
       socialIds.length ? supabase.from('user_animals').select('user_id, unlock_status').in('user_id', socialIds) : { data:[] },
       socialIds.length ? supabase.from('user_badges').select('user_id, badge_id').in('user_id', socialIds) : { data:[] },
       socialIds.length ? supabase.from('social_events').select('*').in('user_id', socialIds).order('created_at', { ascending:false }).limit(30) : { data:[] },
-      supabase.from('social_event_reactions').select('event_id, user_id, reaction_key, created_at').order('created_at', { ascending:false }).limit(160),
       supabase.from('social_notifications').select('*').eq('user_id', userId).order('created_at', { ascending:false }).limit(40),
     ]);
+    const eventIds = (events || []).map(e => e.id).filter(Boolean);
+    const { data: reactions } = eventIds.length
+      ? await supabase.from('social_event_reactions').select('event_id, user_id, reaction_key, created_at').in('event_id', eventIds).order('created_at', { ascending:false }).limit(160)
+      : { data:[] };
     const animalsByUser = (animalRows || []).reduce((acc, row) => { (acc[row.user_id] ||= []).push(row); return acc; }, {});
     const badgesByUser = (badgeRows || []).reduce((acc, row) => { (acc[row.user_id] ||= []).push(row); return acc; }, {});
     const friends = accepted.map(r => ({
@@ -1521,78 +1547,39 @@ async function fetchSocialSnapshot(userId, currentProfile, progress) {
   }
 }
 
-async function fetchSocialProfilesViaRest(userId, q, selectCols='user_id,username,nickname,avatar_url,featured_badge_id,profile_background_image') {
-  const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || '';
-  const anonKey = process.env.REACT_APP_SUPABASE_ANON_KEY || '';
-  if (!supabaseUrl || !anonKey || typeof fetch === 'undefined') {
-    throw createSocialSearchError('Configurazione Supabase non disponibile per la ricerca.', 'SEARCH_CONFIG_MISSING', { step:'rest-config' });
-  }
-  const sessionResult = await withTimeout(
-    supabase.auth.getSession(),
-    3500,
-    { data:null, error:{ code:'SESSION_TIMEOUT', message:'Session timeout' } },
-    'social search getSession'
-  );
-  const accessToken = sessionResult?.data?.session?.access_token;
-  if (!accessToken) {
-    throw createSocialSearchError('Sessione non pronta. Esci e rientra, poi riprova.', 'NO_AUTH_SESSION', { step:'rest-session' });
-  }
+const SOCIAL_SEARCH_BUDGET_MS = 9000;
 
-  const endpoint = new URL('/rest/v1/user_profiles', supabaseUrl);
-  const safeTerm = String(q || '').replace(/[*"'\\]/g, '').trim();
-  endpoint.searchParams.set('select', selectCols);
-  endpoint.searchParams.set('or', `(username.ilike.*${safeTerm}*,nickname.ilike.*${safeTerm}*)`);
-  endpoint.searchParams.set('order', 'username.asc');
-  endpoint.searchParams.set('limit', '12');
-  if (userId) endpoint.searchParams.set('user_id', `neq.${userId}`);
-
-  const response = await runTimedFetch(
-    endpoint.toString(),
-    {
-      headers:{
-        apikey:anonKey,
-        Authorization:`Bearer ${accessToken}`,
-        Accept:'application/json',
-      },
-    },
-    8000,
-    'rest user_profiles search'
-  );
-  if (!response) {
-    throw createSocialSearchError('La ricerca utenti sta impiegando troppo tempo. Riprova tra poco.', 'SEARCH_TIMEOUT', { step:'rest-timeout' });
-  }
-  const bodyText = await response.text();
-  if (!response.ok) {
-    throw createSocialSearchError('Ricerca amici non riuscita. Controlla lo script Supabase.', 'SEARCH_REST_ERROR', {
-      step:'rest-http',
-      status:response.status,
-      hint:bodyText.slice(0, 90),
-    });
-  }
-  try {
-    return bodyText ? JSON.parse(bodyText) : [];
-  } catch {
-    throw createSocialSearchError('Risposta ricerca non leggibile.', 'SEARCH_REST_PARSE', { step:'rest-parse' });
-  }
+function sortSocialSearchProfiles(rows = [], q, userId) {
+  const normalizedQ = String(q || '').toLowerCase();
+  return rows
+    .map(normalizeSocialProfile)
+    .filter(row => row?.user_id && row.user_id !== userId)
+    .sort((a, b) => {
+      const aUsername = String(a.username || '').toLowerCase();
+      const bUsername = String(b.username || '').toLowerCase();
+      const aNickname = String(a.nickname || '').toLowerCase();
+      const bNickname = String(b.nickname || '').toLowerCase();
+      const aExact = aUsername === normalizedQ || aNickname === normalizedQ;
+      const bExact = bUsername === normalizedQ || bNickname === normalizedQ;
+      if (aExact !== bExact) return aExact ? -1 : 1;
+      const aStarts = aUsername.startsWith(normalizedQ) || aNickname.startsWith(normalizedQ);
+      const bStarts = bUsername.startsWith(normalizedQ) || bNickname.startsWith(normalizedQ);
+      if (aStarts !== bStarts) return aStarts ? -1 : 1;
+      return String(a.username || '').localeCompare(String(b.username || ''), 'it');
+    })
+    .slice(0, 12);
 }
 
-async function fetchSocialProfilesViaRpcRest(q) {
+async function fetchSocialProfilesViaRpcRest(q, ms = 5000) {
   const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || '';
   const anonKey = process.env.REACT_APP_SUPABASE_ANON_KEY || '';
   if (!supabaseUrl || !anonKey || typeof fetch === 'undefined') {
     throw createSocialSearchError('Configurazione Supabase non disponibile per la ricerca.', 'SEARCH_CONFIG_MISSING', { step:'rpc-rest-config' });
   }
-  const sessionResult = await withTimeout(
-    supabase.auth.getSession(),
-    3500,
-    { data:null, error:{ code:'SESSION_TIMEOUT', message:'Session timeout' } },
-    'social rpc getSession'
-  );
-  const accessToken = sessionResult?.data?.session?.access_token;
+  const accessToken = await getSupabaseAccessToken(2000);
   if (!accessToken) {
     throw createSocialSearchError('Sessione non pronta. Esci e rientra, poi riprova.', 'NO_AUTH_SESSION', { step:'rpc-rest-session' });
   }
-
   const endpoint = new URL('/rest/v1/rpc/search_social_profiles', supabaseUrl);
   const response = await runTimedFetch(
     endpoint.toString(),
@@ -1606,7 +1593,7 @@ async function fetchSocialProfilesViaRpcRest(q) {
       },
       body:JSON.stringify({ p_query:q, p_limit:12 }),
     },
-    8000,
+    ms,
     'rest rpc search_social_profiles'
   );
   if (!response) {
@@ -1627,66 +1614,34 @@ async function fetchSocialProfilesViaRpcRest(q) {
   }
 }
 
-async function searchSocialProfiles(userId, query) {
+async function searchSocialProfiles(userId, query, options = {}) {
   const q = sanitizeSocialSearchQuery(query);
   if (!q || q.length < 3) return [];
-  const sortProfiles = (rows = []) => {
-    const normalizedQ = q.toLowerCase();
-    return rows
-      .map(normalizeSocialProfile)
-      .filter(row => row?.user_id && row.user_id !== userId)
-      .sort((a, b) => {
-        const aUsername = String(a.username || '').toLowerCase();
-        const bUsername = String(b.username || '').toLowerCase();
-        const aNickname = String(a.nickname || '').toLowerCase();
-        const bNickname = String(b.nickname || '').toLowerCase();
-        const aExact = aUsername === normalizedQ || aNickname === normalizedQ;
-        const bExact = bUsername === normalizedQ || bNickname === normalizedQ;
-        if (aExact !== bExact) return aExact ? -1 : 1;
-        const aStarts = aUsername.startsWith(normalizedQ) || aNickname.startsWith(normalizedQ);
-        const bStarts = bUsername.startsWith(normalizedQ) || bNickname.startsWith(normalizedQ);
-        if (aStarts !== bStarts) return aStarts ? -1 : 1;
-        return String(a.username || '').localeCompare(String(b.username || ''), 'it');
-      })
-      .slice(0, 12);
-  };
-  const runRpcSearch = async () => {
-    const { data, error } = await runTimedSupabaseRequest(
-      supabase.rpc('search_social_profiles', { p_query:q, p_limit:12 }),
-      9000,
-      { data:null, error:{ message:'search_social_profiles timeout', code:'TIMEOUT' } },
-      'rpc search_social_profiles'
-    );
-    if (error?.code === 'TIMEOUT') {
-      throw createSocialSearchError('La ricerca utenti sta impiegando troppo tempo. Riprova tra poco.', 'SEARCH_TIMEOUT', { step:'rpc-timeout' });
-    }
-    if (error) {
-      throw createSocialSearchError(error.message || 'Ricerca amici non riuscita.', error.code || 'SEARCH_RPC_ERROR', {
-        step:'rpc-error',
-        hint:String(error.details || error.hint || '').slice(0, 90),
-      });
-    }
-    return sortProfiles(data || []);
-  };
-  const runProfileTableSearch = async (selectCols='user_id, username, nickname, avatar_url, featured_badge_id, profile_background_image') => {
+  const signal = options.signal;
+  const deadline = Date.now() + (options.timeoutMs || SOCIAL_SEARCH_BUDGET_MS);
+  const remainingMs = () => Math.max(900, deadline - Date.now());
+  const sortProfiles = (rows = []) => sortSocialSearchProfiles(rows, q, userId);
+
+  const runProfileTableSearch = async (pattern, label = 'user_profiles search') => {
     const make = () => {
       let builder = supabase
         .from('user_profiles')
-        .select(selectCols)
-        .or(`username.ilike.%${q}%,nickname.ilike.%${q}%`)
+        .select('user_id, username, nickname, avatar_url, featured_badge_id, profile_background_image')
+        .or(`username.ilike.${pattern},nickname.ilike.${pattern}`)
         .order('username', { ascending:true })
         .limit(12);
       if (userId) builder = builder.neq('user_id', userId);
+      if (signal && typeof builder.abortSignal === 'function') builder = builder.abortSignal(signal);
       return builder;
     };
     const { data, error } = await runTimedSupabaseRequest(
       make(),
-      12000,
-      { data:null, error:{ message:'user_profiles search timeout', code:'TIMEOUT' } },
-      'user_profiles search'
+      remainingMs(),
+      { data:null, error:{ message:`${label} timeout`, code:'TIMEOUT' } },
+      label
     );
     if (error?.code === 'TIMEOUT') {
-      throw createSocialSearchError('La ricerca utenti sta impiegando troppo tempo. Riprova tra poco.', 'SEARCH_TIMEOUT', { step:'sdk-timeout' });
+      return { timedOut:true, rows:[] };
     }
     if (error) {
       throw createSocialSearchError(error.message || 'Ricerca amici non riuscita.', error.code || 'SEARCH_SDK_ERROR', {
@@ -1694,47 +1649,54 @@ async function searchSocialProfiles(userId, query) {
         hint:String(error.details || error.hint || '').slice(0, 90),
       });
     }
-    return sortProfiles(data || []);
+    return { rows:sortProfiles(data || []) };
   };
-  const runRestFallback = async (selectCols='user_id,username,nickname,avatar_url,featured_badge_id,profile_background_image') => {
-    const rows = await fetchSocialProfilesViaRest(userId, q, selectCols);
-    return sortProfiles(rows || []);
-  };
-  const runRpcRestFallback = async () => {
-    const rows = await fetchSocialProfilesViaRpcRest(q);
-    return sortProfiles(rows || []);
-  };
-  const runTableFallbacks = async () => {
-    try {
-      return await runProfileTableSearch();
-    } catch (err) {
-      const msg = String(err?.message || err?.code || '');
-      if (!/column|schema cache|PGRST|does not exist|Could not find/i.test(msg)) {
-        console.warn('[Apex] SDK ricerca amici fallback REST:', err);
-        return await runRestFallback();
-      }
-      try {
-        return await runProfileTableSearch('user_id, username, nickname');
-      } catch (fallbackErr) {
-        console.warn('[Apex] Ricerca amici fallback REST compatibile:', fallbackErr);
-        return runRestFallback('user_id,username,nickname');
-      }
+
+  const runRpcSearch = async () => {
+    let rpcBuilder = supabase.rpc('search_social_profiles', { p_query:q, p_limit:12 });
+    if (signal && typeof rpcBuilder?.abortSignal === 'function') rpcBuilder = rpcBuilder.abortSignal(signal);
+    const { data, error } = await runTimedSupabaseRequest(
+      rpcBuilder,
+      remainingMs(),
+      { data:null, error:{ message:'search_social_profiles timeout', code:'TIMEOUT' } },
+      'rpc search_social_profiles'
+    );
+    if (error?.code === 'TIMEOUT') {
+      return { timedOut:true, rows:[] };
     }
+    if (error) {
+      throw createSocialSearchError(error.message || 'Ricerca amici non riuscita.', error.code || 'SEARCH_RPC_ERROR', {
+        step:'rpc-error',
+        hint:String(error.details || error.hint || '').slice(0, 90),
+      });
+    }
+    return { rows:sortProfiles(data || []) };
   };
-  try {
-    const rpcRows = await runRpcSearch();
-    if (rpcRows.length) return rpcRows;
-    return await runTableFallbacks();
-  } catch (rpcErr) {
-    console.warn('[Apex] RPC ricerca amici fallback REST RPC:', rpcErr);
+
+  const prefix = await runProfileTableSearch(`${q}%`, 'user_profiles prefix search');
+  if (prefix.rows.length) return prefix.rows;
+
+  if (!prefix.timedOut) {
+    const contains = await runProfileTableSearch(`%${q}%`, 'user_profiles contains search');
+    if (contains.rows.length) return contains.rows;
+    if (!contains.timedOut) return [];
+  }
+
+  const rpc = await runRpcSearch();
+  if (rpc.rows.length) return rpc.rows;
+  if (!rpc.timedOut) return [];
+
+  if (remainingMs() > 900) {
     try {
-      const rpcRestRows = await runRpcRestFallback();
-      if (rpcRestRows.length) return rpcRestRows;
-    } catch (rpcRestErr) {
-      console.warn('[Apex] REST RPC ricerca amici fallback tabella:', rpcRestErr);
+      const restRows = await fetchSocialProfilesViaRpcRest(q, remainingMs());
+      return sortProfiles(restRows || []);
+    } catch (restErr) {
+      console.warn('[Apex] REST RPC ricerca amici:', restErr);
+      if (restErr?.code === 'SEARCH_TIMEOUT') throw restErr;
     }
   }
-  return await runTableFallbacks();
+
+  throw createSocialSearchError('La ricerca utenti sta impiegando troppo tempo. Riprova tra poco.', 'SEARCH_TIMEOUT', { step:'search-budget-exhausted' });
 }
 
 async function requestFriendship(userId, friendId) {
@@ -9120,12 +9082,13 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
   const [message, setMessage] = useState('');
   const [tab, setTab] = useState('feed');
   const [selectedFriend, setSelectedFriend] = useState(null);
+  const searchAbortRef = useRef(null);
 
   const load = async () => {
     const fallback = buildSocialFallback(user, userProfile, progress);
     setLoading(true);
     try {
-      const next = await withTimeout(fetchSocialSnapshot(user?.id, userProfile, progress), 6500, fallback, 'fetchSocialSnapshot');
+      const next = await withTimeout(fetchSocialSnapshot(user?.id, userProfile, progress), 9000, fallback, 'fetchSocialSnapshot');
       setSnapshot(next || fallback);
     } catch (err) {
       console.warn('[Apex] Caricamento amici non riuscito:', err);
@@ -9135,57 +9098,62 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
     }
   };
   useEffect(() => { load(); }, [user?.id, progress.seenCount, progress.capturedCount, earnedBadgeIds?.length]);
+
+  const friendIdSet = useMemo(() => new Set((snapshot.friends || []).map(f => f.user_id).filter(Boolean)), [snapshot.friends]);
+  const pendingInIdSet = useMemo(() => new Set((snapshot.requestsIn || []).map(r => r.profile?.user_id).filter(Boolean)), [snapshot.requestsIn]);
+  const pendingOutIdSet = useMemo(() => new Set((snapshot.requestsOut || []).map(r => r.profile?.user_id).filter(Boolean)), [snapshot.requestsOut]);
+
+  const getSearchRelationLabel = (profileId) => {
+    if (friendIdSet.has(profileId)) return 'Amico';
+    if (pendingOutIdSet.has(profileId)) return 'In attesa';
+    if (pendingInIdSet.has(profileId)) return 'Richiesta ricevuta';
+    return 'Aggiungi';
+  };
+
   useEffect(() => {
     let alive = true;
     const t = setTimeout(async () => {
       const q = query.trim();
       if (q.length < 3) {
+        searchAbortRef.current?.abort?.();
+        searchAbortRef.current = null;
         setResults([]);
         setSearchError('');
         setSearchDebug('');
         setSearching(false);
         return;
       }
+      searchAbortRef.current?.abort?.();
+      const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+      searchAbortRef.current = controller;
       setSearching(true);
+      setSearchError('');
+      setSearchDebug('');
       try {
-        const rows = await withTimeout(
-          searchSocialProfiles(user?.id, q),
-          13000,
-          { __searchTimedOut:true },
-          'searchSocialProfiles'
-        );
-        if (!alive) return;
-        if (rows?.__searchTimedOut) {
-          setResults([]);
-          setSearchError('La ricerca sta impiegando troppo tempo. Riprova tra poco.');
-          setSearchDebug(`ref ${getSupabaseProjectRef()} · browser-timeout · "${q}"`);
-        } else {
-          setSearchError('');
-          setSearchDebug('');
-          setResults(rows);
-        }
+        const rows = await searchSocialProfiles(user?.id, q, { signal:controller?.signal });
+        if (!alive || controller?.signal?.aborted) return;
+        setResults(rows);
       } catch (err) {
-        if (alive) {
-          const debug = err?.searchDebug;
-          setSearchError(
-            err?.code === 'SEARCH_TIMEOUT' || err?.code === 'NO_AUTH_SESSION'
-              ? err.message
-              : 'Ricerca amici non riuscita. Controlla lo script Supabase.'
-          );
-          setSearchDebug(debug ? [
-            `ref ${debug.ref || getSupabaseProjectRef()}`,
-            debug.step,
-            debug.status ? `HTTP ${debug.status}` : '',
-            debug.hint ? String(debug.hint) : '',
-            `"${q}"`,
-          ].filter(Boolean).join(' · ') : `ref ${getSupabaseProjectRef()} · errore sconosciuto · "${q}"`);
-          setResults([]);
-        }
+        if (!alive || controller?.signal?.aborted) return;
+        const debug = err?.searchDebug;
+        setSearchError(
+          err?.code === 'SEARCH_TIMEOUT' || err?.code === 'NO_AUTH_SESSION'
+            ? err.message
+            : 'Ricerca amici non riuscita. Controlla lo script Supabase.'
+        );
+        setSearchDebug(debug ? [
+          `ref ${debug.ref || getSupabaseProjectRef()}`,
+          debug.step,
+          debug.status ? `HTTP ${debug.status}` : '',
+          debug.hint ? String(debug.hint) : '',
+          `"${q}"`,
+        ].filter(Boolean).join(' · ') : `ref ${getSupabaseProjectRef()} · errore sconosciuto · "${q}"`);
+        setResults([]);
       } finally {
-        if (alive) setSearching(false);
+        if (alive && !controller?.signal?.aborted) setSearching(false);
       }
-    }, 260);
-    return () => { alive = false; clearTimeout(t); };
+    }, 320);
+    return () => { alive = false; clearTimeout(t); searchAbortRef.current?.abort?.(); };
   }, [query, user?.id]);
 
   const sendRequest = async (profile) => {
@@ -9258,7 +9226,7 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
   const subText = isLightTheme ? 'rgba(0,0,0,.58)' : 'rgba(255,255,255,.58)';
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 50% -12%, rgba(240,168,64,.18), transparent 42%), linear-gradient(180deg,#111113,#08090B)', overflow:'hidden' }}>
-      <PageHeader title="Amici" onBack={onBack} theme={theme} />
+      <PageHeader title="Allenatori" onBack={onBack} theme={theme} />
       <div style={{ flex:1, overflowY:'auto', padding:16, WebkitOverflowScrolling:'touch' }}>
         <div style={{ borderRadius:28, padding:18, background:'linear-gradient(135deg,rgba(122,51,31,.92),rgba(24,18,15,.96) 68%)', border:'1px solid rgba(240,168,64,.24)', color:'white', boxShadow:'0 18px 44px rgba(0,0,0,.28)', marginBottom:14 }}>
           <div style={{ display:'flex', justifyContent:'space-between', gap:12, alignItems:'flex-start' }}>
@@ -9292,11 +9260,15 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
             {searchDebug && <div style={{ color:subText, marginTop:8, fontSize:10.5, fontWeight:750, wordBreak:'break-word' }}>Debug: {searchDebug}</div>}
           </div>}
           {!!results.length && <div style={{ display:'grid', gap:8, marginTop:10 }}>
-            {results.map(p => <button key={p.user_id} onClick={()=>sendRequest(p)} style={{ display:'flex', alignItems:'center', gap:10, minHeight:64, borderRadius:16, border:`1px solid ${panelBorder}`, background:isLightTheme?'rgba(255,255,255,.72)':'rgba(255,255,255,.055)', color:mainText, padding:10, textAlign:'left', fontFamily:'inherit' }}>
-              <FriendAvatar p={p} />
-              <div style={{ flex:1, minWidth:0 }}><div style={{ fontSize:14, fontWeight:1000 }}>{p.nickname}</div><div style={{ color:subText, fontSize:11 }}>{p.username}</div></div>
-              <span style={{ color:'#F0A840', fontSize:12, fontWeight:1000 }}>Aggiungi</span>
-            </button>)}
+            {results.map(p => {
+              const relation = getSearchRelationLabel(p.user_id);
+              const canAdd = relation === 'Aggiungi';
+              return <button key={p.user_id} disabled={!canAdd} onClick={()=>canAdd && sendRequest(p)} style={{ display:'flex', alignItems:'center', gap:10, minHeight:64, borderRadius:16, border:`1px solid ${panelBorder}`, background:isLightTheme?'rgba(255,255,255,.72)':'rgba(255,255,255,.055)', color:mainText, padding:10, textAlign:'left', fontFamily:'inherit', opacity:canAdd ? 1 : .72 }}>
+                <FriendAvatar p={p} />
+                <div style={{ flex:1, minWidth:0 }}><div style={{ fontSize:14, fontWeight:1000 }}>{p.nickname}</div><div style={{ color:subText, fontSize:11 }}>{p.username}</div></div>
+                <span style={{ color:canAdd ? '#F0A840' : subText, fontSize:12, fontWeight:1000 }}>{relation}</span>
+              </button>;
+            })}
           </div>}
           {!results.length && query.trim().length >= 3 && !searching && !searchError && <div style={{ color:subText, textAlign:'center', padding:16, fontSize:12 }}>Nessun profilo trovato.</div>}
         </div>}
@@ -10587,6 +10559,7 @@ function HabitatCard({ row, onOpen, onOpenGrid }) {
 }
 
 function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedCountriesChange, onRemoveDestination, initialView, onSelect, onOpenCountry, onOpenRegion, onAddDestination, destinationsLoading=false, onOpenHabitatGrid, theme='dark', animalsWithStatus: animalsWithStatusProp = null }) {
+  const isLightTheme = theme === 'light';
   const normalizeInitialView = (v) => {
     if (v && typeof v === 'object') return normalizeInitialView(v.view);
     if (v === 'countries') return 'countries';
@@ -12215,6 +12188,7 @@ export default function App() {
   const [lifeWebInitialAnimal,setLifeWebInitialAnimal]=useState(null);
   const [taxonomyInitialAnimal,setTaxonomyInitialAnimal]=useState(null);
   const [featureReturnAnimal,setFeatureReturnAnimal]=useState(null);
+  const [sectionReturnPage,setSectionReturnPage]=useState('menu');
   const [photoTarget,setPhotoTarget]=useState(null);
   const [sectionIntro,setSectionIntro]=useState(null);
   const [activeSectionGuide,setActiveSectionGuide]=useState(null);
@@ -12751,6 +12725,7 @@ export default function App() {
     if (!award?.badgeId) return;
     setToastOpenBadgeId(normalizeBadgeId(award.badgeId));
     setAwardQueue(prev => prev.slice(1));
+    setSectionReturnPage('menu');
     setPage('badges');
     maybeShowSectionIntro('badges');
   };
@@ -12854,7 +12829,7 @@ export default function App() {
   };
 
 const enriched = sel ? getEnrichedAnimal({ ...sel, status: getResolvedAnimalStatus(sel, statusMap, visitedCountries) }) : null;
-const openPage = (nextPage) => {
+const openPage = (nextPage, returnPage = 'menu') => {
   const apply = () => {
   setSel(null);
   setPhotoTarget(null);
@@ -12864,6 +12839,7 @@ const openPage = (nextPage) => {
   if (nextPage !== 'compare') setComparatorInitialAnimal(null);
   if (nextPage !== 'lifeweb') setLifeWebInitialAnimal(null);
   setFeatureReturnAnimal(null);
+  setSectionReturnPage(returnPage);
   if (nextPage === 'regions') prefetchBioregionGeoJson();
 	  if (nextPage === 'grid') {
 	    if (tutorialStep === 'home') setGridPreset({ id: Date.now(), type:'tutorial', search:'piccione', statuses:['ricercato'], title:'Apex' });
@@ -12988,6 +12964,12 @@ const returnFromFilteredGrid = () => {
   setSel(null); setPage('grid');
 };
 
+const returnFromSection = (fallback = 'menu') => {
+  const target = sectionReturnPage || fallback;
+  setSectionReturnPage('menu');
+  setPage(target);
+};
+
 const returnFromFeaturePage = (fallback='menu') => {
   if (featureReturnAnimal?.id) {
     const fresh = animalsData.find(a => a.id === featureReturnAnimal.id) || featureReturnAnimal;
@@ -13053,18 +13035,18 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   }
 
   const renderPage = () => {
-	    if (page === 'menu') return <MainMenu theme={theme} menuProgress={menuProgress} onOpen={openPage} onBack={()=>setPage('grid')} onLogout={handleLogout} tutorialFocus={tutorialStep==='home'?'grid':null} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onOpenGridStatus={openGridWithStatus} onOpenRegions={()=>openPage('regions')} onQuickSeen={()=>{ setPage('quickSeen'); maybeShowSectionIntro('quickSeen'); }} onOpenPhoto={openPhotoRecognition} onOpenBadge={(badgeId)=>{setToastOpenBadgeId(normalizeBadgeId(badgeId)); setPage('badges'); maybeShowSectionIntro('badges');}} />;
+	    if (page === 'menu') return <MainMenu theme={theme} menuProgress={menuProgress} onOpen={openPage} onBack={()=>setPage('grid')} onLogout={handleLogout} tutorialFocus={tutorialStep==='home'?'grid':null} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onOpenGridStatus={openGridWithStatus} onOpenRegions={()=>openPage('regions', 'menu')} onQuickSeen={()=>{ setPage('quickSeen'); maybeShowSectionIntro('quickSeen'); }} onOpenPhoto={openPhotoRecognition} onOpenBadge={(badgeId)=>{setToastOpenBadgeId(normalizeBadgeId(badgeId)); setSectionReturnPage('menu'); setPage('badges'); maybeShowSectionIntro('badges');}} />;
     if (page === 'quickSeen') return <QuickSeenPage theme={theme} onBack={()=>setPage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onStatusChange={handleStatusChange} onSelect={selectAnimal} user={user} userProfile={userProfile} />;
     if (page === 'compare') return (
       <FeaturePageErrorBoundary theme={theme} title="Comparatore" onBack={()=>returnFromFeaturePage('menu')} resetKey={`compare-${theme}-${animalsData?.length || 0}-${comparatorInitialAnimal?.id || ''}`}>
         <ComparatorPage theme={theme} onBack={()=>returnFromFeaturePage('menu')} animals={animalsWithStatus} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={comparatorInitialAnimal} />
       </FeaturePageErrorBoundary>
     );
-    if (page === 'friends') return <FriendsPage theme={theme} onBack={()=>setPage('menu')} user={user} userProfile={userProfile} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
-    if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={handleLogout} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} onOpenFriends={()=>openPage('friends')} />;
-	    if (page === 'badges') return <BadgesPage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={activeSectionGuide==='badges'} onTutorialBadgeOpen={()=>setActiveSectionGuide(null)} />;
-    if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage theme={theme} animalsWithStatus={animalsWithStatus} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={handleVisitedCountriesChange} onRemoveDestination={handleRemoveDestination} initialView={regionsInitialView} onSelect={selectAnimal} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} />{renderDetailOverlay()}</div>;
-    if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage theme={theme} onBack={()=>setPage('profile')} statusMap={statusMap} onSelect={selectAnimal} />{renderDetailOverlay()}</div>;
+    if (page === 'friends') return <FriendsPage theme={theme} onBack={()=>returnFromSection('menu')} user={user} userProfile={userProfile} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
+    if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={handleLogout} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges', 'profile')} onOpenRegions={()=>openPage('regions', 'profile')} onOpenGallery={()=>openPage('gallery', 'profile')} onOpenFriends={()=>openPage('friends', 'profile')} />;
+	    if (page === 'badges') return <BadgesPage theme={theme} onBack={()=>returnFromSection('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={activeSectionGuide==='badges'} onTutorialBadgeOpen={()=>setActiveSectionGuide(null)} />;
+    if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><FeaturePageErrorBoundary theme={theme} title="Territori" onBack={()=>returnFromSection('menu')} resetKey={`regions-${theme}-${visitedCountries?.length || 0}-${regionsInitialView || 'planet'}`}><RegionsPage theme={theme} animalsWithStatus={animalsWithStatus} onBack={()=>returnFromSection('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={handleVisitedCountriesChange} onRemoveDestination={handleRemoveDestination} initialView={regionsInitialView} onSelect={selectAnimal} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} /></FeaturePageErrorBoundary>{renderDetailOverlay()}</div>;
+    if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage theme={theme} onBack={()=>returnFromSection('profile')} statusMap={statusMap} onSelect={selectAnimal} />{renderDetailOverlay()}</div>;
     if (page === 'lifeweb') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><StandaloneLifeWebPage theme={theme} statusMap={statusMap} visitedCountries={visitedCountries} onBack={()=>returnFromFeaturePage('grid')} animals={animalsData} initialAnimal={lifeWebInitialAnimal} onOpenAnimal={selectAnimal} />{renderDetailOverlay()}</div>;
     if (page === 'taxonomy') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><TaxonomyErrorBoundary theme={theme} onBack={()=>setPage('menu')} resetKey={`${theme}-${animalsWithStatus?.length || 0}-${taxonomyInitialAnimal?.id || ''}`}><TaxonomyExplorer theme={theme} animals={animalsWithStatus} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={taxonomyInitialAnimal} onBack={()=>setPage('menu')} onOpenAnimal={selectAnimal} onOpenTaxonomyFilter={openTaxonomyFilterFromDetail} /></TaxonomyErrorBoundary>{renderDetailOverlay()}</div>;
     if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} onStartInitialOnboarding={startInitialOnboardingFromSettings} onStartOperationalTutorial={startOperationalTutorialFromSettings} theme={theme} onThemeChange={setTheme} />;

@@ -160,56 +160,44 @@ as $search_impl$
   with clean as (
     select lower(left(regexp_replace(regexp_replace(trim(coalesce(p_query, '')), '^@+', ''), '[%,()]', '', 'g'), 40)) as q
   ),
-  searchable as (
+  matched as (
     select
-      au.id as user_id,
-      coalesce(
-        nullif(trim(up.username), ''),
-        nullif(trim(au.raw_user_meta_data->>'username'), ''),
-        nullif(trim(au.raw_user_meta_data->>'preferred_username'), ''),
-        nullif(regexp_replace(lower(split_part(coalesce(au.email, ''), '@', 1)), '[^a-z0-9._-]', '', 'g'), ''),
-        'explorer_' || left(au.id::text, 8)
-      ) as username,
-      coalesce(
-        nullif(trim(up.nickname), ''),
-        nullif(trim(up.username), ''),
-        nullif(trim(au.raw_user_meta_data->>'nickname'), ''),
-        nullif(trim(au.raw_user_meta_data->>'name'), ''),
-        nullif(trim(au.raw_user_meta_data->>'full_name'), ''),
-        nullif(regexp_replace(split_part(coalesce(au.email, ''), '@', 1), '[^a-zA-Z0-9._ -]', '', 'g'), ''),
-        'Explorer ' || left(au.id::text, 4)
-      ) as nickname,
-      up.avatar_url,
-      up.featured_badge_id,
-      up.profile_background_image
-    from auth.users au
-    left join public.user_profiles up on up.user_id = au.id
+      p.user_id,
+      nullif(trim(p.username), '') as username,
+      nullif(trim(p.nickname), '') as nickname,
+      p.avatar_url,
+      p.featured_badge_id,
+      p.profile_background_image
+    from public.user_profiles p
+    cross join clean
+    where clean.q <> ''
+      and length(clean.q) >= 3
+      and ((select auth.uid()) is null or p.user_id <> (select auth.uid()))
+      and (
+        lower(coalesce(p.username, '')) like clean.q || '%'
+        or lower(coalesce(p.nickname, '')) like clean.q || '%'
+        or lower(coalesce(p.username, '')) like '%' || clean.q || '%'
+        or lower(coalesce(p.nickname, '')) like '%' || clean.q || '%'
+      )
+      and not exists (
+        select 1 from public.user_blocks b
+        where (b.blocker_id = (select auth.uid()) and b.blocked_id = p.user_id)
+           or (b.blocked_id = (select auth.uid()) and b.blocker_id = p.user_id)
+      )
   )
   select
-    s.user_id,
-    s.username,
-    s.nickname,
-    s.avatar_url,
-    s.featured_badge_id,
-    s.profile_background_image
-  from searchable s
+    m.user_id,
+    m.username,
+    m.nickname,
+    m.avatar_url,
+    m.featured_badge_id,
+    m.profile_background_image
+  from matched m
   cross join clean
-  where clean.q <> ''
-    and length(clean.q) >= 3
-    and ((select auth.uid()) is null or s.user_id <> (select auth.uid()))
-    and (
-      lower(coalesce(s.username, '')) like '%' || clean.q || '%'
-      or lower(coalesce(s.nickname, '')) like '%' || clean.q || '%'
-    )
-    and not exists (
-      select 1 from public.user_blocks b
-      where (b.blocker_id = (select auth.uid()) and b.blocked_id = s.user_id)
-         or (b.blocked_id = (select auth.uid()) and b.blocker_id = s.user_id)
-    )
   order by
-    case when lower(coalesce(s.username, '')) = clean.q or lower(coalesce(s.nickname, '')) = clean.q then 0 else 1 end,
-    case when lower(coalesce(s.username, '')) like clean.q || '%' or lower(coalesce(s.nickname, '')) like clean.q || '%' then 0 else 1 end,
-    lower(coalesce(s.username, s.nickname, ''))
+    case when lower(coalesce(m.username, '')) = clean.q or lower(coalesce(m.nickname, '')) = clean.q then 0 else 1 end,
+    case when lower(coalesce(m.username, '')) like clean.q || '%' or lower(coalesce(m.nickname, '')) like clean.q || '%' then 0 else 1 end,
+    lower(coalesce(m.username, m.nickname, ''))
   limit greatest(1, least(coalesce(p_limit, 12), 25));
 $search_impl$;
 
