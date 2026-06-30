@@ -1332,7 +1332,7 @@ async function fetchUserBadgeIds(userId) {
 }
 
 async function persistEarnedBadges(userId, badgeIds = []) {
-  const cleanIds = Array.from(new Set((badgeIds || []).map(normalizeBadgeId).filter(Boolean)));
+  const cleanIds = filterPersistableBadgeIds(badgeIds);
   if (!userId || !cleanIds.length) return [];
 
   const { data: existingRows, error: existingError } = await supabase
@@ -1547,7 +1547,54 @@ async function fetchSocialSnapshot(userId, currentProfile, progress) {
   }
 }
 
-const SOCIAL_SEARCH_BUDGET_MS = 9000;
+const SOCIAL_SEARCH_BUDGET_MS = 14000;
+
+async function fetchSocialProfilesViaRestTable(userId, q, ms = 6000) {
+  const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || '';
+  const anonKey = process.env.REACT_APP_SUPABASE_ANON_KEY || '';
+  if (!supabaseUrl || !anonKey || typeof fetch === 'undefined') {
+    throw createSocialSearchError('Configurazione Supabase non disponibile per la ricerca.', 'SEARCH_CONFIG_MISSING', { step:'rest-table-config' });
+  }
+  const accessToken = await getSupabaseAccessToken(2000);
+  if (!accessToken) {
+    throw createSocialSearchError('Sessione non pronta. Esci e rientra, poi riprova.', 'NO_AUTH_SESSION', { step:'rest-table-session' });
+  }
+  const safeTerm = String(q || '').replace(/[*"'\\]/g, '').trim();
+  const endpoint = new URL('/rest/v1/user_profiles', supabaseUrl);
+  endpoint.searchParams.set('select', 'user_id,username,nickname,avatar_url,featured_badge_id,profile_background_image');
+  endpoint.searchParams.set('or', `(username.ilike.*${safeTerm}*,nickname.ilike.*${safeTerm}*)`);
+  endpoint.searchParams.set('order', 'username.asc');
+  endpoint.searchParams.set('limit', '12');
+  if (userId) endpoint.searchParams.set('user_id', `neq.${userId}`);
+  const response = await runTimedFetch(
+    endpoint.toString(),
+    {
+      headers:{
+        apikey:anonKey,
+        Authorization:`Bearer ${accessToken}`,
+        Accept:'application/json',
+      },
+    },
+    ms,
+    'rest user_profiles search'
+  );
+  if (!response) {
+    throw createSocialSearchError('La ricerca utenti sta impiegando troppo tempo. Riprova tra poco.', 'SEARCH_TIMEOUT', { step:'rest-table-timeout' });
+  }
+  const bodyText = await response.text();
+  if (!response.ok) {
+    throw createSocialSearchError('Ricerca amici non riuscita. Controlla lo script Supabase.', 'SEARCH_REST_ERROR', {
+      step:'rest-table-http',
+      status:response.status,
+      hint:bodyText.slice(0, 90),
+    });
+  }
+  try {
+    return bodyText ? JSON.parse(bodyText) : [];
+  } catch {
+    throw createSocialSearchError('Risposta ricerca non leggibile.', 'SEARCH_REST_PARSE', { step:'rest-table-parse' });
+  }
+}
 
 function sortSocialSearchProfiles(rows = [], q, userId) {
   const normalizedQ = String(q || '').toLowerCase();
@@ -1617,86 +1664,33 @@ async function fetchSocialProfilesViaRpcRest(q, ms = 5000) {
 async function searchSocialProfiles(userId, query, options = {}) {
   const q = sanitizeSocialSearchQuery(query);
   if (!q || q.length < 3) return [];
-  const signal = options.signal;
-  const deadline = Date.now() + (options.timeoutMs || SOCIAL_SEARCH_BUDGET_MS);
-  const remainingMs = () => Math.max(900, deadline - Date.now());
+  const budgetMs = options.timeoutMs || SOCIAL_SEARCH_BUDGET_MS;
   const sortProfiles = (rows = []) => sortSocialSearchProfiles(rows, q, userId);
+  const errors = [];
 
-  const runProfileTableSearch = async (pattern, label = 'user_profiles search') => {
-    const make = () => {
-      let builder = supabase
-        .from('user_profiles')
-        .select('user_id, username, nickname, avatar_url, featured_badge_id, profile_background_image')
-        .or(`username.ilike.${pattern},nickname.ilike.${pattern}`)
-        .order('username', { ascending:true })
-        .limit(12);
-      if (userId) builder = builder.neq('user_id', userId);
-      if (signal && typeof builder.abortSignal === 'function') builder = builder.abortSignal(signal);
-      return builder;
-    };
-    const { data, error } = await runTimedSupabaseRequest(
-      make(),
-      remainingMs(),
-      { data:null, error:{ message:`${label} timeout`, code:'TIMEOUT' } },
-      label
-    );
-    if (error?.code === 'TIMEOUT') {
-      return { timedOut:true, rows:[] };
-    }
-    if (error) {
-      throw createSocialSearchError(error.message || 'Ricerca amici non riuscita.', error.code || 'SEARCH_SDK_ERROR', {
-        step:'sdk-error',
-        hint:String(error.details || error.hint || '').slice(0, 90),
-      });
-    }
-    return { rows:sortProfiles(data || []) };
-  };
-
-  const runRpcSearch = async () => {
-    let rpcBuilder = supabase.rpc('search_social_profiles', { p_query:q, p_limit:12 });
-    if (signal && typeof rpcBuilder?.abortSignal === 'function') rpcBuilder = rpcBuilder.abortSignal(signal);
-    const { data, error } = await runTimedSupabaseRequest(
-      rpcBuilder,
-      remainingMs(),
-      { data:null, error:{ message:'search_social_profiles timeout', code:'TIMEOUT' } },
-      'rpc search_social_profiles'
-    );
-    if (error?.code === 'TIMEOUT') {
-      return { timedOut:true, rows:[] };
-    }
-    if (error) {
-      throw createSocialSearchError(error.message || 'Ricerca amici non riuscita.', error.code || 'SEARCH_RPC_ERROR', {
-        step:'rpc-error',
-        hint:String(error.details || error.hint || '').slice(0, 90),
-      });
-    }
-    return { rows:sortProfiles(data || []) };
-  };
-
-  const prefix = await runProfileTableSearch(`${q}%`, 'user_profiles prefix search');
-  if (prefix.rows.length) return prefix.rows;
-
-  if (!prefix.timedOut) {
-    const contains = await runProfileTableSearch(`%${q}%`, 'user_profiles contains search');
-    if (contains.rows.length) return contains.rows;
-    if (!contains.timedOut) return [];
+  try {
+    const rpcRows = await fetchSocialProfilesViaRpcRest(q, budgetMs);
+    const sorted = sortProfiles(rpcRows || []);
+    if (sorted.length) return sorted;
+  } catch (err) {
+    errors.push(err);
+    console.warn('[Apex] REST RPC ricerca amici:', err);
+    if (err?.code === 'NO_AUTH_SESSION') throw err;
   }
 
-  const rpc = await runRpcSearch();
-  if (rpc.rows.length) return rpc.rows;
-  if (!rpc.timedOut) return [];
-
-  if (remainingMs() > 900) {
-    try {
-      const restRows = await fetchSocialProfilesViaRpcRest(q, remainingMs());
-      return sortProfiles(restRows || []);
-    } catch (restErr) {
-      console.warn('[Apex] REST RPC ricerca amici:', restErr);
-      if (restErr?.code === 'SEARCH_TIMEOUT') throw restErr;
-    }
+  try {
+    const tableRows = await fetchSocialProfilesViaRestTable(userId, q, Math.max(5000, Math.floor(budgetMs * 0.65)));
+    return sortProfiles(tableRows || []);
+  } catch (err) {
+    errors.push(err);
+    console.warn('[Apex] REST tabella ricerca amici:', err);
+    if (err?.code === 'NO_AUTH_SESSION') throw err;
   }
 
-  throw createSocialSearchError('La ricerca utenti sta impiegando troppo tempo. Riprova tra poco.', 'SEARCH_TIMEOUT', { step:'search-budget-exhausted' });
+  const last = errors[errors.length - 1];
+  if (last?.code === 'SEARCH_TIMEOUT') throw last;
+  if (last) throw last;
+  return [];
 }
 
 async function requestFriendship(userId, friendId) {
@@ -2862,6 +2856,10 @@ const AWARD_RULES = [
   {badgeId:'TAX-03-L3', macroId:'TAX', macro:'Tassonomia', subId:'TAX-03', sub:'Numero Generi diversi', level:3, name:'Maestro della Sistematica', goal:'500 generi', metric:'genera_count', threshold:500},
   {badgeId:'TAX-03-L4', macroId:'TAX', macro:'Tassonomia', subId:'TAX-03', sub:'Numero Generi diversi', level:4, name:'Enciclopedia dei Generi', goal:'800 generi', metric:'genera_count', threshold:800},
 ];
+const PERSISTABLE_BADGE_ID_SET = new Set(AWARD_RULES.map(rule => normalizeBadgeId(rule.badgeId)));
+function filterPersistableBadgeIds(badgeIds = []) {
+  return Array.from(new Set((badgeIds || []).map(normalizeBadgeId).filter(id => PERSISTABLE_BADGE_ID_SET.has(id))));
+}
 const AWARD_MACROS = Array.from(new Set(AWARD_RULES.map(r => r.macro)));
 function buildAwardImagePath(badgeId) {
   return `/awards/${String(badgeId || '').toLowerCase()}.png`;
@@ -9377,7 +9375,7 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
   );
 }
 
-function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], onOpenGridStatus, onOpenBadges, onOpenRegions, onOpenGallery, onOpenFriends, userProfile, user, onLogout, theme='dark' }) {
+function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], animalsWithStatus: animalsWithStatusProp = null, onOpenGridStatus, onOpenBadges, onOpenRegions, onOpenGallery, onOpenFriends, userProfile, user, onLogout, theme='dark' }) {
   const fileInputRef = useRef(null);
   const userIdKey = user?.id || 'local';
   const isLightTheme = theme === 'light';
@@ -9385,12 +9383,24 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
   const subText = isLightTheme ? 'rgba(0,0,0,.58)' : 'rgba(255,255,255,.58)';
   const panelBg = isLightTheme ? '#F6F4EF' : '#222226';
   const panelBorder = isLightTheme ? 'rgba(0,0,0,.10)' : 'rgba(255,255,255,.08)';
-  const animalsWithStatus = ANIMALS.map(a => ({ ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) }));
-  const unlockedCount = animalsWithStatus.filter(a => !isMysteryStatus(a.status)).length;
-  const seenCount = animalsWithStatus.filter(a => a.status === 'avvistato' || a.status === 'catturato').length;
-  const capturedCount = animalsWithStatus.filter(a => a.status === 'catturato').length;
-  const avatarChoices = animalsWithStatus.filter(a => a.status === 'catturato');
-  const earnedAwards = AWARD_RULES.filter(rule => new Set([...earnedBadgeIds, ...computeUnlockedAwards(statusMap, visitedCountries).map(a => a.badgeId)].map(normalizeBadgeId)).has(normalizeBadgeId(rule.badgeId)));
+  const animalsWithStatus = useMemo(
+    () => animalsWithStatusProp?.length
+      ? animalsWithStatusProp
+      : ANIMALS.map(a => ({ ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) })),
+    [animalsWithStatusProp, statusMap, visitedCountries]
+  );
+  const unlockedAwardIdSet = useMemo(
+    () => new Set([...earnedBadgeIds, ...computeUnlockedAwards(statusMap, visitedCountries).map(a => a.badgeId)].map(normalizeBadgeId)),
+    [earnedBadgeIds, statusMap, visitedCountries]
+  );
+  const unlockedCount = useMemo(() => animalsWithStatus.filter(a => !isMysteryStatus(a.status)).length, [animalsWithStatus]);
+  const seenCount = useMemo(() => animalsWithStatus.filter(a => a.status === 'avvistato' || a.status === 'catturato').length, [animalsWithStatus]);
+  const capturedCount = useMemo(() => animalsWithStatus.filter(a => a.status === 'catturato').length, [animalsWithStatus]);
+  const avatarChoices = useMemo(() => animalsWithStatus.filter(a => a.status === 'catturato'), [animalsWithStatus]);
+  const earnedAwards = useMemo(
+    () => AWARD_RULES.filter(rule => unlockedAwardIdSet.has(normalizeBadgeId(rule.badgeId))),
+    [unlockedAwardIdSet]
+  );
   const [profileBgImage,setProfileBgImage] = useState(() => getProfileBackgroundImage(userIdKey));
   const [featuredBadgeId,setFeaturedBadgeId] = useState(() => getFeaturedBadgeId(userIdKey));
   const [profileAvatarAnimalId,setProfileAvatarAnimalId] = useState(() => getProfileAvatarAnimalId(userIdKey));
@@ -9406,7 +9416,10 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
   const featuredBadge = earnedAwards.find(rule => normalizeBadgeId(rule.badgeId) === normalizeBadgeId(featuredBadgeId)) || earnedAwards[0] || null;
   const featuredBadgeColor = featuredBadge ? (BADGE_LEVEL_COLORS[featuredBadge.level] || '#F0A840') : '#D8D2C4';
   const avatarAnimal = avatarChoices.find(a => String(a.id) === String(profileAvatarAnimalId)) || avatarChoices[0] || null;
-  const profileBackgroundChoices = getProfileBackgroundChoices(animalsWithStatus, visitedCountries, profileBgImage);
+  const profileBackgroundChoices = useMemo(
+    () => getProfileBackgroundChoices(animalsWithStatus, visitedCountries, profileBgImage),
+    [animalsWithStatus, visitedCountries, profileBgImage]
+  );
   const progressRows = [
     { label:'Sbloccati', value:unlockedCount, total:ANIMALS.length, color:'#D8D2C4', onClick:()=>onOpenGridStatus?.(['ricercato','avvistato','catturato']) },
     { label:'Avvistati', value:seenCount, total:Math.max(1, unlockedCount), color:'#C87955', onClick:()=>onOpenGridStatus?.(['avvistato','catturato']) },
@@ -12498,6 +12511,12 @@ export default function App() {
       persistAwardUnlocks(merged);
       if (user?.id) {
         persistEarnedBadges(user.id, merged).catch(err => {
+          const msg = String(err?.message || '');
+          const isBadgeCatalogMismatch = err?.code === '23503' || /user_badges_badge_id_fkey|foreign key constraint/i.test(msg);
+          if (isBadgeCatalogMismatch) {
+            console.warn('[Apex] Badge non presente nel catalogo Supabase, salvataggio locale mantenuto:', err);
+            return;
+          }
           console.warn('[Apex] Salvataggio user_badges fallito:', err);
           setDataError(err?.message || 'Errore salvataggio badge');
         });
@@ -12851,7 +12870,7 @@ const openPage = (nextPage, returnPage = 'menu') => {
 	  setPage(nextPage || 'menu');
 	  maybeShowSectionIntro(nextPage);
   };
-  if (nextPage === 'menu' || nextPage === 'compare' || nextPage === 'regions' || nextPage === 'taxonomy') startNavTransition(apply);
+  if (nextPage === 'menu' || nextPage === 'compare' || nextPage === 'regions' || nextPage === 'taxonomy' || nextPage === 'profile') startNavTransition(apply);
   else apply();
 	};
 	const openComparator = (animal=null) => {
@@ -13043,7 +13062,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
       </FeaturePageErrorBoundary>
     );
     if (page === 'friends') return <FriendsPage theme={theme} onBack={()=>returnFromSection('menu')} user={user} userProfile={userProfile} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
-    if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={handleLogout} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges', 'profile')} onOpenRegions={()=>openPage('regions', 'profile')} onOpenGallery={()=>openPage('gallery', 'profile')} onOpenFriends={()=>openPage('friends', 'profile')} />;
+    if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} animalsWithStatus={animalsWithStatus} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={handleLogout} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges', 'profile')} onOpenRegions={()=>openPage('regions', 'profile')} onOpenGallery={()=>openPage('gallery', 'profile')} onOpenFriends={()=>openPage('friends', 'profile')} />;
 	    if (page === 'badges') return <BadgesPage theme={theme} onBack={()=>returnFromSection('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={activeSectionGuide==='badges'} onTutorialBadgeOpen={()=>setActiveSectionGuide(null)} />;
     if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><FeaturePageErrorBoundary theme={theme} title="Territori" onBack={()=>returnFromSection('menu')} resetKey={`regions-${theme}-${visitedCountries?.length || 0}-${regionsInitialView || 'planet'}`}><RegionsPage theme={theme} animalsWithStatus={animalsWithStatus} onBack={()=>returnFromSection('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={handleVisitedCountriesChange} onRemoveDestination={handleRemoveDestination} initialView={regionsInitialView} onSelect={selectAnimal} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} /></FeaturePageErrorBoundary>{renderDetailOverlay()}</div>;
     if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage theme={theme} onBack={()=>returnFromSection('profile')} statusMap={statusMap} onSelect={selectAnimal} />{renderDetailOverlay()}</div>;
