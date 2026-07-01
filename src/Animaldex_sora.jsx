@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useMemo, useRef, useCallback, useTransition, useDeferredValue } from "react";
 import { supabase } from './supabaseClient';
+import MainMenuV2 from './MainMenuV2';
+import { getHomeVariant, setHomeVariant, subscribeHomeVariant, HOME_VARIANTS, getHomeVariantLabel } from './homeVariant';
 
 let LOCAL_ANIMALS = [];
 let ANIMALS = [];
@@ -8016,7 +8018,7 @@ function AuthScreen({ onAuthReady }) {
 
 const TRIP_TAGS = ['city','nature','coast','diving','snorkeling','boat','desert','mountain'];
 
-function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], userProfile, user, socialSnapshot = null, onOpenFriends, onOpenGridStatus, onOpenRegions, onQuickSeen, onOpenPhoto, onOpenBadge, theme='dark', menuProgress=null }) {
+function MainMenuClassic({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], userProfile, user, socialSnapshot = null, onOpenFriends, onOpenGridStatus, onOpenRegions, onQuickSeen, onOpenPhoto, onOpenBadge, theme='dark', menuProgress=null }) {
   const progress = menuProgress || buildSimpleProgressState({ animals:ANIMALS, statusMap, visitedCountries, earnedBadgeIds });
   const social = socialSnapshot || buildSocialFallback(user, userProfile, progress);
   const pendingFriendRequests = social.pendingFriendRequestCount || social.requestsIn?.length || 0;
@@ -11510,7 +11512,7 @@ function GalleryPage({ onBack, statusMap = {}, onSelect, theme='dark' }) {
   );
 }
 
-function SettingsPage({ onBack, onStartInitialOnboarding, onStartOperationalTutorial, theme='dark', onThemeChange }) {
+function SettingsPage({ onBack, onStartInitialOnboarding, onStartOperationalTutorial, theme='dark', onThemeChange, homeVariant='classic', onHomeVariantChange }) {
   const [sub, setSub] = useState(null);
   if (sub === 'audio') return (
     <SettingsSubPage title="Audio" onBack={()=>setSub(null)} theme={theme}>
@@ -11562,6 +11564,20 @@ function SettingsPage({ onBack, onStartInitialOnboarding, onStartOperationalTuto
           <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:9, marginTop:13 }}>
             <button onClick={onStartInitialOnboarding} style={{ width:'100%', minHeight:48, borderRadius:17, border:'none', background:'linear-gradient(135deg,#A84637,#C45D3F)', color:'white', fontSize:13, fontWeight:1000, cursor:'pointer', fontFamily:'inherit', boxShadow:'0 12px 30px rgba(168,70,55,.30)' }}>Avvia percorso primo accesso</button>
             <button onClick={onStartOperationalTutorial} style={{ width:'100%', minHeight:48, borderRadius:17, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.06)', color:'white', fontSize:13, fontWeight:1000, cursor:'pointer', fontFamily:'inherit' }}>Avvia tour operativo dell’app</button>
+          </div>
+        </div>
+        <div style={{ background:'linear-gradient(135deg,rgba(144,216,74,.12),rgba(240,168,64,.06))', border:'1px solid rgba(144,216,74,.28)', borderRadius:24, padding:16, marginBottom:14, boxShadow:'0 18px 50px rgba(0,0,0,.18)' }}>
+          <div style={{ color:'#90D84A', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Sperimentale</div>
+          <div style={{ color:'white', fontSize:18, fontWeight:1000, marginTop:5 }}>Layout home</div>
+          <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.5, marginTop:7 }}>Prova la nuova home v2 e torna alla classica in qualsiasi momento.</div>
+          <div style={{ display:'grid', gap:9, marginTop:13 }}>
+            {[HOME_VARIANTS.classic, HOME_VARIANTS.v2].map(variant=>{
+              const active = homeVariant === variant;
+              return <button key={variant} onClick={()=>onHomeVariantChange?.(variant)} style={{ width:'100%', minHeight:48, borderRadius:17, border:`1.5px solid ${active ? '#90D84A' : 'rgba(255,255,255,.12)'}`, background:active ? 'rgba(144,216,74,.14)' : 'rgba(255,255,255,.06)', color:'white', fontSize:13, fontWeight:1000, cursor:'pointer', fontFamily:'inherit', textAlign:'left', padding:'0 14px', boxShadow:active ? '0 10px 28px rgba(144,216,74,.18)' : 'none' }}>
+                <div>{active ? '●' : '○'} {getHomeVariantLabel(variant)}</div>
+                <div style={{ marginTop:4, fontSize:11, fontWeight:700, color:'rgba(255,255,255,.48)' }}>{variant === HOME_VARIANTS.v2 ? 'Missione del giorno, stats e griglia 2×2' : 'Layout attuale con card verticali'}</div>
+              </button>;
+            })}
           </div>
         </div>
         {rows.map(row=>(
@@ -12541,6 +12557,7 @@ export default function App() {
   const [progressHydrated,setProgressHydrated]=useState(false);
   const [awardToastReady,setAwardToastReady]=useState(false);
   const [theme,setTheme]=useState(getInitialAnimaldexTheme);
+  const [homeVariant,setHomeVariantState]=useState(() => getHomeVariant());
   const [visitedCountries,setVisitedCountries]=useState(() => normalizeIsoList(getVisitedCountries()));
   const animalsWithStatus = useMemo(
     () => (animalsData || []).map(a => ({
@@ -12561,6 +12578,21 @@ export default function App() {
   useEffect(() => {
     refreshSocialSnapshot();
   }, [refreshSocialSnapshot]);
+  useEffect(() => subscribeHomeVariant(setHomeVariantState), []);
+  useEffect(() => {
+    try {
+      const param = new URLSearchParams(window.location.search).get('home');
+      if (param === HOME_VARIANTS.v2 || param === HOME_VARIANTS.classic) {
+        setHomeVariant(param);
+        setHomeVariantState(param);
+      }
+    } catch {}
+  }, []);
+  const handleHomeVariantChange = useCallback((variant) => {
+    const next = setHomeVariant(variant);
+    setHomeVariantState(next);
+    if (page !== 'menu') setPage('menu');
+  }, [page]);
   const pendingFriendRequestCount = socialSnapshot?.pendingFriendRequestCount || socialSnapshot?.requestsIn?.length || 0;
   const awardsHydratedRef = useRef(false);
   const awardInteractionRef = useRef(false);
@@ -13396,8 +13428,38 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
     );
   }
 
+  const renderHomeMenu = () => {
+    const homeProps = {
+      theme,
+      menuProgress,
+      socialSnapshot,
+      onOpenFriends: openFriends,
+      onOpen: openPage,
+      onBack: () => setPage('grid'),
+      onLogout: handleLogout,
+      tutorialFocus: tutorialStep === 'home' ? 'grid' : null,
+      statusMap,
+      visitedCountries,
+      earnedBadgeIds,
+      userProfile,
+      user,
+      onOpenGridStatus: openGridWithStatus,
+      onOpenRegions: () => openPage('regions', 'menu'),
+      onQuickSeen: () => { setPage('quickSeen'); maybeShowSectionIntro('quickSeen'); },
+      onOpenPhoto: openPhotoRecognition,
+      onOpenBadge: (badgeId) => {
+        setToastOpenBadgeId(normalizeBadgeId(badgeId));
+        setSectionReturnPage('menu');
+        setPage('badges');
+        maybeShowSectionIntro('badges');
+      },
+    };
+    const HomeComponent = homeVariant === HOME_VARIANTS.v2 ? MainMenuV2 : MainMenuClassic;
+    return <HomeComponent {...homeProps} />;
+  };
+
   const renderPage = () => {
-	    if (page === 'menu') return <MainMenu theme={theme} menuProgress={menuProgress} socialSnapshot={socialSnapshot} onOpenFriends={openFriends} onOpen={openPage} onBack={()=>setPage('grid')} onLogout={handleLogout} tutorialFocus={tutorialStep==='home'?'grid':null} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onOpenGridStatus={openGridWithStatus} onOpenRegions={()=>openPage('regions', 'menu')} onQuickSeen={()=>{ setPage('quickSeen'); maybeShowSectionIntro('quickSeen'); }} onOpenPhoto={openPhotoRecognition} onOpenBadge={(badgeId)=>{setToastOpenBadgeId(normalizeBadgeId(badgeId)); setSectionReturnPage('menu'); setPage('badges'); maybeShowSectionIntro('badges');}} />;
+	    if (page === 'menu') return renderHomeMenu();
     if (page === 'quickSeen') return <QuickSeenPage theme={theme} onBack={()=>setPage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onStatusChange={handleStatusChange} onSelect={selectAnimal} user={user} userProfile={userProfile} />;
     if (page === 'compare') return (
       <FeaturePageErrorBoundary theme={theme} title="Comparatore" onBack={()=>returnFromFeaturePage('menu')} resetKey={`compare-${theme}-${animalsData?.length || 0}-${comparatorInitialAnimal?.id || ''}`}>
@@ -13411,7 +13473,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
     if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage theme={theme} onBack={()=>returnFromSection('profile')} statusMap={statusMap} onSelect={selectAnimal} />{renderDetailOverlay()}</div>;
     if (page === 'lifeweb') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><StandaloneLifeWebPage theme={theme} statusMap={statusMap} visitedCountries={visitedCountries} onBack={()=>returnFromFeaturePage('grid')} animals={animalsData} initialAnimal={lifeWebInitialAnimal} onOpenAnimal={selectAnimal} />{renderDetailOverlay()}</div>;
     if (page === 'taxonomy') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><TaxonomyErrorBoundary theme={theme} onBack={()=>setPage('menu')} resetKey={`${theme}-${animalsWithStatus?.length || 0}-${taxonomyInitialAnimal?.id || ''}`}><TaxonomyExplorer theme={theme} animals={animalsWithStatus} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={taxonomyInitialAnimal} onBack={()=>setPage('menu')} onOpenAnimal={selectAnimal} onOpenTaxonomyFilter={openTaxonomyFilterFromDetail} /></TaxonomyErrorBoundary>{renderDetailOverlay()}</div>;
-    if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} onStartInitialOnboarding={startInitialOnboardingFromSettings} onStartOperationalTutorial={startOperationalTutorialFromSettings} theme={theme} onThemeChange={setTheme} />;
+    if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} onStartInitialOnboarding={startInitialOnboardingFromSettings} onStartOperationalTutorial={startOperationalTutorialFromSettings} theme={theme} onThemeChange={setTheme} homeVariant={homeVariant} onHomeVariantChange={handleHomeVariantChange} />;
     if (page === 'abilities') return <AbilitiesPage theme={theme} onBack={()=>setPage('menu')} onOpenAbility={openGridWithCategory} tutorialActive={activeSectionGuide==='abilities'} onTutorialAbilityOpen={()=>setActiveSectionGuide(null)} />;
     return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><Grid theme={theme} animals={animalsWithStatus} onSelect={selectAnimal} statusMap={statusMap} visitedCountries={visitedCountries} onHome={()=>openPage('menu')} onOpenRegions={()=>openPage('regions')} preset={gridPreset} onBackToOrigin={gridReturnTarget ? returnFromFilteredGrid : null} tutorialActive={tutorialStep==='grid-open'} tutorialStep={tutorialStep} tutorialAnimalId={tutorialAnimalId} onTutorialAnimalSelect={handleTutorialAnimalSelect} />{renderDetailOverlay()}</div>;
   };
