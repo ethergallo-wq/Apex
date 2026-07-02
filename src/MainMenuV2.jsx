@@ -6,7 +6,7 @@ const ORANGE = '#B84D3A';
 const ORANGE_GRADIENT = 'linear-gradient(135deg,#B84D3A,#D06A45)';
 const GREEN = '#90D84A';
 const BADGE_LEVEL_COLORS = { 1: '#CD7F32', 2: '#C0C0C0', 3: '#FFD700', 4: '#8F34F5' };
-const MISSION_SILHOUETTES = ['🦁', '🦒', '🐘', '🦏'];
+const EXPLORE_TILE_OVERLAY = 'linear-gradient(180deg, rgba(0,0,0,.04) 38%, rgba(0,0,0,.72) 100%)';
 
 function hexToRgba(hex, alpha = 1) {
   const clean = String(hex || '#ffffff').replace('#', '');
@@ -118,11 +118,97 @@ function ProgressRing({ progress = 0, color = '#F0A840', size = 74, stroke = 5 }
 
 function GlobeArt() {
   return (
-    <div style={{ width: 74, height: 74, borderRadius: '50%', position: 'relative', margin: '0 auto 8px', background: 'radial-gradient(circle at 35% 28%, rgba(144,216,74,.42), rgba(20,60,48,.22) 34%, rgba(7,19,31,.92) 62%)', boxShadow: '0 0 28px rgba(91,190,248,.22), inset 0 0 18px rgba(255,255,255,.08)' }}>
+    <div style={{ width: 74, height: 74, borderRadius: '50%', position: 'relative', margin: '0 auto', background: 'radial-gradient(circle at 35% 28%, rgba(144,216,74,.42), rgba(20,60,48,.22) 34%, rgba(7,19,31,.92) 62%)', boxShadow: '0 0 28px rgba(91,190,248,.22), inset 0 0 18px rgba(255,255,255,.08)' }}>
       <div style={{ position: 'absolute', inset: '12%', borderRadius: '50%', border: '1px solid rgba(108,229,199,.28)' }} />
       <div style={{ position: 'absolute', left: '18%', top: '22%', bottom: '22%', width: 1, background: 'rgba(108,229,199,.22)' }} />
       <div style={{ position: 'absolute', right: '18%', top: '22%', bottom: '22%', width: 1, background: 'rgba(108,229,199,.22)' }} />
       <div style={{ position: 'absolute', left: '12%', right: '12%', top: '50%', height: 1, background: 'rgba(108,229,199,.22)' }} />
+    </div>
+  );
+}
+
+function ExploreTile({ children, title, onClick, borderColor, background, badge = null, minHeight = 128 }) {
+  return (
+    <button
+      onClick={onClick}
+      style={{
+        minHeight,
+        borderRadius: 22,
+        border: `1px solid ${borderColor}`,
+        background,
+        color: 'white',
+        fontFamily: 'inherit',
+        cursor: 'pointer',
+        overflow: 'hidden',
+        position: 'relative',
+        padding: 0,
+        textAlign: 'left',
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
+      <div style={{ position: 'absolute', inset: 0, background: EXPLORE_TILE_OVERLAY, pointerEvents: 'none' }} />
+      {badge}
+      <div style={{ position: 'relative', zIndex: 1, flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '14px 14px 0' }}>
+        {children}
+      </div>
+      <div style={{ position: 'relative', zIndex: 1, padding: '10px 14px 14px' }}>
+        <div style={{ fontSize: 17, fontWeight: 1000, lineHeight: 1.05 }}>{title}</div>
+      </div>
+    </button>
+  );
+}
+
+function MissionAnimalSlot({ slot }) {
+  const filled = slot?.type === 'filled' && slot.thumbUrl;
+  return (
+    <div
+      title={slot?.label || ''}
+      style={{
+        width: 34,
+        height: 34,
+        borderRadius: '50%',
+        overflow: 'hidden',
+        background: filled ? 'rgba(240,168,64,.18)' : 'rgba(255,255,255,.08)',
+        border: `1.5px solid ${filled ? 'rgba(240,168,64,.52)' : 'rgba(255,255,255,.12)'}`,
+        display: 'grid',
+        placeItems: 'center',
+        opacity: filled ? 1 : .62,
+        boxShadow: filled ? '0 4px 12px rgba(240,168,64,.18)' : 'none',
+      }}
+    >
+      {filled
+        ? <img src={slot.thumbUrl} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+        : <span style={{ width: 8, height: 8, borderRadius: '50%', background: 'rgba(255,255,255,.24)' }} />}
+    </div>
+  );
+}
+
+function TrainersPreview({ friends = [], pendingCount = 0 }) {
+  if (!friends.length) {
+    return (
+      <div style={{ display: 'flex', alignItems: 'center', gap: 10, width: '100%' }}>
+        <div style={{ width: 42, height: 42, borderRadius: '50%', border: '1.5px dashed rgba(255,255,255,.24)', display: 'grid', placeItems: 'center', background: 'rgba(255,255,255,.06)', fontSize: 20, color: 'rgba(255,255,255,.72)' }}>+</div>
+        <div style={{ minWidth: 0 }}>
+          <div style={{ fontSize: 13, fontWeight: 900, color: 'rgba(255,255,255,.88)' }}>Invita amici</div>
+          <div style={{ fontSize: 10.5, fontWeight: 700, color: 'rgba(255,255,255,.48)', marginTop: 2 }}>Confronta progressi e badge</div>
+        </div>
+        <span style={{ marginLeft: 'auto', color: 'rgba(255,255,255,.42)', fontSize: 22, lineHeight: 1 }}>›</span>
+      </div>
+    );
+  }
+
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', gap: 6, width: '100%' }}>
+      {friends.map((friend, index) => (
+        <div key={`${friend.user_id || friend.nickname}-${index}`} style={{ width: 34, height: 34, borderRadius: '50%', overflow: 'hidden', border: '2px solid rgba(255,255,255,.18)', background: 'rgba(255,255,255,.10)', marginLeft: index ? -10 : 0, display: 'grid', placeItems: 'center', fontSize: 12, fontWeight: 1000 }}>
+          {friend.avatar_url
+            ? <img src={friend.avatar_url} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            : String(friend.nickname || friend.username || '?').slice(0, 1).toUpperCase()}
+        </div>
+      ))}
+      {!!pendingCount && <SocialCountBadge count={pendingCount} style={{ marginLeft: 4 }} />}
+      <span style={{ marginLeft: 'auto', color: 'rgba(255,255,255,.42)', fontSize: 22, lineHeight: 1 }}>›</span>
     </div>
   );
 }
@@ -216,22 +302,28 @@ export default function MainMenuV2({
         <button onClick={() => setNavOpen(true)} aria-label="Menu" style={{ width: 42, height: 42, borderRadius: 14, border: '1px solid rgba(255,255,255,.12)', background: 'rgba(0,0,0,.12)', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 5, padding: '0 10px', cursor: 'pointer' }}>
           {[0, 1, 2].map(i => <span key={i} style={{ display: 'block', width: 20, height: 2.5, borderRadius: 4, background: 'white' }} />)}
         </button>
-        <div style={{ color: 'white', fontSize: 22, fontWeight: 1000, letterSpacing: .2, textShadow: '0 1px 10px rgba(0,0,0,.18)' }}>Apex</div>
-        <button onClick={() => onOpen('profile')} aria-label="Profilo" style={{ width: 42, height: 42, borderRadius: '50%', border: '2px solid rgba(255,255,255,.22)', background: 'rgba(0,0,0,.16)', overflow: 'hidden', cursor: 'pointer', padding: 0, position: 'relative' }}>
-          {userProfile?.avatar_url
-            ? <img src={userProfile.avatar_url} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-            : <span style={{ color: 'white', fontSize: 15, fontWeight: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>{displayName.slice(0, 1).toUpperCase()}</span>}
-          {!!pendingFriendRequests && <span style={{ position: 'absolute', top: -3, right: -3 }}><SocialCountBadge count={pendingFriendRequests} /></span>}
-        </button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, minWidth: 42, justifyContent: 'center' }}>
+          <img src="/Apex_logo_32x32.png" alt="" width={28} height={28} style={{ display: 'block', filter: 'drop-shadow(0 2px 8px rgba(0,0,0,.18))' }} />
+          <div style={{ color: 'white', fontSize: 22, fontWeight: 1000, letterSpacing: .2, textShadow: '0 1px 10px rgba(0,0,0,.18)' }}>Apex</div>
+        </div>
+        <div style={{ width: 42, display: 'flex', justifyContent: 'flex-end' }}>
+          {!!pendingFriendRequests && (
+            <button onClick={openFriendsFromHome} aria-label="Richieste amicizia" style={{ width: 42, height: 42, borderRadius: 14, border: '1px solid rgba(255,255,255,.12)', background: 'rgba(0,0,0,.12)', cursor: 'pointer', position: 'relative', padding: 0 }}>
+              <span style={{ fontSize: 18, lineHeight: '42px' }}>👥</span>
+              <span style={{ position: 'absolute', top: -3, right: -3 }}><SocialCountBadge count={pendingFriendRequests} /></span>
+            </button>
+          )}
+        </div>
       </div>
 
       <div style={{ flex: 1, overflowY: 'auto', padding: '16px 16px 28px', WebkitOverflowScrolling: 'touch' }}>
         <button onClick={() => onOpen('profile')} style={{ width: '100%', border: 'none', background: 'transparent', padding: 0, marginBottom: 16, cursor: 'pointer', fontFamily: 'inherit', textAlign: 'left' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-            <div style={{ width: 64, height: 64, borderRadius: '50%', overflow: 'hidden', border: '2px solid rgba(255,255,255,.14)', background: 'rgba(255,255,255,.06)', flexShrink: 0, boxShadow: '0 10px 24px rgba(0,0,0,.22)' }}>
+            <div style={{ width: 64, height: 64, borderRadius: '50%', overflow: 'hidden', border: '2px solid rgba(255,255,255,.14)', background: 'rgba(255,255,255,.06)', flexShrink: 0, boxShadow: '0 10px 24px rgba(0,0,0,.22)', position: 'relative' }}>
               {userProfile?.avatar_url
                 ? <img src={userProfile.avatar_url} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 : <span style={{ color: pageText, fontSize: 24, fontWeight: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>{displayName.slice(0, 1).toUpperCase()}</span>}
+              {!!pendingFriendRequests && <span style={{ position: 'absolute', top: -2, right: -2 }}><SocialCountBadge count={pendingFriendRequests} /></span>}
             </div>
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ color: pageText, fontSize: 22, fontWeight: 1000, lineHeight: 1.05 }}>{displayName}</div>
@@ -253,14 +345,21 @@ export default function MainMenuV2({
           )}
           <div style={{ position: 'relative', zIndex: 1, padding: '16px 16px 14px', display: 'flex', flexDirection: 'column', minHeight: 156, boxSizing: 'border-box' }}>
             <div style={{ color: GREEN, fontSize: 10.5, fontWeight: 1000, letterSpacing: .9, textTransform: 'uppercase' }}>{mission.eyebrow}</div>
-            <div style={{ color: 'white', fontSize: 19, fontWeight: 1000, lineHeight: 1.18, marginTop: 8, maxWidth: missionBadgeId ? 'calc(100% - 64px)' : '100%' }}>{mission.title}</div>
-            <div style={{ display: 'flex', gap: 8, marginTop: 12 }}>
-              {MISSION_SILHOUETTES.map((emoji, index) => (
-                <div key={emoji} style={{ width: 34, height: 34, borderRadius: '50%', background: index < 2 ? 'rgba(240,168,64,.22)' : 'rgba(255,255,255,.08)', border: `1px solid ${index < 2 ? 'rgba(240,168,64,.42)' : 'rgba(255,255,255,.10)'}`, display: 'grid', placeItems: 'center', fontSize: 16, opacity: index < 2 ? 1 : .55 }}>
-                  {emoji}
-                </div>
-              ))}
+            <div style={{ color: 'white', fontSize: 18, fontWeight: 1000, lineHeight: 1.15, marginTop: 8, maxWidth: missionBadgeId ? 'calc(100% - 64px)' : '100%', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+              {mission.titleLine1 || mission.title}
             </div>
+            {(mission.titleLine2 || mission.subtitle) && (
+              <div style={{ color: 'rgba(255,255,255,.78)', fontSize: 12.5, fontWeight: 800, marginTop: 5, lineHeight: 1.2 }}>
+                {mission.titleLine2 || mission.subtitle}
+              </div>
+            )}
+            {!!(mission.animalSlots || []).length && (
+              <div style={{ display: 'flex', gap: 8, marginTop: 12 }}>
+                {mission.animalSlots.map((slot, index) => (
+                  <MissionAnimalSlot key={`${slot.type}-${index}`} slot={slot} />
+                ))}
+              </div>
+            )}
             <div style={{ marginTop: 'auto', display: 'flex', justifyContent: 'flex-end', paddingTop: 12 }}>
               <button onClick={runMission} style={{ height: 40, padding: '0 18px', borderRadius: 999, border: 'none', background: ORANGE_GRADIENT, color: 'white', fontFamily: 'inherit', fontSize: 13, fontWeight: 1000, cursor: 'pointer', boxShadow: '0 10px 24px rgba(184,77,58,.34)' }}>{mission.cta}</button>
             </div>
@@ -320,11 +419,12 @@ export default function MainMenuV2({
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 8, marginBottom: 18 }}>
           {stats.map(stat => {
             const Icon = stat.icon;
+            const valueSize = stat.value >= 1000 ? 'clamp(14px, 4.2vw, 18px)' : 'clamp(16px, 4.8vw, 18px)';
             return (
-              <button key={stat.label} onClick={stat.action} style={{ borderRadius: 18, border: `1px solid ${panelBorder}`, background: panelBg, padding: '12px 8px', cursor: 'pointer', fontFamily: 'inherit', textAlign: 'center', boxShadow: '0 10px 24px rgba(0,0,0,.14)' }}>
+              <button key={stat.label} onClick={stat.action} style={{ borderRadius: 18, border: `1px solid ${panelBorder}`, background: panelBg, padding: '12px 6px', cursor: 'pointer', fontFamily: 'inherit', textAlign: 'center', boxShadow: '0 10px 24px rgba(0,0,0,.14)', minWidth: 0 }}>
                 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 6 }}><Icon /></div>
-                <div style={{ color: pageText, fontSize: 18, fontWeight: 1000, lineHeight: 1 }}>{stat.value}</div>
-                <div style={{ color: mutedText, fontSize: 9.5, fontWeight: 800, marginTop: 4, lineHeight: 1.15 }}>{stat.label}</div>
+                <div style={{ color: pageText, fontSize: valueSize, fontWeight: 1000, lineHeight: 1.1, wordBreak: 'break-word' }}>{stat.value.toLocaleString('it-IT')}</div>
+                <div style={{ color: mutedText, fontSize: 'clamp(8.5px, 2.4vw, 9.5px)', fontWeight: 800, marginTop: 4, lineHeight: 1.15, whiteSpace: 'normal' }}>{stat.label}</div>
               </button>
             );
           })}
@@ -332,38 +432,44 @@ export default function MainMenuV2({
 
         <div style={{ color: GREEN, fontSize: 11, fontWeight: 1000, letterSpacing: .9, textTransform: 'uppercase', margin: '0 0 10px 2px' }}>Esplora</div>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: nearlyBadges.length ? 18 : 8 }}>
-          <button onClick={() => (onOpenRegions || (() => onOpen('regions')))()} style={{ minHeight: 128, borderRadius: 22, border: `1px solid ${hexToRgba(GREEN, .24)}`, background: 'linear-gradient(180deg, rgba(5,11,13,.92), rgba(5,11,13,.72)), radial-gradient(circle at 50% 36%, rgba(91,190,248,.18), transparent 52%)', color: 'white', fontFamily: 'inherit', cursor: 'pointer', overflow: 'hidden', position: 'relative', padding: '12px 14px 14px', textAlign: 'left' }}>
+          <ExploreTile
+            title="Territori"
+            onClick={() => (onOpenRegions || (() => onOpen('regions')))()}
+            borderColor={hexToRgba(GREEN, .24)}
+            background="linear-gradient(180deg, rgba(5,11,13,.92), rgba(5,11,13,.72)), radial-gradient(circle at 50% 36%, rgba(91,190,248,.18), transparent 52%)"
+          >
             <GlobeArt />
-            <div style={{ fontSize: 18, fontWeight: 1000, lineHeight: 1.05 }}>Territori</div>
-          </button>
+          </ExploreTile>
 
-          <button onClick={() => onOpen('taxonomy')} style={{ minHeight: 128, borderRadius: 22, border: `1px solid ${hexToRgba(GREEN, .24)}`, background: 'linear-gradient(180deg, rgba(3,8,5,.88), rgba(3,8,5,.72)), url("/backgrounds/background_tree.png") center 40% / 88% auto no-repeat', color: 'white', fontFamily: 'inherit', cursor: 'pointer', overflow: 'hidden', position: 'relative', padding: '12px 14px 14px', textAlign: 'left' }}>
-            <div style={{ height: 74, marginBottom: 8 }} />
-            <div style={{ fontSize: 17, fontWeight: 1000, lineHeight: 1.08 }}>Albero della vita</div>
-          </button>
+          <ExploreTile
+            title="Albero della vita"
+            onClick={() => onOpen('taxonomy')}
+            borderColor={hexToRgba(GREEN, .24)}
+            background='linear-gradient(180deg, rgba(3,8,5,.88), rgba(3,8,5,.72)), url("/backgrounds/background_tree.png") center 40% / 88% auto no-repeat'
+          >
+            <div style={{ width: '100%', height: 74 }} />
+          </ExploreTile>
 
-          <button onClick={openFriendsFromHome} style={{ minHeight: 128, borderRadius: 22, border: `1px solid ${hexToRgba('#F0A840', .24)}`, background: `linear-gradient(180deg, rgba(12,10,9,.88), rgba(12,10,9,.72)), url("/backgrounds/background_amici.png") center / cover no-repeat`, color: 'white', fontFamily: 'inherit', cursor: 'pointer', overflow: 'hidden', position: 'relative', padding: '12px 14px 14px', textAlign: 'left' }}>
-            {!!pendingFriendRequests && <div style={{ position: 'absolute', top: 10, right: 10 }}><SocialCountBadge count={pendingFriendRequests} /></div>}
-            <div style={{ display: 'flex', alignItems: 'center', gap: 6, minHeight: 74, marginBottom: 8 }}>
-              {(friendAvatars.length ? friendAvatars : [{ nickname: 'A' }, { nickname: 'B' }, { nickname: 'C' }]).map((friend, index) => (
-                <div key={`${friend.user_id || friend.nickname}-${index}`} style={{ width: 34, height: 34, borderRadius: '50%', overflow: 'hidden', border: '2px solid rgba(255,255,255,.18)', background: 'rgba(255,255,255,.10)', marginLeft: index ? -10 : 0, display: 'grid', placeItems: 'center', fontSize: 12, fontWeight: 1000 }}>
-                  {friend.avatar_url
-                    ? <img src={friend.avatar_url} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    : String(friend.nickname || friend.username || '?').slice(0, 1).toUpperCase()}
-                </div>
-              ))}
-              <span style={{ marginLeft: 'auto', color: 'rgba(255,255,255,.42)', fontSize: 22, lineHeight: 1 }}>›</span>
+          <ExploreTile
+            title="Allenatori"
+            onClick={openFriendsFromHome}
+            borderColor={hexToRgba('#F0A840', .24)}
+            background='linear-gradient(180deg, rgba(12,10,9,.88), rgba(12,10,9,.72)), url("/backgrounds/background_amici.png") center / cover no-repeat'
+            badge={!!pendingFriendRequests && !friendAvatars.length ? <div style={{ position: 'absolute', top: 10, right: 10, zIndex: 2 }}><SocialCountBadge count={pendingFriendRequests} /></div> : null}
+          >
+            <div style={{ width: '100%' }}>
+              <TrainersPreview friends={friendAvatars} pendingCount={pendingFriendRequests} />
             </div>
-            <div style={{ fontSize: 18, fontWeight: 1000, lineHeight: 1.05 }}>Allenatori</div>
-          </button>
+          </ExploreTile>
 
-          <button onClick={() => onOpen('badges')} style={{ minHeight: 128, borderRadius: 22, border: `1px solid ${hexToRgba('#FFD700', .24)}`, background: 'linear-gradient(180deg, rgba(28,20,8,.92), rgba(18,14,8,.72)), radial-gradient(circle at 50% 34%, rgba(255,215,0,.16), transparent 50%)', color: 'white', fontFamily: 'inherit', cursor: 'pointer', overflow: 'hidden', position: 'relative', padding: '12px 14px 14px', textAlign: 'left' }}>
-            <div style={{ minHeight: 74, marginBottom: 8, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-              <img src="/backgrounds/background_badges.png" alt="" style={{ width: 58, height: 58, objectFit: 'contain', filter: 'drop-shadow(0 8px 18px rgba(255,215,0,.24))' }} onError={e => { e.currentTarget.style.display = 'none'; }} />
-              <span style={{ color: 'rgba(255,255,255,.42)', fontSize: 22, lineHeight: 1 }}>›</span>
-            </div>
-            <div style={{ fontSize: 18, fontWeight: 1000, lineHeight: 1.05 }}>Badge</div>
-          </button>
+          <ExploreTile
+            title="Badge"
+            onClick={() => onOpen('badges')}
+            borderColor={hexToRgba('#FFD700', .24)}
+            background="linear-gradient(180deg, rgba(28,20,8,.92), rgba(18,14,8,.72)), radial-gradient(circle at 50% 34%, rgba(255,215,0,.16), transparent 50%)"
+          >
+            <img src="/backgrounds/background_badges.png" alt="" style={{ width: 58, height: 58, objectFit: 'contain', filter: 'drop-shadow(0 8px 18px rgba(255,215,0,.24))' }} onError={e => { e.currentTarget.style.display = 'none'; }} />
+          </ExploreTile>
         </div>
 
         {!!nearlyBadges.length && (
