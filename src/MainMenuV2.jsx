@@ -1,12 +1,21 @@
 import React, { useMemo, useState } from 'react';
 import { buildHomeMission } from './homeMission';
+import { getAnimalThumbUrl } from './homeMissionUi';
+import {
+  getProfileAvatarAnimalId,
+  getProfileAvatarChoices,
+  persistProfileAvatarAnimalId,
+  resolveProfileAvatarAnimal,
+  saveProfileAvatarAnimal,
+} from './profileAvatar';
 
 const LIGHT_APP_BG = '#F3EFE6';
 const ORANGE = '#B84D3A';
 const ORANGE_GRADIENT = 'linear-gradient(135deg,#B84D3A,#D06A45)';
 const GREEN = '#90D84A';
 const BADGE_LEVEL_COLORS = { 1: '#CD7F32', 2: '#C0C0C0', 3: '#FFD700', 4: '#8F34F5' };
-const EXPLORE_TILE_OVERLAY = 'linear-gradient(180deg, rgba(0,0,0,.04) 38%, rgba(0,0,0,.72) 100%)';
+const EXPLORE_TILE_TITLE_OVERLAY = 'linear-gradient(180deg, transparent 52%, rgba(0,0,0,.78) 100%)';
+const EXPLORE_TILE_TITLE_OVERLAY_LIGHT = 'linear-gradient(180deg, transparent 58%, rgba(0,0,0,.62) 100%)';
 
 function hexToRgba(hex, alpha = 1) {
   const clean = String(hex || '#ffffff').replace('#', '');
@@ -116,18 +125,7 @@ function ProgressRing({ progress = 0, color = '#F0A840', size = 74, stroke = 5 }
   );
 }
 
-function GlobeArt() {
-  return (
-    <div style={{ width: 74, height: 74, borderRadius: '50%', position: 'relative', margin: '0 auto', background: 'radial-gradient(circle at 35% 28%, rgba(144,216,74,.42), rgba(20,60,48,.22) 34%, rgba(7,19,31,.92) 62%)', boxShadow: '0 0 28px rgba(91,190,248,.22), inset 0 0 18px rgba(255,255,255,.08)' }}>
-      <div style={{ position: 'absolute', inset: '12%', borderRadius: '50%', border: '1px solid rgba(108,229,199,.28)' }} />
-      <div style={{ position: 'absolute', left: '18%', top: '22%', bottom: '22%', width: 1, background: 'rgba(108,229,199,.22)' }} />
-      <div style={{ position: 'absolute', right: '18%', top: '22%', bottom: '22%', width: 1, background: 'rgba(108,229,199,.22)' }} />
-      <div style={{ position: 'absolute', left: '12%', right: '12%', top: '50%', height: 1, background: 'rgba(108,229,199,.22)' }} />
-    </div>
-  );
-}
-
-function ExploreTile({ children, title, onClick, borderColor, background, badge = null, minHeight = 128 }) {
+function ExploreImageTile({ title, imageSrc, onClick, borderColor, overlay = EXPLORE_TILE_TITLE_OVERLAY, imagePosition = 'center', badge = null, minHeight = 128 }) {
   return (
     <button
       onClick={onClick}
@@ -135,7 +133,7 @@ function ExploreTile({ children, title, onClick, borderColor, background, badge 
         minHeight,
         borderRadius: 22,
         border: `1px solid ${borderColor}`,
-        background,
+        background: '#121417',
         color: 'white',
         fontFamily: 'inherit',
         cursor: 'pointer',
@@ -145,16 +143,36 @@ function ExploreTile({ children, title, onClick, borderColor, background, badge 
         textAlign: 'left',
         display: 'flex',
         flexDirection: 'column',
+        justifyContent: 'flex-end',
       }}
     >
-      <div style={{ position: 'absolute', inset: 0, background: EXPLORE_TILE_OVERLAY, pointerEvents: 'none' }} />
+      <img
+        src={imageSrc}
+        alt=""
+        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: imagePosition, display: 'block' }}
+      />
+      <div style={{ position: 'absolute', inset: 0, background: overlay, pointerEvents: 'none' }} />
       {badge}
-      <div style={{ position: 'relative', zIndex: 1, flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '14px 14px 0' }}>
-        {children}
-      </div>
       <div style={{ position: 'relative', zIndex: 1, padding: '10px 14px 14px' }}>
-        <div style={{ fontSize: 17, fontWeight: 1000, lineHeight: 1.05 }}>{title}</div>
+        <div style={{ fontSize: 17, fontWeight: 1000, lineHeight: 1.05, textShadow: '0 2px 10px rgba(0,0,0,.55)' }}>{title}</div>
       </div>
+    </button>
+  );
+}
+
+function ProfileAvatarButton({ animal, fallbackUrl, displayName, onClick, pendingCount = 0, pageText = 'white' }) {
+  const thumbUrl = animal ? getAnimalThumbUrl(animal) : fallbackUrl;
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-label="Cambia immagine profilo"
+      style={{ width: 64, height: 64, borderRadius: '50%', overflow: 'hidden', border: '2px solid rgba(255,255,255,.14)', background: 'rgba(255,255,255,.06)', flexShrink: 0, boxShadow: '0 10px 24px rgba(0,0,0,.22)', position: 'relative', padding: 0, cursor: 'pointer' }}
+    >
+      {thumbUrl
+        ? <img src={thumbUrl} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+        : <span style={{ color: pageText, fontSize: 24, fontWeight: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>{displayName.slice(0, 1).toUpperCase()}</span>}
+      {!!pendingCount && <span style={{ position: 'absolute', top: -2, right: -2 }}><SocialCountBadge count={pendingCount} /></span>}
     </button>
   );
 }
@@ -180,35 +198,6 @@ function MissionAnimalSlot({ slot }) {
       {filled
         ? <img src={slot.thumbUrl} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         : <span style={{ width: 8, height: 8, borderRadius: '50%', background: 'rgba(255,255,255,.24)' }} />}
-    </div>
-  );
-}
-
-function TrainersPreview({ friends = [], pendingCount = 0 }) {
-  if (!friends.length) {
-    return (
-      <div style={{ display: 'flex', alignItems: 'center', gap: 10, width: '100%' }}>
-        <div style={{ width: 42, height: 42, borderRadius: '50%', border: '1.5px dashed rgba(255,255,255,.24)', display: 'grid', placeItems: 'center', background: 'rgba(255,255,255,.06)', fontSize: 20, color: 'rgba(255,255,255,.72)' }}>+</div>
-        <div style={{ minWidth: 0 }}>
-          <div style={{ fontSize: 13, fontWeight: 900, color: 'rgba(255,255,255,.88)' }}>Invita amici</div>
-          <div style={{ fontSize: 10.5, fontWeight: 700, color: 'rgba(255,255,255,.48)', marginTop: 2 }}>Confronta progressi e badge</div>
-        </div>
-        <span style={{ marginLeft: 'auto', color: 'rgba(255,255,255,.42)', fontSize: 22, lineHeight: 1 }}>›</span>
-      </div>
-    );
-  }
-
-  return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: 6, width: '100%' }}>
-      {friends.map((friend, index) => (
-        <div key={`${friend.user_id || friend.nickname}-${index}`} style={{ width: 34, height: 34, borderRadius: '50%', overflow: 'hidden', border: '2px solid rgba(255,255,255,.18)', background: 'rgba(255,255,255,.10)', marginLeft: index ? -10 : 0, display: 'grid', placeItems: 'center', fontSize: 12, fontWeight: 1000 }}>
-          {friend.avatar_url
-            ? <img src={friend.avatar_url} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-            : String(friend.nickname || friend.username || '?').slice(0, 1).toUpperCase()}
-        </div>
-      ))}
-      {!!pendingCount && <SocialCountBadge count={pendingCount} style={{ marginLeft: 4 }} />}
-      <span style={{ marginLeft: 'auto', color: 'rgba(255,255,255,.42)', fontSize: 22, lineHeight: 1 }}>›</span>
     </div>
   );
 }
@@ -240,6 +229,9 @@ export default function MainMenuV2({
   };
   const pendingFriendRequests = socialSnapshot?.pendingFriendRequestCount || socialSnapshot?.requestsIn?.length || 0;
   const [navOpen, setNavOpen] = useState(false);
+  const [avatarPickerOpen, setAvatarPickerOpen] = useState(false);
+  const userIdKey = user?.id || 'guest';
+  const [profileAvatarAnimalId, setProfileAvatarAnimalId] = useState(() => getProfileAvatarAnimalId(userIdKey));
   const mission = useMemo(() => buildHomeMission(progress), [progress]);
   const isLightTheme = theme === 'light';
   const pageText = isLightTheme ? '#171717' : 'white';
@@ -252,13 +244,24 @@ export default function MainMenuV2({
   const xpPct = Math.max(0, Math.min(100, ((progress.xp - currLevelXP) / Math.max(1, nextLevelXP - currLevelXP)) * 100));
   const badgeCount = (earnedBadgeIds || []).length;
   const nearlyBadges = progress.nearlyCompletedBadges || [];
-  const friendAvatars = (socialSnapshot?.friends || socialSnapshot?.leaderboard || [])
-    .filter(p => !p?.isMe)
-    .slice(0, 3);
+  const animalsWithStatus = progress.animalsWithStatus || [];
+  const avatarChoices = useMemo(() => getProfileAvatarChoices(animalsWithStatus), [animalsWithStatus]);
+  const avatarAnimal = useMemo(
+    () => resolveProfileAvatarAnimal({ animalsWithStatus, profileAvatarAnimalId, userProfile }),
+    [animalsWithStatus, profileAvatarAnimalId, userProfile]
+  );
 
   const openFriendsFromHome = () => {
     if (typeof onOpenFriends === 'function') onOpenFriends('feed', 'menu');
     else onOpen('friends');
+  };
+
+  const chooseProfileAvatar = (animal) => {
+    if (!animal?.id) return;
+    setProfileAvatarAnimalId(String(animal.id));
+    persistProfileAvatarAnimalId(userIdKey, animal.id);
+    saveProfileAvatarAnimal(user?.id, animal).catch(() => {});
+    setAvatarPickerOpen(false);
   };
 
   const runMission = () => {
@@ -319,12 +322,18 @@ export default function MainMenuV2({
       <div style={{ flex: 1, overflowY: 'auto', padding: '16px 16px 28px', WebkitOverflowScrolling: 'touch' }}>
         <button onClick={() => onOpen('profile')} style={{ width: '100%', border: 'none', background: 'transparent', padding: 0, marginBottom: 16, cursor: 'pointer', fontFamily: 'inherit', textAlign: 'left' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-            <div style={{ width: 64, height: 64, borderRadius: '50%', overflow: 'hidden', border: '2px solid rgba(255,255,255,.14)', background: 'rgba(255,255,255,.06)', flexShrink: 0, boxShadow: '0 10px 24px rgba(0,0,0,.22)', position: 'relative' }}>
-              {userProfile?.avatar_url
-                ? <img src={userProfile.avatar_url} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                : <span style={{ color: pageText, fontSize: 24, fontWeight: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>{displayName.slice(0, 1).toUpperCase()}</span>}
-              {!!pendingFriendRequests && <span style={{ position: 'absolute', top: -2, right: -2 }}><SocialCountBadge count={pendingFriendRequests} /></span>}
-            </div>
+            <ProfileAvatarButton
+              animal={avatarAnimal}
+              fallbackUrl={!avatarAnimal ? userProfile?.avatar_url : ''}
+              displayName={displayName}
+              pendingCount={pendingFriendRequests}
+              pageText={pageText}
+              onClick={(e) => {
+                e.stopPropagation();
+                if (avatarChoices.length) setAvatarPickerOpen(true);
+                else onOpen('profile');
+              }}
+            />
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ color: pageText, fontSize: 22, fontWeight: 1000, lineHeight: 1.05 }}>{displayName}</div>
               <div style={{ color: mutedText, fontSize: 12.5, marginTop: 4 }}>Liv. {progress.level} · {progress.xp.toLocaleString('it-IT')} XP</div>
@@ -432,44 +441,37 @@ export default function MainMenuV2({
 
         <div style={{ color: GREEN, fontSize: 11, fontWeight: 1000, letterSpacing: .9, textTransform: 'uppercase', margin: '0 0 10px 2px' }}>Esplora</div>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: nearlyBadges.length ? 18 : 8 }}>
-          <ExploreTile
+          <ExploreImageTile
             title="Territori"
+            imageSrc="/regions/home_regioni.png"
             onClick={() => (onOpenRegions || (() => onOpen('regions')))()}
             borderColor={hexToRgba(GREEN, .24)}
-            background="linear-gradient(180deg, rgba(5,11,13,.92), rgba(5,11,13,.72)), radial-gradient(circle at 50% 36%, rgba(91,190,248,.18), transparent 52%)"
-          >
-            <GlobeArt />
-          </ExploreTile>
+          />
 
-          <ExploreTile
+          <ExploreImageTile
             title="Albero della vita"
+            imageSrc="/backgrounds/background_tree.png"
+            imagePosition="center 42%"
+            overlay={EXPLORE_TILE_TITLE_OVERLAY_LIGHT}
             onClick={() => onOpen('taxonomy')}
             borderColor={hexToRgba(GREEN, .24)}
-            background='linear-gradient(180deg, rgba(3,8,5,.88), rgba(3,8,5,.72)), url("/backgrounds/background_tree.png") center 40% / 88% auto no-repeat'
-          >
-            <div style={{ width: '100%', height: 74 }} />
-          </ExploreTile>
+          />
 
-          <ExploreTile
+          <ExploreImageTile
             title="Allenatori"
+            imageSrc="/backgrounds/background_amici.png"
             onClick={openFriendsFromHome}
             borderColor={hexToRgba('#F0A840', .24)}
-            background='linear-gradient(180deg, rgba(12,10,9,.88), rgba(12,10,9,.72)), url("/backgrounds/background_amici.png") center / cover no-repeat'
-            badge={!!pendingFriendRequests && !friendAvatars.length ? <div style={{ position: 'absolute', top: 10, right: 10, zIndex: 2 }}><SocialCountBadge count={pendingFriendRequests} /></div> : null}
-          >
-            <div style={{ width: '100%' }}>
-              <TrainersPreview friends={friendAvatars} pendingCount={pendingFriendRequests} />
-            </div>
-          </ExploreTile>
+            badge={!!pendingFriendRequests ? <div style={{ position: 'absolute', top: 10, right: 10, zIndex: 2 }}><SocialCountBadge count={pendingFriendRequests} /></div> : null}
+          />
 
-          <ExploreTile
+          <ExploreImageTile
             title="Badge"
+            imageSrc="/backgrounds/background_badges.png"
+            imagePosition="center 38%"
             onClick={() => onOpen('badges')}
             borderColor={hexToRgba('#FFD700', .24)}
-            background="linear-gradient(180deg, rgba(28,20,8,.92), rgba(18,14,8,.72)), radial-gradient(circle at 50% 34%, rgba(255,215,0,.16), transparent 50%)"
-          >
-            <img src="/backgrounds/background_badges.png" alt="" style={{ width: 58, height: 58, objectFit: 'contain', filter: 'drop-shadow(0 8px 18px rgba(255,215,0,.24))' }} onError={e => { e.currentTarget.style.display = 'none'; }} />
-          </ExploreTile>
+          />
         </div>
 
         {!!nearlyBadges.length && (
@@ -502,6 +504,34 @@ export default function MainMenuV2({
           Avvista veloce →
         </button>
       </div>
+
+      {avatarPickerOpen && (
+        <div onClick={() => setAvatarPickerOpen(false)} style={{ position: 'absolute', inset: 0, zIndex: 460, background: 'rgba(0,0,0,.74)', display: 'flex', alignItems: 'flex-end', padding: '12px 12px calc(env(safe-area-inset-bottom, 0px) + 12px)', boxSizing: 'border-box' }}>
+          <div onClick={e => e.stopPropagation()} style={{ width: '100%', maxHeight: '72dvh', overflow: 'hidden', borderRadius: '28px 28px 20px 20px', background: isLightTheme ? '#FBF7EF' : '#17191D', border: `1px solid ${panelBorder}`, boxShadow: '0 28px 90px rgba(0,0,0,.62)', padding: 14, boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, marginBottom: 12, flexShrink: 0 }}>
+              <div>
+                <div style={{ color: pageText, fontSize: 19, fontWeight: 1000 }}>Immagine profilo</div>
+                <div style={{ color: mutedText, fontSize: 11.5, marginTop: 3 }}>Scegli tra gli animali avvistati o catturati.</div>
+              </div>
+              <button onClick={() => setAvatarPickerOpen(false)} aria-label="Chiudi" style={{ width: 40, height: 40, borderRadius: 16, border: `1px solid ${panelBorder}`, background: isLightTheme ? 'rgba(0,0,0,.04)' : 'rgba(255,255,255,.06)', color: pageText, fontSize: 22, fontWeight: 1000, cursor: 'pointer' }}>×</button>
+            </div>
+            <div style={{ overflowY: 'auto', WebkitOverflowScrolling: 'touch', display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 10, paddingBottom: 4 }}>
+              {avatarChoices.map(animal => {
+                const active = String(animal.id) === String(profileAvatarAnimalId);
+                const thumbUrl = getAnimalThumbUrl(animal);
+                return (
+                  <button key={animal.id} onClick={() => chooseProfileAvatar(animal)} style={{ minHeight: 118, borderRadius: 18, border: `2px solid ${active ? '#F0A840' : panelBorder}`, background: panelBg, color: pageText, fontFamily: 'inherit', padding: 8, cursor: 'pointer', boxShadow: active ? '0 0 0 3px rgba(240,168,64,.18)' : 'none' }}>
+                    <div style={{ width: '100%', aspectRatio: '1 / 1', borderRadius: 14, overflow: 'hidden', background: 'rgba(255,255,255,.06)' }}>
+                      {thumbUrl ? <img src={thumbUrl} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> : null}
+                    </div>
+                    <div style={{ marginTop: 6, fontSize: 10, fontWeight: 900, lineHeight: 1.15, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{animal.com || animal.sci}</div>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      )}
 
       {navOpen && (
         <div onClick={() => setNavOpen(false)} style={{ position: 'absolute', inset: 0, zIndex: 420, background: 'rgba(0,0,0,.52)', display: 'flex', alignItems: 'stretch' }}>
