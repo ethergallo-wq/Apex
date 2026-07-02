@@ -220,15 +220,20 @@ const CLASS_ICONS = {
   Bivalvia:       '/icone_unknown/class-bivalvia.png',
 };
 const CONS = {
-  EX: { lbl:'EX', full:'Extinct',                 c:'#FFFFFF', bg:'#1A1A1A' },
-  EW: { lbl:'EW', full:'Extinct in the Wild',     c:'#FFFFFF', bg:'#1A1A1A' },
-  CR: { lbl:'CR', full:'Critically Endangered',   c:'#FFFFFF', bg:'#DC143C' },
-  EN: { lbl:'EN', full:'Endangered',              c:'#000000', bg:'#FF8C00' },
-  VU: { lbl:'VU', full:'Vulnerable',              c:'#000000', bg:'#FFD700' },
-  NT: { lbl:'NT', full:'Near Threatened',         c:'#FFFFFF', bg:'#20B2AA' },
-  LC: { lbl:'LC', full:'Least Concern',           c:'#FFFFFF', bg:'#008B8B' },
-  DD: { lbl:'DD', full:'Data Deficient',          c:'#FFFFFF', bg:'#808080' },
+  EX: { lbl:'EX', full:'Extinct', labelIt:'Estinta', c:'#FFFFFF', bg:'#1A1A1A' },
+  EW: { lbl:'EW', full:'Extinct in the Wild', labelIt:'Estinta in natura', c:'#FFFFFF', bg:'#1A1A1A' },
+  CR: { lbl:'CR', full:'Critically Endangered', labelIt:'In pericolo critico', c:'#FFFFFF', bg:'#DC143C' },
+  EN: { lbl:'EN', full:'Endangered', labelIt:'In pericolo', c:'#000000', bg:'#FF8C00' },
+  VU: { lbl:'VU', full:'Vulnerable', labelIt:'Vulnerabile', c:'#000000', bg:'#FFD700' },
+  NT: { lbl:'NT', full:'Near Threatened', labelIt:'Quasi minacciata', c:'#FFFFFF', bg:'#20B2AA' },
+  LC: { lbl:'LC', full:'Least Concern', labelIt:'Preoccupazione minima', c:'#FFFFFF', bg:'#008B8B' },
+  DD: { lbl:'DD', full:'Data Deficient', labelIt:'Dati insufficienti', c:'#FFFFFF', bg:'#808080' },
 };
+function formatConservationStatus(code, { compact = false } = {}) {
+  const key = String(code || 'DD').toUpperCase();
+  const entry = CONS[key] || CONS.DD;
+  return compact ? entry.lbl : (entry.labelIt || entry.full);
+}
 const RARITY = {
   'Comune':      { c:'#d0895c', bg:'#4a2412', s:1, label:'Comune', shield:'/shields/common_shield.png' },
   'Non comune':  { c:'#a1a8b2', bg:'#343a42', s:2, label:'Non comune', shield:'/shields/noncommon_shield.png' },
@@ -318,6 +323,27 @@ function getAnimalCountryCodes(animal) {
     ...geoIsoValues,
     ...toArraySafe(animal?.iso),
   ]);
+}
+function getAnimalHabitatTokens(animal) {
+  const raw = [
+    ...toArraySafe(animal?.habitats),
+    ...toArraySafe(animal?.habitat),
+    ...toArraySafe(animal?.geo?.habitats),
+    ...toArraySafe(animal?.biome),
+    ...toArraySafe(animal?.biomes),
+  ];
+  return Array.from(new Set(
+    raw.flatMap(value => String(value || '').split(/[,;|/]+/))
+      .map(part => part.trim())
+      .filter(Boolean)
+  ));
+}
+function formatHabitatLabel(value) {
+  return String(value || '')
+    .replace(/[_-]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/\b\w/g, ch => ch.toUpperCase());
 }
 function isAnimalInVisitedCountries(animal, visitedCountries = []) {
   const visited = new Set((visitedCountries || []).map(c => String(c).toUpperCase()));
@@ -4859,13 +4885,25 @@ function Grid({ onSelect, animals: animalsProp, statusMap = {}, visitedCountries
   }, [animalsFilterSource, search, statusMap, visitedCountries, hasExplicitPreset, fStatus, clsF, fRarity, fCons, fTrophic, fGeography, fCategory, fConfidence, fMapProfile, fBioRegion, fGameRegion, fHabitat, fTax, preset, sortBy]);
 
   const anyExtra = fRarity.length||fCons.length||fStatus.length||fTrophic.length||fGeography.length||fCategory.length||fConfidence.length||fMapProfile.length||fBioRegion.length||fGameRegion.length||fHabitat.length||fTax||sortBy!=='no';
+  const geographySummary = useMemo(() => {
+    if (preset?.type !== 'geography' || !preset?.geography?.length) return null;
+    const geoValues = preset.geography;
+    const total = animalsFilterSource.filter(a => matchGeographySelection(a, geoValues)).length;
+    const searched = animalsFilterSource.filter(a => {
+      const status = a?.status != null
+        ? normalizeAnimalStatus(a.status)
+        : getResolvedAnimalStatus(a, statusMap, visitedCountries);
+      return status === 'ricercato' && matchGeographySelection(a, geoValues);
+    }).length;
+    return { total, searched, label: preset.title || 'Territorio' };
+  }, [preset?.type, preset?.geography, preset?.title, animalsFilterSource, statusMap, visitedCountries]);
   const handleCardClick = useCallback((animal) => {
     if (tutorialActive && tutorialAnimalId && animal.id !== tutorialAnimalId) return;
     onSelect?.(animal);
     if (tutorialActive && animal.id === tutorialAnimalId) onTutorialAnimalSelect?.(animal);
   }, [tutorialActive, tutorialAnimalId, onSelect, onTutorialAnimalSelect]);
   const rarityOpts = useMemo(() => Object.entries(RARITY).map(([k,v])=>({ value:k, label:k, c:v.c, bg:v.bg })), []);
-  const consOpts = useMemo(() => Object.entries(CONS).map(([k,v])=>({ value:k, label:`${k} · ${v.full}`, c:v.c, bg:v.bg })), []);
+  const consOpts = useMemo(() => Object.entries(CONS).map(([k,v])=>({ value:k, label:formatConservationStatus(k), c:v.c, bg:v.bg })), []);
   const statusOpts = useMemo(() => ANIMAL_STATUS_ORDER.map(k => ({ value:k, label:ANIMAL_STATUS[k].label, c:ANIMAL_STATUS[k].c, bg:STATUS_FILTER_GRADIENTS[k] || ANIMAL_STATUS[k].bg })), []);
   const trophicOpts = useMemo(() => Object.entries(TROPHIC).map(([k,v])=>({ value:String(k), label:v.label, c:v.c, bg:v.bg })), []);
   const geographyOpts = useMemo(() => [...GEO_FILTER_OPTIONS, ...getAllScratchCountries().map(code=>({ value:code, label:getCountryDisplayName(code), c:'#20B2AA', bg:'rgba(32,178,170,.15)' }))], []);
@@ -4909,7 +4947,7 @@ function Grid({ onSelect, animals: animalsProp, statusMap = {}, visitedCountries
   const filterDefs = useMemo(() => [
     { key:'status', label:'Status', tone:'#F0A840', selected:fStatus, setter:setFStatus, options:statusOpts, layout:'quarters', hint:'Misteriosi, ricercati, avvistati o catturati' },
     { key:'rarity', label:'Rarità', tone:'#F0C449', selected:fRarity, setter:setFRarity, options:rarityOpts, layout:'quarters', hint:'Comune, non comune, raro, leggendario' },
-    { key:'cons', label:'Conservazione', tone:'#F06060', selected:fCons, setter:setFCons, options:consOpts, hint:'Stati IUCN' },
+    { key:'cons', label:'Conservazione', tone:'#F06060', selected:fCons, setter:setFCons, options:consOpts, hint:'Stato di conservazione' },
     { key:'trophic', label:'Catena', tone:'#F55454', selected:fTrophic, setter:setFTrophic, options:trophicOpts, hint:'Ruolo alimentare' },
     { key:'category', label:'Abilità', tone:'#B98CFF', selected:fCategory, setter:setFCategory, options:categoryOpts, hint:'Abilità e tag' },
     { key:'geography', label:'Geografia', tone:'#6CE5C7', selected:fGeography, setter:setFGeography, options:geographyOpts, hint:'Nazioni e aree' },
@@ -4966,6 +5004,14 @@ function Grid({ onSelect, animals: animalsProp, statusMap = {}, visitedCountries
       {/* Filtri applicati nascosti: l'area libera viene usata dai filtri rapidi. */}
 
       <div data-item-count={list.length} style={{ position:'absolute', top:gridTopChromeHeight, bottom:gridBottomChromeHeight, left:0, right:0, minHeight:0, overflowY:'auto', WebkitOverflowScrolling:'touch', overscrollBehavior:'contain', padding:isPhone?'12px 14px 18px':'16px 12px 20px', marginTop:0, marginBottom:0, background:isLightTheme?'transparent':'linear-gradient(180deg,rgba(240,168,64,.09),rgba(184,77,58,.08) 38%,rgba(16,11,9,.18))', zIndex:1 }}>
+        {geographySummary && (
+          <div style={{ marginBottom:12, borderRadius:18, border:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(240,168,64,.24)', background:isLightTheme?'rgba(255,255,255,.82)':'linear-gradient(135deg,rgba(240,168,64,.12),rgba(18,18,20,.88))', padding:'12px 14px', boxShadow:isLightTheme?'0 10px 24px rgba(0,0,0,.06)':'0 12px 28px rgba(0,0,0,.18)' }}>
+            <div style={{ color:isLightTheme?'#171717':'white', fontSize:14, fontWeight:1000 }}>{geographySummary.label}</div>
+            <div style={{ color:isLightTheme?'rgba(0,0,0,.62)':'rgba(255,255,255,.72)', fontSize:12, lineHeight:1.45, marginTop:5 }}>
+              {geographySummary.total} animali nel catalogo Apex · {geographySummary.searched} ricercati · {list.length} visibili con i filtri attuali
+            </div>
+          </div>
+        )}
         {list.length===0 ? (() => {
           const statusOnly = new Set(fStatus);
           const isMysteryTab = statusOnly.size === 1 && statusOnly.has('misterioso');
@@ -5078,7 +5124,7 @@ function Grid({ onSelect, animals: animalsProp, statusMap = {}, visitedCountries
         <div style={{ position:'fixed', inset:0, background:'rgba(0,0,0,.8)', display:'flex', alignItems:'center', justifyContent:'center', zIndex:100, padding:16 }}>
           <div style={{ background:'#1A1A1C', borderRadius:20, padding:28, maxHeight:'90vh', overflowY:'auto', maxWidth:520, width:'100%', border:'2px solid #A84637' }}>
             <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:24 }}><h2 style={{ margin:0, color:'#A84637', fontSize:22, fontWeight:900 }}>Legenda completa</h2><button onClick={()=>setShowInfoModalGrid(false)} style={{ background:'none', border:'none', color:'#A84637', fontSize:24, cursor:'pointer', padding:0 }}>×</button></div>
-            <div style={{ marginBottom:24 }}><h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>Stato conservazione (IUCN)</h3><div style={{ display:'flex', flexDirection:'column', gap:8 }}>{[{k:'LC',full:'Least Concern',desc:'Specie non in pericolo'},{k:'NT',full:'Near Threatened',desc:'Prossima a essere minacciata'},{k:'VU',full:'Vulnerable',desc:'A rischio di estinzione'},{k:'EN',full:'Endangered',desc:'Fortemente minacciata'},{k:'CR',full:'Critically Endangered',desc:'Gravissimamente minacciata'},{k:'EW',full:'Extinct in the Wild',desc:'Estinta in natura'},{k:'EX',full:'Extinct',desc:'Completamente estinta'},{k:'DD',full:'Data Deficient',desc:'Dati insufficienti'}].map(({k,full,desc})=>{const co=CONS[k]||CONS.DD;return <div key={k} style={{display:'flex',gap:10,alignItems:'flex-start'}}><div style={{background:co.bg,color:co.c,padding:'6px 12px',borderRadius:8,fontSize:12,fontWeight:700,whiteSpace:'nowrap',flexShrink:0}}>{k}</div><div style={{flex:1}}><div style={{color:'white',fontSize:12,fontWeight:700}}>{full}</div><div style={{color:'rgba(255,255,255,.55)',fontSize:11,marginTop:2}}>{desc}</div></div></div>;})}</div></div>
+            <div style={{ marginBottom:24 }}><h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>Stato di conservazione</h3><div style={{ display:'flex', flexDirection:'column', gap:8 }}>{[{k:'LC',full:'Least Concern',desc:'Specie non in pericolo'},{k:'NT',full:'Near Threatened',desc:'Prossima a essere minacciata'},{k:'VU',full:'Vulnerable',desc:'A rischio di estinzione'},{k:'EN',full:'Endangered',desc:'Fortemente minacciata'},{k:'CR',full:'Critically Endangered',desc:'Gravissimamente minacciata'},{k:'EW',full:'Extinct in the Wild',desc:'Estinta in natura'},{k:'EX',full:'Extinct',desc:'Completamente estinta'},{k:'DD',full:'Data Deficient',desc:'Dati insufficienti'}].map(({k,full,desc})=>{const co=CONS[k]||CONS.DD;return <div key={k} style={{display:'flex',gap:10,alignItems:'flex-start'}}><div style={{background:co.bg,color:co.c,padding:'6px 12px',borderRadius:8,fontSize:12,fontWeight:700,whiteSpace:'nowrap',flexShrink:0}}>{k}</div><div style={{flex:1}}><div style={{color:'white',fontSize:12,fontWeight:700}}>{full}</div><div style={{color:'rgba(255,255,255,.55)',fontSize:11,marginTop:2}}>{desc}</div></div></div>;})}</div></div>
             <div style={{ marginBottom:24 }}><h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>Rarità animale</h3><div style={{ display:'flex', flexDirection:'column', gap:8 }}><RarityLegendRows /></div></div>
             <div style={{ marginBottom:24 }}><h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>Status animale</h3><div style={{ display:'flex', flexDirection:'column', gap:8 }}><StatusLegendRows /></div></div>
           </div>
@@ -5731,7 +5777,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:8, marginBottom:10, padding:'0 4px' }}>
           <div data-tour="animal-rarity" style={{ width:'100%', opacity:.88, filter:'saturate(.86)', boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none', borderRadius:18 }}><RarityBadge rarity={a.rarity || 'Comune'} full style={{ width:'100%', fontSize:13.5 }} /></div>
-          <div data-tour="animal-conservation" style={{ background:co.bg, borderRadius:18, padding:'9px 12px', color:co.c, fontSize:12, fontWeight:700, textAlign:'center', opacity:.90, boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>{co.lbl} · {co.full}</div>
+          <div data-tour="animal-conservation" style={{ background:co.bg, borderRadius:18, padding:'9px 12px', color:co.c, fontSize:12, fontWeight:700, textAlign:'center', opacity:.90, boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>{formatConservationStatus(a.cons)}</div>
         </div>
         <div style={{ color:isLightTheme?'rgba(0,0,0,.54)':'rgba(255,255,255,.56)', fontSize:10.5, lineHeight:1.45, margin:'0 4px 16px' }}>
           {visitedMatches ? `Presente in ${visitedMatches} dei tuoi paesi · ` : ''}{(a.rarity || 'Comune')}, {a.rarity === 'Comune' ? 'facile da catturare' : a.rarity === 'Leggendario' ? 'molto raro' : 'da documentare'} · “Catturato” significa registrato nel tuo Apex, non cattura fisica.
@@ -5896,7 +5942,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
               <button onClick={()=>setShowInfoModal(false)} style={{ background:'none', border:'none', color:c.accent, fontSize:24, cursor:'pointer', padding:0 }}>×</button>
             </div>
             <div style={{ marginBottom:24 }}>
-              <h3 style={{ margin:'0 0 12px', color:c.accent, fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>🛡 Stato Conservazione (IUCN)</h3>
+              <h3 style={{ margin:'0 0 12px', color:c.accent, fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>🛡 Stato di conservazione</h3>
               <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
                 {[{k:'LC',full:'Least Concern',desc:'Specie non in pericolo'},{k:'NT',full:'Near Threatened',desc:'Prossima a essere minacciata'},{k:'VU',full:'Vulnerable',desc:'A rischio di estinzione'},{k:'EN',full:'Endangered',desc:'Fortemente minacciata'},{k:'CR',full:'Critically Endangered',desc:'Gravissimamente minacciata'},{k:'EW',full:'Extinct in the Wild',desc:'Estinta in natura'},{k:'EX',full:'Extinct',desc:'Completamente estinta'},{k:'DD',full:'Data Deficient',desc:'Dati insufficienti'}].map(({k,full,desc})=>{const co2=CONS[k]||CONS.DD;return <div key={k} style={{display:'flex',gap:10,alignItems:'flex-start'}}><div style={{background:co2.bg,color:co2.c,padding:'6px 12px',borderRadius:8,fontSize:12,fontWeight:700,whiteSpace:'nowrap',flexShrink:0}}>{k}</div><div style={{flex:1}}><div style={{color:'white',fontSize:12,fontWeight:700}}>{full}</div><div style={{color:'rgba(255,255,255,.55)',fontSize:11,marginTop:2}}>{desc}</div></div></div>;})}
               </div>
@@ -6721,49 +6767,55 @@ function SpeciesRangeMap({ animal, fallbackCountryMap, accentColor, forceFallbac
     </>
   );
 }
-function ComparatorDistributionMap({ left, right, colorLeft, colorRight }) {
-  const leftCodes = useMemo(() => new Set(getAnimalCountryCodes(left).map(c => String(c).toUpperCase())), [left?.id]);
-  const rightCodes = useMemo(() => new Set(getAnimalCountryCodes(right).map(c => String(c).toUpperCase())), [right?.id]);
-  const hasAny = leftCodes.size || rightCodes.size;
-  const overlapCount = left && right ? [...leftCodes].filter(c => rightCodes.has(c)).length : 0;
-  const totalUnique = new Set([...leftCodes, ...rightCodes]).size;
-  const overlapPct = totalUnique ? Math.round((overlapCount / totalUnique) * 100) : 0;
+function ComparatorSharedHabitats({ left, right, colorLeft, colorRight }) {
+  const leftHabitats = useMemo(() => new Set(getAnimalHabitatTokens(left).map(h => h.toLowerCase())), [left?.id]);
+  const rightHabitats = useMemo(() => new Set(getAnimalHabitatTokens(right).map(h => h.toLowerCase())), [right?.id]);
+  const leftList = useMemo(() => getAnimalHabitatTokens(left), [left?.id]);
+  const rightList = useMemo(() => getAnimalHabitatTokens(right), [right?.id]);
+  const shared = useMemo(() => leftList.filter(h => rightHabitats.has(h.toLowerCase())), [leftList, rightHabitats]);
+  const onlyLeft = useMemo(() => leftList.filter(h => !rightHabitats.has(h.toLowerCase())), [leftList, rightHabitats]);
+  const onlyRight = useMemo(() => rightList.filter(h => !leftHabitats.has(h.toLowerCase())), [rightList, leftHabitats]);
+  const hasAny = leftList.length || rightList.length;
   if (!left && !right) return null;
   return (
     <div style={{ borderRadius:22, background:'linear-gradient(135deg,rgba(12,18,22,.96),rgba(20,20,22,.96))', border:'1px solid rgba(255,255,255,.08)', padding:14, margin:'0 0 14px', overflow:'hidden' }}>
       <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:12, marginBottom:10 }}>
         <div>
-          <div style={{ color:'#F0A840', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Distribuzione</div>
-          <div style={{ color:'white', fontSize:18, fontWeight:1000, marginTop:3 }}>Aree sovrapposte</div>
+          <div style={{ color:'#F0A840', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Ecologia</div>
+          <div style={{ color:'white', fontSize:18, fontWeight:1000, marginTop:3 }}>Habitat in comune</div>
         </div>
         <div style={{ display:'flex', gap:8, flexShrink:0 }}>
           {left && <span style={{ width:12, height:12, borderRadius:999, background:colorLeft, display:'block' }} />}
           {right && <span style={{ width:12, height:12, borderRadius:999, background:colorRight, display:'block' }} />}
         </div>
       </div>
-      <div style={{ minHeight:132, borderRadius:16, overflow:'hidden', background:'radial-gradient(circle at 50% 20%, rgba(240,168,64,.12), transparent 44%), linear-gradient(135deg,#07131F,#111113)', border:'1px solid rgba(255,255,255,.08)', padding:14, display:'grid', alignContent:'center', gap:12 }}>
+      <div style={{ color:'rgba(255,255,255,.62)', fontSize:11.5, lineHeight:1.45, marginBottom:12 }}>Confronta gli ambienti in cui vivono i due animali. Gli habitat condivisi indicano nicchie ecologiche simili.</div>
+      <div style={{ minHeight:118, borderRadius:16, overflow:'hidden', background:'radial-gradient(circle at 50% 20%, rgba(144,216,74,.10), transparent 44%), linear-gradient(135deg,#07131F,#111113)', border:'1px solid rgba(255,255,255,.08)', padding:14, display:'grid', alignContent:'start', gap:12 }}>
         {!hasAny ? (
-          <div style={{ color:'rgba(255,255,255,.58)', fontSize:11, fontWeight:900, textAlign:'center', padding:18 }}>Distribuzione non disponibile per questi animali.</div>
+          <div style={{ color:'rgba(255,255,255,.58)', fontSize:11, fontWeight:900, textAlign:'center', padding:18 }}>Habitat non disponibili per questi animali.</div>
         ) : (
           <>
-            <div style={{ position:'relative', height:54, borderRadius:999, background:'rgba(255,255,255,.055)', overflow:'hidden', border:'1px solid rgba(255,255,255,.08)' }}>
-              <div style={{ position:'absolute', left:0, top:0, bottom:0, width:leftCodes.size || rightCodes.size ? `${Math.min(100, Math.max(8, (leftCodes.size / Math.max(1, totalUnique)) * 100))}%` : 0, background:`linear-gradient(90deg,${colorLeft}AA,${colorLeft}44)` }} />
-              <div style={{ position:'absolute', right:0, top:0, bottom:0, width:leftCodes.size || rightCodes.size ? `${Math.min(100, Math.max(8, (rightCodes.size / Math.max(1, totalUnique)) * 100))}%` : 0, background:`linear-gradient(270deg,${colorRight}AA,${colorRight}44)` }} />
-              <div style={{ position:'absolute', left:'50%', top:8, bottom:8, transform:'translateX(-50%)', width:`${Math.max(8, Math.min(72, overlapPct))}%`, borderRadius:999, background:'linear-gradient(135deg,#F0A840,#F5F1EA)', boxShadow:'0 0 24px rgba(240,168,64,.34)', opacity:left && right ? 1 : .28 }} />
-              <div style={{ position:'absolute', inset:0, display:'flex', alignItems:'center', justifyContent:'center', color:'white', fontSize:12, fontWeight:1000, textShadow:'0 1px 8px rgba(0,0,0,.55)' }}>{left && right ? `${overlapCount} paesi in comune` : `${totalUnique} paesi`}</div>
-            </div>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(3,minmax(0,1fr))', gap:8 }}>
-              <div style={{ borderRadius:14, background:'rgba(255,255,255,.055)', padding:10, minWidth:0 }}><div style={{ color:colorLeft, fontSize:18, fontWeight:1000 }}>{leftCodes.size}</div><div style={{ color:'rgba(255,255,255,.52)', fontSize:10, fontWeight:850 }}>A</div></div>
-              <div style={{ borderRadius:14, background:'rgba(240,168,64,.10)', padding:10, minWidth:0 }}><div style={{ color:'#F0A840', fontSize:18, fontWeight:1000 }}>{overlapCount}</div><div style={{ color:'rgba(255,255,255,.52)', fontSize:10, fontWeight:850 }}>Overlap</div></div>
-              <div style={{ borderRadius:14, background:'rgba(255,255,255,.055)', padding:10, minWidth:0 }}><div style={{ color:colorRight, fontSize:18, fontWeight:1000 }}>{rightCodes.size}</div><div style={{ color:'rgba(255,255,255,.52)', fontSize:10, fontWeight:850 }}>B</div></div>
+              <div style={{ borderRadius:14, background:'rgba(255,255,255,.055)', padding:10, minWidth:0 }}><div style={{ color:colorLeft, fontSize:18, fontWeight:1000 }}>{onlyLeft.length}</div><div style={{ color:'rgba(255,255,255,.52)', fontSize:10, fontWeight:850 }}>Solo A</div></div>
+              <div style={{ borderRadius:14, background:'rgba(144,216,74,.10)', padding:10, minWidth:0 }}><div style={{ color:'#90D84A', fontSize:18, fontWeight:1000 }}>{shared.length}</div><div style={{ color:'rgba(255,255,255,.52)', fontSize:10, fontWeight:850 }}>In comune</div></div>
+              <div style={{ borderRadius:14, background:'rgba(255,255,255,.055)', padding:10, minWidth:0 }}><div style={{ color:colorRight, fontSize:18, fontWeight:1000 }}>{onlyRight.length}</div><div style={{ color:'rgba(255,255,255,.52)', fontSize:10, fontWeight:850 }}>Solo B</div></div>
             </div>
+            {shared.length > 0 ? (
+              <div style={{ display:'flex', flexWrap:'wrap', gap:6 }}>
+                {shared.slice(0, 8).map(h => (
+                  <span key={h} style={{ borderRadius:999, border:'1px solid rgba(144,216,74,.34)', background:'rgba(144,216,74,.12)', color:'#D8FFC4', padding:'6px 10px', fontSize:10.5, fontWeight:900 }}>{formatHabitatLabel(h)}</span>
+                ))}
+                {shared.length > 8 && <span style={{ color:'rgba(255,255,255,.48)', fontSize:10, fontWeight:850, alignSelf:'center' }}>+{shared.length - 8} altri</span>}
+              </div>
+            ) : (
+              <div style={{ color:'rgba(255,255,255,.56)', fontSize:11, fontWeight:850, textAlign:'center' }}>Nessun habitat condiviso tra i due animali.</div>
+            )}
           </>
         )}
       </div>
       <div style={{ display:'flex', gap:10, flexWrap:'wrap', marginTop:10, color:'rgba(255,255,255,.70)', fontSize:11, fontWeight:850 }}>
-        {left && <span><b style={{ color:colorLeft }}>{left.com}</b>: {leftCodes.size || 0} paesi</span>}
-        {right && <span><b style={{ color:colorRight }}>{right.com}</b>: {rightCodes.size || 0} paesi</span>}
-        {left && right && <span><b style={{ color:'#F0A840' }}>Overlap</b>: {overlapCount}</span>}
+        {left && <span><b style={{ color:colorLeft }}>{left.com}</b>: {leftList.length || 0} habitat</span>}
+        {right && <span><b style={{ color:colorRight }}>{right.com}</b>: {rightList.length || 0} habitat</span>}
       </div>
     </div>
   );
@@ -8751,6 +8803,7 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
   const pinchRef = useRef(null);
   const touchGestureRef = useRef(null);
   const userMovedViewRef = useRef(false);
+  const panMovedRef = useRef(false);
   const lastCenterTapRef = useRef(0);
   const appliedResetRef = useRef(0);
   const [size, setSize] = useState({ w:0, h:0 });
@@ -8867,8 +8920,8 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
   const getTouchPoints = (e) => Array.from(e.touches || []).map(t => toLocalPoint(t.clientX, t.clientY));
   const startDrag = (e) => {
     userMovedViewRef.current = true;
+    panMovedRef.current = false;
     const local = toLocalPoint(e.clientX, e.clientY);
-    const blockedSingleDrag = e.target.closest?.('[data-life-node="true"], [data-life-control="true"]');
     pointersRef.current.set(e.pointerId, local);
     if (pointersRef.current.size === 2) {
       const pts = Array.from(pointersRef.current.values());
@@ -8876,7 +8929,7 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
       const dy = pts[1].y - pts[0].y;
       pinchRef.current = { dist:Math.hypot(dx, dy) || 1, mid:{ x:(pts[0].x + pts[1].x) / 2, y:(pts[0].y + pts[1].y) / 2 }, view };
       dragRef.current = null;
-    } else if (!blockedSingleDrag) {
+    } else if (!e.target.closest?.('[data-life-control="true"]')) {
       dragRef.current = { x:local.x, y:local.y, view };
     }
     e.currentTarget.setPointerCapture?.(e.pointerId);
@@ -8899,7 +8952,10 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
       return;
     }
     const d = dragRef.current;
-    if (d) setView({ ...d.view, x:d.view.x + local.x - d.x, y:d.view.y + local.y - d.y });
+    if (d) {
+      if (Math.hypot(local.x - d.x, local.y - d.y) > 8) panMovedRef.current = true;
+      setView({ ...d.view, x:d.view.x + local.x - d.x, y:d.view.y + local.y - d.y });
+    }
   };
   const endDrag = (e) => {
     pointersRef.current.delete(e.pointerId);
@@ -8913,12 +8969,12 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
     const points = getTouchPoints(e);
     if (!points.length) return;
     userMovedViewRef.current = true;
+    panMovedRef.current = false;
     if (points.length >= 2) {
       touchGestureRef.current = { mode:'pinch', dist:touchDistance(points), mid:touchMidpoint(points), view };
       e.preventDefault?.();
       return;
     }
-    if (e.target.closest?.('[data-life-node="true"]')) return;
     touchGestureRef.current = { mode:'pan', start:points[0], view };
   };
   const moveTouch = (e) => {
@@ -8936,6 +8992,7 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
       return;
     }
     if (gesture.mode === 'pan' && points.length === 1) {
+      if (Math.hypot(points[0].x - gesture.start.x, points[0].y - gesture.start.y) > 8) panMovedRef.current = true;
       setView({ ...gesture.view, x:gesture.view.x + points[0].x - gesture.start.x, y:gesture.view.y + points[0].y - gesture.start.y });
       e.preventDefault?.();
     }
@@ -9010,6 +9067,7 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
               key={id}
               data-life-node="true"
               onClick={() => {
+                if (panMovedRef.current) { panMovedRef.current = false; return; }
                 if (active || id === expandedGeneratedId) { setDetailNode({ node, stats }); return; }
                 if (generatedAnimal) onOpenAnimal?.(node.animal);
                 else if (generatedBranch) setExpandedGeneratedId(id);
@@ -9053,7 +9111,7 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
               <div style={{ color:animalMystery?'rgba(255,255,255,.48)':'rgba(255,255,255,.66)', fontSize:10.5, lineHeight:1.28, marginTop:7, display:'-webkit-box', WebkitLineClamp:2, WebkitBoxOrient:'vertical', overflow:'hidden' }}>{generatedAnimal ? (animalMystery ? 'Animale misterioso' : (node.animal.sci || node.subtitle || 'Specie Apex')) : (inPath && !active ? 'Percorso attivo' : (node.subtitle || 'Ramo Apex'))}</div>
               {generatedAnimal && !animalMystery && (
                 <div style={{ marginTop:8, display:'flex', gap:5, minWidth:0 }}>
-                  <span style={{ borderRadius:999, border:`1px solid ${node.color}44`, background:`${node.color}18`, color:node.color, padding:'3px 7px', fontSize:8.5, fontWeight:950, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{node.animal.cons || 'Conservazione n/d'}</span>
+                  <span style={{ borderRadius:999, border:`1px solid ${node.color}44`, background:`${node.color}18`, color:node.color, padding:'3px 7px', fontSize:8.5, fontWeight:950, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{formatConservationStatus(node.animal.cons, { compact:true })}</span>
                   <span style={{ borderRadius:999, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.055)', color:'rgba(255,255,255,.72)', padding:'3px 7px', fontSize:8.5, fontWeight:950, whiteSpace:'nowrap' }}>Apri scheda</span>
                 </div>
               )}
@@ -10012,7 +10070,7 @@ function BadgesPage({ onBack, statusMap = {}, visitedCountries = [], earnedBadge
 
 function ScratchMap({ visitedCountries, selectedCountry, onSelectCountry }) {
   const visited = Array.from(new Set((visitedCountries || []).map(c=>String(c).toUpperCase()).filter(Boolean))).slice(0, 120);
-  const [flatMap, setFlatMap] = useState(false);
+  const [flatMap, setFlatMap] = useState(true);
   return (
     <div style={{ marginBottom:12 }}>
       <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:8 }}>
@@ -10965,11 +11023,13 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   const region = continent?.regions.find(r => r.id === effectiveRegionId) || null;
   const visitedSet = new Set(normalizeIsoList(visitedCountries));
   const territoryUnlockSet = useMemo(() => getTerritoryUnlockIdsForCountries(visitedCountries), [visitedCountries]);
-  const scratchCountries = getAllScratchCountries().filter(code => {
+  const scratchCountries = useMemo(() => {
     const q = countrySearch.trim().toLowerCase();
-    if (!q) return true;
-    return code.toLowerCase().includes(q) || getCountryDisplayName(code).toLowerCase().includes(q);
-  }).slice(0,160);
+    return getAllScratchCountries().filter(code => {
+      if (!q) return true;
+      return code.toLowerCase().includes(q) || getCountryDisplayName(code).toLowerCase().includes(q);
+    }).slice(0, 160);
+  }, [countrySearch]);
   const submitDestination = async () => {
     const selectedList = selectedDestinationIsos.length ? selectedDestinationIsos : (selectedDestinationIso ? [selectedDestinationIso] : []);
     if (!selectedList.length) return;
@@ -10980,7 +11040,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     setSelectedDestinationIso('');
     setSelectedDestinationIsos([]);
     try {
-      for (const iso of cleanList) await onAddDestination?.(iso, []);
+      for (const iso of cleanList) await onAddDestination?.(cleanList, []);
     } catch (err) { console.warn('[Apex] aggiunta paese non bloccante:', err); }
   };
   const toggleDestinationIso = (code) => {
@@ -11717,7 +11777,7 @@ function ComparatorInfoModal({ onClose }) {
           <button onClick={onClose} style={{ width:34, height:34, borderRadius:12, border:'none', background:'rgba(255,255,255,.08)', color:'white', fontSize:20 }}>×</button>
         </div>
         {[
-          ['Vulnerabilità', 'Deriva dallo stato di conservazione IUCN quando disponibile; in mancanza usa una stima inversa basata sulla resistenza. Valori alti indicano fragilità maggiore.'],
+          ['Vulnerabilità', 'Deriva dallo stato di conservazione quando disponibile; in mancanza usa una stima inversa basata sulla resistenza. Valori alti indicano fragilità maggiore.'],
           ['Dimensioni', 'Nel radar leggi il valore reale. Se nel dataset c’è un range, Apex usa la fascia più alta: per esempio 34-38 cm diventa 38 cm. Il pentagono usa poi una scala logaritmica interna per confrontare piccoli e giganti senza schiacciare nessuno.'],
           ['Velocità', 'Leggi la velocità reale in km/h quando disponibile. Il pentagono la posiziona rispetto agli altri animali del database, così capisci subito chi sta davvero correndo forte.'],
           ['Peso', 'Nel radar leggi il valore reale. Se il peso è indicato come range, Apex usa la fascia più alta; se esiste body_mass_g lo usa come riferimento diretto. La scala del pentagono resta logaritmica per rendere leggibili anche gli estremi.'],
@@ -11909,7 +11969,7 @@ function getComparatorMetrics(a, benchmarks, selectedKeys=DEFAULT_COMPARATOR_MET
 function formatComparatorRaw(metric) {
   if (!metric) return '';
   const raw = String(metric.raw || '').trim();
-  if (metric.key === 'vulnerabilita') return `IUCN ${raw || 'DD'}`;
+  if (metric.key === 'vulnerabilita') return formatConservationStatus(raw);
   if (metric.key === 'velocita') return raw && raw !== 'n/d' ? `${raw} km/h` : 'n/d';
   return raw || 'n/d';
 }
@@ -12170,24 +12230,26 @@ function ComparatorPage({ onBack, animals = [], statusMap = {}, visitedCountries
           <ComparatorSelector label="Destra" value={right} animals={selectorAnimals} onChange={setRight} accent={colorRight} gradient={COMPARE_RIGHT_GRADIENT} compact={isMobile} onZoom={setZoomAnimal} />
         </div>
         {!left && !right && <div style={{ marginBottom:12, borderRadius:18, border:'1px solid rgba(255,255,255,.08)', background:'rgba(255,255,255,.04)', padding:'12px 14px', color:'rgba(255,255,255,.68)', fontSize:12.5, lineHeight:1.45 }}>Seleziona uno o due animali per iniziare il confronto. Da mobile, tocca le card sopra per aprire la ricerca.</div>}
-        <div style={{ borderRadius:20, border:'1px solid rgba(255,255,255,.08)', background:'rgba(255,255,255,.045)', padding:12, marginBottom:12 }}>
-          <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, marginBottom:9 }}>
-            <div style={{ color:'white', fontSize:13, fontWeight:1000 }}>Variabili radar</div>
-            <div style={{ color:'rgba(255,255,255,.50)', fontSize:11, fontWeight:900 }}>{selectedMetricKeys.length} / 8</div>
-          </div>
-          <div style={{ display:'flex', gap:7, overflowX:'auto', paddingBottom:2, WebkitOverflowScrolling:'touch' }}>
-            {COMPARATOR_METRICS.map(metric => {
-              const active = selectedMetricKeys.includes(metric.key);
-              const disabled = !active && selectedMetricKeys.length >= 8;
-              return <button key={metric.key} disabled={disabled} onClick={()=>toggleMetric(metric.key)} style={{ flex:'0 0 auto', height:34, borderRadius:13, border:`1px solid ${active?'rgba(240,168,64,.72)':'rgba(255,255,255,.10)'}`, background:active?'linear-gradient(135deg,rgba(184,77,58,.82),rgba(240,168,64,.78))':'rgba(255,255,255,.045)', color:active?'white':'rgba(255,255,255,.72)', padding:'0 10px', fontSize:11, fontWeight:950, fontFamily:'inherit', opacity:disabled ? .55 : 1, cursor:disabled?'not-allowed':'pointer' }}>{metric.label}</button>;
-            })}
-          </div>
-        </div>
         <ComparatorErrorBoundary>
           <ComparatorMetricBars left={leftMetrics} right={rightMetrics} colorLeft={colorLeft} colorRight={colorRight} theme={theme} />
         </ComparatorErrorBoundary>
         <ComparatorErrorBoundary resetKey={`${left?.id || ''}-${right?.id || ''}-${selectedMetricKeys.join(',')}`}>
-          <ComparatorRadar left={leftMetrics} right={rightMetrics} colorLeft={colorLeft} colorRight={colorRight} />
+          <div style={{ borderRadius:24, border:'1px solid rgba(255,255,255,.08)', background:'rgba(255,255,255,.03)', overflow:'hidden', marginBottom:12 }}>
+            <ComparatorRadar left={leftMetrics} right={rightMetrics} colorLeft={colorLeft} colorRight={colorRight} />
+            <div style={{ borderTop:'1px solid rgba(255,255,255,.08)', padding:'12px 12px 14px' }}>
+              <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, marginBottom:9 }}>
+                <div style={{ color:'white', fontSize:13, fontWeight:1000 }}>Variabili radar</div>
+                <div style={{ color:'rgba(255,255,255,.50)', fontSize:11, fontWeight:900 }}>{selectedMetricKeys.length} / 8</div>
+              </div>
+              <div style={{ display:'flex', gap:7, overflowX:'auto', paddingBottom:2, WebkitOverflowScrolling:'touch' }}>
+                {COMPARATOR_METRICS.map(metric => {
+                  const active = selectedMetricKeys.includes(metric.key);
+                  const disabled = !active && selectedMetricKeys.length >= 8;
+                  return <button key={metric.key} disabled={disabled} onClick={()=>toggleMetric(metric.key)} style={{ flex:'0 0 auto', height:34, borderRadius:13, border:`1px solid ${active?'rgba(240,168,64,.72)':'rgba(255,255,255,.10)'}`, background:active?'linear-gradient(135deg,rgba(184,77,58,.82),rgba(240,168,64,.78))':'rgba(255,255,255,.045)', color:active?'white':'rgba(255,255,255,.72)', padding:'0 10px', fontSize:11, fontWeight:950, fontFamily:'inherit', opacity:disabled ? .55 : 1, cursor:disabled?'not-allowed':'pointer' }}>{metric.label}</button>;
+                })}
+              </div>
+            </div>
+          </div>
         </ComparatorErrorBoundary>
         <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:14, margin:'12px 0 16px' }}>
           <div style={{ display:'flex', alignItems:'center', gap:6, color:'rgba(255,255,255,.76)', fontSize:11, fontWeight:850 }}><span style={{ width:14, height:4, borderRadius:4, background:colorLeft, display:'inline-block' }} />{left ? getComparatorAnimalLabel(left) : 'Animale A'}</div>
@@ -12195,7 +12257,7 @@ function ComparatorPage({ onBack, animals = [], statusMap = {}, visitedCountries
           <div style={{ display:'flex', alignItems:'center', gap:6, color:'rgba(255,255,255,.76)', fontSize:11, fontWeight:850 }}><span style={{ width:14, height:4, borderRadius:4, background:colorRight, display:'inline-block' }} />{right ? getComparatorAnimalLabel(right) : 'Animale B'}</div>
         </div>
         <ComparatorErrorBoundary>
-          <ComparatorDistributionMap left={left} right={right} colorLeft={colorLeft} colorRight={colorRight} />
+          <ComparatorSharedHabitats left={left} right={right} colorLeft={colorLeft} colorRight={colorRight} />
         </ComparatorErrorBoundary>
         <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:12 }}>
           <ComparatorErrorBoundary>
@@ -12294,7 +12356,7 @@ function SimpleComparatorPage({ onBack, animals = [], statusMap = {}, visitedCou
           </div>
         </div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:7, marginTop:12 }}>
-          <span style={{ borderRadius:999, padding:'6px 9px', background:hexToRgba(accent,.15), color:accent, fontSize:11, fontWeight:950 }}>{animal.cons || 'IUCN n/d'}</span>
+          <span style={{ borderRadius:999, padding:'6px 9px', background:hexToRgba(accent,.15), color:accent, fontSize:11, fontWeight:950 }}>{formatConservationStatus(animal.cons)}</span>
           <span style={{ borderRadius:999, padding:'6px 9px', background:isLightTheme?'rgba(0,0,0,.05)':'rgba(255,255,255,.07)', color:pageText, fontSize:11, fontWeight:950 }}>{getComparatorClassLabel(animal)}</span>
           {abilities.map(id => <span key={id} style={{ borderRadius:999, padding:'6px 9px', background:isLightTheme?'rgba(0,0,0,.05)':'rgba(255,255,255,.07)', color:subText, fontSize:10.5, fontWeight:850 }}>{CATEGORY_META[id]?.label || id}</span>)}
         </div>
@@ -12585,6 +12647,13 @@ export default function App() {
       if (param === HOME_VARIANTS.v2 || param === HOME_VARIANTS.classic) {
         setHomeVariant(param);
         setHomeVariantState(param);
+        return;
+      }
+      const rolloutKey = 'animaldex_home_v2_rollout';
+      if (!window.localStorage.getItem(rolloutKey)) {
+        const next = setHomeVariant(HOME_VARIANTS.v2);
+        setHomeVariantState(next);
+        window.localStorage.setItem(rolloutKey, '1');
       }
     } catch {}
   }, []);
@@ -12938,27 +13007,26 @@ export default function App() {
     }
   };
 
-  const handleAddDestination = async (iso, tripTags = []) => {
-    if (!user?.id || !iso) return;
-    const cleanIso = String(iso).toUpperCase();
+  const handleAddDestination = async (isoInput, tripTags = []) => {
+    const cleanList = (Array.isArray(isoInput) ? isoInput : [isoInput])
+      .map(code => String(code || '').toUpperCase())
+      .filter(Boolean);
+    if (!user?.id || !cleanList.length) return;
     awardInteractionRef.current = true;
-    setVisitedCountries(prev => {
-      const nextVisited = normalizeIsoList([...(prev || []), cleanIso]);
-      saveVisitedCountries(nextVisited);
-      return nextVisited;
-    });
     setDestinationsLoading(true);
     setDataError('');
     try {
-      await withTimeout(persistUserDestination(user.id, cleanIso, tripTags || []), 4500, false, 'persistUserDestination');
-      const { error: rpcError } = await withTimeout(supabase.rpc('unlock_animals_for_destination', {
-        p_user_id: user.id,
-        p_iso: cleanIso,
-        p_trip_tags: tripTags || [],
-      }), 7000, { error:null }, 'unlock_animals_for_destination');
-      if (rpcError) console.warn('[Apex] RPC unlock destinazione non disponibile, uso fallback client:', rpcError);
-      await unlockAnimalsForDestinationClient(user.id, cleanIso, animalsData);
-      await trackUserEvent(user, 'country_added', { country_iso:cleanIso, trip_tags:tripTags || [], source_screen:'regions' }, userProfile);
+      for (const cleanIso of cleanList) {
+        await withTimeout(persistUserDestination(user.id, cleanIso, tripTags || []), 4500, false, 'persistUserDestination');
+        const { error: rpcError } = await withTimeout(supabase.rpc('unlock_animals_for_destination', {
+          p_user_id: user.id,
+          p_iso: cleanIso,
+          p_trip_tags: tripTags || [],
+        }), 7000, { error:null }, 'unlock_animals_for_destination');
+        if (rpcError) console.warn('[Apex] RPC unlock destinazione non disponibile, uso fallback client:', rpcError);
+        await unlockAnimalsForDestinationClient(user.id, cleanIso, animalsData);
+        await trackUserEvent(user, 'country_added', { country_iso:cleanIso, trip_tags:tripTags || [], source_screen:'regions' }, userProfile);
+      }
       reloadSupabaseData(user).catch(err => console.warn('[Apex] reload destinazione non bloccante:', err));
     } catch (err) {
       console.warn('[Apex] Aggiungi destinazione fallito:', err);
@@ -12994,9 +13062,8 @@ export default function App() {
     const cleanCodes = normalizeIsoList(codes);
     if (!cleanCodes.length) { setCountryVisitPrompt(null); return; }
     setCountryVisitPrompt(null);
-    for (const iso of cleanCodes) {
-      await handleAddDestination(iso, []);
-    }
+    handleVisitedCountriesChange(normalizeIsoList([...(visitedCountries || []), ...cleanCodes]));
+    await handleAddDestination(cleanCodes, []);
   };
 
 
@@ -13469,7 +13536,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
     if (page === 'friends') return <FriendsPage theme={theme} accessToken={session?.access_token || ''} initialTab={friendsInitialTab} onSocialChange={setSocialSnapshot} onBack={()=>returnFromSection('menu')} user={user} userProfile={userProfile} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
     if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} pendingFriendRequestCount={pendingFriendRequestCount} animalsWithStatus={animalsWithStatus} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={handleLogout} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges', 'profile')} onOpenRegions={()=>openPage('regions', 'profile')} onOpenGallery={()=>openPage('gallery', 'profile')} onOpenFriends={openFriends} />;
 	    if (page === 'badges') return <BadgesPage theme={theme} onBack={()=>returnFromSection('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={activeSectionGuide==='badges'} onTutorialBadgeOpen={()=>setActiveSectionGuide(null)} />;
-    if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><FeaturePageErrorBoundary theme={theme} title="Territori" onBack={()=>returnFromSection('menu')} resetKey={`regions-${theme}-${visitedCountries?.length || 0}-${regionsInitialView || 'planet'}`}><RegionsPage theme={theme} animalsWithStatus={animalsWithStatus} onBack={()=>returnFromSection('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={handleVisitedCountriesChange} onRemoveDestination={handleRemoveDestination} initialView={regionsInitialView} onSelect={selectAnimal} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} /></FeaturePageErrorBoundary>{renderDetailOverlay()}</div>;
+    if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><FeaturePageErrorBoundary theme={theme} title="Territori" onBack={()=>returnFromSection('menu')} resetKey={`regions-${theme}-${regionsInitialView || 'planet'}`}><RegionsPage theme={theme} animalsWithStatus={animalsWithStatus} onBack={()=>returnFromSection('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={handleVisitedCountriesChange} onRemoveDestination={handleRemoveDestination} initialView={regionsInitialView} onSelect={selectAnimal} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} /></FeaturePageErrorBoundary>{renderDetailOverlay()}</div>;
     if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage theme={theme} onBack={()=>returnFromSection('profile')} statusMap={statusMap} onSelect={selectAnimal} />{renderDetailOverlay()}</div>;
     if (page === 'lifeweb') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><StandaloneLifeWebPage theme={theme} statusMap={statusMap} visitedCountries={visitedCountries} onBack={()=>returnFromFeaturePage('grid')} animals={animalsData} initialAnimal={lifeWebInitialAnimal} onOpenAnimal={selectAnimal} />{renderDetailOverlay()}</div>;
     if (page === 'taxonomy') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><TaxonomyErrorBoundary theme={theme} onBack={()=>setPage('menu')} resetKey={`${theme}-${animalsWithStatus?.length || 0}-${taxonomyInitialAnimal?.id || ''}`}><TaxonomyExplorer theme={theme} animals={animalsWithStatus} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={taxonomyInitialAnimal} onBack={()=>setPage('menu')} onOpenAnimal={selectAnimal} onOpenTaxonomyFilter={openTaxonomyFilterFromDetail} /></TaxonomyErrorBoundary>{renderDetailOverlay()}</div>;
