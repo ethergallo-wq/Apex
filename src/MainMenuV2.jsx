@@ -2,17 +2,17 @@ import React, { useMemo, useState } from 'react';
 import { buildHomeMission } from './homeMission';
 
 const LIGHT_APP_BG = '#F3EFE6';
-const ANIMALDEX_ORANGE_GRADIENT = 'linear-gradient(135deg,#B84D3A,#D06A45)';
+const ORANGE = '#B84D3A';
+const ORANGE_GRADIENT = 'linear-gradient(135deg,#B84D3A,#D06A45)';
+const GREEN = '#90D84A';
 const BADGE_LEVEL_COLORS = { 1: '#CD7F32', 2: '#C0C0C0', 3: '#FFD700', 4: '#8F34F5' };
+const MISSION_SILHOUETTES = ['🦁', '🦒', '🐘', '🦏'];
 
 function hexToRgba(hex, alpha = 1) {
   const clean = String(hex || '#ffffff').replace('#', '');
   const full = clean.length === 3 ? clean.split('').map(ch => ch + ch).join('') : clean;
   const n = parseInt(full, 16);
-  const r = (n >> 16) & 255;
-  const g = (n >> 8) & 255;
-  const b = n & 255;
-  return `rgba(${r},${g},${b},${alpha})`;
+  return `rgba(${(n >> 16) & 255},${(n >> 8) & 255},${n & 255},${alpha})`;
 }
 
 function xpForLevel(level) {
@@ -23,26 +23,107 @@ function buildAwardImagePath(badgeId) {
   return `/awards/${String(badgeId || '').toLowerCase()}.png`;
 }
 
+function badgeAccentImage(badgeId = '', index = 0) {
+  const images = [
+    '/regions/afrotropici_equatoriali.jpg',
+    '/regions/Scandinavia_foreste_boreali.jpg',
+    '/regions/amazzonia.jpg',
+    '/regions/africa.jpg',
+    '/regions/eastern_indo_pacific.jpg',
+  ];
+  const seed = String(badgeId || index).split('').reduce((sum, ch) => sum + ch.charCodeAt(0), 0);
+  return images[seed % images.length];
+}
+
 function SocialCountBadge({ count = 0, style = {} }) {
   if (!count) return null;
   return (
-    <span style={{ minWidth: 22, height: 22, padding: '0 6px', borderRadius: 999, background: '#B84D3A', color: 'white', fontSize: 11, fontWeight: 1000, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 12px rgba(184,77,58,.34)', ...style }}>
+    <span style={{ minWidth: 20, height: 20, padding: '0 5px', borderRadius: 999, background: ORANGE, color: 'white', fontSize: 10, fontWeight: 1000, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 12px rgba(184,77,58,.34)', ...style }}>
       {count > 99 ? '99+' : count}
     </span>
   );
 }
 
-function ProgressRing({ progress = 0, color = '#F0A840', size = 52 }) {
+function IconGrid({ size = 22, color = 'white' }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <rect x="3" y="3" width="7" height="7" rx="1.8" fill={color} />
+      <rect x="14" y="3" width="7" height="7" rx="1.8" fill={color} />
+      <rect x="3" y="14" width="7" height="7" rx="1.8" fill={color} />
+      <rect x="14" y="14" width="7" height="7" rx="1.8" fill={color} />
+    </svg>
+  );
+}
+
+function IconCamera({ size = 22, color = ORANGE }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M9.5 7.5 8.2 5.5H5.5C4.12 5.5 3 6.62 3 8v9.5C3 18.88 4.12 20 5.5 20h13c1.38 0 2.5-1.12 2.5-2.5V8c0-1.38-1.12-2.5-2.5-2.5h-2.7L14.5 7.5h-5Z" stroke={color} strokeWidth="1.8" />
+      <circle cx="12" cy="13" r="3.6" stroke={color} strokeWidth="1.8" />
+    </svg>
+  );
+}
+
+function IconSearch({ size = 16, color = 'rgba(255,255,255,.55)' }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <circle cx="11" cy="11" r="6.5" stroke={color} strokeWidth="1.8" />
+      <path d="m16.5 16.5 4 4" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function IconEye({ size = 16, color = 'rgba(255,255,255,.55)' }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M2.5 12.5S6.5 6 12 6s9.5 6.5 9.5 6.5S17.5 19 12 19 2.5 12.5 2.5 12.5Z" stroke={color} strokeWidth="1.8" />
+      <circle cx="12" cy="12.5" r="2.6" stroke={color} strokeWidth="1.8" />
+    </svg>
+  );
+}
+
+function IconPaw({ size = 16, color = 'rgba(255,255,255,.55)' }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <ellipse cx="8" cy="9" rx="2.1" ry="2.6" fill={color} />
+      <ellipse cx="12" cy="7.5" rx="2.1" ry="2.6" fill={color} />
+      <ellipse cx="16" cy="9" rx="2.1" ry="2.6" fill={color} />
+      <path d="M7.5 12.5c1.2 3.2 3.3 5 4.5 5s3.3-1.8 4.5-5" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function IconStarBadge({ size = 16, color = 'rgba(255,255,255,.55)' }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <circle cx="12" cy="12" r="7.5" stroke={color} strokeWidth="1.8" />
+      <path d="M12 8.2 13.1 11h3.1l-2.5 1.8.9 3-2.6-1.8-2.6 1.8.9-3-2.5-1.8h3.1Z" fill={color} />
+    </svg>
+  );
+}
+
+function ProgressRing({ progress = 0, color = '#F0A840', size = 74, stroke = 5 }) {
   const pct = Math.max(0, Math.min(100, Math.round(progress * 100)));
-  const stroke = 4;
   const r = (size - stroke) / 2;
   const c = 2 * Math.PI * r;
   const offset = c - (pct / 100) * c;
   return (
-    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} aria-hidden="true">
-      <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="rgba(255,255,255,.10)" strokeWidth={stroke} />
+    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} aria-hidden="true" style={{ display: 'block' }}>
+      <circle cx={size / 2} cy={size / 2} r={r} fill="rgba(0,0,0,.42)" stroke="rgba(255,255,255,.14)" strokeWidth={stroke} />
       <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke={color} strokeWidth={stroke} strokeLinecap="round" strokeDasharray={c} strokeDashoffset={offset} transform={`rotate(-90 ${size / 2} ${size / 2})`} />
+      <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fill="white" fontSize={size * 0.19} fontWeight="800">{pct}%</text>
     </svg>
+  );
+}
+
+function GlobeArt() {
+  return (
+    <div style={{ width: 74, height: 74, borderRadius: '50%', position: 'relative', margin: '0 auto 8px', background: 'radial-gradient(circle at 35% 28%, rgba(144,216,74,.42), rgba(20,60,48,.22) 34%, rgba(7,19,31,.92) 62%)', boxShadow: '0 0 28px rgba(91,190,248,.22), inset 0 0 18px rgba(255,255,255,.08)' }}>
+      <div style={{ position: 'absolute', inset: '12%', borderRadius: '50%', border: '1px solid rgba(108,229,199,.28)' }} />
+      <div style={{ position: 'absolute', left: '18%', top: '22%', bottom: '22%', width: 1, background: 'rgba(108,229,199,.22)' }} />
+      <div style={{ position: 'absolute', right: '18%', top: '22%', bottom: '22%', width: 1, background: 'rgba(108,229,199,.22)' }} />
+      <div style={{ position: 'absolute', left: '12%', right: '12%', top: '50%', height: 1, background: 'rgba(108,229,199,.22)' }} />
+    </div>
   );
 }
 
@@ -50,8 +131,6 @@ export default function MainMenuV2({
   onOpen,
   onLogout,
   tutorialFocus = null,
-  statusMap = {},
-  visitedCountries = [],
   earnedBadgeIds = [],
   userProfile,
   user,
@@ -79,17 +158,20 @@ export default function MainMenuV2({
   const isLightTheme = theme === 'light';
   const pageText = isLightTheme ? '#171717' : 'white';
   const mutedText = isLightTheme ? 'rgba(0,0,0,.58)' : 'rgba(255,255,255,.62)';
-  const lightPanel = isLightTheme ? '#F6F4EF' : 'rgba(255,255,255,.055)';
-  const lightPanelBorder = isLightTheme ? 'rgba(0,0,0,.10)' : 'rgba(255,255,255,.08)';
+  const panelBorder = isLightTheme ? 'rgba(0,0,0,.10)' : 'rgba(255,255,255,.08)';
+  const panelBg = isLightTheme ? 'rgba(255,255,255,.78)' : 'rgba(255,255,255,.05)';
   const displayName = userProfile?.nickname || userProfile?.username || user?.email?.split('@')[0] || 'Esploratore';
   const nextLevelXP = xpForLevel(progress.level + 1);
   const currLevelXP = xpForLevel(progress.level);
   const xpPct = Math.max(0, Math.min(100, ((progress.xp - currLevelXP) / Math.max(1, nextLevelXP - currLevelXP)) * 100));
   const badgeCount = (earnedBadgeIds || []).length;
   const nearlyBadges = progress.nearlyCompletedBadges || [];
+  const friendAvatars = (socialSnapshot?.friends || socialSnapshot?.leaderboard || [])
+    .filter(p => !p?.isMe)
+    .slice(0, 3);
 
-  const openFriendsFromHome = (tab = 'feed') => {
-    if (typeof onOpenFriends === 'function') onOpenFriends(tab, 'menu');
+  const openFriendsFromHome = () => {
+    if (typeof onOpenFriends === 'function') onOpenFriends('feed', 'menu');
     else onOpen('friends');
   };
 
@@ -120,179 +202,188 @@ export default function MainMenuV2({
   ];
 
   const stats = [
-    { label: 'Ricercati', value: progress.searchedCount || 0, action: () => onOpenGridStatus?.(['ricercato']) },
-    { label: 'Avvistati', value: progress.seenCount || 0, action: () => onOpenGridStatus?.(['avvistato']) },
-    { label: 'Catturati', value: progress.capturedCount || 0, action: () => onOpenGridStatus?.(['catturato']) },
-    { label: 'Badge', value: badgeCount, action: () => onOpen('badges') },
+    { label: 'Ricercati', value: progress.searchedCount || 0, icon: IconSearch, action: () => onOpenGridStatus?.(['ricercato']) },
+    { label: 'Avvistati', value: progress.seenCount || 0, icon: IconEye, action: () => onOpenGridStatus?.(['avvistato']) },
+    { label: 'Catturati', value: progress.capturedCount || 0, icon: IconPaw, action: () => onOpenGridStatus?.(['catturato']) },
+    { label: 'Badge', value: badgeCount, icon: IconStarBadge, action: () => onOpen('badges') },
   ];
 
-  const exploreTiles = [
-    {
-      id: 'regions',
-      eyebrow: 'Esplorazione',
-      title: 'Territori',
-      subtitle: 'Mappa e bioregioni',
-      accent: '#90D84A',
-      background: 'linear-gradient(135deg, rgba(5,11,13,.88), rgba(5,11,13,.42)), radial-gradient(circle at 82% 38%, rgba(144,216,74,.28), transparent 42%)',
-      action: () => (onOpenRegions || (() => onOpen('regions')))(),
-    },
-    {
-      id: 'taxonomy',
-      eyebrow: 'Tassonomia',
-      title: 'Albero della vita',
-      subtitle: 'Naviga i rami',
-      accent: '#90D84A',
-      background: `linear-gradient(135deg, rgba(3,8,5,.82), rgba(3,8,5,.48)), url("/backgrounds/background_tree.png") center 43% / cover no-repeat`,
-      action: () => onOpen('taxonomy'),
-    },
-    {
-      id: 'friends',
-      eyebrow: 'Social',
-      title: 'Allenatori',
-      subtitle: 'Feed e amici',
-      accent: '#F0A840',
-      background: `linear-gradient(135deg, rgba(12,10,9,.78), rgba(25,16,10,.52)), url("/backgrounds/background_amici.png") center / cover no-repeat`,
-      action: () => openFriendsFromHome('feed'),
-      badge: pendingFriendRequests,
-    },
-    {
-      id: 'badges',
-      eyebrow: 'Progressi',
-      title: 'Badge',
-      subtitle: 'Premi e traguardi',
-      accent: '#FFD700',
-      background: 'linear-gradient(135deg, rgba(28,20,8,.88), rgba(18,14,8,.62)), radial-gradient(circle at 78% 24%, rgba(255,215,0,.18), transparent 40%)',
-      action: () => onOpen('badges'),
-    },
-  ];
-
-  const boxShadow = isLightTheme ? '0 14px 30px rgba(0,0,0,.08)' : '0 16px 38px rgba(0,0,0,.22)';
+  const missionBadgeId = mission.badgeId || nearlyBadges[0]?.badgeId;
 
   return (
-    <div style={{ height: '100%', display: 'flex', flexDirection: 'column', position: 'relative', background: isLightTheme ? LIGHT_APP_BG : 'radial-gradient(circle at 50% -10%, rgba(184,77,58,.13), transparent 36%), linear-gradient(180deg,#101216,#0B0D10)', overflow: 'hidden' }}>
-      <div style={{ minHeight: 'calc(env(safe-area-inset-top, 0px) + 56px)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: 'calc(env(safe-area-inset-top, 0px) + 4px) 14px 8px', boxSizing: 'border-box', background: ANIMALDEX_ORANGE_GRADIENT, borderRadius: '0 0 22px 22px', boxShadow: '0 12px 28px rgba(184,77,58,.22)', flexShrink: 0 }}>
-        <button onClick={() => setNavOpen(true)} aria-label="Menu" style={{ width: 44, height: 44, borderRadius: 15, border: '1px solid rgba(255,255,255,.10)', background: 'rgba(0,0,0,.10)', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 5, padding: '0 10px', cursor: 'pointer' }}>
-          {[0, 1, 2].map(i => <span key={i} style={{ display: 'block', width: 22, height: 2.5, borderRadius: 4, background: 'white' }} />)}
+    <div data-home-layout="v2" style={{ height: '100%', display: 'flex', flexDirection: 'column', position: 'relative', background: isLightTheme ? LIGHT_APP_BG : 'radial-gradient(circle at 82% -8%, rgba(184,77,58,.16), transparent 34%), radial-gradient(circle at 12% 88%, rgba(144,216,74,.10), transparent 28%), linear-gradient(180deg,#101216,#0B0D10)', overflow: 'hidden' }}>
+      <div style={{ minHeight: 'calc(env(safe-area-inset-top, 0px) + 54px)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: 'calc(env(safe-area-inset-top, 0px) + 4px) 14px 10px', boxSizing: 'border-box', background: ORANGE_GRADIENT, borderRadius: '0 0 22px 22px', boxShadow: '0 12px 28px rgba(184,77,58,.24)', flexShrink: 0 }}>
+        <button onClick={() => setNavOpen(true)} aria-label="Menu" style={{ width: 42, height: 42, borderRadius: 14, border: '1px solid rgba(255,255,255,.12)', background: 'rgba(0,0,0,.12)', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 5, padding: '0 10px', cursor: 'pointer' }}>
+          {[0, 1, 2].map(i => <span key={i} style={{ display: 'block', width: 20, height: 2.5, borderRadius: 4, background: 'white' }} />)}
         </button>
-        <div style={{ color: 'white', fontSize: 20, fontWeight: 1000, textShadow: '0 1px 10px rgba(0,0,0,.18)' }}>Apex</div>
-        <button onClick={() => onOpen('profile')} aria-label="Profilo" style={{ width: 44, height: 44, borderRadius: 15, border: '1px solid rgba(255,255,255,.14)', background: 'rgba(0,0,0,.14)', overflow: 'hidden', cursor: 'pointer', padding: 0, position: 'relative' }}>
+        <div style={{ color: 'white', fontSize: 22, fontWeight: 1000, letterSpacing: .2, textShadow: '0 1px 10px rgba(0,0,0,.18)' }}>Apex</div>
+        <button onClick={() => onOpen('profile')} aria-label="Profilo" style={{ width: 42, height: 42, borderRadius: '50%', border: '2px solid rgba(255,255,255,.22)', background: 'rgba(0,0,0,.16)', overflow: 'hidden', cursor: 'pointer', padding: 0, position: 'relative' }}>
           {userProfile?.avatar_url
             ? <img src={userProfile.avatar_url} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-            : <span style={{ color: 'white', fontSize: 16, fontWeight: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>{displayName.slice(0, 1).toUpperCase()}</span>}
-          {!!pendingFriendRequests && <span style={{ position: 'absolute', top: -2, right: -2 }}><SocialCountBadge count={pendingFriendRequests} /></span>}
+            : <span style={{ color: 'white', fontSize: 15, fontWeight: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>{displayName.slice(0, 1).toUpperCase()}</span>}
+          {!!pendingFriendRequests && <span style={{ position: 'absolute', top: -3, right: -3 }}><SocialCountBadge count={pendingFriendRequests} /></span>}
         </button>
       </div>
 
-      <div style={{ flex: 1, overflowY: 'auto', padding: '14px 16px 28px', WebkitOverflowScrolling: 'touch' }}>
-        <button onClick={() => onOpen('profile')} style={{ width: '100%', border: `1px solid ${lightPanelBorder}`, borderRadius: 20, background: isLightTheme ? 'rgba(255,255,255,.72)' : 'rgba(255,255,255,.045)', padding: '12px 14px', marginBottom: 14, cursor: 'pointer', fontFamily: 'inherit', textAlign: 'left', boxShadow, boxSizing: 'border-box' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-            <div style={{ width: 42, height: 42, borderRadius: 14, overflow: 'hidden', border: '1px solid rgba(255,255,255,.12)', background: 'rgba(0,0,0,.18)', flexShrink: 0 }}>
+      <div style={{ flex: 1, overflowY: 'auto', padding: '16px 16px 28px', WebkitOverflowScrolling: 'touch' }}>
+        <button onClick={() => onOpen('profile')} style={{ width: '100%', border: 'none', background: 'transparent', padding: 0, marginBottom: 16, cursor: 'pointer', fontFamily: 'inherit', textAlign: 'left' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+            <div style={{ width: 64, height: 64, borderRadius: '50%', overflow: 'hidden', border: '2px solid rgba(255,255,255,.14)', background: 'rgba(255,255,255,.06)', flexShrink: 0, boxShadow: '0 10px 24px rgba(0,0,0,.22)' }}>
               {userProfile?.avatar_url
                 ? <img src={userProfile.avatar_url} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                : <span style={{ color: pageText, fontSize: 16, fontWeight: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>{displayName.slice(0, 1).toUpperCase()}</span>}
+                : <span style={{ color: pageText, fontSize: 24, fontWeight: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>{displayName.slice(0, 1).toUpperCase()}</span>}
             </div>
             <div style={{ flex: 1, minWidth: 0 }}>
-              <div style={{ color: pageText, fontSize: 16, fontWeight: 1000, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{displayName}</div>
-              <div style={{ color: mutedText, fontSize: 11, marginTop: 2 }}>Liv. {progress.level} · {progress.xp} / {nextLevelXP} XP</div>
-              <div style={{ height: 7, borderRadius: 999, background: 'rgba(255,255,255,.08)', overflow: 'hidden', marginTop: 8 }}>
-                <div style={{ height: '100%', width: `${xpPct}%`, background: 'linear-gradient(90deg,#D8D2C4,#C87955,#B84D3A)', borderRadius: 999 }} />
+              <div style={{ color: pageText, fontSize: 22, fontWeight: 1000, lineHeight: 1.05 }}>{displayName}</div>
+              <div style={{ color: mutedText, fontSize: 12.5, marginTop: 4 }}>Liv. {progress.level} · {progress.xp.toLocaleString('it-IT')} XP</div>
+              <div style={{ height: 8, borderRadius: 999, background: 'rgba(255,255,255,.10)', overflow: 'hidden', marginTop: 10 }}>
+                <div style={{ height: '100%', width: `${xpPct}%`, background: 'linear-gradient(90deg,#D8D2C4,#C87955,#B84D3A)', borderRadius: 999, boxShadow: '0 0 14px rgba(184,77,58,.24)' }} />
               </div>
             </div>
           </div>
         </button>
 
-        <div style={{ borderRadius: 24, border: '1px solid rgba(184,77,58,.34)', background: 'linear-gradient(135deg, rgba(24,10,6,.72), rgba(20,20,22,.52)), url("/backgrounds/background_grid.png") center / cover no-repeat', padding: 18, marginBottom: 14, boxShadow: '0 18px 40px rgba(0,0,0,.24)', position: 'relative', overflow: 'hidden' }}>
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, rgba(8,8,10,.82), rgba(8,8,10,.38) 58%, rgba(8,8,10,.18))', pointerEvents: 'none' }} />
-          <div style={{ position: 'relative', zIndex: 1 }}>
-            <div style={{ color: '#F0A840', fontSize: 10.5, fontWeight: 1000, letterSpacing: .8, textTransform: 'uppercase' }}>{mission.eyebrow}</div>
-            <div style={{ color: 'white', fontSize: 22, fontWeight: 1000, lineHeight: 1.08, marginTop: 6 }}>{mission.title}</div>
-            <div style={{ color: 'rgba(255,255,255,.72)', fontSize: 12.5, lineHeight: 1.45, marginTop: 7, maxWidth: '92%' }}>{mission.subtitle}</div>
-            <button onClick={runMission} style={{ marginTop: 14, height: 40, padding: '0 16px', borderRadius: 999, border: 'none', background: ANIMALDEX_ORANGE_GRADIENT, color: 'white', fontFamily: 'inherit', fontSize: 13, fontWeight: 1000, cursor: 'pointer', boxShadow: '0 10px 24px rgba(184,77,58,.32)' }}>{mission.cta}</button>
+        <div style={{ borderRadius: 24, minHeight: 156, border: '1px solid rgba(184,77,58,.28)', marginBottom: 14, position: 'relative', overflow: 'hidden', boxShadow: '0 18px 44px rgba(0,0,0,.28)' }}>
+          <div style={{ position: 'absolute', inset: 0, background: `url("${mission.accentImage}") center / cover no-repeat`, transform: 'scale(1.04)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(8,10,12,.18), rgba(8,10,12,.72) 58%, rgba(8,10,12,.88))' }} />
+          {missionBadgeId && (
+            <div style={{ position: 'absolute', top: 14, right: 14, width: 54, height: 54, borderRadius: 16, background: 'rgba(0,0,0,.28)', border: '1px solid rgba(255,255,255,.14)', display: 'grid', placeItems: 'center', backdropFilter: 'blur(6px)' }}>
+              <img src={buildAwardImagePath(missionBadgeId)} alt="" style={{ width: 40, height: 40, objectFit: 'contain', filter: 'drop-shadow(0 4px 12px rgba(240,168,64,.32))' }} />
+            </div>
+          )}
+          <div style={{ position: 'relative', zIndex: 1, padding: '16px 16px 14px', display: 'flex', flexDirection: 'column', minHeight: 156, boxSizing: 'border-box' }}>
+            <div style={{ color: GREEN, fontSize: 10.5, fontWeight: 1000, letterSpacing: .9, textTransform: 'uppercase' }}>{mission.eyebrow}</div>
+            <div style={{ color: 'white', fontSize: 19, fontWeight: 1000, lineHeight: 1.18, marginTop: 8, maxWidth: missionBadgeId ? 'calc(100% - 64px)' : '100%' }}>{mission.title}</div>
+            <div style={{ display: 'flex', gap: 8, marginTop: 12 }}>
+              {MISSION_SILHOUETTES.map((emoji, index) => (
+                <div key={emoji} style={{ width: 34, height: 34, borderRadius: '50%', background: index < 2 ? 'rgba(240,168,64,.22)' : 'rgba(255,255,255,.08)', border: `1px solid ${index < 2 ? 'rgba(240,168,64,.42)' : 'rgba(255,255,255,.10)'}`, display: 'grid', placeItems: 'center', fontSize: 16, opacity: index < 2 ? 1 : .55 }}>
+                  {emoji}
+                </div>
+              ))}
+            </div>
+            <div style={{ marginTop: 'auto', display: 'flex', justifyContent: 'flex-end', paddingTop: 12 }}>
+              <button onClick={runMission} style={{ height: 40, padding: '0 18px', borderRadius: 999, border: 'none', background: ORANGE_GRADIENT, color: 'white', fontFamily: 'inherit', fontSize: 13, fontWeight: 1000, cursor: 'pointer', boxShadow: '0 10px 24px rgba(184,77,58,.34)' }}>{mission.cta}</button>
+            </div>
           </div>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 10 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 14 }}>
           <button
             onClick={() => onOpenGridStatus?.(['ricercato', 'avvistato', 'catturato'])}
             style={{
-              minHeight: 74,
+              minHeight: 82,
               borderRadius: 20,
               border: tutorialFocus === 'grid' ? '2px solid #F0A840' : 'none',
-              background: ANIMALDEX_ORANGE_GRADIENT,
+              background: ORANGE_GRADIENT,
               color: 'white',
               fontFamily: 'inherit',
-              fontSize: 14,
+              fontSize: 15,
               fontWeight: 1000,
               cursor: 'pointer',
-              boxShadow: tutorialFocus === 'grid' ? '0 0 0 4px rgba(240,168,64,.24), 0 14px 30px rgba(184,77,58,.28)' : '0 14px 30px rgba(184,77,58,.28)',
-              padding: '12px 10px',
+              boxShadow: tutorialFocus === 'grid' ? '0 0 0 4px rgba(240,168,64,.22), 0 14px 30px rgba(184,77,58,.28)' : '0 14px 30px rgba(184,77,58,.28)',
+              padding: '14px 12px',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 8,
             }}
           >
+            <IconGrid />
             Esplora Dex
           </button>
           <button
             onClick={() => onOpenPhoto?.()}
             style={{
-              minHeight: 74,
+              minHeight: 82,
               borderRadius: 20,
-              border: '1.5px solid rgba(184,77,58,.48)',
-              background: isLightTheme ? 'rgba(255,255,255,.82)' : 'rgba(255,255,255,.06)',
+              border: `1.8px solid ${hexToRgba(ORANGE, .55)}`,
+              background: isLightTheme ? 'rgba(255,255,255,.88)' : 'rgba(255,255,255,.04)',
               color: isLightTheme ? '#7D3326' : 'white',
               fontFamily: 'inherit',
-              fontSize: 14,
+              fontSize: 15,
               fontWeight: 1000,
               cursor: 'pointer',
-              padding: '12px 10px',
+              padding: '14px 12px',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 8,
             }}
           >
+            <IconCamera color={isLightTheme ? ORANGE : ORANGE} />
             Cattura
           </button>
         </div>
-        <button onClick={() => onQuickSeen?.()} style={{ width: '100%', border: 'none', background: 'transparent', color: mutedText, fontFamily: 'inherit', fontSize: 12, fontWeight: 800, cursor: 'pointer', marginBottom: 16, padding: '2px 0 0' }}>
-          Avvista veloce →
-        </button>
 
-        <div style={{ display: 'flex', gap: 8, overflowX: 'auto', WebkitOverflowScrolling: 'touch', paddingBottom: 4, marginBottom: 18, scrollbarWidth: 'none' }}>
-          {stats.map(stat => (
-            <button key={stat.label} onClick={stat.action} style={{ flex: '0 0 auto', minWidth: 92, borderRadius: 18, border: `1px solid ${lightPanelBorder}`, background: isLightTheme ? 'rgba(255,255,255,.78)' : 'rgba(255,255,255,.05)', padding: '12px 14px', cursor: 'pointer', fontFamily: 'inherit', textAlign: 'left', boxShadow }}>
-              <div style={{ color: pageText, fontSize: 20, fontWeight: 1000, lineHeight: 1 }}>{stat.value}</div>
-              <div style={{ color: mutedText, fontSize: 10.5, fontWeight: 800, marginTop: 4 }}>{stat.label}</div>
-            </button>
-          ))}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 8, marginBottom: 18 }}>
+          {stats.map(stat => {
+            const Icon = stat.icon;
+            return (
+              <button key={stat.label} onClick={stat.action} style={{ borderRadius: 18, border: `1px solid ${panelBorder}`, background: panelBg, padding: '12px 8px', cursor: 'pointer', fontFamily: 'inherit', textAlign: 'center', boxShadow: '0 10px 24px rgba(0,0,0,.14)' }}>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 6 }}><Icon /></div>
+                <div style={{ color: pageText, fontSize: 18, fontWeight: 1000, lineHeight: 1 }}>{stat.value}</div>
+                <div style={{ color: mutedText, fontSize: 9.5, fontWeight: 800, marginTop: 4, lineHeight: 1.15 }}>{stat.label}</div>
+              </button>
+            );
+          })}
         </div>
 
-        <div style={{ color: '#90D84A', fontSize: 11, fontWeight: 1000, letterSpacing: .8, textTransform: 'uppercase', margin: '0 0 10px 2px' }}>Esplora</div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: nearlyBadges.length ? 18 : 0 }}>
-          {exploreTiles.map(tile => (
-            <button key={tile.id} onClick={tile.action} style={{ position: 'relative', minHeight: 132, borderRadius: 22, border: `1px solid ${hexToRgba(tile.accent, .28)}`, background: tile.background, backgroundSize: 'cover', color: 'white', fontFamily: 'inherit', textAlign: 'left', padding: 14, cursor: 'pointer', overflow: 'hidden', boxShadow }}>
-              {!!tile.badge && <div style={{ position: 'absolute', top: 10, right: 10 }}><SocialCountBadge count={tile.badge} /></div>}
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.58))', pointerEvents: 'none' }} />
-              <div style={{ position: 'relative', zIndex: 1 }}>
-                <div style={{ color: tile.accent, fontSize: 9.5, fontWeight: 1000, letterSpacing: .7, textTransform: 'uppercase' }}>{tile.eyebrow}</div>
-                <div style={{ fontSize: 17, fontWeight: 1000, lineHeight: 1.08, marginTop: 5 }}>{tile.title}</div>
-                <div style={{ color: 'rgba(255,255,255,.68)', fontSize: 10.5, marginTop: 5, lineHeight: 1.35 }}>{tile.subtitle}</div>
-              </div>
-            </button>
-          ))}
+        <div style={{ color: GREEN, fontSize: 11, fontWeight: 1000, letterSpacing: .9, textTransform: 'uppercase', margin: '0 0 10px 2px' }}>Esplora</div>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: nearlyBadges.length ? 18 : 8 }}>
+          <button onClick={() => (onOpenRegions || (() => onOpen('regions')))()} style={{ minHeight: 128, borderRadius: 22, border: `1px solid ${hexToRgba(GREEN, .24)}`, background: 'linear-gradient(180deg, rgba(5,11,13,.92), rgba(5,11,13,.72)), radial-gradient(circle at 50% 36%, rgba(91,190,248,.18), transparent 52%)', color: 'white', fontFamily: 'inherit', cursor: 'pointer', overflow: 'hidden', position: 'relative', padding: '12px 14px 14px', textAlign: 'left' }}>
+            <GlobeArt />
+            <div style={{ fontSize: 18, fontWeight: 1000, lineHeight: 1.05 }}>Territori</div>
+          </button>
+
+          <button onClick={() => onOpen('taxonomy')} style={{ minHeight: 128, borderRadius: 22, border: `1px solid ${hexToRgba(GREEN, .24)}`, background: 'linear-gradient(180deg, rgba(3,8,5,.88), rgba(3,8,5,.72)), url("/backgrounds/background_tree.png") center 40% / 88% auto no-repeat', color: 'white', fontFamily: 'inherit', cursor: 'pointer', overflow: 'hidden', position: 'relative', padding: '12px 14px 14px', textAlign: 'left' }}>
+            <div style={{ height: 74, marginBottom: 8 }} />
+            <div style={{ fontSize: 17, fontWeight: 1000, lineHeight: 1.08 }}>Albero della vita</div>
+          </button>
+
+          <button onClick={openFriendsFromHome} style={{ minHeight: 128, borderRadius: 22, border: `1px solid ${hexToRgba('#F0A840', .24)}`, background: `linear-gradient(180deg, rgba(12,10,9,.88), rgba(12,10,9,.72)), url("/backgrounds/background_amici.png") center / cover no-repeat`, color: 'white', fontFamily: 'inherit', cursor: 'pointer', overflow: 'hidden', position: 'relative', padding: '12px 14px 14px', textAlign: 'left' }}>
+            {!!pendingFriendRequests && <div style={{ position: 'absolute', top: 10, right: 10 }}><SocialCountBadge count={pendingFriendRequests} /></div>}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6, minHeight: 74, marginBottom: 8 }}>
+              {(friendAvatars.length ? friendAvatars : [{ nickname: 'A' }, { nickname: 'B' }, { nickname: 'C' }]).map((friend, index) => (
+                <div key={`${friend.user_id || friend.nickname}-${index}`} style={{ width: 34, height: 34, borderRadius: '50%', overflow: 'hidden', border: '2px solid rgba(255,255,255,.18)', background: 'rgba(255,255,255,.10)', marginLeft: index ? -10 : 0, display: 'grid', placeItems: 'center', fontSize: 12, fontWeight: 1000 }}>
+                  {friend.avatar_url
+                    ? <img src={friend.avatar_url} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    : String(friend.nickname || friend.username || '?').slice(0, 1).toUpperCase()}
+                </div>
+              ))}
+              <span style={{ marginLeft: 'auto', color: 'rgba(255,255,255,.42)', fontSize: 22, lineHeight: 1 }}>›</span>
+            </div>
+            <div style={{ fontSize: 18, fontWeight: 1000, lineHeight: 1.05 }}>Allenatori</div>
+          </button>
+
+          <button onClick={() => onOpen('badges')} style={{ minHeight: 128, borderRadius: 22, border: `1px solid ${hexToRgba('#FFD700', .24)}`, background: 'linear-gradient(180deg, rgba(28,20,8,.92), rgba(18,14,8,.72)), radial-gradient(circle at 50% 34%, rgba(255,215,0,.16), transparent 50%)', color: 'white', fontFamily: 'inherit', cursor: 'pointer', overflow: 'hidden', position: 'relative', padding: '12px 14px 14px', textAlign: 'left' }}>
+            <div style={{ minHeight: 74, marginBottom: 8, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <img src="/backgrounds/background_badges.png" alt="" style={{ width: 58, height: 58, objectFit: 'contain', filter: 'drop-shadow(0 8px 18px rgba(255,215,0,.24))' }} onError={e => { e.currentTarget.style.display = 'none'; }} />
+              <span style={{ color: 'rgba(255,255,255,.42)', fontSize: 22, lineHeight: 1 }}>›</span>
+            </div>
+            <div style={{ fontSize: 18, fontWeight: 1000, lineHeight: 1.05 }}>Badge</div>
+          </button>
         </div>
 
         {!!nearlyBadges.length && (
           <>
-            <div style={{ color: mutedText, fontSize: 11, fontWeight: 1000, textTransform: 'uppercase', margin: '0 0 10px 2px' }}>Quasi completati</div>
-            <div style={{ display: 'flex', gap: 10, overflowX: 'auto', WebkitOverflowScrolling: 'touch', paddingBottom: 6, scrollbarWidth: 'none' }}>
-              {nearlyBadges.map(rule => {
+            <div style={{ color: mutedText, fontSize: 11, fontWeight: 1000, letterSpacing: .8, textTransform: 'uppercase', margin: '0 0 10px 2px' }}>Quasi completati</div>
+            <div style={{ display: 'flex', gap: 10, overflowX: 'auto', WebkitOverflowScrolling: 'touch', paddingBottom: 8, scrollbarWidth: 'none' }}>
+              {nearlyBadges.map((rule, index) => {
                 const color = BADGE_LEVEL_COLORS[rule.level] || '#F0A840';
+                const bg = badgeAccentImage(rule.badgeId, index);
                 return (
-                  <button key={rule.badgeId} onClick={() => onOpenBadge?.(rule.badgeId)} style={{ flex: '0 0 auto', width: 148, borderRadius: 20, border: `1px solid ${hexToRgba(color, .42)}`, background: isLightTheme ? `linear-gradient(180deg, ${hexToRgba(color, .12)}, rgba(251,247,239,.96))` : `linear-gradient(180deg, ${hexToRgba(color, .14)}, rgba(18,18,20,.88))`, padding: 12, cursor: 'pointer', fontFamily: 'inherit', textAlign: 'left', boxShadow }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                      <div style={{ position: 'relative', width: 52, height: 52, flexShrink: 0 }}>
+                  <button key={rule.badgeId} onClick={() => onOpenBadge?.(rule.badgeId)} style={{ flex: '0 0 auto', width: 132, borderRadius: 20, border: `1px solid ${hexToRgba(color, .34)}`, overflow: 'hidden', cursor: 'pointer', fontFamily: 'inherit', textAlign: 'center', background: '#121417', boxShadow: '0 12px 28px rgba(0,0,0,.22)' }}>
+                    <div style={{ height: 96, position: 'relative', background: `url("${bg}") center / cover no-repeat` }}>
+                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.58))' }} />
+                      <div style={{ position: 'absolute', inset: 0, display: 'grid', placeItems: 'center' }}>
                         <ProgressRing progress={rule.progress} color={color} />
-                        <img src={buildAwardImagePath(rule.badgeId)} alt="" style={{ position: 'absolute', inset: 10, width: 32, height: 32, objectFit: 'contain' }} />
                       </div>
-                      <div style={{ minWidth: 0 }}>
-                        <div style={{ color: pageText, fontSize: 11.5, fontWeight: 1000, lineHeight: 1.15, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{rule.name}</div>
-                        <div style={{ color, fontSize: 10.5, fontWeight: 1000, marginTop: 4 }}>{Math.round(rule.progress * 100)}%</div>
-                      </div>
+                    </div>
+                    <div style={{ padding: '10px 10px 12px' }}>
+                      <div style={{ color: pageText, fontSize: 14, fontWeight: 1000, lineHeight: 1.1 }}>{rule.name}</div>
+                      <div style={{ color: mutedText, fontSize: 10.5, fontWeight: 800, marginTop: 4 }}>Avanzamento</div>
                     </div>
                   </button>
                 );
@@ -300,17 +391,21 @@ export default function MainMenuV2({
             </div>
           </>
         )}
+
+        <button onClick={() => onQuickSeen?.()} style={{ width: '100%', border: 'none', background: 'transparent', color: mutedText, fontFamily: 'inherit', fontSize: 12, fontWeight: 800, cursor: 'pointer', marginTop: 10, padding: 0 }}>
+          Avvista veloce →
+        </button>
       </div>
 
       {navOpen && (
         <div onClick={() => setNavOpen(false)} style={{ position: 'absolute', inset: 0, zIndex: 420, background: 'rgba(0,0,0,.52)', display: 'flex', alignItems: 'stretch' }}>
-          <div onClick={e => e.stopPropagation()} style={{ width: 'min(82vw, 330px)', height: '100%', background: isLightTheme ? '#FBF7EF' : '#121417', borderRight: `1px solid ${lightPanelBorder}`, boxShadow: '24px 0 80px rgba(0,0,0,.45)', padding: '18px 14px', boxSizing: 'border-box', color: pageText }}>
+          <div onClick={e => e.stopPropagation()} style={{ width: 'min(82vw, 330px)', height: '100%', background: isLightTheme ? '#FBF7EF' : '#121417', borderRight: `1px solid ${panelBorder}`, boxShadow: '24px 0 80px rgba(0,0,0,.45)', padding: '18px 14px', boxSizing: 'border-box', color: pageText }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', marginBottom: 18 }}>
-              <button onClick={() => setNavOpen(false)} aria-label="Chiudi" style={{ width: 38, height: 38, borderRadius: 13, border: `1px solid ${lightPanelBorder}`, background: 'transparent', color: pageText, fontSize: 22, cursor: 'pointer' }}>×</button>
+              <button onClick={() => setNavOpen(false)} aria-label="Chiudi" style={{ width: 38, height: 38, borderRadius: 13, border: `1px solid ${panelBorder}`, background: 'transparent', color: pageText, fontSize: 22, cursor: 'pointer' }}>×</button>
             </div>
             <div style={{ display: 'grid', gap: 9 }}>
               {drawerItems.map(item => (
-                <button key={item.id} onClick={() => { setNavOpen(false); onOpen(item.id); }} style={{ minHeight: 58, border: `1px solid ${lightPanelBorder}`, borderRadius: 17, background: lightPanel, color: pageText, cursor: 'pointer', padding: '0 13px', display: 'flex', alignItems: 'center', gap: 11, textAlign: 'left', fontFamily: 'inherit' }}>
+                <button key={item.id} onClick={() => { setNavOpen(false); onOpen(item.id); }} style={{ minHeight: 58, border: `1px solid ${panelBorder}`, borderRadius: 17, background: panelBg, color: pageText, cursor: 'pointer', padding: '0 13px', display: 'flex', alignItems: 'center', gap: 11, textAlign: 'left', fontFamily: 'inherit' }}>
                   <span style={{ width: 38, height: 38, borderRadius: 14, background: isLightTheme ? 'rgba(0,0,0,.06)' : 'rgba(255,255,255,.10)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 20 }}>{item.icon}</span>
                   <span style={{ fontSize: 14, fontWeight: 950, flex: 1 }}>{item.label}</span>
                   {item.id === 'profile' && <SocialCountBadge count={pendingFriendRequests} />}

@@ -8,7 +8,8 @@ export const HOME_VARIANTS = {
 
 function readEnvDefault() {
   const env = process.env.REACT_APP_HOME_VARIANT;
-  return env === HOME_VARIANTS.v2 ? HOME_VARIANTS.v2 : HOME_VARIANTS.classic;
+  if (env === HOME_VARIANTS.v2 || env === HOME_VARIANTS.classic) return env;
+  return HOME_VARIANTS.v2;
 }
 
 function readUrlOverride() {
@@ -43,7 +44,7 @@ export function setHomeVariant(variant) {
 }
 
 export function getHomeVariantLabel(variant) {
-  return variant === HOME_VARIANTS.v2 ? 'Home sperimentale (v2)' : 'Home classica';
+  return variant === HOME_VARIANTS.v2 ? 'Home nuova (v2)' : 'Home classica';
 }
 
 export function subscribeHomeVariant(listener) {
