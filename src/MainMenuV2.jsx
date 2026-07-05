@@ -305,9 +305,8 @@ export default function MainMenuV2({
         <button onClick={() => setNavOpen(true)} aria-label="Menu" style={{ width: 42, height: 42, borderRadius: 14, border: '1px solid rgba(255,255,255,.12)', background: 'rgba(0,0,0,.12)', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 5, padding: '0 10px', cursor: 'pointer' }}>
           {[0, 1, 2].map(i => <span key={i} style={{ display: 'block', width: 20, height: 2.5, borderRadius: 4, background: 'white' }} />)}
         </button>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, minWidth: 42, justifyContent: 'center' }}>
-          <img src="/Apex_logo_32x32.png" alt="" width={28} height={28} style={{ display: 'block', filter: 'drop-shadow(0 2px 8px rgba(0,0,0,.18))' }} />
-          <div style={{ color: 'white', fontSize: 22, fontWeight: 1000, letterSpacing: .2, textShadow: '0 1px 10px rgba(0,0,0,.18)' }}>Apex</div>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flex: 1 }}>
+          <img src="/Apex_logo_32x32.png" alt="Apex" width={30} height={30} style={{ display: 'block', filter: 'drop-shadow(0 2px 8px rgba(0,0,0,.18))' }} />
         </div>
         <div style={{ width: 42, display: 'flex', justifyContent: 'flex-end' }}>
           {!!pendingFriendRequests && (
@@ -344,7 +343,7 @@ export default function MainMenuV2({
           </div>
         </button>
 
-        <div style={{ borderRadius: 24, minHeight: 156, border: '1px solid rgba(184,77,58,.28)', marginBottom: 14, position: 'relative', overflow: 'hidden', boxShadow: '0 18px 44px rgba(0,0,0,.28)' }}>
+        <button type="button" onClick={runMission} style={{ width: '100%', borderRadius: 24, minHeight: 156, border: '1px solid rgba(184,77,58,.28)', marginBottom: 14, position: 'relative', overflow: 'hidden', boxShadow: '0 18px 44px rgba(0,0,0,.28)', padding: 0, cursor: 'pointer', fontFamily: 'inherit', textAlign: 'left' }}>
           <div style={{ position: 'absolute', inset: 0, background: `url("${mission.accentImage}") center / cover no-repeat`, transform: 'scale(1.04)' }} />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(8,10,12,.18), rgba(8,10,12,.72) 58%, rgba(8,10,12,.88))' }} />
           {missionBadgeId && (
@@ -369,11 +368,8 @@ export default function MainMenuV2({
                 ))}
               </div>
             )}
-            <div style={{ marginTop: 'auto', display: 'flex', justifyContent: 'flex-end', paddingTop: 12 }}>
-              <button onClick={runMission} style={{ height: 40, padding: '0 18px', borderRadius: 999, border: 'none', background: ORANGE_GRADIENT, color: 'white', fontFamily: 'inherit', fontSize: 13, fontWeight: 1000, cursor: 'pointer', boxShadow: '0 10px 24px rgba(184,77,58,.34)' }}>{mission.cta}</button>
-            </div>
           </div>
-        </div>
+        </button>
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 14 }}>
           <button

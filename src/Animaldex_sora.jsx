@@ -98,6 +98,39 @@ const LIGHT_HEADER_BG = '#F8F3EA';
 const LIGHT_CARD_BG = '#FBF7EF';
 const ANIMALDEX_ORANGE_GRADIENT = 'linear-gradient(135deg,#B84D3A,#D06A45)';
 const ANIMALDEX_ORANGE_SOLID = '#B84D3A';
+const APEX_HEADER_LOGO_SRC = '/Apex_logo_32x32.png';
+const PHOTO_ID_CANDIDATE_LIMIT = 320;
+const PHOTO_ID_FETCH_TIMEOUT_MS = 90000;
+const PHOTO_ID_UPLOAD_TIMEOUT_MS = 12000;
+
+function ApexHeaderLogo({ size = 28, style = {} }) {
+  return <img src={APEX_HEADER_LOGO_SRC} alt="Apex" width={size} height={size} style={{ display:'block', filter:'drop-shadow(0 2px 8px rgba(0,0,0,.18))', ...style }} />;
+}
+
+async function fetchJsonWithTimeout(url, options = {}, timeoutMs = PHOTO_ID_FETCH_TIMEOUT_MS) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const response = await fetch(url, { ...options, signal: controller.signal });
+    const contentType = String(response.headers.get('content-type') || '').toLowerCase();
+    if (!contentType.includes('application/json')) {
+      const text = await response.text().catch(() => '');
+      if (/^\s*</.test(text)) {
+        throw new Error('Servizio AI non disponibile qui. Usa l\'app online oppure avvia `vercel dev` in locale.');
+      }
+      throw new Error('Risposta AI non valida.');
+    }
+    const data = await response.json().catch(() => ({}));
+    return { response, data };
+  } catch (err) {
+    if (err?.name === 'AbortError') {
+      throw new Error('Analisi troppo lenta (oltre 90 secondi). Riprova con una foto più leggera o una connessione migliore.');
+    }
+    throw err;
+  } finally {
+    clearTimeout(timer);
+  }
+}
 const APP_FRAME_PROPS = { className:'animaldex-app-frame' };
 const APP_SAFE_TOP = 'env(safe-area-inset-top, 0px)';
 const APEX_DEBUG_LOGS = process.env.REACT_APP_APEX_DEBUG_LOGS === '1';
@@ -4997,7 +5030,9 @@ function Grid({ onSelect, animals: animalsProp, statusMap = {}, visitedCountries
             <svg width={gridIconSize} height={gridIconSize} viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ display:'block' }}><path d="M3.5 10.5L12 3.25l8.5 7.25" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round"/><path d="M6.5 9.75V20h11V9.75" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round"/><path d="M9.5 20v-6h5v6" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </button>
         )}
-        <span style={{ color:'white', fontSize:isPhone?19:18, fontWeight:1000, flex:1, textAlign:'center', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{preset?.title || 'Apex'}</span>
+        <span style={{ color:'white', fontSize:isPhone?19:18, fontWeight:1000, flex:1, textAlign:'center', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis', display:'flex', alignItems:'center', justifyContent:'center' }}>
+          {!preset?.title || preset.title === 'Apex' ? <ApexHeaderLogo size={isPhone ? 30 : 28} /> : preset.title}
+        </span>
         <button onClick={()=>setShowInfoModalGrid(!showInfoModalGrid)} style={{ ...gridControlStyle, background:'linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.075))', fontSize:isPhone?21:18, fontWeight:1000, lineHeight:1 }}>i</button>
       </div>
 
@@ -5537,37 +5572,50 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm,
   const runIdentification = async () => {
     if (!file) { setError('Scatta o carica prima una foto.'); return; }
     setLoading(true); setError(''); setMatches([]); setAiResult(null);
+    setSelectedMatch(null);
+    setRequestNotice('');
     setUploadedPhoto({ publicUrl:'', storagePath:'' });
-    let publicUrl = '';
-    let storagePath = '';
     try {
-      const imageDataUrl = await buildIdentificationImageDataUrl(file);
-      if (user?.id && supabase?.storage) {
-        const cleanName = String(file.name || 'photo.jpg').replace(/[^a-z0-9._-]/gi,'_');
-        const path = `${user.id}/${targetAnimal?.id || 'unknown'}/${Date.now()}-${cleanName}`;
-        const { error:uploadError } = await supabase.storage.from('animal-photos').upload(path, file, { upsert:false, contentType:file.type || 'image/jpeg' });
-        if (!uploadError) {
-          storagePath = path;
-          const { data } = supabase.storage.from('animal-photos').getPublicUrl(path);
-          publicUrl = data?.publicUrl || '';
-          setUploadedPhoto({ publicUrl, storagePath });
+      const uploadPhotoToStorage = async () => {
+        if (!user?.id || !supabase?.storage) return { publicUrl:'', storagePath:'' };
+        try {
+          const task = (async () => {
+            const cleanName = String(file.name || 'photo.jpg').replace(/[^a-z0-9._-]/gi,'_');
+            const path = `${user.id}/${targetAnimal?.id || 'unknown'}/${Date.now()}-${cleanName}`;
+            const { error:uploadError } = await supabase.storage.from('animal-photos').upload(path, file, { upsert:false, contentType:file.type || 'image/jpeg' });
+            if (uploadError) return { publicUrl:'', storagePath:'' };
+            const { data } = supabase.storage.from('animal-photos').getPublicUrl(path);
+            return { publicUrl:data?.publicUrl || '', storagePath:path };
+          })();
+          return await Promise.race([
+            task,
+            new Promise(resolve => setTimeout(() => resolve({ publicUrl:'', storagePath:'' }), PHOTO_ID_UPLOAD_TIMEOUT_MS)),
+          ]);
+        } catch {
+          return { publicUrl:'', storagePath:'' };
         }
-      }
+      };
+
+      const [imageDataUrl, uploaded] = await Promise.all([
+        buildIdentificationImageDataUrl(file),
+        uploadPhotoToStorage(),
+      ]);
+      setUploadedPhoto(uploaded);
+
       const payload = {
-        image_url: publicUrl,
+        image_url: uploaded.publicUrl || '',
         image_data_url: imageDataUrl,
         expected_animal_id: targetAnimal?.id || null,
         expected_sci: targetAnimal?.sci || '',
         gps,
         expected_habitat_ids: expectedHabitats,
-        candidates: (animals || []).slice(0,1200).map(a => ({ id:a.id, sci:a.sci, com:a.com, com_en:a.com_en, cls:a.cls, countries:a?.distribution?.countries_present || a?.geo?.iso?.primary || [], habitat_ids:getAnimalHabitatIds(a) }))
+        candidates: (animals || []).slice(0, PHOTO_ID_CANDIDATE_LIMIT).map(a => ({ id:a.id, sci:a.sci, com:a.com, com_en:a.com_en, cls:a.cls, countries:a?.distribution?.countries_present || a?.geo?.iso?.primary || [], habitat_ids:getAnimalHabitatIds(a) }))
       };
-      const response = await fetch('/api/identify-animal', {
+      const { response, data } = await fetchJsonWithTimeout('/api/identify-animal', {
         method:'POST',
         headers:{ 'Content-Type':'application/json' },
         body:JSON.stringify(payload),
       });
-      const data = await response.json().catch(() => ({}));
       if (!response.ok) throw new Error(data?.error || 'Riconoscimento AI non riuscito.');
       const hydrated = hydrateAiAlternatives(data, animals, targetAnimal);
       setAiResult(data);
@@ -5651,7 +5699,7 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm,
           <div style={{ borderRadius:14, background:'rgba(255,255,255,.055)', padding:12 }}><div style={{ color:'white', fontSize:12, fontWeight:900 }}>Habitat</div><div style={{ color:expectedHabitats.length?'#90D84A':'#F0B24E', fontSize:11, marginTop:4 }}>{expectedHabitats.length ? `${expectedHabitats.length} habitat attesi` : 'non mappato'}</div></div>
         </div>
         {error && <div style={{ marginTop:12, borderRadius:14, background:'rgba(168,70,55,.18)', border:'1px solid rgba(168,70,55,.45)', color:'#FFC8BE', padding:12, fontSize:12, fontWeight:800 }}>{error}</div>}
-        <button disabled={loading || !file} onClick={runIdentification} style={{ marginTop:14, width:'100%', height:50, borderRadius:16, border:'none', background:(loading || !file)?'#444':'linear-gradient(135deg,#A84637,#C45A3E)', color:'white', fontWeight:1000, fontSize:14 }}>{loading ? 'Analisi in corso…' : 'Analizza con AI'}</button>
+        <button disabled={loading || !file} onClick={runIdentification} style={{ marginTop:14, width:'100%', height:50, borderRadius:16, border:'none', background:(loading || !file)?'#444':'linear-gradient(135deg,#A84637,#C45A3E)', color:'white', fontWeight:1000, fontSize:14, cursor:(loading || !file)?'default':'pointer' }}>{loading ? 'Analisi in corso… (10–45 s)' : 'Analizza con AI'}</button>
         {targetAnimal && file && !loading && <button onClick={confirmTargetWithoutAi} style={{ marginTop:8, width:'100%', height:42, borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.055)', color:'rgba(255,255,255,.72)', fontWeight:900, fontSize:12 }}>Conferma manualmente come {targetAnimal.com || targetAnimal.sci}</button>}
         {requestNotice && <div style={{ marginTop:12, borderRadius:14, background:'rgba(144,216,74,.14)', border:'1px solid rgba(144,216,74,.34)', color:'#D8FFC4', padding:12, fontSize:12, fontWeight:800, lineHeight:1.4 }}>{requestNotice}</div>}
         {aiResult && <div style={{ marginTop:16, borderRadius:18, background:'rgba(255,255,255,.055)', border:`1px solid ${hexToRgba(aiTone,.35)}`, padding:13 }}>
@@ -8403,7 +8451,7 @@ function MainMenuClassic({ onOpen, onBack, onLogout, tutorialFocus=null, statusM
         <button onClick={()=>setNavOpen(true)} aria-label="Menu" style={{ width:44, height:44, borderRadius:15, border:'1px solid rgba(255,255,255,.10)', background:'rgba(0,0,0,.10)', display:'flex', flexDirection:'column', justifyContent:'center', gap:5, padding:'0 10px', cursor:'pointer' }}>
           {[0,1,2].map(i => <span key={i} style={{ display:'block', width:22, height:2.5, borderRadius:4, background:isLightTheme?'#171717':'white' }} />)}
         </button>
-        <div style={{ color:'white', fontSize:20, fontWeight:1000, textShadow:'0 1px 10px rgba(0,0,0,.18)' }}>Apex</div>
+        <ApexHeaderLogo size={28} />
         <button onClick={()=>setQuickActionsOpen(true)} aria-label="Azioni rapide" style={{ width:54, height:54, minWidth:54, minHeight:54, aspectRatio:'1 / 1', borderRadius:18, border:'1px solid rgba(255,255,255,.14)', background:'rgba(0,0,0,.14)', color:'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', padding:0, lineHeight:1, flex:'0 0 auto' }}><span style={{ display:'block', fontSize:36, lineHeight:1, fontWeight:900, transform:'translateY(-1px)' }}>+</span></button>
       </div>
 

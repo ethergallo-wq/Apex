@@ -89,7 +89,7 @@ module.exports = async function identifyAnimal(req, res) {
     return sendJson(res, 413, { error: 'Foto troppo grande. Riprova con un file più leggero.' });
   }
 
-  const candidates = Array.isArray(body.candidates) ? body.candidates.slice(0, 1400).map(normalizeCandidate) : [];
+  const candidates = Array.isArray(body.candidates) ? body.candidates.slice(0, 320).map(normalizeCandidate) : [];
   const expected = {
     animal_id: body.expected_animal_id ?? null,
     sci: body.expected_sci || '',
