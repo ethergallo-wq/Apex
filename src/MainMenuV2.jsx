@@ -7,6 +7,7 @@ import {
   persistProfileAvatarAnimalId,
   resolveProfileAvatarAnimal,
   saveProfileAvatarAnimal,
+  ProfileAvatarImage,
 } from './profileAvatar';
 
 const LIGHT_APP_BG = '#F3EFE6';
@@ -44,10 +45,29 @@ function badgeAccentImage(badgeId = '', index = 0) {
   return images[seed % images.length];
 }
 
-function SocialCountBadge({ count = 0, style = {} }) {
+function SocialCountBadge({ count = 0, style = {}, prominent = false }) {
   if (!count) return null;
+  const prominentStyle = prominent ? {
+    minWidth: 24,
+    height: 24,
+    padding: '0 7px',
+    fontSize: 11,
+    fontWeight: 1000,
+    background: 'linear-gradient(135deg,#FF6B4A,#B84D3A)',
+    border: '2px solid rgba(255,255,255,.95)',
+    boxShadow: '0 0 0 1px rgba(184,77,58,.45), 0 0 10px rgba(255,120,80,.85), 0 0 22px rgba(240,80,50,.55), 0 4px 14px rgba(0,0,0,.42)',
+    textShadow: '0 1px 2px rgba(0,0,0,.35)',
+  } : {
+    minWidth: 20,
+    height: 20,
+    padding: '0 5px',
+    fontSize: 10,
+    fontWeight: 1000,
+    background: ORANGE,
+    boxShadow: '0 4px 12px rgba(184,77,58,.34)',
+  };
   return (
-    <span style={{ minWidth: 20, height: 20, padding: '0 5px', borderRadius: 999, background: ORANGE, color: 'white', fontSize: 10, fontWeight: 1000, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 12px rgba(184,77,58,.34)', ...style }}>
+    <span style={{ borderRadius: 999, color: 'white', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', ...prominentStyle, ...style }}>
       {count > 99 ? '99+' : count}
     </span>
   );
@@ -160,8 +180,7 @@ function ExploreImageTile({ title, imageSrc, onClick, borderColor, overlay = EXP
   );
 }
 
-function ProfileAvatarButton({ animal, fallbackUrl, displayName, onClick, pendingCount = 0, pageText = 'white' }) {
-  const thumbUrl = animal ? getAnimalThumbUrl(animal) : fallbackUrl;
+function ProfileAvatarButton({ animal, fallbackUrl, displayName, onClick, pageText = 'white' }) {
   return (
     <button
       type="button"
@@ -169,10 +188,7 @@ function ProfileAvatarButton({ animal, fallbackUrl, displayName, onClick, pendin
       aria-label="Cambia immagine profilo"
       style={{ width: 64, height: 64, borderRadius: '50%', overflow: 'hidden', border: '2px solid rgba(255,255,255,.14)', background: 'rgba(255,255,255,.06)', flexShrink: 0, boxShadow: '0 10px 24px rgba(0,0,0,.22)', position: 'relative', padding: 0, cursor: 'pointer' }}
     >
-      {thumbUrl
-        ? <img src={thumbUrl} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-        : <span style={{ color: pageText, fontSize: 24, fontWeight: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>{displayName.slice(0, 1).toUpperCase()}</span>}
-      {!!pendingCount && <span style={{ position: 'absolute', top: -2, right: -2 }}><SocialCountBadge count={pendingCount} /></span>}
+      <ProfileAvatarImage animal={animal} size={64} fallbackLetter={displayName} fallbackUrl={fallbackUrl} />
     </button>
   );
 }
@@ -325,7 +341,6 @@ export default function MainMenuV2({
               animal={avatarAnimal}
               fallbackUrl={!avatarAnimal ? userProfile?.avatar_url : ''}
               displayName={displayName}
-              pendingCount={pendingFriendRequests}
               pageText={pageText}
               onClick={(e) => {
                 e.stopPropagation();
@@ -458,7 +473,7 @@ export default function MainMenuV2({
             imageSrc="/backgrounds/background_amici.png"
             onClick={openFriendsFromHome}
             borderColor={hexToRgba('#F0A840', .24)}
-            badge={!!pendingFriendRequests ? <div style={{ position: 'absolute', top: 10, right: 10, zIndex: 2 }}><SocialCountBadge count={pendingFriendRequests} /></div> : null}
+            badge={!!pendingFriendRequests ? <div style={{ position: 'absolute', top: 10, right: 10, zIndex: 2 }}><SocialCountBadge count={pendingFriendRequests} prominent /></div> : null}
           />
 
           <ExploreImageTile

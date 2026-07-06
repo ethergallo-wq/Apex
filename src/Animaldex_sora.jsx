@@ -2,6 +2,8 @@ import React, { useState, useEffect, useMemo, useRef, useCallback, useTransition
 import { supabase } from './supabaseClient';
 import MainMenuV2 from './MainMenuV2';
 import { getHomeVariant, setHomeVariant, subscribeHomeVariant, HOME_VARIANTS, getHomeVariantLabel } from './homeVariant';
+import { addFriendRequestFeedHistory, getFriendRequestFeedHistory } from './friendRequestFeed';
+import { getProfileAvatarChoices, resolveProfileAvatarAnimal } from './profileAvatar';
 
 let LOCAL_ANIMALS = [];
 let ANIMALS = [];
@@ -1700,9 +1702,26 @@ function countPendingFriendRequests(notifications = [], requestsIn = []) {
   return Math.max((requestsIn || []).length, unreadFriendRequests);
 }
 
-function SocialCountBadge({ count = 0, style = {} }) {
+function SocialCountBadge({ count = 0, style = {}, prominent = false }) {
   if (!count) return null;
-  return <span style={{ minWidth:22, height:22, padding:'0 6px', borderRadius:999, background:'#B84D3A', color:'white', fontSize:11, fontWeight:1000, display:'inline-flex', alignItems:'center', justifyContent:'center', boxShadow:'0 4px 12px rgba(184,77,58,.34)', ...style }}>{count > 99 ? '99+' : count}</span>;
+  const prominentStyle = prominent ? {
+    minWidth:24,
+    height:24,
+    padding:'0 7px',
+    fontSize:11,
+    background:'linear-gradient(135deg,#FF6B4A,#B84D3A)',
+    border:'2px solid rgba(255,255,255,.95)',
+    boxShadow:'0 0 0 1px rgba(184,77,58,.45), 0 0 10px rgba(255,120,80,.85), 0 0 22px rgba(240,80,50,.55), 0 4px 14px rgba(0,0,0,.42)',
+    textShadow:'0 1px 2px rgba(0,0,0,.35)',
+  } : {
+    minWidth:22,
+    height:22,
+    padding:'0 6px',
+    fontSize:11,
+    background:'#B84D3A',
+    boxShadow:'0 4px 12px rgba(184,77,58,.34)',
+  };
+  return <span style={{ borderRadius:999, color:'white', fontWeight:1000, display:'inline-flex', alignItems:'center', justifyContent:'center', ...prominentStyle, ...style }}>{count > 99 ? '99+' : count}</span>;
 }
 
 function buildSocialFallback(user, profile, progress = {}) {
@@ -8519,7 +8538,7 @@ function MainMenuClassic({ onOpen, onBack, onLogout, tutorialFocus=null, statusM
         </div>}
 
         <button onClick={(e)=>beginHomeLaunch(e, { label:'Social', title:'Allenatori', subtitle:'Feed, richieste e leaderboard amici', color:'#F0A840', background:'linear-gradient(90deg, rgba(12,10,9,.50), rgba(25,16,10,.24) 58%, rgba(12,10,9,.50)), url("/backgrounds/background_amici.png")', screen:'friends' }, ()=>openFriendsFromHome('feed'))} style={{ width:'100%', border:'1px solid rgba(240,168,64,.30)', borderRadius:22, background:'linear-gradient(90deg, rgba(12,10,9,.62), rgba(25,16,10,.38) 58%, rgba(12,10,9,.60)), url("/backgrounds/background_amici.png")', backgroundSize:'cover', backgroundPosition:'center', color:'white', textAlign:'left', padding:16, fontFamily:'inherit', cursor:'pointer', boxShadow:'0 14px 34px rgba(0,0,0,.20)', marginBottom:14, position:'relative' }}>
-          {!!pendingFriendRequests && <div style={{ position:'absolute', top:12, right:12 }}><SocialCountBadge count={pendingFriendRequests} /></div>}
+          {!!pendingFriendRequests && <div style={{ position:'absolute', top:12, right:12 }}><SocialCountBadge count={pendingFriendRequests} prominent /></div>}
           <div style={{ color:'#F0A840', fontSize:10.5, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Social</div>
           <div style={{ fontSize:22, fontWeight:1000, marginTop:5 }}>Allenatori</div>
           <div style={{ color:'rgba(255,255,255,.68)', fontSize:12.5, lineHeight:1.4, marginTop:6 }}>Scopri i progressi dei tuoi amici</div>
@@ -9618,6 +9637,44 @@ function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCount
   );
 }
 
+function FriendRequestBanner({ row, resolved = null, busy = false, onAccept, onDecline, panelBg, panelBorder, mainText, subText, isLightTheme, FriendAvatar }) {
+  const profile = row?.profile || {
+    user_id: row?.profileUserId,
+    nickname: row?.nickname,
+    username: row?.username,
+  };
+  const nickname = profile?.nickname || profile?.username || 'Un allenatore';
+  const resolvedAction = resolved?.action;
+  const isResolved = !!resolvedAction;
+  const borderAccent = isResolved
+    ? panelBorder
+    : (isLightTheme ? 'rgba(240,168,64,.34)' : 'rgba(240,168,64,.28)');
+  const bgAccent = isResolved
+    ? panelBg
+    : (isLightTheme ? 'linear-gradient(135deg, rgba(240,168,64,.14), rgba(255,255,255,.78))' : 'linear-gradient(135deg, rgba(240,168,64,.16), rgba(255,255,255,.055))');
+  return (
+    <div style={{ display:'flex', alignItems:'center', gap:10, borderRadius:18, background:bgAccent, border:`1px solid ${borderAccent}`, padding:12, marginBottom:8 }}>
+      <FriendAvatar p={profile} />
+      <div style={{ flex:1, minWidth:0 }}>
+        <div style={{ color:mainText, fontWeight:950, fontSize:13.5, lineHeight:1.35 }}>
+          {isResolved
+            ? (resolvedAction === 'accepted'
+              ? <>Hai accettato la richiesta di <strong>{nickname}</strong>.</>
+              : <>Hai ignorato la richiesta di <strong>{nickname}</strong>.</>)
+            : <><strong>{nickname}</strong> ti ha inviato una richiesta di amicizia.</>}
+        </div>
+        {!isResolved && <div style={{ color:subText, fontSize:11, marginTop:3 }}>Puoi accettare o ignorare la richiesta.</div>}
+      </div>
+      {!isResolved && onAccept && onDecline && (
+        <div style={{ display:'flex', gap:6, flexShrink:0 }}>
+          <button type="button" disabled={busy} onClick={onDecline} style={{ height:38, borderRadius:13, border:`1px solid ${panelBorder}`, background:'rgba(255,255,255,.05)', color:mainText, padding:'0 12px', fontWeight:1000, cursor:'pointer', fontFamily:'inherit' }}>Ignora</button>
+          <button type="button" disabled={busy} onClick={onAccept} style={{ height:38, borderRadius:13, border:'none', background:busy ? 'rgba(240,168,64,.35)' : '#F0A840', color:'#17100A', padding:'0 12px', fontWeight:1000, cursor:'pointer', fontFamily:'inherit' }}>{busy ? '...' : 'Accetta'}</button>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab = 'feed', onSocialChange, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], theme='dark' }) {
   const isLightTheme = theme === 'light';
   const progress = buildSimpleProgressState({ animals:ANIMALS, statusMap, visitedCountries, earnedBadgeIds });
@@ -9633,7 +9690,10 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab =
   const [selectedFriend, setSelectedFriend] = useState(null);
   const [requestingUserId, setRequestingUserId] = useState('');
   const [actionUserId, setActionUserId] = useState('');
+  const [feedHistory, setFeedHistory] = useState(() => getFriendRequestFeedHistory(user?.id));
   const searchAbortRef = useRef(null);
+
+  useEffect(() => { setFeedHistory(getFriendRequestFeedHistory(user?.id)); }, [user?.id]);
 
   useEffect(() => { setTab(initialTab || 'feed'); }, [initialTab]);
 
@@ -9657,6 +9717,22 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab =
   const pendingInIdSet = useMemo(() => new Set((snapshot.requestsIn || []).map(r => r.profile?.user_id).filter(Boolean)), [snapshot.requestsIn]);
   const pendingOutIdSet = useMemo(() => new Set((snapshot.requestsOut || []).map(r => r.profile?.user_id).filter(Boolean)), [snapshot.requestsOut]);
   const incomingByUserId = useMemo(() => Object.fromEntries((snapshot.requestsIn || []).map(r => [r.profile?.user_id, r]).filter(([id]) => id)), [snapshot.requestsIn]);
+  const pendingRequestIds = useMemo(() => new Set((snapshot.requestsIn || []).map(r => r.id)), [snapshot.requestsIn]);
+  const visibleFeedHistory = useMemo(
+    () => feedHistory.filter(entry => !pendingRequestIds.has(entry.id)),
+    [feedHistory, pendingRequestIds]
+  );
+
+  const recordFriendRequestResolution = (row, action) => {
+    const next = addFriendRequestFeedHistory(user?.id, {
+      id: row.id,
+      profileUserId: row.profile?.user_id,
+      nickname: row.profile?.nickname,
+      username: row.profile?.username,
+      action,
+    });
+    setFeedHistory(next);
+  };
 
   const getSearchRelationLabel = (profileId) => {
     if (friendIdSet.has(profileId)) return 'Amico';
@@ -9733,6 +9809,7 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab =
     setMessage('');
     try {
       await updateFriendshipStatus(row.id, 'accepted', user?.id, accessToken);
+      recordFriendRequestResolution(row, 'accepted');
       setMessage(`${row.profile?.nickname || 'Amico'} aggiunto.`);
       await load();
     } catch {
@@ -9748,7 +9825,8 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab =
     try {
       await deleteFriendship(row.id, accessToken);
       await markSocialNotificationsRead(user?.id, accessToken, 'friend_request');
-      setMessage('Richiesta rifiutata.');
+      recordFriendRequestResolution(row, 'ignored');
+      setMessage('Richiesta ignorata.');
       await load();
     } catch {
       setMessage('Operazione non riuscita. Riprova tra poco.');
@@ -9804,6 +9882,24 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab =
   const panelBorder = isLightTheme ? 'rgba(0,0,0,.10)' : 'rgba(255,255,255,.08)';
   const mainText = isLightTheme ? '#171717' : 'white';
   const subText = isLightTheme ? 'rgba(0,0,0,.58)' : 'rgba(255,255,255,.58)';
+  const friendBannerProps = {
+    panelBg,
+    panelBorder,
+    mainText,
+    subText,
+    isLightTheme,
+    FriendAvatar,
+  };
+  const renderPendingFriendRequests = () => (snapshot.requestsIn || []).map(row => (
+    <FriendRequestBanner
+      key={row.id}
+      row={row}
+      busy={actionUserId === (row.profile?.user_id || row.id)}
+      onAccept={() => accept(row)}
+      onDecline={() => decline(row)}
+      {...friendBannerProps}
+    />
+  ));
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 50% -12%, rgba(240,168,64,.18), transparent 42%), linear-gradient(180deg,#111113,#08090B)', overflow:'hidden' }}>
       <PageHeader title="Allenatori" onBack={onBack} theme={theme} />
@@ -9866,12 +9962,13 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab =
         {tab === 'feed' && <>
           {!!snapshot.requestsIn?.length && <div style={{ marginBottom:14 }}>
             <div style={{ color:subText, fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Richieste in arrivo</div>
-            {snapshot.requestsIn.map(row => <div key={row.id} style={{ display:'flex', alignItems:'center', gap:10, borderRadius:18, background:panelBg, border:`1px solid ${panelBorder}`, padding:10, marginBottom:8 }}>
-              <FriendAvatar p={row.profile} />
-              <div style={{ flex:1, color:mainText, fontWeight:950 }}>{row.profile.nickname}</div>
-              <button onClick={()=>decline(row)} style={{ width:38, height:38, borderRadius:13, border:`1px solid ${panelBorder}`, background:'rgba(255,255,255,.05)', color:mainText, fontWeight:1000 }}>×</button>
-              <button onClick={()=>accept(row)} style={{ height:38, borderRadius:13, border:'none', background:'#F0A840', color:'#17100A', padding:'0 12px', fontWeight:1000 }}>Accetta</button>
-            </div>)}
+            {renderPendingFriendRequests()}
+          </div>}
+          {!!visibleFeedHistory.length && <div style={{ marginBottom:14 }}>
+            <div style={{ color:subText, fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Richieste recenti</div>
+            {visibleFeedHistory.map(entry => (
+              <FriendRequestBanner key={`${entry.id}-${entry.at}`} row={entry} resolved={entry} {...friendBannerProps} />
+            ))}
           </div>}
           <div style={{ color:subText, fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Catture e badge</div>
           <div style={{ display:'grid', gap:10 }}>
@@ -9904,6 +10001,10 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab =
         </>}
 
         {tab === 'friends' && <div>
+          {!!snapshot.requestsIn?.length && <div style={{ marginBottom:14 }}>
+            <div style={{ color:subText, fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Richieste in arrivo</div>
+            {renderPendingFriendRequests()}
+          </div>}
           <div style={{ color:subText, fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Amici</div>
           {loading ? <div style={{ color:subText, padding:18 }}>Carico amici...</div> : <div style={{ display:'grid', gap:9 }}>
             {friendRows.map(p => <button key={p.user_id} onClick={()=>setSelectedFriend(p)} style={{ display:'flex', alignItems:'center', gap:10, borderRadius:18, background:panelBg, border:`1px solid ${panelBorder}`, padding:11, textAlign:'left', fontFamily:'inherit' }}>
@@ -9988,7 +10089,7 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
   const unlockedCount = useMemo(() => animalsWithStatus.filter(a => !isMysteryStatus(a.status)).length, [animalsWithStatus]);
   const seenCount = useMemo(() => animalsWithStatus.filter(a => a.status === 'avvistato' || a.status === 'catturato').length, [animalsWithStatus]);
   const capturedCount = useMemo(() => animalsWithStatus.filter(a => a.status === 'catturato').length, [animalsWithStatus]);
-  const avatarChoices = useMemo(() => animalsWithStatus.filter(a => a.status === 'catturato'), [animalsWithStatus]);
+  const avatarChoices = useMemo(() => getProfileAvatarChoices(animalsWithStatus), [animalsWithStatus]);
   const earnedAwards = useMemo(
     () => AWARD_RULES.filter(rule => unlockedAwardIdSet.has(normalizeBadgeId(rule.badgeId))),
     [unlockedAwardIdSet]
@@ -10007,7 +10108,10 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
   const residenceCountry = userProfile?.residence_country || userProfile?.country || visitedCountries?.[0] || null;
   const featuredBadge = earnedAwards.find(rule => normalizeBadgeId(rule.badgeId) === normalizeBadgeId(featuredBadgeId)) || earnedAwards[0] || null;
   const featuredBadgeColor = featuredBadge ? (BADGE_LEVEL_COLORS[featuredBadge.level] || '#F0A840') : '#D8D2C4';
-  const avatarAnimal = avatarChoices.find(a => String(a.id) === String(profileAvatarAnimalId)) || avatarChoices[0] || null;
+  const avatarAnimal = useMemo(
+    () => resolveProfileAvatarAnimal({ animalsWithStatus, profileAvatarAnimalId, userProfile }),
+    [animalsWithStatus, profileAvatarAnimalId, userProfile]
+  );
   const profileBackgroundChoices = useMemo(
     () => getProfileBackgroundChoices(animalsWithStatus, visitedCountries, profileBgImage),
     [animalsWithStatus, visitedCountries, profileBgImage]
@@ -10130,7 +10234,7 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
             {profilePickerMode === 'preview' ? (
               <div style={{ overflowY:'auto', WebkitOverflowScrolling:'touch' }}>
                 <div style={{ minHeight:210, borderRadius:24, border:`1px solid ${panelBorder}`, background:profilePicker === 'cover' ? `linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.58)), url("${profileBgImage}")` : isLightTheme?'rgba(0,0,0,.035)':'rgba(255,255,255,.055)', backgroundSize:'cover', backgroundPosition:'center', display:'grid', placeItems:'center', padding:18 }}>
-                  {profilePicker === 'avatar' && (avatarAnimal ? <AnimalImg a={{...avatarAnimal,status:'catturato'}} size={172} fontSize={52} overrideStatus="catturato" /> : <span style={{ color:subText, fontSize:15, fontWeight:900, textAlign:'center', lineHeight:1.35 }}>Cattura un animale per usarlo come immagine profilo.</span>)}
+                  {profilePicker === 'avatar' && (avatarAnimal ? <AnimalImg a={{...avatarAnimal,status:'catturato'}} size={172} fontSize={52} overrideStatus="catturato" /> : <span style={{ color:subText, fontSize:15, fontWeight:900, textAlign:'center', lineHeight:1.35 }}>Avvista o cattura un animale per usarlo come immagine profilo.</span>)}
                   {profilePicker === 'badge' && (featuredBadge ? <img src={buildAwardImagePath(featuredBadge.badgeId)} alt={featuredBadge.name} style={{ width:170, height:170, objectFit:'contain', filter:`drop-shadow(0 0 22px ${hexToRgba(featuredBadgeColor,.44)})` }} /> : <span style={{ color:subText, fontSize:15, fontWeight:900 }}>Nessun badge selezionato</span>)}
                 </div>
                 <button onClick={()=>setProfilePickerMode('list')} style={{ width:'100%', height:48, borderRadius:17, border:'none', background:ANIMALDEX_ORANGE_GRADIENT, color:'white', fontFamily:'inherit', fontSize:14, fontWeight:1000, marginTop:12, cursor:'pointer' }}>Scegli alternative</button>

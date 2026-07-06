@@ -1,3 +1,4 @@
+import React from 'react';
 import { supabase } from './supabaseClient';
 
 function getProfileAvatarStorageKey(userId = 'guest') {
@@ -45,4 +46,29 @@ export function resolveProfileAvatarAnimal({ animalsWithStatus = [], profileAvat
     if (byUrl) return byUrl;
   }
   return choices[0] || null;
+}
+
+export function getProfileAvatarImageUrl(animal) {
+  return animal?.image_url || animal?.img || '';
+}
+
+export function ProfileAvatarImage({ animal, size = 64, fallbackLetter = '?', fallbackUrl = '' }) {
+  const imageUrl = getProfileAvatarImageUrl(animal) || fallbackUrl;
+  if (!imageUrl) {
+    return (
+      <span style={{ color: 'white', fontSize: Math.round(size * 0.38), fontWeight: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+        {String(fallbackLetter || '?').slice(0, 1).toUpperCase()}
+      </span>
+    );
+  }
+  const pad = Math.round(size * 0.08);
+  return (
+    <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', padding: pad, boxSizing: 'border-box' }}>
+      <img
+        src={imageUrl}
+        alt=""
+        style={{ width: '100%', height: '100%', objectFit: 'contain', transform: 'scale(1.2)', transformOrigin: 'center', display: 'block' }}
+      />
+    </div>
+  );
 }
