@@ -1683,6 +1683,28 @@ async function insertSocialNotificationViaRest(payload, accessToken = '') {
   }
 }
 
+async function markSocialNotificationReadById(userId, notificationId, accessToken = '') {
+  if (!userId || !notificationId) return false;
+  const now = new Date().toISOString();
+  try {
+    await restMutateRows('social_notifications', 'PATCH', {
+      id:`eq.${notificationId}`,
+      user_id:`eq.${userId}`,
+    }, { read_at:now }, accessToken, 5000, 'social_notifications-read-one');
+    return true;
+  } catch (err) {
+    console.warn('[Apex] Lettura notifica singola non riuscita:', err);
+  }
+  const { error } = await runTimedSupabaseRequest(
+    supabase.from('social_notifications').update({ read_at:now }).eq('id', notificationId).eq('user_id', userId),
+    5000,
+    { error:{ message:'timeout', code:'TIMEOUT' } },
+    'social_notifications read one sdk'
+  );
+  if (error && error.code !== 'TIMEOUT') throw error;
+  return true;
+}
+
 async function markSocialNotificationsReadViaRest(userId, accessToken = '', filterType = '') {
   if (!userId) return false;
   const now = new Date().toISOString();
@@ -1700,6 +1722,16 @@ async function markSocialNotificationsReadViaRest(userId, accessToken = '', filt
 function countPendingFriendRequests(notifications = [], requestsIn = []) {
   const unreadFriendRequests = (notifications || []).filter(n => n.notification_type === 'friend_request' && !n.read_at).length;
   return Math.max((requestsIn || []).length, unreadFriendRequests);
+}
+
+function countSocialAlertCount(notifications = [], requestsIn = []) {
+  const pendingFriendRequestCount = countPendingFriendRequests(notifications, requestsIn);
+  const unreadFriendAcceptedCount = (notifications || []).filter(n => n.notification_type === 'friend_accepted' && !n.read_at).length;
+  return {
+    pendingFriendRequestCount,
+    unreadFriendAcceptedCount,
+    socialAlertCount: pendingFriendRequestCount + unreadFriendAcceptedCount,
+  };
 }
 
 function SocialCountBadge({ count = 0, style = {}, prominent = false }) {
@@ -1734,6 +1766,8 @@ function buildSocialFallback(user, profile, progress = {}) {
     notifications: [],
     unreadCount:0,
     pendingFriendRequestCount:0,
+    unreadFriendAcceptedCount:0,
+    socialAlertCount:0,
     socialReady:false,
   };
 }
@@ -1827,6 +1861,20 @@ async function fetchSocialSnapshot(userId, currentProfile, progress, accessToken
       );
       notifications = notificationRows || [];
     }
+    const missingActorIds = Array.from(new Set((notifications || []).map(n => n.actor_id).filter(id => id && !byId[id])));
+    if (missingActorIds.length) {
+      let extraProfiles = await fetchUserProfilesViaRest(missingActorIds, accessToken, 6000);
+      if (!extraProfiles?.length) {
+        const { data: profileRows } = await runTimedSupabaseRequest(
+          supabase.from('user_profiles').select('*').in('user_id', missingActorIds),
+          6000,
+          { data:[] },
+          'user_profiles notification actors sdk'
+        );
+        extraProfiles = profileRows || [];
+      }
+      (extraProfiles || []).forEach(p => { byId[p.user_id] = normalizeSocialProfile(p); });
+    }
     const eventIds = (events || []).map(e => e.id).filter(Boolean);
     const { data: reactions } = eventIds.length
       ? await runTimedSupabaseRequest(
@@ -1853,16 +1901,23 @@ async function fetchSocialSnapshot(userId, currentProfile, progress, accessToken
         reactions:reactionByEvent[e.id] || [],
       }));
     const unreadCount = (notifications || []).filter(n => !n.read_at).length;
-    const pendingFriendRequestCount = countPendingFriendRequests(notifications, incoming);
+    const socialCounts = countSocialAlertCount(notifications, incoming);
+    const friendById = Object.fromEntries(friends.map(f => [f.user_id, f]));
+    const decoratedNotifications = (notifications || []).map(n => ({
+      ...n,
+      actorProfile: friendById[n.actor_id] || byId[n.actor_id] || normalizeSocialProfile({ user_id:n.actor_id, username:'Esploratore' }),
+    }));
     return {
       friends,
       requestsIn: incoming,
       requestsOut: outgoing,
       leaderboard:[{ ...me, isMe:true }, ...friends].sort((a,b)=>(b.xp || 0) - (a.xp || 0)).map((row, idx) => ({ ...row, rank:idx + 1 })),
       events:visibleEvents,
-      notifications:notifications || [],
+      notifications:decoratedNotifications,
       unreadCount,
-      pendingFriendRequestCount,
+      pendingFriendRequestCount: socialCounts.pendingFriendRequestCount,
+      unreadFriendAcceptedCount: socialCounts.unreadFriendAcceptedCount,
+      socialAlertCount: socialCounts.socialAlertCount,
       socialReady:true,
     };
   } catch (err) {
@@ -8299,6 +8354,7 @@ function MainMenuClassic({ onOpen, onBack, onLogout, tutorialFocus=null, statusM
   const progress = menuProgress || buildSimpleProgressState({ animals:ANIMALS, statusMap, visitedCountries, earnedBadgeIds });
   const social = socialSnapshot || buildSocialFallback(user, userProfile, progress);
   const pendingFriendRequests = social.pendingFriendRequestCount || social.requestsIn?.length || 0;
+  const socialAlertCount = social.socialAlertCount || pendingFriendRequests;
   const [navOpen, setNavOpen] = useState(false);
   const [quickActionsOpen, setQuickActionsOpen] = useState(false);
   const [homeLaunch, setHomeLaunch] = useState(null);
@@ -8476,7 +8532,7 @@ function MainMenuClassic({ onOpen, onBack, onLogout, tutorialFocus=null, statusM
 
       <div style={{ flex:1, overflowY:'auto', padding:'16px 16px 30px' }}>
         <div role="button" tabIndex={0} onClick={(e)=>beginHomeLaunch(e, { label:'Profilo', title:displayName, subtitle:`Liv. ${progress.level} · ${progress.xp} XP`, color:featuredBadgeColor, background:isLightTheme?`linear-gradient(90deg, rgba(251,247,239,.82), rgba(251,247,239,.42)), url("${profileBgImage}")`:`linear-gradient(90deg, rgba(12,14,18,.72), rgba(17,19,23,.28)), url("${profileBgImage}")`, screen:'profile' }, ()=>onOpen('profile'))} onKeyDown={(e)=>{ if (e.key === 'Enter' || e.key === ' ') onOpen('profile'); }} style={{ ...boxBase, position:'relative', height:homeBoxHeight, padding:16, background:isLightTheme?`linear-gradient(90deg, rgba(251,247,239,.84), rgba(251,247,239,.50) 56%, rgba(251,247,239,.20)), url("${profileBgImage}")`:`linear-gradient(90deg, rgba(12,14,18,.76), rgba(17,19,23,.48) 56%, rgba(17,19,23,.18)), url("${profileBgImage}")`, backgroundSize:'cover', backgroundPosition:'center', marginBottom:14, overflow:'hidden' }}>
-          {!!pendingFriendRequests && <div style={{ position:'absolute', top:12, right:12, zIndex:3 }}><SocialCountBadge count={pendingFriendRequests} /></div>}
+          {!!socialAlertCount && <div style={{ position:'absolute', top:12, right:12, zIndex:3 }}><SocialCountBadge count={socialAlertCount} /></div>}
           <div style={{ position:'absolute', inset:0, pointerEvents:'none', background:'radial-gradient(circle at 80% 16%, rgba(216,210,196,.16), transparent 36%)' }} />
           <div style={{ position:'relative', zIndex:1, display:'flex', alignItems:'center', gap:14, height:'100%' }}>
             <div style={{ flex:1, minWidth:0 }}>
@@ -8538,7 +8594,7 @@ function MainMenuClassic({ onOpen, onBack, onLogout, tutorialFocus=null, statusM
         </div>}
 
         <button onClick={(e)=>beginHomeLaunch(e, { label:'Social', title:'Allenatori', subtitle:'Feed, richieste e leaderboard amici', color:'#F0A840', background:'linear-gradient(90deg, rgba(12,10,9,.50), rgba(25,16,10,.24) 58%, rgba(12,10,9,.50)), url("/backgrounds/background_amici.png")', screen:'friends' }, ()=>openFriendsFromHome('feed'))} style={{ width:'100%', border:'1px solid rgba(240,168,64,.30)', borderRadius:22, background:'linear-gradient(90deg, rgba(12,10,9,.62), rgba(25,16,10,.38) 58%, rgba(12,10,9,.60)), url("/backgrounds/background_amici.png")', backgroundSize:'cover', backgroundPosition:'center', color:'white', textAlign:'left', padding:16, fontFamily:'inherit', cursor:'pointer', boxShadow:'0 14px 34px rgba(0,0,0,.20)', marginBottom:14, position:'relative' }}>
-          {!!pendingFriendRequests && <div style={{ position:'absolute', top:12, right:12 }}><SocialCountBadge count={pendingFriendRequests} prominent /></div>}
+          {!!socialAlertCount && <div style={{ position:'absolute', top:12, right:12 }}><SocialCountBadge count={socialAlertCount} prominent /></div>}
           <div style={{ color:'#F0A840', fontSize:10.5, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Social</div>
           <div style={{ fontSize:22, fontWeight:1000, marginTop:5 }}>Allenatori</div>
           <div style={{ color:'rgba(255,255,255,.68)', fontSize:12.5, lineHeight:1.4, marginTop:6 }}>Scopri i progressi dei tuoi amici</div>
@@ -8657,7 +8713,7 @@ function MainMenuClassic({ onOpen, onBack, onLogout, tutorialFocus=null, statusM
             {drawerItems.map(item => <button key={item.id} onClick={()=>{ setNavOpen(false); onOpen(item.id); }} style={{ minHeight:58, border:`1px solid ${lightPanelBorder}`, borderRadius:17, background:lightPanel, color:pageText, cursor:'pointer', padding:'0 13px', display:'flex', alignItems:'center', gap:11, textAlign:'left', fontFamily:'inherit' }}>
               <span style={{ width:38, height:38, borderRadius:14, background:isLightTheme?'rgba(0,0,0,.06)':'rgba(255,255,255,.10)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:20 }}>{item.icon}</span>
               <span style={{ fontSize:14, fontWeight:950, flex:1 }}>{item.label}</span>
-              {item.id === 'profile' && <SocialCountBadge count={pendingFriendRequests} />}
+              {item.id === 'profile' && <SocialCountBadge count={socialAlertCount} />}
             </button>)}
           </div>
           <button onClick={()=>{ setNavOpen(false); onLogout?.(); }} style={{ width:'100%', height:50, marginTop:18, borderRadius:17, border:'1px solid rgba(184,77,58,.35)', background:'rgba(184,77,58,.10)', color:'#D06A45', fontWeight:1000, fontFamily:'inherit' }}>Esci</button>
@@ -9675,6 +9731,36 @@ function FriendRequestBanner({ row, resolved = null, busy = false, onAccept, onD
   );
 }
 
+function FriendAcceptedBanner({ notification, onViewProfile, panelBg, panelBorder, mainText, subText, isLightTheme, FriendAvatar }) {
+  const profile = notification?.actorProfile;
+  const nickname = profile?.nickname || profile?.username || 'Un allenatore';
+  const unread = !notification?.read_at;
+  const borderAccent = unread
+    ? (isLightTheme ? 'rgba(144,216,74,.34)' : 'rgba(144,216,74,.28)')
+    : panelBorder;
+  const bgAccent = unread
+    ? (isLightTheme ? 'linear-gradient(135deg, rgba(144,216,74,.14), rgba(255,255,255,.78))' : 'linear-gradient(135deg, rgba(144,216,74,.16), rgba(255,255,255,.055))')
+    : panelBg;
+  return (
+    <div style={{ display:'flex', alignItems:'center', gap:10, borderRadius:18, background:bgAccent, border:`1px solid ${borderAccent}`, padding:12, marginBottom:8 }}>
+      <FriendAvatar p={profile} />
+      <div style={{ flex:1, minWidth:0 }}>
+        <div style={{ color:mainText, fontWeight:950, fontSize:13.5, lineHeight:1.35 }}>
+          <strong>{nickname}</strong> ha accettato la tua richiesta di amicizia.
+        </div>
+        <div style={{ color:subText, fontSize:11, marginTop:3 }}>Ora siete amici su Apex.</div>
+      </div>
+      <button
+        type="button"
+        onClick={() => onViewProfile?.(notification)}
+        style={{ height:38, borderRadius:13, border:'none', background:'#90D84A', color:'#102010', padding:'0 12px', fontWeight:1000, cursor:'pointer', fontFamily:'inherit', flexShrink:0 }}
+      >
+        Visualizza profilo
+      </button>
+    </div>
+  );
+}
+
 function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab = 'feed', onSocialChange, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], theme='dark' }) {
   const isLightTheme = theme === 'light';
   const progress = buildSimpleProgressState({ animals:ANIMALS, statusMap, visitedCountries, earnedBadgeIds });
@@ -9900,6 +9986,23 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab =
       {...friendBannerProps}
     />
   ));
+  const friendAcceptedNotifications = useMemo(
+    () => (snapshot.notifications || []).filter(n => n.notification_type === 'friend_accepted'),
+    [snapshot.notifications]
+  );
+  const openFriendProfileFromNotification = async (notification) => {
+    if (!notification) return;
+    const actorId = notification.actor_id;
+    const friend = (snapshot.friends || []).find(f => f.user_id === actorId)
+      || (snapshot.leaderboard || []).find(f => f.user_id === actorId && !f.isMe)
+      || notification.actorProfile;
+    if (notification.id) {
+      await markSocialNotificationReadById(user?.id, notification.id, accessToken).catch(() => {});
+    }
+    setSelectedFriend(friend);
+    setTab('friends');
+    await load();
+  };
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 50% -12%, rgba(240,168,64,.18), transparent 42%), linear-gradient(180deg,#111113,#08090B)', overflow:'hidden' }}>
       <PageHeader title="Allenatori" onBack={onBack} theme={theme} />
@@ -9910,8 +10013,8 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab =
               <div style={{ color:'#FFD4A3', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Compagni di esplorazione</div>
               <div style={{ fontSize:26, fontWeight:1000, marginTop:5 }}>Catture, badge e reazioni</div>
             </div>
-            {!!snapshot.pendingFriendRequestCount && <button onClick={()=>{ setTab('feed'); markRead(); }} title="Richieste amicizia" style={{ minWidth:36, height:36, borderRadius:14, border:'1px solid rgba(255,255,255,.18)', background:'#B84D3A', color:'white', fontWeight:1000, cursor:'pointer' }}>{snapshot.pendingFriendRequestCount}</button>}
-            {!snapshot.pendingFriendRequestCount && !!snapshot.unreadCount && <button onClick={markRead} title="Notifiche social" style={{ minWidth:36, height:36, borderRadius:14, border:'1px solid rgba(255,255,255,.18)', background:'rgba(255,255,255,.12)', color:'white', fontWeight:1000, cursor:'pointer' }}>{snapshot.unreadCount}</button>}
+            {!!snapshot.socialAlertCount && <button onClick={()=>{ setTab('feed'); markRead(); }} title="Notifiche social" style={{ minWidth:36, height:36, borderRadius:14, border:'1px solid rgba(255,255,255,.18)', background:'#B84D3A', color:'white', fontWeight:1000, cursor:'pointer' }}>{snapshot.socialAlertCount}</button>}
+            {!snapshot.socialAlertCount && !!snapshot.unreadCount && <button onClick={markRead} title="Notifiche social" style={{ minWidth:36, height:36, borderRadius:14, border:'1px solid rgba(255,255,255,.18)', background:'rgba(255,255,255,.12)', color:'white', fontWeight:1000, cursor:'pointer' }}>{snapshot.unreadCount}</button>}
           </div>
           <div style={{ color:'rgba(255,255,255,.72)', fontSize:12.5, lineHeight:1.5, marginTop:8 }}>Aggiungi amici per username, confronta i progressi e reagisci alle catture rare.</div>
         </div>
@@ -9970,6 +10073,17 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab =
               <FriendRequestBanner key={`${entry.id}-${entry.at}`} row={entry} resolved={entry} {...friendBannerProps} />
             ))}
           </div>}
+          {!!friendAcceptedNotifications.length && <div style={{ marginBottom:14 }}>
+            <div style={{ color:subText, fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Amicizie accettate</div>
+            {friendAcceptedNotifications.map(notification => (
+              <FriendAcceptedBanner
+                key={notification.id || `${notification.actor_id}-${notification.created_at}`}
+                notification={notification}
+                onViewProfile={openFriendProfileFromNotification}
+                {...friendBannerProps}
+              />
+            ))}
+          </div>}
           <div style={{ color:subText, fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Catture e badge</div>
           <div style={{ display:'grid', gap:10 }}>
             {feed.map(event => {
@@ -9996,7 +10110,7 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab =
                 </div>
               </div>;
             })}
-            {!feed.length && <div style={{ color:subText, fontSize:13, textAlign:'center', padding:22, borderRadius:20, background:panelBg, border:`1px solid ${panelBorder}` }}>Quando tu o un amico catturate animali rari o leggendari, compariranno qui.</div>}
+            {!feed.length && !friendAcceptedNotifications.length && !snapshot.requestsIn?.length && !visibleFeedHistory.length && <div style={{ color:subText, fontSize:13, textAlign:'center', padding:22, borderRadius:20, background:panelBg, border:`1px solid ${panelBorder}` }}>Quando tu o un amico catturate animali rari o leggendari, compariranno qui.</div>}
           </div>
         </>}
 
@@ -12973,6 +13087,7 @@ export default function App() {
     if (page !== 'menu') setPage('menu');
   }, [page]);
   const pendingFriendRequestCount = socialSnapshot?.pendingFriendRequestCount || socialSnapshot?.requestsIn?.length || 0;
+  const socialAlertCount = socialSnapshot?.socialAlertCount || pendingFriendRequestCount;
   const awardsHydratedRef = useRef(false);
   const awardInteractionRef = useRef(false);
   const unlockedAwards = useMemo(() => computeUnlockedAwards(statusMap, visitedCountries), [statusMap, visitedCountries]);
@@ -13924,7 +14039,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
       </FeaturePageErrorBoundary>
     );
     if (page === 'friends') return <FriendsPage theme={theme} accessToken={session?.access_token || ''} initialTab={friendsInitialTab} onSocialChange={setSocialSnapshot} onBack={()=>returnFromSection('menu')} user={user} userProfile={userProfile} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
-    if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} pendingFriendRequestCount={pendingFriendRequestCount} animalsWithStatus={animalsWithStatus} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={handleLogout} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges', 'profile')} onOpenRegions={()=>openPage('regions', 'profile')} onOpenGallery={()=>openPage('gallery', 'profile')} onOpenFriends={openFriends} />;
+    if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} pendingFriendRequestCount={socialAlertCount} animalsWithStatus={animalsWithStatus} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={handleLogout} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges', 'profile')} onOpenRegions={()=>openPage('regions', 'profile')} onOpenGallery={()=>openPage('gallery', 'profile')} onOpenFriends={openFriends} />;
 	    if (page === 'badges') return <BadgesPage theme={theme} onBack={()=>returnFromSection('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={activeSectionGuide==='badges'} onTutorialBadgeOpen={()=>setActiveSectionGuide(null)} />;
     if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><FeaturePageErrorBoundary theme={theme} title="Territori" onBack={()=>returnFromSection('menu')} resetKey={`regions-${theme}-${regionsInitialView || 'planet'}`}><RegionsPage theme={theme} animalsWithStatus={animalsWithStatus} onBack={()=>returnFromSection('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={handleVisitedCountriesChange} onRemoveDestination={handleRemoveDestination} initialView={regionsInitialView} onSelect={selectAnimal} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} /></FeaturePageErrorBoundary>{renderDetailOverlay()}</div>;
     if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage theme={theme} onBack={()=>returnFromSection('profile')} statusMap={statusMap} onSelect={selectAnimal} />{renderDetailOverlay()}</div>;

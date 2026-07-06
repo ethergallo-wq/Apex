@@ -244,6 +244,7 @@ export default function MainMenuV2({
     nearlyCompletedBadges: [],
   };
   const pendingFriendRequests = socialSnapshot?.pendingFriendRequestCount || socialSnapshot?.requestsIn?.length || 0;
+  const socialAlertCount = socialSnapshot?.socialAlertCount || pendingFriendRequests;
   const [navOpen, setNavOpen] = useState(false);
   const [avatarPickerOpen, setAvatarPickerOpen] = useState(false);
   const userIdKey = user?.id || 'guest';
@@ -325,10 +326,10 @@ export default function MainMenuV2({
           <img src="/Apex_logo_32x32.png" alt="Apex" width={30} height={30} style={{ display: 'block', filter: 'drop-shadow(0 2px 8px rgba(0,0,0,.18))' }} />
         </div>
         <div style={{ width: 42, display: 'flex', justifyContent: 'flex-end' }}>
-          {!!pendingFriendRequests && (
-            <button onClick={openFriendsFromHome} aria-label="Richieste amicizia" style={{ width: 42, height: 42, borderRadius: 14, border: '1px solid rgba(255,255,255,.12)', background: 'rgba(0,0,0,.12)', cursor: 'pointer', position: 'relative', padding: 0 }}>
+          {!!socialAlertCount && (
+            <button onClick={openFriendsFromHome} aria-label="Notifiche social" style={{ width: 42, height: 42, borderRadius: 14, border: '1px solid rgba(255,255,255,.12)', background: 'rgba(0,0,0,.12)', cursor: 'pointer', position: 'relative', padding: 0 }}>
               <span style={{ fontSize: 18, lineHeight: '42px' }}>👥</span>
-              <span style={{ position: 'absolute', top: -3, right: -3 }}><SocialCountBadge count={pendingFriendRequests} /></span>
+              <span style={{ position: 'absolute', top: -3, right: -3 }}><SocialCountBadge count={socialAlertCount} /></span>
             </button>
           )}
         </div>
@@ -473,7 +474,7 @@ export default function MainMenuV2({
             imageSrc="/backgrounds/background_amici.png"
             onClick={openFriendsFromHome}
             borderColor={hexToRgba('#F0A840', .24)}
-            badge={!!pendingFriendRequests ? <div style={{ position: 'absolute', top: 10, right: 10, zIndex: 2 }}><SocialCountBadge count={pendingFriendRequests} prominent /></div> : null}
+            badge={!!socialAlertCount ? <div style={{ position: 'absolute', top: 10, right: 10, zIndex: 2 }}><SocialCountBadge count={socialAlertCount} prominent /></div> : null}
           />
 
           <ExploreImageTile
@@ -555,7 +556,7 @@ export default function MainMenuV2({
                 <button key={item.id} onClick={() => { setNavOpen(false); onOpen(item.id); }} style={{ minHeight: 58, border: `1px solid ${panelBorder}`, borderRadius: 17, background: panelBg, color: pageText, cursor: 'pointer', padding: '0 13px', display: 'flex', alignItems: 'center', gap: 11, textAlign: 'left', fontFamily: 'inherit' }}>
                   <span style={{ width: 38, height: 38, borderRadius: 14, background: isLightTheme ? 'rgba(0,0,0,.06)' : 'rgba(255,255,255,.10)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 20 }}>{item.icon}</span>
                   <span style={{ fontSize: 14, fontWeight: 950, flex: 1 }}>{item.label}</span>
-                  {item.id === 'profile' && <SocialCountBadge count={pendingFriendRequests} />}
+                  {item.id === 'profile' && <SocialCountBadge count={socialAlertCount} />}
                 </button>
               ))}
             </div>
