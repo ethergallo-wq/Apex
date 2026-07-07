@@ -1164,12 +1164,15 @@ async function runTimedSupabaseRequest(builder, ms, fallbackValue, label='supaba
   }
 }
 
-async function runTimedFetch(url, options = {}, ms = 8000, label='fetch') {
+async function runTimedFetch(url, options = {}, ms = 8000, label='fetch', externalSignal = null) {
   if (typeof fetch === 'undefined') return null;
+  if (externalSignal?.aborted) return null;
   if (typeof AbortController === 'undefined') {
     return withTimeout(fetch(url, options), ms, null, label);
   }
   const controller = new AbortController();
+  const onExternalAbort = () => controller.abort();
+  externalSignal?.addEventListener?.('abort', onExternalAbort);
   let timer;
   try {
     return await Promise.race([
@@ -1188,6 +1191,7 @@ async function runTimedFetch(url, options = {}, ms = 8000, label='fetch') {
     throw err;
   } finally {
     clearTimeout(timer);
+    externalSignal?.removeEventListener?.('abort', onExternalAbort);
   }
 }
 
@@ -1788,17 +1792,16 @@ function summarizeUserAnimalRows(rows = []) {
   return { seenCount, capturedCount };
 }
 
+function computeApproxFriendXP(seenCount = 0, capturedCount = 0, badgeCount = 0) {
+  const seenXp = seenCount * (XP_BY_RARITY.seen.Comune || 10);
+  const capturedXp = capturedCount * ((XP_BY_RARITY.seen.Comune || 10) + (XP_BY_RARITY.captured.Comune || 25));
+  return Math.round(seenXp + capturedXp + badgeCount * 120);
+}
+
 function decorateFriendStats(profile, animalRows = [], badgeRows = []) {
   const counts = summarizeUserAnimalRows(animalRows);
   const badgeCount = new Set((badgeRows || []).map(r => normalizeBadgeId(r.badge_id)).filter(Boolean)).size;
-  const xp = computeTotalXP({
-    animalsWithStatus:[
-      ...Array.from({ length:counts.seenCount }, () => ({ status:'avvistato', rarity:'Comune' })),
-      ...Array.from({ length:counts.capturedCount }, () => ({ status:'catturato', rarity:'Comune' })),
-    ],
-    visitedCountries:[],
-    earnedBadgeIds:Array.from({ length:badgeCount }, (_, i) => `FRIEND-${i}`),
-  });
+  const xp = computeApproxFriendXP(counts.seenCount, counts.capturedCount, badgeCount);
   return {
     ...profile,
     ...counts,
@@ -1807,6 +1810,57 @@ function decorateFriendStats(profile, animalRows = [], badgeRows = []) {
     level:computeLevelFromXP(xp),
     completionPct:Math.min(100, Math.round((counts.capturedCount / Math.max(1, ANIMALS.length)) * 100)),
   };
+}
+
+const SOCIAL_SNAPSHOT_TTL_MS = 45000;
+let socialSnapshotCache = { key:'', data:null, ts:0 };
+let socialSnapshotInflight = null;
+
+function patchSocialSnapshotMe(snapshot, profile, progress = {}, userId = '') {
+  if (!snapshot || !userId) return snapshot;
+  const prevMe = (snapshot.leaderboard || []).find(r => r.isMe || r.user_id === userId) || {};
+  const nextMe = {
+    ...prevMe,
+    ...normalizeSocialProfile({ ...profile, user_id:userId, username:profile?.username || prevMe.username || 'tu', nickname:profile?.nickname || prevMe.nickname || 'Tu' }),
+    user_id:userId,
+    isMe:true,
+    level:progress.level ?? prevMe.level ?? 1,
+    xp:progress.xp ?? prevMe.xp ?? 0,
+    seenCount:progress.seenCount ?? prevMe.seenCount ?? 0,
+    capturedCount:progress.capturedCount ?? prevMe.capturedCount ?? 0,
+    badgeCount:prevMe.badgeCount ?? 0,
+    completionPct:Math.min(100, Math.round(((progress.capturedCount ?? prevMe.capturedCount ?? 0) / Math.max(1, ANIMALS.length)) * 100)),
+  };
+  const friends = snapshot.friends || [];
+  const leaderboard = [{ ...nextMe }, ...friends]
+    .sort((a, b) => (b.xp || 0) - (a.xp || 0))
+    .map((row, idx) => ({ ...row, rank:idx + 1 }));
+  return { ...snapshot, leaderboard };
+}
+
+async function fetchSocialSnapshotCached(userId, currentProfile, progress, accessToken = '', { force = false } = {}) {
+  if (!userId) return buildSocialFallback(null, currentProfile, progress);
+  const cacheKey = `${userId}:${String(accessToken || '').slice(-12)}`;
+  const now = Date.now();
+  if (!force && socialSnapshotCache.key === cacheKey && socialSnapshotCache.data && (now - socialSnapshotCache.ts) < SOCIAL_SNAPSHOT_TTL_MS) {
+    return patchSocialSnapshotMe(socialSnapshotCache.data, currentProfile, progress, userId);
+  }
+  if (!force && socialSnapshotInflight?.key === cacheKey) {
+    const cached = await socialSnapshotInflight.promise;
+    return patchSocialSnapshotMe(cached, currentProfile, progress, userId);
+  }
+  const promise = fetchSocialSnapshot(userId, currentProfile, progress, accessToken)
+    .then((data) => {
+      socialSnapshotCache = { key:cacheKey, data, ts:Date.now() };
+      socialSnapshotInflight = null;
+      return data;
+    })
+    .catch((err) => {
+      socialSnapshotInflight = null;
+      throw err;
+    });
+  socialSnapshotInflight = { key:cacheKey, promise };
+  return promise;
 }
 
 async function fetchSocialSnapshot(userId, currentProfile, progress, accessToken = '') {
@@ -1846,12 +1900,13 @@ async function fetchSocialSnapshot(userId, currentProfile, progress, accessToken
     const outgoing = (rows || []).filter(r => r.status === 'pending' && r.requester_id === userId).map(decorate);
     const friendIds = accepted.map(r => r.profile.user_id).filter(Boolean);
     const socialIds = Array.from(new Set([userId, ...friendIds]));
-    let notifications = await fetchSocialNotificationsViaRest(userId, accessToken, 6000);
-    const [{ data: animalRows }, { data: badgeRows }, { data: events }] = await Promise.all([
+    const [notificationsResult, animalResult, badgeResult, eventsResult] = await Promise.all([
+      fetchSocialNotificationsViaRest(userId, accessToken, 6000),
       socialIds.length ? runTimedSupabaseRequest(supabase.from('user_animals').select('user_id, unlock_status').in('user_id', socialIds), 6000, { data:[] }, 'user_animals social') : { data:[] },
       socialIds.length ? runTimedSupabaseRequest(supabase.from('user_badges').select('user_id, badge_id').in('user_id', socialIds), 6000, { data:[] }, 'user_badges social') : { data:[] },
       socialIds.length ? runTimedSupabaseRequest(supabase.from('social_events').select('*').in('user_id', socialIds).order('created_at', { ascending:false }).limit(30), 6000, { data:[] }, 'social_events') : { data:[] },
     ]);
+    let notifications = notificationsResult;
     if (!notifications) {
       const { data: notificationRows } = await runTimedSupabaseRequest(
         supabase.from('social_notifications').select('*').eq('user_id', userId).order('created_at', { ascending:false }).limit(40),
@@ -1861,6 +1916,9 @@ async function fetchSocialSnapshot(userId, currentProfile, progress, accessToken
       );
       notifications = notificationRows || [];
     }
+    const animalRows = animalResult?.data || [];
+    const badgeRows = badgeResult?.data || [];
+    const events = eventsResult?.data || [];
     const missingActorIds = Array.from(new Set((notifications || []).map(n => n.actor_id).filter(id => id && !byId[id])));
     if (missingActorIds.length) {
       let extraProfiles = await fetchUserProfilesViaRest(missingActorIds, accessToken, 6000);
@@ -1928,7 +1986,7 @@ async function fetchSocialSnapshot(userId, currentProfile, progress, accessToken
 
 const SOCIAL_SEARCH_BUDGET_MS = 14000;
 
-async function fetchSocialProfilesViaRestTable(userId, q, ms = 6000, accessToken = '') {
+async function fetchSocialProfilesViaRestTable(userId, q, ms = 6000, accessToken = '', signal = null) {
   const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || '';
   const anonKey = process.env.REACT_APP_SUPABASE_ANON_KEY || '';
   if (!supabaseUrl || !anonKey || typeof fetch === 'undefined') {
@@ -1955,7 +2013,8 @@ async function fetchSocialProfilesViaRestTable(userId, q, ms = 6000, accessToken
       },
     },
     ms,
-    'rest user_profiles search'
+    'rest user_profiles search',
+    signal
   );
   if (!response) {
     throw createSocialSearchError('La ricerca utenti sta impiegando troppo tempo. Riprova tra poco.', 'SEARCH_TIMEOUT', { step:'rest-table-timeout' });
@@ -1996,7 +2055,7 @@ function sortSocialSearchProfiles(rows = [], q, userId) {
     .slice(0, 12);
 }
 
-async function fetchSocialProfilesViaRpcRest(q, ms = 5000, accessToken = '') {
+async function fetchSocialProfilesViaRpcRest(q, ms = 5000, accessToken = '', signal = null) {
   const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || '';
   const anonKey = process.env.REACT_APP_SUPABASE_ANON_KEY || '';
   if (!supabaseUrl || !anonKey || typeof fetch === 'undefined') {
@@ -2020,7 +2079,8 @@ async function fetchSocialProfilesViaRpcRest(q, ms = 5000, accessToken = '') {
       body:JSON.stringify({ p_query:q, p_limit:12 }),
     },
     ms,
-    'rest rpc search_social_profiles'
+    'rest rpc search_social_profiles',
+    signal
   );
   if (!response) {
     throw createSocialSearchError('La ricerca utenti sta impiegando troppo tempo. Riprova tra poco.', 'SEARCH_TIMEOUT', { step:'rpc-rest-timeout' });
@@ -2043,25 +2103,36 @@ async function fetchSocialProfilesViaRpcRest(q, ms = 5000, accessToken = '') {
 async function searchSocialProfiles(userId, query, options = {}) {
   const q = sanitizeSocialSearchQuery(query);
   if (!q || q.length < 3) return [];
+  if (options.signal?.aborted) return [];
   const budgetMs = options.timeoutMs || SOCIAL_SEARCH_BUDGET_MS;
   const accessToken = options.accessToken || '';
+  const signal = options.signal || null;
   const sortProfiles = (rows = []) => sortSocialSearchProfiles(rows, q, userId);
   const errors = [];
+  const throwIfAborted = () => {
+    if (signal?.aborted) throw new DOMException('The operation was aborted.', 'AbortError');
+  };
 
   try {
-    const rpcRows = await fetchSocialProfilesViaRpcRest(q, budgetMs, accessToken);
+    throwIfAborted();
+    const rpcRows = await fetchSocialProfilesViaRpcRest(q, budgetMs, accessToken, signal);
+    throwIfAborted();
     const sorted = sortProfiles(rpcRows || []);
     if (sorted.length) return sorted;
   } catch (err) {
+    if (signal?.aborted || err?.name === 'AbortError') return [];
     errors.push(err);
     console.warn('[Apex] REST RPC ricerca amici:', err);
     if (err?.code === 'NO_AUTH_SESSION') throw err;
   }
 
   try {
-    const tableRows = await fetchSocialProfilesViaRestTable(userId, q, Math.max(5000, Math.floor(budgetMs * 0.65)), accessToken);
+    throwIfAborted();
+    const tableRows = await fetchSocialProfilesViaRestTable(userId, q, Math.max(5000, Math.floor(budgetMs * 0.65)), accessToken, signal);
+    throwIfAborted();
     return sortProfiles(tableRows || []);
   } catch (err) {
+    if (signal?.aborted || err?.name === 'AbortError') return [];
     errors.push(err);
     console.warn('[Apex] REST tabella ricerca amici:', err);
     if (err?.code === 'NO_AUTH_SESSION') throw err;
@@ -3330,8 +3401,8 @@ function computeAwardMetrics(statusMap = {}, visitedCountries = null) {
   };
   return metrics;
 }
-function computeUnlockedAwards(statusMap = {}, visitedCountries = null) {
-  const metrics = computeAwardMetrics(statusMap, visitedCountries);
+function computeUnlockedAwards(statusMap = {}, visitedCountries = null, precomputedMetrics = null) {
+  const metrics = precomputedMetrics || computeAwardMetrics(statusMap, visitedCountries);
   return AWARD_RULES.filter(rule => Number(metrics[rule.metric] || 0) >= Number(rule.threshold || 0))
     .map(rule => ({ ...rule, image: buildAwardImagePath(rule.badgeId), currentValue: metrics[rule.metric] || 0 }));
 }
@@ -9761,13 +9832,18 @@ function FriendAcceptedBanner({ notification, onViewProfile, panelBg, panelBorde
   );
 }
 
-function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab = 'feed', onSocialChange, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], theme='dark' }) {
+function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab = 'feed', onSocialChange, initialSnapshot = null, menuProgress = null, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], theme='dark' }) {
   const isLightTheme = theme === 'light';
-  const progress = buildSimpleProgressState({ animals:ANIMALS, statusMap, visitedCountries, earnedBadgeIds });
-  const [snapshot, setSnapshot] = useState(() => buildSocialFallback(user, userProfile, progress));
+  const progress = menuProgress || buildSimpleProgressState({ animals:ANIMALS, statusMap, visitedCountries, earnedBadgeIds });
+  const snapshotReadyRef = useRef(!!initialSnapshot?.socialReady);
+  const [snapshot, setSnapshot] = useState(() => {
+    if (initialSnapshot?.socialReady) return patchSocialSnapshotMe(initialSnapshot, userProfile, progress, user?.id);
+    return buildSocialFallback(user, userProfile, progress);
+  });
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(() => !initialSnapshot?.socialReady);
+  const [refreshing, setRefreshing] = useState(false);
   const [searching, setSearching] = useState(false);
   const [searchError, setSearchError] = useState('');
   const [searchDebug, setSearchDebug] = useState('');
@@ -9783,21 +9859,39 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab =
 
   useEffect(() => { setTab(initialTab || 'feed'); }, [initialTab]);
 
-  const load = async () => {
+  const load = async ({ silent = false, force = false } = {}) => {
+    if (!user?.id) return;
     const fallback = buildSocialFallback(user, userProfile, progress);
-    setLoading(true);
+    const showBlockingLoader = !silent && !snapshotReadyRef.current;
+    if (showBlockingLoader) setLoading(true);
+    else if (silent) setRefreshing(true);
     try {
-      const next = await withTimeout(fetchSocialSnapshot(user?.id, userProfile, progress, accessToken), 9000, fallback, 'fetchSocialSnapshot');
-      setSnapshot(next || fallback);
-      onSocialChange?.(next || fallback);
+      const next = await withTimeout(
+        fetchSocialSnapshotCached(user.id, userProfile, progress, accessToken, { force }),
+        9000,
+        fallback,
+        'fetchSocialSnapshot'
+      );
+      const resolved = next || fallback;
+      setSnapshot(resolved);
+      onSocialChange?.(resolved);
+      snapshotReadyRef.current = !!resolved?.socialReady;
     } catch (err) {
       console.warn('[Apex] Caricamento amici non riuscito:', err);
       setSnapshot(fallback);
     } finally {
-      setLoading(false);
+      if (showBlockingLoader) setLoading(false);
+      if (silent) setRefreshing(false);
     }
   };
-  useEffect(() => { load(); }, [user?.id, progress.seenCount, progress.capturedCount, earnedBadgeIds?.length, accessToken]);
+  useEffect(() => {
+    if (!user?.id) return;
+    load({ silent: snapshotReadyRef.current, force: !snapshotReadyRef.current });
+  }, [user?.id, accessToken]);
+
+  useEffect(() => {
+    setSnapshot(prev => patchSocialSnapshotMe(prev, userProfile, progress, user?.id));
+  }, [progress.level, progress.xp, progress.seenCount, progress.capturedCount, userProfile, user?.id]);
 
   const friendIdSet = useMemo(() => new Set((snapshot.friends || []).map(f => f.user_id).filter(Boolean)), [snapshot.friends]);
   const pendingInIdSet = useMemo(() => new Set((snapshot.requestsIn || []).map(r => r.profile?.user_id).filter(Boolean)), [snapshot.requestsIn]);
@@ -9882,7 +9976,7 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab =
       setMessage(`Richiesta inviata a ${profile.nickname || profile.username}.`);
       setQuery('');
       setResults([]);
-      await load();
+      await load({ silent: true, force: true });
     } catch (err) {
       setMessage(err?.code === 'NO_AUTH_SESSION' ? err.message : 'Non riesco a inviare la richiesta. Riprova tra poco.');
     } finally {
@@ -9897,7 +9991,7 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab =
       await updateFriendshipStatus(row.id, 'accepted', user?.id, accessToken);
       recordFriendRequestResolution(row, 'accepted');
       setMessage(`${row.profile?.nickname || 'Amico'} aggiunto.`);
-      await load();
+      await load({ silent: true, force: true });
     } catch {
       setMessage('Accettazione non riuscita. Riprova tra poco.');
     } finally {
@@ -9913,7 +10007,7 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab =
       await markSocialNotificationsRead(user?.id, accessToken, 'friend_request');
       recordFriendRequestResolution(row, 'ignored');
       setMessage('Richiesta ignorata.');
-      await load();
+      await load({ silent: true, force: true });
     } catch {
       setMessage('Operazione non riuscita. Riprova tra poco.');
     } finally {
@@ -9924,21 +10018,21 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab =
     setMessage('');
     await reactToSocialEvent(user?.id, event, reaction.key).then(() => {
       setMessage(`${reaction.emoji} Reazione inviata.`);
-      load();
+      load({ silent: true, force: true });
     }).catch(() => setMessage('Reazione non riuscita: controlla Supabase.'));
   };
   const removeFriend = async (friend) => {
     await deleteFriendship(friend.friendship_id, accessToken).then(() => {
       setSelectedFriend(null);
       setMessage(`${friend.nickname} rimosso dagli amici.`);
-      load();
+      load({ silent: true, force: true });
     }).catch(() => setMessage('Rimozione non riuscita.'));
   };
   const blockFriend = async (friend) => {
     await blockSocialUser(user?.id, friend.user_id, friend.friendship_id).then(() => {
       setSelectedFriend(null);
       setMessage(`${friend.nickname} bloccato.`);
-      load();
+      load({ silent: true, force: true });
     }).catch(() => setMessage('Blocco non riuscito.'));
   };
   const reportFriend = async (friend, eventId = null) => {
@@ -9948,7 +10042,7 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab =
   };
   const markRead = async () => {
     await markSocialNotificationsRead(user?.id, accessToken, 'friend_request').catch(() => {});
-    load();
+    load({ silent: true, force: true });
   };
   const FriendAvatar = ({ p }) => {
     const featured = AWARD_RULES.find(rule => normalizeBadgeId(rule.badgeId) === normalizeBadgeId(p?.featured_badge_id));
@@ -9957,7 +10051,7 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab =
       <div style={{ width:48, height:48, borderRadius:17, background:'linear-gradient(135deg,#7A331F,#F0A840)', display:'flex', alignItems:'center', justifyContent:'center', color:'white', fontSize:18, fontWeight:1000, overflow:'hidden' }}>
         {p?.avatar_url ? <img src={p.avatar_url} alt="" style={{ width:'100%', height:'100%', objectFit:'cover' }} /> : String(p?.nickname || p?.username || 'A').slice(0,1).toUpperCase()}
       </div>
-      {featured && <img src={buildAwardImagePath(featured.badgeId)} alt="" style={{ position:'absolute', right:-1, bottom:-1, width:24, height:24, objectFit:'contain', filter:'drop-shadow(0 3px 8px rgba(0,0,0,.42))' }} />}
+      {featured && <img src={buildAwardImagePath(featured.badgeId)} alt="" loading="lazy" decoding="async" style={{ position:'absolute', right:-1, bottom:-1, width:24, height:24, objectFit:'contain', filter:'drop-shadow(0 3px 8px rgba(0,0,0,.42))' }} />}
     </div>
     );
   };
@@ -10001,7 +10095,7 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab =
     }
     setSelectedFriend(friend);
     setTab('friends');
-    await load();
+    await load({ silent: true, force: true });
   };
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 50% -12%, rgba(240,168,64,.18), transparent 42%), linear-gradient(180deg,#111113,#08090B)', overflow:'hidden' }}>
@@ -10382,7 +10476,7 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
 
 
 
-function AwardCard({ rule, unlocked, onOpen, tutorialHighlight=false }) {
+const AwardCard = React.memo(function AwardCard({ rule, unlocked, onOpen, tutorialHighlight=false }) {
   const img = buildAwardImagePath(rule.badgeId);
   const borderColor = BADGE_LEVEL_COLORS[Number(rule.level) || 1] || '#CD7F32';
   return (
@@ -10407,12 +10501,12 @@ function AwardCard({ rule, unlocked, onOpen, tutorialHighlight=false }) {
         justifyContent:'space-between'
       }}
     >
-      <img src={img} alt={rule.name} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:'92%', maxWidth:118, height:108, objectFit:'contain', filter:unlocked?'drop-shadow(0 6px 12px rgba(0,0,0,.36))':'grayscale(1) opacity(.7)' }} />
+      <img src={img} alt={rule.name} loading="lazy" decoding="async" onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:'92%', maxWidth:118, height:108, objectFit:'contain', filter:unlocked?'drop-shadow(0 6px 12px rgba(0,0,0,.36))':'grayscale(1) opacity(.7)' }} />
       <span style={{ display:'none', alignItems:'center', justifyContent:'center', flexDirection:'column', width:108, height:108, borderRadius:24, border:`1px dashed ${borderColor}88`, color:borderColor, fontSize:24, fontWeight:1000, lineHeight:1.05, textAlign:'center' }}><span>L{rule.level}</span><span style={{ marginTop:5, color:'rgba(255,255,255,.58)', fontSize:9, fontWeight:900 }}>{String(rule.badgeId || '').toLowerCase()}.png</span></span>
       <div style={{ color:unlocked?'#fff':'rgba(255,255,255,.62)', fontSize:12.5, fontWeight:900, lineHeight:1.13, textAlign:'center', minHeight:30, display:'flex', alignItems:'center' }}>{rule.name}</div>
     </button>
   );
-}
+});
 
 function AwardModal({ rule, unlocked, currentValue, onClose, onPrev, onNext }) {
   if (!rule) return null;
@@ -10426,7 +10520,7 @@ function AwardModal({ rule, unlocked, currentValue, onClose, onPrev, onNext }) {
         <button onClick={onPrev} aria-label="Badge precedente" style={{ position:'absolute', top:'50%', left:12, transform:'translateY(-50%)', width:42, height:42, borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.09)', color:'white', fontSize:28, cursor:'pointer', zIndex:2, display:'flex', alignItems:'center', justifyContent:'center', lineHeight:1 }}>‹</button>
         <button onClick={onNext} aria-label="Badge successivo" style={{ position:'absolute', top:'50%', right:12, transform:'translateY(-50%)', width:42, height:42, borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.09)', color:'white', fontSize:28, cursor:'pointer', zIndex:2, display:'flex', alignItems:'center', justifyContent:'center', lineHeight:1 }}>›</button>
         <div style={{ height:8 }} />
-        <img src={img} alt={rule.name} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:'min(266px, 72vw)', height:'min(266px, 34dvh)', objectFit:'contain', filter:unlocked?'drop-shadow(0 12px 28px rgba(0,0,0,.45))':'grayscale(1) opacity(.78)', margin:'0 auto 8px', display:'block' }} />
+        <img src={img} alt={rule.name} loading="eager" decoding="async" onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:'min(266px, 72vw)', height:'min(266px, 34dvh)', objectFit:'contain', filter:unlocked?'drop-shadow(0 12px 28px rgba(0,0,0,.45))':'grayscale(1) opacity(.78)', margin:'0 auto 8px', display:'block' }} />
         <span style={{ display:'none', alignItems:'center', justifyContent:'center', flexDirection:'column', width:266, height:266, maxWidth:'82vw', borderRadius:34, border:`1px dashed ${borderColor}88`, color:borderColor, fontSize:70, fontWeight:1000, margin:'0 auto 8px', lineHeight:1 }}><span>L{rule.level}</span><span style={{ marginTop:14, color:'rgba(255,255,255,.62)', fontSize:13, fontWeight:900 }}>{String(rule.badgeId || '').toLowerCase()}.png</span></span>
         <div style={{ color:'white', fontSize:24, fontWeight:900, lineHeight:1.1, marginTop:4 }}>{rule.name}</div>
         <div style={{ color:'rgba(255,255,255,.48)', fontSize:12, fontWeight:800, marginTop:6 }}>{rule.macro}</div>
@@ -10446,17 +10540,34 @@ function AwardModal({ rule, unlocked, currentValue, onClose, onPrev, onNext }) {
   );
 }
 
-function BadgesPage({ onBack, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], openBadgeId=null, onBadgeOpened, tutorialActive=false, onTutorialBadgeOpen, theme='dark' }) {
+function BadgesPage({ onBack, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], awardMetrics: parentMetrics = null, unlockedAwards: parentUnlocked = null, openBadgeId=null, onBadgeOpened, tutorialActive=false, onTutorialBadgeOpen, theme='dark' }) {
   const [macro, setMacro] = useState('Tutti');
   const [onlyUnlocked, setOnlyUnlocked] = useState(false);
   const [selectedAward, setSelectedAward] = useState(null);
-  const metrics = computeAwardMetrics(statusMap, visitedCountries);
-  const unlockedSet = new Set([...earnedBadgeIds, ...computeUnlockedAwards(statusMap, visitedCountries).map(a => a.badgeId)].map(normalizeBadgeId));
-  const macros = ['Tutti', ...AWARD_MACROS];
-  const awards = AWARD_RULES.filter(rule => (macro === 'Tutti' || rule.macro === macro) && (!onlyUnlocked || unlockedSet.has(normalizeBadgeId(rule.badgeId))));
-  const orderedAwards = [...awards].sort((a,b)=> String(a.macro).localeCompare(String(b.macro)) || String(a.baseKey || a.badgeId).localeCompare(String(b.baseKey || b.badgeId)) || Number(a.level) - Number(b.level));
-  const rows = [];
-  for (let i = 0; i < orderedAwards.length; i += 3) rows.push(orderedAwards.slice(i, i + 3));
+  const metrics = useMemo(
+    () => parentMetrics || computeAwardMetrics(statusMap, visitedCountries),
+    [parentMetrics, statusMap, visitedCountries]
+  );
+  const unlockedSet = useMemo(() => {
+    const unlockedIds = parentUnlocked
+      ? parentUnlocked.map(a => a.badgeId)
+      : computeUnlockedAwards(statusMap, visitedCountries, metrics).map(a => a.badgeId);
+    return new Set([...earnedBadgeIds, ...unlockedIds].map(normalizeBadgeId));
+  }, [earnedBadgeIds, parentUnlocked, statusMap, visitedCountries, metrics]);
+  const macros = useMemo(() => ['Tutti', ...AWARD_MACROS], []);
+  const orderedAwards = useMemo(() => {
+    const awards = AWARD_RULES.filter(rule => (macro === 'Tutti' || rule.macro === macro) && (!onlyUnlocked || unlockedSet.has(normalizeBadgeId(rule.badgeId))));
+    return [...awards].sort((a,b)=> String(a.macro).localeCompare(String(b.macro)) || String(a.baseKey || a.badgeId).localeCompare(String(b.baseKey || b.badgeId)) || Number(a.level) - Number(b.level));
+  }, [macro, onlyUnlocked, unlockedSet]);
+  const rows = useMemo(() => {
+    const next = [];
+    for (let i = 0; i < orderedAwards.length; i += 3) next.push(orderedAwards.slice(i, i + 3));
+    return next;
+  }, [orderedAwards]);
+  const handleOpenAward = useCallback((rule) => {
+    setSelectedAward(rule);
+    if (tutorialActive) onTutorialBadgeOpen?.(rule);
+  }, [tutorialActive, onTutorialBadgeOpen]);
   useEffect(() => {
     if (!openBadgeId) return;
     const match = AWARD_RULES.find(rule => normalizeBadgeId(rule.badgeId) === normalizeBadgeId(openBadgeId));
@@ -10483,7 +10594,7 @@ function BadgesPage({ onBack, statusMap = {}, visitedCountries = [], earnedBadge
       </div>
       <div style={{ flex:1, overflowY:'auto', padding:'10px 12px 28px' }}>
         <div style={{ display:'flex', flexDirection:'column', gap:12 }}>
-          {rows.map((row, rowIdx)=><div key={rowIdx} style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:12 }}>{row.map((rule,idx)=><AwardCard key={rule.badgeId} rule={rule} unlocked={unlockedSet.has(normalizeBadgeId(rule.badgeId))} tutorialHighlight={tutorialActive && rowIdx===0 && idx===0} onOpen={(r)=>{setSelectedAward(r); if(tutorialActive) onTutorialBadgeOpen?.(r);}} />)}{Array.from({ length: Math.max(0, 3 - row.length) }).map((_,i)=><div key={`empty-${i}`} />)}</div>)}
+          {rows.map((row, rowIdx)=><div key={rowIdx} style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:12 }}>{row.map((rule,idx)=><AwardCard key={rule.badgeId} rule={rule} unlocked={unlockedSet.has(normalizeBadgeId(rule.badgeId))} tutorialHighlight={tutorialActive && rowIdx===0 && idx===0} onOpen={handleOpenAward} />)}{Array.from({ length: Math.max(0, 3 - row.length) }).map((_,i)=><div key={`empty-${i}`} />)}</div>)}
         </div>
       </div>
       {selectedAward && <AwardModal rule={selectedAward} unlocked={unlockedSet.has(normalizeBadgeId(selectedAward.badgeId))} currentValue={metrics[selectedAward.metric]} onClose={()=>setSelectedAward(null)} onPrev={()=>shiftSelected(-1)} onNext={()=>shiftSelected(1)} />}
@@ -13056,14 +13167,20 @@ export default function App() {
     () => buildSimpleProgressState({ animalsWithStatus, visitedCountries, earnedBadgeIds, statusMap }),
     [animalsWithStatus, visitedCountries, earnedBadgeIds, statusMap]
   );
-  const refreshSocialSnapshot = useCallback(async () => {
+  const awardMetrics = useMemo(() => computeAwardMetrics(statusMap, visitedCountries), [statusMap, visitedCountries]);
+  const refreshSocialSnapshot = useCallback(async (force = false) => {
     if (!user?.id) return;
-    const next = await fetchSocialSnapshot(user.id, userProfile, menuProgress, session?.access_token || '');
+    const next = await fetchSocialSnapshotCached(user.id, userProfile, menuProgress, session?.access_token || '', { force });
     setSocialSnapshot(next || buildSocialFallback(user, userProfile, menuProgress));
-  }, [user?.id, userProfile, menuProgress, session?.access_token]);
+  }, [user?.id, userProfile, session?.access_token]);
   useEffect(() => {
-    refreshSocialSnapshot();
-  }, [refreshSocialSnapshot]);
+    if (!user?.id) return;
+    refreshSocialSnapshot(true);
+  }, [user?.id, session?.access_token]);
+  useEffect(() => {
+    if (!user?.id) return;
+    setSocialSnapshot(prev => patchSocialSnapshotMe(prev, userProfile, menuProgress, user.id));
+  }, [menuProgress.xp, menuProgress.level, menuProgress.seenCount, menuProgress.capturedCount, user?.id, userProfile]);
   useEffect(() => subscribeHomeVariant(setHomeVariantState), []);
   useEffect(() => {
     try {
@@ -13090,7 +13207,7 @@ export default function App() {
   const socialAlertCount = socialSnapshot?.socialAlertCount || pendingFriendRequestCount;
   const awardsHydratedRef = useRef(false);
   const awardInteractionRef = useRef(false);
-  const unlockedAwards = useMemo(() => computeUnlockedAwards(statusMap, visitedCountries), [statusMap, visitedCountries]);
+  const unlockedAwards = useMemo(() => computeUnlockedAwards(statusMap, visitedCountries, awardMetrics), [statusMap, visitedCountries, awardMetrics]);
   const activeAwardToast = awardQueue[0] || null;
   useAnimaldexSound(true);
   const appHeight = useAppViewportHeight();
@@ -13887,6 +14004,8 @@ const openGridWithGeography = (geoValue, label, returnView='countries') => {
 const handleLogout = async () => {
   setDataError('');
   clearSupabaseAccessTokenCache();
+  socialSnapshotCache = { key:'', data:null, ts:0 };
+  socialSnapshotInflight = null;
   setSession(null);
   setUser(null);
   setUserProfile(null);
@@ -14038,9 +14157,9 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
         <ComparatorPage theme={theme} onBack={()=>returnFromFeaturePage('menu')} animals={animalsWithStatus} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={comparatorInitialAnimal} />
       </FeaturePageErrorBoundary>
     );
-    if (page === 'friends') return <FriendsPage theme={theme} accessToken={session?.access_token || ''} initialTab={friendsInitialTab} onSocialChange={setSocialSnapshot} onBack={()=>returnFromSection('menu')} user={user} userProfile={userProfile} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
+    if (page === 'friends') return <FriendsPage theme={theme} accessToken={session?.access_token || ''} initialTab={friendsInitialTab} initialSnapshot={socialSnapshot} menuProgress={menuProgress} onSocialChange={setSocialSnapshot} onBack={()=>returnFromSection('menu')} user={user} userProfile={userProfile} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
     if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} pendingFriendRequestCount={socialAlertCount} animalsWithStatus={animalsWithStatus} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={handleLogout} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges', 'profile')} onOpenRegions={()=>openPage('regions', 'profile')} onOpenGallery={()=>openPage('gallery', 'profile')} onOpenFriends={openFriends} />;
-	    if (page === 'badges') return <BadgesPage theme={theme} onBack={()=>returnFromSection('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={activeSectionGuide==='badges'} onTutorialBadgeOpen={()=>setActiveSectionGuide(null)} />;
+	    if (page === 'badges') return <BadgesPage theme={theme} onBack={()=>returnFromSection('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} awardMetrics={awardMetrics} unlockedAwards={unlockedAwards} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={activeSectionGuide==='badges'} onTutorialBadgeOpen={()=>setActiveSectionGuide(null)} />;
     if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><FeaturePageErrorBoundary theme={theme} title="Territori" onBack={()=>returnFromSection('menu')} resetKey={`regions-${theme}-${regionsInitialView || 'planet'}`}><RegionsPage theme={theme} animalsWithStatus={animalsWithStatus} onBack={()=>returnFromSection('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={handleVisitedCountriesChange} onRemoveDestination={handleRemoveDestination} initialView={regionsInitialView} onSelect={selectAnimal} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} /></FeaturePageErrorBoundary>{renderDetailOverlay()}</div>;
     if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage theme={theme} onBack={()=>returnFromSection('profile')} statusMap={statusMap} onSelect={selectAnimal} />{renderDetailOverlay()}</div>;
     if (page === 'lifeweb') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><StandaloneLifeWebPage theme={theme} statusMap={statusMap} visitedCountries={visitedCountries} onBack={()=>returnFromFeaturePage('grid')} animals={animalsData} initialAnimal={lifeWebInitialAnimal} onOpenAnimal={selectAnimal} />{renderDetailOverlay()}</div>;
