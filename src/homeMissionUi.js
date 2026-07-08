@@ -27,6 +27,13 @@ const METRIC_ACCENT = {
   extremes_count: '/regions/Nord_Africa.jpg',
   captured_count: '/regions/amazzonia.jpg',
   sighting_only_count: '/regions/afrotropici_equatoriali.jpg',
+  usage_streak: '/backgrounds/background_grid.png',
+  ai_corrections: '/backgrounds/background_tree.png',
+  total_mass_tons: '/regions/Tropical_Atlantic.jpg',
+  max_family_count: '/backgrounds/background_tree.png',
+  max_order_count: '/backgrounds/background_tree.png',
+  genera_count: '/backgrounds/background_tree.png',
+  obs_under_100: '/regions/Steppe_kazake_foreste.jpg',
 };
 
 function hashSeed(value = '') {
@@ -41,6 +48,15 @@ export function getAnimalThumbUrl(animal) {
   if (!filename) return imageUrl;
   const basename = filename.replace(/\.[^.]+$/, '');
   return `/animals/thumbs/${basename}.webp`;
+}
+
+export function getAnimalHeroUrl(animal) {
+  const imageUrl = animal?.image_url || animal?.img || '';
+  if (!imageUrl || /^(https?:|data:|blob:)/i.test(imageUrl)) return imageUrl;
+  const cleanUrl = String(imageUrl).split('#')[0].split('?')[0];
+  if (cleanUrl.startsWith('./')) return cleanUrl.slice(1);
+  if (cleanUrl.startsWith('/')) return cleanUrl;
+  return `/${cleanUrl}`;
 }
 
 function extractAverageWeightKg(wt) {
@@ -131,7 +147,20 @@ export function getMissionAccentImage({ badgeId, metric, macroId } = {}) {
   if (macroId === 'CON') return '/regions/antartide.jpg';
   if (macroId === 'ARS') return '/regions/africa.jpg';
   if (macroId === 'TRO') return '/regions/amazzonia.jpg';
+  if (macroId === 'ELI') return '/regions/Steppe_kazake_foreste.jpg';
+  if (macroId === 'ENG') return '/backgrounds/background_grid.png';
+  if (macroId === 'MAS') return '/regions/Tropical_Atlantic.jpg';
+  if (macroId === 'MOR') return '/regions/Ovest_americano.jpg';
+  if (macroId === 'STA') return '/regions/amazzonia.jpg';
+  if (macroId === 'TAX') return '/backgrounds/background_tree.png';
+  if (macroId === 'ONB') return '/regions/Europa_temperata.jpg';
   return REGION_IMAGES[hashSeed(badgeId || macroId || metric) % REGION_IMAGES.length];
+}
+
+export function resolveMissionAccentImage({ badgeId, metric, macroId, animalSlots } = {}) {
+  const filled = [...(animalSlots || [])].reverse().find(slot => slot?.type === 'filled' && slot.heroUrl);
+  if (filled?.heroUrl) return filled.heroUrl;
+  return getMissionAccentImage({ badgeId, metric, macroId });
 }
 
 export function formatMissionCopy({ badgeName, remaining, goal, fallbackTitle, fallbackSubtitle }) {
@@ -164,6 +193,7 @@ export function buildMissionAnimalSlots({ metric, current = 0, remaining = 0, an
       slots.push({
         type: 'filled',
         thumbUrl: getAnimalThumbUrl(animal),
+        heroUrl: getAnimalHeroUrl(animal),
         label: animal.com || '',
       });
     } else {
@@ -181,7 +211,7 @@ export function buildGenericAnimalSlots(animalsWithStatus = [], statusFilter = [
   for (let i = 0; i < maxSlots; i += 1) {
     const animal = filtered[i];
     slots.push(animal
-      ? { type: 'filled', thumbUrl: getAnimalThumbUrl(animal), label: animal.com || '' }
+      ? { type: 'filled', thumbUrl: getAnimalThumbUrl(animal), heroUrl: getAnimalHeroUrl(animal), label: animal.com || '' }
       : { type: 'empty' });
   }
   return slots;

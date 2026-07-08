@@ -13977,23 +13977,29 @@ export default function App() {
     let alive = true;
     loadLocalAnimalsData()
       .then(list => {
-        if (!alive) return null;
+        if (!alive) return;
         const normalized = list.map(normalizeLocalAnimal);
         setAnimalsData(prev => prev?.length ? prev : normalized);
         setLocalAnimalsReady(true);
-        return queueFullAnimalsHydration();
-      })
-      .then(fullList => {
-        if (!alive || !fullList?.length) return;
-        setAnimalsData(prev => {
-          const statusById = Object.fromEntries(prev.map(a => [a.id, a.status]));
-          const userStatusById = Object.fromEntries(prev.map(a => [a.id, a.userStatus]));
-          return fullList.map(a => ({
-            ...a,
-            status: normalizeAnimalStatus(statusById[a.id] ?? a.status),
-            userStatus: userStatusById[a.id] ?? a.userStatus,
-          }));
-        });
+        const hydrateFull = () => queueFullAnimalsHydration()
+          .then(fullList => {
+            if (!alive || !fullList?.length) return;
+            setAnimalsData(prev => {
+              const statusById = Object.fromEntries(prev.map(a => [a.id, a.status]));
+              const userStatusById = Object.fromEntries(prev.map(a => [a.id, a.userStatus]));
+              return fullList.map(a => ({
+                ...a,
+                status: normalizeAnimalStatus(statusById[a.id] ?? a.status),
+                userStatus: userStatusById[a.id] ?? a.userStatus,
+              }));
+            });
+          })
+          .catch(err => console.warn('[Apex] Dataset completo non caricato:', err));
+        if (typeof requestIdleCallback === 'function') {
+          requestIdleCallback(hydrateFull, { timeout: 2500 });
+        } else {
+          setTimeout(hydrateFull, 800);
+        }
       })
       .catch(err => {
         console.warn('[Apex] Dataset animali locale non caricato:', err);
@@ -14961,7 +14967,11 @@ const returnFromFeaturePage = (fallback='menu') => {
 const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', inset:0, zIndex:80, background:theme==='light'?LIGHT_APP_BG:'#1C1C1E' }}><Detail theme={theme} a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} onJumpToClass={jumpToClassFromDetail} onOpenTaxonomyFilter={openTaxonomyFilterFromDetail} onOpenComparator={openComparator} onOpenLifeWeb={openLifeWeb} onOpenPhoto={openPhotoRecognition} visitedCountries={visitedCountries} statusMap={statusMap} tutorialStep={tutorialStep} onTutorialAbilityClick={handleTutorialAbilityClick} onTutorialMetricClick={handleTutorialMetricClick} onTutorialStatusClick={handleTutorialStatusClick}/></div> : null;
 
   if (authLoading) {
-    return <ApexBootLoader frameProps={APP_FRAME_PROPS} message="Caricamento sessione..." />;
+    return (
+      <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
+        <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800 }}>Caricamento sessione...</div>
+      </div>
+    );
   }
 
   if (!user) return <AuthScreen onAuthReady={()=>supabase.auth.getSession().then(({data})=>{setSession(data.session||null);setUser(data.session?.user||null);})} />;
@@ -14971,12 +14981,20 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   }
 
   if (!userProfile && dataLoading) {
-    return <ApexBootLoader frameProps={APP_FRAME_PROPS} message="Caricamento profilo..." />;
+    return (
+      <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
+        <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800 }}>Caricamento profilo...</div>
+      </div>
+    );
   }
 
   if (!userProfile && !dataLoading) {
     setTimeout(() => setUserProfile(buildFallbackProfile(user, true)), 0);
-    return <ApexBootLoader frameProps={APP_FRAME_PROPS} message="Apertura Apex..." />;
+    return (
+      <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
+        <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800 }}>Apertura Apex...</div>
+      </div>
+    );
   }
 
   if (userProfile && userProfile.onboarding_completed === false) {

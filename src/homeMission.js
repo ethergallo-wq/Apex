@@ -2,7 +2,7 @@ import {
   buildGenericAnimalSlots,
   buildMissionAnimalSlots,
   formatMissionCopy,
-  getMissionAccentImage,
+  resolveMissionAccentImage,
 } from './homeMissionUi';
 
 export function buildHomeMission(progress = {}) {
@@ -16,6 +16,12 @@ export function buildHomeMission(progress = {}) {
       remaining,
       goal: nearly.goal || nearly.sub || 'Continua la tua collezione',
     });
+    const animalSlots = buildMissionAnimalSlots({
+      metric: nearly.metric,
+      current: nearly.current,
+      remaining,
+      animalsWithStatus,
+    });
     return {
       eyebrow: 'Missione di oggi',
       title: `${copy.titleLine1} — ${copy.titleLine2}`,
@@ -28,13 +34,13 @@ export function buildHomeMission(progress = {}) {
       badgeName: nearly.name,
       metric: nearly.metric,
       macroId: nearly.macroId,
-      accentImage: getMissionAccentImage(nearly),
-      animalSlots: buildMissionAnimalSlots({
+      accentImage: resolveMissionAccentImage({
+        badgeId: nearly.badgeId,
         metric: nearly.metric,
-        current: nearly.current,
-        remaining,
-        animalsWithStatus,
+        macroId: nearly.macroId,
+        animalSlots,
       }),
+      animalSlots,
     };
   }
 
