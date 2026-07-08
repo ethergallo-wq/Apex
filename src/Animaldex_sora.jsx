@@ -3,6 +3,7 @@ import { supabase } from './supabaseClient';
 import MainMenuV2 from './MainMenuV2';
 import DailyAtlasCard from './DailyAtlasCard';
 import ExplorerRulesPanel from './ExplorerRulesPanel';
+import { TrainerHeadToHead, TrainerLeaderboardCard, buildTrainerStatMaxes } from './TrainerCompareUi';
 import { getHomeVariant, setHomeVariant, subscribeHomeVariant, HOME_VARIANTS, getHomeVariantLabel } from './homeVariant';
 import { addFriendRequestFeedHistory, getFriendRequestFeedHistory } from './friendRequestFeed';
 import { getProfileAvatarChoices, resolveProfileAvatarAnimal } from './profileAvatar';
@@ -460,8 +461,10 @@ function buildSimpleProgressState({ animals = ANIMALS, statusMap = {}, visitedCo
     searchedCount: searched.length,
     seenCount: seen.length,
     capturedCount: captured.length,
+    totalSeenCount: seen.length + captured.length,
     documentedCount: Object.keys(DOCUMENTED_MAP || {}).length,
     visitedCountriesCount: visitedCountries.length,
+    badgeCount: (earnedBadgeIds || []).filter(Boolean).length,
     nearlyCompletedBadges: getNearlyCompletedBadges(statusMap, visitedCountries, earnedBadgeIds),
     xp,
     level: computeLevelFromXP(xp),
@@ -2088,7 +2091,7 @@ function buildSocialFallback(user, profile, progress = {}) {
     friends: [],
     requestsIn: [],
     requestsOut: [],
-    leaderboard: [{ ...(normalizeSocialProfile(profile || user || {})), user_id:user?.id || profile?.user_id || 'me', nickname:profile?.nickname || profile?.username || 'Tu', username:profile?.username || 'tu', isMe:true, level:progress.level || 1, xp:progress.xp || 0, seenCount:progress.seenCount || 0, capturedCount:progress.capturedCount || 0, badgeCount:0, completionPct:0 }],
+    leaderboard: [{ ...(normalizeSocialProfile(profile || user || {})), user_id:user?.id || profile?.user_id || 'me', nickname:profile?.nickname || profile?.username || 'Tu', username:profile?.username || 'tu', isMe:true, level:progress.level || 1, xp:progress.xp || 0, seenCount:(progress.seenCount || 0) + (progress.capturedCount || 0), capturedCount:progress.capturedCount || 0, documentedCount:progress.documentedCount || 0, badgeCount:progress.badgeCount || 0, destinationCount:progress.visitedCountriesCount || 0, completionPct:0 }],
     events: [],
     notifications: [],
     unreadCount:0,
@@ -2115,23 +2118,51 @@ function summarizeUserAnimalRows(rows = []) {
   return { seenCount, capturedCount };
 }
 
-function computeApproxFriendXP(seenCount = 0, capturedCount = 0, badgeCount = 0) {
-  const seenXp = seenCount * (XP_BY_RARITY.seen.Comune || 10);
-  const capturedXp = capturedCount * ((XP_BY_RARITY.seen.Comune || 10) + (XP_BY_RARITY.captured.Comune || 25));
-  return Math.round(seenXp + capturedXp + badgeCount * 120);
+function computeApproxFriendXP({ seenCount = 0, capturedCount = 0, badgeCount = 0, documentedCount = 0, destinationCount = 0 } = {}) {
+  const seenOnly = Math.max(0, Number(seenCount) - Number(capturedCount));
+  const seenBase = XP_BY_RARITY.seen.Comune || 10;
+  const capBase = (XP_BY_RARITY.seen.Comune || 10) + (XP_BY_RARITY.captured.Comune || 35);
+  const destXp = destinationCount > 0 ? 100 + Math.max(0, destinationCount - 1) * 40 : 0;
+  return Math.round(
+    seenOnly * seenBase
+    + Number(capturedCount) * capBase
+    + Number(badgeCount) * 120
+    + Number(documentedCount) * XP_PER_DOCUMENTED
+    + destXp
+  );
 }
 
-function decorateFriendStats(profile, animalRows = [], badgeRows = []) {
-  const counts = summarizeUserAnimalRows(animalRows);
-  const badgeCount = new Set((badgeRows || []).map(r => normalizeBadgeId(r.badge_id)).filter(Boolean)).size;
-  const xp = computeApproxFriendXP(counts.seenCount, counts.capturedCount, badgeCount);
+function decorateFriendStats(profile, animalRows = [], badgeRows = [], aggregate = null) {
+  let seenCount;
+  let capturedCount;
+  let documentedCount;
+  let badgeCount;
+  let destinationCount;
+  if (aggregate) {
+    seenCount = Number(aggregate.seen_count ?? aggregate.seenCount ?? 0);
+    capturedCount = Number(aggregate.captured_count ?? aggregate.capturedCount ?? 0);
+    documentedCount = Number(aggregate.documented_count ?? aggregate.documentedCount ?? 0);
+    badgeCount = Number(aggregate.badge_count ?? aggregate.badgeCount ?? 0);
+    destinationCount = Number(aggregate.destination_count ?? aggregate.destinationCount ?? 0);
+  } else {
+    const counts = summarizeUserAnimalRows(animalRows);
+    seenCount = counts.seenCount;
+    capturedCount = counts.capturedCount;
+    documentedCount = (animalRows || []).filter(r => r?.documented_at).length;
+    badgeCount = new Set((badgeRows || []).map(r => normalizeBadgeId(r.badge_id)).filter(Boolean)).size;
+    destinationCount = 0;
+  }
+  const xp = computeApproxFriendXP({ seenCount, capturedCount, badgeCount, documentedCount, destinationCount });
   return {
     ...profile,
-    ...counts,
+    seenCount,
+    capturedCount,
+    documentedCount,
     badgeCount,
+    destinationCount,
     xp,
-    level:computeLevelFromXP(xp),
-    completionPct:Math.min(100, Math.round((counts.capturedCount / Math.max(1, ANIMALS.length)) * 100)),
+    level: computeLevelFromXP(xp),
+    completionPct: Math.min(100, Math.round((capturedCount / Math.max(1, ANIMALS.length)) * 100)),
   };
 }
 
@@ -2147,11 +2178,13 @@ function patchSocialSnapshotMe(snapshot, profile, progress = {}, userId = '') {
     ...normalizeSocialProfile({ ...profile, user_id:userId, username:profile?.username || prevMe.username || 'tu', nickname:profile?.nickname || prevMe.nickname || 'Tu' }),
     user_id:userId,
     isMe:true,
-    level:progress.level ?? prevMe.level ?? 1,
-    xp:progress.xp ?? prevMe.xp ?? 0,
-    seenCount:progress.seenCount ?? prevMe.seenCount ?? 0,
-    capturedCount:progress.capturedCount ?? prevMe.capturedCount ?? 0,
-    badgeCount:prevMe.badgeCount ?? 0,
+    level: progress.level ?? prevMe.level ?? 1,
+    xp: progress.xp ?? prevMe.xp ?? 0,
+    seenCount: (Number(progress.seenCount ?? 0) + Number(progress.capturedCount ?? 0)) || prevMe.seenCount || 0,
+    capturedCount: progress.capturedCount ?? prevMe.capturedCount ?? 0,
+    documentedCount: progress.documentedCount ?? prevMe.documentedCount ?? 0,
+    badgeCount: progress.badgeCount ?? prevMe.badgeCount ?? 0,
+    destinationCount: progress.visitedCountriesCount ?? prevMe.destinationCount ?? 0,
     completionPct:Math.min(100, Math.round(((progress.capturedCount ?? prevMe.capturedCount ?? 0) / Math.max(1, ANIMALS.length)) * 100)),
   };
   const friends = snapshot.friends || [];
@@ -2223,9 +2256,10 @@ async function fetchSocialSnapshot(userId, currentProfile, progress, accessToken
     const outgoing = (rows || []).filter(r => r.status === 'pending' && r.requester_id === userId).map(decorate);
     const friendIds = accepted.map(r => r.profile.user_id).filter(Boolean);
     const socialIds = Array.from(new Set([userId, ...friendIds]));
-    const [notificationsResult, animalResult, badgeResult, eventsResult] = await Promise.all([
+    const [notificationsResult, peerStatsResult, animalResult, badgeResult, eventsResult] = await Promise.all([
       fetchSocialNotificationsViaRest(userId, accessToken, 6000),
-      socialIds.length ? runTimedSupabaseRequest(supabase.from('user_animals').select('user_id, unlock_status').in('user_id', socialIds), 6000, { data:[] }, 'user_animals social') : { data:[] },
+      runTimedSupabaseRequest(supabase.rpc('get_social_peer_stats', { p_viewer_id:userId }), 6000, { data:null }, 'get_social_peer_stats'),
+      socialIds.length ? runTimedSupabaseRequest(supabase.from('user_animals').select('user_id, unlock_status, documented_at').in('user_id', socialIds), 6000, { data:[] }, 'user_animals social') : { data:[] },
       socialIds.length ? runTimedSupabaseRequest(supabase.from('user_badges').select('user_id, badge_id').in('user_id', socialIds), 6000, { data:[] }, 'user_badges social') : { data:[] },
       socialIds.length ? runTimedSupabaseRequest(supabase.from('social_events').select('*').in('user_id', socialIds).order('created_at', { ascending:false }).limit(30), 6000, { data:[] }, 'social_events') : { data:[] },
     ]);
@@ -2242,6 +2276,7 @@ async function fetchSocialSnapshot(userId, currentProfile, progress, accessToken
     const animalRows = animalResult?.data || [];
     const badgeRows = badgeResult?.data || [];
     const events = eventsResult?.data || [];
+    const statsByUserId = Object.fromEntries((peerStatsResult?.data || []).map(row => [row.user_id, row]));
     const missingActorIds = Array.from(new Set((notifications || []).map(n => n.actor_id).filter(id => id && !byId[id])));
     if (missingActorIds.length) {
       let extraProfiles = await fetchUserProfilesViaRest(missingActorIds, accessToken, 6000);
@@ -2268,11 +2303,21 @@ async function fetchSocialSnapshot(userId, currentProfile, progress, accessToken
     const animalsByUser = (animalRows || []).reduce((acc, row) => { (acc[row.user_id] ||= []).push(row); return acc; }, {});
     const badgesByUser = (badgeRows || []).reduce((acc, row) => { (acc[row.user_id] ||= []).push(row); return acc; }, {});
     const friends = accepted.map(r => ({
-      ...decorateFriendStats(r.profile, animalsByUser[r.profile.user_id] || [], badgesByUser[r.profile.user_id] || []),
+      ...decorateFriendStats(
+        r.profile,
+        animalsByUser[r.profile.user_id] || [],
+        badgesByUser[r.profile.user_id] || [],
+        statsByUserId[r.profile.user_id] || null
+      ),
       friendship_id:r.id,
       since:r.accepted_at || r.created_at,
     }));
-    const me = decorateFriendStats(normalizeSocialProfile({ ...currentProfile, user_id:userId, username:currentProfile?.username || 'tu', nickname:currentProfile?.nickname || 'Tu' }), animalsByUser[userId] || [], badgesByUser[userId] || []);
+    const me = decorateFriendStats(
+      normalizeSocialProfile({ ...currentProfile, user_id:userId, username:currentProfile?.username || 'tu', nickname:currentProfile?.nickname || 'Tu' }),
+      animalsByUser[userId] || [],
+      badgesByUser[userId] || [],
+      statsByUserId[userId] || null
+    );
     const reactionByEvent = (reactions || []).reduce((acc, row) => { (acc[row.event_id] ||= []).push(row); return acc; }, {});
     const visibleEvents = (events || [])
       .filter(e => e.user_id === userId || friendIds.includes(e.user_id))
@@ -10439,7 +10484,7 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab =
 
   useEffect(() => {
     setSnapshot(prev => patchSocialSnapshotMe(prev, userProfile, progress, user?.id));
-  }, [progress.level, progress.xp, progress.seenCount, progress.capturedCount, userProfile, user?.id]);
+  }, [progress.level, progress.xp, progress.seenCount, progress.capturedCount, progress.documentedCount, progress.badgeCount, progress.visitedCountriesCount, userProfile, user?.id]);
 
   const friendIdSet = useMemo(() => new Set((snapshot.friends || []).map(f => f.user_id).filter(Boolean)), [snapshot.friends]);
   const pendingInIdSet = useMemo(() => new Set((snapshot.requestsIn || []).map(r => r.profile?.user_id).filter(Boolean)), [snapshot.requestsIn]);
@@ -10605,6 +10650,21 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab =
   };
   const friendRows = snapshot.friends || [];
   const leaderboard = snapshot.leaderboard || [];
+  const meRow = useMemo(
+    () => leaderboard.find(r => r.isMe) || {
+      ...normalizeSocialProfile(userProfile || {}),
+      user_id: user?.id,
+      isMe: true,
+      level: progress.level || 1,
+      xp: progress.xp || 0,
+      seenCount: (progress.seenCount || 0) + (progress.capturedCount || 0),
+      capturedCount: progress.capturedCount || 0,
+      documentedCount: progress.documentedCount || 0,
+      badgeCount: progress.badgeCount || 0,
+    },
+    [leaderboard, progress, user?.id, userProfile]
+  );
+  const statMaxes = useMemo(() => buildTrainerStatMaxes(leaderboard), [leaderboard]);
   const feed = snapshot.events || [];
   const panelBg = isLightTheme ? '#F6F4EF' : 'rgba(255,255,255,.055)';
   const panelBorder = isLightTheme ? 'rgba(0,0,0,.10)' : 'rgba(255,255,255,.08)';
@@ -10763,13 +10823,23 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab =
           </div>}
           <div style={{ color:subText, fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Amici</div>
           {loading ? <div style={{ color:subText, padding:18 }}>Carico amici...</div> : <div style={{ display:'grid', gap:9 }}>
-            {friendRows.map(p => <button key={p.user_id} onClick={()=>setSelectedFriend(p)} style={{ display:'flex', alignItems:'center', gap:10, borderRadius:18, background:panelBg, border:`1px solid ${panelBorder}`, padding:11, textAlign:'left', fontFamily:'inherit' }}>
-              <FriendAvatar p={p} />
-              <div style={{ flex:1, minWidth:0 }}>
-                <div style={{ color:mainText, fontSize:14, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{p.nickname}</div>
-                <div style={{ color:subText, fontSize:11, marginTop:3 }}>Liv. {p.level || 1} · {p.capturedCount || 0} catture · {p.badgeCount || 0} badge</div>
+            {friendRows.map(p => <button key={p.user_id} onClick={()=>setSelectedFriend(p)} style={{ display:'block', width:'100%', borderRadius:18, background:panelBg, border:`1px solid ${panelBorder}`, padding:11, textAlign:'left', fontFamily:'inherit', cursor:'pointer' }}>
+              <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:8 }}>
+                <FriendAvatar p={p} />
+                <div style={{ flex:1, minWidth:0 }}>
+                  <div style={{ color:mainText, fontSize:14, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{p.nickname}</div>
+                  <div style={{ color:subText, fontSize:11, marginTop:3 }}>Liv. {p.level || 1} · {(p.xp || 0).toLocaleString('it-IT')} XP</div>
+                </div>
+                <div style={{ color:'#F0A840', fontSize:12, fontWeight:1000 }}>{p.completionPct || 0}%</div>
               </div>
-              <div style={{ color:'#F0A840', fontSize:12, fontWeight:1000 }}>{p.completionPct || 0}%</div>
+              <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:6 }}>
+                {[['Avvistati', p.seenCount, '#C87955'], ['Catturati', p.capturedCount, '#B84D3A'], ['Badge', p.badgeCount, '#90D84A']].map(([label, val, color]) => (
+                  <div key={label} style={{ borderRadius:12, background:isLightTheme?'rgba(0,0,0,.04)':'rgba(255,255,255,.045)', padding:'7px 8px', textAlign:'center' }}>
+                    <div style={{ color, fontSize:14, fontWeight:1000 }}>{val || 0}</div>
+                    <div style={{ color:subText, fontSize:9.5, fontWeight:850, marginTop:2 }}>{label}</div>
+                  </div>
+                ))}
+              </div>
             </button>)}
             {!friendRows.length && <div style={{ color:subText, fontSize:13, textAlign:'center', padding:22 }}>Cerca un giocatore e manda la prima richiesta.</div>}
           </div>}
@@ -10777,16 +10847,23 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab =
 
         {tab === 'rank' && <div>
           <div style={{ color:subText, fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Leaderboard amici</div>
-          <div style={{ display:'grid', gap:9 }}>
-            {leaderboard.map(row => <div key={row.user_id} style={{ display:'flex', alignItems:'center', gap:10, borderRadius:18, background:row.isMe?'linear-gradient(135deg,rgba(240,168,64,.18),rgba(255,255,255,.045))':panelBg, border:`1px solid ${row.isMe?'rgba(240,168,64,.28)':panelBorder}`, padding:11 }}>
-              <div style={{ width:34, height:34, borderRadius:13, background:row.rank === 1 ? '#F0C449' : row.rank === 2 ? '#C0C0C0' : row.rank === 3 ? '#CD7F32' : 'rgba(255,255,255,.08)', color:row.rank <= 3 ? '#17100A' : mainText, display:'flex', alignItems:'center', justifyContent:'center', fontWeight:1000 }}>{row.rank}</div>
-              <FriendAvatar p={row} />
-              <div style={{ flex:1, minWidth:0 }}>
-                <div style={{ color:mainText, fontSize:14, fontWeight:1000 }}>{row.isMe ? 'Tu' : row.nickname}</div>
-                <div style={{ color:subText, fontSize:11 }}>Liv. {row.level} · {row.capturedCount} catture · {row.badgeCount} badge</div>
-              </div>
-              <div style={{ color:'#90D84A', fontSize:12, fontWeight:1000 }}>{row.xp} XP</div>
-            </div>)}
+          <div style={{ color:subText, fontSize:11.5, lineHeight:1.45, margin:'0 0 12px 2px' }}>Confronto su XP, avvistamenti, catture, badge e Atlante. Le barre sono relative al migliore del gruppo.</div>
+          <div style={{ display:'grid', gap:10 }}>
+            {leaderboard.map(row => (
+              <TrainerLeaderboardCard
+                key={row.user_id}
+                row={row}
+                rank={row.rank}
+                maxes={statMaxes}
+                isLightTheme={isLightTheme}
+                panelBg={panelBg}
+                panelBorder={panelBorder}
+                mainText={mainText}
+                subText={subText}
+                FriendAvatar={FriendAvatar}
+                onClick={row.isMe ? undefined : () => setSelectedFriend(row)}
+              />
+            ))}
           </div>
         </div>}
 
@@ -10809,9 +10886,24 @@ function FriendsPage({ onBack, user, userProfile, accessToken = '', initialTab =
             </div>
             <button onClick={()=>setSelectedFriend(null)} style={{ width:36, height:36, borderRadius:13, border:`1px solid ${panelBorder}`, background:'transparent', color:mainText, fontWeight:1000 }}>×</button>
           </div>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:8, marginTop:14 }}>
-            {[['Liv.', selectedFriend.level], ['Visti', selectedFriend.seenCount], ['Catture', selectedFriend.capturedCount], ['Badge', selectedFriend.badgeCount]].map(([label,value]) => <div key={label} style={{ borderRadius:15, background:isLightTheme?'rgba(0,0,0,.045)':'rgba(255,255,255,.055)', padding:10, textAlign:'center' }}><div style={{ color:'#F0A840', fontSize:16, fontWeight:1000 }}>{value || 0}</div><div style={{ color:subText, fontSize:10.5, fontWeight:850 }}>{label}</div></div>)}
+          <TrainerHeadToHead
+            me={meRow}
+            them={selectedFriend}
+            isLightTheme={isLightTheme}
+            panelBg={isLightTheme ? 'rgba(0,0,0,.04)' : 'rgba(255,255,255,.045)'}
+            panelBorder={panelBorder}
+            mainText={mainText}
+            subText={subText}
+          />
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:8, marginTop:4 }}>
+            {[['XP', (selectedFriend.xp || 0).toLocaleString('it-IT'), '#F0A840'], ['Livello', selectedFriend.level || 1, '#D8D2C4'], ['Avvistati', selectedFriend.seenCount || 0, '#C87955'], ['Catturati', selectedFriend.capturedCount || 0, '#B84D3A'], ['Badge', selectedFriend.badgeCount || 0, '#90D84A'], ['Atlante', selectedFriend.documentedCount || 0, '#9DD3FF']].map(([label,value,color]) => (
+              <div key={label} style={{ borderRadius:15, background:isLightTheme?'rgba(0,0,0,.045)':'rgba(255,255,255,.055)', padding:10, textAlign:'center', border:`1px solid ${panelBorder}` }}>
+                <div style={{ color, fontSize:16, fontWeight:1000 }}>{value}</div>
+                <div style={{ color:subText, fontSize:10.5, fontWeight:850, marginTop:3 }}>{label}</div>
+              </div>
+            ))}
           </div>
+          <div style={{ color:subText, fontSize:11, marginTop:10, marginBottom:4 }}>Completamento Dex (catture sul totale specie)</div>
           <div style={{ height:9, borderRadius:999, background:isLightTheme?'rgba(0,0,0,.08)':'rgba(255,255,255,.08)', overflow:'hidden', marginTop:14 }}><div style={{ width:`${selectedFriend.completionPct || 0}%`, height:'100%', background:'linear-gradient(90deg,#B84D3A,#F0A840)' }} /></div>
           <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:8, marginTop:14 }}>
             <button onClick={()=>removeFriend(selectedFriend)} style={{ height:44, borderRadius:15, border:`1px solid ${panelBorder}`, background:'rgba(255,255,255,.04)', color:mainText, fontWeight:950 }}>Rimuovi</button>
