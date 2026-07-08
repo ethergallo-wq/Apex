@@ -7,6 +7,7 @@ import { TrainerHeadToHead, TrainerLeaderboardCard, buildTrainerStatMaxes } from
 import { getHomeVariant, setHomeVariant, subscribeHomeVariant, HOME_VARIANTS, getHomeVariantLabel } from './homeVariant';
 import { addFriendRequestFeedHistory, getFriendRequestFeedHistory } from './friendRequestFeed';
 import { getProfileAvatarChoices, resolveProfileAvatarAnimal } from './profileAvatar';
+import ApexBootLoader from './ApexBootLoader';
 
 let LOCAL_ANIMALS = [];
 let ANIMALS = [];
@@ -14960,38 +14961,22 @@ const returnFromFeaturePage = (fallback='menu') => {
 const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', inset:0, zIndex:80, background:theme==='light'?LIGHT_APP_BG:'#1C1C1E' }}><Detail theme={theme} a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} onJumpToClass={jumpToClassFromDetail} onOpenTaxonomyFilter={openTaxonomyFilterFromDetail} onOpenComparator={openComparator} onOpenLifeWeb={openLifeWeb} onOpenPhoto={openPhotoRecognition} visitedCountries={visitedCountries} statusMap={statusMap} tutorialStep={tutorialStep} onTutorialAbilityClick={handleTutorialAbilityClick} onTutorialMetricClick={handleTutorialMetricClick} onTutorialStatusClick={handleTutorialStatusClick}/></div> : null;
 
   if (authLoading) {
-    return (
-      <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
-        <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800 }}>Caricamento sessione...</div>
-      </div>
-    );
+    return <ApexBootLoader frameProps={APP_FRAME_PROPS} message="Caricamento sessione..." />;
   }
 
   if (!user) return <AuthScreen onAuthReady={()=>supabase.auth.getSession().then(({data})=>{setSession(data.session||null);setUser(data.session?.user||null);})} />;
 
   if (!localAnimalsReady) {
-    return (
-      <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
-        <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800 }}>Caricamento specie...</div>
-      </div>
-    );
+    return <ApexBootLoader frameProps={APP_FRAME_PROPS} message="Caricamento specie..." />;
   }
 
   if (!userProfile && dataLoading) {
-    return (
-      <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
-        <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800 }}>Caricamento profilo...</div>
-      </div>
-    );
+    return <ApexBootLoader frameProps={APP_FRAME_PROPS} message="Caricamento profilo..." />;
   }
 
   if (!userProfile && !dataLoading) {
     setTimeout(() => setUserProfile(buildFallbackProfile(user, true)), 0);
-    return (
-      <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
-        <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800 }}>Apertura Apex...</div>
-      </div>
-    );
+    return <ApexBootLoader frameProps={APP_FRAME_PROPS} message="Apertura Apex..." />;
   }
 
   if (userProfile && userProfile.onboarding_completed === false) {

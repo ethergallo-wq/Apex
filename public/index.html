@@ -25,6 +25,14 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <style>
+      @keyframes apex-boot-pop {
+        0% { opacity: 0.35; transform: scale(0.82) rotate(-6deg); }
+        55% { opacity: 1; transform: scale(1.06) rotate(2deg); }
+        100% { opacity: 1; transform: scale(1) rotate(0deg); }
+      }
+      #apex-inline-boot .apex-boot-icon { animation: apex-boot-pop 180ms cubic-bezier(0.22, 1, 0.36, 1); }
+    </style>
     <script>
       (function () {
         try {
@@ -53,7 +61,69 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <div id="apex-inline-boot" style="min-height:100vh;min-height:100dvh;background:radial-gradient(circle at 50% 18%, rgba(184,77,58,.16), transparent 42%), #111113;color:white;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+          <div id="apex-inline-boot-icon" class="apex-boot-icon" style="width:72px;height:72px;border-radius:22px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);display:grid;place-items:center;box-shadow:0 10px 28px rgba(0,0,0,.28)">
+            <img id="apex-inline-boot-img" alt="" decoding="async" style="width:52px;height:52px;object-fit:contain;filter:drop-shadow(0 4px 10px rgba(0,0,0,.35))" />
+          </div>
+          <div style="color:rgba(255,255,255,.78);font-weight:900;font-size:15px;letter-spacing:.2px">Apertura Apex...</div>
+          <div id="apex-inline-boot-name" style="color:rgba(255,255,255,.48);font-weight:800;font-size:12px;min-height:16px"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var animals = [
+          { slug: 'melanocetus-johnsonii', name: 'Rana pescatrice' },
+          { slug: 'ornithorhynchus-anatinus', name: 'Ornitorinco' },
+          { slug: 'psychrolutes-marcidus', name: 'Pesce blob' },
+          { slug: 'vampyroteuthis-infernalis', name: 'Vampiro degli abissi' },
+          { slug: 'macropinna-microstoma', name: 'Pesce dal cappuccio' },
+          { slug: 'eurypharynx-pelecanoides', name: 'Anguilla pellicano' },
+          { slug: 'hymenopus-coronatus', name: 'Mantide orchidea' },
+          { slug: 'gonodactylus-smithii', name: 'Gambero mantide' },
+          { slug: 'uroplatus-phantasticus', name: 'Geco foglia' },
+          { slug: 'brookesia-micra', name: 'Camaleonte nano' },
+          { slug: 'nautilus-pompilius', name: 'Nautilus' },
+          { slug: 'argonauta-argo', name: 'Polpo di vetro' },
+          { slug: 'galeopithecus-volans', name: 'Colugo' },
+          { slug: 'uakari-calvus', name: 'Uacari calvo' },
+          { slug: 'rhynochetos-jubatus', name: 'Kagu' },
+          { slug: 'saiga-tatarica', name: 'Saiga' },
+          { slug: 'steatornis-caripensis', name: 'Uccello del petrolio' },
+          { slug: 'priodontes-maximus', name: 'Tatù gigante' },
+          { slug: 'atractosteus-spatula', name: 'Pesce alligatore' },
+          { slug: 'tarsius-syrichta', name: 'Tarsio' }
+        ];
+        for (var i = animals.length - 1; i > 0; i -= 1) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var tmp = animals[i];
+          animals[i] = animals[j];
+          animals[j] = tmp;
+        }
+        animals.forEach(function (animal) {
+          var preload = new Image();
+          preload.src = '%PUBLIC_URL%/animals/thumbs/' + animal.slug + '.webp';
+        });
+        var img = document.getElementById('apex-inline-boot-img');
+        var name = document.getElementById('apex-inline-boot-name');
+        var icon = document.getElementById('apex-inline-boot-icon');
+        var idx = 0;
+        function show() {
+          if (!img || !name || !icon) return;
+          var current = animals[idx % animals.length];
+          img.src = '%PUBLIC_URL%/animals/thumbs/' + current.slug + '.webp';
+          name.textContent = current.name;
+          icon.classList.remove('apex-boot-icon');
+          void icon.offsetWidth;
+          icon.classList.add('apex-boot-icon');
+          idx += 1;
+        }
+        show();
+        window.setInterval(show, 180);
+      })();
+    </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
