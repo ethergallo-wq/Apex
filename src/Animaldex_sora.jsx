@@ -1652,6 +1652,55 @@ async function fetchUserDocumentedMap(userId) {
   return map;
 }
 
+async function fetchUserExpeditions(userId) {
+  if (!userId) return null;
+  const { data, error } = await supabase
+    .from('user_expeditions')
+    .select('country_iso,revealed_waves,activated_at')
+    .eq('user_id', userId);
+  if (error) throw error;
+  const map = {};
+  for (const row of data || []) {
+    const iso = String(row?.country_iso || '').toUpperCase();
+    if (!iso) continue;
+    map[iso] = { revealedWaves:Math.max(0, Number(row.revealed_waves ?? 1)), activatedAt:row.activated_at || null };
+  }
+  return map;
+}
+
+async function saveUserExpeditions(userId, state = {}) {
+  if (!userId) return false;
+  const now = new Date().toISOString();
+  const rows = Object.entries(state || {}).map(([iso, entry]) => ({
+    user_id: userId,
+    country_iso: String(iso).toUpperCase(),
+    revealed_waves: Math.max(0, Number(entry?.revealedWaves ?? 1)),
+    activated_at: entry?.activatedAt || null,
+    updated_at: now,
+  })).filter(r => r.country_iso);
+  if (!rows.length) return false;
+  const { error } = await supabase
+    .from('user_expeditions')
+    .upsert(rows, { onConflict:'user_id,country_iso' });
+  if (error) throw error;
+  return true;
+}
+
+// Merge di due stati spedizione: vince sempre il progresso maggiore per paese.
+function mergeExpeditionStates(...states) {
+  const merged = {};
+  for (const state of states) {
+    for (const [iso, entry] of Object.entries(state || {})) {
+      const code = String(iso).toUpperCase();
+      const prev = merged[code];
+      if (!prev || Number(entry?.revealedWaves ?? 0) > Number(prev?.revealedWaves ?? 0)) {
+        merged[code] = { ...prev, ...entry };
+      }
+    }
+  }
+  return merged;
+}
+
 async function syncLocalStatusMapToSupabase(userId, statusMap = {}) {
   if (!userId || !statusMap || !Object.keys(statusMap).length) return false;
   const now = new Date().toISOString();
@@ -3371,6 +3420,24 @@ function getVisitedCountries() {
 function saveVisitedCountries(list = []) {
   if (typeof window === 'undefined') return;
   try { window.localStorage.setItem('animaldex_visited_countries', JSON.stringify(normalizeIsoList(list))); } catch {}
+}
+// Coda per-utente dei paesi aggiunti ma non ancora confermati su Supabase:
+// evita che un insert fallito/in timeout faccia sparire il paese al reload.
+function getPendingDestinationsKey(userId) { return `animaldex_pending_destinations_${userId || 'guest'}`; }
+function getPendingDestinations(userId) {
+  if (typeof window === 'undefined') return [];
+  try { return normalizeIsoList(JSON.parse(window.localStorage.getItem(getPendingDestinationsKey(userId)) || '[]')); } catch { return []; }
+}
+function addPendingDestinations(userId, isos = []) {
+  if (typeof window === 'undefined') return;
+  const next = normalizeIsoList([...getPendingDestinations(userId), ...isos]);
+  try { window.localStorage.setItem(getPendingDestinationsKey(userId), JSON.stringify(next)); } catch {}
+}
+function removePendingDestinations(userId, isos = []) {
+  if (typeof window === 'undefined') return;
+  const drop = new Set(normalizeIsoList(isos));
+  const next = getPendingDestinations(userId).filter(iso => !drop.has(iso));
+  try { window.localStorage.setItem(getPendingDestinationsKey(userId), JSON.stringify(next)); } catch {}
 }
 function getCountryDisplayName(code) {
   const c = String(code || '').toUpperCase();
@@ -13909,12 +13976,13 @@ export default function App() {
       );
       setUserProfile(profile || buildFallbackProfile(activeUser, true));
 
-      const [remoteAnimalsResult, remoteStatusResult, destinationsResult, badgeResult, documentedResult] = await Promise.allSettled([
+      const [remoteAnimalsResult, remoteStatusResult, destinationsResult, badgeResult, documentedResult, expeditionsResult] = await Promise.allSettled([
         withTimeout(fetchAnimalsFromSupabase(activeUser.id), 10000, null, 'fetchAnimalsFromSupabase'),
         withTimeout(fetchUserAnimalStatusMap(activeUser.id), 6500, {}, 'fetchUserAnimalStatusMap'),
         withTimeout(fetchUserDestinations(activeUser.id), 6500, getVisitedCountries(), 'fetchUserDestinations'),
         withTimeout(fetchUserBadgeIds(activeUser.id), 6500, null, 'fetchUserBadgeIds'),
         withTimeout(fetchUserDocumentedMap(activeUser.id), 6500, null, 'fetchUserDocumentedMap'),
+        withTimeout(fetchUserExpeditions(activeUser.id), 6500, null, 'fetchUserExpeditions'),
       ]);
 
       if (isStale()) return;
@@ -13943,9 +14011,23 @@ export default function App() {
       saveLocalUserStatusMap(activeUser.id, nextStatusMap);
       syncLocalStatusMapToSupabase(activeUser.id, nextStatusMap).catch(err => console.warn('[Apex] sync progressi locali non bloccante:', err));
 
-      const nextDestinations = normalizeIsoList(destinations || []);
+      // Merge remoto + paesi in attesa di conferma: un insert fallito o in
+      // timeout non deve mai far sparire un paese appena aggiunto.
+      const remoteDestinations = normalizeIsoList(destinations || []);
+      const pendingDestinations = getPendingDestinations(activeUser.id);
+      const nextDestinations = normalizeIsoList([...remoteDestinations, ...pendingDestinations]);
       setVisitedCountries(nextDestinations);
       saveVisitedCountries(nextDestinations);
+      if (pendingDestinations.length && destinationsResult.status === 'fulfilled') {
+        const remoteDestSet = new Set(remoteDestinations);
+        const confirmed = pendingDestinations.filter(iso => remoteDestSet.has(iso));
+        if (confirmed.length) removePendingDestinations(activeUser.id, confirmed);
+        pendingDestinations.filter(iso => !remoteDestSet.has(iso)).forEach(iso => {
+          persistUserDestination(activeUser.id, iso, [])
+            .then(() => removePendingDestinations(activeUser.id, [iso]))
+            .catch(err => console.warn('[Apex] risync destinazione fallito:', iso, err));
+        });
+      }
 
       const localBadgeIds = Array.from(getAwardUnlockSet()).map(normalizeBadgeId);
       const nextBadgeIds = Array.from(new Set([
@@ -13962,6 +14044,17 @@ export default function App() {
       if (Object.keys(mergedDocumented).length) {
         setDocumentedMap(prev => ({ ...mergedDocumented, ...prev }));
         saveLocalDocumentedMap(activeUser.id, mergedDocumented);
+      }
+
+      // Spedizioni: merge remoto+locale (vince il progresso maggiore) e risync.
+      const remoteExpeditions = expeditionsResult.status === 'fulfilled' ? (expeditionsResult.value || null) : null;
+      if (remoteExpeditions) {
+        const mergedExpeditions = mergeExpeditionStates(remoteExpeditions, getLocalExpeditionState(activeUser.id));
+        if (Object.keys(mergedExpeditions).length) {
+          setExpeditionState(prev => mergeExpeditionStates(mergedExpeditions, prev));
+          saveLocalExpeditionState(activeUser.id, mergedExpeditions);
+          saveUserExpeditions(activeUser.id, mergedExpeditions).catch(err => console.warn('[Apex] risync spedizioni non bloccante:', err));
+        }
       }
     } catch (err) {
       if (isStale()) return;
@@ -14157,6 +14250,7 @@ export default function App() {
     if (changed) {
       setExpeditionState(next);
       saveLocalExpeditionState(user?.id || 'guest', next);
+      if (user?.id) saveUserExpeditions(user.id, next).catch(err => console.warn('[Apex] sync spedizioni non bloccante:', err));
       if (lastAdvance) setExpeditionNotice(`Nuova ondata rivelata in ${getCountryDisplayName(lastAdvance.iso)}: ${lastAdvance.wave} di ${lastAdvance.waveCount}. +${XP_PER_WAVE_COMPLETED} XP`);
     }
   }, [statusMap, expeditionState, animalsData, user?.id]);
@@ -14176,6 +14270,7 @@ export default function App() {
     if (changed) {
       setExpeditionState(next);
       saveLocalExpeditionState(user?.id || 'guest', next);
+      if (user?.id) saveUserExpeditions(user.id, next).catch(err => console.warn('[Apex] sync spedizioni non bloccante:', err));
     }
   }, [expeditionState, user?.id]);
 
@@ -14187,11 +14282,15 @@ export default function App() {
     awardInteractionRef.current = true;
     setDestinationsLoading(true);
     setDataError('');
+    // In coda finché Supabase non conferma: il paese resta visibile anche se
+    // l'insert fallisce o va in timeout (risync automatico al prossimo reload).
+    addPendingDestinations(user.id, cleanList);
     try {
       let giftGranted = false;
       const nextExpeditions = { ...expeditionState };
       for (const cleanIso of cleanList) {
-        await withTimeout(persistUserDestination(user.id, cleanIso, tripTags || []), 4500, false, 'persistUserDestination');
+        const persisted = await withTimeout(persistUserDestination(user.id, cleanIso, tripTags || []), 4500, false, 'persistUserDestination');
+        if (persisted === true) removePendingDestinations(user.id, [cleanIso]);
         const { error: rpcError } = await withTimeout(supabase.rpc('unlock_animals_for_destination', {
           p_user_id: user.id,
           p_iso: cleanIso,
@@ -14221,6 +14320,7 @@ export default function App() {
       }
       setExpeditionState(nextExpeditions);
       saveLocalExpeditionState(user.id, nextExpeditions);
+      saveUserExpeditions(user.id, nextExpeditions).catch(err => console.warn('[Apex] sync spedizioni non bloccante:', err));
       reloadSupabaseData(user).catch(err => console.warn('[Apex] reload destinazione non bloccante:', err));
     } catch (err) {
       console.warn('[Apex] Aggiungi destinazione fallito:', err);
@@ -14242,6 +14342,7 @@ export default function App() {
     const nextVisited = normalizeIsoList(visitedCountries.filter(code => String(code).toUpperCase() !== cleanIso));
     setVisitedCountries(nextVisited);
     saveVisitedCountries(nextVisited);
+    removePendingDestinations(user?.id, [cleanIso]);
     if (!user?.id) return;
     try {
       await withTimeout(removeUserDestination(user.id, cleanIso), 4500, false, 'removeUserDestination');
@@ -14272,6 +14373,7 @@ export default function App() {
     clean.forEach(iso => { if (!next[iso]) next[iso] = { revealedWaves:1, activatedAt:now }; });
     setExpeditionState(next);
     saveLocalExpeditionState(user?.id || 'guest', next);
+    if (user?.id) saveUserExpeditions(user.id, next).catch(err => console.warn('[Apex] sync spedizioni non bloccante:', err));
     grantExpeditionGift(user?.id);
     setExpeditionGift({ iso:clean[0], recognitions:EXPEDITION_GIFT_RECOGNITIONS, days:EXPEDITION_GIFT_DAYS });
   };
