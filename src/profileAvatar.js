@@ -26,7 +26,7 @@ export async function saveProfileAvatarAnimal(userId, animal) {
   if (!userId || userId === 'guest' || userId === 'local' || !cleanId) return true;
   const { error } = await supabase
     .from('user_profiles')
-    .update({ avatar_url: animal?.image_url || '', updated_at: new Date().toISOString() })
+    .update({ avatar_url: animal?.image_url || animal?.img || '', updated_at: new Date().toISOString() })
     .eq('user_id', userId);
   if (error && error.code !== '42703') throw error;
   return true;

@@ -3250,22 +3250,29 @@ function getAnimalBiomes(a) {
   const raw = [a.biome, a.biomes, a.habitat, a.habitats, a.hab, a.ecosystem, a.ecosystems].filter(Boolean).join(',');
   return Array.from(new Set(raw.split(/[;,|]/).map(normalizeBadgeBiome).filter(Boolean)));
 }
+const USAGE_STREAK_KEY = 'animaldex_usage_streak_v1';
 function getUsageStreak() {
   if (typeof window === 'undefined') return 1;
-  const key = 'animaldex_usage_streak_v1';
   const today = new Date().toISOString().slice(0,10);
   try {
-    const saved = JSON.parse(window.localStorage.getItem(key) || '{}');
+    const saved = JSON.parse(window.localStorage.getItem(USAGE_STREAK_KEY) || '{}');
     if (saved.lastDate === today) return saved.streak || 1;
     const prevDate = saved.lastDate ? new Date(saved.lastDate) : null;
     const currDate = new Date(today);
     const diff = prevDate ? Math.round((currDate - prevDate) / 86400000) : null;
-    const streak = diff === 1 ? (saved.streak || 1) + 1 : 1;
-    window.localStorage.setItem(key, JSON.stringify({ lastDate: today, streak }));
-    return streak;
+    return diff === 1 ? (saved.streak || 1) + 1 : 1;
   } catch {
     return 1;
   }
+}
+function bumpUsageStreak() {
+  if (typeof window === 'undefined') return;
+  const today = new Date().toISOString().slice(0,10);
+  try {
+    const saved = JSON.parse(window.localStorage.getItem(USAGE_STREAK_KEY) || '{}');
+    if (saved.lastDate === today) return;
+    window.localStorage.setItem(USAGE_STREAK_KEY, JSON.stringify({ lastDate: today, streak: getUsageStreak() }));
+  } catch {}
 }
 function getHomeCountry() {
   if (typeof window === 'undefined') return '';
@@ -6485,8 +6492,9 @@ function useCountryGeoJson() {
         }
         throw lastErr;
       })();
+      COUNTRY_GEOJSON_PROMISE.catch(() => { COUNTRY_GEOJSON_PROMISE = null; });
     }
-    COUNTRY_GEOJSON_PROMISE.then(json => { if (alive) setData(json); }).catch(err => { console.warn('[Apex] country geojson:', err); if (alive) setError(true); });
+    COUNTRY_GEOJSON_PROMISE.then(json => { if (alive && json) setData(json); }).catch(err => { console.warn('[Apex] country geojson:', err); if (alive) setError(true); });
     return () => { alive = false; };
   }, []);
   return { data, error };
@@ -7024,7 +7032,11 @@ async function fetchJsonMaybeGzip(url) {
     return new Response(stream).json();
   }
   const text = new TextDecoder().decode(buffer);
-  return JSON.parse(text);
+  try {
+    return JSON.parse(text);
+  } catch (err) {
+    throw new Error('Dati distribuzione non leggibili.');
+  }
 }
 function useSpeciesRange(animal) {
   const sci = scientificRangeKey(animal?.sci || animal?.scientific_name);
@@ -7033,7 +7045,7 @@ function useSpeciesRange(animal) {
     let alive = true;
     if (!sci) { setState({ meta:null, data:null, loading:false, error:null }); return; }
     setState({ meta:null, data:null, loading:true, error:null });
-    if (!SPECIES_RANGE_INDEX_PROMISE) {
+    if (!SPECIES_RANGE_INDEX_CACHE && !SPECIES_RANGE_INDEX_PROMISE) {
       SPECIES_RANGE_INDEX_PROMISE = fetch(SPECIES_RANGE_INDEX_URL)
         .then(res => {
           if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -7043,8 +7055,12 @@ function useSpeciesRange(animal) {
           SPECIES_RANGE_INDEX_CACHE = json;
           return json;
         });
+      SPECIES_RANGE_INDEX_PROMISE.catch(() => { SPECIES_RANGE_INDEX_PROMISE = null; });
     }
-    SPECIES_RANGE_INDEX_PROMISE
+    const indexPromise = SPECIES_RANGE_INDEX_CACHE
+      ? Promise.resolve(SPECIES_RANGE_INDEX_CACHE)
+      : SPECIES_RANGE_INDEX_PROMISE;
+    indexPromise
       .then(index => {
         const meta = index?.[sci] || null;
         if (!meta) return { meta:null, data:null };
@@ -8857,7 +8873,7 @@ const LIFE_TREE = lifeNode({
     lifePhylum('Chordata', 'Pesci, anfibi, rettili, uccelli e mammiferi.', [
       lifeClass('Amphibia','Rane, salamandre, tritoni e cecilie',[lifeOrder('Anura','Rane e rospi',[lifeFamily('Dendrobatidae','Rane freccia',[],LIFE_TREE_COLORS.amphibia), lifeFamily('Hylidae','Raganelle',[],LIFE_TREE_COLORS.amphibia)],LIFE_TREE_COLORS.amphibia), lifeOrder('Caudata','Salamandre e tritoni',[lifeFamily('Ambystomatidae','Axolotl',[],LIFE_TREE_COLORS.amphibia)],LIFE_TREE_COLORS.amphibia), lifeOrder('Gymnophiona','Cecilie',[],LIFE_TREE_COLORS.amphibia)],LIFE_TREE_COLORS.amphibia),
       lifeClass('Reptilia','Rettili, serpenti, tartarughe e coccodrilli',[lifeCluster('Squamata - Lacertilia',[lifeFamily('Varanidae','Varani',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Chamaeleonidae','Camaleonti',[],LIFE_TREE_COLORS.reptilia)],{ color:LIFE_TREE_COLORS.reptilia, matchAny:[{ ord:'Squamata' },{ fam:'Varanidae' },{ fam:'Chamaeleonidae' }] }), lifeCluster('Squamata - Serpentes',[lifeFamily('Viperidae','Vipere e serpenti a sonagli',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Boidae','',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Pythonidae','',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Colubridae','Serpenti comuni',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Elapidae','Veleno neurotossico',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Natricidae',"Bisce d'acqua",[],LIFE_TREE_COLORS.reptilia), lifeCluster('Serpenti Primitivi & Scavatori',[lifeFamily('Anomaloepididae','',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Gerrhopilidae','',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Xenotyphlopidae','',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Loxocemidae','',[],LIFE_TREE_COLORS.reptilia)],{ color:LIFE_TREE_COLORS.reptilia, kind:'editorial' })],{ color:LIFE_TREE_COLORS.reptilia, matchAny:[{ ord:'Squamata', fam:'Viperidae' },{ fam:'Boidae' },{ fam:'Pythonidae' },{ fam:'Colubridae' },{ fam:'Elapidae' },{ fam:'Natricidae' }] }), lifeOrder('Testudines','Tartarughe',[lifeFamily('Testudinidae','Tartarughe terrestri',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Cheloniidae','Tartarughe marine',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Dermochelyidae','Tartaruga liuto',[],LIFE_TREE_COLORS.reptilia)],LIFE_TREE_COLORS.reptilia), lifeOrder('Crocodylia','Coccodrilli, gaviali e alligatori',[lifeFamily('Crocodylidae','',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Gavialidae','',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Alligatoridae','',[],LIFE_TREE_COLORS.reptilia)],LIFE_TREE_COLORS.reptilia)],LIFE_TREE_COLORS.reptilia),
-      lifeCluster('Pisces',[lifeClass('Actinopterygii','Pesci ossei',[lifeOrder('Perciformes','Perciformi',[lifeFamily('Scombridae','Tonni e sgombri',[],LIFE_TREE_COLORS.pisces), lifeFamily('Serranidae','Cernie',[],LIFE_TREE_COLORS.pisces), lifeFamily('Pomacentridae','Pesci pagliaccio',[],LIFE_TREE_COLORS.pisces), lifeFamily('Sparidae','Orate e saraghi',[],LIFE_TREE_COLORS.pisces)],LIFE_TREE_COLORS.pisces), lifeFamily('Salmonidae','Salmoni e trote',[],LIFE_TREE_COLORS.pisces), lifeOrder('Siluriformes','Pesci gatto',[],LIFE_TREE_COLORS.pisces), lifeOrder('Cypriniformes','Carpe e affini',[lifeFamily('Cyprinidae','Carpe e barbi',[],LIFE_TREE_COLORS.pisces)],LIFE_TREE_COLORS.pisces)],LIFE_TREE_COLORS.pisces), lifeClass('Elasmobranchii','Squali e razze',[lifeFamily('Lamnidae','Squalo bianco e mako',[],LIFE_TREE_COLORS.pisces), lifeFamily('Carcharhinidae','Squali requiem',[],LIFE_TREE_COLORS.pisces), lifeFamily('Sphyrnidae','Squali martello',[],LIFE_TREE_COLORS.pisces), lifeFamily('Rhincodontidae','Squalo balena',[],LIFE_TREE_COLORS.pisces)],LIFE_TREE_COLORS.pisces)],{ color:LIFE_TREE_COLORS.pisces, matchAny:[{ cls:'Actinopterygii' },{ cls:'Elasmobranchii' },{ cls:'Coelacanthi' }] }),
+      lifeCluster('Pisces',[lifeClass('Actinopterygii','Pesci ossei',[lifeOrder('Perciformes','Perciformi',[lifeFamily('Scombridae','Tonni e sgombri',[],LIFE_TREE_COLORS.pisces), lifeFamily('Serranidae','Cernie',[],LIFE_TREE_COLORS.pisces), lifeFamily('Pomacentridae','Pesci pagliaccio',[],LIFE_TREE_COLORS.pisces), lifeFamily('Sparidae','Orate e saraghi',[],LIFE_TREE_COLORS.pisces)],LIFE_TREE_COLORS.pisces), lifeOrder('Salmoniformes','Salmoni e trote',[lifeFamily('Salmonidae','Salmoni e trote',[],LIFE_TREE_COLORS.pisces)],LIFE_TREE_COLORS.pisces), lifeOrder('Siluriformes','Pesci gatto',[],LIFE_TREE_COLORS.pisces), lifeOrder('Cypriniformes','Carpe e affini',[lifeFamily('Cyprinidae','Carpe e barbi',[],LIFE_TREE_COLORS.pisces)],LIFE_TREE_COLORS.pisces)],LIFE_TREE_COLORS.pisces), lifeClass('Elasmobranchii','Squali e razze',[lifeFamily('Lamnidae','Squalo bianco e mako',[],LIFE_TREE_COLORS.pisces), lifeFamily('Carcharhinidae','Squali requiem',[],LIFE_TREE_COLORS.pisces), lifeFamily('Sphyrnidae','Squali martello',[],LIFE_TREE_COLORS.pisces), lifeFamily('Rhincodontidae','Squalo balena',[],LIFE_TREE_COLORS.pisces)],LIFE_TREE_COLORS.pisces)],{ color:LIFE_TREE_COLORS.pisces, matchAny:[{ cls:'Actinopterygii' },{ cls:'Elasmobranchii' },{ cls:'Coelacanthi' }] }),
       lifeClass('Aves','Uccelli',[lifeOrder('Passeriformes','Il gruppo più vasto',[lifeCluster('Passeridae & Fringillidae',[],{ color:LIFE_TREE_COLORS.aves, matchAny:[{ fam:'Passeridae' },{ fam:'Fringillidae' }] }), lifeFamily('Corvidae','Corvi e gazze',[],LIFE_TREE_COLORS.aves), lifeFamily('Hirundinidae','Rondini',[],LIFE_TREE_COLORS.aves), lifeFamily('Paridae','Cince',[],LIFE_TREE_COLORS.aves), lifeFamily('Turdidae','Merli e tordi',[],LIFE_TREE_COLORS.aves)],LIFE_TREE_COLORS.aves), lifeOrder('Psittaciformes','Pappagalli',[lifeFamily('Psittacidae','',[],LIFE_TREE_COLORS.aves), lifeFamily('Cacatuidae','',[],LIFE_TREE_COLORS.aves), lifeFamily('Psittaculidae','',[],LIFE_TREE_COLORS.aves)],LIFE_TREE_COLORS.aves), lifeOrder('Accipitriformes','Rapaci diurni',[lifeFamily('Accipitridae','Aquile e poiane',[],LIFE_TREE_COLORS.aves), lifeFamily('Cathartidae','Avvoltoi',[],LIFE_TREE_COLORS.aves)],LIFE_TREE_COLORS.aves), lifeCluster('Giganti Non Volatori',[lifeOrder('Struthioniformes','Struzzi',[],LIFE_TREE_COLORS.aves), lifeOrder('Casuariiformes','Emu e casuari',[],LIFE_TREE_COLORS.aves)],{ color:LIFE_TREE_COLORS.aves, kind:'editorial', matchAny:[{ ord:'Struthioniformes' },{ ord:'Casuariiformes' }] }), lifeCluster('Colori Tropicali',[lifeOrder('Phoenicopteriformes','Fenicotteri',[],LIFE_TREE_COLORS.aves), lifeFamily('Trochilidae','Colibri',[],LIFE_TREE_COLORS.aves), lifeFamily('Ramphastidae','Tucani',[],LIFE_TREE_COLORS.aves), lifeOrder('Bucerotiformes','Hornbills',[],LIFE_TREE_COLORS.aves)],{ color:LIFE_TREE_COLORS.aves, kind:'editorial', matchAny:[{ fam:'Trochilidae' },{ fam:'Ramphastidae' },{ ord:'Phoenicopteriformes' },{ ord:'Bucerotiformes' }] })],LIFE_TREE_COLORS.aves),
       lifeClass('Mammalia','Mammiferi',[lifeOrder('Carnivora','Predatori',[lifeFamily('Felidae','Gatti, leoni e grandi felini',[],LIFE_TREE_COLORS.carnivora), lifeFamily('Canidae','Cani e volpi',[],LIFE_TREE_COLORS.carnivora), lifeFamily('Ursidae','Orsi',[],LIFE_TREE_COLORS.carnivora), lifeFamily('Mustelidae','Tassi e lontre',[],LIFE_TREE_COLORS.carnivora), lifeFamily('Phocidae','Foche',[],LIFE_TREE_COLORS.carnivora)],LIFE_TREE_COLORS.carnivora), lifeOrder('Rodentia','Roditori',[lifeFamily('Muridae','Topi e ratti',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Sciuridae','Scoiattoli',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Caviidae','Capibara',[],LIFE_TREE_COLORS.mammalia)],LIFE_TREE_COLORS.mammalia), lifeCluster('Ungulata',[lifeFamily('Equidae','Cavalli e zebre',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Bovidae','Mucche e antilopi',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Cervidae','Cervi e alci',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Giraffidae','Giraffe',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Suidae','Maiali e cinghiali',[],LIFE_TREE_COLORS.mammalia)],{ color:LIFE_TREE_COLORS.mammalia, matchAny:[{ fam:'Equidae' },{ fam:'Bovidae' },{ fam:'Cervidae' },{ fam:'Giraffidae' }] }), lifeOrder('Primates','Primati',[lifeFamily('Hominidae','Umani',[],LIFE_TREE_COLORS.primates), lifeFamily('Cercopithecidae','Babbuini e macachi',[],LIFE_TREE_COLORS.primates), lifeFamily('Lemuridae','Lemuri',[],LIFE_TREE_COLORS.primates)],LIFE_TREE_COLORS.primates), lifeOrder('Cetacea','Cetacei',[lifeFamily('Delphinidae','Delfini e orche',[],LIFE_TREE_COLORS.cetacea), lifeFamily('Balaenopteridae','Balenottere',[],LIFE_TREE_COLORS.cetacea), lifeFamily('Physeteridae','Capodogli',[],LIFE_TREE_COLORS.cetacea)],LIFE_TREE_COLORS.cetacea), lifeOrder('Chiroptera','Pipistrelli',[lifeFamily('Pteropodidae','Volpi volanti',[],LIFE_TREE_COLORS.chiroptera), lifeFamily('Vespertilionidae','Pipistrelli comuni',[],LIFE_TREE_COLORS.chiroptera)],LIFE_TREE_COLORS.chiroptera), lifeOrder('Eulipotyphla','Insettivori',[lifeFamily('Erinaceidae','Ricci',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Talpidae','Talpe',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Soricidae','Toporagni',[],LIFE_TREE_COLORS.mammalia)],LIFE_TREE_COLORS.mammalia), lifeOrder('Lagomorpha','Lepri e pika',[lifeFamily('Leporidae','Lepri e conigli',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Ochotonidae','Pika',[],LIFE_TREE_COLORS.mammalia)],LIFE_TREE_COLORS.mammalia)],LIFE_TREE_COLORS.mammalia),
     ], LIFE_TREE_COLORS.chordata),
@@ -8886,6 +8902,12 @@ function getLifeNodePath(id, root=LIFE_TREE) {
 }
 function findLifeFocusNodeForAnimal(animal) {
   if (!animal) return null;
+  const cacheKey = `${animal.id || ''}:${animal.fam || ''}:${animal.ord || ''}:${animal.cls || ''}:${animal.phy || ''}:${animal.kin || ''}`;
+  if (lifeFocusAnimalCacheKey !== 'v2') {
+    lifeFocusAnimalCacheKey = 'v2';
+    lifeFocusAnimalCache = new Map();
+  }
+  if (lifeFocusAnimalCache.has(cacheKey)) return lifeFocusAnimalCache.get(cacheKey);
   let best = null;
   const rankScore = { kingdom:1, phylum:2, class:3, order:4, family:5 };
   const walk = (node) => {
@@ -8896,7 +8918,9 @@ function findLifeFocusNodeForAnimal(animal) {
     (node.children || []).forEach(walk);
   };
   walk(LIFE_TREE);
-  return best || LIFE_TREE;
+  const resolved = best || LIFE_TREE;
+  lifeFocusAnimalCache.set(cacheKey, resolved);
+  return resolved;
 }
 function lifeRuleMatches(rule, animal) {
   if (!rule || !animal) return false;
@@ -8923,28 +8947,81 @@ let lifeAnimalsCacheKey = '';
 let lifeAnimalsCache = new Map();
 let lifeAnimalsIndexKey = '';
 let lifeAnimalsIndex = null;
+let lifeFlowCacheKey = '';
+let lifeFlowCache = null;
+let lifeFocusAnimalCacheKey = '';
+let lifeFocusAnimalCache = new Map();
+
+function getLifeAnimalsCacheFingerprint(animals = []) {
+  let captured = 0;
+  let revealed = 0;
+  for (const animal of animals) {
+    const status = normalizeAnimalStatus(animal?.status);
+    if (status === 'catturato') captured += 1;
+    if (!isMysteryStatus(status)) revealed += 1;
+  }
+  return `${animals.length}:${captured}:${revealed}`;
+}
+
 function invalidateLifeAnimalsCache() {
   lifeAnimalsCacheKey = '';
   lifeAnimalsCache = new Map();
   lifeAnimalsIndexKey = '';
   lifeAnimalsIndex = null;
+  lifeFlowCacheKey = '';
+  lifeFlowCache = null;
+  lifeFocusAnimalCacheKey = '';
+  lifeFocusAnimalCache = new Map();
 }
+
+function buildLifeTaxonomyLookup(animals = []) {
+  const lookup = { kin:new Map(), phy:new Map(), cls:new Map(), ord:new Map(), fam:new Map(), gen:new Map() };
+  const fieldKeys = { kin:['kin','kingdom'], phy:['phy','phylum'], cls:['cls','class'], ord:['ord','order'], fam:['fam','family'], gen:['gen','genus'] };
+  for (const animal of animals) {
+    for (const [key, fields] of Object.entries(fieldKeys)) {
+      const val = fields.map(field => animal?.[field]).find(Boolean);
+      if (!val) continue;
+      const norm = String(val).trim().toLowerCase();
+      if (!lookup[key].has(norm)) lookup[key].set(norm, []);
+      lookup[key].get(norm).push(animal);
+    }
+  }
+  return lookup;
+}
+
+function collectAnimalsFromLifeRule(rule, lookup) {
+  const entries = Object.entries(rule || {});
+  if (!entries.length) return [];
+  let pool = null;
+  for (const [key, expected] of entries) {
+    const norm = String(expected || '').trim().toLowerCase();
+    const bucket = (lookup[key] || new Map()).get(norm) || [];
+    const bucketSet = new Set(bucket);
+    if (pool === null) pool = bucketSet;
+    else pool = new Set([...pool].filter(animal => bucketSet.has(animal)));
+  }
+  return pool ? [...pool] : [];
+}
+
+function collectAnimalsFromLifeNodeDirect(node, lookup) {
+  const byId = new Map();
+  const add = (animal) => { if (animal) byId.set(lifeAnimalKey(animal), animal); };
+  if (node?.animal) add(node.animal);
+  if (node?.match) collectAnimalsFromLifeRule(node.match, lookup).forEach(add);
+  (node?.matchAny || []).forEach(rule => collectAnimalsFromLifeRule(rule, lookup).forEach(add));
+  return byId;
+}
+
 function ensureLifeAnimalsIndex(animals = []) {
-  const key = String((animals || []).length);
+  const key = getLifeAnimalsCacheFingerprint(animals);
   if (lifeAnimalsIndexKey === key && lifeAnimalsIndex) return lifeAnimalsIndex;
+  const lookup = buildLifeTaxonomyLookup(animals);
   const index = new Map();
   const walk = (node) => {
-    const byId = new Map();
-    const add = (animal) => {
-      if (animal) byId.set(String(animal?.id || animal?.sci || animal?.com), animal);
-    };
-    if (node?.animal) add(node.animal);
-    if (node?.match || node?.matchAny) {
-      (animals || []).forEach(a => { if (lifeNodeMatchesAnimal(node, a)) add(a); });
-    }
+    const byId = collectAnimalsFromLifeNodeDirect(node, lookup);
     (node?.children || []).forEach(child => {
       walk(child);
-      (index.get(child.id) || []).forEach(add);
+      (index.get(child.id) || []).forEach(animal => byId.set(lifeAnimalKey(animal), animal));
     });
     const rows = Array.from(byId.values());
     if (node?.id) index.set(node.id, rows);
@@ -8963,12 +9040,12 @@ function getLifeAnimals(node, animals=[]) {
     if (node?.id && index.has(node.id)) return index.get(node.id);
     return [];
   }
-  const cacheKey = String((animals || []).length);
+  const cacheKey = getLifeAnimalsCacheFingerprint(animals);
   if (lifeAnimalsCacheKey !== cacheKey) ensureLifeAnimalsIndex(animals);
   const cacheId = node?.id;
   if (cacheId && lifeAnimalsCache.has(cacheId)) return lifeAnimalsCache.get(cacheId);
   const byId = new Map();
-  const add = (animal) => byId.set(String(animal?.id || animal?.sci || animal?.com), animal);
+  const add = (animal) => byId.set(lifeAnimalKey(animal), animal);
   if (node?.animal) add(node.animal);
   if (node?.match || node?.matchAny) animals.filter(a => lifeNodeMatchesAnimal(node, a)).forEach(add);
   (node?.children || []).forEach(child => getLifeAnimals(child, animals).forEach(add));
@@ -8978,7 +9055,10 @@ function getLifeAnimals(node, animals=[]) {
 }
 function getLifeStats(node, animals=[]) {
   const rows = getLifeAnimals(node, animals);
-  const captured = rows.filter(a => normalizeAnimalStatus(a.status) === 'catturato').length;
+  let captured = 0;
+  for (const animal of rows) {
+    if (normalizeAnimalStatus(animal.status) === 'catturato') captured += 1;
+  }
   return { total:rows.length, captured, completion:rows.length ? Math.round(captured / rows.length * 100) : 0, samples:rows.slice(0, 4) };
 }
 function LifeProgress({ value, color }) {
@@ -9146,7 +9226,34 @@ function buildLifeFlow(selected, animals, expandedGeneratedId = null, focusAnima
       label:LIFE_RANK_LABELS[sample?.rank] || sample?.rank || `Livello ${depth + 1}`,
     };
   });
-  return { nodes, edges, columns, selectedPath, selectedNode:nodes.find(node => node.id === selected.id), focusDepth, colGap, rowGap, nodeW, nodeH };
+  const focusAnimalIdStr = focusAnimalId ? String(focusAnimalId) : '';
+  const containsFocusByNodeId = new Map();
+  if (focusAnimalIdStr) {
+    ensureLifeAnimalsIndex(animals);
+    for (const [nodeId, rows] of lifeAnimalsIndex.entries()) {
+      if ((rows || []).some(animal => String(animal?.id || '') === focusAnimalIdStr)) containsFocusByNodeId.set(nodeId, true);
+    }
+  }
+  const enrichedNodes = nodes.map(nodeRow => {
+    const focusedAnimal = nodeRow.node?.kind === 'animal' && String(nodeRow.node?.animal?.id || '') === focusAnimalIdStr;
+    const focusPathNode = !!focusAnimalIdStr && (focusedAnimal || nodeRow.inPath || (nodeRow.node?.generated && containsFocusByNodeId.get(nodeRow.id)));
+    return { ...nodeRow, focusedAnimal, focusPathNode };
+  });
+  return { nodes:enrichedNodes, edges, columns, selectedPath, selectedNode:enrichedNodes.find(node => node.id === selected.id), focusDepth, colGap, rowGap, nodeW, nodeH };
+}
+function buildLifeFlowCached(selected, animals, expandedGeneratedId = null, focusAnimalId=null) {
+  const fingerprint = getLifeAnimalsCacheFingerprint(animals);
+  const cacheKey = `${selected?.id || 'animalia'}|${expandedGeneratedId || ''}|${focusAnimalId || ''}|${fingerprint}`;
+  if (lifeFlowCacheKey === cacheKey && lifeFlowCache) return lifeFlowCache;
+  const next = buildLifeFlow(selected, animals, expandedGeneratedId, focusAnimalId);
+  lifeFlowCacheKey = cacheKey;
+  lifeFlowCache = next;
+  return next;
+}
+function prewarmLifeTreeIndex(animals = []) {
+  if (!animals?.length) return;
+  ensureLifeAnimalsIndex(animals);
+  buildLifeFlowCached(LIFE_TREE, animals, null, null);
 }
 function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onAnimalPanel, onOpenAnimal, onOpenTaxonomyFilter }) {
   const wrapRef = useRef(null);
@@ -9164,17 +9271,22 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
   const [detailNode, setDetailNode] = useState(null);
   const [resetVersion, setResetVersion] = useState(0);
   const deferredAnimals = useDeferredValue(animals);
-  const [lifeFlow, setLifeFlow] = useState(null);
   const emptyLifeFlow = { nodes:[], edges:[], columns:[], selectedPath:[], selectedNode:null, focusDepth:0, colGap:324, rowGap:138, nodeW:252, nodeH:132 };
+  const [lifeFlow, setLifeFlow] = useState(() => buildLifeFlowCached(selectedNode, animals, null, focusAnimalId) || emptyLifeFlow);
   const flow = lifeFlow || emptyLifeFlow;
   useEffect(() => {
     let alive = true;
-    let idleId = null;
     const compute = () => {
-      const next = buildLifeFlow(selectedNode, deferredAnimals, expandedGeneratedId, focusAnimalId);
-      if (alive) setLifeFlow(next);
+      const next = buildLifeFlowCached(selectedNode, deferredAnimals, expandedGeneratedId, focusAnimalId);
+      if (alive) setLifeFlow(next || emptyLifeFlow);
     };
-    if (typeof requestIdleCallback === 'function') idleId = requestIdleCallback(compute, { timeout: 160 });
+    const cachedKey = `${selectedNode.id}|${expandedGeneratedId || ''}|${focusAnimalId || ''}|${getLifeAnimalsCacheFingerprint(deferredAnimals)}`;
+    if (lifeFlowCacheKey === cachedKey && lifeFlowCache) {
+      setLifeFlow(lifeFlowCache);
+      return () => { alive = false; };
+    }
+    let idleId = null;
+    if (typeof requestIdleCallback === 'function') idleId = requestIdleCallback(compute, { timeout: 48 });
     else idleId = setTimeout(compute, 0);
     return () => {
       alive = false;
@@ -9375,7 +9487,7 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
     <div ref={wrapRef} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag} onTouchStart={startTouch} onTouchMove={moveTouch} onTouchEnd={endTouch} onTouchCancel={endTouch} style={{ position:'relative', width:'100%', height:'100%', overflow:'hidden', touchAction:'none', background:'radial-gradient(circle at 50% 0%, rgba(217,184,111,.12), transparent 26%), radial-gradient(circle at 18% 28%, rgba(63,183,166,.12), transparent 30%), linear-gradient(180deg,rgba(18,30,26,.72),rgba(4,7,8,.98) 46%,#030506)' }}>
       <div style={{ position:'absolute', inset:0, opacity:.28, backgroundImage:'linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px)', backgroundSize:'34px 34px', maskImage:'linear-gradient(180deg,rgba(0,0,0,.9),rgba(0,0,0,.34) 55%,rgba(0,0,0,.78))' }} />
       <div style={{ position:'absolute', left:18, right:18, top:18, zIndex:8, pointerEvents:'none', color:'rgba(255,255,255,.50)', fontSize:10, fontWeight:900, letterSpacing:.4, textTransform:'uppercase' }}>Trascina il pannello · usa ⌖ per centrare il nodo vicino</div>
-      {!lifeFlow && (
+      {!flow.nodes.length && (
         <div style={{ position:'absolute', inset:0, zIndex:11, display:'grid', placeItems:'center', color:'rgba(255,255,255,.58)', fontSize:13, fontWeight:900, pointerEvents:'none' }}>Caricamento albero…</div>
       )}
       <div style={{ position:'absolute', right:12, bottom:12, zIndex:20, display:'grid', gap:8 }}>
@@ -9383,7 +9495,7 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
         <button data-life-control="true" onClick={()=>zoomBy(1.16)} style={lifeZoomButtonStyle}>+</button>
         <button data-life-control="true" onClick={()=>zoomBy(.86)} style={lifeZoomButtonStyle}>−</button>
       </div>
-      <div style={{ position:'absolute', left:0, top:0, width:1, height:1, transform:`translate(${view.x}px, ${view.y}px) scale(${view.k})`, transformOrigin:'0 0', transition:(dragRef.current || pinchRef.current) ? 'none' : 'transform .88s cubic-bezier(.16,.86,.18,1)' }}>
+      <div style={{ position:'absolute', left:0, top:0, width:1, height:1, transform:`translate(${view.x}px, ${view.y}px) scale(${view.k})`, transformOrigin:'0 0', transition:(dragRef.current || pinchRef.current) ? 'none' : 'transform .52s cubic-bezier(.16,.86,.18,1)' }}>
         <svg width="1" height="1" style={{ position:'absolute', left:0, top:0, overflow:'visible', pointerEvents:'none' }}>
           {flow.edges.map(edge => <path key={edge.id} d={edgePath(edge)} fill="none" stroke={edge.color} strokeWidth={edge.active ? 4.6 : 3} strokeLinecap="round" opacity={edge.active ? .42 : .24} style={{ transition:'opacity .52s ease, stroke-width .52s ease' }} />)}
           {flow.edges.map(edge => <path key={`${edge.id}-core`} d={edgePath(edge)} fill="none" stroke={edge.color} strokeWidth={edge.active ? 1.55 : 1.05} strokeLinecap="round" opacity={edge.active ? .95 : .48} style={{ transition:'opacity .52s ease, stroke-width .52s ease' }} />)}
@@ -9397,12 +9509,10 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
             <div style={{ margin:'0 14px', height:8, width:'62%', borderRadius:999, background:'rgba(255,255,255,.06)' }} />
           </div>
         ))}
-        {flow.nodes.map(({ id, x, y, node, stats, active, inPath, near }) => {
+        {flow.nodes.map(({ id, x, y, node, stats, active, inPath, near, focusedAnimal, focusPathNode }) => {
           const generatedAnimal = node.kind === 'animal' && node.animal;
           const animalStatus = generatedAnimal ? normalizeAnimalStatus(node.animal.status) : null;
           const animalMystery = generatedAnimal ? isMysteryStatus(animalStatus) : false;
-          const focusedAnimal = generatedAnimal && String(node.animal?.id || '') === String(focusAnimalId || '');
-          const focusPathNode = !!focusAnimal && (focusedAnimal || inPath || (node.generated && getLifeAnimals(node, animals).some(animal => String(animal?.id || '') === String(focusAnimalId))));
           const generatedBranch = node.generated && !generatedAnimal;
           const terminal = !(node.children || []).length && stats.total > 0 && !generatedAnimal;
           const childCount = (node.children || []).length;
@@ -9443,7 +9553,7 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
                 cursor:'pointer',
                 opacity:focusPathNode ? 1 : (animalMystery ? (muted ? .34 : .66) : (muted ? .38 : 1)),
                 transform:(active || focusedAnimal || focusPathNode) ? 'scale(1.035)' : 'scale(1)',
-                transition:'left .72s cubic-bezier(.16,.86,.18,1), top .72s cubic-bezier(.16,.86,.18,1), opacity .46s ease, transform .46s ease, box-shadow .46s ease',
+                transition:'left .42s cubic-bezier(.16,.86,.18,1), top .42s cubic-bezier(.16,.86,.18,1), opacity .32s ease, transform .32s ease, box-shadow .32s ease',
               }}
             >
               <div style={{ display:'flex', alignItems:'center', gap:8 }}>
@@ -9520,7 +9630,9 @@ function LifeInfoModal({ onClose, theme }) {
   </div>;
 }
 function LifeAnimalPanel({ node, animals, onClose, onOpenAnimal, theme }) {
-  const rows = getLifeAnimals(node, animals).sort((a,b)=>ANIMAL_REVEALED_FIRST_ORDER.indexOf(normalizeAnimalStatus(a.status))-ANIMAL_REVEALED_FIRST_ORDER.indexOf(normalizeAnimalStatus(b.status))).slice(0,40);
+  const rows = useMemo(() => getLifeAnimals(node, animals)
+    .sort((a,b)=>ANIMAL_REVEALED_FIRST_ORDER.indexOf(normalizeAnimalStatus(a.status))-ANIMAL_REVEALED_FIRST_ORDER.indexOf(normalizeAnimalStatus(b.status)))
+    .slice(0,40), [node?.id, animals]);
   const isLight = theme === 'light';
   return <div style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:36, maxHeight:'42%', overflow:'hidden', borderRadius:24, background:isLight?'rgba(251,247,239,.96)':'rgba(13,15,18,.94)', border:`1px solid ${node.color}66`, boxShadow:'0 22px 60px rgba(0,0,0,.34)', padding:12 }}>
     <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, marginBottom:10 }}>
@@ -9626,9 +9738,10 @@ function TaxonomyExplorer({ animals=ANIMALS, statusMap={}, visitedCountries=[], 
   const [selectedId, setSelectedId] = useState(() => findLifeFocusNodeForAnimal(initialAnimal)?.id || 'animalia');
   const [infoOpen, setInfoOpen] = useState(false);
   const [panelNodeId, setPanelNodeId] = useState(null);
+  const [isNavPending, startNavTransition] = useTransition();
   const isLight = theme === 'light';
-  const selectedNode = getLifeNodeById(selectedId) || LIFE_TREE;
-  const panelNode = panelNodeId ? getLifeNodeById(panelNodeId) : null;
+  const selectedNode = useMemo(() => getLifeNodeById(selectedId) || LIFE_TREE, [selectedId]);
+  const panelNode = useMemo(() => (panelNodeId ? getLifeNodeById(panelNodeId) : null), [panelNodeId]);
   const animalsWithStatus = useMemo(() => {
     const source = animals?.length ? animals : ANIMALS;
     if (source.length && source.every(a => a.status != null)) return source;
@@ -9638,13 +9751,19 @@ function TaxonomyExplorer({ animals=ANIMALS, statusMap={}, visitedCountries=[], 
         : { ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) }
     ));
   }, [animals, statusMap, visitedCountries]);
-  const path = getLifeNodePath(selectedNode.id);
-  const openNode = useCallback((id) => { setPanelNodeId(null); setSelectedId(id); }, []);
+  const path = useMemo(() => getLifeNodePath(selectedNode.id), [selectedNode.id]);
+  const openNode = useCallback((id) => {
+    setPanelNodeId(null);
+    startNavTransition(() => setSelectedId(id));
+  }, []);
   const openPanel = useCallback((id) => setPanelNodeId(id), []);
+  useEffect(() => {
+    prewarmLifeTreeIndex(animalsWithStatus);
+  }, [animalsWithStatus]);
   useEffect(() => {
     if (!initialAnimal?.id) return;
     const focus = findLifeFocusNodeForAnimal(initialAnimal);
-    if (focus?.id) setSelectedId(focus.id);
+    if (focus?.id) startNavTransition(() => setSelectedId(focus.id));
   }, [initialAnimal?.id]);
   return (
     <div style={{ height:'100%', position:'relative', background:isLight?'#F3EFE6':'radial-gradient(circle at 50% -12%, rgba(63,183,166,.13), transparent 34%), linear-gradient(180deg,#090D0E,#050708)', overflow:'hidden' }}>
@@ -9659,7 +9778,7 @@ function TaxonomyExplorer({ animals=ANIMALS, statusMap={}, visitedCountries=[], 
           <LifePathRail path={path} onOpen={openNode} isLight={isLight} />
         </div>
       </div>
-      <div style={{ position:'absolute', inset:'calc(env(safe-area-inset-top, 0px) + 104px) 0 0 0' }}>
+      <div style={{ position:'absolute', inset:'calc(env(safe-area-inset-top, 0px) + 104px) 0 0 0', opacity:isNavPending ? .94 : 1, transition:'opacity .16s ease' }}>
         <LifeTreeCanvas selectedNode={selectedNode} animals={animalsWithStatus} focusAnimalId={initialAnimal?.id || null} onOpen={openNode} onAnimalPanel={openPanel} onOpenAnimal={onOpenAnimal} onOpenTaxonomyFilter={onOpenTaxonomyFilter} />
       </div>
       {panelNode && <LifeAnimalPanel node={panelNode} animals={animalsWithStatus} onClose={()=>setPanelNodeId(null)} onOpenAnimal={onOpenAnimal} theme={theme} />}
@@ -11575,7 +11694,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     setSelectedDestinationIso('');
     setSelectedDestinationIsos([]);
     try {
-      for (const iso of cleanList) await onAddDestination?.(cleanList, []);
+      await onAddDestination?.(cleanList, []);
     } catch (err) { console.warn('[Apex] aggiunta paese non bloccante:', err); }
   };
   const toggleDestinationIso = (code) => {
@@ -12440,17 +12559,22 @@ function getComparatorBenchmarks(animals=[]) {
     abilities: list.map(a => toArraySafe(a?.categories).length),
   };
 }
-let comparatorBenchmarksCache = { size:0, value:null };
+let comparatorBenchmarksCache = { key:'', value:null };
+function getComparatorBenchmarksFingerprint(list=[]) {
+  let weight = 0;
+  for (const a of list) weight += extractAverageWeightKg(a?.wt) || 0;
+  return `${list.length}:${Math.round(weight)}`;
+}
 function getCachedComparatorBenchmarks(animals=[]) {
   const list = (animals || []).filter(Boolean);
-  const size = list.length;
-  if (comparatorBenchmarksCache.size === size && comparatorBenchmarksCache.value) return comparatorBenchmarksCache.value;
+  const key = getComparatorBenchmarksFingerprint(list);
+  if (comparatorBenchmarksCache.key === key && comparatorBenchmarksCache.value) return comparatorBenchmarksCache.value;
   const value = getComparatorBenchmarks(list);
-  comparatorBenchmarksCache = { size, value };
+  comparatorBenchmarksCache = { key, value };
   return value;
 }
 function invalidateComparatorBenchmarksCache() {
-  comparatorBenchmarksCache = { size:0, value:null };
+  comparatorBenchmarksCache = { key:'', value:null };
 }
 const COMPARATOR_METRICS = [
   { key:'vulnerabilita', label:'Vulnerabilità' },
@@ -13133,7 +13257,7 @@ export default function App() {
     startDetailTransition(() => setSel(animal));
   }, []);
   const [statusMap,setStatusMap]=useState({});
-  const [page,setPage]=useState('grid');
+  const [page,setPage]=useState('menu');
   const [gridPreset,setGridPreset]=useState(null);
   const [gridReturnTarget,setGridReturnTarget]=useState(null);
   const [regionsInitialView,setRegionsInitialView]=useState(null);
@@ -13163,6 +13287,17 @@ export default function App() {
     })),
     [animalsData, statusMap, visitedCountries]
   );
+  useEffect(() => {
+    if (!animalsWithStatus?.length) return;
+    let idleId = null;
+    const run = () => prewarmLifeTreeIndex(animalsWithStatus);
+    if (typeof requestIdleCallback === 'function') idleId = requestIdleCallback(run, { timeout: 500 });
+    else idleId = setTimeout(run, 0);
+    return () => {
+      if (typeof cancelIdleCallback === 'function' && idleId) cancelIdleCallback(idleId);
+      else if (idleId) clearTimeout(idleId);
+    };
+  }, [animalsWithStatus]);
   const menuProgress = useMemo(
     () => buildSimpleProgressState({ animalsWithStatus, visitedCountries, earnedBadgeIds, statusMap }),
     [animalsWithStatus, visitedCountries, earnedBadgeIds, statusMap]
@@ -13207,9 +13342,11 @@ export default function App() {
   const socialAlertCount = socialSnapshot?.socialAlertCount || pendingFriendRequestCount;
   const awardsHydratedRef = useRef(false);
   const awardInteractionRef = useRef(false);
+  const reloadGenerationRef = useRef(0);
   const unlockedAwards = useMemo(() => computeUnlockedAwards(statusMap, visitedCountries, awardMetrics), [statusMap, visitedCountries, awardMetrics]);
   const activeAwardToast = awardQueue[0] || null;
   useAnimaldexSound(true);
+  useEffect(() => { bumpUsageStreak(); }, []);
   const appHeight = useAppViewportHeight();
   const getTutorialAnimal = () => {
     const list = (animalsData || []).map(a => ({ ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) }));
@@ -13336,6 +13473,8 @@ export default function App() {
 
   const reloadSupabaseData = async (activeUser = user) => {
     if (!activeUser?.id) return;
+    const myGen = ++reloadGenerationRef.current;
+    const isStale = () => reloadGenerationRef.current !== myGen;
     setDataLoading(true);
     setDataError('');
 
@@ -13366,6 +13505,7 @@ export default function App() {
         withTimeout(fetchUserBadgeIds(activeUser.id), 6500, null, 'fetchUserBadgeIds'),
       ]);
 
+      if (isStale()) return;
       const remoteAnimals = remoteAnimalsResult.status === 'fulfilled' ? remoteAnimalsResult.value : null;
       const remoteUserStatusMap = remoteStatusResult.status === 'fulfilled' ? (remoteStatusResult.value || {}) : {};
       const destinations = destinationsResult.status === 'fulfilled' ? destinationsResult.value : getVisitedCountries();
@@ -13404,6 +13544,7 @@ export default function App() {
       setEarnedBadgeIds(nextBadgeIds);
       persistAwardUnlocks(nextBadgeIds);
     } catch (err) {
+      if (isStale()) return;
       console.warn('[Apex] Caricamento Supabase fallito, uso fallback locale:', err);
       setDataError(err?.message || 'Errore caricamento Supabase');
 
@@ -13414,9 +13555,11 @@ export default function App() {
       setStatusMap(fallbackStatusMap);
       setUserProfile(prev => prev || buildFallbackProfile(activeUser, true));
     } finally {
-      setDataLoading(false);
-      setProgressHydrated(true);
-      setTimeout(() => setAwardToastReady(true), 0);
+      if (!isStale()) {
+        setDataLoading(false);
+        setProgressHydrated(true);
+        setTimeout(() => setAwardToastReady(true), 0);
+      }
     }
   };
 

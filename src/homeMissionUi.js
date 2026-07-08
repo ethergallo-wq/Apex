@@ -159,12 +159,12 @@ export function buildMissionAnimalSlots({ metric, current = 0, remaining = 0, an
 
   const slots = [];
   for (let i = 0; i < slotCount; i += 1) {
-    if (i < filledCount) {
-      const animal = qualifying[i] || qualifying[qualifying.length - 1];
+    const animal = i < filledCount ? qualifying[i] : null;
+    if (animal) {
       slots.push({
         type: 'filled',
-        thumbUrl: animal ? getAnimalThumbUrl(animal) : '',
-        label: animal?.com || '',
+        thumbUrl: getAnimalThumbUrl(animal),
+        label: animal.com || '',
       });
     } else {
       slots.push({ type: 'empty' });

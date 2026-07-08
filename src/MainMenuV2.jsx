@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { buildHomeMission } from './homeMission';
 import { getAnimalThumbUrl } from './homeMissionUi';
 import {
@@ -249,6 +249,7 @@ export default function MainMenuV2({
   const [avatarPickerOpen, setAvatarPickerOpen] = useState(false);
   const userIdKey = user?.id || 'guest';
   const [profileAvatarAnimalId, setProfileAvatarAnimalId] = useState(() => getProfileAvatarAnimalId(userIdKey));
+  useEffect(() => { setProfileAvatarAnimalId(getProfileAvatarAnimalId(userIdKey)); }, [userIdKey]);
   const mission = useMemo(() => buildHomeMission(progress), [progress]);
   const isLightTheme = theme === 'light';
   const pageText = isLightTheme ? '#171717' : 'white';
@@ -351,7 +352,7 @@ export default function MainMenuV2({
             />
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ color: pageText, fontSize: 22, fontWeight: 1000, lineHeight: 1.05 }}>{displayName}</div>
-              <div style={{ color: mutedText, fontSize: 12.5, marginTop: 4 }}>Liv. {progress.level} · {progress.xp.toLocaleString('it-IT')} XP</div>
+              <div style={{ color: mutedText, fontSize: 12.5, marginTop: 4 }}>Liv. {progress.level} · {(progress.xp ?? 0).toLocaleString('it-IT')} XP</div>
               <div style={{ height: 8, borderRadius: 999, background: 'rgba(255,255,255,.10)', overflow: 'hidden', marginTop: 10 }}>
                 <div style={{ height: '100%', width: `${xpPct}%`, background: 'linear-gradient(90deg,#D8D2C4,#C87955,#B84D3A)', borderRadius: 999, boxShadow: '0 0 14px rgba(184,77,58,.24)' }} />
               </div>
@@ -440,11 +441,12 @@ export default function MainMenuV2({
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 8, marginBottom: 18 }}>
           {stats.map(stat => {
             const Icon = stat.icon;
-            const valueSize = stat.value >= 1000 ? 'clamp(14px, 4.2vw, 18px)' : 'clamp(16px, 4.8vw, 18px)';
+            const statValue = Number(stat.value) || 0;
+            const valueSize = statValue >= 1000 ? 'clamp(14px, 4.2vw, 18px)' : 'clamp(16px, 4.8vw, 18px)';
             return (
               <button key={stat.label} onClick={stat.action} style={{ borderRadius: 18, border: `1px solid ${panelBorder}`, background: panelBg, padding: '12px 6px', cursor: 'pointer', fontFamily: 'inherit', textAlign: 'center', boxShadow: '0 10px 24px rgba(0,0,0,.14)', minWidth: 0 }}>
                 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 6 }}><Icon /></div>
-                <div style={{ color: pageText, fontSize: valueSize, fontWeight: 1000, lineHeight: 1.1, wordBreak: 'break-word' }}>{stat.value.toLocaleString('it-IT')}</div>
+                <div style={{ color: pageText, fontSize: valueSize, fontWeight: 1000, lineHeight: 1.1, wordBreak: 'break-word' }}>{statValue.toLocaleString('it-IT')}</div>
                 <div style={{ color: mutedText, fontSize: 'clamp(8.5px, 2.4vw, 9.5px)', fontWeight: 800, marginTop: 4, lineHeight: 1.15, whiteSpace: 'normal' }}>{stat.label}</div>
               </button>
             );
