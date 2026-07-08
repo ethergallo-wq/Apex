@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useMemo, useRef, useCallback, useTransition, useDeferredValue } from "react";
 import { supabase } from './supabaseClient';
 import MainMenuV2 from './MainMenuV2';
+import DailyAtlasCard from './DailyAtlasCard';
+import ExplorerRulesPanel from './ExplorerRulesPanel';
 import { getHomeVariant, setHomeVariant, subscribeHomeVariant, HOME_VARIANTS, getHomeVariantLabel } from './homeVariant';
 import { addFriendRequestFeedHistory, getFriendRequestFeedHistory } from './friendRequestFeed';
 import { getProfileAvatarChoices, resolveProfileAvatarAnimal } from './profileAvatar';
@@ -6631,6 +6633,11 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
                 ) : (
                   <div data-animaldex-card="true" style={{ background:'rgba(0,0,0,.35)', borderRadius:24, padding:20, textAlign:'center' }}>
                     <p style={{ color:'rgba(255,255,255,.6)', fontSize:13, margin:0 }}>🔒 Sblocca passando ad Avvistato o Catturato</p>
+                    {documented && (
+                      <p style={{ color:'rgba(157,211,255,.72)', fontSize:11.5, lineHeight:1.45, margin:'10px 0 0' }}>
+                        Documentato sblocca scheda e curiosità dall&apos;Atlante. Le statistiche di gioco restano premio dell&apos;esperienza sul campo.
+                      </p>
+                    )}
                   </div>
                 )
               )}
@@ -8501,7 +8508,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
           <div style={{ flex:1, minWidth:0 }}>
             <div style={{ color:OCHRE, fontSize:11, fontWeight:1000, letterSpacing:.9, textTransform:'uppercase' }}>Apex setup</div>
             <div style={{ color:'white', fontSize:28, fontWeight:1000, letterSpacing:'-.8px', marginTop:3 }}>
-              {step==='intro'?'Benvenuto in Apex':step==='identity'?'Come ti chiami':step==='birth'?'Profilo base':step==='location'?'Da dove parti':step==='goals'?'Cosa vuoi fare':step==='travel'?'Stile di esplorazione':step==='countries'?'Paesi visitati':step==='radar'?'Primi avvistamenti':step==='review'?'Riepilogo':step==='sync'?'Sincronizzazione':'Apex è pronto'}
+              {step==='intro'?'Benvenuto in Apex':step==='identity'?'Come ti chiami':step==='birth'?'Profilo base':step==='location'?'Da dove parti':step==='goals'?'Cosa vuoi fare':step==='travel'?'Stile di esplorazione':step==='countries'?'Sul Campo · Paesi':step==='radar'?'Primi avvistamenti':step==='review'?'Riepilogo':step==='sync'?'Sincronizzazione':'Apex è pronto'}
             </div>
           </div>
           <div style={{ width:54, height:54, borderRadius:20, background:`linear-gradient(135deg,${OCHRE},#6F2D24)`, display:'flex', alignItems:'center', justifyContent:'center', fontSize:26, boxShadow:`0 0 32px ${OCHRE}44` }}>A</div>
@@ -8635,7 +8642,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
 
       {step==='countries' && (
         <div style={{ ...panel, flex:1, minHeight:0, display:'flex', flexDirection:'column' }}>
-          <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.55, marginTop:0 }}>Seleziona i paesi in cui sei stato. Apex li userà per proporre animali compatibili con i tuoi viaggi.</p>
+          <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.55, marginTop:0 }}>Seleziona i paesi del tuo <strong style={{ color:'#90D84A', fontWeight:1000 }}>Sul Campo</strong> — dove sei stato davvero. All&apos;iscrizione puoi aggiungerne quanti vuoi: ogni paese attiva subito la prima ondata della Spedizione.</p>
           <input value={countrySearch} onChange={e=>setCountrySearch(e.target.value)} placeholder="Cerca nazione o ISO..." style={{ width:'100%', height:44, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.12)', color:'white', padding:'0 13px', fontSize:14, boxSizing:'border-box', outline:'none', marginBottom:10, fontFamily:'inherit' }} />
           <div style={{ flex:1, overflowY:'auto', display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, paddingRight:2 }}>
             {filteredCountries.map(code => {
@@ -8852,7 +8859,7 @@ function AuthScreen({ onAuthReady }) {
 
 const TRIP_TAGS = ['city','nature','coast','diving','snorkeling','boat','desert','mountain'];
 
-function MainMenuClassic({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], userProfile, user, socialSnapshot = null, onOpenFriends, onOpenGridStatus, onOpenRegions, onQuickSeen, onOpenPhoto, onOpenBadge, theme='dark', menuProgress=null }) {
+function MainMenuClassic({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], userProfile, user, socialSnapshot = null, onOpenFriends, onOpenGridStatus, onOpenRegions, onQuickSeen, onOpenPhoto, onOpenBadge, theme='dark', menuProgress=null, dailyDiscovery = null, onDocumentAnimal, onOpenAnimal, usageStreak = 0 }) {
   const progress = menuProgress || buildSimpleProgressState({ animals:ANIMALS, statusMap, visitedCountries, earnedBadgeIds });
   const social = socialSnapshot || buildSocialFallback(user, userProfile, progress);
   const pendingFriendRequests = social.pendingFriendRequestCount || social.requestsIn?.length || 0;
@@ -9053,6 +9060,13 @@ function MainMenuClassic({ onOpen, onBack, onLogout, tutorialFocus=null, statusM
           <div style={{ color:'white', fontSize:24, fontWeight:1000 }}>I tuoi animali</div>
           <div style={{ color:'rgba(255,255,255,.78)', fontSize:13, lineHeight:1.55, marginTop:7 }}>Hai {searchedAnimalsCount} animali ricercati da trovare.</div>
         </button>
+
+        <DailyAtlasCard
+          dailyDiscovery={dailyDiscovery}
+          onDocumentAnimal={onDocumentAnimal}
+          onOpenAnimal={onOpenAnimal}
+          theme={theme}
+        />
 
         <div style={{ marginBottom:14 }}>
           <button onClick={openTerritoriesFromHome} style={{ position:'relative', width:'100%', height:homeBoxHeight, border:`1px solid ${isLightTheme?'rgba(0,0,0,.10)':'rgba(108,229,199,.24)'}`, borderRadius:24, background:'linear-gradient(90deg, rgba(5,11,13,.82), rgba(5,11,13,.42) 58%, rgba(5,11,13,.18))', color:'#F5F1EA', fontFamily:'inherit', textAlign:'left', padding:'20px 98px 20px 18px', cursor:'pointer', boxShadow:isLightTheme?'0 16px 34px rgba(0,0,0,.09)':'inset 0 1px 0 rgba(255,255,255,.06), 0 16px 34px rgba(0,0,0,.22)', overflow:'hidden' }}>
@@ -10272,7 +10286,7 @@ function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCount
         <div style={{ color:quickIntroColor, fontSize:13, lineHeight:1.55, marginBottom:14 }}>Identifica animali che potresti gia aver avvistato. {Math.min(doneToday, QUICK_SEEN_DAILY_LIMIT)} / {QUICK_SEEN_DAILY_LIMIT} oggi.</div>
         {quickMessage && <SwipeDismissNotice onDismiss={()=>setQuickMessage('')} style={{ borderRadius:16, border:'1px solid rgba(255,218,176,.22)', background:'rgba(255,218,176,.08)', color:isLightTheme?'#5A2A10':'#FFDAB0', padding:'10px 12px', fontSize:12, fontWeight:900, marginBottom:12 }}>{quickMessage}</SwipeDismissNotice>}
         {!visitedCountries.length ? (
-          <div style={{ borderRadius:22, background:quickNoticeBg, border:quickNoticeBorder, padding:20, color:'white', textAlign:'center', fontWeight:900 }}>Aggiungi un paese visitato per attivare Avvista Veloce.</div>
+          <div style={{ borderRadius:22, background:quickNoticeBg, border:quickNoticeBorder, padding:20, color:'white', textAlign:'center', fontWeight:900 }}>Aggiungi un paese al Sul Campo per attivare Avvista Veloce.</div>
         ) : doneToday >= QUICK_SEEN_DAILY_LIMIT ? (
           <div style={{ borderRadius:22, background:quickNoticeBg, border:quickNoticeBorder, padding:20, color:'white', textAlign:'center', fontWeight:900 }}>Limite giornaliero raggiunto. Torna domani.</div>
         ) : current ? (
@@ -10283,7 +10297,7 @@ function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCount
             <div style={{ textAlign:'center', marginTop:16 }}>
               <div style={{ color:'white', fontSize:24, fontWeight:1000, lineHeight:1.05 }}>{current.com}</div>
               <div style={{ color:'rgba(255,255,255,.52)', fontSize:12, fontStyle:'italic', marginTop:4 }}>{current.sci}</div>
-              <div style={{ color:'#F0A840', fontSize:11, fontWeight:900, marginTop:8 }}>{current.rarity || 'Comune'} · {getAnimalVisitedCountryMatches(current, visitedCountries).slice(0,4).map(getCountryDisplayName).join(', ') || 'Paesi visitati compatibili'}</div>
+              <div style={{ color:'#F0A840', fontSize:11, fontWeight:900, marginTop:8 }}>{current.rarity || 'Comune'} · {getAnimalVisitedCountryMatches(current, visitedCountries).slice(0,4).map(getCountryDisplayName).join(', ') || 'Zone Sul Campo compatibili'}</div>
             </div>
             <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12, marginTop:18 }}>
               <button disabled={busy} onClick={no} style={{ height:56, borderRadius:18, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontSize:18, fontWeight:1000, opacity:busy ? .65 : 1 }}>✕ No</button>
@@ -10939,6 +10953,7 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
             </button>;
           })}
         </div>
+        <ExplorerRulesPanel userId={user?.id || 'guest'} theme={theme} />
         <div style={{ marginTop:16, background:panelBg, border:`1px solid ${panelBorder}`, borderRadius:18, padding:16 }}>
           <ScratchMap visitedCountries={visitedCountries} selectedCountry={selectedCountry} onSelectCountry={setSelectedCountry} />
         </div>
@@ -11160,8 +11175,8 @@ function ScratchMap({ visitedCountries, selectedCountry, onSelectCountry }) {
           );
         })}
       </div>
-      <CountryPresenceMap countryCodes={visited} selectedCountry={selectedCountry} onSelectCountry={onSelectCountry} accent="#90D84A" height={250} title="Paesi visitati" pointMode={false} flat={flatMap} globeOverview />
-      {visited.length === 0 && <div style={{ marginTop:8, color:'rgba(255,255,255,.45)', fontSize:12, textAlign:'center' }}>Aggiungi un paese visitato per evidenziarlo sulla mappa.</div>}
+      <CountryPresenceMap countryCodes={visited} selectedCountry={selectedCountry} onSelectCountry={onSelectCountry} accent="#90D84A" height={250} title="Sul Campo" pointMode={false} flat={flatMap} globeOverview />
+      {visited.length === 0 && <div style={{ marginTop:8, color:'rgba(255,255,255,.45)', fontSize:12, textAlign:'center' }}>Aggiungi un paese al Sul Campo per evidenziarlo sulla mappa.</div>}
     </div>
   );
 }
@@ -12039,7 +12054,7 @@ function HabitatCard({ row, onOpen, onOpenGrid }) {
   );
 }
 
-function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedCountriesChange, onRemoveDestination, initialView, onSelect, onOpenCountry, onOpenRegion, onAddDestination, destinationsLoading=false, onOpenHabitatGrid, theme='dark', animalsWithStatus: animalsWithStatusProp = null }) {
+function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedCountriesChange, onRemoveDestination, initialView, onSelect, onOpenCountry, onOpenRegion, onAddDestination, destinationsLoading=false, onOpenHabitatGrid, theme='dark', animalsWithStatus: animalsWithStatusProp = null, user = null }) {
   const isLightTheme = theme === 'light';
   const normalizeInitialView = (v) => {
     if (v && typeof v === 'object') return normalizeInitialView(v.view);
@@ -12567,6 +12582,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
         {view==='countries' && (
           <div>
             <ScratchMap visitedCountries={visitedCountries} selectedCountry={selectedCountry} onSelectCountry={setSelectedCountry} />
+            <ExplorerRulesPanel userId={user?.id || 'guest'} theme={theme} compact />
             {selectedCountry && (
               <div style={{ background:'#1A1A1C', border:'1px solid rgba(144,216,74,.2)', borderRadius:16, padding:14, marginBottom:12 }}>
                 <div style={{ display:'flex', alignItems:'center', gap:10 }}>
@@ -12610,7 +12626,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
               </div>
             )}
             <div style={{ background:'#111113', border:'1px solid rgba(255,255,255,.08)', borderRadius:16, padding:14, marginBottom:12 }}>
-              <div style={{ color:'white', fontSize:18, fontWeight:900 }}>Aggiungi paesi visitati</div>
+              <div style={{ color:'white', fontSize:18, fontWeight:900 }}>Aggiungi al Sul Campo</div>
               <input value={countrySearch} onChange={e=>setCountrySearch(e.target.value)} placeholder="Cerca paese..." style={{ marginTop:12, width:'100%', height:42, borderRadius:12, background:'#252527', color:'white', border:'1px solid rgba(255,255,255,.12)', padding:'0 12px', fontSize:14, outline:'none', boxSizing:'border-box' }} />
               <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, maxHeight:230, overflowY:'auto', marginTop:10, paddingRight:2 }}>
                 {scratchCountries.map(code => {
@@ -14946,7 +14962,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
     if (page === 'friends') return <FriendsPage theme={theme} accessToken={session?.access_token || ''} initialTab={friendsInitialTab} initialSnapshot={socialSnapshot} menuProgress={menuProgress} onSocialChange={setSocialSnapshot} onBack={()=>returnFromSection('menu')} user={user} userProfile={userProfile} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
     if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} pendingFriendRequestCount={socialAlertCount} animalsWithStatus={animalsWithStatus} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={handleLogout} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges', 'profile')} onOpenRegions={()=>openPage('regions', 'profile')} onOpenGallery={()=>openPage('gallery', 'profile')} onOpenFriends={openFriends} />;
 	    if (page === 'badges') return <BadgesPage theme={theme} onBack={()=>returnFromSection('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} awardMetrics={awardMetrics} unlockedAwards={unlockedAwards} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={activeSectionGuide==='badges'} onTutorialBadgeOpen={()=>setActiveSectionGuide(null)} />;
-    if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><FeaturePageErrorBoundary theme={theme} title="Territori" onBack={()=>returnFromSection('menu')} resetKey={`regions-${theme}-${regionsInitialView || 'planet'}`}><RegionsPage theme={theme} animalsWithStatus={animalsWithStatus} onBack={()=>returnFromSection('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={handleVisitedCountriesChange} onRemoveDestination={handleRemoveDestination} initialView={regionsInitialView} onSelect={selectAnimal} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} /></FeaturePageErrorBoundary>{renderDetailOverlay()}</div>;
+    if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><FeaturePageErrorBoundary theme={theme} title="Territori" onBack={()=>returnFromSection('menu')} resetKey={`regions-${theme}-${regionsInitialView || 'planet'}`}><RegionsPage theme={theme} animalsWithStatus={animalsWithStatus} onBack={()=>returnFromSection('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={handleVisitedCountriesChange} onRemoveDestination={handleRemoveDestination} initialView={regionsInitialView} onSelect={selectAnimal} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} user={user} /></FeaturePageErrorBoundary>{renderDetailOverlay()}</div>;
     if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage theme={theme} onBack={()=>returnFromSection('profile')} statusMap={statusMap} onSelect={selectAnimal} />{renderDetailOverlay()}</div>;
     if (page === 'lifeweb') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><StandaloneLifeWebPage theme={theme} statusMap={statusMap} visitedCountries={visitedCountries} onBack={()=>returnFromFeaturePage('grid')} animals={animalsData} initialAnimal={lifeWebInitialAnimal} onOpenAnimal={selectAnimal} />{renderDetailOverlay()}</div>;
     if (page === 'taxonomy') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><TaxonomyErrorBoundary theme={theme} onBack={()=>setPage('menu')} resetKey={`${theme}-${animalsWithStatus?.length || 0}-${taxonomyInitialAnimal?.id || ''}`}><TaxonomyExplorer theme={theme} animals={animalsWithStatus} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={taxonomyInitialAnimal} onBack={()=>setPage('menu')} onOpenAnimal={selectAnimal} onOpenTaxonomyFilter={openTaxonomyFilterFromDetail} /></TaxonomyErrorBoundary>{renderDetailOverlay()}</div>;
