@@ -344,9 +344,12 @@ const STATUS_CARD_STYLE = {
 };
 const XP_BY_RARITY = {
   seen:{ Comune:10, 'Non comune':20, Raro:50, Leggendario:120 },
-  captured:{ Comune:25, 'Non comune':60, Raro:150, Leggendario:400 },
+  // La cattura (solo verifica AI) domina l'economia: ~4x l'avvistato sui rari.
+  captured:{ Comune:35, 'Non comune':90, Raro:250, Leggendario:700 },
 };
-const QUICK_SEEN_DAILY_LIMIT = 20;
+const QUICK_SEEN_DAILY_LIMIT = 8;
+const XP_PER_DOCUMENTED = 5;
+const XP_PER_WAVE_COMPLETED = 80;
 
 function getAnimalCountryCodes(animal) {
   const geoIso = animal?.geo?.iso;
@@ -387,22 +390,41 @@ function isAnimalInVisitedCountries(animal, visitedCountries = []) {
 }
 function getResolvedAnimalStatus(animal, statusMap = {}, visitedCountries = []) {
   const manualStatus = normalizeAnimalStatus(statusMap?.[animal?.id] ?? animal?.status);
+  // Congelamento: avvistato/catturato restano acquisiti anche se il paese
+  // viene rimosso o l'ondata non è ancora rivelata.
   if (manualStatus === 'avvistato' || manualStatus === 'catturato') return manualStatus;
-  if (isAnimalInVisitedCountries(animal, visitedCountries)) return 'ricercato';
+  if (isAnimalInVisitedCountries(animal, visitedCountries)) {
+    // Ricercato solo se rivelato da un'ondata già aperta in almeno un paese visitato.
+    const id = String(animal?.id);
+    const revealed = (visitedCountries || []).some(iso => {
+      const code = String(iso).toUpperCase();
+      return getAnimalCountryCodes(animal).some(c => String(c).toUpperCase() === code) && getRevealedIdSetForCountry(code).has(id);
+    });
+    return revealed ? 'ricercato' : 'misterioso';
+  }
   return manualStatus === 'misterioso' ? 'misterioso' : (visitedCountries?.length ? 'misterioso' : manualStatus);
 }
 function countCountryMatches(animal, visitedSet) {
   return getAnimalCountryCodes(animal).filter(c => visitedSet.has(String(c).toUpperCase())).length;
 }
-function computeTotalXP({ animalsWithStatus = [], visitedCountries = [], earnedBadgeIds = [] }) {
+function computeTotalXP({ animalsWithStatus = [], visitedCountries = [], earnedBadgeIds = [], documentedMap = DOCUMENTED_MAP }) {
   let xp = 0;
   for (const a of animalsWithStatus) {
     const rarity = a.rarity || 'Comune';
     if (a.status === 'avvistato') xp += XP_BY_RARITY.seen[rarity] || 10;
-    if (a.status === 'catturato') xp += (XP_BY_RARITY.seen[rarity] || 10) + (XP_BY_RARITY.captured[rarity] || 25);
+    if (a.status === 'catturato') xp += (XP_BY_RARITY.seen[rarity] || 10) + (XP_BY_RARITY.captured[rarity] || 35);
   }
   xp += visitedCountries?.length ? 100 + Math.max(0, visitedCountries.length - 1) * 40 : 0;
   xp += (earnedBadgeIds || []).length * 120;
+  // Asse Naturalista: XP piccolo e piatto per specie documentata nell'Atlante.
+  xp += Object.keys(documentedMap || {}).length * XP_PER_DOCUMENTED;
+  // Bonus completamento ondate delle Spedizioni attive.
+  for (const iso of visitedCountries || []) {
+    const entry = EXPEDITION_STATE?.[String(iso).toUpperCase()];
+    if (!entry) continue;
+    const completed = Math.max(0, Math.min(Number(entry.revealedWaves || 1), getCountryWaveCount(iso)) - 1);
+    xp += completed * XP_PER_WAVE_COMPLETED;
+  }
   return Math.round(xp);
 }
 function xpForLevel(level) { return Math.round(100 * Math.pow(Math.max(1, level - 1), 1.65)); }
@@ -436,6 +458,7 @@ function buildSimpleProgressState({ animals = ANIMALS, statusMap = {}, visitedCo
     searchedCount: searched.length,
     seenCount: seen.length,
     capturedCount: captured.length,
+    documentedCount: Object.keys(DOCUMENTED_MAP || {}).length,
     visitedCountriesCount: visitedCountries.length,
     nearlyCompletedBadges: getNearlyCompletedBadges(statusMap, visitedCountries, earnedBadgeIds),
     xp,
@@ -497,6 +520,230 @@ function mergeStatusMapsByRank(...maps) {
     merged[id] = strongestAnimalStatus(...maps.map(map => map?.[id]));
   });
   return merged;
+}
+
+// ── Atlante / layer "Documentato" ─────────────────────────────────────
+// Documentato NON è un quinto status: è un flag parallelo alla piramide
+// misterioso→ricercato→avvistato→catturato. Dice "lo conosco", non "l'ho visto".
+// Non tocca mai la logica di ranking degli status.
+const DOCUMENTED_META = { label:'Documentato', short:'DOC.', c:'#9DD3FF', bg:'rgba(157,211,255,.14)', border:'1.5px solid rgba(157,211,255,.55)', dot:'#9DD3FF', desc:'Specie studiata nell\'Atlante: la conosci, ma non l\'hai ancora incontrata sul campo.' };
+const DOCUMENTED_FILTER_VALUE = 'documentato';
+// Mappa condivisa a livello modulo (stesso pattern di ANIMALS): la fonte di
+// verità resta lo stato React nel componente principale, che la sincronizza.
+let DOCUMENTED_MAP = {};
+function setModuleDocumentedMap(map) { DOCUMENTED_MAP = map || {}; }
+function getLocalDocumentedKey(userId) { return `animaldex_documented_${userId || 'guest'}`; }
+function getLocalDocumentedMap(userId) {
+  if (typeof window === 'undefined') return {};
+  try { return JSON.parse(localStorage.getItem(getLocalDocumentedKey(userId)) || '{}') || {}; } catch { return {}; }
+}
+function saveLocalDocumentedMap(userId, map = {}) {
+  if (typeof window === 'undefined') return;
+  try { localStorage.setItem(getLocalDocumentedKey(userId), JSON.stringify(map || {})); } catch {}
+}
+function isAnimalDocumented(animal, documentedMap = DOCUMENTED_MAP) {
+  if (!animal) return false;
+  if (animal.documented) return true;
+  return !!documentedMap?.[String(animal.id)];
+}
+function dailyAtlasSeed() {
+  const d = new Date();
+  return d.getFullYear() * 372 + (d.getMonth() + 1) * 31 + d.getDate();
+}
+// Scoperta del giorno: una specie mondiale (misteriosa e non documentata),
+// deterministica per data, uguale per tutta la giornata.
+function getDailyAtlasDiscovery(animals = ANIMALS, documentedMap = DOCUMENTED_MAP, statusMap = {}, visitedCountries = []) {
+  const seed = dailyAtlasSeed();
+  let best = null;
+  let bestScore = -1;
+  for (const a of animals || []) {
+    if (!a?.image_url) continue;
+    if (documentedMap?.[String(a.id)]) continue;
+    if (getResolvedAnimalStatus(a, statusMap, visitedCountries) !== 'misterioso') continue;
+    const score = Math.abs(Math.sin(seed * 7919 + Number(a.id || a.no || 0) * 104729));
+    if (score > bestScore) { bestScore = score; best = a; }
+  }
+  return best;
+}
+// La scoperta resta la stessa per tutta la giornata anche dopo che è stata
+// documentata (per mostrare lo stato "fatto" invece di proporne subito un'altra).
+function getDailyAtlasDiscoveryStable(userId, animals = ANIMALS, documentedMap = DOCUMENTED_MAP, statusMap = {}, visitedCountries = []) {
+  const key = `animaldex_atlas_daily_${userId || 'guest'}`;
+  const today = new Date().toISOString().slice(0, 10);
+  if (typeof window !== 'undefined') {
+    try {
+      const raw = JSON.parse(localStorage.getItem(key) || 'null');
+      if (raw?.date === today && raw.animalId) {
+        const found = (animals || []).find(a => String(a.id) === String(raw.animalId));
+        if (found) return found;
+      }
+    } catch {}
+  }
+  const pick = getDailyAtlasDiscovery(animals, documentedMap, statusMap, visitedCountries);
+  if (pick && typeof window !== 'undefined') {
+    try { localStorage.setItem(key, JSON.stringify({ date:today, animalId:String(pick.id) })); } catch {}
+  }
+  return pick;
+}
+
+// ── Spedizioni a ondate ───────────────────────────────────────────────
+// Un paese visitato è un "diario" (sempre libero). La Spedizione rivela le
+// specie a ondate progressive. Paesi senza entry (legacy/onboarding) sono
+// interamente rivelati.
+const EXPEDITION_WAVE_SIZE = 30;
+const EXPEDITION_WAVE_ADVANCE = { seen:10, captured:3 };
+const EXPEDITION_ALL_WAVES = 99;
+const EXPEDITION_CREDIT_MAX = 3;
+let EXPEDITION_STATE = {};
+function setModuleExpeditionState(state) { EXPEDITION_STATE = state || {}; }
+function getExpeditionStateKey(userId) { return `animaldex_expeditions_${userId || 'guest'}`; }
+function getLocalExpeditionState(userId) {
+  if (typeof window === 'undefined') return {};
+  try { return JSON.parse(localStorage.getItem(getExpeditionStateKey(userId)) || '{}') || {}; } catch { return {}; }
+}
+function saveLocalExpeditionState(userId, state = {}) {
+  if (typeof window === 'undefined') return;
+  try { localStorage.setItem(getExpeditionStateKey(userId), JSON.stringify(state || {})); } catch {}
+}
+const expeditionWaveCache = new Map();
+function getCountryWaveAnimalIds(iso, animals = ANIMALS) {
+  const code = String(iso || '').toUpperCase();
+  const key = `${code}:${(animals || []).length}`;
+  if (expeditionWaveCache.has(key)) return expeditionWaveCache.get(key);
+  const rows = (animals || [])
+    .filter(a => getAnimalCountryCodes(a).some(c => String(c).toUpperCase() === code))
+    .sort((a, b) =>
+      ((RARITY[a.rarity]?.s || 1) - (RARITY[b.rarity]?.s || 1))
+      || (getObservationCount(b) - getObservationCount(a))
+      || (Number(a.id || a.no || 0) - Number(b.id || b.no || 0))
+    );
+  const ids = rows.map(r => String(r.id));
+  expeditionWaveCache.set(key, ids);
+  return ids;
+}
+function getCountryWaveCount(iso, animals = ANIMALS) {
+  return Math.max(1, Math.ceil(getCountryWaveAnimalIds(iso, animals).length / EXPEDITION_WAVE_SIZE));
+}
+function getRevealedWaves(iso, expeditionState = EXPEDITION_STATE) {
+  const entry = expeditionState?.[String(iso || '').toUpperCase()];
+  if (!entry) return EXPEDITION_ALL_WAVES;
+  return Math.max(0, Number(entry.revealedWaves ?? 1));
+}
+const expeditionRevealedSetCache = new Map();
+function getRevealedIdSetForCountry(iso, animals = ANIMALS, expeditionState = EXPEDITION_STATE) {
+  const code = String(iso || '').toUpperCase();
+  const revealed = getRevealedWaves(code, expeditionState);
+  const key = `${code}:${revealed}:${(animals || []).length}`;
+  if (expeditionRevealedSetCache.has(key)) return expeditionRevealedSetCache.get(key);
+  const ids = getCountryWaveAnimalIds(code, animals);
+  const limit = revealed >= EXPEDITION_ALL_WAVES ? ids.length : Math.min(ids.length, Math.max(0, revealed) * EXPEDITION_WAVE_SIZE);
+  const set = new Set(ids.slice(0, limit));
+  expeditionRevealedSetCache.set(key, set);
+  if (expeditionRevealedSetCache.size > 400) expeditionRevealedSetCache.clear();
+  return set;
+}
+// Progresso dell'ondata corrente di un paese: quante specie della finestra
+// rivelata sono avvistate/catturate, e se l'ondata successiva va aperta.
+function getExpeditionProgress(iso, statusMap = {}, expeditionState = EXPEDITION_STATE, animals = ANIMALS) {
+  const code = String(iso || '').toUpperCase();
+  const ids = getCountryWaveAnimalIds(code, animals);
+  const waveCount = Math.max(1, Math.ceil(ids.length / EXPEDITION_WAVE_SIZE));
+  const revealedRaw = getRevealedWaves(code, expeditionState);
+  const revealed = Math.min(revealedRaw >= EXPEDITION_ALL_WAVES ? waveCount : revealedRaw, waveCount);
+  const complete = revealed >= waveCount;
+  let seenInWave = 0;
+  let capturedInWave = 0;
+  if (!complete && revealed > 0) {
+    const start = (revealed - 1) * EXPEDITION_WAVE_SIZE;
+    const windowIds = ids.slice(start, revealed * EXPEDITION_WAVE_SIZE);
+    for (const id of windowIds) {
+      const s = normalizeAnimalStatus(statusMap?.[id]);
+      if (s === 'avvistato') seenInWave += 1;
+      if (s === 'catturato') { seenInWave += 1; capturedInWave += 1; }
+    }
+  }
+  const shouldAdvance = !complete && revealed > 0 && (seenInWave >= EXPEDITION_WAVE_ADVANCE.seen || capturedInWave >= EXPEDITION_WAVE_ADVANCE.captured);
+  return { totalSpecies:ids.length, waveCount, revealedWaves:revealed, pending:revealedRaw <= 0, complete, seenInWave, capturedInWave, shouldAdvance };
+}
+// Crediti attivazione Spedizioni (free: 1 al mese, accumulabili fino a 3).
+function getExpeditionCreditsKey(userId) { return `animaldex_expedition_credits_${userId || 'guest'}`; }
+function currentYearMonth() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+}
+function monthsBetweenYearMonths(fromYm, toYm) {
+  const [fy, fm] = String(fromYm || '').split('-').map(Number);
+  const [ty, tm] = String(toYm || '').split('-').map(Number);
+  if (!fy || !ty) return 0;
+  return Math.max(0, (ty - fy) * 12 + (tm - fm));
+}
+function loadExpeditionCredits(userId) {
+  if (typeof window === 'undefined') return { credits:EXPEDITION_CREDIT_MAX, lastMonth:currentYearMonth() };
+  const nowYm = currentYearMonth();
+  try {
+    const raw = JSON.parse(localStorage.getItem(getExpeditionCreditsKey(userId)) || 'null');
+    if (!raw || !raw.lastMonth) {
+      const fresh = { credits:1, lastMonth:nowYm };
+      localStorage.setItem(getExpeditionCreditsKey(userId), JSON.stringify(fresh));
+      return fresh;
+    }
+    const accrued = monthsBetweenYearMonths(raw.lastMonth, nowYm);
+    const next = { credits:Math.min(EXPEDITION_CREDIT_MAX, Math.max(0, Number(raw.credits || 0)) + accrued), lastMonth:nowYm };
+    if (accrued > 0) localStorage.setItem(getExpeditionCreditsKey(userId), JSON.stringify(next));
+    return next;
+  } catch {
+    return { credits:1, lastMonth:nowYm };
+  }
+}
+function consumeExpeditionCredit(userId) {
+  const state = loadExpeditionCredits(userId);
+  if (state.credits <= 0) return false;
+  const next = { ...state, credits:state.credits - 1 };
+  try { localStorage.setItem(getExpeditionCreditsKey(userId), JSON.stringify(next)); } catch {}
+  return true;
+}
+
+// ── Quota riconoscimenti AI (le catture passano solo da qui) ─────────
+// Free: 5/mese. Regalo di Spedizione: +10 per 14 giorni a ogni attivazione,
+// consumato per primo. Le foto giudicate inutilizzabili non consumano quota.
+const AI_RECOGNITION_MONTHLY_FREE = 5;
+const EXPEDITION_GIFT_RECOGNITIONS = 10;
+const EXPEDITION_GIFT_DAYS = 14;
+function getAiUsageKey(userId) { return `animaldex_ai_usage_${userId || 'guest'}_${currentYearMonth()}`; }
+function getAiGiftKey(userId) { return `animaldex_ai_gift_${userId || 'guest'}`; }
+function getAiGift(userId) {
+  if (typeof window === 'undefined') return null;
+  try {
+    const raw = JSON.parse(localStorage.getItem(getAiGiftKey(userId)) || 'null');
+    if (!raw || Number(raw.expiresAt || 0) < Date.now() || Number(raw.remaining || 0) <= 0) return null;
+    return raw;
+  } catch { return null; }
+}
+function grantExpeditionGift(userId) {
+  if (typeof window === 'undefined') return null;
+  const gift = { remaining:EXPEDITION_GIFT_RECOGNITIONS, expiresAt:Date.now() + EXPEDITION_GIFT_DAYS * 24 * 60 * 60 * 1000 };
+  try { localStorage.setItem(getAiGiftKey(userId), JSON.stringify(gift)); } catch {}
+  return gift;
+}
+function getAiRecognitionAllowance(userId) {
+  let used = 0;
+  try { used = Number(localStorage.getItem(getAiUsageKey(userId)) || 0); } catch {}
+  const gift = getAiGift(userId);
+  const giftRemaining = gift ? Math.max(0, Number(gift.remaining || 0)) : 0;
+  const baseRemaining = Math.max(0, AI_RECOGNITION_MONTHLY_FREE - used);
+  return { used, baseRemaining, giftRemaining, remaining:baseRemaining + giftRemaining, giftExpiresAt:gift?.expiresAt || null };
+}
+function consumeAiRecognition(userId) {
+  const gift = getAiGift(userId);
+  if (gift) {
+    const next = { ...gift, remaining:Math.max(0, Number(gift.remaining || 0) - 1) };
+    try { localStorage.setItem(getAiGiftKey(userId), JSON.stringify(next)); } catch {}
+    return;
+  }
+  try {
+    const key = getAiUsageKey(userId);
+    localStorage.setItem(key, String(Number(localStorage.getItem(key) || 0) + 1));
+  } catch {}
 }
 function getAnimalImageUrl(animal) {
   return animal?.image_url || (LOCAL_ANIMALS.find(x => Number(x.id) === Number(animal?.id) || x.sci === animal?.sci)?.image_url || '');
@@ -1378,6 +1625,31 @@ async function saveUserAnimalStatus(userId, animal, status) {
     .upsert(payload, { onConflict:'user_id,animal_id' });
   if (error) throw error;
   return true;
+}
+
+async function saveUserAnimalDocumented(userId, animalId, documentedAt) {
+  if (!userId || !animalId) return false;
+  const now = new Date().toISOString();
+  const { error } = await supabase
+    .from('user_animals')
+    .upsert({ user_id:userId, animal_id:animalId, documented_at:documentedAt || now, updated_at:now }, { onConflict:'user_id,animal_id' });
+  if (error) throw error;
+  return true;
+}
+
+async function fetchUserDocumentedMap(userId) {
+  if (!userId) return {};
+  const { data, error } = await supabase
+    .from('user_animals')
+    .select('animal_id,documented_at')
+    .eq('user_id', userId)
+    .not('documented_at', 'is', null);
+  if (error) throw error;
+  const map = {};
+  for (const row of data || []) {
+    if (row?.animal_id && row?.documented_at) map[String(row.animal_id)] = row.documented_at;
+  }
+  return map;
 }
 
 async function syncLocalStatusMapToSupabase(userId, statusMap = {}) {
@@ -4610,7 +4882,28 @@ const AnimalImg = React.memo(function AnimalImg({ a, size=102, fontSize=52, over
   const [mysteryErr, setMysteryErr] = useState(false);
   const baseStatus = normalizeAnimalStatus(a.status);
   const status = baseStatus === 'misterioso' ? 'misterioso' : normalizeAnimalStatus(overrideStatus !== undefined ? overrideStatus : a.status);
-  const mystery = isMysteryStatus(status);
+  const documented = isAnimalDocumented(a);
+  const mystery = isMysteryStatus(status) && !documented;
+
+  // Misterioso + documentato: artwork visibile in resa "documentario" (seppia),
+  // distinta dal colore pieno degli status da campo.
+  if (isMysteryStatus(status) && documented) {
+    const localImageUrl = gridMode ? getAnimalGridImageUrl(a) : getAnimalImageUrl(a);
+    if (localImageUrl && !mysteryErr) {
+      const pad = gridMode ? 0 : Math.round(size * (detailMode ? 0.07 : 0.12));
+      const imgScale = detailMode ? 1.18 : gridMode ? GRID_IMAGE_SCALE : 1.2;
+      return (
+        <div style={{ width:'100%', height:size, background:'transparent', display:'flex', alignItems:detailMode?'flex-end':'center', justifyContent:'center', overflow:'hidden', padding:pad, boxSizing:'border-box' }}>
+          <img src={localImageUrl} alt={a.sci} loading={gridMode ? 'lazy' : 'eager'} decoding="async" onError={()=>setMysteryErr(true)}
+            style={{ width:'100%', height:'100%', objectFit:'contain',
+              transform:`scale(${imgScale})`,
+              transformOrigin:detailMode?'center bottom':'center',
+              filter:'sepia(.72) saturate(.55) brightness(.94) contrast(.96)',
+              WebkitFilter:'sepia(.72) saturate(.55) brightness(.94) contrast(.96)' }} />
+        </div>
+      );
+    }
+  }
 
   if (mystery) {
     const iconSrc = CLASS_ICONS[a.cls] || CLASS_ICONS.Mammalia;
@@ -4658,7 +4951,9 @@ const AnimalImg = React.memo(function AnimalImg({ a, size=102, fontSize=52, over
 
 const AnimalCard = React.memo(function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false, isPhone=null }) {
   const status = normalizeAnimalStatus(a.status);
-  const mystery = isMysteryStatus(status);
+  const documented = isAnimalDocumented(a);
+  const mystery = isMysteryStatus(status) && !documented;
+  const documentaryLook = isMysteryStatus(status) && documented;
   const imageVisible = !mystery;
   // Ricercato, Avvistato e Catturato condividono la resa grafica completa in griglia.
   const found = imageVisible;
@@ -4690,7 +4985,7 @@ const AnimalCard = React.memo(function AnimalCard({ a, onClick, tutorialHighligh
         background: imageVisible
           ? 'linear-gradient(180deg, #191B20 0%, #14161A 58%, #0F1013 100%)'
           : 'linear-gradient(180deg, rgba(255,255,255,.035), rgba(0,0,0,.30)), #14161A',
-        border:`1.5px solid ${rarityColor}B8`
+        border: documentaryLook ? '1.5px dashed rgba(157,211,255,.60)' : `1.5px solid ${rarityColor}B8`
       }}
       onMouseDown={e=>e.currentTarget.style.transform='scale(0.94)'}
       onMouseUp={e=>e.currentTarget.style.transform='scale(1)'}
@@ -4703,7 +4998,7 @@ const AnimalCard = React.memo(function AnimalCard({ a, onClick, tutorialHighligh
           <AnimalImg a={a} size={imageH} fontSize={52} gridMode={true} />
         </div>
       )}
-      {photographed ? <div style={{ position:'absolute', top:7, left:7, zIndex:3, width:phone?28:24, height:phone?28:24, borderRadius:9, background:'rgba(0,0,0,.58)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontSize:phone?15:13, backdropFilter:'blur(4px)', boxShadow:'0 2px 10px rgba(0,0,0,.28)' }}>📷</div> : <div style={{ position:'absolute', top:8, left:8, zIndex:3, color:'rgba(245,241,234,.38)', fontSize:phone?12:8.5, fontWeight:800, letterSpacing:.2 }}>#{String(a.no || a.id || '').padStart(3,'0')}</div>}
+      {photographed ? <div style={{ position:'absolute', top:7, left:7, zIndex:3, width:phone?28:24, height:phone?28:24, borderRadius:9, background:'rgba(0,0,0,.58)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontSize:phone?15:13, backdropFilter:'blur(4px)', boxShadow:'0 2px 10px rgba(0,0,0,.28)' }}>📷</div> : documentaryLook ? <div title="Documentato nell'Atlante" style={{ position:'absolute', top:7, left:7, zIndex:3, width:phone?28:24, height:phone?28:24, borderRadius:9, background:'rgba(157,211,255,.20)', border:'1px solid rgba(157,211,255,.45)', color:'#9DD3FF', display:'flex', alignItems:'center', justifyContent:'center', fontSize:phone?14:12, backdropFilter:'blur(4px)' }}>📖</div> : <div style={{ position:'absolute', top:8, left:8, zIndex:3, color:'rgba(245,241,234,.38)', fontSize:phone?12:8.5, fontWeight:800, letterSpacing:.2 }}>#{String(a.no || a.id || '').padStart(3,'0')}</div>}
       <div
         style={{
           position:'absolute',
@@ -4972,6 +5267,10 @@ function StatusLegendRows() {
           </div>
         );
       })}
+      <div style={{ display:'flex', gap:10, alignItems:'flex-start' }}>
+        <div style={{ background:DOCUMENTED_META.bg, color:DOCUMENTED_META.c, border:DOCUMENTED_META.border, padding:'6px 12px', borderRadius:8, fontSize:12, fontWeight:800, whiteSpace:'nowrap', flexShrink:0, textTransform:'uppercase' }}>{DOCUMENTED_META.label}</div>
+        <div style={{ flex:1 }}><div style={{ color:'rgba(255,255,255,.75)', fontSize:11, marginTop:2 }}>{DOCUMENTED_META.desc} È un livello parallelo: si combina con gli altri stati senza sostituirli.</div></div>
+      </div>
     </>
   );
 }
@@ -5032,17 +5331,21 @@ function Grid({ onSelect, animals: animalsProp, statusMap = {}, visitedCountries
   const list = useMemo(() => {
     const q = search.toLowerCase().trim();
     const wantsMystery = fStatus.includes('misterioso');
+    const wantsDocumented = fStatus.includes(DOCUMENTED_FILTER_VALUE);
     const next = [];
     for (const sourceAnimal of animalsFilterSource) {
       const status = sourceAnimal?.status != null
         ? normalizeAnimalStatus(sourceAnimal.status)
         : getResolvedAnimalStatus(sourceAnimal, statusMap, visitedCountries);
-      if (!hasExplicitPreset && !wantsMystery && !['ricercato','avvistato','catturato'].includes(status)) continue;
+      const documented = isAnimalDocumented(sourceAnimal);
+      if (!hasExplicitPreset && !wantsMystery && !(wantsDocumented && documented) && !['ricercato','avvistato','catturato'].includes(status)) continue;
       if (q && !getAnimalSearchText(sourceAnimal).includes(q)) continue;
       if (clsF && sourceAnimal.cls !== clsF) continue;
       if (fRarity.length   && !fRarity.includes(sourceAnimal.rarity)) continue;
       if (fCons.length     && !fCons.includes(sourceAnimal.cons)) continue;
-      if (fStatus.length   && !fStatus.includes(status)) continue;
+      // "Documentato" è un layer parallelo: passa il filtro status se lo status
+      // combacia oppure se è selezionato Documentato e la specie lo è.
+      if (fStatus.length && !fStatus.includes(status) && !(wantsDocumented && documented)) continue;
       if (fTrophic.length  && !fTrophic.includes(String(sourceAnimal.trophic))) continue;
       if (fGeography.length && !matchGeographySelection(sourceAnimal, fGeography)) continue;
       if (fCategory.length && !(sourceAnimal.categories || []).some(cat => fCategory.includes(cat))) continue;
@@ -5089,7 +5392,10 @@ function Grid({ onSelect, animals: animalsProp, statusMap = {}, visitedCountries
   }, [tutorialActive, tutorialAnimalId, onSelect, onTutorialAnimalSelect]);
   const rarityOpts = useMemo(() => Object.entries(RARITY).map(([k,v])=>({ value:k, label:k, c:v.c, bg:v.bg })), []);
   const consOpts = useMemo(() => Object.entries(CONS).map(([k,v])=>({ value:k, label:formatConservationStatus(k), c:v.c, bg:v.bg })), []);
-  const statusOpts = useMemo(() => ANIMAL_STATUS_ORDER.map(k => ({ value:k, label:ANIMAL_STATUS[k].label, c:ANIMAL_STATUS[k].c, bg:STATUS_FILTER_GRADIENTS[k] || ANIMAL_STATUS[k].bg })), []);
+  const statusOpts = useMemo(() => [
+    ...ANIMAL_STATUS_ORDER.map(k => ({ value:k, label:ANIMAL_STATUS[k].label, c:ANIMAL_STATUS[k].c, bg:STATUS_FILTER_GRADIENTS[k] || ANIMAL_STATUS[k].bg })),
+    { value:DOCUMENTED_FILTER_VALUE, label:DOCUMENTED_META.label, c:DOCUMENTED_META.c, bg:DOCUMENTED_META.bg },
+  ], []);
   const trophicOpts = useMemo(() => Object.entries(TROPHIC).map(([k,v])=>({ value:String(k), label:v.label, c:v.c, bg:v.bg })), []);
   const geographyOpts = useMemo(() => [...GEO_FILTER_OPTIONS, ...getAllScratchCountries().map(code=>({ value:code, label:getCountryDisplayName(code), c:'#20B2AA', bg:'rgba(32,178,170,.15)' }))], []);
   const categoryOpts = useMemo(() => Object.entries(CATEGORY_META).map(([id,meta])=>({ value:id, label:meta.label, c:meta.color, bg:`${meta.color}22` })), []);
@@ -5204,15 +5510,18 @@ function Grid({ onSelect, animals: animalsProp, statusMap = {}, visitedCountries
           const isMysteryTab = statusOnly.size === 1 && statusOnly.has('misterioso');
           const isSeenTab = statusOnly.size === 1 && statusOnly.has('avvistato');
           const isCapturedTab = statusOnly.size === 1 && statusOnly.has('catturato');
-          const title = isMysteryTab ? 'Nessun animale misterioso' : isSeenTab ? 'Nessun animale avvistato' : isCapturedTab ? 'Nessun animale catturato' : 'Nessun animale ricercato';
+          const isDocumentedTab = statusOnly.size === 1 && statusOnly.has(DOCUMENTED_FILTER_VALUE);
+          const title = isMysteryTab ? 'Nessun animale misterioso' : isSeenTab ? 'Nessun animale avvistato' : isCapturedTab ? 'Nessun animale catturato' : isDocumentedTab ? 'Nessuna specie documentata' : 'Nessun animale ricercato';
           const body = isMysteryTab
             ? 'Qui compaiono solo gli animali ancora bloccati e non rivelati.'
             : isSeenTab
               ? 'Qui compaiono gli animali che hai dichiarato come visti dal vivo.'
               : isCapturedTab
-                ? 'Qui compaiono solo gli animali fotografati e registrati nel tuo Apex.'
-                : 'Aggiungi un paese visitato per vedere i primi animali ricercati.';
-          return <div style={{ color:isLightTheme?'rgba(0,0,0,.58)':'rgba(255,255,255,.56)', textAlign:'center', padding:34, fontSize:14 }}><div style={{ fontWeight:950, color:isLightTheme?'#171717':'white', marginBottom:8 }}>{title}</div><div>{body}</div>{!isSeenTab && !isCapturedTab && !isMysteryTab && <button onClick={()=>onOpenRegions?.()} style={{ marginTop:16, height:44, padding:'0 16px', borderRadius:14, border:'none', background:'linear-gradient(180deg,rgba(184,77,58,.96),rgba(142,58,46,.98))', color:'white', fontWeight:950 }}>Aggiungi paese</button>}</div>;
+                ? 'Qui compaiono solo gli animali catturati con foto verificata dall\'AI.'
+                : isDocumentedTab
+                  ? 'Qui compaiono le specie studiate dall\'Atlante. Apri la Scoperta del giorno in home per documentare la prima.'
+                  : 'Aggiungi un paese visitato per vedere i primi animali ricercati.';
+          return <div style={{ color:isLightTheme?'rgba(0,0,0,.58)':'rgba(255,255,255,.56)', textAlign:'center', padding:34, fontSize:14 }}><div style={{ fontWeight:950, color:isLightTheme?'#171717':'white', marginBottom:8 }}>{title}</div><div>{body}</div>{!isSeenTab && !isCapturedTab && !isMysteryTab && !isDocumentedTab && <button onClick={()=>onOpenRegions?.()} style={{ marginTop:16, height:44, padding:'0 16px', borderRadius:14, border:'none', background:'linear-gradient(180deg,rgba(184,77,58,.96),rgba(142,58,46,.98))', color:'white', fontWeight:950 }}>Aggiungi paese</button>}</div>;
         })() : (
           <div style={{ display:'grid', gridTemplateColumns:'repeat(3,minmax(0,1fr))', gap:isPhone?8:10 }}>
             {list.map(a=><AnimalCard key={a.id} a={a} onClick={handleCardClick} isPhone={isPhone} tutorialHighlight={tutorialActive && a.id === tutorialAnimalId} tutorialDim={tutorialActive && tutorialAnimalId && a.id !== tutorialAnimalId}/>)}
@@ -5280,7 +5589,7 @@ function Grid({ onSelect, animals: animalsProp, statusMap = {}, visitedCountries
                     const isStatus = activeFilterDef.key === 'status';
                     const isRarity = activeFilterDef.key === 'rarity';
                     const isSemanticValue = ['status','rarity','cons'].includes(activeFilterDef.key);
-                    const displayLabel = isStatus ? ANIMAL_STATUS[opt.value]?.label : prettyFilterLabel(opt.label || opt.value, activeFilterDef.label);
+                    const displayLabel = isStatus ? (ANIMAL_STATUS[opt.value]?.label || opt.label) : prettyFilterLabel(opt.label || opt.value, activeFilterDef.label);
                     const bg = selected
                       ? (isStatus ? (STATUS_GRADIENTS[opt.value] || opt.bg) : (isSemanticValue ? (opt.bg || `linear-gradient(180deg, ${hexToRgba(tone,.22)}, rgba(255,255,255,.055))`) : `linear-gradient(180deg, ${hexToRgba(tone,.22)}, rgba(255,255,255,.055))`))
                       : (isSemanticValue ? (opt.bg || hexToRgba(tone,.12)) : (isLightTheme?'rgba(0,0,0,.045)':'rgba(255,255,255,.045)'));
@@ -5690,9 +5999,11 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm,
   const [selectedMatch, setSelectedMatch] = useState(null);
   const [requestBusy, setRequestBusy] = useState(false);
   const [requestNotice, setRequestNotice] = useState('');
+  const [aiAllowance, setAiAllowance] = useState(() => getAiRecognitionAllowance(user?.id));
   const cameraInputRef = useRef(null);
   const galleryInputRef = useRef(null);
   const targetAnimal = animal?.id ? animal : null;
+  const quotaExhausted = aiAllowance.remaining <= 0;
   const expectedHabitats = getAnimalHabitatIds(targetAnimal || {});
   const handleFilePick = (picked) => {
     setFile(picked || null);
@@ -5723,6 +6034,10 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm,
   }, [file]);
   const runIdentification = async () => {
     if (!file) { setError('Scatta o carica prima una foto.'); return; }
+    if (getAiRecognitionAllowance(user?.id).remaining <= 0) {
+      setError(`Hai usato i ${AI_RECOGNITION_MONTHLY_FREE} riconoscimenti gratuiti del mese. La quota si rinnova il mese prossimo — oppure attiva una nuova Spedizione per ricevere il Regalo di Spedizione.`);
+      return;
+    }
     setLoading(true); setError(''); setMatches([]); setAiResult(null);
     setSelectedMatch(null);
     setRequestNotice('');
@@ -5773,6 +6088,11 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm,
       setAiResult(data);
       setMatches(hydrated);
       setSelectedMatch(data?.identification_status === 'certain' ? (hydrated[0] || null) : null);
+      // Le foto giudicate inutilizzabili dall'AI non consumano la quota.
+      if (data?.identification_status && data.identification_status !== 'unusable') {
+        consumeAiRecognition(user?.id);
+        setAiAllowance(getAiRecognitionAllowance(user?.id));
+      }
       if (data?.identification_status !== 'unusable' && !hydrated.length) setError('L’AI ha risposto, ma non ha trovato ipotesi leggibili.');
     } catch (err) {
       console.warn('[Apex] photo recognition:', err);
@@ -5784,10 +6104,6 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm,
   const confirmMatch = (match, { openDetail = false } = {}) => {
     if (!match?.animal) return;
     onConfirm?.(match.animal, { ...buildPhotoRecognitionMeta({ gps, file, uploadedPhoto, preview, aiResult, match }), openDetail });
-  };
-  const confirmTargetWithoutAi = () => {
-    if (!targetAnimal) return;
-    onConfirm?.(targetAnimal, { ...buildPhotoRecognitionMeta({ gps, file, uploadedPhoto, preview, aiResult, match:{ confidence:1 } }), openDetail:false, ai_status:'manual' });
   };
   const submitAddRequest = async (match) => {
     if (!match || requestBusy) return;
@@ -5851,8 +6167,13 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm,
           <div style={{ borderRadius:14, background:'rgba(255,255,255,.055)', padding:12 }}><div style={{ color:'white', fontSize:12, fontWeight:900 }}>Habitat</div><div style={{ color:expectedHabitats.length?'#90D84A':'#F0B24E', fontSize:11, marginTop:4 }}>{expectedHabitats.length ? `${expectedHabitats.length} habitat attesi` : 'non mappato'}</div></div>
         </div>
         {error && <div style={{ marginTop:12, borderRadius:14, background:'rgba(168,70,55,.18)', border:'1px solid rgba(168,70,55,.45)', color:'#FFC8BE', padding:12, fontSize:12, fontWeight:800 }}>{error}</div>}
-        <button disabled={loading || !file} onClick={runIdentification} style={{ marginTop:14, width:'100%', height:50, borderRadius:16, border:'none', background:(loading || !file)?'#444':'linear-gradient(135deg,#A84637,#C45A3E)', color:'white', fontWeight:1000, fontSize:14, cursor:(loading || !file)?'default':'pointer' }}>{loading ? 'Analisi in corso… (10–45 s)' : 'Analizza con AI'}</button>
-        {targetAnimal && file && !loading && <button onClick={confirmTargetWithoutAi} style={{ marginTop:8, width:'100%', height:42, borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.055)', color:'rgba(255,255,255,.72)', fontWeight:900, fontSize:12 }}>Conferma manualmente come {targetAnimal.com || targetAnimal.sci}</button>}
+        <button disabled={loading || !file || quotaExhausted} onClick={runIdentification} style={{ marginTop:14, width:'100%', height:50, borderRadius:16, border:'none', background:(loading || !file || quotaExhausted)?'#444':'linear-gradient(135deg,#A84637,#C45A3E)', color:'white', fontWeight:1000, fontSize:14, cursor:(loading || !file || quotaExhausted)?'default':'pointer' }}>{loading ? 'Analisi in corso… (10–45 s)' : 'Analizza con AI'}</button>
+        <div style={{ marginTop:8, display:'flex', alignItems:'center', justifyContent:'center', gap:8, color:'rgba(255,255,255,.52)', fontSize:10.5, fontWeight:800 }}>
+          <span>{aiAllowance.baseRemaining}/{AI_RECOGNITION_MONTHLY_FREE} riconoscimenti del mese</span>
+          {aiAllowance.giftRemaining > 0 && <span style={{ color:'#F0A840' }}>🎁 +{aiAllowance.giftRemaining} omaggio</span>}
+        </div>
+        {quotaExhausted && <div style={{ marginTop:8, borderRadius:14, background:'rgba(240,168,64,.12)', border:'1px solid rgba(240,168,64,.32)', color:'#FFD9A8', padding:12, fontSize:11.5, lineHeight:1.45, fontWeight:800 }}>Riconoscimenti del mese esauriti. Si rinnovano il mese prossimo — oppure attiva una nuova Spedizione per ricevere il Regalo di Spedizione.</div>}
+        {targetAnimal && file && !loading && !aiResult && !quotaExhausted && <div style={{ marginTop:8, color:'rgba(255,255,255,.46)', fontSize:11, lineHeight:1.4, textAlign:'center' }}>La cattura richiede la verifica AI della foto.</div>}
         {requestNotice && <div style={{ marginTop:12, borderRadius:14, background:'rgba(144,216,74,.14)', border:'1px solid rgba(144,216,74,.34)', color:'#D8FFC4', padding:12, fontSize:12, fontWeight:800, lineHeight:1.4 }}>{requestNotice}</div>}
         {aiResult && <div style={{ marginTop:16, borderRadius:18, background:'rgba(255,255,255,.055)', border:`1px solid ${hexToRgba(aiTone,.35)}`, padding:13 }}>
           <div style={{ color:aiTone, fontSize:12, fontWeight:1000, textTransform:'uppercase', letterSpacing:.7 }}>{aiTitle}</div>
@@ -5895,7 +6216,7 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm,
             {activeInDex ? (
               <>
                 <div style={{ display:'flex', alignItems:'center', gap:12, marginBottom:12 }}>
-                  <AnimalImg a={activeMatch.animal} size={64} fontSize={28} overrideStatus="avvistato" />
+                  <AnimalImg a={activeMatch.animal} size={64} fontSize={28} overrideStatus="catturato" />
                   <div style={{ minWidth:0 }}>
                     <div style={{ color:'white', fontSize:15, fontWeight:1000, lineHeight:1.1 }}>{activeMatch.animal.com || activeMatch.common_name}</div>
                     <div style={{ color:'rgba(255,255,255,.56)', fontSize:11.5, marginTop:4 }}>{activeMatch.animal.sci || activeMatch.scientific_name}</div>
@@ -5903,8 +6224,8 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm,
                   </div>
                 </div>
                 <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8 }}>
-                  <button type="button" onClick={() => confirmMatch(activeMatch)} style={{ minHeight:44, borderRadius:14, border:'none', background:ANIMALDEX_ORANGE_GRADIENT, color:'white', fontFamily:'inherit', fontSize:12.5, fontWeight:1000, cursor:'pointer' }}>Segna avvistato</button>
-                  <button type="button" onClick={() => confirmMatch(activeMatch, { openDetail:true })} style={{ minHeight:44, borderRadius:14, border:'1px solid rgba(255,255,255,.14)', background:'rgba(255,255,255,.07)', color:'white', fontFamily:'inherit', fontSize:12.5, fontWeight:1000, cursor:'pointer' }}>Apri scheda</button>
+                  <button type="button" onClick={() => confirmMatch(activeMatch)} style={{ minHeight:44, borderRadius:14, border:'none', background:ANIMALDEX_ORANGE_GRADIENT, color:'white', fontFamily:'inherit', fontSize:12.5, fontWeight:1000, cursor:'pointer' }}>Cattura nel Dex</button>
+                  <button type="button" onClick={() => confirmMatch(activeMatch, { openDetail:true })} style={{ minHeight:44, borderRadius:14, border:'1px solid rgba(255,255,255,.14)', background:'rgba(255,255,255,.07)', color:'white', fontFamily:'inherit', fontSize:12.5, fontWeight:1000, cursor:'pointer' }}>Cattura e apri scheda</button>
                 </div>
               </>
             ) : (
@@ -5919,7 +6240,24 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm,
             )}
           </div>
         )}
-        <div style={{ color:'rgba(255,255,255,.42)', fontSize:10.5, lineHeight:1.4, marginTop:12 }}>“Avvistato” registra l’incontro nel tuo Apex. Nessun animale viene catturato fisicamente.</div>
+        <div style={{ color:'rgba(255,255,255,.42)', fontSize:10.5, lineHeight:1.4, marginTop:12 }}>La cattura è verificata dall’AI: la specie deve comparire tra le sue proposte. Nessun animale viene catturato fisicamente.</div>
+      </div>
+    </div>
+  );
+}
+
+function ExpeditionGiftModal({ gift, onClose }) {
+  if (!gift) return null;
+  return (
+    <div onClick={onClose} style={{ position:'fixed', inset:0, zIndex:300, background:'rgba(0,0,0,.82)', display:'flex', alignItems:'center', justifyContent:'center', padding:20 }}>
+      <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxWidth:380, borderRadius:28, background:'linear-gradient(180deg,#282018,#141210)', border:'1px solid rgba(240,168,64,.38)', boxShadow:'0 30px 80px rgba(0,0,0,.65)', padding:'28px 20px 22px', textAlign:'center' }}>
+        <div style={{ fontSize:46, lineHeight:1 }}>🎁</div>
+        <div style={{ color:'#F0A840', fontSize:11, fontWeight:1000, letterSpacing:1, textTransform:'uppercase', marginTop:12 }}>Regalo di Spedizione</div>
+        <div style={{ color:'white', fontSize:21, fontWeight:1000, lineHeight:1.15, marginTop:8 }}>Buona spedizione in {getCountryDisplayName(gift.iso)}!</div>
+        <div style={{ color:'rgba(255,255,255,.74)', fontSize:13, lineHeight:1.5, marginTop:10 }}>
+          Ti abbiamo regalato <b style={{ color:'#F0A840' }}>{gift.recognitions} riconoscimenti AI</b> per i prossimi {gift.days} giorni. Usali per catturare le specie della prima ondata.
+        </div>
+        <button onClick={onClose} style={{ marginTop:18, width:'100%', height:50, borderRadius:16, border:'none', background:ANIMALDEX_ORANGE_GRADIENT, color:'white', fontFamily:'inherit', fontWeight:1000, fontSize:14, cursor:'pointer' }}>Grande, si parte!</button>
       </div>
     </div>
   );
@@ -6022,7 +6360,8 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
   const co=CONS[a.cons]||CONS.DD;
   const found = isRevealedStatus(localStatus);
   const animalImageUrl = getAnimalImageUrl(a);
-  const canViewImage = !isMysteryStatus(localStatus) && !!animalImageUrl;
+  const documented = isAnimalDocumented(a);
+  const canViewImage = (!isMysteryStatus(localStatus) || documented) && !!animalImageUrl;
   const docuCuriosities = getDocumentaryCuriosities(a);
   const bioPanels = [a.bio, ...docuCuriosities].filter(Boolean);
 
@@ -6121,6 +6460,15 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:8, marginBottom:14, padding:'0 4px' }}>
           <div data-tour="animal-status" style={{ width:'100%', borderRadius:18, boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}><StatusBadge status={localStatus} accentColor={c.accent}/></div>
+          {documented && (
+            <div style={{ display:'flex', alignItems:'center', gap:8, borderRadius:16, padding:'8px 12px', background:DOCUMENTED_META.bg, border:DOCUMENTED_META.border }}>
+              <span style={{ fontSize:14 }}>📖</span>
+              <div style={{ minWidth:0 }}>
+                <div style={{ color:DOCUMENTED_META.c, fontSize:11, fontWeight:1000, letterSpacing:.6, textTransform:'uppercase' }}>{DOCUMENTED_META.label} nell'Atlante</div>
+                <div style={{ color:isLightTheme?'rgba(0,0,0,.56)':'rgba(255,255,255,.58)', fontSize:10.5, lineHeight:1.35, marginTop:2 }}>{isMysteryStatus(localStatus) ? DOCUMENTED_META.desc : 'La conoscevi già dall\'Atlante — e ora l\'hai incontrata sul campo.'}</div>
+              </div>
+            </div>
+          )}
           {statusActions.length > 0 && (
             <div style={{ marginTop:4 }}>
               <div style={{ color:isLightTheme?'rgba(0,0,0,.50)':'rgba(255,255,255,.48)', fontSize:10, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase', margin:'0 0 6px 2px' }}>Azioni</div>
@@ -6138,7 +6486,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
           <div data-tour="animal-conservation" style={{ background:co.bg, borderRadius:18, padding:'9px 12px', color:co.c, fontSize:12, fontWeight:700, textAlign:'center', opacity:.90, boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>{formatConservationStatus(a.cons)}</div>
         </div>
         <div style={{ color:isLightTheme?'rgba(0,0,0,.54)':'rgba(255,255,255,.56)', fontSize:10.5, lineHeight:1.45, margin:'0 4px 16px' }}>
-          {visitedMatches ? `Presente in ${visitedMatches} dei tuoi paesi · ` : ''}{(a.rarity || 'Comune')}, {a.rarity === 'Comune' ? 'facile da catturare' : a.rarity === 'Leggendario' ? 'molto raro' : 'da documentare'} · “Catturato” significa registrato nel tuo Apex, non cattura fisica.
+          {visitedMatches ? `Presente in ${visitedMatches} dei tuoi paesi · ` : ''}{(a.rarity || 'Comune')}, {a.rarity === 'Comune' ? 'facile da catturare' : a.rarity === 'Leggendario' ? 'molto raro' : 'impegnativo da trovare'} · “Catturato” significa registrato con foto verificata dall’AI, non cattura fisica.
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:8, marginBottom:18 }}>
           <button onClick={()=>{setMetricModal('peso'); if(tutorialStep==='detail-metrics') { setTimeout(()=>setMetricModal(null), 520); onTutorialMetricClick?.(); }}} style={{ height:112, minHeight:112, width:'100%', minWidth:0, background:'#111113', borderRadius:20, padding:'8px 8px 10px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'flex-end', gap:3, border:'1px solid rgba(255,255,255,.06)', fontFamily:'inherit', cursor:'pointer', boxSizing:'border-box', boxShadow:tutorialStep==='detail-metrics'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
@@ -10416,6 +10764,7 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
   const unlockedCount = useMemo(() => animalsWithStatus.filter(a => !isMysteryStatus(a.status)).length, [animalsWithStatus]);
   const seenCount = useMemo(() => animalsWithStatus.filter(a => a.status === 'avvistato' || a.status === 'catturato').length, [animalsWithStatus]);
   const capturedCount = useMemo(() => animalsWithStatus.filter(a => a.status === 'catturato').length, [animalsWithStatus]);
+  const documentedCount = useMemo(() => animalsWithStatus.filter(a => isAnimalDocumented(a)).length, [animalsWithStatus]);
   const avatarChoices = useMemo(() => getProfileAvatarChoices(animalsWithStatus), [animalsWithStatus]);
   const earnedAwards = useMemo(
     () => AWARD_RULES.filter(rule => unlockedAwardIdSet.has(normalizeBadgeId(rule.badgeId))),
@@ -10447,6 +10796,8 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
     { label:'Sbloccati', value:unlockedCount, total:ANIMALS.length, color:'#D8D2C4', onClick:()=>onOpenGridStatus?.(['ricercato','avvistato','catturato']) },
     { label:'Avvistati', value:seenCount, total:Math.max(1, unlockedCount), color:'#C87955', onClick:()=>onOpenGridStatus?.(['avvistato','catturato']) },
     { label:'Catturati', value:capturedCount, total:Math.max(1, seenCount), color:'#B84D3A', onClick:onOpenGallery },
+    // Asse Naturalista: conoscenza dell'Atlante su tutto il Dex, parallelo alla collezione da campo.
+    { label:'Documentati (Atlante)', value:documentedCount, total:ANIMALS.length, color:'#9DD3FF', onClick:()=>onOpenGridStatus?.([DOCUMENTED_FILTER_VALUE]) },
   ];
   const cycleProfileBackground = () => {
     const options = profileBackgroundChoices.map(choice => choice.image);
@@ -10728,7 +11079,7 @@ function ScratchMap({ visitedCountries, selectedCountry, onSelectCountry }) {
   return (
     <div style={{ marginBottom:12 }}>
       <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:8 }}>
-        <div style={{ color:'white', fontSize:18, fontWeight:1000 }}>Paesi visitati</div>
+        <div style={{ color:'white', fontSize:18, fontWeight:1000 }}>Sul Campo</div>
         <div style={{ color:'#90D84A', fontSize:13, fontWeight:1000 }}>{visited.length}</div>
       </div>
       <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:6, marginBottom:8 }}>
@@ -10748,16 +11099,25 @@ function ScratchMap({ visitedCountries, selectedCountry, onSelectCountry }) {
   );
 }
 
-function VisitedCountryCard({ code, onOpenAnimals, onRemove }) {
+function VisitedCountryCard({ code, onOpenAnimals, onRemove, statusMap = {} }) {
   const [flipped, setFlipped] = useState(false);
   useAutoUnflip(flipped, setFlipped, 10000);
   const count = countAnimalsForGeoValue(code);
+  const expedition = getExpeditionProgress(code, statusMap);
+  const expeditionLine = expedition.pending
+    ? 'Spedizione in attesa'
+    : expedition.complete
+      ? (expedition.waveCount > 1 ? 'Tutte le ondate rivelate' : '')
+      : `Ondata ${expedition.revealedWaves}/${expedition.waveCount} · ${expedition.seenInWave}/${EXPEDITION_WAVE_ADVANCE.seen} avvistati`;
   return (
     <div className="interactive-hint" onClick={()=>setFlipped(v=>!v)} style={{ minHeight:72, borderRadius:14, background:'#1A1A1C', border:'1px solid rgba(255,255,255,.08)', overflow:'hidden', cursor:'pointer', perspective:700 }}>
       <div style={{ position:'relative', minHeight:72, transition:'transform .28s ease', transformStyle:'preserve-3d', transform:flipped?'rotateY(180deg)':'rotateY(0deg)' }}>
         <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', display:'flex', alignItems:'center', gap:10, padding:'10px 12px', boxSizing:'border-box' }}>
           <span style={{ fontSize:24 }}>{getFlagEmoji(code)}</span>
-          <span style={{ color:'white', fontSize:13, fontWeight:900, lineHeight:1.15, flex:1 }}>{getCountryDisplayName(code)}</span>
+          <span style={{ flex:1, minWidth:0 }}>
+            <span style={{ display:'block', color:'white', fontSize:13, fontWeight:900, lineHeight:1.15 }}>{getCountryDisplayName(code)}</span>
+            {expeditionLine && <span style={{ display:'block', color:expedition.pending?'#F0B24E':'rgba(144,216,74,.86)', fontSize:9.5, fontWeight:900, marginTop:3 }}>{expeditionLine}</span>}
+          </span>
           <button onClick={e=>{e.stopPropagation();onRemove?.(code);}} style={{ width:28, height:28, borderRadius:8, border:'none', background:'rgba(255,255,255,.08)', color:'rgba(255,255,255,.6)', cursor:'pointer' }}>×</button>
         </div>
         <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateY(180deg)', padding:'10px 12px', boxSizing:'border-box', display:'flex', alignItems:'center', gap:10 }}>
@@ -11719,13 +12079,28 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     [allAnimalsWithStatus, selectedTerritory]
   );
   const selectedSubregionTerritory = selectedEcoregion ? { ...selectedEcoregion, filterValue:`ecoregion:${selectedEcoregion.id}`, kind:'subregion', label:selectedEcoregion.label } : null;
+  // Atlante: paesi "esplorati da casa" tramite specie documentate ma mai incontrate sul campo.
+  const atlasFromHome = useMemo(() => {
+    const source = animalsWithStatusProp?.length ? animalsWithStatusProp : [];
+    const documentedAway = source.filter(a => a.documented && isMysteryStatus(a.status));
+    const countryCounts = new Map();
+    for (const a of documentedAway) {
+      for (const code of getAnimalCountryCodes(a)) {
+        const up = String(code).toUpperCase();
+        if (visitedSet.has(up)) continue;
+        countryCounts.set(up, (countryCounts.get(up) || 0) + 1);
+      }
+    }
+    const countries = Array.from(countryCounts.entries()).sort((a, b) => b[1] - a[1]).slice(0, 10);
+    return { speciesCount:documentedAway.length, countries };
+  }, [animalsWithStatusProp, visitedCountries]);
   const habitatRows = useMemo(
     () => (selectedSubregionTerritory ? getHabitatsForTerritory(selectedSubregionTerritory, allAnimalsWithStatus) : []),
     [selectedSubregionTerritory, allAnimalsWithStatus]
   );
   const title = (() => {
     if (view === 'planet') return 'Pianeta Terra';
-    if (view === 'countries') return 'Paesi visitati';
+    if (view === 'countries') return 'Sul Campo';
     if (view === 'terrestrial') return 'Dominio terrestre';
     if (view === 'marine') return 'Dominio marino';
     if (view === 'regions') return continent?.label || 'Regioni';
@@ -11765,7 +12140,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     setView(targetView);
   };
   const breadcrumbItems = (() => {
-    if (view === 'countries') return [{ label:'Pianeta Terra', view:'planet' }, { label:'Paesi visitati', view:'countries' }];
+    if (view === 'countries') return [{ label:'Pianeta Terra', view:'planet' }, { label:'Sul Campo', view:'countries' }];
     if (view === 'marine') return [{ label:'Pianeta Terra', view:'planet' }, { label:'Dominio marino', view:'marine' }];
     if (['terrestrial','regions','ecoregions','lifeweb','animals'].includes(view) || selectedContinentId) {
       const items = [{ label:'Pianeta Terra', view:'planet' }, { label:'Dominio terrestre', view:'terrestrial' }];
@@ -12067,7 +12442,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
             <button onClick={()=>setView('countries')} style={{ width:'100%', border:`1px solid ${isLightTheme?'rgba(38,118,94,.22)':'rgba(144,216,74,.28)'}`, borderRadius:24, background:isLightTheme?'linear-gradient(135deg,rgba(144,216,74,.22),rgba(251,247,239,.94))':'linear-gradient(135deg,rgba(144,216,74,.18),rgba(32,178,170,.12))', padding:16, marginBottom:14, color:isLightTheme?'#171717':'white', textAlign:'left', cursor:'pointer', fontFamily:'inherit', boxShadow:isLightTheme?'0 12px 28px rgba(0,0,0,.06)':'none' }}>
               <div style={{ display:'flex', alignItems:'center', gap:12 }}>
                 <div style={{ width:58, height:58, borderRadius:20, background:isLightTheme?'rgba(255,255,255,.70)':'rgba(255,255,255,.12)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:30 }}>🗺️</div>
-                <div style={{ flex:1 }}><div style={{ fontSize:19, fontWeight:1000 }}>Paesi visitati</div><div style={{ color:isLightTheme?'rgba(0,0,0,.62)':'rgba(255,255,255,.58)', fontSize:12, marginTop:4 }}>Paesi visitati su mappa.</div></div>
+                <div style={{ flex:1 }}><div style={{ fontSize:19, fontWeight:1000 }}>Sul Campo</div><div style={{ color:isLightTheme?'rgba(0,0,0,.62)':'rgba(255,255,255,.58)', fontSize:12, marginTop:4 }}>Le tue Spedizioni: i paesi visitati davvero.</div></div>
                 <div style={{ color:isLightTheme?'#2B7A4B':'#90D84A', fontSize:20, fontWeight:1000 }}>{visitedCountries.length}</div>
               </div>
             </button>
@@ -12137,10 +12512,34 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
             )}
             {visitedCountries.length > 0 && (
               <div style={{ background:'#111113', border:'1px solid rgba(255,255,255,.08)', borderRadius:16, padding:14, marginBottom:12 }}>
-                <div style={{ color:'white', fontSize:18, fontWeight:900, marginBottom:10 }}>Paesi visitati</div>
-                <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8 }}>
-                  {visitedCountries.map(code => <VisitedCountryCard key={code} code={code} onOpenAnimals={onOpenCountry} onRemove={removeVisitedCountry} />)}
+                <div style={{ display:'flex', alignItems:'baseline', gap:8, marginBottom:4 }}>
+                  <div style={{ color:'white', fontSize:18, fontWeight:900 }}>Sul Campo</div>
+                  <div style={{ color:'rgba(144,216,74,.85)', fontSize:11, fontWeight:900, textTransform:'uppercase', letterSpacing:.6 }}>Spedizioni</div>
                 </div>
+                <div style={{ color:'rgba(255,255,255,.50)', fontSize:11.5, lineHeight:1.4, marginBottom:10 }}>I paesi dove sei stato davvero. Ogni Spedizione rivela le specie a ondate: avvista o cattura per aprire la successiva.</div>
+                <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8 }}>
+                  {visitedCountries.map(code => <VisitedCountryCard key={code} code={code} onOpenAnimals={onOpenCountry} onRemove={removeVisitedCountry} statusMap={statusMap} />)}
+                </div>
+              </div>
+            )}
+            {atlasFromHome.speciesCount > 0 && (
+              <div style={{ background:'#0F141A', border:'1px solid rgba(157,211,255,.20)', borderRadius:16, padding:14, marginBottom:12 }}>
+                <div style={{ display:'flex', alignItems:'baseline', gap:8, marginBottom:4 }}>
+                  <div style={{ color:'white', fontSize:18, fontWeight:900 }}>📖 Dall'Atlante</div>
+                  <div style={{ color:'#9DD3FF', fontSize:11, fontWeight:900, textTransform:'uppercase', letterSpacing:.6 }}>Esplorate da casa</div>
+                </div>
+                <div style={{ color:'rgba(255,255,255,.50)', fontSize:11.5, lineHeight:1.4, marginBottom:10 }}>
+                  {atlasFromHome.speciesCount} {atlasFromHome.speciesCount === 1 ? 'specie documentata' : 'specie documentate'} senza muoverti dal divano. Le conosci, ma non le hai ancora incontrate sul campo.
+                </div>
+                {atlasFromHome.countries.length > 0 && (
+                  <div style={{ display:'flex', flexWrap:'wrap', gap:6 }}>
+                    {atlasFromHome.countries.map(([code, n]) => (
+                      <button key={code} onClick={()=>onOpenCountry?.(code)} style={{ display:'inline-flex', alignItems:'center', gap:6, height:32, borderRadius:10, border:'1px dashed rgba(157,211,255,.36)', background:'rgba(157,211,255,.08)', color:'#CDE8FF', fontSize:11, fontWeight:900, padding:'0 10px', cursor:'pointer', fontFamily:'inherit' }}>
+                        <span>{getFlagEmoji(code)}</span>{getCountryDisplayName(code)}<span style={{ color:'rgba(157,211,255,.72)' }}>{n}</span>
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
             )}
             <div style={{ background:'#111113', border:'1px solid rgba(255,255,255,.08)', borderRadius:16, padding:14, marginBottom:12 }}>
@@ -13280,12 +13679,20 @@ export default function App() {
   const [theme,setTheme]=useState(getInitialAnimaldexTheme);
   const [homeVariant,setHomeVariantState]=useState(() => getHomeVariant());
   const [visitedCountries,setVisitedCountries]=useState(() => normalizeIsoList(getVisitedCountries()));
+  const [documentedMap,setDocumentedMap]=useState({});
+  const [expeditionState,setExpeditionState]=useState({});
+  const [expeditionGift,setExpeditionGift]=useState(null);
+  const [expeditionNotice,setExpeditionNotice]=useState('');
+  // Sync sincrono delle mappe modulo prima del calcolo dei memo (stesso pattern di ANIMALS).
+  setModuleDocumentedMap(documentedMap);
+  setModuleExpeditionState(expeditionState);
   const animalsWithStatus = useMemo(
     () => (animalsData || []).map(a => ({
       ...a,
       status: getResolvedAnimalStatus(a, statusMap, visitedCountries),
+      documented: !!documentedMap[String(a.id)],
     })),
-    [animalsData, statusMap, visitedCountries]
+    [animalsData, statusMap, visitedCountries, documentedMap, expeditionState]
   );
   useEffect(() => {
     if (!animalsWithStatus?.length) return;
@@ -13300,7 +13707,7 @@ export default function App() {
   }, [animalsWithStatus]);
   const menuProgress = useMemo(
     () => buildSimpleProgressState({ animalsWithStatus, visitedCountries, earnedBadgeIds, statusMap }),
-    [animalsWithStatus, visitedCountries, earnedBadgeIds, statusMap]
+    [animalsWithStatus, visitedCountries, earnedBadgeIds, statusMap, documentedMap, expeditionState]
   );
   const awardMetrics = useMemo(() => computeAwardMetrics(statusMap, visitedCountries), [statusMap, visitedCountries]);
   const refreshSocialSnapshot = useCallback(async (force = false) => {
@@ -13468,6 +13875,10 @@ export default function App() {
     }
     if (localDestinations.length) setVisitedCountries(localDestinations);
     if (localBadgeIds.length) setEarnedBadgeIds(prev => Array.from(new Set([...prev.map(normalizeBadgeId), ...localBadgeIds])));
+    const localDocumented = getLocalDocumentedMap(activeUser.id);
+    if (Object.keys(localDocumented).length) setDocumentedMap(prev => ({ ...localDocumented, ...prev }));
+    const localExpeditions = getLocalExpeditionState(activeUser.id);
+    if (Object.keys(localExpeditions).length) setExpeditionState(prev => ({ ...localExpeditions, ...prev }));
     setProgressHydrated(true);
   };
 
@@ -13498,11 +13909,12 @@ export default function App() {
       );
       setUserProfile(profile || buildFallbackProfile(activeUser, true));
 
-      const [remoteAnimalsResult, remoteStatusResult, destinationsResult, badgeResult] = await Promise.allSettled([
+      const [remoteAnimalsResult, remoteStatusResult, destinationsResult, badgeResult, documentedResult] = await Promise.allSettled([
         withTimeout(fetchAnimalsFromSupabase(activeUser.id), 10000, null, 'fetchAnimalsFromSupabase'),
         withTimeout(fetchUserAnimalStatusMap(activeUser.id), 6500, {}, 'fetchUserAnimalStatusMap'),
         withTimeout(fetchUserDestinations(activeUser.id), 6500, getVisitedCountries(), 'fetchUserDestinations'),
         withTimeout(fetchUserBadgeIds(activeUser.id), 6500, null, 'fetchUserBadgeIds'),
+        withTimeout(fetchUserDocumentedMap(activeUser.id), 6500, null, 'fetchUserDocumentedMap'),
       ]);
 
       if (isStale()) return;
@@ -13543,6 +13955,14 @@ export default function App() {
       ])).filter(Boolean);
       setEarnedBadgeIds(nextBadgeIds);
       persistAwardUnlocks(nextBadgeIds);
+
+      // Layer Documentato: merge remoto (se la colonna esiste) + locale, senza mai perdere voci locali.
+      const remoteDocumented = documentedResult.status === 'fulfilled' ? (documentedResult.value || null) : null;
+      const mergedDocumented = { ...getLocalDocumentedMap(activeUser.id), ...(remoteDocumented || {}) };
+      if (Object.keys(mergedDocumented).length) {
+        setDocumentedMap(prev => ({ ...mergedDocumented, ...prev }));
+        saveLocalDocumentedMap(activeUser.id, mergedDocumented);
+      }
     } catch (err) {
       if (isStale()) return;
       console.warn('[Apex] Caricamento Supabase fallito, uso fallback locale:', err);
@@ -13580,6 +14000,10 @@ export default function App() {
     if (!localAnimalsReady) return;
     if (user?.id) return;
     const localStatusMap = getLocalUserStatusMap('guest');
+    const guestDocumented = getLocalDocumentedMap('guest');
+    if (Object.keys(guestDocumented).length) setDocumentedMap(prev => ({ ...guestDocumented, ...prev }));
+    const guestExpeditions = getLocalExpeditionState('guest');
+    if (Object.keys(guestExpeditions).length) setExpeditionState(prev => ({ ...guestExpeditions, ...prev }));
     if (!Object.keys(localStatusMap).length) {
       setProgressHydrated(true);
       setTimeout(() => setAwardToastReady(true), 0);
@@ -13658,6 +14082,12 @@ export default function App() {
     return () => clearTimeout(t);
   }, [activeAwardToast]);
 
+  useEffect(() => {
+    if (!expeditionNotice) return;
+    const t = setTimeout(() => setExpeditionNotice(''), 5200);
+    return () => clearTimeout(t);
+  }, [expeditionNotice]);
+
   const handleStatusChange = async (id, status) => {
     const localUserId = user?.id || 'guest';
     const nextStatus = normalizeAnimalStatus(status);
@@ -13692,6 +14122,63 @@ export default function App() {
     }
   };
 
+  const handleDocumentAnimal = async (id, source = 'atlas_daily') => {
+    const animalId = String(id || '');
+    if (!animalId || documentedMap[animalId]) return;
+    const now = new Date().toISOString();
+    const nextMap = { ...documentedMap, [animalId]: now };
+    setDocumentedMap(nextMap);
+    saveLocalDocumentedMap(user?.id || 'guest', nextMap);
+    awardInteractionRef.current = true;
+    const animal = animalsData.find(a => String(a.id) === animalId);
+    trackUserEvent(user, 'animal_documented', { animal_id:id, animal_name:animal?.com, rarity:animal?.rarity, source_screen:source }, userProfile).catch(err => console.warn('[Apex] tracking documentato non bloccante:', err));
+    if (user?.id) {
+      saveUserAnimalDocumented(user.id, id, now).catch(err => console.warn('[Apex] documented_at non salvato (colonna assente?):', err));
+    }
+  };
+
+  // Avanzamento automatico ondate: quando l'ondata corrente di un paese è
+  // completata (10 avvistati o 3 catturati), la successiva si rivela da sola.
+  useEffect(() => {
+    if (!Object.keys(expeditionState).length) return;
+    let changed = false;
+    const next = { ...expeditionState };
+    let lastAdvance = null;
+    for (const iso of Object.keys(next)) {
+      let guard = 0;
+      while (guard++ < 60) {
+        const progress = getExpeditionProgress(iso, statusMap, next, animalsData);
+        if (!progress.shouldAdvance) break;
+        next[iso] = { ...next[iso], revealedWaves:progress.revealedWaves + 1 };
+        changed = true;
+        lastAdvance = { iso, wave:progress.revealedWaves + 1, waveCount:progress.waveCount };
+      }
+    }
+    if (changed) {
+      setExpeditionState(next);
+      saveLocalExpeditionState(user?.id || 'guest', next);
+      if (lastAdvance) setExpeditionNotice(`Nuova ondata rivelata in ${getCountryDisplayName(lastAdvance.iso)}: ${lastAdvance.wave} di ${lastAdvance.waveCount}. +${XP_PER_WAVE_COMPLETED} XP`);
+    }
+  }, [statusMap, expeditionState, animalsData, user?.id]);
+
+  // Spedizioni in attesa: si attivano da sole quando matura un credito mensile.
+  useEffect(() => {
+    const pending = Object.entries(expeditionState).filter(([, entry]) => Number(entry?.revealedWaves ?? 1) <= 0);
+    if (!pending.length) return;
+    let changed = false;
+    const next = { ...expeditionState };
+    for (const [iso] of pending) {
+      if (!consumeExpeditionCredit(user?.id)) break;
+      next[iso] = { ...next[iso], revealedWaves:1, activatedAt:new Date().toISOString() };
+      changed = true;
+      setExpeditionNotice(`Spedizione ${getCountryDisplayName(iso)} attivata: prima ondata rivelata.`);
+    }
+    if (changed) {
+      setExpeditionState(next);
+      saveLocalExpeditionState(user?.id || 'guest', next);
+    }
+  }, [expeditionState, user?.id]);
+
   const handleAddDestination = async (isoInput, tripTags = []) => {
     const cleanList = (Array.isArray(isoInput) ? isoInput : [isoInput])
       .map(code => String(code || '').toUpperCase())
@@ -13701,6 +14188,8 @@ export default function App() {
     setDestinationsLoading(true);
     setDataError('');
     try {
+      let giftGranted = false;
+      const nextExpeditions = { ...expeditionState };
       for (const cleanIso of cleanList) {
         await withTimeout(persistUserDestination(user.id, cleanIso, tripTags || []), 4500, false, 'persistUserDestination');
         const { error: rpcError } = await withTimeout(supabase.rpc('unlock_animals_for_destination', {
@@ -13711,7 +14200,27 @@ export default function App() {
         if (rpcError) console.warn('[Apex] RPC unlock destinazione non disponibile, uso fallback client:', rpcError);
         await unlockAnimalsForDestinationClient(user.id, cleanIso, animalsData);
         await trackUserEvent(user, 'country_added', { country_iso:cleanIso, trip_tags:tripTags || [], source_screen:'regions' }, userProfile);
+        // Il diario è sempre libero; l'attivazione della Spedizione (ondate)
+        // consuma un credito mensile. Senza crediti resta "in attesa".
+        if (!nextExpeditions[cleanIso]) {
+          const activated = consumeExpeditionCredit(user.id);
+          nextExpeditions[cleanIso] = activated
+            ? { revealedWaves:1, activatedAt:new Date().toISOString() }
+            : { revealedWaves:0 };
+          if (activated && !giftGranted) {
+            // Regalo di Spedizione: omaggio celebrativo, comunicato come dono.
+            grantExpeditionGift(user.id);
+            giftGranted = true;
+            setExpeditionGift({ iso:cleanIso, recognitions:EXPEDITION_GIFT_RECOGNITIONS, days:EXPEDITION_GIFT_DAYS });
+            trackUserEvent(user, 'expedition_gift_granted', { country_iso:cleanIso, source_screen:'regions' }, userProfile).catch(() => {});
+          }
+          if (!activated) {
+            setExpeditionNotice(`${getCountryDisplayName(cleanIso)} è nel tuo diario. La Spedizione si attiverà con il credito del prossimo mese.`);
+          }
+        }
       }
+      setExpeditionState(nextExpeditions);
+      saveLocalExpeditionState(user.id, nextExpeditions);
       reloadSupabaseData(user).catch(err => console.warn('[Apex] reload destinazione non bloccante:', err));
     } catch (err) {
       console.warn('[Apex] Aggiungi destinazione fallito:', err);
@@ -13752,6 +14261,21 @@ export default function App() {
   };
 
 
+  // All'iscrizione i paesi scelti sono illimitati e le loro Spedizioni partono
+  // subito (prima ondata), senza consumare crediti mensili. Un solo Regalo di
+  // Spedizione di benvenuto.
+  const activateOnboardingExpeditions = (isoList = []) => {
+    const clean = normalizeIsoList(isoList || []);
+    if (!clean.length) return;
+    const now = new Date().toISOString();
+    const next = { ...expeditionState };
+    clean.forEach(iso => { if (!next[iso]) next[iso] = { revealedWaves:1, activatedAt:now }; });
+    setExpeditionState(next);
+    saveLocalExpeditionState(user?.id || 'guest', next);
+    grantExpeditionGift(user?.id);
+    setExpeditionGift({ iso:clean[0], recognitions:EXPEDITION_GIFT_RECOGNITIONS, days:EXPEDITION_GIFT_DAYS });
+  };
+
   const handleCompleteOnboarding = async ({ nickname, countries, seenAnimalIds, tripTags, demographics = {} }) => {
     if (!user?.id) throw new Error('Sessione non valida');
     setDataError('');
@@ -13776,6 +14300,7 @@ export default function App() {
       if (cleanCountries.length) {
         setVisitedCountries(cleanCountries);
         saveVisitedCountries(cleanCountries);
+        activateOnboardingExpeditions(cleanCountries);
       }
       await persistOnboardingQuestionnaire(user, demographics || {});
       await trackUserEvent(user, 'onboarding_completed', {
@@ -13798,6 +14323,7 @@ export default function App() {
       if (cleanCountries.length) {
         setVisitedCountries(cleanCountries);
         saveVisitedCountries(cleanCountries);
+        activateOnboardingExpeditions(cleanCountries);
       }
       for (const iso of cleanCountries) {
         await withTimeout(persistUserDestination(user.id, iso, tripTags || []), 3500, false, 'persistUserDestination');
@@ -14022,8 +14548,12 @@ const confirmPhotoRecognition = async (animal, meta={}) => {
   if (!animal?.id) return;
   setPhotoTarget(null);
   await trackUserEvent(user, 'photo_recognition_confirmed', { animal_id:animal.id, animal_name:animal.com, rarity:animal.rarity, ai_confidence:meta.confidence || null, has_gps:!!meta.gps, source_screen:'photo_recognition' }, userProfile);
+  // Cattura solo tramite validazione AI: la specie deve comparire tra le proposte del riconoscimento.
+  const aiValidated = meta.ai_status === 'certain' || meta.ai_status === 'alternatives';
   const resolvedStatus = getResolvedAnimalStatus(animal, statusMap, visitedCountries);
-  if (resolvedStatus === 'ricercato' || resolvedStatus === 'nascosto' || !resolvedStatus) {
+  if (aiValidated && resolvedStatus !== 'catturato') {
+    await handleStatusChange(animal.id, 'catturato');
+  } else if (!aiValidated && (resolvedStatus === 'ricercato' || resolvedStatus === 'nascosto' || !resolvedStatus)) {
     await handleStatusChange(animal.id, 'avvistato');
   }
   try {
@@ -14048,9 +14578,10 @@ const confirmPhotoRecognition = async (animal, meta={}) => {
     console.warn('[Apex] animal_photos non bloccante:', err);
   }
   if (meta.openDetail) {
+    const nextStatus = (meta.ai_status === 'certain' || meta.ai_status === 'alternatives') ? 'catturato' : 'avvistato';
     startDetailTransition(() => {
       setPage('grid');
-      setSel(getEnrichedAnimal({ ...animal, status:'avvistato' }));
+      setSel(getEnrichedAnimal({ ...animal, status:nextStatus }));
     });
   }
 };
@@ -14263,9 +14794,19 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   }
 
   const renderHomeMenu = () => {
+    const dailyDiscoveryAnimal = getDailyAtlasDiscoveryStable(user?.id, animalsData, documentedMap, statusMap, visitedCountries);
     const homeProps = {
       theme,
       menuProgress,
+      dailyDiscovery: dailyDiscoveryAnimal ? { animal: dailyDiscoveryAnimal, documented: !!documentedMap[String(dailyDiscoveryAnimal.id)] } : null,
+      onDocumentAnimal: (id) => handleDocumentAnimal(id, 'home_daily_discovery'),
+      onOpenAnimal: (animal) => {
+        setGridPreset(null);
+        setGridReturnTarget(null);
+        setPage('grid');
+        selectAnimal(getEnrichedAnimal({ ...animal, status: getResolvedAnimalStatus(animal, statusMap, visitedCountries) }));
+      },
+      usageStreak: getUsageStreak(),
       socialSnapshot,
       onOpenFriends: openFriends,
       onOpen: openPage,
@@ -14319,8 +14860,10 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
 	      {sectionIntro && !tutorialStep && <SectionIntroModal section={sectionIntro} onClose={()=>{ const guided = sectionIntro; markSectionIntroSeen(guided); setSectionIntro(null); if (guided === 'badges' || guided === 'abilities') setActiveSectionGuide(guided); }} />}
       <InstallPromptBanner />
 	      {dataError && user && <SwipeDismissNotice onDismiss={()=>setDataError('')} style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:250, borderRadius:14, padding:'10px 12px', background:'rgba(255,59,48,.92)', color:'white', fontSize:11, fontWeight:800, boxShadow:'0 10px 30px rgba(0,0,0,.35)' }}>{dataError}</SwipeDismissNotice>}
+      {expeditionNotice && <SwipeDismissNotice onDismiss={()=>setExpeditionNotice('')} style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:252, borderRadius:14, padding:'10px 12px', background:'linear-gradient(135deg,rgba(240,168,64,.96),rgba(200,121,85,.96))', color:'#1A1000', fontSize:11.5, fontWeight:900, boxShadow:'0 10px 30px rgba(0,0,0,.35)' }}>{expeditionNotice}</SwipeDismissNotice>}
       {activeAwardToast && <AwardToast award={activeAwardToast} onOpen={openAwardFromToast} onDismiss={()=>setAwardQueue(prev => prev.slice(1))} />}
       {photoTarget && <PhotoRecognitionModal animal={photoTarget?.id ? photoTarget : null} animals={animalsData} user={user} onClose={()=>setPhotoTarget(null)} onConfirm={confirmPhotoRecognition} onRequestAddAnimal={requestAnimalAdd} />}
+      {expeditionGift && <ExpeditionGiftModal gift={expeditionGift} onClose={()=>setExpeditionGift(null)} />}
       {countryVisitPrompt && <CountryVisitPromptModal animal={countryVisitPrompt} visitedCountries={visitedCountries} onClose={()=>setCountryVisitPrompt(null)} onConfirm={confirmPromptCountries} />}
     </div>
   );
