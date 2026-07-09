@@ -551,6 +551,21 @@ function isAnimalDocumented(animal, documentedMap = DOCUMENTED_MAP) {
   if (animal.documented) return true;
   return !!documentedMap?.[String(animal.id)];
 }
+function getLocalDateKey(date = new Date()) {
+  const d = date instanceof Date ? date : new Date(date);
+  if (Number.isNaN(d.getTime())) return '';
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+function isAnimalDocumentedToday(animalId, documentedMap = DOCUMENTED_MAP) {
+  const raw = documentedMap?.[String(animalId)];
+  if (!raw || raw === true) return false;
+  const docDay = getLocalDateKey(new Date(raw));
+  return !!docDay && docDay === getLocalDateKey();
+}
+function canViewAnimalGameStats(animal, status, documentedMap = DOCUMENTED_MAP) {
+  if (isRevealedStatus(status)) return true;
+  return isAnimalDocumentedToday(animal?.id, documentedMap);
+}
 function dailyAtlasSeed() {
   const d = new Date();
   return d.getFullYear() * 372 + (d.getMonth() + 1) * 31 + d.getDate();
@@ -571,7 +586,7 @@ function getDailyAtlasDiscovery(animals = ANIMALS, documentedMap = DOCUMENTED_MA
   return best;
 }
 // La scoperta resta la stessa per tutta la giornata anche dopo che è stata
-// documentata (per mostrare lo stato "fatto" invece di proporne subito un'altra).
+// documentata (CTA "Scopri" per aprire la scheda invece di cambiar subito specie).
 function getDailyAtlasDiscoveryStable(userId, animals = ANIMALS, documentedMap = DOCUMENTED_MAP, statusMap = {}, visitedCountries = []) {
   const key = `animaldex_atlas_daily_${userId || 'guest'}`;
   const today = new Date().toISOString().slice(0, 10);
@@ -6464,7 +6479,7 @@ function FullscreenMetricModal({ open, title, subtitle='', onClose, children }) 
   );
 }
 
-function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter, onOpenComparator, onOpenLifeWeb, onOpenPhoto, visitedCountries = [], tutorialStep=null, onTutorialAbilityClick, onTutorialMetricClick, onTutorialStatusClick, theme='dark' }) {
+function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter, onOpenComparator, onOpenLifeWeb, onOpenPhoto, visitedCountries = [], documentedMap = {}, tutorialStep=null, onTutorialAbilityClick, onTutorialMetricClick, onTutorialStatusClick, theme='dark' }) {
   const [statMode,setStatMode]=useState('statistiche');
   const [slideDir,setSlideDir]=useState(1);
   const [localStatus,setLocalStatus]=useState(normalizeAnimalStatus(a.status));
@@ -6485,9 +6500,10 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
   const detailPanel = isLightTheme ? 'rgba(255,255,255,.74)' : 'rgba(0,0,0,.35)';
   const detailPanelBorder = isLightTheme ? '1px solid rgba(0,0,0,.08)' : 'none';
   const co=CONS[a.cons]||CONS.DD;
-  const found = isRevealedStatus(localStatus);
   const animalImageUrl = getAnimalImageUrl(a);
-  const documented = isAnimalDocumented(a);
+  const documented = isAnimalDocumented(a, documentedMap);
+  const statsUnlocked = canViewAnimalGameStats(a, localStatus, documentedMap);
+  const documentedToday = isAnimalDocumentedToday(a?.id, documentedMap);
   const canViewImage = (!isMysteryStatus(localStatus) || documented) && !!animalImageUrl;
   const docuCuriosities = getDocumentaryCuriosities(a);
   const bioPanels = [a.bio, ...docuCuriosities].filter(Boolean);
@@ -6670,8 +6686,13 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
 
               {/* Statistiche */}
               {statMode==='statistiche'&&(
-                isRevealedStatus(localStatus) ? (
+                statsUnlocked ? (
                   <div data-tour="animal-stats" data-animaldex-card="true" style={{ background:'rgba(0,0,0,.35)', borderRadius:24, padding:'12px', height:'100%', boxSizing:'border-box', display:'flex', flexDirection:'column', gap:7, justifyContent:'space-between' }}>
+                    {documentedToday && !isRevealedStatus(localStatus) && (
+                      <p style={{ color:'rgba(157,211,255,.78)', fontSize:11, lineHeight:1.4, margin:'0 0 4px', textAlign:'center' }}>
+                        Statistiche visibili fino a mezzanotte: domani servirà incontrarla sul campo.
+                      </p>
+                    )}
                     <StatRow label='Velocità' base={a.stats?.velocita ?? 0} scale={scale} color={c.accent} unit='km/h'/>
                     {Number(a.stats?.morso || 0) > 0 && <StatRow label='Morso' base={a.stats?.morso ?? 0} scale={scale} color={c.accent} unit='PSI'/>}
                     {a.lifespan != null && (
@@ -6693,7 +6714,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
                     <p style={{ color:'rgba(255,255,255,.6)', fontSize:13, margin:0 }}>🔒 Sblocca passando ad Avvistato o Catturato</p>
                     {documented && (
                       <p style={{ color:'rgba(157,211,255,.72)', fontSize:11.5, lineHeight:1.45, margin:'10px 0 0' }}>
-                        Documentato sblocca scheda e curiosità dall&apos;Atlante. Le statistiche di gioco restano premio dell&apos;esperienza sul campo.
+                        Documentato sblocca scheda e curiosità dall&apos;Atlante. Le statistiche di gioco si sbloccano il giorno della scoperta o incontrando la specie sul campo.
                       </p>
                     )}
                   </div>
@@ -14995,7 +15016,7 @@ const returnFromFeaturePage = (fallback='menu') => {
   setPage(fallback);
 };
 
-const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', inset:0, zIndex:80, background:theme==='light'?LIGHT_APP_BG:'#1C1C1E' }}><Detail theme={theme} a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} onJumpToClass={jumpToClassFromDetail} onOpenTaxonomyFilter={openTaxonomyFilterFromDetail} onOpenComparator={openComparator} onOpenLifeWeb={openLifeWeb} onOpenPhoto={openPhotoRecognition} visitedCountries={visitedCountries} statusMap={statusMap} tutorialStep={tutorialStep} onTutorialAbilityClick={handleTutorialAbilityClick} onTutorialMetricClick={handleTutorialMetricClick} onTutorialStatusClick={handleTutorialStatusClick}/></div> : null;
+const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', inset:0, zIndex:80, background:theme==='light'?LIGHT_APP_BG:'#1C1C1E' }}><Detail theme={theme} a={enriched} documentedMap={documentedMap} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} onJumpToClass={jumpToClassFromDetail} onOpenTaxonomyFilter={openTaxonomyFilterFromDetail} onOpenComparator={openComparator} onOpenLifeWeb={openLifeWeb} onOpenPhoto={openPhotoRecognition} visitedCountries={visitedCountries} statusMap={statusMap} tutorialStep={tutorialStep} onTutorialAbilityClick={handleTutorialAbilityClick} onTutorialMetricClick={handleTutorialMetricClick} onTutorialStatusClick={handleTutorialStatusClick}/></div> : null;
 
   if (authLoading) {
     return (

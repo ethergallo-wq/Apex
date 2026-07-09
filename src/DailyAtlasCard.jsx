@@ -55,9 +55,13 @@ export default function DailyAtlasCard({
           </div>
         </div>
         {dailyDiscovery.documented ? (
-          <div style={{ flexShrink: 0, borderRadius: 14, padding: '9px 12px', background: 'rgba(157,211,255,.12)', border: '1px solid rgba(157,211,255,.34)', color: '#9DD3FF', fontSize: 11.5, fontWeight: 1000 }}>
-            📖 Fatto
-          </div>
+          <button
+            type="button"
+            onClick={() => onOpenAnimal?.(dailyDiscovery.animal)}
+            style={{ flexShrink: 0, minHeight: 44, borderRadius: 14, padding: '0 14px', border: '1px solid rgba(157,211,255,.42)', background: 'rgba(157,211,255,.14)', color: '#9DD3FF', fontFamily: 'inherit', fontSize: 12.5, fontWeight: 1000, cursor: 'pointer' }}
+          >
+            Scopri
+          </button>
         ) : (
           <button
             type="button"
