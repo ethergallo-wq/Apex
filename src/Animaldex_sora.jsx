@@ -3493,6 +3493,58 @@ function normalizeIsoList(list = []) {
     .filter(c => /^[A-Z]{2}$/.test(c))
   )).sort((a,b)=>getCountryDisplayName(a).localeCompare(getCountryDisplayName(b),'it'));
 }
+function toggleIsoCode(list = [], code) {
+  const iso = String(code || '').trim().toUpperCase();
+  if (!/^[A-Z]{2}$/.test(iso)) return list;
+  return list.includes(iso) ? list.filter(x => x !== iso) : [...list, iso];
+}
+function buildAnimalIdsByCountryIndex(animals = []) {
+  const index = new Map();
+  const source = animals?.length ? animals : LOCAL_ANIMALS;
+  for (const animal of source) {
+    const id = Number(animal?.id);
+    if (!id) continue;
+    const codes = new Set();
+    const push = (raw) => {
+      const iso = String(raw || '').trim().toUpperCase();
+      if (/^[A-Z]{2}$/.test(iso)) codes.add(iso);
+    };
+    for (const iso of toArraySafe(animal?.distribution?.countries_present)) push(iso);
+    const geoIso = animal?.geo?.iso;
+    if (geoIso && typeof geoIso === 'object') {
+      for (const iso of [...toArraySafe(geoIso.primary), ...toArraySafe(geoIso.iucn), ...toArraySafe(geoIso.observed), ...toArraySafe(geoIso.geoson_range)]) push(iso);
+    } else {
+      for (const iso of toArraySafe(geoIso)) push(iso);
+    }
+    for (const iso of toArraySafe(animal?.iso)) push(iso);
+    for (const iso of codes) {
+      if (!index.has(iso)) index.set(iso, new Set());
+      index.get(iso).add(id);
+    }
+  }
+  return index;
+}
+function countAnimalsForCountrySelection(countries = [], index = new Map()) {
+  if (!countries.length) return 0;
+  const seen = new Set();
+  for (const raw of countries) {
+    const ids = index.get(String(raw).toUpperCase());
+    if (!ids) continue;
+    ids.forEach(id => seen.add(id));
+  }
+  return seen.size;
+}
+let scratchCountryMetaCache = null;
+function getScratchCountryMetaList() {
+  if (!scratchCountryMetaCache) {
+    scratchCountryMetaCache = getAllScratchCountries().map(code => ({
+      code,
+      name: getCountryDisplayName(code),
+      flag: getFlagEmoji(code),
+    }));
+  }
+  return scratchCountryMetaCache;
+}
 function getVisitedCountries() {
   if (typeof window === 'undefined') return [];
   try { return normalizeIsoList(JSON.parse(window.localStorage.getItem('animaldex_visited_countries') || '[]')); } catch { return []; }
@@ -8484,6 +8536,26 @@ function InstallPromptBanner({ suppressed = false }) {
 }
 
 
+const CountrySelectButton = React.memo(function CountrySelectButton({ code, name, flag, active, accent = '#A84637', activeBg = 'rgba(168,70,55,.22)', onToggle }) {
+  return (
+    <button type="button" onClick={() => onToggle(code)} style={{ minHeight:48, borderRadius:17, border:`1px solid ${active ? accent : 'rgba(255,255,255,.08)'}`, background:active ? activeBg : 'rgba(255,255,255,.045)', color:'white', display:'flex', alignItems:'center', gap:8, padding:'8px 10px', cursor:'pointer', textAlign:'left', fontFamily:'inherit', touchAction:'manipulation' }}>
+      <span style={{ fontSize:21 }}>{flag}</span>
+      <span style={{ flex:1, fontSize:11.5, fontWeight:900, lineHeight:1.15 }}>{name}</span>
+      <span style={{ color:active ? '#FFD4C8' : 'rgba(255,255,255,.22)', fontWeight:1000 }}>{active ? '✓' : '+'}</span>
+    </button>
+  );
+});
+
+const RegionsCountrySelectButton = React.memo(function RegionsCountrySelectButton({ code, name, flag, active, onToggle }) {
+  return (
+    <button type="button" onClick={() => onToggle(code)} style={{ minHeight:44, borderRadius:12, border:`1px solid ${active ? 'rgba(144,216,74,.65)' : 'rgba(255,255,255,.08)'}`, background:active ? 'rgba(144,216,74,.18)' : '#1A1A1C', color:active ? '#D8FFC4' : 'white', padding:'8px 10px', display:'flex', alignItems:'center', gap:8, cursor:'pointer', textAlign:'left', fontFamily:'inherit', touchAction:'manipulation' }}>
+      <span style={{ fontSize:20 }}>{flag}</span>
+      <span style={{ flex:1, fontSize:11.5, fontWeight:800, lineHeight:1.15 }}>{name}</span>
+      <span style={{ color:active ? '#90D84A' : 'rgba(255,255,255,.22)', fontSize:15 }}>{active ? '✓' : '+'}</span>
+    </button>
+  );
+});
+
 function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, onFinish }) {
   const OCHRE = '#A84637';
   const [step,setStep]=useState('intro');
@@ -8515,29 +8587,41 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
   const progress = Math.round(((stepIndex + 1) / steps.length) * 100);
   const allCountries = useMemo(() => normalizeIsoList(getAllScratchCountries()), []);
   const countryNameCompare = useCallback((a, b) => getCountryDisplayName(a).localeCompare(getCountryDisplayName(b), 'it'), []);
+  const countryMetaByCode = useMemo(() => {
+    const map = new Map();
+    for (const code of allCountries) {
+      map.set(code, { code, name: getCountryDisplayName(code), flag: getFlagEmoji(code) });
+    }
+    return map;
+  }, [allCountries]);
+  const animalsByCountryIndex = useMemo(() => buildAnimalIdsByCountryIndex(animals), [animals]);
+  const selectedCountrySet = useMemo(() => new Set(selectedCountries.map(c => String(c).toUpperCase())), [selectedCountries]);
+  const deferredSelectedCountries = useDeferredValue(selectedCountries);
   const onboardingCountryGroups = useMemo(
     () => buildOnboardingCountryGroups(residenceCountry, allCountries).map(group => ({
       ...group,
-      countries: group.key === 'molto_probabili'
+      countries: (group.key === 'molto_probabili'
         ? group.countries
-        : [...group.countries].sort(countryNameCompare),
+        : [...group.countries].sort(countryNameCompare)
+      ).map(code => countryMetaByCode.get(code) || { code, name: getCountryDisplayName(code), flag: getFlagEmoji(code) }),
     })),
-    [residenceCountry, allCountries, countryNameCompare]
+    [residenceCountry, allCountries, countryNameCompare, countryMetaByCode]
   );
   const filteredCountries = useMemo(() => {
     const q = countrySearch.trim().toLowerCase();
     if (!q) return [];
     return allCountries
       .filter(code => getCountryDisplayName(code).toLowerCase().includes(q) || code.toLowerCase().includes(q))
-      .sort(countryNameCompare);
-  }, [allCountries, countrySearch, countryNameCompare]);
+      .sort(countryNameCompare)
+      .map(code => countryMetaByCode.get(code) || { code, name: getCountryDisplayName(code), flag: getFlagEmoji(code) });
+  }, [allCountries, countrySearch, countryNameCompare, countryMetaByCode]);
   const animalCount = animals?.length || LOCAL_ANIMALS.length;
   const classCount = new Set((animals?.length ? animals : LOCAL_ANIMALS).map(a => a.cls).filter(Boolean)).size;
   const countryCount = allCountries.length;
   const RADAR_TARGET = 6;
 
   const radarAnimals = useMemo(() => {
-    if (!selectedCountries.length) return [];
+    if (step !== 'radar' || !selectedCountries.length) return [];
     const normalizedAnimals = animals.map(a => ({ ...(LOCAL_ANIMALS.find(x => Number(x.id) === Number(a.id)) || {}), ...a })).filter(a => a.image_url);
     const byCountry = selectedCountries.map(code => normalizedAnimals
       .filter(a => getAnimalCountryCodes(a).includes(String(code).toUpperCase()))
@@ -8563,19 +8647,17 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
         .forEach(a => { if (picked.length < RADAR_TARGET && !seen.has(Number(a.id))) { seen.add(Number(a.id)); picked.push(a); } });
     }
     return picked.slice(0, RADAR_TARGET);
-  }, [animals, selectedCountries]);
+  }, [step, animals, selectedCountries]);
 
   const currentAnimal = radarAnimals[cardIndex] || null;
-  const predictedUnlocks = useMemo(() => {
-    if (!selectedCountries.length) return 0;
-    const set = new Set(selectedCountries);
-    return animals.filter(a => {
-      const iso = a.distribution?.countries_present || a.geo?.iso || a.iso || [];
-      return iso.some(code => set.has(code));
-    }).length;
-  }, [animals, selectedCountries]);
+  const predictedUnlocks = useMemo(
+    () => countAnimalsForCountrySelection(deferredSelectedCountries, animalsByCountryIndex),
+    [deferredSelectedCountries, animalsByCountryIndex]
+  );
 
-  const toggleCountry = (code) => setSelectedCountries(prev => normalizeIsoList(prev.includes(code) ? prev.filter(x=>x!==code) : [...prev, code]));
+  const toggleCountry = useCallback((code) => {
+    setSelectedCountries(prev => toggleIsoCode(prev, code));
+  }, []);
   const enterCountries = () => {
     if (residenceCountry && !selectedCountries.length) setSelectedCountries([residenceCountry]);
     setStep('countries');
@@ -8753,16 +8835,17 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
           <div style={{ flex:1, overflowY:'auto', paddingRight:2 }}>
             {countrySearch.trim() ? (
               <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8 }}>
-                {filteredCountries.map(code => {
-                  const active = selectedCountries.includes(code);
-                  return (
-                    <button key={code} onClick={()=>toggleCountry(code)} style={{ minHeight:48, borderRadius:17, border:`1px solid ${active?OCHRE:'rgba(255,255,255,.08)'}`, background:active?`rgba(168,70,55,.22)`:'rgba(255,255,255,.045)', color:'white', display:'flex', alignItems:'center', gap:8, padding:'8px 10px', cursor:'pointer', textAlign:'left', fontFamily:'inherit' }}>
-                      <span style={{ fontSize:21 }}>{getFlagEmoji(code)}</span>
-                      <span style={{ flex:1, fontSize:11.5, fontWeight:900, lineHeight:1.15 }}>{getCountryDisplayName(code)}</span>
-                      <span style={{ color:active?'#FFD4C8':'rgba(255,255,255,.22)', fontWeight:1000 }}>{active?'✓':'+'}</span>
-                    </button>
-                  );
-                })}
+                {filteredCountries.map(({ code, name, flag }) => (
+                  <CountrySelectButton
+                    key={code}
+                    code={code}
+                    name={name}
+                    flag={flag}
+                    active={selectedCountrySet.has(code)}
+                    accent={OCHRE}
+                    onToggle={toggleCountry}
+                  />
+                ))}
               </div>
             ) : onboardingCountryGroups.map(group => {
               const collapsed = group.key === 'improbabili' && !showImprobabili;
@@ -8786,16 +8869,17 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
                   </button>
                   {!collapsed && (
                     <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8 }}>
-                      {group.countries.map(code => {
-                        const active = selectedCountries.includes(code);
-                        return (
-                          <button key={`${group.key}-${code}`} onClick={()=>toggleCountry(code)} style={{ minHeight:48, borderRadius:17, border:`1px solid ${active?OCHRE:'rgba(255,255,255,.08)'}`, background:active?`rgba(168,70,55,.22)`:'rgba(255,255,255,.045)', color:'white', display:'flex', alignItems:'center', gap:8, padding:'8px 10px', cursor:'pointer', textAlign:'left', fontFamily:'inherit' }}>
-                            <span style={{ fontSize:21 }}>{getFlagEmoji(code)}</span>
-                            <span style={{ flex:1, fontSize:11.5, fontWeight:900, lineHeight:1.15 }}>{getCountryDisplayName(code)}</span>
-                            <span style={{ color:active?'#FFD4C8':'rgba(255,255,255,.22)', fontWeight:1000 }}>{active?'✓':'+'}</span>
-                          </button>
-                        );
-                      })}
+                      {group.countries.map(({ code, name, flag }) => (
+                        <CountrySelectButton
+                          key={`${group.key}-${code}`}
+                          code={code}
+                          name={name}
+                          flag={flag}
+                          active={selectedCountrySet.has(code)}
+                          accent={OCHRE}
+                          onToggle={toggleCountry}
+                        />
+                      ))}
                     </div>
                   )}
                 </div>
@@ -11334,8 +11418,11 @@ function BadgesPage({ onBack, statusMap = {}, visitedCountries = [], earnedBadge
 }
 
 
-function ScratchMap({ visitedCountries, selectedCountry, onSelectCountry }) {
-  const visited = Array.from(new Set((visitedCountries || []).map(c=>String(c).toUpperCase()).filter(Boolean))).slice(0, 120);
+const MemoScratchMap = React.memo(function ScratchMap({ visitedCountries, selectedCountry, onSelectCountry }) {
+  const visited = useMemo(
+    () => Array.from(new Set((visitedCountries || []).map(c => String(c).toUpperCase()).filter(Boolean))).slice(0, 120),
+    [visitedCountries]
+  );
   const [flatMap, setFlatMap] = useState(true);
   return (
     <div style={{ marginBottom:12 }}>
@@ -11358,7 +11445,7 @@ function ScratchMap({ visitedCountries, selectedCountry, onSelectCountry }) {
       {visited.length === 0 && <div style={{ marginTop:8, color:'rgba(255,255,255,.45)', fontSize:12, textAlign:'center' }}>Aggiungi un paese al Sul Campo per evidenziarlo sulla mappa.</div>}
     </div>
   );
-}
+});
 
 function VisitedCountryCard({ code, onOpenAnimals, onRemove, statusMap = {} }) {
   const [flipped, setFlipped] = useState(false);
@@ -12296,14 +12383,17 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   const continent = BIOREGION_V4_CONTINENTS.find(c => c.id === effectiveContinentId) || null;
   const effectiveRegionId = selectedRegionId || selectedEcoPath?.region?.id || null;
   const region = continent?.regions.find(r => r.id === effectiveRegionId) || null;
-  const visitedSet = new Set(normalizeIsoList(visitedCountries));
+  const visitedSet = useMemo(() => new Set(normalizeIsoList(visitedCountries)), [visitedCountries]);
   const territoryUnlockSet = useMemo(() => getTerritoryUnlockIdsForCountries(visitedCountries), [visitedCountries]);
+  const destinationSelectionSet = useMemo(
+    () => new Set(selectedDestinationIsos.map(c => String(c).toUpperCase())),
+    [selectedDestinationIsos]
+  );
   const scratchCountries = useMemo(() => {
     const q = countrySearch.trim().toLowerCase();
-    return getAllScratchCountries().filter(code => {
-      if (!q) return true;
-      return code.toLowerCase().includes(q) || getCountryDisplayName(code).toLowerCase().includes(q);
-    }).slice(0, 160);
+    const base = getScratchCountryMetaList();
+    if (!q) return base.slice(0, 160);
+    return base.filter(c => c.code.toLowerCase().includes(q) || c.name.toLowerCase().includes(q)).slice(0, 160);
   }, [countrySearch]);
   const submitDestination = async () => {
     const selectedList = selectedDestinationIsos.length ? selectedDestinationIsos : (selectedDestinationIso ? [selectedDestinationIso] : []);
@@ -12318,11 +12408,11 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
       await onAddDestination?.(cleanList, []);
     } catch (err) { console.warn('[Apex] aggiunta paese non bloccante:', err); }
   };
-  const toggleDestinationIso = (code) => {
+  const toggleDestinationIso = useCallback((code) => {
     const iso = String(code).toUpperCase();
     setSelectedDestinationIso(iso);
     setSelectedDestinationIsos(prev => prev.includes(iso) ? prev.filter(x => x !== iso) : [...prev, iso]);
-  };
+  }, []);
   const removeVisitedCountry = (code) => {
     const list = normalizeIsoList(visitedCountries.filter(c=>c!==code));
     onVisitedCountriesChange?.(list);
@@ -12760,7 +12850,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
 
         {view==='countries' && (
           <div>
-            <ScratchMap visitedCountries={visitedCountries} selectedCountry={selectedCountry} onSelectCountry={setSelectedCountry} />
+            <MemoScratchMap visitedCountries={visitedCountries} selectedCountry={selectedCountry} onSelectCountry={setSelectedCountry} />
             <ExplorerRulesPanel userId={user?.id || 'guest'} theme={theme} compact />
             {selectedCountry && (
               <div style={{ background:'#1A1A1C', border:'1px solid rgba(144,216,74,.2)', borderRadius:16, padding:14, marginBottom:12 }}>
@@ -12808,10 +12898,16 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
               <div style={{ color:'white', fontSize:18, fontWeight:900 }}>Aggiungi al Sul Campo</div>
               <input value={countrySearch} onChange={e=>setCountrySearch(e.target.value)} placeholder="Cerca paese..." style={{ marginTop:12, width:'100%', height:42, borderRadius:12, background:'#252527', color:'white', border:'1px solid rgba(255,255,255,.12)', padding:'0 12px', fontSize:14, outline:'none', boxSizing:'border-box' }} />
               <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, maxHeight:230, overflowY:'auto', marginTop:10, paddingRight:2 }}>
-                {scratchCountries.map(code => {
-                  const active = visitedSet.has(code) || selectedDestinationIsos.includes(code);
-                  return <button key={code} onClick={()=>toggleDestinationIso(code)} style={{ minHeight:44, borderRadius:12, border:`1px solid ${active?'rgba(144,216,74,.65)':'rgba(255,255,255,.08)'}`, background:active?'rgba(144,216,74,.18)':'#1A1A1C', color:active?'#D8FFC4':'white', padding:'8px 10px', display:'flex', alignItems:'center', gap:8, cursor:'pointer', textAlign:'left', fontFamily:'inherit' }}><span style={{ fontSize:20 }}>{getFlagEmoji(code)}</span><span style={{ flex:1, fontSize:11.5, fontWeight:800, lineHeight:1.15 }}>{getCountryDisplayName(code)}</span><span style={{ color:active?'#90D84A':'rgba(255,255,255,.22)', fontSize:15 }}>{active?'✓':'+'}</span></button>;
-                })}
+                {scratchCountries.map(({ code, name, flag }) => (
+                  <RegionsCountrySelectButton
+                    key={code}
+                    code={code}
+                    name={name}
+                    flag={flag}
+                    active={visitedSet.has(code) || destinationSelectionSet.has(code)}
+                    onToggle={toggleDestinationIso}
+                  />
+                ))}
               </div>
               <button disabled={(!selectedDestinationIsos.length && !selectedDestinationIso) || destinationsLoading} onClick={submitDestination} style={{ marginTop:12, width:'100%', height:42, borderRadius:13, border:'none', background:(selectedDestinationIsos.length || selectedDestinationIso)?'#90D84A':'#3A3A3C', color:(selectedDestinationIsos.length || selectedDestinationIso)?'#111':'rgba(255,255,255,.38)', fontWeight:900, cursor:(selectedDestinationIsos.length || selectedDestinationIso)?'pointer':'default' }}>{destinationsLoading ? 'Sblocco animali...' : selectedDestinationIsos.length > 1 ? `Aggiungi ${selectedDestinationIsos.length} paesi` : (selectedDestinationIsos[0] || selectedDestinationIso) ? `Aggiungi ${getCountryDisplayName(selectedDestinationIsos[0] || selectedDestinationIso)}` : 'Seleziona uno o più paesi'}</button>
             </div>
