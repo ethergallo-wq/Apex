@@ -7,6 +7,7 @@ import { TrainerHeadToHead, TrainerLeaderboardCard, buildTrainerStatMaxes } from
 import { getHomeVariant, setHomeVariant, subscribeHomeVariant, HOME_VARIANTS, getHomeVariantLabel } from './homeVariant';
 import { addFriendRequestFeedHistory, getFriendRequestFeedHistory } from './friendRequestFeed';
 import { getProfileAvatarChoices, resolveProfileAvatarAnimal } from './profileAvatar';
+import { buildOnboardingCountryGroups } from './travelProbability';
 
 let LOCAL_ANIMALS = [];
 let ANIMALS = [];
@@ -8432,12 +8433,31 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
   const [syncing,setSyncing]=useState(false);
   const [result,setResult]=useState(null);
   const [error,setError]=useState('');
+  const [showImprobabili,setShowImprobabili]=useState(false);
+
+  useEffect(() => { setShowImprobabili(false); }, [residenceCountry]);
 
   const steps = ['intro','profile','intent','countries','radar','wow'];
   const stepIndex = Math.max(0, steps.indexOf(step));
   const progress = Math.round(((stepIndex + 1) / steps.length) * 100);
   const allCountries = useMemo(() => normalizeIsoList(getAllScratchCountries()), []);
-  const filteredCountries = allCountries.filter(code => !countrySearch.trim() || getCountryDisplayName(code).toLowerCase().includes(countrySearch.toLowerCase()) || code.toLowerCase().includes(countrySearch.toLowerCase()));
+  const countryNameCompare = useCallback((a, b) => getCountryDisplayName(a).localeCompare(getCountryDisplayName(b), 'it'), []);
+  const onboardingCountryGroups = useMemo(
+    () => buildOnboardingCountryGroups(residenceCountry, allCountries).map(group => ({
+      ...group,
+      countries: group.key === 'molto_probabili'
+        ? group.countries
+        : [...group.countries].sort(countryNameCompare),
+    })),
+    [residenceCountry, allCountries, countryNameCompare]
+  );
+  const filteredCountries = useMemo(() => {
+    const q = countrySearch.trim().toLowerCase();
+    if (!q) return [];
+    return allCountries
+      .filter(code => getCountryDisplayName(code).toLowerCase().includes(q) || code.toLowerCase().includes(q))
+      .sort(countryNameCompare);
+  }, [allCountries, countrySearch, countryNameCompare]);
   const animalCount = animals?.length || LOCAL_ANIMALS.length;
   const classCount = new Set((animals?.length ? animals : LOCAL_ANIMALS).map(a => a.cls).filter(Boolean)).size;
   const countryCount = allCountries.length;
@@ -8653,16 +8673,59 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
       {step==='countries' && (
         <div style={{ ...panel, flex:1, minHeight:0, display:'flex', flexDirection:'column' }}>
           <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.55, marginTop:0 }}>Seleziona i paesi del tuo <strong style={{ color:'#90D84A', fontWeight:1000 }}>Sul Campo</strong> — dove sei stato davvero. All&apos;iscrizione puoi aggiungerne quanti vuoi: ogni paese attiva subito la prima ondata della Spedizione.</p>
+          {residenceCountry && !countrySearch.trim() && (
+            <div style={{ color:'rgba(255,255,255,.48)', fontSize:11, lineHeight:1.35, marginBottom:8 }}>Ordinati per probabilità di viaggio da {getCountryDisplayName(residenceCountry)}.</div>
+          )}
           <input value={countrySearch} onChange={e=>setCountrySearch(e.target.value)} placeholder="Cerca nazione o ISO..." style={{ width:'100%', height:44, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.12)', color:'white', padding:'0 13px', fontSize:14, boxSizing:'border-box', outline:'none', marginBottom:10, fontFamily:'inherit' }} />
-          <div style={{ flex:1, overflowY:'auto', display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, paddingRight:2 }}>
-            {filteredCountries.map(code => {
-              const active = selectedCountries.includes(code);
+          <div style={{ flex:1, overflowY:'auto', paddingRight:2 }}>
+            {countrySearch.trim() ? (
+              <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8 }}>
+                {filteredCountries.map(code => {
+                  const active = selectedCountries.includes(code);
+                  return (
+                    <button key={code} onClick={()=>toggleCountry(code)} style={{ minHeight:48, borderRadius:17, border:`1px solid ${active?OCHRE:'rgba(255,255,255,.08)'}`, background:active?`rgba(168,70,55,.22)`:'rgba(255,255,255,.045)', color:'white', display:'flex', alignItems:'center', gap:8, padding:'8px 10px', cursor:'pointer', textAlign:'left', fontFamily:'inherit' }}>
+                      <span style={{ fontSize:21 }}>{getFlagEmoji(code)}</span>
+                      <span style={{ flex:1, fontSize:11.5, fontWeight:900, lineHeight:1.15 }}>{getCountryDisplayName(code)}</span>
+                      <span style={{ color:active?'#FFD4C8':'rgba(255,255,255,.22)', fontWeight:1000 }}>{active?'✓':'+'}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            ) : onboardingCountryGroups.map(group => {
+              const collapsed = group.key === 'improbabili' && !showImprobabili;
               return (
-                <button key={code} onClick={()=>toggleCountry(code)} style={{ minHeight:48, borderRadius:17, border:`1px solid ${active?OCHRE:'rgba(255,255,255,.08)'}`, background:active?`rgba(168,70,55,.22)`:'rgba(255,255,255,.045)', color:'white', display:'flex', alignItems:'center', gap:8, padding:'8px 10px', cursor:'pointer', textAlign:'left', fontFamily:'inherit' }}>
-                  <span style={{ fontSize:21 }}>{getFlagEmoji(code)}</span>
-                  <span style={{ flex:1, fontSize:11.5, fontWeight:900, lineHeight:1.15 }}>{getCountryDisplayName(code)}</span>
-                  <span style={{ color:active?'#FFD4C8':'rgba(255,255,255,.22)', fontWeight:1000 }}>{active?'✓':'+'}</span>
-                </button>
+                <div key={group.key} style={{ marginBottom:14 }}>
+                  <button
+                    type="button"
+                    onClick={() => { if (group.key === 'improbabili') setShowImprobabili(v => !v); }}
+                    style={{
+                      display:'flex', alignItems:'center', justifyContent:'space-between', width:'100%',
+                      border:'none', background:'transparent', padding:'0 0 8px', cursor: group.key === 'improbabili' ? 'pointer' : 'default',
+                      fontFamily:'inherit', textAlign:'left',
+                    }}
+                  >
+                    <span style={{ color: group.key === 'molto_probabili' ? OCHRE : 'rgba(255,255,255,.52)', fontSize:10.5, fontWeight:1000, letterSpacing:.7, textTransform:'uppercase' }}>
+                      {group.label} · {group.countries.length}
+                    </span>
+                    {group.key === 'improbabili' && (
+                      <span style={{ color:'rgba(255,255,255,.42)', fontSize:11, fontWeight:900 }}>{collapsed ? 'Mostra' : 'Nascondi'}</span>
+                    )}
+                  </button>
+                  {!collapsed && (
+                    <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8 }}>
+                      {group.countries.map(code => {
+                        const active = selectedCountries.includes(code);
+                        return (
+                          <button key={`${group.key}-${code}`} onClick={()=>toggleCountry(code)} style={{ minHeight:48, borderRadius:17, border:`1px solid ${active?OCHRE:'rgba(255,255,255,.08)'}`, background:active?`rgba(168,70,55,.22)`:'rgba(255,255,255,.045)', color:'white', display:'flex', alignItems:'center', gap:8, padding:'8px 10px', cursor:'pointer', textAlign:'left', fontFamily:'inherit' }}>
+                            <span style={{ fontSize:21 }}>{getFlagEmoji(code)}</span>
+                            <span style={{ flex:1, fontSize:11.5, fontWeight:900, lineHeight:1.15 }}>{getCountryDisplayName(code)}</span>
+                            <span style={{ color:active?'#FFD4C8':'rgba(255,255,255,.22)', fontWeight:1000 }}>{active?'✓':'+'}</span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
               );
             })}
           </div>
