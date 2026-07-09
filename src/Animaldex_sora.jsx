@@ -1505,6 +1505,7 @@ function normalizeProfileQuestionnaire(data = {}) {
     consent_marketing: Boolean(data?.consent_marketing),
     consent_personalization: Boolean(data?.consent_personalization),
     consent_newsletter: Boolean(data?.consent_newsletter),
+    onboarding_completed: Boolean(data?.onboarding_completed),
   };
 }
 function persistProfileDemographicsLocal(userId, data = {}) {
@@ -1583,14 +1584,16 @@ async function persistOnboardingQuestionnaire(user, payload = {}) {
   }
 }
 
-function buildFallbackProfile(user, onboardingCompleted = true) {
+function buildFallbackProfile(user, onboardingCompleted = false) {
   const username = getDefaultUsernameFromUser(user);
+  const local = getProfileDemographicsLocal(user?.id);
+  const resolvedOnboarding = onboardingCompleted || Boolean(local?.onboarding_completed);
   return mergeProfileDemographics({
     user_id: user?.id,
     username,
     nickname: username,
-    onboarding_completed: onboardingCompleted,
-    has_completed_tutorial: true,
+    onboarding_completed: resolvedOnboarding,
+    has_completed_tutorial: resolvedOnboarding,
     first_login_reward_shown: false,
   }, user?.id);
 }
@@ -5674,15 +5677,15 @@ function Grid({ onSelect, animals: animalsProp, statusMap = {}, visitedCountries
 
       <div data-animaldex-bottom-bar="true" data-animaldex-grid-bottom="true" style={{ position:'absolute', left:0, right:0, bottom:0, minHeight:gridBottomChromeHeight, boxSizing:'border-box', background:ANIMALDEX_ORANGE_GRADIENT, borderTop:'none', padding:isPhone?'9px 14px calc(13px + env(safe-area-inset-bottom, 0px))':'7px 12px 7px', marginBottom:0, zIndex:30, transform:'translateZ(0)' }}>
         <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:8 }}>
-          <button data-tour="grid-search" onClick={()=>setShowSearchBar(!showSearchBar)} aria-label="Cerca" style={{ ...bottomControlStyle, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
+          <button data-tour="grid-search" onClick={()=>setShowSearchBar(!showSearchBar)} aria-label="Cerca" style={{ ...bottomControlStyle, boxShadow:['grid-tools','grid-basics'].includes(tutorialStep)?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
             <svg width={bottomIconSize} height={bottomIconSize} viewBox="0 0 20 20" fill="none" style={{ display:'block' }}><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.9" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round"/></svg>
           </button>
           <div style={{ flex:1, textAlign:'center', color:'rgba(255,255,255,.84)', fontSize:isPhone?13:11, fontWeight:1000, letterSpacing:'.1px', minWidth:0 }}>{`${list.length} risultati`}</div>
           <div style={{ display:'flex', alignItems:'center', gap:isNarrow?6:8, flexShrink:0 }}>
-            <button onClick={()=>{setSheet('sort');setShowMenu(false);}} aria-label="Ordina" style={{ ...bottomControlStyle, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
+            <button onClick={()=>{setSheet('sort');setShowMenu(false);}} aria-label="Ordina" style={{ ...bottomControlStyle, boxShadow:['grid-tools','grid-basics'].includes(tutorialStep)?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
               <svg width={bottomIconSize} height={bottomIconSize} viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ display:'block' }}><path d="M8 5v14M8 19l-3-3M8 19l3-3M16 19V5M16 5l-3 3M16 5l3 3" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </button>
-            <button data-tour="grid-filters" onClick={()=>{ setShowMenu(v=>!v); setActiveFilter(null); }} aria-label="Filtra" style={{ ...bottomControlStyle, background:showMenu?'rgba(0,0,0,.28)':'rgba(0,0,0,.12)', border:`${showMenu?'2.5px':'1px'} solid ${showMenu?'#FFFFFF':'rgba(255,255,255,.12)'}`, boxSizing:'border-box', boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
+            <button data-tour="grid-filters" onClick={()=>{ setShowMenu(v=>!v); setActiveFilter(null); }} aria-label="Filtra" style={{ ...bottomControlStyle, background:showMenu?'rgba(0,0,0,.28)':'rgba(0,0,0,.12)', border:`${showMenu?'2.5px':'1px'} solid ${showMenu?'#FFFFFF':'rgba(255,255,255,.12)'}`, boxSizing:'border-box', boxShadow:['grid-tools','grid-basics'].includes(tutorialStep)?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
               <svg width={bottomIconSize + 1} height={bottomIconSize + 1} viewBox="0 0 24 24" fill="none" style={{ display:'block' }}><path d="M4 7h16M7 12h13M10 17h10" stroke="currentColor" strokeWidth="2.35" strokeLinecap="round"/></svg>
             </button>
           </div>
@@ -6534,7 +6537,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
   const handleTouchEnd = () => { if (!showLightbox) setPullProgress(0); };
   
   useEffect(() => {
-    if (tutorialStep === 'detail-overview' || tutorialStep === 'detail-metrics' || tutorialStep === 'detail-status') setStatMode('statistiche');
+    if (tutorialStep === 'detail-guide' || tutorialStep === 'detail-overview' || tutorialStep === 'detail-metrics' || tutorialStep === 'detail-status') setStatMode('statistiche');
     if (tutorialStep === 'detail-abilities') setStatMode('abilita');
   }, [tutorialStep]);
 
@@ -6602,7 +6605,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
           <p style={{ margin:'4px 0 0', color:c.accent, fontSize:15, fontStyle:'italic', fontWeight:400 }}>{a.sci}</p>
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:8, marginBottom:14, padding:'0 4px' }}>
-          <div data-tour="animal-status" style={{ width:'100%', borderRadius:18, boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}><StatusBadge status={localStatus} accentColor={c.accent}/></div>
+          <div data-tour="animal-status" style={{ width:'100%', borderRadius:18, boxShadow:['detail-guide','detail-overview'].includes(tutorialStep)?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}><StatusBadge status={localStatus} accentColor={c.accent}/></div>
           {documented && (
             <div style={{ display:'flex', alignItems:'center', gap:8, borderRadius:16, padding:'8px 12px', background:DOCUMENTED_META.bg, border:DOCUMENTED_META.border }}>
               <span style={{ fontSize:14 }}>📖</span>
@@ -6621,12 +6624,12 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
             </div>
           )}
         </div>
-        <div data-animaldex-card="true" style={{ background:detailPanel, border:detailPanelBorder, borderRadius:24, padding:14, marginBottom:10, boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.22), 0 0 24px rgba(240,168,64,.18)':'none' }}>
+        <div data-animaldex-card="true" style={{ background:detailPanel, border:detailPanelBorder, borderRadius:24, padding:14, marginBottom:10, boxShadow:['detail-guide','detail-overview'].includes(tutorialStep)?'0 0 0 3px rgba(240,168,64,.22), 0 0 24px rgba(240,168,64,.18)':'none' }}>
           <p style={{ margin:0, color:isLightTheme?'rgba(0,0,0,.74)':'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.desc}</p>
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:8, marginBottom:10, padding:'0 4px' }}>
-          <div data-tour="animal-rarity" style={{ width:'100%', opacity:.88, filter:'saturate(.86)', boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none', borderRadius:18 }}><RarityBadge rarity={a.rarity || 'Comune'} full style={{ width:'100%', fontSize:13.5 }} /></div>
-          <div data-tour="animal-conservation" style={{ background:co.bg, borderRadius:18, padding:'9px 12px', color:co.c, fontSize:12, fontWeight:700, textAlign:'center', opacity:.90, boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>{formatConservationStatus(a.cons)}</div>
+          <div data-tour="animal-rarity" style={{ width:'100%', opacity:.88, filter:'saturate(.86)', boxShadow:['detail-guide','detail-overview'].includes(tutorialStep)?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none', borderRadius:18 }}><RarityBadge rarity={a.rarity || 'Comune'} full style={{ width:'100%', fontSize:13.5 }} /></div>
+          <div data-tour="animal-conservation" style={{ background:co.bg, borderRadius:18, padding:'9px 12px', color:co.c, fontSize:12, fontWeight:700, textAlign:'center', opacity:.90, boxShadow:['detail-guide','detail-overview'].includes(tutorialStep)?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>{formatConservationStatus(a.cons)}</div>
         </div>
         <div style={{ color:isLightTheme?'rgba(0,0,0,.54)':'rgba(255,255,255,.56)', fontSize:10.5, lineHeight:1.45, margin:'0 4px 16px' }}>
           {visitedMatches ? `Presente in ${visitedMatches} dei tuoi paesi · ` : ''}{(a.rarity || 'Comune')}, {a.rarity === 'Comune' ? 'facile da catturare' : a.rarity === 'Leggendario' ? 'molto raro' : 'impegnativo da trovare'} · “Catturato” significa registrato con foto verificata dall’AI, non cattura fisica.
@@ -8048,81 +8051,60 @@ function AwardToast({ award, onOpen, onDismiss }) {
 function OperationalTutorialOverlay({ step, animal, onNext, onPrev, onFinish, onSkip }) {
   if (!step) return null;
   const OCHRE = '#A84637';
-  const sequence = ['home','grid-status','grid-tools','grid-open','detail-overview','detail-metrics','detail-abilities','detail-status','home-finish'];
+  const sequence = ['home','grid-basics','grid-open','detail-guide','detail-status','home-finish'];
   const index = Math.max(0, sequence.indexOf(step));
   const pct = Math.round(((index + 1) / sequence.length) * 100);
 
   const copyMap = {
     home: {
       title:'La tua base',
-      kicker:'Home',
-      body:'La Home raccoglie il tuo livello, la missione consigliata, le scorciatoie rapide e l’accesso alle sezioni. Per iniziare davvero si entra nella griglia: è il catalogo operativo di Apex.',
-      hint:'Tocca “Apex” nella navigazione evidenziata.',
+      kicker:'Home · 1/6',
+      body:'La Home raccoglie missione del giorno, progressi e scorciatoie. Per iniziare entra nella griglia Apex: è il catalogo vivo delle specie.',
+      hint:'Tocca il pulsante Apex evidenziato.',
       action:null,
     },
-    'grid-status': {
-      title:'I quattro stati',
-      kicker:'Grid',
-      body:'Misterioso significa che l’identità non è ancora rivelata. Ricercato indica una specie disponibile nel tuo percorso, ma non ancora vista. Avvistato è una specie che dichiari di aver visto dal vivo. Catturato è una specie confermata nel Dex, idealmente con foto.',
-      hint:'Guarda i quattro filtri in alto: sono il modo più rapido per leggere il tuo progresso.',
-      action:'Avanti',
-    },
-    'grid-tools': {
-      title:'Cercare e filtrare',
-      kicker:'Grid',
-      body:'La griglia non è solo una lista. Puoi cercare per nome, aprire i filtri, ordinare, isolare una classe, una geografia, uno stato di conservazione o una famiglia di abilità. Quando il catalogo cresce, questi strumenti diventano la tua bussola.',
-      hint:'I comandi evidenziati sono ricerca, ordinamento e filtri.',
+    'grid-basics': {
+      title:'Griglia e progresso',
+      kicker:'Grid · 2/6',
+      body:'In alto trovi i quattro stati — Misterioso, Ricercato, Avvistato, Catturato — il cuore del tuo percorso. Sotto, cerca, ordina e filtra per classe, geografia o rarità.',
+      hint:'Guarda filtri e strumenti evidenziati in basso.',
       action:'Avanti',
     },
     'grid-open': {
       title:'Apri una scheda',
-      kicker:'Grid',
-      body:`Useremo ${animal?.com || 'il piccione'} come specie guida. Aprire una card è il gesto base: da lì trovi descrizione, biologia, statistiche, abilità, tassonomia e distribuzione.`,
+      kicker:'Grid · 3/6',
+      body:`Useremo ${animal?.com || 'il piccione'} come guida. Ogni card apre descrizione, biologia, statistiche interattive, abilità e distribuzione.`,
       hint:'Tocca la card evidenziata.',
       action:null,
     },
-    'detail-overview': {
-      title:'Leggere un animale',
-      kicker:'Scheda',
-      body:'In alto trovi nome comune e nome scientifico. Subito sotto ci sono rarità, conservazione e status. La descrizione racconta come riconoscerlo; Biologia approfondisce comportamento, adattamenti e vita quotidiana.',
-      hint:'Scorri la scheda: ogni blocco racconta un pezzo diverso della specie.',
+    'detail-guide': {
+      title:'Leggi e scopri',
+      kicker:'Scheda · 4/6',
+      body:'Nome, rarità e conservazione in alto. Scorri per biologia, peso, dimensioni, ruolo trofico e abilità biologiche. Ogni blocco racconta un pezzo della specie.',
+      hint:'Scorri la scheda, poi premi Avanti.',
       action:'Avanti',
     },
-    'detail-metrics': {
-      title:'Peso, dimensioni e ruolo',
-      kicker:'Scheda',
-      body:'Le tre card statistiche sono interattive. Peso apre il tachimetro, Dimensioni mostra il confronto di scala, la piramide spiega il ruolo alimentare nella rete trofica.',
-      hint:'Tocca una delle tre card evidenziate per aprire lo zoom.',
-      action:null,
-    },
-    'detail-abilities': {
-      title:'Abilità e curiosità',
-      kicker:'Scheda',
-      body:'Le abilità sono il lato divulgativo di Apex: adattamenti, comportamenti e capacità fuori scala. Per esempio, i piccioni sanno distinguere immagini e pattern complessi, e in alcuni studi hanno imparato a separare stili pittorici come Picasso e Monet. Tocca una card abilità per girarla e leggere la curiosità.',
-      hint:'Tocca una card abilità evidenziata.',
-      action:null,
-    },
     'detail-status': {
-      title:'Avvistare e catturare',
-      kicker:'Scheda',
-      body:'Qui Apex inizia a diventare tuo. Una specie Ricercata è nel mirino; quando la incontri davvero passa ad Avvistata e il tuo percorso si aggiorna. Con una foto o una conferma completa diventa Catturata nel Dex. Ogni passo muove progressi, badge e profilo.',
-      hint:'Tocca il tasto “Ho avvistato” evidenziato sulla scheda.',
+      title:'Segna un avvistamento',
+      kicker:'Scheda · 5/6',
+      body:'Qui Apex diventa tuo: Ricercato → Avvistato quando la incontri dal vivo → Catturato con foto o conferma. Ogni passo muove badge e profilo.',
+      hint:'Tocca “Ho avvistato” evidenziato.',
       action:null,
     },
     'home-finish': {
-      title:'Ora puoi esplorare',
-      kicker:'Home',
-      body:'Hai visto il percorso principale: Home, Grid e scheda animale. Le altre sezioni avranno una guida breve quando le aprirai per la prima volta, così impari nel momento giusto senza sovraccaricare l’inizio.',
-      hint:'Fine del percorso principale.',
-      action:'Chiudi',
+      title:'Sei pronto',
+      kicker:'Fine tour · 6/6',
+      body:'Hai visto Home, griglia e scheda animale. Le altre sezioni — geografia, badge, amici, foto — hanno una mini guida alla prima apertura.',
+      hint:'Esplora liberamente. Torna qui per la missione quotidiana.',
+      action:'Inizia a esplorare',
     },
   };
 
   const copy = copyMap[step];
   if (!copy) return null;
-  const noPrimary = ['home','grid-open','detail-metrics','detail-abilities','detail-status'].includes(step);
+  const noPrimary = ['home','grid-open','detail-status'].includes(step);
   const primary = step === 'home-finish' ? onFinish : onNext;
-  const panelPosition = step === 'grid-tools'
+  const panelPosition = step === 'grid-basics'
     ? { top:'calc(env(safe-area-inset-top, 0px) + 14px)' }
     : { bottom:'calc(env(safe-area-inset-bottom, 0px) + 18px)' };
 
@@ -8352,7 +8334,7 @@ function InstallGuidePreview({ profileKey }) {
   );
 }
 
-function InstallPromptBanner() {
+function InstallPromptBanner({ suppressed = false }) {
   const [profile] = useState(() => detectInstallGuideProfile());
   const [online, setOnline] = useState(() => typeof navigator === 'undefined' ? true : navigator.onLine !== false);
   const [dismissed, setDismissed] = useState(() => {
@@ -8397,7 +8379,7 @@ function InstallPromptBanner() {
     close();
   };
 
-  if (dismissed || !online || isRunningAsInstalledApp()) return null;
+  if (suppressed || dismissed || !online || isRunningAsInstalledApp()) return null;
 
   return (
     <div style={{ position:'absolute', inset:0, zIndex:390, pointerEvents:'none', display:'flex', alignItems:'flex-end', justifyContent:'center', padding:'0 14px calc(env(safe-area-inset-bottom, 0px) + 14px)' }}>
@@ -8442,19 +8424,16 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
   const [residenceCountry,setResidenceCountry]=useState('');
   const [objectives,setObjectives]=useState([]);
   const [objectiveOther,setObjectiveOther]=useState('');
-  const [acquisitionSource,setAcquisitionSource]=useState('');
-  const [acquisitionSourceOther,setAcquisitionSourceOther]=useState('');
-  const [waterActivityInterests,setWaterActivityInterests]=useState([]);
-  const [isCollector,setIsCollector]=useState('');
-  const [annualAbroadVacations,setAnnualAbroadVacations]=useState('');
   const [consents,setConsents]=useState({ terms:false, analytics:false, marketing:false, personalization:false, newsletter:false });
+  const [showProfileExtras,setShowProfileExtras]=useState(false);
   const [cardIndex,setCardIndex]=useState(0);
   const [seenAnimals,setSeenAnimals]=useState([]);
   const [loading,setLoading]=useState(false);
+  const [syncing,setSyncing]=useState(false);
   const [result,setResult]=useState(null);
   const [error,setError]=useState('');
 
-  const steps = ['intro','identity','birth','location','goals','travel','countries','radar','review','sync','wow'];
+  const steps = ['intro','profile','intent','countries','radar','wow'];
   const stepIndex = Math.max(0, steps.indexOf(step));
   const progress = Math.round(((stepIndex + 1) / steps.length) * 100);
   const allCountries = useMemo(() => normalizeIsoList(getAllScratchCountries()), []);
@@ -8462,6 +8441,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
   const animalCount = animals?.length || LOCAL_ANIMALS.length;
   const classCount = new Set((animals?.length ? animals : LOCAL_ANIMALS).map(a => a.cls).filter(Boolean)).size;
   const countryCount = allCountries.length;
+  const RADAR_TARGET = 6;
 
   const radarAnimals = useMemo(() => {
     if (!selectedCountries.length) return [];
@@ -8472,24 +8452,24 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
     );
     const picked = [];
     const seen = new Set();
-    for (let round = 0; picked.length < 14 && round < 80; round++) {
+    for (let round = 0; picked.length < RADAR_TARGET && round < 40; round++) {
       for (const list of byCountry) {
         const next = list.find(a => !seen.has(Number(a.id)));
         if (next) {
           seen.add(Number(next.id));
           picked.push(next);
-          if (picked.length >= 14) break;
+          if (picked.length >= RADAR_TARGET) break;
         }
       }
       if (byCountry.every(list => list.every(a => seen.has(Number(a.id))))) break;
     }
-    if (picked.length < 14) {
+    if (picked.length < RADAR_TARGET) {
       const selectedSet = new Set(selectedCountries.map(c => String(c).toUpperCase()));
       normalizedAnimals
         .filter(a => getAnimalCountryCodes(a).some(code => selectedSet.has(code)))
-        .forEach(a => { if (picked.length < 14 && !seen.has(Number(a.id))) { seen.add(Number(a.id)); picked.push(a); } });
+        .forEach(a => { if (picked.length < RADAR_TARGET && !seen.has(Number(a.id))) { seen.add(Number(a.id)); picked.push(a); } });
     }
-    return picked.slice(0, 14);
+    return picked.slice(0, RADAR_TARGET);
   }, [animals, selectedCountries]);
 
   const currentAnimal = radarAnimals[cardIndex] || null;
@@ -8503,22 +8483,26 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
   }, [animals, selectedCountries]);
 
   const toggleCountry = (code) => setSelectedCountries(prev => normalizeIsoList(prev.includes(code) ? prev.filter(x=>x!==code) : [...prev, code]));
-  const toggleTripTag = (tag) => setSelectedTripTags(prev => prev.includes(tag) ? prev.filter(x=>x!==tag) : [...prev, tag]);
+  const enterCountries = () => {
+    if (residenceCountry && !selectedCountries.length) setSelectedCountries([residenceCountry]);
+    setStep('countries');
+  };
 
   const markRadar = (seen) => {
     if (seen && currentAnimal) setSeenAnimals(prev => Array.from(new Set([...prev, currentAnimal.id])));
     setCardIndex(i => i + 1);
   };
   const goBack = () => {
-    if (step === 'intro' || step === 'sync') return;
+    if (step === 'intro' || step === 'wow') return;
     const idx = steps.indexOf(step);
     if (idx > 0) setStep(steps[idx - 1]);
   };
 
   const runSync = async () => {
     setLoading(true);
+    setSyncing(true);
     setError('');
-    setStep('sync');
+    setStep('wow');
     const payload = { nickname, countries:normalizeIsoList(selectedCountries), seenAnimalIds:Array.from(new Set(seenAnimals)), tripTags:selectedTripTags, demographics:{
       gender,
       nationality,
@@ -8527,11 +8511,11 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
       residence_country:residenceCountry,
       onboarding_objectives:objectives,
       onboarding_objective_other:objectiveOther,
-      acquisition_source:acquisitionSource,
-      acquisition_source_other:acquisitionSourceOther,
-      water_activity_interests:waterActivityInterests,
-      is_collector:isCollector === 'yes' ? true : isCollector === 'no' ? false : null,
-      annual_abroad_vacations:annualAbroadVacations,
+      acquisition_source:'',
+      acquisition_source_other:'',
+      water_activity_interests:[],
+      is_collector:null,
+      annual_abroad_vacations:'',
       pokemon_affinity:'',
       consent_terms_privacy:consents.terms,
       consent_analytics:consents.analytics,
@@ -8549,17 +8533,16 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
       };
       const data = await Promise.race([
         Promise.resolve(onComplete?.(payload)),
-        new Promise(resolve => setTimeout(() => resolve(timeoutResult), 16000))
+        new Promise(resolve => setTimeout(() => resolve(timeoutResult), 5000))
       ]);
       setResult(data || timeoutResult);
-      setStep('wow');
     } catch (err) {
       console.warn('[Apex] Onboarding sync failed:', err);
       setError(err?.message || 'Sincronizzazione non completata. Puoi riprovare o continuare: Apex tenterà di salvare in background.');
       setResult({ ok:false, unlocked_count:Math.max(predictedUnlocks, selectedCountries.length), seen_count:seenAnimals.length, badge_ids:['ONB-01-L1'] });
-      setStep('review');
     } finally {
       setLoading(false);
+      setSyncing(false);
     }
   };
 
@@ -8568,12 +8551,6 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
   const disabledButton = { ...primaryButton, background:'#3A3A3C', color:'rgba(255,255,255,.42)', boxShadow:'none', cursor:'default' };
   const Pill = ({ children, active=false, onClick }) => <button onClick={onClick} style={{ borderRadius:999, border:`1px solid ${active?OCHRE:'rgba(255,255,255,.10)'}`, background:active?`rgba(168,70,55,.22)`:'rgba(255,255,255,.055)', color:active?'#FFD4C8':'rgba(255,255,255,.74)', padding:'8px 11px', fontSize:11.5, fontWeight:900, cursor:'pointer', fontFamily:'inherit' }}>{children}</button>;
   const ObjectivePill = ({ value, label }) => <Pill active={objectives.includes(value)} onClick={()=>setObjectives(prev => prev.includes(value) ? prev.filter(x=>x!==value) : [...prev, value])}>{label}</Pill>;
-  const SourcePill = ({ value, label }) => <Pill active={acquisitionSource === value} onClick={()=>setAcquisitionSource(value)}>{label}</Pill>;
-  const WaterPill = ({ value, label }) => <Pill active={waterActivityInterests.includes(value)} onClick={()=>setWaterActivityInterests(prev => {
-    if (value === 'not_interested') return prev.includes(value) ? [] : [value];
-    const withoutNone = prev.filter(x => x !== 'not_interested');
-    return withoutNone.includes(value) ? withoutNone.filter(x=>x!==value) : [...withoutNone, value];
-  })}>{label}</Pill>;
   const ConsentRow = ({ keyName, label, required=false }) => <button type="button" onClick={()=>setConsents(prev => ({ ...prev, [keyName]:!prev[keyName] }))} style={{ display:'flex', alignItems:'center', gap:10, width:'100%', border:'1px solid rgba(255,255,255,.08)', borderRadius:14, background:'rgba(255,255,255,.045)', padding:'10px 12px', color:'white', fontFamily:'inherit', textAlign:'left' }}>
     <span style={{ width:22, height:22, borderRadius:8, background:consents[keyName]?OCHRE:'rgba(255,255,255,.08)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:1000 }}>{consents[keyName]?'✓':''}</span>
     <span style={{ flex:1, fontSize:12, color:'rgba(255,255,255,.72)', lineHeight:1.35 }}>{label} {required && <b style={{ color:'#FFD4C8' }}>*</b>}</span>
@@ -8583,11 +8560,11 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
     <div style={{ height:'100%', background:`radial-gradient(circle at 50% 0%, ${OCHRE}2A, transparent 36%), linear-gradient(180deg,#111113,#050506)`, color:'white', display:'flex', flexDirection:'column', overflow:'hidden' }}>
       <div style={{ padding:'20px 18px 8px', flexShrink:0 }}>
         <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:12 }}>
-          {step !== 'intro' && step !== 'sync' && <button onClick={goBack} aria-label="Indietro" style={{ width:38, height:38, borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.055)', color:'white', fontSize:22, fontWeight:1000, cursor:'pointer', flexShrink:0 }}>‹</button>}
+          {step !== 'intro' && step !== 'wow' && <button onClick={goBack} aria-label="Indietro" style={{ width:38, height:38, borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.055)', color:'white', fontSize:22, fontWeight:1000, cursor:'pointer', flexShrink:0 }}>‹</button>}
           <div style={{ flex:1, minWidth:0 }}>
-            <div style={{ color:OCHRE, fontSize:11, fontWeight:1000, letterSpacing:.9, textTransform:'uppercase' }}>Apex setup</div>
+            <div style={{ color:OCHRE, fontSize:11, fontWeight:1000, letterSpacing:.9, textTransform:'uppercase' }}>Setup · {stepIndex + 1}/{steps.length}</div>
             <div style={{ color:'white', fontSize:28, fontWeight:1000, letterSpacing:'-.8px', marginTop:3 }}>
-              {step==='intro'?'Benvenuto in Apex':step==='identity'?'Come ti chiami':step==='birth'?'Profilo base':step==='location'?'Da dove parti':step==='goals'?'Cosa vuoi fare':step==='travel'?'Stile di esplorazione':step==='countries'?'Sul Campo · Paesi':step==='radar'?'Primi avvistamenti':step==='review'?'Riepilogo':step==='sync'?'Sincronizzazione':'Apex è pronto'}
+              {step==='intro'?'Benvenuto in Apex':step==='profile'?'Il tuo profilo':step==='intent'?'Cosa ti interessa':step==='countries'?'Sul Campo':step==='radar'?'Primi avvistamenti':'Il tuo atlante è pronto'}
             </div>
           </div>
           <div style={{ width:54, height:54, borderRadius:20, background:`linear-gradient(135deg,${OCHRE},#6F2D24)`, display:'flex', alignItems:'center', justifyContent:'center', fontSize:26, boxShadow:`0 0 32px ${OCHRE}44` }}>A</div>
@@ -8601,14 +8578,14 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
         <div style={{ ...panel, flex:1, display:'flex', flexDirection:'column', justifyContent:'space-between' }}>
           <div>
             <div style={{ color:OCHRE, fontSize:12, fontWeight:1000, textTransform:'uppercase', letterSpacing:.9 }}>Atlante vivo della fauna</div>
-            <div style={{ color:'white', fontSize:27, fontWeight:1000, letterSpacing:'-.7px', lineHeight:1.06, marginTop:8 }}>Apex ti aiuta a scoprire, riconoscere e collezionare gli animali del mondo.</div>
-            <p style={{ color:'rgba(255,255,255,.68)', fontSize:13.5, lineHeight:1.6 }}>L'app combina catalogo, geografia, rarità, stato di conservazione, abilità biologiche e progressi personali. In pochi passaggi prepariamo il tuo profilo e ti spieghiamo le parole chiave che incontrerai.</p>
+            <div style={{ color:'white', fontSize:27, fontWeight:1000, letterSpacing:'-.7px', lineHeight:1.06, marginTop:8 }}>Colleziona, esplora e impara gli animali del mondo.</div>
+            <p style={{ color:'rgba(255,255,255,.68)', fontSize:13.5, lineHeight:1.6 }}>In meno di 2 minuti prepariamo il tuo atlante personale: profilo, paesi visitati e primi avvistamenti. Poi ti guidiamo brevemente nella griglia.</p>
             <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginTop:14 }}>
               {[
-                [`${animalCount}`,'Animali','specie catalogate, divise per classe e dati ecologici'],
-                [`${classCount}`,'Classi','mammiferi, uccelli, rettili, pesci, insetti e altri gruppi'],
-                [`${countryCount}`,'Paesi','geografia usata per esplorare fauna e regioni'],
-                ['Badge','Progressi','riconoscimenti per viaggi, catture, rarità e abilità'],
+                [`${animalCount}`,'Specie','catalogo con rarità, biologia e geografia'],
+                [`${countryCount}`,'Paesi','attivano la Spedizione e sbloccano fauna locale'],
+                ['4','Stati','Misterioso → Ricercato → Avvistato → Catturato'],
+                ['Badge','Progressi','obiettivi che trasformano l\'esplorazione in abitudine'],
               ].map(([ic,t,d])=>(
                 <div key={t} style={{ borderRadius:20, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.08)', padding:12 }}>
                   <div style={{ color:'#FFD4C8', fontSize:20, fontWeight:1000 }}>{ic}</div><div style={{ fontWeight:1000, fontSize:13, marginTop:5 }}>{t}</div><div style={{ color:'rgba(255,255,255,.50)', fontSize:10.5, lineHeight:1.3, marginTop:3 }}>{d}</div>
@@ -8616,106 +8593,60 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
               ))}
             </div>
           </div>
-          <button onClick={()=>setStep('identity')} style={primaryButton}>Inizia</button>
+          <button onClick={()=>setStep('profile')} style={primaryButton}>Inizia in 2 minuti</button>
         </div>
       )}
 
-      {step==='identity' && (
+      {step==='profile' && (
         <div style={{ ...panel, flex:1, display:'flex', flexDirection:'column', justifyContent:'space-between' }}>
           <div>
-          <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.6, marginTop:0 }}>Scegli il nome che Apex userà nel profilo, nelle schermate di progresso e nei riconoscimenti.</p>
+          <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.6, marginTop:0 }}>Come ti chiami in Apex? Il paese di residenza ci aiuta a suggerirti fauna locale.</p>
           <div style={{ borderRadius:16, background:'rgba(255,255,255,.045)', border:'1px solid rgba(255,255,255,.08)', padding:12, marginBottom:12 }}>
             <div style={{ color:'rgba(255,255,255,.46)', fontSize:10.5, fontWeight:900, textTransform:'uppercase' }}>Account</div>
             <div style={{ color:'white', fontSize:13, fontWeight:900, marginTop:4 }}>{user?.email || 'Email non disponibile'}</div>
-            <div style={{ color:'rgba(255,255,255,.50)', fontSize:11, marginTop:3 }}>Provider: {user?.app_metadata?.provider || user?.identities?.[0]?.provider || 'email'}</div>
           </div>
           <label style={{ color:'rgba(255,255,255,.58)', fontSize:12, fontWeight:900 }}>Nickname</label>
           <input value={nickname} onChange={e=>setNickname(e.target.value)} placeholder="Es. Andrea" style={{ width:'100%', height:54, borderRadius:18, background:'#202024', border:`1px solid ${OCHRE}55`, color:'white', padding:'0 15px', fontSize:15, boxSizing:'border-box', outline:'none', fontFamily:'inherit', marginTop:8 }} />
+          <label style={{ display:'block', color:'rgba(255,255,255,.58)', fontSize:12, fontWeight:900, marginTop:16 }}>Paese di residenza</label>
+          <select value={residenceCountry} onChange={e=>setResidenceCountry(e.target.value)} style={{ width:'100%', height:54, borderRadius:18, background:'#202024', border:'1px solid rgba(255,255,255,.14)', color:'white', padding:'0 14px', fontSize:15, boxSizing:'border-box', fontFamily:'inherit', marginTop:8 }}>
+            <option value="">Seleziona (consigliato)</option>
+            {allCountries.map(code => <option key={code} value={code}>{getCountryDisplayName(code)}</option>)}
+          </select>
+          <button type="button" onClick={()=>setShowProfileExtras(v=>!v)} style={{ marginTop:14, border:'none', background:'transparent', color:'rgba(255,255,255,.52)', fontSize:12, fontWeight:900, cursor:'pointer', fontFamily:'inherit', textAlign:'left', padding:0 }}>{showProfileExtras ? '▾ Nascondi dettagli facoltativi' : '▸ Altri dettagli facoltativi'}</button>
+          {showProfileExtras && (
+            <div style={{ marginTop:10, display:'grid', gap:10 }}>
+              <input type="date" value={dateOfBirth} onChange={e=>setDateOfBirth(e.target.value)} aria-label="Data di nascita" style={{ width:'100%', height:48, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.14)', color:'white', padding:'0 14px', fontSize:14, boxSizing:'border-box', fontFamily:'inherit', colorScheme:'dark' }} />
+              <select value={gender} onChange={e=>setGender(e.target.value)} style={{ width:'100%', height:48, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.14)', color:'white', padding:'0 14px', fontSize:14, boxSizing:'border-box', fontFamily:'inherit' }}>
+                <option value="">Genere (facoltativo)</option><option>Donna</option><option>Uomo</option><option>Non binario</option><option>Preferisco non dirlo</option>
+              </select>
+              <select value={nationality} onChange={e=>setNationality(e.target.value)} style={{ width:'100%', height:48, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.14)', color:'white', padding:'0 14px', fontSize:14, boxSizing:'border-box', fontFamily:'inherit' }}>
+                <option value="">Nazionalità (facoltativa)</option>
+                {allCountries.map(code => <option key={`nat-${code}`} value={code}>{getCountryDisplayName(code)}</option>)}
+              </select>
+            </div>
+          )}
           </div>
-          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10, marginTop:16 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button disabled={!nickname.trim()} onClick={()=>setStep('birth')} style={nickname.trim() ? primaryButton : disabledButton}>Continua</button></div>
+          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10, marginTop:16 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button disabled={!nickname.trim()} onClick={()=>setStep('intent')} style={nickname.trim() ? primaryButton : disabledButton}>Continua</button></div>
         </div>
       )}
 
-      {step==='birth' && (
+      {step==='intent' && (
         <div style={{ ...panel, flex:1, display:'flex', flexDirection:'column', justifyContent:'space-between' }}>
           <div>
-            <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.6, marginTop:0 }}>Questi dati servono a leggere meglio il pubblico di Apex e, più avanti, a calibrare contenuti e missioni. Puoi lasciare vuoti i campi non essenziali.</p>
-            <label style={{ color:'rgba(255,255,255,.58)', fontSize:12, fontWeight:900 }}>Data di nascita</label>
-            <input type="date" value={dateOfBirth} onChange={e=>setDateOfBirth(e.target.value)} aria-label="Data di nascita" style={{ width:'100%', height:56, borderRadius:18, background:'#202024', border:'1px solid rgba(255,255,255,.14)', color:'white', padding:'0 14px', fontSize:16, boxSizing:'border-box', fontFamily:'inherit', marginTop:8, colorScheme:'dark' }} />
-            <div style={{ color:'rgba(255,255,255,.42)', fontSize:11.5, lineHeight:1.4, marginTop:8 }}>Apri il calendario oppure digita la data nel formato del tuo dispositivo.</div>
-            <label style={{ display:'block', color:'rgba(255,255,255,.58)', fontSize:12, fontWeight:900, marginTop:18 }}>Genere</label>
-            <select value={gender} onChange={e=>setGender(e.target.value)} style={{ width:'100%', height:54, borderRadius:18, background:'#202024', border:'1px solid rgba(255,255,255,.14)', color:'white', padding:'0 14px', fontSize:15, boxSizing:'border-box', fontFamily:'inherit', marginTop:8 }}>
-              <option value="">Seleziona, oppure salta</option><option>Donna</option><option>Uomo</option><option>Non binario</option><option>Preferisco non dirlo</option>
-            </select>
-          </div>
-          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10, marginTop:16 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button onClick={()=>setStep('location')} style={primaryButton}>Continua</button></div>
-        </div>
-      )}
-
-      {step==='location' && (
-        <div style={{ ...panel, flex:1, display:'flex', flexDirection:'column', justifyContent:'space-between' }}>
-          <div>
-            <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.6, marginTop:0 }}>La residenza e la nazionalità aiutano Apex a capire il punto di partenza del tuo atlante personale.</p>
-            <label style={{ color:'rgba(255,255,255,.58)', fontSize:12, fontWeight:900 }}>Paese di residenza</label>
-            <select value={residenceCountry} onChange={e=>setResidenceCountry(e.target.value)} style={{ width:'100%', height:54, borderRadius:18, background:'#202024', border:'1px solid rgba(255,255,255,.14)', color:'white', padding:'0 14px', fontSize:15, boxSizing:'border-box', fontFamily:'inherit', marginTop:8 }}>
-              <option value="">Seleziona paese</option>
-              {allCountries.map(code => <option key={code} value={code}>{getCountryDisplayName(code)}</option>)}
-            </select>
-            <label style={{ display:'block', color:'rgba(255,255,255,.58)', fontSize:12, fontWeight:900, marginTop:18 }}>Nazionalità</label>
-            <select value={nationality} onChange={e=>setNationality(e.target.value)} style={{ width:'100%', height:54, borderRadius:18, background:'#202024', border:'1px solid rgba(255,255,255,.14)', color:'white', padding:'0 14px', fontSize:15, boxSizing:'border-box', fontFamily:'inherit', marginTop:8 }}>
-              <option value="">Seleziona nazionalità</option>
-              {allCountries.map(code => <option key={code} value={code}>{getCountryDisplayName(code)}</option>)}
-            </select>
-            <label style={{ display:'block', color:'rgba(255,255,255,.58)', fontSize:12, fontWeight:900, marginTop:18 }}>Telefono</label>
-            <input value={phone} onChange={e=>setPhone(e.target.value)} placeholder="Facoltativo" style={{ width:'100%', height:52, borderRadius:18, background:'#202024', border:'1px solid rgba(255,255,255,.14)', color:'white', padding:'0 14px', fontSize:15, boxSizing:'border-box', outline:'none', fontFamily:'inherit', marginTop:8 }} />
-          </div>
-          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10, marginTop:16 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button onClick={()=>setStep('goals')} style={primaryButton}>Continua</button></div>
-        </div>
-      )}
-
-      {step==='goals' && (
-        <div style={{ ...panel, flex:1, display:'flex', flexDirection:'column', justifyContent:'space-between' }}>
-          <div>
-            <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.6, marginTop:0 }}>Cosa vuoi ottenere da Apex? Puoi scegliere più opzioni.</p>
+            <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.6, marginTop:0 }}>Scegli cosa vuoi da Apex. Useremo le tue preferenze per missioni e suggerimenti.</p>
             <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
               <ObjectivePill value="collection" label="Collezionare specie" /><ObjectivePill value="travel" label="Preparare viaggi" /><ObjectivePill value="photo_ai" label="Riconoscere da foto" /><ObjectivePill value="education" label="Imparare biologia" /><ObjectivePill value="badges" label="Completare badge" /><ObjectivePill value="other" label="Altro" />
             </div>
             {objectives.includes('other') && <input value={objectiveOther} onChange={e=>setObjectiveOther(e.target.value)} placeholder="Scrivi il tuo obiettivo" style={{ width:'100%', height:48, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.12)', color:'white', padding:'0 13px', fontSize:13, boxSizing:'border-box', outline:'none', fontFamily:'inherit', marginTop:12 }} />}
-            <div style={{ color:'rgba(255,255,255,.55)', fontSize:11, fontWeight:900, margin:'20px 0 8px', textTransform:'uppercase' }}>Come ci hai conosciuti?</div>
-            <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
-              <SourcePill value="instagram" label="Instagram" /><SourcePill value="tiktok" label="TikTok" /><SourcePill value="youtube" label="YouTube" /><SourcePill value="google_search" label="Google" /><SourcePill value="friend" label="Amico" /><SourcePill value="app_store" label="Store" /><SourcePill value="school_event" label="Scuola/evento" /><SourcePill value="park_museum" label="Parco/museo" /><SourcePill value="other" label="Altro" />
-            </div>
-            {acquisitionSource === 'other' && <input value={acquisitionSourceOther} onChange={e=>setAcquisitionSourceOther(e.target.value)} placeholder="Raccontaci dove ci hai scoperti" style={{ width:'100%', height:48, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.12)', color:'white', padding:'0 13px', fontSize:13, boxSizing:'border-box', outline:'none', fontFamily:'inherit', marginTop:12 }} />}
-            <div style={{ color:'rgba(255,255,255,.55)', fontSize:11, fontWeight:900, margin:'20px 0 8px', textTransform:'uppercase' }}>Mondo marino</div>
-            <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
-              <WaterPill value="scuba_diver" label="Scuba diver" /><WaterPill value="snorkeler" label="Snorkeler" /><WaterPill value="freediver" label="Freediver" /><WaterPill value="marine_life_fan" label="Fauna marina" /><WaterPill value="beginner_interested" label="Vorrei iniziare" /><WaterPill value="not_interested" label="Non ora" />
-            </div>
-            <div style={{ marginTop:18, borderRadius:18, background:'rgba(168,70,55,.12)', border:'1px solid rgba(168,70,55,.24)', padding:13, color:'rgba(255,255,255,.72)', fontSize:12.5, lineHeight:1.45 }}>I badge si ottengono completando azioni misurabili: visitare paesi, avvistare o catturare animali, scoprire predatori apex, raccogliere specie rare, esplorare classi tassonomiche e abilità biologiche.</div>
-          </div>
-          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10, marginTop:16 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button onClick={()=>setStep('travel')} style={primaryButton}>Continua</button></div>
-        </div>
-      )}
-
-      {step==='travel' && (
-        <div style={{ ...panel, flex:1, display:'flex', flexDirection:'column', justifyContent:'space-between' }}>
-          <div>
-            <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.6, marginTop:0 }}>Queste preferenze aiutano a capire che tipo di esplorazione ti interessa.</p>
-            <label style={{ color:'rgba(255,255,255,.58)', fontSize:12, fontWeight:900 }}>Ti consideri collezionista?</label>
-            <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginTop:8 }}>
-              {[['yes','Sì'],['no','No']].map(([value,label]) => <button key={value} onClick={()=>setIsCollector(value)} style={{ minHeight:48, borderRadius:16, border:`1px solid ${isCollector===value?OCHRE:'rgba(255,255,255,.10)'}`, background:isCollector===value?'rgba(168,70,55,.22)':'rgba(255,255,255,.045)', color:'white', fontWeight:1000 }}>{label}</button>)}
-            </div>
-            <label style={{ display:'block', color:'rgba(255,255,255,.58)', fontSize:12, fontWeight:900, marginTop:18 }}>Viaggi all'estero in un anno</label>
-            <select value={annualAbroadVacations} onChange={e=>setAnnualAbroadVacations(e.target.value)} style={{ width:'100%', height:52, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.12)', color:'white', padding:'0 12px', fontSize:14, marginTop:8 }}><option value="">Seleziona frequenza</option><option value="0">Nessuno</option><option value="1">1</option><option value="2-4">2-4</option><option value="5-10">5-10</option><option value="10+">10+</option></select>
             <div style={{ color:'rgba(255,255,255,.55)', fontSize:11, fontWeight:900, margin:'18px 0 8px', textTransform:'uppercase' }}>Consensi</div>
             <div style={{ display:'grid', gap:7 }}>
               <ConsentRow keyName="terms" label="Accetto termini, privacy e trattamento dati necessario al funzionamento di Apex" required />
-              <ConsentRow keyName="analytics" label="Analytics per migliorare prodotto e stabilità" />
-              <ConsentRow keyName="marketing" label="Comunicazioni commerciali e offerte future" />
-              <ConsentRow keyName="personalization" label="Personalizzazione di missioni, contenuti e suggerimenti" />
-              <ConsentRow keyName="newsletter" label="Newsletter e aggiornamenti Apex" />
+              <ConsentRow keyName="analytics" label="Analytics anonimi per migliorare stabilità e prodotto" />
+              <ConsentRow keyName="marketing" label="Comunicazioni su novità e funzioni premium" />
             </div>
+            <div style={{ marginTop:14, borderRadius:16, background:'rgba(168,70,55,.10)', border:'1px solid rgba(168,70,55,.20)', padding:11, color:'rgba(255,255,255,.62)', fontSize:11.5, lineHeight:1.4 }}>Ogni avvistamento e ogni badge costruiscono il tuo atlante. Più usi Apex, più la fauna del mondo diventa tua.</div>
           </div>
-          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10, marginTop:16 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button disabled={!consents.terms} onClick={()=>setStep('countries')} style={consents.terms ? primaryButton : disabledButton}>Continua</button></div>
+          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10, marginTop:16 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button disabled={!consents.terms} onClick={enterCountries} style={consents.terms ? primaryButton : disabledButton}>Scegli i paesi</button></div>
         </div>
       )}
 
@@ -8739,7 +8670,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
             <div style={{ borderRadius:18, background:'rgba(255,255,255,.055)', padding:12 }}><div style={{ color:OCHRE, fontWeight:1000, fontSize:18 }}>{selectedCountries.length}</div><div style={{ color:'rgba(255,255,255,.55)', fontSize:11 }}>nazioni</div></div>
             <div style={{ borderRadius:18, background:'rgba(255,255,255,.055)', padding:12 }}><div style={{ color:OCHRE, fontWeight:1000, fontSize:18 }}>{predictedUnlocks}</div><div style={{ color:'rgba(255,255,255,.55)', fontSize:11 }}>animali potenziali</div></div>
           </div>
-          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:8, marginTop:12 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button disabled={!selectedCountries.length} onClick={()=>{ setCardIndex(0); setStep('radar'); }} style={selectedCountries.length?primaryButton:disabledButton}>Mostra specie possibili</button></div>
+          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:8, marginTop:12 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button disabled={!selectedCountries.length} onClick={()=>{ setCardIndex(0); setStep('radar'); }} style={selectedCountries.length?primaryButton:disabledButton}>Continua al radar</button></div>
         </div>
       )}
 
@@ -8772,63 +8703,45 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
               </div>
             </div>
           )}
-          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10, marginTop:14 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button onClick={()=>setStep('review')} style={primaryButton}>Vai al riepilogo</button></div>
-        </div>
-      )}
-
-      {step==='review' && (
-        <div style={{ ...panel, flex:1, display:'flex', flexDirection:'column', justifyContent:'space-between' }}>
-          <div>
-            <div style={{ color:'white', fontSize:21, fontWeight:1000, lineHeight:1.12 }}>Pacchetto iniziale pronto</div>
-            <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.6 }}>Ora salviamo profilo, paesi visitati, primi avvistamenti e badge iniziale. Da qui in poi potrai esplorare liberamente griglia, geografia, badge, profilo e riconoscimento foto.</p>
-            <div style={{ display:'grid', gridTemplateColumns:'repeat(2,minmax(0,1fr))', gap:8, marginTop:12, width:'100%', maxWidth:'100%', boxSizing:'border-box' }}>
-              {[
-                ['🗺️', selectedCountries.length, 'nazioni visitate'],
-                ['🔭', predictedUnlocks, 'ricercati potenziali'],
-                ['👁️', seenAnimals.length, 'avvistati radar'],
-                ['🏅', 1, 'badge iniziale'],
-              ].map(([ic,n,l])=>(
-                <div key={l} style={{ borderRadius:22, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.08)', padding:13 }}>
-                  <div style={{ fontSize:24 }}>{ic}</div><div style={{ color:OCHRE, fontSize:24, fontWeight:1000, marginTop:4 }}>{n}</div><div style={{ color:'rgba(255,255,255,.55)', fontSize:11, lineHeight:1.2 }}>{l}</div>
-                </div>
-              ))}
-            </div>
-            {error && <div style={{ marginTop:12, borderRadius:16, background:'rgba(255,70,70,.12)', border:'1px solid rgba(255,70,70,.22)', color:'#FF9A9A', padding:12, fontSize:12, lineHeight:1.45 }}>{error}</div>}
-          </div>
-            <div style={{ display:'grid', gap:9 }}>
-            <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10 }}><button onClick={goBack} disabled={loading} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px', opacity:loading ? .45 : 1 }}>Indietro</button><button onClick={runSync} disabled={loading || !selectedCountries.length} style={selectedCountries.length && !loading ? primaryButton : disabledButton}>{loading?'Sincronizzazione...':'Salva e continua'}</button></div>
-            {error && <button onClick={()=>{ setError(''); onFinish?.({ skipReload:true }); }} style={{ minHeight:46, borderRadius:16, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:950, cursor:'pointer', fontFamily:'inherit' }}>Continua comunque</button>}
-          </div>
-        </div>
-      )}
-
-      {step==='sync' && (
-        <div style={{ ...panel, flex:1, display:'flex', alignItems:'center', justifyContent:'center', textAlign:'center' }}>
-          <div>
-            <div style={{ width:98, height:98, borderRadius:'50%', margin:'0 auto 18px', background:`conic-gradient(from 90deg,${OCHRE},#F0A840,#8f34f5,${OCHRE})`, boxShadow:`0 0 46px ${OCHRE}50`, animation:'interactiveWiggle .7s ease-in-out infinite' }} />
-            <div style={{ color:'white', fontSize:19, fontWeight:1000 }}>Prepariamo il tuo atlante</div>
-            <div style={{ color:'rgba(255,255,255,.55)', fontSize:12.5, marginTop:8, lineHeight:1.45 }}>Salvataggio di profilo, paesi visitati, primi avvistamenti e badge iniziale.</div>
+          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, marginTop:14 }}>
+            <button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button>
+            {!currentAnimal ? (
+              <button onClick={runSync} disabled={loading} style={loading ? disabledButton : primaryButton}>{loading ? 'Salvataggio...' : 'Entra in Apex'}</button>
+            ) : (
+              <button onClick={runSync} disabled={loading} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.06)', color:'rgba(255,255,255,.78)', fontWeight:950, cursor:'pointer', fontFamily:'inherit' }}>Salta radar</button>
+            )}
           </div>
         </div>
       )}
 
       {step==='wow' && (
         <div style={{ ...panel, flex:1, display:'flex', flexDirection:'column', justifyContent:'space-between', textAlign:'center' }}>
+          {syncing ? (
+            <div style={{ flex:1, display:'flex', alignItems:'center', justifyContent:'center' }}>
+              <div>
+                <div style={{ width:72, height:72, borderRadius:'50%', margin:'0 auto 14px', background:`conic-gradient(from 90deg,${OCHRE},#F0A840,${OCHRE})`, animation:'interactiveWiggle .7s ease-in-out infinite' }} />
+                <div style={{ color:'white', fontSize:17, fontWeight:1000 }}>Prepariamo il tuo atlante</div>
+                <div style={{ color:'rgba(255,255,255,.52)', fontSize:12, marginTop:6 }}>Salvataggio profilo, paesi e primi avvistamenti…</div>
+              </div>
+            </div>
+          ) : (
           <div>
             <div style={{ fontSize:64, marginBottom:12 }}>🏅</div>
-            <div style={{ color:'#F0C449', fontSize:13, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Primo viaggio registrato</div>
+            <div style={{ color:'#F0C449', fontSize:13, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Prima Spedizione attiva</div>
             <div style={{ color:'white', fontSize:42, fontWeight:1000, marginTop:8 }}>{result?.unlocked_count ?? predictedUnlocks}</div>
-            <div style={{ color:'rgba(255,255,255,.64)', fontSize:13, marginTop:4 }}>animali collegati ai tuoi paesi visitati</div>
-            <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, lineHeight:1.45, marginTop:12 }}>Nella griglia trovi gli animali. In geografia esplori paesi e subregioni. Nei badge vedi gli obiettivi. Nel profilo segui progressi, catture e riconoscimenti.</div>
-            {result?.timed_out && <div style={{ color:'#FFD4C8', fontSize:11.5, marginTop:12, lineHeight:1.4 }}>La rete è lenta: Apex entra subito, la sincronizzazione continua in background.</div>}
+            <div style={{ color:'rgba(255,255,255,.64)', fontSize:13, marginTop:4 }}>animali collegati ai tuoi paesi Sul Campo</div>
+            <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, lineHeight:1.45, marginTop:12 }}>Subito dopo ti guidiamo in 5 passi nella Home e nella griglia. Poi esplori liberamente: geografia, badge, riconoscimento foto.</div>
+            {result?.timed_out && <div style={{ color:'#FFD4C8', fontSize:11.5, marginTop:12, lineHeight:1.4 }}>Rete lenta: Apex è già pronto, la sincronizzazione continua in background.</div>}
+            {error && <div style={{ marginTop:12, borderRadius:14, background:'rgba(255,70,70,.12)', border:'1px solid rgba(255,70,70,.22)', color:'#FF9A9A', padding:10, fontSize:11.5 }}>{error}</div>}
             <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:9, marginTop:20 }}>
-              <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>🔭</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Ricercato: da trovare</div></div>
-              <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>👁️</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Avvistato: visto dal vivo</div></div>
-              <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>📸</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Catturato: confermato</div></div>
-              <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>🏅</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Badge: obiettivi completati</div></div>
+              <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>🔭</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Ricercato</div></div>
+              <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>👁️</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Avvistato</div></div>
+              <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>📸</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Catturato</div></div>
+              <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>🏅</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Badge</div></div>
             </div>
           </div>
-          <button onClick={()=>onFinish?.()} style={primaryButton}>Entra in Apex</button>
+          )}
+          <button onClick={()=>onFinish?.()} disabled={syncing || loading} style={syncing || loading ? disabledButton : primaryButton}>{syncing ? 'Attendi...' : 'Inizia il tour rapido'}</button>
         </div>
       )}
     </div>
@@ -8909,7 +8822,12 @@ function AuthScreen({ onAuthReady }) {
         ? await supabase.auth.signUp({ email, password })
         : await supabase.auth.signInWithPassword({ email, password });
       if (error) throw error;
-      setMessage(mode === 'signup' ? 'Account creato. Controlla la mail se Supabase richiede conferma, poi fai login.' : 'Accesso effettuato.');
+      if (mode === 'signup' && !data?.session) {
+        setMessage('Account creato. Controlla la mail per confermare, poi torna qui e fai login.');
+        setMode('login');
+        return;
+      }
+      setMessage(mode === 'signup' ? 'Account creato. Benvenuto in Apex!' : 'Accesso effettuato.');
       onAuthReady?.();
     } catch (err) {
       setMessage(err?.message || 'Errore autenticazione.');
@@ -8922,8 +8840,8 @@ function AuthScreen({ onAuthReady }) {
     <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'radial-gradient(circle at 78% 4%, rgba(240,168,64,.28), transparent 34%), radial-gradient(circle at 8% 28%, rgba(184,77,58,.34), transparent 42%), linear-gradient(180deg,#2A1208 0%,#17110E 54%,#111113 100%)', color:'white', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", display:'flex', alignItems:'center', justifyContent:'center', padding:'calc(env(safe-area-inset-top, 0px) + 22px) 22px calc(env(safe-area-inset-bottom, 0px) + 22px)', boxSizing:'border-box', position:'relative', overflow:'hidden' }}>
       <form onSubmit={submit} style={{ width:'100%', background:'linear-gradient(180deg,rgba(41,29,22,.94),rgba(18,17,18,.96))', border:'1px solid rgba(240,168,64,.20)', borderRadius:28, padding:24, boxShadow:'0 28px 80px rgba(0,0,0,.48), inset 0 1px 0 rgba(255,255,255,.06)', backdropFilter:'blur(16px)' }}>
         <div style={{ color:'#F0A840', fontSize:13, fontWeight:900, textTransform:'uppercase', letterSpacing:.9 }}>Apex</div>
-        <h1 style={{ margin:'8px 0 6px', fontSize:30, lineHeight:1.05 }}>Accedi</h1>
-        <p style={{ margin:'0 0 18px', color:'rgba(255,245,232,.64)', fontSize:13, lineHeight:1.45 }}>Sincronizza animali, destinazioni, status e badge nel tuo dex.</p>
+        <h1 style={{ margin:'8px 0 6px', fontSize:30, lineHeight:1.05 }}>{mode === 'signup' ? 'Crea il tuo atlante' : 'Bentornato'}</h1>
+        <p style={{ margin:'0 0 18px', color:'rgba(255,245,232,.64)', fontSize:13, lineHeight:1.45 }}>{mode === 'signup' ? 'Colleziona fauna, sblocca badge e tieni traccia di ogni avvistamento.' : 'Sincronizza progressi, paesi Sul Campo e badge nel cloud.'}</p>
         <input type="email" required value={email} onChange={e=>setEmail(e.target.value)} placeholder="Email" style={{ width:'100%', height:46, borderRadius:14, border:'1px solid rgba(240,168,64,.20)', background:'rgba(20,16,14,.78)', color:'white', padding:'0 14px', fontSize:14, boxSizing:'border-box', marginBottom:10, outlineColor:'#F0A840' }} />
         <input type="password" required value={password} onChange={e=>setPassword(e.target.value)} placeholder="Password" style={{ width:'100%', height:46, borderRadius:14, border:'1px solid rgba(240,168,64,.20)', background:'rgba(20,16,14,.78)', color:'white', padding:'0 14px', fontSize:14, boxSizing:'border-box', marginBottom:14, outlineColor:'#F0A840' }} />
         <button disabled={loading} type="submit" style={{ width:'100%', height:48, borderRadius:15, border:'none', background:'linear-gradient(135deg,#B84D3A,#F0A840)', color:'white', fontWeight:900, fontSize:15, cursor:loading?'default':'pointer', opacity:loading ? .7 : 1, boxShadow:'0 12px 28px rgba(184,77,58,.34)' }}>{loading ? 'Attendi...' : mode === 'signup' ? 'Crea account' : 'Login'}</button>
@@ -8931,7 +8849,6 @@ function AuthScreen({ onAuthReady }) {
         <button type="button" onClick={()=>setMode(mode==='signup'?'login':'signup')} style={{ width:'100%', height:42, marginTop:10, borderRadius:13, border:'1px solid rgba(240,168,64,.18)', background:'rgba(255,255,255,.035)', color:'rgba(255,245,232,.84)', fontWeight:800, cursor:'pointer' }}>{mode === 'signup' ? 'Ho già un account' : 'Crea nuovo account'}</button>
         {message && <SwipeDismissNotice onDismiss={()=>setMessage('')} style={{ marginTop:14, color:message.toLowerCase().includes('erro')?'#FF9387':'#F0C449', fontSize:12, lineHeight:1.4 }}>{message}</SwipeDismissNotice>}
       </form>
-      <InstallPromptBanner />
     </div>
   );
 }
@@ -14073,7 +13990,7 @@ export default function App() {
     const localStatusMap = getLocalUserStatusMap(activeUser.id);
     const localBadgeIds = Array.from(getAwardUnlockSet()).map(normalizeBadgeId).filter(Boolean);
     const localDestinations = normalizeIsoList(getVisitedCountries());
-    const fallbackProfile = buildFallbackProfile(activeUser, true);
+    const fallbackProfile = buildFallbackProfile(activeUser, false);
 
     setUserProfile(prev => prev || fallbackProfile);
     if (Object.keys(localStatusMap).length) {
@@ -14111,10 +14028,10 @@ export default function App() {
       const profile = await withTimeout(
         fetchUserProfile(activeUser),
         4500,
-        buildFallbackProfile(activeUser, true),
+        buildFallbackProfile(activeUser, false),
         'fetchUserProfile'
       );
-      setUserProfile(profile || buildFallbackProfile(activeUser, true));
+      setUserProfile(profile || buildFallbackProfile(activeUser, false));
 
       const localSnapshot = buildLocalAnimalSnapshot(activeUser.id, statusMap);
       if (localSnapshot) {
@@ -14227,7 +14144,7 @@ export default function App() {
       const fallback = fallbackSource.map(a => ({ ...a, status:fallbackStatusMap[a.id] || normalizeAnimalStatus(a.status), userStatus:appStatusToSupabase(fallbackStatusMap[a.id] || a.status) }));
       setAnimalsData(fallback);
       setStatusMap(fallbackStatusMap);
-      setUserProfile(prev => prev || buildFallbackProfile(activeUser, true));
+      setUserProfile(prev => prev || buildFallbackProfile(activeUser, false));
     } finally {
       if (!isStale()) {
         setDataLoading(false);
@@ -14645,6 +14562,7 @@ export default function App() {
   };
 
   const finishOnboarding = async (options = {}) => {
+    persistProfileDemographicsLocal(user?.id, { onboarding_completed: true });
     setUserProfile(prev => mergeProfileDemographics({
       ...(prev || buildFallbackProfile(user, true)),
       onboarding_completed:true,
@@ -14652,7 +14570,7 @@ export default function App() {
       onboarding_completed_at:new Date().toISOString(),
     }, user?.id));
     setSel(null);
-    setPage('grid');
+    setPage('menu');
     // Ricarica silenziosa: non bloccare mai la schermata finale dell’onboarding.
     if (!options?.skipReload) {
       reloadSupabaseData(user).catch(err => console.warn('[Apex] reload post-onboarding non bloccante:', err));
@@ -14669,7 +14587,15 @@ export default function App() {
   };
 
   function maybeShowSectionIntro(section) {
+    if (!section) return;
+    if (tutorialStep) return;
+    if (userProfile && userProfile.has_completed_tutorial === false) return;
+    const validSections = ['regions', 'badges', 'abilities', 'compare', 'profile', 'gallery', 'lifeweb', 'quickSeen', 'friends'];
+    const resolved = section === 'taxonomy' ? 'lifeweb' : section;
+    if (!validSections.includes(resolved)) return;
+    if (hasSeenSectionIntro(resolved)) return;
     setActiveSectionGuide(null);
+    setTimeout(() => setSectionIntro(resolved), 260);
   }
 
   const getCurrentTutorialAnimal = () => {
@@ -14679,34 +14605,24 @@ export default function App() {
 
   const handleTutorialAnimalSelect = (animal) => {
     setTutorialAnimalId(animal?.id || tutorialAnimalId);
-    setTutorialStep('detail-overview');
+    setTutorialStep('detail-guide');
   };
 
   const handleTutorialNext = () => {
-    if (tutorialStep === 'grid-status') { setTutorialStep('grid-tools'); return; }
-    if (tutorialStep === 'grid-tools') { setTutorialStep('grid-open'); return; }
-    if (tutorialStep === 'detail-overview') { setTutorialStep('detail-metrics'); return; }
+    if (tutorialStep === 'grid-basics') { setTutorialStep('grid-open'); return; }
+    if (tutorialStep === 'detail-guide') { setTutorialStep('detail-status'); return; }
     if (tutorialStep === 'home-finish') { completeOperationalTutorial(); return; }
   };
   const handleTutorialPrev = () => {
     if (tutorialStep === 'home-finish') { setSel(getCurrentTutorialAnimal()); setPage('grid'); setTutorialStep('detail-status'); return; }
-    if (tutorialStep === 'detail-status') { setTutorialStep('detail-abilities'); return; }
-    if (tutorialStep === 'detail-abilities') { setTutorialStep('detail-metrics'); return; }
-    if (tutorialStep === 'detail-metrics') { setTutorialStep('detail-overview'); return; }
-    if (tutorialStep === 'detail-overview') { setSel(null); setPage('grid'); setTutorialStep('grid-open'); return; }
-    if (tutorialStep === 'grid-open') { setTutorialStep('grid-tools'); return; }
-    if (tutorialStep === 'grid-tools') { setTutorialStep('grid-status'); return; }
-    if (tutorialStep === 'grid-status') { setPage('menu'); setTutorialStep('home'); return; }
+    if (tutorialStep === 'detail-status') { setTutorialStep('detail-guide'); return; }
+    if (tutorialStep === 'detail-guide') { setSel(null); setPage('grid'); setTutorialStep('grid-open'); return; }
+    if (tutorialStep === 'grid-open') { setTutorialStep('grid-basics'); return; }
+    if (tutorialStep === 'grid-basics') { setPage('menu'); setTutorialStep('home'); return; }
   };
 
-  const handleTutorialAbilityClick = () => {
-    if (tutorialStep === 'detail-abilities') {
-      setTimeout(() => setTutorialStep('detail-status'), 520);
-    }
-  };
-  const handleTutorialMetricClick = () => {
-    if (tutorialStep === 'detail-metrics') setTimeout(() => setTutorialStep('detail-abilities'), 520);
-  };
+  const handleTutorialAbilityClick = () => {};
+  const handleTutorialMetricClick = () => {};
   const handleTutorialStatusClick = () => {
     if (tutorialStep === 'detail-status') setTimeout(() => { setSel(null); setPage('menu'); setTutorialStep('home-finish'); }, 620);
   };
@@ -14783,7 +14699,7 @@ const openPage = (nextPage, returnPage = 'menu') => {
 	    if (tutorialStep === 'home') setGridPreset({ id: Date.now(), type:'tutorial', search:'piccione', statuses:['ricercato'], title:'Apex' });
 	    else setGridPreset({ id: Date.now(), type:'status', statuses:['avvistato','catturato'], title:'Apex' });
 	    setPage('grid');
-	    if (tutorialStep === 'home') setTutorialStep('grid-status');
+	    if (tutorialStep === 'home') setTutorialStep('grid-basics');
 	    return;
 	  }
 	  setPage(nextPage || 'menu');
@@ -15021,7 +14937,10 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   if (authLoading) {
     return (
       <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
-        <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800 }}>Caricamento sessione...</div>
+        <div style={{ textAlign:'center' }}>
+          <div style={{ width:44, height:44, borderRadius:16, margin:'0 auto 12px', background:'linear-gradient(135deg,#B84D3A,#F0A840)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:1000, fontSize:20 }}>A</div>
+          <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800, fontSize:13 }}>Apertura Apex…</div>
+        </div>
       </div>
     );
   }
@@ -15031,13 +14950,16 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   if (!userProfile && dataLoading) {
     return (
       <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
-        <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800 }}>Caricamento profilo...</div>
+        <div style={{ textAlign:'center' }}>
+          <div style={{ width:44, height:44, borderRadius:16, margin:'0 auto 12px', background:'linear-gradient(135deg,#B84D3A,#F0A840)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:1000, fontSize:20 }}>A</div>
+          <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800, fontSize:13 }}>Caricamento profilo…</div>
+        </div>
       </div>
     );
   }
 
   if (!userProfile && !dataLoading) {
-    setTimeout(() => setUserProfile(buildFallbackProfile(user, true)), 0);
+    setTimeout(() => setUserProfile(buildFallbackProfile(user, false)), 0);
     return (
       <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
         <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800 }}>Apertura Apex...</div>
@@ -15049,7 +14971,6 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
     return (
       <div {...APP_FRAME_PROPS} style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', overflow:'hidden', background:'#111113', position:'relative' }}>
         <OnboardingFlow user={user} animals={animalsData} initialNickname={userProfile.nickname || userProfile.username} onComplete={handleCompleteOnboarding} onFinish={finishOnboarding} />
-        <InstallPromptBanner />
       </div>
     );
   }
@@ -15119,7 +15040,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
 	      <div key={page} className="animaldex-page-dive" style={{ height:'100%', minHeight:0, overflow:'hidden' }}>{renderPage()}</div>
 	      {tutorialStep && <OperationalTutorialOverlay step={tutorialStep} animal={getCurrentTutorialAnimal()} onNext={handleTutorialNext} onPrev={handleTutorialPrev} onFinish={completeOperationalTutorial} onSkip={completeOperationalTutorial} />}
 	      {sectionIntro && !tutorialStep && <SectionIntroModal section={sectionIntro} onClose={()=>{ const guided = sectionIntro; markSectionIntroSeen(guided); setSectionIntro(null); if (guided === 'badges' || guided === 'abilities') setActiveSectionGuide(guided); }} />}
-      <InstallPromptBanner />
+      <InstallPromptBanner suppressed={!!tutorialStep || userProfile?.has_completed_tutorial === false} />
 	      {dataError && user && <SwipeDismissNotice onDismiss={()=>setDataError('')} style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:250, borderRadius:14, padding:'10px 12px', background:'rgba(255,59,48,.92)', color:'white', fontSize:11, fontWeight:800, boxShadow:'0 10px 30px rgba(0,0,0,.35)' }}>{dataError}</SwipeDismissNotice>}
       {expeditionNotice && <SwipeDismissNotice onDismiss={()=>setExpeditionNotice('')} style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:252, borderRadius:14, padding:'10px 12px', background:'linear-gradient(135deg,rgba(240,168,64,.96),rgba(200,121,85,.96))', color:'#1A1000', fontSize:11.5, fontWeight:900, boxShadow:'0 10px 30px rgba(0,0,0,.35)' }}>{expeditionNotice}</SwipeDismissNotice>}
       {activeAwardToast && <AwardToast award={activeAwardToast} onOpen={openAwardFromToast} onDismiss={()=>setAwardQueue(prev => prev.slice(1))} />}
