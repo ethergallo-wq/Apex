@@ -8,6 +8,7 @@ import { getHomeVariant, setHomeVariant, subscribeHomeVariant, HOME_VARIANTS, ge
 import { addFriendRequestFeedHistory, getFriendRequestFeedHistory } from './friendRequestFeed';
 import { getProfileAvatarChoices, resolveProfileAvatarAnimal } from './profileAvatar';
 import { buildOnboardingCountryGroups } from './travelProbability';
+import ApexBootLoader from './ApexBootLoader';
 
 let LOCAL_ANIMALS = [];
 let ANIMALS = [];
@@ -5620,7 +5621,11 @@ function Grid({ onSelect, animals: animalsProp, statusMap = {}, visitedCountries
     borderRadius:isPhone ? 13 : 14,
   };
   const gridTopChromeHeight = isPhone ? 'calc(env(safe-area-inset-top, 0px) + 78px)' : 'calc(env(safe-area-inset-top, 0px) + 76px)';
+  const gridStatusBarHeight = isPhone ? 48 : 46;
+  const gridScrollTop = `calc(${gridTopChromeHeight} + ${gridStatusBarHeight}px)`;
   const gridBottomChromeHeight = isPhone ? 'calc(env(safe-area-inset-bottom, 0px) + 78px)' : '56px';
+  const quickStatus = fStatus.length === 1 ? fStatus[0] : null;
+  const setQuickStatus = (status) => setFStatus([status]);
 
   return (
     <div style={{ height:'100%', minHeight:0, maxHeight:'100%', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 80% -8%, rgba(240,168,64,.34), transparent 34%), radial-gradient(circle at 10% 28%, rgba(184,77,58,.24), transparent 38%), radial-gradient(circle at 92% 72%, rgba(200,121,85,.20), transparent 36%), linear-gradient(180deg,#2A1208 0%,#1B100B 44%,#100B09 100%)', position:'relative', overflow:'hidden', overscrollBehavior:'none' }}>
@@ -5640,9 +5645,61 @@ function Grid({ onSelect, animals: animalsProp, statusMap = {}, visitedCountries
         <button onClick={()=>setShowInfoModalGrid(!showInfoModalGrid)} style={{ ...gridControlStyle, background:'linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.075))', fontSize:isPhone?21:18, fontWeight:1000, lineHeight:1 }}>i</button>
       </div>
 
+      <div
+        data-tour="grid-status-bar"
+        style={{
+          position:'absolute',
+          top:gridTopChromeHeight,
+          left:0,
+          right:0,
+          height:gridStatusBarHeight,
+          display:'flex',
+          alignItems:'center',
+          gap:isPhone?6:8,
+          padding:isPhone?'0 10px':'0 12px',
+          boxSizing:'border-box',
+          background:isLightTheme?'rgba(251,247,239,.94)':'linear-gradient(180deg,rgba(22,16,13,.96),rgba(14,12,11,.98))',
+          borderBottom:isLightTheme?'1px solid rgba(0,0,0,.08)':'1px solid rgba(240,168,64,.14)',
+          zIndex:28,
+          boxShadow:tutorialStep==='grid-basics'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none',
+        }}
+      >
+        {ANIMAL_STATUS_ORDER.map((k) => {
+          const meta = ANIMAL_STATUS[k];
+          const active = quickStatus === k;
+          return (
+            <button
+              key={k}
+              onClick={() => setQuickStatus(k)}
+              aria-pressed={active}
+              style={{
+                flex:1,
+                minWidth:0,
+                height:isPhone?34:32,
+                borderRadius:999,
+                border:active ? meta.border : (isLightTheme ? '1px solid rgba(0,0,0,.10)' : '1px solid rgba(255,255,255,.10)'),
+                background:active ? (STATUS_FILTER_GRADIENTS[k] || meta.bg) : (isLightTheme ? 'rgba(255,255,255,.72)' : 'rgba(255,255,255,.05)'),
+                color:active ? meta.c : (isLightTheme ? 'rgba(0,0,0,.58)' : 'rgba(255,255,255,.62)'),
+                fontSize:isPhone?9.5:10,
+                fontWeight:1000,
+                fontFamily:'inherit',
+                cursor:'pointer',
+                padding:'0 4px',
+                whiteSpace:'nowrap',
+                overflow:'hidden',
+                textOverflow:'ellipsis',
+                boxShadow:active ? '0 6px 16px rgba(0,0,0,.18)' : 'none',
+              }}
+            >
+              {meta.label}
+            </button>
+          );
+        })}
+      </div>
+
       {/* Filtri applicati nascosti: l'area libera viene usata dai filtri rapidi. */}
 
-      <div data-item-count={list.length} style={{ position:'absolute', top:gridTopChromeHeight, bottom:gridBottomChromeHeight, left:0, right:0, minHeight:0, overflowY:'auto', WebkitOverflowScrolling:'touch', overscrollBehavior:'contain', padding:isPhone?'12px 14px 18px':'16px 12px 20px', marginTop:0, marginBottom:0, background:isLightTheme?'transparent':'linear-gradient(180deg,rgba(240,168,64,.09),rgba(184,77,58,.08) 38%,rgba(16,11,9,.18))', zIndex:1 }}>
+      <div data-item-count={list.length} style={{ position:'absolute', top:gridScrollTop, bottom:gridBottomChromeHeight, left:0, right:0, minHeight:0, overflowY:'auto', WebkitOverflowScrolling:'touch', overscrollBehavior:'contain', padding:isPhone?'12px 14px 18px':'16px 12px 20px', marginTop:0, marginBottom:0, background:isLightTheme?'transparent':'linear-gradient(180deg,rgba(240,168,64,.09),rgba(184,77,58,.08) 38%,rgba(16,11,9,.18))', zIndex:1 }}>
         {geographySummary && (
           <div style={{ marginBottom:12, borderRadius:18, border:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(240,168,64,.24)', background:isLightTheme?'rgba(255,255,255,.82)':'linear-gradient(135deg,rgba(240,168,64,.12),rgba(18,18,20,.88))', padding:'12px 14px', boxShadow:isLightTheme?'0 10px 24px rgba(0,0,0,.06)':'0 12px 28px rgba(0,0,0,.18)' }}>
             <div style={{ color:isLightTheme?'#171717':'white', fontSize:14, fontWeight:1000 }}>{geographySummary.label}</div>
@@ -5678,15 +5735,15 @@ function Grid({ onSelect, animals: animalsProp, statusMap = {}, visitedCountries
 
       <div data-animaldex-bottom-bar="true" data-animaldex-grid-bottom="true" style={{ position:'absolute', left:0, right:0, bottom:0, minHeight:gridBottomChromeHeight, boxSizing:'border-box', background:ANIMALDEX_ORANGE_GRADIENT, borderTop:'none', padding:isPhone?'9px 14px calc(13px + env(safe-area-inset-bottom, 0px))':'7px 12px 7px', marginBottom:0, zIndex:30, transform:'translateZ(0)' }}>
         <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:8 }}>
-          <button data-tour="grid-search" onClick={()=>setShowSearchBar(!showSearchBar)} aria-label="Cerca" style={{ ...bottomControlStyle, boxShadow:['grid-tools','grid-basics'].includes(tutorialStep)?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
+          <button data-tour="grid-search" onClick={()=>setShowSearchBar(!showSearchBar)} aria-label="Cerca" style={bottomControlStyle}>
             <svg width={bottomIconSize} height={bottomIconSize} viewBox="0 0 20 20" fill="none" style={{ display:'block' }}><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.9" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round"/></svg>
           </button>
           <div style={{ flex:1, textAlign:'center', color:'rgba(255,255,255,.84)', fontSize:isPhone?13:11, fontWeight:1000, letterSpacing:'.1px', minWidth:0 }}>{`${list.length} risultati`}</div>
           <div style={{ display:'flex', alignItems:'center', gap:isNarrow?6:8, flexShrink:0 }}>
-            <button onClick={()=>{setSheet('sort');setShowMenu(false);}} aria-label="Ordina" style={{ ...bottomControlStyle, boxShadow:['grid-tools','grid-basics'].includes(tutorialStep)?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
+            <button onClick={()=>{setSheet('sort');setShowMenu(false);}} aria-label="Ordina" style={bottomControlStyle}>
               <svg width={bottomIconSize} height={bottomIconSize} viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ display:'block' }}><path d="M8 5v14M8 19l-3-3M8 19l3-3M16 19V5M16 5l-3 3M16 5l3 3" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </button>
-            <button data-tour="grid-filters" onClick={()=>{ setShowMenu(v=>!v); setActiveFilter(null); }} aria-label="Filtra" style={{ ...bottomControlStyle, background:showMenu?'rgba(0,0,0,.28)':'rgba(0,0,0,.12)', border:`${showMenu?'2.5px':'1px'} solid ${showMenu?'#FFFFFF':'rgba(255,255,255,.12)'}`, boxSizing:'border-box', boxShadow:['grid-tools','grid-basics'].includes(tutorialStep)?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
+            <button data-tour="grid-filters" onClick={()=>{ setShowMenu(v=>!v); setActiveFilter(null); }} aria-label="Filtra" style={{ ...bottomControlStyle, background:showMenu?'rgba(0,0,0,.28)':'rgba(0,0,0,.12)', border:`${showMenu?'2.5px':'1px'} solid ${showMenu?'#FFFFFF':'rgba(255,255,255,.12)'}`, boxSizing:'border-box' }}>
               <svg width={bottomIconSize + 1} height={bottomIconSize + 1} viewBox="0 0 24 24" fill="none" style={{ display:'block' }}><path d="M4 7h16M7 12h13M10 17h10" stroke="currentColor" strokeWidth="2.35" strokeLinecap="round"/></svg>
             </button>
           </div>
@@ -6653,15 +6710,28 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
           </button>
         </div>
         {/* 3 pannelli: Abilità | Statistiche | Tassonomia */}
-        <div style={{ marginBottom:20 }}>
+        <div style={{ marginBottom:20 }} data-tour="animal-detail-tabs">
           {/* Tab bar */}
-          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', marginBottom:0, background:'rgba(0,0,0,.38)', borderRadius:'22px 22px 0 0', padding:4, gap:4 }}>
-            {['abilita','statistiche','tassonomia'].map(m=>(
-              <button key={m} onClick={()=>handleTab(m)} style={{ padding:'8px 0', borderRadius:16, background:statMode===m?c.mid:'transparent', color:statMode===m?'white':'rgba(255,255,255,.38)', fontSize:11, fontWeight:700, border:'none', cursor:'pointer', textTransform:'capitalize' }}>
-                {m==='abilita'?'Abilità':m==='statistiche'?'Statistiche':'Tassonomia'}
-              </button>
-            ))}
+          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', marginBottom:0, background:'rgba(0,0,0,.38)', borderRadius:'22px 22px 0 0', padding:4, gap:4, boxShadow:['detail-guide','detail-overview'].includes(tutorialStep)?'0 0 0 3px rgba(240,168,64,.28), 0 0 22px rgba(240,168,64,.22)':'none' }}>
+            {[
+              { id:'abilita', label:'Abilità', icon:'✨', accent:'#B98CFF', idleBg:'rgba(185,140,255,.14)', idleBorder:'rgba(185,140,255,.34)' },
+              { id:'statistiche', label:'Statistiche', icon:'📊', accent:'#5BBEF8', idleBg:'rgba(91,190,248,.10)', idleBorder:'rgba(91,190,248,.28)' },
+              { id:'tassonomia', label:'Tassonomia', icon:'🌿', accent:'#90D84A', idleBg:'rgba(144,216,74,.16)', idleBorder:'rgba(144,216,74,.38)' },
+            ].map(tab=>{
+              const active = statMode === tab.id;
+              return (
+                <button key={tab.id} onClick={()=>handleTab(tab.id)} style={{ padding:'8px 4px 7px', borderRadius:16, background:active ? tab.accent : tab.idleBg, color:active ? 'white' : tab.accent, fontSize:10.5, fontWeight:900, border:active ? 'none' : `1px solid ${tab.idleBorder}`, cursor:'pointer', display:'flex', flexDirection:'column', alignItems:'center', gap:2, boxShadow:!active && (tab.id==='tassonomia' || tab.id==='abilita') ? '0 0 14px rgba(255,255,255,.04)' : 'none' }}>
+                  <span style={{ fontSize:13, lineHeight:1 }}>{tab.icon}</span>
+                  <span style={{ lineHeight:1.1 }}>{tab.label}</span>
+                </button>
+              );
+            })}
           </div>
+          {statMode === 'statistiche' && (
+            <div style={{ padding:'6px 8px 0', color:'rgba(255,255,255,.48)', fontSize:10, fontWeight:800, textAlign:'center' }}>
+              Prova anche Abilità e Tassonomia — i tab colorati sopra
+            </div>
+          )}
 
           {/* Fixed-height content — height sized to tassonomia (tallest tab) */}
           <div style={{ background:'rgba(0,0,0,.28)', borderRadius:'0 0 22px 22px', padding:'10px 10px', height:404, boxSizing:'border-box', overflow:'hidden', position:'relative' }}>
@@ -8049,54 +8119,63 @@ function AwardToast({ award, onOpen, onDismiss }) {
 
 
 
-function OperationalTutorialOverlay({ step, animal, onNext, onPrev, onFinish, onSkip }) {
+function TutorialGlowLabel({ children }) {
+  return (
+    <span style={{ display:'inline-block', padding:'2px 8px', borderRadius:10, background:'rgba(240,168,64,.20)', border:'1.5px solid #F0A840', color:'#FFE5B8', fontWeight:1000, boxShadow:'0 0 18px rgba(240,168,64,.48), 0 0 6px rgba(240,168,64,.32)' }}>
+      {children}
+    </span>
+  );
+}
+
+function OperationalTutorialOverlay({ step, animal, homeGridLabel = 'Esplora Dex', onNext, onPrev, onFinish, onSkip }) {
   if (!step) return null;
   const OCHRE = '#A84637';
   const sequence = ['home','grid-basics','grid-open','detail-guide','detail-status','home-finish'];
   const index = Math.max(0, sequence.indexOf(step));
   const pct = Math.round(((index + 1) / sequence.length) * 100);
+  const topSteps = new Set(['home', 'grid-open', 'detail-status']);
 
   const copyMap = {
     home: {
-      title:'La tua base',
+      title:'Entra nel catalogo',
       kicker:'Home · 1/6',
-      body:'La Home raccoglie missione del giorno, progressi e scorciatoie. Per iniziare entra nella griglia Apex: è il catalogo vivo delle specie.',
-      hint:'Tocca il pulsante Apex evidenziato.',
+      body:'Da qui apri la griglia Apex: il catalogo vivo di tutte le specie, con stati e filtri.',
+      hint:<>Tocca <TutorialGlowLabel>{homeGridLabel}</TutorialGlowLabel> — il pulsante arancione evidenziato sotto.</>,
       action:null,
     },
     'grid-basics': {
-      title:'Griglia e progresso',
+      title:'Filtra per stato',
       kicker:'Grid · 2/6',
-      body:'In alto trovi i quattro stati — Misterioso, Ricercato, Avvistato, Catturato — il cuore del tuo percorso. Sotto, cerca, ordina e filtra per classe, geografia o rarità.',
-      hint:'Guarda filtri e strumenti evidenziati in basso.',
+      body:'La barra in alto mostra i quattro stati del tuo percorso. Tocca una voce per vedere solo quelle specie.',
+      hint:<>Usa la barra <TutorialGlowLabel>Misterioso · Ricercato · Avvistato · Catturato</TutorialGlowLabel> evidenziata in alto.</>,
       action:'Avanti',
     },
     'grid-open': {
       title:'Apri una scheda',
       kicker:'Grid · 3/6',
-      body:`Useremo ${animal?.com || 'il piccione'} come guida. Ogni card apre descrizione, biologia, statistiche interattive, abilità e distribuzione.`,
+      body:`Useremo ${animal?.com || 'il piccione'} come guida. Ogni card apre descrizione, biologia, statistiche, abilità e tassonomia.`,
       hint:'Tocca la card evidenziata.',
       action:null,
     },
     'detail-guide': {
-      title:'Leggi e scopri',
+      title:'Tre sezioni da esplorare',
       kicker:'Scheda · 4/6',
-      body:'Nome, rarità e conservazione in alto. Scorri per biologia, peso, dimensioni, ruolo trofico e abilità biologiche. Ogni blocco racconta un pezzo della specie.',
-      hint:'Scorri la scheda, poi premi Avanti.',
+      body:'Sotto la biologia trovi tre tab: Abilità (superpoteri biologici), Statistiche (velocità, forza…) e Tassonomia (albero scientifico).',
+      hint:<>Prova i tab <TutorialGlowLabel>Abilità</TutorialGlowLabel> e <TutorialGlowLabel>Tassonomia</TutorialGlowLabel>, poi premi Avanti.</>,
       action:'Avanti',
     },
     'detail-status': {
       title:'Segna un avvistamento',
       kicker:'Scheda · 5/6',
-      body:'Qui Apex diventa tuo: Ricercato → Avvistato quando la incontri dal vivo → Catturato con foto o conferma. Ogni passo muove badge e profilo.',
-      hint:'Tocca “Ho avvistato” evidenziato.',
+      body:'Qui Apex diventa tuo: Ricercato → Avvistato quando la incontri dal vivo → Catturato con foto. Ogni passo muove badge e profilo.',
+      hint:<>Tocca <TutorialGlowLabel>Avvistato</TutorialGlowLabel> evidenziato.</>,
       action:null,
     },
     'home-finish': {
       title:'Sei pronto',
       kicker:'Fine tour · 6/6',
-      body:'Hai visto Home, griglia e scheda animale. Le altre sezioni — geografia, badge, amici, foto — hanno una mini guida alla prima apertura.',
-      hint:'Esplora liberamente. Torna qui per la missione quotidiana.',
+      body:'Hai visto Home, griglia e scheda animale. Geografia, badge, amici e foto hanno una mini guida alla prima apertura.',
+      hint:'Esplora liberamente. Torna in Home per la missione quotidiana.',
       action:'Inizia a esplorare',
     },
   };
@@ -8105,43 +8184,37 @@ function OperationalTutorialOverlay({ step, animal, onNext, onPrev, onFinish, on
   if (!copy) return null;
   const noPrimary = ['home','grid-open','detail-status'].includes(step);
   const primary = step === 'home-finish' ? onFinish : onNext;
-  const panelPosition = step === 'grid-basics'
-    ? { top:'calc(env(safe-area-inset-top, 0px) + 14px)' }
-    : { bottom:'calc(env(safe-area-inset-bottom, 0px) + 18px)' };
+  const panelPosition = topSteps.has(step)
+    ? { top:'calc(env(safe-area-inset-top, 0px) + 10px)' }
+    : { bottom:'calc(env(safe-area-inset-bottom, 0px) + 12px)' };
 
   return (
     <div style={{ position:'absolute', inset:0, zIndex:260, pointerEvents:'none' }}>
       <div style={{ position:'absolute', inset:0, background:'radial-gradient(circle at 50% 28%, rgba(168,70,55,.08), rgba(0,0,0,.58) 42%, rgba(0,0,0,.72))', pointerEvents:'none' }} />
-      <div style={{ position:'absolute', left:12, right:12, ...panelPosition, pointerEvents:'auto', maxHeight:'calc(var(--animaldex-app-height, 100dvh) - 42px)', overflowY:'auto', WebkitOverflowScrolling:'touch' }}>
-        <div style={{ background:'linear-gradient(180deg,rgba(28,28,31,.98),rgba(12,12,14,.99))', border:`1px solid ${OCHRE}88`, borderRadius:28, padding:16, boxShadow:`0 24px 80px rgba(0,0,0,.62), 0 0 34px ${OCHRE}28`, overflow:'visible' }}>
-          <div style={{ display:'flex', alignItems:'center', gap:12 }}>
-            <div style={{ width:52, height:52, borderRadius:20, background:`linear-gradient(135deg,${OCHRE},#6F2D24)`, display:'flex', alignItems:'center', justifyContent:'center', fontSize:24, fontWeight:1000, boxShadow:`0 0 28px ${OCHRE}55`, flexShrink:0 }}>A</div>
-            <div style={{ flex:1, minWidth:0 }}>
-              <div style={{ color:OCHRE, fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.9 }}>{copy.kicker}</div>
-              <div style={{ color:'white', fontSize:20, fontWeight:1000, letterSpacing:'-.4px', lineHeight:1.08, marginTop:3 }}>{copy.title}</div>
-            </div>
-            <div style={{ width:48, height:48, borderRadius:18, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.08)', color:'rgba(255,255,255,.72)', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
-              <span style={{ fontSize:14, fontWeight:1000 }}>{index+1}</span>
-              <span style={{ fontSize:9, fontWeight:900, color:'rgba(255,255,255,.38)' }}>/{sequence.length}</span>
-            </div>
+      <div style={{ position:'absolute', left:10, right:10, ...panelPosition, pointerEvents:'auto', maxHeight: topSteps.has(step) ? 'min(38vh, 280px)' : 'min(42vh, 320px)', overflowY:'auto', WebkitOverflowScrolling:'touch' }}>
+        <div style={{ background:'linear-gradient(180deg,rgba(28,28,31,.98),rgba(12,12,14,.99))', border:`1px solid ${OCHRE}88`, borderRadius:20, padding:'12px 13px', boxShadow:`0 18px 56px rgba(0,0,0,.58), 0 0 28px ${OCHRE}24` }}>
+          <div style={{ display:'flex', alignItems:'baseline', justifyContent:'space-between', gap:8, marginBottom:6 }}>
+            <div style={{ color:OCHRE, fontSize:10, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>{copy.kicker}</div>
+            <div style={{ color:'rgba(255,255,255,.42)', fontSize:10, fontWeight:900 }}>{index + 1}/{sequence.length}</div>
           </div>
+          <div style={{ color:'white', fontSize:17, fontWeight:1000, letterSpacing:'-.3px', lineHeight:1.12, marginBottom:8 }}>{copy.title}</div>
 
-          <div style={{ height:7, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', margin:'14px 0 12px' }}>
+          <div style={{ height:4, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginBottom:10 }}>
             <div style={{ width:`${pct}%`, height:'100%', borderRadius:999, background:`linear-gradient(90deg,${OCHRE},#F0A840)`, transition:'width .25s ease' }} />
           </div>
 
-          <div style={{ color:'rgba(255,255,255,.76)', fontSize:13, lineHeight:1.55 }}>{copy.body}</div>
+          <div style={{ color:'rgba(255,255,255,.76)', fontSize:12.5, lineHeight:1.48 }}>{copy.body}</div>
 
           {copy.hint && (
-            <div style={{ marginTop:12, borderRadius:16, background:'rgba(240,168,64,.10)', border:'1px solid rgba(240,168,64,.24)', padding:'10px 11px', color:'#F0CFA5', fontSize:11.5, lineHeight:1.38, fontWeight:850 }}>
+            <div style={{ marginTop:10, borderRadius:14, background:'rgba(240,168,64,.10)', border:'1px solid rgba(240,168,64,.24)', padding:'8px 10px', color:'#F0CFA5', fontSize:11, lineHeight:1.42, fontWeight:850 }}>
               {copy.hint}
             </div>
           )}
 
-          <div style={{ display:'flex', gap:9, marginTop:14 }}>
-            <button onClick={onSkip} style={{ height:44, padding:'0 12px', borderRadius:15, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.04)', color:'rgba(255,255,255,.62)', fontWeight:950, cursor:'pointer', fontFamily:'inherit' }}>Salta</button>
-            {index > 0 && <button onClick={onPrev} style={{ height:44, padding:'0 12px', borderRadius:15, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.055)', color:'rgba(255,255,255,.82)', fontWeight:950, cursor:'pointer', fontFamily:'inherit' }}>Indietro</button>}
-            {!noPrimary && <button onClick={primary} style={{ flex:1, height:44, borderRadius:15, border:'none', background:`linear-gradient(135deg,${OCHRE},#C45D3F)`, color:'white', fontWeight:1000, cursor:'pointer', fontFamily:'inherit', boxShadow:`0 12px 32px ${OCHRE}40` }}>{copy.action}</button>}
+          <div style={{ display:'flex', gap:8, marginTop:11 }}>
+            <button onClick={onSkip} style={{ height:40, padding:'0 11px', borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.04)', color:'rgba(255,255,255,.62)', fontWeight:950, cursor:'pointer', fontFamily:'inherit', fontSize:12 }}>Salta</button>
+            {index > 0 && <button onClick={onPrev} style={{ height:40, padding:'0 11px', borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.055)', color:'rgba(255,255,255,.82)', fontWeight:950, cursor:'pointer', fontFamily:'inherit', fontSize:12 }}>Indietro</button>}
+            {!noPrimary && <button onClick={primary} style={{ flex:1, height:40, borderRadius:13, border:'none', background:`linear-gradient(135deg,${OCHRE},#C45D3F)`, color:'white', fontWeight:1000, cursor:'pointer', fontFamily:'inherit', fontSize:12.5, boxShadow:`0 10px 28px ${OCHRE}40` }}>{copy.action}</button>}
           </div>
         </div>
       </div>
@@ -9115,7 +9188,7 @@ function MainMenuClassic({ onOpen, onBack, onLogout, tutorialFocus=null, statusM
           </div>
         </div>
 
-        <button onClick={(e)=>beginHomeLaunch(e, { label:'Collezione', title:'I tuoi animali', subtitle:'Avvistati e catturati', color:'#F0A840', background:'linear-gradient(135deg, rgba(24,10,6,.42), rgba(20,20,22,.22) 58%, rgba(20,20,22,.45)), url("/backgrounds/background_grid.png")', backgroundSize:'100% 100%, 88% auto', screen:'grid' }, ()=>onOpenGridStatus?.(['avvistato','catturato']))} style={{ ...boxBase, height:homeBoxHeight, padding:18, background:'linear-gradient(135deg, rgba(24,10,6,.50), rgba(20,20,22,.32) 58%, rgba(20,20,22,.58)), url("/backgrounds/background_grid.png")', backgroundSize:'100% 100%, 88% auto', backgroundRepeat:'no-repeat', backgroundPosition:'center', border:'1px solid rgba(184,77,58,.38)', marginBottom:14, overflow:'hidden', display:'flex', flexDirection:'column', justifyContent:'center' }}>
+        <button data-tour="home-grid" onClick={(e)=>beginHomeLaunch(e, { label:'Collezione', title:'I tuoi animali', subtitle:'Avvistati e catturati', color:'#F0A840', background:'linear-gradient(135deg, rgba(24,10,6,.42), rgba(20,20,22,.22) 58%, rgba(20,20,22,.45)), url("/backgrounds/background_grid.png")', backgroundSize:'100% 100%, 88% auto', screen:'grid' }, ()=> (tutorialFocus === 'grid' ? onOpen?.('grid') : onOpenGridStatus?.(['avvistato','catturato'])))} style={{ ...boxBase, height:homeBoxHeight, padding:18, background:'linear-gradient(135deg, rgba(24,10,6,.50), rgba(20,20,22,.32) 58%, rgba(20,20,22,.58)), url("/backgrounds/background_grid.png")', backgroundSize:'100% 100%, 88% auto', backgroundRepeat:'no-repeat', backgroundPosition:'center', border: tutorialFocus === 'grid' ? '2.5px solid #F0A840' : '1px solid rgba(184,77,58,.38)', marginBottom:14, overflow:'hidden', display:'flex', flexDirection:'column', justifyContent:'center', boxShadow: tutorialFocus === 'grid' ? '0 0 0 5px rgba(240,168,64,.28), 0 0 32px rgba(240,168,64,.55), 0 16px 34px rgba(184,77,58,.24)' : undefined }}>
           <div style={{ color:'white', fontSize:24, fontWeight:1000 }}>I tuoi animali</div>
           <div style={{ color:'rgba(255,255,255,.78)', fontSize:13, lineHeight:1.55, marginTop:7 }}>Hai {searchedAnimalsCount} animali ricercati da trovare.</div>
         </button>
@@ -14998,36 +15071,18 @@ const returnFromFeaturePage = (fallback='menu') => {
 const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', inset:0, zIndex:80, background:theme==='light'?LIGHT_APP_BG:'#1C1C1E' }}><Detail theme={theme} a={enriched} documentedMap={documentedMap} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} onJumpToClass={jumpToClassFromDetail} onOpenTaxonomyFilter={openTaxonomyFilterFromDetail} onOpenComparator={openComparator} onOpenLifeWeb={openLifeWeb} onOpenPhoto={openPhotoRecognition} visitedCountries={visitedCountries} statusMap={statusMap} tutorialStep={tutorialStep} onTutorialAbilityClick={handleTutorialAbilityClick} onTutorialMetricClick={handleTutorialMetricClick} onTutorialStatusClick={handleTutorialStatusClick}/></div> : null;
 
   if (authLoading) {
-    return (
-      <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
-        <div style={{ textAlign:'center' }}>
-          <div style={{ width:44, height:44, borderRadius:16, margin:'0 auto 12px', background:'linear-gradient(135deg,#B84D3A,#F0A840)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:1000, fontSize:20 }}>A</div>
-          <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800, fontSize:13 }}>Apertura Apex…</div>
-        </div>
-      </div>
-    );
+    return <ApexBootLoader frameProps={APP_FRAME_PROPS} />;
   }
 
   if (!user) return <AuthScreen onAuthReady={()=>supabase.auth.getSession().then(({data})=>{setSession(data.session||null);setUser(data.session?.user||null);})} />;
 
   if (!userProfile && dataLoading) {
-    return (
-      <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
-        <div style={{ textAlign:'center' }}>
-          <div style={{ width:44, height:44, borderRadius:16, margin:'0 auto 12px', background:'linear-gradient(135deg,#B84D3A,#F0A840)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:1000, fontSize:20 }}>A</div>
-          <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800, fontSize:13 }}>Caricamento profilo…</div>
-        </div>
-      </div>
-    );
+    return <ApexBootLoader frameProps={APP_FRAME_PROPS} message="Caricamento profilo…" />;
   }
 
   if (!userProfile && !dataLoading) {
     setTimeout(() => setUserProfile(buildFallbackProfile(user, false)), 0);
-    return (
-      <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
-        <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800 }}>Apertura Apex...</div>
-      </div>
-    );
+    return <ApexBootLoader frameProps={APP_FRAME_PROPS} message="Apertura Apex…" />;
   }
 
   if (userProfile && userProfile.onboarding_completed === false) {
@@ -15101,7 +15156,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   return (
     <div id="animaldex-app-root" className="animaldex-app-frame" data-theme={theme} style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column', overflow:'hidden', background:theme==='light'?LIGHT_APP_BG:'#1C1C1E', position:'relative' }}>
 	      <div key={page} className="animaldex-page-dive" style={{ height:'100%', minHeight:0, overflow:'hidden' }}>{renderPage()}</div>
-	      {tutorialStep && <OperationalTutorialOverlay step={tutorialStep} animal={getCurrentTutorialAnimal()} onNext={handleTutorialNext} onPrev={handleTutorialPrev} onFinish={completeOperationalTutorial} onSkip={completeOperationalTutorial} />}
+	      {tutorialStep && <OperationalTutorialOverlay step={tutorialStep} animal={getCurrentTutorialAnimal()} homeGridLabel={homeVariant === HOME_VARIANTS.v2 ? 'Esplora Dex' : 'I tuoi animali'} onNext={handleTutorialNext} onPrev={handleTutorialPrev} onFinish={completeOperationalTutorial} onSkip={completeOperationalTutorial} />}
 	      {sectionIntro && !tutorialStep && <SectionIntroModal section={sectionIntro} onClose={()=>{ const guided = sectionIntro; markSectionIntroSeen(guided); setSectionIntro(null); if (guided === 'badges' || guided === 'abilities') setActiveSectionGuide(guided); }} />}
       <InstallPromptBanner suppressed={!!tutorialStep || userProfile?.has_completed_tutorial === false} />
 	      {dataError && user && <SwipeDismissNotice onDismiss={()=>setDataError('')} style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:250, borderRadius:14, padding:'10px 12px', background:'rgba(255,59,48,.92)', color:'white', fontSize:11, fontWeight:800, boxShadow:'0 10px 30px rgba(0,0,0,.35)' }}>{dataError}</SwipeDismissNotice>}

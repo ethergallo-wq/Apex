@@ -402,18 +402,21 @@ export default function MainMenuV2({
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 14 }}>
           <button
-            onClick={() => onOpenGridStatus?.(['ricercato', 'avvistato', 'catturato'])}
+            data-tour="home-grid"
+            onClick={() => (tutorialFocus === 'grid' ? onOpen?.('grid') : onOpenGridStatus?.(['ricercato', 'avvistato', 'catturato']))}
             style={{
               minHeight: 82,
               borderRadius: 20,
-              border: tutorialFocus === 'grid' ? '2px solid #F0A840' : 'none',
+              border: tutorialFocus === 'grid' ? '2.5px solid #F0A840' : 'none',
               background: ORANGE_GRADIENT,
               color: 'white',
               fontFamily: 'inherit',
               fontSize: 15,
               fontWeight: 1000,
               cursor: 'pointer',
-              boxShadow: tutorialFocus === 'grid' ? '0 0 0 4px rgba(240,168,64,.22), 0 14px 30px rgba(184,77,58,.28)' : '0 14px 30px rgba(184,77,58,.28)',
+              boxShadow: tutorialFocus === 'grid'
+                ? '0 0 0 5px rgba(240,168,64,.28), 0 0 32px rgba(240,168,64,.55), 0 14px 30px rgba(184,77,58,.28)'
+                : '0 14px 30px rgba(184,77,58,.28)',
               padding: '14px 12px',
               display: 'flex',
               flexDirection: 'column',

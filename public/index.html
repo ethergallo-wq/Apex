@@ -27,7 +27,36 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <style>
       #apex-inline-boot .apex-boot-icon { opacity: 1; }
+      @keyframes apex-boot-marquee-left {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+      }
+      @keyframes apex-boot-marquee-right {
+        from { transform: translateX(-50%); }
+        to { transform: translateX(0); }
+      }
+      @keyframes apex-boot-message-fade {
+        from { opacity: 0; transform: translateY(4px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .apex-boot-marquee-track,
+      .apex-boot-marquee-track-reverse {
+        display: flex;
+        gap: 12px;
+        width: max-content;
+        will-change: transform;
+      }
+      .apex-boot-marquee-track {
+        animation: apex-boot-marquee-left 22s linear infinite;
+      }
+      .apex-boot-marquee-track-reverse {
+        animation: apex-boot-marquee-right 28s linear infinite;
+      }
+      .apex-boot-message-fade {
+        animation: apex-boot-message-fade .45s ease;
+      }
     </style>
+    <script src="%PUBLIC_URL%/apex-boot.js" defer></script>
     <script>
       (function () {
         try {
@@ -57,13 +86,8 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
-      <div id="apex-inline-boot" style="min-height:100vh;min-height:100dvh;background:radial-gradient(circle at 50% 18%, rgba(184,77,58,.16), transparent 42%), #111113;color:white;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
-        <div style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
-          <div id="apex-inline-boot-icon" class="apex-boot-icon" style="width:72px;height:72px;border-radius:22px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);display:grid;place-items:center;box-shadow:0 10px 28px rgba(0,0,0,.28)">
-            <img id="apex-inline-boot-img" src="%PUBLIC_URL%/Apex_logo_32x32.png" alt="" width="40" height="40" decoding="async" style="object-fit:contain;filter:drop-shadow(0 4px 10px rgba(0,0,0,.35))" />
-          </div>
-          <div style="color:rgba(255,255,255,.78);font-weight:900;font-size:15px;letter-spacing:.2px">Apertura Apex...</div>
-        </div>
+      <div id="apex-inline-boot" style="min-height:100vh;min-height:100dvh;background:#111113;color:white;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+        <div style="color:rgba(255,255,255,.78);font-weight:900;font-size:15px">Apertura Apex…</div>
       </div>
     </div>
     <!--
