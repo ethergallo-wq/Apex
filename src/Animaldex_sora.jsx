@@ -1264,6 +1264,49 @@ async function ensureUserProfile(user) {
   }
 }
 
+function hasLocalUserProgress(userId) {
+  if (!userId || typeof window === 'undefined') return false;
+  try {
+    if (Object.keys(getLocalUserStatusMap(userId)).length > 0) return true;
+    if (normalizeIsoList(getVisitedCountries()).length > 0) return true;
+    if (getAwardUnlockSet().size > 0) return true;
+    if (Object.keys(getLocalDocumentedMap(userId)).length > 0) return true;
+    return false;
+  } catch {
+    return false;
+  }
+}
+
+function resolveProfileFirstTimeFlags(profile = {}, userId) {
+  const resolvedUserId = userId || profile?.user_id;
+  const local = normalizeProfileQuestionnaire(getProfileDemographicsLocal(resolvedUserId));
+  const dbOnboarding = Boolean(profile?.onboarding_completed);
+  const dbTutorial = Boolean(profile?.has_completed_tutorial);
+  const localOnboarding = Boolean(local.onboarding_completed);
+  const localTutorial = Boolean(local.has_completed_tutorial);
+  const hasProgress = hasLocalUserProgress(resolvedUserId);
+  const hasStatuses = resolvedUserId ? Object.keys(getLocalUserStatusMap(resolvedUserId)).length > 0 : false;
+
+  const onboarding_completed = dbOnboarding || localOnboarding || hasProgress;
+  const has_completed_tutorial = dbTutorial || localTutorial || (onboarding_completed && hasStatuses);
+
+  if (resolvedUserId && hasProgress && (!dbOnboarding || !dbTutorial) && (onboarding_completed || has_completed_tutorial)) {
+    persistProfileDemographicsLocal(resolvedUserId, {
+      onboarding_completed,
+      has_completed_tutorial,
+      onboarding_completed_at: profile?.onboarding_completed_at || local.onboarding_completed_at || null,
+      tutorial_completed_at: profile?.tutorial_completed_at || local.tutorial_completed_at || null,
+    });
+  }
+
+  return {
+    onboarding_completed,
+    has_completed_tutorial,
+    onboarding_completed_at: profile?.onboarding_completed_at || local.onboarding_completed_at || null,
+    tutorial_completed_at: profile?.tutorial_completed_at || local.tutorial_completed_at || null,
+  };
+}
+
 async function fetchUserProfile(user) {
   if (!user?.id) return null;
   try {
@@ -1281,8 +1324,6 @@ async function fetchUserProfile(user) {
         user_id: user.id,
         username,
         nickname: username,
-        onboarding_completed: false,
-        has_completed_tutorial: false,
         first_login_reward_shown: false,
       }, user.id);
     }
@@ -1297,15 +1338,7 @@ async function fetchUserProfile(user) {
     }, user.id);
   } catch (err) {
     console.warn('[Apex] fetchUserProfile fallback:', err);
-    const username = getDefaultUsernameFromUser(user);
-    return mergeProfileDemographics({
-      user_id: user.id,
-      username,
-      nickname: username,
-      onboarding_completed: false,
-      has_completed_tutorial: false,
-      first_login_reward_shown: false,
-    }, user.id);
+    return buildFallbackProfile(user, false);
   }
 }
 
@@ -1508,6 +1541,9 @@ function normalizeProfileQuestionnaire(data = {}) {
     consent_personalization: Boolean(data?.consent_personalization),
     consent_newsletter: Boolean(data?.consent_newsletter),
     onboarding_completed: Boolean(data?.onboarding_completed),
+    has_completed_tutorial: Boolean(data?.has_completed_tutorial),
+    onboarding_completed_at: data?.onboarding_completed_at || null,
+    tutorial_completed_at: data?.tutorial_completed_at || null,
   };
 }
 function persistProfileDemographicsLocal(userId, data = {}) {
@@ -1543,6 +1579,7 @@ function mergeProfileDemographics(profile = {}, userId) {
     consent_marketing: Boolean(profile?.consent_marketing || normalizedLocal.consent_marketing),
     consent_personalization: Boolean(profile?.consent_personalization || normalizedLocal.consent_personalization),
     consent_newsletter: Boolean(profile?.consent_newsletter || normalizedLocal.consent_newsletter),
+    ...resolveProfileFirstTimeFlags(profile, userId || profile?.user_id),
   };
 }
 async function persistOnboardingQuestionnaire(user, payload = {}) {
@@ -1588,14 +1625,14 @@ async function persistOnboardingQuestionnaire(user, payload = {}) {
 
 function buildFallbackProfile(user, onboardingCompleted = false) {
   const username = getDefaultUsernameFromUser(user);
-  const local = getProfileDemographicsLocal(user?.id);
-  const resolvedOnboarding = onboardingCompleted || Boolean(local?.onboarding_completed);
+  const local = normalizeProfileQuestionnaire(getProfileDemographicsLocal(user?.id));
+  const baseOnboarding = onboardingCompleted || Boolean(local.onboarding_completed);
   return mergeProfileDemographics({
     user_id: user?.id,
     username,
     nickname: username,
-    onboarding_completed: resolvedOnboarding,
-    has_completed_tutorial: resolvedOnboarding,
+    onboarding_completed: baseOnboarding,
+    has_completed_tutorial: Boolean(local.has_completed_tutorial),
     first_login_reward_shown: false,
   }, user?.id);
 }
@@ -8278,15 +8315,15 @@ function SectionIntroModal({ section, onClose }) {
   if (!section) return null;
   const OCHRE = '#A84637';
   const copy = {
-    regions:{ title:'Geografia', kicker:'Mini guida', body:'Apex organizza il mondo a livelli: Domini, cioè Terrestre e Marino; Continenti, come America o Eurasia; Regioni, grandi aree biogeografiche; Territori, cioè le nostre ecoregioni giocabili. I paesi servono come ingresso rapido, ma i Territori sono il livello più preciso: quando apri Alaska, Mediterraneo o Foreste boreali stai entrando in una unità ecologica con animali collegati a quell’ID bioregionale.' },
-    badges:{ title:'Badge', kicker:'Mini guida', body:'Qui si colleziona sul serio. I badge sono divisi per categorie: Arsenale, Elite, Trofico, Geografia, Massa, Morfologia, Status, Tassonomia, Engagement e Onboarding. Ogni linea sale di livello: Bronzo principiante, Argento intermedio, Oro esperto e Viola leggenda. Tocca una card: dentro trovi obiettivo, progresso e quanto ti manca al prossimo colpo grosso.', action:'Scelgo un badge' },
-    abilities:{ title:'Abilità', kicker:'Mini guida', body:'Le abilità sono i superpoteri biologici di Apex: veleno, mimetismo, intelligenza, velocità, migrazioni, corazze, record, vita estrema. Sono raggruppate per famiglia e ogni card mostra quanti animali la possiedono. Tocca un’abilità per aprire il dettaglio, poi puoi saltare alla griglia già filtrata con tutte le specie collegate.', action:'Scelgo un’abilità' },
-    compare:{ title:'Comparatore', kicker:'Mini guida', body:'Il comparatore mette due animali fianco a fianco per confrontare dimensioni, peso, statistiche e ruolo ecologico. Usalo quando vuoi capire le differenze in modo immediato.' },
-    profile:{ title:'Profilo', kicker:'Mini guida', body:'Il profilo riassume progressi, animali ricercati, avvistati e catturati, badge ottenuti e dati del tuo percorso. È la memoria personale del tuo Apex.' },
-    friends:{ title:'Amici', kicker:'Mini guida', body:'Qui Apex diventa una spedizione condivisa: cerca altri giocatori solo per username, manda richieste, guarda i progressi degli amici e reagisci alle catture rare o leggendarie con messaggi preset. Niente chat e niente testo libero: più gioco, più privacy, meno rumore.' },
-    gallery:{ title:'Galleria', kicker:'Mini guida', body:'La galleria raccoglie le immagini e le catture collegate al tuo percorso. È pensata come archivio visivo delle specie che hai documentato.' },
-    lifeweb:{ title:'LifeWeb', kicker:'Mini guida', body:'LifeWeb mostra relazioni alimentari e ruoli ecologici. È una lettura della rete, non solo della singola specie: predatori, prede, risorse e connessioni.' },
-    quickSeen:{ title:'Avvistamento rapido', kicker:'Mini guida', body:'È il modo più veloce per aggiornare Apex con gli animali che hai già avvistato. Apex ti propone specie ad alta probabilità in base alle nazioni visitate e alla facilità di incontro: tu rispondi al volo, il Dex si aggiorna e i progressi iniziano a correre.' },
+    regions:{ title:'Geografia', kicker:'Prima volta', bullets:['Domini → Continenti → Regioni → Territori','I Territori sono le ecoregioni giocabili','I paesi aprono l’accesso rapido'] },
+    badges:{ title:'Badge', kicker:'Prima volta', bullets:['Colleziona per categoria e livello','Bronzo → Argento → Oro → Leggenda','Tocca una card per obiettivo e progresso'], action:'Scelgo un badge' },
+    abilities:{ title:'Abilità', kicker:'Prima volta', bullets:['Superpoteri biologici per famiglia','Veleno, mimetismo, velocità, record…','Tocca per filtrare la griglia'], action:'Scelgo un’abilità' },
+    compare:{ title:'Comparatore', kicker:'Prima volta', bullets:['Due animali fianco a fianco','Confronta peso, dimensioni e statistiche','Utile per capire le differenze al volo'] },
+    profile:{ title:'Profilo', kicker:'Prima volta', bullets:['Progressi e stati del Dex','Badge e percorso personale','La tua memoria di Apex'] },
+    friends:{ title:'Amici', kicker:'Prima volta', bullets:['Cerca per username','Guarda progressi e reagisci alle catture','Niente chat: solo messaggi preset'] },
+    gallery:{ title:'Galleria', kicker:'Prima volta', bullets:['Archivio visivo delle specie','Foto e catture documentate','Tutto ciò che hai registrato'] },
+    lifeweb:{ title:'LifeWeb', kicker:'Prima volta', bullets:['Rete alimentare ed ecologica','Predatori, prede e connessioni','Leggi la specie nel contesto'] },
+    quickSeen:{ title:'Avvistamento rapido', kicker:'Prima volta', bullets:['Aggiorna il Dex in pochi tap','Specie probabili per paese visitato','Rispondi al volo, i progressi corrono'] },
   }[section];
   if (!copy) return null;
   return (
@@ -8294,7 +8331,9 @@ function SectionIntroModal({ section, onClose }) {
       <div style={{ width:'100%', maxWidth:440, borderRadius:26, background:'linear-gradient(180deg,rgba(30,30,34,.98),rgba(12,12,14,.99))', border:`1px solid ${OCHRE}88`, boxShadow:'0 24px 80px rgba(0,0,0,.55)', padding:18 }}>
         <div style={{ color:OCHRE, fontSize:11, fontWeight:1000, letterSpacing:.9, textTransform:'uppercase' }}>{copy.kicker}</div>
         <div style={{ color:'white', fontSize:23, fontWeight:1000, marginTop:5 }}>{copy.title}</div>
-        <div style={{ color:'rgba(255,255,255,.72)', fontSize:13, lineHeight:1.55, marginTop:9 }}>{copy.body}</div>
+        <ul style={{ margin:'10px 0 0', padding:'0 0 0 18px', color:'rgba(255,255,255,.78)', fontSize:13, lineHeight:1.5 }}>
+          {copy.bullets.map((bullet) => <li key={bullet} style={{ marginBottom:5 }}>{bullet}</li>)}
+        </ul>
         <button onClick={onClose} style={{ width:'100%', height:48, borderRadius:16, border:'none', background:`linear-gradient(135deg,${OCHRE},#C45D3F)`, color:'white', fontWeight:1000, marginTop:16 }}>{copy.action || 'Ho capito'}</button>
       </div>
     </SwipeDismissNotice>
@@ -14794,7 +14833,8 @@ export default function App() {
   };
 
   const finishOnboarding = async (options = {}) => {
-    persistProfileDemographicsLocal(user?.id, { onboarding_completed: true });
+    const now = new Date().toISOString();
+    persistProfileDemographicsLocal(user?.id, { onboarding_completed: true, onboarding_completed_at: now });
     setUserProfile(prev => mergeProfileDemographics({
       ...(prev || buildFallbackProfile(user, true)),
       onboarding_completed:true,
@@ -14826,6 +14866,7 @@ export default function App() {
     const resolved = section === 'taxonomy' ? 'lifeweb' : section;
     if (!validSections.includes(resolved)) return;
     if (hasSeenSectionIntro(resolved)) return;
+    markSectionIntroSeen(resolved);
     setActiveSectionGuide(null);
     setTimeout(() => setSectionIntro(resolved), 260);
   }
@@ -14864,6 +14905,7 @@ export default function App() {
     setTutorialStep(null);
     setTutorialAnimalId(null);
     setTutorialStamp(false);
+    persistProfileDemographicsLocal(user?.id, { has_completed_tutorial: true, tutorial_completed_at: now });
     setUserProfile(prev => ({ ...(prev || {}), has_completed_tutorial:true, tutorial_completed_at:now }));
     try {
       if (user?.id) {
