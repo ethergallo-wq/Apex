@@ -1,12 +1,16 @@
-const REGION_IMAGES = [
-  '/regions/afrotropici_equatoriali.jpg',
+const GENERIC_TERRITORY_IMAGES = [
   '/regions/amazzonia.jpg',
+  '/regions/afrotropici_equatoriali.jpg',
   '/regions/africa.jpg',
-  '/regions/Scandinavia_foreste_boreali.jpg',
   '/regions/eastern_indo_pacific.jpg',
   '/regions/Europa_temperata.jpg',
   '/regions/america.jpg',
   '/regions/antartide.jpg',
+  '/regions/Scandinavia_foreste_boreali.jpg',
+  '/regions/Tropical_Atlantic.jpg',
+  '/regions/australia.jpg',
+  '/regions/eco-foreste-nordamericane.jpg',
+  '/regions/Western_Indo-Pacific.jpg',
 ];
 
 const METRIC_ACCENT = {
@@ -25,16 +29,32 @@ const METRIC_ACCENT = {
   record_count: '/regions/Ovest_americano.jpg',
   tiny_species_count: '/regions/Steppe_kazake_foreste.jpg',
   extremes_count: '/regions/Nord_Africa.jpg',
-  captured_count: '/regions/amazzonia.jpg',
-  sighting_only_count: '/regions/afrotropici_equatoriali.jpg',
-  usage_streak: '/backgrounds/background_grid.png',
-  ai_corrections: '/backgrounds/background_tree.png',
-  total_mass_tons: '/regions/Tropical_Atlantic.jpg',
-  max_family_count: '/backgrounds/background_tree.png',
-  max_order_count: '/backgrounds/background_tree.png',
-  genera_count: '/backgrounds/background_tree.png',
-  obs_under_100: '/regions/Steppe_kazake_foreste.jpg',
+  captured_count: '/regions/eco-cerrado-brasiliano-costa-atlantica.jpg',
+  sighting_only_count: '/regions/eco-foreste-nordamericane.jpg',
+  usage_streak: '/regions/Scandinavia_foreste_boreali.jpg',
+  ai_corrections: '/regions/eco-foreste-montane-europee.jpg',
+  total_mass_tons: '/regions/southern_ocean.jpg',
+  max_family_count: '/regions/Isole_australasiatiche_Indonesia_orientale.jpg',
+  max_order_count: '/regions/central_indo_pacific.jpg',
+  genera_count: '/regions/amazzonia.jpg',
+  obs_under_100: '/regions/groenlandia.jpg',
 };
+
+const MACRO_ACCENT = {
+  GEO: '/regions/afrotropici_equatoriali.jpg',
+  CON: '/regions/antartide.jpg',
+  ARS: '/regions/africa.jpg',
+  TRO: '/regions/Tropical_Atlantic.jpg',
+  ELI: '/regions/Ovest_americano.jpg',
+  ENG: '/regions/Europa_temperata.jpg',
+  MAS: '/regions/southern_ocean.jpg',
+  MOR: '/regions/Nord_Africa.jpg',
+  STA: '/regions/eco-foreste-nordamericane.jpg',
+  TAX: '/regions/eastern_indo_pacific.jpg',
+  ONB: '/regions/Europa_temperata.jpg',
+};
+
+const DEFAULT_MISSION_TERRITORY = '/regions/amazzonia.jpg';
 
 function hashSeed(value = '') {
   return String(value).split('').reduce((sum, ch) => sum + ch.charCodeAt(0), 0);
@@ -143,23 +163,14 @@ export function animalQualifiesForMetric(animal, metric) {
 
 export function getMissionAccentImage({ badgeId, metric, macroId } = {}) {
   if (metric && METRIC_ACCENT[metric]) return METRIC_ACCENT[metric];
-  if (macroId === 'GEO') return '/regions/afrotropici_equatoriali.jpg';
-  if (macroId === 'CON') return '/regions/antartide.jpg';
-  if (macroId === 'ARS') return '/regions/africa.jpg';
-  if (macroId === 'TRO') return '/regions/amazzonia.jpg';
-  if (macroId === 'ELI') return '/regions/Steppe_kazake_foreste.jpg';
-  if (macroId === 'ENG') return '/backgrounds/background_grid.png';
-  if (macroId === 'MAS') return '/regions/Tropical_Atlantic.jpg';
-  if (macroId === 'MOR') return '/regions/Ovest_americano.jpg';
-  if (macroId === 'STA') return '/regions/amazzonia.jpg';
-  if (macroId === 'TAX') return '/backgrounds/background_tree.png';
-  if (macroId === 'ONB') return '/regions/Europa_temperata.jpg';
-  return REGION_IMAGES[hashSeed(badgeId || macroId || metric) % REGION_IMAGES.length];
+  if (macroId && MACRO_ACCENT[macroId]) return MACRO_ACCENT[macroId];
+  if (badgeId || macroId || metric) {
+    return GENERIC_TERRITORY_IMAGES[hashSeed(badgeId || macroId || metric) % GENERIC_TERRITORY_IMAGES.length];
+  }
+  return DEFAULT_MISSION_TERRITORY;
 }
 
-export function resolveMissionAccentImage({ badgeId, metric, macroId, animalSlots } = {}) {
-  const filled = [...(animalSlots || [])].reverse().find(slot => slot?.type === 'filled' && slot.heroUrl);
-  if (filled?.heroUrl) return filled.heroUrl;
+export function resolveMissionAccentImage({ badgeId, metric, macroId } = {}) {
   return getMissionAccentImage({ badgeId, metric, macroId });
 }
 

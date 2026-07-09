@@ -38,7 +38,6 @@ export function buildHomeMission(progress = {}) {
         badgeId: nearly.badgeId,
         metric: nearly.metric,
         macroId: nearly.macroId,
-        animalSlots,
       }),
       animalSlots,
     };
@@ -54,7 +53,7 @@ export function buildHomeMission(progress = {}) {
       subtitle: 'Esplora la griglia e avvista nuove specie',
       cta: 'Vai al Dex ›',
       action: 'grid-all',
-      accentImage: '/backgrounds/background_grid.png',
+      accentImage: '/regions/eco-foreste-nordamericane.jpg',
       animalSlots: buildGenericAnimalSlots(animalsWithStatus, ['ricercato']),
     };
   }
