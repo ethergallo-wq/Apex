@@ -7,7 +7,6 @@ import { TrainerHeadToHead, TrainerLeaderboardCard, buildTrainerStatMaxes } from
 import { getHomeVariant, setHomeVariant, subscribeHomeVariant, HOME_VARIANTS, getHomeVariantLabel } from './homeVariant';
 import { addFriendRequestFeedHistory, getFriendRequestFeedHistory } from './friendRequestFeed';
 import { getProfileAvatarChoices, resolveProfileAvatarAnimal } from './profileAvatar';
-import ApexBootLoader from './ApexBootLoader';
 
 let LOCAL_ANIMALS = [];
 let ANIMALS = [];
@@ -1185,6 +1184,19 @@ function applyCachedUserStatuses(list = [], userId) {
     if (cachedRank <= currentRank) return a;
     return { ...a, status:normalizeAnimalStatus(cachedStatus), userStatus:appStatusToSupabase(cachedStatus) };
   });
+}
+
+function buildLocalAnimalSnapshot(userId, statusMapOverride = {}, remoteUserStatusMap = {}) {
+  if (!LOCAL_ANIMALS.length || !userId) return null;
+  const sourceAnimals = applyCachedUserStatuses(LOCAL_ANIMALS.map(normalizeLocalAnimal), userId);
+  const remoteStatusMap = Object.fromEntries(sourceAnimals.map(a => [a.id, normalizeAnimalStatus(a.status)]));
+  const nextStatusMap = mergeStatusMapsByRank(remoteStatusMap, remoteUserStatusMap, getLocalUserStatusMap(userId), statusMapOverride);
+  const nextAnimals = sourceAnimals.map(a => {
+    const status = nextStatusMap[a.id] || normalizeAnimalStatus(a.status);
+    const base = a._searchText ? a : { ...a, _searchText:getAnimalSearchText(a) };
+    return { ...base, status, userStatus:appStatusToSupabase(status) };
+  });
+  return { nextAnimals, nextStatusMap };
 }
 
 async function ensureUserProfile(user) {
@@ -13830,6 +13842,12 @@ export default function App() {
   const [,startNavTransition]=useTransition();
   const selectAnimal = useCallback((animal) => {
     startDetailTransition(() => setSel(animal));
+    queueFullAnimalsHydration().then(() => {
+      setSel(prev => {
+        if (!prev || Number(prev.id) !== Number(animal?.id)) return prev;
+        return getEnrichedAnimal({ ...prev, status: prev.status ?? animal?.status });
+      });
+    }).catch(() => {});
   }, []);
   const [statusMap,setStatusMap]=useState({});
   const [page,setPage]=useState('menu');
@@ -13981,25 +13999,6 @@ export default function App() {
         const normalized = list.map(normalizeLocalAnimal);
         setAnimalsData(prev => prev?.length ? prev : normalized);
         setLocalAnimalsReady(true);
-        const hydrateFull = () => queueFullAnimalsHydration()
-          .then(fullList => {
-            if (!alive || !fullList?.length) return;
-            setAnimalsData(prev => {
-              const statusById = Object.fromEntries(prev.map(a => [a.id, a.status]));
-              const userStatusById = Object.fromEntries(prev.map(a => [a.id, a.userStatus]));
-              return fullList.map(a => ({
-                ...a,
-                status: normalizeAnimalStatus(statusById[a.id] ?? a.status),
-                userStatus: userStatusById[a.id] ?? a.userStatus,
-              }));
-            });
-          })
-          .catch(err => console.warn('[Apex] Dataset completo non caricato:', err));
-        if (typeof requestIdleCallback === 'function') {
-          requestIdleCallback(hydrateFull, { timeout: 2500 });
-        } else {
-          setTimeout(hydrateFull, 800);
-        }
       })
       .catch(err => {
         console.warn('[Apex] Dataset animali locale non caricato:', err);
@@ -14010,6 +14009,11 @@ export default function App() {
       });
     return () => { alive = false; };
   }, []);
+
+  useEffect(() => {
+    if (authLoading || !user?.id) return;
+    hydrateCachedProgress(user);
+  }, [authLoading, user?.id]);
 
   useEffect(()=>{
     applyAnimaldexThemeToDocument(theme);
@@ -14091,8 +14095,17 @@ export default function App() {
       );
       setUserProfile(profile || buildFallbackProfile(activeUser, true));
 
+      const localSnapshot = buildLocalAnimalSnapshot(activeUser.id, statusMap);
+      if (localSnapshot) {
+        setAnimalsData(localSnapshot.nextAnimals);
+        setStatusMap(localSnapshot.nextStatusMap);
+        setDataLoading(false);
+        setProgressHydrated(true);
+        setTimeout(() => setAwardToastReady(true), 0);
+      }
+
       const [remoteAnimalsResult, remoteStatusResult, destinationsResult, badgeResult, documentedResult, expeditionsResult] = await Promise.allSettled([
-        withTimeout(fetchAnimalsFromSupabase(activeUser.id), 10000, null, 'fetchAnimalsFromSupabase'),
+        Promise.resolve(null),
         withTimeout(fetchUserAnimalStatusMap(activeUser.id), 6500, {}, 'fetchUserAnimalStatusMap'),
         withTimeout(fetchUserDestinations(activeUser.id), 6500, getVisitedCountries(), 'fetchUserDestinations'),
         withTimeout(fetchUserBadgeIds(activeUser.id), 6500, null, 'fetchUserBadgeIds'),
@@ -14113,18 +14126,30 @@ export default function App() {
         }
       });
 
-      const sourceAnimals = applyCachedUserStatuses(remoteAnimals?.length ? mergeRemoteWithLocalBioregions(remoteAnimals) : LOCAL_ANIMALS.map(normalizeLocalAnimal), activeUser.id);
-      const remoteStatusMap = Object.fromEntries((sourceAnimals || []).map(a => [a.id, normalizeAnimalStatus(a.status)]));
-      const nextStatusMap = mergeStatusMapsByRank(remoteStatusMap, remoteUserStatusMap, getLocalUserStatusMap(activeUser.id), statusMap);
-      const nextAnimals = (sourceAnimals || []).map(a => {
-        const status = nextStatusMap[a.id] || normalizeAnimalStatus(a.status);
-        const base = a._searchText ? a : { ...a, _searchText:getAnimalSearchText(a) };
-        return { ...base, status, userStatus:appStatusToSupabase(status) };
-      });
-      setAnimalsData(nextAnimals);
-      setStatusMap(nextStatusMap);
-      saveLocalUserStatusMap(activeUser.id, nextStatusMap);
-      syncLocalStatusMapToSupabase(activeUser.id, nextStatusMap).catch(err => console.warn('[Apex] sync progressi locali non bloccante:', err));
+      const sourceAnimals = LOCAL_ANIMALS.length
+        ? applyCachedUserStatuses(LOCAL_ANIMALS.map(normalizeLocalAnimal), activeUser.id)
+        : (remoteAnimals?.length ? applyCachedUserStatuses(mergeRemoteWithLocalBioregions(remoteAnimals), activeUser.id) : null);
+      const mergedSnapshot = LOCAL_ANIMALS.length
+        ? buildLocalAnimalSnapshot(activeUser.id, statusMap, remoteUserStatusMap)
+        : (sourceAnimals?.length ? {
+            nextAnimals: sourceAnimals.map(a => {
+              const status = remoteUserStatusMap[a.id] || normalizeAnimalStatus(a.status);
+              const base = a._searchText ? a : { ...a, _searchText:getAnimalSearchText(a) };
+              return { ...base, status, userStatus:appStatusToSupabase(status) };
+            }),
+            nextStatusMap: mergeStatusMapsByRank(
+              Object.fromEntries(sourceAnimals.map(a => [a.id, normalizeAnimalStatus(a.status)])),
+              remoteUserStatusMap,
+              getLocalUserStatusMap(activeUser.id),
+              statusMap
+            ),
+          } : null);
+      if (mergedSnapshot?.nextAnimals?.length) {
+        setAnimalsData(mergedSnapshot.nextAnimals);
+        setStatusMap(mergedSnapshot.nextStatusMap);
+        saveLocalUserStatusMap(activeUser.id, mergedSnapshot.nextStatusMap);
+        syncLocalStatusMapToSupabase(activeUser.id, mergedSnapshot.nextStatusMap).catch(err => console.warn('[Apex] sync progressi locali non bloccante:', err));
+      }
 
       // Merge remoto + paesi in attesa di conferma: un insert fallito o in
       // timeout non deve mai far sparire un paese appena aggiunto.
@@ -14196,12 +14221,18 @@ export default function App() {
     setProgressHydrated(false);
     setAwardToastReady(false);
     setAwardQueue([]);
-    if (!localAnimalsReady) return;
     if (user?.id) {
-      hydrateCachedProgress(user);
       reloadSupabaseData(user);
     }
-  },[user?.id, localAnimalsReady]);
+  },[user?.id]);
+
+  useEffect(() => {
+    if (!localAnimalsReady || !user?.id) return;
+    const snapshot = buildLocalAnimalSnapshot(user.id, statusMap);
+    if (!snapshot?.nextAnimals?.length) return;
+    setAnimalsData(snapshot.nextAnimals);
+    setStatusMap(snapshot.nextStatusMap);
+  }, [localAnimalsReady, user?.id]);
 
   useEffect(() => {
     if (authLoading) return;
@@ -14975,10 +15006,6 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   }
 
   if (!user) return <AuthScreen onAuthReady={()=>supabase.auth.getSession().then(({data})=>{setSession(data.session||null);setUser(data.session?.user||null);})} />;
-
-  if (!localAnimalsReady) {
-    return <ApexBootLoader frameProps={APP_FRAME_PROPS} message="Caricamento specie..." />;
-  }
 
   if (!userProfile && dataLoading) {
     return (
