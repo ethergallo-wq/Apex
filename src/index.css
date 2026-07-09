@@ -145,3 +145,12 @@ code {
 .apex-boot-message-fade {
   animation: apex-boot-message-fade .45s ease;
 }
+
+.apex-boot-spotlight-card {
+  animation: apex-boot-spotlight-pop .55s ease both;
+}
+
+@keyframes apex-boot-spotlight-pop {
+  from { opacity: 0; transform: translateY(6px) scale(.92); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}

@@ -1289,22 +1289,68 @@ function resolveProfileFirstTimeFlags(profile = {}, userId) {
 
   const onboarding_completed = dbOnboarding || localOnboarding || hasProgress;
   const has_completed_tutorial = dbTutorial || localTutorial || (onboarding_completed && hasStatuses);
+  const onboarding_completed_at = profile?.onboarding_completed_at || local.onboarding_completed_at || null;
+  const tutorial_completed_at = profile?.tutorial_completed_at || local.tutorial_completed_at || null;
+  const shouldBackfillLocal = resolvedUserId && hasProgress && (!dbOnboarding || !dbTutorial) && (onboarding_completed || has_completed_tutorial);
+  const shouldPushRemote = resolvedUserId && (
+    shouldBackfillLocal
+    || (localOnboarding && !dbOnboarding)
+    || (localTutorial && !dbTutorial)
+  );
 
-  if (resolvedUserId && hasProgress && (!dbOnboarding || !dbTutorial) && (onboarding_completed || has_completed_tutorial)) {
+  if (shouldBackfillLocal) {
     persistProfileDemographicsLocal(resolvedUserId, {
       onboarding_completed,
       has_completed_tutorial,
-      onboarding_completed_at: profile?.onboarding_completed_at || local.onboarding_completed_at || null,
-      tutorial_completed_at: profile?.tutorial_completed_at || local.tutorial_completed_at || null,
+      onboarding_completed_at,
+      tutorial_completed_at,
     });
+  }
+  if (shouldPushRemote) {
+    syncUserProfileFlagsToSupabase(resolvedUserId, {
+      onboarding_completed,
+      has_completed_tutorial,
+      onboarding_completed_at,
+      tutorial_completed_at,
+    }).catch(err => console.warn('[Apex] sync flag profilo non bloccante:', err));
   }
 
   return {
     onboarding_completed,
     has_completed_tutorial,
-    onboarding_completed_at: profile?.onboarding_completed_at || local.onboarding_completed_at || null,
-    tutorial_completed_at: profile?.tutorial_completed_at || local.tutorial_completed_at || null,
+    onboarding_completed_at,
+    tutorial_completed_at,
   };
+}
+
+async function syncUserProfileFlagsToSupabase(userId, flags = {}) {
+  if (!userId) return false;
+  const payload = {
+    user_id: userId,
+    updated_at: new Date().toISOString(),
+  };
+  if (flags.onboarding_completed !== undefined) {
+    payload.onboarding_completed = Boolean(flags.onboarding_completed);
+    if (flags.onboarding_completed_at) payload.onboarding_completed_at = flags.onboarding_completed_at;
+    else if (payload.onboarding_completed) payload.onboarding_completed_at = new Date().toISOString();
+  }
+  if (flags.has_completed_tutorial !== undefined) {
+    payload.has_completed_tutorial = Boolean(flags.has_completed_tutorial);
+    if (flags.tutorial_completed_at) payload.tutorial_completed_at = flags.tutorial_completed_at;
+    else if (payload.has_completed_tutorial) payload.tutorial_completed_at = new Date().toISOString();
+  }
+  const { error } = await supabase.from('user_profiles').upsert(payload, { onConflict: 'user_id' });
+  if (error) throw error;
+  return true;
+}
+
+async function syncMissingDestinationsToSupabase(userId, localIsos = [], remoteIsos = []) {
+  if (!userId) return 0;
+  const remoteSet = new Set(normalizeIsoList(remoteIsos));
+  const missing = normalizeIsoList(localIsos).filter(iso => !remoteSet.has(iso));
+  if (!missing.length) return 0;
+  await Promise.allSettled(missing.map(iso => persistUserDestination(userId, iso, [])));
+  return missing.length;
 }
 
 async function fetchUserProfile(user) {
@@ -14031,7 +14077,6 @@ export default function App() {
   const [session,setSession]=useState(null);
   const [user,setUser]=useState(null);
   const [authLoading,setAuthLoading]=useState(true);
-  const [dataLoading,setDataLoading]=useState(false);
   const [dataError,setDataError]=useState('');
   const [userProfile,setUserProfile]=useState(null);
   const [toastOpenBadgeId,setToastOpenBadgeId]=useState(null);
@@ -14263,7 +14308,7 @@ export default function App() {
     const localDestinations = normalizeIsoList(getVisitedCountries());
     const fallbackProfile = buildFallbackProfile(activeUser, false);
 
-    setUserProfile(prev => prev || fallbackProfile);
+    setUserProfile(fallbackProfile);
     if (Object.keys(localStatusMap).length) {
       setStatusMap(prev => mergeStatusMapsByRank(localStatusMap, prev));
       setAnimalsData(prev => applyCachedUserStatuses(prev, activeUser.id));
@@ -14281,63 +14326,60 @@ export default function App() {
     if (!activeUser?.id) return;
     const myGen = ++reloadGenerationRef.current;
     const isStale = () => reloadGenerationRef.current !== myGen;
-    setDataLoading(true);
     setDataError('');
 
-    try {
-      // Non bloccare mai la UI sul profilo: se Supabase/RLS rallenta, usiamo fallback.
-      await withTimeout(
-        ensureUserProfile(activeUser).catch(err => {
-          console.warn('[Apex] ensure profile non bloccante:', err);
-          return false;
-        }),
-        3500,
-        false,
-        'ensureUserProfile'
-      );
+    const localSnapshot = buildLocalAnimalSnapshot(activeUser.id, statusMap);
+    if (localSnapshot?.nextAnimals?.length) {
+      setAnimalsData(localSnapshot.nextAnimals);
+      setStatusMap(localSnapshot.nextStatusMap);
+      setProgressHydrated(true);
+    }
+    setUserProfile(prev => prev || buildFallbackProfile(activeUser, false));
 
-      const profile = await withTimeout(
-        fetchUserProfile(activeUser),
-        4500,
-        buildFallbackProfile(activeUser, false),
-        'fetchUserProfile'
-      );
+    try {
+      const [, profile] = await Promise.all([
+        withTimeout(
+          ensureUserProfile(activeUser).catch(err => {
+            console.warn('[Apex] ensure profile non bloccante:', err);
+            return false;
+          }),
+          2200,
+          false,
+          'ensureUserProfile'
+        ),
+        withTimeout(
+          fetchUserProfile(activeUser),
+          2800,
+          buildFallbackProfile(activeUser, false),
+          'fetchUserProfile'
+        ),
+      ]);
+      if (isStale()) return;
       setUserProfile(profile || buildFallbackProfile(activeUser, false));
 
-      const localSnapshot = buildLocalAnimalSnapshot(activeUser.id, statusMap);
-      if (localSnapshot) {
-        setAnimalsData(localSnapshot.nextAnimals);
-        setStatusMap(localSnapshot.nextStatusMap);
-        setDataLoading(false);
-        setProgressHydrated(true);
-        setTimeout(() => setAwardToastReady(true), 0);
-      }
-
-      const [remoteAnimalsResult, remoteStatusResult, destinationsResult, badgeResult, documentedResult, expeditionsResult] = await Promise.allSettled([
-        Promise.resolve(null),
-        withTimeout(fetchUserAnimalStatusMap(activeUser.id), 6500, {}, 'fetchUserAnimalStatusMap'),
-        withTimeout(fetchUserDestinations(activeUser.id), 6500, getVisitedCountries(), 'fetchUserDestinations'),
-        withTimeout(fetchUserBadgeIds(activeUser.id), 6500, null, 'fetchUserBadgeIds'),
-        withTimeout(fetchUserDocumentedMap(activeUser.id), 6500, null, 'fetchUserDocumentedMap'),
-        withTimeout(fetchUserExpeditions(activeUser.id), 6500, null, 'fetchUserExpeditions'),
+      const [remoteStatusResult, destinationsResult, badgeResult, documentedResult, expeditionsResult] = await Promise.allSettled([
+        withTimeout(fetchUserAnimalStatusMap(activeUser.id), 4500, {}, 'fetchUserAnimalStatusMap'),
+        withTimeout(fetchUserDestinations(activeUser.id), 4500, getVisitedCountries(), 'fetchUserDestinations'),
+        withTimeout(fetchUserBadgeIds(activeUser.id), 4500, null, 'fetchUserBadgeIds'),
+        withTimeout(fetchUserDocumentedMap(activeUser.id), 4500, null, 'fetchUserDocumentedMap'),
+        withTimeout(fetchUserExpeditions(activeUser.id), 4500, null, 'fetchUserExpeditions'),
       ]);
 
       if (isStale()) return;
-      const remoteAnimals = remoteAnimalsResult.status === 'fulfilled' ? remoteAnimalsResult.value : null;
       const remoteUserStatusMap = remoteStatusResult.status === 'fulfilled' ? (remoteStatusResult.value || {}) : {};
       const destinations = destinationsResult.status === 'fulfilled' ? destinationsResult.value : getVisitedCountries();
       const remoteBadgeIds = badgeResult.status === 'fulfilled' ? badgeResult.value : null;
 
-      [remoteAnimalsResult, remoteStatusResult, destinationsResult, badgeResult].forEach((result, idx) => {
+      [remoteStatusResult, destinationsResult, badgeResult].forEach((result, idx) => {
         if (result.status === 'rejected') {
-          const label = ['animals', 'user_animals', 'destinations', 'badges'][idx];
+          const label = ['user_animals', 'destinations', 'badges'][idx];
           console.warn(`[Apex] Caricamento parziale ${label} fallito:`, result.reason);
         }
       });
 
       const sourceAnimals = LOCAL_ANIMALS.length
         ? applyCachedUserStatuses(LOCAL_ANIMALS.map(normalizeLocalAnimal), activeUser.id)
-        : (remoteAnimals?.length ? applyCachedUserStatuses(mergeRemoteWithLocalBioregions(remoteAnimals), activeUser.id) : null);
+        : null;
       const mergedSnapshot = LOCAL_ANIMALS.length
         ? buildLocalAnimalSnapshot(activeUser.id, statusMap, remoteUserStatusMap)
         : (sourceAnimals?.length ? {
@@ -14363,6 +14405,9 @@ export default function App() {
       // Merge remoto + paesi in attesa di conferma: un insert fallito o in
       // timeout non deve mai far sparire un paese appena aggiunto.
       const remoteDestinations = normalizeIsoList(destinations || []);
+      const localDestinationsNow = normalizeIsoList([...getVisitedCountries(), ...getPendingDestinations(activeUser.id)]);
+      syncMissingDestinationsToSupabase(activeUser.id, localDestinationsNow, remoteDestinations)
+        .catch(err => console.warn('[Apex] sync destinazioni mancanti non bloccante:', err));
       const pendingDestinations = getPendingDestinations(activeUser.id);
       const nextDestinations = normalizeIsoList([...remoteDestinations, ...pendingDestinations]);
       setVisitedCountries(nextDestinations);
@@ -14386,6 +14431,9 @@ export default function App() {
       ])).filter(Boolean);
       setEarnedBadgeIds(nextBadgeIds);
       persistAwardUnlocks(nextBadgeIds);
+      if (nextBadgeIds.length) {
+        persistEarnedBadges(activeUser.id, nextBadgeIds).catch(err => console.warn('[Apex] sync badge non bloccante:', err));
+      }
 
       // Layer Documentato: merge remoto (se la colonna esiste) + locale, senza mai perdere voci locali.
       const remoteDocumented = documentedResult.status === 'fulfilled' ? (documentedResult.value || null) : null;
@@ -14418,7 +14466,6 @@ export default function App() {
       setUserProfile(prev => prev || buildFallbackProfile(activeUser, false));
     } finally {
       if (!isStale()) {
-        setDataLoading(false);
         setProgressHydrated(true);
         setTimeout(() => setAwardToastReady(true), 0);
       }
@@ -14835,6 +14882,11 @@ export default function App() {
   const finishOnboarding = async (options = {}) => {
     const now = new Date().toISOString();
     persistProfileDemographicsLocal(user?.id, { onboarding_completed: true, onboarding_completed_at: now });
+    syncUserProfileFlagsToSupabase(user?.id, {
+      onboarding_completed: true,
+      onboarding_completed_at: now,
+      has_completed_tutorial: false,
+    }).catch(err => console.warn('[Apex] sync onboarding completato non bloccante:', err));
     setUserProfile(prev => mergeProfileDemographics({
       ...(prev || buildFallbackProfile(user, true)),
       onboarding_completed:true,
@@ -14909,10 +14961,12 @@ export default function App() {
     setUserProfile(prev => ({ ...(prev || {}), has_completed_tutorial:true, tutorial_completed_at:now }));
     try {
       if (user?.id) {
-        await supabase
-          .from('user_profiles')
-          .update({ has_completed_tutorial:true, tutorial_completed_at:now })
-          .eq('user_id', user.id);
+        await syncUserProfileFlagsToSupabase(user.id, {
+          has_completed_tutorial: true,
+          tutorial_completed_at: now,
+          onboarding_completed: Boolean(userProfile?.onboarding_completed),
+          onboarding_completed_at: userProfile?.onboarding_completed_at || null,
+        });
       }
     } catch (err) {
       console.warn('[Apex] Salvataggio tutorial non bloccante:', err);
@@ -15214,19 +15268,12 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
 
   if (!user) return <AuthScreen onAuthReady={()=>supabase.auth.getSession().then(({data})=>{setSession(data.session||null);setUser(data.session?.user||null);})} />;
 
-  if (!userProfile && dataLoading) {
-    return <ApexBootLoader frameProps={APP_FRAME_PROPS} message="Caricamento profilo…" />;
-  }
+  const activeUserProfile = userProfile || buildFallbackProfile(user, false);
 
-  if (!userProfile && !dataLoading) {
-    setTimeout(() => setUserProfile(buildFallbackProfile(user, false)), 0);
-    return <ApexBootLoader frameProps={APP_FRAME_PROPS} message="Apertura Apex…" />;
-  }
-
-  if (userProfile && userProfile.onboarding_completed === false) {
+  if (activeUserProfile.onboarding_completed === false) {
     return (
       <div {...APP_FRAME_PROPS} style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', overflow:'hidden', background:'#111113', position:'relative' }}>
-        <OnboardingFlow user={user} animals={animalsData} initialNickname={userProfile.nickname || userProfile.username} onComplete={handleCompleteOnboarding} onFinish={finishOnboarding} />
+        <OnboardingFlow user={user} animals={animalsData} initialNickname={activeUserProfile.nickname || activeUserProfile.username} onComplete={handleCompleteOnboarding} onFinish={finishOnboarding} />
       </div>
     );
   }

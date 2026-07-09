@@ -4,6 +4,12 @@ export const APEX_BOOT_MESSAGES = [
   'Riscaldando le ali dei colibrì…',
   'Stirando le antenne delle farfalle…',
   'Sincronizzando i branchi di pesci…',
+  'Spiegando ai pinguini perché volano sott’acqua…',
+  'Misurando la lingua del camaleonte…',
+  'Convincendo l’ornitorinco che è un mammifero…',
+  'Controllando se i polpi hanno davvero tre cuori…',
+  'Chiedendo al koala quante ore ha dormito oggi…',
+  'Allineando le strisce delle zebre al carrello…',
 ];
 
 export const APEX_BOOT_ANIMAL_IMAGES = [
@@ -36,4 +42,23 @@ export function buildMarqueeTrack(images = APEX_BOOT_ANIMAL_IMAGES, repeat = 2) 
   const base = (images || []).filter(Boolean);
   if (!base.length) return [];
   return Array.from({ length: repeat }, () => base).flat();
+}
+
+export function pickBootSpotlightImages(images = APEX_BOOT_ANIMAL_IMAGES, count = 5, offset = 0) {
+  const base = (images || []).filter(Boolean);
+  if (!base.length) return [];
+  const picked = [];
+  for (let i = 0; i < count; i += 1) {
+    picked.push(base[(offset + i) % base.length]);
+  }
+  return picked;
+}
+
+export function preloadBootImages(images = APEX_BOOT_ANIMAL_IMAGES) {
+  if (typeof window === 'undefined') return;
+  (images || []).filter(Boolean).forEach((src) => {
+    const img = new Image();
+    img.decoding = 'async';
+    img.src = src;
+  });
 }
