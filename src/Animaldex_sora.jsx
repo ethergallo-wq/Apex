@@ -10,6 +10,7 @@ import { getProfileAvatarChoices, resolveProfileAvatarAnimal } from './profileAv
 import { buildOnboardingCountryGroups } from './travelProbability';
 import { resolveMissionGridNavigation } from './homeMission';
 import ApexBootLoader from './ApexBootLoader';
+import { ANIMAL_IMAGE_BOUNDS } from './animal-image-bounds';
 
 let LOCAL_ANIMALS = [];
 let ANIMALS = [];
@@ -770,6 +771,55 @@ function consumeAiRecognition(userId) {
 }
 function getAnimalImageUrl(animal) {
   return animal?.image_url || (LOCAL_ANIMALS.find(x => Number(x.id) === Number(animal?.id) || x.sci === animal?.sci)?.image_url || '');
+}
+
+function lookupAnimalImageBounds(src) {
+  const file = String(src || '').split('?')[0].split('#')[0].split('/').pop() || '';
+  if (!file) return null;
+  const key = Object.prototype.hasOwnProperty.call(ANIMAL_IMAGE_BOUNDS, file)
+    ? file
+    : Object.keys(ANIMAL_IMAGE_BOUNDS).find(k => k.toLowerCase() === file.toLowerCase());
+  if (!key) return null;
+  const row = ANIMAL_IMAGE_BOUNDS[key];
+  if (!Array.isArray(row) || row.length < 6) return null;
+  const [naturalWidth, naturalHeight, x, y, width, height] = row;
+  return { naturalWidth, naturalHeight, x, y, width, height };
+}
+
+function getAnimalScaleImageCandidates(animal) {
+  const out = [];
+  const add = (v) => {
+    const clean = String(v || '').trim();
+    if (clean && !out.includes(clean)) out.push(clean);
+  };
+  const primary = getAnimalImageUrl(animal);
+  if (primary) {
+    add(primary);
+    const file = primary.split('?')[0].split('#')[0].split('/').pop() || '';
+    const basename = file.replace(/\.[^.]+$/, '');
+    if (basename) {
+      add(`/animals/${basename}.png`);
+      add(`/animals/thumbs/${basename}.webp`);
+    }
+    try {
+      if (file && !/^https?:\/\//i.test(primary)) {
+        add(`/${primary.replace(/^\/+/, '')}`);
+        add(`/animals/${file}`);
+      }
+    } catch {}
+  }
+  if (animal?.sci) {
+    const slug = String(animal.sci).trim().toLowerCase().replace(/\s+/g, '-');
+    add(`/animals/${slug}.png`);
+  }
+  const local = LOCAL_ANIMALS.find(x => Number(x.id) === Number(animal?.id) || x.sci === animal?.sci);
+  if (local?.image_url && local.image_url !== primary) {
+    add(local.image_url);
+    const file = String(local.image_url).split('/').pop() || '';
+    const basename = file.replace(/\.[^.]+$/, '');
+    if (basename) add(`/animals/${basename}.png`);
+  }
+  return out;
 }
 function getAnimalGridImageUrl(animal) {
   const imageUrl = getAnimalImageUrl(animal);
@@ -4531,7 +4581,7 @@ function EarSilhouette({ h = 72 }) {
     </svg>
   );
 }
-function ScaleComparison({ animal, full=false }) {
+function ScaleComparison({ animal, full=false, documented=false }) {
   const viewportW = typeof window !== 'undefined' ? window.innerWidth : 390;
   const viewportH = typeof window !== 'undefined' ? window.innerHeight : 800;
   const availableW = Math.max(280, Math.min(520, viewportW - 70));
@@ -4543,10 +4593,26 @@ function ScaleComparison({ animal, full=false }) {
   const pxPerCm = maxPx / maxCm;
   const referencePx = Math.max(full ? 40 : 28, Math.round(ref.cm * pxPerCm));
   const animalPx = Math.max(minPx, Math.round((lengthCm || ref.cm * .25) * pxPerCm));
-  const animalIsMystery = isMysteryStatus(animal?.status);
-  const resolvedAnimalUrl = getAnimalImageUrl(animal);
-  const animalSrc = animalIsMystery ? (CLASS_ICONS[animal?.cls] || CLASS_ICONS.Mammalia) : (resolvedAnimalUrl || MYSTERY_PLACEHOLDER);
-  const animalBounds = useImagePixelBounds(!animalIsMystery && resolvedAnimalUrl ? resolvedAnimalUrl : '');
+  const showWhiteSilhouette = !isMysteryStatus(animal?.status) || documented || isAnimalDocumented(animal);
+  const imageCandidates = useMemo(
+    () => (showWhiteSilhouette ? getAnimalScaleImageCandidates(animal) : []),
+    [animal, showWhiteSilhouette]
+  );
+  const [srcIdx, setSrcIdx] = useState(0);
+  useEffect(() => { setSrcIdx(0); }, [animal?.id, animal?.sci, imageCandidates.join('|')]);
+  const activeAnimalSrc = showWhiteSilhouette ? (imageCandidates[srcIdx] || imageCandidates[0] || '') : '';
+  const animalSrc = showWhiteSilhouette
+    ? (activeAnimalSrc || MYSTERY_PLACEHOLDER)
+    : (CLASS_ICONS[animal?.cls] || CLASS_ICONS.Mammalia);
+  const canvasBounds = useImagePixelBounds(showWhiteSilhouette && activeAnimalSrc ? activeAnimalSrc : '');
+  const catalogBounds = useMemo(() => {
+    for (const candidate of imageCandidates) {
+      const bounds = lookupAnimalImageBounds(candidate);
+      if (bounds) return bounds;
+    }
+    return lookupAnimalImageBounds(activeAnimalSrc);
+  }, [imageCandidates, activeAnimalSrc]);
+  const animalBounds = canvasBounds || catalogBounds;
   const stageHeight = full ? Math.min(196, Math.max(152, Math.round(viewportH * .25))) : 68;
   const floorY = full ? Math.max(128, stageHeight - 18) : 62;
   const refSlotW = full ? Math.max(92, Math.min(160, Math.round(availableW * .34))) : 66;
@@ -4566,7 +4632,14 @@ function ScaleComparison({ animal, full=false }) {
 	          <img src={ref.src} alt={ref.label} style={{ maxHeight:referencePx, maxWidth:full?144:58, width:'auto', height:'auto', objectFit:'contain', objectPosition:'center bottom', display:'block', opacity:.96 }} />
 	        </div>
 	        <div style={{ height:'100%', width:animalSlotW, display:'flex', justifyContent:'flex-start', alignItems:'flex-end', transform:`translateX(${animalNudge}px)`, paddingBottom:Math.max(0, stageHeight - floorY), boxSizing:'border-box' }}>
-	          <img src={animalSrc} alt="" style={{ maxWidth:animalMaxWidth, maxHeight:animalPx, width:'auto', height:'auto', objectFit:'contain', objectPosition:'center bottom', display:'block', transform:`translateY(${animalBottomOffset}px)`, filter:animalIsMystery?'none':'brightness(0) invert(1)', imageRendering:'-webkit-optimize-contrast', opacity:animalIsMystery ? .78 : 1 }} />
+	          <img
+              src={animalSrc}
+              alt=""
+              onError={() => {
+                if (showWhiteSilhouette && srcIdx < imageCandidates.length - 1) setSrcIdx(i => i + 1);
+              }}
+              style={{ maxWidth:animalMaxWidth, maxHeight:animalPx, width:'auto', height:'auto', objectFit:'contain', objectPosition:'center bottom', display:'block', transform:`translateY(${animalBottomOffset}px)`, filter:showWhiteSilhouette ? 'brightness(0) invert(1)' : 'none', imageRendering:'-webkit-optimize-contrast', opacity:showWhiteSilhouette ? 1 : .78 }}
+            />
 	        </div>
       </div>
     </div>
@@ -5207,7 +5280,13 @@ function StatusBadge({ status, accentColor, onClick }) {
     ? { ...base, bg: accentColor, c:'#fff', dot:'#fff' }
     : base;
   return (
-    <div onClick={onClick} style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:7, padding:'10px 12px', borderRadius:18, background:cfg.bg, color:cfg.c, fontSize:12, fontWeight:800, border:cfg.border||'none', cursor:onClick?'pointer':'default', textTransform:'uppercase', letterSpacing:0.5, width:'100%', boxSizing:'border-box', maxWidth:'100%' }}>
+    <div
+      role={onClick ? 'button' : undefined}
+      tabIndex={onClick ? 0 : undefined}
+      onClick={onClick}
+      onKeyDown={onClick ? (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick(e); } } : undefined}
+      style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:7, padding:'10px 12px', borderRadius:18, background:cfg.bg, color:cfg.c, fontSize:12, fontWeight:800, border:cfg.border||'none', cursor:onClick?'pointer':'default', textTransform:'uppercase', letterSpacing:0.5, width:'100%', boxSizing:'border-box', maxWidth:'100%', fontFamily:'inherit' }}
+    >
       <span style={{ width:7, height:7, borderRadius:'50%', background:cfg.dot || cfg.c, display:'inline-block', boxShadow:normalized==='catturato'?'0 0 8px rgba(255,255,255,.55)':'none' }} />
       {cfg.label}
     </div>
@@ -6990,7 +7069,13 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
           <p style={{ margin:'4px 0 0', color:c.accent, fontSize:15, fontStyle:'italic', fontWeight:400 }}>{a.sci}</p>
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:8, marginBottom:14, padding:'0 4px' }}>
-          <div data-tour="animal-status" style={{ width:'100%', borderRadius:18, boxShadow:['detail-guide','detail-overview'].includes(tutorialStep)?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}><StatusBadge status={localStatus} accentColor={c.accent}/></div>
+          <div data-tour="animal-status" style={{ width:'100%', borderRadius:18, boxShadow:['detail-guide','detail-overview'].includes(tutorialStep)?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
+            <StatusBadge
+              status={localStatus}
+              accentColor={c.accent}
+              onClick={isMysteryStatus(localStatus) ? () => setFocusLegend('status') : undefined}
+            />
+          </div>
           {documented && (
             <div style={{ display:'flex', alignItems:'center', gap:8, borderRadius:16, padding:'8px 12px', background:DOCUMENTED_META.bg, border:DOCUMENTED_META.border }}>
               <span style={{ fontSize:14 }}>📖</span>
@@ -7027,7 +7112,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
           </button>
 
           <button onClick={()=>{setMetricModal('dimensioni'); if(tutorialStep==='detail-metrics') { setTimeout(()=>setMetricModal(null), 520); onTutorialMetricClick?.(); }}} style={{ height:112, minHeight:112, width:'100%', minWidth:0, background:'#111113', borderRadius:20, padding:'6px 8px 10px', display:'flex', flexDirection:'column', alignItems:'stretch', justifyContent:'space-between', border:'1px solid rgba(255,255,255,.06)', fontFamily:'inherit', cursor:'pointer', boxSizing:'border-box', boxShadow:tutorialStep==='detail-metrics'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
-            <ScaleComparison animal={a} />
+            <ScaleComparison animal={a} documented={documented} />
             <div style={{ fontSize:11.5, fontWeight:900, color:'white', textAlign:'center', letterSpacing:'-.3px', marginTop:2 }}>{a.ln}</div>
           </button>
 
@@ -7184,7 +7269,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
       </FullscreenMetricModal>
       <FullscreenMetricModal open={metricModal==='dimensioni'} title="Dimensioni" subtitle="Il confronto usa sempre la stessa scala tra anteprima e zoom. Le misure in metri vengono convertite in centimetri, così animali grandi come bovini o cervi non risultano artificialmente minuscoli." onClose={()=>setMetricModal(null)}>
         <div style={{ background:'rgba(255,255,255,.04)', borderRadius:20, padding:'clamp(12px, 4vw, 18px)', textAlign:'center', overflow:'hidden' }}>
-          <ScaleComparison animal={a} full />
+          <ScaleComparison animal={a} full documented={documented} />
         </div>
         <div style={{ color:'white', textAlign:'center', fontSize:'clamp(20px, 7vw, 28px)', fontWeight:1000, marginTop:12, lineHeight:1.08, overflowWrap:'anywhere' }}>{a.ln}</div>
       </FullscreenMetricModal>
@@ -7199,11 +7284,13 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
         <div onClick={()=>setFocusLegend(null)} style={{ position:'fixed', inset:0, background:'rgba(0,0,0,.8)', display:'flex', alignItems:'center', justifyContent:'center', zIndex:100, padding:16 }}>
           <div onClick={e=>e.stopPropagation()} style={{ background:c.detailBg, borderRadius:20, padding:'24px 28px', maxHeight:'82vh', overflowY:'auto', maxWidth:460, width:'100%', border:`2px solid ${c.accent}` }}>
             <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:18 }}>
-              <h2 style={{ margin:0, color:c.accent, fontSize:20, fontWeight:900 }}>{focusLegend === 'rarity' ? '★ Rarità Animale' : '🛡 Stato di conservazione'}</h2>
+              <h2 style={{ margin:0, color:c.accent, fontSize:20, fontWeight:900 }}>
+                {focusLegend === 'rarity' ? '★ Rarità Animale' : focusLegend === 'status' ? 'Status animale' : '🛡 Stato di conservazione'}
+              </h2>
               <button onClick={()=>setFocusLegend(null)} style={{ background:'none', border:'none', color:c.accent, fontSize:24, cursor:'pointer', padding:0 }}>×</button>
             </div>
             <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
-              {focusLegend === 'rarity' ? <RarityLegendRows /> : <ConservationLegendRows />}
+              {focusLegend === 'rarity' ? <RarityLegendRows /> : focusLegend === 'status' ? <StatusLegendRows /> : <ConservationLegendRows />}
             </div>
           </div>
         </div>
@@ -10014,9 +10101,17 @@ function getLifeUncoveredAnimals(node, visibleChildren, animals=[]) {
 }
 function getMysteryLifeLabel(rank='species') {
   if (rank === 'species') return 'Animale misterioso';
-  const labels = { kingdom:'Regno', phylum:'Phylum', class:'Classe', order:'Ordine', family:'Famiglia', genus:'Genere', species:'Specie', cluster:'Cluster' };
+  const labels = { domain:'Dominio', kingdom:'Regno', phylum:'Phylum', class:'Classe', order:'Ordine', family:'Famiglia', genus:'Genere', species:'Specie', cluster:'Cluster' };
   const label = labels[rank] || 'Nodo';
   return `${label} ${label === 'Specie' || label === 'Famiglia' || label === 'Classe' ? 'misteriosa' : 'misterioso'}`;
+}
+
+const LIFE_RANK_ORDER = ['domain', 'kingdom', 'phylum', 'class', 'order', 'family', 'genus', 'species'];
+
+function getLifeRankColumn(rank='') {
+  if (rank === 'cluster' || rank === 'editorial') return LIFE_RANK_ORDER.indexOf('family');
+  const idx = LIFE_RANK_ORDER.indexOf(rank);
+  return idx >= 0 ? idx : LIFE_RANK_ORDER.indexOf('family');
 }
 function limitLifeEntriesWithFocus(entries, limit, hasFocus) {
   const list = entries.slice().sort(([a], [b]) => String(a).localeCompare(String(b)));
@@ -10053,8 +10148,16 @@ function buildLifeAnimalBranches(node, animals=[], sourceRows=null, focusAnimalI
       return { ...childNode, children:nextRowsBuilder(childNode, rankRows) };
     });
   };
+  if (node.rank === 'kingdom') return buildRankBranches('phy', 'phylum', 'Phylum non classificato', (childNode, rankRows) => buildLifeAnimalBranches(childNode, animals, rankRows, focusAnimalId));
+  if (node.rank === 'phylum') return buildRankBranches('cls', 'class', 'Classe non classificata', (childNode, rankRows) => buildLifeAnimalBranches(childNode, animals, rankRows, focusAnimalId));
   if (node.rank === 'class') return buildRankBranches('ord', 'order', 'Ordine non classificato', (childNode, rankRows) => buildLifeAnimalBranches(childNode, animals, rankRows, focusAnimalId));
   if (node.rank === 'order') return buildRankBranches('fam', 'family', 'Famiglia non classificata', (childNode, rankRows) => buildLifeAnimalBranches(childNode, animals, rankRows, focusAnimalId));
+  if (node.rank === 'cluster' || node.rank === 'editorial') return buildRankBranches('fam', 'family', 'Famiglia non classificata', (childNode, rankRows) => buildLifeAnimalBranches(childNode, animals, rankRows, focusAnimalId));
+  if (node.rank === 'family') {
+    // pass through to genus/species below
+  } else if (node.rank !== 'genus') {
+    return buildRankBranches('fam', 'family', 'Famiglia non classificata', (childNode, rankRows) => buildLifeAnimalBranches(childNode, animals, rankRows, focusAnimalId));
+  }
   const byGenus = new Map();
   rows.forEach(animal => {
     const genus = getLifeAnimalGenus(animal) || 'Genere non classificato';
@@ -10092,37 +10195,38 @@ function buildLifeAnimalBranches(node, animals=[], sourceRows=null, focusAnimalI
 }
 function buildLifeFlow(selected, animals, expandedGeneratedId = null, focusAnimalId=null) {
   const selectedPath = getLifeNodePath(selected.id);
-  const focusDepth = Math.max(0, selectedPath.length - 1);
-  const maxVisibleDepth = focusDepth + (focusAnimalId ? 4 : 2);
+  const focusRankCol = getLifeRankColumn(selected.rank);
+  const maxVisibleRankCol = focusRankCol + (focusAnimalId ? 3 : 2);
   const selectedPathIds = new Set(selectedPath.map(node => node.id));
   const layoutNodes = [];
   const colGap = 324;
-  const rowGap = focusDepth === 0 ? 138 : 164;
-  const groupGap = focusDepth === 0 ? 84 : 68;
+  const rowGap = focusRankCol <= LIFE_RANK_ORDER.indexOf('kingdom') ? 138 : 164;
+  const groupGap = focusRankCol <= LIFE_RANK_ORDER.indexOf('kingdom') ? 84 : 68;
   const nodeW = 252;
   const nodeH = 132;
   let cursorY = 0;
   const walk = (node, depth = 0, parent = null, parentWithinSelected = false) => {
+    const nodeRankCol = getLifeRankColumn(node.rank);
     const withinSelected = parentWithinSelected || node.id === selected.id;
     const baseChildren = (node.children || []).filter(child => {
-      const childDepth = depth + 1;
+      const childRankCol = getLifeRankColumn(child.rank);
       const childWithinSelected = withinSelected || child.id === selected.id;
-      if ((withinSelected || parentWithinSelected) && childDepth <= maxVisibleDepth) return true;
+      if ((withinSelected || parentWithinSelected) && childRankCol <= maxVisibleRankCol) return true;
       if (!selectedPathIds.has(child.id) && getLifeAnimals(child, animals).length === 0) return false;
-      return childDepth <= 2 || selectedPathIds.has(node.id) || selectedPathIds.has(child.id) || (childWithinSelected && childDepth <= maxVisibleDepth) || node.id === expandedGeneratedId;
+      return childRankCol <= LIFE_RANK_ORDER.indexOf('class') || selectedPathIds.has(child.id) || selectedPathIds.has(node.id) || (childWithinSelected && childRankCol <= maxVisibleRankCol) || node.id === expandedGeneratedId;
     });
-    const canAttachAnimals = focusDepth > 0 && withinSelected && depth >= focusDepth && depth < maxVisibleDepth && !(node.children || []).length;
+    const canAttachAnimals = focusRankCol > 0 && withinSelected && nodeRankCol >= focusRankCol && nodeRankCol < maxVisibleRankCol && !(node.children || []).length;
     const uncoveredAnimals = canAttachAnimals ? getLifeUncoveredAnimals(node, baseChildren, animals) : [];
     const animalChildren = uncoveredAnimals.length ? buildLifeAnimalBranches(node, animals, uncoveredAnimals, focusAnimalId) : [];
     const visibleChildren = [...baseChildren, ...animalChildren];
-    const column = depth - focusDepth;
-    const row = { data:node, depth, parent, x:140 + depth * colGap, y:0, column, withinSelected };
+    const column = nodeRankCol - focusRankCol;
+    const row = { data:node, depth, parent, x:140 + nodeRankCol * colGap, y:0, column, withinSelected, rankCol:nodeRankCol };
     layoutNodes.push(row);
     const childRows = [];
     visibleChildren.forEach((child, index) => {
       childRows.push(walk(child, depth + 1, row, withinSelected));
       if (depth === 0 && index < visibleChildren.length - 1) cursorY += groupGap;
-      if (depth >= 1 && focusDepth > 0 && index < visibleChildren.length - 1) cursorY += Math.max(18, groupGap * .34);
+      if (depth >= 1 && focusRankCol > 0 && index < visibleChildren.length - 1) cursorY += Math.max(18, groupGap * .34);
     });
     if (childRows.length) row.y = childRows.reduce((sum, child) => sum + child.y, 0) / childRows.length;
     else {
@@ -10140,28 +10244,26 @@ function buildLifeFlow(selected, animals, expandedGeneratedId = null, focusAnima
     y:d.y,
     depth:d.depth,
     column:d.column,
+    rankCol:d.rankCol,
     node:d.data,
     stats:getLifeStats(d.data, animals),
     active:d.data.id === selected.id,
     inPath:selectedPathIds.has(d.data.id),
-    near:focusDepth === 0 || d.withinSelected || selectedPathIds.has(d.data.id),
+    near:focusRankCol <= LIFE_RANK_ORDER.indexOf('kingdom') || d.withinSelected || selectedPathIds.has(d.data.id),
   }));
   const edges = layoutNodes.filter(d => d.parent).map(d => ({
     id:`${d.parent.data.id}-${d.data.id}`,
     source:{ x:d.parent.x, y:d.parent.y },
     target:{ x:d.x, y:d.y },
     color:d.data.color,
-    active:focusDepth === 0 ? false : (d.withinSelected || (selectedPathIds.has(d.parent.data.id) && selectedPathIds.has(d.data.id))),
+    active:focusRankCol <= LIFE_RANK_ORDER.indexOf('kingdom') ? false : (d.withinSelected || (selectedPathIds.has(d.parent.data.id) && selectedPathIds.has(d.data.id))),
   }));
-  const visibleDepths = Array.from(new Set(nodes.map(node => node.depth))).sort((a,b)=>a-b);
-  const columns = visibleDepths.map(depth => {
-    const sample = nodes.find(node => node.depth === depth)?.node;
-    return {
-      depth,
-      x:140 + depth * colGap,
-      label:LIFE_RANK_LABELS[sample?.rank] || sample?.rank || `Livello ${depth + 1}`,
-    };
-  });
+  const visibleRankCols = Array.from(new Set(nodes.map(node => node.rankCol))).sort((a, b) => a - b);
+  const columns = visibleRankCols.map(rankCol => ({
+    depth:rankCol,
+    x:140 + rankCol * colGap,
+    label:LIFE_RANK_LABELS[LIFE_RANK_ORDER[rankCol]] || LIFE_RANK_ORDER[rankCol] || `Livello ${rankCol + 1}`,
+  }));
   const focusAnimalIdStr = focusAnimalId ? String(focusAnimalId) : '';
   const containsFocusByNodeId = new Map();
   if (focusAnimalIdStr) {
@@ -10175,7 +10277,7 @@ function buildLifeFlow(selected, animals, expandedGeneratedId = null, focusAnima
     const focusPathNode = !!focusAnimalIdStr && (focusedAnimal || nodeRow.inPath || (nodeRow.node?.generated && containsFocusByNodeId.get(nodeRow.id)));
     return { ...nodeRow, focusedAnimal, focusPathNode };
   });
-  return { nodes:enrichedNodes, edges, columns, selectedPath, selectedNode:enrichedNodes.find(node => node.id === selected.id), focusDepth, colGap, rowGap, nodeW, nodeH };
+  return { nodes:enrichedNodes, edges, columns, selectedPath, selectedNode:enrichedNodes.find(node => node.id === selected.id), focusDepth:focusRankCol, focusRankCol, colGap, rowGap, nodeW, nodeH };
 }
 function buildLifeFlowCached(selected, animals, expandedGeneratedId = null, focusAnimalId=null) {
   const fingerprint = getLifeAnimalsCacheFingerprint(animals);
@@ -10207,7 +10309,7 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
   const [detailNode, setDetailNode] = useState(null);
   const [resetVersion, setResetVersion] = useState(0);
   const deferredAnimals = useDeferredValue(animals);
-  const emptyLifeFlow = { nodes:[], edges:[], columns:[], selectedPath:[], selectedNode:null, focusDepth:0, colGap:324, rowGap:138, nodeW:252, nodeH:132 };
+  const emptyLifeFlow = { nodes:[], edges:[], columns:[], selectedPath:[], selectedNode:null, focusDepth:0, focusRankCol:0, colGap:324, rowGap:138, nodeW:252, nodeH:132 };
   const [lifeFlow, setLifeFlow] = useState(() => buildLifeFlowCached(selectedNode, animals, null, focusAnimalId) || emptyLifeFlow);
   const flow = lifeFlow || emptyLifeFlow;
   useEffect(() => {
@@ -10417,7 +10519,7 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
     const midX = (sx + tx) / 2;
     return `M ${sx} ${sy} H ${midX} V ${ty} H ${tx}`;
   };
-  const rootPlaceholderOpacity = flow.focusDepth === 0 ? Math.max(0, Math.min(.24, 1.05 - view.k)) : 0;
+  const rootPlaceholderOpacity = flow.focusRankCol <= LIFE_RANK_ORDER.indexOf('kingdom') ? Math.max(0, Math.min(.24, 1.05 - view.k)) : 0;
   const focusAnimal = focusAnimalId ? animals.find(animal => String(animal?.id || '') === String(focusAnimalId)) : null;
   return (
     <div ref={wrapRef} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag} onTouchStart={startTouch} onTouchMove={moveTouch} onTouchEnd={endTouch} onTouchCancel={endTouch} style={{ position:'relative', width:'100%', height:'100%', overflow:'hidden', touchAction:'none', background:'radial-gradient(circle at 50% 0%, rgba(217,184,111,.12), transparent 26%), radial-gradient(circle at 18% 28%, rgba(63,183,166,.12), transparent 30%), linear-gradient(180deg,rgba(18,30,26,.72),rgba(4,7,8,.98) 46%,#030506)' }}>
@@ -10438,9 +10540,9 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
           {flow.edges.map(edge => <circle key={`${edge.id}-source`} cx={edge.source.x + 126} cy={edge.source.y} r={edge.active ? 4.8 : 3.6} fill="#07090B" stroke={edge.color} strokeWidth={edge.active ? 1.8 : 1.15} opacity={edge.active ? .96 : .58} style={{ transition:'opacity .52s ease, r .52s ease' }} />)}
           {flow.edges.map(edge => <circle key={`${edge.id}-target`} cx={edge.target.x - 126} cy={edge.target.y} r={edge.active ? 4.8 : 3.6} fill={edge.color} opacity={edge.active ? .96 : .62} style={{ transition:'opacity .52s ease, r .52s ease' }} />)}
         </svg>
-        {rootPlaceholderOpacity > 0 && [3,4].map(level => (
-          <div key={`life-placeholder-${level}`} style={{ position:'absolute', left:140 + level * flow.colGap - 126, top:74 + (level - 3) * 34, width:252, minHeight:118, borderRadius:22, border:'1.4px dashed rgba(255,255,255,.20)', background:'linear-gradient(135deg,rgba(255,255,255,.055),rgba(255,255,255,.018))', opacity:rootPlaceholderOpacity, pointerEvents:'none', transition:'opacity .42s ease', boxShadow:'0 12px 28px rgba(0,0,0,.16)' }}>
-            <div style={{ padding:14, color:'rgba(255,255,255,.42)', fontSize:13, fontWeight:1000 }}>{level === 3 ? 'Ordini e famiglie' : 'Generi e specie'}</div>
+        {rootPlaceholderOpacity > 0 && [LIFE_RANK_ORDER.indexOf('order'), LIFE_RANK_ORDER.indexOf('genus')].map(level => (
+          <div key={`life-placeholder-${level}`} style={{ position:'absolute', left:140 + level * flow.colGap - 126, top:74 + (level - LIFE_RANK_ORDER.indexOf('order')) * 34, width:252, minHeight:118, borderRadius:22, border:'1.4px dashed rgba(255,255,255,.20)', background:'linear-gradient(135deg,rgba(255,255,255,.055),rgba(255,255,255,.018))', opacity:rootPlaceholderOpacity, pointerEvents:'none', transition:'opacity .42s ease', boxShadow:'0 12px 28px rgba(0,0,0,.16)' }}>
+            <div style={{ padding:14, color:'rgba(255,255,255,.42)', fontSize:13, fontWeight:1000 }}>{level === LIFE_RANK_ORDER.indexOf('order') ? 'Ordini e famiglie' : 'Generi e specie'}</div>
             <div style={{ margin:'0 14px 10px', height:8, borderRadius:999, background:'rgba(255,255,255,.08)' }} />
             <div style={{ margin:'0 14px', height:8, width:'62%', borderRadius:999, background:'rgba(255,255,255,.06)' }} />
           </div>
@@ -10588,6 +10690,7 @@ function LifeAnimalPanel({ node, animals, onClose, onOpenAnimal, theme }) {
   </div>;
 }
 const LIFE_RANK_LABELS = {
+  domain:'Dominio',
   kingdom:'Regno',
   phylum:'Phylum',
   class:'Classe',
@@ -10595,8 +10698,8 @@ const LIFE_RANK_LABELS = {
   family:'Famiglia',
   genus:'Genere',
   species:'Specie',
-  cluster:'Cluster',
-  editorial:'Cluster',
+  cluster:'Famiglia',
+  editorial:'Famiglia',
 };
 function LifePathRail({ path, onOpen, isLight }) {
   const railRef = useRef(null);
