@@ -120,6 +120,45 @@ function isRecorded(animal) {
   return ['avvistato', 'catturato'].includes(String(animal?.status || '').toLowerCase());
 }
 
+function isRecordedAnimal(animal) {
+  return ['avvistato', 'catturato'].includes(String(animal?.status || '').toLowerCase());
+}
+
+export function buildMissionAnimalFilter(metric, animalsWithStatus = []) {
+  if (!metric) return () => false;
+  const recorded = (animalsWithStatus || []).filter(isRecordedAnimal);
+
+  if (metric === 'max_family_count') {
+    const familyCounts = {};
+    recorded.forEach((animal) => {
+      if (animal.fam) familyCounts[animal.fam] = (familyCounts[animal.fam] || 0) + 1;
+    });
+    const topFamily = Object.entries(familyCounts).sort((a, b) => b[1] - a[1])[0]?.[0];
+    if (!topFamily) return () => false;
+    return (animal) => isRecordedAnimal(animal) && animal.fam === topFamily;
+  }
+
+  if (metric === 'max_order_count') {
+    const orderCounts = {};
+    recorded.forEach((animal) => {
+      if (animal.ord) orderCounts[animal.ord] = (orderCounts[animal.ord] || 0) + 1;
+    });
+    const topOrder = Object.entries(orderCounts).sort((a, b) => b[1] - a[1])[0]?.[0];
+    if (!topOrder) return () => false;
+    return (animal) => isRecordedAnimal(animal) && animal.ord === topOrder;
+  }
+
+  if (metric === 'genera_count') {
+    return (animal) => isRecordedAnimal(animal) && !!animal.gen;
+  }
+
+  if (['countries_count', 'onboarding_first_trip', 'usage_streak', 'ai_corrections'].includes(metric)) {
+    return () => false;
+  }
+
+  return (animal) => animalQualifiesForMetric(animal, metric);
+}
+
 export function animalQualifiesForMetric(animal, metric) {
   if (!animal || !metric) return false;
   const categories = animal.categories || [];

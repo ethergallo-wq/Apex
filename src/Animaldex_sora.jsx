@@ -8,6 +8,7 @@ import { getHomeVariant, setHomeVariant, subscribeHomeVariant, HOME_VARIANTS, ge
 import { addFriendRequestFeedHistory, getFriendRequestFeedHistory } from './friendRequestFeed';
 import { getProfileAvatarChoices, resolveProfileAvatarAnimal } from './profileAvatar';
 import { buildOnboardingCountryGroups } from './travelProbability';
+import { resolveMissionGridNavigation } from './homeMission';
 import ApexBootLoader from './ApexBootLoader';
 
 let LOCAL_ANIMALS = [];
@@ -15188,8 +15189,24 @@ const openHabitatGrid = (territory, habitat, returnContext = null) => {
   setGridReturnTarget({ page:'regions', view:returnContext || 'ecoregions' });
   setPage('grid');
 };
-const openGridWithStatus = (statuses) => {
-  setSel(null); setGridReturnTarget(null); setGridPreset({ id: Date.now(), type:'status', statuses, title:'Apex' }); setPage('grid');
+const openGridWithStatus = (statuses, title = 'Apex') => {
+  setSel(null); setGridReturnTarget(null); setGridPreset({ id: Date.now(), type:'status', statuses, title }); setPage('grid');
+};
+const openGridWithMission = (mission) => {
+  const nav = resolveMissionGridNavigation(mission, animalsWithStatus);
+  if (!nav) return;
+  if (nav.kind === 'regions') {
+    openPage('regions', 'menu');
+    return;
+  }
+  setSel(null);
+  setGridReturnTarget({ page: 'menu' });
+  if (nav.kind === 'status') {
+    setGridPreset({ id: Date.now(), type: 'status', statuses: nav.statuses, title: nav.title });
+  } else {
+    setGridPreset({ id: Date.now(), type: 'mission', customFilter: nav.customFilter, title: nav.title });
+  }
+  setPage('grid');
 };
 const openGridWithCategory = (categoryId, label) => {
   setSel(null); setGridPreset({ id: Date.now(), type:'category', categories:[categoryId], title: label || 'Abilità' }); setGridReturnTarget({ page:'abilities' }); setPage('grid');
@@ -15241,6 +15258,7 @@ const returnFromFilteredGrid = () => {
   if (target?.page === 'detail' && target.animal) { setSel(target.animal); setPage('grid'); return; }
   if (target?.page === 'abilities') { setSel(null); setPage('abilities'); return; }
   if (target?.page === 'regions') { setSel(null); setRegionsInitialView(target.view || 'countries'); setPage('regions'); return; }
+  if (target?.page === 'menu') { setSel(null); setPage('menu'); return; }
   if (target?.page === 'taxonomy') { setSel(null); setPage('taxonomy'); return; }
   setSel(null); setPage('grid');
 };
@@ -15313,6 +15331,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
       userProfile,
       user,
       onOpenGridStatus: openGridWithStatus,
+      onOpenMissionGrid: openGridWithMission,
       onOpenRegions: () => openPage('regions', 'menu'),
       onQuickSeen: () => { setPage('quickSeen'); maybeShowSectionIntro('quickSeen'); },
       onOpenPhoto: openPhotoRecognition,

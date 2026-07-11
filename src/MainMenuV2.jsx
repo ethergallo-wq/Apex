@@ -233,6 +233,7 @@ export default function MainMenuV2({
   onQuickSeen,
   onOpenPhoto,
   onOpenBadge,
+  onOpenMissionGrid,
   theme = 'dark',
   menuProgress = null,
   dailyDiscovery = null,
@@ -288,6 +289,10 @@ export default function MainMenuV2({
   };
 
   const runMission = () => {
+    if (onOpenMissionGrid) {
+      onOpenMissionGrid(mission);
+      return;
+    }
     if (mission.action === 'badge') {
       onOpenBadge?.(mission.badgeId);
       return;

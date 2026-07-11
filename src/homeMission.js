@@ -1,9 +1,36 @@
 import {
   buildGenericAnimalSlots,
   buildMissionAnimalSlots,
+  buildMissionAnimalFilter,
   formatMissionCopy,
   resolveMissionAccentImage,
 } from './homeMissionUi';
+
+export function getMissionGridTitle(mission = {}) {
+  return [mission.titleLine1, mission.titleLine2].filter(Boolean).join(' · ')
+    || mission.title
+    || mission.badgeName
+    || 'Missione';
+}
+
+export function resolveMissionGridNavigation(mission = {}, animalsWithStatus = []) {
+  if (!mission?.action) return null;
+  if (mission.action === 'regions') return { kind: 'regions' };
+  if (mission.action === 'grid-seen') {
+    return { kind: 'status', statuses: ['avvistato'], title: getMissionGridTitle(mission) };
+  }
+  if (mission.action === 'grid-all') {
+    return { kind: 'status', statuses: ['ricercato', 'avvistato', 'catturato'], title: getMissionGridTitle(mission) };
+  }
+  if (mission.action === 'badge' && mission.metric) {
+    return {
+      kind: 'mission',
+      customFilter: buildMissionAnimalFilter(mission.metric, animalsWithStatus),
+      title: getMissionGridTitle(mission),
+    };
+  }
+  return null;
+}
 
 export function buildHomeMission(progress = {}) {
   const nearly = progress.nearlyCompletedBadges?.[0];
