@@ -30,7 +30,7 @@ export default function DailyAtlasCard({
         <button
           type="button"
           onClick={() => onOpenAnimal?.(dailyDiscovery.animal)}
-          style={{ width: 72, height: 72, borderRadius: 18, overflow: 'hidden', border: '1.5px dashed rgba(157,211,255,.45)', background: 'rgba(0,0,0,.24)', padding: 0, cursor: 'pointer', flexShrink: 0 }}
+          style={{ width: 72, height: 72, borderRadius: 18, overflow: 'hidden', border: '1.5px dashed rgba(157,211,255,.45)', background: 'rgba(0,0,0,.24)', padding: 6, cursor: 'pointer', flexShrink: 0, boxSizing: 'border-box', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
         >
           <img
             src={getAnimalThumbUrl(dailyDiscovery.animal)}
@@ -38,7 +38,8 @@ export default function DailyAtlasCard({
             style={{
               width: '100%',
               height: '100%',
-              objectFit: 'cover',
+              objectFit: 'contain',
+              display: 'block',
               filter: dailyDiscovery.documented ? 'sepia(.72) saturate(.55) brightness(.94)' : 'brightness(0) saturate(0)',
               opacity: dailyDiscovery.documented ? 1 : .85,
             }}

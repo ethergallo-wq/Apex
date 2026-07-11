@@ -15,6 +15,7 @@ const LIGHT_APP_BG = '#F3EFE6';
 const ORANGE = '#B84D3A';
 const ORANGE_GRADIENT = 'linear-gradient(135deg,#B84D3A,#D06A45)';
 const GREEN = '#90D84A';
+const FOREST_GREEN = '#2D6A4F';
 const BADGE_LEVEL_COLORS = { 1: '#CD7F32', 2: '#C0C0C0', 3: '#FFD700', 4: '#8F34F5' };
 const EXPLORE_TILE_TITLE_OVERLAY = 'linear-gradient(180deg, transparent 52%, rgba(0,0,0,.78) 100%)';
 const EXPLORE_TILE_TITLE_OVERLAY_LIGHT = 'linear-gradient(180deg, transparent 58%, rgba(0,0,0,.62) 100%)';
@@ -206,14 +207,17 @@ function MissionAnimalSlot({ slot }) {
         overflow: 'hidden',
         background: filled ? 'rgba(240,168,64,.18)' : 'rgba(255,255,255,.08)',
         border: `1.5px solid ${filled ? 'rgba(240,168,64,.52)' : 'rgba(255,255,255,.12)'}`,
-        display: 'grid',
-        placeItems: 'center',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
         opacity: filled ? 1 : .62,
         boxShadow: filled ? '0 4px 12px rgba(240,168,64,.18)' : 'none',
+        padding: filled ? 3 : 0,
+        boxSizing: 'border-box',
       }}
     >
       {filled
-        ? <img src={slot.thumbUrl} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+        ? <img src={slot.thumbUrl} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }} />
         : <span style={{ width: 8, height: 8, borderRadius: '50%', background: 'rgba(255,255,255,.24)' }} />}
     </div>
   );
@@ -319,10 +323,10 @@ export default function MainMenuV2({
   ];
 
   const stats = [
-    { label: 'Ricercati', value: progress.searchedCount || 0, icon: IconSearch, action: () => onOpenGridStatus?.(['ricercato']) },
-    { label: 'Avvistati', value: progress.seenCount || 0, icon: IconEye, action: () => onOpenGridStatus?.(['avvistato']) },
-    { label: 'Catturati', value: progress.capturedCount || 0, icon: IconPaw, action: () => onOpenGridStatus?.(['catturato']) },
-    { label: 'Badge', value: badgeCount, icon: IconStarBadge, action: () => onOpen('badges') },
+    { label: 'Ricercati', value: progress.searchedCount || 0, action: () => onOpenGridStatus?.(['ricercato']) },
+    { label: 'Avvistati', value: progress.seenCount || 0, action: () => onOpenGridStatus?.(['avvistato']) },
+    { label: 'Catturati', value: progress.capturedCount || 0, action: () => onOpenGridStatus?.(['catturato']) },
+    { label: 'Badge', value: badgeCount, action: () => onOpen('badges') },
   ];
 
   const missionBadgeId = mission.badgeId || nearlyBadges[0]?.badgeId;
@@ -460,14 +464,28 @@ export default function MainMenuV2({
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 8, marginBottom: 18 }}>
           {stats.map(stat => {
-            const Icon = stat.icon;
             const statValue = Number(stat.value) || 0;
             const valueSize = statValue >= 1000 ? 'clamp(14px, 4.2vw, 18px)' : 'clamp(16px, 4.8vw, 18px)';
             return (
-              <button key={stat.label} onClick={stat.action} style={{ borderRadius: 18, border: `1px solid ${panelBorder}`, background: panelBg, padding: '12px 6px', cursor: 'pointer', fontFamily: 'inherit', textAlign: 'center', boxShadow: '0 10px 24px rgba(0,0,0,.14)', minWidth: 0 }}>
-                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 6 }}><Icon /></div>
+              <button
+                key={stat.label}
+                onClick={stat.action}
+                style={{
+                  borderRadius: 18,
+                  border: `1px solid ${hexToRgba(FOREST_GREEN, isLightTheme ? .34 : .42)}`,
+                  background: isLightTheme
+                    ? `linear-gradient(135deg, ${hexToRgba(FOREST_GREEN, .10)}, rgba(255,255,255,.88))`
+                    : `linear-gradient(135deg, ${hexToRgba(FOREST_GREEN, .16)}, rgba(18,20,23,.92))`,
+                  padding: '14px 6px 12px',
+                  cursor: 'pointer',
+                  fontFamily: 'inherit',
+                  textAlign: 'center',
+                  boxShadow: '0 10px 24px rgba(0,0,0,.14)',
+                  minWidth: 0,
+                }}
+              >
                 <div style={{ color: pageText, fontSize: valueSize, fontWeight: 1000, lineHeight: 1.1, wordBreak: 'break-word' }}>{statValue.toLocaleString('it-IT')}</div>
-                <div style={{ color: mutedText, fontSize: 'clamp(8.5px, 2.4vw, 9.5px)', fontWeight: 800, marginTop: 4, lineHeight: 1.15, whiteSpace: 'normal' }}>{stat.label}</div>
+                <div style={{ color: isLightTheme ? hexToRgba(FOREST_GREEN, .82) : '#90D84A', fontSize: 'clamp(8.5px, 2.4vw, 9.5px)', fontWeight: 800, marginTop: 6, lineHeight: 1.15, whiteSpace: 'normal' }}>{stat.label}</div>
               </button>
             );
           })}

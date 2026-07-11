@@ -24,9 +24,18 @@ export async function saveProfileAvatarAnimal(userId, animal) {
   const cleanId = String(animal?.id || '');
   persistProfileAvatarAnimalId(userId || 'guest', cleanId);
   if (!userId || userId === 'guest' || userId === 'local' || !cleanId) return true;
+  const imageUrl = animal?.image_url || animal?.img || '';
+  let onboardingAnswers;
+  try {
+    const { data } = await supabase.from('user_profiles').select('onboarding_answers').eq('user_id', userId).maybeSingle();
+    const base = typeof data?.onboarding_answers === 'object' && data?.onboarding_answers ? data.onboarding_answers : {};
+    onboardingAnswers = { ...base, profile_avatar_animal_id: cleanId, updated_at: new Date().toISOString() };
+  } catch {
+    onboardingAnswers = { profile_avatar_animal_id: cleanId };
+  }
   const { error } = await supabase
     .from('user_profiles')
-    .update({ avatar_url: animal?.image_url || animal?.img || '', updated_at: new Date().toISOString() })
+    .update({ avatar_url: imageUrl, onboarding_answers: onboardingAnswers, updated_at: new Date().toISOString() })
     .eq('user_id', userId);
   if (error && error.code !== '42703') throw error;
   return true;

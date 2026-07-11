@@ -2961,6 +2961,17 @@ html, body, #root {
 .tab-from-right { animation: tabFromRight 0.22s cubic-bezier(.25,.46,.45,.94) forwards; }
 .tab-from-left  { animation: tabFromLeft  0.22s cubic-bezier(.25,.46,.45,.94) forwards; }
 
+@keyframes tabStatNudge {
+  0%, 100% { transform: translateX(0); }
+  12% { transform: translateX(-3px); }
+  24% { transform: translateX(3px); }
+  36% { transform: translateX(-3px); }
+  48% { transform: translateX(3px); }
+  60% { transform: translateX(-2px); }
+  72% { transform: translateX(2px); }
+}
+.tab-stat-nudge { animation: tabStatNudge 0.62s ease-in-out 0.28s 2; }
+
 /* rarità: barra con stemma e lastra metallica/amethyst */
 .rarity-badge {
   position: relative;
@@ -4122,6 +4133,87 @@ async function saveProfileBackgroundImage(userId, image='') {
   if (error && error.code !== '42703') throw error;
   return true;
 }
+
+function readProfilePrefsFromAnswers(answers) {
+  if (!answers) return { avatarAnimalId:'' };
+  const obj = typeof answers === 'string'
+    ? (() => { try { return JSON.parse(answers); } catch { return {}; } })()
+    : answers;
+  return { avatarAnimalId: String(obj?.profile_avatar_animal_id || obj?.avatar_animal_id || '') };
+}
+
+async function fetchProfileAnswers(userId) {
+  if (!userId) return {};
+  const { data } = await supabase.from('user_profiles').select('onboarding_answers').eq('user_id', userId).maybeSingle();
+  const answers = data?.onboarding_answers;
+  return typeof answers === 'object' && answers ? answers : {};
+}
+
+async function mergeProfileAnswersPatch(userId, patch = {}) {
+  const base = await fetchProfileAnswers(userId);
+  return { ...base, ...patch, updated_at: new Date().toISOString() };
+}
+
+function applyRemoteProfileCustomization(profile, userId, animals = []) {
+  if (!userId || !profile) return;
+  const bg = normalizeProfileBackgroundImage(profile.profile_background_image || '');
+  if (bg) persistProfileBackgroundImage(userId, bg);
+  const badge = normalizeBadgeId(profile.featured_badge_id || '');
+  if (badge) persistFeaturedBadgeId(userId, badge);
+  const prefs = readProfilePrefsFromAnswers(profile.onboarding_answers);
+  if (prefs.avatarAnimalId) {
+    persistProfileAvatarAnimalId(userId, prefs.avatarAnimalId);
+  } else if (profile.avatar_url && animals.length) {
+    const match = animals.find(a => getAnimalImageUrl(a) === profile.avatar_url || a.image_url === profile.avatar_url);
+    if (match?.id) persistProfileAvatarAnimalId(userId, match.id);
+  }
+}
+
+async function pushLocalProfileCustomizationIfNeeded(userId, profile, animals = []) {
+  if (!userId) return;
+  const patch = {};
+  const answersPatch = {};
+  const localBg = getProfileBackgroundImage(userId);
+  const localBadge = getFeaturedBadgeId(userId);
+  const localAvatarId = getProfileAvatarAnimalId(userId);
+  if (!profile?.profile_background_image && localBg) patch.profile_background_image = localBg;
+  if (!profile?.featured_badge_id && localBadge) patch.featured_badge_id = localBadge;
+  const remotePrefs = readProfilePrefsFromAnswers(profile?.onboarding_answers);
+  const localAnimal = localAvatarId ? animals.find(a => String(a.id) === String(localAvatarId)) : null;
+  if (!remotePrefs.avatarAnimalId && localAvatarId) {
+    answersPatch.profile_avatar_animal_id = localAvatarId;
+    if (localAnimal && !profile?.avatar_url) patch.avatar_url = getAnimalImageUrl(localAnimal) || localAnimal.image_url || '';
+  } else if (localAnimal) {
+    const expectedUrl = getAnimalImageUrl(localAnimal) || localAnimal.image_url || '';
+    if (expectedUrl && profile?.avatar_url !== expectedUrl) {
+      patch.avatar_url = expectedUrl;
+      answersPatch.profile_avatar_animal_id = localAvatarId;
+    }
+  }
+  if (Object.keys(answersPatch).length) {
+    try { patch.onboarding_answers = await mergeProfileAnswersPatch(userId, answersPatch); }
+    catch { patch.onboarding_answers = { ...answersPatch }; }
+  }
+  if (!Object.keys(patch).length) return;
+  const { error } = await supabase
+    .from('user_profiles')
+    .update({ ...patch, updated_at: new Date().toISOString() })
+    .eq('user_id', userId);
+  if (error && error.code !== '42703') throw error;
+}
+
+async function syncDocumentedMapToSupabase(userId, documentedMap = {}, remoteDocumented = null) {
+  if (!userId) return;
+  const remote = remoteDocumented || {};
+  await Promise.allSettled(
+    Object.entries(documentedMap || {}).map(([animalId, documentedAt]) => {
+      if (!animalId || !documentedAt) return Promise.resolve();
+      const remoteTs = remote[String(animalId)];
+      if (remoteTs && new Date(remoteTs).getTime() >= new Date(documentedAt).getTime()) return Promise.resolve();
+      return saveUserAnimalDocumented(userId, animalId, documentedAt);
+    })
+  );
+}
 function getProfileAvatarStorageKey(userId='guest') {
   return `animaldex_profile_avatar_animal_${userId || 'guest'}`;
 }
@@ -4142,9 +4234,13 @@ async function saveProfileAvatarAnimal(userId, animal) {
   const cleanId = String(animal?.id || '');
   persistProfileAvatarAnimalId(userId || 'guest', cleanId);
   if (!userId || userId === 'guest' || userId === 'local' || !cleanId) return true;
+  const imageUrl = getAnimalImageUrl(animal) || animal?.image_url || '';
+  let onboardingAnswers;
+  try { onboardingAnswers = await mergeProfileAnswersPatch(userId, { profile_avatar_animal_id: cleanId }); }
+  catch { onboardingAnswers = { profile_avatar_animal_id: cleanId }; }
   const { error } = await supabase
     .from('user_profiles')
-    .update({ avatar_url:animal?.image_url || '', updated_at:new Date().toISOString() })
+    .update({ avatar_url: imageUrl, onboarding_answers: onboardingAnswers, updated_at: new Date().toISOString() })
     .eq('user_id', userId);
   if (error && error.code !== '42703') throw error;
   return true;
@@ -4448,8 +4544,9 @@ function ScaleComparison({ animal, full=false }) {
   const referencePx = Math.max(full ? 40 : 28, Math.round(ref.cm * pxPerCm));
   const animalPx = Math.max(minPx, Math.round((lengthCm || ref.cm * .25) * pxPerCm));
   const animalIsMystery = isMysteryStatus(animal?.status);
-  const animalSrc = animalIsMystery ? (CLASS_ICONS[animal?.cls] || CLASS_ICONS.Mammalia) : (animal?.image_url || MYSTERY_PLACEHOLDER);
-  const animalBounds = useImagePixelBounds(!animalIsMystery ? getAnimalImageUrl(animal) : '');
+  const resolvedAnimalUrl = getAnimalImageUrl(animal);
+  const animalSrc = animalIsMystery ? (CLASS_ICONS[animal?.cls] || CLASS_ICONS.Mammalia) : (resolvedAnimalUrl || MYSTERY_PLACEHOLDER);
+  const animalBounds = useImagePixelBounds(!animalIsMystery && resolvedAnimalUrl ? resolvedAnimalUrl : '');
   const stageHeight = full ? Math.min(196, Math.max(152, Math.round(viewportH * .25))) : 68;
   const floorY = full ? Math.max(128, stageHeight - 18) : 62;
   const refSlotW = full ? Math.max(92, Math.min(160, Math.round(availableW * .34))) : 66;
@@ -5538,6 +5635,36 @@ function RarityLegendRows() {
   );
 }
 
+const CONSERVATION_LEGEND = [
+  { k:'LC', full:'Least Concern', desc:'Specie non in pericolo' },
+  { k:'NT', full:'Near Threatened', desc:'Prossima a essere minacciata' },
+  { k:'VU', full:'Vulnerable', desc:'A rischio di estinzione' },
+  { k:'EN', full:'Endangered', desc:'Fortemente minacciata' },
+  { k:'CR', full:'Critically Endangered', desc:'Gravissimamente minacciata' },
+  { k:'EW', full:'Extinct in the Wild', desc:'Estinta in natura' },
+  { k:'EX', full:'Extinct', desc:'Completamente estinta' },
+  { k:'DD', full:'Data Deficient', desc:'Dati insufficienti' },
+];
+
+function ConservationLegendRows() {
+  return (
+    <>
+      {CONSERVATION_LEGEND.map(({ k, full, desc }) => {
+        const co2 = CONS[k] || CONS.DD;
+        return (
+          <div key={k} style={{ display:'flex', gap:10, alignItems:'flex-start' }}>
+            <div style={{ background:co2.bg, color:co2.c, padding:'6px 12px', borderRadius:8, fontSize:12, fontWeight:700, whiteSpace:'nowrap', flexShrink:0 }}>{k}</div>
+            <div style={{ flex:1 }}>
+              <div style={{ color:'white', fontSize:12, fontWeight:700 }}>{full}</div>
+              <div style={{ color:'rgba(255,255,255,.55)', fontSize:11, marginTop:2 }}>{desc}</div>
+            </div>
+          </div>
+        );
+      })}
+    </>
+  );
+}
+
 function StatusLegendRows() {
   return (
     <>
@@ -5555,6 +5682,34 @@ function StatusLegendRows() {
         <div style={{ flex:1 }}><div style={{ color:'rgba(255,255,255,.75)', fontSize:11, marginTop:2 }}>{DOCUMENTED_META.desc} È un livello parallelo: si combina con gli altri stati senza sostituirli.</div></div>
       </div>
     </>
+  );
+}
+
+function AnimalStatusGuideModal({ open, onClose, theme = 'dark' }) {
+  if (!open) return null;
+  const isLightTheme = theme === 'light';
+  const detailBg = isLightTheme ? '#FBF7EF' : '#17191D';
+  const accent = '#90D84A';
+  const text = isLightTheme ? '#171717' : 'white';
+  const muted = isLightTheme ? 'rgba(0,0,0,.58)' : 'rgba(255,255,255,.62)';
+  return (
+    <div onClick={onClose} style={{ position:'fixed', inset:0, background:'rgba(0,0,0,.84)', display:'flex', alignItems:'center', justifyContent:'center', zIndex:640, padding:16 }}>
+      <div onClick={e=>e.stopPropagation()} style={{ background:detailBg, borderRadius:22, padding:'22px 24px', maxWidth:480, width:'100%', maxHeight:'86vh', overflowY:'auto', border:`2px solid ${accent}` }}>
+        <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', gap:12, marginBottom:14 }}>
+          <div>
+            <h2 style={{ margin:0, color:accent, fontSize:20, fontWeight:900 }}>Come funzionano gli status</h2>
+            <p style={{ margin:'8px 0 0', color:muted, fontSize:12.5, lineHeight:1.45 }}>
+              Gli animali misteriosi nascondono nome e scheda finché non li sblocchi viaggiando o documentandoli nell&apos;Atlante.
+            </p>
+          </div>
+          <button onClick={onClose} style={{ background:'none', border:'none', color:accent, fontSize:24, cursor:'pointer', padding:0, lineHeight:1 }}>×</button>
+        </div>
+        <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
+          <StatusLegendRows />
+        </div>
+        <button onClick={onClose} style={{ width:'100%', marginTop:16, height:46, borderRadius:14, border:'none', background:'linear-gradient(135deg,#2D6A4F,#90D84A)', color:'#0B1B26', fontFamily:'inherit', fontSize:14, fontWeight:1000, cursor:'pointer' }}>Ho capito</button>
+      </div>
+    </div>
   );
 }
 
@@ -6001,7 +6156,7 @@ function getImageSrcCandidates(src) {
 }
 
 // ── Image Lightbox ────────────────────────────────────────────────────
-function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose, animal }) {
+function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose, animal, photoMode = false }) {
   const [visible, setVisible] = useState(false);
   const [zoom, setZoom] = useState(1);
   const [offset, setOffset] = useState({ x:0, y:0 });
@@ -6010,7 +6165,7 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose, an
   const [srcIdx, setSrcIdx] = useState(0);
   const currentSrc = candidates[srcIdx] || src;
   const [hardFail, setHardFail] = useState(false);
-  const pinchRef = useRef({ active:false, startDist:0, startZoom:1, startCenter:{ x:0, y:0 }, baseX:0, baseY:0 });
+  const pinchRef = useRef({ active:false, startDist:0, startZoom:1, startCenter:{ x:0, y:0 }, baseX:0, baseY:0, baseOffset:{ x:0, y:0 } });
   const panRef = useRef({ active:false, startX:0, startY:0, baseX:0, baseY:0 });
 
   useEffect(() => { requestAnimationFrame(() => requestAnimationFrame(() => setVisible(true))); }, []);
@@ -6036,18 +6191,26 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose, an
   });
   const clampOffset = (nextOffset, nextZoom) => {
     if (nextZoom <= 1.01) return { x:0, y:0 };
-    const limitX = Math.max(160, vw * (nextZoom - 1) * .55);
-    const limitY = Math.max(180, vh * (nextZoom - 1) * .55);
+    const limitX = photoMode ? Math.max(280, vw * (nextZoom - 1) * 0.92) : Math.max(160, vw * (nextZoom - 1) * .55);
+    const limitY = photoMode ? Math.max(320, vh * (nextZoom - 1) * 0.92) : Math.max(180, vh * (nextZoom - 1) * .55);
     return {
       x:Math.max(-limitX, Math.min(limitX, nextOffset.x)),
       y:Math.max(-limitY, Math.min(limitY, nextOffset.y)),
     };
   };
 
+  const zoomAroundPoint = (nextZoom, focalX, focalY, currentOffset, currentZoom) => {
+    const ratio = nextZoom / Math.max(currentZoom, 0.001);
+    return clampOffset({
+      x: focalX - ratio * (focalX - currentOffset.x),
+      y: focalY - ratio * (focalY - currentOffset.y),
+    }, nextZoom);
+  };
+
   const handleTouchStart = (e) => {
     if (e.touches?.length === 2) {
       e.preventDefault();
-      pinchRef.current = { active:true, startDist:distance(e.touches), startZoom:zoom, startCenter:touchCenter(e.touches), baseX:offset.x, baseY:offset.y };
+      pinchRef.current = { active:true, startDist:distance(e.touches), startZoom:zoom, startCenter:touchCenter(e.touches), baseX:offset.x, baseY:offset.y, baseOffset:{ ...offset } };
       panRef.current.active = false;
     } else if (e.touches?.length === 1 && zoom > 1) {
       e.preventDefault();
@@ -6062,11 +6225,10 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose, an
       if (pinchRef.current.startDist > 0) {
         const next = Math.max(1, Math.min(5, pinchRef.current.startZoom * (d / pinchRef.current.startDist)));
         const center = touchCenter(e.touches);
+        const focalX = center.x - vw / 2;
+        const focalY = center.y - vh / 2;
+        setOffset(zoomAroundPoint(next, focalX, focalY, pinchRef.current.baseOffset, pinchRef.current.startZoom));
         setZoom(next);
-        setOffset(clampOffset({
-          x:pinchRef.current.baseX + center.x - pinchRef.current.startCenter.x,
-          y:pinchRef.current.baseY + center.y - pinchRef.current.startCenter.y,
-        }, next));
       }
     } else if (panRef.current.active && e.touches?.length === 1 && zoom > 1) {
       e.preventDefault();
@@ -6085,11 +6247,19 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose, an
     const now = Date.now();
     if (now - lastTap < 280) {
       e.preventDefault?.();
+      const touch = e.changedTouches?.[0];
+      const focalX = touch ? touch.clientX - vw / 2 : 0;
+      const focalY = touch ? touch.clientY - vh / 2 : 0;
       setZoom(z => {
+        if (photoMode) {
+          if (z >= 1.75) return z;
+          const next = Math.min(4.5, Math.max(2.4, z * 2.1));
+          setOffset(zoomAroundPoint(next, focalX, focalY, offset, z));
+          return next;
+        }
         const next = z > 1 ? 1 : 2.25;
-        const touch = e.changedTouches?.[0];
         if (next === 1 || !touch) setOffset({ x:0, y:0 });
-        else setOffset(clampOffset({ x:(vw / 2 - touch.clientX) * .65, y:(vh / 2 - touch.clientY) * .65 }, next));
+        else setOffset(zoomAroundPoint(next, focalX, focalY, offset, z));
         return next;
       });
     }
@@ -6163,11 +6333,11 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose, an
               maxWidth:'88%', maxHeight:'88%',
               objectFit:'contain',
               opacity: visible ? 1 : 0,
-              transition:'opacity .25s ease .1s, transform .12s ease-out',
+              transition: photoMode ? 'opacity .25s ease .1s' : 'opacity .25s ease .1s, transform .12s ease-out',
               transform:`translate3d(${offset.x}px, ${offset.y}px, 0) scale(${zoom})`,
               transformOrigin:'center center',
               filter: `drop-shadow(0 0 40px ${accentColor}99)`,
-              cursor:zoom > 1 ? 'grab' : 'default',
+              cursor:zoom > 1 ? (panRef.current.active ? 'grabbing' : 'grab') : 'default',
               userSelect:'none',
               WebkitUserSelect:'none',
               touchAction:'none',
@@ -6685,11 +6855,14 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
   const [showLightbox,setShowLightbox]=useState(false);
   const [lightboxRect,setLightboxRect]=useState(null);
   const [metricModal,setMetricModal]=useState(null);
+  const [focusLegend,setFocusLegend]=useState(null);
   const [pullProgress,setPullProgress]=useState(0);
   const [bioExpanded,setBioExpanded]=useState(false);
+  const [statNudgeKey,setStatNudgeKey]=useState(0);
   const scrollRef = useRef(null);
   const imgRef = useRef(null);
   const touchStartY = useRef(0);
+  const tabSwipeStart = useRef({ x:0, y:0 });
   const c=CLS[a.cls]||CLS.Mammalia;
   const isLightTheme = theme === 'light';
   const detailText = isLightTheme ? '#171717' : 'white';
@@ -6709,6 +6882,24 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
     if (m===statMode) return;
     setSlideDir(TAB_ORDER.indexOf(m) > TAB_ORDER.indexOf(statMode) ? 1 : -1);
     setStatMode(m);
+  };
+
+  useEffect(() => {
+    if (statMode === 'statistiche') setStatNudgeKey(k => k + 1);
+  }, [statMode]);
+
+  const handleTabSwipeStart = (e) => {
+    const t = e.touches[0];
+    tabSwipeStart.current = { x: t.clientX, y: t.clientY };
+  };
+  const handleTabSwipeEnd = (e) => {
+    const t = e.changedTouches[0];
+    const dx = t.clientX - tabSwipeStart.current.x;
+    const dy = t.clientY - tabSwipeStart.current.y;
+    if (Math.abs(dx) < 44 || Math.abs(dx) < Math.abs(dy) * 1.15) return;
+    const idx = TAB_ORDER.indexOf(statMode);
+    if (dx < 0 && idx < TAB_ORDER.length - 1) handleTab(TAB_ORDER[idx + 1]);
+    else if (dx > 0 && idx > 0) handleTab(TAB_ORDER[idx - 1]);
   };
 
   const openLightbox = (rect) => {
@@ -6822,8 +7013,8 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
           <p style={{ margin:0, color:isLightTheme?'rgba(0,0,0,.74)':'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.desc}</p>
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:8, marginBottom:10, padding:'0 4px' }}>
-          <div data-tour="animal-rarity" style={{ width:'100%', opacity:.88, filter:'saturate(.86)', boxShadow:['detail-guide','detail-overview'].includes(tutorialStep)?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none', borderRadius:18 }}><RarityBadge rarity={a.rarity || 'Comune'} full style={{ width:'100%', fontSize:13.5 }} /></div>
-          <div data-tour="animal-conservation" style={{ background:co.bg, borderRadius:18, padding:'9px 12px', color:co.c, fontSize:12, fontWeight:700, textAlign:'center', opacity:.90, boxShadow:['detail-guide','detail-overview'].includes(tutorialStep)?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>{formatConservationStatus(a.cons)}</div>
+          <button type="button" data-tour="animal-rarity" onClick={()=>setFocusLegend('rarity')} style={{ width:'100%', opacity:.88, filter:'saturate(.86)', boxShadow:['detail-guide','detail-overview'].includes(tutorialStep)?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none', borderRadius:18, border:'none', padding:0, background:'transparent', cursor:'pointer', fontFamily:'inherit' }}><RarityBadge rarity={a.rarity || 'Comune'} full style={{ width:'100%', fontSize:13.5 }} /></button>
+          <button type="button" data-tour="animal-conservation" onClick={()=>setFocusLegend('conservation')} style={{ width:'100%', background:co.bg, borderRadius:18, padding:'9px 12px', color:co.c, fontSize:12, fontWeight:700, textAlign:'center', opacity:.90, boxShadow:['detail-guide','detail-overview'].includes(tutorialStep)?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none', border:'none', cursor:'pointer', fontFamily:'inherit' }}>{formatConservationStatus(a.cons)}</button>
         </div>
         <div style={{ color:isLightTheme?'rgba(0,0,0,.54)':'rgba(255,255,255,.56)', fontSize:10.5, lineHeight:1.45, margin:'0 4px 16px' }}>
           {visitedMatches ? `Presente in ${visitedMatches} dei tuoi paesi · ` : ''}{(a.rarity || 'Comune')}, {a.rarity === 'Comune' ? 'facile da catturare' : a.rarity === 'Leggendario' ? 'molto raro' : 'impegnativo da trovare'} · “Catturato” significa registrato con foto verificata dall’AI, non cattura fisica.
@@ -6848,35 +7039,37 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
         {/* 3 pannelli: Abilità | Statistiche | Tassonomia */}
         <div style={{ marginBottom:20 }} data-tour="animal-detail-tabs">
           {/* Tab bar */}
-          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', marginBottom:0, background:'rgba(0,0,0,.52)', borderRadius:'22px 22px 0 0', padding:4, gap:3, border:'1px solid rgba(255,255,255,.06)', borderBottom:'none', boxShadow:['detail-guide','detail-overview'].includes(tutorialStep)?'0 0 0 3px rgba(240,168,64,.28), 0 0 22px rgba(240,168,64,.22)':'none' }}>
+          <div
+            onTouchStart={handleTabSwipeStart}
+            onTouchEnd={handleTabSwipeEnd}
+            style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', marginBottom:0, background:'rgba(0,0,0,.52)', borderRadius:'22px 22px 0 0', padding:4, gap:3, border:'1px solid rgba(255,255,255,.06)', borderBottom:'none', boxShadow:['detail-guide','detail-overview'].includes(tutorialStep)?'0 0 0 3px rgba(240,168,64,.28), 0 0 22px rgba(240,168,64,.22)':'none', touchAction:'pan-y' }}
+          >
             {[
               { id:'abilita', label:'Abilità' },
               { id:'statistiche', label:'Statistiche' },
               { id:'tassonomia', label:'Tassonomia' },
             ].map(tab=>{
               const active = statMode === tab.id;
+              const nudge = active && tab.id === 'statistiche';
               return (
-                <button key={tab.id} onClick={()=>handleTab(tab.id)} style={{ padding:'10px 6px 9px', borderRadius:14, background:active ? 'rgba(255,255,255,.14)' : 'transparent', color:active ? 'white' : 'rgba(255,255,255,.52)', fontSize:10.5, fontWeight:active ? 1000 : 850, border:active ? '1px solid rgba(255,255,255,.16)' : '1px solid transparent', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', boxShadow:active ? '0 4px 14px rgba(0,0,0,.24)' : 'none', transition:'background .16s ease, color .16s ease, box-shadow .16s ease' }}>
+                <button key={nudge ? `${tab.id}-${statNudgeKey}` : tab.id} onClick={()=>handleTab(tab.id)} className={nudge ? 'tab-stat-nudge' : undefined} style={{ padding:'10px 6px 9px', borderRadius:14, background:active ? 'rgba(255,255,255,.14)' : 'transparent', color:active ? 'white' : 'rgba(255,255,255,.52)', fontSize:10.5, fontWeight:active ? 1000 : 850, border:active ? '1px solid rgba(255,255,255,.16)' : '1px solid transparent', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', boxShadow:active ? '0 4px 14px rgba(0,0,0,.24)' : 'none', transition:'background .16s ease, color .16s ease, box-shadow .16s ease' }}>
                   <span style={{ lineHeight:1.1, letterSpacing:'.01em' }}>{tab.label}</span>
                 </button>
               );
             })}
           </div>
-          {statMode === 'statistiche' && (
-            <div style={{ padding:'6px 8px 0', color:'rgba(255,255,255,.48)', fontSize:10, fontWeight:800, textAlign:'center' }}>
-              Prova anche Abilità e Tassonomia — i tab sopra
-            </div>
-          )}
 
           {/* Fixed-height content — height sized to tassonomia (tallest tab) */}
-          <div style={{ background:'rgba(0,0,0,.28)', borderRadius:'0 0 22px 22px', padding:'10px 10px', height:404, boxSizing:'border-box', overflow:'hidden', position:'relative' }}>
+          <div
+            onTouchStart={handleTabSwipeStart}
+            onTouchEnd={handleTabSwipeEnd}
+            style={{ background:'rgba(0,0,0,.28)', borderRadius:'0 0 22px 22px', padding:'10px 10px', height:404, boxSizing:'border-box', overflow:'hidden', position:'relative', touchAction:'pan-y' }}
+          >
             <div key={statMode} className={slideDir>0?'tab-from-right':'tab-from-left'} style={{ height:'100%' }}>
 
               {/* Abilità */}
               {statMode==='abilita'&&(
                 <div
-                  onTouchStart={e=>e.stopPropagation()}
-                  onTouchMove={e=>e.stopPropagation()}
                   data-tour="animal-abilities" style={{ height:'100%', overflowY:'auto', WebkitOverflowScrolling:'touch', overscrollBehavior:'contain', touchAction:'pan-y', paddingRight:2 }}
                 >
                   {a.categories?.length>0?(
@@ -7002,6 +7195,19 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
           <div style={{ display:'grid', gap:8, marginTop:16, textAlign:'left' }}>{PYRAMID_LEVELS.map(lv=><div key={lv.key} style={{ display:'grid', gridTemplateColumns:'18px minmax(92px, 132px) minmax(0,1fr)', alignItems:'center', gap:8, color:'rgba(255,255,255,.78)', fontSize:11.5, lineHeight:1.25 }}><div style={{ width:16, height:8, borderRadius:4, background:lv.c }} /><strong style={{ color:'white' }}>{lv.label}</strong><span>{lv.desc}</span></div>)}</div>
         </div>
       </FullscreenMetricModal>
+      {focusLegend && (
+        <div onClick={()=>setFocusLegend(null)} style={{ position:'fixed', inset:0, background:'rgba(0,0,0,.8)', display:'flex', alignItems:'center', justifyContent:'center', zIndex:100, padding:16 }}>
+          <div onClick={e=>e.stopPropagation()} style={{ background:c.detailBg, borderRadius:20, padding:'24px 28px', maxHeight:'82vh', overflowY:'auto', maxWidth:460, width:'100%', border:`2px solid ${c.accent}` }}>
+            <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:18 }}>
+              <h2 style={{ margin:0, color:c.accent, fontSize:20, fontWeight:900 }}>{focusLegend === 'rarity' ? '★ Rarità Animale' : '🛡 Stato di conservazione'}</h2>
+              <button onClick={()=>setFocusLegend(null)} style={{ background:'none', border:'none', color:c.accent, fontSize:24, cursor:'pointer', padding:0 }}>×</button>
+            </div>
+            <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
+              {focusLegend === 'rarity' ? <RarityLegendRows /> : <ConservationLegendRows />}
+            </div>
+          </div>
+        </div>
+      )}
       {showInfoModal && (
         <div style={{ position:'fixed', inset:0, background:'rgba(0,0,0,.8)', display:'flex', alignItems:'center', justifyContent:'center', zIndex:100, padding:16 }}>
           <div style={{ background:c.detailBg, borderRadius:20, padding:28, maxHeight:'90vh', overflowY:'auto', maxWidth:520, width:'100%', border:`2px solid ${c.accent}` }}>
@@ -7012,7 +7218,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
             <div style={{ marginBottom:24 }}>
               <h3 style={{ margin:'0 0 12px', color:c.accent, fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>🛡 Stato di conservazione</h3>
               <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
-                {[{k:'LC',full:'Least Concern',desc:'Specie non in pericolo'},{k:'NT',full:'Near Threatened',desc:'Prossima a essere minacciata'},{k:'VU',full:'Vulnerable',desc:'A rischio di estinzione'},{k:'EN',full:'Endangered',desc:'Fortemente minacciata'},{k:'CR',full:'Critically Endangered',desc:'Gravissimamente minacciata'},{k:'EW',full:'Extinct in the Wild',desc:'Estinta in natura'},{k:'EX',full:'Extinct',desc:'Completamente estinta'},{k:'DD',full:'Data Deficient',desc:'Dati insufficienti'}].map(({k,full,desc})=>{const co2=CONS[k]||CONS.DD;return <div key={k} style={{display:'flex',gap:10,alignItems:'flex-start'}}><div style={{background:co2.bg,color:co2.c,padding:'6px 12px',borderRadius:8,fontSize:12,fontWeight:700,whiteSpace:'nowrap',flexShrink:0}}>{k}</div><div style={{flex:1}}><div style={{color:'white',fontSize:12,fontWeight:700}}>{full}</div><div style={{color:'rgba(255,255,255,.55)',fontSize:11,marginTop:2}}>{desc}</div></div></div>;})}
+                <ConservationLegendRows />
               </div>
             </div>
             <div style={{ marginBottom:24 }}>
@@ -11205,6 +11411,7 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
   const [selectedCountry,setSelectedCountry] = useState(null);
   const [profilePicker,setProfilePicker] = useState(null);
   const [profilePickerMode,setProfilePickerMode] = useState('preview');
+  const [profileLightbox,setProfileLightbox] = useState(null);
   const displayName = userProfile?.nickname || userProfile?.username || user?.email?.split('@')[0] || 'Esploratore';
   const progress = buildSimpleProgressState({ animals:ANIMALS, statusMap, visitedCountries, earnedBadgeIds });
   const nextLevelXP = xpForLevel(progress.level + 1);
@@ -11217,6 +11424,23 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
     () => resolveProfileAvatarAnimal({ animalsWithStatus, profileAvatarAnimalId, userProfile }),
     [animalsWithStatus, profileAvatarAnimalId, userProfile]
   );
+  useEffect(() => {
+    if (!userProfile || !userIdKey) return;
+    applyRemoteProfileCustomization(userProfile, userIdKey, animalsWithStatus);
+    const prefs = readProfilePrefsFromAnswers(userProfile.onboarding_answers);
+    if (prefs.avatarAnimalId) setProfileAvatarAnimalId(prefs.avatarAnimalId);
+    const bg = normalizeProfileBackgroundImage(userProfile.profile_background_image || '');
+    if (bg) setProfileBgImage(bg);
+    const badge = normalizeBadgeId(userProfile.featured_badge_id || '');
+    if (badge) setFeaturedBadgeId(badge);
+  }, [userProfile, userIdKey, animalsWithStatus]);
+  const openProfilePhotoLightbox = (animal) => {
+    if (!animal) return;
+    const src = getAnimalImageUrl(animal) || animal.image_url || '';
+    if (!src) return;
+    const cls = CLS[animal.cls] || CLS.Mammalia;
+    setProfileLightbox({ src, alt: animal.com || animal.sci || 'Profilo', accentColor: cls.accent, animal });
+  };
   const profileBackgroundChoices = useMemo(
     () => getProfileBackgroundChoices(animalsWithStatus, visitedCountries, profileBgImage),
     [animalsWithStatus, visitedCountries, profileBgImage]
@@ -11277,7 +11501,10 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
       <div style={{ flex:1, overflowY:'auto', padding:18 }}>
         <div style={{ position:'relative', background:isLightTheme?`linear-gradient(90deg, rgba(251,247,239,.82), rgba(251,247,239,.48) 56%, rgba(251,247,239,.18)), url("${profileBgImage}")`:`linear-gradient(90deg, rgba(12,14,18,.76), rgba(17,19,23,.48) 56%, rgba(17,19,23,.18)), url("${profileBgImage}")`, backgroundSize:'cover', backgroundPosition:'center', borderRadius:24, padding:24, textAlign:'center', marginBottom:16, boxShadow:'0 18px 42px rgba(0,0,0,.28)', border:`1px solid ${panelBorder}`, overflow:'hidden' }}>
           <button onClick={()=>openProfilePicker('cover','list')} style={{ position:'absolute', top:12, right:12, height:32, borderRadius:13, border:'1px solid rgba(255,255,255,.14)', background:'rgba(0,0,0,.34)', color:'white', padding:'0 10px', fontSize:11, fontWeight:1000, fontFamily:'inherit', cursor:'pointer' }}>Sfondo</button>
-          <button onClick={()=>openProfilePicker('avatar')} aria-label="Cambia foto profilo" style={{ width:102, height:102, borderRadius:'50%', background:'rgba(0,0,0,.30)', border:'1px solid rgba(255,255,255,.12)', color:'#9DD3FF', display:'flex', alignItems:'center', justifyContent:'center', fontSize:48, margin:'0 auto 14px', cursor:'pointer', boxShadow:'inset 0 0 22px rgba(255,255,255,.06)', overflow:'hidden' }}>{avatarAnimal ? <AnimalImg a={{...avatarAnimal,status:'catturato'}} size={96} fontSize={40} overrideStatus="catturato" /> : '👤'}</button>
+          <div style={{ position:'relative', width:102, margin:'0 auto 14px' }}>
+            <button onClick={()=>avatarAnimal ? openProfilePhotoLightbox(avatarAnimal) : openProfilePicker('avatar')} aria-label={avatarAnimal ? 'Ingrandisci foto profilo' : 'Cambia foto profilo'} style={{ width:102, height:102, borderRadius:'50%', background:'rgba(0,0,0,.30)', border:'1px solid rgba(255,255,255,.12)', color:'#9DD3FF', display:'flex', alignItems:'center', justifyContent:'center', fontSize:48, cursor:'pointer', boxShadow:'inset 0 0 22px rgba(255,255,255,.06)', overflow:'hidden', padding:0 }}>{avatarAnimal ? <AnimalImg a={{...avatarAnimal,status:'catturato'}} size={96} fontSize={40} overrideStatus="catturato" /> : '👤'}</button>
+            <button onClick={()=>openProfilePicker('avatar')} aria-label="Cambia immagine profilo" style={{ position:'absolute', right:-2, bottom:2, width:34, height:34, borderRadius:12, border:'1px solid rgba(255,255,255,.16)', background:'rgba(0,0,0,.52)', color:'white', fontSize:15, cursor:'pointer' }}>✎</button>
+          </div>
           <input ref={fileInputRef} type="file" accept="image/*" style={{ display:'none' }} onChange={()=>{}} />
           <div style={{ color:mainText, fontSize:26, fontWeight:900, letterSpacing:'-.4px' }}>{displayName}</div>
           <div style={{ color:subText, fontSize:13, marginTop:5, fontWeight:600 }}>{userProfile?.username || user?.email || 'Profilo Apex'}</div>
@@ -11342,7 +11569,11 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
             {profilePickerMode === 'preview' ? (
               <div style={{ overflowY:'auto', WebkitOverflowScrolling:'touch' }}>
                 <div style={{ minHeight:210, borderRadius:24, border:`1px solid ${panelBorder}`, background:profilePicker === 'cover' ? `linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.58)), url("${profileBgImage}")` : isLightTheme?'rgba(0,0,0,.035)':'rgba(255,255,255,.055)', backgroundSize:'cover', backgroundPosition:'center', display:'grid', placeItems:'center', padding:18 }}>
-                  {profilePicker === 'avatar' && (avatarAnimal ? <AnimalImg a={{...avatarAnimal,status:'catturato'}} size={172} fontSize={52} overrideStatus="catturato" /> : <span style={{ color:subText, fontSize:15, fontWeight:900, textAlign:'center', lineHeight:1.35 }}>Avvista o cattura un animale per usarlo come immagine profilo.</span>)}
+                  {profilePicker === 'avatar' && (avatarAnimal ? (
+                    <button type="button" onClick={()=>openProfilePhotoLightbox(avatarAnimal)} style={{ border:'none', background:'transparent', padding:0, cursor:'zoom-in' }}>
+                      <AnimalImg a={{...avatarAnimal,status:'catturato'}} size={172} fontSize={52} overrideStatus="catturato" />
+                    </button>
+                  ) : <span style={{ color:subText, fontSize:15, fontWeight:900, textAlign:'center', lineHeight:1.35 }}>Avvista o cattura un animale per usarlo come immagine profilo.</span>)}
                   {profilePicker === 'badge' && (featuredBadge ? <img src={buildAwardImagePath(featuredBadge.badgeId)} alt={featuredBadge.name} style={{ width:170, height:170, objectFit:'contain', filter:`drop-shadow(0 0 22px ${hexToRgba(featuredBadgeColor,.44)})` }} /> : <span style={{ color:subText, fontSize:15, fontWeight:900 }}>Nessun badge selezionato</span>)}
                 </div>
                 <button onClick={()=>setProfilePickerMode('list')} style={{ width:'100%', height:48, borderRadius:17, border:'none', background:ANIMALDEX_ORANGE_GRADIENT, color:'white', fontFamily:'inherit', fontSize:14, fontWeight:1000, marginTop:12, cursor:'pointer' }}>Scegli alternative</button>
@@ -11369,6 +11600,16 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
             )}
           </div>
         </div>
+      )}
+      {profileLightbox && (
+        <ImageLightbox
+          photoMode
+          src={profileLightbox.src}
+          alt={profileLightbox.alt}
+          accentColor={profileLightbox.accentColor}
+          animal={profileLightbox.animal}
+          onClose={()=>setProfileLightbox(null)}
+        />
       )}
     </div>
   );
@@ -14103,6 +14344,17 @@ export default function App() {
       });
     }).catch(() => {});
   }, []);
+  const [statusGuideOpen, setStatusGuideOpen] = useState(false);
+  const openAnimalFromApp = useCallback((animal, options = {}) => {
+    if (!animal) return;
+    const enriched = getEnrichedAnimal({ ...animal, status: getResolvedAnimalStatus(animal, statusMap, visitedCountries) });
+    const documented = isAnimalDocumented(enriched, documentedMap);
+    if (!options.force && isMysteryStatus(enriched.status) && !documented) {
+      setStatusGuideOpen(true);
+      return;
+    }
+    selectAnimal(enriched);
+  }, [statusMap, visitedCountries, documentedMap, selectAnimal]);
   const [statusMap,setStatusMap]=useState({});
   const [page,setPage]=useState('menu');
   const [gridPreset,setGridPreset]=useState(null);
@@ -14366,6 +14618,9 @@ export default function App() {
       ]);
       if (isStale()) return;
       setUserProfile(profile || buildFallbackProfile(activeUser, false));
+      applyRemoteProfileCustomization(profile, activeUser.id, LOCAL_ANIMALS.length ? LOCAL_ANIMALS : animalsData);
+      pushLocalProfileCustomizationIfNeeded(activeUser.id, profile, LOCAL_ANIMALS.length ? LOCAL_ANIMALS : animalsData)
+        .catch(err => console.warn('[Apex] push preferenze profilo non bloccante:', err));
 
       const [remoteStatusResult, destinationsResult, badgeResult, documentedResult, expeditionsResult] = await Promise.allSettled([
         withTimeout(fetchUserAnimalStatusMap(activeUser.id), 4500, {}, 'fetchUserAnimalStatusMap'),
@@ -14451,6 +14706,8 @@ export default function App() {
       if (Object.keys(mergedDocumented).length) {
         setDocumentedMap(prev => ({ ...mergedDocumented, ...prev }));
         saveLocalDocumentedMap(activeUser.id, mergedDocumented);
+        syncDocumentedMapToSupabase(activeUser.id, mergedDocumented, remoteDocumented)
+          .catch(err => console.warn('[Apex] sync documented non bloccante:', err));
       }
 
       // Spedizioni: merge remoto+locale (vince il progresso maggiore) e risync.
@@ -15316,7 +15573,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
         setGridPreset(null);
         setGridReturnTarget(null);
         setPage('grid');
-        selectAnimal(getEnrichedAnimal({ ...animal, status: getResolvedAnimalStatus(animal, statusMap, visitedCountries) }));
+        openAnimalFromApp(animal);
       },
       usageStreak: getUsageStreak(),
       socialSnapshot,
@@ -15348,7 +15605,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
 
   const renderPage = () => {
 	    if (page === 'menu') return renderHomeMenu();
-    if (page === 'quickSeen') return <QuickSeenPage theme={theme} onBack={()=>setPage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onStatusChange={handleStatusChange} onSelect={selectAnimal} user={user} userProfile={userProfile} />;
+    if (page === 'quickSeen') return <QuickSeenPage theme={theme} onBack={()=>setPage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onStatusChange={handleStatusChange} onSelect={openAnimalFromApp} user={user} userProfile={userProfile} />;
     if (page === 'compare') return (
       <FeaturePageErrorBoundary theme={theme} title="Comparatore" onBack={()=>returnFromFeaturePage('menu')} resetKey={`compare-${theme}-${animalsData?.length || 0}-${comparatorInitialAnimal?.id || ''}`}>
         <ComparatorPage theme={theme} onBack={()=>returnFromFeaturePage('menu')} animals={animalsWithStatus} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={comparatorInitialAnimal} />
@@ -15357,13 +15614,13 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
     if (page === 'friends') return <FriendsPage theme={theme} accessToken={session?.access_token || ''} initialTab={friendsInitialTab} initialSnapshot={socialSnapshot} menuProgress={menuProgress} onSocialChange={setSocialSnapshot} onBack={()=>returnFromSection('menu')} user={user} userProfile={userProfile} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
     if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} pendingFriendRequestCount={socialAlertCount} animalsWithStatus={animalsWithStatus} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={handleLogout} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges', 'profile')} onOpenRegions={()=>openPage('regions', 'profile')} onOpenGallery={()=>openPage('gallery', 'profile')} onOpenFriends={openFriends} />;
 	    if (page === 'badges') return <BadgesPage theme={theme} onBack={()=>returnFromSection('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} awardMetrics={awardMetrics} unlockedAwards={unlockedAwards} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={activeSectionGuide==='badges'} onTutorialBadgeOpen={()=>setActiveSectionGuide(null)} />;
-    if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><FeaturePageErrorBoundary theme={theme} title="Territori" onBack={()=>returnFromSection('menu')} resetKey={`regions-${theme}-${regionsInitialView || 'planet'}`}><RegionsPage theme={theme} animalsWithStatus={animalsWithStatus} onBack={()=>returnFromSection('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={handleVisitedCountriesChange} onRemoveDestination={handleRemoveDestination} initialView={regionsInitialView} onSelect={selectAnimal} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} user={user} /></FeaturePageErrorBoundary>{renderDetailOverlay()}</div>;
-    if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage theme={theme} onBack={()=>returnFromSection('profile')} statusMap={statusMap} onSelect={selectAnimal} />{renderDetailOverlay()}</div>;
-    if (page === 'lifeweb') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><StandaloneLifeWebPage theme={theme} statusMap={statusMap} visitedCountries={visitedCountries} onBack={()=>returnFromFeaturePage('grid')} animals={animalsData} initialAnimal={lifeWebInitialAnimal} onOpenAnimal={selectAnimal} />{renderDetailOverlay()}</div>;
-    if (page === 'taxonomy') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><TaxonomyErrorBoundary theme={theme} onBack={()=>setPage('menu')} resetKey={`${theme}-${animalsWithStatus?.length || 0}-${taxonomyInitialAnimal?.id || ''}`}><TaxonomyExplorer theme={theme} animals={animalsWithStatus} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={taxonomyInitialAnimal} onBack={()=>setPage('menu')} onOpenAnimal={selectAnimal} onOpenTaxonomyFilter={openTaxonomyFilterFromDetail} /></TaxonomyErrorBoundary>{renderDetailOverlay()}</div>;
+    if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><FeaturePageErrorBoundary theme={theme} title="Territori" onBack={()=>returnFromSection('menu')} resetKey={`regions-${theme}-${regionsInitialView || 'planet'}`}><RegionsPage theme={theme} animalsWithStatus={animalsWithStatus} onBack={()=>returnFromSection('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={handleVisitedCountriesChange} onRemoveDestination={handleRemoveDestination} initialView={regionsInitialView} onSelect={openAnimalFromApp} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} user={user} /></FeaturePageErrorBoundary>{renderDetailOverlay()}</div>;
+    if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage theme={theme} onBack={()=>returnFromSection('profile')} statusMap={statusMap} onSelect={openAnimalFromApp} />{renderDetailOverlay()}</div>;
+    if (page === 'lifeweb') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><StandaloneLifeWebPage theme={theme} statusMap={statusMap} visitedCountries={visitedCountries} onBack={()=>returnFromFeaturePage('grid')} animals={animalsData} initialAnimal={lifeWebInitialAnimal} onOpenAnimal={openAnimalFromApp} />{renderDetailOverlay()}</div>;
+    if (page === 'taxonomy') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><TaxonomyErrorBoundary theme={theme} onBack={()=>setPage('menu')} resetKey={`${theme}-${animalsWithStatus?.length || 0}-${taxonomyInitialAnimal?.id || ''}`}><TaxonomyExplorer theme={theme} animals={animalsWithStatus} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={taxonomyInitialAnimal} onBack={()=>setPage('menu')} onOpenAnimal={openAnimalFromApp} onOpenTaxonomyFilter={openTaxonomyFilterFromDetail} /></TaxonomyErrorBoundary>{renderDetailOverlay()}</div>;
     if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} onStartInitialOnboarding={startInitialOnboardingFromSettings} onStartOperationalTutorial={startOperationalTutorialFromSettings} theme={theme} onThemeChange={setTheme} homeVariant={homeVariant} onHomeVariantChange={handleHomeVariantChange} />;
     if (page === 'abilities') return <AbilitiesPage theme={theme} onBack={()=>setPage('menu')} onOpenAbility={openGridWithCategory} tutorialActive={activeSectionGuide==='abilities'} onTutorialAbilityOpen={()=>setActiveSectionGuide(null)} />;
-    return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><Grid theme={theme} animals={animalsWithStatus} onSelect={selectAnimal} statusMap={statusMap} visitedCountries={visitedCountries} onHome={()=>openPage('menu')} onOpenRegions={()=>openPage('regions')} preset={gridPreset} onBackToOrigin={gridReturnTarget ? returnFromFilteredGrid : null} tutorialActive={tutorialStep==='grid-open'} tutorialStep={tutorialStep} tutorialAnimalId={tutorialAnimalId} onTutorialAnimalSelect={handleTutorialAnimalSelect} />{renderDetailOverlay()}</div>;
+    return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><Grid theme={theme} animals={animalsWithStatus} onSelect={openAnimalFromApp} statusMap={statusMap} visitedCountries={visitedCountries} onHome={()=>openPage('menu')} onOpenRegions={()=>openPage('regions')} preset={gridPreset} onBackToOrigin={gridReturnTarget ? returnFromFilteredGrid : null} tutorialActive={tutorialStep==='grid-open'} tutorialStep={tutorialStep} tutorialAnimalId={tutorialAnimalId} onTutorialAnimalSelect={handleTutorialAnimalSelect} />{renderDetailOverlay()}</div>;
   };
 
   return (
@@ -15378,6 +15635,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
       {photoTarget && <PhotoRecognitionModal animal={photoTarget?.id ? photoTarget : null} animals={animalsData} user={user} onClose={()=>setPhotoTarget(null)} onConfirm={confirmPhotoRecognition} onRequestAddAnimal={requestAnimalAdd} />}
       {expeditionGift && <ExpeditionGiftModal gift={expeditionGift} onClose={()=>setExpeditionGift(null)} />}
       {countryVisitPrompt && <CountryVisitPromptModal animal={countryVisitPrompt} visitedCountries={visitedCountries} onClose={()=>setCountryVisitPrompt(null)} onConfirm={confirmPromptCountries} />}
+      <AnimalStatusGuideModal open={statusGuideOpen} onClose={()=>setStatusGuideOpen(false)} theme={theme} />
     </div>
   );
 }
