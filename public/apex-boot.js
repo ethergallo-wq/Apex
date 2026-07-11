@@ -26,26 +26,26 @@
     'Caricando i tuoi badge…',
   ];
   var ANIMALS = [
-    '/animals/ornithorhynchus-anatinus.png',
-    '/animals/tachyglossus-aculeatus.png',
-    '/animals/daubentonia-madagascariensis.png',
-    '/animals/condylura-cristata.png',
-    '/animals/nasalis-larvatus.png',
-    '/animals/okapia-johnstoni.png',
-    '/animals/psychrolutes-marcidus.png',
-    '/animals/milnesium-tardigradum.png',
-    '/animals/pipa-pipa.png',
-    '/animals/phyllium-giganteum.png',
-    '/animals/uroplatus-phantasticus.png',
-    '/animals/chlamyphorus-truncatus.png',
-    '/animals/moloch-horridus.png',
-    '/animals/chlamydoselachus-anguineus.png',
-    '/animals/thaumoctopus-mimicus.png',
-    '/animals/vampyroteuthis-infernalis.png',
-    '/animals/ambystoma-mexicanum.png',
-    '/animals/balaeniceps-rex.png',
-    '/animals/saiga-tatarica.png',
-    '/animals/opisthocomus-hoazin.png',
+    '/animals/thumbs/ornithorhynchus-anatinus.webp',
+    '/animals/thumbs/tachyglossus-aculeatus.webp',
+    '/animals/thumbs/daubentonia-madagascariensis.webp',
+    '/animals/thumbs/condylura-cristata.webp',
+    '/animals/thumbs/nasalis-larvatus.webp',
+    '/animals/thumbs/okapia-johnstoni.webp',
+    '/animals/thumbs/psychrolutes-marcidus.webp',
+    '/animals/thumbs/milnesium-tardigradum.webp',
+    '/animals/thumbs/pipa-pipa.webp',
+    '/animals/thumbs/phyllium-giganteum.webp',
+    '/animals/thumbs/uroplatus-phantasticus.webp',
+    '/animals/thumbs/chlamyphorus-truncatus.webp',
+    '/animals/thumbs/moloch-horridus.webp',
+    '/animals/thumbs/chlamydoselachus-anguineus.webp',
+    '/animals/thumbs/thaumoctopus-mimicus.webp',
+    '/animals/thumbs/vampyroteuthis-infernalis.webp',
+    '/animals/thumbs/ambystoma-mexicanum.webp',
+    '/animals/thumbs/balaeniceps-rex.webp',
+    '/animals/thumbs/saiga-tatarica.webp',
+    '/animals/thumbs/opisthocomus-hoazin.webp',
   ];
   var ANIMAL_FLIP_MS = 333;
   var MESSAGE_FLIP_MS = 3000;
@@ -56,25 +56,24 @@
     return pool[Math.floor(Math.random() * pool.length)];
   }
 
-  function preloadImages() {
-    ANIMALS.forEach(function (src) {
+  function preloadAround(list, index, count) {
+    if (!list.length) return;
+    var limit = Math.min(count || 3, list.length);
+    for (var i = 0; i < limit; i += 1) {
+      var src = list[(index + i) % list.length];
       var img = new Image();
       img.decoding = 'async';
       img.src = src;
-    });
+    }
   }
 
   function init() {
     var root = document.getElementById('apex-inline-boot');
     if (!root) return;
-    root.innerHTML = '';
-    root.style.cssText = 'min-height:100vh;min-height:100dvh;background:radial-gradient(circle at 50% 18%, rgba(184,77,58,.16), transparent 42%), #111113;color:white;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif';
 
-    var shell = document.createElement('div');
-    shell.style.cssText = 'width:100%;max-width:360px;display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center';
-
-    var animalWrap = document.createElement('div');
-    animalWrap.style.cssText = 'min-height:58px;display:flex;align-items:center;justify-content:center';
+    var animalWrap = document.getElementById('apex-inline-boot-animal');
+    var msg = document.getElementById('apex-inline-boot-message');
+    if (!animalWrap || !msg) return;
 
     var animalImg = document.createElement('img');
     animalImg.alt = '';
@@ -83,30 +82,28 @@
     animalImg.decoding = 'async';
     animalImg.style.cssText = 'width:58px;height:58px;object-fit:contain;display:block';
     animalWrap.appendChild(animalImg);
-    shell.appendChild(animalWrap);
 
-    var msg = document.createElement('div');
-    msg.id = 'apex-inline-boot-message';
-    msg.style.cssText = 'min-height:48px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.82);font-weight:900;font-size:15px;line-height:1.35;padding:0 8px';
     msg.textContent = pickRandomMessage();
-    shell.appendChild(msg);
-
-    root.appendChild(shell);
-    preloadImages();
+    msg.className = 'apex-boot-text-shimmer';
 
     var animalIdx = 0;
     var activeMessage = msg.textContent;
-    if (ANIMALS.length) animalImg.src = ANIMALS[0];
+    if (ANIMALS.length) {
+      animalImg.src = ANIMALS[0];
+      preloadAround(ANIMALS, 0, 4);
+    }
 
     window.setInterval(function () {
       if (!ANIMALS.length) return;
       animalIdx = (animalIdx + 1) % ANIMALS.length;
       animalImg.src = ANIMALS[animalIdx];
+      preloadAround(ANIMALS, animalIdx + 1, 2);
     }, ANIMAL_FLIP_MS);
 
     window.setInterval(function () {
       activeMessage = pickRandomMessage(activeMessage);
       msg.textContent = activeMessage;
+      msg.className = 'apex-boot-text-shimmer apex-boot-message-fade';
     }, MESSAGE_FLIP_MS);
   }
 

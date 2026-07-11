@@ -14245,6 +14245,7 @@ export default function App() {
   },[]);
 
   useEffect(() => {
+    if (authLoading) return undefined;
     let alive = true;
     loadLocalAnimalsData()
       .then(list => {
@@ -14261,7 +14262,7 @@ export default function App() {
         }
       });
     return () => { alive = false; };
-  }, []);
+  }, [authLoading]);
 
   useEffect(() => {
     if (authLoading || !user?.id) return;
@@ -14278,11 +14279,19 @@ export default function App() {
 
   useEffect(()=>{
     let mounted = true;
+    const authTimer = window.setTimeout(() => {
+      if (mounted) setAuthLoading(false);
+    }, 5000);
     supabase.auth.getSession().then(({ data }) => {
       if (!mounted) return;
+      window.clearTimeout(authTimer);
       syncSupabaseAccessTokenCache(data.session || null);
       setSession(data.session || null);
       setUser(data.session?.user || null);
+      setAuthLoading(false);
+    }).catch(() => {
+      if (!mounted) return;
+      window.clearTimeout(authTimer);
       setAuthLoading(false);
     });
     const { data: listener } = supabase.auth.onAuthStateChange(async (_event, nextSession) => {
@@ -14296,6 +14305,7 @@ export default function App() {
     });
     return () => {
       mounted = false;
+      window.clearTimeout(authTimer);
       listener?.subscription?.unsubscribe?.();
     };
   },[]);

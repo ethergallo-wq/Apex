@@ -1,6 +1,8 @@
-import React from 'react';
-import Animaldex from './Animaldex_sora';
+import React, { Suspense, lazy } from 'react';
+import ApexBootLoader from './ApexBootLoader';
 import './App.css';
+
+const Animaldex = lazy(() => import('./Animaldex_sora'));
 
 const LEGAL_UPDATED_AT = 'June 5, 2026';
 
@@ -114,7 +116,13 @@ function App() {
   const path = typeof window !== 'undefined' ? window.location.pathname.replace(/\/+$/, '') : '';
   if (path === '/terms') return <LegalPage type="terms" />;
   if (path === '/privacy') return <LegalPage type="privacy" />;
-  return <AppErrorBoundary><Animaldex /></AppErrorBoundary>;
+  return (
+    <AppErrorBoundary>
+      <Suspense fallback={<ApexBootLoader />}>
+        <Animaldex />
+      </Suspense>
+    </AppErrorBoundary>
+  );
 }
 
 export default App;

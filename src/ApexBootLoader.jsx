@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   APEX_BOOT_ANIMAL_IMAGES,
   pickRandomBootMessage,
@@ -10,11 +10,12 @@ const MESSAGE_FLIP_MS = 3000;
 
 export default function ApexBootLoader({ message = null, frameProps = null }) {
   const images = useMemo(() => APEX_BOOT_ANIMAL_IMAGES.filter(Boolean), []);
+  const imgRef = useRef(null);
   const [animalIndex, setAnimalIndex] = useState(0);
   const [activeMessage, setActiveMessage] = useState(() => pickRandomBootMessage());
 
   useEffect(() => {
-    preloadBootImages(images);
+    preloadBootImages(images, 0, 4);
   }, [images]);
 
   useEffect(() => {
@@ -34,6 +35,13 @@ export default function ApexBootLoader({ message = null, frameProps = null }) {
   }, [message]);
 
   const activeImage = images[animalIndex % images.length] || null;
+
+  useEffect(() => {
+    if (!activeImage || !imgRef.current) return;
+    imgRef.current.src = activeImage;
+    preloadBootImages(images, animalIndex + 1, 2);
+  }, [activeImage, animalIndex, images]);
+
   const displayMessage = message || activeMessage || 'Apertura Apex…';
 
   return (
@@ -57,19 +65,24 @@ export default function ApexBootLoader({ message = null, frameProps = null }) {
         <div style={{ minHeight: 58, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           {activeImage && (
             <img
-              key={activeImage}
+              ref={imgRef}
               src={activeImage}
               alt=""
               width={58}
               height={58}
               loading="eager"
               decoding="async"
+              fetchPriority="high"
               style={{ width: 58, height: 58, objectFit: 'contain', display: 'block' }}
             />
           )}
         </div>
         <div style={{ minHeight: 48, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 8px' }}>
-          <div key={displayMessage} className="apex-boot-message-fade" style={{ color: 'rgba(255,255,255,.82)', fontWeight: 900, fontSize: 15, letterSpacing: 0.2, lineHeight: 1.35 }}>
+          <div
+            key={displayMessage}
+            className="apex-boot-text-shimmer apex-boot-message-fade"
+            style={{ fontWeight: 900, fontSize: 15, letterSpacing: 0.2, lineHeight: 1.35 }}
+          >
             {displayMessage}
           </div>
         </div>

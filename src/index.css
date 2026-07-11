@@ -111,46 +111,36 @@ code {
   filter: invert(1) opacity(0.82);
 }
 
-@keyframes apex-boot-marquee-left {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-@keyframes apex-boot-marquee-right {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
-}
-
 @keyframes apex-boot-message-fade {
   from { opacity: 0; transform: translateY(4px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.apex-boot-marquee-track,
-.apex-boot-marquee-track-reverse {
-  display: flex;
-  gap: 12px;
-  width: max-content;
-  will-change: transform;
-}
-
-.apex-boot-marquee-track {
-  animation: apex-boot-marquee-left 22s linear infinite;
-}
-
-.apex-boot-marquee-track-reverse {
-  animation: apex-boot-marquee-right 28s linear infinite;
+@keyframes apex-boot-text-shimmer {
+  0% { background-position: 130% 50%; }
+  100% { background-position: -30% 50%; }
 }
 
 .apex-boot-message-fade {
   animation: apex-boot-message-fade .45s ease;
 }
 
-.apex-boot-spotlight-card {
-  animation: apex-boot-spotlight-pop .55s ease both;
-}
-
-@keyframes apex-boot-spotlight-pop {
-  from { opacity: 0; transform: translateY(6px) scale(.92); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+.apex-boot-text-shimmer {
+  display: inline-block;
+  max-width: 100%;
+  background-image: linear-gradient(
+    105deg,
+    rgba(255, 255, 255, .58) 0%,
+    rgba(255, 255, 255, .58) 40%,
+    rgba(255, 255, 255, .98) 50%,
+    rgba(255, 255, 255, .58) 60%,
+    rgba(255, 255, 255, .58) 100%
+  );
+  background-size: 220% 100%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: apex-boot-text-shimmer 2s linear infinite;
 }
