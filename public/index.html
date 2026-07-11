@@ -31,8 +31,8 @@
         to { opacity: 1; transform: translateY(0); }
       }
       @keyframes apex-boot-text-shimmer {
-        0% { background-position: 130% 50%; }
-        100% { background-position: -30% 50%; }
+        0% { background-position: 115% 50%; }
+        100% { background-position: -15% 50%; }
       }
       .apex-boot-message-fade {
         animation: apex-boot-message-fade .45s ease;
@@ -41,20 +41,25 @@
         display: inline-block;
         max-width: 100%;
         background-image: linear-gradient(
-          105deg,
-          rgba(255, 255, 255, .58) 0%,
-          rgba(255, 255, 255, .58) 40%,
-          rgba(255, 255, 255, .98) 50%,
-          rgba(255, 255, 255, .58) 60%,
-          rgba(255, 255, 255, .58) 100%
+          100deg,
+          rgba(255, 255, 255, .36) 0%,
+          rgba(255, 255, 255, .36) 38%,
+          rgba(255, 255, 255, .72) 46%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, .72) 54%,
+          rgba(255, 255, 255, .36) 62%,
+          rgba(255, 255, 255, .36) 100%
         );
-        background-size: 220% 100%;
+        background-size: 260% 100%;
         background-repeat: no-repeat;
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
         -webkit-text-fill-color: transparent;
-        animation: apex-boot-text-shimmer 2s linear infinite;
+        animation: apex-boot-text-shimmer 2.4s linear infinite;
+      }
+      .apex-boot-text-shimmer.apex-boot-message-fade {
+        animation: apex-boot-message-fade .45s ease, apex-boot-text-shimmer 2.4s linear infinite;
       }
     </style>
     <script src="%PUBLIC_URL%/apex-boot.js" defer></script>
@@ -90,7 +95,9 @@
       <div id="apex-inline-boot" style="min-height:100vh;min-height:100dvh;background:radial-gradient(circle at 50% 18%, rgba(184,77,58,.16), transparent 42%), #111113;color:white;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
         <div style="width:100%;max-width:360px;display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center">
           <div id="apex-inline-boot-animal" style="min-height:58px;display:flex;align-items:center;justify-content:center"></div>
-          <div id="apex-inline-boot-message" class="apex-boot-text-shimmer" style="min-height:48px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;line-height:1.35;padding:0 8px">Lucidando gli zoccoli agli equini…</div>
+          <div class="apex-boot-message-fade" style="min-height:48px;display:flex;align-items:center;justify-content:center;padding:0 8px;max-width:100%">
+            <span id="apex-inline-boot-message" class="apex-boot-text-shimmer" style="font-weight:900;font-size:15px;line-height:1.35">Lucidando gli zoccoli agli equini…</span>
+          </div>
         </div>
       </div>
     </div>

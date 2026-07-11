@@ -78,12 +78,10 @@ export default function ApexBootLoader({ message = null, frameProps = null }) {
           )}
         </div>
         <div style={{ minHeight: 48, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 8px' }}>
-          <div
-            key={displayMessage}
-            className="apex-boot-text-shimmer apex-boot-message-fade"
-            style={{ fontWeight: 900, fontSize: 15, letterSpacing: 0.2, lineHeight: 1.35 }}
-          >
-            {displayMessage}
+          <div key={displayMessage} className="apex-boot-message-fade" style={{ maxWidth: '100%' }}>
+            <span className="apex-boot-text-shimmer" style={{ fontWeight: 900, fontSize: 15, letterSpacing: 0.2, lineHeight: 1.35 }}>
+              {displayMessage}
+            </span>
           </div>
         </div>
       </div>

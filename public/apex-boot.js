@@ -103,7 +103,16 @@
     window.setInterval(function () {
       activeMessage = pickRandomMessage(activeMessage);
       msg.textContent = activeMessage;
-      msg.className = 'apex-boot-text-shimmer apex-boot-message-fade';
+      msg.className = 'apex-boot-text-shimmer';
+      msg.style.animation = 'none';
+      void msg.offsetWidth;
+      msg.style.animation = '';
+      var wrap = msg.parentElement;
+      if (wrap) {
+        wrap.classList.remove('apex-boot-message-fade');
+        void wrap.offsetWidth;
+        wrap.classList.add('apex-boot-message-fade');
+      }
     }, MESSAGE_FLIP_MS);
   }
 

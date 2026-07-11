@@ -117,8 +117,8 @@ code {
 }
 
 @keyframes apex-boot-text-shimmer {
-  0% { background-position: 130% 50%; }
-  100% { background-position: -30% 50%; }
+  0% { background-position: 115% 50%; }
+  100% { background-position: -15% 50%; }
 }
 
 .apex-boot-message-fade {
@@ -129,18 +129,36 @@ code {
   display: inline-block;
   max-width: 100%;
   background-image: linear-gradient(
-    105deg,
-    rgba(255, 255, 255, .58) 0%,
-    rgba(255, 255, 255, .58) 40%,
-    rgba(255, 255, 255, .98) 50%,
-    rgba(255, 255, 255, .58) 60%,
-    rgba(255, 255, 255, .58) 100%
+    100deg,
+    rgba(255, 255, 255, .36) 0%,
+    rgba(255, 255, 255, .36) 38%,
+    rgba(255, 255, 255, .72) 46%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, .72) 54%,
+    rgba(255, 255, 255, .36) 62%,
+    rgba(255, 255, 255, .36) 100%
   );
-  background-size: 220% 100%;
+  background-size: 260% 100%;
   background-repeat: no-repeat;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  animation: apex-boot-text-shimmer 2s linear infinite;
+  animation: apex-boot-text-shimmer 2.4s linear infinite;
+}
+
+.apex-boot-text-shimmer.apex-boot-message-fade {
+  animation: apex-boot-message-fade .45s ease, apex-boot-text-shimmer 2.4s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .apex-boot-text-shimmer {
+    background-image: none;
+    color: rgba(255, 255, 255, .72);
+    -webkit-text-fill-color: rgba(255, 255, 255, .72);
+    animation: none;
+  }
+  .apex-boot-text-shimmer.apex-boot-message-fade {
+    animation: apex-boot-message-fade .45s ease;
+  }
 }
