@@ -14344,17 +14344,6 @@ export default function App() {
       });
     }).catch(() => {});
   }, []);
-  const [statusGuideOpen, setStatusGuideOpen] = useState(false);
-  const openAnimalFromApp = useCallback((animal, options = {}) => {
-    if (!animal) return;
-    const enriched = getEnrichedAnimal({ ...animal, status: getResolvedAnimalStatus(animal, statusMap, visitedCountries) });
-    const documented = isAnimalDocumented(enriched, documentedMap);
-    if (!options.force && isMysteryStatus(enriched.status) && !documented) {
-      setStatusGuideOpen(true);
-      return;
-    }
-    selectAnimal(enriched);
-  }, [statusMap, visitedCountries, documentedMap, selectAnimal]);
   const [statusMap,setStatusMap]=useState({});
   const [page,setPage]=useState('menu');
   const [gridPreset,setGridPreset]=useState(null);
@@ -14381,6 +14370,17 @@ export default function App() {
   const [visitedCountries,setVisitedCountries]=useState(() => normalizeIsoList(getVisitedCountries()));
   const [documentedMap,setDocumentedMap]=useState({});
   const [expeditionState,setExpeditionState]=useState({});
+  const [statusGuideOpen, setStatusGuideOpen] = useState(false);
+  const openAnimalFromApp = useCallback((animal, options = {}) => {
+    if (!animal) return;
+    const enriched = getEnrichedAnimal({ ...animal, status: getResolvedAnimalStatus(animal, statusMap, visitedCountries) });
+    const documented = isAnimalDocumented(enriched, documentedMap);
+    if (!options.force && isMysteryStatus(enriched.status) && !documented) {
+      setStatusGuideOpen(true);
+      return;
+    }
+    selectAnimal(enriched);
+  }, [statusMap, visitedCountries, documentedMap, selectAnimal]);
   const [expeditionGift,setExpeditionGift]=useState(null);
   const [expeditionNotice,setExpeditionNotice]=useState('');
   // Sync sincrono delle mappe modulo prima del calcolo dei memo (stesso pattern di ANIMALS).
