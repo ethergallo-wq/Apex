@@ -6847,24 +6847,23 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
         {/* 3 pannelli: Abilità | Statistiche | Tassonomia */}
         <div style={{ marginBottom:20 }} data-tour="animal-detail-tabs">
           {/* Tab bar */}
-          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', marginBottom:0, background:'rgba(0,0,0,.38)', borderRadius:'22px 22px 0 0', padding:4, gap:4, boxShadow:['detail-guide','detail-overview'].includes(tutorialStep)?'0 0 0 3px rgba(240,168,64,.28), 0 0 22px rgba(240,168,64,.22)':'none' }}>
+          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', marginBottom:0, background:'rgba(0,0,0,.52)', borderRadius:'22px 22px 0 0', padding:4, gap:3, border:'1px solid rgba(255,255,255,.06)', borderBottom:'none', boxShadow:['detail-guide','detail-overview'].includes(tutorialStep)?'0 0 0 3px rgba(240,168,64,.28), 0 0 22px rgba(240,168,64,.22)':'none' }}>
             {[
-              { id:'abilita', label:'Abilità', icon:'✨', accent:'#B98CFF', idleBg:'rgba(185,140,255,.14)', idleBorder:'rgba(185,140,255,.34)' },
-              { id:'statistiche', label:'Statistiche', icon:'📊', accent:'#5BBEF8', idleBg:'rgba(91,190,248,.10)', idleBorder:'rgba(91,190,248,.28)' },
-              { id:'tassonomia', label:'Tassonomia', icon:'🌿', accent:'#90D84A', idleBg:'rgba(144,216,74,.16)', idleBorder:'rgba(144,216,74,.38)' },
+              { id:'abilita', label:'Abilità' },
+              { id:'statistiche', label:'Statistiche' },
+              { id:'tassonomia', label:'Tassonomia' },
             ].map(tab=>{
               const active = statMode === tab.id;
               return (
-                <button key={tab.id} onClick={()=>handleTab(tab.id)} style={{ padding:'8px 4px 7px', borderRadius:16, background:active ? tab.accent : tab.idleBg, color:active ? 'white' : tab.accent, fontSize:10.5, fontWeight:900, border:active ? 'none' : `1px solid ${tab.idleBorder}`, cursor:'pointer', display:'flex', flexDirection:'column', alignItems:'center', gap:2, boxShadow:!active && (tab.id==='tassonomia' || tab.id==='abilita') ? '0 0 14px rgba(255,255,255,.04)' : 'none' }}>
-                  <span style={{ fontSize:13, lineHeight:1 }}>{tab.icon}</span>
-                  <span style={{ lineHeight:1.1 }}>{tab.label}</span>
+                <button key={tab.id} onClick={()=>handleTab(tab.id)} style={{ padding:'10px 6px 9px', borderRadius:14, background:active ? 'rgba(255,255,255,.14)' : 'transparent', color:active ? 'white' : 'rgba(255,255,255,.52)', fontSize:10.5, fontWeight:active ? 1000 : 850, border:active ? '1px solid rgba(255,255,255,.16)' : '1px solid transparent', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', boxShadow:active ? '0 4px 14px rgba(0,0,0,.24)' : 'none', transition:'background .16s ease, color .16s ease, box-shadow .16s ease' }}>
+                  <span style={{ lineHeight:1.1, letterSpacing:'.01em' }}>{tab.label}</span>
                 </button>
               );
             })}
           </div>
           {statMode === 'statistiche' && (
             <div style={{ padding:'6px 8px 0', color:'rgba(255,255,255,.48)', fontSize:10, fontWeight:800, textAlign:'center' }}>
-              Prova anche Abilità e Tassonomia — i tab colorati sopra
+              Prova anche Abilità e Tassonomia — i tab sopra
             </div>
           )}
 
