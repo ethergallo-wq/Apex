@@ -1,59 +1,67 @@
 (function () {
   var MESSAGES = [
-    'Lucidando gli zoccoli degli equini…',
-    'Contando le macchie dei leopardi…',
-    'Riscaldando le ali dei colibrì…',
-    'Stirando le antenne delle farfalle…',
-    'Sincronizzando i branchi di pesci…',
+    'Lucidando gli zoccoli agli equini…',
+    'Contando le zampe dei millepiedi…',
+    'Svegliando i gufi con delicatezza…',
+    'Aspettando la conferma dal bradipo…',
+    'Insegnando a parlare ai pappagalli…',
+    'Mettendo in fila i pinguini…',
+    'Colorando i camaleonti…',
+    'Contando le pecore…',
+    'Mettendo in equilibrio i fenicotteri…',
+    'Riempiendo le gobbe dei cammelli…',
+    'Appendendo i pipistrelli…',
+    'Sotterrando le talpe…',
+    'Pulendo le lenti dei cannocchiali…',
+    'Allacciando le scarpe da trekking…',
+    'Riempiendo le bombole da immersione…',
+    'Cercando i leocorni…',
+    'Affilando i denti degli squali…',
+    'Caricando gli animali nella tua zona…',
+    'Cercando gli avvistamenti più recenti…',
+    'Preparando le destinazioni migliori…',
+    'Caricando le tue esplorazioni…',
+    'Ricostruendo l’albero tassonomico…',
+    'Sincronizzando i tuoi progressi…',
+    'Caricando i tuoi badge…',
   ];
   var ANIMALS = [
-    '/animals/acinonyx-jubatus.png',
-    '/animals/amblyrhynchus-cristatus.png',
-    '/animals/amphiprion-ocellaris.png',
-    '/animals/panthera-leo.png',
-    '/animals/ursus-arctos.png',
-    '/animals/loxodonta-africana.png',
-    '/animals/giraffa-camelopardalis.png',
-    '/animals/accipiter-nisus.png',
-    '/animals/anax-imperator.png',
-    '/animals/passer-domesticus.png',
-    '/animals/delphinus-delphis.png',
-    '/animals/chamaeleo-africanus.png',
-    '/animals/crocodylus-niloticus.png',
-    '/animals/equus-quagga.png',
-    '/animals/falco-peregrinus.png',
-    '/animals/gorilla-beringei.png',
-    '/animals/octopus-vulgaris.png',
-    '/animals/pongo-pygmaeus.png',
-    '/animals/tursiops-truncatus.png',
+    '/animals/ornithorhynchus-anatinus.png',
+    '/animals/tachyglossus-aculeatus.png',
+    '/animals/daubentonia-madagascariensis.png',
+    '/animals/condylura-cristata.png',
+    '/animals/nasalis-larvatus.png',
+    '/animals/okapia-johnstoni.png',
+    '/animals/psychrolutes-marcidus.png',
+    '/animals/milnesium-tardigradum.png',
+    '/animals/pipa-pipa.png',
+    '/animals/phyllium-giganteum.png',
+    '/animals/uroplatus-phantasticus.png',
+    '/animals/chlamyphorus-truncatus.png',
+    '/animals/moloch-horridus.png',
+    '/animals/chlamydoselachus-anguineus.png',
+    '/animals/thaumoctopus-mimicus.png',
+    '/animals/vampyroteuthis-infernalis.png',
+    '/animals/ambystoma-mexicanum.png',
+    '/animals/balaeniceps-rex.png',
+    '/animals/saiga-tatarica.png',
+    '/animals/opisthocomus-hoazin.png',
   ];
+  var ANIMAL_FLIP_MS = 333;
+  var MESSAGE_FLIP_MS = 3000;
 
-  function buildTrack(list, reverse) {
-    var base = reverse ? list.slice().reverse() : list.slice();
-    return base.concat(base);
+  function pickRandomMessage(exclude) {
+    var pool = exclude == null ? MESSAGES.slice() : MESSAGES.filter(function (msg) { return msg !== exclude; });
+    if (!pool.length) pool = MESSAGES.slice();
+    return pool[Math.floor(Math.random() * pool.length)];
   }
 
-  function renderTrack(container, list, reverse, duration) {
-    var track = document.createElement('div');
-    track.className = reverse ? 'apex-boot-marquee-track-reverse' : 'apex-boot-marquee-track';
-    track.style.animationDuration = duration + 's';
-    buildTrack(list, false).forEach(function (src, index) {
-      var cell = document.createElement('div');
-      cell.style.cssText = 'width:72px;height:72px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);overflow:hidden;flex-shrink:0;box-shadow:0 8px 20px rgba(0,0,0,.28)';
-      var img = document.createElement('img');
-      img.src = src;
-      img.alt = '';
-      img.width = 72;
-      img.height = 72;
+  function preloadImages() {
+    ANIMALS.forEach(function (src) {
+      var img = new Image();
       img.decoding = 'async';
-      img.style.cssText = 'width:100%;height:100%;object-fit:cover;display:block';
-      cell.appendChild(img);
-      track.appendChild(cell);
+      img.src = src;
     });
-    var wrap = document.createElement('div');
-    wrap.style.cssText = 'overflow:hidden;width:100%;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)';
-    wrap.appendChild(track);
-    container.appendChild(wrap);
   }
 
   function init() {
@@ -63,28 +71,43 @@
     root.style.cssText = 'min-height:100vh;min-height:100dvh;background:radial-gradient(circle at 50% 18%, rgba(184,77,58,.16), transparent 42%), #111113;color:white;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif';
 
     var shell = document.createElement('div');
-    shell.style.cssText = 'width:100%;max-width:360px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center';
+    shell.style.cssText = 'width:100%;max-width:360px;display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center';
 
-    var marquee = document.createElement('div');
-    marquee.style.cssText = 'width:100%;display:grid;gap:10px';
-    renderTrack(marquee, ANIMALS, false, 20);
-    renderTrack(marquee, ANIMALS, true, 26);
-    shell.appendChild(marquee);
+    var animalWrap = document.createElement('div');
+    animalWrap.style.cssText = 'min-height:58px;display:flex;align-items:center;justify-content:center';
+
+    var animalImg = document.createElement('img');
+    animalImg.alt = '';
+    animalImg.width = 58;
+    animalImg.height = 58;
+    animalImg.decoding = 'async';
+    animalImg.style.cssText = 'width:58px;height:58px;object-fit:contain;display:block';
+    animalWrap.appendChild(animalImg);
+    shell.appendChild(animalWrap);
 
     var msg = document.createElement('div');
     msg.id = 'apex-inline-boot-message';
-    msg.style.cssText = 'min-height:44px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.82);font-weight:900;font-size:15px;line-height:1.35';
-    msg.textContent = MESSAGES[0];
+    msg.style.cssText = 'min-height:48px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.82);font-weight:900;font-size:15px;line-height:1.35;padding:0 8px';
+    msg.textContent = pickRandomMessage();
     shell.appendChild(msg);
 
     root.appendChild(shell);
+    preloadImages();
 
-    var idx = 0;
+    var animalIdx = 0;
+    var activeMessage = msg.textContent;
+    if (ANIMALS.length) animalImg.src = ANIMALS[0];
+
     window.setInterval(function () {
-      idx = (idx + 1) % MESSAGES.length;
-      var el = document.getElementById('apex-inline-boot-message');
-      if (el) el.textContent = MESSAGES[idx];
-    }, 2800);
+      if (!ANIMALS.length) return;
+      animalIdx = (animalIdx + 1) % ANIMALS.length;
+      animalImg.src = ANIMALS[animalIdx];
+    }, ANIMAL_FLIP_MS);
+
+    window.setInterval(function () {
+      activeMessage = pickRandomMessage(activeMessage);
+      msg.textContent = activeMessage;
+    }, MESSAGE_FLIP_MS);
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
