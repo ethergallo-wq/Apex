@@ -1,6 +1,7 @@
 import React, { useMemo, useState, useEffect } from 'react';
 import { buildHomeMission } from './homeMission';
 import { getAnimalThumbUrl } from './homeMissionUi';
+import { HOME_EXPLORE_TILES, getHomeExploreImage, preloadHomeExploreImages, preloadImageUrl } from './homeImages';
 import DailyAtlasCard from './DailyAtlasCard';
 import {
   getProfileAvatarAnimalId,
@@ -86,7 +87,16 @@ function IconGrid({ size = 22, color = 'white' }) {
   );
 }
 
-function IconCamera({ size = 22, color = ORANGE }) {
+function IconCamera({ size = 22, color = ORANGE, filled = false }) {
+  if (filled) {
+    return (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ filter: 'drop-shadow(0 2px 8px rgba(184,77,58,.45))' }}>
+        <path d="M9.5 7.5 8.2 5.5H5.5C4.12 5.5 3 6.62 3 8v9.5C3 18.88 4.12 20 5.5 20h13c1.38 0 2.5-1.12 2.5-2.5V8c0-1.38-1.12-2.5-2.5-2.5h-2.7L14.5 7.5h-5Z" fill="#B84D3A" stroke="#D06A45" strokeWidth="1.1" />
+        <circle cx="12" cy="13" r="3.6" fill="rgba(255,255,255,.18)" stroke="#F5F1EA" strokeWidth="1.5" />
+        <circle cx="12" cy="13" r="1.5" fill="#F5F1EA" />
+      </svg>
+    );
+  }
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path d="M9.5 7.5 8.2 5.5H5.5C4.12 5.5 3 6.62 3 8v9.5C3 18.88 4.12 20 5.5 20h13c1.38 0 2.5-1.12 2.5-2.5V8c0-1.38-1.12-2.5-2.5-2.5h-2.7L14.5 7.5h-5Z" stroke={color} strokeWidth="1.8" />
@@ -147,12 +157,14 @@ function ProgressRing({ progress = 0, color = '#F0A840', size = 74, stroke = 5 }
   );
 }
 
-function ExploreImageTile({ title, imageSrc, onClick, borderColor, overlay = EXPLORE_TILE_TITLE_OVERLAY, imagePosition = 'center', badge = null, minHeight = 128 }) {
+function ExploreImageTile({ title, imageSrc, imageWebp, onClick, borderColor, overlay = EXPLORE_TILE_TITLE_OVERLAY, imagePosition = 'center', badge = null, minHeight = 128, loading = 'lazy', fetchPriority, gridColumn }) {
+  const displaySrc = imageWebp || imageSrc;
   return (
     <button
       onClick={onClick}
       style={{
         minHeight,
+        gridColumn,
         borderRadius: 22,
         border: `1px solid ${borderColor}`,
         background: '#121417',
@@ -169,8 +181,11 @@ function ExploreImageTile({ title, imageSrc, onClick, borderColor, overlay = EXP
       }}
     >
       <img
-        src={imageSrc}
+        src={displaySrc}
         alt=""
+        loading={loading}
+        decoding="async"
+        {...(fetchPriority ? { fetchPriority } : {})}
         style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: imagePosition, display: 'block' }}
       />
       <div style={{ position: 'absolute', inset: 0, background: overlay, pointerEvents: 'none' }} />
@@ -315,6 +330,7 @@ export default function MainMenuV2({
   };
 
   const drawerItems = [
+    { id: 'friends', label: 'Allenatori', icon: '👥' },
     { id: 'badges', label: 'Badge', icon: '🏅' },
     { id: 'abilities', label: 'Abilità', icon: '✨' },
     { id: 'compare', label: 'Comparatore', icon: '⚔️' },
@@ -330,6 +346,19 @@ export default function MainMenuV2({
   ];
 
   const missionBadgeId = mission.badgeId || nearlyBadges[0]?.badgeId;
+
+  useEffect(() => {
+    preloadImageUrl(mission.accentImage, { priority: true });
+    let idleId = null;
+    const useIdle = typeof requestIdleCallback === 'function';
+    const preloadTiles = () => preloadHomeExploreImages();
+    if (useIdle) idleId = requestIdleCallback(preloadTiles, { timeout: 1800 });
+    else idleId = window.setTimeout(preloadTiles, 600);
+    return () => {
+      if (useIdle && idleId) cancelIdleCallback(idleId);
+      else if (idleId) window.clearTimeout(idleId);
+    };
+  }, [mission.accentImage]);
 
   return (
     <div data-home-layout="v2" style={{ height: '100%', display: 'flex', flexDirection: 'column', position: 'relative', background: isLightTheme ? LIGHT_APP_BG : 'radial-gradient(circle at 82% -8%, rgba(184,77,58,.16), transparent 34%), radial-gradient(circle at 12% 88%, rgba(144,216,74,.10), transparent 28%), linear-gradient(180deg,#101216,#0B0D10)', overflow: 'hidden' }}>
@@ -351,38 +380,46 @@ export default function MainMenuV2({
       </div>
 
       <div style={{ flex: 1, overflowY: 'auto', padding: '16px 16px 28px', WebkitOverflowScrolling: 'touch' }}>
-        <button onClick={() => onOpen('profile')} style={{ width: '100%', border: 'none', background: 'transparent', padding: 0, marginBottom: 16, cursor: 'pointer', fontFamily: 'inherit', textAlign: 'left' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-            <ProfileAvatarButton
-              animal={avatarAnimal}
-              fallbackUrl={!avatarAnimal ? userProfile?.avatar_url : ''}
-              displayName={displayName}
-              pageText={pageText}
-              onClick={(e) => {
-                e.stopPropagation();
-                if (avatarChoices.length) setAvatarPickerOpen(true);
-                else onOpen('profile');
-              }}
-            />
-            <div style={{ flex: 1, minWidth: 0 }}>
-              <div style={{ color: pageText, fontSize: 22, fontWeight: 1000, lineHeight: 1.05 }}>{displayName}</div>
-              <div style={{ color: mutedText, fontSize: 12.5, marginTop: 4, display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
-                <span>Liv. {progress.level} · {(progress.xp ?? 0).toLocaleString('it-IT')} XP</span>
-                {usageStreak > 1 && (
-                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, borderRadius: 999, padding: '2px 9px', background: 'rgba(240,168,64,.14)', border: '1px solid rgba(240,168,64,.32)', color: '#F0A840', fontSize: 11, fontWeight: 1000 }}>
-                    🔥 {usageStreak} giorni
-                  </span>
-                )}
-              </div>
-              <div style={{ height: 8, borderRadius: 999, background: 'rgba(255,255,255,.10)', overflow: 'hidden', marginTop: 10 }}>
-                <div style={{ height: '100%', width: `${xpPct}%`, background: 'linear-gradient(90deg,#D8D2C4,#C87955,#B84D3A)', borderRadius: 999, boxShadow: '0 0 14px rgba(184,77,58,.24)' }} />
-              </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 16 }}>
+          <ProfileAvatarButton
+            animal={avatarAnimal}
+            fallbackUrl={!avatarAnimal ? userProfile?.avatar_url : ''}
+            displayName={displayName}
+            pageText={pageText}
+            onClick={() => {
+              if (avatarChoices.length) setAvatarPickerOpen(true);
+              else onOpen('profile');
+            }}
+          />
+          <button
+            type="button"
+            onClick={() => onOpen('profile')}
+            style={{ flex: 1, minWidth: 0, border: 'none', background: 'transparent', padding: 0, cursor: 'pointer', fontFamily: 'inherit', textAlign: 'left' }}
+          >
+            <div style={{ color: pageText, fontSize: 22, fontWeight: 1000, lineHeight: 1.05 }}>{displayName}</div>
+            <div style={{ color: mutedText, fontSize: 12.5, marginTop: 4, display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+              <span>Liv. {progress.level} · {(progress.xp ?? 0).toLocaleString('it-IT')} XP</span>
+              {usageStreak > 1 && (
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, borderRadius: 999, padding: '2px 9px', background: 'rgba(240,168,64,.14)', border: '1px solid rgba(240,168,64,.32)', color: '#F0A840', fontSize: 11, fontWeight: 1000 }}>
+                  🔥 {usageStreak} giorni
+                </span>
+              )}
             </div>
-          </div>
-        </button>
+            <div style={{ height: 8, borderRadius: 999, background: 'rgba(255,255,255,.10)', overflow: 'hidden', marginTop: 10 }}>
+              <div style={{ height: '100%', width: `${xpPct}%`, background: 'linear-gradient(90deg,#D8D2C4,#C87955,#B84D3A)', borderRadius: 999, boxShadow: '0 0 14px rgba(184,77,58,.24)' }} />
+            </div>
+          </button>
+        </div>
 
         <button type="button" onClick={runMission} style={{ width: '100%', borderRadius: 24, minHeight: 156, border: '1px solid rgba(184,77,58,.28)', marginBottom: 14, position: 'relative', overflow: 'hidden', boxShadow: '0 18px 44px rgba(0,0,0,.28)', padding: 0, cursor: 'pointer', fontFamily: 'inherit', textAlign: 'left' }}>
-          <div style={{ position: 'absolute', inset: 0, background: `url("${mission.accentImage}") center / cover no-repeat`, transform: 'scale(1.04)' }} />
+          <img
+            src={mission.accentImage}
+            alt=""
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.04)', display: 'block' }}
+          />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(8,10,12,.18), rgba(8,10,12,.72) 58%, rgba(8,10,12,.88))' }} />
           {missionBadgeId && (
             <div style={{ position: 'absolute', top: 14, right: 14, width: 54, height: 54, borderRadius: 16, background: 'rgba(0,0,0,.28)', border: '1px solid rgba(255,255,255,.14)', display: 'grid', placeItems: 'center', backdropFilter: 'blur(6px)' }}>
@@ -442,8 +479,10 @@ export default function MainMenuV2({
             style={{
               minHeight: 82,
               borderRadius: 20,
-              border: `1.8px solid ${hexToRgba(ORANGE, .55)}`,
-              background: isLightTheme ? 'rgba(255,255,255,.88)' : 'rgba(255,255,255,.04)',
+              border: `1.8px solid ${hexToRgba(ORANGE, .62)}`,
+              background: isLightTheme
+                ? 'linear-gradient(145deg, rgba(255,255,255,.92), rgba(251,235,228,.88))'
+                : 'linear-gradient(145deg, rgba(18,20,23,.94), rgba(28,16,12,.88))',
               color: isLightTheme ? '#7D3326' : 'white',
               fontFamily: 'inherit',
               fontSize: 15,
@@ -455,9 +494,10 @@ export default function MainMenuV2({
               alignItems: 'center',
               justifyContent: 'center',
               gap: 8,
+              boxShadow: isLightTheme ? '0 10px 24px rgba(184,77,58,.12)' : '0 10px 24px rgba(0,0,0,.22), inset 0 0 0 1px rgba(184,77,58,.08)',
             }}
           >
-            <IconCamera color={isLightTheme ? ORANGE : ORANGE} />
+            <IconCamera filled size={26} />
             Cattura
           </button>
         </div>
@@ -502,14 +542,20 @@ export default function MainMenuV2({
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: nearlyBadges.length ? 18 : 8 }}>
           <ExploreImageTile
             title="Territori"
-            imageSrc="/regions/home_regioni.png"
+            imageSrc={HOME_EXPLORE_TILES.regioni.fallback}
+            imageWebp={getHomeExploreImage('regioni')}
             onClick={() => (onOpenRegions || (() => onOpen('regions')))()}
             borderColor={hexToRgba(GREEN, .24)}
+            minHeight={108}
+            gridColumn="1 / -1"
+            loading="eager"
+            fetchPriority="high"
           />
 
           <ExploreImageTile
             title="Albero della vita"
-            imageSrc="/backgrounds/background_tree.png"
+            imageSrc={HOME_EXPLORE_TILES.tree.fallback}
+            imageWebp={getHomeExploreImage('tree')}
             imagePosition="center 42%"
             overlay={EXPLORE_TILE_TITLE_OVERLAY_LIGHT}
             onClick={() => onOpen('taxonomy')}
@@ -517,16 +563,9 @@ export default function MainMenuV2({
           />
 
           <ExploreImageTile
-            title="Allenatori"
-            imageSrc="/backgrounds/background_amici.png"
-            onClick={openFriendsFromHome}
-            borderColor={hexToRgba('#F0A840', .24)}
-            badge={!!socialAlertCount ? <div style={{ position: 'absolute', top: 10, right: 10, zIndex: 2 }}><SocialCountBadge count={socialAlertCount} prominent /></div> : null}
-          />
-
-          <ExploreImageTile
             title="Badge"
-            imageSrc="/backgrounds/background_badges.png"
+            imageSrc={HOME_EXPLORE_TILES.badges.fallback}
+            imageWebp={getHomeExploreImage('badges')}
             imagePosition="center 38%"
             onClick={() => onOpen('badges')}
             borderColor={hexToRgba('#FFD700', .24)}
@@ -542,7 +581,8 @@ export default function MainMenuV2({
                 const bg = badgeAccentImage(rule.badgeId, index);
                 return (
                   <button key={rule.badgeId} onClick={() => onOpenBadge?.(rule.badgeId)} style={{ flex: '0 0 auto', width: 132, borderRadius: 20, border: `1px solid ${hexToRgba(color, .34)}`, overflow: 'hidden', cursor: 'pointer', fontFamily: 'inherit', textAlign: 'center', background: '#121417', boxShadow: '0 12px 28px rgba(0,0,0,.22)' }}>
-                    <div style={{ height: 96, position: 'relative', background: `url("${bg}") center / cover no-repeat` }}>
+                    <div style={{ height: 96, position: 'relative', overflow: 'hidden' }}>
+                      <img src={bg} alt="" loading="lazy" decoding="async" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                       <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.58))' }} />
                       <div style={{ position: 'absolute', inset: 0, display: 'grid', placeItems: 'center' }}>
                         <ProgressRing progress={rule.progress} color={color} />
@@ -574,16 +614,24 @@ export default function MainMenuV2({
               </div>
               <button onClick={() => setAvatarPickerOpen(false)} aria-label="Chiudi" style={{ width: 40, height: 40, borderRadius: 16, border: `1px solid ${panelBorder}`, background: isLightTheme ? 'rgba(0,0,0,.04)' : 'rgba(255,255,255,.06)', color: pageText, fontSize: 22, fontWeight: 1000, cursor: 'pointer' }}>×</button>
             </div>
+            {!!avatarAnimal && (
+              <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 14, flexShrink: 0 }}>
+                <div style={{ width: 92, height: 92, borderRadius: '50%', overflow: 'hidden', border: '2px solid rgba(240,168,64,.42)', background: 'rgba(255,255,255,.06)', boxShadow: '0 10px 28px rgba(0,0,0,.24)' }}>
+                  <ProfileAvatarImage animal={avatarAnimal} size={92} fallbackLetter={displayName} fallbackUrl={userProfile?.avatar_url || ''} />
+                </div>
+              </div>
+            )}
             <div style={{ overflowY: 'auto', WebkitOverflowScrolling: 'touch', display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 10, paddingBottom: 4 }}>
               {avatarChoices.map(animal => {
+                if (!animal?.id) return null;
                 const active = String(animal.id) === String(profileAvatarAnimalId);
                 const thumbUrl = getAnimalThumbUrl(animal);
                 return (
-                  <button key={animal.id} onClick={() => chooseProfileAvatar(animal)} style={{ minHeight: 118, borderRadius: 18, border: `2px solid ${active ? '#F0A840' : panelBorder}`, background: panelBg, color: pageText, fontFamily: 'inherit', padding: 8, cursor: 'pointer', boxShadow: active ? '0 0 0 3px rgba(240,168,64,.18)' : 'none' }}>
-                    <div style={{ width: '100%', aspectRatio: '1 / 1', borderRadius: 14, overflow: 'hidden', background: 'rgba(255,255,255,.06)' }}>
-                      {thumbUrl ? <img src={thumbUrl} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> : null}
+                  <button key={animal.id} type="button" onClick={() => chooseProfileAvatar(animal)} style={{ minHeight: 118, borderRadius: 18, border: `2px solid ${active ? '#F0A840' : panelBorder}`, background: panelBg, color: pageText, fontFamily: 'inherit', padding: 8, cursor: 'pointer', boxShadow: active ? '0 0 0 3px rgba(240,168,64,.18)' : 'none' }}>
+                    <div style={{ width: '100%', aspectRatio: '1 / 1', borderRadius: 14, overflow: 'hidden', background: 'rgba(255,255,255,.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 4, boxSizing: 'border-box' }}>
+                      {thumbUrl ? <img src={thumbUrl} alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /> : null}
                     </div>
-                    <div style={{ marginTop: 6, fontSize: 10, fontWeight: 900, lineHeight: 1.15, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{animal.com || animal.sci}</div>
+                    <div style={{ marginTop: 6, fontSize: 10, fontWeight: 900, lineHeight: 1.15, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{animal.com || animal.sci || 'Animale'}</div>
                   </button>
                 );
               })}
@@ -600,10 +648,10 @@ export default function MainMenuV2({
             </div>
             <div style={{ display: 'grid', gap: 9 }}>
               {drawerItems.map(item => (
-                <button key={item.id} onClick={() => { setNavOpen(false); onOpen(item.id); }} style={{ minHeight: 58, border: `1px solid ${panelBorder}`, borderRadius: 17, background: panelBg, color: pageText, cursor: 'pointer', padding: '0 13px', display: 'flex', alignItems: 'center', gap: 11, textAlign: 'left', fontFamily: 'inherit' }}>
+                <button key={item.id} onClick={() => { setNavOpen(false); if (item.id === 'friends') openFriendsFromHome(); else onOpen(item.id); }} style={{ minHeight: 58, border: `1px solid ${panelBorder}`, borderRadius: 17, background: panelBg, color: pageText, cursor: 'pointer', padding: '0 13px', display: 'flex', alignItems: 'center', gap: 11, textAlign: 'left', fontFamily: 'inherit' }}>
                   <span style={{ width: 38, height: 38, borderRadius: 14, background: isLightTheme ? 'rgba(0,0,0,.06)' : 'rgba(255,255,255,.10)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 20 }}>{item.icon}</span>
                   <span style={{ fontSize: 14, fontWeight: 950, flex: 1 }}>{item.label}</span>
-                  {item.id === 'profile' && <SocialCountBadge count={socialAlertCount} />}
+                  {item.id === 'friends' && <SocialCountBadge count={socialAlertCount} />}
                 </button>
               ))}
             </div>

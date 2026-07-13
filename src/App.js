@@ -84,6 +84,19 @@ function LegalPage({ type }) {
   );
 }
 
+function hardReloadApp() {
+  const target = `${window.location.pathname}${window.location.search}${window.location.hash || ''}` || '/';
+  try {
+    window.location.replace(target);
+    return;
+  } catch {}
+  try {
+    window.location.assign(target);
+    return;
+  } catch {}
+  window.location.reload();
+}
+
 class AppErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -105,7 +118,7 @@ class AppErrorBoundary extends React.Component {
         <div>
           <div style={{ fontSize:24, fontWeight:900, marginBottom:8 }}>Apex si sta ricaricando</div>
           <div style={{ color:'rgba(255,255,255,.68)', fontSize:14, lineHeight:1.45, marginBottom:16 }}>Chiudi e riapri l'app dalla schermata Home. Se continua, aprila una volta da Safari.</div>
-          <button onClick={() => window.location.reload()} style={{ height:44, border:'none', borderRadius:14, background:'#B84D3A', color:'white', fontWeight:900, padding:'0 18px' }}>Ricarica</button>
+          <button type="button" onClick={hardReloadApp} style={{ height:44, border:'none', borderRadius:14, background:'#B84D3A', color:'white', fontWeight:900, padding:'0 18px', cursor:'pointer' }}>Ricarica</button>
         </div>
       </div>
     );

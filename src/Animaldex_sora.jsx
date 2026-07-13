@@ -4292,7 +4292,10 @@ async function saveProfileAvatarAnimal(userId, animal) {
     .from('user_profiles')
     .update({ avatar_url: imageUrl, onboarding_answers: onboardingAnswers, updated_at: new Date().toISOString() })
     .eq('user_id', userId);
-  if (error && error.code !== '42703') throw error;
+  if (error && error.code !== '42703') {
+    console.warn('[Apex] Salvataggio avatar profilo non riuscito:', error);
+    return false;
+  }
   return true;
 }
 function getProfileBackgroundChoices(animalsWithStatus = [], visitedCountries = [], currentImage = '') {
@@ -6046,7 +6049,7 @@ function Grid({ onSelect, animals: animalsProp, statusMap = {}, visitedCountries
                 flex:1,
                 minWidth:0,
                 height:isPhone?34:32,
-                borderRadius:999,
+                borderRadius:18,
                 border:active ? meta.border : (isLightTheme ? '1px solid rgba(0,0,0,.10)' : '1px solid rgba(255,255,255,.10)'),
                 background:active ? (STATUS_FILTER_GRADIENTS[k] || meta.bg) : (isLightTheme ? 'rgba(255,255,255,.72)' : 'rgba(255,255,255,.05)'),
                 color:active ? meta.c : (isLightTheme ? 'rgba(0,0,0,.58)' : 'rgba(255,255,255,.62)'),
@@ -14603,21 +14606,30 @@ export default function App() {
   useEffect(() => {
     if (authLoading) return undefined;
     let alive = true;
-    loadLocalAnimalsData()
-      .then(list => {
-        if (!alive) return;
-        const normalized = list.map(normalizeLocalAnimal);
-        setAnimalsData(prev => prev?.length ? prev : normalized);
-        setLocalAnimalsReady(true);
-      })
-      .catch(err => {
-        console.warn('[Apex] Dataset animali locale non caricato:', err);
-        if (alive) {
-          setDataError('Dataset animali non caricato');
+    const startLoad = () => {
+      loadLocalAnimalsData()
+        .then(list => {
+          if (!alive) return;
+          const normalized = list.map(normalizeLocalAnimal);
+          setAnimalsData(prev => prev?.length ? prev : normalized);
           setLocalAnimalsReady(true);
-        }
-      });
-    return () => { alive = false; };
+        })
+        .catch(err => {
+          console.warn('[Apex] Dataset animali locale non caricato:', err);
+          if (alive) {
+            setDataError('Dataset animali non caricato');
+            setLocalAnimalsReady(true);
+          }
+        });
+    };
+    let idleId = null;
+    if (typeof requestIdleCallback === 'function') idleId = requestIdleCallback(startLoad, { timeout: 1400 });
+    else idleId = window.setTimeout(startLoad, 350);
+    return () => {
+      alive = false;
+      if (typeof cancelIdleCallback === 'function' && idleId) cancelIdleCallback(idleId);
+      else if (idleId) window.clearTimeout(idleId);
+    };
   }, [authLoading]);
 
   useEffect(() => {

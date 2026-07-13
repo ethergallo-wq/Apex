@@ -1,5 +1,6 @@
 import React from 'react';
 import { supabase } from './supabaseClient';
+import { getAnimalThumbUrl } from './homeMissionUi';
 
 function getProfileAvatarStorageKey(userId = 'guest') {
   return `animaldex_profile_avatar_animal_${userId || 'guest'}`;
@@ -37,12 +38,15 @@ export async function saveProfileAvatarAnimal(userId, animal) {
     .from('user_profiles')
     .update({ avatar_url: imageUrl, onboarding_answers: onboardingAnswers, updated_at: new Date().toISOString() })
     .eq('user_id', userId);
-  if (error && error.code !== '42703') throw error;
+  if (error && error.code !== '42703') {
+    console.warn('[Apex] Salvataggio avatar profilo non riuscito:', error);
+    return false;
+  }
   return true;
 }
 
 export function getProfileAvatarChoices(animalsWithStatus = []) {
-  return (animalsWithStatus || []).filter(a => ['avvistato', 'catturato'].includes(String(a.status || '').toLowerCase()));
+  return (animalsWithStatus || []).filter(a => a && ['avvistato', 'catturato'].includes(String(a.status || '').toLowerCase()));
 }
 
 export function resolveProfileAvatarAnimal({ animalsWithStatus = [], profileAvatarAnimalId = '', userProfile = null } = {}) {
@@ -58,7 +62,10 @@ export function resolveProfileAvatarAnimal({ animalsWithStatus = [], profileAvat
 }
 
 export function getProfileAvatarImageUrl(animal) {
-  return animal?.image_url || animal?.img || '';
+  const raw = animal?.image_url || animal?.img || '';
+  if (!raw) return '';
+  if (/^(https?:|data:|blob:)/i.test(raw)) return raw;
+  return getAnimalThumbUrl(animal) || raw;
 }
 
 export function ProfileAvatarImage({ animal, size = 64, fallbackLetter = '?', fallbackUrl = '' }) {
@@ -76,6 +83,8 @@ export function ProfileAvatarImage({ animal, size = 64, fallbackLetter = '?', fa
       <img
         src={imageUrl}
         alt=""
+        loading="lazy"
+        decoding="async"
         style={{ width: '100%', height: '100%', objectFit: 'contain', transform: 'scale(1.2)', transformOrigin: 'center', display: 'block' }}
       />
     </div>

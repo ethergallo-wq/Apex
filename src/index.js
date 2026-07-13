@@ -13,7 +13,7 @@ function showBootFallback(error) {
     return;
   }
   if (rootElement) {
-    rootElement.innerHTML = '<div style="min-height:100vh;background:#1C1C1E;color:white;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;text-align:center"><div><div style="font-size:24px;font-weight:900;margin-bottom:8px">Apex si sta ricaricando</div><button onclick="window.location.reload()" style="height:44px;border:0;border-radius:14px;background:#B84D3A;color:white;font-weight:900;padding:0 18px">Ricarica</button></div></div>';
+    rootElement.innerHTML = '<div style="min-height:100vh;background:#1C1C1E;color:white;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;text-align:center"><div><div style="font-size:24px;font-weight:900;margin-bottom:8px">Apex si sta ricaricando</div><button type="button" onclick="(function(){var t=window.location.pathname+window.location.search+(window.location.hash||\'\')||\'/\';try{window.location.replace(t);return;}catch(e){}try{window.location.assign(t);return;}catch(e2){}window.location.reload();})()" style="height:44px;border:0;border-radius:14px;background:#B84D3A;color:white;font-weight:900;padding:0 18px;cursor:pointer">Ricarica</button></div></div>';
   }
 }
 
