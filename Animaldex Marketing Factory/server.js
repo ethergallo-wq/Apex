@@ -26,6 +26,8 @@ const TIKTOK_VERIFICATION_FILES = {
     "tiktok-developers-site-verification=WGaGE2HF72mAdOO7t80FcrkBYC24Woou",
   "tiktokGS0T1SdaaDxwUh0kMwQhcvg4My8Eh7ru.txt":
     "tiktok-developers-site-verification=GS0T1SdaaDxwUh0kMwQhcvg4My8Eh7ru",
+  "tiktokEWEFcfTRjQHO25FgT53h6bOTCjfW8YNt.txt":
+    "tiktok-developers-site-verification=EWEFcfTRjQHO25FgT53h6bOTCjfW8YNt",
 };
 
 const reviewPost = {
