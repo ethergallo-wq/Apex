@@ -1,7 +1,7 @@
 import React, { useMemo, useState, useEffect } from 'react';
 import { buildHomeMission } from './homeMission';
 import { getAnimalThumbUrl } from './homeMissionUi';
-import { HOME_EXPLORE_TILES, getHomeExploreImage, preloadHomeExploreImages, preloadImageUrl } from './homeImages';
+import { HOME_EXPLORE_TILES, getHomeExploreImage } from './homeImages';
 import DailyAtlasCard from './DailyAtlasCard';
 import {
   getProfileAvatarAnimalId,
@@ -158,9 +158,20 @@ function ProgressRing({ progress = 0, color = '#F0A840', size = 74, stroke = 5 }
 }
 
 function ExploreImageTile({ title, imageSrc, imageWebp, onClick, borderColor, overlay = EXPLORE_TILE_TITLE_OVERLAY, imagePosition = 'center', badge = null, minHeight = 128, loading = 'lazy', fetchPriority, gridColumn }) {
-  const displaySrc = imageWebp || imageSrc;
+  const preferredSrc = imageWebp || imageSrc;
+  const [activeSrc, setActiveSrc] = useState(preferredSrc);
+
+  const handleImageError = () => {
+    if (imageSrc && activeSrc !== imageSrc) {
+      setActiveSrc(imageSrc);
+      return;
+    }
+    setActiveSrc('');
+  };
+
   return (
     <button
+      type="button"
       onClick={onClick}
       style={{
         minHeight,
@@ -180,14 +191,17 @@ function ExploreImageTile({ title, imageSrc, imageWebp, onClick, borderColor, ov
         justifyContent: 'flex-end',
       }}
     >
-      <img
-        src={displaySrc}
-        alt=""
-        loading={loading}
-        decoding="async"
-        {...(fetchPriority ? { fetchPriority } : {})}
-        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: imagePosition, display: 'block' }}
-      />
+      {activeSrc ? (
+        <img
+          src={activeSrc}
+          alt=""
+          loading={loading}
+          decoding="async"
+          onError={handleImageError}
+          {...(fetchPriority ? { fetchPriority } : {})}
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: imagePosition, display: 'block' }}
+        />
+      ) : null}
       <div style={{ position: 'absolute', inset: 0, background: overlay, pointerEvents: 'none' }} />
       {badge}
       <div style={{ position: 'relative', zIndex: 1, padding: '10px 14px 14px' }}>
@@ -346,19 +360,6 @@ export default function MainMenuV2({
   ];
 
   const missionBadgeId = mission.badgeId || nearlyBadges[0]?.badgeId;
-
-  useEffect(() => {
-    preloadImageUrl(mission.accentImage, { priority: true });
-    let idleId = null;
-    const useIdle = typeof requestIdleCallback === 'function';
-    const preloadTiles = () => preloadHomeExploreImages();
-    if (useIdle) idleId = requestIdleCallback(preloadTiles, { timeout: 1800 });
-    else idleId = window.setTimeout(preloadTiles, 600);
-    return () => {
-      if (useIdle && idleId) cancelIdleCallback(idleId);
-      else if (idleId) window.clearTimeout(idleId);
-    };
-  }, [mission.accentImage]);
 
   return (
     <div data-home-layout="v2" style={{ height: '100%', display: 'flex', flexDirection: 'column', position: 'relative', background: isLightTheme ? LIGHT_APP_BG : 'radial-gradient(circle at 82% -8%, rgba(184,77,58,.16), transparent 34%), radial-gradient(circle at 12% 88%, rgba(144,216,74,.10), transparent 28%), linear-gradient(180deg,#101216,#0B0D10)', overflow: 'hidden' }}>
@@ -548,8 +549,6 @@ export default function MainMenuV2({
             borderColor={hexToRgba(GREEN, .24)}
             minHeight={108}
             gridColumn="1 / -1"
-            loading="eager"
-            fetchPriority="high"
           />
 
           <ExploreImageTile
