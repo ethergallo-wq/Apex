@@ -380,7 +380,7 @@ export default function MainMenuV2({
         </div>
       </div>
 
-      <div style={{ flex: 1, overflowY: 'auto', padding: '16px 16px 28px', WebkitOverflowScrolling: 'touch' }}>
+      <div style={{ flex: 1, overflowY: 'auto', padding: '16px 16px 28px', WebkitOverflowScrolling: 'touch', touchAction: 'pan-y', overscrollBehavior: 'contain' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 16 }}>
           <ProfileAvatarButton
             animal={avatarAnimal}

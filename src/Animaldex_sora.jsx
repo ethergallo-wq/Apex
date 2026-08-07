@@ -11,6 +11,7 @@ import { buildOnboardingCountryGroups } from './travelProbability';
 import { resolveMissionGridNavigation } from './homeMission';
 import ApexBootLoader from './ApexBootLoader';
 import { ANIMAL_IMAGE_BOUNDS } from './animal-image-bounds';
+import { isMobileInstallEnvironment } from './mobileRuntime';
 
 let LOCAL_ANIMALS = [];
 let ANIMALS = [];
@@ -18,6 +19,7 @@ let LOCAL_ANIMAL_BY_ID = {};
 let LOCAL_ANIMAL_FULL_BY_ID = {};
 let localAnimalsLoadPromise = null;
 let fullAnimalsLoadPromise = null;
+const fullAnimalLoadPromises = new Map();
 let googleIdentityScriptPromise = null;
 
 const GOOGLE_CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID;
@@ -1127,23 +1129,23 @@ function hydrateLocalAnimalIndexes(list = []) {
   rebuildAnimalGridFilterOptions(normalized);
   invalidateComparatorBenchmarksCache();
   invalidateLifeAnimalsCache();
-  const warmComparatorBenchmarks = () => getCachedComparatorBenchmarks(normalized);
-  const warmLifeIndex = () => ensureLifeAnimalsIndex(normalized);
-  if (typeof requestIdleCallback === 'function') {
-    requestIdleCallback(warmComparatorBenchmarks, { timeout: 800 });
-    requestIdleCallback(warmLifeIndex, { timeout: 2200 });
-  } else {
-    setTimeout(warmComparatorBenchmarks, 0);
-    setTimeout(warmLifeIndex, 250);
-  }
   return LOCAL_ANIMALS;
+}
+
+function loadAnimalsGridOffMainThread() {
+  if (typeof Worker === 'undefined') return Promise.reject(new Error('Web Worker non disponibile'));
+  return import('./animalsWorkerClient').then(module => module.loadAnimalsGridInWorker());
 }
 
 async function loadLocalAnimalsData() {
   if (LOCAL_ANIMALS.length) return LOCAL_ANIMALS;
   if (!localAnimalsLoadPromise) {
-    localAnimalsLoadPromise = import('./animals-data-grid')
-      .then(module => hydrateLocalAnimalIndexes(module.ANIMALS || []))
+    localAnimalsLoadPromise = loadAnimalsGridOffMainThread()
+      .catch(err => {
+        console.warn('[Apex] Worker dataset non disponibile, uso import diretto:', err);
+        return import('./animals-data-grid').then(module => module.ANIMALS || []);
+      })
+      .then(hydrateLocalAnimalIndexes)
       .catch(err => {
         console.warn('[Apex] Dataset grid non disponibile, uso dataset completo:', err);
         return import('./animals-data').then(module => hydrateLocalAnimalIndexes(module.ANIMALS || []));
@@ -1156,38 +1158,38 @@ async function loadLocalAnimalsData() {
   return localAnimalsLoadPromise;
 }
 
-function hydrateFullAnimalIndexes(fullList = []) {
-  LOCAL_ANIMAL_FULL_BY_ID = Object.fromEntries((fullList || []).map(a => [a.id, a]));
-  LOCAL_ANIMALS = (fullList || []).map(full => {
-    const prev = LOCAL_ANIMAL_BY_ID[full.id];
-    return normalizeLocalAnimal({
-      ...full,
-      status: prev?.status ?? full.status,
-      userStatus: prev?.userStatus ?? appStatusToSupabase(prev?.status ?? full.status),
-    });
-  });
-  ANIMALS = LOCAL_ANIMALS;
-  LOCAL_ANIMAL_BY_ID = Object.fromEntries(LOCAL_ANIMALS.map(a => [a.id, a]));
-  rebuildAnimalGridFilterOptions(LOCAL_ANIMALS);
-  invalidateComparatorBenchmarksCache();
-  invalidateLifeAnimalsCache();
-  const warmLifeIndex = () => ensureLifeAnimalsIndex(LOCAL_ANIMALS);
-  if (typeof requestIdleCallback === 'function') requestIdleCallback(warmLifeIndex, { timeout: 1200 });
-  else setTimeout(warmLifeIndex, 0);
-  return LOCAL_ANIMALS;
-}
+function queueFullAnimalHydration(animalId) {
+  const key = String(animalId || '');
+  if (!key) return Promise.resolve(null);
+  if (LOCAL_ANIMAL_FULL_BY_ID[key]) return Promise.resolve(LOCAL_ANIMAL_FULL_BY_ID[key]);
+  if (fullAnimalLoadPromises.has(key)) return fullAnimalLoadPromises.get(key);
 
-function queueFullAnimalsHydration() {
-  if (fullAnimalsLoadPromise) return fullAnimalsLoadPromise;
-  if (Object.keys(LOCAL_ANIMAL_FULL_BY_ID).length) return Promise.resolve(LOCAL_ANIMALS);
-  fullAnimalsLoadPromise = import('./animals-data')
-    .then(module => hydrateFullAnimalIndexes(module.ANIMALS || []))
+  const workerLoad = typeof Worker === 'undefined'
+    ? Promise.reject(new Error('Web Worker non disponibile'))
+    : import('./animalsWorkerClient').then(module => module.loadFullAnimalInWorker(key));
+
+  const promise = workerLoad
     .catch(err => {
-      console.warn('[Apex] Dataset completo non caricato:', err);
-      fullAnimalsLoadPromise = null;
-      return LOCAL_ANIMALS;
-    });
-  return fullAnimalsLoadPromise;
+      console.warn('[Apex] Worker scheda completa non disponibile, uso import diretto:', err);
+      if (!fullAnimalsLoadPromise) {
+        fullAnimalsLoadPromise = import('./animals-data').then(module => module.ANIMALS || []);
+      }
+      return fullAnimalsLoadPromise.then(list => list.find(item => String(item?.id) === key) || null);
+    })
+    .then(full => {
+      if (full?.id !== undefined && full?.id !== null) {
+        LOCAL_ANIMAL_FULL_BY_ID[String(full.id)] = full;
+      }
+      return full || null;
+    })
+    .catch(err => {
+      console.warn('[Apex] Scheda completa non caricata:', err);
+      return null;
+    })
+    .finally(() => fullAnimalLoadPromises.delete(key));
+
+  fullAnimalLoadPromises.set(key, promise);
+  return promise;
 }
 
 function getEnrichedAnimal(animal) {
@@ -8219,6 +8221,29 @@ class ComparatorErrorBoundary extends React.Component {
   }
 }
 
+class HomeMenuErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError:false };
+  }
+  static getDerivedStateFromError() {
+    return { hasError:true };
+  }
+  componentDidUpdate(prevProps) {
+    if (this.state.hasError && prevProps.resetKey !== this.props.resetKey) {
+      this.setState({ hasError:false });
+    }
+  }
+  componentDidCatch(error) {
+    console.warn('[Apex] Home v2 fallback:', error);
+    try { setHomeVariant(HOME_VARIANTS.classic); } catch {}
+  }
+  render() {
+    if (!this.state.hasError) return this.props.children;
+    return <MainMenuClassic {...this.props.homeProps} />;
+  }
+}
+
 class FeaturePageErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -8843,6 +8868,7 @@ function InstallGuidePreview({ profileKey }) {
 
 function InstallPromptBanner({ suppressed = false }) {
   const [profile] = useState(() => detectInstallGuideProfile());
+  const [mobileEligible] = useState(() => isMobileInstallEnvironment());
   const [online, setOnline] = useState(() => typeof navigator === 'undefined' ? true : navigator.onLine !== false);
   const [dismissed, setDismissed] = useState(() => {
     try { return typeof localStorage !== 'undefined' && localStorage.getItem(INSTALL_GUIDE_DISMISSED_KEY) === '1'; }
@@ -8862,13 +8888,14 @@ function InstallPromptBanner({ suppressed = false }) {
   }, []);
 
   useEffect(() => {
+    if (!mobileEligible) return undefined;
     const handleBeforeInstallPrompt = (event) => {
       event.preventDefault?.();
       setDeferredPrompt(event);
     };
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
     return () => window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-  }, []);
+  }, [mobileEligible]);
 
   const close = () => {
     try { localStorage.setItem(INSTALL_GUIDE_DISMISSED_KEY, '1'); } catch {}
@@ -8886,7 +8913,7 @@ function InstallPromptBanner({ suppressed = false }) {
     close();
   };
 
-  if (suppressed || dismissed || !online || isRunningAsInstalledApp()) return null;
+  if (!mobileEligible || suppressed || dismissed || !online || isRunningAsInstalledApp()) return null;
 
   return (
     <div style={{ position:'absolute', inset:0, zIndex:390, pointerEvents:'none', display:'flex', alignItems:'flex-end', justifyContent:'center', padding:'0 14px calc(env(safe-area-inset-bottom, 0px) + 14px)' }}>
@@ -14443,7 +14470,7 @@ export default function App() {
   const [,startNavTransition]=useTransition();
   const selectAnimal = useCallback((animal) => {
     startDetailTransition(() => setSel(animal));
-    queueFullAnimalsHydration().then(() => {
+    queueFullAnimalHydration(animal?.id).then(() => {
       setSel(prev => {
         if (!prev || Number(prev.id) !== Number(animal?.id)) return prev;
         return getEnrichedAnimal({ ...prev, status: prev.status ?? animal?.status });
@@ -15714,8 +15741,15 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
         maybeShowSectionIntro('badges');
       },
     };
-    const HomeComponent = homeVariant === HOME_VARIANTS.v2 ? MainMenuV2 : MainMenuClassic;
-    return <HomeComponent {...homeProps} />;
+    const homeResetKey = `${user?.id || 'guest'}-${animalsData?.length || 0}-${Object.keys(statusMap || {}).length}`;
+    if (homeVariant === HOME_VARIANTS.v2) {
+      return (
+        <HomeMenuErrorBoundary homeProps={homeProps} resetKey={homeResetKey}>
+          <MainMenuV2 {...homeProps} />
+        </HomeMenuErrorBoundary>
+      );
+    }
+    return <MainMenuClassic {...homeProps} />;
   };
 
   const renderPage = () => {

@@ -7,7 +7,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SOURCE = join(ROOT, 'src/animals-data.js');
 const TARGET = join(ROOT, 'src/animals-data-grid.js');
 
-const STRIP_KEYS = new Set(['desc', 'bio', 'ety', 'cat_curiosities', 'geo', 'iucn']);
+const STRIP_KEYS = new Set(['desc', 'bio', 'ety', 'cat_curiosities', 'geo', 'iucn', 'bioregions_v4']);
 
 function slimAnimal(animal) {
   const geo = animal.geo || {};
@@ -19,10 +19,16 @@ function slimAnimal(animal) {
   next.bio_regions = next.bio_regions || geo.bio_regions || [];
   next.game_regions = next.game_regions || geo.game_regions || [];
   next.habitats = next.habitats || next.habitat || geo.habitats || geo.habitat_ids || next.hab || [];
-  next.bioregions_v4 = next.bioregions_v4 || geo.bioregions_v4 || [];
   next.map_bioregion_ids_v4 = next.map_bioregion_ids_v4 || geo.map_bioregion_ids_v4 || [];
   next.map_bioregion_domains_v4 = next.map_bioregion_domains_v4 || geo.map_bioregion_domains_v4 || [];
   next.confidence = next.confidence || geo.confidence || geo.bioregion_confidence || '';
+
+  const distribution = animal.distribution || {};
+  next.distribution = {
+    countries_present: distribution.countries_present || [],
+    ...(distribution.total_observations !== undefined ? { total_observations:distribution.total_observations } : {}),
+    ...(distribution.wild_observations !== undefined ? { wild_observations:distribution.wild_observations } : {}),
+  };
 
   return next;
 }
