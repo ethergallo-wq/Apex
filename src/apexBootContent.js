@@ -53,6 +53,8 @@ export const APEX_BOOT_ANIMAL_IMAGES = APEX_BOOT_ANIMAL_IDS.map(
   (id) => `/animals/thumbs/${id}.webp`,
 );
 
+const preloadedBootImages = new Set();
+
 export function pickRandomBootMessage(messages = APEX_BOOT_MESSAGES, exclude = null) {
   const pool = (messages || []).filter(Boolean);
   if (!pool.length) return 'Apertura Apex…';
@@ -68,6 +70,8 @@ export function preloadBootImages(images = APEX_BOOT_ANIMAL_IMAGES, startIndex =
   const limit = Math.min(count, list.length);
   for (let i = 0; i < limit; i += 1) {
     const src = list[(startIndex + i) % list.length];
+    if (preloadedBootImages.has(src)) continue;
+    preloadedBootImages.add(src);
     const img = new Image();
     img.decoding = 'async';
     img.src = src;

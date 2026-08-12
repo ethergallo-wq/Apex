@@ -533,6 +533,21 @@ function mergeStatusMapsByRank(...maps) {
   return merged;
 }
 
+function getStatusSyncDelta(localMap = {}, remoteMap = {}) {
+  const delta = {};
+  Object.entries(localMap || {}).forEach(([id, status]) => {
+    const localStatus = normalizeAnimalStatus(status);
+    const remoteStatus = normalizeAnimalStatus(remoteMap?.[id]);
+    // "Ricercato" deriva anche dal catalogo/territorio e non va riscritto in
+    // massa a ogni avvio. Recuperiamo offline soltanto progressi espliciti.
+    if (!['avvistato', 'catturato'].includes(localStatus)) return;
+    if (ANIMAL_STATUS_ORDER.indexOf(localStatus) > ANIMAL_STATUS_ORDER.indexOf(remoteStatus)) {
+      delta[id] = localStatus;
+    }
+  });
+  return delta;
+}
+
 // ── Atlante / layer "Documentato" ─────────────────────────────────────
 // Documentato NON è un quinto status: è un flag parallelo alla piramide
 // misterioso→ricercato→avvistato→catturato. Dice "lo conosco", non "l'ho visto".
@@ -1258,7 +1273,7 @@ function applyCachedUserStatuses(list = [], userId) {
 
 function buildLocalAnimalSnapshot(userId, statusMapOverride = {}, remoteUserStatusMap = {}) {
   if (!LOCAL_ANIMALS.length || !userId) return null;
-  const sourceAnimals = applyCachedUserStatuses(LOCAL_ANIMALS.map(normalizeLocalAnimal), userId);
+  const sourceAnimals = applyCachedUserStatuses(LOCAL_ANIMALS, userId);
   const remoteStatusMap = Object.fromEntries(sourceAnimals.map(a => [a.id, normalizeAnimalStatus(a.status)]));
   const nextStatusMap = mergeStatusMapsByRank(remoteStatusMap, remoteUserStatusMap, getLocalUserStatusMap(userId), statusMapOverride);
   const nextAnimals = sourceAnimals.map(a => {
@@ -4786,40 +4801,48 @@ function clampWholeWords(text, maxChars = 31) {
 
 
 function useAppViewportHeight() {
-  const [h, setH] = useState('100dvh');
   useEffect(() => {
     if (typeof window === 'undefined') return;
     let frame = 0;
+    let lastWidth = 0;
     const apply = () => {
       const vv = window.visualViewport;
-      const measured = Math.max(
-        Math.round(vv?.height || 0),
-        Math.round(window.innerHeight || 0),
-        Math.round(document.documentElement.clientHeight || 0)
-      );
+      const editing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || '');
+      const measured = editing && vv?.height
+        ? Math.round(vv.height)
+        : Math.max(
+            Math.round(vv?.height || 0),
+            Math.round(window.innerHeight || 0),
+            Math.round(document.documentElement.clientHeight || 0)
+          );
       const next = Math.max(320, measured || 800);
       const standalone = window.matchMedia?.('(display-mode: standalone)')?.matches || window.navigator?.standalone === true;
       const px = standalone ? `calc(${next}px + env(safe-area-inset-bottom, 0px))` : `${next}px`;
       document.documentElement.style.setProperty('--animaldex-app-height', px);
       document.body.style.minHeight = px;
-      setH(px);
+      lastWidth = Math.round(window.innerWidth || document.documentElement.clientWidth || 0);
     };
     const scheduleApply = () => {
       cancelAnimationFrame(frame);
       frame = requestAnimationFrame(apply);
     };
+    const handleResize = () => {
+      const width = Math.round(window.innerWidth || document.documentElement.clientWidth || 0);
+      const editing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || '');
+      if (!editing && lastWidth && Math.abs(width - lastWidth) < 40) return;
+      scheduleApply();
+    };
     apply();
-    window.addEventListener('resize', scheduleApply);
+    window.addEventListener('resize', handleResize, { passive:true });
     window.addEventListener('orientationchange', scheduleApply);
-    window.visualViewport?.addEventListener('resize', scheduleApply);
+    window.visualViewport?.addEventListener('resize', handleResize, { passive:true });
     return () => {
       cancelAnimationFrame(frame);
-      window.removeEventListener('resize', scheduleApply);
+      window.removeEventListener('resize', handleResize);
       window.removeEventListener('orientationchange', scheduleApply);
-      window.visualViewport?.removeEventListener('resize', scheduleApply);
+      window.visualViewport?.removeEventListener('resize', handleResize);
     };
   }, []);
-  return h;
 }
 
 function useInteractiveMapControls(minZoom=1, maxZoom=4.5, initialZoom=1, options={}) {
@@ -9383,6 +9406,7 @@ function AuthScreen({ onAuthReady }) {
   const [loading,setLoading]=useState(false);
   const [message,setMessage]=useState('');
   const googleButtonRef=useRef(null);
+  const googleCredentialHandlerRef=useRef(null);
 
   const handleGoogleCredential = useCallback(async (credentialResponse) => {
     setLoading(true);
@@ -9404,6 +9428,7 @@ function AuthScreen({ onAuthReady }) {
       setLoading(false);
     }
   }, [onAuthReady]);
+  googleCredentialHandlerRef.current = handleGoogleCredential;
 
   useEffect(() => {
     if (!googleButtonRef.current) return;
@@ -9418,7 +9443,7 @@ function AuthScreen({ onAuthReady }) {
         if (cancelled || !google?.accounts?.id || !googleButtonRef.current) return;
         google.accounts.id.initialize({
           client_id: GOOGLE_CLIENT_ID,
-          callback: handleGoogleCredential,
+          callback: (credentialResponse) => googleCredentialHandlerRef.current?.(credentialResponse),
           ux_mode: 'popup',
         });
         googleButtonRef.current.innerHTML = '';
@@ -9439,7 +9464,7 @@ function AuthScreen({ onAuthReady }) {
     return () => {
       cancelled = true;
     };
-  }, [handleGoogleCredential]);
+  }, []);
 
   const submit = async (e) => {
     e.preventDefault();
@@ -14461,9 +14486,7 @@ export default function App() {
   const [animalsData,setAnimalsData]=useState(() => LOCAL_ANIMALS.map(normalizeLocalAnimal));
   useEffect(() => {
     ANIMALS = animalsData;
-    invalidateComparatorBenchmarksCache();
-  invalidateLifeAnimalsCache();
-    if (animalsData?.length) rebuildAnimalGridFilterOptions(animalsData);
+    invalidateLifeAnimalsCache();
   }, [animalsData]);
   const [sel,setSel]=useState(null);
   const [,startDetailTransition]=useTransition();
@@ -14527,17 +14550,6 @@ export default function App() {
     })),
     [animalsData, statusMap, visitedCountries, documentedMap, expeditionState]
   );
-  useEffect(() => {
-    if (!animalsWithStatus?.length) return;
-    let idleId = null;
-    const run = () => prewarmLifeTreeIndex(animalsWithStatus);
-    if (typeof requestIdleCallback === 'function') idleId = requestIdleCallback(run, { timeout: 500 });
-    else idleId = setTimeout(run, 0);
-    return () => {
-      if (typeof cancelIdleCallback === 'function' && idleId) cancelIdleCallback(idleId);
-      else if (idleId) clearTimeout(idleId);
-    };
-  }, [animalsWithStatus]);
   const menuProgress = useMemo(
     () => buildSimpleProgressState({ animalsWithStatus, visitedCountries, earnedBadgeIds, statusMap }),
     [animalsWithStatus, visitedCountries, earnedBadgeIds, statusMap, documentedMap, expeditionState]
@@ -14549,9 +14561,9 @@ export default function App() {
     setSocialSnapshot(next || buildSocialFallback(user, userProfile, menuProgress));
   }, [user?.id, userProfile, session?.access_token]);
   useEffect(() => {
-    if (!user?.id) return;
+    if (!user?.id || !progressHydrated) return;
     refreshSocialSnapshot(true);
-  }, [user?.id, session?.access_token]);
+  }, [user?.id, session?.access_token, progressHydrated]);
   useEffect(() => {
     if (!user?.id) return;
     setSocialSnapshot(prev => patchSocialSnapshotMe(prev, userProfile, menuProgress, user.id));
@@ -14583,11 +14595,12 @@ export default function App() {
   const awardsHydratedRef = useRef(false);
   const awardInteractionRef = useRef(false);
   const reloadGenerationRef = useRef(0);
+  const initialDataSyncKeyRef = useRef('');
   const unlockedAwards = useMemo(() => computeUnlockedAwards(statusMap, visitedCountries, awardMetrics), [statusMap, visitedCountries, awardMetrics]);
   const activeAwardToast = awardQueue[0] || null;
   useAnimaldexSound(true);
   useEffect(() => { bumpUsageStreak(); }, []);
-  const appHeight = useAppViewportHeight();
+  useAppViewportHeight();
   const getTutorialAnimal = () => {
     const list = (animalsData || []).map(a => ({ ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) }));
     return list.find(a => Number(a.id) === 31)
@@ -14631,33 +14644,22 @@ export default function App() {
   },[]);
 
   useEffect(() => {
-    if (authLoading) return undefined;
     let alive = true;
-    const startLoad = () => {
-      loadLocalAnimalsData()
-        .then(list => {
-          if (!alive) return;
-          const normalized = list.map(normalizeLocalAnimal);
-          setAnimalsData(prev => prev?.length ? prev : normalized);
+    loadLocalAnimalsData()
+      .then(list => {
+        if (!alive) return;
+        setAnimalsData(prev => prev?.length ? prev : list);
+        setLocalAnimalsReady(true);
+      })
+      .catch(err => {
+        console.warn('[Apex] Dataset animali locale non caricato:', err);
+        if (alive) {
+          setDataError('Dataset animali non caricato');
           setLocalAnimalsReady(true);
-        })
-        .catch(err => {
-          console.warn('[Apex] Dataset animali locale non caricato:', err);
-          if (alive) {
-            setDataError('Dataset animali non caricato');
-            setLocalAnimalsReady(true);
-          }
-        });
-    };
-    let idleId = null;
-    if (typeof requestIdleCallback === 'function') idleId = requestIdleCallback(startLoad, { timeout: 1400 });
-    else idleId = window.setTimeout(startLoad, 350);
-    return () => {
-      alive = false;
-      if (typeof cancelIdleCallback === 'function' && idleId) cancelIdleCallback(idleId);
-      else if (idleId) window.clearTimeout(idleId);
-    };
-  }, [authLoading]);
+        }
+      });
+    return () => { alive = false; };
+  }, []);
 
   useEffect(() => {
     if (authLoading || !user?.id) return;
@@ -14689,14 +14691,11 @@ export default function App() {
       window.clearTimeout(authTimer);
       setAuthLoading(false);
     });
-    const { data: listener } = supabase.auth.onAuthStateChange(async (_event, nextSession) => {
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, nextSession) => {
       syncSupabaseAccessTokenCache(nextSession || null);
       setSession(nextSession || null);
       setUser(nextSession?.user || null);
       setAuthLoading(false);
-      if (nextSession?.user) {
-        try { await ensureUserProfile(nextSession.user); } catch (err) { console.warn('[Apex] Profilo Supabase:', err); }
-      }
     });
     return () => {
       mounted = false;
@@ -14723,7 +14722,6 @@ export default function App() {
     if (Object.keys(localDocumented).length) setDocumentedMap(prev => ({ ...localDocumented, ...prev }));
     const localExpeditions = getLocalExpeditionState(activeUser.id);
     if (Object.keys(localExpeditions).length) setExpeditionState(prev => ({ ...localExpeditions, ...prev }));
-    setProgressHydrated(true);
   };
 
   const reloadSupabaseData = async (activeUser = user) => {
@@ -14736,12 +14734,11 @@ export default function App() {
     if (localSnapshot?.nextAnimals?.length) {
       setAnimalsData(localSnapshot.nextAnimals);
       setStatusMap(localSnapshot.nextStatusMap);
-      setProgressHydrated(true);
     }
     setUserProfile(prev => prev || buildFallbackProfile(activeUser, false));
 
     try {
-      const [, profile] = await Promise.all([
+      const profileRequests = Promise.all([
         withTimeout(
           ensureUserProfile(activeUser).catch(err => {
             console.warn('[Apex] ensure profile non bloccante:', err);
@@ -14758,22 +14755,26 @@ export default function App() {
           'fetchUserProfile'
         ),
       ]);
+      const progressRequests = Promise.allSettled([
+        withTimeout(fetchUserAnimalStatusMap(activeUser.id), 4500, null, 'fetchUserAnimalStatusMap'),
+        withTimeout(fetchUserDestinations(activeUser.id), 4500, getVisitedCountries(), 'fetchUserDestinations'),
+        withTimeout(fetchUserBadgeIds(activeUser.id), 4500, null, 'fetchUserBadgeIds'),
+        withTimeout(fetchUserDocumentedMap(activeUser.id), 4500, null, 'fetchUserDocumentedMap'),
+        withTimeout(fetchUserExpeditions(activeUser.id), 4500, null, 'fetchUserExpeditions'),
+      ]);
+      const [[, profile], [remoteStatusResult, destinationsResult, badgeResult, documentedResult, expeditionsResult]] = await Promise.all([
+        profileRequests,
+        progressRequests,
+      ]);
+
       if (isStale()) return;
       setUserProfile(profile || buildFallbackProfile(activeUser, false));
       applyRemoteProfileCustomization(profile, activeUser.id, LOCAL_ANIMALS.length ? LOCAL_ANIMALS : animalsData);
       pushLocalProfileCustomizationIfNeeded(activeUser.id, profile, LOCAL_ANIMALS.length ? LOCAL_ANIMALS : animalsData)
         .catch(err => console.warn('[Apex] push preferenze profilo non bloccante:', err));
 
-      const [remoteStatusResult, destinationsResult, badgeResult, documentedResult, expeditionsResult] = await Promise.allSettled([
-        withTimeout(fetchUserAnimalStatusMap(activeUser.id), 4500, {}, 'fetchUserAnimalStatusMap'),
-        withTimeout(fetchUserDestinations(activeUser.id), 4500, getVisitedCountries(), 'fetchUserDestinations'),
-        withTimeout(fetchUserBadgeIds(activeUser.id), 4500, null, 'fetchUserBadgeIds'),
-        withTimeout(fetchUserDocumentedMap(activeUser.id), 4500, null, 'fetchUserDocumentedMap'),
-        withTimeout(fetchUserExpeditions(activeUser.id), 4500, null, 'fetchUserExpeditions'),
-      ]);
-
-      if (isStale()) return;
-      const remoteUserStatusMap = remoteStatusResult.status === 'fulfilled' ? (remoteStatusResult.value || {}) : {};
+      const remoteStatusLoaded = remoteStatusResult.status === 'fulfilled' && remoteStatusResult.value !== null;
+      const remoteUserStatusMap = remoteStatusLoaded ? (remoteStatusResult.value || {}) : {};
       const destinations = destinationsResult.status === 'fulfilled' ? destinationsResult.value : getVisitedCountries();
       const remoteBadgeIds = badgeResult.status === 'fulfilled' ? badgeResult.value : null;
 
@@ -14785,7 +14786,7 @@ export default function App() {
       });
 
       const sourceAnimals = LOCAL_ANIMALS.length
-        ? applyCachedUserStatuses(LOCAL_ANIMALS.map(normalizeLocalAnimal), activeUser.id)
+        ? applyCachedUserStatuses(LOCAL_ANIMALS, activeUser.id)
         : null;
       const mergedSnapshot = LOCAL_ANIMALS.length
         ? buildLocalAnimalSnapshot(activeUser.id, statusMap, remoteUserStatusMap)
@@ -14806,7 +14807,10 @@ export default function App() {
         setAnimalsData(mergedSnapshot.nextAnimals);
         setStatusMap(mergedSnapshot.nextStatusMap);
         saveLocalUserStatusMap(activeUser.id, mergedSnapshot.nextStatusMap);
-        syncLocalStatusMapToSupabase(activeUser.id, mergedSnapshot.nextStatusMap).catch(err => console.warn('[Apex] sync progressi locali non bloccante:', err));
+        const localStatusDelta = remoteStatusLoaded ? getStatusSyncDelta(getLocalUserStatusMap(activeUser.id), remoteUserStatusMap) : {};
+        if (Object.keys(localStatusDelta).length) {
+          syncLocalStatusMapToSupabase(activeUser.id, localStatusDelta).catch(err => console.warn('[Apex] sync progressi locali non bloccante:', err));
+        }
       }
 
       // Merge remoto + paesi in attesa di conferma: un insert fallito o in
@@ -14867,7 +14871,7 @@ export default function App() {
       console.warn('[Apex] Caricamento Supabase fallito, uso fallback locale:', err);
       setDataError(err?.message || 'Errore caricamento Supabase');
 
-      const fallbackSource = applyCachedUserStatuses(LOCAL_ANIMALS.map(normalizeLocalAnimal), activeUser.id);
+      const fallbackSource = applyCachedUserStatuses(LOCAL_ANIMALS, activeUser.id);
       const fallbackStatusMap = mergeStatusMapsByRank(Object.fromEntries(fallbackSource.map(a => [a.id, normalizeAnimalStatus(a.status)])), getLocalUserStatusMap(activeUser.id), statusMap);
       const fallback = fallbackSource.map(a => ({ ...a, status:fallbackStatusMap[a.id] || normalizeAnimalStatus(a.status), userStatus:appStatusToSupabase(fallbackStatusMap[a.id] || a.status) }));
       setAnimalsData(fallback);
@@ -14886,18 +14890,16 @@ export default function App() {
     setProgressHydrated(false);
     setAwardToastReady(false);
     setAwardQueue([]);
-    if (user?.id) {
-      reloadSupabaseData(user);
+    if (!user?.id) {
+      initialDataSyncKeyRef.current = '';
+      return;
     }
-  },[user?.id]);
-
-  useEffect(() => {
-    if (!localAnimalsReady || !user?.id) return;
-    const snapshot = buildLocalAnimalSnapshot(user.id, statusMap);
-    if (!snapshot?.nextAnimals?.length) return;
-    setAnimalsData(snapshot.nextAnimals);
-    setStatusMap(snapshot.nextStatusMap);
-  }, [localAnimalsReady, user?.id]);
+    if (!localAnimalsReady) return;
+    const syncKey = `${user.id}:${LOCAL_ANIMALS.length}`;
+    if (initialDataSyncKeyRef.current === syncKey) return;
+    initialDataSyncKeyRef.current = syncKey;
+    reloadSupabaseData(user);
+  },[user?.id, localAnimalsReady]);
 
   useEffect(() => {
     if (authLoading) return;
@@ -15693,6 +15695,10 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   }
 
   if (!user) return <AuthScreen onAuthReady={()=>supabase.auth.getSession().then(({data})=>{setSession(data.session||null);setUser(data.session?.user||null);})} />;
+
+  if (!localAnimalsReady || !progressHydrated) {
+    return <ApexBootLoader message={localAnimalsReady ? 'Sincronizzando i tuoi progressi…' : 'Preparando il tuo mondo animale…'} frameProps={APP_FRAME_PROPS} />;
+  }
 
   const activeUserProfile = userProfile || buildFallbackProfile(user, false);
 

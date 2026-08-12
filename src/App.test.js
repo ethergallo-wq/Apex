@@ -18,6 +18,6 @@ jest.mock('./supabaseClient', () => ({
 test('renders Apex login', async () => {
   const App = require('./App').default;
   render(<App />);
-  expect(await screen.findByRole('heading', { name: /accedi/i })).toBeInTheDocument();
+  expect(await screen.findByRole('heading', { name: /bentornato|accedi/i })).toBeInTheDocument();
   expect(screen.getByText(/Apex/i)).toBeInTheDocument();
 });

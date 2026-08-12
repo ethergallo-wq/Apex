@@ -47,8 +47,9 @@
     '/animals/thumbs/saiga-tatarica.webp',
     '/animals/thumbs/opisthocomus-hoazin.webp',
   ];
-  var ANIMAL_FLIP_MS = 333;
+  var ANIMAL_FLIP_MS = 500;
   var MESSAGE_FLIP_MS = 3000;
+  var PRELOADED = {};
 
   function pickRandomMessage(exclude) {
     var pool = exclude == null ? MESSAGES.slice() : MESSAGES.filter(function (msg) { return msg !== exclude; });
@@ -61,6 +62,8 @@
     var limit = Math.min(count || 3, list.length);
     for (var i = 0; i < limit; i += 1) {
       var src = list[(index + i) % list.length];
+      if (PRELOADED[src]) continue;
+      PRELOADED[src] = true;
       var img = new Image();
       img.decoding = 'async';
       img.src = src;
@@ -90,17 +93,31 @@
     var activeMessage = msg.textContent;
     if (ANIMALS.length) {
       animalImg.src = ANIMALS[0];
-      preloadAround(ANIMALS, 0, 4);
+      preloadAround(ANIMALS, 0, 1);
     }
 
-    window.setInterval(function () {
+    var disposed = false;
+    var animalTimer = 0;
+    var messageTimer = 0;
+    function cleanup() {
+      if (disposed) return;
+      disposed = true;
+      if (animalTimer) window.clearInterval(animalTimer);
+      if (messageTimer) window.clearInterval(messageTimer);
+      if (window.__APEX_STOP_INLINE_BOOT__ === cleanup) window.__APEX_STOP_INLINE_BOOT__ = null;
+    }
+    window.__APEX_STOP_INLINE_BOOT__ = cleanup;
+
+    animalTimer = window.setInterval(function () {
+      if (!root.isConnected) { cleanup(); return; }
       if (!ANIMALS.length) return;
       animalIdx = (animalIdx + 1) % ANIMALS.length;
       animalImg.src = ANIMALS[animalIdx];
-      preloadAround(ANIMALS, animalIdx + 1, 2);
+      preloadAround(ANIMALS, animalIdx + 1, 1);
     }, ANIMAL_FLIP_MS);
 
-    window.setInterval(function () {
+    messageTimer = window.setInterval(function () {
+      if (!root.isConnected) { cleanup(); return; }
       activeMessage = pickRandomMessage(activeMessage);
       msg.textContent = activeMessage;
       msg.className = 'apex-boot-text-shimmer';

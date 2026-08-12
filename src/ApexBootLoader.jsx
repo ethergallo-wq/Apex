@@ -5,7 +5,7 @@ import {
   preloadBootImages,
 } from './apexBootContent';
 
-const ANIMAL_FLIP_MS = 333;
+const ANIMAL_FLIP_MS = 500;
 const MESSAGE_FLIP_MS = 3000;
 
 export default function ApexBootLoader({ message = null, frameProps = null }) {
@@ -15,7 +15,7 @@ export default function ApexBootLoader({ message = null, frameProps = null }) {
   const [activeMessage, setActiveMessage] = useState(() => pickRandomBootMessage());
 
   useEffect(() => {
-    preloadBootImages(images, 0, 4);
+    preloadBootImages(images, 0, 1);
   }, [images]);
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function ApexBootLoader({ message = null, frameProps = null }) {
   useEffect(() => {
     if (!activeImage || !imgRef.current) return;
     imgRef.current.src = activeImage;
-    preloadBootImages(images, animalIndex + 1, 2);
+    preloadBootImages(images, animalIndex + 1, 1);
   }, [activeImage, animalIndex, images]);
 
   const displayMessage = message || activeMessage || 'Apertura Apex…';
@@ -72,7 +72,6 @@ export default function ApexBootLoader({ message = null, frameProps = null }) {
               height={58}
               loading="eager"
               decoding="async"
-              fetchPriority="high"
               style={{ width: 58, height: 58, objectFit: 'contain', display: 'block' }}
             />
           )}

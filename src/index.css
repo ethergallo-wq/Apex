@@ -49,6 +49,16 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
+@media (max-width: 560px), (display-mode: standalone) {
+  .apex-home-blurred-background {
+    display: none !important;
+  }
+
+  [data-home-layout="v2"] {
+    contain: layout paint style;
+  }
+}
+
 img,
 svg,
 canvas,
