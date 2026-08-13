@@ -7299,7 +7299,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
           <div style={{ color:'white', fontSize:'clamp(24px, 8vw, 30px)', fontWeight:1000, marginTop:6, lineHeight:1.05 }}>{a.wt}</div>
         </div>
       </FullscreenMetricModal>
-      <FullscreenMetricModal open={metricModal==='dimensioni'} title="Dimensioni" subtitle="Il confronto usa sempre la stessa scala tra anteprima e zoom. Le misure in metri vengono convertite in centimetri; le sagome dei serpenti attorcigliati sono mostrate al 40%, perché la dimensione massima dell’immagine non rappresenta il corpo disteso." onClose={()=>setMetricModal(null)}>
+      <FullscreenMetricModal open={metricModal==='dimensioni'} title="Dimensioni" subtitle="Il confronto usa sempre la stessa scala tra anteprima e zoom. Le misure in metri vengono convertite in centimetri; le sagome di serpenti e murene sono mostrate al 40%, perché la dimensione massima dell’immagine non rappresenta il corpo disteso." onClose={()=>setMetricModal(null)}>
         <div style={{ background:'rgba(255,255,255,.04)', borderRadius:20, padding:'clamp(12px, 4vw, 18px)', textAlign:'center', overflow:'hidden' }}>
           <ScaleComparison animal={a} full documented={documented} />
         </div>

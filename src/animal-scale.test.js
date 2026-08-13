@@ -1,4 +1,4 @@
-import { getAnimalSilhouetteScale, isSnakeAnimal, SNAKE_SILHOUETTE_SCALE } from './animal-scale';
+import { CURLED_BODY_SILHOUETTE_SCALE, getAnimalSilhouetteScale, isMorayAnimal, isSnakeAnimal } from './animal-scale';
 
 describe('animal size comparison scale', () => {
   test.each(['Boidae', 'Colubridae', 'Elapidae', 'Homalopsidae', 'Pythonidae', 'Viperidae'])(
@@ -18,8 +18,14 @@ describe('animal size comparison scale', () => {
     expect(isSnakeAnimal({ cls:'Reptilia', fam:'Chelidae', com:'Tartaruga Collo-Serpente Sudamericana' })).toBe(false);
   });
 
-  test('scales only snake silhouettes to 40 percent', () => {
-    expect(getAnimalSilhouetteScale({ cls:'Reptilia', fam:'Viperidae' })).toBe(SNAKE_SILHOUETTE_SCALE);
+  test('recognizes morays from the Muraenidae family only', () => {
+    expect(isMorayAnimal({ cls:'Actinopterygii', fam:'Muraenidae', com:'Murena Mediterranea' })).toBe(true);
+    expect(isMorayAnimal({ cls:'Actinopterygii', fam:'Anguillidae', com:'Murena di fantasia' })).toBe(false);
+  });
+
+  test('scales snake and moray silhouettes to 40 percent', () => {
+    expect(getAnimalSilhouetteScale({ cls:'Reptilia', fam:'Viperidae' })).toBe(CURLED_BODY_SILHOUETTE_SCALE);
+    expect(getAnimalSilhouetteScale({ cls:'Actinopterygii', fam:'Muraenidae' })).toBe(CURLED_BODY_SILHOUETTE_SCALE);
     expect(getAnimalSilhouetteScale({ cls:'Mammalia', fam:'Felidae' })).toBe(1);
   });
 });

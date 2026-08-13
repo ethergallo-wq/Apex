@@ -1,4 +1,4 @@
-export const SNAKE_SILHOUETTE_SCALE = 0.4;
+export const CURLED_BODY_SILHOUETTE_SCALE = 0.4;
 
 const SNAKE_ORDERS = new Set(['serpentes', 'ophidia']);
 
@@ -38,6 +38,8 @@ const SNAKE_FAMILIES = new Set([
   'xenotyphlopidae',
 ]);
 
+const MORAY_FAMILIES = new Set(['muraenidae']);
+
 function normalizeTaxon(value) {
   return String(value || '').trim().toLowerCase();
 }
@@ -54,17 +56,14 @@ export function isSnakeAnimal(animal) {
   if (SNAKE_ORDERS.has(order)) return true;
 
   const family = normalizeTaxon(animal?.fam || animal?.family || animal?.taxonomy?.family);
-  if (SNAKE_FAMILIES.has(family)) return true;
+  return SNAKE_FAMILIES.has(family);
+}
 
-  // A populated non-snake family is stronger evidence than a common name such
-  // as "tartaruga collo-serpente" or a scientific epithet like "serpentina".
-  if (family) return false;
-  if (normalizeTaxon(animal?.cls || animal?.class) !== 'reptilia') return false;
-
-  const names = normalizeTaxon(`${animal?.com || ''} ${animal?.com_en || ''}`);
-  return /\b(serpente|snake|vipera|viper|cobra|mamba|pitone|python|boa|anaconda|crotalo|rattlesnake|colubro|biacco)\b/.test(names);
+export function isMorayAnimal(animal) {
+  const family = normalizeTaxon(animal?.fam || animal?.family || animal?.taxonomy?.family);
+  return MORAY_FAMILIES.has(family);
 }
 
 export function getAnimalSilhouetteScale(animal) {
-  return isSnakeAnimal(animal) ? SNAKE_SILHOUETTE_SCALE : 1;
+  return isSnakeAnimal(animal) || isMorayAnimal(animal) ? CURLED_BODY_SILHOUETTE_SCALE : 1;
 }
