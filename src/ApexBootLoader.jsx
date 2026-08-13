@@ -61,7 +61,7 @@ export default function ApexBootLoader({ message = null, frameProps = null }) {
         boxSizing: 'border-box',
       }}
     >
-      <div style={{ width: '100%', maxWidth: 360, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 18, textAlign: 'center' }}>
+      <div style={{ width: '100%', maxWidth: 360, minWidth: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 18, textAlign: 'center' }}>
         <div style={{ minHeight: 58, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           {activeImage && (
             <img
@@ -76,9 +76,9 @@ export default function ApexBootLoader({ message = null, frameProps = null }) {
             />
           )}
         </div>
-        <div style={{ minHeight: 48, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 8px' }}>
-          <div key={displayMessage} className="apex-boot-message-fade" style={{ maxWidth: '100%' }}>
-            <span className="apex-boot-text-shimmer" style={{ fontWeight: 900, fontSize: 15, letterSpacing: 0.2, lineHeight: 1.35 }}>
+        <div style={{ width: '100%', maxWidth: '100%', minWidth: 0, minHeight: 48, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 8px', boxSizing: 'border-box' }}>
+          <div key={displayMessage} className="apex-boot-message-fade" style={{ width: '100%', maxWidth: '100%', minWidth: 0 }}>
+            <span className="apex-boot-text-shimmer" style={{ display: 'block', width: '100%', maxWidth: '100%', minWidth: 0, whiteSpace: 'normal', overflowWrap: 'anywhere', textAlign: 'center', fontWeight: 900, fontSize: 15, letterSpacing: 0.2, lineHeight: 1.35 }}>
               {displayMessage}
             </span>
           </div>

@@ -78,6 +78,21 @@
     var msg = document.getElementById('apex-inline-boot-message');
     if (!animalWrap || !msg) return;
 
+    var messageWrap = msg.parentElement;
+    if (messageWrap) {
+      messageWrap.style.width = '100%';
+      messageWrap.style.maxWidth = '100%';
+      messageWrap.style.minWidth = '0';
+      messageWrap.style.boxSizing = 'border-box';
+    }
+    msg.style.display = 'block';
+    msg.style.width = '100%';
+    msg.style.maxWidth = '100%';
+    msg.style.minWidth = '0';
+    msg.style.whiteSpace = 'normal';
+    msg.style.overflowWrap = 'anywhere';
+    msg.style.textAlign = 'center';
+
     var animalImg = document.createElement('img');
     animalImg.alt = '';
     animalImg.width = 58;
@@ -124,11 +139,10 @@
       msg.style.animation = 'none';
       void msg.offsetWidth;
       msg.style.animation = '';
-      var wrap = msg.parentElement;
-      if (wrap) {
-        wrap.classList.remove('apex-boot-message-fade');
-        void wrap.offsetWidth;
-        wrap.classList.add('apex-boot-message-fade');
+      if (messageWrap) {
+        messageWrap.classList.remove('apex-boot-message-fade');
+        void messageWrap.offsetWidth;
+        messageWrap.classList.add('apex-boot-message-fade');
       }
     }, MESSAGE_FLIP_MS);
   }

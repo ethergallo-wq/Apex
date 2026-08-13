@@ -136,8 +136,14 @@ code {
 }
 
 .apex-boot-text-shimmer {
-  display: inline-block;
+  display: block;
+  width: 100%;
   max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: center;
   background-image: linear-gradient(
     100deg,
     rgba(255, 255, 255, .36) 0%,
