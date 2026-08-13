@@ -11,6 +11,7 @@ import { buildOnboardingCountryGroups } from './travelProbability';
 import { resolveMissionGridNavigation } from './homeMission';
 import ApexBootLoader from './ApexBootLoader';
 import { ANIMAL_IMAGE_BOUNDS } from './animal-image-bounds';
+import { getAnimalSilhouetteScale } from './animal-scale';
 import { isMobileInstallEnvironment } from './mobileRuntime';
 
 let LOCAL_ANIMALS = [];
@@ -4612,7 +4613,9 @@ function ScaleComparison({ animal, full=false, documented=false }) {
   const maxCm = Math.max(ref.cm, lengthCm || 0.1);
   const pxPerCm = maxPx / maxCm;
   const referencePx = Math.max(full ? 40 : 28, Math.round(ref.cm * pxPerCm));
-  const animalPx = Math.max(minPx, Math.round((lengthCm || ref.cm * .25) * pxPerCm));
+  const silhouetteScale = getAnimalSilhouetteScale(animal);
+  const baseAnimalPx = Math.max(minPx, Math.round((lengthCm || ref.cm * .25) * pxPerCm));
+  const animalPx = Math.max(1, Math.round(baseAnimalPx * silhouetteScale));
   const showWhiteSilhouette = !isMysteryStatus(animal?.status) || documented || isAnimalDocumented(animal);
   const imageCandidates = useMemo(
     () => (showWhiteSilhouette ? getAnimalScaleImageCandidates(animal) : []),
@@ -4640,7 +4643,8 @@ function ScaleComparison({ animal, full=false, documented=false }) {
   const refNudge = full ? 8 : 4;
   const animalNudge = full ? 0 : -2;
   const animalVisibleAspect = animalBounds?.width && animalBounds?.height ? animalBounds.width / animalBounds.height : 1;
-  const animalMaxWidth = Math.min(animalSlotW - 6, Math.max(full ? 92 : 34, animalPx * Math.max(.72, animalVisibleAspect)));
+  const baseAnimalMaxWidth = Math.min(animalSlotW - 6, Math.max(full ? 92 : 34, baseAnimalPx * Math.max(.72, animalVisibleAspect)));
+  const animalMaxWidth = Math.max(1, Math.round(baseAnimalMaxWidth * silhouetteScale));
   const naturalAspect = animalBounds?.naturalWidth && animalBounds?.naturalHeight ? animalBounds.naturalWidth / animalBounds.naturalHeight : 1;
   const renderedAnimalHeight = Math.min(animalPx, animalMaxWidth / Math.max(.01, naturalAspect));
   const animalTransparentBottom = animalBounds?.naturalHeight ? Math.max(0, animalBounds.naturalHeight - (animalBounds.y + animalBounds.height)) / animalBounds.naturalHeight : 0;
@@ -7295,7 +7299,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
           <div style={{ color:'white', fontSize:'clamp(24px, 8vw, 30px)', fontWeight:1000, marginTop:6, lineHeight:1.05 }}>{a.wt}</div>
         </div>
       </FullscreenMetricModal>
-      <FullscreenMetricModal open={metricModal==='dimensioni'} title="Dimensioni" subtitle="Il confronto usa sempre la stessa scala tra anteprima e zoom. Le misure in metri vengono convertite in centimetri, così animali grandi come bovini o cervi non risultano artificialmente minuscoli." onClose={()=>setMetricModal(null)}>
+      <FullscreenMetricModal open={metricModal==='dimensioni'} title="Dimensioni" subtitle="Il confronto usa sempre la stessa scala tra anteprima e zoom. Le misure in metri vengono convertite in centimetri; le sagome dei serpenti attorcigliati sono mostrate al 40%, perché la dimensione massima dell’immagine non rappresenta il corpo disteso." onClose={()=>setMetricModal(null)}>
         <div style={{ background:'rgba(255,255,255,.04)', borderRadius:20, padding:'clamp(12px, 4vw, 18px)', textAlign:'center', overflow:'hidden' }}>
           <ScaleComparison animal={a} full documented={documented} />
         </div>
