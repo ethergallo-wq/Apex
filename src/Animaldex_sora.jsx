@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useRef, useCallback, useTransition, useDeferredValue } from "react";
-import { supabase } from './supabaseClient';
+import { getSupabaseAuthErrorMessage, supabase } from './supabaseClient';
 import MainMenuV2 from './MainMenuV2';
 import DailyAtlasCard from './DailyAtlasCard';
 import ExplorerRulesPanel from './ExplorerRulesPanel';
@@ -46,6 +46,9 @@ function loadGoogleIdentityScript() {
     script.onload = () => resolve(window.google);
     script.onerror = () => reject(new Error('Impossibile caricare Google Login.'));
     document.head.appendChild(script);
+  }).catch((error) => {
+    googleIdentityScriptPromise = null;
+    throw error;
   });
 
   return googleIdentityScriptPromise;
@@ -443,8 +446,8 @@ function computeLevelFromXP(totalXP) {
   while (totalXP >= xpForLevel(level + 1)) level++;
   return level;
 }
-function getNearlyCompletedBadges(statusMap, visitedCountries, earnedBadgeIds) {
-  const metrics = computeAwardMetrics(statusMap, visitedCountries);
+function getNearlyCompletedBadges(statusMap, visitedCountries, earnedBadgeIds, metricsOverride = null) {
+  const metrics = metricsOverride || computeAwardMetrics(statusMap, visitedCountries);
   const unlocked = new Set((earnedBadgeIds || []).map(normalizeBadgeId));
   return AWARD_RULES
     .map(rule => {
@@ -457,7 +460,7 @@ function getNearlyCompletedBadges(statusMap, visitedCountries, earnedBadgeIds) {
     .sort((a,b)=>b.progress-a.progress)
     .slice(0,3);
 }
-function buildSimpleProgressState({ animals = ANIMALS, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], animalsWithStatus: resolvedAnimals = null }) {
+function buildSimpleProgressState({ animals = ANIMALS, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], animalsWithStatus: resolvedAnimals = null, awardMetrics = null }) {
   const animalsWithStatus = resolvedAnimals || (animals || []).map(a => ({ ...a, status:getResolvedAnimalStatus(a, statusMap, visitedCountries) }));
   const searched = animalsWithStatus.filter(a => a.status === 'ricercato');
   const seen = animalsWithStatus.filter(a => a.status === 'avvistato');
@@ -472,7 +475,7 @@ function buildSimpleProgressState({ animals = ANIMALS, statusMap = {}, visitedCo
     documentedCount: Object.keys(DOCUMENTED_MAP || {}).length,
     visitedCountriesCount: visitedCountries.length,
     badgeCount: (earnedBadgeIds || []).filter(Boolean).length,
-    nearlyCompletedBadges: getNearlyCompletedBadges(statusMap, visitedCountries, earnedBadgeIds),
+    nearlyCompletedBadges: getNearlyCompletedBadges(statusMap, visitedCountries, earnedBadgeIds, awardMetrics),
     xp,
     level: computeLevelFromXP(xp),
   };
@@ -1634,6 +1637,9 @@ function getProfileDemographicsLocal(userId) {
   } catch {
     return {};
   }
+}
+function hasLocalProfileOnboardingDecision(userId) {
+  return Object.prototype.hasOwnProperty.call(getProfileDemographicsLocal(userId), 'onboarding_completed');
 }
 function normalizeProfileQuestionnaire(data = {}) {
   return {
@@ -3998,8 +4004,11 @@ function buildAwardImagePath(badgeId) {
 }
 function computeAwardMetrics(statusMap = {}, visitedCountries = null) {
   const visitedCountrySet = new Set(visitedCountries || getVisitedCountries());
-  const animalsWithStatus = ANIMALS.map(a => ({ ...a, _status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) }));
-  const recorded = animalsWithStatus.filter(a => ['avvistato','catturato'].includes(a._status));
+  const recorded = ANIMALS.reduce((result, animal) => {
+    const status = normalizeAnimalStatus(statusMap[animal.id] ?? animal.status);
+    if (status === 'avvistato' || status === 'catturato') result.push({ ...animal, _status:status });
+    return result;
+  }, []);
   const captured = recorded.filter(a => a._status === 'catturato');
   const sightOnly = recorded.filter(a => a._status === 'avvistato');
   const consCounts = recorded.reduce((acc, a) => { acc[a.cons] = (acc[a.cons] || 0) + 1; return acc; }, {});
@@ -5468,6 +5477,8 @@ const AnimalCard = React.memo(function AnimalCard({ a, onClick, tutorialHighligh
         cursor:'pointer',
         position:'relative',
         userSelect:'none',
+        contentVisibility:'auto',
+        containIntrinsicSize:`auto ${cardH}px`,
         transition:'transform .1s ease, box-shadow .3s ease, opacity .2s ease',
         boxShadow:tutorialHighlight ? '0 0 0 3px #90D84A, 0 0 24px rgba(144,216,74,.34)' : `0 10px 24px rgba(0,0,0,.22), 0 0 0 1px ${hexToRgba(rarityColor,.10)}`,
         outline:tutorialHighlight ? '1px solid rgba(255,255,255,.55)' : 'none',
@@ -5826,8 +5837,12 @@ function AnimalStatusGuideModal({ open, onClose, theme = 'dark' }) {
 
 // ── Grid ──────────────────────────────────────────────────────────────
 
+const GRID_INITIAL_RENDER_COUNT = 60;
+const GRID_RENDER_BATCH_SIZE = 60;
+
 function Grid({ onSelect, animals: animalsProp, statusMap = {}, visitedCountries = [], onHome, preset, onBackToOrigin, tutorialActive=false, tutorialStep=null, tutorialAnimalId=null, onTutorialAnimalSelect, onOpenRegions, theme='dark' }) {
   const [search, setSearch]   = useState('');
+  const deferredSearch = useDeferredValue(search);
   const [clsF, setClsF]       = useState(null);
   const [sheet, setSheet]     = useState(null);
   const [showSearchBar, setShowSearchBar] = useState(false);
@@ -5847,6 +5862,9 @@ function Grid({ onSelect, animals: animalsProp, statusMap = {}, visitedCountries
   const [fHabitat, setFHabitat] = useState([]);
   const [sortBy, setSortBy] = useState('no');
   const [fTax,    setFTax]        = useState(null);
+  const [visibleCardCount, setVisibleCardCount] = useState(GRID_INITIAL_RENDER_COUNT);
+  const gridScrollRef = useRef(null);
+  const gridLoadMoreRef = useRef(null);
   const TAX_KEY_MAP = { kin:'kin', phy:'phy', cls:'cls', ord:'ord', fam:'fam', gen:'gen' };
   const viewportWidth = typeof window !== 'undefined' ? window.innerWidth : 390;
   const isNarrow = viewportWidth <= 390;
@@ -5878,7 +5896,7 @@ function Grid({ onSelect, animals: animalsProp, statusMap = {}, visitedCountries
 
   const hasExplicitPreset = !!preset?.id;
   const list = useMemo(() => {
-    const q = search.toLowerCase().trim();
+    const q = deferredSearch.toLowerCase().trim();
     const wantsMystery = fStatus.includes('misterioso');
     const wantsDocumented = fStatus.includes(DOCUMENTED_FILTER_VALUE);
     const next = [];
@@ -5919,7 +5937,35 @@ function Grid({ onSelect, animals: animalsProp, statusMap = {}, visitedCountries
         if (sortBy === 'class') return String(a.cls).localeCompare(String(b.cls), 'it') || noA - noB;
         return noA - noB;
       });
-  }, [animalsFilterSource, search, statusMap, visitedCountries, hasExplicitPreset, fStatus, clsF, fRarity, fCons, fTrophic, fGeography, fCategory, fConfidence, fMapProfile, fBioRegion, fGameRegion, fHabitat, fTax, preset, sortBy]);
+  }, [animalsFilterSource, deferredSearch, statusMap, visitedCountries, hasExplicitPreset, fStatus, clsF, fRarity, fCons, fTrophic, fGeography, fCategory, fConfidence, fMapProfile, fBioRegion, fGameRegion, fHabitat, fTax, preset, sortBy]);
+
+  const renderedList = useMemo(
+    () => list.length <= visibleCardCount ? list : list.slice(0, visibleCardCount),
+    [list, visibleCardCount]
+  );
+  const hasMoreCards = renderedList.length < list.length;
+
+  useEffect(() => {
+    setVisibleCardCount(GRID_INITIAL_RENDER_COUNT);
+    gridScrollRef.current?.scrollTo?.({ top:0, behavior:'auto' });
+  }, [deferredSearch, clsF, fRarity, fCons, fStatus, fTrophic, fGeography, fCategory, fConfidence, fMapProfile, fBioRegion, fGameRegion, fHabitat, fTax, sortBy, preset?.id]);
+
+  useEffect(() => {
+    if (!hasMoreCards) return;
+    if (typeof IntersectionObserver === 'undefined') {
+      setVisibleCardCount(list.length);
+      return;
+    }
+    const target = gridLoadMoreRef.current;
+    const root = gridScrollRef.current;
+    if (!target || !root) return;
+    const observer = new IntersectionObserver((entries) => {
+      if (!entries.some(entry => entry.isIntersecting)) return;
+      setVisibleCardCount(count => Math.min(list.length, count + GRID_RENDER_BATCH_SIZE));
+    }, { root, rootMargin:'700px 0px', threshold:0 });
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, [hasMoreCards, list.length, renderedList.length]);
 
   const anyExtra = fRarity.length||fCons.length||fStatus.length||fTrophic.length||fGeography.length||fCategory.length||fConfidence.length||fMapProfile.length||fBioRegion.length||fGameRegion.length||fHabitat.length||fTax||sortBy!=='no';
   const geographySummary = useMemo(() => {
@@ -6101,7 +6147,7 @@ function Grid({ onSelect, animals: animalsProp, statusMap = {}, visitedCountries
 
       {/* Filtri applicati nascosti: l'area libera viene usata dai filtri rapidi. */}
 
-      <div data-item-count={list.length} style={{ position:'absolute', top:gridScrollTop, bottom:gridBottomChromeHeight, left:0, right:0, minHeight:0, overflowY:'auto', WebkitOverflowScrolling:'touch', overscrollBehavior:'contain', padding:isPhone?'12px 14px 18px':'16px 12px 20px', marginTop:0, marginBottom:0, background:isLightTheme?'transparent':'linear-gradient(180deg,rgba(240,168,64,.09),rgba(184,77,58,.08) 38%,rgba(16,11,9,.18))', zIndex:1 }}>
+      <div ref={gridScrollRef} data-item-count={list.length} data-rendered-count={renderedList.length} style={{ position:'absolute', top:gridScrollTop, bottom:gridBottomChromeHeight, left:0, right:0, minHeight:0, overflowY:'auto', WebkitOverflowScrolling:'touch', overscrollBehavior:'contain', padding:isPhone?'12px 14px 18px':'16px 12px 20px', marginTop:0, marginBottom:0, background:isLightTheme?'transparent':'linear-gradient(180deg,rgba(240,168,64,.09),rgba(184,77,58,.08) 38%,rgba(16,11,9,.18))', zIndex:1 }}>
         {geographySummary && (
           <div style={{ marginBottom:12, borderRadius:18, border:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(240,168,64,.24)', background:isLightTheme?'rgba(255,255,255,.82)':'linear-gradient(135deg,rgba(240,168,64,.12),rgba(18,18,20,.88))', padding:'12px 14px', boxShadow:isLightTheme?'0 10px 24px rgba(0,0,0,.06)':'0 12px 28px rgba(0,0,0,.18)' }}>
             <div style={{ color:isLightTheme?'#171717':'white', fontSize:14, fontWeight:1000 }}>{geographySummary.label}</div>
@@ -6129,9 +6175,10 @@ function Grid({ onSelect, animals: animalsProp, statusMap = {}, visitedCountries
           return <div style={{ color:isLightTheme?'rgba(0,0,0,.58)':'rgba(255,255,255,.56)', textAlign:'center', padding:34, fontSize:14 }}><div style={{ fontWeight:950, color:isLightTheme?'#171717':'white', marginBottom:8 }}>{title}</div><div>{body}</div>{!isSeenTab && !isCapturedTab && !isMysteryTab && !isDocumentedTab && <button onClick={()=>onOpenRegions?.()} style={{ marginTop:16, height:44, padding:'0 16px', borderRadius:14, border:'none', background:'linear-gradient(180deg,rgba(184,77,58,.96),rgba(142,58,46,.98))', color:'white', fontWeight:950 }}>Aggiungi paese</button>}</div>;
         })() : (
           <div style={{ display:'grid', gridTemplateColumns:'repeat(3,minmax(0,1fr))', gap:isPhone?8:10 }}>
-            {list.map(a=><AnimalCard key={a.id} a={a} onClick={handleCardClick} isPhone={isPhone} tutorialHighlight={tutorialActive && a.id === tutorialAnimalId} tutorialDim={tutorialActive && tutorialAnimalId && a.id !== tutorialAnimalId}/>)}
+            {renderedList.map(a=><AnimalCard key={a.id} a={a} onClick={handleCardClick} isPhone={isPhone} tutorialHighlight={tutorialActive && a.id === tutorialAnimalId} tutorialDim={tutorialActive && tutorialAnimalId && a.id !== tutorialAnimalId}/>)}
           </div>
         )}
+        {hasMoreCards && <div ref={gridLoadMoreRef} aria-hidden="true" style={{ height:1, pointerEvents:'none' }} />}
         <div style={{ height:6 }}/>
       </div>
 
@@ -9419,15 +9466,20 @@ function AuthScreen({ onAuthReady }) {
       if (!credentialResponse?.credential) {
         throw new Error('Google non ha restituito un token valido.');
       }
-      const { error } = await supabase.auth.signInWithIdToken({
-        provider: 'google',
-        token: credentialResponse.credential,
-      });
+      const { error } = await withTimeout(
+        supabase.auth.signInWithIdToken({
+          provider: 'google',
+          token: credentialResponse.credential,
+        }),
+        12000,
+        { data:null, error:{ code:'AUTH_TIMEOUT', message:'Google login timeout' } },
+        'signInWithIdToken'
+      );
       if (error) throw error;
       setMessage('Accesso Google effettuato.');
       onAuthReady?.();
     } catch (err) {
-      setMessage(err?.message || 'Errore login Google.');
+      setMessage(getSupabaseAuthErrorMessage(err, 'Errore login Google.'));
     } finally {
       setLoading(false);
     }
@@ -9462,7 +9514,7 @@ function AuthScreen({ onAuthReady }) {
         });
       })
       .catch((err) => {
-        if (!cancelled) setMessage(err?.message || 'Errore caricamento login Google.');
+        if (!cancelled) setMessage(getSupabaseAuthErrorMessage(err, 'Errore caricamento login Google.'));
       });
 
     return () => {
@@ -9487,7 +9539,7 @@ function AuthScreen({ onAuthReady }) {
       setMessage(mode === 'signup' ? 'Account creato. Benvenuto in Apex!' : 'Accesso effettuato.');
       onAuthReady?.();
     } catch (err) {
-      setMessage(err?.message || 'Errore autenticazione.');
+      setMessage(getSupabaseAuthErrorMessage(err));
     } finally {
       setLoading(false);
     }
@@ -14523,6 +14575,7 @@ export default function App() {
   const [countryVisitPrompt,setCountryVisitPrompt]=useState(null);
   const [awardQueue,setAwardQueue]=useState([]);
   const [earnedBadgeIds,setEarnedBadgeIds]=useState([]);
+  const [profileHydratedUserId,setProfileHydratedUserId]=useState('');
   const [progressHydrated,setProgressHydrated]=useState(false);
   const [awardToastReady,setAwardToastReady]=useState(false);
   const [theme,setTheme]=useState(getInitialAnimaldexTheme);
@@ -14547,18 +14600,19 @@ export default function App() {
   setModuleDocumentedMap(documentedMap);
   setModuleExpeditionState(expeditionState);
   const animalsWithStatus = useMemo(
-    () => (animalsData || []).map(a => ({
-      ...a,
-      status: getResolvedAnimalStatus(a, statusMap, visitedCountries),
-      documented: !!documentedMap[String(a.id)],
-    })),
-    [animalsData, statusMap, visitedCountries, documentedMap, expeditionState]
-  );
-  const menuProgress = useMemo(
-    () => buildSimpleProgressState({ animalsWithStatus, visitedCountries, earnedBadgeIds, statusMap }),
-    [animalsWithStatus, visitedCountries, earnedBadgeIds, statusMap, documentedMap, expeditionState]
+    () => (animalsData || []).map(a => {
+      const status = getResolvedAnimalStatus(a, statusMap, visitedCountries);
+      const documented = !!documentedMap[String(a.id)];
+      if (a.status === status && Boolean(a.documented) === documented) return a;
+      return { ...a, status, documented };
+    }),
+    [animalsData, statusMap, visitedCountries, documentedMap]
   );
   const awardMetrics = useMemo(() => computeAwardMetrics(statusMap, visitedCountries), [statusMap, visitedCountries]);
+  const menuProgress = useMemo(
+    () => buildSimpleProgressState({ animalsWithStatus, visitedCountries, earnedBadgeIds, statusMap, awardMetrics }),
+    [animalsWithStatus, visitedCountries, earnedBadgeIds, statusMap, awardMetrics, documentedMap, expeditionState]
+  );
   const refreshSocialSnapshot = useCallback(async (force = false) => {
     if (!user?.id) return;
     const next = await fetchSocialSnapshotCached(user.id, userProfile, menuProgress, session?.access_token || '', { force });
@@ -14716,6 +14770,7 @@ export default function App() {
     const fallbackProfile = buildFallbackProfile(activeUser, false);
 
     setUserProfile(fallbackProfile);
+    if (hasLocalProfileOnboardingDecision(activeUser.id)) setProfileHydratedUserId(activeUser.id);
     if (Object.keys(localStatusMap).length) {
       setStatusMap(prev => mergeStatusMapsByRank(localStatusMap, prev));
       setAnimalsData(prev => applyCachedUserStatuses(prev, activeUser.id));
@@ -14766,16 +14821,17 @@ export default function App() {
         withTimeout(fetchUserDocumentedMap(activeUser.id), 4500, null, 'fetchUserDocumentedMap'),
         withTimeout(fetchUserExpeditions(activeUser.id), 4500, null, 'fetchUserExpeditions'),
       ]);
-      const [[, profile], [remoteStatusResult, destinationsResult, badgeResult, documentedResult, expeditionsResult]] = await Promise.all([
-        profileRequests,
-        progressRequests,
-      ]);
+      const [, profile] = await profileRequests;
 
       if (isStale()) return;
       setUserProfile(profile || buildFallbackProfile(activeUser, false));
+      setProfileHydratedUserId(activeUser.id);
       applyRemoteProfileCustomization(profile, activeUser.id, LOCAL_ANIMALS.length ? LOCAL_ANIMALS : animalsData);
       pushLocalProfileCustomizationIfNeeded(activeUser.id, profile, LOCAL_ANIMALS.length ? LOCAL_ANIMALS : animalsData)
         .catch(err => console.warn('[Apex] push preferenze profilo non bloccante:', err));
+
+      const [remoteStatusResult, destinationsResult, badgeResult, documentedResult, expeditionsResult] = await progressRequests;
+      if (isStale()) return;
 
       const remoteStatusLoaded = remoteStatusResult.status === 'fulfilled' && remoteStatusResult.value !== null;
       const remoteUserStatusMap = remoteStatusLoaded ? (remoteStatusResult.value || {}) : {};
@@ -14881,6 +14937,7 @@ export default function App() {
       setAnimalsData(fallback);
       setStatusMap(fallbackStatusMap);
       setUserProfile(prev => prev || buildFallbackProfile(activeUser, false));
+      setProfileHydratedUserId(activeUser.id);
     } finally {
       if (!isStale()) {
         setProgressHydrated(true);
@@ -14891,6 +14948,7 @@ export default function App() {
 
   useEffect(()=>{
     awardsHydratedRef.current = false;
+    setProfileHydratedUserId(user?.id && hasLocalProfileOnboardingDecision(user.id) ? user.id : '');
     setProgressHydrated(false);
     setAwardToastReady(false);
     setAwardQueue([]);
@@ -15007,7 +15065,6 @@ export default function App() {
     const visitedSet = new Set(normalizeIsoList(visitedCountries));
     const hasVisitedMatch = nextCountryCodes.some(code => visitedSet.has(code));
     setStatusMap(prev => ({ ...prev, [id]: nextStatus }));
-    setAnimalsData(prev => prev.map(a => a.id === id ? { ...a, status: nextStatus, userStatus: appStatusToSupabase(nextStatus) } : a));
     saveLocalUserAnimalStatus(localUserId, id, nextStatus);
     awardInteractionRef.current = true;
     if ((nextStatus === 'avvistato' || nextStatus === 'catturato') && nextCountryCodes.length && !hasVisitedMatch) {
@@ -15022,10 +15079,6 @@ export default function App() {
       if (isSocialCaptureEventWorthy(currentAnimal, nextStatus, previousStatus)) {
         await createSocialCaptureEvent(user.id, currentAnimal).catch(err => console.warn('[Apex] Evento social non salvato:', err));
       }
-      reloadSupabaseData(user).catch(err => {
-        console.warn('[Apex] Refresh Supabase post-status non bloccante fallito:', err);
-        setDataError(err?.message || 'Errore refresh dati Supabase');
-      });
     } catch (err) {
       console.warn('[Apex] Salvataggio user_animals fallito:', err);
       setDataError(err?.message || 'Errore salvataggio status animale');
@@ -15096,6 +15149,9 @@ export default function App() {
       .map(code => String(code || '').toUpperCase())
       .filter(Boolean);
     if (!user?.id || !cleanList.length) return;
+    const nextVisited = normalizeIsoList([...visitedCountries, ...cleanList]);
+    setVisitedCountries(nextVisited);
+    saveVisitedCountries(nextVisited);
     awardInteractionRef.current = true;
     setDestinationsLoading(true);
     setDataError('');
@@ -15112,10 +15168,13 @@ export default function App() {
           p_user_id: user.id,
           p_iso: cleanIso,
           p_trip_tags: tripTags || [],
-        }), 7000, { error:null }, 'unlock_animals_for_destination');
-        if (rpcError) console.warn('[Apex] RPC unlock destinazione non disponibile, uso fallback client:', rpcError);
-        await unlockAnimalsForDestinationClient(user.id, cleanIso, animalsData);
-        await trackUserEvent(user, 'country_added', { country_iso:cleanIso, trip_tags:tripTags || [], source_screen:'regions' }, userProfile);
+        }), 7000, { data:null, error:{ code:'TIMEOUT', message:'unlock_animals_for_destination timeout' } }, 'unlock_animals_for_destination');
+        if (rpcError) {
+          console.warn('[Apex] RPC unlock destinazione non disponibile, uso fallback client:', rpcError);
+          await unlockAnimalsForDestinationClient(user.id, cleanIso, animalsData);
+        }
+        trackUserEvent(user, 'country_added', { country_iso:cleanIso, trip_tags:tripTags || [], source_screen:'regions' }, userProfile)
+          .catch(err => console.warn('[Apex] tracking paese non bloccante:', err));
         // Il diario è sempre libero; l'attivazione della Spedizione (ondate)
         // consuma un credito mensile. Senza crediti resta "in attesa".
         if (!nextExpeditions[cleanIso]) {
@@ -15138,7 +15197,6 @@ export default function App() {
       setExpeditionState(nextExpeditions);
       saveLocalExpeditionState(user.id, nextExpeditions);
       saveUserExpeditions(user.id, nextExpeditions).catch(err => console.warn('[Apex] sync spedizioni non bloccante:', err));
-      reloadSupabaseData(user).catch(err => console.warn('[Apex] reload destinazione non bloccante:', err));
     } catch (err) {
       console.warn('[Apex] Aggiungi destinazione fallito:', err);
       setDataError(err?.message || 'Errore aggiunta paese');
@@ -15700,8 +15758,8 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
 
   if (!user) return <AuthScreen onAuthReady={()=>supabase.auth.getSession().then(({data})=>{setSession(data.session||null);setUser(data.session?.user||null);})} />;
 
-  if (!localAnimalsReady || !progressHydrated) {
-    return <ApexBootLoader message={localAnimalsReady ? 'Sincronizzando i tuoi progressi…' : 'Preparando il tuo mondo animale…'} frameProps={APP_FRAME_PROPS} />;
+  if (!localAnimalsReady || profileHydratedUserId !== user.id) {
+    return <ApexBootLoader message={localAnimalsReady ? 'Preparando il tuo profilo…' : 'Preparando il tuo mondo animale…'} frameProps={APP_FRAME_PROPS} />;
   }
 
   const activeUserProfile = userProfile || buildFallbackProfile(user, false);

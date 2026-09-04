@@ -2,6 +2,12 @@ import React from 'react';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 
 let mockAuthCallbackReturn;
+const originalIntersectionObserver = window.IntersectionObserver;
+
+class PassiveIntersectionObserver {
+  observe() {}
+  disconnect() {}
+}
 
 jest.mock('./supabaseClient', () => {
   const profile = {
@@ -78,9 +84,14 @@ import App from './Animaldex_sora';
 import { getMockAuthCallbackReturn } from './supabaseClient';
 
 beforeEach(() => {
+  window.IntersectionObserver = PassiveIntersectionObserver;
   localStorage.clear();
   localStorage.setItem('animaldex_home_v2_rollout', '1');
   localStorage.setItem('animaldex_user_status_test-user-123', JSON.stringify({ '1': 'catturato', '2': 'avvistato' }));
+});
+
+afterEach(() => {
+  window.IntersectionObserver = originalIntersectionObserver;
 });
 
 test('logged-in home renders without crash screen', async () => {
@@ -105,6 +116,12 @@ test('logged-in home renders without crash screen', async () => {
 
   fireEvent.click(await screen.findByRole('button', { name: /Esplora Dex/i }));
   expect(await screen.findByRole('button', { name: 'Cerca' })).toBeInTheDocument();
+  fireEvent.click(screen.getByRole('button', { name: /Misterioso/i }));
+  await waitFor(() => {
+    const gridScroller = document.querySelector('[data-item-count]');
+    expect(Number(gridScroller?.dataset.itemCount || 0)).toBeGreaterThan(60);
+    expect(Number(gridScroller?.dataset.renderedCount || 0)).toBe(60);
+  });
 });
 
 test('auth callback stays synchronous and Supabase progress is applied before home is ready', async () => {
