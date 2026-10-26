@@ -13,13 +13,16 @@ import ApexBootLoader from './ApexBootLoader';
 import { ANIMAL_IMAGE_BOUNDS } from './animal-image-bounds';
 import { getAnimalSilhouetteScale } from './animal-scale';
 import { isMobileInstallEnvironment } from './mobileRuntime';
+import { loadAnimalDetails, mergeAnimalDetails } from './animalDetails';
+import { fetchAllRows } from './supabasePagination';
+import { fetchSocialProfilesByIds } from './socialProfiles';
+import { setProgressStorageUser, readUserProgress, writeUserProgress } from './userProgressStorage';
 
 let LOCAL_ANIMALS = [];
 let ANIMALS = [];
 let LOCAL_ANIMAL_BY_ID = {};
 let LOCAL_ANIMAL_FULL_BY_ID = {};
 let localAnimalsLoadPromise = null;
-let fullAnimalsLoadPromise = null;
 const fullAnimalLoadPromises = new Map();
 let googleIdentityScriptPromise = null;
 
@@ -1166,10 +1169,6 @@ async function loadLocalAnimalsData() {
       })
       .then(hydrateLocalAnimalIndexes)
       .catch(err => {
-        console.warn('[Apex] Dataset grid non disponibile, uso dataset completo:', err);
-        return import('./animals-data').then(module => hydrateLocalAnimalIndexes(module.ANIMALS || []));
-      })
-      .catch(err => {
         localAnimalsLoadPromise = null;
         throw err;
       });
@@ -1183,18 +1182,7 @@ function queueFullAnimalHydration(animalId) {
   if (LOCAL_ANIMAL_FULL_BY_ID[key]) return Promise.resolve(LOCAL_ANIMAL_FULL_BY_ID[key]);
   if (fullAnimalLoadPromises.has(key)) return fullAnimalLoadPromises.get(key);
 
-  const workerLoad = typeof Worker === 'undefined'
-    ? Promise.reject(new Error('Web Worker non disponibile'))
-    : import('./animalsWorkerClient').then(module => module.loadFullAnimalInWorker(key));
-
-  const promise = workerLoad
-    .catch(err => {
-      console.warn('[Apex] Worker scheda completa non disponibile, uso import diretto:', err);
-      if (!fullAnimalsLoadPromise) {
-        fullAnimalsLoadPromise = import('./animals-data').then(module => module.ANIMALS || []);
-      }
-      return fullAnimalsLoadPromise.then(list => list.find(item => String(item?.id) === key) || null);
-    })
+  const promise = loadAnimalDetails(LOCAL_ANIMAL_BY_ID[key])
     .then(full => {
       if (full?.id !== undefined && full?.id !== null) {
         LOCAL_ANIMAL_FULL_BY_ID[String(full.id)] = full;
@@ -1215,12 +1203,7 @@ function getEnrichedAnimal(animal) {
   if (!animal?.id) return animal;
   const full = LOCAL_ANIMAL_FULL_BY_ID[animal.id];
   if (!full) return animal;
-  return normalizeLocalAnimal({
-    ...full,
-    ...animal,
-    status: animal.status ?? full.status,
-    userStatus: animal.userStatus ?? full.userStatus,
-  });
+  return normalizeLocalAnimal(mergeAnimalDetails(full, animal));
 }
 
 function mergeRemoteWithLocalBioregions(remoteList = []) {
@@ -1780,12 +1763,11 @@ async function fetchAnimalsFromSupabase(userId) {
 }
 
 async function fetchUserAnimalStatusMap(userId) {
-  const { data, error } = await supabase
+  const data = await fetchAllRows(() => supabase
     .from('user_animals')
     .select('animal_id, unlock_status')
-    .eq('user_id', userId);
-
-  if (error) throw error;
+    .eq('user_id', userId)
+    .order('animal_id'), { timeoutMs: 4500 });
   return Object.fromEntries((data || [])
     .filter(row => row?.animal_id !== undefined && row?.animal_id !== null)
     .map(row => [String(row.animal_id), supabaseStatusToApp(row.unlock_status)]));
@@ -1835,12 +1817,12 @@ async function saveUserAnimalDocumented(userId, animalId, documentedAt) {
 
 async function fetchUserDocumentedMap(userId) {
   if (!userId) return {};
-  const { data, error } = await supabase
+  const data = await fetchAllRows(() => supabase
     .from('user_animals')
     .select('animal_id,documented_at')
     .eq('user_id', userId)
-    .not('documented_at', 'is', null);
-  if (error) throw error;
+    .not('documented_at', 'is', null)
+    .order('animal_id'), { timeoutMs: 4500 });
   const map = {};
   for (const row of data || []) {
     if (row?.animal_id && row?.documented_at) map[String(row.animal_id)] = row.documented_at;
@@ -2161,16 +2143,6 @@ async function fetchSocialNotificationsViaRest(userId, accessToken = '', ms = 60
   }, accessToken, ms, 'social_notifications');
 }
 
-async function fetchUserProfilesViaRest(userIds = [], accessToken = '', ms = 6000) {
-  const ids = Array.from(new Set((userIds || []).filter(Boolean)));
-  if (!ids.length) return [];
-  const rows = await restSelectRows('user_profiles', {
-    select:'user_id,username,nickname,avatar_url,featured_badge_id,profile_background_image',
-    user_id:`in.(${ids.join(',')})`,
-  }, accessToken, ms, 'user_profiles');
-  return rows || [];
-}
-
 async function insertFriendshipViaRest(userId, friendId, accessToken = '') {
   try {
     return await restMutateRows('friendships', 'POST', {}, {
@@ -2426,17 +2398,7 @@ async function fetchSocialSnapshot(userId, currentProfile, progress, accessToken
     }
 
     const otherIds = Array.from(new Set((rows || []).map(r => r.requester_id === userId ? r.addressee_id : r.requester_id).filter(Boolean)));
-    let profiles = otherIds.length ? await fetchUserProfilesViaRest(otherIds, accessToken, 6000) : [];
-    if (otherIds.length && !profiles?.length) {
-      const { data: profileRows, error: profileError } = await runTimedSupabaseRequest(
-        supabase.from('user_profiles').select('*').in('user_id', otherIds),
-        6000,
-        { data:[], error:null },
-        'user_profiles sdk'
-      );
-      if (profileError) throw profileError;
-      profiles = profileRows || [];
-    }
+    const profiles = await fetchSocialProfilesByIds(supabase, otherIds);
     const byId = Object.fromEntries((profiles || []).map(p => [p.user_id, normalizeSocialProfile(p)]));
     const decorate = (row) => {
       const otherId = row.requester_id === userId ? row.addressee_id : row.requester_id;
@@ -2447,11 +2409,9 @@ async function fetchSocialSnapshot(userId, currentProfile, progress, accessToken
     const outgoing = (rows || []).filter(r => r.status === 'pending' && r.requester_id === userId).map(decorate);
     const friendIds = accepted.map(r => r.profile.user_id).filter(Boolean);
     const socialIds = Array.from(new Set([userId, ...friendIds]));
-    const [notificationsResult, peerStatsResult, animalResult, badgeResult, eventsResult] = await Promise.all([
+    const [notificationsResult, peerStatsResult, eventsResult] = await Promise.all([
       fetchSocialNotificationsViaRest(userId, accessToken, 6000),
       runTimedSupabaseRequest(supabase.rpc('get_social_peer_stats', { p_viewer_id:userId }), 6000, { data:null }, 'get_social_peer_stats'),
-      socialIds.length ? runTimedSupabaseRequest(supabase.from('user_animals').select('user_id, unlock_status, documented_at').in('user_id', socialIds), 6000, { data:[] }, 'user_animals social') : { data:[] },
-      socialIds.length ? runTimedSupabaseRequest(supabase.from('user_badges').select('user_id, badge_id').in('user_id', socialIds), 6000, { data:[] }, 'user_badges social') : { data:[] },
       socialIds.length ? runTimedSupabaseRequest(supabase.from('social_events').select('*').in('user_id', socialIds).order('created_at', { ascending:false }).limit(30), 6000, { data:[] }, 'social_events') : { data:[] },
     ]);
     let notifications = notificationsResult;
@@ -2464,22 +2424,21 @@ async function fetchSocialSnapshot(userId, currentProfile, progress, accessToken
       );
       notifications = notificationRows || [];
     }
-    const animalRows = animalResult?.data || [];
-    const badgeRows = badgeResult?.data || [];
-    const events = eventsResult?.data || [];
     const statsByUserId = Object.fromEntries((peerStatsResult?.data || []).map(row => [row.user_id, row]));
+    const missingStatsIds = socialIds.filter(id => !statsByUserId[id]);
+    // The RPC already returns aggregates. Download raw rows only for missing peers.
+    const [animalRows, badgeRows] = missingStatsIds.length ? await Promise.all([
+      fetchAllRows(() => supabase.from('user_animals')
+        .select('user_id, animal_id, unlock_status, documented_at').in('user_id', missingStatsIds)
+        .order('user_id').order('animal_id'), { timeoutMs: 6000 }),
+      fetchAllRows(() => supabase.from('user_badges')
+        .select('user_id, badge_id').in('user_id', missingStatsIds)
+        .order('user_id').order('badge_id'), { timeoutMs: 6000 }),
+    ]) : [[], []];
+    const events = eventsResult?.data || [];
     const missingActorIds = Array.from(new Set((notifications || []).map(n => n.actor_id).filter(id => id && !byId[id])));
     if (missingActorIds.length) {
-      let extraProfiles = await fetchUserProfilesViaRest(missingActorIds, accessToken, 6000);
-      if (!extraProfiles?.length) {
-        const { data: profileRows } = await runTimedSupabaseRequest(
-          supabase.from('user_profiles').select('*').in('user_id', missingActorIds),
-          6000,
-          { data:[] },
-          'user_profiles notification actors sdk'
-        );
-        extraProfiles = profileRows || [];
-      }
+      const extraProfiles = await fetchSocialProfilesByIds(supabase, missingActorIds);
       (extraProfiles || []).forEach(p => { byId[p.user_id] = normalizeSocialProfile(p); });
     }
     const eventIds = (events || []).map(e => e.id).filter(Boolean);
@@ -2544,54 +2503,6 @@ async function fetchSocialSnapshot(userId, currentProfile, progress, accessToken
 }
 
 const SOCIAL_SEARCH_BUDGET_MS = 14000;
-
-async function fetchSocialProfilesViaRestTable(userId, q, ms = 6000, accessToken = '', signal = null) {
-  const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || '';
-  const anonKey = process.env.REACT_APP_SUPABASE_ANON_KEY || '';
-  if (!supabaseUrl || !anonKey || typeof fetch === 'undefined') {
-    throw createSocialSearchError('Configurazione Supabase non disponibile per la ricerca.', 'SEARCH_CONFIG_MISSING', { step:'rest-table-config' });
-  }
-  const token = await getSupabaseAccessToken(6000, accessToken);
-  if (!token) {
-    throw createSocialSearchError('Sessione non pronta. Esci e rientra, poi riprova.', 'NO_AUTH_SESSION', { step:'rest-table-session' });
-  }
-  const safeTerm = String(q || '').replace(/[*"'\\]/g, '').trim();
-  const endpoint = new URL('/rest/v1/user_profiles', supabaseUrl);
-  endpoint.searchParams.set('select', 'user_id,username,nickname,avatar_url,featured_badge_id,profile_background_image');
-  endpoint.searchParams.set('or', `(username.ilike.*${safeTerm}*,nickname.ilike.*${safeTerm}*)`);
-  endpoint.searchParams.set('order', 'username.asc');
-  endpoint.searchParams.set('limit', '12');
-  if (userId) endpoint.searchParams.set('user_id', `neq.${userId}`);
-  const response = await runTimedFetch(
-    endpoint.toString(),
-    {
-      headers:{
-        apikey:anonKey,
-        Authorization:`Bearer ${token}`,
-        Accept:'application/json',
-      },
-    },
-    ms,
-    'rest user_profiles search',
-    signal
-  );
-  if (!response) {
-    throw createSocialSearchError('La ricerca utenti sta impiegando troppo tempo. Riprova tra poco.', 'SEARCH_TIMEOUT', { step:'rest-table-timeout' });
-  }
-  const bodyText = await response.text();
-  if (!response.ok) {
-    throw createSocialSearchError('Ricerca amici non riuscita. Controlla lo script Supabase.', 'SEARCH_REST_ERROR', {
-      step:'rest-table-http',
-      status:response.status,
-      hint:bodyText.slice(0, 90),
-    });
-  }
-  try {
-    return bodyText ? JSON.parse(bodyText) : [];
-  } catch {
-    throw createSocialSearchError('Risposta ricerca non leggibile.', 'SEARCH_REST_PARSE', { step:'rest-table-parse' });
-  }
-}
 
 function sortSocialSearchProfiles(rows = [], q, userId) {
   const normalizedQ = String(q || '').toLowerCase();
@@ -2667,40 +2578,14 @@ async function searchSocialProfiles(userId, query, options = {}) {
   const accessToken = options.accessToken || '';
   const signal = options.signal || null;
   const sortProfiles = (rows = []) => sortSocialSearchProfiles(rows, q, userId);
-  const errors = [];
-  const throwIfAborted = () => {
-    if (signal?.aborted) throw new DOMException('The operation was aborted.', 'AbortError');
-  };
-
   try {
-    throwIfAborted();
-    const rpcRows = await fetchSocialProfilesViaRpcRest(q, budgetMs, accessToken, signal);
-    throwIfAborted();
-    const sorted = sortProfiles(rpcRows || []);
-    if (sorted.length) return sorted;
-  } catch (err) {
-    if (signal?.aborted || err?.name === 'AbortError') return [];
-    errors.push(err);
-    console.warn('[Apex] REST RPC ricerca amici:', err);
-    if (err?.code === 'NO_AUTH_SESSION') throw err;
+    const rows = await fetchSocialProfilesViaRpcRest(q, budgetMs, accessToken, signal);
+    if (signal?.aborted) return [];
+    return sortProfiles(rows || []);
+  } catch (error) {
+    if (signal?.aborted || error?.name === 'AbortError') return [];
+    throw error;
   }
-
-  try {
-    throwIfAborted();
-    const tableRows = await fetchSocialProfilesViaRestTable(userId, q, Math.max(5000, Math.floor(budgetMs * 0.65)), accessToken, signal);
-    throwIfAborted();
-    return sortProfiles(tableRows || []);
-  } catch (err) {
-    if (signal?.aborted || err?.name === 'AbortError') return [];
-    errors.push(err);
-    console.warn('[Apex] REST tabella ricerca amici:', err);
-    if (err?.code === 'NO_AUTH_SESSION') throw err;
-  }
-
-  const last = errors[errors.length - 1];
-  if (last?.code === 'SEARCH_TIMEOUT') throw last;
-  if (last) throw last;
-  return [];
 }
 
 async function requestFriendship(userId, friendId, accessToken = '') {
@@ -3714,13 +3599,13 @@ function getScratchCountryMetaList() {
   }
   return scratchCountryMetaCache;
 }
-function getVisitedCountries() {
+function getVisitedCountries(userId) {
   if (typeof window === 'undefined') return [];
-  try { return normalizeIsoList(JSON.parse(window.localStorage.getItem('animaldex_visited_countries') || '[]')); } catch { return []; }
+  try { return normalizeIsoList(readUserProgress('visited_countries', [], userId)); } catch { return []; }
 }
-function saveVisitedCountries(list = []) {
+function saveVisitedCountries(list = [], userId) {
   if (typeof window === 'undefined') return;
-  try { window.localStorage.setItem('animaldex_visited_countries', JSON.stringify(normalizeIsoList(list))); } catch {}
+  try { writeUserProgress('visited_countries', normalizeIsoList(list), userId); } catch {}
 }
 // Coda per-utente dei paesi aggiunti ma non ancora confermati su Supabase:
 // evita che un insert fallito/in timeout faccia sparire il paese al reload.
@@ -4056,13 +3941,13 @@ function computeUnlockedAwards(statusMap = {}, visitedCountries = null, precompu
   return AWARD_RULES.filter(rule => Number(metrics[rule.metric] || 0) >= Number(rule.threshold || 0))
     .map(rule => ({ ...rule, image: buildAwardImagePath(rule.badgeId), currentValue: metrics[rule.metric] || 0 }));
 }
-function getAwardUnlockSet() {
+function getAwardUnlockSet(userId) {
   if (typeof window === 'undefined') return new Set();
-  try { return new Set(JSON.parse(window.localStorage.getItem('animaldex_awards_unlocked') || '[]').map(normalizeBadgeId)); } catch { return new Set(); }
+  try { return new Set(readUserProgress('awards_unlocked', [], userId).map(normalizeBadgeId)); } catch { return new Set(); }
 }
-function persistAwardUnlocks(ids = []) {
+function persistAwardUnlocks(ids = [], userId) {
   if (typeof window === 'undefined') return;
-  try { window.localStorage.setItem('animaldex_awards_unlocked', JSON.stringify(Array.from(new Set((ids || []).map(normalizeBadgeId).filter(Boolean))))); } catch {}
+  try { writeUserProgress('awards_unlocked', Array.from(new Set((ids || []).map(normalizeBadgeId).filter(Boolean))), userId); } catch {}
 }
 function getFeaturedBadgeStorageKey(userId='guest') {
   return `animaldex_featured_badge_${userId || 'guest'}`;
@@ -6738,7 +6623,7 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm,
 
       const payload = {
         image_url: uploaded.publicUrl || '',
-        image_data_url: imageDataUrl,
+        image_data_url: uploaded.publicUrl ? '' : imageDataUrl,
         expected_animal_id: targetAnimal?.id || null,
         expected_sci: targetAnimal?.sci || '',
         gps,
@@ -6747,7 +6632,7 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm,
       };
       const { response, data } = await fetchJsonWithTimeout('/api/identify-animal', {
         method:'POST',
-        headers:{ 'Content-Type':'application/json' },
+        headers:{ 'Content-Type':'application/json', Authorization:`Bearer ${await getSupabaseAccessToken()}` },
         body:JSON.stringify(payload),
       });
       if (!response.ok) throw new Error(data?.error || 'Riconoscimento AI non riuscito.');
@@ -7592,7 +7477,7 @@ function getCountryFeatureName(feature) {
 
 let BIOREGION_GEOJSON_CACHE = null;
 let BIOREGION_GEOJSON_PROMISE = null;
-const BIOREGION_GEOJSON_URLS = ['/geo/bioregions-v4-terrestrial-marine-kepler.geojson','/geo/bioregions-v4-terrestrial-marine-kepler.geojson.geojson','/geo/bioregions-v4-terrestrial-marine-kepler_paesi_med-atlantic-split.geojson','/bioregions-v4-terrestrial-marine-kepler.geojson','/bioregions-v4-terrestrial-marine-kepler.geojson.geojson','/bioregions-v4-terrestrial-marine-kepler_paesi_med-atlantic-split.geojson'];
+const BIOREGION_GEOJSON_URLS = ['/geo/bioregions-v4-terrestrial-marine-kepler.geojson.geojson','/geo/bioregions-v4-terrestrial-marine-kepler.geojson','/geo/bioregions-v4-terrestrial-marine-kepler_paesi_med-atlantic-split.geojson','/bioregions-v4-terrestrial-marine-kepler.geojson','/bioregions-v4-terrestrial-marine-kepler.geojson.geojson','/bioregions-v4-terrestrial-marine-kepler_paesi_med-atlantic-split.geojson'];
 function prefetchBioregionGeoJson() {
   if (BIOREGION_GEOJSON_CACHE || BIOREGION_GEOJSON_PROMISE) return BIOREGION_GEOJSON_PROMISE;
   BIOREGION_GEOJSON_PROMISE = (async () => {
@@ -7621,7 +7506,9 @@ function useBioregionGeoJson() {
     let alive = true;
     if (BIOREGION_GEOJSON_CACHE) { setData(BIOREGION_GEOJSON_CACHE); return; }
     prefetchBioregionGeoJson()?.then(json => {
-      if (alive && json) setData(json);
+      if (!alive) return;
+      if (json) setData(json);
+      else setError(true);
     }).catch(() => { if (alive) setError(true); });
     return () => { alive = false; };
   }, []);
@@ -14530,6 +14417,7 @@ function markSectionIntroSeen(section) {
 
 export default function App() {
   const [session,setSession]=useState(null);
+  const activeAuthUserRef = useRef(null);
   const [user,setUser]=useState(null);
   const [authLoading,setAuthLoading]=useState(true);
   const [dataError,setDataError]=useState('');
@@ -14616,6 +14504,7 @@ export default function App() {
   const refreshSocialSnapshot = useCallback(async (force = false) => {
     if (!user?.id) return;
     const next = await fetchSocialSnapshotCached(user.id, userProfile, menuProgress, session?.access_token || '', { force });
+    if (activeAuthUserRef.current !== user.id) return;
     setSocialSnapshot(next || buildSocialFallback(user, userProfile, menuProgress));
   }, [user?.id, userProfile, session?.access_token]);
   useEffect(() => {
@@ -14737,23 +14626,44 @@ export default function App() {
     const authTimer = window.setTimeout(() => {
       if (mounted) setAuthLoading(false);
     }, 5000);
-    supabase.auth.getSession().then(({ data }) => {
+    const applySession = nextSession => {
       if (!mounted) return;
-      window.clearTimeout(authTimer);
-      syncSupabaseAccessTokenCache(data.session || null);
-      setSession(data.session || null);
-      setUser(data.session?.user || null);
+      const nextId = nextSession?.user?.id || null;
+      setProgressStorageUser(nextId);
+      if (activeAuthUserRef.current !== nextId) {
+        activeAuthUserRef.current = nextId;
+        reloadGenerationRef.current += 1;
+        initialDataSyncKeyRef.current = '';
+        setStatusMap({});
+        setAnimalsData(LOCAL_ANIMALS);
+        setDocumentedMap({});
+        setExpeditionState({});
+        setVisitedCountries(getVisitedCountries(nextId || 'guest'));
+        setEarnedBadgeIds(Array.from(getAwardUnlockSet(nextId || 'guest')));
+        setUserProfile(null);
+        setSel(null);
+        setSocialSnapshot(buildSocialFallback(null, null, {}));
+        setProgressHydrated(false);
+      }
+      syncSupabaseAccessTokenCache(nextSession || null);
+      setSession(nextSession || null);
+      setUser(nextSession?.user || null);
       setAuthLoading(false);
+    };
+    let authEventReceived = false;
+    supabase.auth.getSession().then(({ data }) => {
+      if (!mounted || authEventReceived) return;
+      window.clearTimeout(authTimer);
+      applySession(data.session || null);
     }).catch(() => {
       if (!mounted) return;
       window.clearTimeout(authTimer);
       setAuthLoading(false);
     });
     const { data: listener } = supabase.auth.onAuthStateChange((_event, nextSession) => {
-      syncSupabaseAccessTokenCache(nextSession || null);
-      setSession(nextSession || null);
-      setUser(nextSession?.user || null);
-      setAuthLoading(false);
+      authEventReceived = true;
+      window.clearTimeout(authTimer);
+      applySession(nextSession);
     });
     return () => {
       mounted = false;
@@ -14816,7 +14726,7 @@ export default function App() {
       ]);
       const progressRequests = Promise.allSettled([
         withTimeout(fetchUserAnimalStatusMap(activeUser.id), 4500, null, 'fetchUserAnimalStatusMap'),
-        withTimeout(fetchUserDestinations(activeUser.id), 4500, getVisitedCountries(), 'fetchUserDestinations'),
+        withTimeout(fetchUserDestinations(activeUser.id), 4500, getVisitedCountries(activeUser.id), 'fetchUserDestinations'),
         withTimeout(fetchUserBadgeIds(activeUser.id), 4500, null, 'fetchUserBadgeIds'),
         withTimeout(fetchUserDocumentedMap(activeUser.id), 4500, null, 'fetchUserDocumentedMap'),
         withTimeout(fetchUserExpeditions(activeUser.id), 4500, null, 'fetchUserExpeditions'),
@@ -14835,7 +14745,7 @@ export default function App() {
 
       const remoteStatusLoaded = remoteStatusResult.status === 'fulfilled' && remoteStatusResult.value !== null;
       const remoteUserStatusMap = remoteStatusLoaded ? (remoteStatusResult.value || {}) : {};
-      const destinations = destinationsResult.status === 'fulfilled' ? destinationsResult.value : getVisitedCountries();
+      const destinations = destinationsResult.status === 'fulfilled' ? destinationsResult.value : getVisitedCountries(activeUser.id);
       const remoteBadgeIds = badgeResult.status === 'fulfilled' ? badgeResult.value : null;
 
       [remoteStatusResult, destinationsResult, badgeResult].forEach((result, idx) => {
@@ -14876,13 +14786,13 @@ export default function App() {
       // Merge remoto + paesi in attesa di conferma: un insert fallito o in
       // timeout non deve mai far sparire un paese appena aggiunto.
       const remoteDestinations = normalizeIsoList(destinations || []);
-      const localDestinationsNow = normalizeIsoList([...getVisitedCountries(), ...getPendingDestinations(activeUser.id)]);
+      const localDestinationsNow = normalizeIsoList([...getVisitedCountries(activeUser.id), ...getPendingDestinations(activeUser.id)]);
       syncMissingDestinationsToSupabase(activeUser.id, localDestinationsNow, remoteDestinations)
         .catch(err => console.warn('[Apex] sync destinazioni mancanti non bloccante:', err));
       const pendingDestinations = getPendingDestinations(activeUser.id);
       const nextDestinations = normalizeIsoList([...remoteDestinations, ...pendingDestinations]);
       setVisitedCountries(nextDestinations);
-      saveVisitedCountries(nextDestinations);
+      saveVisitedCountries(nextDestinations, activeUser.id);
       if (pendingDestinations.length && destinationsResult.status === 'fulfilled') {
         const remoteDestSet = new Set(remoteDestinations);
         const confirmed = pendingDestinations.filter(iso => remoteDestSet.has(iso));
@@ -14894,14 +14804,14 @@ export default function App() {
         });
       }
 
-      const localBadgeIds = Array.from(getAwardUnlockSet()).map(normalizeBadgeId);
+      const localBadgeIds = Array.from(getAwardUnlockSet(activeUser.id)).map(normalizeBadgeId);
       const nextBadgeIds = Array.from(new Set([
         ...(earnedBadgeIds || []).map(normalizeBadgeId),
         ...localBadgeIds,
         ...((remoteBadgeIds || []).map(normalizeBadgeId)),
       ])).filter(Boolean);
       setEarnedBadgeIds(nextBadgeIds);
-      persistAwardUnlocks(nextBadgeIds);
+      persistAwardUnlocks(nextBadgeIds, activeUser.id);
       if (nextBadgeIds.length) {
         persistEarnedBadges(activeUser.id, nextBadgeIds).catch(err => console.warn('[Apex] sync badge non bloccante:', err));
       }
@@ -15554,8 +15464,8 @@ const confirmPhotoRecognition = async (animal, meta={}) => {
         public_url:meta.public_url || null,
         photo_source:meta.file ? 'upload' : null,
         recognition_status:meta.ai_status || 'confirmed',
-        lat:meta.gps?.lat || null,
-        lng:meta.gps?.lng || null,
+        lat:meta.gps?.lat ?? null,
+        lng:meta.gps?.lng ?? null,
         location_accuracy:meta.gps?.accuracy || null,
         created_at:new Date().toISOString(),
       });
@@ -15589,7 +15499,7 @@ const requestAnimalAdd = async (payload = {}) => {
   try {
     const response = await fetch('/api/request-animal-add', {
       method:'POST',
-      headers:{ 'Content-Type':'application/json' },
+      headers:{ 'Content-Type':'application/json', Authorization:`Bearer ${await getSupabaseAccessToken()}` },
       body:JSON.stringify(body),
     });
     const data = await response.json().catch(() => ({}));
@@ -15678,6 +15588,18 @@ const openGridWithGeography = (geoValue, label, returnView='countries') => {
   setSel(null); setGridPreset({ id: Date.now(), type:'geography', geography:[geoValue], title: label || 'Geografia' }); setGridReturnTarget({ page:'regions', view:returnView }); setPage('grid');
 };
 const handleLogout = async () => {
+  reloadGenerationRef.current += 1;
+  activeAuthUserRef.current = null;
+  initialDataSyncKeyRef.current = '';
+  setProgressStorageUser(null);
+  setStatusMap({});
+  setAnimalsData(LOCAL_ANIMALS);
+  setDocumentedMap({});
+  setExpeditionState({});
+  setVisitedCountries(getVisitedCountries('guest'));
+  setEarnedBadgeIds(Array.from(getAwardUnlockSet('guest')));
+  setSocialSnapshot(buildSocialFallback(null, null, {}));
+  setProgressHydrated(false);
   setDataError('');
   clearSupabaseAccessTokenCache();
   socialSnapshotCache = { key:'', data:null, ts:0 };

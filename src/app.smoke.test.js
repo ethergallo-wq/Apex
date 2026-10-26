@@ -1,7 +1,8 @@
 import React from 'react';
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
 
 let mockAuthCallbackReturn;
+let mockEmitAuth;
 const originalIntersectionObserver = window.IntersectionObserver;
 
 class PassiveIntersectionObserver {
@@ -18,8 +19,9 @@ jest.mock('./supabaseClient', () => {
     has_completed_tutorial: true,
   };
 
-  const resultFor = (table, selected = '') => {
-    if (table === 'user_profiles') return { data: profile, error: null };
+  const resultFor = (table, selected = '', userId = profile.user_id) => {
+    if (table === 'user_profiles') return { data: { ...profile, user_id: userId }, error: null };
+    if (userId === 'second-user') return { data: [], error: null };
     if (table === 'user_animals' && selected.includes('unlock_status')) {
       return { data: [{ animal_id: 2, unlock_status: 'collected' }], error: null };
     }
@@ -30,13 +32,15 @@ jest.mock('./supabaseClient', () => {
 
   const makeQuery = (table) => {
     let selected = '';
+    let offset = 0;
+    let userId = profile.user_id;
     const chain = {
       select: (columns = '') => { selected = String(columns); return chain; },
       insert: () => chain,
       update: () => chain,
       upsert: () => chain,
       delete: () => chain,
-      eq: () => chain,
+      eq: (column, value) => { if (column === 'user_id') userId = value; return chain; },
       neq: () => chain,
       in: () => chain,
       not: () => chain,
@@ -44,16 +48,18 @@ jest.mock('./supabaseClient', () => {
       or: () => chain,
       order: () => chain,
       limit: () => chain,
+      range: (start) => { offset = start; return chain; },
       abortSignal: () => chain,
-      maybeSingle: async () => resultFor(table, selected),
-      single: async () => resultFor(table, selected),
-      then: (resolve, reject) => Promise.resolve(resultFor(table, selected)).then(resolve, reject),
+      maybeSingle: async () => resultFor(table, selected, userId),
+      single: async () => resultFor(table, selected, userId),
+      then: (resolve, reject) => Promise.resolve(offset ? { data: [], error: null } : resultFor(table, selected, userId)).then(resolve, reject),
     };
     return chain;
   };
 
   return {
     getMockAuthCallbackReturn: () => mockAuthCallbackReturn,
+    emitMockAuth: session => mockEmitAuth('SIGNED_IN', session),
     supabase: {
       auth: {
         getSession: async () => ({
@@ -66,6 +72,7 @@ jest.mock('./supabaseClient', () => {
           error: null,
         }),
         onAuthStateChange: (cb) => {
+          mockEmitAuth = cb;
           mockAuthCallbackReturn = cb('INITIAL_SESSION', {
             user: { id: 'test-user-123', email: 'test@example.com' },
             access_token: 'mock-token',
@@ -81,7 +88,7 @@ jest.mock('./supabaseClient', () => {
 });
 
 import App from './Animaldex_sora';
-import { getMockAuthCallbackReturn } from './supabaseClient';
+import { emitMockAuth, getMockAuthCallbackReturn } from './supabaseClient';
 
 beforeEach(() => {
   window.IntersectionObserver = PassiveIntersectionObserver;
@@ -133,4 +140,17 @@ test('auth callback stays synchronous and Supabase progress is applied before ho
     expect(stored['2']).toBe('catturato');
     expect(document.body.textContent).not.toContain('Sincronizzando i tuoi progressi');
   }, { timeout: 15000 });
+});
+
+test('switching accounts clears the previous account progress before syncing', async () => {
+  render(<App />);
+  await screen.findByRole('button', { name: /Esplora Dex/i }, { timeout: 15000 });
+  act(() => emitMockAuth({ user: { id: 'second-user', email: 'second@example.test' }, access_token: 'second-token' }));
+  await waitFor(() => {
+    const stored = JSON.parse(localStorage.getItem('animaldex_user_status_second-user') || 'null');
+    expect(stored).not.toBeNull();
+    expect(stored['1']).not.toBe('catturato');
+    expect(stored['2']).not.toBe('catturato');
+    expect(localStorage.getItem('animaldex_visited_countries_second-user')).toBe('[]');
+  });
 });

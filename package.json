@@ -18,11 +18,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "prestart": "node scripts/build-animals-grid-data.mjs",
     "start": "react-scripts start",
     "build:animals-grid": "node scripts/build-animals-grid-data.mjs",
     "prebuild": "node scripts/build-animals-grid-data.mjs",
     "build": "react-scripts build",
+    "pretest": "node scripts/build-animals-grid-data.mjs",
     "test": "react-scripts test",
+    "test:api": "node --test tests/*.test.cjs",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

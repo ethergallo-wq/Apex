@@ -1,8 +1,9 @@
-const { createClient } = require('@supabase/supabase-js');
+const { authenticateRequest, parseObjectBody } = require('../server/supabaseAuth');
 
 function sendJson(res, statusCode, payload) {
   res.statusCode = statusCode;
   res.setHeader('Content-Type', 'application/json');
+  res.setHeader('Cache-Control', 'no-store');
   res.end(JSON.stringify(payload));
 }
 
@@ -28,6 +29,7 @@ async function notifyAdminByEmail(payload) {
   ].join('\n');
 
   const response = await fetch('https://api.resend.com/emails', {
+    signal: AbortSignal.timeout(8000),
     method: 'POST',
     headers: {
       Authorization: `Bearer ${apiKey}`,
@@ -54,17 +56,25 @@ module.exports = async function requestAnimalAdd(req, res) {
     return sendJson(res, 405, { error: 'Metodo non consentito.' });
   }
 
-  let body = req.body || {};
-  if (typeof body === 'string') {
-    try { body = JSON.parse(body); } catch { return sendJson(res, 400, { error: 'Payload non valido.' }); }
+  let body, user, client;
+  try {
+    body = parseObjectBody(req, 20000);
+    ({ user, client } = await authenticateRequest(req));
+  } catch (error) {
+    return sendJson(res, error.statusCode || 503, { error: error.message });
   }
 
   const commonName = String(body.common_name || '').trim();
   if (!commonName) return sendJson(res, 400, { error: 'Nome animale mancante.' });
+  for (const [field, min, max] of [['lat', -90, 90], ['lng', -180, 180], ['ai_probability', 0, 100]]) {
+    if (body[field] != null && (typeof body[field] !== 'number' || !Number.isFinite(body[field]) || body[field] < min || body[field] > max)) {
+      return sendJson(res, 400, { error: `Valore ${field} non valido.` });
+    }
+  }
 
   const row = {
-    user_id: body.user_id || null,
-    user_email: body.user_email || null,
+    user_id: user.id,
+    user_email: user.email || null,
     common_name: commonName.slice(0, 180),
     scientific_name: String(body.scientific_name || '').slice(0, 180) || null,
     photo_url: String(body.photo_url || '').slice(0, 2000) || null,
@@ -76,20 +86,14 @@ module.exports = async function requestAnimalAdd(req, res) {
     status: 'pending',
   };
 
-  const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || process.env.SUPABASE_URL;
-  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!supabaseUrl || !serviceKey) {
-    return sendJson(res, 200, { ok: true, stored: false, notified: false, fallback: 'mailto' });
-  }
-
   try {
-    const supabase = createClient(supabaseUrl, serviceKey);
-    const { data, error } = await supabase.from('animal_add_requests').insert(row).select('id').single();
+    // The caller's JWT applies RLS; this endpoint needs no service-role key.
+    const { data, error } = await client.from('animal_add_requests').insert(row).select('id').single();
     if (error) throw error;
 
     let notified = false;
     try {
-      const emailResult = await notifyAdminByEmail({ ...row, user_id: body.user_id, user_email: body.user_email });
+      const emailResult = await notifyAdminByEmail(row);
       notified = !!emailResult.sent;
     } catch (emailErr) {
       console.warn('[Apex] request-animal-add email:', emailErr?.message || emailErr);
@@ -97,6 +101,7 @@ module.exports = async function requestAnimalAdd(req, res) {
 
     return sendJson(res, 200, { ok: true, stored: true, id: data?.id || null, notified });
   } catch (err) {
-    return sendJson(res, 500, { error: err?.message || 'Salvataggio richiesta non riuscito.' });
+    console.warn('[Apex] request-animal-add storage:', err?.code || 'unavailable');
+    return sendJson(res, 503, { error: 'Salvataggio richiesta non riuscito. Riprova tra poco.' });
   }
 };

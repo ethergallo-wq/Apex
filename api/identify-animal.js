@@ -1,9 +1,11 @@
+const { authenticateRequest, httpError, parseObjectBody } = require('../server/supabaseAuth');
 const OPENAI_RESPONSES_URL = 'https://api.openai.com/v1/responses';
 const DEFAULT_MODEL = 'gpt-5.5';
 
 function sendJson(res, statusCode, payload) {
   res.statusCode = statusCode;
   res.setHeader('Content-Type', 'application/json');
+  res.setHeader('Cache-Control', 'no-store');
   res.end(JSON.stringify(payload));
 }
 
@@ -19,6 +21,7 @@ function extractOutputText(responseData = {}) {
 }
 
 function normalizeCandidate(candidate = {}) {
+  candidate = candidate && typeof candidate === 'object' ? candidate : {};
   return {
     id: candidate.id ?? null,
     sci: String(candidate.sci || '').slice(0, 120),
@@ -72,29 +75,40 @@ module.exports = async function identifyAnimal(req, res) {
     return sendJson(res, 500, { error: 'OPENAI_API_KEY non configurata sul server.' });
   }
 
-  let body = req.body || {};
-  if (typeof body === 'string') {
-    try {
-      body = JSON.parse(body);
-    } catch {
-      return sendJson(res, 400, { error: 'Payload non valido.' });
-    }
+  let body;
+  try {
+    body = parseObjectBody(req, 4_000_000);
+    await authenticateRequest(req);
+  } catch (error) {
+    return sendJson(res, error.statusCode || 503, { error: error.message });
   }
 
   const imageUrl = body.image_url || body.image_data_url || '';
   if (!imageUrl || typeof imageUrl !== 'string') {
     return sendJson(res, 400, { error: 'Foto mancante.' });
   }
-  if (imageUrl.startsWith('data:') && imageUrl.length > 8_000_000) {
+  if (imageUrl.startsWith('data:') && imageUrl.length > 3_500_000) {
     return sendJson(res, 413, { error: 'Foto troppo grande. Riprova con un file più leggero.' });
+  }
+  try {
+    if (imageUrl.startsWith('data:')) {
+      if (!/^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/]+=*$/.test(imageUrl)) throw new Error('invalid image');
+    } else {
+      const url = new URL(imageUrl);
+      const storage = new URL(process.env.SUPABASE_URL || process.env.REACT_APP_SUPABASE_URL);
+      if (url.origin !== storage.origin || url.protocol !== 'https:' || url.username || url.password || !url.pathname.startsWith('/storage/v1/object/public/animal-photos/')) throw new Error('invalid image');
+    }
+  } catch {
+    return sendJson(res, 400, { error: 'Formato o indirizzo foto non valido.' });
   }
 
   const candidates = Array.isArray(body.candidates) ? body.candidates.slice(0, 320).map(normalizeCandidate) : [];
   const expected = {
     animal_id: body.expected_animal_id ?? null,
-    sci: body.expected_sci || '',
-    gps: body.gps || null,
-    expected_habitat_ids: Array.isArray(body.expected_habitat_ids) ? body.expected_habitat_ids : [],
+    sci: String(body.expected_sci || '').slice(0, 120),
+    gps: body.gps && Number.isFinite(body.gps.lat) && Number.isFinite(body.gps.lng)
+      ? { lat: body.gps.lat, lng: body.gps.lng } : null,
+    expected_habitat_ids: Array.isArray(body.expected_habitat_ids) ? body.expected_habitat_ids.slice(0, 16) : [],
   };
 
   const prompt = [
@@ -112,6 +126,7 @@ module.exports = async function identifyAnimal(req, res) {
 
   try {
     const openaiResponse = await fetch(OPENAI_RESPONSES_URL, {
+      signal: AbortSignal.timeout(75000),
       method: 'POST',
       headers: {
         Authorization: `Bearer ${apiKey}`,
@@ -142,14 +157,18 @@ module.exports = async function identifyAnimal(req, res) {
 
     const responseData = await openaiResponse.json().catch(() => ({}));
     if (!openaiResponse.ok) {
-      const message = responseData?.error?.message || 'Riconoscimento OpenAI non riuscito.';
-      return sendJson(res, openaiResponse.status, { error: message });
+      console.warn('[Apex] identification upstream status:', openaiResponse.status);
+      return sendJson(res, openaiResponse.status === 429 ? 429 : 502, { error: 'Riconoscimento temporaneamente non disponibile. Riprova tra poco.' });
     }
 
     const text = extractOutputText(responseData);
     const parsed = JSON.parse(text);
+    if (!['certain', 'alternatives', 'unusable'].includes(parsed?.identification_status) || !Array.isArray(parsed.alternatives)) {
+      throw httpError(502, 'Risposta di riconoscimento non valida. Riprova.');
+    }
     return sendJson(res, 200, parsed);
   } catch (err) {
-    return sendJson(res, 500, { error: err?.message || 'Riconoscimento non riuscito.' });
+    const timeout = err?.name === 'TimeoutError' || err?.name === 'AbortError';
+    return sendJson(res, timeout ? 504 : (err.statusCode || 502), { error: timeout ? 'Analisi troppo lenta. Riprova con una foto più leggera.' : 'Riconoscimento non riuscito. Riprova.' });
   }
 };
